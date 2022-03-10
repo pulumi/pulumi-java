@@ -169,82 +169,82 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDateCreated(@Nullable Input<String> dateCreated) {
+        public Builder dateCreated(@Nullable Input<String> dateCreated) {
             this.dateCreated = dateCreated;
             return this;
         }
 
-        public Builder setDateCreated(@Nullable String dateCreated) {
+        public Builder dateCreated(@Nullable String dateCreated) {
             this.dateCreated = Input.ofNullable(dateCreated);
             return this;
         }
 
-        public Builder setDateUpdated(@Nullable Input<String> dateUpdated) {
+        public Builder dateUpdated(@Nullable Input<String> dateUpdated) {
             this.dateUpdated = dateUpdated;
             return this;
         }
 
-        public Builder setDateUpdated(@Nullable String dateUpdated) {
+        public Builder dateUpdated(@Nullable String dateUpdated) {
             this.dateUpdated = Input.ofNullable(dateUpdated);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDistributions(@Nullable Input<List<DistributionConfigurationDistributionGetArgs>> distributions) {
+        public Builder distributions(@Nullable Input<List<DistributionConfigurationDistributionGetArgs>> distributions) {
             this.distributions = distributions;
             return this;
         }
 
-        public Builder setDistributions(@Nullable List<DistributionConfigurationDistributionGetArgs> distributions) {
+        public Builder distributions(@Nullable List<DistributionConfigurationDistributionGetArgs> distributions) {
             this.distributions = Input.ofNullable(distributions);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

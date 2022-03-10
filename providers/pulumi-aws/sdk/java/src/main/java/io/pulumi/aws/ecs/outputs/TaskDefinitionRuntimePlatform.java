@@ -67,12 +67,12 @@ public final class TaskDefinitionRuntimePlatform {
     	      this.operatingSystemFamily = defaults.operatingSystemFamily;
         }
 
-        public Builder setCpuArchitecture(@Nullable String cpuArchitecture) {
+        public Builder cpuArchitecture(@Nullable String cpuArchitecture) {
             this.cpuArchitecture = cpuArchitecture;
             return this;
         }
 
-        public Builder setOperatingSystemFamily(@Nullable String operatingSystemFamily) {
+        public Builder operatingSystemFamily(@Nullable String operatingSystemFamily) {
             this.operatingSystemFamily = operatingSystemFamily;
             return this;
         }

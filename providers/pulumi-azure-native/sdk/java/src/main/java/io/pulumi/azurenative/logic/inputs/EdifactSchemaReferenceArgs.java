@@ -154,72 +154,72 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
     	      this.senderApplicationQualifier = defaults.senderApplicationQualifier;
         }
 
-        public Builder setAssociationAssignedCode(@Nullable Input<String> associationAssignedCode) {
+        public Builder associationAssignedCode(@Nullable Input<String> associationAssignedCode) {
             this.associationAssignedCode = associationAssignedCode;
             return this;
         }
 
-        public Builder setAssociationAssignedCode(@Nullable String associationAssignedCode) {
+        public Builder associationAssignedCode(@Nullable String associationAssignedCode) {
             this.associationAssignedCode = Input.ofNullable(associationAssignedCode);
             return this;
         }
 
-        public Builder setMessageId(Input<String> messageId) {
+        public Builder messageId(Input<String> messageId) {
             this.messageId = Objects.requireNonNull(messageId);
             return this;
         }
 
-        public Builder setMessageId(String messageId) {
+        public Builder messageId(String messageId) {
             this.messageId = Input.of(Objects.requireNonNull(messageId));
             return this;
         }
 
-        public Builder setMessageRelease(Input<String> messageRelease) {
+        public Builder messageRelease(Input<String> messageRelease) {
             this.messageRelease = Objects.requireNonNull(messageRelease);
             return this;
         }
 
-        public Builder setMessageRelease(String messageRelease) {
+        public Builder messageRelease(String messageRelease) {
             this.messageRelease = Input.of(Objects.requireNonNull(messageRelease));
             return this;
         }
 
-        public Builder setMessageVersion(Input<String> messageVersion) {
+        public Builder messageVersion(Input<String> messageVersion) {
             this.messageVersion = Objects.requireNonNull(messageVersion);
             return this;
         }
 
-        public Builder setMessageVersion(String messageVersion) {
+        public Builder messageVersion(String messageVersion) {
             this.messageVersion = Input.of(Objects.requireNonNull(messageVersion));
             return this;
         }
 
-        public Builder setSchemaName(Input<String> schemaName) {
+        public Builder schemaName(Input<String> schemaName) {
             this.schemaName = Objects.requireNonNull(schemaName);
             return this;
         }
 
-        public Builder setSchemaName(String schemaName) {
+        public Builder schemaName(String schemaName) {
             this.schemaName = Input.of(Objects.requireNonNull(schemaName));
             return this;
         }
 
-        public Builder setSenderApplicationId(@Nullable Input<String> senderApplicationId) {
+        public Builder senderApplicationId(@Nullable Input<String> senderApplicationId) {
             this.senderApplicationId = senderApplicationId;
             return this;
         }
 
-        public Builder setSenderApplicationId(@Nullable String senderApplicationId) {
+        public Builder senderApplicationId(@Nullable String senderApplicationId) {
             this.senderApplicationId = Input.ofNullable(senderApplicationId);
             return this;
         }
 
-        public Builder setSenderApplicationQualifier(@Nullable Input<String> senderApplicationQualifier) {
+        public Builder senderApplicationQualifier(@Nullable Input<String> senderApplicationQualifier) {
             this.senderApplicationQualifier = senderApplicationQualifier;
             return this;
         }
 
-        public Builder setSenderApplicationQualifier(@Nullable String senderApplicationQualifier) {
+        public Builder senderApplicationQualifier(@Nullable String senderApplicationQualifier) {
             this.senderApplicationQualifier = Input.ofNullable(senderApplicationQualifier);
             return this;
         }

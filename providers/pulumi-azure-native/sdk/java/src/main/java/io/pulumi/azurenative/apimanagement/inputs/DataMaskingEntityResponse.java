@@ -70,12 +70,12 @@ public final class DataMaskingEntityResponse extends io.pulumi.resources.InvokeA
     	      this.value = defaults.value;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

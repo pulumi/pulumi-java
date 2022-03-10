@@ -77,17 +77,17 @@ public final class GetDatabaseResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DatabaseTag> tags) {
+        public Builder tags(@Nullable List<DatabaseTag> tags) {
             this.tags = tags;
             return this;
         }

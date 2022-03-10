@@ -81,17 +81,17 @@ public final class VirtualNetworkConfigurationResponse {
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setDataManagementPublicIpId(String dataManagementPublicIpId) {
+        public Builder dataManagementPublicIpId(String dataManagementPublicIpId) {
             this.dataManagementPublicIpId = Objects.requireNonNull(dataManagementPublicIpId);
             return this;
         }
 
-        public Builder setEnginePublicIpId(String enginePublicIpId) {
+        public Builder enginePublicIpId(String enginePublicIpId) {
             this.enginePublicIpId = Objects.requireNonNull(enginePublicIpId);
             return this;
         }
 
-        public Builder setSubnetId(String subnetId) {
+        public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }

@@ -139,62 +139,62 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
     	      this.isEnabled = defaults.isEnabled;
         }
 
-        public Builder setAcceptedTerms(@Nullable Input<Boolean> acceptedTerms) {
+        public Builder acceptedTerms(@Nullable Input<Boolean> acceptedTerms) {
             this.acceptedTerms = acceptedTerms;
             return this;
         }
 
-        public Builder setAcceptedTerms(@Nullable Boolean acceptedTerms) {
+        public Builder acceptedTerms(@Nullable Boolean acceptedTerms) {
             this.acceptedTerms = Input.ofNullable(acceptedTerms);
             return this;
         }
 
-        public Builder setCallingWebHook(@Nullable Input<String> callingWebHook) {
+        public Builder callingWebHook(@Nullable Input<String> callingWebHook) {
             this.callingWebHook = callingWebHook;
             return this;
         }
 
-        public Builder setCallingWebHook(@Nullable String callingWebHook) {
+        public Builder callingWebHook(@Nullable String callingWebHook) {
             this.callingWebHook = Input.ofNullable(callingWebHook);
             return this;
         }
 
-        public Builder setDeploymentEnvironment(@Nullable Input<String> deploymentEnvironment) {
+        public Builder deploymentEnvironment(@Nullable Input<String> deploymentEnvironment) {
             this.deploymentEnvironment = deploymentEnvironment;
             return this;
         }
 
-        public Builder setDeploymentEnvironment(@Nullable String deploymentEnvironment) {
+        public Builder deploymentEnvironment(@Nullable String deploymentEnvironment) {
             this.deploymentEnvironment = Input.ofNullable(deploymentEnvironment);
             return this;
         }
 
-        public Builder setEnableCalling(@Nullable Input<Boolean> enableCalling) {
+        public Builder enableCalling(@Nullable Input<Boolean> enableCalling) {
             this.enableCalling = enableCalling;
             return this;
         }
 
-        public Builder setEnableCalling(@Nullable Boolean enableCalling) {
+        public Builder enableCalling(@Nullable Boolean enableCalling) {
             this.enableCalling = Input.ofNullable(enableCalling);
             return this;
         }
 
-        public Builder setIncomingCallRoute(@Nullable Input<String> incomingCallRoute) {
+        public Builder incomingCallRoute(@Nullable Input<String> incomingCallRoute) {
             this.incomingCallRoute = incomingCallRoute;
             return this;
         }
 
-        public Builder setIncomingCallRoute(@Nullable String incomingCallRoute) {
+        public Builder incomingCallRoute(@Nullable String incomingCallRoute) {
             this.incomingCallRoute = Input.ofNullable(incomingCallRoute);
             return this;
         }
 
-        public Builder setIsEnabled(Input<Boolean> isEnabled) {
+        public Builder isEnabled(Input<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
-        public Builder setIsEnabled(Boolean isEnabled) {
+        public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Input.of(Objects.requireNonNull(isEnabled));
             return this;
         }

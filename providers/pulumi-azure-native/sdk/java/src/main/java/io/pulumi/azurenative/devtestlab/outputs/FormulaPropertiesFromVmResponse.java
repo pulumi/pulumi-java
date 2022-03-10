@@ -50,7 +50,7 @@ public final class FormulaPropertiesFromVmResponse {
     	      this.labVmId = defaults.labVmId;
         }
 
-        public Builder setLabVmId(@Nullable String labVmId) {
+        public Builder labVmId(@Nullable String labVmId) {
             this.labVmId = labVmId;
             return this;
         }

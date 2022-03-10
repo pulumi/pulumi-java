@@ -42,7 +42,7 @@ public final class FirewallPolicyStatefulEngineOptions {
     	      this.ruleOrder = defaults.ruleOrder;
         }
 
-        public Builder setRuleOrder(@Nullable FirewallPolicyRuleOrder ruleOrder) {
+        public Builder ruleOrder(@Nullable FirewallPolicyRuleOrder ruleOrder) {
             this.ruleOrder = ruleOrder;
             return this;
         }

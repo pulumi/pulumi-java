@@ -50,12 +50,12 @@ public final class FirewallPolicyStatelessRuleGroupReference {
     	      this.resourceArn = defaults.resourceArn;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setResourceArn(String resourceArn) {
+        public Builder resourceArn(String resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }

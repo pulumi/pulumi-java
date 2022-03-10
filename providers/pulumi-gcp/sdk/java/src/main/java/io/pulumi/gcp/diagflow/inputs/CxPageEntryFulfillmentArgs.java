@@ -106,42 +106,42 @@ public final class CxPageEntryFulfillmentArgs extends io.pulumi.resources.Resour
     	      this.webhook = defaults.webhook;
         }
 
-        public Builder setMessages(@Nullable Input<List<CxPageEntryFulfillmentMessageArgs>> messages) {
+        public Builder messages(@Nullable Input<List<CxPageEntryFulfillmentMessageArgs>> messages) {
             this.messages = messages;
             return this;
         }
 
-        public Builder setMessages(@Nullable List<CxPageEntryFulfillmentMessageArgs> messages) {
+        public Builder messages(@Nullable List<CxPageEntryFulfillmentMessageArgs> messages) {
             this.messages = Input.ofNullable(messages);
             return this;
         }
 
-        public Builder setReturnPartialResponses(@Nullable Input<Boolean> returnPartialResponses) {
+        public Builder returnPartialResponses(@Nullable Input<Boolean> returnPartialResponses) {
             this.returnPartialResponses = returnPartialResponses;
             return this;
         }
 
-        public Builder setReturnPartialResponses(@Nullable Boolean returnPartialResponses) {
+        public Builder returnPartialResponses(@Nullable Boolean returnPartialResponses) {
             this.returnPartialResponses = Input.ofNullable(returnPartialResponses);
             return this;
         }
 
-        public Builder setTag(@Nullable Input<String> tag) {
+        public Builder tag(@Nullable Input<String> tag) {
             this.tag = tag;
             return this;
         }
 
-        public Builder setTag(@Nullable String tag) {
+        public Builder tag(@Nullable String tag) {
             this.tag = Input.ofNullable(tag);
             return this;
         }
 
-        public Builder setWebhook(@Nullable Input<String> webhook) {
+        public Builder webhook(@Nullable Input<String> webhook) {
             this.webhook = webhook;
             return this;
         }
 
-        public Builder setWebhook(@Nullable String webhook) {
+        public Builder webhook(@Nullable String webhook) {
             this.webhook = Input.ofNullable(webhook);
             return this;
         }

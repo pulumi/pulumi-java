@@ -50,7 +50,7 @@ public final class CloudServiceExtensionProfileResponse {
     	      this.extensions = defaults.extensions;
         }
 
-        public Builder setExtensions(@Nullable List<ExtensionResponse> extensions) {
+        public Builder extensions(@Nullable List<ExtensionResponse> extensions) {
             this.extensions = extensions;
             return this;
         }

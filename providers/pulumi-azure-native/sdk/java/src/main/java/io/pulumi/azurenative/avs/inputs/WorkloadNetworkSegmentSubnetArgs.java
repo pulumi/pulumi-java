@@ -75,22 +75,22 @@ public final class WorkloadNetworkSegmentSubnetArgs extends io.pulumi.resources.
     	      this.gatewayAddress = defaults.gatewayAddress;
         }
 
-        public Builder setDhcpRanges(@Nullable Input<List<String>> dhcpRanges) {
+        public Builder dhcpRanges(@Nullable Input<List<String>> dhcpRanges) {
             this.dhcpRanges = dhcpRanges;
             return this;
         }
 
-        public Builder setDhcpRanges(@Nullable List<String> dhcpRanges) {
+        public Builder dhcpRanges(@Nullable List<String> dhcpRanges) {
             this.dhcpRanges = Input.ofNullable(dhcpRanges);
             return this;
         }
 
-        public Builder setGatewayAddress(@Nullable Input<String> gatewayAddress) {
+        public Builder gatewayAddress(@Nullable Input<String> gatewayAddress) {
             this.gatewayAddress = gatewayAddress;
             return this;
         }
 
-        public Builder setGatewayAddress(@Nullable String gatewayAddress) {
+        public Builder gatewayAddress(@Nullable String gatewayAddress) {
             this.gatewayAddress = Input.ofNullable(gatewayAddress);
             return this;
         }

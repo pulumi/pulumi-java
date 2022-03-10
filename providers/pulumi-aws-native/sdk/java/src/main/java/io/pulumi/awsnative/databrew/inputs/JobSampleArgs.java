@@ -67,22 +67,22 @@ public final class JobSampleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.size = defaults.size;
         }
 
-        public Builder setMode(@Nullable Input<JobSampleMode> mode) {
+        public Builder mode(@Nullable Input<JobSampleMode> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable JobSampleMode mode) {
+        public Builder mode(@Nullable JobSampleMode mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }
 
-        public Builder setSize(@Nullable Input<Integer> size) {
+        public Builder size(@Nullable Input<Integer> size) {
             this.size = size;
             return this;
         }
 
-        public Builder setSize(@Nullable Integer size) {
+        public Builder size(@Nullable Integer size) {
             this.size = Input.ofNullable(size);
             return this;
         }

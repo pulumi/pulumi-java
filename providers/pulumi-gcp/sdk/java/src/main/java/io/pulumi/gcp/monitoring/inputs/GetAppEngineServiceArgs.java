@@ -72,12 +72,12 @@ public final class GetAppEngineServiceArgs extends io.pulumi.resources.InvokeArg
     	      this.project = defaults.project;
         }
 
-        public Builder setModuleId(String moduleId) {
+        public Builder moduleId(String moduleId) {
             this.moduleId = Objects.requireNonNull(moduleId);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

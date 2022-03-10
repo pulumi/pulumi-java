@@ -168,8 +168,8 @@ public class Service extends io.pulumi.resources.CustomResource {
     private static ServiceArgs makeArgs(@Nullable ServiceArgs args) {
         var builder = args == null ? ServiceArgs.builder() : ServiceArgs.builder(args);
         return builder
-            .setApiVersion("v1")
-            .setKind("Service")
+            .apiVersion("v1")
+            .kind("Service")
             .build();
     }
 

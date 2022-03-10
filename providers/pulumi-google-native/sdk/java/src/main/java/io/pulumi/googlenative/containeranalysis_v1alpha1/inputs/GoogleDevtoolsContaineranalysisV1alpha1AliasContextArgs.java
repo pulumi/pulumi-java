@@ -75,22 +75,22 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs exten
     	      this.name = defaults.name;
         }
 
-        public Builder setKind(@Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1AliasContextKind> kind) {
+        public Builder kind(@Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1AliasContextKind> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable GoogleDevtoolsContaineranalysisV1alpha1AliasContextKind kind) {
+        public Builder kind(@Nullable GoogleDevtoolsContaineranalysisV1alpha1AliasContextKind kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

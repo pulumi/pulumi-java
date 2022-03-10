@@ -117,27 +117,27 @@ public final class GetFilterResult {
     	      this.name = defaults.name;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setFilterAction(@Nullable FilterAction filterAction) {
+        public Builder filterAction(@Nullable FilterAction filterAction) {
             this.filterAction = filterAction;
             return this;
         }
 
-        public Builder setFilterCriteria(@Nullable FilterCriteria filterCriteria) {
+        public Builder filterCriteria(@Nullable FilterCriteria filterCriteria) {
             this.filterCriteria = filterCriteria;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

@@ -52,12 +52,12 @@ public final class AssessmentReportsDestination {
     	      this.destinationType = defaults.destinationType;
         }
 
-        public Builder setDestination(@Nullable String destination) {
+        public Builder destination(@Nullable String destination) {
             this.destination = destination;
             return this;
         }
 
-        public Builder setDestinationType(@Nullable AssessmentReportDestinationType destinationType) {
+        public Builder destinationType(@Nullable AssessmentReportDestinationType destinationType) {
             this.destinationType = destinationType;
             return this;
         }

@@ -70,12 +70,12 @@ public final class ModelDefinitionResponse extends io.pulumi.resources.InvokeArg
     	      this.trainingRuns = defaults.trainingRuns;
         }
 
-        public Builder setModelOptions(ModelDefinitionModelOptionsResponse modelOptions) {
+        public Builder modelOptions(ModelDefinitionModelOptionsResponse modelOptions) {
             this.modelOptions = Objects.requireNonNull(modelOptions);
             return this;
         }
 
-        public Builder setTrainingRuns(List<BqmlTrainingRunResponse> trainingRuns) {
+        public Builder trainingRuns(List<BqmlTrainingRunResponse> trainingRuns) {
             this.trainingRuns = Objects.requireNonNull(trainingRuns);
             return this;
         }

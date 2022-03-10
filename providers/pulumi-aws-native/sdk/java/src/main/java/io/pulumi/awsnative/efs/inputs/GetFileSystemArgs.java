@@ -47,7 +47,7 @@ public final class GetFileSystemArgs extends io.pulumi.resources.InvokeArgs {
     	      this.fileSystemId = defaults.fileSystemId;
         }
 
-        public Builder setFileSystemId(String fileSystemId) {
+        public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = Objects.requireNonNull(fileSystemId);
             return this;
         }

@@ -100,22 +100,22 @@ public final class TransferJobTransferSpecObjectConditions {
     	      this.minTimeElapsedSinceLastModification = defaults.minTimeElapsedSinceLastModification;
         }
 
-        public Builder setExcludePrefixes(@Nullable List<String> excludePrefixes) {
+        public Builder excludePrefixes(@Nullable List<String> excludePrefixes) {
             this.excludePrefixes = excludePrefixes;
             return this;
         }
 
-        public Builder setIncludePrefixes(@Nullable List<String> includePrefixes) {
+        public Builder includePrefixes(@Nullable List<String> includePrefixes) {
             this.includePrefixes = includePrefixes;
             return this;
         }
 
-        public Builder setMaxTimeElapsedSinceLastModification(@Nullable String maxTimeElapsedSinceLastModification) {
+        public Builder maxTimeElapsedSinceLastModification(@Nullable String maxTimeElapsedSinceLastModification) {
             this.maxTimeElapsedSinceLastModification = maxTimeElapsedSinceLastModification;
             return this;
         }
 
-        public Builder setMinTimeElapsedSinceLastModification(@Nullable String minTimeElapsedSinceLastModification) {
+        public Builder minTimeElapsedSinceLastModification(@Nullable String minTimeElapsedSinceLastModification) {
             this.minTimeElapsedSinceLastModification = minTimeElapsedSinceLastModification;
             return this;
         }

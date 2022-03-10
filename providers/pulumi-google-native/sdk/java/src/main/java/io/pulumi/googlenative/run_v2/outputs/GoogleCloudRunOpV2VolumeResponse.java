@@ -83,17 +83,17 @@ public final class GoogleCloudRunOpV2VolumeResponse {
     	      this.secret = defaults.secret;
         }
 
-        public Builder setCloudSqlInstance(GoogleCloudRunOpV2CloudSqlInstanceResponse cloudSqlInstance) {
+        public Builder cloudSqlInstance(GoogleCloudRunOpV2CloudSqlInstanceResponse cloudSqlInstance) {
             this.cloudSqlInstance = Objects.requireNonNull(cloudSqlInstance);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSecret(GoogleCloudRunOpV2SecretVolumeSourceResponse secret) {
+        public Builder secret(GoogleCloudRunOpV2SecretVolumeSourceResponse secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }

@@ -150,37 +150,37 @@ public final class DomainSamlOptionsSamlOptions {
     	      this.subjectKey = defaults.subjectKey;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setIdp(@Nullable DomainSamlOptionsSamlOptionsIdp idp) {
+        public Builder idp(@Nullable DomainSamlOptionsSamlOptionsIdp idp) {
             this.idp = idp;
             return this;
         }
 
-        public Builder setMasterBackendRole(@Nullable String masterBackendRole) {
+        public Builder masterBackendRole(@Nullable String masterBackendRole) {
             this.masterBackendRole = masterBackendRole;
             return this;
         }
 
-        public Builder setMasterUserName(@Nullable String masterUserName) {
+        public Builder masterUserName(@Nullable String masterUserName) {
             this.masterUserName = masterUserName;
             return this;
         }
 
-        public Builder setRolesKey(@Nullable String rolesKey) {
+        public Builder rolesKey(@Nullable String rolesKey) {
             this.rolesKey = rolesKey;
             return this;
         }
 
-        public Builder setSessionTimeoutMinutes(@Nullable Integer sessionTimeoutMinutes) {
+        public Builder sessionTimeoutMinutes(@Nullable Integer sessionTimeoutMinutes) {
             this.sessionTimeoutMinutes = sessionTimeoutMinutes;
             return this;
         }
 
-        public Builder setSubjectKey(@Nullable String subjectKey) {
+        public Builder subjectKey(@Nullable String subjectKey) {
             this.subjectKey = subjectKey;
             return this;
         }

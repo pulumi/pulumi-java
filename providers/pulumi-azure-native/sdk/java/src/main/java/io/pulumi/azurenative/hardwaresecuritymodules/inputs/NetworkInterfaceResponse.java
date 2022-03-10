@@ -74,12 +74,12 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
     	      this.privateIpAddress = defaults.privateIpAddress;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setPrivateIpAddress(@Nullable String privateIpAddress) {
+        public Builder privateIpAddress(@Nullable String privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }

@@ -53,12 +53,12 @@ public final class ExperimentOnlineAbConfigObject {
     	      this.treatmentWeights = defaults.treatmentWeights;
         }
 
-        public Builder setControlTreatmentName(@Nullable String controlTreatmentName) {
+        public Builder controlTreatmentName(@Nullable String controlTreatmentName) {
             this.controlTreatmentName = controlTreatmentName;
             return this;
         }
 
-        public Builder setTreatmentWeights(@Nullable List<ExperimentTreatmentToWeight> treatmentWeights) {
+        public Builder treatmentWeights(@Nullable List<ExperimentTreatmentToWeight> treatmentWeights) {
             this.treatmentWeights = treatmentWeights;
             return this;
         }

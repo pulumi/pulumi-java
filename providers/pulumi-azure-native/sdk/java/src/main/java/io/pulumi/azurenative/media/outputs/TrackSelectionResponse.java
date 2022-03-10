@@ -50,7 +50,7 @@ public final class TrackSelectionResponse {
     	      this.trackSelections = defaults.trackSelections;
         }
 
-        public Builder setTrackSelections(@Nullable List<TrackPropertyConditionResponse> trackSelections) {
+        public Builder trackSelections(@Nullable List<TrackPropertyConditionResponse> trackSelections) {
             this.trackSelections = trackSelections;
             return this;
         }

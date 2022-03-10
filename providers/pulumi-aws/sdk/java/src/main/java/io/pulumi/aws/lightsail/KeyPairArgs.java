@@ -101,42 +101,42 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
     	      this.publicKey = defaults.publicKey;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Input<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable String namePrefix) {
+        public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Input.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder setPgpKey(@Nullable Input<String> pgpKey) {
+        public Builder pgpKey(@Nullable Input<String> pgpKey) {
             this.pgpKey = pgpKey;
             return this;
         }
 
-        public Builder setPgpKey(@Nullable String pgpKey) {
+        public Builder pgpKey(@Nullable String pgpKey) {
             this.pgpKey = Input.ofNullable(pgpKey);
             return this;
         }
 
-        public Builder setPublicKey(@Nullable Input<String> publicKey) {
+        public Builder publicKey(@Nullable Input<String> publicKey) {
             this.publicKey = publicKey;
             return this;
         }
 
-        public Builder setPublicKey(@Nullable String publicKey) {
+        public Builder publicKey(@Nullable String publicKey) {
             this.publicKey = Input.ofNullable(publicKey);
             return this;
         }

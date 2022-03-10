@@ -56,12 +56,12 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rawDer = defaults.rawDer;
         }
 
-        public Builder setRawDer(Input<String> rawDer) {
+        public Builder rawDer(Input<String> rawDer) {
             this.rawDer = Objects.requireNonNull(rawDer);
             return this;
         }
 
-        public Builder setRawDer(String rawDer) {
+        public Builder rawDer(String rawDer) {
             this.rawDer = Input.of(Objects.requireNonNull(rawDer));
             return this;
         }

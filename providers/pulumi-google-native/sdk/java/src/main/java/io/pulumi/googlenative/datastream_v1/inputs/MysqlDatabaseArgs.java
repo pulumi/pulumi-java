@@ -76,22 +76,22 @@ public final class MysqlDatabaseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.mysqlTables = defaults.mysqlTables;
         }
 
-        public Builder setDatabase(@Nullable Input<String> database) {
+        public Builder database(@Nullable Input<String> database) {
             this.database = database;
             return this;
         }
 
-        public Builder setDatabase(@Nullable String database) {
+        public Builder database(@Nullable String database) {
             this.database = Input.ofNullable(database);
             return this;
         }
 
-        public Builder setMysqlTables(@Nullable Input<List<MysqlTableArgs>> mysqlTables) {
+        public Builder mysqlTables(@Nullable Input<List<MysqlTableArgs>> mysqlTables) {
             this.mysqlTables = mysqlTables;
             return this;
         }
 
-        public Builder setMysqlTables(@Nullable List<MysqlTableArgs> mysqlTables) {
+        public Builder mysqlTables(@Nullable List<MysqlTableArgs> mysqlTables) {
             this.mysqlTables = Input.ofNullable(mysqlTables);
             return this;
         }

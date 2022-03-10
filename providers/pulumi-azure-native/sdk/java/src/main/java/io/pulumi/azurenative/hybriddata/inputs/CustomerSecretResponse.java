@@ -88,17 +88,17 @@ public final class CustomerSecretResponse extends io.pulumi.resources.InvokeArgs
     	      this.keyValue = defaults.keyValue;
         }
 
-        public Builder setAlgorithm(String algorithm) {
+        public Builder algorithm(String algorithm) {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
 
-        public Builder setKeyIdentifier(String keyIdentifier) {
+        public Builder keyIdentifier(String keyIdentifier) {
             this.keyIdentifier = Objects.requireNonNull(keyIdentifier);
             return this;
         }
 
-        public Builder setKeyValue(String keyValue) {
+        public Builder keyValue(String keyValue) {
             this.keyValue = Objects.requireNonNull(keyValue);
             return this;
         }

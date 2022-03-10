@@ -155,72 +155,72 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setClientTokenIds(@Nullable Input<List<String>> clientTokenIds) {
+        public Builder clientTokenIds(@Nullable Input<List<String>> clientTokenIds) {
             this.clientTokenIds = clientTokenIds;
             return this;
         }
 
-        public Builder setClientTokenIds(@Nullable List<String> clientTokenIds) {
+        public Builder clientTokenIds(@Nullable List<String> clientTokenIds) {
             this.clientTokenIds = Input.ofNullable(clientTokenIds);
             return this;
         }
 
-        public Builder setConnectedRegistryName(@Nullable Input<String> connectedRegistryName) {
+        public Builder connectedRegistryName(@Nullable Input<String> connectedRegistryName) {
             this.connectedRegistryName = connectedRegistryName;
             return this;
         }
 
-        public Builder setConnectedRegistryName(@Nullable String connectedRegistryName) {
+        public Builder connectedRegistryName(@Nullable String connectedRegistryName) {
             this.connectedRegistryName = Input.ofNullable(connectedRegistryName);
             return this;
         }
 
-        public Builder setLogging(@Nullable Input<LoggingPropertiesArgs> logging) {
+        public Builder logging(@Nullable Input<LoggingPropertiesArgs> logging) {
             this.logging = logging;
             return this;
         }
 
-        public Builder setLogging(@Nullable LoggingPropertiesArgs logging) {
+        public Builder logging(@Nullable LoggingPropertiesArgs logging) {
             this.logging = Input.ofNullable(logging);
             return this;
         }
 
-        public Builder setMode(Input<Either<String,ConnectedRegistryMode>> mode) {
+        public Builder mode(Input<Either<String,ConnectedRegistryMode>> mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
-        public Builder setMode(Either<String,ConnectedRegistryMode> mode) {
+        public Builder mode(Either<String,ConnectedRegistryMode> mode) {
             this.mode = Input.of(Objects.requireNonNull(mode));
             return this;
         }
 
-        public Builder setParent(Input<ParentPropertiesArgs> parent) {
+        public Builder parent(Input<ParentPropertiesArgs> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
-        public Builder setParent(ParentPropertiesArgs parent) {
+        public Builder parent(ParentPropertiesArgs parent) {
             this.parent = Input.of(Objects.requireNonNull(parent));
             return this;
         }
 
-        public Builder setRegistryName(Input<String> registryName) {
+        public Builder registryName(Input<String> registryName) {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
 
-        public Builder setRegistryName(String registryName) {
+        public Builder registryName(String registryName) {
             this.registryName = Input.of(Objects.requireNonNull(registryName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

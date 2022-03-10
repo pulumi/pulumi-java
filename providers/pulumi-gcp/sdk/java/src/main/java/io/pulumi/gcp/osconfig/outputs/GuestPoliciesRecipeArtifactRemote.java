@@ -71,12 +71,12 @@ public final class GuestPoliciesRecipeArtifactRemote {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setCheckSum(@Nullable String checkSum) {
+        public Builder checkSum(@Nullable String checkSum) {
             this.checkSum = checkSum;
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
         }

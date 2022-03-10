@@ -50,12 +50,12 @@ public final class DeliveryStreamHiveJsonSerDeArgs extends io.pulumi.resources.R
     	      this.timestampFormats = defaults.timestampFormats;
         }
 
-        public Builder setTimestampFormats(@Nullable Input<List<String>> timestampFormats) {
+        public Builder timestampFormats(@Nullable Input<List<String>> timestampFormats) {
             this.timestampFormats = timestampFormats;
             return this;
         }
 
-        public Builder setTimestampFormats(@Nullable List<String> timestampFormats) {
+        public Builder timestampFormats(@Nullable List<String> timestampFormats) {
             this.timestampFormats = Input.ofNullable(timestampFormats);
             return this;
         }

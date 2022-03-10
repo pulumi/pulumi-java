@@ -141,32 +141,32 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentResponse extends io.
     	      this.webhook = defaults.webhook;
         }
 
-        public Builder setConditionalCases(List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResponse> conditionalCases) {
+        public Builder conditionalCases(List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResponse> conditionalCases) {
             this.conditionalCases = Objects.requireNonNull(conditionalCases);
             return this;
         }
 
-        public Builder setMessages(List<GoogleCloudDialogflowCxV3beta1ResponseMessageResponse> messages) {
+        public Builder messages(List<GoogleCloudDialogflowCxV3beta1ResponseMessageResponse> messages) {
             this.messages = Objects.requireNonNull(messages);
             return this;
         }
 
-        public Builder setReturnPartialResponses(Boolean returnPartialResponses) {
+        public Builder returnPartialResponses(Boolean returnPartialResponses) {
             this.returnPartialResponses = Objects.requireNonNull(returnPartialResponses);
             return this;
         }
 
-        public Builder setSetParameterActions(List<GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionResponse> setParameterActions) {
+        public Builder setParameterActions(List<GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionResponse> setParameterActions) {
             this.setParameterActions = Objects.requireNonNull(setParameterActions);
             return this;
         }
 
-        public Builder setTag(String tag) {
+        public Builder tag(String tag) {
             this.tag = Objects.requireNonNull(tag);
             return this;
         }
 
-        public Builder setWebhook(String webhook) {
+        public Builder webhook(String webhook) {
             this.webhook = Objects.requireNonNull(webhook);
             return this;
         }

@@ -176,82 +176,82 @@ public final class ImageDataDiskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.storageAccountType = defaults.storageAccountType;
         }
 
-        public Builder setBlobUri(@Nullable Input<String> blobUri) {
+        public Builder blobUri(@Nullable Input<String> blobUri) {
             this.blobUri = blobUri;
             return this;
         }
 
-        public Builder setBlobUri(@Nullable String blobUri) {
+        public Builder blobUri(@Nullable String blobUri) {
             this.blobUri = Input.ofNullable(blobUri);
             return this;
         }
 
-        public Builder setCaching(@Nullable Input<CachingTypes> caching) {
+        public Builder caching(@Nullable Input<CachingTypes> caching) {
             this.caching = caching;
             return this;
         }
 
-        public Builder setCaching(@Nullable CachingTypes caching) {
+        public Builder caching(@Nullable CachingTypes caching) {
             this.caching = Input.ofNullable(caching);
             return this;
         }
 
-        public Builder setDiskEncryptionSet(@Nullable Input<DiskEncryptionSetParametersArgs> diskEncryptionSet) {
+        public Builder diskEncryptionSet(@Nullable Input<DiskEncryptionSetParametersArgs> diskEncryptionSet) {
             this.diskEncryptionSet = diskEncryptionSet;
             return this;
         }
 
-        public Builder setDiskEncryptionSet(@Nullable DiskEncryptionSetParametersArgs diskEncryptionSet) {
+        public Builder diskEncryptionSet(@Nullable DiskEncryptionSetParametersArgs diskEncryptionSet) {
             this.diskEncryptionSet = Input.ofNullable(diskEncryptionSet);
             return this;
         }
 
-        public Builder setDiskSizeGB(@Nullable Input<Integer> diskSizeGB) {
+        public Builder diskSizeGB(@Nullable Input<Integer> diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
 
-        public Builder setDiskSizeGB(@Nullable Integer diskSizeGB) {
+        public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = Input.ofNullable(diskSizeGB);
             return this;
         }
 
-        public Builder setLun(Input<Integer> lun) {
+        public Builder lun(Input<Integer> lun) {
             this.lun = Objects.requireNonNull(lun);
             return this;
         }
 
-        public Builder setLun(Integer lun) {
+        public Builder lun(Integer lun) {
             this.lun = Input.of(Objects.requireNonNull(lun));
             return this;
         }
 
-        public Builder setManagedDisk(@Nullable Input<SubResourceArgs> managedDisk) {
+        public Builder managedDisk(@Nullable Input<SubResourceArgs> managedDisk) {
             this.managedDisk = managedDisk;
             return this;
         }
 
-        public Builder setManagedDisk(@Nullable SubResourceArgs managedDisk) {
+        public Builder managedDisk(@Nullable SubResourceArgs managedDisk) {
             this.managedDisk = Input.ofNullable(managedDisk);
             return this;
         }
 
-        public Builder setSnapshot(@Nullable Input<SubResourceArgs> snapshot) {
+        public Builder snapshot(@Nullable Input<SubResourceArgs> snapshot) {
             this.snapshot = snapshot;
             return this;
         }
 
-        public Builder setSnapshot(@Nullable SubResourceArgs snapshot) {
+        public Builder snapshot(@Nullable SubResourceArgs snapshot) {
             this.snapshot = Input.ofNullable(snapshot);
             return this;
         }
 
-        public Builder setStorageAccountType(@Nullable Input<Either<String,StorageAccountTypes>> storageAccountType) {
+        public Builder storageAccountType(@Nullable Input<Either<String,StorageAccountTypes>> storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
         }
 
-        public Builder setStorageAccountType(@Nullable Either<String,StorageAccountTypes> storageAccountType) {
+        public Builder storageAccountType(@Nullable Either<String,StorageAccountTypes> storageAccountType) {
             this.storageAccountType = Input.ofNullable(storageAccountType);
             return this;
         }

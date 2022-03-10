@@ -123,52 +123,52 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
     	      this.subnetworkUri = defaults.subnetworkUri;
         }
 
-        public Builder setKmsKey(@Nullable Input<String> kmsKey) {
+        public Builder kmsKey(@Nullable Input<String> kmsKey) {
             this.kmsKey = kmsKey;
             return this;
         }
 
-        public Builder setKmsKey(@Nullable String kmsKey) {
+        public Builder kmsKey(@Nullable String kmsKey) {
             this.kmsKey = Input.ofNullable(kmsKey);
             return this;
         }
 
-        public Builder setNetworkTags(@Nullable Input<List<String>> networkTags) {
+        public Builder networkTags(@Nullable Input<List<String>> networkTags) {
             this.networkTags = networkTags;
             return this;
         }
 
-        public Builder setNetworkTags(@Nullable List<String> networkTags) {
+        public Builder networkTags(@Nullable List<String> networkTags) {
             this.networkTags = Input.ofNullable(networkTags);
             return this;
         }
 
-        public Builder setNetworkUri(@Nullable Input<String> networkUri) {
+        public Builder networkUri(@Nullable Input<String> networkUri) {
             this.networkUri = networkUri;
             return this;
         }
 
-        public Builder setNetworkUri(@Nullable String networkUri) {
+        public Builder networkUri(@Nullable String networkUri) {
             this.networkUri = Input.ofNullable(networkUri);
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable String serviceAccount) {
+        public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Input.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder setSubnetworkUri(@Nullable Input<String> subnetworkUri) {
+        public Builder subnetworkUri(@Nullable Input<String> subnetworkUri) {
             this.subnetworkUri = subnetworkUri;
             return this;
         }
 
-        public Builder setSubnetworkUri(@Nullable String subnetworkUri) {
+        public Builder subnetworkUri(@Nullable String subnetworkUri) {
             this.subnetworkUri = Input.ofNullable(subnetworkUri);
             return this;
         }

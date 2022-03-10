@@ -72,22 +72,22 @@ public final class StreamKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setChannelArn(Input<String> channelArn) {
+        public Builder channelArn(Input<String> channelArn) {
             this.channelArn = Objects.requireNonNull(channelArn);
             return this;
         }
 
-        public Builder setChannelArn(String channelArn) {
+        public Builder channelArn(String channelArn) {
             this.channelArn = Input.of(Objects.requireNonNull(channelArn));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<StreamKeyTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<StreamKeyTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<StreamKeyTagArgs> tags) {
+        public Builder tags(@Nullable List<StreamKeyTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

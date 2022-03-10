@@ -71,12 +71,12 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
     	      this.latestValidTill = defaults.latestValidTill;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLatestValidTill(@Nullable Boolean latestValidTill) {
+        public Builder latestValidTill(@Nullable Boolean latestValidTill) {
             this.latestValidTill = latestValidTill;
             return this;
         }

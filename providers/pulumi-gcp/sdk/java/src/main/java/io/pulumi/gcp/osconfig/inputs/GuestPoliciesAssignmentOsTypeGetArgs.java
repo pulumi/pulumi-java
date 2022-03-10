@@ -86,32 +86,32 @@ public final class GuestPoliciesAssignmentOsTypeGetArgs extends io.pulumi.resour
     	      this.osVersion = defaults.osVersion;
         }
 
-        public Builder setOsArchitecture(@Nullable Input<String> osArchitecture) {
+        public Builder osArchitecture(@Nullable Input<String> osArchitecture) {
             this.osArchitecture = osArchitecture;
             return this;
         }
 
-        public Builder setOsArchitecture(@Nullable String osArchitecture) {
+        public Builder osArchitecture(@Nullable String osArchitecture) {
             this.osArchitecture = Input.ofNullable(osArchitecture);
             return this;
         }
 
-        public Builder setOsShortName(@Nullable Input<String> osShortName) {
+        public Builder osShortName(@Nullable Input<String> osShortName) {
             this.osShortName = osShortName;
             return this;
         }
 
-        public Builder setOsShortName(@Nullable String osShortName) {
+        public Builder osShortName(@Nullable String osShortName) {
             this.osShortName = Input.ofNullable(osShortName);
             return this;
         }
 
-        public Builder setOsVersion(@Nullable Input<String> osVersion) {
+        public Builder osVersion(@Nullable Input<String> osVersion) {
             this.osVersion = osVersion;
             return this;
         }
 
-        public Builder setOsVersion(@Nullable String osVersion) {
+        public Builder osVersion(@Nullable String osVersion) {
             this.osVersion = Input.ofNullable(osVersion);
             return this;
         }

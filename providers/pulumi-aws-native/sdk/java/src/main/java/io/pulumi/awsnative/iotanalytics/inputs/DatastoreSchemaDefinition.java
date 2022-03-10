@@ -50,7 +50,7 @@ public final class DatastoreSchemaDefinition extends io.pulumi.resources.InvokeA
     	      this.columns = defaults.columns;
         }
 
-        public Builder setColumns(@Nullable List<DatastoreColumn> columns) {
+        public Builder columns(@Nullable List<DatastoreColumn> columns) {
             this.columns = columns;
             return this;
         }

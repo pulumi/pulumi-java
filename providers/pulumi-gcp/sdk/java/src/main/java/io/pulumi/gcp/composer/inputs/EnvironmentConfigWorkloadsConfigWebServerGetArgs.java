@@ -74,32 +74,32 @@ public final class EnvironmentConfigWorkloadsConfigWebServerGetArgs extends io.p
     	      this.storageGb = defaults.storageGb;
         }
 
-        public Builder setCpu(@Nullable Input<Double> cpu) {
+        public Builder cpu(@Nullable Input<Double> cpu) {
             this.cpu = cpu;
             return this;
         }
 
-        public Builder setCpu(@Nullable Double cpu) {
+        public Builder cpu(@Nullable Double cpu) {
             this.cpu = Input.ofNullable(cpu);
             return this;
         }
 
-        public Builder setMemoryGb(@Nullable Input<Double> memoryGb) {
+        public Builder memoryGb(@Nullable Input<Double> memoryGb) {
             this.memoryGb = memoryGb;
             return this;
         }
 
-        public Builder setMemoryGb(@Nullable Double memoryGb) {
+        public Builder memoryGb(@Nullable Double memoryGb) {
             this.memoryGb = Input.ofNullable(memoryGb);
             return this;
         }
 
-        public Builder setStorageGb(@Nullable Input<Double> storageGb) {
+        public Builder storageGb(@Nullable Input<Double> storageGb) {
             this.storageGb = storageGb;
             return this;
         }
 
-        public Builder setStorageGb(@Nullable Double storageGb) {
+        public Builder storageGb(@Nullable Double storageGb) {
             this.storageGb = Input.ofNullable(storageGb);
             return this;
         }

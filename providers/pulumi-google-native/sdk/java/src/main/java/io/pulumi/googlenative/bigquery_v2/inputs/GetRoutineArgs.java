@@ -86,22 +86,22 @@ public final class GetRoutineArgs extends io.pulumi.resources.InvokeArgs {
     	      this.routineId = defaults.routineId;
         }
 
-        public Builder setDatasetId(String datasetId) {
+        public Builder datasetId(String datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setReadMask(@Nullable String readMask) {
+        public Builder readMask(@Nullable String readMask) {
             this.readMask = readMask;
             return this;
         }
 
-        public Builder setRoutineId(String routineId) {
+        public Builder routineId(String routineId) {
             this.routineId = Objects.requireNonNull(routineId);
             return this;
         }

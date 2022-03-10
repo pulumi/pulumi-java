@@ -92,32 +92,32 @@ public final class PeeringConnectionOptionsState extends io.pulumi.resources.Res
     	      this.vpcPeeringConnectionId = defaults.vpcPeeringConnectionId;
         }
 
-        public Builder setAccepter(@Nullable Input<PeeringConnectionOptionsAccepterGetArgs> accepter) {
+        public Builder accepter(@Nullable Input<PeeringConnectionOptionsAccepterGetArgs> accepter) {
             this.accepter = accepter;
             return this;
         }
 
-        public Builder setAccepter(@Nullable PeeringConnectionOptionsAccepterGetArgs accepter) {
+        public Builder accepter(@Nullable PeeringConnectionOptionsAccepterGetArgs accepter) {
             this.accepter = Input.ofNullable(accepter);
             return this;
         }
 
-        public Builder setRequester(@Nullable Input<PeeringConnectionOptionsRequesterGetArgs> requester) {
+        public Builder requester(@Nullable Input<PeeringConnectionOptionsRequesterGetArgs> requester) {
             this.requester = requester;
             return this;
         }
 
-        public Builder setRequester(@Nullable PeeringConnectionOptionsRequesterGetArgs requester) {
+        public Builder requester(@Nullable PeeringConnectionOptionsRequesterGetArgs requester) {
             this.requester = Input.ofNullable(requester);
             return this;
         }
 
-        public Builder setVpcPeeringConnectionId(@Nullable Input<String> vpcPeeringConnectionId) {
+        public Builder vpcPeeringConnectionId(@Nullable Input<String> vpcPeeringConnectionId) {
             this.vpcPeeringConnectionId = vpcPeeringConnectionId;
             return this;
         }
 
-        public Builder setVpcPeeringConnectionId(@Nullable String vpcPeeringConnectionId) {
+        public Builder vpcPeeringConnectionId(@Nullable String vpcPeeringConnectionId) {
             this.vpcPeeringConnectionId = Input.ofNullable(vpcPeeringConnectionId);
             return this;
         }

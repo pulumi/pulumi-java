@@ -136,62 +136,62 @@ public final class IpSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAddresses(@Nullable Input<List<String>> addresses) {
+        public Builder addresses(@Nullable Input<List<String>> addresses) {
             this.addresses = addresses;
             return this;
         }
 
-        public Builder setAddresses(@Nullable List<String> addresses) {
+        public Builder addresses(@Nullable List<String> addresses) {
             this.addresses = Input.ofNullable(addresses);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setIpAddressVersion(Input<String> ipAddressVersion) {
+        public Builder ipAddressVersion(Input<String> ipAddressVersion) {
             this.ipAddressVersion = Objects.requireNonNull(ipAddressVersion);
             return this;
         }
 
-        public Builder setIpAddressVersion(String ipAddressVersion) {
+        public Builder ipAddressVersion(String ipAddressVersion) {
             this.ipAddressVersion = Input.of(Objects.requireNonNull(ipAddressVersion));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setScope(Input<String> scope) {
+        public Builder scope(Input<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Input.of(Objects.requireNonNull(scope));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

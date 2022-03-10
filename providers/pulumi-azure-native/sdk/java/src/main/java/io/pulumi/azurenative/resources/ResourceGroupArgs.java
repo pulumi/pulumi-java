@@ -103,42 +103,42 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setManagedBy(@Nullable Input<String> managedBy) {
+        public Builder managedBy(@Nullable Input<String> managedBy) {
             this.managedBy = managedBy;
             return this;
         }
 
-        public Builder setManagedBy(@Nullable String managedBy) {
+        public Builder managedBy(@Nullable String managedBy) {
             this.managedBy = Input.ofNullable(managedBy);
             return this;
         }
 
-        public Builder setResourceGroupName(@Nullable Input<String> resourceGroupName) {
+        public Builder resourceGroupName(@Nullable Input<String> resourceGroupName) {
             this.resourceGroupName = resourceGroupName;
             return this;
         }
 
-        public Builder setResourceGroupName(@Nullable String resourceGroupName) {
+        public Builder resourceGroupName(@Nullable String resourceGroupName) {
             this.resourceGroupName = Input.ofNullable(resourceGroupName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

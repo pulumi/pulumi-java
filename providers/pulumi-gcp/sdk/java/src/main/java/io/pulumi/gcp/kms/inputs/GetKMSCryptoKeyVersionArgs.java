@@ -72,12 +72,12 @@ public final class GetKMSCryptoKeyVersionArgs extends io.pulumi.resources.Invoke
     	      this.version = defaults.version;
         }
 
-        public Builder setCryptoKey(String cryptoKey) {
+        public Builder cryptoKey(String cryptoKey) {
             this.cryptoKey = Objects.requireNonNull(cryptoKey);
             return this;
         }
 
-        public Builder setVersion(@Nullable Integer version) {
+        public Builder version(@Nullable Integer version) {
             this.version = version;
             return this;
         }

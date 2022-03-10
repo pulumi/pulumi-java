@@ -91,17 +91,17 @@ public final class InboundNatRuleResponse extends io.pulumi.resources.InvokeArgs
     	      this.transportProtocol = defaults.transportProtocol;
         }
 
-        public Builder setBackendPort(@Nullable Integer backendPort) {
+        public Builder backendPort(@Nullable Integer backendPort) {
             this.backendPort = backendPort;
             return this;
         }
 
-        public Builder setFrontendPort(@Nullable Integer frontendPort) {
+        public Builder frontendPort(@Nullable Integer frontendPort) {
             this.frontendPort = frontendPort;
             return this;
         }
 
-        public Builder setTransportProtocol(@Nullable String transportProtocol) {
+        public Builder transportProtocol(@Nullable String transportProtocol) {
             this.transportProtocol = transportProtocol;
             return this;
         }

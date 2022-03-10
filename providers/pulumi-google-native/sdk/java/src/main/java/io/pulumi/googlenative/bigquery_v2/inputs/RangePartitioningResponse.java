@@ -69,12 +69,12 @@ public final class RangePartitioningResponse extends io.pulumi.resources.InvokeA
     	      this.range = defaults.range;
         }
 
-        public Builder setField(String field) {
+        public Builder field(String field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
 
-        public Builder setRange(RangePartitioningRangeResponse range) {
+        public Builder range(RangePartitioningRangeResponse range) {
             this.range = Objects.requireNonNull(range);
             return this;
         }

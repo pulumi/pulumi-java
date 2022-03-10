@@ -48,7 +48,7 @@ public final class DSSEAttestationNoteResponse {
     	      this.hint = defaults.hint;
         }
 
-        public Builder setHint(DSSEHintResponse hint) {
+        public Builder hint(DSSEHintResponse hint) {
             this.hint = Objects.requireNonNull(hint);
             return this;
         }

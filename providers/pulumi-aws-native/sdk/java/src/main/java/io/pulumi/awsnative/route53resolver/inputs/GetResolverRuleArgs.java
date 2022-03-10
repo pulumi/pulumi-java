@@ -51,7 +51,7 @@ public final class GetResolverRuleArgs extends io.pulumi.resources.InvokeArgs {
     	      this.resolverRuleId = defaults.resolverRuleId;
         }
 
-        public Builder setResolverRuleId(String resolverRuleId) {
+        public Builder resolverRuleId(String resolverRuleId) {
             this.resolverRuleId = Objects.requireNonNull(resolverRuleId);
             return this;
         }

@@ -84,17 +84,17 @@ public final class GetVendorSkuPreviewArgs extends io.pulumi.resources.InvokeArg
     	      this.vendorName = defaults.vendorName;
         }
 
-        public Builder setPreviewSubscription(String previewSubscription) {
+        public Builder previewSubscription(String previewSubscription) {
             this.previewSubscription = Objects.requireNonNull(previewSubscription);
             return this;
         }
 
-        public Builder setSkuName(String skuName) {
+        public Builder skuName(String skuName) {
             this.skuName = Objects.requireNonNull(skuName);
             return this;
         }
 
-        public Builder setVendorName(String vendorName) {
+        public Builder vendorName(String vendorName) {
             this.vendorName = Objects.requireNonNull(vendorName);
             return this;
         }

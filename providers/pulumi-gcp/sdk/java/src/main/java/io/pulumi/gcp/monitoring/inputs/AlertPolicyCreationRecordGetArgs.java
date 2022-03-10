@@ -62,22 +62,22 @@ public final class AlertPolicyCreationRecordGetArgs extends io.pulumi.resources.
     	      this.mutatedBy = defaults.mutatedBy;
         }
 
-        public Builder setMutateTime(@Nullable Input<String> mutateTime) {
+        public Builder mutateTime(@Nullable Input<String> mutateTime) {
             this.mutateTime = mutateTime;
             return this;
         }
 
-        public Builder setMutateTime(@Nullable String mutateTime) {
+        public Builder mutateTime(@Nullable String mutateTime) {
             this.mutateTime = Input.ofNullable(mutateTime);
             return this;
         }
 
-        public Builder setMutatedBy(@Nullable Input<String> mutatedBy) {
+        public Builder mutatedBy(@Nullable Input<String> mutatedBy) {
             this.mutatedBy = mutatedBy;
             return this;
         }
 
-        public Builder setMutatedBy(@Nullable String mutatedBy) {
+        public Builder mutatedBy(@Nullable String mutatedBy) {
             this.mutatedBy = Input.ofNullable(mutatedBy);
             return this;
         }

@@ -62,22 +62,22 @@ public final class BudgetsActionActionThresholdArgs extends io.pulumi.resources.
     	      this.value = defaults.value;
         }
 
-        public Builder setType(Input<BudgetsActionActionThresholdType> type) {
+        public Builder type(Input<BudgetsActionActionThresholdType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(BudgetsActionActionThresholdType type) {
+        public Builder type(BudgetsActionActionThresholdType type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setValue(Input<Double> value) {
+        public Builder value(Input<Double> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setValue(Double value) {
+        public Builder value(Double value) {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }

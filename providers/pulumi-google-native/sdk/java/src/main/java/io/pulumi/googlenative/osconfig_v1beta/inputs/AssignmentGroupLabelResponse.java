@@ -56,7 +56,7 @@ public final class AssignmentGroupLabelResponse extends io.pulumi.resources.Invo
     	      this.labels = defaults.labels;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }

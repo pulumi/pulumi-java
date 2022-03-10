@@ -66,12 +66,12 @@ public final class ConnectorWorkerConfiguration {
     	      this.workerConfigurationArn = defaults.workerConfigurationArn;
         }
 
-        public Builder setRevision(Integer revision) {
+        public Builder revision(Integer revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
 
-        public Builder setWorkerConfigurationArn(String workerConfigurationArn) {
+        public Builder workerConfigurationArn(String workerConfigurationArn) {
             this.workerConfigurationArn = Objects.requireNonNull(workerConfigurationArn);
             return this;
         }

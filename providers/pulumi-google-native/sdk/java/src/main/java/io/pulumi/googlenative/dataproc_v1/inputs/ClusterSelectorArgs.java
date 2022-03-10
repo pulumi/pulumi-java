@@ -75,22 +75,22 @@ public final class ClusterSelectorArgs extends io.pulumi.resources.ResourceArgs 
     	      this.zone = defaults.zone;
         }
 
-        public Builder setClusterLabels(Input<Map<String,String>> clusterLabels) {
+        public Builder clusterLabels(Input<Map<String,String>> clusterLabels) {
             this.clusterLabels = Objects.requireNonNull(clusterLabels);
             return this;
         }
 
-        public Builder setClusterLabels(Map<String,String> clusterLabels) {
+        public Builder clusterLabels(Map<String,String> clusterLabels) {
             this.clusterLabels = Input.of(Objects.requireNonNull(clusterLabels));
             return this;
         }
 
-        public Builder setZone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Input<String> zone) {
             this.zone = zone;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = Input.ofNullable(zone);
             return this;
         }

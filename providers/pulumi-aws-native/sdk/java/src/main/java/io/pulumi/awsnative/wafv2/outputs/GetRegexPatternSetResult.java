@@ -101,27 +101,27 @@ public final class GetRegexPatternSetResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setRegularExpressionList(@Nullable List<String> regularExpressionList) {
+        public Builder regularExpressionList(@Nullable List<String> regularExpressionList) {
             this.regularExpressionList = regularExpressionList;
             return this;
         }
 
-        public Builder setTags(@Nullable List<RegexPatternSetTag> tags) {
+        public Builder tags(@Nullable List<RegexPatternSetTag> tags) {
             this.tags = tags;
             return this;
         }

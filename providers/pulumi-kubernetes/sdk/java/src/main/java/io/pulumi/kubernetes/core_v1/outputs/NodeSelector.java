@@ -49,7 +49,7 @@ public final class NodeSelector {
     	      this.nodeSelectorTerms = defaults.nodeSelectorTerms;
         }
 
-        public Builder setNodeSelectorTerms(List<NodeSelectorTerm> nodeSelectorTerms) {
+        public Builder nodeSelectorTerms(List<NodeSelectorTerm> nodeSelectorTerms) {
             this.nodeSelectorTerms = Objects.requireNonNull(nodeSelectorTerms);
             return this;
         }

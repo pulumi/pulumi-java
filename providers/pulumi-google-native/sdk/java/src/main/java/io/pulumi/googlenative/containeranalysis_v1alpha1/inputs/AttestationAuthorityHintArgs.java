@@ -57,12 +57,12 @@ public final class AttestationAuthorityHintArgs extends io.pulumi.resources.Reso
     	      this.humanReadableName = defaults.humanReadableName;
         }
 
-        public Builder setHumanReadableName(@Nullable Input<String> humanReadableName) {
+        public Builder humanReadableName(@Nullable Input<String> humanReadableName) {
             this.humanReadableName = humanReadableName;
             return this;
         }
 
-        public Builder setHumanReadableName(@Nullable String humanReadableName) {
+        public Builder humanReadableName(@Nullable String humanReadableName) {
             this.humanReadableName = Input.ofNullable(humanReadableName);
             return this;
         }

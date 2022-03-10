@@ -106,22 +106,22 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
     	      this.objectKeyPrefix = defaults.objectKeyPrefix;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setEncryptionOption(String encryptionOption) {
+        public Builder encryptionOption(String encryptionOption) {
             this.encryptionOption = Objects.requireNonNull(encryptionOption);
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setObjectKeyPrefix(@Nullable String objectKeyPrefix) {
+        public Builder objectKeyPrefix(@Nullable String objectKeyPrefix) {
             this.objectKeyPrefix = objectKeyPrefix;
             return this;
         }

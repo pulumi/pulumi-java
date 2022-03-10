@@ -69,22 +69,22 @@ public final class BotAliasCloudWatchLogGroupLogDestinationArgs extends io.pulum
     	      this.logPrefix = defaults.logPrefix;
         }
 
-        public Builder setCloudWatchLogGroupArn(Input<String> cloudWatchLogGroupArn) {
+        public Builder cloudWatchLogGroupArn(Input<String> cloudWatchLogGroupArn) {
             this.cloudWatchLogGroupArn = Objects.requireNonNull(cloudWatchLogGroupArn);
             return this;
         }
 
-        public Builder setCloudWatchLogGroupArn(String cloudWatchLogGroupArn) {
+        public Builder cloudWatchLogGroupArn(String cloudWatchLogGroupArn) {
             this.cloudWatchLogGroupArn = Input.of(Objects.requireNonNull(cloudWatchLogGroupArn));
             return this;
         }
 
-        public Builder setLogPrefix(Input<String> logPrefix) {
+        public Builder logPrefix(Input<String> logPrefix) {
             this.logPrefix = Objects.requireNonNull(logPrefix);
             return this;
         }
 
-        public Builder setLogPrefix(String logPrefix) {
+        public Builder logPrefix(String logPrefix) {
             this.logPrefix = Input.of(Objects.requireNonNull(logPrefix));
             return this;
         }

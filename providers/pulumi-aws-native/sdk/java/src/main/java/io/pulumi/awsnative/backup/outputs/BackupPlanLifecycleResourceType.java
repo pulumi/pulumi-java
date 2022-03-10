@@ -51,12 +51,12 @@ public final class BackupPlanLifecycleResourceType {
     	      this.moveToColdStorageAfterDays = defaults.moveToColdStorageAfterDays;
         }
 
-        public Builder setDeleteAfterDays(@Nullable Double deleteAfterDays) {
+        public Builder deleteAfterDays(@Nullable Double deleteAfterDays) {
             this.deleteAfterDays = deleteAfterDays;
             return this;
         }
 
-        public Builder setMoveToColdStorageAfterDays(@Nullable Double moveToColdStorageAfterDays) {
+        public Builder moveToColdStorageAfterDays(@Nullable Double moveToColdStorageAfterDays) {
             this.moveToColdStorageAfterDays = moveToColdStorageAfterDays;
             return this;
         }

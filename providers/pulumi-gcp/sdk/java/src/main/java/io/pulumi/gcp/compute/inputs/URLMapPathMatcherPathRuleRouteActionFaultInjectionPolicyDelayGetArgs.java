@@ -72,22 +72,22 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay
     	      this.percentage = defaults.percentage;
         }
 
-        public Builder setFixedDelay(Input<URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs> fixedDelay) {
+        public Builder fixedDelay(Input<URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs> fixedDelay) {
             this.fixedDelay = Objects.requireNonNull(fixedDelay);
             return this;
         }
 
-        public Builder setFixedDelay(URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs fixedDelay) {
+        public Builder fixedDelay(URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs fixedDelay) {
             this.fixedDelay = Input.of(Objects.requireNonNull(fixedDelay));
             return this;
         }
 
-        public Builder setPercentage(Input<Double> percentage) {
+        public Builder percentage(Input<Double> percentage) {
             this.percentage = Objects.requireNonNull(percentage);
             return this;
         }
 
-        public Builder setPercentage(Double percentage) {
+        public Builder percentage(Double percentage) {
             this.percentage = Input.of(Objects.requireNonNull(percentage));
             return this;
         }

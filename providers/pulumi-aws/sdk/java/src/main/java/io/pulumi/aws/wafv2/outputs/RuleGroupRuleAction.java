@@ -85,17 +85,17 @@ public final class RuleGroupRuleAction {
     	      this.count = defaults.count;
         }
 
-        public Builder setAllow(@Nullable RuleGroupRuleActionAllow allow) {
+        public Builder allow(@Nullable RuleGroupRuleActionAllow allow) {
             this.allow = allow;
             return this;
         }
 
-        public Builder setBlock(@Nullable RuleGroupRuleActionBlock block) {
+        public Builder block(@Nullable RuleGroupRuleActionBlock block) {
             this.block = block;
             return this;
         }
 
-        public Builder setCount(@Nullable RuleGroupRuleActionCount count) {
+        public Builder count(@Nullable RuleGroupRuleActionCount count) {
             this.count = count;
             return this;
         }

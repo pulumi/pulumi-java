@@ -153,72 +153,72 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
     	      this.status = defaults.status;
         }
 
-        public Builder setBackendUri(@Nullable Input<String> backendUri) {
+        public Builder backendUri(@Nullable Input<String> backendUri) {
             this.backendUri = backendUri;
             return this;
         }
 
-        public Builder setBackendUri(@Nullable String backendUri) {
+        public Builder backendUri(@Nullable String backendUri) {
             this.backendUri = Input.ofNullable(backendUri);
             return this;
         }
 
-        public Builder setConnectionGatewayInstallation(@Nullable Input<ConnectionGatewayReferenceArgs> connectionGatewayInstallation) {
+        public Builder connectionGatewayInstallation(@Nullable Input<ConnectionGatewayReferenceArgs> connectionGatewayInstallation) {
             this.connectionGatewayInstallation = connectionGatewayInstallation;
             return this;
         }
 
-        public Builder setConnectionGatewayInstallation(@Nullable ConnectionGatewayReferenceArgs connectionGatewayInstallation) {
+        public Builder connectionGatewayInstallation(@Nullable ConnectionGatewayReferenceArgs connectionGatewayInstallation) {
             this.connectionGatewayInstallation = Input.ofNullable(connectionGatewayInstallation);
             return this;
         }
 
-        public Builder setContactInformation(@Nullable Input<List<String>> contactInformation) {
+        public Builder contactInformation(@Nullable Input<List<String>> contactInformation) {
             this.contactInformation = contactInformation;
             return this;
         }
 
-        public Builder setContactInformation(@Nullable List<String> contactInformation) {
+        public Builder contactInformation(@Nullable List<String> contactInformation) {
             this.contactInformation = Input.ofNullable(contactInformation);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setMachineName(@Nullable Input<String> machineName) {
+        public Builder machineName(@Nullable Input<String> machineName) {
             this.machineName = machineName;
             return this;
         }
 
-        public Builder setMachineName(@Nullable String machineName) {
+        public Builder machineName(@Nullable String machineName) {
             this.machineName = Input.ofNullable(machineName);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<Object> status) {
+        public Builder status(@Nullable Input<Object> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable Object status) {
+        public Builder status(@Nullable Object status) {
             this.status = Input.ofNullable(status);
             return this;
         }

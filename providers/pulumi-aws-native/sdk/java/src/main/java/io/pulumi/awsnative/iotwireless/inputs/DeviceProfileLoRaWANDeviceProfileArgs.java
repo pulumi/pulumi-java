@@ -208,142 +208,142 @@ public final class DeviceProfileLoRaWANDeviceProfileArgs extends io.pulumi.resou
     	      this.supportsJoin = defaults.supportsJoin;
         }
 
-        public Builder setClassBTimeout(@Nullable Input<Integer> classBTimeout) {
+        public Builder classBTimeout(@Nullable Input<Integer> classBTimeout) {
             this.classBTimeout = classBTimeout;
             return this;
         }
 
-        public Builder setClassBTimeout(@Nullable Integer classBTimeout) {
+        public Builder classBTimeout(@Nullable Integer classBTimeout) {
             this.classBTimeout = Input.ofNullable(classBTimeout);
             return this;
         }
 
-        public Builder setClassCTimeout(@Nullable Input<Integer> classCTimeout) {
+        public Builder classCTimeout(@Nullable Input<Integer> classCTimeout) {
             this.classCTimeout = classCTimeout;
             return this;
         }
 
-        public Builder setClassCTimeout(@Nullable Integer classCTimeout) {
+        public Builder classCTimeout(@Nullable Integer classCTimeout) {
             this.classCTimeout = Input.ofNullable(classCTimeout);
             return this;
         }
 
-        public Builder setMacVersion(@Nullable Input<String> macVersion) {
+        public Builder macVersion(@Nullable Input<String> macVersion) {
             this.macVersion = macVersion;
             return this;
         }
 
-        public Builder setMacVersion(@Nullable String macVersion) {
+        public Builder macVersion(@Nullable String macVersion) {
             this.macVersion = Input.ofNullable(macVersion);
             return this;
         }
 
-        public Builder setMaxDutyCycle(@Nullable Input<Integer> maxDutyCycle) {
+        public Builder maxDutyCycle(@Nullable Input<Integer> maxDutyCycle) {
             this.maxDutyCycle = maxDutyCycle;
             return this;
         }
 
-        public Builder setMaxDutyCycle(@Nullable Integer maxDutyCycle) {
+        public Builder maxDutyCycle(@Nullable Integer maxDutyCycle) {
             this.maxDutyCycle = Input.ofNullable(maxDutyCycle);
             return this;
         }
 
-        public Builder setMaxEirp(@Nullable Input<Integer> maxEirp) {
+        public Builder maxEirp(@Nullable Input<Integer> maxEirp) {
             this.maxEirp = maxEirp;
             return this;
         }
 
-        public Builder setMaxEirp(@Nullable Integer maxEirp) {
+        public Builder maxEirp(@Nullable Integer maxEirp) {
             this.maxEirp = Input.ofNullable(maxEirp);
             return this;
         }
 
-        public Builder setPingSlotDr(@Nullable Input<Integer> pingSlotDr) {
+        public Builder pingSlotDr(@Nullable Input<Integer> pingSlotDr) {
             this.pingSlotDr = pingSlotDr;
             return this;
         }
 
-        public Builder setPingSlotDr(@Nullable Integer pingSlotDr) {
+        public Builder pingSlotDr(@Nullable Integer pingSlotDr) {
             this.pingSlotDr = Input.ofNullable(pingSlotDr);
             return this;
         }
 
-        public Builder setPingSlotFreq(@Nullable Input<Integer> pingSlotFreq) {
+        public Builder pingSlotFreq(@Nullable Input<Integer> pingSlotFreq) {
             this.pingSlotFreq = pingSlotFreq;
             return this;
         }
 
-        public Builder setPingSlotFreq(@Nullable Integer pingSlotFreq) {
+        public Builder pingSlotFreq(@Nullable Integer pingSlotFreq) {
             this.pingSlotFreq = Input.ofNullable(pingSlotFreq);
             return this;
         }
 
-        public Builder setPingSlotPeriod(@Nullable Input<Integer> pingSlotPeriod) {
+        public Builder pingSlotPeriod(@Nullable Input<Integer> pingSlotPeriod) {
             this.pingSlotPeriod = pingSlotPeriod;
             return this;
         }
 
-        public Builder setPingSlotPeriod(@Nullable Integer pingSlotPeriod) {
+        public Builder pingSlotPeriod(@Nullable Integer pingSlotPeriod) {
             this.pingSlotPeriod = Input.ofNullable(pingSlotPeriod);
             return this;
         }
 
-        public Builder setRegParamsRevision(@Nullable Input<String> regParamsRevision) {
+        public Builder regParamsRevision(@Nullable Input<String> regParamsRevision) {
             this.regParamsRevision = regParamsRevision;
             return this;
         }
 
-        public Builder setRegParamsRevision(@Nullable String regParamsRevision) {
+        public Builder regParamsRevision(@Nullable String regParamsRevision) {
             this.regParamsRevision = Input.ofNullable(regParamsRevision);
             return this;
         }
 
-        public Builder setRfRegion(@Nullable Input<String> rfRegion) {
+        public Builder rfRegion(@Nullable Input<String> rfRegion) {
             this.rfRegion = rfRegion;
             return this;
         }
 
-        public Builder setRfRegion(@Nullable String rfRegion) {
+        public Builder rfRegion(@Nullable String rfRegion) {
             this.rfRegion = Input.ofNullable(rfRegion);
             return this;
         }
 
-        public Builder setSupports32BitFCnt(@Nullable Input<Boolean> supports32BitFCnt) {
+        public Builder supports32BitFCnt(@Nullable Input<Boolean> supports32BitFCnt) {
             this.supports32BitFCnt = supports32BitFCnt;
             return this;
         }
 
-        public Builder setSupports32BitFCnt(@Nullable Boolean supports32BitFCnt) {
+        public Builder supports32BitFCnt(@Nullable Boolean supports32BitFCnt) {
             this.supports32BitFCnt = Input.ofNullable(supports32BitFCnt);
             return this;
         }
 
-        public Builder setSupportsClassB(@Nullable Input<Boolean> supportsClassB) {
+        public Builder supportsClassB(@Nullable Input<Boolean> supportsClassB) {
             this.supportsClassB = supportsClassB;
             return this;
         }
 
-        public Builder setSupportsClassB(@Nullable Boolean supportsClassB) {
+        public Builder supportsClassB(@Nullable Boolean supportsClassB) {
             this.supportsClassB = Input.ofNullable(supportsClassB);
             return this;
         }
 
-        public Builder setSupportsClassC(@Nullable Input<Boolean> supportsClassC) {
+        public Builder supportsClassC(@Nullable Input<Boolean> supportsClassC) {
             this.supportsClassC = supportsClassC;
             return this;
         }
 
-        public Builder setSupportsClassC(@Nullable Boolean supportsClassC) {
+        public Builder supportsClassC(@Nullable Boolean supportsClassC) {
             this.supportsClassC = Input.ofNullable(supportsClassC);
             return this;
         }
 
-        public Builder setSupportsJoin(@Nullable Input<Boolean> supportsJoin) {
+        public Builder supportsJoin(@Nullable Input<Boolean> supportsJoin) {
             this.supportsJoin = supportsJoin;
             return this;
         }
 
-        public Builder setSupportsJoin(@Nullable Boolean supportsJoin) {
+        public Builder supportsJoin(@Nullable Boolean supportsJoin) {
             this.supportsJoin = Input.ofNullable(supportsJoin);
             return this;
         }

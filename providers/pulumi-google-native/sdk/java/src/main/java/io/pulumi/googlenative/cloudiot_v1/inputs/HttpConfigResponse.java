@@ -55,7 +55,7 @@ public final class HttpConfigResponse extends io.pulumi.resources.InvokeArgs {
     	      this.httpEnabledState = defaults.httpEnabledState;
         }
 
-        public Builder setHttpEnabledState(String httpEnabledState) {
+        public Builder httpEnabledState(String httpEnabledState) {
             this.httpEnabledState = Objects.requireNonNull(httpEnabledState);
             return this;
         }

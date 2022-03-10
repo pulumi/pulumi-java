@@ -68,12 +68,12 @@ public final class CustomActivityReferenceObjectResponse {
     	      this.linkedServices = defaults.linkedServices;
         }
 
-        public Builder setDatasets(@Nullable List<DatasetReferenceResponse> datasets) {
+        public Builder datasets(@Nullable List<DatasetReferenceResponse> datasets) {
             this.datasets = datasets;
             return this;
         }
 
-        public Builder setLinkedServices(@Nullable List<LinkedServiceReferenceResponse> linkedServices) {
+        public Builder linkedServices(@Nullable List<LinkedServiceReferenceResponse> linkedServices) {
             this.linkedServices = linkedServices;
             return this;
         }

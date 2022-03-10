@@ -49,7 +49,7 @@ public final class ListIngestionSettingConnectionStringsResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(List<IngestionConnectionStringResponse> value) {
+        public Builder value(List<IngestionConnectionStringResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

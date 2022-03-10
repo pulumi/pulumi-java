@@ -72,22 +72,22 @@ public final class ProjectBuildBatchConfigRestrictionsArgs extends io.pulumi.res
     	      this.maximumBuildsAllowed = defaults.maximumBuildsAllowed;
         }
 
-        public Builder setComputeTypesAlloweds(@Nullable Input<List<String>> computeTypesAlloweds) {
+        public Builder computeTypesAlloweds(@Nullable Input<List<String>> computeTypesAlloweds) {
             this.computeTypesAlloweds = computeTypesAlloweds;
             return this;
         }
 
-        public Builder setComputeTypesAlloweds(@Nullable List<String> computeTypesAlloweds) {
+        public Builder computeTypesAlloweds(@Nullable List<String> computeTypesAlloweds) {
             this.computeTypesAlloweds = Input.ofNullable(computeTypesAlloweds);
             return this;
         }
 
-        public Builder setMaximumBuildsAllowed(@Nullable Input<Integer> maximumBuildsAllowed) {
+        public Builder maximumBuildsAllowed(@Nullable Input<Integer> maximumBuildsAllowed) {
             this.maximumBuildsAllowed = maximumBuildsAllowed;
             return this;
         }
 
-        public Builder setMaximumBuildsAllowed(@Nullable Integer maximumBuildsAllowed) {
+        public Builder maximumBuildsAllowed(@Nullable Integer maximumBuildsAllowed) {
             this.maximumBuildsAllowed = Input.ofNullable(maximumBuildsAllowed);
             return this;
         }

@@ -103,22 +103,22 @@ public final class GetAKSServiceArgs extends io.pulumi.resources.InvokeArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setExpand(@Nullable Boolean expand) {
+        public Builder expand(@Nullable Boolean expand) {
             this.expand = expand;
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }

@@ -317,87 +317,87 @@ public final class NetworkInterfaceIPConfigurationResponse {
     	      this.virtualNetworkTaps = defaults.virtualNetworkTaps;
         }
 
-        public Builder setApplicationGatewayBackendAddressPools(@Nullable List<ApplicationGatewayBackendAddressPoolResponse> applicationGatewayBackendAddressPools) {
+        public Builder applicationGatewayBackendAddressPools(@Nullable List<ApplicationGatewayBackendAddressPoolResponse> applicationGatewayBackendAddressPools) {
             this.applicationGatewayBackendAddressPools = applicationGatewayBackendAddressPools;
             return this;
         }
 
-        public Builder setApplicationSecurityGroups(@Nullable List<ApplicationSecurityGroupResponse> applicationSecurityGroups) {
+        public Builder applicationSecurityGroups(@Nullable List<ApplicationSecurityGroupResponse> applicationSecurityGroups) {
             this.applicationSecurityGroups = applicationSecurityGroups;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLoadBalancerBackendAddressPools(@Nullable List<BackendAddressPoolResponse> loadBalancerBackendAddressPools) {
+        public Builder loadBalancerBackendAddressPools(@Nullable List<BackendAddressPoolResponse> loadBalancerBackendAddressPools) {
             this.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;
             return this;
         }
 
-        public Builder setLoadBalancerInboundNatRules(@Nullable List<InboundNatRuleResponse> loadBalancerInboundNatRules) {
+        public Builder loadBalancerInboundNatRules(@Nullable List<InboundNatRuleResponse> loadBalancerInboundNatRules) {
             this.loadBalancerInboundNatRules = loadBalancerInboundNatRules;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPrimary(@Nullable Boolean primary) {
+        public Builder primary(@Nullable Boolean primary) {
             this.primary = primary;
             return this;
         }
 
-        public Builder setPrivateIPAddress(@Nullable String privateIPAddress) {
+        public Builder privateIPAddress(@Nullable String privateIPAddress) {
             this.privateIPAddress = privateIPAddress;
             return this;
         }
 
-        public Builder setPrivateIPAddressVersion(@Nullable String privateIPAddressVersion) {
+        public Builder privateIPAddressVersion(@Nullable String privateIPAddressVersion) {
             this.privateIPAddressVersion = privateIPAddressVersion;
             return this;
         }
 
-        public Builder setPrivateIPAllocationMethod(@Nullable String privateIPAllocationMethod) {
+        public Builder privateIPAllocationMethod(@Nullable String privateIPAllocationMethod) {
             this.privateIPAllocationMethod = privateIPAllocationMethod;
             return this;
         }
 
-        public Builder setPrivateLinkConnectionProperties(NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse privateLinkConnectionProperties) {
+        public Builder privateLinkConnectionProperties(NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse privateLinkConnectionProperties) {
             this.privateLinkConnectionProperties = Objects.requireNonNull(privateLinkConnectionProperties);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicIPAddress(@Nullable PublicIPAddressResponse publicIPAddress) {
+        public Builder publicIPAddress(@Nullable PublicIPAddressResponse publicIPAddress) {
             this.publicIPAddress = publicIPAddress;
             return this;
         }
 
-        public Builder setSubnet(@Nullable SubnetResponse subnet) {
+        public Builder subnet(@Nullable SubnetResponse subnet) {
             this.subnet = subnet;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setVirtualNetworkTaps(@Nullable List<VirtualNetworkTapResponse> virtualNetworkTaps) {
+        public Builder virtualNetworkTaps(@Nullable List<VirtualNetworkTapResponse> virtualNetworkTaps) {
             this.virtualNetworkTaps = virtualNetworkTaps;
             return this;
         }

@@ -119,52 +119,52 @@ public final class DedicatedCloudServiceArgs extends io.pulumi.resources.Resourc
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDedicatedCloudServiceName(@Nullable Input<String> dedicatedCloudServiceName) {
+        public Builder dedicatedCloudServiceName(@Nullable Input<String> dedicatedCloudServiceName) {
             this.dedicatedCloudServiceName = dedicatedCloudServiceName;
             return this;
         }
 
-        public Builder setDedicatedCloudServiceName(@Nullable String dedicatedCloudServiceName) {
+        public Builder dedicatedCloudServiceName(@Nullable String dedicatedCloudServiceName) {
             this.dedicatedCloudServiceName = Input.ofNullable(dedicatedCloudServiceName);
             return this;
         }
 
-        public Builder setGatewaySubnet(Input<String> gatewaySubnet) {
+        public Builder gatewaySubnet(Input<String> gatewaySubnet) {
             this.gatewaySubnet = Objects.requireNonNull(gatewaySubnet);
             return this;
         }
 
-        public Builder setGatewaySubnet(String gatewaySubnet) {
+        public Builder gatewaySubnet(String gatewaySubnet) {
             this.gatewaySubnet = Input.of(Objects.requireNonNull(gatewaySubnet));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -107,22 +107,22 @@ public final class SqlIpConfigResponse extends io.pulumi.resources.InvokeArgs {
     	      this.requireSsl = defaults.requireSsl;
         }
 
-        public Builder setAuthorizedNetworks(List<SqlAclEntryResponse> authorizedNetworks) {
+        public Builder authorizedNetworks(List<SqlAclEntryResponse> authorizedNetworks) {
             this.authorizedNetworks = Objects.requireNonNull(authorizedNetworks);
             return this;
         }
 
-        public Builder setEnableIpv4(Boolean enableIpv4) {
+        public Builder enableIpv4(Boolean enableIpv4) {
             this.enableIpv4 = Objects.requireNonNull(enableIpv4);
             return this;
         }
 
-        public Builder setPrivateNetwork(String privateNetwork) {
+        public Builder privateNetwork(String privateNetwork) {
             this.privateNetwork = Objects.requireNonNull(privateNetwork);
             return this;
         }
 
-        public Builder setRequireSsl(Boolean requireSsl) {
+        public Builder requireSsl(Boolean requireSsl) {
             this.requireSsl = Objects.requireNonNull(requireSsl);
             return this;
         }

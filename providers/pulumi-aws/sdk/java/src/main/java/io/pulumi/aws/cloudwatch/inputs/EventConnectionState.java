@@ -135,62 +135,62 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
     	      this.secretArn = defaults.secretArn;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAuthParameters(@Nullable Input<EventConnectionAuthParametersGetArgs> authParameters) {
+        public Builder authParameters(@Nullable Input<EventConnectionAuthParametersGetArgs> authParameters) {
             this.authParameters = authParameters;
             return this;
         }
 
-        public Builder setAuthParameters(@Nullable EventConnectionAuthParametersGetArgs authParameters) {
+        public Builder authParameters(@Nullable EventConnectionAuthParametersGetArgs authParameters) {
             this.authParameters = Input.ofNullable(authParameters);
             return this;
         }
 
-        public Builder setAuthorizationType(@Nullable Input<String> authorizationType) {
+        public Builder authorizationType(@Nullable Input<String> authorizationType) {
             this.authorizationType = authorizationType;
             return this;
         }
 
-        public Builder setAuthorizationType(@Nullable String authorizationType) {
+        public Builder authorizationType(@Nullable String authorizationType) {
             this.authorizationType = Input.ofNullable(authorizationType);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSecretArn(@Nullable Input<String> secretArn) {
+        public Builder secretArn(@Nullable Input<String> secretArn) {
             this.secretArn = secretArn;
             return this;
         }
 
-        public Builder setSecretArn(@Nullable String secretArn) {
+        public Builder secretArn(@Nullable String secretArn) {
             this.secretArn = Input.ofNullable(secretArn);
             return this;
         }

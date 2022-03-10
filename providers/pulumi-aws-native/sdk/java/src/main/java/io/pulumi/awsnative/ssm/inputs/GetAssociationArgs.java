@@ -51,7 +51,7 @@ public final class GetAssociationArgs extends io.pulumi.resources.InvokeArgs {
     	      this.associationId = defaults.associationId;
         }
 
-        public Builder setAssociationId(String associationId) {
+        public Builder associationId(String associationId) {
             this.associationId = Objects.requireNonNull(associationId);
             return this;
         }

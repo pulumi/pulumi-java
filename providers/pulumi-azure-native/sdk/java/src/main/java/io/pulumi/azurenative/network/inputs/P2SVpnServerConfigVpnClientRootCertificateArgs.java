@@ -106,42 +106,42 @@ public final class P2SVpnServerConfigVpnClientRootCertificateArgs extends io.pul
     	      this.publicCertData = defaults.publicCertData;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPublicCertData(Input<String> publicCertData) {
+        public Builder publicCertData(Input<String> publicCertData) {
             this.publicCertData = Objects.requireNonNull(publicCertData);
             return this;
         }
 
-        public Builder setPublicCertData(String publicCertData) {
+        public Builder publicCertData(String publicCertData) {
             this.publicCertData = Input.of(Objects.requireNonNull(publicCertData));
             return this;
         }

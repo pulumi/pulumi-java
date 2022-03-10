@@ -68,12 +68,12 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     	      this.cloudwatchOutputEnabled = defaults.cloudwatchOutputEnabled;
         }
 
-        public Builder setCloudwatchLogGroupName(@Nullable String cloudwatchLogGroupName) {
+        public Builder cloudwatchLogGroupName(@Nullable String cloudwatchLogGroupName) {
             this.cloudwatchLogGroupName = cloudwatchLogGroupName;
             return this;
         }
 
-        public Builder setCloudwatchOutputEnabled(@Nullable Boolean cloudwatchOutputEnabled) {
+        public Builder cloudwatchOutputEnabled(@Nullable Boolean cloudwatchOutputEnabled) {
             this.cloudwatchOutputEnabled = cloudwatchOutputEnabled;
             return this;
         }

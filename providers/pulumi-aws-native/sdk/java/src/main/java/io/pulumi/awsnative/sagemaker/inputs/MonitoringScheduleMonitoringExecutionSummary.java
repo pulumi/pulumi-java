@@ -163,42 +163,42 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends io.pulum
     	      this.scheduledTime = defaults.scheduledTime;
         }
 
-        public Builder setCreationTime(String creationTime) {
+        public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
 
-        public Builder setEndpointName(@Nullable String endpointName) {
+        public Builder endpointName(@Nullable String endpointName) {
             this.endpointName = endpointName;
             return this;
         }
 
-        public Builder setFailureReason(@Nullable String failureReason) {
+        public Builder failureReason(@Nullable String failureReason) {
             this.failureReason = failureReason;
             return this;
         }
 
-        public Builder setLastModifiedTime(String lastModifiedTime) {
+        public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
 
-        public Builder setMonitoringExecutionStatus(MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus monitoringExecutionStatus) {
+        public Builder monitoringExecutionStatus(MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus monitoringExecutionStatus) {
             this.monitoringExecutionStatus = Objects.requireNonNull(monitoringExecutionStatus);
             return this;
         }
 
-        public Builder setMonitoringScheduleName(String monitoringScheduleName) {
+        public Builder monitoringScheduleName(String monitoringScheduleName) {
             this.monitoringScheduleName = Objects.requireNonNull(monitoringScheduleName);
             return this;
         }
 
-        public Builder setProcessingJobArn(@Nullable String processingJobArn) {
+        public Builder processingJobArn(@Nullable String processingJobArn) {
             this.processingJobArn = processingJobArn;
             return this;
         }
 
-        public Builder setScheduledTime(String scheduledTime) {
+        public Builder scheduledTime(String scheduledTime) {
             this.scheduledTime = Objects.requireNonNull(scheduledTime);
             return this;
         }

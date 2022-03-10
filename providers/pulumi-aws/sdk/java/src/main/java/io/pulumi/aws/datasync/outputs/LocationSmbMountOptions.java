@@ -50,7 +50,7 @@ public final class LocationSmbMountOptions {
     	      this.version = defaults.version;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

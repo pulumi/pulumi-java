@@ -190,92 +190,92 @@ public final class AnalyticsApplicationInputsArgs extends io.pulumi.resources.Re
     	      this.streamNames = defaults.streamNames;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setKinesisFirehose(@Nullable Input<AnalyticsApplicationInputsKinesisFirehoseArgs> kinesisFirehose) {
+        public Builder kinesisFirehose(@Nullable Input<AnalyticsApplicationInputsKinesisFirehoseArgs> kinesisFirehose) {
             this.kinesisFirehose = kinesisFirehose;
             return this;
         }
 
-        public Builder setKinesisFirehose(@Nullable AnalyticsApplicationInputsKinesisFirehoseArgs kinesisFirehose) {
+        public Builder kinesisFirehose(@Nullable AnalyticsApplicationInputsKinesisFirehoseArgs kinesisFirehose) {
             this.kinesisFirehose = Input.ofNullable(kinesisFirehose);
             return this;
         }
 
-        public Builder setKinesisStream(@Nullable Input<AnalyticsApplicationInputsKinesisStreamArgs> kinesisStream) {
+        public Builder kinesisStream(@Nullable Input<AnalyticsApplicationInputsKinesisStreamArgs> kinesisStream) {
             this.kinesisStream = kinesisStream;
             return this;
         }
 
-        public Builder setKinesisStream(@Nullable AnalyticsApplicationInputsKinesisStreamArgs kinesisStream) {
+        public Builder kinesisStream(@Nullable AnalyticsApplicationInputsKinesisStreamArgs kinesisStream) {
             this.kinesisStream = Input.ofNullable(kinesisStream);
             return this;
         }
 
-        public Builder setNamePrefix(Input<String> namePrefix) {
+        public Builder namePrefix(Input<String> namePrefix) {
             this.namePrefix = Objects.requireNonNull(namePrefix);
             return this;
         }
 
-        public Builder setNamePrefix(String namePrefix) {
+        public Builder namePrefix(String namePrefix) {
             this.namePrefix = Input.of(Objects.requireNonNull(namePrefix));
             return this;
         }
 
-        public Builder setParallelism(@Nullable Input<AnalyticsApplicationInputsParallelismArgs> parallelism) {
+        public Builder parallelism(@Nullable Input<AnalyticsApplicationInputsParallelismArgs> parallelism) {
             this.parallelism = parallelism;
             return this;
         }
 
-        public Builder setParallelism(@Nullable AnalyticsApplicationInputsParallelismArgs parallelism) {
+        public Builder parallelism(@Nullable AnalyticsApplicationInputsParallelismArgs parallelism) {
             this.parallelism = Input.ofNullable(parallelism);
             return this;
         }
 
-        public Builder setProcessingConfiguration(@Nullable Input<AnalyticsApplicationInputsProcessingConfigurationArgs> processingConfiguration) {
+        public Builder processingConfiguration(@Nullable Input<AnalyticsApplicationInputsProcessingConfigurationArgs> processingConfiguration) {
             this.processingConfiguration = processingConfiguration;
             return this;
         }
 
-        public Builder setProcessingConfiguration(@Nullable AnalyticsApplicationInputsProcessingConfigurationArgs processingConfiguration) {
+        public Builder processingConfiguration(@Nullable AnalyticsApplicationInputsProcessingConfigurationArgs processingConfiguration) {
             this.processingConfiguration = Input.ofNullable(processingConfiguration);
             return this;
         }
 
-        public Builder setSchema(Input<AnalyticsApplicationInputsSchemaArgs> schema) {
+        public Builder schema(Input<AnalyticsApplicationInputsSchemaArgs> schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
 
-        public Builder setSchema(AnalyticsApplicationInputsSchemaArgs schema) {
+        public Builder schema(AnalyticsApplicationInputsSchemaArgs schema) {
             this.schema = Input.of(Objects.requireNonNull(schema));
             return this;
         }
 
-        public Builder setStartingPositionConfigurations(@Nullable Input<List<AnalyticsApplicationInputsStartingPositionConfigurationArgs>> startingPositionConfigurations) {
+        public Builder startingPositionConfigurations(@Nullable Input<List<AnalyticsApplicationInputsStartingPositionConfigurationArgs>> startingPositionConfigurations) {
             this.startingPositionConfigurations = startingPositionConfigurations;
             return this;
         }
 
-        public Builder setStartingPositionConfigurations(@Nullable List<AnalyticsApplicationInputsStartingPositionConfigurationArgs> startingPositionConfigurations) {
+        public Builder startingPositionConfigurations(@Nullable List<AnalyticsApplicationInputsStartingPositionConfigurationArgs> startingPositionConfigurations) {
             this.startingPositionConfigurations = Input.ofNullable(startingPositionConfigurations);
             return this;
         }
 
-        public Builder setStreamNames(@Nullable Input<List<String>> streamNames) {
+        public Builder streamNames(@Nullable Input<List<String>> streamNames) {
             this.streamNames = streamNames;
             return this;
         }
 
-        public Builder setStreamNames(@Nullable List<String> streamNames) {
+        public Builder streamNames(@Nullable List<String> streamNames) {
             this.streamNames = Input.ofNullable(streamNames);
             return this;
         }

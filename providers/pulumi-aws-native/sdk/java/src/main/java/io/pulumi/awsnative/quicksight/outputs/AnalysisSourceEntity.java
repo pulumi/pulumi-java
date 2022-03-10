@@ -42,7 +42,7 @@ public final class AnalysisSourceEntity {
     	      this.sourceTemplate = defaults.sourceTemplate;
         }
 
-        public Builder setSourceTemplate(@Nullable AnalysisSourceTemplate sourceTemplate) {
+        public Builder sourceTemplate(@Nullable AnalysisSourceTemplate sourceTemplate) {
             this.sourceTemplate = sourceTemplate;
             return this;
         }

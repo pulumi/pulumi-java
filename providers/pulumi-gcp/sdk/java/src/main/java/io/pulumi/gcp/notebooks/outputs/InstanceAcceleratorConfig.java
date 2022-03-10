@@ -68,12 +68,12 @@ public final class InstanceAcceleratorConfig {
     	      this.type = defaults.type;
         }
 
-        public Builder setCoreCount(Integer coreCount) {
+        public Builder coreCount(Integer coreCount) {
             this.coreCount = Objects.requireNonNull(coreCount);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

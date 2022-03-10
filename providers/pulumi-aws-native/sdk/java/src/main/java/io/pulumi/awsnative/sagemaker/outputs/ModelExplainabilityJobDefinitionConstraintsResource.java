@@ -50,7 +50,7 @@ public final class ModelExplainabilityJobDefinitionConstraintsResource {
     	      this.s3Uri = defaults.s3Uri;
         }
 
-        public Builder setS3Uri(@Nullable String s3Uri) {
+        public Builder s3Uri(@Nullable String s3Uri) {
             this.s3Uri = s3Uri;
             return this;
         }

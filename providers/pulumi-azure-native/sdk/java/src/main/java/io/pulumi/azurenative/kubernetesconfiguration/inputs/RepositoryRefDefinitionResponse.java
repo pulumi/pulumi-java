@@ -106,22 +106,22 @@ public final class RepositoryRefDefinitionResponse extends io.pulumi.resources.I
     	      this.tag = defaults.tag;
         }
 
-        public Builder setBranch(@Nullable String branch) {
+        public Builder branch(@Nullable String branch) {
             this.branch = branch;
             return this;
         }
 
-        public Builder setCommit(@Nullable String commit) {
+        public Builder commit(@Nullable String commit) {
             this.commit = commit;
             return this;
         }
 
-        public Builder setSemver(@Nullable String semver) {
+        public Builder semver(@Nullable String semver) {
             this.semver = semver;
             return this;
         }
 
-        public Builder setTag(@Nullable String tag) {
+        public Builder tag(@Nullable String tag) {
             this.tag = tag;
             return this;
         }

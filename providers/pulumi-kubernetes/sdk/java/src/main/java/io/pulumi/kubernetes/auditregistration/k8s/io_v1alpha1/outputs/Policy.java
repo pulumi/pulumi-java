@@ -67,12 +67,12 @@ public final class Policy {
     	      this.stages = defaults.stages;
         }
 
-        public Builder setLevel(String level) {
+        public Builder level(String level) {
             this.level = Objects.requireNonNull(level);
             return this;
         }
 
-        public Builder setStages(@Nullable List<String> stages) {
+        public Builder stages(@Nullable List<String> stages) {
             this.stages = stages;
             return this;
         }

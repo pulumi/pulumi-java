@@ -102,22 +102,22 @@ public final class Subject {
     	      this.user = defaults.user;
         }
 
-        public Builder setGroup(@Nullable GroupSubject group) {
+        public Builder group(@Nullable GroupSubject group) {
             this.group = group;
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable ServiceAccountSubject serviceAccount) {
+        public Builder serviceAccount(@Nullable ServiceAccountSubject serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setUser(@Nullable UserSubject user) {
+        public Builder user(@Nullable UserSubject user) {
             this.user = user;
             return this;
         }

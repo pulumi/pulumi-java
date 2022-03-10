@@ -138,82 +138,82 @@ public final class DeliveryStreamS3DestinationConfigurationArgs extends io.pulum
     	      this.roleARN = defaults.roleARN;
         }
 
-        public Builder setBucketARN(Input<String> bucketARN) {
+        public Builder bucketARN(Input<String> bucketARN) {
             this.bucketARN = Objects.requireNonNull(bucketARN);
             return this;
         }
 
-        public Builder setBucketARN(String bucketARN) {
+        public Builder bucketARN(String bucketARN) {
             this.bucketARN = Input.of(Objects.requireNonNull(bucketARN));
             return this;
         }
 
-        public Builder setBufferingHints(@Nullable Input<DeliveryStreamBufferingHintsArgs> bufferingHints) {
+        public Builder bufferingHints(@Nullable Input<DeliveryStreamBufferingHintsArgs> bufferingHints) {
             this.bufferingHints = bufferingHints;
             return this;
         }
 
-        public Builder setBufferingHints(@Nullable DeliveryStreamBufferingHintsArgs bufferingHints) {
+        public Builder bufferingHints(@Nullable DeliveryStreamBufferingHintsArgs bufferingHints) {
             this.bufferingHints = Input.ofNullable(bufferingHints);
             return this;
         }
 
-        public Builder setCloudWatchLoggingOptions(@Nullable Input<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions) {
+        public Builder cloudWatchLoggingOptions(@Nullable Input<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions) {
             this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
             return this;
         }
 
-        public Builder setCloudWatchLoggingOptions(@Nullable DeliveryStreamCloudWatchLoggingOptionsArgs cloudWatchLoggingOptions) {
+        public Builder cloudWatchLoggingOptions(@Nullable DeliveryStreamCloudWatchLoggingOptionsArgs cloudWatchLoggingOptions) {
             this.cloudWatchLoggingOptions = Input.ofNullable(cloudWatchLoggingOptions);
             return this;
         }
 
-        public Builder setCompressionFormat(@Nullable Input<DeliveryStreamS3DestinationConfigurationCompressionFormat> compressionFormat) {
+        public Builder compressionFormat(@Nullable Input<DeliveryStreamS3DestinationConfigurationCompressionFormat> compressionFormat) {
             this.compressionFormat = compressionFormat;
             return this;
         }
 
-        public Builder setCompressionFormat(@Nullable DeliveryStreamS3DestinationConfigurationCompressionFormat compressionFormat) {
+        public Builder compressionFormat(@Nullable DeliveryStreamS3DestinationConfigurationCompressionFormat compressionFormat) {
             this.compressionFormat = Input.ofNullable(compressionFormat);
             return this;
         }
 
-        public Builder setEncryptionConfiguration(@Nullable Input<DeliveryStreamEncryptionConfigurationArgs> encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable Input<DeliveryStreamEncryptionConfigurationArgs> encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
 
-        public Builder setEncryptionConfiguration(@Nullable DeliveryStreamEncryptionConfigurationArgs encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable DeliveryStreamEncryptionConfigurationArgs encryptionConfiguration) {
             this.encryptionConfiguration = Input.ofNullable(encryptionConfiguration);
             return this;
         }
 
-        public Builder setErrorOutputPrefix(@Nullable Input<String> errorOutputPrefix) {
+        public Builder errorOutputPrefix(@Nullable Input<String> errorOutputPrefix) {
             this.errorOutputPrefix = errorOutputPrefix;
             return this;
         }
 
-        public Builder setErrorOutputPrefix(@Nullable String errorOutputPrefix) {
+        public Builder errorOutputPrefix(@Nullable String errorOutputPrefix) {
             this.errorOutputPrefix = Input.ofNullable(errorOutputPrefix);
             return this;
         }
 
-        public Builder setPrefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Input<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = Input.ofNullable(prefix);
             return this;
         }
 
-        public Builder setRoleARN(Input<String> roleARN) {
+        public Builder roleARN(Input<String> roleARN) {
             this.roleARN = Objects.requireNonNull(roleARN);
             return this;
         }
 
-        public Builder setRoleARN(String roleARN) {
+        public Builder roleARN(String roleARN) {
             this.roleARN = Input.of(Objects.requireNonNull(roleARN));
             return this;
         }

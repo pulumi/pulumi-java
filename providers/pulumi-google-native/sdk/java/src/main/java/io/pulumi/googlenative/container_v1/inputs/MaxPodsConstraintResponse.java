@@ -55,7 +55,7 @@ public final class MaxPodsConstraintResponse extends io.pulumi.resources.InvokeA
     	      this.maxPodsPerNode = defaults.maxPodsPerNode;
         }
 
-        public Builder setMaxPodsPerNode(String maxPodsPerNode) {
+        public Builder maxPodsPerNode(String maxPodsPerNode) {
             this.maxPodsPerNode = Objects.requireNonNull(maxPodsPerNode);
             return this;
         }

@@ -48,7 +48,7 @@ public final class PushConfigResponse {
     	      this.pushEndpoint = defaults.pushEndpoint;
         }
 
-        public Builder setPushEndpoint(String pushEndpoint) {
+        public Builder pushEndpoint(String pushEndpoint) {
             this.pushEndpoint = Objects.requireNonNull(pushEndpoint);
             return this;
         }

@@ -74,32 +74,32 @@ public final class PerformanceCounterConfigurationArgs extends io.pulumi.resourc
     	      this.samplingPeriod = defaults.samplingPeriod;
         }
 
-        public Builder setInstance(@Nullable Input<String> instance) {
+        public Builder instance(@Nullable Input<String> instance) {
             this.instance = instance;
             return this;
         }
 
-        public Builder setInstance(@Nullable String instance) {
+        public Builder instance(@Nullable String instance) {
             this.instance = Input.ofNullable(instance);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setSamplingPeriod(Input<String> samplingPeriod) {
+        public Builder samplingPeriod(Input<String> samplingPeriod) {
             this.samplingPeriod = Objects.requireNonNull(samplingPeriod);
             return this;
         }
 
-        public Builder setSamplingPeriod(String samplingPeriod) {
+        public Builder samplingPeriod(String samplingPeriod) {
             this.samplingPeriod = Input.of(Objects.requireNonNull(samplingPeriod));
             return this;
         }

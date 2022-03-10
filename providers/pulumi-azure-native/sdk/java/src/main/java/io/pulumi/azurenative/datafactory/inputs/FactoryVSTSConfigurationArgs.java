@@ -171,82 +171,82 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
     	      this.type = defaults.type;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setCollaborationBranch(Input<String> collaborationBranch) {
+        public Builder collaborationBranch(Input<String> collaborationBranch) {
             this.collaborationBranch = Objects.requireNonNull(collaborationBranch);
             return this;
         }
 
-        public Builder setCollaborationBranch(String collaborationBranch) {
+        public Builder collaborationBranch(String collaborationBranch) {
             this.collaborationBranch = Input.of(Objects.requireNonNull(collaborationBranch));
             return this;
         }
 
-        public Builder setLastCommitId(@Nullable Input<String> lastCommitId) {
+        public Builder lastCommitId(@Nullable Input<String> lastCommitId) {
             this.lastCommitId = lastCommitId;
             return this;
         }
 
-        public Builder setLastCommitId(@Nullable String lastCommitId) {
+        public Builder lastCommitId(@Nullable String lastCommitId) {
             this.lastCommitId = Input.ofNullable(lastCommitId);
             return this;
         }
 
-        public Builder setProjectName(Input<String> projectName) {
+        public Builder projectName(Input<String> projectName) {
             this.projectName = Objects.requireNonNull(projectName);
             return this;
         }
 
-        public Builder setProjectName(String projectName) {
+        public Builder projectName(String projectName) {
             this.projectName = Input.of(Objects.requireNonNull(projectName));
             return this;
         }
 
-        public Builder setRepositoryName(Input<String> repositoryName) {
+        public Builder repositoryName(Input<String> repositoryName) {
             this.repositoryName = Objects.requireNonNull(repositoryName);
             return this;
         }
 
-        public Builder setRepositoryName(String repositoryName) {
+        public Builder repositoryName(String repositoryName) {
             this.repositoryName = Input.of(Objects.requireNonNull(repositoryName));
             return this;
         }
 
-        public Builder setRootFolder(Input<String> rootFolder) {
+        public Builder rootFolder(Input<String> rootFolder) {
             this.rootFolder = Objects.requireNonNull(rootFolder);
             return this;
         }
 
-        public Builder setRootFolder(String rootFolder) {
+        public Builder rootFolder(String rootFolder) {
             this.rootFolder = Input.of(Objects.requireNonNull(rootFolder));
             return this;
         }
 
-        public Builder setTenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Input<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Input.ofNullable(tenantId);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

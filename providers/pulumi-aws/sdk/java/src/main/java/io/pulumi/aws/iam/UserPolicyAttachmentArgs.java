@@ -69,17 +69,17 @@ public final class UserPolicyAttachmentArgs extends io.pulumi.resources.Resource
     	      this.user = defaults.user;
         }
 
-        public Builder setPolicyArn(Input<String> policyArn) {
+        public Builder policyArn(Input<String> policyArn) {
             this.policyArn = Objects.requireNonNull(policyArn);
             return this;
         }
 
-        public Builder setPolicyArn(String policyArn) {
+        public Builder policyArn(String policyArn) {
             this.policyArn = Input.of(Objects.requireNonNull(policyArn));
             return this;
         }
 
-        public Builder setUser(Input<String> user) {
+        public Builder user(Input<String> user) {
             this.user = Objects.requireNonNull(user);
             return this;
         }

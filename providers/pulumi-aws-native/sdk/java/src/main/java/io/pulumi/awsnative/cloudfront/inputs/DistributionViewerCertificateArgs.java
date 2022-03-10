@@ -99,52 +99,52 @@ public final class DistributionViewerCertificateArgs extends io.pulumi.resources
     	      this.sslSupportMethod = defaults.sslSupportMethod;
         }
 
-        public Builder setAcmCertificateArn(@Nullable Input<String> acmCertificateArn) {
+        public Builder acmCertificateArn(@Nullable Input<String> acmCertificateArn) {
             this.acmCertificateArn = acmCertificateArn;
             return this;
         }
 
-        public Builder setAcmCertificateArn(@Nullable String acmCertificateArn) {
+        public Builder acmCertificateArn(@Nullable String acmCertificateArn) {
             this.acmCertificateArn = Input.ofNullable(acmCertificateArn);
             return this;
         }
 
-        public Builder setCloudFrontDefaultCertificate(@Nullable Input<Boolean> cloudFrontDefaultCertificate) {
+        public Builder cloudFrontDefaultCertificate(@Nullable Input<Boolean> cloudFrontDefaultCertificate) {
             this.cloudFrontDefaultCertificate = cloudFrontDefaultCertificate;
             return this;
         }
 
-        public Builder setCloudFrontDefaultCertificate(@Nullable Boolean cloudFrontDefaultCertificate) {
+        public Builder cloudFrontDefaultCertificate(@Nullable Boolean cloudFrontDefaultCertificate) {
             this.cloudFrontDefaultCertificate = Input.ofNullable(cloudFrontDefaultCertificate);
             return this;
         }
 
-        public Builder setIamCertificateId(@Nullable Input<String> iamCertificateId) {
+        public Builder iamCertificateId(@Nullable Input<String> iamCertificateId) {
             this.iamCertificateId = iamCertificateId;
             return this;
         }
 
-        public Builder setIamCertificateId(@Nullable String iamCertificateId) {
+        public Builder iamCertificateId(@Nullable String iamCertificateId) {
             this.iamCertificateId = Input.ofNullable(iamCertificateId);
             return this;
         }
 
-        public Builder setMinimumProtocolVersion(@Nullable Input<String> minimumProtocolVersion) {
+        public Builder minimumProtocolVersion(@Nullable Input<String> minimumProtocolVersion) {
             this.minimumProtocolVersion = minimumProtocolVersion;
             return this;
         }
 
-        public Builder setMinimumProtocolVersion(@Nullable String minimumProtocolVersion) {
+        public Builder minimumProtocolVersion(@Nullable String minimumProtocolVersion) {
             this.minimumProtocolVersion = Input.ofNullable(minimumProtocolVersion);
             return this;
         }
 
-        public Builder setSslSupportMethod(@Nullable Input<String> sslSupportMethod) {
+        public Builder sslSupportMethod(@Nullable Input<String> sslSupportMethod) {
             this.sslSupportMethod = sslSupportMethod;
             return this;
         }
 
-        public Builder setSslSupportMethod(@Nullable String sslSupportMethod) {
+        public Builder sslSupportMethod(@Nullable String sslSupportMethod) {
             this.sslSupportMethod = Input.ofNullable(sslSupportMethod);
             return this;
         }

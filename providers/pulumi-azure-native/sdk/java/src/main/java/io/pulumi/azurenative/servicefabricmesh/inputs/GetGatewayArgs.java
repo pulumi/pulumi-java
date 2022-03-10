@@ -68,12 +68,12 @@ public final class GetGatewayArgs extends io.pulumi.resources.InvokeArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setGatewayResourceName(String gatewayResourceName) {
+        public Builder gatewayResourceName(String gatewayResourceName) {
             this.gatewayResourceName = Objects.requireNonNull(gatewayResourceName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

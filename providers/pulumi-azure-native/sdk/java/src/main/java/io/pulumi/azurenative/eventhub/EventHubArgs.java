@@ -153,72 +153,72 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder setCaptureDescription(@Nullable Input<CaptureDescriptionArgs> captureDescription) {
+        public Builder captureDescription(@Nullable Input<CaptureDescriptionArgs> captureDescription) {
             this.captureDescription = captureDescription;
             return this;
         }
 
-        public Builder setCaptureDescription(@Nullable CaptureDescriptionArgs captureDescription) {
+        public Builder captureDescription(@Nullable CaptureDescriptionArgs captureDescription) {
             this.captureDescription = Input.ofNullable(captureDescription);
             return this;
         }
 
-        public Builder setEventHubName(@Nullable Input<String> eventHubName) {
+        public Builder eventHubName(@Nullable Input<String> eventHubName) {
             this.eventHubName = eventHubName;
             return this;
         }
 
-        public Builder setEventHubName(@Nullable String eventHubName) {
+        public Builder eventHubName(@Nullable String eventHubName) {
             this.eventHubName = Input.ofNullable(eventHubName);
             return this;
         }
 
-        public Builder setMessageRetentionInDays(@Nullable Input<Double> messageRetentionInDays) {
+        public Builder messageRetentionInDays(@Nullable Input<Double> messageRetentionInDays) {
             this.messageRetentionInDays = messageRetentionInDays;
             return this;
         }
 
-        public Builder setMessageRetentionInDays(@Nullable Double messageRetentionInDays) {
+        public Builder messageRetentionInDays(@Nullable Double messageRetentionInDays) {
             this.messageRetentionInDays = Input.ofNullable(messageRetentionInDays);
             return this;
         }
 
-        public Builder setNamespaceName(Input<String> namespaceName) {
+        public Builder namespaceName(Input<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
 
-        public Builder setNamespaceName(String namespaceName) {
+        public Builder namespaceName(String namespaceName) {
             this.namespaceName = Input.of(Objects.requireNonNull(namespaceName));
             return this;
         }
 
-        public Builder setPartitionCount(@Nullable Input<Double> partitionCount) {
+        public Builder partitionCount(@Nullable Input<Double> partitionCount) {
             this.partitionCount = partitionCount;
             return this;
         }
 
-        public Builder setPartitionCount(@Nullable Double partitionCount) {
+        public Builder partitionCount(@Nullable Double partitionCount) {
             this.partitionCount = Input.ofNullable(partitionCount);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<EntityStatus> status) {
+        public Builder status(@Nullable Input<EntityStatus> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable EntityStatus status) {
+        public Builder status(@Nullable EntityStatus status) {
             this.status = Input.ofNullable(status);
             return this;
         }

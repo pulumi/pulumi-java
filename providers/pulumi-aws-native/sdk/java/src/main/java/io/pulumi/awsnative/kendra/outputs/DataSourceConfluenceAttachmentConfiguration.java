@@ -53,12 +53,12 @@ public final class DataSourceConfluenceAttachmentConfiguration {
     	      this.crawlAttachments = defaults.crawlAttachments;
         }
 
-        public Builder setAttachmentFieldMappings(@Nullable List<DataSourceConfluenceAttachmentToIndexFieldMapping> attachmentFieldMappings) {
+        public Builder attachmentFieldMappings(@Nullable List<DataSourceConfluenceAttachmentToIndexFieldMapping> attachmentFieldMappings) {
             this.attachmentFieldMappings = attachmentFieldMappings;
             return this;
         }
 
-        public Builder setCrawlAttachments(@Nullable Boolean crawlAttachments) {
+        public Builder crawlAttachments(@Nullable Boolean crawlAttachments) {
             this.crawlAttachments = crawlAttachments;
             return this;
         }

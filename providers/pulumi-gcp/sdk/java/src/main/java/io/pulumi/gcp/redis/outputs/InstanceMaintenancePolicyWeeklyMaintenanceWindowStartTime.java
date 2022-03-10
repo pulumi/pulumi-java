@@ -103,22 +103,22 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime {
     	      this.seconds = defaults.seconds;
         }
 
-        public Builder setHours(@Nullable Integer hours) {
+        public Builder hours(@Nullable Integer hours) {
             this.hours = hours;
             return this;
         }
 
-        public Builder setMinutes(@Nullable Integer minutes) {
+        public Builder minutes(@Nullable Integer minutes) {
             this.minutes = minutes;
             return this;
         }
 
-        public Builder setNanos(@Nullable Integer nanos) {
+        public Builder nanos(@Nullable Integer nanos) {
             this.nanos = nanos;
             return this;
         }
 
-        public Builder setSeconds(@Nullable Integer seconds) {
+        public Builder seconds(@Nullable Integer seconds) {
             this.seconds = seconds;
             return this;
         }

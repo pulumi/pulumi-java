@@ -113,62 +113,62 @@ public final class EC2FleetOnDemandOptionsRequestArgs extends io.pulumi.resource
     	      this.singleInstanceType = defaults.singleInstanceType;
         }
 
-        public Builder setAllocationStrategy(@Nullable Input<String> allocationStrategy) {
+        public Builder allocationStrategy(@Nullable Input<String> allocationStrategy) {
             this.allocationStrategy = allocationStrategy;
             return this;
         }
 
-        public Builder setAllocationStrategy(@Nullable String allocationStrategy) {
+        public Builder allocationStrategy(@Nullable String allocationStrategy) {
             this.allocationStrategy = Input.ofNullable(allocationStrategy);
             return this;
         }
 
-        public Builder setCapacityReservationOptions(@Nullable Input<EC2FleetCapacityReservationOptionsRequestArgs> capacityReservationOptions) {
+        public Builder capacityReservationOptions(@Nullable Input<EC2FleetCapacityReservationOptionsRequestArgs> capacityReservationOptions) {
             this.capacityReservationOptions = capacityReservationOptions;
             return this;
         }
 
-        public Builder setCapacityReservationOptions(@Nullable EC2FleetCapacityReservationOptionsRequestArgs capacityReservationOptions) {
+        public Builder capacityReservationOptions(@Nullable EC2FleetCapacityReservationOptionsRequestArgs capacityReservationOptions) {
             this.capacityReservationOptions = Input.ofNullable(capacityReservationOptions);
             return this;
         }
 
-        public Builder setMaxTotalPrice(@Nullable Input<String> maxTotalPrice) {
+        public Builder maxTotalPrice(@Nullable Input<String> maxTotalPrice) {
             this.maxTotalPrice = maxTotalPrice;
             return this;
         }
 
-        public Builder setMaxTotalPrice(@Nullable String maxTotalPrice) {
+        public Builder maxTotalPrice(@Nullable String maxTotalPrice) {
             this.maxTotalPrice = Input.ofNullable(maxTotalPrice);
             return this;
         }
 
-        public Builder setMinTargetCapacity(@Nullable Input<Integer> minTargetCapacity) {
+        public Builder minTargetCapacity(@Nullable Input<Integer> minTargetCapacity) {
             this.minTargetCapacity = minTargetCapacity;
             return this;
         }
 
-        public Builder setMinTargetCapacity(@Nullable Integer minTargetCapacity) {
+        public Builder minTargetCapacity(@Nullable Integer minTargetCapacity) {
             this.minTargetCapacity = Input.ofNullable(minTargetCapacity);
             return this;
         }
 
-        public Builder setSingleAvailabilityZone(@Nullable Input<Boolean> singleAvailabilityZone) {
+        public Builder singleAvailabilityZone(@Nullable Input<Boolean> singleAvailabilityZone) {
             this.singleAvailabilityZone = singleAvailabilityZone;
             return this;
         }
 
-        public Builder setSingleAvailabilityZone(@Nullable Boolean singleAvailabilityZone) {
+        public Builder singleAvailabilityZone(@Nullable Boolean singleAvailabilityZone) {
             this.singleAvailabilityZone = Input.ofNullable(singleAvailabilityZone);
             return this;
         }
 
-        public Builder setSingleInstanceType(@Nullable Input<Boolean> singleInstanceType) {
+        public Builder singleInstanceType(@Nullable Input<Boolean> singleInstanceType) {
             this.singleInstanceType = singleInstanceType;
             return this;
         }
 
-        public Builder setSingleInstanceType(@Nullable Boolean singleInstanceType) {
+        public Builder singleInstanceType(@Nullable Boolean singleInstanceType) {
             this.singleInstanceType = Input.ofNullable(singleInstanceType);
             return this;
         }

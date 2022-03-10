@@ -202,112 +202,112 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
     	      this.v3Id1 = defaults.v3Id1;
         }
 
-        public Builder setCalendarPeriod(@Nullable Input<ServiceLevelObjectiveCalendarPeriod> calendarPeriod) {
+        public Builder calendarPeriod(@Nullable Input<ServiceLevelObjectiveCalendarPeriod> calendarPeriod) {
             this.calendarPeriod = calendarPeriod;
             return this;
         }
 
-        public Builder setCalendarPeriod(@Nullable ServiceLevelObjectiveCalendarPeriod calendarPeriod) {
+        public Builder calendarPeriod(@Nullable ServiceLevelObjectiveCalendarPeriod calendarPeriod) {
             this.calendarPeriod = Input.ofNullable(calendarPeriod);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setGoal(@Nullable Input<Double> goal) {
+        public Builder goal(@Nullable Input<Double> goal) {
             this.goal = goal;
             return this;
         }
 
-        public Builder setGoal(@Nullable Double goal) {
+        public Builder goal(@Nullable Double goal) {
             this.goal = Input.ofNullable(goal);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRollingPeriod(@Nullable Input<String> rollingPeriod) {
+        public Builder rollingPeriod(@Nullable Input<String> rollingPeriod) {
             this.rollingPeriod = rollingPeriod;
             return this;
         }
 
-        public Builder setRollingPeriod(@Nullable String rollingPeriod) {
+        public Builder rollingPeriod(@Nullable String rollingPeriod) {
             this.rollingPeriod = Input.ofNullable(rollingPeriod);
             return this;
         }
 
-        public Builder setServiceId(Input<String> serviceId) {
+        public Builder serviceId(Input<String> serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
 
-        public Builder setServiceId(String serviceId) {
+        public Builder serviceId(String serviceId) {
             this.serviceId = Input.of(Objects.requireNonNull(serviceId));
             return this;
         }
 
-        public Builder setServiceLevelIndicator(@Nullable Input<ServiceLevelIndicatorArgs> serviceLevelIndicator) {
+        public Builder serviceLevelIndicator(@Nullable Input<ServiceLevelIndicatorArgs> serviceLevelIndicator) {
             this.serviceLevelIndicator = serviceLevelIndicator;
             return this;
         }
 
-        public Builder setServiceLevelIndicator(@Nullable ServiceLevelIndicatorArgs serviceLevelIndicator) {
+        public Builder serviceLevelIndicator(@Nullable ServiceLevelIndicatorArgs serviceLevelIndicator) {
             this.serviceLevelIndicator = Input.ofNullable(serviceLevelIndicator);
             return this;
         }
 
-        public Builder setServiceLevelObjectiveId(@Nullable Input<String> serviceLevelObjectiveId) {
+        public Builder serviceLevelObjectiveId(@Nullable Input<String> serviceLevelObjectiveId) {
             this.serviceLevelObjectiveId = serviceLevelObjectiveId;
             return this;
         }
 
-        public Builder setServiceLevelObjectiveId(@Nullable String serviceLevelObjectiveId) {
+        public Builder serviceLevelObjectiveId(@Nullable String serviceLevelObjectiveId) {
             this.serviceLevelObjectiveId = Input.ofNullable(serviceLevelObjectiveId);
             return this;
         }
 
-        public Builder setUserLabels(@Nullable Input<Map<String,String>> userLabels) {
+        public Builder userLabels(@Nullable Input<Map<String,String>> userLabels) {
             this.userLabels = userLabels;
             return this;
         }
 
-        public Builder setUserLabels(@Nullable Map<String,String> userLabels) {
+        public Builder userLabels(@Nullable Map<String,String> userLabels) {
             this.userLabels = Input.ofNullable(userLabels);
             return this;
         }
 
-        public Builder setV3Id(Input<String> v3Id) {
+        public Builder v3Id(Input<String> v3Id) {
             this.v3Id = Objects.requireNonNull(v3Id);
             return this;
         }
 
-        public Builder setV3Id(String v3Id) {
+        public Builder v3Id(String v3Id) {
             this.v3Id = Input.of(Objects.requireNonNull(v3Id));
             return this;
         }
 
-        public Builder setV3Id1(Input<String> v3Id1) {
+        public Builder v3Id1(Input<String> v3Id1) {
             this.v3Id1 = Objects.requireNonNull(v3Id1);
             return this;
         }
 
-        public Builder setV3Id1(String v3Id1) {
+        public Builder v3Id1(String v3Id1) {
             this.v3Id1 = Input.of(Objects.requireNonNull(v3Id1));
             return this;
         }

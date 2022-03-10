@@ -50,7 +50,7 @@ public final class IngressStatus {
     	      this.loadBalancer = defaults.loadBalancer;
         }
 
-        public Builder setLoadBalancer(@Nullable LoadBalancerStatus loadBalancer) {
+        public Builder loadBalancer(@Nullable LoadBalancerStatus loadBalancer) {
             this.loadBalancer = loadBalancer;
             return this;
         }

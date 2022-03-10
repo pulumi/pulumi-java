@@ -50,7 +50,7 @@ public final class ListIdentityProviderSecretsResult {
     	      this.clientSecret = defaults.clientSecret;
         }
 
-        public Builder setClientSecret(@Nullable String clientSecret) {
+        public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }

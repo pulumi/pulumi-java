@@ -70,12 +70,12 @@ public final class MlStatisticsResponse extends io.pulumi.resources.InvokeArgs {
     	      this.maxIterations = defaults.maxIterations;
         }
 
-        public Builder setIterationResults(List<IterationResultResponse> iterationResults) {
+        public Builder iterationResults(List<IterationResultResponse> iterationResults) {
             this.iterationResults = Objects.requireNonNull(iterationResults);
             return this;
         }
 
-        public Builder setMaxIterations(String maxIterations) {
+        public Builder maxIterations(String maxIterations) {
             this.maxIterations = Objects.requireNonNull(maxIterations);
             return this;
         }

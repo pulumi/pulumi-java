@@ -111,62 +111,62 @@ public final class FilterPackageFilterArgs extends io.pulumi.resources.ResourceA
     	      this.version = defaults.version;
         }
 
-        public Builder setArchitecture(@Nullable Input<FilterStringFilterArgs> architecture) {
+        public Builder architecture(@Nullable Input<FilterStringFilterArgs> architecture) {
             this.architecture = architecture;
             return this;
         }
 
-        public Builder setArchitecture(@Nullable FilterStringFilterArgs architecture) {
+        public Builder architecture(@Nullable FilterStringFilterArgs architecture) {
             this.architecture = Input.ofNullable(architecture);
             return this;
         }
 
-        public Builder setEpoch(@Nullable Input<FilterNumberFilterArgs> epoch) {
+        public Builder epoch(@Nullable Input<FilterNumberFilterArgs> epoch) {
             this.epoch = epoch;
             return this;
         }
 
-        public Builder setEpoch(@Nullable FilterNumberFilterArgs epoch) {
+        public Builder epoch(@Nullable FilterNumberFilterArgs epoch) {
             this.epoch = Input.ofNullable(epoch);
             return this;
         }
 
-        public Builder setName(@Nullable Input<FilterStringFilterArgs> name) {
+        public Builder name(@Nullable Input<FilterStringFilterArgs> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable FilterStringFilterArgs name) {
+        public Builder name(@Nullable FilterStringFilterArgs name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRelease(@Nullable Input<FilterStringFilterArgs> release) {
+        public Builder release(@Nullable Input<FilterStringFilterArgs> release) {
             this.release = release;
             return this;
         }
 
-        public Builder setRelease(@Nullable FilterStringFilterArgs release) {
+        public Builder release(@Nullable FilterStringFilterArgs release) {
             this.release = Input.ofNullable(release);
             return this;
         }
 
-        public Builder setSourceLayerHash(@Nullable Input<FilterStringFilterArgs> sourceLayerHash) {
+        public Builder sourceLayerHash(@Nullable Input<FilterStringFilterArgs> sourceLayerHash) {
             this.sourceLayerHash = sourceLayerHash;
             return this;
         }
 
-        public Builder setSourceLayerHash(@Nullable FilterStringFilterArgs sourceLayerHash) {
+        public Builder sourceLayerHash(@Nullable FilterStringFilterArgs sourceLayerHash) {
             this.sourceLayerHash = Input.ofNullable(sourceLayerHash);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<FilterStringFilterArgs> version) {
+        public Builder version(@Nullable Input<FilterStringFilterArgs> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable FilterStringFilterArgs version) {
+        public Builder version(@Nullable FilterStringFilterArgs version) {
             this.version = Input.ofNullable(version);
             return this;
         }

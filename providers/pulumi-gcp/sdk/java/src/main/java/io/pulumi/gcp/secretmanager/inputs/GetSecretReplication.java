@@ -62,12 +62,12 @@ public final class GetSecretReplication extends io.pulumi.resources.InvokeArgs {
     	      this.userManageds = defaults.userManageds;
         }
 
-        public Builder setAutomatic(Boolean automatic) {
+        public Builder automatic(Boolean automatic) {
             this.automatic = Objects.requireNonNull(automatic);
             return this;
         }
 
-        public Builder setUserManageds(List<GetSecretReplicationUserManaged> userManageds) {
+        public Builder userManageds(List<GetSecretReplicationUserManaged> userManageds) {
             this.userManageds = Objects.requireNonNull(userManageds);
             return this;
         }

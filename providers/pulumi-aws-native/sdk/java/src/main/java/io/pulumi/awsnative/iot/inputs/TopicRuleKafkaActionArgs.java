@@ -99,52 +99,52 @@ public final class TopicRuleKafkaActionArgs extends io.pulumi.resources.Resource
     	      this.topic = defaults.topic;
         }
 
-        public Builder setClientProperties(Input<Object> clientProperties) {
+        public Builder clientProperties(Input<Object> clientProperties) {
             this.clientProperties = Objects.requireNonNull(clientProperties);
             return this;
         }
 
-        public Builder setClientProperties(Object clientProperties) {
+        public Builder clientProperties(Object clientProperties) {
             this.clientProperties = Input.of(Objects.requireNonNull(clientProperties));
             return this;
         }
 
-        public Builder setDestinationArn(Input<String> destinationArn) {
+        public Builder destinationArn(Input<String> destinationArn) {
             this.destinationArn = Objects.requireNonNull(destinationArn);
             return this;
         }
 
-        public Builder setDestinationArn(String destinationArn) {
+        public Builder destinationArn(String destinationArn) {
             this.destinationArn = Input.of(Objects.requireNonNull(destinationArn));
             return this;
         }
 
-        public Builder setKey(@Nullable Input<String> key) {
+        public Builder key(@Nullable Input<String> key) {
             this.key = key;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = Input.ofNullable(key);
             return this;
         }
 
-        public Builder setPartition(@Nullable Input<String> partition) {
+        public Builder partition(@Nullable Input<String> partition) {
             this.partition = partition;
             return this;
         }
 
-        public Builder setPartition(@Nullable String partition) {
+        public Builder partition(@Nullable String partition) {
             this.partition = Input.ofNullable(partition);
             return this;
         }
 
-        public Builder setTopic(Input<String> topic) {
+        public Builder topic(Input<String> topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
 
-        public Builder setTopic(String topic) {
+        public Builder topic(String topic) {
             this.topic = Input.of(Objects.requireNonNull(topic));
             return this;
         }

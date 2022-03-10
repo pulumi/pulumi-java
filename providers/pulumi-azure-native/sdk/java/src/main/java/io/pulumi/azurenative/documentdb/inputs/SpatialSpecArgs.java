@@ -73,22 +73,22 @@ public final class SpatialSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.types = defaults.types;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }
 
-        public Builder setTypes(@Nullable Input<List<Either<String,SpatialType>>> types) {
+        public Builder types(@Nullable Input<List<Either<String,SpatialType>>> types) {
             this.types = types;
             return this;
         }
 
-        public Builder setTypes(@Nullable List<Either<String,SpatialType>> types) {
+        public Builder types(@Nullable List<Either<String,SpatialType>> types) {
             this.types = Input.ofNullable(types);
             return this;
         }

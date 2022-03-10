@@ -159,72 +159,72 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
     	      this.preemptibility = defaults.preemptibility;
         }
 
-        public Builder setAccelerators(@Nullable Input<List<AcceleratorConfigArgs>> accelerators) {
+        public Builder accelerators(@Nullable Input<List<AcceleratorConfigArgs>> accelerators) {
             this.accelerators = accelerators;
             return this;
         }
 
-        public Builder setAccelerators(@Nullable List<AcceleratorConfigArgs> accelerators) {
+        public Builder accelerators(@Nullable List<AcceleratorConfigArgs> accelerators) {
             this.accelerators = Input.ofNullable(accelerators);
             return this;
         }
 
-        public Builder setDiskConfig(@Nullable Input<DiskConfigArgs> diskConfig) {
+        public Builder diskConfig(@Nullable Input<DiskConfigArgs> diskConfig) {
             this.diskConfig = diskConfig;
             return this;
         }
 
-        public Builder setDiskConfig(@Nullable DiskConfigArgs diskConfig) {
+        public Builder diskConfig(@Nullable DiskConfigArgs diskConfig) {
             this.diskConfig = Input.ofNullable(diskConfig);
             return this;
         }
 
-        public Builder setImageUri(@Nullable Input<String> imageUri) {
+        public Builder imageUri(@Nullable Input<String> imageUri) {
             this.imageUri = imageUri;
             return this;
         }
 
-        public Builder setImageUri(@Nullable String imageUri) {
+        public Builder imageUri(@Nullable String imageUri) {
             this.imageUri = Input.ofNullable(imageUri);
             return this;
         }
 
-        public Builder setMachineTypeUri(@Nullable Input<String> machineTypeUri) {
+        public Builder machineTypeUri(@Nullable Input<String> machineTypeUri) {
             this.machineTypeUri = machineTypeUri;
             return this;
         }
 
-        public Builder setMachineTypeUri(@Nullable String machineTypeUri) {
+        public Builder machineTypeUri(@Nullable String machineTypeUri) {
             this.machineTypeUri = Input.ofNullable(machineTypeUri);
             return this;
         }
 
-        public Builder setMinCpuPlatform(@Nullable Input<String> minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable Input<String> minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
-        public Builder setMinCpuPlatform(@Nullable String minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
             this.minCpuPlatform = Input.ofNullable(minCpuPlatform);
             return this;
         }
 
-        public Builder setNumInstances(@Nullable Input<Integer> numInstances) {
+        public Builder numInstances(@Nullable Input<Integer> numInstances) {
             this.numInstances = numInstances;
             return this;
         }
 
-        public Builder setNumInstances(@Nullable Integer numInstances) {
+        public Builder numInstances(@Nullable Integer numInstances) {
             this.numInstances = Input.ofNullable(numInstances);
             return this;
         }
 
-        public Builder setPreemptibility(@Nullable Input<InstanceGroupConfigPreemptibility> preemptibility) {
+        public Builder preemptibility(@Nullable Input<InstanceGroupConfigPreemptibility> preemptibility) {
             this.preemptibility = preemptibility;
             return this;
         }
 
-        public Builder setPreemptibility(@Nullable InstanceGroupConfigPreemptibility preemptibility) {
+        public Builder preemptibility(@Nullable InstanceGroupConfigPreemptibility preemptibility) {
             this.preemptibility = Input.ofNullable(preemptibility);
             return this;
         }

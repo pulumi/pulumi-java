@@ -67,12 +67,12 @@ public final class ListSaasResourceAccessTokenResult {
     	      this.token = defaults.token;
         }
 
-        public Builder setPublisherOfferBaseUri(@Nullable String publisherOfferBaseUri) {
+        public Builder publisherOfferBaseUri(@Nullable String publisherOfferBaseUri) {
             this.publisherOfferBaseUri = publisherOfferBaseUri;
             return this;
         }
 
-        public Builder setToken(@Nullable String token) {
+        public Builder token(@Nullable String token) {
             this.token = token;
             return this;
         }

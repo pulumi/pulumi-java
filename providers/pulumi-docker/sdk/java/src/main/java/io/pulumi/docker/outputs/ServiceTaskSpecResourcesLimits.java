@@ -51,12 +51,12 @@ public final class ServiceTaskSpecResourcesLimits {
     	      this.nanoCpus = defaults.nanoCpus;
         }
 
-        public Builder setMemoryBytes(@Nullable Integer memoryBytes) {
+        public Builder memoryBytes(@Nullable Integer memoryBytes) {
             this.memoryBytes = memoryBytes;
             return this;
         }
 
-        public Builder setNanoCpus(@Nullable Integer nanoCpus) {
+        public Builder nanoCpus(@Nullable Integer nanoCpus) {
             this.nanoCpus = nanoCpus;
             return this;
         }

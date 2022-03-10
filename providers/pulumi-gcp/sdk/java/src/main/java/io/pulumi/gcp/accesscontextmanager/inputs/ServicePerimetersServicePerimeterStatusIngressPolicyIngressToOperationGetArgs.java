@@ -78,22 +78,22 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressTo
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setMethodSelectors(@Nullable Input<List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressToOperationMethodSelectorGetArgs>> methodSelectors) {
+        public Builder methodSelectors(@Nullable Input<List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressToOperationMethodSelectorGetArgs>> methodSelectors) {
             this.methodSelectors = methodSelectors;
             return this;
         }
 
-        public Builder setMethodSelectors(@Nullable List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressToOperationMethodSelectorGetArgs> methodSelectors) {
+        public Builder methodSelectors(@Nullable List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressToOperationMethodSelectorGetArgs> methodSelectors) {
             this.methodSelectors = Input.ofNullable(methodSelectors);
             return this;
         }
 
-        public Builder setServiceName(@Nullable Input<String> serviceName) {
+        public Builder serviceName(@Nullable Input<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
 
-        public Builder setServiceName(@Nullable String serviceName) {
+        public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = Input.ofNullable(serviceName);
             return this;
         }

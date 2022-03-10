@@ -68,22 +68,22 @@ public final class ResponseHeadersPolicyStrictTransportSecurity {
     	      this.preload = defaults.preload;
         }
 
-        public Builder setAccessControlMaxAgeSec(Integer accessControlMaxAgeSec) {
+        public Builder accessControlMaxAgeSec(Integer accessControlMaxAgeSec) {
             this.accessControlMaxAgeSec = Objects.requireNonNull(accessControlMaxAgeSec);
             return this;
         }
 
-        public Builder setIncludeSubdomains(@Nullable Boolean includeSubdomains) {
+        public Builder includeSubdomains(@Nullable Boolean includeSubdomains) {
             this.includeSubdomains = includeSubdomains;
             return this;
         }
 
-        public Builder setOverride(Boolean override) {
+        public Builder override(Boolean override) {
             this.override = Objects.requireNonNull(override);
             return this;
         }
 
-        public Builder setPreload(@Nullable Boolean preload) {
+        public Builder preload(@Nullable Boolean preload) {
             this.preload = preload;
             return this;
         }

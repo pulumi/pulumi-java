@@ -154,72 +154,72 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setEnabledState(@Nullable Input<Either<String,EnabledState>> enabledState) {
+        public Builder enabledState(@Nullable Input<Either<String,EnabledState>> enabledState) {
             this.enabledState = enabledState;
             return this;
         }
 
-        public Builder setEnabledState(@Nullable Either<String,EnabledState> enabledState) {
+        public Builder enabledState(@Nullable Either<String,EnabledState> enabledState) {
             this.enabledState = Input.ofNullable(enabledState);
             return this;
         }
 
-        public Builder setEndpointName(@Nullable Input<String> endpointName) {
+        public Builder endpointName(@Nullable Input<String> endpointName) {
             this.endpointName = endpointName;
             return this;
         }
 
-        public Builder setEndpointName(@Nullable String endpointName) {
+        public Builder endpointName(@Nullable String endpointName) {
             this.endpointName = Input.ofNullable(endpointName);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setOriginResponseTimeoutSeconds(@Nullable Input<Integer> originResponseTimeoutSeconds) {
+        public Builder originResponseTimeoutSeconds(@Nullable Input<Integer> originResponseTimeoutSeconds) {
             this.originResponseTimeoutSeconds = originResponseTimeoutSeconds;
             return this;
         }
 
-        public Builder setOriginResponseTimeoutSeconds(@Nullable Integer originResponseTimeoutSeconds) {
+        public Builder originResponseTimeoutSeconds(@Nullable Integer originResponseTimeoutSeconds) {
             this.originResponseTimeoutSeconds = Input.ofNullable(originResponseTimeoutSeconds);
             return this;
         }
 
-        public Builder setProfileName(Input<String> profileName) {
+        public Builder profileName(Input<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
 
-        public Builder setProfileName(String profileName) {
+        public Builder profileName(String profileName) {
             this.profileName = Input.of(Objects.requireNonNull(profileName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

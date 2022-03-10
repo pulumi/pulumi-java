@@ -134,62 +134,62 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setActionId(@Nullable Input<String> actionId) {
+        public Builder actionId(@Nullable Input<String> actionId) {
             this.actionId = actionId;
             return this;
         }
 
-        public Builder setActionId(@Nullable String actionId) {
+        public Builder actionId(@Nullable String actionId) {
             this.actionId = Input.ofNullable(actionId);
             return this;
         }
 
-        public Builder setLogicAppResourceId(Input<String> logicAppResourceId) {
+        public Builder logicAppResourceId(Input<String> logicAppResourceId) {
             this.logicAppResourceId = Objects.requireNonNull(logicAppResourceId);
             return this;
         }
 
-        public Builder setLogicAppResourceId(String logicAppResourceId) {
+        public Builder logicAppResourceId(String logicAppResourceId) {
             this.logicAppResourceId = Input.of(Objects.requireNonNull(logicAppResourceId));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRuleId(Input<String> ruleId) {
+        public Builder ruleId(Input<String> ruleId) {
             this.ruleId = Objects.requireNonNull(ruleId);
             return this;
         }
 
-        public Builder setRuleId(String ruleId) {
+        public Builder ruleId(String ruleId) {
             this.ruleId = Input.of(Objects.requireNonNull(ruleId));
             return this;
         }
 
-        public Builder setTriggerUri(Input<String> triggerUri) {
+        public Builder triggerUri(Input<String> triggerUri) {
             this.triggerUri = Objects.requireNonNull(triggerUri);
             return this;
         }
 
-        public Builder setTriggerUri(String triggerUri) {
+        public Builder triggerUri(String triggerUri) {
             this.triggerUri = Input.of(Objects.requireNonNull(triggerUri));
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

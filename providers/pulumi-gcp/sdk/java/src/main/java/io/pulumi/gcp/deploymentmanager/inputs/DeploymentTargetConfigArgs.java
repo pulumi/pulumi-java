@@ -52,12 +52,12 @@ public final class DeploymentTargetConfigArgs extends io.pulumi.resources.Resour
     	      this.content = defaults.content;
         }
 
-        public Builder setContent(Input<String> content) {
+        public Builder content(Input<String> content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
-        public Builder setContent(String content) {
+        public Builder content(String content) {
             this.content = Input.of(Objects.requireNonNull(content));
             return this;
         }

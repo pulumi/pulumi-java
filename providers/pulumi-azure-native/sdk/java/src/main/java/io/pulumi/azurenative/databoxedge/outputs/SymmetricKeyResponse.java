@@ -50,7 +50,7 @@ public final class SymmetricKeyResponse {
     	      this.connectionString = defaults.connectionString;
         }
 
-        public Builder setConnectionString(@Nullable AsymmetricEncryptedSecretResponse connectionString) {
+        public Builder connectionString(@Nullable AsymmetricEncryptedSecretResponse connectionString) {
             this.connectionString = connectionString;
             return this;
         }

@@ -68,12 +68,12 @@ public final class NetworkPolicyIngressRule {
     	      this.ports = defaults.ports;
         }
 
-        public Builder setFrom(@Nullable List<NetworkPolicyPeer> from) {
+        public Builder from(@Nullable List<NetworkPolicyPeer> from) {
             this.from = from;
             return this;
         }
 
-        public Builder setPorts(@Nullable List<NetworkPolicyPort> ports) {
+        public Builder ports(@Nullable List<NetworkPolicyPort> ports) {
             this.ports = ports;
             return this;
         }

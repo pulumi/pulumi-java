@@ -50,7 +50,7 @@ public final class PrivateAtlasPropertiesResponse {
     	      this.provisioningState = defaults.provisioningState;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }

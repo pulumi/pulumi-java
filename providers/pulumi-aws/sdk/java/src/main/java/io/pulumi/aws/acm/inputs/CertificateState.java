@@ -268,142 +268,142 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
     	      this.validationMethod = defaults.validationMethod;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setCertificateAuthorityArn(@Nullable Input<String> certificateAuthorityArn) {
+        public Builder certificateAuthorityArn(@Nullable Input<String> certificateAuthorityArn) {
             this.certificateAuthorityArn = certificateAuthorityArn;
             return this;
         }
 
-        public Builder setCertificateAuthorityArn(@Nullable String certificateAuthorityArn) {
+        public Builder certificateAuthorityArn(@Nullable String certificateAuthorityArn) {
             this.certificateAuthorityArn = Input.ofNullable(certificateAuthorityArn);
             return this;
         }
 
-        public Builder setCertificateBody(@Nullable Input<String> certificateBody) {
+        public Builder certificateBody(@Nullable Input<String> certificateBody) {
             this.certificateBody = certificateBody;
             return this;
         }
 
-        public Builder setCertificateBody(@Nullable String certificateBody) {
+        public Builder certificateBody(@Nullable String certificateBody) {
             this.certificateBody = Input.ofNullable(certificateBody);
             return this;
         }
 
-        public Builder setCertificateChain(@Nullable Input<String> certificateChain) {
+        public Builder certificateChain(@Nullable Input<String> certificateChain) {
             this.certificateChain = certificateChain;
             return this;
         }
 
-        public Builder setCertificateChain(@Nullable String certificateChain) {
+        public Builder certificateChain(@Nullable String certificateChain) {
             this.certificateChain = Input.ofNullable(certificateChain);
             return this;
         }
 
-        public Builder setDomainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Input<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
-        public Builder setDomainName(@Nullable String domainName) {
+        public Builder domainName(@Nullable String domainName) {
             this.domainName = Input.ofNullable(domainName);
             return this;
         }
 
-        public Builder setDomainValidationOptions(@Nullable Input<List<CertificateDomainValidationOptionGetArgs>> domainValidationOptions) {
+        public Builder domainValidationOptions(@Nullable Input<List<CertificateDomainValidationOptionGetArgs>> domainValidationOptions) {
             this.domainValidationOptions = domainValidationOptions;
             return this;
         }
 
-        public Builder setDomainValidationOptions(@Nullable List<CertificateDomainValidationOptionGetArgs> domainValidationOptions) {
+        public Builder domainValidationOptions(@Nullable List<CertificateDomainValidationOptionGetArgs> domainValidationOptions) {
             this.domainValidationOptions = Input.ofNullable(domainValidationOptions);
             return this;
         }
 
-        public Builder setOptions(@Nullable Input<CertificateOptionsGetArgs> options) {
+        public Builder options(@Nullable Input<CertificateOptionsGetArgs> options) {
             this.options = options;
             return this;
         }
 
-        public Builder setOptions(@Nullable CertificateOptionsGetArgs options) {
+        public Builder options(@Nullable CertificateOptionsGetArgs options) {
             this.options = Input.ofNullable(options);
             return this;
         }
 
-        public Builder setPrivateKey(@Nullable Input<String> privateKey) {
+        public Builder privateKey(@Nullable Input<String> privateKey) {
             this.privateKey = privateKey;
             return this;
         }
 
-        public Builder setPrivateKey(@Nullable String privateKey) {
+        public Builder privateKey(@Nullable String privateKey) {
             this.privateKey = Input.ofNullable(privateKey);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setSubjectAlternativeNames(@Nullable Input<List<String>> subjectAlternativeNames) {
+        public Builder subjectAlternativeNames(@Nullable Input<List<String>> subjectAlternativeNames) {
             this.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
 
-        public Builder setSubjectAlternativeNames(@Nullable List<String> subjectAlternativeNames) {
+        public Builder subjectAlternativeNames(@Nullable List<String> subjectAlternativeNames) {
             this.subjectAlternativeNames = Input.ofNullable(subjectAlternativeNames);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setValidationEmails(@Nullable Input<List<String>> validationEmails) {
+        public Builder validationEmails(@Nullable Input<List<String>> validationEmails) {
             this.validationEmails = validationEmails;
             return this;
         }
 
-        public Builder setValidationEmails(@Nullable List<String> validationEmails) {
+        public Builder validationEmails(@Nullable List<String> validationEmails) {
             this.validationEmails = Input.ofNullable(validationEmails);
             return this;
         }
 
-        public Builder setValidationMethod(@Nullable Input<String> validationMethod) {
+        public Builder validationMethod(@Nullable Input<String> validationMethod) {
             this.validationMethod = validationMethod;
             return this;
         }
 
-        public Builder setValidationMethod(@Nullable String validationMethod) {
+        public Builder validationMethod(@Nullable String validationMethod) {
             this.validationMethod = Input.ofNullable(validationMethod);
             return this;
         }

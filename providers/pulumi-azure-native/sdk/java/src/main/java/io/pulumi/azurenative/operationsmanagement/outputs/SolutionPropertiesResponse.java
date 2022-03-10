@@ -99,22 +99,22 @@ public final class SolutionPropertiesResponse {
     	      this.workspaceResourceId = defaults.workspaceResourceId;
         }
 
-        public Builder setContainedResources(@Nullable List<String> containedResources) {
+        public Builder containedResources(@Nullable List<String> containedResources) {
             this.containedResources = containedResources;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setReferencedResources(@Nullable List<String> referencedResources) {
+        public Builder referencedResources(@Nullable List<String> referencedResources) {
             this.referencedResources = referencedResources;
             return this;
         }
 
-        public Builder setWorkspaceResourceId(String workspaceResourceId) {
+        public Builder workspaceResourceId(String workspaceResourceId) {
             this.workspaceResourceId = Objects.requireNonNull(workspaceResourceId);
             return this;
         }

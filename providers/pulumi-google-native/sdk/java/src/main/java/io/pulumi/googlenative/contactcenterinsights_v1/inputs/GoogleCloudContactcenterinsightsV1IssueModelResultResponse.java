@@ -74,12 +74,12 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelResultResponse ex
     	      this.issues = defaults.issues;
         }
 
-        public Builder setIssueModel(String issueModel) {
+        public Builder issueModel(String issueModel) {
             this.issueModel = Objects.requireNonNull(issueModel);
             return this;
         }
 
-        public Builder setIssues(List<GoogleCloudContactcenterinsightsV1IssueAssignmentResponse> issues) {
+        public Builder issues(List<GoogleCloudContactcenterinsightsV1IssueAssignmentResponse> issues) {
             this.issues = Objects.requireNonNull(issues);
             return this;
         }

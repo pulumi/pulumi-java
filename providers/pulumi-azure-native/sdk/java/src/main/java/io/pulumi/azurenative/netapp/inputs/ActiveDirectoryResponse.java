@@ -348,97 +348,97 @@ public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArg
     	      this.username = defaults.username;
         }
 
-        public Builder setActiveDirectoryId(@Nullable String activeDirectoryId) {
+        public Builder activeDirectoryId(@Nullable String activeDirectoryId) {
             this.activeDirectoryId = activeDirectoryId;
             return this;
         }
 
-        public Builder setAdName(@Nullable String adName) {
+        public Builder adName(@Nullable String adName) {
             this.adName = adName;
             return this;
         }
 
-        public Builder setAesEncryption(@Nullable Boolean aesEncryption) {
+        public Builder aesEncryption(@Nullable Boolean aesEncryption) {
             this.aesEncryption = aesEncryption;
             return this;
         }
 
-        public Builder setAllowLocalNfsUsersWithLdap(@Nullable Boolean allowLocalNfsUsersWithLdap) {
+        public Builder allowLocalNfsUsersWithLdap(@Nullable Boolean allowLocalNfsUsersWithLdap) {
             this.allowLocalNfsUsersWithLdap = allowLocalNfsUsersWithLdap;
             return this;
         }
 
-        public Builder setBackupOperators(@Nullable List<String> backupOperators) {
+        public Builder backupOperators(@Nullable List<String> backupOperators) {
             this.backupOperators = backupOperators;
             return this;
         }
 
-        public Builder setDns(@Nullable String dns) {
+        public Builder dns(@Nullable String dns) {
             this.dns = dns;
             return this;
         }
 
-        public Builder setDomain(@Nullable String domain) {
+        public Builder domain(@Nullable String domain) {
             this.domain = domain;
             return this;
         }
 
-        public Builder setKdcIP(@Nullable String kdcIP) {
+        public Builder kdcIP(@Nullable String kdcIP) {
             this.kdcIP = kdcIP;
             return this;
         }
 
-        public Builder setLdapOverTLS(@Nullable Boolean ldapOverTLS) {
+        public Builder ldapOverTLS(@Nullable Boolean ldapOverTLS) {
             this.ldapOverTLS = ldapOverTLS;
             return this;
         }
 
-        public Builder setLdapSigning(@Nullable Boolean ldapSigning) {
+        public Builder ldapSigning(@Nullable Boolean ldapSigning) {
             this.ldapSigning = ldapSigning;
             return this;
         }
 
-        public Builder setOrganizationalUnit(@Nullable String organizationalUnit) {
+        public Builder organizationalUnit(@Nullable String organizationalUnit) {
             this.organizationalUnit = organizationalUnit;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setSecurityOperators(@Nullable List<String> securityOperators) {
+        public Builder securityOperators(@Nullable List<String> securityOperators) {
             this.securityOperators = securityOperators;
             return this;
         }
 
-        public Builder setServerRootCACertificate(@Nullable String serverRootCACertificate) {
+        public Builder serverRootCACertificate(@Nullable String serverRootCACertificate) {
             this.serverRootCACertificate = serverRootCACertificate;
             return this;
         }
 
-        public Builder setSite(@Nullable String site) {
+        public Builder site(@Nullable String site) {
             this.site = site;
             return this;
         }
 
-        public Builder setSmbServerName(@Nullable String smbServerName) {
+        public Builder smbServerName(@Nullable String smbServerName) {
             this.smbServerName = smbServerName;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatusDetails(String statusDetails) {
+        public Builder statusDetails(String statusDetails) {
             this.statusDetails = Objects.requireNonNull(statusDetails);
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = username;
             return this;
         }

@@ -75,12 +75,12 @@ public final class OpenIdAuthenticationSettingsContractResponse extends io.pulum
     	      this.openidProviderId = defaults.openidProviderId;
         }
 
-        public Builder setBearerTokenSendingMethods(@Nullable List<String> bearerTokenSendingMethods) {
+        public Builder bearerTokenSendingMethods(@Nullable List<String> bearerTokenSendingMethods) {
             this.bearerTokenSendingMethods = bearerTokenSendingMethods;
             return this;
         }
 
-        public Builder setOpenidProviderId(@Nullable String openidProviderId) {
+        public Builder openidProviderId(@Nullable String openidProviderId) {
             this.openidProviderId = openidProviderId;
             return this;
         }

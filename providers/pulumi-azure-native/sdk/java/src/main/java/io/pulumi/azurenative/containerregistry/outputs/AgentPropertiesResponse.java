@@ -50,7 +50,7 @@ public final class AgentPropertiesResponse {
     	      this.cpu = defaults.cpu;
         }
 
-        public Builder setCpu(@Nullable Integer cpu) {
+        public Builder cpu(@Nullable Integer cpu) {
             this.cpu = cpu;
             return this;
         }

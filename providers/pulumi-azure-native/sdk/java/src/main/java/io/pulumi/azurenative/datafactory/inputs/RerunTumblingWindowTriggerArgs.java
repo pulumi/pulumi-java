@@ -158,72 +158,72 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
     	      this.type = defaults.type;
         }
 
-        public Builder setAnnotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Input<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setParentTrigger(Input<Object> parentTrigger) {
+        public Builder parentTrigger(Input<Object> parentTrigger) {
             this.parentTrigger = Objects.requireNonNull(parentTrigger);
             return this;
         }
 
-        public Builder setParentTrigger(Object parentTrigger) {
+        public Builder parentTrigger(Object parentTrigger) {
             this.parentTrigger = Input.of(Objects.requireNonNull(parentTrigger));
             return this;
         }
 
-        public Builder setRequestedEndTime(Input<String> requestedEndTime) {
+        public Builder requestedEndTime(Input<String> requestedEndTime) {
             this.requestedEndTime = Objects.requireNonNull(requestedEndTime);
             return this;
         }
 
-        public Builder setRequestedEndTime(String requestedEndTime) {
+        public Builder requestedEndTime(String requestedEndTime) {
             this.requestedEndTime = Input.of(Objects.requireNonNull(requestedEndTime));
             return this;
         }
 
-        public Builder setRequestedStartTime(Input<String> requestedStartTime) {
+        public Builder requestedStartTime(Input<String> requestedStartTime) {
             this.requestedStartTime = Objects.requireNonNull(requestedStartTime);
             return this;
         }
 
-        public Builder setRequestedStartTime(String requestedStartTime) {
+        public Builder requestedStartTime(String requestedStartTime) {
             this.requestedStartTime = Input.of(Objects.requireNonNull(requestedStartTime));
             return this;
         }
 
-        public Builder setRerunConcurrency(Input<Integer> rerunConcurrency) {
+        public Builder rerunConcurrency(Input<Integer> rerunConcurrency) {
             this.rerunConcurrency = Objects.requireNonNull(rerunConcurrency);
             return this;
         }
 
-        public Builder setRerunConcurrency(Integer rerunConcurrency) {
+        public Builder rerunConcurrency(Integer rerunConcurrency) {
             this.rerunConcurrency = Input.of(Objects.requireNonNull(rerunConcurrency));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

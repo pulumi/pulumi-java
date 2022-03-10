@@ -66,12 +66,12 @@ public final class DeadLetterPolicyResponse {
     	      this.maxDeliveryAttempts = defaults.maxDeliveryAttempts;
         }
 
-        public Builder setDeadLetterTopic(String deadLetterTopic) {
+        public Builder deadLetterTopic(String deadLetterTopic) {
             this.deadLetterTopic = Objects.requireNonNull(deadLetterTopic);
             return this;
         }
 
-        public Builder setMaxDeliveryAttempts(Integer maxDeliveryAttempts) {
+        public Builder maxDeliveryAttempts(Integer maxDeliveryAttempts) {
             this.maxDeliveryAttempts = Objects.requireNonNull(maxDeliveryAttempts);
             return this;
         }

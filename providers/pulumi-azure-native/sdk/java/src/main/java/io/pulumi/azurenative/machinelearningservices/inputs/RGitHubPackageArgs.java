@@ -70,22 +70,22 @@ public final class RGitHubPackageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.repository = defaults.repository;
         }
 
-        public Builder setAuthToken(@Nullable Input<String> authToken) {
+        public Builder authToken(@Nullable Input<String> authToken) {
             this.authToken = authToken;
             return this;
         }
 
-        public Builder setAuthToken(@Nullable String authToken) {
+        public Builder authToken(@Nullable String authToken) {
             this.authToken = Input.ofNullable(authToken);
             return this;
         }
 
-        public Builder setRepository(@Nullable Input<String> repository) {
+        public Builder repository(@Nullable Input<String> repository) {
             this.repository = repository;
             return this;
         }
 
-        public Builder setRepository(@Nullable String repository) {
+        public Builder repository(@Nullable String repository) {
             this.repository = Input.ofNullable(repository);
             return this;
         }

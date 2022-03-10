@@ -113,27 +113,27 @@ public final class LinkedIntegrationRuntimeResponse {
     	      this.subscriptionId = defaults.subscriptionId;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDataFactoryLocation(String dataFactoryLocation) {
+        public Builder dataFactoryLocation(String dataFactoryLocation) {
             this.dataFactoryLocation = Objects.requireNonNull(dataFactoryLocation);
             return this;
         }
 
-        public Builder setDataFactoryName(String dataFactoryName) {
+        public Builder dataFactoryName(String dataFactoryName) {
             this.dataFactoryName = Objects.requireNonNull(dataFactoryName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSubscriptionId(String subscriptionId) {
+        public Builder subscriptionId(String subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }

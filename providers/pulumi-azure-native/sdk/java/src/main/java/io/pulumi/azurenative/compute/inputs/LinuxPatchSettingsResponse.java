@@ -74,12 +74,12 @@ public final class LinuxPatchSettingsResponse extends io.pulumi.resources.Invoke
     	      this.patchMode = defaults.patchMode;
         }
 
-        public Builder setAssessmentMode(@Nullable String assessmentMode) {
+        public Builder assessmentMode(@Nullable String assessmentMode) {
             this.assessmentMode = assessmentMode;
             return this;
         }
 
-        public Builder setPatchMode(@Nullable String patchMode) {
+        public Builder patchMode(@Nullable String patchMode) {
             this.patchMode = patchMode;
             return this;
         }

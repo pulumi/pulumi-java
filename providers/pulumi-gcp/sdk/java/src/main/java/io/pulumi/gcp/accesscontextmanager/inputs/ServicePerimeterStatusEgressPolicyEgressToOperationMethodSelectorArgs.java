@@ -73,22 +73,22 @@ public final class ServicePerimeterStatusEgressPolicyEgressToOperationMethodSele
     	      this.permission = defaults.permission;
         }
 
-        public Builder setMethod(@Nullable Input<String> method) {
+        public Builder method(@Nullable Input<String> method) {
             this.method = method;
             return this;
         }
 
-        public Builder setMethod(@Nullable String method) {
+        public Builder method(@Nullable String method) {
             this.method = Input.ofNullable(method);
             return this;
         }
 
-        public Builder setPermission(@Nullable Input<String> permission) {
+        public Builder permission(@Nullable Input<String> permission) {
             this.permission = permission;
             return this;
         }
 
-        public Builder setPermission(@Nullable String permission) {
+        public Builder permission(@Nullable String permission) {
             this.permission = Input.ofNullable(permission);
             return this;
         }

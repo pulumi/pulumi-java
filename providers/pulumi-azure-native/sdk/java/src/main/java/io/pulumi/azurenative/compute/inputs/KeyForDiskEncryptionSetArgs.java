@@ -75,22 +75,22 @@ public final class KeyForDiskEncryptionSetArgs extends io.pulumi.resources.Resou
     	      this.sourceVault = defaults.sourceVault;
         }
 
-        public Builder setKeyUrl(Input<String> keyUrl) {
+        public Builder keyUrl(Input<String> keyUrl) {
             this.keyUrl = Objects.requireNonNull(keyUrl);
             return this;
         }
 
-        public Builder setKeyUrl(String keyUrl) {
+        public Builder keyUrl(String keyUrl) {
             this.keyUrl = Input.of(Objects.requireNonNull(keyUrl));
             return this;
         }
 
-        public Builder setSourceVault(@Nullable Input<SourceVaultArgs> sourceVault) {
+        public Builder sourceVault(@Nullable Input<SourceVaultArgs> sourceVault) {
             this.sourceVault = sourceVault;
             return this;
         }
 
-        public Builder setSourceVault(@Nullable SourceVaultArgs sourceVault) {
+        public Builder sourceVault(@Nullable SourceVaultArgs sourceVault) {
             this.sourceVault = Input.ofNullable(sourceVault);
             return this;
         }

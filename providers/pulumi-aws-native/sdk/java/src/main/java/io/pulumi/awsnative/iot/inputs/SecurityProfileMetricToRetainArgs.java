@@ -71,22 +71,22 @@ public final class SecurityProfileMetricToRetainArgs extends io.pulumi.resources
     	      this.metricDimension = defaults.metricDimension;
         }
 
-        public Builder setMetric(Input<String> metric) {
+        public Builder metric(Input<String> metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
 
-        public Builder setMetric(String metric) {
+        public Builder metric(String metric) {
             this.metric = Input.of(Objects.requireNonNull(metric));
             return this;
         }
 
-        public Builder setMetricDimension(@Nullable Input<SecurityProfileMetricDimensionArgs> metricDimension) {
+        public Builder metricDimension(@Nullable Input<SecurityProfileMetricDimensionArgs> metricDimension) {
             this.metricDimension = metricDimension;
             return this;
         }
 
-        public Builder setMetricDimension(@Nullable SecurityProfileMetricDimensionArgs metricDimension) {
+        public Builder metricDimension(@Nullable SecurityProfileMetricDimensionArgs metricDimension) {
             this.metricDimension = Input.ofNullable(metricDimension);
             return this;
         }

@@ -220,57 +220,57 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends io.pul
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setApplicationGatewayName(String applicationGatewayName) {
+        public Builder applicationGatewayName(String applicationGatewayName) {
             this.applicationGatewayName = Objects.requireNonNull(applicationGatewayName);
             return this;
         }
 
-        public Builder setBackendAddressPool(@Nullable SubResource backendAddressPool) {
+        public Builder backendAddressPool(@Nullable SubResource backendAddressPool) {
             this.backendAddressPool = backendAddressPool;
             return this;
         }
 
-        public Builder setBackendHttpSettings(@Nullable SubResource backendHttpSettings) {
+        public Builder backendHttpSettings(@Nullable SubResource backendHttpSettings) {
             this.backendHttpSettings = backendHttpSettings;
             return this;
         }
 
-        public Builder setExpand(@Nullable String expand) {
+        public Builder expand(@Nullable String expand) {
             this.expand = expand;
             return this;
         }
 
-        public Builder setHost(@Nullable String host) {
+        public Builder host(@Nullable String host) {
             this.host = host;
             return this;
         }
 
-        public Builder setMatch(@Nullable ApplicationGatewayProbeHealthResponseMatch match) {
+        public Builder match(@Nullable ApplicationGatewayProbeHealthResponseMatch match) {
             this.match = match;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPickHostNameFromBackendHttpSettings(@Nullable Boolean pickHostNameFromBackendHttpSettings) {
+        public Builder pickHostNameFromBackendHttpSettings(@Nullable Boolean pickHostNameFromBackendHttpSettings) {
             this.pickHostNameFromBackendHttpSettings = pickHostNameFromBackendHttpSettings;
             return this;
         }
 
-        public Builder setProtocol(@Nullable Either<String,ApplicationGatewayProtocol> protocol) {
+        public Builder protocol(@Nullable Either<String,ApplicationGatewayProtocol> protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Integer timeout) {
+        public Builder timeout(@Nullable Integer timeout) {
             this.timeout = timeout;
             return this;
         }

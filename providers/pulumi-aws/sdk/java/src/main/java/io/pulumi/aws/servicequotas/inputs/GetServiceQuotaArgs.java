@@ -86,17 +86,17 @@ public final class GetServiceQuotaArgs extends io.pulumi.resources.InvokeArgs {
     	      this.serviceCode = defaults.serviceCode;
         }
 
-        public Builder setQuotaCode(@Nullable String quotaCode) {
+        public Builder quotaCode(@Nullable String quotaCode) {
             this.quotaCode = quotaCode;
             return this;
         }
 
-        public Builder setQuotaName(@Nullable String quotaName) {
+        public Builder quotaName(@Nullable String quotaName) {
             this.quotaName = quotaName;
             return this;
         }
 
-        public Builder setServiceCode(String serviceCode) {
+        public Builder serviceCode(String serviceCode) {
             this.serviceCode = Objects.requireNonNull(serviceCode);
             return this;
         }

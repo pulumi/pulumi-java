@@ -42,7 +42,7 @@ public final class AutomationRuleSetResponse {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setRules(@Nullable List<AutomationTriggeringRuleResponse> rules) {
+        public Builder rules(@Nullable List<AutomationTriggeringRuleResponse> rules) {
             this.rules = rules;
             return this;
         }

@@ -86,32 +86,32 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordColumnGet
     	      this.sqlType = defaults.sqlType;
         }
 
-        public Builder setMapping(@Nullable Input<String> mapping) {
+        public Builder mapping(@Nullable Input<String> mapping) {
             this.mapping = mapping;
             return this;
         }
 
-        public Builder setMapping(@Nullable String mapping) {
+        public Builder mapping(@Nullable String mapping) {
             this.mapping = Input.ofNullable(mapping);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setSqlType(Input<String> sqlType) {
+        public Builder sqlType(Input<String> sqlType) {
             this.sqlType = Objects.requireNonNull(sqlType);
             return this;
         }
 
-        public Builder setSqlType(String sqlType) {
+        public Builder sqlType(String sqlType) {
             this.sqlType = Input.of(Objects.requireNonNull(sqlType));
             return this;
         }

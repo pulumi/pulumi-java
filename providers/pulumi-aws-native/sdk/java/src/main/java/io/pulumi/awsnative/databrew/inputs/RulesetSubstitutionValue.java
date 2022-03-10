@@ -72,12 +72,12 @@ public final class RulesetSubstitutionValue extends io.pulumi.resources.InvokeAr
     	      this.valueReference = defaults.valueReference;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setValueReference(String valueReference) {
+        public Builder valueReference(String valueReference) {
             this.valueReference = Objects.requireNonNull(valueReference);
             return this;
         }

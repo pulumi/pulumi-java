@@ -49,7 +49,7 @@ public final class SubordinateConfigChainResponse {
     	      this.pemCertificates = defaults.pemCertificates;
         }
 
-        public Builder setPemCertificates(List<String> pemCertificates) {
+        public Builder pemCertificates(List<String> pemCertificates) {
             this.pemCertificates = Objects.requireNonNull(pemCertificates);
             return this;
         }

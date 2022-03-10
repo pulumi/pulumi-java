@@ -93,17 +93,17 @@ public final class AzureWorkloadContainerExtendedInfoResponse extends io.pulumi.
     	      this.nodesList = defaults.nodesList;
         }
 
-        public Builder setHostServerName(@Nullable String hostServerName) {
+        public Builder hostServerName(@Nullable String hostServerName) {
             this.hostServerName = hostServerName;
             return this;
         }
 
-        public Builder setInquiryInfo(@Nullable InquiryInfoResponse inquiryInfo) {
+        public Builder inquiryInfo(@Nullable InquiryInfoResponse inquiryInfo) {
             this.inquiryInfo = inquiryInfo;
             return this;
         }
 
-        public Builder setNodesList(@Nullable List<DistributedNodesInfoResponse> nodesList) {
+        public Builder nodesList(@Nullable List<DistributedNodesInfoResponse> nodesList) {
             this.nodesList = nodesList;
             return this;
         }

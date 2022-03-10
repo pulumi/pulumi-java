@@ -62,12 +62,12 @@ public final class GetMachineImageArgs extends io.pulumi.resources.InvokeArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setMachineImage(String machineImage) {
+        public Builder machineImage(String machineImage) {
             this.machineImage = Objects.requireNonNull(machineImage);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

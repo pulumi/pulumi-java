@@ -153,72 +153,72 @@ public final class DomainSamlOptionsSamlOptionsGetArgs extends io.pulumi.resourc
     	      this.subjectKey = defaults.subjectKey;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setIdp(@Nullable Input<DomainSamlOptionsSamlOptionsIdpGetArgs> idp) {
+        public Builder idp(@Nullable Input<DomainSamlOptionsSamlOptionsIdpGetArgs> idp) {
             this.idp = idp;
             return this;
         }
 
-        public Builder setIdp(@Nullable DomainSamlOptionsSamlOptionsIdpGetArgs idp) {
+        public Builder idp(@Nullable DomainSamlOptionsSamlOptionsIdpGetArgs idp) {
             this.idp = Input.ofNullable(idp);
             return this;
         }
 
-        public Builder setMasterBackendRole(@Nullable Input<String> masterBackendRole) {
+        public Builder masterBackendRole(@Nullable Input<String> masterBackendRole) {
             this.masterBackendRole = masterBackendRole;
             return this;
         }
 
-        public Builder setMasterBackendRole(@Nullable String masterBackendRole) {
+        public Builder masterBackendRole(@Nullable String masterBackendRole) {
             this.masterBackendRole = Input.ofNullable(masterBackendRole);
             return this;
         }
 
-        public Builder setMasterUserName(@Nullable Input<String> masterUserName) {
+        public Builder masterUserName(@Nullable Input<String> masterUserName) {
             this.masterUserName = masterUserName;
             return this;
         }
 
-        public Builder setMasterUserName(@Nullable String masterUserName) {
+        public Builder masterUserName(@Nullable String masterUserName) {
             this.masterUserName = Input.ofNullable(masterUserName);
             return this;
         }
 
-        public Builder setRolesKey(@Nullable Input<String> rolesKey) {
+        public Builder rolesKey(@Nullable Input<String> rolesKey) {
             this.rolesKey = rolesKey;
             return this;
         }
 
-        public Builder setRolesKey(@Nullable String rolesKey) {
+        public Builder rolesKey(@Nullable String rolesKey) {
             this.rolesKey = Input.ofNullable(rolesKey);
             return this;
         }
 
-        public Builder setSessionTimeoutMinutes(@Nullable Input<Integer> sessionTimeoutMinutes) {
+        public Builder sessionTimeoutMinutes(@Nullable Input<Integer> sessionTimeoutMinutes) {
             this.sessionTimeoutMinutes = sessionTimeoutMinutes;
             return this;
         }
 
-        public Builder setSessionTimeoutMinutes(@Nullable Integer sessionTimeoutMinutes) {
+        public Builder sessionTimeoutMinutes(@Nullable Integer sessionTimeoutMinutes) {
             this.sessionTimeoutMinutes = Input.ofNullable(sessionTimeoutMinutes);
             return this;
         }
 
-        public Builder setSubjectKey(@Nullable Input<String> subjectKey) {
+        public Builder subjectKey(@Nullable Input<String> subjectKey) {
             this.subjectKey = subjectKey;
             return this;
         }
 
-        public Builder setSubjectKey(@Nullable String subjectKey) {
+        public Builder subjectKey(@Nullable String subjectKey) {
             this.subjectKey = Input.ofNullable(subjectKey);
             return this;
         }

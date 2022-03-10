@@ -92,32 +92,32 @@ public final class RoboStartingIntentArgs extends io.pulumi.resources.ResourceAr
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setLauncherActivity(@Nullable Input<LauncherActivityIntentArgs> launcherActivity) {
+        public Builder launcherActivity(@Nullable Input<LauncherActivityIntentArgs> launcherActivity) {
             this.launcherActivity = launcherActivity;
             return this;
         }
 
-        public Builder setLauncherActivity(@Nullable LauncherActivityIntentArgs launcherActivity) {
+        public Builder launcherActivity(@Nullable LauncherActivityIntentArgs launcherActivity) {
             this.launcherActivity = Input.ofNullable(launcherActivity);
             return this;
         }
 
-        public Builder setStartActivity(@Nullable Input<StartActivityIntentArgs> startActivity) {
+        public Builder startActivity(@Nullable Input<StartActivityIntentArgs> startActivity) {
             this.startActivity = startActivity;
             return this;
         }
 
-        public Builder setStartActivity(@Nullable StartActivityIntentArgs startActivity) {
+        public Builder startActivity(@Nullable StartActivityIntentArgs startActivity) {
             this.startActivity = Input.ofNullable(startActivity);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<String> timeout) {
+        public Builder timeout(@Nullable Input<String> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable String timeout) {
+        public Builder timeout(@Nullable String timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }

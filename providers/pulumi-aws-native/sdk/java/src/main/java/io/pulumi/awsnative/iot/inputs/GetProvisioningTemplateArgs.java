@@ -47,7 +47,7 @@ public final class GetProvisioningTemplateArgs extends io.pulumi.resources.Invok
     	      this.templateName = defaults.templateName;
         }
 
-        public Builder setTemplateName(String templateName) {
+        public Builder templateName(String templateName) {
             this.templateName = Objects.requireNonNull(templateName);
             return this;
         }

@@ -222,112 +222,112 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends io.pulumi
     	      this.verifyServerCertificate = defaults.verifyServerCertificate;
         }
 
-        public Builder setCaCertificate(@Nullable Input<String> caCertificate) {
+        public Builder caCertificate(@Nullable Input<String> caCertificate) {
             this.caCertificate = caCertificate;
             return this;
         }
 
-        public Builder setCaCertificate(@Nullable String caCertificate) {
+        public Builder caCertificate(@Nullable String caCertificate) {
             this.caCertificate = Input.ofNullable(caCertificate);
             return this;
         }
 
-        public Builder setClientCertificate(@Nullable Input<String> clientCertificate) {
+        public Builder clientCertificate(@Nullable Input<String> clientCertificate) {
             this.clientCertificate = clientCertificate;
             return this;
         }
 
-        public Builder setClientCertificate(@Nullable String clientCertificate) {
+        public Builder clientCertificate(@Nullable String clientCertificate) {
             this.clientCertificate = Input.ofNullable(clientCertificate);
             return this;
         }
 
-        public Builder setClientKey(@Nullable Input<String> clientKey) {
+        public Builder clientKey(@Nullable Input<String> clientKey) {
             this.clientKey = clientKey;
             return this;
         }
 
-        public Builder setClientKey(@Nullable String clientKey) {
+        public Builder clientKey(@Nullable String clientKey) {
             this.clientKey = Input.ofNullable(clientKey);
             return this;
         }
 
-        public Builder setConnectRetryInterval(@Nullable Input<Integer> connectRetryInterval) {
+        public Builder connectRetryInterval(@Nullable Input<Integer> connectRetryInterval) {
             this.connectRetryInterval = connectRetryInterval;
             return this;
         }
 
-        public Builder setConnectRetryInterval(@Nullable Integer connectRetryInterval) {
+        public Builder connectRetryInterval(@Nullable Integer connectRetryInterval) {
             this.connectRetryInterval = Input.ofNullable(connectRetryInterval);
             return this;
         }
 
-        public Builder setDumpFilePath(@Nullable Input<String> dumpFilePath) {
+        public Builder dumpFilePath(@Nullable Input<String> dumpFilePath) {
             this.dumpFilePath = dumpFilePath;
             return this;
         }
 
-        public Builder setDumpFilePath(@Nullable String dumpFilePath) {
+        public Builder dumpFilePath(@Nullable String dumpFilePath) {
             this.dumpFilePath = Input.ofNullable(dumpFilePath);
             return this;
         }
 
-        public Builder setFailoverTarget(@Nullable Input<Boolean> failoverTarget) {
+        public Builder failoverTarget(@Nullable Input<Boolean> failoverTarget) {
             this.failoverTarget = failoverTarget;
             return this;
         }
 
-        public Builder setFailoverTarget(@Nullable Boolean failoverTarget) {
+        public Builder failoverTarget(@Nullable Boolean failoverTarget) {
             this.failoverTarget = Input.ofNullable(failoverTarget);
             return this;
         }
 
-        public Builder setMasterHeartbeatPeriod(@Nullable Input<Integer> masterHeartbeatPeriod) {
+        public Builder masterHeartbeatPeriod(@Nullable Input<Integer> masterHeartbeatPeriod) {
             this.masterHeartbeatPeriod = masterHeartbeatPeriod;
             return this;
         }
 
-        public Builder setMasterHeartbeatPeriod(@Nullable Integer masterHeartbeatPeriod) {
+        public Builder masterHeartbeatPeriod(@Nullable Integer masterHeartbeatPeriod) {
             this.masterHeartbeatPeriod = Input.ofNullable(masterHeartbeatPeriod);
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<String> password) {
+        public Builder password(@Nullable Input<String> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setSslCipher(@Nullable Input<String> sslCipher) {
+        public Builder sslCipher(@Nullable Input<String> sslCipher) {
             this.sslCipher = sslCipher;
             return this;
         }
 
-        public Builder setSslCipher(@Nullable String sslCipher) {
+        public Builder sslCipher(@Nullable String sslCipher) {
             this.sslCipher = Input.ofNullable(sslCipher);
             return this;
         }
 
-        public Builder setUsername(@Nullable Input<String> username) {
+        public Builder username(@Nullable Input<String> username) {
             this.username = username;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = Input.ofNullable(username);
             return this;
         }
 
-        public Builder setVerifyServerCertificate(@Nullable Input<Boolean> verifyServerCertificate) {
+        public Builder verifyServerCertificate(@Nullable Input<Boolean> verifyServerCertificate) {
             this.verifyServerCertificate = verifyServerCertificate;
             return this;
         }
 
-        public Builder setVerifyServerCertificate(@Nullable Boolean verifyServerCertificate) {
+        public Builder verifyServerCertificate(@Nullable Boolean verifyServerCertificate) {
             this.verifyServerCertificate = Input.ofNullable(verifyServerCertificate);
             return this;
         }

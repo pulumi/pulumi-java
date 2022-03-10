@@ -178,47 +178,47 @@ public final class OnPremisesConfigurationResponse {
     	      this.username = defaults.username;
         }
 
-        public Builder setCaCertificate(String caCertificate) {
+        public Builder caCertificate(String caCertificate) {
             this.caCertificate = Objects.requireNonNull(caCertificate);
             return this;
         }
 
-        public Builder setClientCertificate(String clientCertificate) {
+        public Builder clientCertificate(String clientCertificate) {
             this.clientCertificate = Objects.requireNonNull(clientCertificate);
             return this;
         }
 
-        public Builder setClientKey(String clientKey) {
+        public Builder clientKey(String clientKey) {
             this.clientKey = Objects.requireNonNull(clientKey);
             return this;
         }
 
-        public Builder setDumpFilePath(String dumpFilePath) {
+        public Builder dumpFilePath(String dumpFilePath) {
             this.dumpFilePath = Objects.requireNonNull(dumpFilePath);
             return this;
         }
 
-        public Builder setHostPort(String hostPort) {
+        public Builder hostPort(String hostPort) {
             this.hostPort = Objects.requireNonNull(hostPort);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setSourceInstance(InstanceReferenceResponse sourceInstance) {
+        public Builder sourceInstance(InstanceReferenceResponse sourceInstance) {
             this.sourceInstance = Objects.requireNonNull(sourceInstance);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

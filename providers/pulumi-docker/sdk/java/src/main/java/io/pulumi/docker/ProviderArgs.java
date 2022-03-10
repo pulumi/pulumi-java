@@ -133,62 +133,62 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     	      this.registryAuth = defaults.registryAuth;
         }
 
-        public Builder setCaMaterial(@Nullable Input<String> caMaterial) {
+        public Builder caMaterial(@Nullable Input<String> caMaterial) {
             this.caMaterial = caMaterial;
             return this;
         }
 
-        public Builder setCaMaterial(@Nullable String caMaterial) {
+        public Builder caMaterial(@Nullable String caMaterial) {
             this.caMaterial = Input.ofNullable(caMaterial);
             return this;
         }
 
-        public Builder setCertMaterial(@Nullable Input<String> certMaterial) {
+        public Builder certMaterial(@Nullable Input<String> certMaterial) {
             this.certMaterial = certMaterial;
             return this;
         }
 
-        public Builder setCertMaterial(@Nullable String certMaterial) {
+        public Builder certMaterial(@Nullable String certMaterial) {
             this.certMaterial = Input.ofNullable(certMaterial);
             return this;
         }
 
-        public Builder setCertPath(@Nullable Input<String> certPath) {
+        public Builder certPath(@Nullable Input<String> certPath) {
             this.certPath = certPath;
             return this;
         }
 
-        public Builder setCertPath(@Nullable String certPath) {
+        public Builder certPath(@Nullable String certPath) {
             this.certPath = Input.ofNullable(certPath);
             return this;
         }
 
-        public Builder setHost(@Nullable Input<String> host) {
+        public Builder host(@Nullable Input<String> host) {
             this.host = host;
             return this;
         }
 
-        public Builder setHost(@Nullable String host) {
+        public Builder host(@Nullable String host) {
             this.host = Input.ofNullable(host);
             return this;
         }
 
-        public Builder setKeyMaterial(@Nullable Input<String> keyMaterial) {
+        public Builder keyMaterial(@Nullable Input<String> keyMaterial) {
             this.keyMaterial = keyMaterial;
             return this;
         }
 
-        public Builder setKeyMaterial(@Nullable String keyMaterial) {
+        public Builder keyMaterial(@Nullable String keyMaterial) {
             this.keyMaterial = Input.ofNullable(keyMaterial);
             return this;
         }
 
-        public Builder setRegistryAuth(@Nullable Input<List<ProviderRegistryAuthArgs>> registryAuth) {
+        public Builder registryAuth(@Nullable Input<List<ProviderRegistryAuthArgs>> registryAuth) {
             this.registryAuth = registryAuth;
             return this;
         }
 
-        public Builder setRegistryAuth(@Nullable List<ProviderRegistryAuthArgs> registryAuth) {
+        public Builder registryAuth(@Nullable List<ProviderRegistryAuthArgs> registryAuth) {
             this.registryAuth = Input.ofNullable(registryAuth);
             return this;
         }

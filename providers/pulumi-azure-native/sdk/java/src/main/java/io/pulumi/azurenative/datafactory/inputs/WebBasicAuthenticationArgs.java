@@ -110,42 +110,42 @@ public final class WebBasicAuthenticationArgs extends io.pulumi.resources.Resour
     	      this.username = defaults.username;
         }
 
-        public Builder setAuthenticationType(Input<String> authenticationType) {
+        public Builder authenticationType(Input<String> authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
 
-        public Builder setAuthenticationType(String authenticationType) {
+        public Builder authenticationType(String authenticationType) {
             this.authenticationType = Input.of(Objects.requireNonNull(authenticationType));
             return this;
         }
 
-        public Builder setPassword(Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
+        public Builder password(Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setPassword(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
+        public Builder password(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             this.password = Input.of(Objects.requireNonNull(password));
             return this;
         }
 
-        public Builder setUrl(Input<Object> url) {
+        public Builder url(Input<Object> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
-        public Builder setUrl(Object url) {
+        public Builder url(Object url) {
             this.url = Input.of(Objects.requireNonNull(url));
             return this;
         }
 
-        public Builder setUsername(Input<Object> username) {
+        public Builder username(Input<Object> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
 
-        public Builder setUsername(Object username) {
+        public Builder username(Object username) {
             this.username = Input.of(Objects.requireNonNull(username));
             return this;
         }

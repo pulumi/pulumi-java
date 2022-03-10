@@ -63,12 +63,12 @@ public final class SpotFleetPrivateIpAddressSpecification extends io.pulumi.reso
     	      this.privateIpAddress = defaults.privateIpAddress;
         }
 
-        public Builder setPrimary(@Nullable Boolean primary) {
+        public Builder primary(@Nullable Boolean primary) {
             this.primary = primary;
             return this;
         }
 
-        public Builder setPrivateIpAddress(String privateIpAddress) {
+        public Builder privateIpAddress(String privateIpAddress) {
             this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
             return this;
         }

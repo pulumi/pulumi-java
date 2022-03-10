@@ -289,152 +289,152 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
     	      this.zone = defaults.zone;
         }
 
-        public Builder setAdditionalLicenses(@Nullable Input<List<String>> additionalLicenses) {
+        public Builder additionalLicenses(@Nullable Input<List<String>> additionalLicenses) {
             this.additionalLicenses = additionalLicenses;
             return this;
         }
 
-        public Builder setAdditionalLicenses(@Nullable List<String> additionalLicenses) {
+        public Builder additionalLicenses(@Nullable List<String> additionalLicenses) {
             this.additionalLicenses = Input.ofNullable(additionalLicenses);
             return this;
         }
 
-        public Builder setComputeScheduling(@Nullable Input<ComputeSchedulingArgs> computeScheduling) {
+        public Builder computeScheduling(@Nullable Input<ComputeSchedulingArgs> computeScheduling) {
             this.computeScheduling = computeScheduling;
             return this;
         }
 
-        public Builder setComputeScheduling(@Nullable ComputeSchedulingArgs computeScheduling) {
+        public Builder computeScheduling(@Nullable ComputeSchedulingArgs computeScheduling) {
             this.computeScheduling = Input.ofNullable(computeScheduling);
             return this;
         }
 
-        public Builder setDiskType(@Nullable Input<ComputeEngineTargetDefaultsDiskType> diskType) {
+        public Builder diskType(@Nullable Input<ComputeEngineTargetDefaultsDiskType> diskType) {
             this.diskType = diskType;
             return this;
         }
 
-        public Builder setDiskType(@Nullable ComputeEngineTargetDefaultsDiskType diskType) {
+        public Builder diskType(@Nullable ComputeEngineTargetDefaultsDiskType diskType) {
             this.diskType = Input.ofNullable(diskType);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLicenseType(@Nullable Input<ComputeEngineTargetDefaultsLicenseType> licenseType) {
+        public Builder licenseType(@Nullable Input<ComputeEngineTargetDefaultsLicenseType> licenseType) {
             this.licenseType = licenseType;
             return this;
         }
 
-        public Builder setLicenseType(@Nullable ComputeEngineTargetDefaultsLicenseType licenseType) {
+        public Builder licenseType(@Nullable ComputeEngineTargetDefaultsLicenseType licenseType) {
             this.licenseType = Input.ofNullable(licenseType);
             return this;
         }
 
-        public Builder setMachineType(@Nullable Input<String> machineType) {
+        public Builder machineType(@Nullable Input<String> machineType) {
             this.machineType = machineType;
             return this;
         }
 
-        public Builder setMachineType(@Nullable String machineType) {
+        public Builder machineType(@Nullable String machineType) {
             this.machineType = Input.ofNullable(machineType);
             return this;
         }
 
-        public Builder setMachineTypeSeries(@Nullable Input<String> machineTypeSeries) {
+        public Builder machineTypeSeries(@Nullable Input<String> machineTypeSeries) {
             this.machineTypeSeries = machineTypeSeries;
             return this;
         }
 
-        public Builder setMachineTypeSeries(@Nullable String machineTypeSeries) {
+        public Builder machineTypeSeries(@Nullable String machineTypeSeries) {
             this.machineTypeSeries = Input.ofNullable(machineTypeSeries);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setNetworkInterfaces(@Nullable Input<List<NetworkInterfaceArgs>> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable Input<List<NetworkInterfaceArgs>> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
 
-        public Builder setNetworkInterfaces(@Nullable List<NetworkInterfaceArgs> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable List<NetworkInterfaceArgs> networkInterfaces) {
             this.networkInterfaces = Input.ofNullable(networkInterfaces);
             return this;
         }
 
-        public Builder setNetworkTags(@Nullable Input<List<String>> networkTags) {
+        public Builder networkTags(@Nullable Input<List<String>> networkTags) {
             this.networkTags = networkTags;
             return this;
         }
 
-        public Builder setNetworkTags(@Nullable List<String> networkTags) {
+        public Builder networkTags(@Nullable List<String> networkTags) {
             this.networkTags = Input.ofNullable(networkTags);
             return this;
         }
 
-        public Builder setSecureBoot(@Nullable Input<Boolean> secureBoot) {
+        public Builder secureBoot(@Nullable Input<Boolean> secureBoot) {
             this.secureBoot = secureBoot;
             return this;
         }
 
-        public Builder setSecureBoot(@Nullable Boolean secureBoot) {
+        public Builder secureBoot(@Nullable Boolean secureBoot) {
             this.secureBoot = Input.ofNullable(secureBoot);
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable String serviceAccount) {
+        public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Input.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder setTargetProject(@Nullable Input<String> targetProject) {
+        public Builder targetProject(@Nullable Input<String> targetProject) {
             this.targetProject = targetProject;
             return this;
         }
 
-        public Builder setTargetProject(@Nullable String targetProject) {
+        public Builder targetProject(@Nullable String targetProject) {
             this.targetProject = Input.ofNullable(targetProject);
             return this;
         }
 
-        public Builder setVmName(@Nullable Input<String> vmName) {
+        public Builder vmName(@Nullable Input<String> vmName) {
             this.vmName = vmName;
             return this;
         }
 
-        public Builder setVmName(@Nullable String vmName) {
+        public Builder vmName(@Nullable String vmName) {
             this.vmName = Input.ofNullable(vmName);
             return this;
         }
 
-        public Builder setZone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Input<String> zone) {
             this.zone = zone;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = Input.ofNullable(zone);
             return this;
         }

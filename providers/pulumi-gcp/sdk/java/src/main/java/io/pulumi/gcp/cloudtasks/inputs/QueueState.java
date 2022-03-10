@@ -166,72 +166,72 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
     	      this.stackdriverLoggingConfig = defaults.stackdriverLoggingConfig;
         }
 
-        public Builder setAppEngineRoutingOverride(@Nullable Input<QueueAppEngineRoutingOverrideGetArgs> appEngineRoutingOverride) {
+        public Builder appEngineRoutingOverride(@Nullable Input<QueueAppEngineRoutingOverrideGetArgs> appEngineRoutingOverride) {
             this.appEngineRoutingOverride = appEngineRoutingOverride;
             return this;
         }
 
-        public Builder setAppEngineRoutingOverride(@Nullable QueueAppEngineRoutingOverrideGetArgs appEngineRoutingOverride) {
+        public Builder appEngineRoutingOverride(@Nullable QueueAppEngineRoutingOverrideGetArgs appEngineRoutingOverride) {
             this.appEngineRoutingOverride = Input.ofNullable(appEngineRoutingOverride);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRateLimits(@Nullable Input<QueueRateLimitsGetArgs> rateLimits) {
+        public Builder rateLimits(@Nullable Input<QueueRateLimitsGetArgs> rateLimits) {
             this.rateLimits = rateLimits;
             return this;
         }
 
-        public Builder setRateLimits(@Nullable QueueRateLimitsGetArgs rateLimits) {
+        public Builder rateLimits(@Nullable QueueRateLimitsGetArgs rateLimits) {
             this.rateLimits = Input.ofNullable(rateLimits);
             return this;
         }
 
-        public Builder setRetryConfig(@Nullable Input<QueueRetryConfigGetArgs> retryConfig) {
+        public Builder retryConfig(@Nullable Input<QueueRetryConfigGetArgs> retryConfig) {
             this.retryConfig = retryConfig;
             return this;
         }
 
-        public Builder setRetryConfig(@Nullable QueueRetryConfigGetArgs retryConfig) {
+        public Builder retryConfig(@Nullable QueueRetryConfigGetArgs retryConfig) {
             this.retryConfig = Input.ofNullable(retryConfig);
             return this;
         }
 
-        public Builder setStackdriverLoggingConfig(@Nullable Input<QueueStackdriverLoggingConfigGetArgs> stackdriverLoggingConfig) {
+        public Builder stackdriverLoggingConfig(@Nullable Input<QueueStackdriverLoggingConfigGetArgs> stackdriverLoggingConfig) {
             this.stackdriverLoggingConfig = stackdriverLoggingConfig;
             return this;
         }
 
-        public Builder setStackdriverLoggingConfig(@Nullable QueueStackdriverLoggingConfigGetArgs stackdriverLoggingConfig) {
+        public Builder stackdriverLoggingConfig(@Nullable QueueStackdriverLoggingConfigGetArgs stackdriverLoggingConfig) {
             this.stackdriverLoggingConfig = Input.ofNullable(stackdriverLoggingConfig);
             return this;
         }

@@ -457,262 +457,262 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
     	      this.weeklyMaintenanceWindowStart = defaults.weeklyMaintenanceWindowStart;
         }
 
-        public Builder setAirflowConfigurationOptions(@Nullable Input<Map<String,String>> airflowConfigurationOptions) {
+        public Builder airflowConfigurationOptions(@Nullable Input<Map<String,String>> airflowConfigurationOptions) {
             this.airflowConfigurationOptions = airflowConfigurationOptions;
             return this;
         }
 
-        public Builder setAirflowConfigurationOptions(@Nullable Map<String,String> airflowConfigurationOptions) {
+        public Builder airflowConfigurationOptions(@Nullable Map<String,String> airflowConfigurationOptions) {
             this.airflowConfigurationOptions = Input.ofNullable(airflowConfigurationOptions);
             return this;
         }
 
-        public Builder setAirflowVersion(@Nullable Input<String> airflowVersion) {
+        public Builder airflowVersion(@Nullable Input<String> airflowVersion) {
             this.airflowVersion = airflowVersion;
             return this;
         }
 
-        public Builder setAirflowVersion(@Nullable String airflowVersion) {
+        public Builder airflowVersion(@Nullable String airflowVersion) {
             this.airflowVersion = Input.ofNullable(airflowVersion);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setCreatedAt(@Nullable Input<String> createdAt) {
+        public Builder createdAt(@Nullable Input<String> createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-        public Builder setCreatedAt(@Nullable String createdAt) {
+        public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = Input.ofNullable(createdAt);
             return this;
         }
 
-        public Builder setDagS3Path(@Nullable Input<String> dagS3Path) {
+        public Builder dagS3Path(@Nullable Input<String> dagS3Path) {
             this.dagS3Path = dagS3Path;
             return this;
         }
 
-        public Builder setDagS3Path(@Nullable String dagS3Path) {
+        public Builder dagS3Path(@Nullable String dagS3Path) {
             this.dagS3Path = Input.ofNullable(dagS3Path);
             return this;
         }
 
-        public Builder setEnvironmentClass(@Nullable Input<String> environmentClass) {
+        public Builder environmentClass(@Nullable Input<String> environmentClass) {
             this.environmentClass = environmentClass;
             return this;
         }
 
-        public Builder setEnvironmentClass(@Nullable String environmentClass) {
+        public Builder environmentClass(@Nullable String environmentClass) {
             this.environmentClass = Input.ofNullable(environmentClass);
             return this;
         }
 
-        public Builder setExecutionRoleArn(@Nullable Input<String> executionRoleArn) {
+        public Builder executionRoleArn(@Nullable Input<String> executionRoleArn) {
             this.executionRoleArn = executionRoleArn;
             return this;
         }
 
-        public Builder setExecutionRoleArn(@Nullable String executionRoleArn) {
+        public Builder executionRoleArn(@Nullable String executionRoleArn) {
             this.executionRoleArn = Input.ofNullable(executionRoleArn);
             return this;
         }
 
-        public Builder setKmsKey(@Nullable Input<String> kmsKey) {
+        public Builder kmsKey(@Nullable Input<String> kmsKey) {
             this.kmsKey = kmsKey;
             return this;
         }
 
-        public Builder setKmsKey(@Nullable String kmsKey) {
+        public Builder kmsKey(@Nullable String kmsKey) {
             this.kmsKey = Input.ofNullable(kmsKey);
             return this;
         }
 
-        public Builder setLastUpdateds(@Nullable Input<List<EnvironmentLastUpdatedGetArgs>> lastUpdateds) {
+        public Builder lastUpdateds(@Nullable Input<List<EnvironmentLastUpdatedGetArgs>> lastUpdateds) {
             this.lastUpdateds = lastUpdateds;
             return this;
         }
 
-        public Builder setLastUpdateds(@Nullable List<EnvironmentLastUpdatedGetArgs> lastUpdateds) {
+        public Builder lastUpdateds(@Nullable List<EnvironmentLastUpdatedGetArgs> lastUpdateds) {
             this.lastUpdateds = Input.ofNullable(lastUpdateds);
             return this;
         }
 
-        public Builder setLoggingConfiguration(@Nullable Input<EnvironmentLoggingConfigurationGetArgs> loggingConfiguration) {
+        public Builder loggingConfiguration(@Nullable Input<EnvironmentLoggingConfigurationGetArgs> loggingConfiguration) {
             this.loggingConfiguration = loggingConfiguration;
             return this;
         }
 
-        public Builder setLoggingConfiguration(@Nullable EnvironmentLoggingConfigurationGetArgs loggingConfiguration) {
+        public Builder loggingConfiguration(@Nullable EnvironmentLoggingConfigurationGetArgs loggingConfiguration) {
             this.loggingConfiguration = Input.ofNullable(loggingConfiguration);
             return this;
         }
 
-        public Builder setMaxWorkers(@Nullable Input<Integer> maxWorkers) {
+        public Builder maxWorkers(@Nullable Input<Integer> maxWorkers) {
             this.maxWorkers = maxWorkers;
             return this;
         }
 
-        public Builder setMaxWorkers(@Nullable Integer maxWorkers) {
+        public Builder maxWorkers(@Nullable Integer maxWorkers) {
             this.maxWorkers = Input.ofNullable(maxWorkers);
             return this;
         }
 
-        public Builder setMinWorkers(@Nullable Input<Integer> minWorkers) {
+        public Builder minWorkers(@Nullable Input<Integer> minWorkers) {
             this.minWorkers = minWorkers;
             return this;
         }
 
-        public Builder setMinWorkers(@Nullable Integer minWorkers) {
+        public Builder minWorkers(@Nullable Integer minWorkers) {
             this.minWorkers = Input.ofNullable(minWorkers);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetworkConfiguration(@Nullable Input<EnvironmentNetworkConfigurationGetArgs> networkConfiguration) {
+        public Builder networkConfiguration(@Nullable Input<EnvironmentNetworkConfigurationGetArgs> networkConfiguration) {
             this.networkConfiguration = networkConfiguration;
             return this;
         }
 
-        public Builder setNetworkConfiguration(@Nullable EnvironmentNetworkConfigurationGetArgs networkConfiguration) {
+        public Builder networkConfiguration(@Nullable EnvironmentNetworkConfigurationGetArgs networkConfiguration) {
             this.networkConfiguration = Input.ofNullable(networkConfiguration);
             return this;
         }
 
-        public Builder setPluginsS3ObjectVersion(@Nullable Input<String> pluginsS3ObjectVersion) {
+        public Builder pluginsS3ObjectVersion(@Nullable Input<String> pluginsS3ObjectVersion) {
             this.pluginsS3ObjectVersion = pluginsS3ObjectVersion;
             return this;
         }
 
-        public Builder setPluginsS3ObjectVersion(@Nullable String pluginsS3ObjectVersion) {
+        public Builder pluginsS3ObjectVersion(@Nullable String pluginsS3ObjectVersion) {
             this.pluginsS3ObjectVersion = Input.ofNullable(pluginsS3ObjectVersion);
             return this;
         }
 
-        public Builder setPluginsS3Path(@Nullable Input<String> pluginsS3Path) {
+        public Builder pluginsS3Path(@Nullable Input<String> pluginsS3Path) {
             this.pluginsS3Path = pluginsS3Path;
             return this;
         }
 
-        public Builder setPluginsS3Path(@Nullable String pluginsS3Path) {
+        public Builder pluginsS3Path(@Nullable String pluginsS3Path) {
             this.pluginsS3Path = Input.ofNullable(pluginsS3Path);
             return this;
         }
 
-        public Builder setRequirementsS3ObjectVersion(@Nullable Input<String> requirementsS3ObjectVersion) {
+        public Builder requirementsS3ObjectVersion(@Nullable Input<String> requirementsS3ObjectVersion) {
             this.requirementsS3ObjectVersion = requirementsS3ObjectVersion;
             return this;
         }
 
-        public Builder setRequirementsS3ObjectVersion(@Nullable String requirementsS3ObjectVersion) {
+        public Builder requirementsS3ObjectVersion(@Nullable String requirementsS3ObjectVersion) {
             this.requirementsS3ObjectVersion = Input.ofNullable(requirementsS3ObjectVersion);
             return this;
         }
 
-        public Builder setRequirementsS3Path(@Nullable Input<String> requirementsS3Path) {
+        public Builder requirementsS3Path(@Nullable Input<String> requirementsS3Path) {
             this.requirementsS3Path = requirementsS3Path;
             return this;
         }
 
-        public Builder setRequirementsS3Path(@Nullable String requirementsS3Path) {
+        public Builder requirementsS3Path(@Nullable String requirementsS3Path) {
             this.requirementsS3Path = Input.ofNullable(requirementsS3Path);
             return this;
         }
 
-        public Builder setServiceRoleArn(@Nullable Input<String> serviceRoleArn) {
+        public Builder serviceRoleArn(@Nullable Input<String> serviceRoleArn) {
             this.serviceRoleArn = serviceRoleArn;
             return this;
         }
 
-        public Builder setServiceRoleArn(@Nullable String serviceRoleArn) {
+        public Builder serviceRoleArn(@Nullable String serviceRoleArn) {
             this.serviceRoleArn = Input.ofNullable(serviceRoleArn);
             return this;
         }
 
-        public Builder setSourceBucketArn(@Nullable Input<String> sourceBucketArn) {
+        public Builder sourceBucketArn(@Nullable Input<String> sourceBucketArn) {
             this.sourceBucketArn = sourceBucketArn;
             return this;
         }
 
-        public Builder setSourceBucketArn(@Nullable String sourceBucketArn) {
+        public Builder sourceBucketArn(@Nullable String sourceBucketArn) {
             this.sourceBucketArn = Input.ofNullable(sourceBucketArn);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setWebserverAccessMode(@Nullable Input<String> webserverAccessMode) {
+        public Builder webserverAccessMode(@Nullable Input<String> webserverAccessMode) {
             this.webserverAccessMode = webserverAccessMode;
             return this;
         }
 
-        public Builder setWebserverAccessMode(@Nullable String webserverAccessMode) {
+        public Builder webserverAccessMode(@Nullable String webserverAccessMode) {
             this.webserverAccessMode = Input.ofNullable(webserverAccessMode);
             return this;
         }
 
-        public Builder setWebserverUrl(@Nullable Input<String> webserverUrl) {
+        public Builder webserverUrl(@Nullable Input<String> webserverUrl) {
             this.webserverUrl = webserverUrl;
             return this;
         }
 
-        public Builder setWebserverUrl(@Nullable String webserverUrl) {
+        public Builder webserverUrl(@Nullable String webserverUrl) {
             this.webserverUrl = Input.ofNullable(webserverUrl);
             return this;
         }
 
-        public Builder setWeeklyMaintenanceWindowStart(@Nullable Input<String> weeklyMaintenanceWindowStart) {
+        public Builder weeklyMaintenanceWindowStart(@Nullable Input<String> weeklyMaintenanceWindowStart) {
             this.weeklyMaintenanceWindowStart = weeklyMaintenanceWindowStart;
             return this;
         }
 
-        public Builder setWeeklyMaintenanceWindowStart(@Nullable String weeklyMaintenanceWindowStart) {
+        public Builder weeklyMaintenanceWindowStart(@Nullable String weeklyMaintenanceWindowStart) {
             this.weeklyMaintenanceWindowStart = Input.ofNullable(weeklyMaintenanceWindowStart);
             return this;
         }

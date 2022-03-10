@@ -42,7 +42,7 @@ public final class ListListUpgradableVersionPostResult {
     	      this.supportedPath = defaults.supportedPath;
         }
 
-        public Builder setSupportedPath(@Nullable List<String> supportedPath) {
+        public Builder supportedPath(@Nullable List<String> supportedPath) {
             this.supportedPath = supportedPath;
             return this;
         }

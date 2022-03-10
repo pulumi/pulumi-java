@@ -66,12 +66,12 @@ public final class SecurityConfigResponse {
     	      this.kerberosConfig = defaults.kerberosConfig;
         }
 
-        public Builder setIdentityConfig(IdentityConfigResponse identityConfig) {
+        public Builder identityConfig(IdentityConfigResponse identityConfig) {
             this.identityConfig = Objects.requireNonNull(identityConfig);
             return this;
         }
 
-        public Builder setKerberosConfig(KerberosConfigResponse kerberosConfig) {
+        public Builder kerberosConfig(KerberosConfigResponse kerberosConfig) {
             this.kerberosConfig = Objects.requireNonNull(kerberosConfig);
             return this;
         }

@@ -142,62 +142,62 @@ public final class CustomerCertificateParametersArgs extends io.pulumi.resources
     	      this.useLatestVersion = defaults.useLatestVersion;
         }
 
-        public Builder setCertificateAuthority(@Nullable Input<String> certificateAuthority) {
+        public Builder certificateAuthority(@Nullable Input<String> certificateAuthority) {
             this.certificateAuthority = certificateAuthority;
             return this;
         }
 
-        public Builder setCertificateAuthority(@Nullable String certificateAuthority) {
+        public Builder certificateAuthority(@Nullable String certificateAuthority) {
             this.certificateAuthority = Input.ofNullable(certificateAuthority);
             return this;
         }
 
-        public Builder setSecretSource(Input<ResourceReferenceArgs> secretSource) {
+        public Builder secretSource(Input<ResourceReferenceArgs> secretSource) {
             this.secretSource = Objects.requireNonNull(secretSource);
             return this;
         }
 
-        public Builder setSecretSource(ResourceReferenceArgs secretSource) {
+        public Builder secretSource(ResourceReferenceArgs secretSource) {
             this.secretSource = Input.of(Objects.requireNonNull(secretSource));
             return this;
         }
 
-        public Builder setSecretVersion(@Nullable Input<String> secretVersion) {
+        public Builder secretVersion(@Nullable Input<String> secretVersion) {
             this.secretVersion = secretVersion;
             return this;
         }
 
-        public Builder setSecretVersion(@Nullable String secretVersion) {
+        public Builder secretVersion(@Nullable String secretVersion) {
             this.secretVersion = Input.ofNullable(secretVersion);
             return this;
         }
 
-        public Builder setSubjectAlternativeNames(@Nullable Input<List<String>> subjectAlternativeNames) {
+        public Builder subjectAlternativeNames(@Nullable Input<List<String>> subjectAlternativeNames) {
             this.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
 
-        public Builder setSubjectAlternativeNames(@Nullable List<String> subjectAlternativeNames) {
+        public Builder subjectAlternativeNames(@Nullable List<String> subjectAlternativeNames) {
             this.subjectAlternativeNames = Input.ofNullable(subjectAlternativeNames);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setUseLatestVersion(@Nullable Input<Boolean> useLatestVersion) {
+        public Builder useLatestVersion(@Nullable Input<Boolean> useLatestVersion) {
             this.useLatestVersion = useLatestVersion;
             return this;
         }
 
-        public Builder setUseLatestVersion(@Nullable Boolean useLatestVersion) {
+        public Builder useLatestVersion(@Nullable Boolean useLatestVersion) {
             this.useLatestVersion = Input.ofNullable(useLatestVersion);
             return this;
         }

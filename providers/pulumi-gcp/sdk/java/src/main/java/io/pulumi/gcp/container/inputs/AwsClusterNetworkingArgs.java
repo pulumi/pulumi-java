@@ -86,32 +86,32 @@ public final class AwsClusterNetworkingArgs extends io.pulumi.resources.Resource
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setPodAddressCidrBlocks(Input<List<String>> podAddressCidrBlocks) {
+        public Builder podAddressCidrBlocks(Input<List<String>> podAddressCidrBlocks) {
             this.podAddressCidrBlocks = Objects.requireNonNull(podAddressCidrBlocks);
             return this;
         }
 
-        public Builder setPodAddressCidrBlocks(List<String> podAddressCidrBlocks) {
+        public Builder podAddressCidrBlocks(List<String> podAddressCidrBlocks) {
             this.podAddressCidrBlocks = Input.of(Objects.requireNonNull(podAddressCidrBlocks));
             return this;
         }
 
-        public Builder setServiceAddressCidrBlocks(Input<List<String>> serviceAddressCidrBlocks) {
+        public Builder serviceAddressCidrBlocks(Input<List<String>> serviceAddressCidrBlocks) {
             this.serviceAddressCidrBlocks = Objects.requireNonNull(serviceAddressCidrBlocks);
             return this;
         }
 
-        public Builder setServiceAddressCidrBlocks(List<String> serviceAddressCidrBlocks) {
+        public Builder serviceAddressCidrBlocks(List<String> serviceAddressCidrBlocks) {
             this.serviceAddressCidrBlocks = Input.of(Objects.requireNonNull(serviceAddressCidrBlocks));
             return this;
         }
 
-        public Builder setVpcId(Input<String> vpcId) {
+        public Builder vpcId(Input<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Input.of(Objects.requireNonNull(vpcId));
             return this;
         }

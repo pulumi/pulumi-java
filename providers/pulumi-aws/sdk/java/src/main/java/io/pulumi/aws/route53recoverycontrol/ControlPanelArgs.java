@@ -70,22 +70,22 @@ public final class ControlPanelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setClusterArn(Input<String> clusterArn) {
+        public Builder clusterArn(Input<String> clusterArn) {
             this.clusterArn = Objects.requireNonNull(clusterArn);
             return this;
         }
 
-        public Builder setClusterArn(String clusterArn) {
+        public Builder clusterArn(String clusterArn) {
             this.clusterArn = Input.of(Objects.requireNonNull(clusterArn));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

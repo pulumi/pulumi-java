@@ -125,57 +125,57 @@ public final class GetTransitGatewayResult {
     	      this.vpnEcmpSupport = defaults.vpnEcmpSupport;
         }
 
-        public Builder setAssociationDefaultRouteTableId(@Nullable String associationDefaultRouteTableId) {
+        public Builder associationDefaultRouteTableId(@Nullable String associationDefaultRouteTableId) {
             this.associationDefaultRouteTableId = associationDefaultRouteTableId;
             return this;
         }
 
-        public Builder setAutoAcceptSharedAttachments(@Nullable String autoAcceptSharedAttachments) {
+        public Builder autoAcceptSharedAttachments(@Nullable String autoAcceptSharedAttachments) {
             this.autoAcceptSharedAttachments = autoAcceptSharedAttachments;
             return this;
         }
 
-        public Builder setDefaultRouteTableAssociation(@Nullable String defaultRouteTableAssociation) {
+        public Builder defaultRouteTableAssociation(@Nullable String defaultRouteTableAssociation) {
             this.defaultRouteTableAssociation = defaultRouteTableAssociation;
             return this;
         }
 
-        public Builder setDefaultRouteTablePropagation(@Nullable String defaultRouteTablePropagation) {
+        public Builder defaultRouteTablePropagation(@Nullable String defaultRouteTablePropagation) {
             this.defaultRouteTablePropagation = defaultRouteTablePropagation;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDnsSupport(@Nullable String dnsSupport) {
+        public Builder dnsSupport(@Nullable String dnsSupport) {
             this.dnsSupport = dnsSupport;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setPropagationDefaultRouteTableId(@Nullable String propagationDefaultRouteTableId) {
+        public Builder propagationDefaultRouteTableId(@Nullable String propagationDefaultRouteTableId) {
             this.propagationDefaultRouteTableId = propagationDefaultRouteTableId;
             return this;
         }
 
-        public Builder setTags(@Nullable List<TransitGatewayTag> tags) {
+        public Builder tags(@Nullable List<TransitGatewayTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTransitGatewayCidrBlocks(@Nullable List<String> transitGatewayCidrBlocks) {
+        public Builder transitGatewayCidrBlocks(@Nullable List<String> transitGatewayCidrBlocks) {
             this.transitGatewayCidrBlocks = transitGatewayCidrBlocks;
             return this;
         }
 
-        public Builder setVpnEcmpSupport(@Nullable String vpnEcmpSupport) {
+        public Builder vpnEcmpSupport(@Nullable String vpnEcmpSupport) {
             this.vpnEcmpSupport = vpnEcmpSupport;
             return this;
         }

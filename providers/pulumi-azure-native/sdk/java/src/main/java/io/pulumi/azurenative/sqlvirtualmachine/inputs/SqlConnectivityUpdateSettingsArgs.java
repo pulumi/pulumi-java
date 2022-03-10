@@ -109,42 +109,42 @@ public final class SqlConnectivityUpdateSettingsArgs extends io.pulumi.resources
     	      this.sqlAuthUpdateUserName = defaults.sqlAuthUpdateUserName;
         }
 
-        public Builder setConnectivityType(@Nullable Input<Either<String,ConnectivityType>> connectivityType) {
+        public Builder connectivityType(@Nullable Input<Either<String,ConnectivityType>> connectivityType) {
             this.connectivityType = connectivityType;
             return this;
         }
 
-        public Builder setConnectivityType(@Nullable Either<String,ConnectivityType> connectivityType) {
+        public Builder connectivityType(@Nullable Either<String,ConnectivityType> connectivityType) {
             this.connectivityType = Input.ofNullable(connectivityType);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Input<Integer> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setSqlAuthUpdatePassword(@Nullable Input<String> sqlAuthUpdatePassword) {
+        public Builder sqlAuthUpdatePassword(@Nullable Input<String> sqlAuthUpdatePassword) {
             this.sqlAuthUpdatePassword = sqlAuthUpdatePassword;
             return this;
         }
 
-        public Builder setSqlAuthUpdatePassword(@Nullable String sqlAuthUpdatePassword) {
+        public Builder sqlAuthUpdatePassword(@Nullable String sqlAuthUpdatePassword) {
             this.sqlAuthUpdatePassword = Input.ofNullable(sqlAuthUpdatePassword);
             return this;
         }
 
-        public Builder setSqlAuthUpdateUserName(@Nullable Input<String> sqlAuthUpdateUserName) {
+        public Builder sqlAuthUpdateUserName(@Nullable Input<String> sqlAuthUpdateUserName) {
             this.sqlAuthUpdateUserName = sqlAuthUpdateUserName;
             return this;
         }
 
-        public Builder setSqlAuthUpdateUserName(@Nullable String sqlAuthUpdateUserName) {
+        public Builder sqlAuthUpdateUserName(@Nullable String sqlAuthUpdateUserName) {
             this.sqlAuthUpdateUserName = Input.ofNullable(sqlAuthUpdateUserName);
             return this;
         }

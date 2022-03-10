@@ -68,12 +68,12 @@ public final class GetVpnSiteArgs extends io.pulumi.resources.InvokeArgs {
     	      this.vpnSiteName = defaults.vpnSiteName;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setVpnSiteName(String vpnSiteName) {
+        public Builder vpnSiteName(String vpnSiteName) {
             this.vpnSiteName = Objects.requireNonNull(vpnSiteName);
             return this;
         }

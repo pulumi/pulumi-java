@@ -163,42 +163,42 @@ public final class GetApiTagDescriptionResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setExternalDocsDescription(@Nullable String externalDocsDescription) {
+        public Builder externalDocsDescription(@Nullable String externalDocsDescription) {
             this.externalDocsDescription = externalDocsDescription;
             return this;
         }
 
-        public Builder setExternalDocsUrl(@Nullable String externalDocsUrl) {
+        public Builder externalDocsUrl(@Nullable String externalDocsUrl) {
             this.externalDocsUrl = externalDocsUrl;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTagId(@Nullable String tagId) {
+        public Builder tagId(@Nullable String tagId) {
             this.tagId = tagId;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

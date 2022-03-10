@@ -74,12 +74,12 @@ public final class ProxyServerPropertiesResponse extends io.pulumi.resources.Inv
     	      this.port = defaults.port;
         }
 
-        public Builder setIp(@Nullable String ip) {
+        public Builder ip(@Nullable String ip) {
             this.ip = ip;
             return this;
         }
 
-        public Builder setPort(@Nullable String port) {
+        public Builder port(@Nullable String port) {
             this.port = port;
             return this;
         }

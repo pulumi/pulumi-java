@@ -51,7 +51,7 @@ public final class GetIPAMScopeArgs extends io.pulumi.resources.InvokeArgs {
     	      this.ipamScopeId = defaults.ipamScopeId;
         }
 
-        public Builder setIpamScopeId(String ipamScopeId) {
+        public Builder ipamScopeId(String ipamScopeId) {
             this.ipamScopeId = Objects.requireNonNull(ipamScopeId);
             return this;
         }

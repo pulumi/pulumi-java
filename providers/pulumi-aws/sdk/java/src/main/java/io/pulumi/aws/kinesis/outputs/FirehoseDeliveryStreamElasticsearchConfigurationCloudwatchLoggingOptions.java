@@ -84,17 +84,17 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLog
     	      this.logStreamName = defaults.logStreamName;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setLogGroupName(@Nullable String logGroupName) {
+        public Builder logGroupName(@Nullable String logGroupName) {
             this.logGroupName = logGroupName;
             return this;
         }
 
-        public Builder setLogStreamName(@Nullable String logStreamName) {
+        public Builder logStreamName(@Nullable String logStreamName) {
             this.logStreamName = logStreamName;
             return this;
         }

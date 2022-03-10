@@ -70,22 +70,22 @@ public final class BucketOwnershipControlsArgs extends io.pulumi.resources.Resou
     	      this.rule = defaults.rule;
         }
 
-        public Builder setBucket(Input<String> bucket) {
+        public Builder bucket(Input<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Input.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder setRule(Input<BucketOwnershipControlsRuleArgs> rule) {
+        public Builder rule(Input<BucketOwnershipControlsRuleArgs> rule) {
             this.rule = Objects.requireNonNull(rule);
             return this;
         }
 
-        public Builder setRule(BucketOwnershipControlsRuleArgs rule) {
+        public Builder rule(BucketOwnershipControlsRuleArgs rule) {
             this.rule = Input.of(Objects.requireNonNull(rule));
             return this;
         }

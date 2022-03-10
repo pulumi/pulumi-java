@@ -76,22 +76,22 @@ public final class PowerQuerySinkMappingArgs extends io.pulumi.resources.Resourc
     	      this.queryName = defaults.queryName;
         }
 
-        public Builder setDataflowSinks(@Nullable Input<List<PowerQuerySinkArgs>> dataflowSinks) {
+        public Builder dataflowSinks(@Nullable Input<List<PowerQuerySinkArgs>> dataflowSinks) {
             this.dataflowSinks = dataflowSinks;
             return this;
         }
 
-        public Builder setDataflowSinks(@Nullable List<PowerQuerySinkArgs> dataflowSinks) {
+        public Builder dataflowSinks(@Nullable List<PowerQuerySinkArgs> dataflowSinks) {
             this.dataflowSinks = Input.ofNullable(dataflowSinks);
             return this;
         }
 
-        public Builder setQueryName(@Nullable Input<String> queryName) {
+        public Builder queryName(@Nullable Input<String> queryName) {
             this.queryName = queryName;
             return this;
         }
 
-        public Builder setQueryName(@Nullable String queryName) {
+        public Builder queryName(@Nullable String queryName) {
             this.queryName = Input.ofNullable(queryName);
             return this;
         }

@@ -50,7 +50,7 @@ public final class LinuxOsInfoResponse {
     	      this.linuxOsState = defaults.linuxOsState;
         }
 
-        public Builder setLinuxOsState(@Nullable String linuxOsState) {
+        public Builder linuxOsState(@Nullable String linuxOsState) {
             this.linuxOsState = linuxOsState;
             return this;
         }

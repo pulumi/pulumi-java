@@ -67,22 +67,22 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationGetArgs
     	      this.selfManagedActiveDirectoryConfiguration = defaults.selfManagedActiveDirectoryConfiguration;
         }
 
-        public Builder setNetbiosName(@Nullable Input<String> netbiosName) {
+        public Builder netbiosName(@Nullable Input<String> netbiosName) {
             this.netbiosName = netbiosName;
             return this;
         }
 
-        public Builder setNetbiosName(@Nullable String netbiosName) {
+        public Builder netbiosName(@Nullable String netbiosName) {
             this.netbiosName = Input.ofNullable(netbiosName);
             return this;
         }
 
-        public Builder setSelfManagedActiveDirectoryConfiguration(@Nullable Input<OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationGetArgs> selfManagedActiveDirectoryConfiguration) {
+        public Builder selfManagedActiveDirectoryConfiguration(@Nullable Input<OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationGetArgs> selfManagedActiveDirectoryConfiguration) {
             this.selfManagedActiveDirectoryConfiguration = selfManagedActiveDirectoryConfiguration;
             return this;
         }
 
-        public Builder setSelfManagedActiveDirectoryConfiguration(@Nullable OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationGetArgs selfManagedActiveDirectoryConfiguration) {
+        public Builder selfManagedActiveDirectoryConfiguration(@Nullable OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationGetArgs selfManagedActiveDirectoryConfiguration) {
             this.selfManagedActiveDirectoryConfiguration = Input.ofNullable(selfManagedActiveDirectoryConfiguration);
             return this;
         }

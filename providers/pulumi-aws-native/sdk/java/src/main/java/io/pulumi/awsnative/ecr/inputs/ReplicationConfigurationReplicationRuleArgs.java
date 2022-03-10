@@ -76,22 +76,22 @@ public final class ReplicationConfigurationReplicationRuleArgs extends io.pulumi
     	      this.repositoryFilters = defaults.repositoryFilters;
         }
 
-        public Builder setDestinations(Input<List<ReplicationConfigurationReplicationDestinationArgs>> destinations) {
+        public Builder destinations(Input<List<ReplicationConfigurationReplicationDestinationArgs>> destinations) {
             this.destinations = Objects.requireNonNull(destinations);
             return this;
         }
 
-        public Builder setDestinations(List<ReplicationConfigurationReplicationDestinationArgs> destinations) {
+        public Builder destinations(List<ReplicationConfigurationReplicationDestinationArgs> destinations) {
             this.destinations = Input.of(Objects.requireNonNull(destinations));
             return this;
         }
 
-        public Builder setRepositoryFilters(@Nullable Input<List<ReplicationConfigurationRepositoryFilterArgs>> repositoryFilters) {
+        public Builder repositoryFilters(@Nullable Input<List<ReplicationConfigurationRepositoryFilterArgs>> repositoryFilters) {
             this.repositoryFilters = repositoryFilters;
             return this;
         }
 
-        public Builder setRepositoryFilters(@Nullable List<ReplicationConfigurationRepositoryFilterArgs> repositoryFilters) {
+        public Builder repositoryFilters(@Nullable List<ReplicationConfigurationRepositoryFilterArgs> repositoryFilters) {
             this.repositoryFilters = Input.ofNullable(repositoryFilters);
             return this;
         }

@@ -107,22 +107,22 @@ public final class EncryptionConfigurationResponse extends io.pulumi.resources.I
     	      this.vaultBaseUrl = defaults.vaultBaseUrl;
         }
 
-        public Builder setIdentity(@Nullable CMKIdentityDefinitionResponse identity) {
+        public Builder identity(@Nullable CMKIdentityDefinitionResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setKeyName(String keyName) {
+        public Builder keyName(String keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
 
-        public Builder setKeyVersion(@Nullable String keyVersion) {
+        public Builder keyVersion(@Nullable String keyVersion) {
             this.keyVersion = keyVersion;
             return this;
         }
 
-        public Builder setVaultBaseUrl(String vaultBaseUrl) {
+        public Builder vaultBaseUrl(String vaultBaseUrl) {
             this.vaultBaseUrl = Objects.requireNonNull(vaultBaseUrl);
             return this;
         }

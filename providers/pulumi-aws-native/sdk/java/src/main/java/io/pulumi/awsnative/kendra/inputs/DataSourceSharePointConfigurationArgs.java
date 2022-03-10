@@ -192,122 +192,122 @@ public final class DataSourceSharePointConfigurationArgs extends io.pulumi.resou
     	      this.vpcConfiguration = defaults.vpcConfiguration;
         }
 
-        public Builder setCrawlAttachments(@Nullable Input<Boolean> crawlAttachments) {
+        public Builder crawlAttachments(@Nullable Input<Boolean> crawlAttachments) {
             this.crawlAttachments = crawlAttachments;
             return this;
         }
 
-        public Builder setCrawlAttachments(@Nullable Boolean crawlAttachments) {
+        public Builder crawlAttachments(@Nullable Boolean crawlAttachments) {
             this.crawlAttachments = Input.ofNullable(crawlAttachments);
             return this;
         }
 
-        public Builder setDisableLocalGroups(@Nullable Input<Boolean> disableLocalGroups) {
+        public Builder disableLocalGroups(@Nullable Input<Boolean> disableLocalGroups) {
             this.disableLocalGroups = disableLocalGroups;
             return this;
         }
 
-        public Builder setDisableLocalGroups(@Nullable Boolean disableLocalGroups) {
+        public Builder disableLocalGroups(@Nullable Boolean disableLocalGroups) {
             this.disableLocalGroups = Input.ofNullable(disableLocalGroups);
             return this;
         }
 
-        public Builder setDocumentTitleFieldName(@Nullable Input<String> documentTitleFieldName) {
+        public Builder documentTitleFieldName(@Nullable Input<String> documentTitleFieldName) {
             this.documentTitleFieldName = documentTitleFieldName;
             return this;
         }
 
-        public Builder setDocumentTitleFieldName(@Nullable String documentTitleFieldName) {
+        public Builder documentTitleFieldName(@Nullable String documentTitleFieldName) {
             this.documentTitleFieldName = Input.ofNullable(documentTitleFieldName);
             return this;
         }
 
-        public Builder setExclusionPatterns(@Nullable Input<List<String>> exclusionPatterns) {
+        public Builder exclusionPatterns(@Nullable Input<List<String>> exclusionPatterns) {
             this.exclusionPatterns = exclusionPatterns;
             return this;
         }
 
-        public Builder setExclusionPatterns(@Nullable List<String> exclusionPatterns) {
+        public Builder exclusionPatterns(@Nullable List<String> exclusionPatterns) {
             this.exclusionPatterns = Input.ofNullable(exclusionPatterns);
             return this;
         }
 
-        public Builder setFieldMappings(@Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings) {
+        public Builder fieldMappings(@Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings) {
             this.fieldMappings = fieldMappings;
             return this;
         }
 
-        public Builder setFieldMappings(@Nullable List<DataSourceToIndexFieldMappingArgs> fieldMappings) {
+        public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMappingArgs> fieldMappings) {
             this.fieldMappings = Input.ofNullable(fieldMappings);
             return this;
         }
 
-        public Builder setInclusionPatterns(@Nullable Input<List<String>> inclusionPatterns) {
+        public Builder inclusionPatterns(@Nullable Input<List<String>> inclusionPatterns) {
             this.inclusionPatterns = inclusionPatterns;
             return this;
         }
 
-        public Builder setInclusionPatterns(@Nullable List<String> inclusionPatterns) {
+        public Builder inclusionPatterns(@Nullable List<String> inclusionPatterns) {
             this.inclusionPatterns = Input.ofNullable(inclusionPatterns);
             return this;
         }
 
-        public Builder setSecretArn(Input<String> secretArn) {
+        public Builder secretArn(Input<String> secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }
 
-        public Builder setSecretArn(String secretArn) {
+        public Builder secretArn(String secretArn) {
             this.secretArn = Input.of(Objects.requireNonNull(secretArn));
             return this;
         }
 
-        public Builder setSharePointVersion(Input<DataSourceSharePointConfigurationSharePointVersion> sharePointVersion) {
+        public Builder sharePointVersion(Input<DataSourceSharePointConfigurationSharePointVersion> sharePointVersion) {
             this.sharePointVersion = Objects.requireNonNull(sharePointVersion);
             return this;
         }
 
-        public Builder setSharePointVersion(DataSourceSharePointConfigurationSharePointVersion sharePointVersion) {
+        public Builder sharePointVersion(DataSourceSharePointConfigurationSharePointVersion sharePointVersion) {
             this.sharePointVersion = Input.of(Objects.requireNonNull(sharePointVersion));
             return this;
         }
 
-        public Builder setSslCertificateS3Path(@Nullable Input<DataSourceS3PathArgs> sslCertificateS3Path) {
+        public Builder sslCertificateS3Path(@Nullable Input<DataSourceS3PathArgs> sslCertificateS3Path) {
             this.sslCertificateS3Path = sslCertificateS3Path;
             return this;
         }
 
-        public Builder setSslCertificateS3Path(@Nullable DataSourceS3PathArgs sslCertificateS3Path) {
+        public Builder sslCertificateS3Path(@Nullable DataSourceS3PathArgs sslCertificateS3Path) {
             this.sslCertificateS3Path = Input.ofNullable(sslCertificateS3Path);
             return this;
         }
 
-        public Builder setUrls(Input<List<String>> urls) {
+        public Builder urls(Input<List<String>> urls) {
             this.urls = Objects.requireNonNull(urls);
             return this;
         }
 
-        public Builder setUrls(List<String> urls) {
+        public Builder urls(List<String> urls) {
             this.urls = Input.of(Objects.requireNonNull(urls));
             return this;
         }
 
-        public Builder setUseChangeLog(@Nullable Input<Boolean> useChangeLog) {
+        public Builder useChangeLog(@Nullable Input<Boolean> useChangeLog) {
             this.useChangeLog = useChangeLog;
             return this;
         }
 
-        public Builder setUseChangeLog(@Nullable Boolean useChangeLog) {
+        public Builder useChangeLog(@Nullable Boolean useChangeLog) {
             this.useChangeLog = Input.ofNullable(useChangeLog);
             return this;
         }
 
-        public Builder setVpcConfiguration(@Nullable Input<DataSourceVpcConfigurationArgs> vpcConfiguration) {
+        public Builder vpcConfiguration(@Nullable Input<DataSourceVpcConfigurationArgs> vpcConfiguration) {
             this.vpcConfiguration = vpcConfiguration;
             return this;
         }
 
-        public Builder setVpcConfiguration(@Nullable DataSourceVpcConfigurationArgs vpcConfiguration) {
+        public Builder vpcConfiguration(@Nullable DataSourceVpcConfigurationArgs vpcConfiguration) {
             this.vpcConfiguration = Input.ofNullable(vpcConfiguration);
             return this;
         }

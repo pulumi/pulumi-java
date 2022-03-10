@@ -83,12 +83,12 @@ public final class ProjectSecondarySourceAuth {
     	      this.type = defaults.type;
         }
 
-        public Builder setResource(@Nullable String resource) {
+        public Builder resource(@Nullable String resource) {
             this.resource = resource;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -87,17 +87,17 @@ public final class DataSetOutputColumn extends io.pulumi.resources.InvokeArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setType(@Nullable DataSetColumnDataType type) {
+        public Builder type(@Nullable DataSetColumnDataType type) {
             this.type = type;
             return this;
         }

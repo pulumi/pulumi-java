@@ -92,32 +92,32 @@ public final class OfficeDataConnectorDataTypesArgs extends io.pulumi.resources.
     	      this.teams = defaults.teams;
         }
 
-        public Builder setExchange(@Nullable Input<OfficeDataConnectorDataTypesExchangeArgs> exchange) {
+        public Builder exchange(@Nullable Input<OfficeDataConnectorDataTypesExchangeArgs> exchange) {
             this.exchange = exchange;
             return this;
         }
 
-        public Builder setExchange(@Nullable OfficeDataConnectorDataTypesExchangeArgs exchange) {
+        public Builder exchange(@Nullable OfficeDataConnectorDataTypesExchangeArgs exchange) {
             this.exchange = Input.ofNullable(exchange);
             return this;
         }
 
-        public Builder setSharePoint(@Nullable Input<OfficeDataConnectorDataTypesSharePointArgs> sharePoint) {
+        public Builder sharePoint(@Nullable Input<OfficeDataConnectorDataTypesSharePointArgs> sharePoint) {
             this.sharePoint = sharePoint;
             return this;
         }
 
-        public Builder setSharePoint(@Nullable OfficeDataConnectorDataTypesSharePointArgs sharePoint) {
+        public Builder sharePoint(@Nullable OfficeDataConnectorDataTypesSharePointArgs sharePoint) {
             this.sharePoint = Input.ofNullable(sharePoint);
             return this;
         }
 
-        public Builder setTeams(@Nullable Input<OfficeDataConnectorDataTypesTeamsArgs> teams) {
+        public Builder teams(@Nullable Input<OfficeDataConnectorDataTypesTeamsArgs> teams) {
             this.teams = teams;
             return this;
         }
 
-        public Builder setTeams(@Nullable OfficeDataConnectorDataTypesTeamsArgs teams) {
+        public Builder teams(@Nullable OfficeDataConnectorDataTypesTeamsArgs teams) {
             this.teams = Input.ofNullable(teams);
             return this;
         }

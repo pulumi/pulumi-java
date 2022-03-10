@@ -123,27 +123,27 @@ public final class ImageTemplateRestartCustomizerResponse extends io.pulumi.reso
     	      this.type = defaults.type;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setRestartCheckCommand(@Nullable String restartCheckCommand) {
+        public Builder restartCheckCommand(@Nullable String restartCheckCommand) {
             this.restartCheckCommand = restartCheckCommand;
             return this;
         }
 
-        public Builder setRestartCommand(@Nullable String restartCommand) {
+        public Builder restartCommand(@Nullable String restartCommand) {
             this.restartCommand = restartCommand;
             return this;
         }
 
-        public Builder setRestartTimeout(@Nullable String restartTimeout) {
+        public Builder restartTimeout(@Nullable String restartTimeout) {
             this.restartTimeout = restartTimeout;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

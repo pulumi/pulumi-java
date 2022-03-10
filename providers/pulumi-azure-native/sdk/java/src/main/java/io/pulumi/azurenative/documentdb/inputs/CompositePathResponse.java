@@ -70,12 +70,12 @@ public final class CompositePathResponse extends io.pulumi.resources.InvokeArgs 
     	      this.path = defaults.path;
         }
 
-        public Builder setOrder(@Nullable String order) {
+        public Builder order(@Nullable String order) {
             this.order = order;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }

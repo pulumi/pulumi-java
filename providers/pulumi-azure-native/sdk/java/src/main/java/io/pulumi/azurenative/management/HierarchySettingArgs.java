@@ -87,32 +87,32 @@ public final class HierarchySettingArgs extends io.pulumi.resources.ResourceArgs
     	      this.requireAuthorizationForGroupCreation = defaults.requireAuthorizationForGroupCreation;
         }
 
-        public Builder setDefaultManagementGroup(@Nullable Input<String> defaultManagementGroup) {
+        public Builder defaultManagementGroup(@Nullable Input<String> defaultManagementGroup) {
             this.defaultManagementGroup = defaultManagementGroup;
             return this;
         }
 
-        public Builder setDefaultManagementGroup(@Nullable String defaultManagementGroup) {
+        public Builder defaultManagementGroup(@Nullable String defaultManagementGroup) {
             this.defaultManagementGroup = Input.ofNullable(defaultManagementGroup);
             return this;
         }
 
-        public Builder setGroupId(Input<String> groupId) {
+        public Builder groupId(Input<String> groupId) {
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
 
-        public Builder setGroupId(String groupId) {
+        public Builder groupId(String groupId) {
             this.groupId = Input.of(Objects.requireNonNull(groupId));
             return this;
         }
 
-        public Builder setRequireAuthorizationForGroupCreation(@Nullable Input<Boolean> requireAuthorizationForGroupCreation) {
+        public Builder requireAuthorizationForGroupCreation(@Nullable Input<Boolean> requireAuthorizationForGroupCreation) {
             this.requireAuthorizationForGroupCreation = requireAuthorizationForGroupCreation;
             return this;
         }
 
-        public Builder setRequireAuthorizationForGroupCreation(@Nullable Boolean requireAuthorizationForGroupCreation) {
+        public Builder requireAuthorizationForGroupCreation(@Nullable Boolean requireAuthorizationForGroupCreation) {
             this.requireAuthorizationForGroupCreation = Input.ofNullable(requireAuthorizationForGroupCreation);
             return this;
         }

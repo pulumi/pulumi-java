@@ -110,22 +110,22 @@ public final class DataDiskResponse {
     	      this.storageAccountType = defaults.storageAccountType;
         }
 
-        public Builder setCaching(@Nullable String caching) {
+        public Builder caching(@Nullable String caching) {
             this.caching = caching;
             return this;
         }
 
-        public Builder setDiskSizeGB(Integer diskSizeGB) {
+        public Builder diskSizeGB(Integer diskSizeGB) {
             this.diskSizeGB = Objects.requireNonNull(diskSizeGB);
             return this;
         }
 
-        public Builder setLun(Integer lun) {
+        public Builder lun(Integer lun) {
             this.lun = Objects.requireNonNull(lun);
             return this;
         }
 
-        public Builder setStorageAccountType(@Nullable String storageAccountType) {
+        public Builder storageAccountType(@Nullable String storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
         }

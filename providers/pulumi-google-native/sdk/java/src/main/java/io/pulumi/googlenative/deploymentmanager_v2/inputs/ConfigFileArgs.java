@@ -53,12 +53,12 @@ public final class ConfigFileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.content = defaults.content;
         }
 
-        public Builder setContent(@Nullable Input<String> content) {
+        public Builder content(@Nullable Input<String> content) {
             this.content = content;
             return this;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = Input.ofNullable(content);
             return this;
         }

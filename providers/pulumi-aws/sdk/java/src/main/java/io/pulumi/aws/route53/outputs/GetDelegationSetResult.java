@@ -66,22 +66,22 @@ public final class GetDelegationSetResult {
     	      this.nameServers = defaults.nameServers;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setCallerReference(String callerReference) {
+        public Builder callerReference(String callerReference) {
             this.callerReference = Objects.requireNonNull(callerReference);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setNameServers(List<String> nameServers) {
+        public Builder nameServers(List<String> nameServers) {
             this.nameServers = Objects.requireNonNull(nameServers);
             return this;
         }

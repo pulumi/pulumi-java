@@ -87,32 +87,32 @@ public final class ConnectionPhysicalConnectionRequirementsArgs extends io.pulum
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setAvailabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Input.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder setSecurityGroupIdLists(@Nullable Input<List<String>> securityGroupIdLists) {
+        public Builder securityGroupIdLists(@Nullable Input<List<String>> securityGroupIdLists) {
             this.securityGroupIdLists = securityGroupIdLists;
             return this;
         }
 
-        public Builder setSecurityGroupIdLists(@Nullable List<String> securityGroupIdLists) {
+        public Builder securityGroupIdLists(@Nullable List<String> securityGroupIdLists) {
             this.securityGroupIdLists = Input.ofNullable(securityGroupIdLists);
             return this;
         }
 
-        public Builder setSubnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Input<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Input.ofNullable(subnetId);
             return this;
         }

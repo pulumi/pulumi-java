@@ -314,87 +314,87 @@ public final class GetMetadataResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setAuthor(@Nullable MetadataAuthorResponse author) {
+        public Builder author(@Nullable MetadataAuthorResponse author) {
             this.author = author;
             return this;
         }
 
-        public Builder setCategories(@Nullable MetadataCategoriesResponse categories) {
+        public Builder categories(@Nullable MetadataCategoriesResponse categories) {
             this.categories = categories;
             return this;
         }
 
-        public Builder setContentId(@Nullable String contentId) {
+        public Builder contentId(@Nullable String contentId) {
             this.contentId = contentId;
             return this;
         }
 
-        public Builder setDependencies(@Nullable MetadataDependenciesResponse dependencies) {
+        public Builder dependencies(@Nullable MetadataDependenciesResponse dependencies) {
             this.dependencies = dependencies;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setFirstPublishDate(@Nullable String firstPublishDate) {
+        public Builder firstPublishDate(@Nullable String firstPublishDate) {
             this.firstPublishDate = firstPublishDate;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLastPublishDate(@Nullable String lastPublishDate) {
+        public Builder lastPublishDate(@Nullable String lastPublishDate) {
             this.lastPublishDate = lastPublishDate;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParentId(String parentId) {
+        public Builder parentId(String parentId) {
             this.parentId = Objects.requireNonNull(parentId);
             return this;
         }
 
-        public Builder setProviders(@Nullable List<String> providers) {
+        public Builder providers(@Nullable List<String> providers) {
             this.providers = providers;
             return this;
         }
 
-        public Builder setSource(@Nullable MetadataSourceResponse source) {
+        public Builder source(@Nullable MetadataSourceResponse source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSupport(@Nullable MetadataSupportResponse support) {
+        public Builder support(@Nullable MetadataSupportResponse support) {
             this.support = support;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

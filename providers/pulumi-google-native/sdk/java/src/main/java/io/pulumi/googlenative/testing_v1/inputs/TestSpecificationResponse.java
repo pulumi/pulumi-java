@@ -208,52 +208,52 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
     	      this.testTimeout = defaults.testTimeout;
         }
 
-        public Builder setAndroidInstrumentationTest(AndroidInstrumentationTestResponse androidInstrumentationTest) {
+        public Builder androidInstrumentationTest(AndroidInstrumentationTestResponse androidInstrumentationTest) {
             this.androidInstrumentationTest = Objects.requireNonNull(androidInstrumentationTest);
             return this;
         }
 
-        public Builder setAndroidRoboTest(AndroidRoboTestResponse androidRoboTest) {
+        public Builder androidRoboTest(AndroidRoboTestResponse androidRoboTest) {
             this.androidRoboTest = Objects.requireNonNull(androidRoboTest);
             return this;
         }
 
-        public Builder setAndroidTestLoop(AndroidTestLoopResponse androidTestLoop) {
+        public Builder androidTestLoop(AndroidTestLoopResponse androidTestLoop) {
             this.androidTestLoop = Objects.requireNonNull(androidTestLoop);
             return this;
         }
 
-        public Builder setDisablePerformanceMetrics(Boolean disablePerformanceMetrics) {
+        public Builder disablePerformanceMetrics(Boolean disablePerformanceMetrics) {
             this.disablePerformanceMetrics = Objects.requireNonNull(disablePerformanceMetrics);
             return this;
         }
 
-        public Builder setDisableVideoRecording(Boolean disableVideoRecording) {
+        public Builder disableVideoRecording(Boolean disableVideoRecording) {
             this.disableVideoRecording = Objects.requireNonNull(disableVideoRecording);
             return this;
         }
 
-        public Builder setIosTestLoop(IosTestLoopResponse iosTestLoop) {
+        public Builder iosTestLoop(IosTestLoopResponse iosTestLoop) {
             this.iosTestLoop = Objects.requireNonNull(iosTestLoop);
             return this;
         }
 
-        public Builder setIosTestSetup(IosTestSetupResponse iosTestSetup) {
+        public Builder iosTestSetup(IosTestSetupResponse iosTestSetup) {
             this.iosTestSetup = Objects.requireNonNull(iosTestSetup);
             return this;
         }
 
-        public Builder setIosXcTest(IosXcTestResponse iosXcTest) {
+        public Builder iosXcTest(IosXcTestResponse iosXcTest) {
             this.iosXcTest = Objects.requireNonNull(iosXcTest);
             return this;
         }
 
-        public Builder setTestSetup(TestSetupResponse testSetup) {
+        public Builder testSetup(TestSetupResponse testSetup) {
             this.testSetup = Objects.requireNonNull(testSetup);
             return this;
         }
 
-        public Builder setTestTimeout(String testTimeout) {
+        public Builder testTimeout(String testTimeout) {
             this.testTimeout = Objects.requireNonNull(testTimeout);
             return this;
         }

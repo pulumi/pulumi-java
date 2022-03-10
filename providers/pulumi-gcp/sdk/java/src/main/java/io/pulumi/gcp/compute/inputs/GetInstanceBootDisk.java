@@ -157,42 +157,42 @@ public final class GetInstanceBootDisk extends io.pulumi.resources.InvokeArgs {
     	      this.source = defaults.source;
         }
 
-        public Builder setAutoDelete(Boolean autoDelete) {
+        public Builder autoDelete(Boolean autoDelete) {
             this.autoDelete = Objects.requireNonNull(autoDelete);
             return this;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setDiskEncryptionKeyRaw(String diskEncryptionKeyRaw) {
+        public Builder diskEncryptionKeyRaw(String diskEncryptionKeyRaw) {
             this.diskEncryptionKeyRaw = Objects.requireNonNull(diskEncryptionKeyRaw);
             return this;
         }
 
-        public Builder setDiskEncryptionKeySha256(String diskEncryptionKeySha256) {
+        public Builder diskEncryptionKeySha256(String diskEncryptionKeySha256) {
             this.diskEncryptionKeySha256 = Objects.requireNonNull(diskEncryptionKeySha256);
             return this;
         }
 
-        public Builder setInitializeParams(List<GetInstanceBootDiskInitializeParam> initializeParams) {
+        public Builder initializeParams(List<GetInstanceBootDiskInitializeParam> initializeParams) {
             this.initializeParams = Objects.requireNonNull(initializeParams);
             return this;
         }
 
-        public Builder setKmsKeySelfLink(String kmsKeySelfLink) {
+        public Builder kmsKeySelfLink(String kmsKeySelfLink) {
             this.kmsKeySelfLink = Objects.requireNonNull(kmsKeySelfLink);
             return this;
         }
 
-        public Builder setMode(String mode) {
+        public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }

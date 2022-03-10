@@ -68,12 +68,12 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
     	      this.ruleVisibility = defaults.ruleVisibility;
         }
 
-        public Builder setEnable(@Nullable Boolean enable) {
+        public Builder enable(@Nullable Boolean enable) {
             this.enable = enable;
             return this;
         }
 
-        public Builder setRuleVisibility(@Nullable String ruleVisibility) {
+        public Builder ruleVisibility(@Nullable String ruleVisibility) {
             this.ruleVisibility = ruleVisibility;
             return this;
         }

@@ -92,22 +92,22 @@ public final class GetInstanceNetworkInterfaceIpv6AccessConfig extends io.pulumi
     	      this.publicPtrDomainName = defaults.publicPtrDomainName;
         }
 
-        public Builder setExternalIpv6(String externalIpv6) {
+        public Builder externalIpv6(String externalIpv6) {
             this.externalIpv6 = Objects.requireNonNull(externalIpv6);
             return this;
         }
 
-        public Builder setExternalIpv6PrefixLength(String externalIpv6PrefixLength) {
+        public Builder externalIpv6PrefixLength(String externalIpv6PrefixLength) {
             this.externalIpv6PrefixLength = Objects.requireNonNull(externalIpv6PrefixLength);
             return this;
         }
 
-        public Builder setNetworkTier(String networkTier) {
+        public Builder networkTier(String networkTier) {
             this.networkTier = Objects.requireNonNull(networkTier);
             return this;
         }
 
-        public Builder setPublicPtrDomainName(String publicPtrDomainName) {
+        public Builder publicPtrDomainName(String publicPtrDomainName) {
             this.publicPtrDomainName = Objects.requireNonNull(publicPtrDomainName);
             return this;
         }

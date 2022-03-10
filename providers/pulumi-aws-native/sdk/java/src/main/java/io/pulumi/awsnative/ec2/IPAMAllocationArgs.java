@@ -95,42 +95,42 @@ public final class IPAMAllocationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.netmaskLength = defaults.netmaskLength;
         }
 
-        public Builder setCidr(@Nullable Input<String> cidr) {
+        public Builder cidr(@Nullable Input<String> cidr) {
             this.cidr = cidr;
             return this;
         }
 
-        public Builder setCidr(@Nullable String cidr) {
+        public Builder cidr(@Nullable String cidr) {
             this.cidr = Input.ofNullable(cidr);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setIpamPoolId(Input<String> ipamPoolId) {
+        public Builder ipamPoolId(Input<String> ipamPoolId) {
             this.ipamPoolId = Objects.requireNonNull(ipamPoolId);
             return this;
         }
 
-        public Builder setIpamPoolId(String ipamPoolId) {
+        public Builder ipamPoolId(String ipamPoolId) {
             this.ipamPoolId = Input.of(Objects.requireNonNull(ipamPoolId));
             return this;
         }
 
-        public Builder setNetmaskLength(@Nullable Input<Integer> netmaskLength) {
+        public Builder netmaskLength(@Nullable Input<Integer> netmaskLength) {
             this.netmaskLength = netmaskLength;
             return this;
         }
 
-        public Builder setNetmaskLength(@Nullable Integer netmaskLength) {
+        public Builder netmaskLength(@Nullable Integer netmaskLength) {
             this.netmaskLength = Input.ofNullable(netmaskLength);
             return this;
         }

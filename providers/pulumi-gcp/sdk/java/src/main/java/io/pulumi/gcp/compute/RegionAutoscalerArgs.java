@@ -143,62 +143,62 @@ public final class RegionAutoscalerArgs extends io.pulumi.resources.ResourceArgs
     	      this.target = defaults.target;
         }
 
-        public Builder setAutoscalingPolicy(Input<RegionAutoscalerAutoscalingPolicyArgs> autoscalingPolicy) {
+        public Builder autoscalingPolicy(Input<RegionAutoscalerAutoscalingPolicyArgs> autoscalingPolicy) {
             this.autoscalingPolicy = Objects.requireNonNull(autoscalingPolicy);
             return this;
         }
 
-        public Builder setAutoscalingPolicy(RegionAutoscalerAutoscalingPolicyArgs autoscalingPolicy) {
+        public Builder autoscalingPolicy(RegionAutoscalerAutoscalingPolicyArgs autoscalingPolicy) {
             this.autoscalingPolicy = Input.of(Objects.requireNonNull(autoscalingPolicy));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setTarget(Input<String> target) {
+        public Builder target(Input<String> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
 
-        public Builder setTarget(String target) {
+        public Builder target(String target) {
             this.target = Input.of(Objects.requireNonNull(target));
             return this;
         }

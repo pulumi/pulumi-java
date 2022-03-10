@@ -40,7 +40,7 @@ public final class InstanceGroupManagerStandbyPolicyResponse {
     	      this.initialDelaySec = defaults.initialDelaySec;
         }
 
-        public Builder setInitialDelaySec(Integer initialDelaySec) {
+        public Builder initialDelaySec(Integer initialDelaySec) {
             this.initialDelaySec = Objects.requireNonNull(initialDelaySec);
             return this;
         }

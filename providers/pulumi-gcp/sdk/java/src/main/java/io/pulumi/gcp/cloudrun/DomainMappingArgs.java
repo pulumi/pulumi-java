@@ -123,52 +123,52 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.spec = defaults.spec;
         }
 
-        public Builder setLocation(Input<String> location) {
+        public Builder location(Input<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Input.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder setMetadata(Input<DomainMappingMetadataArgs> metadata) {
+        public Builder metadata(Input<DomainMappingMetadataArgs> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setMetadata(DomainMappingMetadataArgs metadata) {
+        public Builder metadata(DomainMappingMetadataArgs metadata) {
             this.metadata = Input.of(Objects.requireNonNull(metadata));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSpec(Input<DomainMappingSpecArgs> spec) {
+        public Builder spec(Input<DomainMappingSpecArgs> spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
 
-        public Builder setSpec(DomainMappingSpecArgs spec) {
+        public Builder spec(DomainMappingSpecArgs spec) {
             this.spec = Input.of(Objects.requireNonNull(spec));
             return this;
         }

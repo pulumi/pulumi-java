@@ -120,27 +120,27 @@ public final class EventIntegrationAssociation extends io.pulumi.resources.Invok
     	      this.eventIntegrationAssociationId = defaults.eventIntegrationAssociationId;
         }
 
-        public Builder setClientAssociationMetadata(@Nullable List<EventIntegrationMetadata> clientAssociationMetadata) {
+        public Builder clientAssociationMetadata(@Nullable List<EventIntegrationMetadata> clientAssociationMetadata) {
             this.clientAssociationMetadata = clientAssociationMetadata;
             return this;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setEventBridgeRuleName(@Nullable String eventBridgeRuleName) {
+        public Builder eventBridgeRuleName(@Nullable String eventBridgeRuleName) {
             this.eventBridgeRuleName = eventBridgeRuleName;
             return this;
         }
 
-        public Builder setEventIntegrationAssociationArn(@Nullable String eventIntegrationAssociationArn) {
+        public Builder eventIntegrationAssociationArn(@Nullable String eventIntegrationAssociationArn) {
             this.eventIntegrationAssociationArn = eventIntegrationAssociationArn;
             return this;
         }
 
-        public Builder setEventIntegrationAssociationId(@Nullable String eventIntegrationAssociationId) {
+        public Builder eventIntegrationAssociationId(@Nullable String eventIntegrationAssociationId) {
             this.eventIntegrationAssociationId = eventIntegrationAssociationId;
             return this;
         }

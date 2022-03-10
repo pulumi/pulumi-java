@@ -86,32 +86,32 @@ public final class RuleGroupNamespaceArgs extends io.pulumi.resources.ResourceAr
     	      this.workspaceId = defaults.workspaceId;
         }
 
-        public Builder setData(Input<String> data) {
+        public Builder data(Input<String> data) {
             this.data = Objects.requireNonNull(data);
             return this;
         }
 
-        public Builder setData(String data) {
+        public Builder data(String data) {
             this.data = Input.of(Objects.requireNonNull(data));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setWorkspaceId(Input<String> workspaceId) {
+        public Builder workspaceId(Input<String> workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
 
-        public Builder setWorkspaceId(String workspaceId) {
+        public Builder workspaceId(String workspaceId) {
             this.workspaceId = Input.of(Objects.requireNonNull(workspaceId));
             return this;
         }

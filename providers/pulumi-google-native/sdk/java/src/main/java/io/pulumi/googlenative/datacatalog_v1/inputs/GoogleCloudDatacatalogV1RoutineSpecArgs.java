@@ -142,62 +142,62 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends io.pulumi.res
     	      this.routineType = defaults.routineType;
         }
 
-        public Builder setBigqueryRoutineSpec(@Nullable Input<GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs> bigqueryRoutineSpec) {
+        public Builder bigqueryRoutineSpec(@Nullable Input<GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs> bigqueryRoutineSpec) {
             this.bigqueryRoutineSpec = bigqueryRoutineSpec;
             return this;
         }
 
-        public Builder setBigqueryRoutineSpec(@Nullable GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs bigqueryRoutineSpec) {
+        public Builder bigqueryRoutineSpec(@Nullable GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs bigqueryRoutineSpec) {
             this.bigqueryRoutineSpec = Input.ofNullable(bigqueryRoutineSpec);
             return this;
         }
 
-        public Builder setDefinitionBody(@Nullable Input<String> definitionBody) {
+        public Builder definitionBody(@Nullable Input<String> definitionBody) {
             this.definitionBody = definitionBody;
             return this;
         }
 
-        public Builder setDefinitionBody(@Nullable String definitionBody) {
+        public Builder definitionBody(@Nullable String definitionBody) {
             this.definitionBody = Input.ofNullable(definitionBody);
             return this;
         }
 
-        public Builder setLanguage(@Nullable Input<String> language) {
+        public Builder language(@Nullable Input<String> language) {
             this.language = language;
             return this;
         }
 
-        public Builder setLanguage(@Nullable String language) {
+        public Builder language(@Nullable String language) {
             this.language = Input.ofNullable(language);
             return this;
         }
 
-        public Builder setReturnType(@Nullable Input<String> returnType) {
+        public Builder returnType(@Nullable Input<String> returnType) {
             this.returnType = returnType;
             return this;
         }
 
-        public Builder setReturnType(@Nullable String returnType) {
+        public Builder returnType(@Nullable String returnType) {
             this.returnType = Input.ofNullable(returnType);
             return this;
         }
 
-        public Builder setRoutineArguments(@Nullable Input<List<GoogleCloudDatacatalogV1RoutineSpecArgumentArgs>> routineArguments) {
+        public Builder routineArguments(@Nullable Input<List<GoogleCloudDatacatalogV1RoutineSpecArgumentArgs>> routineArguments) {
             this.routineArguments = routineArguments;
             return this;
         }
 
-        public Builder setRoutineArguments(@Nullable List<GoogleCloudDatacatalogV1RoutineSpecArgumentArgs> routineArguments) {
+        public Builder routineArguments(@Nullable List<GoogleCloudDatacatalogV1RoutineSpecArgumentArgs> routineArguments) {
             this.routineArguments = Input.ofNullable(routineArguments);
             return this;
         }
 
-        public Builder setRoutineType(@Nullable Input<GoogleCloudDatacatalogV1RoutineSpecRoutineType> routineType) {
+        public Builder routineType(@Nullable Input<GoogleCloudDatacatalogV1RoutineSpecRoutineType> routineType) {
             this.routineType = routineType;
             return this;
         }
 
-        public Builder setRoutineType(@Nullable GoogleCloudDatacatalogV1RoutineSpecRoutineType routineType) {
+        public Builder routineType(@Nullable GoogleCloudDatacatalogV1RoutineSpecRoutineType routineType) {
             this.routineType = Input.ofNullable(routineType);
             return this;
         }

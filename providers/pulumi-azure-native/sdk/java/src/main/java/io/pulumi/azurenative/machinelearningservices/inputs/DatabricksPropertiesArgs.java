@@ -70,22 +70,22 @@ public final class DatabricksPropertiesArgs extends io.pulumi.resources.Resource
     	      this.workspaceUrl = defaults.workspaceUrl;
         }
 
-        public Builder setDatabricksAccessToken(@Nullable Input<String> databricksAccessToken) {
+        public Builder databricksAccessToken(@Nullable Input<String> databricksAccessToken) {
             this.databricksAccessToken = databricksAccessToken;
             return this;
         }
 
-        public Builder setDatabricksAccessToken(@Nullable String databricksAccessToken) {
+        public Builder databricksAccessToken(@Nullable String databricksAccessToken) {
             this.databricksAccessToken = Input.ofNullable(databricksAccessToken);
             return this;
         }
 
-        public Builder setWorkspaceUrl(@Nullable Input<String> workspaceUrl) {
+        public Builder workspaceUrl(@Nullable Input<String> workspaceUrl) {
             this.workspaceUrl = workspaceUrl;
             return this;
         }
 
-        public Builder setWorkspaceUrl(@Nullable String workspaceUrl) {
+        public Builder workspaceUrl(@Nullable String workspaceUrl) {
             this.workspaceUrl = Input.ofNullable(workspaceUrl);
             return this;
         }

@@ -201,52 +201,52 @@ public final class GetDedicatedHostGroupResult {
     	      this.zones = defaults.zones;
         }
 
-        public Builder setHosts(List<SubResourceReadOnlyResponse> hosts) {
+        public Builder hosts(List<SubResourceReadOnlyResponse> hosts) {
             this.hosts = Objects.requireNonNull(hosts);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstanceView(DedicatedHostGroupInstanceViewResponse instanceView) {
+        public Builder instanceView(DedicatedHostGroupInstanceViewResponse instanceView) {
             this.instanceView = Objects.requireNonNull(instanceView);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPlatformFaultDomainCount(Integer platformFaultDomainCount) {
+        public Builder platformFaultDomainCount(Integer platformFaultDomainCount) {
             this.platformFaultDomainCount = Objects.requireNonNull(platformFaultDomainCount);
             return this;
         }
 
-        public Builder setSupportAutomaticPlacement(@Nullable Boolean supportAutomaticPlacement) {
+        public Builder supportAutomaticPlacement(@Nullable Boolean supportAutomaticPlacement) {
             this.supportAutomaticPlacement = supportAutomaticPlacement;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setZones(@Nullable List<String> zones) {
+        public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }

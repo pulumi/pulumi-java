@@ -72,12 +72,12 @@ public final class AnyResponse extends io.pulumi.resources.InvokeArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setTypeUrl(String typeUrl) {
+        public Builder typeUrl(String typeUrl) {
             this.typeUrl = Objects.requireNonNull(typeUrl);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

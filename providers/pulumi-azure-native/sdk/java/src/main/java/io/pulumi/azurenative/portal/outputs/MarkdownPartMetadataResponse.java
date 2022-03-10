@@ -88,17 +88,17 @@ public final class MarkdownPartMetadataResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setInputs(@Nullable List<Object> inputs) {
+        public Builder inputs(@Nullable List<Object> inputs) {
             this.inputs = inputs;
             return this;
         }
 
-        public Builder setSettings(@Nullable MarkdownPartMetadataResponseSettings settings) {
+        public Builder settings(@Nullable MarkdownPartMetadataResponseSettings settings) {
             this.settings = settings;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

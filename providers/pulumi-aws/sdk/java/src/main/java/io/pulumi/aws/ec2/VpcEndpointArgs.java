@@ -202,102 +202,102 @@ public final class VpcEndpointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setAutoAccept(@Nullable Input<Boolean> autoAccept) {
+        public Builder autoAccept(@Nullable Input<Boolean> autoAccept) {
             this.autoAccept = autoAccept;
             return this;
         }
 
-        public Builder setAutoAccept(@Nullable Boolean autoAccept) {
+        public Builder autoAccept(@Nullable Boolean autoAccept) {
             this.autoAccept = Input.ofNullable(autoAccept);
             return this;
         }
 
-        public Builder setPolicy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Input<String> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPolicy(@Nullable String policy) {
+        public Builder policy(@Nullable String policy) {
             this.policy = Input.ofNullable(policy);
             return this;
         }
 
-        public Builder setPrivateDnsEnabled(@Nullable Input<Boolean> privateDnsEnabled) {
+        public Builder privateDnsEnabled(@Nullable Input<Boolean> privateDnsEnabled) {
             this.privateDnsEnabled = privateDnsEnabled;
             return this;
         }
 
-        public Builder setPrivateDnsEnabled(@Nullable Boolean privateDnsEnabled) {
+        public Builder privateDnsEnabled(@Nullable Boolean privateDnsEnabled) {
             this.privateDnsEnabled = Input.ofNullable(privateDnsEnabled);
             return this;
         }
 
-        public Builder setRouteTableIds(@Nullable Input<List<String>> routeTableIds) {
+        public Builder routeTableIds(@Nullable Input<List<String>> routeTableIds) {
             this.routeTableIds = routeTableIds;
             return this;
         }
 
-        public Builder setRouteTableIds(@Nullable List<String> routeTableIds) {
+        public Builder routeTableIds(@Nullable List<String> routeTableIds) {
             this.routeTableIds = Input.ofNullable(routeTableIds);
             return this;
         }
 
-        public Builder setSecurityGroupIds(@Nullable Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable Input<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
 
-        public Builder setSecurityGroupIds(@Nullable List<String> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = Input.ofNullable(securityGroupIds);
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder setSubnetIds(@Nullable Input<List<String>> subnetIds) {
+        public Builder subnetIds(@Nullable Input<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
 
-        public Builder setSubnetIds(@Nullable List<String> subnetIds) {
+        public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = Input.ofNullable(subnetIds);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVpcEndpointType(@Nullable Input<String> vpcEndpointType) {
+        public Builder vpcEndpointType(@Nullable Input<String> vpcEndpointType) {
             this.vpcEndpointType = vpcEndpointType;
             return this;
         }
 
-        public Builder setVpcEndpointType(@Nullable String vpcEndpointType) {
+        public Builder vpcEndpointType(@Nullable String vpcEndpointType) {
             this.vpcEndpointType = Input.ofNullable(vpcEndpointType);
             return this;
         }
 
-        public Builder setVpcId(Input<String> vpcId) {
+        public Builder vpcId(Input<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Input.of(Objects.requireNonNull(vpcId));
             return this;
         }

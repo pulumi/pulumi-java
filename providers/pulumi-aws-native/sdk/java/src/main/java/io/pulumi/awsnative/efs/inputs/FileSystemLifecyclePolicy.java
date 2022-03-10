@@ -62,12 +62,12 @@ public final class FileSystemLifecyclePolicy extends io.pulumi.resources.InvokeA
     	      this.transitionToPrimaryStorageClass = defaults.transitionToPrimaryStorageClass;
         }
 
-        public Builder setTransitionToIA(@Nullable String transitionToIA) {
+        public Builder transitionToIA(@Nullable String transitionToIA) {
             this.transitionToIA = transitionToIA;
             return this;
         }
 
-        public Builder setTransitionToPrimaryStorageClass(@Nullable String transitionToPrimaryStorageClass) {
+        public Builder transitionToPrimaryStorageClass(@Nullable String transitionToPrimaryStorageClass) {
             this.transitionToPrimaryStorageClass = transitionToPrimaryStorageClass;
             return this;
         }

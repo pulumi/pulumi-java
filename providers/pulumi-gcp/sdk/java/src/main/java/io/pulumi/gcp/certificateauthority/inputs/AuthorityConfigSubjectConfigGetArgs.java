@@ -73,22 +73,22 @@ public final class AuthorityConfigSubjectConfigGetArgs extends io.pulumi.resourc
     	      this.subjectAltName = defaults.subjectAltName;
         }
 
-        public Builder setSubject(Input<AuthorityConfigSubjectConfigSubjectGetArgs> subject) {
+        public Builder subject(Input<AuthorityConfigSubjectConfigSubjectGetArgs> subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
 
-        public Builder setSubject(AuthorityConfigSubjectConfigSubjectGetArgs subject) {
+        public Builder subject(AuthorityConfigSubjectConfigSubjectGetArgs subject) {
             this.subject = Input.of(Objects.requireNonNull(subject));
             return this;
         }
 
-        public Builder setSubjectAltName(@Nullable Input<AuthorityConfigSubjectConfigSubjectAltNameGetArgs> subjectAltName) {
+        public Builder subjectAltName(@Nullable Input<AuthorityConfigSubjectConfigSubjectAltNameGetArgs> subjectAltName) {
             this.subjectAltName = subjectAltName;
             return this;
         }
 
-        public Builder setSubjectAltName(@Nullable AuthorityConfigSubjectConfigSubjectAltNameGetArgs subjectAltName) {
+        public Builder subjectAltName(@Nullable AuthorityConfigSubjectConfigSubjectAltNameGetArgs subjectAltName) {
             this.subjectAltName = Input.ofNullable(subjectAltName);
             return this;
         }

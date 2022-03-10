@@ -75,22 +75,22 @@ public final class VolumeAttachmentSourceArgs extends io.pulumi.resources.Resour
     	      this.persistentVolumeName = defaults.persistentVolumeName;
         }
 
-        public Builder setInlineVolumeSpec(@Nullable Input<PersistentVolumeSpecArgs> inlineVolumeSpec) {
+        public Builder inlineVolumeSpec(@Nullable Input<PersistentVolumeSpecArgs> inlineVolumeSpec) {
             this.inlineVolumeSpec = inlineVolumeSpec;
             return this;
         }
 
-        public Builder setInlineVolumeSpec(@Nullable PersistentVolumeSpecArgs inlineVolumeSpec) {
+        public Builder inlineVolumeSpec(@Nullable PersistentVolumeSpecArgs inlineVolumeSpec) {
             this.inlineVolumeSpec = Input.ofNullable(inlineVolumeSpec);
             return this;
         }
 
-        public Builder setPersistentVolumeName(@Nullable Input<String> persistentVolumeName) {
+        public Builder persistentVolumeName(@Nullable Input<String> persistentVolumeName) {
             this.persistentVolumeName = persistentVolumeName;
             return this;
         }
 
-        public Builder setPersistentVolumeName(@Nullable String persistentVolumeName) {
+        public Builder persistentVolumeName(@Nullable String persistentVolumeName) {
             this.persistentVolumeName = Input.ofNullable(persistentVolumeName);
             return this;
         }

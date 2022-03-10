@@ -251,67 +251,67 @@ public final class AttachedDiskInitializeParamsResponse extends io.pulumi.resour
     	      this.sourceSnapshotEncryptionKey = defaults.sourceSnapshotEncryptionKey;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDiskName(String diskName) {
+        public Builder diskName(String diskName) {
             this.diskName = Objects.requireNonNull(diskName);
             return this;
         }
 
-        public Builder setDiskSizeGb(String diskSizeGb) {
+        public Builder diskSizeGb(String diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
 
-        public Builder setDiskType(String diskType) {
+        public Builder diskType(String diskType) {
             this.diskType = Objects.requireNonNull(diskType);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLicenses(List<String> licenses) {
+        public Builder licenses(List<String> licenses) {
             this.licenses = Objects.requireNonNull(licenses);
             return this;
         }
 
-        public Builder setOnUpdateAction(String onUpdateAction) {
+        public Builder onUpdateAction(String onUpdateAction) {
             this.onUpdateAction = Objects.requireNonNull(onUpdateAction);
             return this;
         }
 
-        public Builder setProvisionedIops(String provisionedIops) {
+        public Builder provisionedIops(String provisionedIops) {
             this.provisionedIops = Objects.requireNonNull(provisionedIops);
             return this;
         }
 
-        public Builder setResourcePolicies(List<String> resourcePolicies) {
+        public Builder resourcePolicies(List<String> resourcePolicies) {
             this.resourcePolicies = Objects.requireNonNull(resourcePolicies);
             return this;
         }
 
-        public Builder setSourceImage(String sourceImage) {
+        public Builder sourceImage(String sourceImage) {
             this.sourceImage = Objects.requireNonNull(sourceImage);
             return this;
         }
 
-        public Builder setSourceImageEncryptionKey(CustomerEncryptionKeyResponse sourceImageEncryptionKey) {
+        public Builder sourceImageEncryptionKey(CustomerEncryptionKeyResponse sourceImageEncryptionKey) {
             this.sourceImageEncryptionKey = Objects.requireNonNull(sourceImageEncryptionKey);
             return this;
         }
 
-        public Builder setSourceSnapshot(String sourceSnapshot) {
+        public Builder sourceSnapshot(String sourceSnapshot) {
             this.sourceSnapshot = Objects.requireNonNull(sourceSnapshot);
             return this;
         }
 
-        public Builder setSourceSnapshotEncryptionKey(CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey) {
+        public Builder sourceSnapshotEncryptionKey(CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey) {
             this.sourceSnapshotEncryptionKey = Objects.requireNonNull(sourceSnapshotEncryptionKey);
             return this;
         }

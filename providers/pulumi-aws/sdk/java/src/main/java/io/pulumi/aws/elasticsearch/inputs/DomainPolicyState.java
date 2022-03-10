@@ -70,17 +70,17 @@ public final class DomainPolicyState extends io.pulumi.resources.ResourceArgs {
     	      this.domainName = defaults.domainName;
         }
 
-        public Builder setAccessPolicies(@Nullable Input<String> accessPolicies) {
+        public Builder accessPolicies(@Nullable Input<String> accessPolicies) {
             this.accessPolicies = accessPolicies;
             return this;
         }
 
-        public Builder setDomainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Input<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
-        public Builder setDomainName(@Nullable String domainName) {
+        public Builder domainName(@Nullable String domainName) {
             this.domainName = Input.ofNullable(domainName);
             return this;
         }

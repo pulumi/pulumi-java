@@ -50,7 +50,7 @@ public final class ManagedClusterLoadBalancerProfileResponseOutboundIPs {
     	      this.publicIPs = defaults.publicIPs;
         }
 
-        public Builder setPublicIPs(@Nullable List<ResourceReferenceResponse> publicIPs) {
+        public Builder publicIPs(@Nullable List<ResourceReferenceResponse> publicIPs) {
             this.publicIPs = publicIPs;
             return this;
         }

@@ -148,37 +148,37 @@ public final class SoaRecordResponse {
     	      this.serialNumber = defaults.serialNumber;
         }
 
-        public Builder setEmail(@Nullable String email) {
+        public Builder email(@Nullable String email) {
             this.email = email;
             return this;
         }
 
-        public Builder setExpireTime(@Nullable Double expireTime) {
+        public Builder expireTime(@Nullable Double expireTime) {
             this.expireTime = expireTime;
             return this;
         }
 
-        public Builder setHost(@Nullable String host) {
+        public Builder host(@Nullable String host) {
             this.host = host;
             return this;
         }
 
-        public Builder setMinimumTtl(@Nullable Double minimumTtl) {
+        public Builder minimumTtl(@Nullable Double minimumTtl) {
             this.minimumTtl = minimumTtl;
             return this;
         }
 
-        public Builder setRefreshTime(@Nullable Double refreshTime) {
+        public Builder refreshTime(@Nullable Double refreshTime) {
             this.refreshTime = refreshTime;
             return this;
         }
 
-        public Builder setRetryTime(@Nullable Double retryTime) {
+        public Builder retryTime(@Nullable Double retryTime) {
             this.retryTime = retryTime;
             return this;
         }
 
-        public Builder setSerialNumber(@Nullable Double serialNumber) {
+        public Builder serialNumber(@Nullable Double serialNumber) {
             this.serialNumber = serialNumber;
             return this;
         }

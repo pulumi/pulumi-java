@@ -65,12 +65,12 @@ public final class SelectedCertificateInputResponse {
     	      this.password = defaults.password;
         }
 
-        public Builder setCertificateName(String certificateName) {
+        public Builder certificateName(String certificateName) {
             this.certificateName = Objects.requireNonNull(certificateName);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }

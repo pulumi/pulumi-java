@@ -214,57 +214,57 @@ public final class GetOrganizationResult {
     	      this.userDetail = defaults.userDetail;
         }
 
-        public Builder setCreatedTime(String createdTime) {
+        public Builder createdTime(String createdTime) {
             this.createdTime = Objects.requireNonNull(createdTime);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOfferDetail(@Nullable OrganizationResourcePropertiesResponseOfferDetail offerDetail) {
+        public Builder offerDetail(@Nullable OrganizationResourcePropertiesResponseOfferDetail offerDetail) {
             this.offerDetail = offerDetail;
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSsoUrl(String ssoUrl) {
+        public Builder ssoUrl(String ssoUrl) {
             this.ssoUrl = Objects.requireNonNull(ssoUrl);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserDetail(@Nullable OrganizationResourcePropertiesResponseUserDetail userDetail) {
+        public Builder userDetail(@Nullable OrganizationResourcePropertiesResponseUserDetail userDetail) {
             this.userDetail = userDetail;
             return this;
         }

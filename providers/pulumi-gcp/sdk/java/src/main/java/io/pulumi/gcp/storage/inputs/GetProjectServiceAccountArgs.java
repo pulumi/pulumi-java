@@ -71,12 +71,12 @@ public final class GetProjectServiceAccountArgs extends io.pulumi.resources.Invo
     	      this.userProject = defaults.userProject;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setUserProject(@Nullable String userProject) {
+        public Builder userProject(@Nullable String userProject) {
             this.userProject = userProject;
             return this;
         }

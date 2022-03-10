@@ -55,7 +55,7 @@ public final class OneTimeScheduleResponse extends io.pulumi.resources.InvokeArg
     	      this.executeTime = defaults.executeTime;
         }
 
-        public Builder setExecuteTime(String executeTime) {
+        public Builder executeTime(String executeTime) {
             this.executeTime = Objects.requireNonNull(executeTime);
             return this;
         }

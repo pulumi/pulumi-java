@@ -137,62 +137,62 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tokenName = defaults.tokenName;
         }
 
-        public Builder setCredentials(@Nullable Input<TokenCredentialsPropertiesArgs> credentials) {
+        public Builder credentials(@Nullable Input<TokenCredentialsPropertiesArgs> credentials) {
             this.credentials = credentials;
             return this;
         }
 
-        public Builder setCredentials(@Nullable TokenCredentialsPropertiesArgs credentials) {
+        public Builder credentials(@Nullable TokenCredentialsPropertiesArgs credentials) {
             this.credentials = Input.ofNullable(credentials);
             return this;
         }
 
-        public Builder setRegistryName(Input<String> registryName) {
+        public Builder registryName(Input<String> registryName) {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
 
-        public Builder setRegistryName(String registryName) {
+        public Builder registryName(String registryName) {
             this.registryName = Input.of(Objects.requireNonNull(registryName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setScopeMapId(@Nullable Input<String> scopeMapId) {
+        public Builder scopeMapId(@Nullable Input<String> scopeMapId) {
             this.scopeMapId = scopeMapId;
             return this;
         }
 
-        public Builder setScopeMapId(@Nullable String scopeMapId) {
+        public Builder scopeMapId(@Nullable String scopeMapId) {
             this.scopeMapId = Input.ofNullable(scopeMapId);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<Either<String,TokenStatus>> status) {
+        public Builder status(@Nullable Input<Either<String,TokenStatus>> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable Either<String,TokenStatus> status) {
+        public Builder status(@Nullable Either<String,TokenStatus> status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setTokenName(@Nullable Input<String> tokenName) {
+        public Builder tokenName(@Nullable Input<String> tokenName) {
             this.tokenName = tokenName;
             return this;
         }
 
-        public Builder setTokenName(@Nullable String tokenName) {
+        public Builder tokenName(@Nullable String tokenName) {
             this.tokenName = Input.ofNullable(tokenName);
             return this;
         }

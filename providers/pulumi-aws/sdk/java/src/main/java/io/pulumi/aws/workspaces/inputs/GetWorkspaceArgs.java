@@ -103,22 +103,22 @@ public final class GetWorkspaceArgs extends io.pulumi.resources.InvokeArgs {
     	      this.workspaceId = defaults.workspaceId;
         }
 
-        public Builder setDirectoryId(@Nullable String directoryId) {
+        public Builder directoryId(@Nullable String directoryId) {
             this.directoryId = directoryId;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setUserName(@Nullable String userName) {
+        public Builder userName(@Nullable String userName) {
             this.userName = userName;
             return this;
         }
 
-        public Builder setWorkspaceId(@Nullable String workspaceId) {
+        public Builder workspaceId(@Nullable String workspaceId) {
             this.workspaceId = workspaceId;
             return this;
         }

@@ -47,7 +47,7 @@ public final class DeliveryStreamKMSEncryptionConfig extends io.pulumi.resources
     	      this.aWSKMSKeyARN = defaults.aWSKMSKeyARN;
         }
 
-        public Builder setAWSKMSKeyARN(String aWSKMSKeyARN) {
+        public Builder aWSKMSKeyARN(String aWSKMSKeyARN) {
             this.aWSKMSKeyARN = Objects.requireNonNull(aWSKMSKeyARN);
             return this;
         }

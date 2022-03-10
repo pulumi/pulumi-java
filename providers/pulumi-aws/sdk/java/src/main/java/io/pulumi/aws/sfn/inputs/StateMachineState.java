@@ -217,112 +217,112 @@ public final class StateMachineState extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setCreationDate(@Nullable Input<String> creationDate) {
+        public Builder creationDate(@Nullable Input<String> creationDate) {
             this.creationDate = creationDate;
             return this;
         }
 
-        public Builder setCreationDate(@Nullable String creationDate) {
+        public Builder creationDate(@Nullable String creationDate) {
             this.creationDate = Input.ofNullable(creationDate);
             return this;
         }
 
-        public Builder setDefinition(@Nullable Input<String> definition) {
+        public Builder definition(@Nullable Input<String> definition) {
             this.definition = definition;
             return this;
         }
 
-        public Builder setDefinition(@Nullable String definition) {
+        public Builder definition(@Nullable String definition) {
             this.definition = Input.ofNullable(definition);
             return this;
         }
 
-        public Builder setLoggingConfiguration(@Nullable Input<StateMachineLoggingConfigurationGetArgs> loggingConfiguration) {
+        public Builder loggingConfiguration(@Nullable Input<StateMachineLoggingConfigurationGetArgs> loggingConfiguration) {
             this.loggingConfiguration = loggingConfiguration;
             return this;
         }
 
-        public Builder setLoggingConfiguration(@Nullable StateMachineLoggingConfigurationGetArgs loggingConfiguration) {
+        public Builder loggingConfiguration(@Nullable StateMachineLoggingConfigurationGetArgs loggingConfiguration) {
             this.loggingConfiguration = Input.ofNullable(loggingConfiguration);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRoleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Input<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Input.ofNullable(roleArn);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setTracingConfiguration(@Nullable Input<StateMachineTracingConfigurationGetArgs> tracingConfiguration) {
+        public Builder tracingConfiguration(@Nullable Input<StateMachineTracingConfigurationGetArgs> tracingConfiguration) {
             this.tracingConfiguration = tracingConfiguration;
             return this;
         }
 
-        public Builder setTracingConfiguration(@Nullable StateMachineTracingConfigurationGetArgs tracingConfiguration) {
+        public Builder tracingConfiguration(@Nullable StateMachineTracingConfigurationGetArgs tracingConfiguration) {
             this.tracingConfiguration = Input.ofNullable(tracingConfiguration);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

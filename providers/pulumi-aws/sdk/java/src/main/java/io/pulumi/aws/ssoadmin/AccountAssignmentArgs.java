@@ -134,62 +134,62 @@ public final class AccountAssignmentArgs extends io.pulumi.resources.ResourceArg
     	      this.targetType = defaults.targetType;
         }
 
-        public Builder setInstanceArn(Input<String> instanceArn) {
+        public Builder instanceArn(Input<String> instanceArn) {
             this.instanceArn = Objects.requireNonNull(instanceArn);
             return this;
         }
 
-        public Builder setInstanceArn(String instanceArn) {
+        public Builder instanceArn(String instanceArn) {
             this.instanceArn = Input.of(Objects.requireNonNull(instanceArn));
             return this;
         }
 
-        public Builder setPermissionSetArn(Input<String> permissionSetArn) {
+        public Builder permissionSetArn(Input<String> permissionSetArn) {
             this.permissionSetArn = Objects.requireNonNull(permissionSetArn);
             return this;
         }
 
-        public Builder setPermissionSetArn(String permissionSetArn) {
+        public Builder permissionSetArn(String permissionSetArn) {
             this.permissionSetArn = Input.of(Objects.requireNonNull(permissionSetArn));
             return this;
         }
 
-        public Builder setPrincipalId(Input<String> principalId) {
+        public Builder principalId(Input<String> principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
 
-        public Builder setPrincipalId(String principalId) {
+        public Builder principalId(String principalId) {
             this.principalId = Input.of(Objects.requireNonNull(principalId));
             return this;
         }
 
-        public Builder setPrincipalType(Input<String> principalType) {
+        public Builder principalType(Input<String> principalType) {
             this.principalType = Objects.requireNonNull(principalType);
             return this;
         }
 
-        public Builder setPrincipalType(String principalType) {
+        public Builder principalType(String principalType) {
             this.principalType = Input.of(Objects.requireNonNull(principalType));
             return this;
         }
 
-        public Builder setTargetId(Input<String> targetId) {
+        public Builder targetId(Input<String> targetId) {
             this.targetId = Objects.requireNonNull(targetId);
             return this;
         }
 
-        public Builder setTargetId(String targetId) {
+        public Builder targetId(String targetId) {
             this.targetId = Input.of(Objects.requireNonNull(targetId));
             return this;
         }
 
-        public Builder setTargetType(@Nullable Input<String> targetType) {
+        public Builder targetType(@Nullable Input<String> targetType) {
             this.targetType = targetType;
             return this;
         }
 
-        public Builder setTargetType(@Nullable String targetType) {
+        public Builder targetType(@Nullable String targetType) {
             this.targetType = Input.ofNullable(targetType);
             return this;
         }

@@ -68,12 +68,12 @@ public final class GetDocumentationVersionArgs extends io.pulumi.resources.Invok
     	      this.restApiId = defaults.restApiId;
         }
 
-        public Builder setDocumentationVersion(String documentationVersion) {
+        public Builder documentationVersion(String documentationVersion) {
             this.documentationVersion = Objects.requireNonNull(documentationVersion);
             return this;
         }
 
-        public Builder setRestApiId(String restApiId) {
+        public Builder restApiId(String restApiId) {
             this.restApiId = Objects.requireNonNull(restApiId);
             return this;
         }

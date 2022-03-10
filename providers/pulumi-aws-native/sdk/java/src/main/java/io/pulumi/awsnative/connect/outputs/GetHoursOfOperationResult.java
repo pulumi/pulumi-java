@@ -150,37 +150,37 @@ public final class GetHoursOfOperationResult {
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setConfig(@Nullable List<HoursOfOperationConfig> config) {
+        public Builder config(@Nullable List<HoursOfOperationConfig> config) {
             this.config = config;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setHoursOfOperationArn(@Nullable String hoursOfOperationArn) {
+        public Builder hoursOfOperationArn(@Nullable String hoursOfOperationArn) {
             this.hoursOfOperationArn = hoursOfOperationArn;
             return this;
         }
 
-        public Builder setInstanceArn(@Nullable String instanceArn) {
+        public Builder instanceArn(@Nullable String instanceArn) {
             this.instanceArn = instanceArn;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTags(@Nullable List<HoursOfOperationTag> tags) {
+        public Builder tags(@Nullable List<HoursOfOperationTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = timeZone;
             return this;
         }

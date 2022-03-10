@@ -280,7 +280,7 @@ public class IoTHubEventSource extends io.pulumi.resources.CustomResource {
     private static IoTHubEventSourceArgs makeArgs(IoTHubEventSourceArgs args) {
         var builder = args == null ? IoTHubEventSourceArgs.builder() : IoTHubEventSourceArgs.builder(args);
         return builder
-            .setKind("Microsoft.IoTHub")
+            .kind("Microsoft.IoTHub")
             .build();
     }
 

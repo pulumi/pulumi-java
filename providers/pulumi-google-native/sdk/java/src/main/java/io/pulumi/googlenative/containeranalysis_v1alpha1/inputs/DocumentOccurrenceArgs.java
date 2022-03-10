@@ -187,92 +187,92 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
     	      this.title = defaults.title;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setCreatorComment(@Nullable Input<String> creatorComment) {
+        public Builder creatorComment(@Nullable Input<String> creatorComment) {
             this.creatorComment = creatorComment;
             return this;
         }
 
-        public Builder setCreatorComment(@Nullable String creatorComment) {
+        public Builder creatorComment(@Nullable String creatorComment) {
             this.creatorComment = Input.ofNullable(creatorComment);
             return this;
         }
 
-        public Builder setCreators(@Nullable Input<List<String>> creators) {
+        public Builder creators(@Nullable Input<List<String>> creators) {
             this.creators = creators;
             return this;
         }
 
-        public Builder setCreators(@Nullable List<String> creators) {
+        public Builder creators(@Nullable List<String> creators) {
             this.creators = Input.ofNullable(creators);
             return this;
         }
 
-        public Builder setDocumentComment(@Nullable Input<String> documentComment) {
+        public Builder documentComment(@Nullable Input<String> documentComment) {
             this.documentComment = documentComment;
             return this;
         }
 
-        public Builder setDocumentComment(@Nullable String documentComment) {
+        public Builder documentComment(@Nullable String documentComment) {
             this.documentComment = Input.ofNullable(documentComment);
             return this;
         }
 
-        public Builder setExternalDocumentRefs(@Nullable Input<List<String>> externalDocumentRefs) {
+        public Builder externalDocumentRefs(@Nullable Input<List<String>> externalDocumentRefs) {
             this.externalDocumentRefs = externalDocumentRefs;
             return this;
         }
 
-        public Builder setExternalDocumentRefs(@Nullable List<String> externalDocumentRefs) {
+        public Builder externalDocumentRefs(@Nullable List<String> externalDocumentRefs) {
             this.externalDocumentRefs = Input.ofNullable(externalDocumentRefs);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setLicenseListVersion(@Nullable Input<String> licenseListVersion) {
+        public Builder licenseListVersion(@Nullable Input<String> licenseListVersion) {
             this.licenseListVersion = licenseListVersion;
             return this;
         }
 
-        public Builder setLicenseListVersion(@Nullable String licenseListVersion) {
+        public Builder licenseListVersion(@Nullable String licenseListVersion) {
             this.licenseListVersion = Input.ofNullable(licenseListVersion);
             return this;
         }
 
-        public Builder setNamespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Input<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = Input.ofNullable(namespace);
             return this;
         }
 
-        public Builder setTitle(@Nullable Input<String> title) {
+        public Builder title(@Nullable Input<String> title) {
             this.title = title;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = Input.ofNullable(title);
             return this;
         }

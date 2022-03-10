@@ -53,12 +53,12 @@ public final class OrganizationAdminAccountState extends io.pulumi.resources.Res
     	      this.adminAccountId = defaults.adminAccountId;
         }
 
-        public Builder setAdminAccountId(@Nullable Input<String> adminAccountId) {
+        public Builder adminAccountId(@Nullable Input<String> adminAccountId) {
             this.adminAccountId = adminAccountId;
             return this;
         }
 
-        public Builder setAdminAccountId(@Nullable String adminAccountId) {
+        public Builder adminAccountId(@Nullable String adminAccountId) {
             this.adminAccountId = Input.ofNullable(adminAccountId);
             return this;
         }

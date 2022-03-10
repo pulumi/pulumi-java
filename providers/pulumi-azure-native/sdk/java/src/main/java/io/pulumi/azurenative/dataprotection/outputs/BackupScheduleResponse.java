@@ -49,7 +49,7 @@ public final class BackupScheduleResponse {
     	      this.repeatingTimeIntervals = defaults.repeatingTimeIntervals;
         }
 
-        public Builder setRepeatingTimeIntervals(List<String> repeatingTimeIntervals) {
+        public Builder repeatingTimeIntervals(List<String> repeatingTimeIntervals) {
             this.repeatingTimeIntervals = Objects.requireNonNull(repeatingTimeIntervals);
             return this;
         }

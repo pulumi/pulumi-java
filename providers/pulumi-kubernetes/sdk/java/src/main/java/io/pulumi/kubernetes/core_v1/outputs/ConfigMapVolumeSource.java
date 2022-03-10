@@ -103,22 +103,22 @@ public final class ConfigMapVolumeSource {
     	      this.optional = defaults.optional;
         }
 
-        public Builder setDefaultMode(@Nullable Integer defaultMode) {
+        public Builder defaultMode(@Nullable Integer defaultMode) {
             this.defaultMode = defaultMode;
             return this;
         }
 
-        public Builder setItems(@Nullable List<KeyToPath> items) {
+        public Builder items(@Nullable List<KeyToPath> items) {
             this.items = items;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setOptional(@Nullable Boolean optional) {
+        public Builder optional(@Nullable Boolean optional) {
             this.optional = optional;
             return this;
         }

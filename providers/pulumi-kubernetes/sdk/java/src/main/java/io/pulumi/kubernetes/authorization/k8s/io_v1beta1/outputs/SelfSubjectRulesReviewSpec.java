@@ -50,7 +50,7 @@ public final class SelfSubjectRulesReviewSpec {
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }

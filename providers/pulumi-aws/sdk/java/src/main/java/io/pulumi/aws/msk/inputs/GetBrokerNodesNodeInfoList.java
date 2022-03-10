@@ -134,32 +134,32 @@ public final class GetBrokerNodesNodeInfoList extends io.pulumi.resources.Invoke
     	      this.nodeArn = defaults.nodeArn;
         }
 
-        public Builder setAttachedEniId(String attachedEniId) {
+        public Builder attachedEniId(String attachedEniId) {
             this.attachedEniId = Objects.requireNonNull(attachedEniId);
             return this;
         }
 
-        public Builder setBrokerId(Double brokerId) {
+        public Builder brokerId(Double brokerId) {
             this.brokerId = Objects.requireNonNull(brokerId);
             return this;
         }
 
-        public Builder setClientSubnet(String clientSubnet) {
+        public Builder clientSubnet(String clientSubnet) {
             this.clientSubnet = Objects.requireNonNull(clientSubnet);
             return this;
         }
 
-        public Builder setClientVpcIpAddress(String clientVpcIpAddress) {
+        public Builder clientVpcIpAddress(String clientVpcIpAddress) {
             this.clientVpcIpAddress = Objects.requireNonNull(clientVpcIpAddress);
             return this;
         }
 
-        public Builder setEndpoints(List<String> endpoints) {
+        public Builder endpoints(List<String> endpoints) {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
 
-        public Builder setNodeArn(String nodeArn) {
+        public Builder nodeArn(String nodeArn) {
             this.nodeArn = Objects.requireNonNull(nodeArn);
             return this;
         }

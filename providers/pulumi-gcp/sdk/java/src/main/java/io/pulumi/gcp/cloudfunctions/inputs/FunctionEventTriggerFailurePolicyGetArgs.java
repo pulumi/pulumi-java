@@ -52,12 +52,12 @@ public final class FunctionEventTriggerFailurePolicyGetArgs extends io.pulumi.re
     	      this.retry = defaults.retry;
         }
 
-        public Builder setRetry(Input<Boolean> retry) {
+        public Builder retry(Input<Boolean> retry) {
             this.retry = Objects.requireNonNull(retry);
             return this;
         }
 
-        public Builder setRetry(Boolean retry) {
+        public Builder retry(Boolean retry) {
             this.retry = Input.of(Objects.requireNonNull(retry));
             return this;
         }

@@ -152,92 +152,92 @@ public final class DataSourceWebCrawlerConfigurationArgs extends io.pulumi.resou
     	      this.urls = defaults.urls;
         }
 
-        public Builder setAuthenticationConfiguration(@Nullable Input<DataSourceWebCrawlerAuthenticationConfigurationArgs> authenticationConfiguration) {
+        public Builder authenticationConfiguration(@Nullable Input<DataSourceWebCrawlerAuthenticationConfigurationArgs> authenticationConfiguration) {
             this.authenticationConfiguration = authenticationConfiguration;
             return this;
         }
 
-        public Builder setAuthenticationConfiguration(@Nullable DataSourceWebCrawlerAuthenticationConfigurationArgs authenticationConfiguration) {
+        public Builder authenticationConfiguration(@Nullable DataSourceWebCrawlerAuthenticationConfigurationArgs authenticationConfiguration) {
             this.authenticationConfiguration = Input.ofNullable(authenticationConfiguration);
             return this;
         }
 
-        public Builder setCrawlDepth(@Nullable Input<Integer> crawlDepth) {
+        public Builder crawlDepth(@Nullable Input<Integer> crawlDepth) {
             this.crawlDepth = crawlDepth;
             return this;
         }
 
-        public Builder setCrawlDepth(@Nullable Integer crawlDepth) {
+        public Builder crawlDepth(@Nullable Integer crawlDepth) {
             this.crawlDepth = Input.ofNullable(crawlDepth);
             return this;
         }
 
-        public Builder setMaxContentSizePerPageInMegaBytes(@Nullable Input<Double> maxContentSizePerPageInMegaBytes) {
+        public Builder maxContentSizePerPageInMegaBytes(@Nullable Input<Double> maxContentSizePerPageInMegaBytes) {
             this.maxContentSizePerPageInMegaBytes = maxContentSizePerPageInMegaBytes;
             return this;
         }
 
-        public Builder setMaxContentSizePerPageInMegaBytes(@Nullable Double maxContentSizePerPageInMegaBytes) {
+        public Builder maxContentSizePerPageInMegaBytes(@Nullable Double maxContentSizePerPageInMegaBytes) {
             this.maxContentSizePerPageInMegaBytes = Input.ofNullable(maxContentSizePerPageInMegaBytes);
             return this;
         }
 
-        public Builder setMaxLinksPerPage(@Nullable Input<Integer> maxLinksPerPage) {
+        public Builder maxLinksPerPage(@Nullable Input<Integer> maxLinksPerPage) {
             this.maxLinksPerPage = maxLinksPerPage;
             return this;
         }
 
-        public Builder setMaxLinksPerPage(@Nullable Integer maxLinksPerPage) {
+        public Builder maxLinksPerPage(@Nullable Integer maxLinksPerPage) {
             this.maxLinksPerPage = Input.ofNullable(maxLinksPerPage);
             return this;
         }
 
-        public Builder setMaxUrlsPerMinuteCrawlRate(@Nullable Input<Integer> maxUrlsPerMinuteCrawlRate) {
+        public Builder maxUrlsPerMinuteCrawlRate(@Nullable Input<Integer> maxUrlsPerMinuteCrawlRate) {
             this.maxUrlsPerMinuteCrawlRate = maxUrlsPerMinuteCrawlRate;
             return this;
         }
 
-        public Builder setMaxUrlsPerMinuteCrawlRate(@Nullable Integer maxUrlsPerMinuteCrawlRate) {
+        public Builder maxUrlsPerMinuteCrawlRate(@Nullable Integer maxUrlsPerMinuteCrawlRate) {
             this.maxUrlsPerMinuteCrawlRate = Input.ofNullable(maxUrlsPerMinuteCrawlRate);
             return this;
         }
 
-        public Builder setProxyConfiguration(@Nullable Input<DataSourceProxyConfigurationArgs> proxyConfiguration) {
+        public Builder proxyConfiguration(@Nullable Input<DataSourceProxyConfigurationArgs> proxyConfiguration) {
             this.proxyConfiguration = proxyConfiguration;
             return this;
         }
 
-        public Builder setProxyConfiguration(@Nullable DataSourceProxyConfigurationArgs proxyConfiguration) {
+        public Builder proxyConfiguration(@Nullable DataSourceProxyConfigurationArgs proxyConfiguration) {
             this.proxyConfiguration = Input.ofNullable(proxyConfiguration);
             return this;
         }
 
-        public Builder setUrlExclusionPatterns(@Nullable Input<List<String>> urlExclusionPatterns) {
+        public Builder urlExclusionPatterns(@Nullable Input<List<String>> urlExclusionPatterns) {
             this.urlExclusionPatterns = urlExclusionPatterns;
             return this;
         }
 
-        public Builder setUrlExclusionPatterns(@Nullable List<String> urlExclusionPatterns) {
+        public Builder urlExclusionPatterns(@Nullable List<String> urlExclusionPatterns) {
             this.urlExclusionPatterns = Input.ofNullable(urlExclusionPatterns);
             return this;
         }
 
-        public Builder setUrlInclusionPatterns(@Nullable Input<List<String>> urlInclusionPatterns) {
+        public Builder urlInclusionPatterns(@Nullable Input<List<String>> urlInclusionPatterns) {
             this.urlInclusionPatterns = urlInclusionPatterns;
             return this;
         }
 
-        public Builder setUrlInclusionPatterns(@Nullable List<String> urlInclusionPatterns) {
+        public Builder urlInclusionPatterns(@Nullable List<String> urlInclusionPatterns) {
             this.urlInclusionPatterns = Input.ofNullable(urlInclusionPatterns);
             return this;
         }
 
-        public Builder setUrls(Input<DataSourceWebCrawlerUrlsArgs> urls) {
+        public Builder urls(Input<DataSourceWebCrawlerUrlsArgs> urls) {
             this.urls = Objects.requireNonNull(urls);
             return this;
         }
 
-        public Builder setUrls(DataSourceWebCrawlerUrlsArgs urls) {
+        public Builder urls(DataSourceWebCrawlerUrlsArgs urls) {
             this.urls = Input.of(Objects.requireNonNull(urls));
             return this;
         }

@@ -58,7 +58,7 @@ public final class UniqueKeyResponse extends io.pulumi.resources.InvokeArgs {
     	      this.paths = defaults.paths;
         }
 
-        public Builder setPaths(@Nullable List<String> paths) {
+        public Builder paths(@Nullable List<String> paths) {
             this.paths = paths;
             return this;
         }

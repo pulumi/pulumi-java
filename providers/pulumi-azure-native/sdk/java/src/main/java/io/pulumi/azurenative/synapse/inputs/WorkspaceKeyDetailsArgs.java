@@ -74,22 +74,22 @@ public final class WorkspaceKeyDetailsArgs extends io.pulumi.resources.ResourceA
     	      this.name = defaults.name;
         }
 
-        public Builder setKeyVaultUrl(@Nullable Input<String> keyVaultUrl) {
+        public Builder keyVaultUrl(@Nullable Input<String> keyVaultUrl) {
             this.keyVaultUrl = keyVaultUrl;
             return this;
         }
 
-        public Builder setKeyVaultUrl(@Nullable String keyVaultUrl) {
+        public Builder keyVaultUrl(@Nullable String keyVaultUrl) {
             this.keyVaultUrl = Input.ofNullable(keyVaultUrl);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

@@ -67,12 +67,12 @@ public final class RegistryScanningConfigurationRule {
     	      this.scanFrequency = defaults.scanFrequency;
         }
 
-        public Builder setRepositoryFilters(List<RegistryScanningConfigurationRuleRepositoryFilter> repositoryFilters) {
+        public Builder repositoryFilters(List<RegistryScanningConfigurationRuleRepositoryFilter> repositoryFilters) {
             this.repositoryFilters = Objects.requireNonNull(repositoryFilters);
             return this;
         }
 
-        public Builder setScanFrequency(String scanFrequency) {
+        public Builder scanFrequency(String scanFrequency) {
             this.scanFrequency = Objects.requireNonNull(scanFrequency);
             return this;
         }

@@ -189,92 +189,92 @@ public final class AzureFirewallNetworkRuleArgs extends io.pulumi.resources.Reso
     	      this.sourceIpGroups = defaults.sourceIpGroups;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDestinationAddresses(@Nullable Input<List<String>> destinationAddresses) {
+        public Builder destinationAddresses(@Nullable Input<List<String>> destinationAddresses) {
             this.destinationAddresses = destinationAddresses;
             return this;
         }
 
-        public Builder setDestinationAddresses(@Nullable List<String> destinationAddresses) {
+        public Builder destinationAddresses(@Nullable List<String> destinationAddresses) {
             this.destinationAddresses = Input.ofNullable(destinationAddresses);
             return this;
         }
 
-        public Builder setDestinationFqdns(@Nullable Input<List<String>> destinationFqdns) {
+        public Builder destinationFqdns(@Nullable Input<List<String>> destinationFqdns) {
             this.destinationFqdns = destinationFqdns;
             return this;
         }
 
-        public Builder setDestinationFqdns(@Nullable List<String> destinationFqdns) {
+        public Builder destinationFqdns(@Nullable List<String> destinationFqdns) {
             this.destinationFqdns = Input.ofNullable(destinationFqdns);
             return this;
         }
 
-        public Builder setDestinationIpGroups(@Nullable Input<List<String>> destinationIpGroups) {
+        public Builder destinationIpGroups(@Nullable Input<List<String>> destinationIpGroups) {
             this.destinationIpGroups = destinationIpGroups;
             return this;
         }
 
-        public Builder setDestinationIpGroups(@Nullable List<String> destinationIpGroups) {
+        public Builder destinationIpGroups(@Nullable List<String> destinationIpGroups) {
             this.destinationIpGroups = Input.ofNullable(destinationIpGroups);
             return this;
         }
 
-        public Builder setDestinationPorts(@Nullable Input<List<String>> destinationPorts) {
+        public Builder destinationPorts(@Nullable Input<List<String>> destinationPorts) {
             this.destinationPorts = destinationPorts;
             return this;
         }
 
-        public Builder setDestinationPorts(@Nullable List<String> destinationPorts) {
+        public Builder destinationPorts(@Nullable List<String> destinationPorts) {
             this.destinationPorts = Input.ofNullable(destinationPorts);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProtocols(@Nullable Input<List<Either<String,AzureFirewallNetworkRuleProtocol>>> protocols) {
+        public Builder protocols(@Nullable Input<List<Either<String,AzureFirewallNetworkRuleProtocol>>> protocols) {
             this.protocols = protocols;
             return this;
         }
 
-        public Builder setProtocols(@Nullable List<Either<String,AzureFirewallNetworkRuleProtocol>> protocols) {
+        public Builder protocols(@Nullable List<Either<String,AzureFirewallNetworkRuleProtocol>> protocols) {
             this.protocols = Input.ofNullable(protocols);
             return this;
         }
 
-        public Builder setSourceAddresses(@Nullable Input<List<String>> sourceAddresses) {
+        public Builder sourceAddresses(@Nullable Input<List<String>> sourceAddresses) {
             this.sourceAddresses = sourceAddresses;
             return this;
         }
 
-        public Builder setSourceAddresses(@Nullable List<String> sourceAddresses) {
+        public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
             this.sourceAddresses = Input.ofNullable(sourceAddresses);
             return this;
         }
 
-        public Builder setSourceIpGroups(@Nullable Input<List<String>> sourceIpGroups) {
+        public Builder sourceIpGroups(@Nullable Input<List<String>> sourceIpGroups) {
             this.sourceIpGroups = sourceIpGroups;
             return this;
         }
 
-        public Builder setSourceIpGroups(@Nullable List<String> sourceIpGroups) {
+        public Builder sourceIpGroups(@Nullable List<String> sourceIpGroups) {
             this.sourceIpGroups = Input.ofNullable(sourceIpGroups);
             return this;
         }

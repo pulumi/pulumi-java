@@ -125,52 +125,52 @@ public final class HiveMetastoreConfigArgs extends io.pulumi.resources.ResourceA
     	      this.version = defaults.version;
         }
 
-        public Builder setAuxiliaryVersions(@Nullable Input<Map<String,String>> auxiliaryVersions) {
+        public Builder auxiliaryVersions(@Nullable Input<Map<String,String>> auxiliaryVersions) {
             this.auxiliaryVersions = auxiliaryVersions;
             return this;
         }
 
-        public Builder setAuxiliaryVersions(@Nullable Map<String,String> auxiliaryVersions) {
+        public Builder auxiliaryVersions(@Nullable Map<String,String> auxiliaryVersions) {
             this.auxiliaryVersions = Input.ofNullable(auxiliaryVersions);
             return this;
         }
 
-        public Builder setConfigOverrides(@Nullable Input<Map<String,String>> configOverrides) {
+        public Builder configOverrides(@Nullable Input<Map<String,String>> configOverrides) {
             this.configOverrides = configOverrides;
             return this;
         }
 
-        public Builder setConfigOverrides(@Nullable Map<String,String> configOverrides) {
+        public Builder configOverrides(@Nullable Map<String,String> configOverrides) {
             this.configOverrides = Input.ofNullable(configOverrides);
             return this;
         }
 
-        public Builder setEndpointProtocol(@Nullable Input<HiveMetastoreConfigEndpointProtocol> endpointProtocol) {
+        public Builder endpointProtocol(@Nullable Input<HiveMetastoreConfigEndpointProtocol> endpointProtocol) {
             this.endpointProtocol = endpointProtocol;
             return this;
         }
 
-        public Builder setEndpointProtocol(@Nullable HiveMetastoreConfigEndpointProtocol endpointProtocol) {
+        public Builder endpointProtocol(@Nullable HiveMetastoreConfigEndpointProtocol endpointProtocol) {
             this.endpointProtocol = Input.ofNullable(endpointProtocol);
             return this;
         }
 
-        public Builder setKerberosConfig(@Nullable Input<KerberosConfigArgs> kerberosConfig) {
+        public Builder kerberosConfig(@Nullable Input<KerberosConfigArgs> kerberosConfig) {
             this.kerberosConfig = kerberosConfig;
             return this;
         }
 
-        public Builder setKerberosConfig(@Nullable KerberosConfigArgs kerberosConfig) {
+        public Builder kerberosConfig(@Nullable KerberosConfigArgs kerberosConfig) {
             this.kerberosConfig = Input.ofNullable(kerberosConfig);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

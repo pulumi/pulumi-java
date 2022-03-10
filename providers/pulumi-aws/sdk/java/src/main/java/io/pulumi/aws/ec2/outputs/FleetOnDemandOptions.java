@@ -50,7 +50,7 @@ public final class FleetOnDemandOptions {
     	      this.allocationStrategy = defaults.allocationStrategy;
         }
 
-        public Builder setAllocationStrategy(@Nullable String allocationStrategy) {
+        public Builder allocationStrategy(@Nullable String allocationStrategy) {
             this.allocationStrategy = allocationStrategy;
             return this;
         }

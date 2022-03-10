@@ -93,32 +93,32 @@ public final class DiagnosticsDescriptionArgs extends io.pulumi.resources.Resour
     	      this.sinks = defaults.sinks;
         }
 
-        public Builder setDefaultSinkRefs(@Nullable Input<List<String>> defaultSinkRefs) {
+        public Builder defaultSinkRefs(@Nullable Input<List<String>> defaultSinkRefs) {
             this.defaultSinkRefs = defaultSinkRefs;
             return this;
         }
 
-        public Builder setDefaultSinkRefs(@Nullable List<String> defaultSinkRefs) {
+        public Builder defaultSinkRefs(@Nullable List<String> defaultSinkRefs) {
             this.defaultSinkRefs = Input.ofNullable(defaultSinkRefs);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setSinks(@Nullable Input<List<AzureInternalMonitoringPipelineSinkDescriptionArgs>> sinks) {
+        public Builder sinks(@Nullable Input<List<AzureInternalMonitoringPipelineSinkDescriptionArgs>> sinks) {
             this.sinks = sinks;
             return this;
         }
 
-        public Builder setSinks(@Nullable List<AzureInternalMonitoringPipelineSinkDescriptionArgs> sinks) {
+        public Builder sinks(@Nullable List<AzureInternalMonitoringPipelineSinkDescriptionArgs> sinks) {
             this.sinks = Input.ofNullable(sinks);
             return this;
         }

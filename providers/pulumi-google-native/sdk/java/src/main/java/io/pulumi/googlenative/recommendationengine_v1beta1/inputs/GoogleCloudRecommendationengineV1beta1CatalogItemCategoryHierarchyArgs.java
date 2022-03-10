@@ -57,12 +57,12 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHier
     	      this.categories = defaults.categories;
         }
 
-        public Builder setCategories(Input<List<String>> categories) {
+        public Builder categories(Input<List<String>> categories) {
             this.categories = Objects.requireNonNull(categories);
             return this;
         }
 
-        public Builder setCategories(List<String> categories) {
+        public Builder categories(List<String> categories) {
             this.categories = Input.of(Objects.requireNonNull(categories));
             return this;
         }

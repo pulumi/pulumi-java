@@ -263,72 +263,72 @@ public final class VirtualMachineExtensionResponse {
     	      this.typeHandlerVersion = defaults.typeHandlerVersion;
         }
 
-        public Builder setAutoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
+        public Builder autoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
             this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
             return this;
         }
 
-        public Builder setEnableAutomaticUpgrade(@Nullable Boolean enableAutomaticUpgrade) {
+        public Builder enableAutomaticUpgrade(@Nullable Boolean enableAutomaticUpgrade) {
             this.enableAutomaticUpgrade = enableAutomaticUpgrade;
             return this;
         }
 
-        public Builder setForceUpdateTag(@Nullable String forceUpdateTag) {
+        public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
             this.forceUpdateTag = forceUpdateTag;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstanceView(@Nullable VirtualMachineExtensionInstanceViewResponse instanceView) {
+        public Builder instanceView(@Nullable VirtualMachineExtensionInstanceViewResponse instanceView) {
             this.instanceView = instanceView;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProtectedSettings(@Nullable Object protectedSettings) {
+        public Builder protectedSettings(@Nullable Object protectedSettings) {
             this.protectedSettings = protectedSettings;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublisher(@Nullable String publisher) {
+        public Builder publisher(@Nullable String publisher) {
             this.publisher = publisher;
             return this;
         }
 
-        public Builder setSettings(@Nullable Object settings) {
+        public Builder settings(@Nullable Object settings) {
             this.settings = settings;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setTypeHandlerVersion(@Nullable String typeHandlerVersion) {
+        public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
         }

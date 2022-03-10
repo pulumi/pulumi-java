@@ -611,352 +611,352 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcAccessConnector = defaults.vpcAccessConnector;
         }
 
-        public Builder setApiConfig(@Nullable Input<ApiConfigHandlerArgs> apiConfig) {
+        public Builder apiConfig(@Nullable Input<ApiConfigHandlerArgs> apiConfig) {
             this.apiConfig = apiConfig;
             return this;
         }
 
-        public Builder setApiConfig(@Nullable ApiConfigHandlerArgs apiConfig) {
+        public Builder apiConfig(@Nullable ApiConfigHandlerArgs apiConfig) {
             this.apiConfig = Input.ofNullable(apiConfig);
             return this;
         }
 
-        public Builder setAppId(Input<String> appId) {
+        public Builder appId(Input<String> appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
 
-        public Builder setAppId(String appId) {
+        public Builder appId(String appId) {
             this.appId = Input.of(Objects.requireNonNull(appId));
             return this;
         }
 
-        public Builder setAutomaticScaling(@Nullable Input<AutomaticScalingArgs> automaticScaling) {
+        public Builder automaticScaling(@Nullable Input<AutomaticScalingArgs> automaticScaling) {
             this.automaticScaling = automaticScaling;
             return this;
         }
 
-        public Builder setAutomaticScaling(@Nullable AutomaticScalingArgs automaticScaling) {
+        public Builder automaticScaling(@Nullable AutomaticScalingArgs automaticScaling) {
             this.automaticScaling = Input.ofNullable(automaticScaling);
             return this;
         }
 
-        public Builder setBasicScaling(@Nullable Input<BasicScalingArgs> basicScaling) {
+        public Builder basicScaling(@Nullable Input<BasicScalingArgs> basicScaling) {
             this.basicScaling = basicScaling;
             return this;
         }
 
-        public Builder setBasicScaling(@Nullable BasicScalingArgs basicScaling) {
+        public Builder basicScaling(@Nullable BasicScalingArgs basicScaling) {
             this.basicScaling = Input.ofNullable(basicScaling);
             return this;
         }
 
-        public Builder setBetaSettings(@Nullable Input<Map<String,String>> betaSettings) {
+        public Builder betaSettings(@Nullable Input<Map<String,String>> betaSettings) {
             this.betaSettings = betaSettings;
             return this;
         }
 
-        public Builder setBetaSettings(@Nullable Map<String,String> betaSettings) {
+        public Builder betaSettings(@Nullable Map<String,String> betaSettings) {
             this.betaSettings = Input.ofNullable(betaSettings);
             return this;
         }
 
-        public Builder setBuildEnvVariables(@Nullable Input<Map<String,String>> buildEnvVariables) {
+        public Builder buildEnvVariables(@Nullable Input<Map<String,String>> buildEnvVariables) {
             this.buildEnvVariables = buildEnvVariables;
             return this;
         }
 
-        public Builder setBuildEnvVariables(@Nullable Map<String,String> buildEnvVariables) {
+        public Builder buildEnvVariables(@Nullable Map<String,String> buildEnvVariables) {
             this.buildEnvVariables = Input.ofNullable(buildEnvVariables);
             return this;
         }
 
-        public Builder setDefaultExpiration(@Nullable Input<String> defaultExpiration) {
+        public Builder defaultExpiration(@Nullable Input<String> defaultExpiration) {
             this.defaultExpiration = defaultExpiration;
             return this;
         }
 
-        public Builder setDefaultExpiration(@Nullable String defaultExpiration) {
+        public Builder defaultExpiration(@Nullable String defaultExpiration) {
             this.defaultExpiration = Input.ofNullable(defaultExpiration);
             return this;
         }
 
-        public Builder setDeployment(@Nullable Input<DeploymentArgs> deployment) {
+        public Builder deployment(@Nullable Input<DeploymentArgs> deployment) {
             this.deployment = deployment;
             return this;
         }
 
-        public Builder setDeployment(@Nullable DeploymentArgs deployment) {
+        public Builder deployment(@Nullable DeploymentArgs deployment) {
             this.deployment = Input.ofNullable(deployment);
             return this;
         }
 
-        public Builder setEndpointsApiService(@Nullable Input<EndpointsApiServiceArgs> endpointsApiService) {
+        public Builder endpointsApiService(@Nullable Input<EndpointsApiServiceArgs> endpointsApiService) {
             this.endpointsApiService = endpointsApiService;
             return this;
         }
 
-        public Builder setEndpointsApiService(@Nullable EndpointsApiServiceArgs endpointsApiService) {
+        public Builder endpointsApiService(@Nullable EndpointsApiServiceArgs endpointsApiService) {
             this.endpointsApiService = Input.ofNullable(endpointsApiService);
             return this;
         }
 
-        public Builder setEntrypoint(@Nullable Input<EntrypointArgs> entrypoint) {
+        public Builder entrypoint(@Nullable Input<EntrypointArgs> entrypoint) {
             this.entrypoint = entrypoint;
             return this;
         }
 
-        public Builder setEntrypoint(@Nullable EntrypointArgs entrypoint) {
+        public Builder entrypoint(@Nullable EntrypointArgs entrypoint) {
             this.entrypoint = Input.ofNullable(entrypoint);
             return this;
         }
 
-        public Builder setEnv(@Nullable Input<String> env) {
+        public Builder env(@Nullable Input<String> env) {
             this.env = env;
             return this;
         }
 
-        public Builder setEnv(@Nullable String env) {
+        public Builder env(@Nullable String env) {
             this.env = Input.ofNullable(env);
             return this;
         }
 
-        public Builder setEnvVariables(@Nullable Input<Map<String,String>> envVariables) {
+        public Builder envVariables(@Nullable Input<Map<String,String>> envVariables) {
             this.envVariables = envVariables;
             return this;
         }
 
-        public Builder setEnvVariables(@Nullable Map<String,String> envVariables) {
+        public Builder envVariables(@Nullable Map<String,String> envVariables) {
             this.envVariables = Input.ofNullable(envVariables);
             return this;
         }
 
-        public Builder setErrorHandlers(@Nullable Input<List<ErrorHandlerArgs>> errorHandlers) {
+        public Builder errorHandlers(@Nullable Input<List<ErrorHandlerArgs>> errorHandlers) {
             this.errorHandlers = errorHandlers;
             return this;
         }
 
-        public Builder setErrorHandlers(@Nullable List<ErrorHandlerArgs> errorHandlers) {
+        public Builder errorHandlers(@Nullable List<ErrorHandlerArgs> errorHandlers) {
             this.errorHandlers = Input.ofNullable(errorHandlers);
             return this;
         }
 
-        public Builder setHandlers(@Nullable Input<List<UrlMapArgs>> handlers) {
+        public Builder handlers(@Nullable Input<List<UrlMapArgs>> handlers) {
             this.handlers = handlers;
             return this;
         }
 
-        public Builder setHandlers(@Nullable List<UrlMapArgs> handlers) {
+        public Builder handlers(@Nullable List<UrlMapArgs> handlers) {
             this.handlers = Input.ofNullable(handlers);
             return this;
         }
 
-        public Builder setHealthCheck(@Nullable Input<HealthCheckArgs> healthCheck) {
+        public Builder healthCheck(@Nullable Input<HealthCheckArgs> healthCheck) {
             this.healthCheck = healthCheck;
             return this;
         }
 
-        public Builder setHealthCheck(@Nullable HealthCheckArgs healthCheck) {
+        public Builder healthCheck(@Nullable HealthCheckArgs healthCheck) {
             this.healthCheck = Input.ofNullable(healthCheck);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setInboundServices(@Nullable Input<List<VersionInboundServicesItem>> inboundServices) {
+        public Builder inboundServices(@Nullable Input<List<VersionInboundServicesItem>> inboundServices) {
             this.inboundServices = inboundServices;
             return this;
         }
 
-        public Builder setInboundServices(@Nullable List<VersionInboundServicesItem> inboundServices) {
+        public Builder inboundServices(@Nullable List<VersionInboundServicesItem> inboundServices) {
             this.inboundServices = Input.ofNullable(inboundServices);
             return this;
         }
 
-        public Builder setInstanceClass(@Nullable Input<String> instanceClass) {
+        public Builder instanceClass(@Nullable Input<String> instanceClass) {
             this.instanceClass = instanceClass;
             return this;
         }
 
-        public Builder setInstanceClass(@Nullable String instanceClass) {
+        public Builder instanceClass(@Nullable String instanceClass) {
             this.instanceClass = Input.ofNullable(instanceClass);
             return this;
         }
 
-        public Builder setLibraries(@Nullable Input<List<LibraryArgs>> libraries) {
+        public Builder libraries(@Nullable Input<List<LibraryArgs>> libraries) {
             this.libraries = libraries;
             return this;
         }
 
-        public Builder setLibraries(@Nullable List<LibraryArgs> libraries) {
+        public Builder libraries(@Nullable List<LibraryArgs> libraries) {
             this.libraries = Input.ofNullable(libraries);
             return this;
         }
 
-        public Builder setLivenessCheck(@Nullable Input<LivenessCheckArgs> livenessCheck) {
+        public Builder livenessCheck(@Nullable Input<LivenessCheckArgs> livenessCheck) {
             this.livenessCheck = livenessCheck;
             return this;
         }
 
-        public Builder setLivenessCheck(@Nullable LivenessCheckArgs livenessCheck) {
+        public Builder livenessCheck(@Nullable LivenessCheckArgs livenessCheck) {
             this.livenessCheck = Input.ofNullable(livenessCheck);
             return this;
         }
 
-        public Builder setManualScaling(@Nullable Input<ManualScalingArgs> manualScaling) {
+        public Builder manualScaling(@Nullable Input<ManualScalingArgs> manualScaling) {
             this.manualScaling = manualScaling;
             return this;
         }
 
-        public Builder setManualScaling(@Nullable ManualScalingArgs manualScaling) {
+        public Builder manualScaling(@Nullable ManualScalingArgs manualScaling) {
             this.manualScaling = Input.ofNullable(manualScaling);
             return this;
         }
 
-        public Builder setNetwork(@Nullable Input<NetworkArgs> network) {
+        public Builder network(@Nullable Input<NetworkArgs> network) {
             this.network = network;
             return this;
         }
 
-        public Builder setNetwork(@Nullable NetworkArgs network) {
+        public Builder network(@Nullable NetworkArgs network) {
             this.network = Input.ofNullable(network);
             return this;
         }
 
-        public Builder setNobuildFilesRegex(@Nullable Input<String> nobuildFilesRegex) {
+        public Builder nobuildFilesRegex(@Nullable Input<String> nobuildFilesRegex) {
             this.nobuildFilesRegex = nobuildFilesRegex;
             return this;
         }
 
-        public Builder setNobuildFilesRegex(@Nullable String nobuildFilesRegex) {
+        public Builder nobuildFilesRegex(@Nullable String nobuildFilesRegex) {
             this.nobuildFilesRegex = Input.ofNullable(nobuildFilesRegex);
             return this;
         }
 
-        public Builder setReadinessCheck(@Nullable Input<ReadinessCheckArgs> readinessCheck) {
+        public Builder readinessCheck(@Nullable Input<ReadinessCheckArgs> readinessCheck) {
             this.readinessCheck = readinessCheck;
             return this;
         }
 
-        public Builder setReadinessCheck(@Nullable ReadinessCheckArgs readinessCheck) {
+        public Builder readinessCheck(@Nullable ReadinessCheckArgs readinessCheck) {
             this.readinessCheck = Input.ofNullable(readinessCheck);
             return this;
         }
 
-        public Builder setResources(@Nullable Input<ResourcesArgs> resources) {
+        public Builder resources(@Nullable Input<ResourcesArgs> resources) {
             this.resources = resources;
             return this;
         }
 
-        public Builder setResources(@Nullable ResourcesArgs resources) {
+        public Builder resources(@Nullable ResourcesArgs resources) {
             this.resources = Input.ofNullable(resources);
             return this;
         }
 
-        public Builder setRuntime(@Nullable Input<String> runtime) {
+        public Builder runtime(@Nullable Input<String> runtime) {
             this.runtime = runtime;
             return this;
         }
 
-        public Builder setRuntime(@Nullable String runtime) {
+        public Builder runtime(@Nullable String runtime) {
             this.runtime = Input.ofNullable(runtime);
             return this;
         }
 
-        public Builder setRuntimeApiVersion(@Nullable Input<String> runtimeApiVersion) {
+        public Builder runtimeApiVersion(@Nullable Input<String> runtimeApiVersion) {
             this.runtimeApiVersion = runtimeApiVersion;
             return this;
         }
 
-        public Builder setRuntimeApiVersion(@Nullable String runtimeApiVersion) {
+        public Builder runtimeApiVersion(@Nullable String runtimeApiVersion) {
             this.runtimeApiVersion = Input.ofNullable(runtimeApiVersion);
             return this;
         }
 
-        public Builder setRuntimeChannel(@Nullable Input<String> runtimeChannel) {
+        public Builder runtimeChannel(@Nullable Input<String> runtimeChannel) {
             this.runtimeChannel = runtimeChannel;
             return this;
         }
 
-        public Builder setRuntimeChannel(@Nullable String runtimeChannel) {
+        public Builder runtimeChannel(@Nullable String runtimeChannel) {
             this.runtimeChannel = Input.ofNullable(runtimeChannel);
             return this;
         }
 
-        public Builder setRuntimeMainExecutablePath(@Nullable Input<String> runtimeMainExecutablePath) {
+        public Builder runtimeMainExecutablePath(@Nullable Input<String> runtimeMainExecutablePath) {
             this.runtimeMainExecutablePath = runtimeMainExecutablePath;
             return this;
         }
 
-        public Builder setRuntimeMainExecutablePath(@Nullable String runtimeMainExecutablePath) {
+        public Builder runtimeMainExecutablePath(@Nullable String runtimeMainExecutablePath) {
             this.runtimeMainExecutablePath = Input.ofNullable(runtimeMainExecutablePath);
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable String serviceAccount) {
+        public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Input.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder setServiceId(Input<String> serviceId) {
+        public Builder serviceId(Input<String> serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
 
-        public Builder setServiceId(String serviceId) {
+        public Builder serviceId(String serviceId) {
             this.serviceId = Input.of(Objects.requireNonNull(serviceId));
             return this;
         }
 
-        public Builder setServingStatus(@Nullable Input<VersionServingStatus> servingStatus) {
+        public Builder servingStatus(@Nullable Input<VersionServingStatus> servingStatus) {
             this.servingStatus = servingStatus;
             return this;
         }
 
-        public Builder setServingStatus(@Nullable VersionServingStatus servingStatus) {
+        public Builder servingStatus(@Nullable VersionServingStatus servingStatus) {
             this.servingStatus = Input.ofNullable(servingStatus);
             return this;
         }
 
-        public Builder setThreadsafe(@Nullable Input<Boolean> threadsafe) {
+        public Builder threadsafe(@Nullable Input<Boolean> threadsafe) {
             this.threadsafe = threadsafe;
             return this;
         }
 
-        public Builder setThreadsafe(@Nullable Boolean threadsafe) {
+        public Builder threadsafe(@Nullable Boolean threadsafe) {
             this.threadsafe = Input.ofNullable(threadsafe);
             return this;
         }
 
-        public Builder setVm(@Nullable Input<Boolean> vm) {
+        public Builder vm(@Nullable Input<Boolean> vm) {
             this.vm = vm;
             return this;
         }
 
-        public Builder setVm(@Nullable Boolean vm) {
+        public Builder vm(@Nullable Boolean vm) {
             this.vm = Input.ofNullable(vm);
             return this;
         }
 
-        public Builder setVpcAccessConnector(@Nullable Input<VpcAccessConnectorArgs> vpcAccessConnector) {
+        public Builder vpcAccessConnector(@Nullable Input<VpcAccessConnectorArgs> vpcAccessConnector) {
             this.vpcAccessConnector = vpcAccessConnector;
             return this;
         }
 
-        public Builder setVpcAccessConnector(@Nullable VpcAccessConnectorArgs vpcAccessConnector) {
+        public Builder vpcAccessConnector(@Nullable VpcAccessConnectorArgs vpcAccessConnector) {
             this.vpcAccessConnector = Input.ofNullable(vpcAccessConnector);
             return this;
         }

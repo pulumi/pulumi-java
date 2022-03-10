@@ -49,7 +49,7 @@ public final class WorkforceSourceIpConfig {
     	      this.cidrs = defaults.cidrs;
         }
 
-        public Builder setCidrs(List<String> cidrs) {
+        public Builder cidrs(List<String> cidrs) {
             this.cidrs = Objects.requireNonNull(cidrs);
             return this;
         }

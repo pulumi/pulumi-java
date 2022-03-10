@@ -104,22 +104,22 @@ public final class CxIntentParameter {
     	      this.redact = defaults.redact;
         }
 
-        public Builder setEntityType(String entityType) {
+        public Builder entityType(String entityType) {
             this.entityType = Objects.requireNonNull(entityType);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsList(@Nullable Boolean isList) {
+        public Builder isList(@Nullable Boolean isList) {
             this.isList = isList;
             return this;
         }
 
-        public Builder setRedact(@Nullable Boolean redact) {
+        public Builder redact(@Nullable Boolean redact) {
             this.redact = redact;
             return this;
         }

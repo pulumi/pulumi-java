@@ -91,32 +91,32 @@ public final class ClusterKubernetesNetworkConfigArgs extends io.pulumi.resource
     	      this.serviceIpv6Cidr = defaults.serviceIpv6Cidr;
         }
 
-        public Builder setIpFamily(@Nullable Input<ClusterKubernetesNetworkConfigIpFamily> ipFamily) {
+        public Builder ipFamily(@Nullable Input<ClusterKubernetesNetworkConfigIpFamily> ipFamily) {
             this.ipFamily = ipFamily;
             return this;
         }
 
-        public Builder setIpFamily(@Nullable ClusterKubernetesNetworkConfigIpFamily ipFamily) {
+        public Builder ipFamily(@Nullable ClusterKubernetesNetworkConfigIpFamily ipFamily) {
             this.ipFamily = Input.ofNullable(ipFamily);
             return this;
         }
 
-        public Builder setServiceIpv4Cidr(@Nullable Input<String> serviceIpv4Cidr) {
+        public Builder serviceIpv4Cidr(@Nullable Input<String> serviceIpv4Cidr) {
             this.serviceIpv4Cidr = serviceIpv4Cidr;
             return this;
         }
 
-        public Builder setServiceIpv4Cidr(@Nullable String serviceIpv4Cidr) {
+        public Builder serviceIpv4Cidr(@Nullable String serviceIpv4Cidr) {
             this.serviceIpv4Cidr = Input.ofNullable(serviceIpv4Cidr);
             return this;
         }
 
-        public Builder setServiceIpv6Cidr(@Nullable Input<String> serviceIpv6Cidr) {
+        public Builder serviceIpv6Cidr(@Nullable Input<String> serviceIpv6Cidr) {
             this.serviceIpv6Cidr = serviceIpv6Cidr;
             return this;
         }
 
-        public Builder setServiceIpv6Cidr(@Nullable String serviceIpv6Cidr) {
+        public Builder serviceIpv6Cidr(@Nullable String serviceIpv6Cidr) {
             this.serviceIpv6Cidr = Input.ofNullable(serviceIpv6Cidr);
             return this;
         }

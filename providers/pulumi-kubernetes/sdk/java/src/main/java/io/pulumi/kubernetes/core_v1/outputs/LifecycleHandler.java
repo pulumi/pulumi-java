@@ -85,17 +85,17 @@ public final class LifecycleHandler {
     	      this.tcpSocket = defaults.tcpSocket;
         }
 
-        public Builder setExec(@Nullable ExecAction exec) {
+        public Builder exec(@Nullable ExecAction exec) {
             this.exec = exec;
             return this;
         }
 
-        public Builder setHttpGet(@Nullable HTTPGetAction httpGet) {
+        public Builder httpGet(@Nullable HTTPGetAction httpGet) {
             this.httpGet = httpGet;
             return this;
         }
 
-        public Builder setTcpSocket(@Nullable TCPSocketAction tcpSocket) {
+        public Builder tcpSocket(@Nullable TCPSocketAction tcpSocket) {
             this.tcpSocket = tcpSocket;
             return this;
         }

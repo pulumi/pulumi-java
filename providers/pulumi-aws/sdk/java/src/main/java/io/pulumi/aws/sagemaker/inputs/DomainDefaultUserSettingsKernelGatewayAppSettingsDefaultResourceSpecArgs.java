@@ -102,42 +102,42 @@ public final class DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResou
     	      this.sagemakerImageVersionArn = defaults.sagemakerImageVersionArn;
         }
 
-        public Builder setInstanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Input<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Input.ofNullable(instanceType);
             return this;
         }
 
-        public Builder setLifecycleConfigArn(@Nullable Input<String> lifecycleConfigArn) {
+        public Builder lifecycleConfigArn(@Nullable Input<String> lifecycleConfigArn) {
             this.lifecycleConfigArn = lifecycleConfigArn;
             return this;
         }
 
-        public Builder setLifecycleConfigArn(@Nullable String lifecycleConfigArn) {
+        public Builder lifecycleConfigArn(@Nullable String lifecycleConfigArn) {
             this.lifecycleConfigArn = Input.ofNullable(lifecycleConfigArn);
             return this;
         }
 
-        public Builder setSagemakerImageArn(@Nullable Input<String> sagemakerImageArn) {
+        public Builder sagemakerImageArn(@Nullable Input<String> sagemakerImageArn) {
             this.sagemakerImageArn = sagemakerImageArn;
             return this;
         }
 
-        public Builder setSagemakerImageArn(@Nullable String sagemakerImageArn) {
+        public Builder sagemakerImageArn(@Nullable String sagemakerImageArn) {
             this.sagemakerImageArn = Input.ofNullable(sagemakerImageArn);
             return this;
         }
 
-        public Builder setSagemakerImageVersionArn(@Nullable Input<String> sagemakerImageVersionArn) {
+        public Builder sagemakerImageVersionArn(@Nullable Input<String> sagemakerImageVersionArn) {
             this.sagemakerImageVersionArn = sagemakerImageVersionArn;
             return this;
         }
 
-        public Builder setSagemakerImageVersionArn(@Nullable String sagemakerImageVersionArn) {
+        public Builder sagemakerImageVersionArn(@Nullable String sagemakerImageVersionArn) {
             this.sagemakerImageVersionArn = Input.ofNullable(sagemakerImageVersionArn);
             return this;
         }

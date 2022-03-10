@@ -67,12 +67,12 @@ public final class FeatureGroupFeatureDefinition {
     	      this.featureType = defaults.featureType;
         }
 
-        public Builder setFeatureName(@Nullable String featureName) {
+        public Builder featureName(@Nullable String featureName) {
             this.featureName = featureName;
             return this;
         }
 
-        public Builder setFeatureType(@Nullable String featureType) {
+        public Builder featureType(@Nullable String featureType) {
             this.featureType = featureType;
             return this;
         }

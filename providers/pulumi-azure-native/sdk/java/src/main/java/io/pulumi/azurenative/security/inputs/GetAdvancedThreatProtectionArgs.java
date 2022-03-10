@@ -68,12 +68,12 @@ public final class GetAdvancedThreatProtectionArgs extends io.pulumi.resources.I
     	      this.settingName = defaults.settingName;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
-        public Builder setSettingName(String settingName) {
+        public Builder settingName(String settingName) {
             this.settingName = Objects.requireNonNull(settingName);
             return this;
         }

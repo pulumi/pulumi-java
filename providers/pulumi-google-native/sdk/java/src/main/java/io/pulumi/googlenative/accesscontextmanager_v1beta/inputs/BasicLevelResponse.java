@@ -74,12 +74,12 @@ public final class BasicLevelResponse extends io.pulumi.resources.InvokeArgs {
     	      this.conditions = defaults.conditions;
         }
 
-        public Builder setCombiningFunction(String combiningFunction) {
+        public Builder combiningFunction(String combiningFunction) {
             this.combiningFunction = Objects.requireNonNull(combiningFunction);
             return this;
         }
 
-        public Builder setConditions(List<ConditionResponse> conditions) {
+        public Builder conditions(List<ConditionResponse> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }

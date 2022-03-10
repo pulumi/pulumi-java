@@ -226,122 +226,122 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     	      this.storageLocations = defaults.storageLocations;
         }
 
-        public Builder setChainName(@Nullable Input<String> chainName) {
+        public Builder chainName(@Nullable Input<String> chainName) {
             this.chainName = chainName;
             return this;
         }
 
-        public Builder setChainName(@Nullable String chainName) {
+        public Builder chainName(@Nullable String chainName) {
             this.chainName = Input.ofNullable(chainName);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setGuestFlush(@Nullable Input<Boolean> guestFlush) {
+        public Builder guestFlush(@Nullable Input<Boolean> guestFlush) {
             this.guestFlush = guestFlush;
             return this;
         }
 
-        public Builder setGuestFlush(@Nullable Boolean guestFlush) {
+        public Builder guestFlush(@Nullable Boolean guestFlush) {
             this.guestFlush = Input.ofNullable(guestFlush);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocationHint(@Nullable Input<String> locationHint) {
+        public Builder locationHint(@Nullable Input<String> locationHint) {
             this.locationHint = locationHint;
             return this;
         }
 
-        public Builder setLocationHint(@Nullable String locationHint) {
+        public Builder locationHint(@Nullable String locationHint) {
             this.locationHint = Input.ofNullable(locationHint);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setSnapshotEncryptionKey(@Nullable Input<CustomerEncryptionKeyArgs> snapshotEncryptionKey) {
+        public Builder snapshotEncryptionKey(@Nullable Input<CustomerEncryptionKeyArgs> snapshotEncryptionKey) {
             this.snapshotEncryptionKey = snapshotEncryptionKey;
             return this;
         }
 
-        public Builder setSnapshotEncryptionKey(@Nullable CustomerEncryptionKeyArgs snapshotEncryptionKey) {
+        public Builder snapshotEncryptionKey(@Nullable CustomerEncryptionKeyArgs snapshotEncryptionKey) {
             this.snapshotEncryptionKey = Input.ofNullable(snapshotEncryptionKey);
             return this;
         }
 
-        public Builder setSourceDisk(@Nullable Input<String> sourceDisk) {
+        public Builder sourceDisk(@Nullable Input<String> sourceDisk) {
             this.sourceDisk = sourceDisk;
             return this;
         }
 
-        public Builder setSourceDisk(@Nullable String sourceDisk) {
+        public Builder sourceDisk(@Nullable String sourceDisk) {
             this.sourceDisk = Input.ofNullable(sourceDisk);
             return this;
         }
 
-        public Builder setSourceDiskEncryptionKey(@Nullable Input<CustomerEncryptionKeyArgs> sourceDiskEncryptionKey) {
+        public Builder sourceDiskEncryptionKey(@Nullable Input<CustomerEncryptionKeyArgs> sourceDiskEncryptionKey) {
             this.sourceDiskEncryptionKey = sourceDiskEncryptionKey;
             return this;
         }
 
-        public Builder setSourceDiskEncryptionKey(@Nullable CustomerEncryptionKeyArgs sourceDiskEncryptionKey) {
+        public Builder sourceDiskEncryptionKey(@Nullable CustomerEncryptionKeyArgs sourceDiskEncryptionKey) {
             this.sourceDiskEncryptionKey = Input.ofNullable(sourceDiskEncryptionKey);
             return this;
         }
 
-        public Builder setStorageLocations(@Nullable Input<List<String>> storageLocations) {
+        public Builder storageLocations(@Nullable Input<List<String>> storageLocations) {
             this.storageLocations = storageLocations;
             return this;
         }
 
-        public Builder setStorageLocations(@Nullable List<String> storageLocations) {
+        public Builder storageLocations(@Nullable List<String> storageLocations) {
             this.storageLocations = Input.ofNullable(storageLocations);
             return this;
         }

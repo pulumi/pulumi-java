@@ -174,82 +174,82 @@ public final class TagFieldGetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timestampValue = defaults.timestampValue;
         }
 
-        public Builder setBoolValue(@Nullable Input<Boolean> boolValue) {
+        public Builder boolValue(@Nullable Input<Boolean> boolValue) {
             this.boolValue = boolValue;
             return this;
         }
 
-        public Builder setBoolValue(@Nullable Boolean boolValue) {
+        public Builder boolValue(@Nullable Boolean boolValue) {
             this.boolValue = Input.ofNullable(boolValue);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setDoubleValue(@Nullable Input<Double> doubleValue) {
+        public Builder doubleValue(@Nullable Input<Double> doubleValue) {
             this.doubleValue = doubleValue;
             return this;
         }
 
-        public Builder setDoubleValue(@Nullable Double doubleValue) {
+        public Builder doubleValue(@Nullable Double doubleValue) {
             this.doubleValue = Input.ofNullable(doubleValue);
             return this;
         }
 
-        public Builder setEnumValue(@Nullable Input<String> enumValue) {
+        public Builder enumValue(@Nullable Input<String> enumValue) {
             this.enumValue = enumValue;
             return this;
         }
 
-        public Builder setEnumValue(@Nullable String enumValue) {
+        public Builder enumValue(@Nullable String enumValue) {
             this.enumValue = Input.ofNullable(enumValue);
             return this;
         }
 
-        public Builder setFieldName(Input<String> fieldName) {
+        public Builder fieldName(Input<String> fieldName) {
             this.fieldName = Objects.requireNonNull(fieldName);
             return this;
         }
 
-        public Builder setFieldName(String fieldName) {
+        public Builder fieldName(String fieldName) {
             this.fieldName = Input.of(Objects.requireNonNull(fieldName));
             return this;
         }
 
-        public Builder setOrder(@Nullable Input<Integer> order) {
+        public Builder order(@Nullable Input<Integer> order) {
             this.order = order;
             return this;
         }
 
-        public Builder setOrder(@Nullable Integer order) {
+        public Builder order(@Nullable Integer order) {
             this.order = Input.ofNullable(order);
             return this;
         }
 
-        public Builder setStringValue(@Nullable Input<String> stringValue) {
+        public Builder stringValue(@Nullable Input<String> stringValue) {
             this.stringValue = stringValue;
             return this;
         }
 
-        public Builder setStringValue(@Nullable String stringValue) {
+        public Builder stringValue(@Nullable String stringValue) {
             this.stringValue = Input.ofNullable(stringValue);
             return this;
         }
 
-        public Builder setTimestampValue(@Nullable Input<String> timestampValue) {
+        public Builder timestampValue(@Nullable Input<String> timestampValue) {
             this.timestampValue = timestampValue;
             return this;
         }
 
-        public Builder setTimestampValue(@Nullable String timestampValue) {
+        public Builder timestampValue(@Nullable String timestampValue) {
             this.timestampValue = Input.ofNullable(timestampValue);
             return this;
         }

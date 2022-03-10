@@ -62,12 +62,12 @@ public final class GetInstructionArgs extends io.pulumi.resources.InvokeArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setInstructionId(String instructionId) {
+        public Builder instructionId(String instructionId) {
             this.instructionId = Objects.requireNonNull(instructionId);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

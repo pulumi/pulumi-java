@@ -242,112 +242,112 @@ public final class GuestPoliciesState extends io.pulumi.resources.ResourceArgs {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setAssignment(@Nullable Input<GuestPoliciesAssignmentGetArgs> assignment) {
+        public Builder assignment(@Nullable Input<GuestPoliciesAssignmentGetArgs> assignment) {
             this.assignment = assignment;
             return this;
         }
 
-        public Builder setAssignment(@Nullable GuestPoliciesAssignmentGetArgs assignment) {
+        public Builder assignment(@Nullable GuestPoliciesAssignmentGetArgs assignment) {
             this.assignment = Input.ofNullable(assignment);
             return this;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setGuestPolicyId(@Nullable Input<String> guestPolicyId) {
+        public Builder guestPolicyId(@Nullable Input<String> guestPolicyId) {
             this.guestPolicyId = guestPolicyId;
             return this;
         }
 
-        public Builder setGuestPolicyId(@Nullable String guestPolicyId) {
+        public Builder guestPolicyId(@Nullable String guestPolicyId) {
             this.guestPolicyId = Input.ofNullable(guestPolicyId);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPackageRepositories(@Nullable Input<List<GuestPoliciesPackageRepositoryGetArgs>> packageRepositories) {
+        public Builder packageRepositories(@Nullable Input<List<GuestPoliciesPackageRepositoryGetArgs>> packageRepositories) {
             this.packageRepositories = packageRepositories;
             return this;
         }
 
-        public Builder setPackageRepositories(@Nullable List<GuestPoliciesPackageRepositoryGetArgs> packageRepositories) {
+        public Builder packageRepositories(@Nullable List<GuestPoliciesPackageRepositoryGetArgs> packageRepositories) {
             this.packageRepositories = Input.ofNullable(packageRepositories);
             return this;
         }
 
-        public Builder setPackages(@Nullable Input<List<GuestPoliciesPackageGetArgs>> packages) {
+        public Builder packages(@Nullable Input<List<GuestPoliciesPackageGetArgs>> packages) {
             this.packages = packages;
             return this;
         }
 
-        public Builder setPackages(@Nullable List<GuestPoliciesPackageGetArgs> packages) {
+        public Builder packages(@Nullable List<GuestPoliciesPackageGetArgs> packages) {
             this.packages = Input.ofNullable(packages);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRecipes(@Nullable Input<List<GuestPoliciesRecipeGetArgs>> recipes) {
+        public Builder recipes(@Nullable Input<List<GuestPoliciesRecipeGetArgs>> recipes) {
             this.recipes = recipes;
             return this;
         }
 
-        public Builder setRecipes(@Nullable List<GuestPoliciesRecipeGetArgs> recipes) {
+        public Builder recipes(@Nullable List<GuestPoliciesRecipeGetArgs> recipes) {
             this.recipes = Input.ofNullable(recipes);
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Input<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable String updateTime) {
+        public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Input.ofNullable(updateTime);
             return this;
         }

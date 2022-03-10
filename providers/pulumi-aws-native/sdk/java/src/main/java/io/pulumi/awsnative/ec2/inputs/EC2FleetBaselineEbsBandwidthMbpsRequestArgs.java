@@ -62,22 +62,22 @@ public final class EC2FleetBaselineEbsBandwidthMbpsRequestArgs extends io.pulumi
     	      this.min = defaults.min;
         }
 
-        public Builder setMax(@Nullable Input<Integer> max) {
+        public Builder max(@Nullable Input<Integer> max) {
             this.max = max;
             return this;
         }
 
-        public Builder setMax(@Nullable Integer max) {
+        public Builder max(@Nullable Integer max) {
             this.max = Input.ofNullable(max);
             return this;
         }
 
-        public Builder setMin(@Nullable Input<Integer> min) {
+        public Builder min(@Nullable Input<Integer> min) {
             this.min = min;
             return this;
         }
 
-        public Builder setMin(@Nullable Integer min) {
+        public Builder min(@Nullable Integer min) {
             this.min = Input.ofNullable(min);
             return this;
         }

@@ -113,52 +113,52 @@ public final class UserAccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.windowsUserConfiguration = defaults.windowsUserConfiguration;
         }
 
-        public Builder setElevationLevel(@Nullable Input<ElevationLevel> elevationLevel) {
+        public Builder elevationLevel(@Nullable Input<ElevationLevel> elevationLevel) {
             this.elevationLevel = elevationLevel;
             return this;
         }
 
-        public Builder setElevationLevel(@Nullable ElevationLevel elevationLevel) {
+        public Builder elevationLevel(@Nullable ElevationLevel elevationLevel) {
             this.elevationLevel = Input.ofNullable(elevationLevel);
             return this;
         }
 
-        public Builder setLinuxUserConfiguration(@Nullable Input<LinuxUserConfigurationArgs> linuxUserConfiguration) {
+        public Builder linuxUserConfiguration(@Nullable Input<LinuxUserConfigurationArgs> linuxUserConfiguration) {
             this.linuxUserConfiguration = linuxUserConfiguration;
             return this;
         }
 
-        public Builder setLinuxUserConfiguration(@Nullable LinuxUserConfigurationArgs linuxUserConfiguration) {
+        public Builder linuxUserConfiguration(@Nullable LinuxUserConfigurationArgs linuxUserConfiguration) {
             this.linuxUserConfiguration = Input.ofNullable(linuxUserConfiguration);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setPassword(Input<String> password) {
+        public Builder password(Input<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Input.of(Objects.requireNonNull(password));
             return this;
         }
 
-        public Builder setWindowsUserConfiguration(@Nullable Input<WindowsUserConfigurationArgs> windowsUserConfiguration) {
+        public Builder windowsUserConfiguration(@Nullable Input<WindowsUserConfigurationArgs> windowsUserConfiguration) {
             this.windowsUserConfiguration = windowsUserConfiguration;
             return this;
         }
 
-        public Builder setWindowsUserConfiguration(@Nullable WindowsUserConfigurationArgs windowsUserConfiguration) {
+        public Builder windowsUserConfiguration(@Nullable WindowsUserConfigurationArgs windowsUserConfiguration) {
             this.windowsUserConfiguration = Input.ofNullable(windowsUserConfiguration);
             return this;
         }

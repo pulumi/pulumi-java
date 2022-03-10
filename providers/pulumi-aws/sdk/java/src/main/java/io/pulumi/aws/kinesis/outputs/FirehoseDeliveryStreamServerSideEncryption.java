@@ -84,17 +84,17 @@ public final class FirehoseDeliveryStreamServerSideEncryption {
     	      this.keyType = defaults.keyType;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setKeyArn(@Nullable String keyArn) {
+        public Builder keyArn(@Nullable String keyArn) {
             this.keyArn = keyArn;
             return this;
         }
 
-        public Builder setKeyType(@Nullable String keyType) {
+        public Builder keyType(@Nullable String keyType) {
             this.keyType = keyType;
             return this;
         }

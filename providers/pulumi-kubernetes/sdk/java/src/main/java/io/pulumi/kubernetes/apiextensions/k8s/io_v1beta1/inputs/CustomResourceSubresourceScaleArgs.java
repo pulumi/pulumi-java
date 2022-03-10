@@ -90,32 +90,32 @@ public final class CustomResourceSubresourceScaleArgs extends io.pulumi.resource
     	      this.statusReplicasPath = defaults.statusReplicasPath;
         }
 
-        public Builder setLabelSelectorPath(@Nullable Input<String> labelSelectorPath) {
+        public Builder labelSelectorPath(@Nullable Input<String> labelSelectorPath) {
             this.labelSelectorPath = labelSelectorPath;
             return this;
         }
 
-        public Builder setLabelSelectorPath(@Nullable String labelSelectorPath) {
+        public Builder labelSelectorPath(@Nullable String labelSelectorPath) {
             this.labelSelectorPath = Input.ofNullable(labelSelectorPath);
             return this;
         }
 
-        public Builder setSpecReplicasPath(Input<String> specReplicasPath) {
+        public Builder specReplicasPath(Input<String> specReplicasPath) {
             this.specReplicasPath = Objects.requireNonNull(specReplicasPath);
             return this;
         }
 
-        public Builder setSpecReplicasPath(String specReplicasPath) {
+        public Builder specReplicasPath(String specReplicasPath) {
             this.specReplicasPath = Input.of(Objects.requireNonNull(specReplicasPath));
             return this;
         }
 
-        public Builder setStatusReplicasPath(Input<String> statusReplicasPath) {
+        public Builder statusReplicasPath(Input<String> statusReplicasPath) {
             this.statusReplicasPath = Objects.requireNonNull(statusReplicasPath);
             return this;
         }
 
-        public Builder setStatusReplicasPath(String statusReplicasPath) {
+        public Builder statusReplicasPath(String statusReplicasPath) {
             this.statusReplicasPath = Input.of(Objects.requireNonNull(statusReplicasPath));
             return this;
         }

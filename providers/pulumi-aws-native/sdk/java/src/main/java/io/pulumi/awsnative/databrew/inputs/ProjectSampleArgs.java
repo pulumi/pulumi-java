@@ -71,22 +71,22 @@ public final class ProjectSampleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setSize(@Nullable Input<Integer> size) {
+        public Builder size(@Nullable Input<Integer> size) {
             this.size = size;
             return this;
         }
 
-        public Builder setSize(@Nullable Integer size) {
+        public Builder size(@Nullable Integer size) {
             this.size = Input.ofNullable(size);
             return this;
         }
 
-        public Builder setType(Input<ProjectSampleType> type) {
+        public Builder type(Input<ProjectSampleType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(ProjectSampleType type) {
+        public Builder type(ProjectSampleType type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

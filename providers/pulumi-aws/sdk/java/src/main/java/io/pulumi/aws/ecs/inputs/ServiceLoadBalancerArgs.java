@@ -103,42 +103,42 @@ public final class ServiceLoadBalancerArgs extends io.pulumi.resources.ResourceA
     	      this.targetGroupArn = defaults.targetGroupArn;
         }
 
-        public Builder setContainerName(Input<String> containerName) {
+        public Builder containerName(Input<String> containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
 
-        public Builder setContainerName(String containerName) {
+        public Builder containerName(String containerName) {
             this.containerName = Input.of(Objects.requireNonNull(containerName));
             return this;
         }
 
-        public Builder setContainerPort(Input<Integer> containerPort) {
+        public Builder containerPort(Input<Integer> containerPort) {
             this.containerPort = Objects.requireNonNull(containerPort);
             return this;
         }
 
-        public Builder setContainerPort(Integer containerPort) {
+        public Builder containerPort(Integer containerPort) {
             this.containerPort = Input.of(Objects.requireNonNull(containerPort));
             return this;
         }
 
-        public Builder setElbName(@Nullable Input<String> elbName) {
+        public Builder elbName(@Nullable Input<String> elbName) {
             this.elbName = elbName;
             return this;
         }
 
-        public Builder setElbName(@Nullable String elbName) {
+        public Builder elbName(@Nullable String elbName) {
             this.elbName = Input.ofNullable(elbName);
             return this;
         }
 
-        public Builder setTargetGroupArn(@Nullable Input<String> targetGroupArn) {
+        public Builder targetGroupArn(@Nullable Input<String> targetGroupArn) {
             this.targetGroupArn = targetGroupArn;
             return this;
         }
 
-        public Builder setTargetGroupArn(@Nullable String targetGroupArn) {
+        public Builder targetGroupArn(@Nullable String targetGroupArn) {
             this.targetGroupArn = Input.ofNullable(targetGroupArn);
             return this;
         }

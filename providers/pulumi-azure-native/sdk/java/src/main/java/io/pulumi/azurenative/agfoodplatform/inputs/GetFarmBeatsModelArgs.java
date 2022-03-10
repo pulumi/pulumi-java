@@ -68,12 +68,12 @@ public final class GetFarmBeatsModelArgs extends io.pulumi.resources.InvokeArgs 
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setFarmBeatsResourceName(String farmBeatsResourceName) {
+        public Builder farmBeatsResourceName(String farmBeatsResourceName) {
             this.farmBeatsResourceName = Objects.requireNonNull(farmBeatsResourceName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

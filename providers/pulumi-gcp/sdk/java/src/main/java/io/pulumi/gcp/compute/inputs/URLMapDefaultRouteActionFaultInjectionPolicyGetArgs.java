@@ -73,22 +73,22 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyGetArgs extends i
     	      this.delay = defaults.delay;
         }
 
-        public Builder setAbort(@Nullable Input<URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs> abort) {
+        public Builder abort(@Nullable Input<URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs> abort) {
             this.abort = abort;
             return this;
         }
 
-        public Builder setAbort(@Nullable URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs abort) {
+        public Builder abort(@Nullable URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs abort) {
             this.abort = Input.ofNullable(abort);
             return this;
         }
 
-        public Builder setDelay(@Nullable Input<URLMapDefaultRouteActionFaultInjectionPolicyDelayGetArgs> delay) {
+        public Builder delay(@Nullable Input<URLMapDefaultRouteActionFaultInjectionPolicyDelayGetArgs> delay) {
             this.delay = delay;
             return this;
         }
 
-        public Builder setDelay(@Nullable URLMapDefaultRouteActionFaultInjectionPolicyDelayGetArgs delay) {
+        public Builder delay(@Nullable URLMapDefaultRouteActionFaultInjectionPolicyDelayGetArgs delay) {
             this.delay = Input.ofNullable(delay);
             return this;
         }

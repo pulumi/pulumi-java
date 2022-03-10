@@ -93,32 +93,32 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
     	      this.recurringWindow = defaults.recurringWindow;
         }
 
-        public Builder setDailyMaintenanceWindow(@Nullable Input<DailyMaintenanceWindowArgs> dailyMaintenanceWindow) {
+        public Builder dailyMaintenanceWindow(@Nullable Input<DailyMaintenanceWindowArgs> dailyMaintenanceWindow) {
             this.dailyMaintenanceWindow = dailyMaintenanceWindow;
             return this;
         }
 
-        public Builder setDailyMaintenanceWindow(@Nullable DailyMaintenanceWindowArgs dailyMaintenanceWindow) {
+        public Builder dailyMaintenanceWindow(@Nullable DailyMaintenanceWindowArgs dailyMaintenanceWindow) {
             this.dailyMaintenanceWindow = Input.ofNullable(dailyMaintenanceWindow);
             return this;
         }
 
-        public Builder setMaintenanceExclusions(@Nullable Input<Map<String,String>> maintenanceExclusions) {
+        public Builder maintenanceExclusions(@Nullable Input<Map<String,String>> maintenanceExclusions) {
             this.maintenanceExclusions = maintenanceExclusions;
             return this;
         }
 
-        public Builder setMaintenanceExclusions(@Nullable Map<String,String> maintenanceExclusions) {
+        public Builder maintenanceExclusions(@Nullable Map<String,String> maintenanceExclusions) {
             this.maintenanceExclusions = Input.ofNullable(maintenanceExclusions);
             return this;
         }
 
-        public Builder setRecurringWindow(@Nullable Input<RecurringTimeWindowArgs> recurringWindow) {
+        public Builder recurringWindow(@Nullable Input<RecurringTimeWindowArgs> recurringWindow) {
             this.recurringWindow = recurringWindow;
             return this;
         }
 
-        public Builder setRecurringWindow(@Nullable RecurringTimeWindowArgs recurringWindow) {
+        public Builder recurringWindow(@Nullable RecurringTimeWindowArgs recurringWindow) {
             this.recurringWindow = Input.ofNullable(recurringWindow);
             return this;
         }

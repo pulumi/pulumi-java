@@ -95,32 +95,32 @@ public final class RegionNetworkEndpointGroupAppEngineGetArgs extends io.pulumi.
     	      this.version = defaults.version;
         }
 
-        public Builder setService(@Nullable Input<String> service) {
+        public Builder service(@Nullable Input<String> service) {
             this.service = service;
             return this;
         }
 
-        public Builder setService(@Nullable String service) {
+        public Builder service(@Nullable String service) {
             this.service = Input.ofNullable(service);
             return this;
         }
 
-        public Builder setUrlMask(@Nullable Input<String> urlMask) {
+        public Builder urlMask(@Nullable Input<String> urlMask) {
             this.urlMask = urlMask;
             return this;
         }
 
-        public Builder setUrlMask(@Nullable String urlMask) {
+        public Builder urlMask(@Nullable String urlMask) {
             this.urlMask = Input.ofNullable(urlMask);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

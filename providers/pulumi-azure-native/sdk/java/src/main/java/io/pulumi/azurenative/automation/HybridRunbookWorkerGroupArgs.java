@@ -103,42 +103,42 @@ public final class HybridRunbookWorkerGroupArgs extends io.pulumi.resources.Reso
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAutomationAccountName(Input<String> automationAccountName) {
+        public Builder automationAccountName(Input<String> automationAccountName) {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
 
-        public Builder setAutomationAccountName(String automationAccountName) {
+        public Builder automationAccountName(String automationAccountName) {
             this.automationAccountName = Input.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
 
-        public Builder setCredential(@Nullable Input<RunAsCredentialAssociationPropertyArgs> credential) {
+        public Builder credential(@Nullable Input<RunAsCredentialAssociationPropertyArgs> credential) {
             this.credential = credential;
             return this;
         }
 
-        public Builder setCredential(@Nullable RunAsCredentialAssociationPropertyArgs credential) {
+        public Builder credential(@Nullable RunAsCredentialAssociationPropertyArgs credential) {
             this.credential = Input.ofNullable(credential);
             return this;
         }
 
-        public Builder setHybridRunbookWorkerGroupName(@Nullable Input<String> hybridRunbookWorkerGroupName) {
+        public Builder hybridRunbookWorkerGroupName(@Nullable Input<String> hybridRunbookWorkerGroupName) {
             this.hybridRunbookWorkerGroupName = hybridRunbookWorkerGroupName;
             return this;
         }
 
-        public Builder setHybridRunbookWorkerGroupName(@Nullable String hybridRunbookWorkerGroupName) {
+        public Builder hybridRunbookWorkerGroupName(@Nullable String hybridRunbookWorkerGroupName) {
             this.hybridRunbookWorkerGroupName = Input.ofNullable(hybridRunbookWorkerGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

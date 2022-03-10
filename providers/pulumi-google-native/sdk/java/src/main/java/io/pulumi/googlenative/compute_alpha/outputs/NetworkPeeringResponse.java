@@ -227,62 +227,62 @@ public final class NetworkPeeringResponse {
     	      this.stateDetails = defaults.stateDetails;
         }
 
-        public Builder setAdvertisePeerSubnetsViaRouters(Boolean advertisePeerSubnetsViaRouters) {
+        public Builder advertisePeerSubnetsViaRouters(Boolean advertisePeerSubnetsViaRouters) {
             this.advertisePeerSubnetsViaRouters = Objects.requireNonNull(advertisePeerSubnetsViaRouters);
             return this;
         }
 
-        public Builder setAutoCreateRoutes(Boolean autoCreateRoutes) {
+        public Builder autoCreateRoutes(Boolean autoCreateRoutes) {
             this.autoCreateRoutes = Objects.requireNonNull(autoCreateRoutes);
             return this;
         }
 
-        public Builder setExchangeSubnetRoutes(Boolean exchangeSubnetRoutes) {
+        public Builder exchangeSubnetRoutes(Boolean exchangeSubnetRoutes) {
             this.exchangeSubnetRoutes = Objects.requireNonNull(exchangeSubnetRoutes);
             return this;
         }
 
-        public Builder setExportCustomRoutes(Boolean exportCustomRoutes) {
+        public Builder exportCustomRoutes(Boolean exportCustomRoutes) {
             this.exportCustomRoutes = Objects.requireNonNull(exportCustomRoutes);
             return this;
         }
 
-        public Builder setExportSubnetRoutesWithPublicIp(Boolean exportSubnetRoutesWithPublicIp) {
+        public Builder exportSubnetRoutesWithPublicIp(Boolean exportSubnetRoutesWithPublicIp) {
             this.exportSubnetRoutesWithPublicIp = Objects.requireNonNull(exportSubnetRoutesWithPublicIp);
             return this;
         }
 
-        public Builder setImportCustomRoutes(Boolean importCustomRoutes) {
+        public Builder importCustomRoutes(Boolean importCustomRoutes) {
             this.importCustomRoutes = Objects.requireNonNull(importCustomRoutes);
             return this;
         }
 
-        public Builder setImportSubnetRoutesWithPublicIp(Boolean importSubnetRoutesWithPublicIp) {
+        public Builder importSubnetRoutesWithPublicIp(Boolean importSubnetRoutesWithPublicIp) {
             this.importSubnetRoutesWithPublicIp = Objects.requireNonNull(importSubnetRoutesWithPublicIp);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setPeerMtu(Integer peerMtu) {
+        public Builder peerMtu(Integer peerMtu) {
             this.peerMtu = Objects.requireNonNull(peerMtu);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStateDetails(String stateDetails) {
+        public Builder stateDetails(String stateDetails) {
             this.stateDetails = Objects.requireNonNull(stateDetails);
             return this;
         }

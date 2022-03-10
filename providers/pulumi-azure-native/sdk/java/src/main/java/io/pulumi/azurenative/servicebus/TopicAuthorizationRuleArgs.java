@@ -120,52 +120,52 @@ public final class TopicAuthorizationRuleArgs extends io.pulumi.resources.Resour
     	      this.topicName = defaults.topicName;
         }
 
-        public Builder setAuthorizationRuleName(@Nullable Input<String> authorizationRuleName) {
+        public Builder authorizationRuleName(@Nullable Input<String> authorizationRuleName) {
             this.authorizationRuleName = authorizationRuleName;
             return this;
         }
 
-        public Builder setAuthorizationRuleName(@Nullable String authorizationRuleName) {
+        public Builder authorizationRuleName(@Nullable String authorizationRuleName) {
             this.authorizationRuleName = Input.ofNullable(authorizationRuleName);
             return this;
         }
 
-        public Builder setNamespaceName(Input<String> namespaceName) {
+        public Builder namespaceName(Input<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
 
-        public Builder setNamespaceName(String namespaceName) {
+        public Builder namespaceName(String namespaceName) {
             this.namespaceName = Input.of(Objects.requireNonNull(namespaceName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRights(Input<List<AccessRights>> rights) {
+        public Builder rights(Input<List<AccessRights>> rights) {
             this.rights = Objects.requireNonNull(rights);
             return this;
         }
 
-        public Builder setRights(List<AccessRights> rights) {
+        public Builder rights(List<AccessRights> rights) {
             this.rights = Input.of(Objects.requireNonNull(rights));
             return this;
         }
 
-        public Builder setTopicName(Input<String> topicName) {
+        public Builder topicName(Input<String> topicName) {
             this.topicName = Objects.requireNonNull(topicName);
             return this;
         }
 
-        public Builder setTopicName(String topicName) {
+        public Builder topicName(String topicName) {
             this.topicName = Input.of(Objects.requireNonNull(topicName));
             return this;
         }

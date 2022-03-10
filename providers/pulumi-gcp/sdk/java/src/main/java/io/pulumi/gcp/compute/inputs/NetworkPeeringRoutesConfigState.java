@@ -120,52 +120,52 @@ public final class NetworkPeeringRoutesConfigState extends io.pulumi.resources.R
     	      this.project = defaults.project;
         }
 
-        public Builder setExportCustomRoutes(@Nullable Input<Boolean> exportCustomRoutes) {
+        public Builder exportCustomRoutes(@Nullable Input<Boolean> exportCustomRoutes) {
             this.exportCustomRoutes = exportCustomRoutes;
             return this;
         }
 
-        public Builder setExportCustomRoutes(@Nullable Boolean exportCustomRoutes) {
+        public Builder exportCustomRoutes(@Nullable Boolean exportCustomRoutes) {
             this.exportCustomRoutes = Input.ofNullable(exportCustomRoutes);
             return this;
         }
 
-        public Builder setImportCustomRoutes(@Nullable Input<Boolean> importCustomRoutes) {
+        public Builder importCustomRoutes(@Nullable Input<Boolean> importCustomRoutes) {
             this.importCustomRoutes = importCustomRoutes;
             return this;
         }
 
-        public Builder setImportCustomRoutes(@Nullable Boolean importCustomRoutes) {
+        public Builder importCustomRoutes(@Nullable Boolean importCustomRoutes) {
             this.importCustomRoutes = Input.ofNullable(importCustomRoutes);
             return this;
         }
 
-        public Builder setNetwork(@Nullable Input<String> network) {
+        public Builder network(@Nullable Input<String> network) {
             this.network = network;
             return this;
         }
 
-        public Builder setNetwork(@Nullable String network) {
+        public Builder network(@Nullable String network) {
             this.network = Input.ofNullable(network);
             return this;
         }
 
-        public Builder setPeering(@Nullable Input<String> peering) {
+        public Builder peering(@Nullable Input<String> peering) {
             this.peering = peering;
             return this;
         }
 
-        public Builder setPeering(@Nullable String peering) {
+        public Builder peering(@Nullable String peering) {
             this.peering = Input.ofNullable(peering);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

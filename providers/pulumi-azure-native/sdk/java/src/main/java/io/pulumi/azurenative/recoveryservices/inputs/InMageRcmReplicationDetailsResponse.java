@@ -769,227 +769,227 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
     	      this.vmNics = defaults.vmNics;
         }
 
-        public Builder setAgentUpgradeBlockingErrorDetails(List<InMageRcmAgentUpgradeBlockingErrorDetailsResponse> agentUpgradeBlockingErrorDetails) {
+        public Builder agentUpgradeBlockingErrorDetails(List<InMageRcmAgentUpgradeBlockingErrorDetailsResponse> agentUpgradeBlockingErrorDetails) {
             this.agentUpgradeBlockingErrorDetails = Objects.requireNonNull(agentUpgradeBlockingErrorDetails);
             return this;
         }
 
-        public Builder setAgentUpgradeState(String agentUpgradeState) {
+        public Builder agentUpgradeState(String agentUpgradeState) {
             this.agentUpgradeState = Objects.requireNonNull(agentUpgradeState);
             return this;
         }
 
-        public Builder setAllocatedMemoryInMB(Double allocatedMemoryInMB) {
+        public Builder allocatedMemoryInMB(Double allocatedMemoryInMB) {
             this.allocatedMemoryInMB = Objects.requireNonNull(allocatedMemoryInMB);
             return this;
         }
 
-        public Builder setDiscoveryType(String discoveryType) {
+        public Builder discoveryType(String discoveryType) {
             this.discoveryType = Objects.requireNonNull(discoveryType);
             return this;
         }
 
-        public Builder setFabricDiscoveryMachineId(String fabricDiscoveryMachineId) {
+        public Builder fabricDiscoveryMachineId(String fabricDiscoveryMachineId) {
             this.fabricDiscoveryMachineId = Objects.requireNonNull(fabricDiscoveryMachineId);
             return this;
         }
 
-        public Builder setFailoverRecoveryPointId(String failoverRecoveryPointId) {
+        public Builder failoverRecoveryPointId(String failoverRecoveryPointId) {
             this.failoverRecoveryPointId = Objects.requireNonNull(failoverRecoveryPointId);
             return this;
         }
 
-        public Builder setFirmwareType(String firmwareType) {
+        public Builder firmwareType(String firmwareType) {
             this.firmwareType = Objects.requireNonNull(firmwareType);
             return this;
         }
 
-        public Builder setInitialReplicationProcessedBytes(Double initialReplicationProcessedBytes) {
+        public Builder initialReplicationProcessedBytes(Double initialReplicationProcessedBytes) {
             this.initialReplicationProcessedBytes = Objects.requireNonNull(initialReplicationProcessedBytes);
             return this;
         }
 
-        public Builder setInitialReplicationProgressPercentage(Integer initialReplicationProgressPercentage) {
+        public Builder initialReplicationProgressPercentage(Integer initialReplicationProgressPercentage) {
             this.initialReplicationProgressPercentage = Objects.requireNonNull(initialReplicationProgressPercentage);
             return this;
         }
 
-        public Builder setInitialReplicationTransferredBytes(Double initialReplicationTransferredBytes) {
+        public Builder initialReplicationTransferredBytes(Double initialReplicationTransferredBytes) {
             this.initialReplicationTransferredBytes = Objects.requireNonNull(initialReplicationTransferredBytes);
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setInternalIdentifier(String internalIdentifier) {
+        public Builder internalIdentifier(String internalIdentifier) {
             this.internalIdentifier = Objects.requireNonNull(internalIdentifier);
             return this;
         }
 
-        public Builder setIsLastUpgradeSuccessful(String isLastUpgradeSuccessful) {
+        public Builder isLastUpgradeSuccessful(String isLastUpgradeSuccessful) {
             this.isLastUpgradeSuccessful = Objects.requireNonNull(isLastUpgradeSuccessful);
             return this;
         }
 
-        public Builder setLastAgentUpgradeErrorDetails(List<InMageRcmLastAgentUpgradeErrorDetailsResponse> lastAgentUpgradeErrorDetails) {
+        public Builder lastAgentUpgradeErrorDetails(List<InMageRcmLastAgentUpgradeErrorDetailsResponse> lastAgentUpgradeErrorDetails) {
             this.lastAgentUpgradeErrorDetails = Objects.requireNonNull(lastAgentUpgradeErrorDetails);
             return this;
         }
 
-        public Builder setLastAgentUpgradeFailedJobId(String lastAgentUpgradeFailedJobId) {
+        public Builder lastAgentUpgradeFailedJobId(String lastAgentUpgradeFailedJobId) {
             this.lastAgentUpgradeFailedJobId = Objects.requireNonNull(lastAgentUpgradeFailedJobId);
             return this;
         }
 
-        public Builder setLastAgentUpgradeType(String lastAgentUpgradeType) {
+        public Builder lastAgentUpgradeType(String lastAgentUpgradeType) {
             this.lastAgentUpgradeType = Objects.requireNonNull(lastAgentUpgradeType);
             return this;
         }
 
-        public Builder setLastRecoveryPointId(String lastRecoveryPointId) {
+        public Builder lastRecoveryPointId(String lastRecoveryPointId) {
             this.lastRecoveryPointId = Objects.requireNonNull(lastRecoveryPointId);
             return this;
         }
 
-        public Builder setLastRecoveryPointReceived(String lastRecoveryPointReceived) {
+        public Builder lastRecoveryPointReceived(String lastRecoveryPointReceived) {
             this.lastRecoveryPointReceived = Objects.requireNonNull(lastRecoveryPointReceived);
             return this;
         }
 
-        public Builder setLastRpoCalculatedTime(String lastRpoCalculatedTime) {
+        public Builder lastRpoCalculatedTime(String lastRpoCalculatedTime) {
             this.lastRpoCalculatedTime = Objects.requireNonNull(lastRpoCalculatedTime);
             return this;
         }
 
-        public Builder setLastRpoInSeconds(Double lastRpoInSeconds) {
+        public Builder lastRpoInSeconds(Double lastRpoInSeconds) {
             this.lastRpoInSeconds = Objects.requireNonNull(lastRpoInSeconds);
             return this;
         }
 
-        public Builder setLicenseType(String licenseType) {
+        public Builder licenseType(String licenseType) {
             this.licenseType = Objects.requireNonNull(licenseType);
             return this;
         }
 
-        public Builder setMobilityAgentDetails(InMageRcmMobilityAgentDetailsResponse mobilityAgentDetails) {
+        public Builder mobilityAgentDetails(InMageRcmMobilityAgentDetailsResponse mobilityAgentDetails) {
             this.mobilityAgentDetails = Objects.requireNonNull(mobilityAgentDetails);
             return this;
         }
 
-        public Builder setMultiVmGroupName(String multiVmGroupName) {
+        public Builder multiVmGroupName(String multiVmGroupName) {
             this.multiVmGroupName = Objects.requireNonNull(multiVmGroupName);
             return this;
         }
 
-        public Builder setOsType(String osType) {
+        public Builder osType(String osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
 
-        public Builder setProcessServerId(String processServerId) {
+        public Builder processServerId(String processServerId) {
             this.processServerId = Objects.requireNonNull(processServerId);
             return this;
         }
 
-        public Builder setProcessServerName(String processServerName) {
+        public Builder processServerName(String processServerName) {
             this.processServerName = Objects.requireNonNull(processServerName);
             return this;
         }
 
-        public Builder setProcessorCoreCount(Integer processorCoreCount) {
+        public Builder processorCoreCount(Integer processorCoreCount) {
             this.processorCoreCount = Objects.requireNonNull(processorCoreCount);
             return this;
         }
 
-        public Builder setProtectedDisks(List<InMageRcmProtectedDiskDetailsResponse> protectedDisks) {
+        public Builder protectedDisks(List<InMageRcmProtectedDiskDetailsResponse> protectedDisks) {
             this.protectedDisks = Objects.requireNonNull(protectedDisks);
             return this;
         }
 
-        public Builder setResyncProcessedBytes(Double resyncProcessedBytes) {
+        public Builder resyncProcessedBytes(Double resyncProcessedBytes) {
             this.resyncProcessedBytes = Objects.requireNonNull(resyncProcessedBytes);
             return this;
         }
 
-        public Builder setResyncProgressPercentage(Integer resyncProgressPercentage) {
+        public Builder resyncProgressPercentage(Integer resyncProgressPercentage) {
             this.resyncProgressPercentage = Objects.requireNonNull(resyncProgressPercentage);
             return this;
         }
 
-        public Builder setResyncRequired(String resyncRequired) {
+        public Builder resyncRequired(String resyncRequired) {
             this.resyncRequired = Objects.requireNonNull(resyncRequired);
             return this;
         }
 
-        public Builder setResyncState(String resyncState) {
+        public Builder resyncState(String resyncState) {
             this.resyncState = Objects.requireNonNull(resyncState);
             return this;
         }
 
-        public Builder setResyncTransferredBytes(Double resyncTransferredBytes) {
+        public Builder resyncTransferredBytes(Double resyncTransferredBytes) {
             this.resyncTransferredBytes = Objects.requireNonNull(resyncTransferredBytes);
             return this;
         }
 
-        public Builder setRunAsAccountId(String runAsAccountId) {
+        public Builder runAsAccountId(String runAsAccountId) {
             this.runAsAccountId = Objects.requireNonNull(runAsAccountId);
             return this;
         }
 
-        public Builder setTargetAvailabilitySetId(String targetAvailabilitySetId) {
+        public Builder targetAvailabilitySetId(String targetAvailabilitySetId) {
             this.targetAvailabilitySetId = Objects.requireNonNull(targetAvailabilitySetId);
             return this;
         }
 
-        public Builder setTargetAvailabilityZone(String targetAvailabilityZone) {
+        public Builder targetAvailabilityZone(String targetAvailabilityZone) {
             this.targetAvailabilityZone = Objects.requireNonNull(targetAvailabilityZone);
             return this;
         }
 
-        public Builder setTargetBootDiagnosticsStorageAccountId(String targetBootDiagnosticsStorageAccountId) {
+        public Builder targetBootDiagnosticsStorageAccountId(String targetBootDiagnosticsStorageAccountId) {
             this.targetBootDiagnosticsStorageAccountId = Objects.requireNonNull(targetBootDiagnosticsStorageAccountId);
             return this;
         }
 
-        public Builder setTargetGeneration(String targetGeneration) {
+        public Builder targetGeneration(String targetGeneration) {
             this.targetGeneration = Objects.requireNonNull(targetGeneration);
             return this;
         }
 
-        public Builder setTargetNetworkId(String targetNetworkId) {
+        public Builder targetNetworkId(String targetNetworkId) {
             this.targetNetworkId = Objects.requireNonNull(targetNetworkId);
             return this;
         }
 
-        public Builder setTargetProximityPlacementGroupId(String targetProximityPlacementGroupId) {
+        public Builder targetProximityPlacementGroupId(String targetProximityPlacementGroupId) {
             this.targetProximityPlacementGroupId = Objects.requireNonNull(targetProximityPlacementGroupId);
             return this;
         }
 
-        public Builder setTargetResourceGroupId(String targetResourceGroupId) {
+        public Builder targetResourceGroupId(String targetResourceGroupId) {
             this.targetResourceGroupId = Objects.requireNonNull(targetResourceGroupId);
             return this;
         }
 
-        public Builder setTargetVmName(String targetVmName) {
+        public Builder targetVmName(String targetVmName) {
             this.targetVmName = Objects.requireNonNull(targetVmName);
             return this;
         }
 
-        public Builder setTargetVmSize(String targetVmSize) {
+        public Builder targetVmSize(String targetVmSize) {
             this.targetVmSize = Objects.requireNonNull(targetVmSize);
             return this;
         }
 
-        public Builder setTestNetworkId(String testNetworkId) {
+        public Builder testNetworkId(String testNetworkId) {
             this.testNetworkId = Objects.requireNonNull(testNetworkId);
             return this;
         }
 
-        public Builder setVmNics(List<InMageRcmNicDetailsResponse> vmNics) {
+        public Builder vmNics(List<InMageRcmNicDetailsResponse> vmNics) {
             this.vmNics = Objects.requireNonNull(vmNics);
             return this;
         }

@@ -58,7 +58,7 @@ public final class ClusterReleaseChannel {
     	      this.channel = defaults.channel;
         }
 
-        public Builder setChannel(String channel) {
+        public Builder channel(String channel) {
             this.channel = Objects.requireNonNull(channel);
             return this;
         }

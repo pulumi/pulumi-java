@@ -48,7 +48,7 @@ public final class VirtualNodeSpecListenerConnectionPoolHttp2 {
     	      this.maxRequests = defaults.maxRequests;
         }
 
-        public Builder setMaxRequests(Integer maxRequests) {
+        public Builder maxRequests(Integer maxRequests) {
             this.maxRequests = Objects.requireNonNull(maxRequests);
             return this;
         }

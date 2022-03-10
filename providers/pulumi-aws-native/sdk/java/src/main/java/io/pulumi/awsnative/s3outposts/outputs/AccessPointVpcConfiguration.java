@@ -50,7 +50,7 @@ public final class AccessPointVpcConfiguration {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = vpcId;
             return this;
         }

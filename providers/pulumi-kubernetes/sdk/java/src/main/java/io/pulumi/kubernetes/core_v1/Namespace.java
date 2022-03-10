@@ -140,8 +140,8 @@ public class Namespace extends io.pulumi.resources.CustomResource {
     private static NamespaceArgs makeArgs(@Nullable NamespaceArgs args) {
         var builder = args == null ? NamespaceArgs.builder() : NamespaceArgs.builder(args);
         return builder
-            .setApiVersion("v1")
-            .setKind("Namespace")
+            .apiVersion("v1")
+            .kind("Namespace")
             .build();
     }
 

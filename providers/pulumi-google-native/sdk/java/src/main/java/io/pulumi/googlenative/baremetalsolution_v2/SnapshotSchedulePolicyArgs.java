@@ -141,72 +141,72 @@ public final class SnapshotSchedulePolicyArgs extends io.pulumi.resources.Resour
     	      this.snapshotSchedulePolicyId = defaults.snapshotSchedulePolicyId;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSchedules(@Nullable Input<List<ScheduleArgs>> schedules) {
+        public Builder schedules(@Nullable Input<List<ScheduleArgs>> schedules) {
             this.schedules = schedules;
             return this;
         }
 
-        public Builder setSchedules(@Nullable List<ScheduleArgs> schedules) {
+        public Builder schedules(@Nullable List<ScheduleArgs> schedules) {
             this.schedules = Input.ofNullable(schedules);
             return this;
         }
 
-        public Builder setSnapshotSchedulePolicyId(Input<String> snapshotSchedulePolicyId) {
+        public Builder snapshotSchedulePolicyId(Input<String> snapshotSchedulePolicyId) {
             this.snapshotSchedulePolicyId = Objects.requireNonNull(snapshotSchedulePolicyId);
             return this;
         }
 
-        public Builder setSnapshotSchedulePolicyId(String snapshotSchedulePolicyId) {
+        public Builder snapshotSchedulePolicyId(String snapshotSchedulePolicyId) {
             this.snapshotSchedulePolicyId = Input.of(Objects.requireNonNull(snapshotSchedulePolicyId));
             return this;
         }

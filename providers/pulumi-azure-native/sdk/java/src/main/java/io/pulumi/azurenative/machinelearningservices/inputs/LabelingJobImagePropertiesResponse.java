@@ -70,12 +70,12 @@ public final class LabelingJobImagePropertiesResponse extends io.pulumi.resource
     	      this.mediaType = defaults.mediaType;
         }
 
-        public Builder setAnnotationType(@Nullable String annotationType) {
+        public Builder annotationType(@Nullable String annotationType) {
             this.annotationType = annotationType;
             return this;
         }
 
-        public Builder setMediaType(String mediaType) {
+        public Builder mediaType(String mediaType) {
             this.mediaType = Objects.requireNonNull(mediaType);
             return this;
         }

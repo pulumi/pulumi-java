@@ -84,17 +84,17 @@ public final class ListVirtualMachineApplicableSchedulesArgs extends io.pulumi.r
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setLabName(String labName) {
+        public Builder labName(String labName) {
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

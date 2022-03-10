@@ -89,17 +89,17 @@ public final class GetWorkloadIdentityPoolProviderArgs extends io.pulumi.resourc
     	      this.workloadIdentityPoolProviderId = defaults.workloadIdentityPoolProviderId;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setWorkloadIdentityPoolId(String workloadIdentityPoolId) {
+        public Builder workloadIdentityPoolId(String workloadIdentityPoolId) {
             this.workloadIdentityPoolId = Objects.requireNonNull(workloadIdentityPoolId);
             return this;
         }
 
-        public Builder setWorkloadIdentityPoolProviderId(String workloadIdentityPoolProviderId) {
+        public Builder workloadIdentityPoolProviderId(String workloadIdentityPoolProviderId) {
             this.workloadIdentityPoolProviderId = Objects.requireNonNull(workloadIdentityPoolProviderId);
             return this;
         }

@@ -107,42 +107,42 @@ public final class GetUserTablesSqlSyncTaskInputArgs extends io.pulumi.resources
     	      this.targetConnectionInfo = defaults.targetConnectionInfo;
         }
 
-        public Builder setSelectedSourceDatabases(Input<List<String>> selectedSourceDatabases) {
+        public Builder selectedSourceDatabases(Input<List<String>> selectedSourceDatabases) {
             this.selectedSourceDatabases = Objects.requireNonNull(selectedSourceDatabases);
             return this;
         }
 
-        public Builder setSelectedSourceDatabases(List<String> selectedSourceDatabases) {
+        public Builder selectedSourceDatabases(List<String> selectedSourceDatabases) {
             this.selectedSourceDatabases = Input.of(Objects.requireNonNull(selectedSourceDatabases));
             return this;
         }
 
-        public Builder setSelectedTargetDatabases(Input<List<String>> selectedTargetDatabases) {
+        public Builder selectedTargetDatabases(Input<List<String>> selectedTargetDatabases) {
             this.selectedTargetDatabases = Objects.requireNonNull(selectedTargetDatabases);
             return this;
         }
 
-        public Builder setSelectedTargetDatabases(List<String> selectedTargetDatabases) {
+        public Builder selectedTargetDatabases(List<String> selectedTargetDatabases) {
             this.selectedTargetDatabases = Input.of(Objects.requireNonNull(selectedTargetDatabases));
             return this;
         }
 
-        public Builder setSourceConnectionInfo(Input<SqlConnectionInfoArgs> sourceConnectionInfo) {
+        public Builder sourceConnectionInfo(Input<SqlConnectionInfoArgs> sourceConnectionInfo) {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
 
-        public Builder setSourceConnectionInfo(SqlConnectionInfoArgs sourceConnectionInfo) {
+        public Builder sourceConnectionInfo(SqlConnectionInfoArgs sourceConnectionInfo) {
             this.sourceConnectionInfo = Input.of(Objects.requireNonNull(sourceConnectionInfo));
             return this;
         }
 
-        public Builder setTargetConnectionInfo(Input<SqlConnectionInfoArgs> targetConnectionInfo) {
+        public Builder targetConnectionInfo(Input<SqlConnectionInfoArgs> targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
 
-        public Builder setTargetConnectionInfo(SqlConnectionInfoArgs targetConnectionInfo) {
+        public Builder targetConnectionInfo(SqlConnectionInfoArgs targetConnectionInfo) {
             this.targetConnectionInfo = Input.of(Objects.requireNonNull(targetConnectionInfo));
             return this;
         }

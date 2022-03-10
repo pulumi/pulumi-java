@@ -138,32 +138,32 @@ public final class OrganizationResourcePropertiesResponseOfferDetail extends io.
     	      this.termUnit = defaults.termUnit;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setPlanId(@Nullable String planId) {
+        public Builder planId(@Nullable String planId) {
             this.planId = planId;
             return this;
         }
 
-        public Builder setPlanName(@Nullable String planName) {
+        public Builder planName(@Nullable String planName) {
             this.planName = planName;
             return this;
         }
 
-        public Builder setPublisherId(@Nullable String publisherId) {
+        public Builder publisherId(@Nullable String publisherId) {
             this.publisherId = publisherId;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTermUnit(@Nullable String termUnit) {
+        public Builder termUnit(@Nullable String termUnit) {
             this.termUnit = termUnit;
             return this;
         }

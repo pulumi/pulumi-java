@@ -42,7 +42,7 @@ public final class FieldLevelEncryptionProfileEncryptionEntities {
     	      this.items = defaults.items;
         }
 
-        public Builder setItems(@Nullable List<FieldLevelEncryptionProfileEncryptionEntitiesItem> items) {
+        public Builder items(@Nullable List<FieldLevelEncryptionProfileEncryptionEntitiesItem> items) {
             this.items = items;
             return this;
         }

@@ -71,12 +71,12 @@ public final class TriggerBuildSecret {
     	      this.secretEnv = defaults.secretEnv;
         }
 
-        public Builder setKmsKeyName(String kmsKeyName) {
+        public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
 
-        public Builder setSecretEnv(@Nullable Map<String,String> secretEnv) {
+        public Builder secretEnv(@Nullable Map<String,String> secretEnv) {
             this.secretEnv = secretEnv;
             return this;
         }

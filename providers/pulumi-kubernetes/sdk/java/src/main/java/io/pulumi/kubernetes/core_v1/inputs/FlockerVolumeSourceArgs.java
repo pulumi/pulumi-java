@@ -74,22 +74,22 @@ public final class FlockerVolumeSourceArgs extends io.pulumi.resources.ResourceA
     	      this.datasetUUID = defaults.datasetUUID;
         }
 
-        public Builder setDatasetName(@Nullable Input<String> datasetName) {
+        public Builder datasetName(@Nullable Input<String> datasetName) {
             this.datasetName = datasetName;
             return this;
         }
 
-        public Builder setDatasetName(@Nullable String datasetName) {
+        public Builder datasetName(@Nullable String datasetName) {
             this.datasetName = Input.ofNullable(datasetName);
             return this;
         }
 
-        public Builder setDatasetUUID(@Nullable Input<String> datasetUUID) {
+        public Builder datasetUUID(@Nullable Input<String> datasetUUID) {
             this.datasetUUID = datasetUUID;
             return this;
         }
 
-        public Builder setDatasetUUID(@Nullable String datasetUUID) {
+        public Builder datasetUUID(@Nullable String datasetUUID) {
             this.datasetUUID = Input.ofNullable(datasetUUID);
             return this;
         }

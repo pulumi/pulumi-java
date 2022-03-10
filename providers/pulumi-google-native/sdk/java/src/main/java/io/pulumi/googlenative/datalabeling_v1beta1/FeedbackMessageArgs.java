@@ -176,102 +176,102 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
     	      this.requesterFeedbackMetadata = defaults.requesterFeedbackMetadata;
         }
 
-        public Builder setAnnotatedDatasetId(Input<String> annotatedDatasetId) {
+        public Builder annotatedDatasetId(Input<String> annotatedDatasetId) {
             this.annotatedDatasetId = Objects.requireNonNull(annotatedDatasetId);
             return this;
         }
 
-        public Builder setAnnotatedDatasetId(String annotatedDatasetId) {
+        public Builder annotatedDatasetId(String annotatedDatasetId) {
             this.annotatedDatasetId = Input.of(Objects.requireNonNull(annotatedDatasetId));
             return this;
         }
 
-        public Builder setBody(@Nullable Input<String> body) {
+        public Builder body(@Nullable Input<String> body) {
             this.body = body;
             return this;
         }
 
-        public Builder setBody(@Nullable String body) {
+        public Builder body(@Nullable String body) {
             this.body = Input.ofNullable(body);
             return this;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setDatasetId(Input<String> datasetId) {
+        public Builder datasetId(Input<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
-        public Builder setDatasetId(String datasetId) {
+        public Builder datasetId(String datasetId) {
             this.datasetId = Input.of(Objects.requireNonNull(datasetId));
             return this;
         }
 
-        public Builder setFeedbackThreadId(Input<String> feedbackThreadId) {
+        public Builder feedbackThreadId(Input<String> feedbackThreadId) {
             this.feedbackThreadId = Objects.requireNonNull(feedbackThreadId);
             return this;
         }
 
-        public Builder setFeedbackThreadId(String feedbackThreadId) {
+        public Builder feedbackThreadId(String feedbackThreadId) {
             this.feedbackThreadId = Input.of(Objects.requireNonNull(feedbackThreadId));
             return this;
         }
 
-        public Builder setImage(@Nullable Input<String> image) {
+        public Builder image(@Nullable Input<String> image) {
             this.image = image;
             return this;
         }
 
-        public Builder setImage(@Nullable String image) {
+        public Builder image(@Nullable String image) {
             this.image = Input.ofNullable(image);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOperatorFeedbackMetadata(@Nullable Input<GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs> operatorFeedbackMetadata) {
+        public Builder operatorFeedbackMetadata(@Nullable Input<GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs> operatorFeedbackMetadata) {
             this.operatorFeedbackMetadata = operatorFeedbackMetadata;
             return this;
         }
 
-        public Builder setOperatorFeedbackMetadata(@Nullable GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs operatorFeedbackMetadata) {
+        public Builder operatorFeedbackMetadata(@Nullable GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs operatorFeedbackMetadata) {
             this.operatorFeedbackMetadata = Input.ofNullable(operatorFeedbackMetadata);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRequesterFeedbackMetadata(@Nullable Input<GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs> requesterFeedbackMetadata) {
+        public Builder requesterFeedbackMetadata(@Nullable Input<GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs> requesterFeedbackMetadata) {
             this.requesterFeedbackMetadata = requesterFeedbackMetadata;
             return this;
         }
 
-        public Builder setRequesterFeedbackMetadata(@Nullable GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs requesterFeedbackMetadata) {
+        public Builder requesterFeedbackMetadata(@Nullable GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs requesterFeedbackMetadata) {
             this.requesterFeedbackMetadata = Input.ofNullable(requesterFeedbackMetadata);
             return this;
         }

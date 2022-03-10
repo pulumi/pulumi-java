@@ -419,232 +419,232 @@ public final class JobConfigurationQueryArgs extends io.pulumi.resources.Resourc
     	      this.writeDisposition = defaults.writeDisposition;
         }
 
-        public Builder setAllowLargeResults(@Nullable Input<Boolean> allowLargeResults) {
+        public Builder allowLargeResults(@Nullable Input<Boolean> allowLargeResults) {
             this.allowLargeResults = allowLargeResults;
             return this;
         }
 
-        public Builder setAllowLargeResults(@Nullable Boolean allowLargeResults) {
+        public Builder allowLargeResults(@Nullable Boolean allowLargeResults) {
             this.allowLargeResults = Input.ofNullable(allowLargeResults);
             return this;
         }
 
-        public Builder setClustering(@Nullable Input<ClusteringArgs> clustering) {
+        public Builder clustering(@Nullable Input<ClusteringArgs> clustering) {
             this.clustering = clustering;
             return this;
         }
 
-        public Builder setClustering(@Nullable ClusteringArgs clustering) {
+        public Builder clustering(@Nullable ClusteringArgs clustering) {
             this.clustering = Input.ofNullable(clustering);
             return this;
         }
 
-        public Builder setConnectionProperties(@Nullable Input<List<ConnectionPropertyArgs>> connectionProperties) {
+        public Builder connectionProperties(@Nullable Input<List<ConnectionPropertyArgs>> connectionProperties) {
             this.connectionProperties = connectionProperties;
             return this;
         }
 
-        public Builder setConnectionProperties(@Nullable List<ConnectionPropertyArgs> connectionProperties) {
+        public Builder connectionProperties(@Nullable List<ConnectionPropertyArgs> connectionProperties) {
             this.connectionProperties = Input.ofNullable(connectionProperties);
             return this;
         }
 
-        public Builder setCreateDisposition(@Nullable Input<String> createDisposition) {
+        public Builder createDisposition(@Nullable Input<String> createDisposition) {
             this.createDisposition = createDisposition;
             return this;
         }
 
-        public Builder setCreateDisposition(@Nullable String createDisposition) {
+        public Builder createDisposition(@Nullable String createDisposition) {
             this.createDisposition = Input.ofNullable(createDisposition);
             return this;
         }
 
-        public Builder setCreateSession(@Nullable Input<Boolean> createSession) {
+        public Builder createSession(@Nullable Input<Boolean> createSession) {
             this.createSession = createSession;
             return this;
         }
 
-        public Builder setCreateSession(@Nullable Boolean createSession) {
+        public Builder createSession(@Nullable Boolean createSession) {
             this.createSession = Input.ofNullable(createSession);
             return this;
         }
 
-        public Builder setDefaultDataset(@Nullable Input<DatasetReferenceArgs> defaultDataset) {
+        public Builder defaultDataset(@Nullable Input<DatasetReferenceArgs> defaultDataset) {
             this.defaultDataset = defaultDataset;
             return this;
         }
 
-        public Builder setDefaultDataset(@Nullable DatasetReferenceArgs defaultDataset) {
+        public Builder defaultDataset(@Nullable DatasetReferenceArgs defaultDataset) {
             this.defaultDataset = Input.ofNullable(defaultDataset);
             return this;
         }
 
-        public Builder setDestinationEncryptionConfiguration(@Nullable Input<EncryptionConfigurationArgs> destinationEncryptionConfiguration) {
+        public Builder destinationEncryptionConfiguration(@Nullable Input<EncryptionConfigurationArgs> destinationEncryptionConfiguration) {
             this.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
             return this;
         }
 
-        public Builder setDestinationEncryptionConfiguration(@Nullable EncryptionConfigurationArgs destinationEncryptionConfiguration) {
+        public Builder destinationEncryptionConfiguration(@Nullable EncryptionConfigurationArgs destinationEncryptionConfiguration) {
             this.destinationEncryptionConfiguration = Input.ofNullable(destinationEncryptionConfiguration);
             return this;
         }
 
-        public Builder setDestinationTable(@Nullable Input<TableReferenceArgs> destinationTable) {
+        public Builder destinationTable(@Nullable Input<TableReferenceArgs> destinationTable) {
             this.destinationTable = destinationTable;
             return this;
         }
 
-        public Builder setDestinationTable(@Nullable TableReferenceArgs destinationTable) {
+        public Builder destinationTable(@Nullable TableReferenceArgs destinationTable) {
             this.destinationTable = Input.ofNullable(destinationTable);
             return this;
         }
 
-        public Builder setFlattenResults(@Nullable Input<Boolean> flattenResults) {
+        public Builder flattenResults(@Nullable Input<Boolean> flattenResults) {
             this.flattenResults = flattenResults;
             return this;
         }
 
-        public Builder setFlattenResults(@Nullable Boolean flattenResults) {
+        public Builder flattenResults(@Nullable Boolean flattenResults) {
             this.flattenResults = Input.ofNullable(flattenResults);
             return this;
         }
 
-        public Builder setMaximumBillingTier(@Nullable Input<Integer> maximumBillingTier) {
+        public Builder maximumBillingTier(@Nullable Input<Integer> maximumBillingTier) {
             this.maximumBillingTier = maximumBillingTier;
             return this;
         }
 
-        public Builder setMaximumBillingTier(@Nullable Integer maximumBillingTier) {
+        public Builder maximumBillingTier(@Nullable Integer maximumBillingTier) {
             this.maximumBillingTier = Input.ofNullable(maximumBillingTier);
             return this;
         }
 
-        public Builder setMaximumBytesBilled(@Nullable Input<String> maximumBytesBilled) {
+        public Builder maximumBytesBilled(@Nullable Input<String> maximumBytesBilled) {
             this.maximumBytesBilled = maximumBytesBilled;
             return this;
         }
 
-        public Builder setMaximumBytesBilled(@Nullable String maximumBytesBilled) {
+        public Builder maximumBytesBilled(@Nullable String maximumBytesBilled) {
             this.maximumBytesBilled = Input.ofNullable(maximumBytesBilled);
             return this;
         }
 
-        public Builder setParameterMode(@Nullable Input<String> parameterMode) {
+        public Builder parameterMode(@Nullable Input<String> parameterMode) {
             this.parameterMode = parameterMode;
             return this;
         }
 
-        public Builder setParameterMode(@Nullable String parameterMode) {
+        public Builder parameterMode(@Nullable String parameterMode) {
             this.parameterMode = Input.ofNullable(parameterMode);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<String> priority) {
+        public Builder priority(@Nullable Input<String> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable String priority) {
+        public Builder priority(@Nullable String priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setQuery(@Nullable Input<String> query) {
+        public Builder query(@Nullable Input<String> query) {
             this.query = query;
             return this;
         }
 
-        public Builder setQuery(@Nullable String query) {
+        public Builder query(@Nullable String query) {
             this.query = Input.ofNullable(query);
             return this;
         }
 
-        public Builder setQueryParameters(@Nullable Input<List<QueryParameterArgs>> queryParameters) {
+        public Builder queryParameters(@Nullable Input<List<QueryParameterArgs>> queryParameters) {
             this.queryParameters = queryParameters;
             return this;
         }
 
-        public Builder setQueryParameters(@Nullable List<QueryParameterArgs> queryParameters) {
+        public Builder queryParameters(@Nullable List<QueryParameterArgs> queryParameters) {
             this.queryParameters = Input.ofNullable(queryParameters);
             return this;
         }
 
-        public Builder setRangePartitioning(@Nullable Input<RangePartitioningArgs> rangePartitioning) {
+        public Builder rangePartitioning(@Nullable Input<RangePartitioningArgs> rangePartitioning) {
             this.rangePartitioning = rangePartitioning;
             return this;
         }
 
-        public Builder setRangePartitioning(@Nullable RangePartitioningArgs rangePartitioning) {
+        public Builder rangePartitioning(@Nullable RangePartitioningArgs rangePartitioning) {
             this.rangePartitioning = Input.ofNullable(rangePartitioning);
             return this;
         }
 
-        public Builder setSchemaUpdateOptions(@Nullable Input<List<String>> schemaUpdateOptions) {
+        public Builder schemaUpdateOptions(@Nullable Input<List<String>> schemaUpdateOptions) {
             this.schemaUpdateOptions = schemaUpdateOptions;
             return this;
         }
 
-        public Builder setSchemaUpdateOptions(@Nullable List<String> schemaUpdateOptions) {
+        public Builder schemaUpdateOptions(@Nullable List<String> schemaUpdateOptions) {
             this.schemaUpdateOptions = Input.ofNullable(schemaUpdateOptions);
             return this;
         }
 
-        public Builder setTableDefinitions(@Nullable Input<Map<String,String>> tableDefinitions) {
+        public Builder tableDefinitions(@Nullable Input<Map<String,String>> tableDefinitions) {
             this.tableDefinitions = tableDefinitions;
             return this;
         }
 
-        public Builder setTableDefinitions(@Nullable Map<String,String> tableDefinitions) {
+        public Builder tableDefinitions(@Nullable Map<String,String> tableDefinitions) {
             this.tableDefinitions = Input.ofNullable(tableDefinitions);
             return this;
         }
 
-        public Builder setTimePartitioning(@Nullable Input<TimePartitioningArgs> timePartitioning) {
+        public Builder timePartitioning(@Nullable Input<TimePartitioningArgs> timePartitioning) {
             this.timePartitioning = timePartitioning;
             return this;
         }
 
-        public Builder setTimePartitioning(@Nullable TimePartitioningArgs timePartitioning) {
+        public Builder timePartitioning(@Nullable TimePartitioningArgs timePartitioning) {
             this.timePartitioning = Input.ofNullable(timePartitioning);
             return this;
         }
 
-        public Builder setUseLegacySql(@Nullable Input<Boolean> useLegacySql) {
+        public Builder useLegacySql(@Nullable Input<Boolean> useLegacySql) {
             this.useLegacySql = useLegacySql;
             return this;
         }
 
-        public Builder setUseLegacySql(@Nullable Boolean useLegacySql) {
+        public Builder useLegacySql(@Nullable Boolean useLegacySql) {
             this.useLegacySql = Input.ofNullable(useLegacySql);
             return this;
         }
 
-        public Builder setUseQueryCache(@Nullable Input<Boolean> useQueryCache) {
+        public Builder useQueryCache(@Nullable Input<Boolean> useQueryCache) {
             this.useQueryCache = useQueryCache;
             return this;
         }
 
-        public Builder setUseQueryCache(@Nullable Boolean useQueryCache) {
+        public Builder useQueryCache(@Nullable Boolean useQueryCache) {
             this.useQueryCache = Input.ofNullable(useQueryCache);
             return this;
         }
 
-        public Builder setUserDefinedFunctionResources(@Nullable Input<List<UserDefinedFunctionResourceArgs>> userDefinedFunctionResources) {
+        public Builder userDefinedFunctionResources(@Nullable Input<List<UserDefinedFunctionResourceArgs>> userDefinedFunctionResources) {
             this.userDefinedFunctionResources = userDefinedFunctionResources;
             return this;
         }
 
-        public Builder setUserDefinedFunctionResources(@Nullable List<UserDefinedFunctionResourceArgs> userDefinedFunctionResources) {
+        public Builder userDefinedFunctionResources(@Nullable List<UserDefinedFunctionResourceArgs> userDefinedFunctionResources) {
             this.userDefinedFunctionResources = Input.ofNullable(userDefinedFunctionResources);
             return this;
         }
 
-        public Builder setWriteDisposition(@Nullable Input<String> writeDisposition) {
+        public Builder writeDisposition(@Nullable Input<String> writeDisposition) {
             this.writeDisposition = writeDisposition;
             return this;
         }
 
-        public Builder setWriteDisposition(@Nullable String writeDisposition) {
+        public Builder writeDisposition(@Nullable String writeDisposition) {
             this.writeDisposition = Input.ofNullable(writeDisposition);
             return this;
         }

@@ -58,12 +58,12 @@ public final class LoggingComponentConfigArgs extends io.pulumi.resources.Resour
     	      this.enableComponents = defaults.enableComponents;
         }
 
-        public Builder setEnableComponents(@Nullable Input<List<LoggingComponentConfigEnableComponentsItem>> enableComponents) {
+        public Builder enableComponents(@Nullable Input<List<LoggingComponentConfigEnableComponentsItem>> enableComponents) {
             this.enableComponents = enableComponents;
             return this;
         }
 
-        public Builder setEnableComponents(@Nullable List<LoggingComponentConfigEnableComponentsItem> enableComponents) {
+        public Builder enableComponents(@Nullable List<LoggingComponentConfigEnableComponentsItem> enableComponents) {
             this.enableComponents = Input.ofNullable(enableComponents);
             return this;
         }

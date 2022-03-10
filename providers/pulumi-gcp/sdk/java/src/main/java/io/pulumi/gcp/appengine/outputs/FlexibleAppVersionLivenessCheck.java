@@ -150,37 +150,37 @@ public final class FlexibleAppVersionLivenessCheck {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setCheckInterval(@Nullable String checkInterval) {
+        public Builder checkInterval(@Nullable String checkInterval) {
             this.checkInterval = checkInterval;
             return this;
         }
 
-        public Builder setFailureThreshold(@Nullable Double failureThreshold) {
+        public Builder failureThreshold(@Nullable Double failureThreshold) {
             this.failureThreshold = failureThreshold;
             return this;
         }
 
-        public Builder setHost(@Nullable String host) {
+        public Builder host(@Nullable String host) {
             this.host = host;
             return this;
         }
 
-        public Builder setInitialDelay(@Nullable String initialDelay) {
+        public Builder initialDelay(@Nullable String initialDelay) {
             this.initialDelay = initialDelay;
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setSuccessThreshold(@Nullable Double successThreshold) {
+        public Builder successThreshold(@Nullable Double successThreshold) {
             this.successThreshold = successThreshold;
             return this;
         }
 
-        public Builder setTimeout(@Nullable String timeout) {
+        public Builder timeout(@Nullable String timeout) {
             this.timeout = timeout;
             return this;
         }

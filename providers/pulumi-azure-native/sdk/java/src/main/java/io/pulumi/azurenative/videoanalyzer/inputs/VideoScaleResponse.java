@@ -90,17 +90,17 @@ public final class VideoScaleResponse extends io.pulumi.resources.InvokeArgs {
     	      this.width = defaults.width;
         }
 
-        public Builder setHeight(@Nullable String height) {
+        public Builder height(@Nullable String height) {
             this.height = height;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setWidth(@Nullable String width) {
+        public Builder width(@Nullable String width) {
             this.width = width;
             return this;
         }

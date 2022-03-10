@@ -76,27 +76,27 @@ public final class ServiceEndpointSpecPort {
     	      this.targetPort = defaults.targetPort;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setPublishMode(@Nullable String publishMode) {
+        public Builder publishMode(@Nullable String publishMode) {
             this.publishMode = publishMode;
             return this;
         }
 
-        public Builder setPublishedPort(@Nullable Integer publishedPort) {
+        public Builder publishedPort(@Nullable Integer publishedPort) {
             this.publishedPort = publishedPort;
             return this;
         }
 
-        public Builder setTargetPort(Integer targetPort) {
+        public Builder targetPort(Integer targetPort) {
             this.targetPort = Objects.requireNonNull(targetPort);
             return this;
         }

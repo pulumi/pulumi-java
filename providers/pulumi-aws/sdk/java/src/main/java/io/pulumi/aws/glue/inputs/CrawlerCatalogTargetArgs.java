@@ -70,22 +70,22 @@ public final class CrawlerCatalogTargetArgs extends io.pulumi.resources.Resource
     	      this.tables = defaults.tables;
         }
 
-        public Builder setDatabaseName(Input<String> databaseName) {
+        public Builder databaseName(Input<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Input.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder setTables(Input<List<String>> tables) {
+        public Builder tables(Input<List<String>> tables) {
             this.tables = Objects.requireNonNull(tables);
             return this;
         }
 
-        public Builder setTables(List<String> tables) {
+        public Builder tables(List<String> tables) {
             this.tables = Input.of(Objects.requireNonNull(tables));
             return this;
         }

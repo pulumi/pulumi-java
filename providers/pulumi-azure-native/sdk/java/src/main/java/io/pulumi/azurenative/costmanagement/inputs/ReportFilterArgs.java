@@ -123,52 +123,52 @@ public final class ReportFilterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tag = defaults.tag;
         }
 
-        public Builder setAnd(@Nullable Input<List<ReportFilterArgs>> and) {
+        public Builder and(@Nullable Input<List<ReportFilterArgs>> and) {
             this.and = and;
             return this;
         }
 
-        public Builder setAnd(@Nullable List<ReportFilterArgs> and) {
+        public Builder and(@Nullable List<ReportFilterArgs> and) {
             this.and = Input.ofNullable(and);
             return this;
         }
 
-        public Builder setDimension(@Nullable Input<ReportComparisonExpressionArgs> dimension) {
+        public Builder dimension(@Nullable Input<ReportComparisonExpressionArgs> dimension) {
             this.dimension = dimension;
             return this;
         }
 
-        public Builder setDimension(@Nullable ReportComparisonExpressionArgs dimension) {
+        public Builder dimension(@Nullable ReportComparisonExpressionArgs dimension) {
             this.dimension = Input.ofNullable(dimension);
             return this;
         }
 
-        public Builder setNot(@Nullable Input<ReportFilterArgs> not) {
+        public Builder not(@Nullable Input<ReportFilterArgs> not) {
             this.not = not;
             return this;
         }
 
-        public Builder setNot(@Nullable ReportFilterArgs not) {
+        public Builder not(@Nullable ReportFilterArgs not) {
             this.not = Input.ofNullable(not);
             return this;
         }
 
-        public Builder setOr(@Nullable Input<List<ReportFilterArgs>> or) {
+        public Builder or(@Nullable Input<List<ReportFilterArgs>> or) {
             this.or = or;
             return this;
         }
 
-        public Builder setOr(@Nullable List<ReportFilterArgs> or) {
+        public Builder or(@Nullable List<ReportFilterArgs> or) {
             this.or = Input.ofNullable(or);
             return this;
         }
 
-        public Builder setTag(@Nullable Input<ReportComparisonExpressionArgs> tag) {
+        public Builder tag(@Nullable Input<ReportComparisonExpressionArgs> tag) {
             this.tag = tag;
             return this;
         }
 
-        public Builder setTag(@Nullable ReportComparisonExpressionArgs tag) {
+        public Builder tag(@Nullable ReportComparisonExpressionArgs tag) {
             this.tag = Input.ofNullable(tag);
             return this;
         }

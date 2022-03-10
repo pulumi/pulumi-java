@@ -47,7 +47,7 @@ public final class GetFolderArgs extends io.pulumi.resources.InvokeArgs {
     	      this.folderId = defaults.folderId;
         }
 
-        public Builder setFolderId(String folderId) {
+        public Builder folderId(String folderId) {
             this.folderId = Objects.requireNonNull(folderId);
             return this;
         }

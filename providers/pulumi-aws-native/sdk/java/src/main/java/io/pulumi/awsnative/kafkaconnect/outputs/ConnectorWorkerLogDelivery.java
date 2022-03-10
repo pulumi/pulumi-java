@@ -61,17 +61,17 @@ public final class ConnectorWorkerLogDelivery {
     	      this.s3 = defaults.s3;
         }
 
-        public Builder setCloudWatchLogs(@Nullable ConnectorCloudWatchLogsLogDelivery cloudWatchLogs) {
+        public Builder cloudWatchLogs(@Nullable ConnectorCloudWatchLogsLogDelivery cloudWatchLogs) {
             this.cloudWatchLogs = cloudWatchLogs;
             return this;
         }
 
-        public Builder setFirehose(@Nullable ConnectorFirehoseLogDelivery firehose) {
+        public Builder firehose(@Nullable ConnectorFirehoseLogDelivery firehose) {
             this.firehose = firehose;
             return this;
         }
 
-        public Builder setS3(@Nullable ConnectorS3LogDelivery s3) {
+        public Builder s3(@Nullable ConnectorS3LogDelivery s3) {
             this.s3 = s3;
             return this;
         }

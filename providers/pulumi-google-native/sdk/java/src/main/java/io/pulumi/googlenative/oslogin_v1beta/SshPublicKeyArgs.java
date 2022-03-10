@@ -82,32 +82,32 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userId = defaults.userId;
         }
 
-        public Builder setExpirationTimeUsec(@Nullable Input<String> expirationTimeUsec) {
+        public Builder expirationTimeUsec(@Nullable Input<String> expirationTimeUsec) {
             this.expirationTimeUsec = expirationTimeUsec;
             return this;
         }
 
-        public Builder setExpirationTimeUsec(@Nullable String expirationTimeUsec) {
+        public Builder expirationTimeUsec(@Nullable String expirationTimeUsec) {
             this.expirationTimeUsec = Input.ofNullable(expirationTimeUsec);
             return this;
         }
 
-        public Builder setKey(@Nullable Input<String> key) {
+        public Builder key(@Nullable Input<String> key) {
             this.key = key;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = Input.ofNullable(key);
             return this;
         }
 
-        public Builder setUserId(Input<String> userId) {
+        public Builder userId(Input<String> userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
 
-        public Builder setUserId(String userId) {
+        public Builder userId(String userId) {
             this.userId = Input.of(Objects.requireNonNull(userId));
             return this;
         }

@@ -147,82 +147,82 @@ public final class BotAliasArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sentimentAnalysisSettings = defaults.sentimentAnalysisSettings;
         }
 
-        public Builder setBotAliasLocaleSettings(@Nullable Input<List<BotAliasLocaleSettingsItemArgs>> botAliasLocaleSettings) {
+        public Builder botAliasLocaleSettings(@Nullable Input<List<BotAliasLocaleSettingsItemArgs>> botAliasLocaleSettings) {
             this.botAliasLocaleSettings = botAliasLocaleSettings;
             return this;
         }
 
-        public Builder setBotAliasLocaleSettings(@Nullable List<BotAliasLocaleSettingsItemArgs> botAliasLocaleSettings) {
+        public Builder botAliasLocaleSettings(@Nullable List<BotAliasLocaleSettingsItemArgs> botAliasLocaleSettings) {
             this.botAliasLocaleSettings = Input.ofNullable(botAliasLocaleSettings);
             return this;
         }
 
-        public Builder setBotAliasName(@Nullable Input<String> botAliasName) {
+        public Builder botAliasName(@Nullable Input<String> botAliasName) {
             this.botAliasName = botAliasName;
             return this;
         }
 
-        public Builder setBotAliasName(@Nullable String botAliasName) {
+        public Builder botAliasName(@Nullable String botAliasName) {
             this.botAliasName = Input.ofNullable(botAliasName);
             return this;
         }
 
-        public Builder setBotAliasTags(@Nullable Input<List<BotAliasTagArgs>> botAliasTags) {
+        public Builder botAliasTags(@Nullable Input<List<BotAliasTagArgs>> botAliasTags) {
             this.botAliasTags = botAliasTags;
             return this;
         }
 
-        public Builder setBotAliasTags(@Nullable List<BotAliasTagArgs> botAliasTags) {
+        public Builder botAliasTags(@Nullable List<BotAliasTagArgs> botAliasTags) {
             this.botAliasTags = Input.ofNullable(botAliasTags);
             return this;
         }
 
-        public Builder setBotId(Input<String> botId) {
+        public Builder botId(Input<String> botId) {
             this.botId = Objects.requireNonNull(botId);
             return this;
         }
 
-        public Builder setBotId(String botId) {
+        public Builder botId(String botId) {
             this.botId = Input.of(Objects.requireNonNull(botId));
             return this;
         }
 
-        public Builder setBotVersion(@Nullable Input<String> botVersion) {
+        public Builder botVersion(@Nullable Input<String> botVersion) {
             this.botVersion = botVersion;
             return this;
         }
 
-        public Builder setBotVersion(@Nullable String botVersion) {
+        public Builder botVersion(@Nullable String botVersion) {
             this.botVersion = Input.ofNullable(botVersion);
             return this;
         }
 
-        public Builder setConversationLogSettings(@Nullable Input<BotAliasConversationLogSettingsArgs> conversationLogSettings) {
+        public Builder conversationLogSettings(@Nullable Input<BotAliasConversationLogSettingsArgs> conversationLogSettings) {
             this.conversationLogSettings = conversationLogSettings;
             return this;
         }
 
-        public Builder setConversationLogSettings(@Nullable BotAliasConversationLogSettingsArgs conversationLogSettings) {
+        public Builder conversationLogSettings(@Nullable BotAliasConversationLogSettingsArgs conversationLogSettings) {
             this.conversationLogSettings = Input.ofNullable(conversationLogSettings);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setSentimentAnalysisSettings(@Nullable Input<SentimentAnalysisSettingsPropertiesArgs> sentimentAnalysisSettings) {
+        public Builder sentimentAnalysisSettings(@Nullable Input<SentimentAnalysisSettingsPropertiesArgs> sentimentAnalysisSettings) {
             this.sentimentAnalysisSettings = sentimentAnalysisSettings;
             return this;
         }
 
-        public Builder setSentimentAnalysisSettings(@Nullable SentimentAnalysisSettingsPropertiesArgs sentimentAnalysisSettings) {
+        public Builder sentimentAnalysisSettings(@Nullable SentimentAnalysisSettingsPropertiesArgs sentimentAnalysisSettings) {
             this.sentimentAnalysisSettings = Input.ofNullable(sentimentAnalysisSettings);
             return this;
         }

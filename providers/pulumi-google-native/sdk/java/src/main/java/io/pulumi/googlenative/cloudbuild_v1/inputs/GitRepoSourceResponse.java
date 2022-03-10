@@ -88,17 +88,17 @@ public final class GitRepoSourceResponse extends io.pulumi.resources.InvokeArgs 
     	      this.uri = defaults.uri;
         }
 
-        public Builder setRef(String ref) {
+        public Builder ref(String ref) {
             this.ref = Objects.requireNonNull(ref);
             return this;
         }
 
-        public Builder setRepoType(String repoType) {
+        public Builder repoType(String repoType) {
             this.repoType = Objects.requireNonNull(repoType);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

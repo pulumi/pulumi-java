@@ -118,27 +118,27 @@ public final class ServiceCorsConfigurationInfoResponse {
     	      this.origins = defaults.origins;
         }
 
-        public Builder setAllowCredentials(@Nullable Boolean allowCredentials) {
+        public Builder allowCredentials(@Nullable Boolean allowCredentials) {
             this.allowCredentials = allowCredentials;
             return this;
         }
 
-        public Builder setHeaders(@Nullable List<String> headers) {
+        public Builder headers(@Nullable List<String> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setMaxAge(@Nullable Double maxAge) {
+        public Builder maxAge(@Nullable Double maxAge) {
             this.maxAge = maxAge;
             return this;
         }
 
-        public Builder setMethods(@Nullable List<String> methods) {
+        public Builder methods(@Nullable List<String> methods) {
             this.methods = methods;
             return this;
         }
 
-        public Builder setOrigins(@Nullable List<String> origins) {
+        public Builder origins(@Nullable List<String> origins) {
             this.origins = origins;
             return this;
         }

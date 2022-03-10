@@ -40,7 +40,7 @@ public final class WebACLNotStatement {
     	      this.statement = defaults.statement;
         }
 
-        public Builder setStatement(WebACLStatement statement) {
+        public Builder statement(WebACLStatement statement) {
             this.statement = Objects.requireNonNull(statement);
             return this;
         }

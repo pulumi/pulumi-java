@@ -53,12 +53,12 @@ public final class EventTargetSqsTargetArgs extends io.pulumi.resources.Resource
     	      this.messageGroupId = defaults.messageGroupId;
         }
 
-        public Builder setMessageGroupId(@Nullable Input<String> messageGroupId) {
+        public Builder messageGroupId(@Nullable Input<String> messageGroupId) {
             this.messageGroupId = messageGroupId;
             return this;
         }
 
-        public Builder setMessageGroupId(@Nullable String messageGroupId) {
+        public Builder messageGroupId(@Nullable String messageGroupId) {
             this.messageGroupId = Input.ofNullable(messageGroupId);
             return this;
         }

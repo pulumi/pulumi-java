@@ -151,37 +151,37 @@ public final class SolutionPropertiesResponse {
     	      this.tool = defaults.tool;
         }
 
-        public Builder setCleanupState(@Nullable String cleanupState) {
+        public Builder cleanupState(@Nullable String cleanupState) {
             this.cleanupState = cleanupState;
             return this;
         }
 
-        public Builder setDetails(@Nullable SolutionDetailsResponse details) {
+        public Builder details(@Nullable SolutionDetailsResponse details) {
             this.details = details;
             return this;
         }
 
-        public Builder setGoal(@Nullable String goal) {
+        public Builder goal(@Nullable String goal) {
             this.goal = goal;
             return this;
         }
 
-        public Builder setPurpose(@Nullable String purpose) {
+        public Builder purpose(@Nullable String purpose) {
             this.purpose = purpose;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setSummary(@Nullable Either<DatabasesSolutionSummaryResponse,ServersSolutionSummaryResponse> summary) {
+        public Builder summary(@Nullable Either<DatabasesSolutionSummaryResponse,ServersSolutionSummaryResponse> summary) {
             this.summary = summary;
             return this;
         }
 
-        public Builder setTool(@Nullable String tool) {
+        public Builder tool(@Nullable String tool) {
             this.tool = tool;
             return this;
         }

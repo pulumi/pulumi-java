@@ -48,7 +48,7 @@ public final class FlexibleAppVersionEntrypoint {
     	      this.shell = defaults.shell;
         }
 
-        public Builder setShell(String shell) {
+        public Builder shell(String shell) {
             this.shell = Objects.requireNonNull(shell);
             return this;
         }

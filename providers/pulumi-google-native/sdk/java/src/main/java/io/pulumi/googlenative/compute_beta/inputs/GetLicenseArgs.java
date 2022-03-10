@@ -62,12 +62,12 @@ public final class GetLicenseArgs extends io.pulumi.resources.InvokeArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setLicense(String license) {
+        public Builder license(String license) {
             this.license = Objects.requireNonNull(license);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

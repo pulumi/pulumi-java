@@ -73,12 +73,12 @@ public final class ApigatewayAuditLogConfigResponse extends io.pulumi.resources.
     	      this.logType = defaults.logType;
         }
 
-        public Builder setExemptedMembers(List<String> exemptedMembers) {
+        public Builder exemptedMembers(List<String> exemptedMembers) {
             this.exemptedMembers = Objects.requireNonNull(exemptedMembers);
             return this;
         }
 
-        public Builder setLogType(String logType) {
+        public Builder logType(String logType) {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }

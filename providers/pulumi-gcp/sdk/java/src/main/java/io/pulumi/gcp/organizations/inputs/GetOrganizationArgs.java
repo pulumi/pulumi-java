@@ -70,12 +70,12 @@ public final class GetOrganizationArgs extends io.pulumi.resources.InvokeArgs {
     	      this.organization = defaults.organization;
         }
 
-        public Builder setDomain(@Nullable String domain) {
+        public Builder domain(@Nullable String domain) {
             this.domain = domain;
             return this;
         }
 
-        public Builder setOrganization(@Nullable String organization) {
+        public Builder organization(@Nullable String organization) {
             this.organization = organization;
             return this;
         }

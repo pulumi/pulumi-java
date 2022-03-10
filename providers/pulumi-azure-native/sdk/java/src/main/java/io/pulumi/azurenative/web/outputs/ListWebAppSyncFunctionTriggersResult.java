@@ -67,12 +67,12 @@ public final class ListWebAppSyncFunctionTriggersResult {
     	      this.triggerUrl = defaults.triggerUrl;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }
 
-        public Builder setTriggerUrl(@Nullable String triggerUrl) {
+        public Builder triggerUrl(@Nullable String triggerUrl) {
             this.triggerUrl = triggerUrl;
             return this;
         }

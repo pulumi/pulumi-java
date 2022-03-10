@@ -578,177 +578,177 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
     	      this.tokenExtendedInformation = defaults.tokenExtendedInformation;
         }
 
-        public Builder setAccessTokenString(@Nullable String accessTokenString) {
+        public Builder accessTokenString(@Nullable String accessTokenString) {
             this.accessTokenString = accessTokenString;
             return this;
         }
 
-        public Builder setBMSActiveRegion(@Nullable String bMSActiveRegion) {
+        public Builder bMSActiveRegion(@Nullable String bMSActiveRegion) {
             this.bMSActiveRegion = bMSActiveRegion;
             return this;
         }
 
-        public Builder setBackupManagementType(@Nullable String backupManagementType) {
+        public Builder backupManagementType(@Nullable String backupManagementType) {
             this.backupManagementType = backupManagementType;
             return this;
         }
 
-        public Builder setContainerId(@Nullable String containerId) {
+        public Builder containerId(@Nullable String containerId) {
             this.containerId = containerId;
             return this;
         }
 
-        public Builder setContainerName(@Nullable String containerName) {
+        public Builder containerName(@Nullable String containerName) {
             this.containerName = containerName;
             return this;
         }
 
-        public Builder setContainerType(@Nullable String containerType) {
+        public Builder containerType(@Nullable String containerType) {
             this.containerType = containerType;
             return this;
         }
 
-        public Builder setCoordinatorServiceStampId(@Nullable String coordinatorServiceStampId) {
+        public Builder coordinatorServiceStampId(@Nullable String coordinatorServiceStampId) {
             this.coordinatorServiceStampId = coordinatorServiceStampId;
             return this;
         }
 
-        public Builder setCoordinatorServiceStampUri(@Nullable String coordinatorServiceStampUri) {
+        public Builder coordinatorServiceStampUri(@Nullable String coordinatorServiceStampUri) {
             this.coordinatorServiceStampUri = coordinatorServiceStampUri;
             return this;
         }
 
-        public Builder setDatasourceContainerName(@Nullable String datasourceContainerName) {
+        public Builder datasourceContainerName(@Nullable String datasourceContainerName) {
             this.datasourceContainerName = datasourceContainerName;
             return this;
         }
 
-        public Builder setDatasourceId(@Nullable String datasourceId) {
+        public Builder datasourceId(@Nullable String datasourceId) {
             this.datasourceId = datasourceId;
             return this;
         }
 
-        public Builder setDatasourceName(@Nullable String datasourceName) {
+        public Builder datasourceName(@Nullable String datasourceName) {
             this.datasourceName = datasourceName;
             return this;
         }
 
-        public Builder setDatasourceType(@Nullable String datasourceType) {
+        public Builder datasourceType(@Nullable String datasourceType) {
             this.datasourceType = datasourceType;
             return this;
         }
 
-        public Builder setObjectType(String objectType) {
+        public Builder objectType(String objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
 
-        public Builder setPolicyId(@Nullable String policyId) {
+        public Builder policyId(@Nullable String policyId) {
             this.policyId = policyId;
             return this;
         }
 
-        public Builder setPolicyName(@Nullable String policyName) {
+        public Builder policyName(@Nullable String policyName) {
             this.policyName = policyName;
             return this;
         }
 
-        public Builder setProtectableObjectContainerHostOsName(@Nullable String protectableObjectContainerHostOsName) {
+        public Builder protectableObjectContainerHostOsName(@Nullable String protectableObjectContainerHostOsName) {
             this.protectableObjectContainerHostOsName = protectableObjectContainerHostOsName;
             return this;
         }
 
-        public Builder setProtectableObjectFriendlyName(@Nullable String protectableObjectFriendlyName) {
+        public Builder protectableObjectFriendlyName(@Nullable String protectableObjectFriendlyName) {
             this.protectableObjectFriendlyName = protectableObjectFriendlyName;
             return this;
         }
 
-        public Builder setProtectableObjectParentLogicalContainerName(@Nullable String protectableObjectParentLogicalContainerName) {
+        public Builder protectableObjectParentLogicalContainerName(@Nullable String protectableObjectParentLogicalContainerName) {
             this.protectableObjectParentLogicalContainerName = protectableObjectParentLogicalContainerName;
             return this;
         }
 
-        public Builder setProtectableObjectProtectionState(@Nullable String protectableObjectProtectionState) {
+        public Builder protectableObjectProtectionState(@Nullable String protectableObjectProtectionState) {
             this.protectableObjectProtectionState = protectableObjectProtectionState;
             return this;
         }
 
-        public Builder setProtectableObjectUniqueName(@Nullable String protectableObjectUniqueName) {
+        public Builder protectableObjectUniqueName(@Nullable String protectableObjectUniqueName) {
             this.protectableObjectUniqueName = protectableObjectUniqueName;
             return this;
         }
 
-        public Builder setProtectableObjectWorkloadType(@Nullable String protectableObjectWorkloadType) {
+        public Builder protectableObjectWorkloadType(@Nullable String protectableObjectWorkloadType) {
             this.protectableObjectWorkloadType = protectableObjectWorkloadType;
             return this;
         }
 
-        public Builder setProtectionContainerId(@Nullable Double protectionContainerId) {
+        public Builder protectionContainerId(@Nullable Double protectionContainerId) {
             this.protectionContainerId = protectionContainerId;
             return this;
         }
 
-        public Builder setProtectionServiceStampId(@Nullable String protectionServiceStampId) {
+        public Builder protectionServiceStampId(@Nullable String protectionServiceStampId) {
             this.protectionServiceStampId = protectionServiceStampId;
             return this;
         }
 
-        public Builder setProtectionServiceStampUri(@Nullable String protectionServiceStampUri) {
+        public Builder protectionServiceStampUri(@Nullable String protectionServiceStampUri) {
             this.protectionServiceStampUri = protectionServiceStampUri;
             return this;
         }
 
-        public Builder setRecoveryPointId(@Nullable String recoveryPointId) {
+        public Builder recoveryPointId(@Nullable String recoveryPointId) {
             this.recoveryPointId = recoveryPointId;
             return this;
         }
 
-        public Builder setRecoveryPointTime(@Nullable String recoveryPointTime) {
+        public Builder recoveryPointTime(@Nullable String recoveryPointTime) {
             this.recoveryPointTime = recoveryPointTime;
             return this;
         }
 
-        public Builder setResourceGroupName(@Nullable String resourceGroupName) {
+        public Builder resourceGroupName(@Nullable String resourceGroupName) {
             this.resourceGroupName = resourceGroupName;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setResourceName(@Nullable String resourceName) {
+        public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
-        public Builder setRpIsManagedVirtualMachine(@Nullable Boolean rpIsManagedVirtualMachine) {
+        public Builder rpIsManagedVirtualMachine(@Nullable Boolean rpIsManagedVirtualMachine) {
             this.rpIsManagedVirtualMachine = rpIsManagedVirtualMachine;
             return this;
         }
 
-        public Builder setRpOriginalSAOption(@Nullable Boolean rpOriginalSAOption) {
+        public Builder rpOriginalSAOption(@Nullable Boolean rpOriginalSAOption) {
             this.rpOriginalSAOption = rpOriginalSAOption;
             return this;
         }
 
-        public Builder setRpTierInformation(@Nullable Map<String,String> rpTierInformation) {
+        public Builder rpTierInformation(@Nullable Map<String,String> rpTierInformation) {
             this.rpTierInformation = rpTierInformation;
             return this;
         }
 
-        public Builder setRpVMSizeDescription(@Nullable String rpVMSizeDescription) {
+        public Builder rpVMSizeDescription(@Nullable String rpVMSizeDescription) {
             this.rpVMSizeDescription = rpVMSizeDescription;
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable String subscriptionId) {
+        public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
-        public Builder setTokenExtendedInformation(@Nullable String tokenExtendedInformation) {
+        public Builder tokenExtendedInformation(@Nullable String tokenExtendedInformation) {
             this.tokenExtendedInformation = tokenExtendedInformation;
             return this;
         }

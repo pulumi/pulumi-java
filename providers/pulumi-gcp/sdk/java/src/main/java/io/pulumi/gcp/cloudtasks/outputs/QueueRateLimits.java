@@ -102,17 +102,17 @@ public final class QueueRateLimits {
     	      this.maxDispatchesPerSecond = defaults.maxDispatchesPerSecond;
         }
 
-        public Builder setMaxBurstSize(@Nullable Integer maxBurstSize) {
+        public Builder maxBurstSize(@Nullable Integer maxBurstSize) {
             this.maxBurstSize = maxBurstSize;
             return this;
         }
 
-        public Builder setMaxConcurrentDispatches(@Nullable Integer maxConcurrentDispatches) {
+        public Builder maxConcurrentDispatches(@Nullable Integer maxConcurrentDispatches) {
             this.maxConcurrentDispatches = maxConcurrentDispatches;
             return this;
         }
 
-        public Builder setMaxDispatchesPerSecond(@Nullable Double maxDispatchesPerSecond) {
+        public Builder maxDispatchesPerSecond(@Nullable Double maxDispatchesPerSecond) {
             this.maxDispatchesPerSecond = maxDispatchesPerSecond;
             return this;
         }

@@ -73,12 +73,12 @@ public final class GoogleCloudApigeeV1GraphQLOperationResponse extends io.pulumi
     	      this.operationTypes = defaults.operationTypes;
         }
 
-        public Builder setOperation(String operation) {
+        public Builder operation(String operation) {
             this.operation = Objects.requireNonNull(operation);
             return this;
         }
 
-        public Builder setOperationTypes(List<String> operationTypes) {
+        public Builder operationTypes(List<String> operationTypes) {
             this.operationTypes = Objects.requireNonNull(operationTypes);
             return this;
         }

@@ -85,17 +85,17 @@ public final class GetLocationS3Result {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setLocationArn(@Nullable String locationArn) {
+        public Builder locationArn(@Nullable String locationArn) {
             this.locationArn = locationArn;
             return this;
         }
 
-        public Builder setLocationUri(@Nullable String locationUri) {
+        public Builder locationUri(@Nullable String locationUri) {
             this.locationUri = locationUri;
             return this;
         }
 
-        public Builder setTags(@Nullable List<LocationS3Tag> tags) {
+        public Builder tags(@Nullable List<LocationS3Tag> tags) {
             this.tags = tags;
             return this;
         }

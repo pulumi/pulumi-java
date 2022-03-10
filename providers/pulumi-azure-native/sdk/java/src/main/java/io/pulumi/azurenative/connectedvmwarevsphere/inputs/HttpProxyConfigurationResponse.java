@@ -57,7 +57,7 @@ public final class HttpProxyConfigurationResponse extends io.pulumi.resources.In
     	      this.httpsProxy = defaults.httpsProxy;
         }
 
-        public Builder setHttpsProxy(@Nullable String httpsProxy) {
+        public Builder httpsProxy(@Nullable String httpsProxy) {
             this.httpsProxy = httpsProxy;
             return this;
         }

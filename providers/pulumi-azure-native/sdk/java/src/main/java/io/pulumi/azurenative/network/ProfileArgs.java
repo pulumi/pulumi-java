@@ -289,152 +289,152 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setAllowedEndpointRecordTypes(@Nullable Input<List<Either<String,AllowedEndpointRecordType>>> allowedEndpointRecordTypes) {
+        public Builder allowedEndpointRecordTypes(@Nullable Input<List<Either<String,AllowedEndpointRecordType>>> allowedEndpointRecordTypes) {
             this.allowedEndpointRecordTypes = allowedEndpointRecordTypes;
             return this;
         }
 
-        public Builder setAllowedEndpointRecordTypes(@Nullable List<Either<String,AllowedEndpointRecordType>> allowedEndpointRecordTypes) {
+        public Builder allowedEndpointRecordTypes(@Nullable List<Either<String,AllowedEndpointRecordType>> allowedEndpointRecordTypes) {
             this.allowedEndpointRecordTypes = Input.ofNullable(allowedEndpointRecordTypes);
             return this;
         }
 
-        public Builder setDnsConfig(@Nullable Input<DnsConfigArgs> dnsConfig) {
+        public Builder dnsConfig(@Nullable Input<DnsConfigArgs> dnsConfig) {
             this.dnsConfig = dnsConfig;
             return this;
         }
 
-        public Builder setDnsConfig(@Nullable DnsConfigArgs dnsConfig) {
+        public Builder dnsConfig(@Nullable DnsConfigArgs dnsConfig) {
             this.dnsConfig = Input.ofNullable(dnsConfig);
             return this;
         }
 
-        public Builder setEndpoints(@Nullable Input<List<EndpointArgs>> endpoints) {
+        public Builder endpoints(@Nullable Input<List<EndpointArgs>> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
-        public Builder setEndpoints(@Nullable List<EndpointArgs> endpoints) {
+        public Builder endpoints(@Nullable List<EndpointArgs> endpoints) {
             this.endpoints = Input.ofNullable(endpoints);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMaxReturn(@Nullable Input<Double> maxReturn) {
+        public Builder maxReturn(@Nullable Input<Double> maxReturn) {
             this.maxReturn = maxReturn;
             return this;
         }
 
-        public Builder setMaxReturn(@Nullable Double maxReturn) {
+        public Builder maxReturn(@Nullable Double maxReturn) {
             this.maxReturn = Input.ofNullable(maxReturn);
             return this;
         }
 
-        public Builder setMonitorConfig(@Nullable Input<MonitorConfigArgs> monitorConfig) {
+        public Builder monitorConfig(@Nullable Input<MonitorConfigArgs> monitorConfig) {
             this.monitorConfig = monitorConfig;
             return this;
         }
 
-        public Builder setMonitorConfig(@Nullable MonitorConfigArgs monitorConfig) {
+        public Builder monitorConfig(@Nullable MonitorConfigArgs monitorConfig) {
             this.monitorConfig = Input.ofNullable(monitorConfig);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProfileName(@Nullable Input<String> profileName) {
+        public Builder profileName(@Nullable Input<String> profileName) {
             this.profileName = profileName;
             return this;
         }
 
-        public Builder setProfileName(@Nullable String profileName) {
+        public Builder profileName(@Nullable String profileName) {
             this.profileName = Input.ofNullable(profileName);
             return this;
         }
 
-        public Builder setProfileStatus(@Nullable Input<Either<String,ProfileStatus>> profileStatus) {
+        public Builder profileStatus(@Nullable Input<Either<String,ProfileStatus>> profileStatus) {
             this.profileStatus = profileStatus;
             return this;
         }
 
-        public Builder setProfileStatus(@Nullable Either<String,ProfileStatus> profileStatus) {
+        public Builder profileStatus(@Nullable Either<String,ProfileStatus> profileStatus) {
             this.profileStatus = Input.ofNullable(profileStatus);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTrafficRoutingMethod(@Nullable Input<Either<String,TrafficRoutingMethod>> trafficRoutingMethod) {
+        public Builder trafficRoutingMethod(@Nullable Input<Either<String,TrafficRoutingMethod>> trafficRoutingMethod) {
             this.trafficRoutingMethod = trafficRoutingMethod;
             return this;
         }
 
-        public Builder setTrafficRoutingMethod(@Nullable Either<String,TrafficRoutingMethod> trafficRoutingMethod) {
+        public Builder trafficRoutingMethod(@Nullable Either<String,TrafficRoutingMethod> trafficRoutingMethod) {
             this.trafficRoutingMethod = Input.ofNullable(trafficRoutingMethod);
             return this;
         }
 
-        public Builder setTrafficViewEnrollmentStatus(@Nullable Input<Either<String,TrafficViewEnrollmentStatus>> trafficViewEnrollmentStatus) {
+        public Builder trafficViewEnrollmentStatus(@Nullable Input<Either<String,TrafficViewEnrollmentStatus>> trafficViewEnrollmentStatus) {
             this.trafficViewEnrollmentStatus = trafficViewEnrollmentStatus;
             return this;
         }
 
-        public Builder setTrafficViewEnrollmentStatus(@Nullable Either<String,TrafficViewEnrollmentStatus> trafficViewEnrollmentStatus) {
+        public Builder trafficViewEnrollmentStatus(@Nullable Either<String,TrafficViewEnrollmentStatus> trafficViewEnrollmentStatus) {
             this.trafficViewEnrollmentStatus = Input.ofNullable(trafficViewEnrollmentStatus);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

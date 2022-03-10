@@ -207,52 +207,52 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfig {
     	      this.preemptibility = defaults.preemptibility;
         }
 
-        public Builder setAccelerators(@Nullable List<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerator> accelerators) {
+        public Builder accelerators(@Nullable List<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerator> accelerators) {
             this.accelerators = accelerators;
             return this;
         }
 
-        public Builder setDiskConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfig diskConfig) {
+        public Builder diskConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfig diskConfig) {
             this.diskConfig = diskConfig;
             return this;
         }
 
-        public Builder setImage(@Nullable String image) {
+        public Builder image(@Nullable String image) {
             this.image = image;
             return this;
         }
 
-        public Builder setInstanceNames(@Nullable List<String> instanceNames) {
+        public Builder instanceNames(@Nullable List<String> instanceNames) {
             this.instanceNames = instanceNames;
             return this;
         }
 
-        public Builder setIsPreemptible(@Nullable Boolean isPreemptible) {
+        public Builder isPreemptible(@Nullable Boolean isPreemptible) {
             this.isPreemptible = isPreemptible;
             return this;
         }
 
-        public Builder setMachineType(@Nullable String machineType) {
+        public Builder machineType(@Nullable String machineType) {
             this.machineType = machineType;
             return this;
         }
 
-        public Builder setManagedGroupConfigs(@Nullable List<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigManagedGroupConfig> managedGroupConfigs) {
+        public Builder managedGroupConfigs(@Nullable List<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigManagedGroupConfig> managedGroupConfigs) {
             this.managedGroupConfigs = managedGroupConfigs;
             return this;
         }
 
-        public Builder setMinCpuPlatform(@Nullable String minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
-        public Builder setNumInstances(@Nullable Integer numInstances) {
+        public Builder numInstances(@Nullable Integer numInstances) {
             this.numInstances = numInstances;
             return this;
         }
 
-        public Builder setPreemptibility(@Nullable String preemptibility) {
+        public Builder preemptibility(@Nullable String preemptibility) {
             this.preemptibility = preemptibility;
             return this;
         }

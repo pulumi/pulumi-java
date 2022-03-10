@@ -89,17 +89,17 @@ public final class GoogleCloudDialogflowCxV3beta1IntentParameterResponse extends
     	      this.redact = defaults.redact;
         }
 
-        public Builder setEntityType(String entityType) {
+        public Builder entityType(String entityType) {
             this.entityType = Objects.requireNonNull(entityType);
             return this;
         }
 
-        public Builder setIsList(Boolean isList) {
+        public Builder isList(Boolean isList) {
             this.isList = Objects.requireNonNull(isList);
             return this;
         }
 
-        public Builder setRedact(Boolean redact) {
+        public Builder redact(Boolean redact) {
             this.redact = Objects.requireNonNull(redact);
             return this;
         }

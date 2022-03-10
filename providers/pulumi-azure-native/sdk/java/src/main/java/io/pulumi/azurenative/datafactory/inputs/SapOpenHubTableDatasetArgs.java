@@ -225,112 +225,112 @@ public final class SapOpenHubTableDatasetArgs extends io.pulumi.resources.Resour
     	      this.type = defaults.type;
         }
 
-        public Builder setAnnotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Input<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setBaseRequestId(@Nullable Input<Object> baseRequestId) {
+        public Builder baseRequestId(@Nullable Input<Object> baseRequestId) {
             this.baseRequestId = baseRequestId;
             return this;
         }
 
-        public Builder setBaseRequestId(@Nullable Object baseRequestId) {
+        public Builder baseRequestId(@Nullable Object baseRequestId) {
             this.baseRequestId = Input.ofNullable(baseRequestId);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setExcludeLastRequest(@Nullable Input<Object> excludeLastRequest) {
+        public Builder excludeLastRequest(@Nullable Input<Object> excludeLastRequest) {
             this.excludeLastRequest = excludeLastRequest;
             return this;
         }
 
-        public Builder setExcludeLastRequest(@Nullable Object excludeLastRequest) {
+        public Builder excludeLastRequest(@Nullable Object excludeLastRequest) {
             this.excludeLastRequest = Input.ofNullable(excludeLastRequest);
             return this;
         }
 
-        public Builder setFolder(@Nullable Input<DatasetFolderArgs> folder) {
+        public Builder folder(@Nullable Input<DatasetFolderArgs> folder) {
             this.folder = folder;
             return this;
         }
 
-        public Builder setFolder(@Nullable DatasetFolderArgs folder) {
+        public Builder folder(@Nullable DatasetFolderArgs folder) {
             this.folder = Input.ofNullable(folder);
             return this;
         }
 
-        public Builder setLinkedServiceName(Input<LinkedServiceReferenceArgs> linkedServiceName) {
+        public Builder linkedServiceName(Input<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
 
-        public Builder setLinkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
+        public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
             this.linkedServiceName = Input.of(Objects.requireNonNull(linkedServiceName));
             return this;
         }
 
-        public Builder setOpenHubDestinationName(Input<Object> openHubDestinationName) {
+        public Builder openHubDestinationName(Input<Object> openHubDestinationName) {
             this.openHubDestinationName = Objects.requireNonNull(openHubDestinationName);
             return this;
         }
 
-        public Builder setOpenHubDestinationName(Object openHubDestinationName) {
+        public Builder openHubDestinationName(Object openHubDestinationName) {
             this.openHubDestinationName = Input.of(Objects.requireNonNull(openHubDestinationName));
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setSchema(@Nullable Input<Object> schema) {
+        public Builder schema(@Nullable Input<Object> schema) {
             this.schema = schema;
             return this;
         }
 
-        public Builder setSchema(@Nullable Object schema) {
+        public Builder schema(@Nullable Object schema) {
             this.schema = Input.ofNullable(schema);
             return this;
         }
 
-        public Builder setStructure(@Nullable Input<Object> structure) {
+        public Builder structure(@Nullable Input<Object> structure) {
             this.structure = structure;
             return this;
         }
 
-        public Builder setStructure(@Nullable Object structure) {
+        public Builder structure(@Nullable Object structure) {
             this.structure = Input.ofNullable(structure);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

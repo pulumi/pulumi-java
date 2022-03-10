@@ -42,7 +42,7 @@ public final class ThemeTileStyle {
     	      this.border = defaults.border;
         }
 
-        public Builder setBorder(@Nullable ThemeBorderStyle border) {
+        public Builder border(@Nullable ThemeBorderStyle border) {
             this.border = border;
             return this;
         }

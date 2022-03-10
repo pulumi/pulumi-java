@@ -48,7 +48,7 @@ public final class BotSlotValueRegexFilter {
     	      this.pattern = defaults.pattern;
         }
 
-        public Builder setPattern(String pattern) {
+        public Builder pattern(String pattern) {
             this.pattern = Objects.requireNonNull(pattern);
             return this;
         }

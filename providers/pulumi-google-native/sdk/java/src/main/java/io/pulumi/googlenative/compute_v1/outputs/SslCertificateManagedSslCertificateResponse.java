@@ -83,17 +83,17 @@ public final class SslCertificateManagedSslCertificateResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setDomainStatus(Map<String,String> domainStatus) {
+        public Builder domainStatus(Map<String,String> domainStatus) {
             this.domainStatus = Objects.requireNonNull(domainStatus);
             return this;
         }
 
-        public Builder setDomains(List<String> domains) {
+        public Builder domains(List<String> domains) {
             this.domains = Objects.requireNonNull(domains);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

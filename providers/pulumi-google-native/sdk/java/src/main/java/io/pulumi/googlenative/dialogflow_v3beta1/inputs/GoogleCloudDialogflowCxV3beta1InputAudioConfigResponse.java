@@ -155,37 +155,37 @@ public final class GoogleCloudDialogflowCxV3beta1InputAudioConfigResponse extend
     	      this.singleUtterance = defaults.singleUtterance;
         }
 
-        public Builder setAudioEncoding(String audioEncoding) {
+        public Builder audioEncoding(String audioEncoding) {
             this.audioEncoding = Objects.requireNonNull(audioEncoding);
             return this;
         }
 
-        public Builder setEnableWordInfo(Boolean enableWordInfo) {
+        public Builder enableWordInfo(Boolean enableWordInfo) {
             this.enableWordInfo = Objects.requireNonNull(enableWordInfo);
             return this;
         }
 
-        public Builder setModel(String model) {
+        public Builder model(String model) {
             this.model = Objects.requireNonNull(model);
             return this;
         }
 
-        public Builder setModelVariant(String modelVariant) {
+        public Builder modelVariant(String modelVariant) {
             this.modelVariant = Objects.requireNonNull(modelVariant);
             return this;
         }
 
-        public Builder setPhraseHints(List<String> phraseHints) {
+        public Builder phraseHints(List<String> phraseHints) {
             this.phraseHints = Objects.requireNonNull(phraseHints);
             return this;
         }
 
-        public Builder setSampleRateHertz(Integer sampleRateHertz) {
+        public Builder sampleRateHertz(Integer sampleRateHertz) {
             this.sampleRateHertz = Objects.requireNonNull(sampleRateHertz);
             return this;
         }
 
-        public Builder setSingleUtterance(Boolean singleUtterance) {
+        public Builder singleUtterance(Boolean singleUtterance) {
             this.singleUtterance = Objects.requireNonNull(singleUtterance);
             return this;
         }

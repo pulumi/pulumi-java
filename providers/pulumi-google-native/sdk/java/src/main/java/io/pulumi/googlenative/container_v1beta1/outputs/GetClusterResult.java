@@ -983,287 +983,287 @@ public final class GetClusterResult {
     	      this.workloadIdentityConfig = defaults.workloadIdentityConfig;
         }
 
-        public Builder setAddonsConfig(AddonsConfigResponse addonsConfig) {
+        public Builder addonsConfig(AddonsConfigResponse addonsConfig) {
             this.addonsConfig = Objects.requireNonNull(addonsConfig);
             return this;
         }
 
-        public Builder setAuthenticatorGroupsConfig(AuthenticatorGroupsConfigResponse authenticatorGroupsConfig) {
+        public Builder authenticatorGroupsConfig(AuthenticatorGroupsConfigResponse authenticatorGroupsConfig) {
             this.authenticatorGroupsConfig = Objects.requireNonNull(authenticatorGroupsConfig);
             return this;
         }
 
-        public Builder setAutopilot(AutopilotResponse autopilot) {
+        public Builder autopilot(AutopilotResponse autopilot) {
             this.autopilot = Objects.requireNonNull(autopilot);
             return this;
         }
 
-        public Builder setAutoscaling(ClusterAutoscalingResponse autoscaling) {
+        public Builder autoscaling(ClusterAutoscalingResponse autoscaling) {
             this.autoscaling = Objects.requireNonNull(autoscaling);
             return this;
         }
 
-        public Builder setBinaryAuthorization(BinaryAuthorizationResponse binaryAuthorization) {
+        public Builder binaryAuthorization(BinaryAuthorizationResponse binaryAuthorization) {
             this.binaryAuthorization = Objects.requireNonNull(binaryAuthorization);
             return this;
         }
 
-        public Builder setClusterIpv4Cidr(String clusterIpv4Cidr) {
+        public Builder clusterIpv4Cidr(String clusterIpv4Cidr) {
             this.clusterIpv4Cidr = Objects.requireNonNull(clusterIpv4Cidr);
             return this;
         }
 
-        public Builder setClusterTelemetry(ClusterTelemetryResponse clusterTelemetry) {
+        public Builder clusterTelemetry(ClusterTelemetryResponse clusterTelemetry) {
             this.clusterTelemetry = Objects.requireNonNull(clusterTelemetry);
             return this;
         }
 
-        public Builder setConditions(List<StatusConditionResponse> conditions) {
+        public Builder conditions(List<StatusConditionResponse> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
 
-        public Builder setConfidentialNodes(ConfidentialNodesResponse confidentialNodes) {
+        public Builder confidentialNodes(ConfidentialNodesResponse confidentialNodes) {
             this.confidentialNodes = Objects.requireNonNull(confidentialNodes);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setCurrentMasterVersion(String currentMasterVersion) {
+        public Builder currentMasterVersion(String currentMasterVersion) {
             this.currentMasterVersion = Objects.requireNonNull(currentMasterVersion);
             return this;
         }
 
-        public Builder setCurrentNodeVersion(String currentNodeVersion) {
+        public Builder currentNodeVersion(String currentNodeVersion) {
             this.currentNodeVersion = Objects.requireNonNull(currentNodeVersion);
             return this;
         }
 
-        public Builder setDatabaseEncryption(DatabaseEncryptionResponse databaseEncryption) {
+        public Builder databaseEncryption(DatabaseEncryptionResponse databaseEncryption) {
             this.databaseEncryption = Objects.requireNonNull(databaseEncryption);
             return this;
         }
 
-        public Builder setDefaultMaxPodsConstraint(MaxPodsConstraintResponse defaultMaxPodsConstraint) {
+        public Builder defaultMaxPodsConstraint(MaxPodsConstraintResponse defaultMaxPodsConstraint) {
             this.defaultMaxPodsConstraint = Objects.requireNonNull(defaultMaxPodsConstraint);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEnableKubernetesAlpha(Boolean enableKubernetesAlpha) {
+        public Builder enableKubernetesAlpha(Boolean enableKubernetesAlpha) {
             this.enableKubernetesAlpha = Objects.requireNonNull(enableKubernetesAlpha);
             return this;
         }
 
-        public Builder setEndpoint(String endpoint) {
+        public Builder endpoint(String endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
 
-        public Builder setExpireTime(String expireTime) {
+        public Builder expireTime(String expireTime) {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
         }
 
-        public Builder setIdentityServiceConfig(IdentityServiceConfigResponse identityServiceConfig) {
+        public Builder identityServiceConfig(IdentityServiceConfigResponse identityServiceConfig) {
             this.identityServiceConfig = Objects.requireNonNull(identityServiceConfig);
             return this;
         }
 
-        public Builder setInitialClusterVersion(String initialClusterVersion) {
+        public Builder initialClusterVersion(String initialClusterVersion) {
             this.initialClusterVersion = Objects.requireNonNull(initialClusterVersion);
             return this;
         }
 
-        public Builder setIpAllocationPolicy(IPAllocationPolicyResponse ipAllocationPolicy) {
+        public Builder ipAllocationPolicy(IPAllocationPolicyResponse ipAllocationPolicy) {
             this.ipAllocationPolicy = Objects.requireNonNull(ipAllocationPolicy);
             return this;
         }
 
-        public Builder setLabelFingerprint(String labelFingerprint) {
+        public Builder labelFingerprint(String labelFingerprint) {
             this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
             return this;
         }
 
-        public Builder setLegacyAbac(LegacyAbacResponse legacyAbac) {
+        public Builder legacyAbac(LegacyAbacResponse legacyAbac) {
             this.legacyAbac = Objects.requireNonNull(legacyAbac);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLocations(List<String> locations) {
+        public Builder locations(List<String> locations) {
             this.locations = Objects.requireNonNull(locations);
             return this;
         }
 
-        public Builder setLoggingConfig(LoggingConfigResponse loggingConfig) {
+        public Builder loggingConfig(LoggingConfigResponse loggingConfig) {
             this.loggingConfig = Objects.requireNonNull(loggingConfig);
             return this;
         }
 
-        public Builder setLoggingService(String loggingService) {
+        public Builder loggingService(String loggingService) {
             this.loggingService = Objects.requireNonNull(loggingService);
             return this;
         }
 
-        public Builder setMaintenancePolicy(MaintenancePolicyResponse maintenancePolicy) {
+        public Builder maintenancePolicy(MaintenancePolicyResponse maintenancePolicy) {
             this.maintenancePolicy = Objects.requireNonNull(maintenancePolicy);
             return this;
         }
 
-        public Builder setMaster(MasterResponse master) {
+        public Builder master(MasterResponse master) {
             this.master = Objects.requireNonNull(master);
             return this;
         }
 
-        public Builder setMasterAuth(MasterAuthResponse masterAuth) {
+        public Builder masterAuth(MasterAuthResponse masterAuth) {
             this.masterAuth = Objects.requireNonNull(masterAuth);
             return this;
         }
 
-        public Builder setMasterAuthorizedNetworksConfig(MasterAuthorizedNetworksConfigResponse masterAuthorizedNetworksConfig) {
+        public Builder masterAuthorizedNetworksConfig(MasterAuthorizedNetworksConfigResponse masterAuthorizedNetworksConfig) {
             this.masterAuthorizedNetworksConfig = Objects.requireNonNull(masterAuthorizedNetworksConfig);
             return this;
         }
 
-        public Builder setMeshCertificates(MeshCertificatesResponse meshCertificates) {
+        public Builder meshCertificates(MeshCertificatesResponse meshCertificates) {
             this.meshCertificates = Objects.requireNonNull(meshCertificates);
             return this;
         }
 
-        public Builder setMonitoringConfig(MonitoringConfigResponse monitoringConfig) {
+        public Builder monitoringConfig(MonitoringConfigResponse monitoringConfig) {
             this.monitoringConfig = Objects.requireNonNull(monitoringConfig);
             return this;
         }
 
-        public Builder setMonitoringService(String monitoringService) {
+        public Builder monitoringService(String monitoringService) {
             this.monitoringService = Objects.requireNonNull(monitoringService);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setNetworkConfig(NetworkConfigResponse networkConfig) {
+        public Builder networkConfig(NetworkConfigResponse networkConfig) {
             this.networkConfig = Objects.requireNonNull(networkConfig);
             return this;
         }
 
-        public Builder setNetworkPolicy(NetworkPolicyResponse networkPolicy) {
+        public Builder networkPolicy(NetworkPolicyResponse networkPolicy) {
             this.networkPolicy = Objects.requireNonNull(networkPolicy);
             return this;
         }
 
-        public Builder setNodeIpv4CidrSize(Integer nodeIpv4CidrSize) {
+        public Builder nodeIpv4CidrSize(Integer nodeIpv4CidrSize) {
             this.nodeIpv4CidrSize = Objects.requireNonNull(nodeIpv4CidrSize);
             return this;
         }
 
-        public Builder setNodePoolDefaults(NodePoolDefaultsResponse nodePoolDefaults) {
+        public Builder nodePoolDefaults(NodePoolDefaultsResponse nodePoolDefaults) {
             this.nodePoolDefaults = Objects.requireNonNull(nodePoolDefaults);
             return this;
         }
 
-        public Builder setNodePools(List<NodePoolResponse> nodePools) {
+        public Builder nodePools(List<NodePoolResponse> nodePools) {
             this.nodePools = Objects.requireNonNull(nodePools);
             return this;
         }
 
-        public Builder setNotificationConfig(NotificationConfigResponse notificationConfig) {
+        public Builder notificationConfig(NotificationConfigResponse notificationConfig) {
             this.notificationConfig = Objects.requireNonNull(notificationConfig);
             return this;
         }
 
-        public Builder setPodSecurityPolicyConfig(PodSecurityPolicyConfigResponse podSecurityPolicyConfig) {
+        public Builder podSecurityPolicyConfig(PodSecurityPolicyConfigResponse podSecurityPolicyConfig) {
             this.podSecurityPolicyConfig = Objects.requireNonNull(podSecurityPolicyConfig);
             return this;
         }
 
-        public Builder setPrivateClusterConfig(PrivateClusterConfigResponse privateClusterConfig) {
+        public Builder privateClusterConfig(PrivateClusterConfigResponse privateClusterConfig) {
             this.privateClusterConfig = Objects.requireNonNull(privateClusterConfig);
             return this;
         }
 
-        public Builder setReleaseChannel(ReleaseChannelResponse releaseChannel) {
+        public Builder releaseChannel(ReleaseChannelResponse releaseChannel) {
             this.releaseChannel = Objects.requireNonNull(releaseChannel);
             return this;
         }
 
-        public Builder setResourceLabels(Map<String,String> resourceLabels) {
+        public Builder resourceLabels(Map<String,String> resourceLabels) {
             this.resourceLabels = Objects.requireNonNull(resourceLabels);
             return this;
         }
 
-        public Builder setResourceUsageExportConfig(ResourceUsageExportConfigResponse resourceUsageExportConfig) {
+        public Builder resourceUsageExportConfig(ResourceUsageExportConfigResponse resourceUsageExportConfig) {
             this.resourceUsageExportConfig = Objects.requireNonNull(resourceUsageExportConfig);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setServicesIpv4Cidr(String servicesIpv4Cidr) {
+        public Builder servicesIpv4Cidr(String servicesIpv4Cidr) {
             this.servicesIpv4Cidr = Objects.requireNonNull(servicesIpv4Cidr);
             return this;
         }
 
-        public Builder setShieldedNodes(ShieldedNodesResponse shieldedNodes) {
+        public Builder shieldedNodes(ShieldedNodesResponse shieldedNodes) {
             this.shieldedNodes = Objects.requireNonNull(shieldedNodes);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setSubnetwork(String subnetwork) {
+        public Builder subnetwork(String subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }
 
-        public Builder setTpuConfig(TpuConfigResponse tpuConfig) {
+        public Builder tpuConfig(TpuConfigResponse tpuConfig) {
             this.tpuConfig = Objects.requireNonNull(tpuConfig);
             return this;
         }
 
-        public Builder setTpuIpv4CidrBlock(String tpuIpv4CidrBlock) {
+        public Builder tpuIpv4CidrBlock(String tpuIpv4CidrBlock) {
             this.tpuIpv4CidrBlock = Objects.requireNonNull(tpuIpv4CidrBlock);
             return this;
         }
 
-        public Builder setVerticalPodAutoscaling(VerticalPodAutoscalingResponse verticalPodAutoscaling) {
+        public Builder verticalPodAutoscaling(VerticalPodAutoscalingResponse verticalPodAutoscaling) {
             this.verticalPodAutoscaling = Objects.requireNonNull(verticalPodAutoscaling);
             return this;
         }
 
-        public Builder setWorkloadCertificates(WorkloadCertificatesResponse workloadCertificates) {
+        public Builder workloadCertificates(WorkloadCertificatesResponse workloadCertificates) {
             this.workloadCertificates = Objects.requireNonNull(workloadCertificates);
             return this;
         }
 
-        public Builder setWorkloadIdentityConfig(WorkloadIdentityConfigResponse workloadIdentityConfig) {
+        public Builder workloadIdentityConfig(WorkloadIdentityConfigResponse workloadIdentityConfig) {
             this.workloadIdentityConfig = Objects.requireNonNull(workloadIdentityConfig);
             return this;
         }

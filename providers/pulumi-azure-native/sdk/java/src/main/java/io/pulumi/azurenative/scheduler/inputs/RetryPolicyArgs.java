@@ -88,32 +88,32 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.retryType = defaults.retryType;
         }
 
-        public Builder setRetryCount(@Nullable Input<Integer> retryCount) {
+        public Builder retryCount(@Nullable Input<Integer> retryCount) {
             this.retryCount = retryCount;
             return this;
         }
 
-        public Builder setRetryCount(@Nullable Integer retryCount) {
+        public Builder retryCount(@Nullable Integer retryCount) {
             this.retryCount = Input.ofNullable(retryCount);
             return this;
         }
 
-        public Builder setRetryInterval(@Nullable Input<String> retryInterval) {
+        public Builder retryInterval(@Nullable Input<String> retryInterval) {
             this.retryInterval = retryInterval;
             return this;
         }
 
-        public Builder setRetryInterval(@Nullable String retryInterval) {
+        public Builder retryInterval(@Nullable String retryInterval) {
             this.retryInterval = Input.ofNullable(retryInterval);
             return this;
         }
 
-        public Builder setRetryType(@Nullable Input<RetryType> retryType) {
+        public Builder retryType(@Nullable Input<RetryType> retryType) {
             this.retryType = retryType;
             return this;
         }
 
-        public Builder setRetryType(@Nullable RetryType retryType) {
+        public Builder retryType(@Nullable RetryType retryType) {
             this.retryType = Input.ofNullable(retryType);
             return this;
         }

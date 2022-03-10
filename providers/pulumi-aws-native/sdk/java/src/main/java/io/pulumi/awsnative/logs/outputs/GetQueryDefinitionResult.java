@@ -100,22 +100,22 @@ public final class GetQueryDefinitionResult {
     	      this.queryString = defaults.queryString;
         }
 
-        public Builder setLogGroupNames(@Nullable List<String> logGroupNames) {
+        public Builder logGroupNames(@Nullable List<String> logGroupNames) {
             this.logGroupNames = logGroupNames;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setQueryDefinitionId(@Nullable String queryDefinitionId) {
+        public Builder queryDefinitionId(@Nullable String queryDefinitionId) {
             this.queryDefinitionId = queryDefinitionId;
             return this;
         }
 
-        public Builder setQueryString(@Nullable String queryString) {
+        public Builder queryString(@Nullable String queryString) {
             this.queryString = queryString;
             return this;
         }

@@ -159,72 +159,72 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceExternalIpsConfig = defaults.serviceExternalIpsConfig;
         }
 
-        public Builder setDatapathProvider(@Nullable Input<NetworkConfigDatapathProvider> datapathProvider) {
+        public Builder datapathProvider(@Nullable Input<NetworkConfigDatapathProvider> datapathProvider) {
             this.datapathProvider = datapathProvider;
             return this;
         }
 
-        public Builder setDatapathProvider(@Nullable NetworkConfigDatapathProvider datapathProvider) {
+        public Builder datapathProvider(@Nullable NetworkConfigDatapathProvider datapathProvider) {
             this.datapathProvider = Input.ofNullable(datapathProvider);
             return this;
         }
 
-        public Builder setDefaultSnatStatus(@Nullable Input<DefaultSnatStatusArgs> defaultSnatStatus) {
+        public Builder defaultSnatStatus(@Nullable Input<DefaultSnatStatusArgs> defaultSnatStatus) {
             this.defaultSnatStatus = defaultSnatStatus;
             return this;
         }
 
-        public Builder setDefaultSnatStatus(@Nullable DefaultSnatStatusArgs defaultSnatStatus) {
+        public Builder defaultSnatStatus(@Nullable DefaultSnatStatusArgs defaultSnatStatus) {
             this.defaultSnatStatus = Input.ofNullable(defaultSnatStatus);
             return this;
         }
 
-        public Builder setDnsConfig(@Nullable Input<DNSConfigArgs> dnsConfig) {
+        public Builder dnsConfig(@Nullable Input<DNSConfigArgs> dnsConfig) {
             this.dnsConfig = dnsConfig;
             return this;
         }
 
-        public Builder setDnsConfig(@Nullable DNSConfigArgs dnsConfig) {
+        public Builder dnsConfig(@Nullable DNSConfigArgs dnsConfig) {
             this.dnsConfig = Input.ofNullable(dnsConfig);
             return this;
         }
 
-        public Builder setEnableIntraNodeVisibility(@Nullable Input<Boolean> enableIntraNodeVisibility) {
+        public Builder enableIntraNodeVisibility(@Nullable Input<Boolean> enableIntraNodeVisibility) {
             this.enableIntraNodeVisibility = enableIntraNodeVisibility;
             return this;
         }
 
-        public Builder setEnableIntraNodeVisibility(@Nullable Boolean enableIntraNodeVisibility) {
+        public Builder enableIntraNodeVisibility(@Nullable Boolean enableIntraNodeVisibility) {
             this.enableIntraNodeVisibility = Input.ofNullable(enableIntraNodeVisibility);
             return this;
         }
 
-        public Builder setEnableL4ilbSubsetting(@Nullable Input<Boolean> enableL4ilbSubsetting) {
+        public Builder enableL4ilbSubsetting(@Nullable Input<Boolean> enableL4ilbSubsetting) {
             this.enableL4ilbSubsetting = enableL4ilbSubsetting;
             return this;
         }
 
-        public Builder setEnableL4ilbSubsetting(@Nullable Boolean enableL4ilbSubsetting) {
+        public Builder enableL4ilbSubsetting(@Nullable Boolean enableL4ilbSubsetting) {
             this.enableL4ilbSubsetting = Input.ofNullable(enableL4ilbSubsetting);
             return this;
         }
 
-        public Builder setPrivateIpv6GoogleAccess(@Nullable Input<NetworkConfigPrivateIpv6GoogleAccess> privateIpv6GoogleAccess) {
+        public Builder privateIpv6GoogleAccess(@Nullable Input<NetworkConfigPrivateIpv6GoogleAccess> privateIpv6GoogleAccess) {
             this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
             return this;
         }
 
-        public Builder setPrivateIpv6GoogleAccess(@Nullable NetworkConfigPrivateIpv6GoogleAccess privateIpv6GoogleAccess) {
+        public Builder privateIpv6GoogleAccess(@Nullable NetworkConfigPrivateIpv6GoogleAccess privateIpv6GoogleAccess) {
             this.privateIpv6GoogleAccess = Input.ofNullable(privateIpv6GoogleAccess);
             return this;
         }
 
-        public Builder setServiceExternalIpsConfig(@Nullable Input<ServiceExternalIPsConfigArgs> serviceExternalIpsConfig) {
+        public Builder serviceExternalIpsConfig(@Nullable Input<ServiceExternalIPsConfigArgs> serviceExternalIpsConfig) {
             this.serviceExternalIpsConfig = serviceExternalIpsConfig;
             return this;
         }
 
-        public Builder setServiceExternalIpsConfig(@Nullable ServiceExternalIPsConfigArgs serviceExternalIpsConfig) {
+        public Builder serviceExternalIpsConfig(@Nullable ServiceExternalIPsConfigArgs serviceExternalIpsConfig) {
             this.serviceExternalIpsConfig = Input.ofNullable(serviceExternalIpsConfig);
             return this;
         }

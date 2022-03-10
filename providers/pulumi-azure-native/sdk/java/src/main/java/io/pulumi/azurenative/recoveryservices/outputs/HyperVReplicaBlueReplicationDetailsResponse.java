@@ -169,42 +169,42 @@ public final class HyperVReplicaBlueReplicationDetailsResponse {
     	      this.vmProtectionStateDescription = defaults.vmProtectionStateDescription;
         }
 
-        public Builder setInitialReplicationDetails(@Nullable InitialReplicationDetailsResponse initialReplicationDetails) {
+        public Builder initialReplicationDetails(@Nullable InitialReplicationDetailsResponse initialReplicationDetails) {
             this.initialReplicationDetails = initialReplicationDetails;
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setLastReplicatedTime(@Nullable String lastReplicatedTime) {
+        public Builder lastReplicatedTime(@Nullable String lastReplicatedTime) {
             this.lastReplicatedTime = lastReplicatedTime;
             return this;
         }
 
-        public Builder setVMDiskDetails(@Nullable List<DiskDetailsResponse> vMDiskDetails) {
+        public Builder vMDiskDetails(@Nullable List<DiskDetailsResponse> vMDiskDetails) {
             this.vMDiskDetails = vMDiskDetails;
             return this;
         }
 
-        public Builder setVmId(@Nullable String vmId) {
+        public Builder vmId(@Nullable String vmId) {
             this.vmId = vmId;
             return this;
         }
 
-        public Builder setVmNics(@Nullable List<VMNicDetailsResponse> vmNics) {
+        public Builder vmNics(@Nullable List<VMNicDetailsResponse> vmNics) {
             this.vmNics = vmNics;
             return this;
         }
 
-        public Builder setVmProtectionState(@Nullable String vmProtectionState) {
+        public Builder vmProtectionState(@Nullable String vmProtectionState) {
             this.vmProtectionState = vmProtectionState;
             return this;
         }
 
-        public Builder setVmProtectionStateDescription(@Nullable String vmProtectionStateDescription) {
+        public Builder vmProtectionStateDescription(@Nullable String vmProtectionStateDescription) {
             this.vmProtectionStateDescription = vmProtectionStateDescription;
             return this;
         }

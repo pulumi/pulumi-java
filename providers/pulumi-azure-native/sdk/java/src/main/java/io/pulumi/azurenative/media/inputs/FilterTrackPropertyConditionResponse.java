@@ -88,17 +88,17 @@ public final class FilterTrackPropertyConditionResponse extends io.pulumi.resour
     	      this.value = defaults.value;
         }
 
-        public Builder setOperation(String operation) {
+        public Builder operation(String operation) {
             this.operation = Objects.requireNonNull(operation);
             return this;
         }
 
-        public Builder setProperty(String property) {
+        public Builder property(String property) {
             this.property = Objects.requireNonNull(property);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

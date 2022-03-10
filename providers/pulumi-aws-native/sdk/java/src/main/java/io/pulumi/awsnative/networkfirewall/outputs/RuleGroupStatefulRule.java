@@ -60,17 +60,17 @@ public final class RuleGroupStatefulRule {
     	      this.ruleOptions = defaults.ruleOptions;
         }
 
-        public Builder setAction(RuleGroupStatefulRuleAction action) {
+        public Builder action(RuleGroupStatefulRuleAction action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setHeader(RuleGroupHeader header) {
+        public Builder header(RuleGroupHeader header) {
             this.header = Objects.requireNonNull(header);
             return this;
         }
 
-        public Builder setRuleOptions(List<RuleGroupRuleOption> ruleOptions) {
+        public Builder ruleOptions(List<RuleGroupRuleOption> ruleOptions) {
             this.ruleOptions = Objects.requireNonNull(ruleOptions);
             return this;
         }

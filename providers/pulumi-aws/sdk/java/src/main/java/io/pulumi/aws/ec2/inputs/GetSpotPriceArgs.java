@@ -88,17 +88,17 @@ public final class GetSpotPriceArgs extends io.pulumi.resources.InvokeArgs {
     	      this.instanceType = defaults.instanceType;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetSpotPriceFilter> filters) {
+        public Builder filters(@Nullable List<GetSpotPriceFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = instanceType;
             return this;
         }

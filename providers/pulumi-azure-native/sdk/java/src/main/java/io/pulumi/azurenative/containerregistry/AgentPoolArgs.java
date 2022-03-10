@@ -186,92 +186,92 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.virtualNetworkSubnetResourceId = defaults.virtualNetworkSubnetResourceId;
         }
 
-        public Builder setAgentPoolName(@Nullable Input<String> agentPoolName) {
+        public Builder agentPoolName(@Nullable Input<String> agentPoolName) {
             this.agentPoolName = agentPoolName;
             return this;
         }
 
-        public Builder setAgentPoolName(@Nullable String agentPoolName) {
+        public Builder agentPoolName(@Nullable String agentPoolName) {
             this.agentPoolName = Input.ofNullable(agentPoolName);
             return this;
         }
 
-        public Builder setCount(@Nullable Input<Integer> count) {
+        public Builder count(@Nullable Input<Integer> count) {
             this.count = count;
             return this;
         }
 
-        public Builder setCount(@Nullable Integer count) {
+        public Builder count(@Nullable Integer count) {
             this.count = Input.ofNullable(count);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setOs(@Nullable Input<Either<String,OS>> os) {
+        public Builder os(@Nullable Input<Either<String,OS>> os) {
             this.os = os;
             return this;
         }
 
-        public Builder setOs(@Nullable Either<String,OS> os) {
+        public Builder os(@Nullable Either<String,OS> os) {
             this.os = Input.ofNullable(os);
             return this;
         }
 
-        public Builder setRegistryName(Input<String> registryName) {
+        public Builder registryName(Input<String> registryName) {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
 
-        public Builder setRegistryName(String registryName) {
+        public Builder registryName(String registryName) {
             this.registryName = Input.of(Objects.requireNonNull(registryName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTier(@Nullable Input<String> tier) {
+        public Builder tier(@Nullable Input<String> tier) {
             this.tier = tier;
             return this;
         }
 
-        public Builder setTier(@Nullable String tier) {
+        public Builder tier(@Nullable String tier) {
             this.tier = Input.ofNullable(tier);
             return this;
         }
 
-        public Builder setVirtualNetworkSubnetResourceId(@Nullable Input<String> virtualNetworkSubnetResourceId) {
+        public Builder virtualNetworkSubnetResourceId(@Nullable Input<String> virtualNetworkSubnetResourceId) {
             this.virtualNetworkSubnetResourceId = virtualNetworkSubnetResourceId;
             return this;
         }
 
-        public Builder setVirtualNetworkSubnetResourceId(@Nullable String virtualNetworkSubnetResourceId) {
+        public Builder virtualNetworkSubnetResourceId(@Nullable String virtualNetworkSubnetResourceId) {
             this.virtualNetworkSubnetResourceId = Input.ofNullable(virtualNetworkSubnetResourceId);
             return this;
         }

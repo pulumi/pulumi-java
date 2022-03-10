@@ -169,82 +169,82 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAlarms(@Nullable Input<AlarmsPropertiesArgs> alarms) {
+        public Builder alarms(@Nullable Input<AlarmsPropertiesArgs> alarms) {
             this.alarms = alarms;
             return this;
         }
 
-        public Builder setAlarms(@Nullable AlarmsPropertiesArgs alarms) {
+        public Builder alarms(@Nullable AlarmsPropertiesArgs alarms) {
             this.alarms = Input.ofNullable(alarms);
             return this;
         }
 
-        public Builder setNotificationSenderEmail(@Nullable Input<String> notificationSenderEmail) {
+        public Builder notificationSenderEmail(@Nullable Input<String> notificationSenderEmail) {
             this.notificationSenderEmail = notificationSenderEmail;
             return this;
         }
 
-        public Builder setNotificationSenderEmail(@Nullable String notificationSenderEmail) {
+        public Builder notificationSenderEmail(@Nullable String notificationSenderEmail) {
             this.notificationSenderEmail = Input.ofNullable(notificationSenderEmail);
             return this;
         }
 
-        public Builder setPortalAuthMode(@Nullable Input<String> portalAuthMode) {
+        public Builder portalAuthMode(@Nullable Input<String> portalAuthMode) {
             this.portalAuthMode = portalAuthMode;
             return this;
         }
 
-        public Builder setPortalAuthMode(@Nullable String portalAuthMode) {
+        public Builder portalAuthMode(@Nullable String portalAuthMode) {
             this.portalAuthMode = Input.ofNullable(portalAuthMode);
             return this;
         }
 
-        public Builder setPortalContactEmail(Input<String> portalContactEmail) {
+        public Builder portalContactEmail(Input<String> portalContactEmail) {
             this.portalContactEmail = Objects.requireNonNull(portalContactEmail);
             return this;
         }
 
-        public Builder setPortalContactEmail(String portalContactEmail) {
+        public Builder portalContactEmail(String portalContactEmail) {
             this.portalContactEmail = Input.of(Objects.requireNonNull(portalContactEmail));
             return this;
         }
 
-        public Builder setPortalDescription(@Nullable Input<String> portalDescription) {
+        public Builder portalDescription(@Nullable Input<String> portalDescription) {
             this.portalDescription = portalDescription;
             return this;
         }
 
-        public Builder setPortalDescription(@Nullable String portalDescription) {
+        public Builder portalDescription(@Nullable String portalDescription) {
             this.portalDescription = Input.ofNullable(portalDescription);
             return this;
         }
 
-        public Builder setPortalName(@Nullable Input<String> portalName) {
+        public Builder portalName(@Nullable Input<String> portalName) {
             this.portalName = portalName;
             return this;
         }
 
-        public Builder setPortalName(@Nullable String portalName) {
+        public Builder portalName(@Nullable String portalName) {
             this.portalName = Input.ofNullable(portalName);
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<PortalTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<PortalTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<PortalTagArgs> tags) {
+        public Builder tags(@Nullable List<PortalTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

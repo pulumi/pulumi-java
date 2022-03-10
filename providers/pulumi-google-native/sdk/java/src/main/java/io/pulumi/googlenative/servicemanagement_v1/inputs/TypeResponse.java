@@ -140,32 +140,32 @@ public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
     	      this.syntax = defaults.syntax;
         }
 
-        public Builder setFields(List<FieldResponse> fields) {
+        public Builder fields(List<FieldResponse> fields) {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOneofs(List<String> oneofs) {
+        public Builder oneofs(List<String> oneofs) {
             this.oneofs = Objects.requireNonNull(oneofs);
             return this;
         }
 
-        public Builder setOptions(List<OptionResponse> options) {
+        public Builder options(List<OptionResponse> options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }
 
-        public Builder setSourceContext(SourceContextResponse sourceContext) {
+        public Builder sourceContext(SourceContextResponse sourceContext) {
             this.sourceContext = Objects.requireNonNull(sourceContext);
             return this;
         }
 
-        public Builder setSyntax(String syntax) {
+        public Builder syntax(String syntax) {
             this.syntax = Objects.requireNonNull(syntax);
             return this;
         }

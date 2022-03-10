@@ -366,102 +366,102 @@ public final class GetFirewallPolicyResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setBasePolicy(@Nullable SubResourceResponse basePolicy) {
+        public Builder basePolicy(@Nullable SubResourceResponse basePolicy) {
             this.basePolicy = basePolicy;
             return this;
         }
 
-        public Builder setChildPolicies(List<SubResourceResponse> childPolicies) {
+        public Builder childPolicies(List<SubResourceResponse> childPolicies) {
             this.childPolicies = Objects.requireNonNull(childPolicies);
             return this;
         }
 
-        public Builder setDnsSettings(@Nullable DnsSettingsResponse dnsSettings) {
+        public Builder dnsSettings(@Nullable DnsSettingsResponse dnsSettings) {
             this.dnsSettings = dnsSettings;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setFirewalls(List<SubResourceResponse> firewalls) {
+        public Builder firewalls(List<SubResourceResponse> firewalls) {
             this.firewalls = Objects.requireNonNull(firewalls);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIdentity(@Nullable ManagedServiceIdentityResponse identity) {
+        public Builder identity(@Nullable ManagedServiceIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setInsights(@Nullable FirewallPolicyInsightsResponse insights) {
+        public Builder insights(@Nullable FirewallPolicyInsightsResponse insights) {
             this.insights = insights;
             return this;
         }
 
-        public Builder setIntrusionDetection(@Nullable FirewallPolicyIntrusionDetectionResponse intrusionDetection) {
+        public Builder intrusionDetection(@Nullable FirewallPolicyIntrusionDetectionResponse intrusionDetection) {
             this.intrusionDetection = intrusionDetection;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRuleCollectionGroups(List<SubResourceResponse> ruleCollectionGroups) {
+        public Builder ruleCollectionGroups(List<SubResourceResponse> ruleCollectionGroups) {
             this.ruleCollectionGroups = Objects.requireNonNull(ruleCollectionGroups);
             return this;
         }
 
-        public Builder setSku(@Nullable FirewallPolicySkuResponse sku) {
+        public Builder sku(@Nullable FirewallPolicySkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSnat(@Nullable FirewallPolicySNATResponse snat) {
+        public Builder snat(@Nullable FirewallPolicySNATResponse snat) {
             this.snat = snat;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setThreatIntelMode(@Nullable String threatIntelMode) {
+        public Builder threatIntelMode(@Nullable String threatIntelMode) {
             this.threatIntelMode = threatIntelMode;
             return this;
         }
 
-        public Builder setThreatIntelWhitelist(@Nullable FirewallPolicyThreatIntelWhitelistResponse threatIntelWhitelist) {
+        public Builder threatIntelWhitelist(@Nullable FirewallPolicyThreatIntelWhitelistResponse threatIntelWhitelist) {
             this.threatIntelWhitelist = threatIntelWhitelist;
             return this;
         }
 
-        public Builder setTransportSecurity(@Nullable FirewallPolicyTransportSecurityResponse transportSecurity) {
+        public Builder transportSecurity(@Nullable FirewallPolicyTransportSecurityResponse transportSecurity) {
             this.transportSecurity = transportSecurity;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

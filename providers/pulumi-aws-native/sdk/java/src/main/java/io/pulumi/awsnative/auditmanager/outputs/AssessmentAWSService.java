@@ -42,7 +42,7 @@ public final class AssessmentAWSService {
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setServiceName(@Nullable String serviceName) {
+        public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = serviceName;
             return this;
         }

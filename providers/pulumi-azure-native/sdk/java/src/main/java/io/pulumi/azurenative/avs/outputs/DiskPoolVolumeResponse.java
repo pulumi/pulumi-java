@@ -68,12 +68,12 @@ public final class DiskPoolVolumeResponse {
     	      this.lunName = defaults.lunName;
         }
 
-        public Builder setEndpoints(@Nullable List<String> endpoints) {
+        public Builder endpoints(@Nullable List<String> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
-        public Builder setLunName(@Nullable String lunName) {
+        public Builder lunName(@Nullable String lunName) {
             this.lunName = lunName;
             return this;
         }

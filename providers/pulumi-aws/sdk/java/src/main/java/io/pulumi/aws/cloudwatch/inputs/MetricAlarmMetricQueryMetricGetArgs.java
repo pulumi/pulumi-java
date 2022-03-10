@@ -139,62 +139,62 @@ public final class MetricAlarmMetricQueryMetricGetArgs extends io.pulumi.resourc
     	      this.unit = defaults.unit;
         }
 
-        public Builder setDimensions(@Nullable Input<Map<String,String>> dimensions) {
+        public Builder dimensions(@Nullable Input<Map<String,String>> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
 
-        public Builder setDimensions(@Nullable Map<String,String> dimensions) {
+        public Builder dimensions(@Nullable Map<String,String> dimensions) {
             this.dimensions = Input.ofNullable(dimensions);
             return this;
         }
 
-        public Builder setMetricName(Input<String> metricName) {
+        public Builder metricName(Input<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Input.of(Objects.requireNonNull(metricName));
             return this;
         }
 
-        public Builder setNamespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Input<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = Input.ofNullable(namespace);
             return this;
         }
 
-        public Builder setPeriod(Input<Integer> period) {
+        public Builder period(Input<Integer> period) {
             this.period = Objects.requireNonNull(period);
             return this;
         }
 
-        public Builder setPeriod(Integer period) {
+        public Builder period(Integer period) {
             this.period = Input.of(Objects.requireNonNull(period));
             return this;
         }
 
-        public Builder setStat(Input<String> stat) {
+        public Builder stat(Input<String> stat) {
             this.stat = Objects.requireNonNull(stat);
             return this;
         }
 
-        public Builder setStat(String stat) {
+        public Builder stat(String stat) {
             this.stat = Input.of(Objects.requireNonNull(stat));
             return this;
         }
 
-        public Builder setUnit(@Nullable Input<String> unit) {
+        public Builder unit(@Nullable Input<String> unit) {
             this.unit = unit;
             return this;
         }
 
-        public Builder setUnit(@Nullable String unit) {
+        public Builder unit(@Nullable String unit) {
             this.unit = Input.ofNullable(unit);
             return this;
         }

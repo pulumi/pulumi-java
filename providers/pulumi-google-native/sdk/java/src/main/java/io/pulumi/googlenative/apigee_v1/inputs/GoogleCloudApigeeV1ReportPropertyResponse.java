@@ -70,12 +70,12 @@ public final class GoogleCloudApigeeV1ReportPropertyResponse extends io.pulumi.r
     	      this.value = defaults.value;
         }
 
-        public Builder setProperty(String property) {
+        public Builder property(String property) {
             this.property = Objects.requireNonNull(property);
             return this;
         }
 
-        public Builder setValue(List<GoogleCloudApigeeV1AttributeResponse> value) {
+        public Builder value(List<GoogleCloudApigeeV1AttributeResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

@@ -50,7 +50,7 @@ public final class RouteSpecTcpRouteTimeout {
     	      this.idle = defaults.idle;
         }
 
-        public Builder setIdle(@Nullable RouteSpecTcpRouteTimeoutIdle idle) {
+        public Builder idle(@Nullable RouteSpecTcpRouteTimeoutIdle idle) {
             this.idle = idle;
             return this;
         }

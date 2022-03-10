@@ -126,8 +126,8 @@ public class CSINodeList extends io.pulumi.resources.CustomResource {
     private static CSINodeListArgs makeArgs(CSINodeListArgs args) {
         var builder = args == null ? CSINodeListArgs.builder() : CSINodeListArgs.builder(args);
         return builder
-            .setApiVersion("storage.k8s.io/v1")
-            .setKind("CSINodeList")
+            .apiVersion("storage.k8s.io/v1")
+            .kind("CSINodeList")
             .build();
     }
 

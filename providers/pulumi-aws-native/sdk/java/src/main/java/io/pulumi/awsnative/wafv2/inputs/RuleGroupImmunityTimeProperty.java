@@ -47,7 +47,7 @@ public final class RuleGroupImmunityTimeProperty extends io.pulumi.resources.Inv
     	      this.immunityTime = defaults.immunityTime;
         }
 
-        public Builder setImmunityTime(Integer immunityTime) {
+        public Builder immunityTime(Integer immunityTime) {
             this.immunityTime = Objects.requireNonNull(immunityTime);
             return this;
         }

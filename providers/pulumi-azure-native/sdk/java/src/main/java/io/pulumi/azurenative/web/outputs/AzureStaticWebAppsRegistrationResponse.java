@@ -50,7 +50,7 @@ public final class AzureStaticWebAppsRegistrationResponse {
     	      this.clientId = defaults.clientId;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }

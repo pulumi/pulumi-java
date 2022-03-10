@@ -124,52 +124,52 @@ public final class LoggingConfigurationFieldToMatchArgs extends io.pulumi.resour
     	      this.uriPath = defaults.uriPath;
         }
 
-        public Builder setJsonBody(@Nullable Input<LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs> jsonBody) {
+        public Builder jsonBody(@Nullable Input<LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs> jsonBody) {
             this.jsonBody = jsonBody;
             return this;
         }
 
-        public Builder setJsonBody(@Nullable LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs jsonBody) {
+        public Builder jsonBody(@Nullable LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs jsonBody) {
             this.jsonBody = Input.ofNullable(jsonBody);
             return this;
         }
 
-        public Builder setMethod(@Nullable Input<Object> method) {
+        public Builder method(@Nullable Input<Object> method) {
             this.method = method;
             return this;
         }
 
-        public Builder setMethod(@Nullable Object method) {
+        public Builder method(@Nullable Object method) {
             this.method = Input.ofNullable(method);
             return this;
         }
 
-        public Builder setQueryString(@Nullable Input<Object> queryString) {
+        public Builder queryString(@Nullable Input<Object> queryString) {
             this.queryString = queryString;
             return this;
         }
 
-        public Builder setQueryString(@Nullable Object queryString) {
+        public Builder queryString(@Nullable Object queryString) {
             this.queryString = Input.ofNullable(queryString);
             return this;
         }
 
-        public Builder setSingleHeader(@Nullable Input<LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs> singleHeader) {
+        public Builder singleHeader(@Nullable Input<LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs> singleHeader) {
             this.singleHeader = singleHeader;
             return this;
         }
 
-        public Builder setSingleHeader(@Nullable LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs singleHeader) {
+        public Builder singleHeader(@Nullable LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs singleHeader) {
             this.singleHeader = Input.ofNullable(singleHeader);
             return this;
         }
 
-        public Builder setUriPath(@Nullable Input<Object> uriPath) {
+        public Builder uriPath(@Nullable Input<Object> uriPath) {
             this.uriPath = uriPath;
             return this;
         }
 
-        public Builder setUriPath(@Nullable Object uriPath) {
+        public Builder uriPath(@Nullable Object uriPath) {
             this.uriPath = Input.ofNullable(uriPath);
             return this;
         }

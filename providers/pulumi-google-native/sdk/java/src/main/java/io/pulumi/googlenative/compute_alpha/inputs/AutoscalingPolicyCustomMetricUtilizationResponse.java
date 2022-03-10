@@ -121,27 +121,27 @@ public final class AutoscalingPolicyCustomMetricUtilizationResponse extends io.p
     	      this.utilizationTargetType = defaults.utilizationTargetType;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setMetric(String metric) {
+        public Builder metric(String metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
 
-        public Builder setSingleInstanceAssignment(Double singleInstanceAssignment) {
+        public Builder singleInstanceAssignment(Double singleInstanceAssignment) {
             this.singleInstanceAssignment = Objects.requireNonNull(singleInstanceAssignment);
             return this;
         }
 
-        public Builder setUtilizationTarget(Double utilizationTarget) {
+        public Builder utilizationTarget(Double utilizationTarget) {
             this.utilizationTarget = Objects.requireNonNull(utilizationTarget);
             return this;
         }
 
-        public Builder setUtilizationTargetType(String utilizationTargetType) {
+        public Builder utilizationTargetType(String utilizationTargetType) {
             this.utilizationTargetType = Objects.requireNonNull(utilizationTargetType);
             return this;
         }

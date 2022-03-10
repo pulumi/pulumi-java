@@ -256,132 +256,132 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
     	      this.zone = defaults.zone;
         }
 
-        public Builder setActivationPolicy(@Nullable Input<CloudSqlSettingsActivationPolicy> activationPolicy) {
+        public Builder activationPolicy(@Nullable Input<CloudSqlSettingsActivationPolicy> activationPolicy) {
             this.activationPolicy = activationPolicy;
             return this;
         }
 
-        public Builder setActivationPolicy(@Nullable CloudSqlSettingsActivationPolicy activationPolicy) {
+        public Builder activationPolicy(@Nullable CloudSqlSettingsActivationPolicy activationPolicy) {
             this.activationPolicy = Input.ofNullable(activationPolicy);
             return this;
         }
 
-        public Builder setAutoStorageIncrease(@Nullable Input<Boolean> autoStorageIncrease) {
+        public Builder autoStorageIncrease(@Nullable Input<Boolean> autoStorageIncrease) {
             this.autoStorageIncrease = autoStorageIncrease;
             return this;
         }
 
-        public Builder setAutoStorageIncrease(@Nullable Boolean autoStorageIncrease) {
+        public Builder autoStorageIncrease(@Nullable Boolean autoStorageIncrease) {
             this.autoStorageIncrease = Input.ofNullable(autoStorageIncrease);
             return this;
         }
 
-        public Builder setDataDiskSizeGb(@Nullable Input<String> dataDiskSizeGb) {
+        public Builder dataDiskSizeGb(@Nullable Input<String> dataDiskSizeGb) {
             this.dataDiskSizeGb = dataDiskSizeGb;
             return this;
         }
 
-        public Builder setDataDiskSizeGb(@Nullable String dataDiskSizeGb) {
+        public Builder dataDiskSizeGb(@Nullable String dataDiskSizeGb) {
             this.dataDiskSizeGb = Input.ofNullable(dataDiskSizeGb);
             return this;
         }
 
-        public Builder setDataDiskType(@Nullable Input<CloudSqlSettingsDataDiskType> dataDiskType) {
+        public Builder dataDiskType(@Nullable Input<CloudSqlSettingsDataDiskType> dataDiskType) {
             this.dataDiskType = dataDiskType;
             return this;
         }
 
-        public Builder setDataDiskType(@Nullable CloudSqlSettingsDataDiskType dataDiskType) {
+        public Builder dataDiskType(@Nullable CloudSqlSettingsDataDiskType dataDiskType) {
             this.dataDiskType = Input.ofNullable(dataDiskType);
             return this;
         }
 
-        public Builder setDatabaseFlags(@Nullable Input<Map<String,String>> databaseFlags) {
+        public Builder databaseFlags(@Nullable Input<Map<String,String>> databaseFlags) {
             this.databaseFlags = databaseFlags;
             return this;
         }
 
-        public Builder setDatabaseFlags(@Nullable Map<String,String> databaseFlags) {
+        public Builder databaseFlags(@Nullable Map<String,String> databaseFlags) {
             this.databaseFlags = Input.ofNullable(databaseFlags);
             return this;
         }
 
-        public Builder setDatabaseVersion(@Nullable Input<CloudSqlSettingsDatabaseVersion> databaseVersion) {
+        public Builder databaseVersion(@Nullable Input<CloudSqlSettingsDatabaseVersion> databaseVersion) {
             this.databaseVersion = databaseVersion;
             return this;
         }
 
-        public Builder setDatabaseVersion(@Nullable CloudSqlSettingsDatabaseVersion databaseVersion) {
+        public Builder databaseVersion(@Nullable CloudSqlSettingsDatabaseVersion databaseVersion) {
             this.databaseVersion = Input.ofNullable(databaseVersion);
             return this;
         }
 
-        public Builder setIpConfig(@Nullable Input<SqlIpConfigArgs> ipConfig) {
+        public Builder ipConfig(@Nullable Input<SqlIpConfigArgs> ipConfig) {
             this.ipConfig = ipConfig;
             return this;
         }
 
-        public Builder setIpConfig(@Nullable SqlIpConfigArgs ipConfig) {
+        public Builder ipConfig(@Nullable SqlIpConfigArgs ipConfig) {
             this.ipConfig = Input.ofNullable(ipConfig);
             return this;
         }
 
-        public Builder setRootPassword(@Nullable Input<String> rootPassword) {
+        public Builder rootPassword(@Nullable Input<String> rootPassword) {
             this.rootPassword = rootPassword;
             return this;
         }
 
-        public Builder setRootPassword(@Nullable String rootPassword) {
+        public Builder rootPassword(@Nullable String rootPassword) {
             this.rootPassword = Input.ofNullable(rootPassword);
             return this;
         }
 
-        public Builder setSourceId(@Nullable Input<String> sourceId) {
+        public Builder sourceId(@Nullable Input<String> sourceId) {
             this.sourceId = sourceId;
             return this;
         }
 
-        public Builder setSourceId(@Nullable String sourceId) {
+        public Builder sourceId(@Nullable String sourceId) {
             this.sourceId = Input.ofNullable(sourceId);
             return this;
         }
 
-        public Builder setStorageAutoResizeLimit(@Nullable Input<String> storageAutoResizeLimit) {
+        public Builder storageAutoResizeLimit(@Nullable Input<String> storageAutoResizeLimit) {
             this.storageAutoResizeLimit = storageAutoResizeLimit;
             return this;
         }
 
-        public Builder setStorageAutoResizeLimit(@Nullable String storageAutoResizeLimit) {
+        public Builder storageAutoResizeLimit(@Nullable String storageAutoResizeLimit) {
             this.storageAutoResizeLimit = Input.ofNullable(storageAutoResizeLimit);
             return this;
         }
 
-        public Builder setTier(@Nullable Input<String> tier) {
+        public Builder tier(@Nullable Input<String> tier) {
             this.tier = tier;
             return this;
         }
 
-        public Builder setTier(@Nullable String tier) {
+        public Builder tier(@Nullable String tier) {
             this.tier = Input.ofNullable(tier);
             return this;
         }
 
-        public Builder setUserLabels(@Nullable Input<Map<String,String>> userLabels) {
+        public Builder userLabels(@Nullable Input<Map<String,String>> userLabels) {
             this.userLabels = userLabels;
             return this;
         }
 
-        public Builder setUserLabels(@Nullable Map<String,String> userLabels) {
+        public Builder userLabels(@Nullable Map<String,String> userLabels) {
             this.userLabels = Input.ofNullable(userLabels);
             return this;
         }
 
-        public Builder setZone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Input<String> zone) {
             this.zone = zone;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = Input.ofNullable(zone);
             return this;
         }

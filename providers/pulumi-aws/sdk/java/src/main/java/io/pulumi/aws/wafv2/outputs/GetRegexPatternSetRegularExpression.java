@@ -48,7 +48,7 @@ public final class GetRegexPatternSetRegularExpression {
     	      this.regexString = defaults.regexString;
         }
 
-        public Builder setRegexString(String regexString) {
+        public Builder regexString(String regexString) {
             this.regexString = Objects.requireNonNull(regexString);
             return this;
         }

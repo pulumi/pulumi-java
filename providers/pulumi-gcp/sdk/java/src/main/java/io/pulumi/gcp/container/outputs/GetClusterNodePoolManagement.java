@@ -49,12 +49,12 @@ public final class GetClusterNodePoolManagement {
     	      this.autoUpgrade = defaults.autoUpgrade;
         }
 
-        public Builder setAutoRepair(Boolean autoRepair) {
+        public Builder autoRepair(Boolean autoRepair) {
             this.autoRepair = Objects.requireNonNull(autoRepair);
             return this;
         }
 
-        public Builder setAutoUpgrade(Boolean autoUpgrade) {
+        public Builder autoUpgrade(Boolean autoUpgrade) {
             this.autoUpgrade = Objects.requireNonNull(autoUpgrade);
             return this;
         }

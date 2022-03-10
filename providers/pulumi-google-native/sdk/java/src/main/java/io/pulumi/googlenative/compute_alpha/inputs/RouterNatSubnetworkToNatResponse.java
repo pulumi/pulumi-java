@@ -89,17 +89,17 @@ public final class RouterNatSubnetworkToNatResponse extends io.pulumi.resources.
     	      this.sourceIpRangesToNat = defaults.sourceIpRangesToNat;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSecondaryIpRangeNames(List<String> secondaryIpRangeNames) {
+        public Builder secondaryIpRangeNames(List<String> secondaryIpRangeNames) {
             this.secondaryIpRangeNames = Objects.requireNonNull(secondaryIpRangeNames);
             return this;
         }
 
-        public Builder setSourceIpRangesToNat(List<String> sourceIpRangesToNat) {
+        public Builder sourceIpRangesToNat(List<String> sourceIpRangesToNat) {
             this.sourceIpRangesToNat = Objects.requireNonNull(sourceIpRangesToNat);
             return this;
         }

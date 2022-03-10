@@ -90,32 +90,32 @@ public final class SkippedDetailArgs extends io.pulumi.resources.ResourceArgs {
     	      this.incompatibleDevice = defaults.incompatibleDevice;
         }
 
-        public Builder setIncompatibleAppVersion(@Nullable Input<Boolean> incompatibleAppVersion) {
+        public Builder incompatibleAppVersion(@Nullable Input<Boolean> incompatibleAppVersion) {
             this.incompatibleAppVersion = incompatibleAppVersion;
             return this;
         }
 
-        public Builder setIncompatibleAppVersion(@Nullable Boolean incompatibleAppVersion) {
+        public Builder incompatibleAppVersion(@Nullable Boolean incompatibleAppVersion) {
             this.incompatibleAppVersion = Input.ofNullable(incompatibleAppVersion);
             return this;
         }
 
-        public Builder setIncompatibleArchitecture(@Nullable Input<Boolean> incompatibleArchitecture) {
+        public Builder incompatibleArchitecture(@Nullable Input<Boolean> incompatibleArchitecture) {
             this.incompatibleArchitecture = incompatibleArchitecture;
             return this;
         }
 
-        public Builder setIncompatibleArchitecture(@Nullable Boolean incompatibleArchitecture) {
+        public Builder incompatibleArchitecture(@Nullable Boolean incompatibleArchitecture) {
             this.incompatibleArchitecture = Input.ofNullable(incompatibleArchitecture);
             return this;
         }
 
-        public Builder setIncompatibleDevice(@Nullable Input<Boolean> incompatibleDevice) {
+        public Builder incompatibleDevice(@Nullable Input<Boolean> incompatibleDevice) {
             this.incompatibleDevice = incompatibleDevice;
             return this;
         }
 
-        public Builder setIncompatibleDevice(@Nullable Boolean incompatibleDevice) {
+        public Builder incompatibleDevice(@Nullable Boolean incompatibleDevice) {
             this.incompatibleDevice = Input.ofNullable(incompatibleDevice);
             return this;
         }

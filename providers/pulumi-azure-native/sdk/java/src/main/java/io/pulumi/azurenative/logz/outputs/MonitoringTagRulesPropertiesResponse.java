@@ -85,17 +85,17 @@ public final class MonitoringTagRulesPropertiesResponse {
     	      this.systemData = defaults.systemData;
         }
 
-        public Builder setLogRules(@Nullable LogRulesResponse logRules) {
+        public Builder logRules(@Nullable LogRulesResponse logRules) {
             this.logRules = logRules;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }

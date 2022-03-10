@@ -136,62 +136,62 @@ public final class FusionAlertRuleArgs extends io.pulumi.resources.ResourceArgs 
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setAlertRuleTemplateName(Input<String> alertRuleTemplateName) {
+        public Builder alertRuleTemplateName(Input<String> alertRuleTemplateName) {
             this.alertRuleTemplateName = Objects.requireNonNull(alertRuleTemplateName);
             return this;
         }
 
-        public Builder setAlertRuleTemplateName(String alertRuleTemplateName) {
+        public Builder alertRuleTemplateName(String alertRuleTemplateName) {
             this.alertRuleTemplateName = Input.of(Objects.requireNonNull(alertRuleTemplateName));
             return this;
         }
 
-        public Builder setEnabled(Input<Boolean> enabled) {
+        public Builder enabled(Input<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Input.of(Objects.requireNonNull(enabled));
             return this;
         }
 
-        public Builder setKind(Input<String> kind) {
+        public Builder kind(Input<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRuleId(@Nullable Input<String> ruleId) {
+        public Builder ruleId(@Nullable Input<String> ruleId) {
             this.ruleId = ruleId;
             return this;
         }
 
-        public Builder setRuleId(@Nullable String ruleId) {
+        public Builder ruleId(@Nullable String ruleId) {
             this.ruleId = Input.ofNullable(ruleId);
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

@@ -185,92 +185,92 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
     	      this.view = defaults.view;
         }
 
-        public Builder setDataset(@Nullable Input<DatasetAccessEntryArgs> dataset) {
+        public Builder dataset(@Nullable Input<DatasetAccessEntryArgs> dataset) {
             this.dataset = dataset;
             return this;
         }
 
-        public Builder setDataset(@Nullable DatasetAccessEntryArgs dataset) {
+        public Builder dataset(@Nullable DatasetAccessEntryArgs dataset) {
             this.dataset = Input.ofNullable(dataset);
             return this;
         }
 
-        public Builder setDomain(@Nullable Input<String> domain) {
+        public Builder domain(@Nullable Input<String> domain) {
             this.domain = domain;
             return this;
         }
 
-        public Builder setDomain(@Nullable String domain) {
+        public Builder domain(@Nullable String domain) {
             this.domain = Input.ofNullable(domain);
             return this;
         }
 
-        public Builder setGroupByEmail(@Nullable Input<String> groupByEmail) {
+        public Builder groupByEmail(@Nullable Input<String> groupByEmail) {
             this.groupByEmail = groupByEmail;
             return this;
         }
 
-        public Builder setGroupByEmail(@Nullable String groupByEmail) {
+        public Builder groupByEmail(@Nullable String groupByEmail) {
             this.groupByEmail = Input.ofNullable(groupByEmail);
             return this;
         }
 
-        public Builder setIamMember(@Nullable Input<String> iamMember) {
+        public Builder iamMember(@Nullable Input<String> iamMember) {
             this.iamMember = iamMember;
             return this;
         }
 
-        public Builder setIamMember(@Nullable String iamMember) {
+        public Builder iamMember(@Nullable String iamMember) {
             this.iamMember = Input.ofNullable(iamMember);
             return this;
         }
 
-        public Builder setRole(@Nullable Input<String> role) {
+        public Builder role(@Nullable Input<String> role) {
             this.role = role;
             return this;
         }
 
-        public Builder setRole(@Nullable String role) {
+        public Builder role(@Nullable String role) {
             this.role = Input.ofNullable(role);
             return this;
         }
 
-        public Builder setRoutine(@Nullable Input<RoutineReferenceArgs> routine) {
+        public Builder routine(@Nullable Input<RoutineReferenceArgs> routine) {
             this.routine = routine;
             return this;
         }
 
-        public Builder setRoutine(@Nullable RoutineReferenceArgs routine) {
+        public Builder routine(@Nullable RoutineReferenceArgs routine) {
             this.routine = Input.ofNullable(routine);
             return this;
         }
 
-        public Builder setSpecialGroup(@Nullable Input<String> specialGroup) {
+        public Builder specialGroup(@Nullable Input<String> specialGroup) {
             this.specialGroup = specialGroup;
             return this;
         }
 
-        public Builder setSpecialGroup(@Nullable String specialGroup) {
+        public Builder specialGroup(@Nullable String specialGroup) {
             this.specialGroup = Input.ofNullable(specialGroup);
             return this;
         }
 
-        public Builder setUserByEmail(@Nullable Input<String> userByEmail) {
+        public Builder userByEmail(@Nullable Input<String> userByEmail) {
             this.userByEmail = userByEmail;
             return this;
         }
 
-        public Builder setUserByEmail(@Nullable String userByEmail) {
+        public Builder userByEmail(@Nullable String userByEmail) {
             this.userByEmail = Input.ofNullable(userByEmail);
             return this;
         }
 
-        public Builder setView(@Nullable Input<TableReferenceArgs> view) {
+        public Builder view(@Nullable Input<TableReferenceArgs> view) {
             this.view = view;
             return this;
         }
 
-        public Builder setView(@Nullable TableReferenceArgs view) {
+        public Builder view(@Nullable TableReferenceArgs view) {
             this.view = Input.ofNullable(view);
             return this;
         }

@@ -103,22 +103,22 @@ public final class SecretVolumeSource {
     	      this.secretName = defaults.secretName;
         }
 
-        public Builder setDefaultMode(@Nullable Integer defaultMode) {
+        public Builder defaultMode(@Nullable Integer defaultMode) {
             this.defaultMode = defaultMode;
             return this;
         }
 
-        public Builder setItems(@Nullable List<KeyToPath> items) {
+        public Builder items(@Nullable List<KeyToPath> items) {
             this.items = items;
             return this;
         }
 
-        public Builder setOptional(@Nullable Boolean optional) {
+        public Builder optional(@Nullable Boolean optional) {
             this.optional = optional;
             return this;
         }
 
-        public Builder setSecretName(@Nullable String secretName) {
+        public Builder secretName(@Nullable String secretName) {
             this.secretName = secretName;
             return this;
         }

@@ -118,27 +118,27 @@ public final class ReplicaSet {
     	      this.status = defaults.status;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setMetadata(@Nullable ObjectMeta metadata) {
+        public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setSpec(@Nullable ReplicaSetSpec spec) {
+        public Builder spec(@Nullable ReplicaSetSpec spec) {
             this.spec = spec;
             return this;
         }
 
-        public Builder setStatus(@Nullable ReplicaSetStatus status) {
+        public Builder status(@Nullable ReplicaSetStatus status) {
             this.status = status;
             return this;
         }

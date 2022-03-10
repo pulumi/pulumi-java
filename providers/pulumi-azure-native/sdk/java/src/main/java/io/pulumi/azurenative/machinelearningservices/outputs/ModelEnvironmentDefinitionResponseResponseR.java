@@ -169,42 +169,42 @@ public final class ModelEnvironmentDefinitionResponseResponseR {
     	      this.userManaged = defaults.userManaged;
         }
 
-        public Builder setBioConductorPackages(@Nullable List<String> bioConductorPackages) {
+        public Builder bioConductorPackages(@Nullable List<String> bioConductorPackages) {
             this.bioConductorPackages = bioConductorPackages;
             return this;
         }
 
-        public Builder setCranPackages(@Nullable List<RCranPackageResponse> cranPackages) {
+        public Builder cranPackages(@Nullable List<RCranPackageResponse> cranPackages) {
             this.cranPackages = cranPackages;
             return this;
         }
 
-        public Builder setCustomUrlPackages(@Nullable List<String> customUrlPackages) {
+        public Builder customUrlPackages(@Nullable List<String> customUrlPackages) {
             this.customUrlPackages = customUrlPackages;
             return this;
         }
 
-        public Builder setGitHubPackages(@Nullable List<RGitHubPackageResponseResponse> gitHubPackages) {
+        public Builder gitHubPackages(@Nullable List<RGitHubPackageResponseResponse> gitHubPackages) {
             this.gitHubPackages = gitHubPackages;
             return this;
         }
 
-        public Builder setRVersion(@Nullable String rVersion) {
+        public Builder rVersion(@Nullable String rVersion) {
             this.rVersion = rVersion;
             return this;
         }
 
-        public Builder setRscriptPath(@Nullable String rscriptPath) {
+        public Builder rscriptPath(@Nullable String rscriptPath) {
             this.rscriptPath = rscriptPath;
             return this;
         }
 
-        public Builder setSnapshotDate(@Nullable String snapshotDate) {
+        public Builder snapshotDate(@Nullable String snapshotDate) {
             this.snapshotDate = snapshotDate;
             return this;
         }
 
-        public Builder setUserManaged(@Nullable Boolean userManaged) {
+        public Builder userManaged(@Nullable Boolean userManaged) {
             this.userManaged = userManaged;
             return this;
         }

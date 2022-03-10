@@ -108,42 +108,42 @@ public final class GoogleCloudChannelV1RenewalSettingsArgs extends io.pulumi.res
     	      this.resizeUnitCount = defaults.resizeUnitCount;
         }
 
-        public Builder setEnableRenewal(@Nullable Input<Boolean> enableRenewal) {
+        public Builder enableRenewal(@Nullable Input<Boolean> enableRenewal) {
             this.enableRenewal = enableRenewal;
             return this;
         }
 
-        public Builder setEnableRenewal(@Nullable Boolean enableRenewal) {
+        public Builder enableRenewal(@Nullable Boolean enableRenewal) {
             this.enableRenewal = Input.ofNullable(enableRenewal);
             return this;
         }
 
-        public Builder setPaymentCycle(@Nullable Input<GoogleCloudChannelV1PeriodArgs> paymentCycle) {
+        public Builder paymentCycle(@Nullable Input<GoogleCloudChannelV1PeriodArgs> paymentCycle) {
             this.paymentCycle = paymentCycle;
             return this;
         }
 
-        public Builder setPaymentCycle(@Nullable GoogleCloudChannelV1PeriodArgs paymentCycle) {
+        public Builder paymentCycle(@Nullable GoogleCloudChannelV1PeriodArgs paymentCycle) {
             this.paymentCycle = Input.ofNullable(paymentCycle);
             return this;
         }
 
-        public Builder setPaymentPlan(@Nullable Input<GoogleCloudChannelV1RenewalSettingsPaymentPlan> paymentPlan) {
+        public Builder paymentPlan(@Nullable Input<GoogleCloudChannelV1RenewalSettingsPaymentPlan> paymentPlan) {
             this.paymentPlan = paymentPlan;
             return this;
         }
 
-        public Builder setPaymentPlan(@Nullable GoogleCloudChannelV1RenewalSettingsPaymentPlan paymentPlan) {
+        public Builder paymentPlan(@Nullable GoogleCloudChannelV1RenewalSettingsPaymentPlan paymentPlan) {
             this.paymentPlan = Input.ofNullable(paymentPlan);
             return this;
         }
 
-        public Builder setResizeUnitCount(@Nullable Input<Boolean> resizeUnitCount) {
+        public Builder resizeUnitCount(@Nullable Input<Boolean> resizeUnitCount) {
             this.resizeUnitCount = resizeUnitCount;
             return this;
         }
 
-        public Builder setResizeUnitCount(@Nullable Boolean resizeUnitCount) {
+        public Builder resizeUnitCount(@Nullable Boolean resizeUnitCount) {
             this.resizeUnitCount = Input.ofNullable(resizeUnitCount);
             return this;
         }

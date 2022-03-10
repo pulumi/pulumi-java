@@ -49,7 +49,7 @@ public final class FlowLookoutMetricsDestinationProperties extends io.pulumi.res
     	      this.object = defaults.object;
         }
 
-        public Builder setObject(@Nullable String object) {
+        public Builder object(@Nullable String object) {
             this.object = object;
             return this;
         }

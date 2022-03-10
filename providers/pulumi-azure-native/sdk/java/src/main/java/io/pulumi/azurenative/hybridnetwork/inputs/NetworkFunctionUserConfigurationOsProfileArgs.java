@@ -57,12 +57,12 @@ public final class NetworkFunctionUserConfigurationOsProfileArgs extends io.pulu
     	      this.customData = defaults.customData;
         }
 
-        public Builder setCustomData(@Nullable Input<String> customData) {
+        public Builder customData(@Nullable Input<String> customData) {
             this.customData = customData;
             return this;
         }
 
-        public Builder setCustomData(@Nullable String customData) {
+        public Builder customData(@Nullable String customData) {
             this.customData = Input.ofNullable(customData);
             return this;
         }

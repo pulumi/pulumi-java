@@ -119,52 +119,52 @@ public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.Resou
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setNumberOfPublicIPs(@Nullable Input<Double> numberOfPublicIPs) {
+        public Builder numberOfPublicIPs(@Nullable Input<Double> numberOfPublicIPs) {
             this.numberOfPublicIPs = numberOfPublicIPs;
             return this;
         }
 
-        public Builder setNumberOfPublicIPs(@Nullable Double numberOfPublicIPs) {
+        public Builder numberOfPublicIPs(@Nullable Double numberOfPublicIPs) {
             this.numberOfPublicIPs = Input.ofNullable(numberOfPublicIPs);
             return this;
         }
 
-        public Builder setPrivateCloudName(Input<String> privateCloudName) {
+        public Builder privateCloudName(Input<String> privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
 
-        public Builder setPrivateCloudName(String privateCloudName) {
+        public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Input.of(Objects.requireNonNull(privateCloudName));
             return this;
         }
 
-        public Builder setPublicIPId(@Nullable Input<String> publicIPId) {
+        public Builder publicIPId(@Nullable Input<String> publicIPId) {
             this.publicIPId = publicIPId;
             return this;
         }
 
-        public Builder setPublicIPId(@Nullable String publicIPId) {
+        public Builder publicIPId(@Nullable String publicIPId) {
             this.publicIPId = Input.ofNullable(publicIPId);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

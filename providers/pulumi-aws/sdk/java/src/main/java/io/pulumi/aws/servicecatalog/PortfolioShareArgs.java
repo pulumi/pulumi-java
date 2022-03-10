@@ -135,62 +135,62 @@ public final class PortfolioShareArgs extends io.pulumi.resources.ResourceArgs {
     	      this.waitForAcceptance = defaults.waitForAcceptance;
         }
 
-        public Builder setAcceptLanguage(@Nullable Input<String> acceptLanguage) {
+        public Builder acceptLanguage(@Nullable Input<String> acceptLanguage) {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
 
-        public Builder setAcceptLanguage(@Nullable String acceptLanguage) {
+        public Builder acceptLanguage(@Nullable String acceptLanguage) {
             this.acceptLanguage = Input.ofNullable(acceptLanguage);
             return this;
         }
 
-        public Builder setPortfolioId(Input<String> portfolioId) {
+        public Builder portfolioId(Input<String> portfolioId) {
             this.portfolioId = Objects.requireNonNull(portfolioId);
             return this;
         }
 
-        public Builder setPortfolioId(String portfolioId) {
+        public Builder portfolioId(String portfolioId) {
             this.portfolioId = Input.of(Objects.requireNonNull(portfolioId));
             return this;
         }
 
-        public Builder setPrincipalId(Input<String> principalId) {
+        public Builder principalId(Input<String> principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
 
-        public Builder setPrincipalId(String principalId) {
+        public Builder principalId(String principalId) {
             this.principalId = Input.of(Objects.requireNonNull(principalId));
             return this;
         }
 
-        public Builder setShareTagOptions(@Nullable Input<Boolean> shareTagOptions) {
+        public Builder shareTagOptions(@Nullable Input<Boolean> shareTagOptions) {
             this.shareTagOptions = shareTagOptions;
             return this;
         }
 
-        public Builder setShareTagOptions(@Nullable Boolean shareTagOptions) {
+        public Builder shareTagOptions(@Nullable Boolean shareTagOptions) {
             this.shareTagOptions = Input.ofNullable(shareTagOptions);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setWaitForAcceptance(@Nullable Input<Boolean> waitForAcceptance) {
+        public Builder waitForAcceptance(@Nullable Input<Boolean> waitForAcceptance) {
             this.waitForAcceptance = waitForAcceptance;
             return this;
         }
 
-        public Builder setWaitForAcceptance(@Nullable Boolean waitForAcceptance) {
+        public Builder waitForAcceptance(@Nullable Boolean waitForAcceptance) {
             this.waitForAcceptance = Input.ofNullable(waitForAcceptance);
             return this;
         }

@@ -295,82 +295,82 @@ public final class GetEndpointResult {
     	      this.weight = defaults.weight;
         }
 
-        public Builder setCustomHeaders(@Nullable List<EndpointPropertiesResponseCustomHeaders> customHeaders) {
+        public Builder customHeaders(@Nullable List<EndpointPropertiesResponseCustomHeaders> customHeaders) {
             this.customHeaders = customHeaders;
             return this;
         }
 
-        public Builder setEndpointLocation(@Nullable String endpointLocation) {
+        public Builder endpointLocation(@Nullable String endpointLocation) {
             this.endpointLocation = endpointLocation;
             return this;
         }
 
-        public Builder setEndpointMonitorStatus(@Nullable String endpointMonitorStatus) {
+        public Builder endpointMonitorStatus(@Nullable String endpointMonitorStatus) {
             this.endpointMonitorStatus = endpointMonitorStatus;
             return this;
         }
 
-        public Builder setEndpointStatus(@Nullable String endpointStatus) {
+        public Builder endpointStatus(@Nullable String endpointStatus) {
             this.endpointStatus = endpointStatus;
             return this;
         }
 
-        public Builder setGeoMapping(@Nullable List<String> geoMapping) {
+        public Builder geoMapping(@Nullable List<String> geoMapping) {
             this.geoMapping = geoMapping;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setMinChildEndpoints(@Nullable Double minChildEndpoints) {
+        public Builder minChildEndpoints(@Nullable Double minChildEndpoints) {
             this.minChildEndpoints = minChildEndpoints;
             return this;
         }
 
-        public Builder setMinChildEndpointsIPv4(@Nullable Double minChildEndpointsIPv4) {
+        public Builder minChildEndpointsIPv4(@Nullable Double minChildEndpointsIPv4) {
             this.minChildEndpointsIPv4 = minChildEndpointsIPv4;
             return this;
         }
 
-        public Builder setMinChildEndpointsIPv6(@Nullable Double minChildEndpointsIPv6) {
+        public Builder minChildEndpointsIPv6(@Nullable Double minChildEndpointsIPv6) {
             this.minChildEndpointsIPv6 = minChildEndpointsIPv6;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPriority(@Nullable Double priority) {
+        public Builder priority(@Nullable Double priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setSubnets(@Nullable List<EndpointPropertiesResponseSubnets> subnets) {
+        public Builder subnets(@Nullable List<EndpointPropertiesResponseSubnets> subnets) {
             this.subnets = subnets;
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = target;
             return this;
         }
 
-        public Builder setTargetResourceId(@Nullable String targetResourceId) {
+        public Builder targetResourceId(@Nullable String targetResourceId) {
             this.targetResourceId = targetResourceId;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setWeight(@Nullable Double weight) {
+        public Builder weight(@Nullable Double weight) {
             this.weight = weight;
             return this;
         }

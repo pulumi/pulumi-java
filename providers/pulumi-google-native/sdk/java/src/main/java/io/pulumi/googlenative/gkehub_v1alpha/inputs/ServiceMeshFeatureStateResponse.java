@@ -56,7 +56,7 @@ public final class ServiceMeshFeatureStateResponse extends io.pulumi.resources.I
     	      this.analysisMessages = defaults.analysisMessages;
         }
 
-        public Builder setAnalysisMessages(List<ServiceMeshAnalysisMessageResponse> analysisMessages) {
+        public Builder analysisMessages(List<ServiceMeshAnalysisMessageResponse> analysisMessages) {
             this.analysisMessages = Objects.requireNonNull(analysisMessages);
             return this;
         }

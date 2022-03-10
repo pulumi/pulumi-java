@@ -100,22 +100,22 @@ public final class MonitoringScheduleClusterConfig {
     	      this.volumeSizeInGB = defaults.volumeSizeInGB;
         }
 
-        public Builder setInstanceCount(Integer instanceCount) {
+        public Builder instanceCount(Integer instanceCount) {
             this.instanceCount = Objects.requireNonNull(instanceCount);
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setVolumeKmsKeyId(@Nullable String volumeKmsKeyId) {
+        public Builder volumeKmsKeyId(@Nullable String volumeKmsKeyId) {
             this.volumeKmsKeyId = volumeKmsKeyId;
             return this;
         }
 
-        public Builder setVolumeSizeInGB(Integer volumeSizeInGB) {
+        public Builder volumeSizeInGB(Integer volumeSizeInGB) {
             this.volumeSizeInGB = Objects.requireNonNull(volumeSizeInGB);
             return this;
         }

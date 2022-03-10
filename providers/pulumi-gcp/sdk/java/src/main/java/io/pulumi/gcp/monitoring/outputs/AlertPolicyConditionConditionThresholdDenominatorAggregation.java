@@ -242,22 +242,22 @@ public final class AlertPolicyConditionConditionThresholdDenominatorAggregation 
     	      this.perSeriesAligner = defaults.perSeriesAligner;
         }
 
-        public Builder setAlignmentPeriod(@Nullable String alignmentPeriod) {
+        public Builder alignmentPeriod(@Nullable String alignmentPeriod) {
             this.alignmentPeriod = alignmentPeriod;
             return this;
         }
 
-        public Builder setCrossSeriesReducer(@Nullable String crossSeriesReducer) {
+        public Builder crossSeriesReducer(@Nullable String crossSeriesReducer) {
             this.crossSeriesReducer = crossSeriesReducer;
             return this;
         }
 
-        public Builder setGroupByFields(@Nullable List<String> groupByFields) {
+        public Builder groupByFields(@Nullable List<String> groupByFields) {
             this.groupByFields = groupByFields;
             return this;
         }
 
-        public Builder setPerSeriesAligner(@Nullable String perSeriesAligner) {
+        public Builder perSeriesAligner(@Nullable String perSeriesAligner) {
             this.perSeriesAligner = perSeriesAligner;
             return this;
         }

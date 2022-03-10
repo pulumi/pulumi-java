@@ -70,12 +70,12 @@ public final class RRSetRoutingPolicyGeoPolicyResponse extends io.pulumi.resourc
     	      this.kind = defaults.kind;
         }
 
-        public Builder setItems(List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse> items) {
+        public Builder items(List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }

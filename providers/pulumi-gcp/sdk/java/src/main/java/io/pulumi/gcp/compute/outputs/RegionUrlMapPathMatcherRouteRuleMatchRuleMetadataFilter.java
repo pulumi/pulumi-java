@@ -85,12 +85,12 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilter {
     	      this.filterMatchCriteria = defaults.filterMatchCriteria;
         }
 
-        public Builder setFilterLabels(List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabel> filterLabels) {
+        public Builder filterLabels(List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabel> filterLabels) {
             this.filterLabels = Objects.requireNonNull(filterLabels);
             return this;
         }
 
-        public Builder setFilterMatchCriteria(String filterMatchCriteria) {
+        public Builder filterMatchCriteria(String filterMatchCriteria) {
             this.filterMatchCriteria = Objects.requireNonNull(filterMatchCriteria);
             return this;
         }

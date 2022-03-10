@@ -69,12 +69,12 @@ public final class RegionInstanceGroupManagerStatusStateful {
     	      this.perInstanceConfigs = defaults.perInstanceConfigs;
         }
 
-        public Builder setHasStatefulConfig(@Nullable Boolean hasStatefulConfig) {
+        public Builder hasStatefulConfig(@Nullable Boolean hasStatefulConfig) {
             this.hasStatefulConfig = hasStatefulConfig;
             return this;
         }
 
-        public Builder setPerInstanceConfigs(@Nullable List<RegionInstanceGroupManagerStatusStatefulPerInstanceConfig> perInstanceConfigs) {
+        public Builder perInstanceConfigs(@Nullable List<RegionInstanceGroupManagerStatusStatefulPerInstanceConfig> perInstanceConfigs) {
             this.perInstanceConfigs = perInstanceConfigs;
             return this;
         }

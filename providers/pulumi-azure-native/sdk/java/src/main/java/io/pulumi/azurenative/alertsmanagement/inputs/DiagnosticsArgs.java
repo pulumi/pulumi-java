@@ -127,52 +127,52 @@ public final class DiagnosticsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setConditions(@Nullable Input<ConditionsArgs> conditions) {
+        public Builder conditions(@Nullable Input<ConditionsArgs> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setConditions(@Nullable ConditionsArgs conditions) {
+        public Builder conditions(@Nullable ConditionsArgs conditions) {
             this.conditions = Input.ofNullable(conditions);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setScope(@Nullable Input<ScopeArgs> scope) {
+        public Builder scope(@Nullable Input<ScopeArgs> scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setScope(@Nullable ScopeArgs scope) {
+        public Builder scope(@Nullable ScopeArgs scope) {
             this.scope = Input.ofNullable(scope);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<Either<String,ActionRuleStatus>> status) {
+        public Builder status(@Nullable Input<Either<String,ActionRuleStatus>> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable Either<String,ActionRuleStatus> status) {
+        public Builder status(@Nullable Either<String,ActionRuleStatus> status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

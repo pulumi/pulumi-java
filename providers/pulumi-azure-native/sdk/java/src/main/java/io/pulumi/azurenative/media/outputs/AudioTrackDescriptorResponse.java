@@ -69,12 +69,12 @@ public final class AudioTrackDescriptorResponse {
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setChannelMapping(@Nullable String channelMapping) {
+        public Builder channelMapping(@Nullable String channelMapping) {
             this.channelMapping = channelMapping;
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }

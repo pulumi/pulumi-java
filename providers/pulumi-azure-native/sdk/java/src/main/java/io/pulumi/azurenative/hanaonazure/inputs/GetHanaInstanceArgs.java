@@ -68,12 +68,12 @@ public final class GetHanaInstanceArgs extends io.pulumi.resources.InvokeArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setHanaInstanceName(String hanaInstanceName) {
+        public Builder hanaInstanceName(String hanaInstanceName) {
             this.hanaInstanceName = Objects.requireNonNull(hanaInstanceName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

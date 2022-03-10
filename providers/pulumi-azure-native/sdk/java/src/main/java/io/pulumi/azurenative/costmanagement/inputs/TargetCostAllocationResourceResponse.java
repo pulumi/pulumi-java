@@ -106,22 +106,22 @@ public final class TargetCostAllocationResourceResponse extends io.pulumi.resour
     	      this.values = defaults.values;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPolicyType(String policyType) {
+        public Builder policyType(String policyType) {
             this.policyType = Objects.requireNonNull(policyType);
             return this;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
-        public Builder setValues(List<CostAllocationProportionResponse> values) {
+        public Builder values(List<CostAllocationProportionResponse> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }

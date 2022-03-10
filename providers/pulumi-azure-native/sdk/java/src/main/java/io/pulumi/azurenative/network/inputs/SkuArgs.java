@@ -59,12 +59,12 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setName(@Nullable Input<Either<String,SkuName>> name) {
+        public Builder name(@Nullable Input<Either<String,SkuName>> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable Either<String,SkuName> name) {
+        public Builder name(@Nullable Either<String,SkuName> name) {
             this.name = Input.ofNullable(name);
             return this;
         }

@@ -177,82 +177,82 @@ public final class ConnectorMappingPropertiesArgs extends io.pulumi.resources.Re
     	      this.structure = defaults.structure;
         }
 
-        public Builder setAvailability(Input<ConnectorMappingAvailabilityArgs> availability) {
+        public Builder availability(Input<ConnectorMappingAvailabilityArgs> availability) {
             this.availability = Objects.requireNonNull(availability);
             return this;
         }
 
-        public Builder setAvailability(ConnectorMappingAvailabilityArgs availability) {
+        public Builder availability(ConnectorMappingAvailabilityArgs availability) {
             this.availability = Input.of(Objects.requireNonNull(availability));
             return this;
         }
 
-        public Builder setCompleteOperation(Input<ConnectorMappingCompleteOperationArgs> completeOperation) {
+        public Builder completeOperation(Input<ConnectorMappingCompleteOperationArgs> completeOperation) {
             this.completeOperation = Objects.requireNonNull(completeOperation);
             return this;
         }
 
-        public Builder setCompleteOperation(ConnectorMappingCompleteOperationArgs completeOperation) {
+        public Builder completeOperation(ConnectorMappingCompleteOperationArgs completeOperation) {
             this.completeOperation = Input.of(Objects.requireNonNull(completeOperation));
             return this;
         }
 
-        public Builder setErrorManagement(Input<ConnectorMappingErrorManagementArgs> errorManagement) {
+        public Builder errorManagement(Input<ConnectorMappingErrorManagementArgs> errorManagement) {
             this.errorManagement = Objects.requireNonNull(errorManagement);
             return this;
         }
 
-        public Builder setErrorManagement(ConnectorMappingErrorManagementArgs errorManagement) {
+        public Builder errorManagement(ConnectorMappingErrorManagementArgs errorManagement) {
             this.errorManagement = Input.of(Objects.requireNonNull(errorManagement));
             return this;
         }
 
-        public Builder setFileFilter(@Nullable Input<String> fileFilter) {
+        public Builder fileFilter(@Nullable Input<String> fileFilter) {
             this.fileFilter = fileFilter;
             return this;
         }
 
-        public Builder setFileFilter(@Nullable String fileFilter) {
+        public Builder fileFilter(@Nullable String fileFilter) {
             this.fileFilter = Input.ofNullable(fileFilter);
             return this;
         }
 
-        public Builder setFolderPath(@Nullable Input<String> folderPath) {
+        public Builder folderPath(@Nullable Input<String> folderPath) {
             this.folderPath = folderPath;
             return this;
         }
 
-        public Builder setFolderPath(@Nullable String folderPath) {
+        public Builder folderPath(@Nullable String folderPath) {
             this.folderPath = Input.ofNullable(folderPath);
             return this;
         }
 
-        public Builder setFormat(Input<ConnectorMappingFormatArgs> format) {
+        public Builder format(Input<ConnectorMappingFormatArgs> format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
-        public Builder setFormat(ConnectorMappingFormatArgs format) {
+        public Builder format(ConnectorMappingFormatArgs format) {
             this.format = Input.of(Objects.requireNonNull(format));
             return this;
         }
 
-        public Builder setHasHeader(@Nullable Input<Boolean> hasHeader) {
+        public Builder hasHeader(@Nullable Input<Boolean> hasHeader) {
             this.hasHeader = hasHeader;
             return this;
         }
 
-        public Builder setHasHeader(@Nullable Boolean hasHeader) {
+        public Builder hasHeader(@Nullable Boolean hasHeader) {
             this.hasHeader = Input.ofNullable(hasHeader);
             return this;
         }
 
-        public Builder setStructure(Input<List<ConnectorMappingStructureArgs>> structure) {
+        public Builder structure(Input<List<ConnectorMappingStructureArgs>> structure) {
             this.structure = Objects.requireNonNull(structure);
             return this;
         }
 
-        public Builder setStructure(List<ConnectorMappingStructureArgs> structure) {
+        public Builder structure(List<ConnectorMappingStructureArgs> structure) {
             this.structure = Input.of(Objects.requireNonNull(structure));
             return this;
         }

@@ -100,22 +100,22 @@ public final class SourceResponse {
     	      this.queryType = defaults.queryType;
         }
 
-        public Builder setAuthorizedResources(@Nullable List<String> authorizedResources) {
+        public Builder authorizedResources(@Nullable List<String> authorizedResources) {
             this.authorizedResources = authorizedResources;
             return this;
         }
 
-        public Builder setDataSourceId(String dataSourceId) {
+        public Builder dataSourceId(String dataSourceId) {
             this.dataSourceId = Objects.requireNonNull(dataSourceId);
             return this;
         }
 
-        public Builder setQuery(@Nullable String query) {
+        public Builder query(@Nullable String query) {
             this.query = query;
             return this;
         }
 
-        public Builder setQueryType(@Nullable String queryType) {
+        public Builder queryType(@Nullable String queryType) {
             this.queryType = queryType;
             return this;
         }

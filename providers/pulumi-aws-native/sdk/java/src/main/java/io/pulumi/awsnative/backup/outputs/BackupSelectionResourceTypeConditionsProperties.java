@@ -67,22 +67,22 @@ public final class BackupSelectionResourceTypeConditionsProperties {
     	      this.stringNotLike = defaults.stringNotLike;
         }
 
-        public Builder setStringEquals(@Nullable List<BackupSelectionConditionParameter> stringEquals) {
+        public Builder stringEquals(@Nullable List<BackupSelectionConditionParameter> stringEquals) {
             this.stringEquals = stringEquals;
             return this;
         }
 
-        public Builder setStringLike(@Nullable List<BackupSelectionConditionParameter> stringLike) {
+        public Builder stringLike(@Nullable List<BackupSelectionConditionParameter> stringLike) {
             this.stringLike = stringLike;
             return this;
         }
 
-        public Builder setStringNotEquals(@Nullable List<BackupSelectionConditionParameter> stringNotEquals) {
+        public Builder stringNotEquals(@Nullable List<BackupSelectionConditionParameter> stringNotEquals) {
             this.stringNotEquals = stringNotEquals;
             return this;
         }
 
-        public Builder setStringNotLike(@Nullable List<BackupSelectionConditionParameter> stringNotLike) {
+        public Builder stringNotLike(@Nullable List<BackupSelectionConditionParameter> stringNotLike) {
             this.stringNotLike = stringNotLike;
             return this;
         }

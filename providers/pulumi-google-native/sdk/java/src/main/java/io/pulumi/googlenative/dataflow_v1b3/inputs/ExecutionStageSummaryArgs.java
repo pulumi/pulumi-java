@@ -175,82 +175,82 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
     	      this.prerequisiteStage = defaults.prerequisiteStage;
         }
 
-        public Builder setComponentSource(@Nullable Input<List<ComponentSourceArgs>> componentSource) {
+        public Builder componentSource(@Nullable Input<List<ComponentSourceArgs>> componentSource) {
             this.componentSource = componentSource;
             return this;
         }
 
-        public Builder setComponentSource(@Nullable List<ComponentSourceArgs> componentSource) {
+        public Builder componentSource(@Nullable List<ComponentSourceArgs> componentSource) {
             this.componentSource = Input.ofNullable(componentSource);
             return this;
         }
 
-        public Builder setComponentTransform(@Nullable Input<List<ComponentTransformArgs>> componentTransform) {
+        public Builder componentTransform(@Nullable Input<List<ComponentTransformArgs>> componentTransform) {
             this.componentTransform = componentTransform;
             return this;
         }
 
-        public Builder setComponentTransform(@Nullable List<ComponentTransformArgs> componentTransform) {
+        public Builder componentTransform(@Nullable List<ComponentTransformArgs> componentTransform) {
             this.componentTransform = Input.ofNullable(componentTransform);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setInputSource(@Nullable Input<List<StageSourceArgs>> inputSource) {
+        public Builder inputSource(@Nullable Input<List<StageSourceArgs>> inputSource) {
             this.inputSource = inputSource;
             return this;
         }
 
-        public Builder setInputSource(@Nullable List<StageSourceArgs> inputSource) {
+        public Builder inputSource(@Nullable List<StageSourceArgs> inputSource) {
             this.inputSource = Input.ofNullable(inputSource);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<ExecutionStageSummaryKind> kind) {
+        public Builder kind(@Nullable Input<ExecutionStageSummaryKind> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable ExecutionStageSummaryKind kind) {
+        public Builder kind(@Nullable ExecutionStageSummaryKind kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOutputSource(@Nullable Input<List<StageSourceArgs>> outputSource) {
+        public Builder outputSource(@Nullable Input<List<StageSourceArgs>> outputSource) {
             this.outputSource = outputSource;
             return this;
         }
 
-        public Builder setOutputSource(@Nullable List<StageSourceArgs> outputSource) {
+        public Builder outputSource(@Nullable List<StageSourceArgs> outputSource) {
             this.outputSource = Input.ofNullable(outputSource);
             return this;
         }
 
-        public Builder setPrerequisiteStage(@Nullable Input<List<String>> prerequisiteStage) {
+        public Builder prerequisiteStage(@Nullable Input<List<String>> prerequisiteStage) {
             this.prerequisiteStage = prerequisiteStage;
             return this;
         }
 
-        public Builder setPrerequisiteStage(@Nullable List<String> prerequisiteStage) {
+        public Builder prerequisiteStage(@Nullable List<String> prerequisiteStage) {
             this.prerequisiteStage = Input.ofNullable(prerequisiteStage);
             return this;
         }

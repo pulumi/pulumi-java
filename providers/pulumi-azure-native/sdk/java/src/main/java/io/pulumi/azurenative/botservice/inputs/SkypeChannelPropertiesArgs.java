@@ -203,102 +203,102 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
     	      this.isEnabled = defaults.isEnabled;
         }
 
-        public Builder setCallingWebHook(@Nullable Input<String> callingWebHook) {
+        public Builder callingWebHook(@Nullable Input<String> callingWebHook) {
             this.callingWebHook = callingWebHook;
             return this;
         }
 
-        public Builder setCallingWebHook(@Nullable String callingWebHook) {
+        public Builder callingWebHook(@Nullable String callingWebHook) {
             this.callingWebHook = Input.ofNullable(callingWebHook);
             return this;
         }
 
-        public Builder setEnableCalling(@Nullable Input<Boolean> enableCalling) {
+        public Builder enableCalling(@Nullable Input<Boolean> enableCalling) {
             this.enableCalling = enableCalling;
             return this;
         }
 
-        public Builder setEnableCalling(@Nullable Boolean enableCalling) {
+        public Builder enableCalling(@Nullable Boolean enableCalling) {
             this.enableCalling = Input.ofNullable(enableCalling);
             return this;
         }
 
-        public Builder setEnableGroups(@Nullable Input<Boolean> enableGroups) {
+        public Builder enableGroups(@Nullable Input<Boolean> enableGroups) {
             this.enableGroups = enableGroups;
             return this;
         }
 
-        public Builder setEnableGroups(@Nullable Boolean enableGroups) {
+        public Builder enableGroups(@Nullable Boolean enableGroups) {
             this.enableGroups = Input.ofNullable(enableGroups);
             return this;
         }
 
-        public Builder setEnableMediaCards(@Nullable Input<Boolean> enableMediaCards) {
+        public Builder enableMediaCards(@Nullable Input<Boolean> enableMediaCards) {
             this.enableMediaCards = enableMediaCards;
             return this;
         }
 
-        public Builder setEnableMediaCards(@Nullable Boolean enableMediaCards) {
+        public Builder enableMediaCards(@Nullable Boolean enableMediaCards) {
             this.enableMediaCards = Input.ofNullable(enableMediaCards);
             return this;
         }
 
-        public Builder setEnableMessaging(@Nullable Input<Boolean> enableMessaging) {
+        public Builder enableMessaging(@Nullable Input<Boolean> enableMessaging) {
             this.enableMessaging = enableMessaging;
             return this;
         }
 
-        public Builder setEnableMessaging(@Nullable Boolean enableMessaging) {
+        public Builder enableMessaging(@Nullable Boolean enableMessaging) {
             this.enableMessaging = Input.ofNullable(enableMessaging);
             return this;
         }
 
-        public Builder setEnableScreenSharing(@Nullable Input<Boolean> enableScreenSharing) {
+        public Builder enableScreenSharing(@Nullable Input<Boolean> enableScreenSharing) {
             this.enableScreenSharing = enableScreenSharing;
             return this;
         }
 
-        public Builder setEnableScreenSharing(@Nullable Boolean enableScreenSharing) {
+        public Builder enableScreenSharing(@Nullable Boolean enableScreenSharing) {
             this.enableScreenSharing = Input.ofNullable(enableScreenSharing);
             return this;
         }
 
-        public Builder setEnableVideo(@Nullable Input<Boolean> enableVideo) {
+        public Builder enableVideo(@Nullable Input<Boolean> enableVideo) {
             this.enableVideo = enableVideo;
             return this;
         }
 
-        public Builder setEnableVideo(@Nullable Boolean enableVideo) {
+        public Builder enableVideo(@Nullable Boolean enableVideo) {
             this.enableVideo = Input.ofNullable(enableVideo);
             return this;
         }
 
-        public Builder setGroupsMode(@Nullable Input<String> groupsMode) {
+        public Builder groupsMode(@Nullable Input<String> groupsMode) {
             this.groupsMode = groupsMode;
             return this;
         }
 
-        public Builder setGroupsMode(@Nullable String groupsMode) {
+        public Builder groupsMode(@Nullable String groupsMode) {
             this.groupsMode = Input.ofNullable(groupsMode);
             return this;
         }
 
-        public Builder setIncomingCallRoute(@Nullable Input<String> incomingCallRoute) {
+        public Builder incomingCallRoute(@Nullable Input<String> incomingCallRoute) {
             this.incomingCallRoute = incomingCallRoute;
             return this;
         }
 
-        public Builder setIncomingCallRoute(@Nullable String incomingCallRoute) {
+        public Builder incomingCallRoute(@Nullable String incomingCallRoute) {
             this.incomingCallRoute = Input.ofNullable(incomingCallRoute);
             return this;
         }
 
-        public Builder setIsEnabled(Input<Boolean> isEnabled) {
+        public Builder isEnabled(Input<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
-        public Builder setIsEnabled(Boolean isEnabled) {
+        public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Input.of(Objects.requireNonNull(isEnabled));
             return this;
         }

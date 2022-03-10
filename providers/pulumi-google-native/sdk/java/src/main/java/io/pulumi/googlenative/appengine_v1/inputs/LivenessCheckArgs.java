@@ -155,72 +155,72 @@ public final class LivenessCheckArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setCheckInterval(@Nullable Input<String> checkInterval) {
+        public Builder checkInterval(@Nullable Input<String> checkInterval) {
             this.checkInterval = checkInterval;
             return this;
         }
 
-        public Builder setCheckInterval(@Nullable String checkInterval) {
+        public Builder checkInterval(@Nullable String checkInterval) {
             this.checkInterval = Input.ofNullable(checkInterval);
             return this;
         }
 
-        public Builder setFailureThreshold(@Nullable Input<Integer> failureThreshold) {
+        public Builder failureThreshold(@Nullable Input<Integer> failureThreshold) {
             this.failureThreshold = failureThreshold;
             return this;
         }
 
-        public Builder setFailureThreshold(@Nullable Integer failureThreshold) {
+        public Builder failureThreshold(@Nullable Integer failureThreshold) {
             this.failureThreshold = Input.ofNullable(failureThreshold);
             return this;
         }
 
-        public Builder setHost(@Nullable Input<String> host) {
+        public Builder host(@Nullable Input<String> host) {
             this.host = host;
             return this;
         }
 
-        public Builder setHost(@Nullable String host) {
+        public Builder host(@Nullable String host) {
             this.host = Input.ofNullable(host);
             return this;
         }
 
-        public Builder setInitialDelay(@Nullable Input<String> initialDelay) {
+        public Builder initialDelay(@Nullable Input<String> initialDelay) {
             this.initialDelay = initialDelay;
             return this;
         }
 
-        public Builder setInitialDelay(@Nullable String initialDelay) {
+        public Builder initialDelay(@Nullable String initialDelay) {
             this.initialDelay = Input.ofNullable(initialDelay);
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }
 
-        public Builder setSuccessThreshold(@Nullable Input<Integer> successThreshold) {
+        public Builder successThreshold(@Nullable Input<Integer> successThreshold) {
             this.successThreshold = successThreshold;
             return this;
         }
 
-        public Builder setSuccessThreshold(@Nullable Integer successThreshold) {
+        public Builder successThreshold(@Nullable Integer successThreshold) {
             this.successThreshold = Input.ofNullable(successThreshold);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<String> timeout) {
+        public Builder timeout(@Nullable Input<String> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable String timeout) {
+        public Builder timeout(@Nullable String timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }

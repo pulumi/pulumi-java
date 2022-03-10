@@ -185,92 +185,92 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tleLine2 = defaults.tleLine2;
         }
 
-        public Builder setLinks(@Nullable Input<List<SpacecraftLinkArgs>> links) {
+        public Builder links(@Nullable Input<List<SpacecraftLinkArgs>> links) {
             this.links = links;
             return this;
         }
 
-        public Builder setLinks(@Nullable List<SpacecraftLinkArgs> links) {
+        public Builder links(@Nullable List<SpacecraftLinkArgs> links) {
             this.links = Input.ofNullable(links);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setNoradId(Input<String> noradId) {
+        public Builder noradId(Input<String> noradId) {
             this.noradId = Objects.requireNonNull(noradId);
             return this;
         }
 
-        public Builder setNoradId(String noradId) {
+        public Builder noradId(String noradId) {
             this.noradId = Input.of(Objects.requireNonNull(noradId));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSpacecraftName(@Nullable Input<String> spacecraftName) {
+        public Builder spacecraftName(@Nullable Input<String> spacecraftName) {
             this.spacecraftName = spacecraftName;
             return this;
         }
 
-        public Builder setSpacecraftName(@Nullable String spacecraftName) {
+        public Builder spacecraftName(@Nullable String spacecraftName) {
             this.spacecraftName = Input.ofNullable(spacecraftName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTitleLine(@Nullable Input<String> titleLine) {
+        public Builder titleLine(@Nullable Input<String> titleLine) {
             this.titleLine = titleLine;
             return this;
         }
 
-        public Builder setTitleLine(@Nullable String titleLine) {
+        public Builder titleLine(@Nullable String titleLine) {
             this.titleLine = Input.ofNullable(titleLine);
             return this;
         }
 
-        public Builder setTleLine1(@Nullable Input<String> tleLine1) {
+        public Builder tleLine1(@Nullable Input<String> tleLine1) {
             this.tleLine1 = tleLine1;
             return this;
         }
 
-        public Builder setTleLine1(@Nullable String tleLine1) {
+        public Builder tleLine1(@Nullable String tleLine1) {
             this.tleLine1 = Input.ofNullable(tleLine1);
             return this;
         }
 
-        public Builder setTleLine2(@Nullable Input<String> tleLine2) {
+        public Builder tleLine2(@Nullable Input<String> tleLine2) {
             this.tleLine2 = tleLine2;
             return this;
         }
 
-        public Builder setTleLine2(@Nullable String tleLine2) {
+        public Builder tleLine2(@Nullable String tleLine2) {
             this.tleLine2 = Input.ofNullable(tleLine2);
             return this;
         }

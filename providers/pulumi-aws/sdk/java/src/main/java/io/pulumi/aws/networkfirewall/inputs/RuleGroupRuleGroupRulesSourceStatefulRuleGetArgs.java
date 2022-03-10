@@ -88,32 +88,32 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs extends io.p
     	      this.ruleOptions = defaults.ruleOptions;
         }
 
-        public Builder setAction(Input<String> action) {
+        public Builder action(Input<String> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Input.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder setHeader(Input<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs> header) {
+        public Builder header(Input<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs> header) {
             this.header = Objects.requireNonNull(header);
             return this;
         }
 
-        public Builder setHeader(RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs header) {
+        public Builder header(RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs header) {
             this.header = Input.of(Objects.requireNonNull(header));
             return this;
         }
 
-        public Builder setRuleOptions(Input<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionGetArgs>> ruleOptions) {
+        public Builder ruleOptions(Input<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionGetArgs>> ruleOptions) {
             this.ruleOptions = Objects.requireNonNull(ruleOptions);
             return this;
         }
 
-        public Builder setRuleOptions(List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionGetArgs> ruleOptions) {
+        public Builder ruleOptions(List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionGetArgs> ruleOptions) {
             this.ruleOptions = Input.of(Objects.requireNonNull(ruleOptions));
             return this;
         }

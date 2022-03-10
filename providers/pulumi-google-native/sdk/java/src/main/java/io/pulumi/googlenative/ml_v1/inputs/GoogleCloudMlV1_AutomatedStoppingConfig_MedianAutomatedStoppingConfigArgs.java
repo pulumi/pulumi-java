@@ -57,12 +57,12 @@ public final class GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppi
     	      this.useElapsedTime = defaults.useElapsedTime;
         }
 
-        public Builder setUseElapsedTime(@Nullable Input<Boolean> useElapsedTime) {
+        public Builder useElapsedTime(@Nullable Input<Boolean> useElapsedTime) {
             this.useElapsedTime = useElapsedTime;
             return this;
         }
 
-        public Builder setUseElapsedTime(@Nullable Boolean useElapsedTime) {
+        public Builder useElapsedTime(@Nullable Boolean useElapsedTime) {
             this.useElapsedTime = Input.ofNullable(useElapsedTime);
             return this;
         }

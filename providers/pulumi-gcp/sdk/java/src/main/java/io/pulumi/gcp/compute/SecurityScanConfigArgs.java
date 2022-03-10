@@ -213,102 +213,102 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
     	      this.userAgent = defaults.userAgent;
         }
 
-        public Builder setAuthentication(@Nullable Input<SecurityScanConfigAuthenticationArgs> authentication) {
+        public Builder authentication(@Nullable Input<SecurityScanConfigAuthenticationArgs> authentication) {
             this.authentication = authentication;
             return this;
         }
 
-        public Builder setAuthentication(@Nullable SecurityScanConfigAuthenticationArgs authentication) {
+        public Builder authentication(@Nullable SecurityScanConfigAuthenticationArgs authentication) {
             this.authentication = Input.ofNullable(authentication);
             return this;
         }
 
-        public Builder setBlacklistPatterns(@Nullable Input<List<String>> blacklistPatterns) {
+        public Builder blacklistPatterns(@Nullable Input<List<String>> blacklistPatterns) {
             this.blacklistPatterns = blacklistPatterns;
             return this;
         }
 
-        public Builder setBlacklistPatterns(@Nullable List<String> blacklistPatterns) {
+        public Builder blacklistPatterns(@Nullable List<String> blacklistPatterns) {
             this.blacklistPatterns = Input.ofNullable(blacklistPatterns);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setExportToSecurityCommandCenter(@Nullable Input<String> exportToSecurityCommandCenter) {
+        public Builder exportToSecurityCommandCenter(@Nullable Input<String> exportToSecurityCommandCenter) {
             this.exportToSecurityCommandCenter = exportToSecurityCommandCenter;
             return this;
         }
 
-        public Builder setExportToSecurityCommandCenter(@Nullable String exportToSecurityCommandCenter) {
+        public Builder exportToSecurityCommandCenter(@Nullable String exportToSecurityCommandCenter) {
             this.exportToSecurityCommandCenter = Input.ofNullable(exportToSecurityCommandCenter);
             return this;
         }
 
-        public Builder setMaxQps(@Nullable Input<Integer> maxQps) {
+        public Builder maxQps(@Nullable Input<Integer> maxQps) {
             this.maxQps = maxQps;
             return this;
         }
 
-        public Builder setMaxQps(@Nullable Integer maxQps) {
+        public Builder maxQps(@Nullable Integer maxQps) {
             this.maxQps = Input.ofNullable(maxQps);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSchedule(@Nullable Input<SecurityScanConfigScheduleArgs> schedule) {
+        public Builder schedule(@Nullable Input<SecurityScanConfigScheduleArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setSchedule(@Nullable SecurityScanConfigScheduleArgs schedule) {
+        public Builder schedule(@Nullable SecurityScanConfigScheduleArgs schedule) {
             this.schedule = Input.ofNullable(schedule);
             return this;
         }
 
-        public Builder setStartingUrls(Input<List<String>> startingUrls) {
+        public Builder startingUrls(Input<List<String>> startingUrls) {
             this.startingUrls = Objects.requireNonNull(startingUrls);
             return this;
         }
 
-        public Builder setStartingUrls(List<String> startingUrls) {
+        public Builder startingUrls(List<String> startingUrls) {
             this.startingUrls = Input.of(Objects.requireNonNull(startingUrls));
             return this;
         }
 
-        public Builder setTargetPlatforms(@Nullable Input<List<String>> targetPlatforms) {
+        public Builder targetPlatforms(@Nullable Input<List<String>> targetPlatforms) {
             this.targetPlatforms = targetPlatforms;
             return this;
         }
 
-        public Builder setTargetPlatforms(@Nullable List<String> targetPlatforms) {
+        public Builder targetPlatforms(@Nullable List<String> targetPlatforms) {
             this.targetPlatforms = Input.ofNullable(targetPlatforms);
             return this;
         }
 
-        public Builder setUserAgent(@Nullable Input<String> userAgent) {
+        public Builder userAgent(@Nullable Input<String> userAgent) {
             this.userAgent = userAgent;
             return this;
         }
 
-        public Builder setUserAgent(@Nullable String userAgent) {
+        public Builder userAgent(@Nullable String userAgent) {
             this.userAgent = Input.ofNullable(userAgent);
             return this;
         }

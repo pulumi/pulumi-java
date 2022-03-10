@@ -125,52 +125,52 @@ public final class BasicSliArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setAvailability(@Nullable Input<AvailabilityCriteriaArgs> availability) {
+        public Builder availability(@Nullable Input<AvailabilityCriteriaArgs> availability) {
             this.availability = availability;
             return this;
         }
 
-        public Builder setAvailability(@Nullable AvailabilityCriteriaArgs availability) {
+        public Builder availability(@Nullable AvailabilityCriteriaArgs availability) {
             this.availability = Input.ofNullable(availability);
             return this;
         }
 
-        public Builder setLatency(@Nullable Input<LatencyCriteriaArgs> latency) {
+        public Builder latency(@Nullable Input<LatencyCriteriaArgs> latency) {
             this.latency = latency;
             return this;
         }
 
-        public Builder setLatency(@Nullable LatencyCriteriaArgs latency) {
+        public Builder latency(@Nullable LatencyCriteriaArgs latency) {
             this.latency = Input.ofNullable(latency);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<List<String>> location) {
+        public Builder location(@Nullable Input<List<String>> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable List<String> location) {
+        public Builder location(@Nullable List<String> location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMethod(@Nullable Input<List<String>> method) {
+        public Builder method(@Nullable Input<List<String>> method) {
             this.method = method;
             return this;
         }
 
-        public Builder setMethod(@Nullable List<String> method) {
+        public Builder method(@Nullable List<String> method) {
             this.method = Input.ofNullable(method);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<List<String>> version) {
+        public Builder version(@Nullable Input<List<String>> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable List<String> version) {
+        public Builder version(@Nullable List<String> version) {
             this.version = Input.ofNullable(version);
             return this;
         }

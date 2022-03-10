@@ -87,32 +87,32 @@ public final class AppImageConfigKernelGatewayImageConfigFileSystemConfigGetArgs
     	      this.mountPath = defaults.mountPath;
         }
 
-        public Builder setDefaultGid(@Nullable Input<Integer> defaultGid) {
+        public Builder defaultGid(@Nullable Input<Integer> defaultGid) {
             this.defaultGid = defaultGid;
             return this;
         }
 
-        public Builder setDefaultGid(@Nullable Integer defaultGid) {
+        public Builder defaultGid(@Nullable Integer defaultGid) {
             this.defaultGid = Input.ofNullable(defaultGid);
             return this;
         }
 
-        public Builder setDefaultUid(@Nullable Input<Integer> defaultUid) {
+        public Builder defaultUid(@Nullable Input<Integer> defaultUid) {
             this.defaultUid = defaultUid;
             return this;
         }
 
-        public Builder setDefaultUid(@Nullable Integer defaultUid) {
+        public Builder defaultUid(@Nullable Integer defaultUid) {
             this.defaultUid = Input.ofNullable(defaultUid);
             return this;
         }
 
-        public Builder setMountPath(@Nullable Input<String> mountPath) {
+        public Builder mountPath(@Nullable Input<String> mountPath) {
             this.mountPath = mountPath;
             return this;
         }
 
-        public Builder setMountPath(@Nullable String mountPath) {
+        public Builder mountPath(@Nullable String mountPath) {
             this.mountPath = Input.ofNullable(mountPath);
             return this;
         }

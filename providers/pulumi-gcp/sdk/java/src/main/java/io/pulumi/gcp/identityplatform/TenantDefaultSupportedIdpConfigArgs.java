@@ -146,62 +146,62 @@ public final class TenantDefaultSupportedIdpConfigArgs extends io.pulumi.resourc
     	      this.tenant = defaults.tenant;
         }
 
-        public Builder setClientId(Input<String> clientId) {
+        public Builder clientId(Input<String> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
-        public Builder setClientId(String clientId) {
+        public Builder clientId(String clientId) {
             this.clientId = Input.of(Objects.requireNonNull(clientId));
             return this;
         }
 
-        public Builder setClientSecret(Input<String> clientSecret) {
+        public Builder clientSecret(Input<String> clientSecret) {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
         }
 
-        public Builder setClientSecret(String clientSecret) {
+        public Builder clientSecret(String clientSecret) {
             this.clientSecret = Input.of(Objects.requireNonNull(clientSecret));
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setIdpId(Input<String> idpId) {
+        public Builder idpId(Input<String> idpId) {
             this.idpId = Objects.requireNonNull(idpId);
             return this;
         }
 
-        public Builder setIdpId(String idpId) {
+        public Builder idpId(String idpId) {
             this.idpId = Input.of(Objects.requireNonNull(idpId));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setTenant(Input<String> tenant) {
+        public Builder tenant(Input<String> tenant) {
             this.tenant = Objects.requireNonNull(tenant);
             return this;
         }
 
-        public Builder setTenant(String tenant) {
+        public Builder tenant(String tenant) {
             this.tenant = Input.of(Objects.requireNonNull(tenant));
             return this;
         }

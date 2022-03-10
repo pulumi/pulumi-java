@@ -75,22 +75,22 @@ public final class AutomationRulePropertyValuesConditionArgs extends io.pulumi.r
     	      this.conditionType = defaults.conditionType;
         }
 
-        public Builder setConditionProperties(Input<AutomationRulePropertyValuesConditionConditionPropertiesArgs> conditionProperties) {
+        public Builder conditionProperties(Input<AutomationRulePropertyValuesConditionConditionPropertiesArgs> conditionProperties) {
             this.conditionProperties = Objects.requireNonNull(conditionProperties);
             return this;
         }
 
-        public Builder setConditionProperties(AutomationRulePropertyValuesConditionConditionPropertiesArgs conditionProperties) {
+        public Builder conditionProperties(AutomationRulePropertyValuesConditionConditionPropertiesArgs conditionProperties) {
             this.conditionProperties = Input.of(Objects.requireNonNull(conditionProperties));
             return this;
         }
 
-        public Builder setConditionType(Input<String> conditionType) {
+        public Builder conditionType(Input<String> conditionType) {
             this.conditionType = Objects.requireNonNull(conditionType);
             return this;
         }
 
-        public Builder setConditionType(String conditionType) {
+        public Builder conditionType(String conditionType) {
             this.conditionType = Input.of(Objects.requireNonNull(conditionType));
             return this;
         }

@@ -165,62 +165,62 @@ public final class RegionUrlMapPathMatcherRouteRuleGetArgs extends io.pulumi.res
     	      this.urlRedirect = defaults.urlRedirect;
         }
 
-        public Builder setHeaderAction(@Nullable Input<RegionUrlMapPathMatcherRouteRuleHeaderActionGetArgs> headerAction) {
+        public Builder headerAction(@Nullable Input<RegionUrlMapPathMatcherRouteRuleHeaderActionGetArgs> headerAction) {
             this.headerAction = headerAction;
             return this;
         }
 
-        public Builder setHeaderAction(@Nullable RegionUrlMapPathMatcherRouteRuleHeaderActionGetArgs headerAction) {
+        public Builder headerAction(@Nullable RegionUrlMapPathMatcherRouteRuleHeaderActionGetArgs headerAction) {
             this.headerAction = Input.ofNullable(headerAction);
             return this;
         }
 
-        public Builder setMatchRules(@Nullable Input<List<RegionUrlMapPathMatcherRouteRuleMatchRuleGetArgs>> matchRules) {
+        public Builder matchRules(@Nullable Input<List<RegionUrlMapPathMatcherRouteRuleMatchRuleGetArgs>> matchRules) {
             this.matchRules = matchRules;
             return this;
         }
 
-        public Builder setMatchRules(@Nullable List<RegionUrlMapPathMatcherRouteRuleMatchRuleGetArgs> matchRules) {
+        public Builder matchRules(@Nullable List<RegionUrlMapPathMatcherRouteRuleMatchRuleGetArgs> matchRules) {
             this.matchRules = Input.ofNullable(matchRules);
             return this;
         }
 
-        public Builder setPriority(Input<Integer> priority) {
+        public Builder priority(Input<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Input.of(Objects.requireNonNull(priority));
             return this;
         }
 
-        public Builder setRouteAction(@Nullable Input<RegionUrlMapPathMatcherRouteRuleRouteActionGetArgs> routeAction) {
+        public Builder routeAction(@Nullable Input<RegionUrlMapPathMatcherRouteRuleRouteActionGetArgs> routeAction) {
             this.routeAction = routeAction;
             return this;
         }
 
-        public Builder setRouteAction(@Nullable RegionUrlMapPathMatcherRouteRuleRouteActionGetArgs routeAction) {
+        public Builder routeAction(@Nullable RegionUrlMapPathMatcherRouteRuleRouteActionGetArgs routeAction) {
             this.routeAction = Input.ofNullable(routeAction);
             return this;
         }
 
-        public Builder setService(@Nullable Input<String> service) {
+        public Builder service(@Nullable Input<String> service) {
             this.service = service;
             return this;
         }
 
-        public Builder setService(@Nullable String service) {
+        public Builder service(@Nullable String service) {
             this.service = Input.ofNullable(service);
             return this;
         }
 
-        public Builder setUrlRedirect(@Nullable Input<RegionUrlMapPathMatcherRouteRuleUrlRedirectGetArgs> urlRedirect) {
+        public Builder urlRedirect(@Nullable Input<RegionUrlMapPathMatcherRouteRuleUrlRedirectGetArgs> urlRedirect) {
             this.urlRedirect = urlRedirect;
             return this;
         }
 
-        public Builder setUrlRedirect(@Nullable RegionUrlMapPathMatcherRouteRuleUrlRedirectGetArgs urlRedirect) {
+        public Builder urlRedirect(@Nullable RegionUrlMapPathMatcherRouteRuleUrlRedirectGetArgs urlRedirect) {
             this.urlRedirect = Input.ofNullable(urlRedirect);
             return this;
         }

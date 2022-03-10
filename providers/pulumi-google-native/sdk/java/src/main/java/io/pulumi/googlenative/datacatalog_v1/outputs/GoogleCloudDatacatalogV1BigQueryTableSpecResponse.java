@@ -83,17 +83,17 @@ public final class GoogleCloudDatacatalogV1BigQueryTableSpecResponse {
     	      this.viewSpec = defaults.viewSpec;
         }
 
-        public Builder setTableSourceType(String tableSourceType) {
+        public Builder tableSourceType(String tableSourceType) {
             this.tableSourceType = Objects.requireNonNull(tableSourceType);
             return this;
         }
 
-        public Builder setTableSpec(GoogleCloudDatacatalogV1TableSpecResponse tableSpec) {
+        public Builder tableSpec(GoogleCloudDatacatalogV1TableSpecResponse tableSpec) {
             this.tableSpec = Objects.requireNonNull(tableSpec);
             return this;
         }
 
-        public Builder setViewSpec(GoogleCloudDatacatalogV1ViewSpecResponse viewSpec) {
+        public Builder viewSpec(GoogleCloudDatacatalogV1ViewSpecResponse viewSpec) {
             this.viewSpec = Objects.requireNonNull(viewSpec);
             return this;
         }

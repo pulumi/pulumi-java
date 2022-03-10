@@ -138,32 +138,32 @@ public final class CloneJobResponse extends io.pulumi.resources.InvokeArgs {
     	      this.stateTime = defaults.stateTime;
         }
 
-        public Builder setComputeEngineTargetDetails(ComputeEngineTargetDetailsResponse computeEngineTargetDetails) {
+        public Builder computeEngineTargetDetails(ComputeEngineTargetDetailsResponse computeEngineTargetDetails) {
             this.computeEngineTargetDetails = Objects.requireNonNull(computeEngineTargetDetails);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setError(StatusResponse error) {
+        public Builder error(StatusResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStateTime(String stateTime) {
+        public Builder stateTime(String stateTime) {
             this.stateTime = Objects.requireNonNull(stateTime);
             return this;
         }

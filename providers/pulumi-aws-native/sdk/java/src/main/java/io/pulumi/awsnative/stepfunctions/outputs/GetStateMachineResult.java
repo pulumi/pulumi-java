@@ -104,42 +104,42 @@ public final class GetStateMachineResult {
     	      this.tracingConfiguration = defaults.tracingConfiguration;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDefinitionString(@Nullable String definitionString) {
+        public Builder definitionString(@Nullable String definitionString) {
             this.definitionString = definitionString;
             return this;
         }
 
-        public Builder setLoggingConfiguration(@Nullable StateMachineLoggingConfiguration loggingConfiguration) {
+        public Builder loggingConfiguration(@Nullable StateMachineLoggingConfiguration loggingConfiguration) {
             this.loggingConfiguration = loggingConfiguration;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setStateMachineType(@Nullable StateMachineType stateMachineType) {
+        public Builder stateMachineType(@Nullable StateMachineType stateMachineType) {
             this.stateMachineType = stateMachineType;
             return this;
         }
 
-        public Builder setTags(@Nullable List<StateMachineTagsEntry> tags) {
+        public Builder tags(@Nullable List<StateMachineTagsEntry> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTracingConfiguration(@Nullable StateMachineTracingConfiguration tracingConfiguration) {
+        public Builder tracingConfiguration(@Nullable StateMachineTracingConfiguration tracingConfiguration) {
             this.tracingConfiguration = tracingConfiguration;
             return this;
         }

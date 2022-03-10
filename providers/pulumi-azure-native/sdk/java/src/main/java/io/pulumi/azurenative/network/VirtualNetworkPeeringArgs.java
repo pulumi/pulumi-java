@@ -284,152 +284,152 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
     	      this.virtualNetworkPeeringName = defaults.virtualNetworkPeeringName;
         }
 
-        public Builder setAllowForwardedTraffic(@Nullable Input<Boolean> allowForwardedTraffic) {
+        public Builder allowForwardedTraffic(@Nullable Input<Boolean> allowForwardedTraffic) {
             this.allowForwardedTraffic = allowForwardedTraffic;
             return this;
         }
 
-        public Builder setAllowForwardedTraffic(@Nullable Boolean allowForwardedTraffic) {
+        public Builder allowForwardedTraffic(@Nullable Boolean allowForwardedTraffic) {
             this.allowForwardedTraffic = Input.ofNullable(allowForwardedTraffic);
             return this;
         }
 
-        public Builder setAllowGatewayTransit(@Nullable Input<Boolean> allowGatewayTransit) {
+        public Builder allowGatewayTransit(@Nullable Input<Boolean> allowGatewayTransit) {
             this.allowGatewayTransit = allowGatewayTransit;
             return this;
         }
 
-        public Builder setAllowGatewayTransit(@Nullable Boolean allowGatewayTransit) {
+        public Builder allowGatewayTransit(@Nullable Boolean allowGatewayTransit) {
             this.allowGatewayTransit = Input.ofNullable(allowGatewayTransit);
             return this;
         }
 
-        public Builder setAllowVirtualNetworkAccess(@Nullable Input<Boolean> allowVirtualNetworkAccess) {
+        public Builder allowVirtualNetworkAccess(@Nullable Input<Boolean> allowVirtualNetworkAccess) {
             this.allowVirtualNetworkAccess = allowVirtualNetworkAccess;
             return this;
         }
 
-        public Builder setAllowVirtualNetworkAccess(@Nullable Boolean allowVirtualNetworkAccess) {
+        public Builder allowVirtualNetworkAccess(@Nullable Boolean allowVirtualNetworkAccess) {
             this.allowVirtualNetworkAccess = Input.ofNullable(allowVirtualNetworkAccess);
             return this;
         }
 
-        public Builder setDoNotVerifyRemoteGateways(@Nullable Input<Boolean> doNotVerifyRemoteGateways) {
+        public Builder doNotVerifyRemoteGateways(@Nullable Input<Boolean> doNotVerifyRemoteGateways) {
             this.doNotVerifyRemoteGateways = doNotVerifyRemoteGateways;
             return this;
         }
 
-        public Builder setDoNotVerifyRemoteGateways(@Nullable Boolean doNotVerifyRemoteGateways) {
+        public Builder doNotVerifyRemoteGateways(@Nullable Boolean doNotVerifyRemoteGateways) {
             this.doNotVerifyRemoteGateways = Input.ofNullable(doNotVerifyRemoteGateways);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPeeringState(@Nullable Input<Either<String,VirtualNetworkPeeringState>> peeringState) {
+        public Builder peeringState(@Nullable Input<Either<String,VirtualNetworkPeeringState>> peeringState) {
             this.peeringState = peeringState;
             return this;
         }
 
-        public Builder setPeeringState(@Nullable Either<String,VirtualNetworkPeeringState> peeringState) {
+        public Builder peeringState(@Nullable Either<String,VirtualNetworkPeeringState> peeringState) {
             this.peeringState = Input.ofNullable(peeringState);
             return this;
         }
 
-        public Builder setRemoteAddressSpace(@Nullable Input<AddressSpaceArgs> remoteAddressSpace) {
+        public Builder remoteAddressSpace(@Nullable Input<AddressSpaceArgs> remoteAddressSpace) {
             this.remoteAddressSpace = remoteAddressSpace;
             return this;
         }
 
-        public Builder setRemoteAddressSpace(@Nullable AddressSpaceArgs remoteAddressSpace) {
+        public Builder remoteAddressSpace(@Nullable AddressSpaceArgs remoteAddressSpace) {
             this.remoteAddressSpace = Input.ofNullable(remoteAddressSpace);
             return this;
         }
 
-        public Builder setRemoteBgpCommunities(@Nullable Input<VirtualNetworkBgpCommunitiesArgs> remoteBgpCommunities) {
+        public Builder remoteBgpCommunities(@Nullable Input<VirtualNetworkBgpCommunitiesArgs> remoteBgpCommunities) {
             this.remoteBgpCommunities = remoteBgpCommunities;
             return this;
         }
 
-        public Builder setRemoteBgpCommunities(@Nullable VirtualNetworkBgpCommunitiesArgs remoteBgpCommunities) {
+        public Builder remoteBgpCommunities(@Nullable VirtualNetworkBgpCommunitiesArgs remoteBgpCommunities) {
             this.remoteBgpCommunities = Input.ofNullable(remoteBgpCommunities);
             return this;
         }
 
-        public Builder setRemoteVirtualNetwork(@Nullable Input<SubResourceArgs> remoteVirtualNetwork) {
+        public Builder remoteVirtualNetwork(@Nullable Input<SubResourceArgs> remoteVirtualNetwork) {
             this.remoteVirtualNetwork = remoteVirtualNetwork;
             return this;
         }
 
-        public Builder setRemoteVirtualNetwork(@Nullable SubResourceArgs remoteVirtualNetwork) {
+        public Builder remoteVirtualNetwork(@Nullable SubResourceArgs remoteVirtualNetwork) {
             this.remoteVirtualNetwork = Input.ofNullable(remoteVirtualNetwork);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setUseRemoteGateways(@Nullable Input<Boolean> useRemoteGateways) {
+        public Builder useRemoteGateways(@Nullable Input<Boolean> useRemoteGateways) {
             this.useRemoteGateways = useRemoteGateways;
             return this;
         }
 
-        public Builder setUseRemoteGateways(@Nullable Boolean useRemoteGateways) {
+        public Builder useRemoteGateways(@Nullable Boolean useRemoteGateways) {
             this.useRemoteGateways = Input.ofNullable(useRemoteGateways);
             return this;
         }
 
-        public Builder setVirtualNetworkName(Input<String> virtualNetworkName) {
+        public Builder virtualNetworkName(Input<String> virtualNetworkName) {
             this.virtualNetworkName = Objects.requireNonNull(virtualNetworkName);
             return this;
         }
 
-        public Builder setVirtualNetworkName(String virtualNetworkName) {
+        public Builder virtualNetworkName(String virtualNetworkName) {
             this.virtualNetworkName = Input.of(Objects.requireNonNull(virtualNetworkName));
             return this;
         }
 
-        public Builder setVirtualNetworkPeeringName(@Nullable Input<String> virtualNetworkPeeringName) {
+        public Builder virtualNetworkPeeringName(@Nullable Input<String> virtualNetworkPeeringName) {
             this.virtualNetworkPeeringName = virtualNetworkPeeringName;
             return this;
         }
 
-        public Builder setVirtualNetworkPeeringName(@Nullable String virtualNetworkPeeringName) {
+        public Builder virtualNetworkPeeringName(@Nullable String virtualNetworkPeeringName) {
             this.virtualNetworkPeeringName = Input.ofNullable(virtualNetworkPeeringName);
             return this;
         }

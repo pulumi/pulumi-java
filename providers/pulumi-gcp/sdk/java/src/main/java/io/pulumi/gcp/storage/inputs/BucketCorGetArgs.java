@@ -104,42 +104,42 @@ public final class BucketCorGetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.responseHeaders = defaults.responseHeaders;
         }
 
-        public Builder setMaxAgeSeconds(@Nullable Input<Integer> maxAgeSeconds) {
+        public Builder maxAgeSeconds(@Nullable Input<Integer> maxAgeSeconds) {
             this.maxAgeSeconds = maxAgeSeconds;
             return this;
         }
 
-        public Builder setMaxAgeSeconds(@Nullable Integer maxAgeSeconds) {
+        public Builder maxAgeSeconds(@Nullable Integer maxAgeSeconds) {
             this.maxAgeSeconds = Input.ofNullable(maxAgeSeconds);
             return this;
         }
 
-        public Builder setMethods(@Nullable Input<List<String>> methods) {
+        public Builder methods(@Nullable Input<List<String>> methods) {
             this.methods = methods;
             return this;
         }
 
-        public Builder setMethods(@Nullable List<String> methods) {
+        public Builder methods(@Nullable List<String> methods) {
             this.methods = Input.ofNullable(methods);
             return this;
         }
 
-        public Builder setOrigins(@Nullable Input<List<String>> origins) {
+        public Builder origins(@Nullable Input<List<String>> origins) {
             this.origins = origins;
             return this;
         }
 
-        public Builder setOrigins(@Nullable List<String> origins) {
+        public Builder origins(@Nullable List<String> origins) {
             this.origins = Input.ofNullable(origins);
             return this;
         }
 
-        public Builder setResponseHeaders(@Nullable Input<List<String>> responseHeaders) {
+        public Builder responseHeaders(@Nullable Input<List<String>> responseHeaders) {
             this.responseHeaders = responseHeaders;
             return this;
         }
 
-        public Builder setResponseHeaders(@Nullable List<String> responseHeaders) {
+        public Builder responseHeaders(@Nullable List<String> responseHeaders) {
             this.responseHeaders = Input.ofNullable(responseHeaders);
             return this;
         }

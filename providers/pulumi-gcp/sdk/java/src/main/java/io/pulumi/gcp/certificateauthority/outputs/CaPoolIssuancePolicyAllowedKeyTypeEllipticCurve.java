@@ -50,7 +50,7 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeEllipticCurve {
     	      this.signatureAlgorithm = defaults.signatureAlgorithm;
         }
 
-        public Builder setSignatureAlgorithm(String signatureAlgorithm) {
+        public Builder signatureAlgorithm(String signatureAlgorithm) {
             this.signatureAlgorithm = Objects.requireNonNull(signatureAlgorithm);
             return this;
         }

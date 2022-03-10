@@ -47,7 +47,7 @@ public final class GetInAppTemplateArgs extends io.pulumi.resources.InvokeArgs {
     	      this.templateName = defaults.templateName;
         }
 
-        public Builder setTemplateName(String templateName) {
+        public Builder templateName(String templateName) {
             this.templateName = Objects.requireNonNull(templateName);
             return this;
         }

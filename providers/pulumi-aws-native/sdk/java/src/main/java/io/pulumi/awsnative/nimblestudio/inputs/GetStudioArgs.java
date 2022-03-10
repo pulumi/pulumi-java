@@ -47,7 +47,7 @@ public final class GetStudioArgs extends io.pulumi.resources.InvokeArgs {
     	      this.studioId = defaults.studioId;
         }
 
-        public Builder setStudioId(String studioId) {
+        public Builder studioId(String studioId) {
             this.studioId = Objects.requireNonNull(studioId);
             return this;
         }

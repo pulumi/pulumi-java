@@ -88,32 +88,32 @@ public final class CodeSigningConfigArgs extends io.pulumi.resources.ResourceArg
     	      this.description = defaults.description;
         }
 
-        public Builder setAllowedPublishers(Input<CodeSigningConfigAllowedPublishersArgs> allowedPublishers) {
+        public Builder allowedPublishers(Input<CodeSigningConfigAllowedPublishersArgs> allowedPublishers) {
             this.allowedPublishers = Objects.requireNonNull(allowedPublishers);
             return this;
         }
 
-        public Builder setAllowedPublishers(CodeSigningConfigAllowedPublishersArgs allowedPublishers) {
+        public Builder allowedPublishers(CodeSigningConfigAllowedPublishersArgs allowedPublishers) {
             this.allowedPublishers = Input.of(Objects.requireNonNull(allowedPublishers));
             return this;
         }
 
-        public Builder setCodeSigningPolicies(@Nullable Input<CodeSigningConfigCodeSigningPoliciesArgs> codeSigningPolicies) {
+        public Builder codeSigningPolicies(@Nullable Input<CodeSigningConfigCodeSigningPoliciesArgs> codeSigningPolicies) {
             this.codeSigningPolicies = codeSigningPolicies;
             return this;
         }
 
-        public Builder setCodeSigningPolicies(@Nullable CodeSigningConfigCodeSigningPoliciesArgs codeSigningPolicies) {
+        public Builder codeSigningPolicies(@Nullable CodeSigningConfigCodeSigningPoliciesArgs codeSigningPolicies) {
             this.codeSigningPolicies = Input.ofNullable(codeSigningPolicies);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }

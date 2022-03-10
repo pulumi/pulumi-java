@@ -50,7 +50,7 @@ public final class LocationNFSMountOptions {
     	      this.version = defaults.version;
         }
 
-        public Builder setVersion(@Nullable LocationNFSMountOptionsVersion version) {
+        public Builder version(@Nullable LocationNFSMountOptionsVersion version) {
             this.version = version;
             return this;
         }

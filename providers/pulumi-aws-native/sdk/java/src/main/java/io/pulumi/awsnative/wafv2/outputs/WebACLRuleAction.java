@@ -70,22 +70,22 @@ public final class WebACLRuleAction {
     	      this.count = defaults.count;
         }
 
-        public Builder setAllow(@Nullable WebACLAllowAction allow) {
+        public Builder allow(@Nullable WebACLAllowAction allow) {
             this.allow = allow;
             return this;
         }
 
-        public Builder setBlock(@Nullable WebACLBlockAction block) {
+        public Builder block(@Nullable WebACLBlockAction block) {
             this.block = block;
             return this;
         }
 
-        public Builder setCaptcha(@Nullable WebACLCaptchaAction captcha) {
+        public Builder captcha(@Nullable WebACLCaptchaAction captcha) {
             this.captcha = captcha;
             return this;
         }
 
-        public Builder setCount(@Nullable WebACLCountAction count) {
+        public Builder count(@Nullable WebACLCountAction count) {
             this.count = count;
             return this;
         }

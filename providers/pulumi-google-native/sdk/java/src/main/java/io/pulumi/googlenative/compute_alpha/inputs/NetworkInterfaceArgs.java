@@ -241,122 +241,122 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     	      this.subnetwork = defaults.subnetwork;
         }
 
-        public Builder setAccessConfigs(@Nullable Input<List<AccessConfigArgs>> accessConfigs) {
+        public Builder accessConfigs(@Nullable Input<List<AccessConfigArgs>> accessConfigs) {
             this.accessConfigs = accessConfigs;
             return this;
         }
 
-        public Builder setAccessConfigs(@Nullable List<AccessConfigArgs> accessConfigs) {
+        public Builder accessConfigs(@Nullable List<AccessConfigArgs> accessConfigs) {
             this.accessConfigs = Input.ofNullable(accessConfigs);
             return this;
         }
 
-        public Builder setAliasIpRanges(@Nullable Input<List<AliasIpRangeArgs>> aliasIpRanges) {
+        public Builder aliasIpRanges(@Nullable Input<List<AliasIpRangeArgs>> aliasIpRanges) {
             this.aliasIpRanges = aliasIpRanges;
             return this;
         }
 
-        public Builder setAliasIpRanges(@Nullable List<AliasIpRangeArgs> aliasIpRanges) {
+        public Builder aliasIpRanges(@Nullable List<AliasIpRangeArgs> aliasIpRanges) {
             this.aliasIpRanges = Input.ofNullable(aliasIpRanges);
             return this;
         }
 
-        public Builder setInternalIpv6PrefixLength(@Nullable Input<Integer> internalIpv6PrefixLength) {
+        public Builder internalIpv6PrefixLength(@Nullable Input<Integer> internalIpv6PrefixLength) {
             this.internalIpv6PrefixLength = internalIpv6PrefixLength;
             return this;
         }
 
-        public Builder setInternalIpv6PrefixLength(@Nullable Integer internalIpv6PrefixLength) {
+        public Builder internalIpv6PrefixLength(@Nullable Integer internalIpv6PrefixLength) {
             this.internalIpv6PrefixLength = Input.ofNullable(internalIpv6PrefixLength);
             return this;
         }
 
-        public Builder setIpv6AccessConfigs(@Nullable Input<List<AccessConfigArgs>> ipv6AccessConfigs) {
+        public Builder ipv6AccessConfigs(@Nullable Input<List<AccessConfigArgs>> ipv6AccessConfigs) {
             this.ipv6AccessConfigs = ipv6AccessConfigs;
             return this;
         }
 
-        public Builder setIpv6AccessConfigs(@Nullable List<AccessConfigArgs> ipv6AccessConfigs) {
+        public Builder ipv6AccessConfigs(@Nullable List<AccessConfigArgs> ipv6AccessConfigs) {
             this.ipv6AccessConfigs = Input.ofNullable(ipv6AccessConfigs);
             return this;
         }
 
-        public Builder setIpv6Address(@Nullable Input<String> ipv6Address) {
+        public Builder ipv6Address(@Nullable Input<String> ipv6Address) {
             this.ipv6Address = ipv6Address;
             return this;
         }
 
-        public Builder setIpv6Address(@Nullable String ipv6Address) {
+        public Builder ipv6Address(@Nullable String ipv6Address) {
             this.ipv6Address = Input.ofNullable(ipv6Address);
             return this;
         }
 
-        public Builder setNetwork(@Nullable Input<String> network) {
+        public Builder network(@Nullable Input<String> network) {
             this.network = network;
             return this;
         }
 
-        public Builder setNetwork(@Nullable String network) {
+        public Builder network(@Nullable String network) {
             this.network = Input.ofNullable(network);
             return this;
         }
 
-        public Builder setNetworkIP(@Nullable Input<String> networkIP) {
+        public Builder networkIP(@Nullable Input<String> networkIP) {
             this.networkIP = networkIP;
             return this;
         }
 
-        public Builder setNetworkIP(@Nullable String networkIP) {
+        public Builder networkIP(@Nullable String networkIP) {
             this.networkIP = Input.ofNullable(networkIP);
             return this;
         }
 
-        public Builder setNicType(@Nullable Input<NetworkInterfaceNicType> nicType) {
+        public Builder nicType(@Nullable Input<NetworkInterfaceNicType> nicType) {
             this.nicType = nicType;
             return this;
         }
 
-        public Builder setNicType(@Nullable NetworkInterfaceNicType nicType) {
+        public Builder nicType(@Nullable NetworkInterfaceNicType nicType) {
             this.nicType = Input.ofNullable(nicType);
             return this;
         }
 
-        public Builder setQueueCount(@Nullable Input<Integer> queueCount) {
+        public Builder queueCount(@Nullable Input<Integer> queueCount) {
             this.queueCount = queueCount;
             return this;
         }
 
-        public Builder setQueueCount(@Nullable Integer queueCount) {
+        public Builder queueCount(@Nullable Integer queueCount) {
             this.queueCount = Input.ofNullable(queueCount);
             return this;
         }
 
-        public Builder setStackType(@Nullable Input<NetworkInterfaceStackType> stackType) {
+        public Builder stackType(@Nullable Input<NetworkInterfaceStackType> stackType) {
             this.stackType = stackType;
             return this;
         }
 
-        public Builder setStackType(@Nullable NetworkInterfaceStackType stackType) {
+        public Builder stackType(@Nullable NetworkInterfaceStackType stackType) {
             this.stackType = Input.ofNullable(stackType);
             return this;
         }
 
-        public Builder setSubinterfaces(@Nullable Input<List<NetworkInterfaceSubInterfaceArgs>> subinterfaces) {
+        public Builder subinterfaces(@Nullable Input<List<NetworkInterfaceSubInterfaceArgs>> subinterfaces) {
             this.subinterfaces = subinterfaces;
             return this;
         }
 
-        public Builder setSubinterfaces(@Nullable List<NetworkInterfaceSubInterfaceArgs> subinterfaces) {
+        public Builder subinterfaces(@Nullable List<NetworkInterfaceSubInterfaceArgs> subinterfaces) {
             this.subinterfaces = Input.ofNullable(subinterfaces);
             return this;
         }
 
-        public Builder setSubnetwork(@Nullable Input<String> subnetwork) {
+        public Builder subnetwork(@Nullable Input<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
 
-        public Builder setSubnetwork(@Nullable String subnetwork) {
+        public Builder subnetwork(@Nullable String subnetwork) {
             this.subnetwork = Input.ofNullable(subnetwork);
             return this;
         }

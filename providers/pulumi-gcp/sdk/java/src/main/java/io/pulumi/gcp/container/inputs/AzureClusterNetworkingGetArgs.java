@@ -86,32 +86,32 @@ public final class AzureClusterNetworkingGetArgs extends io.pulumi.resources.Res
     	      this.virtualNetworkId = defaults.virtualNetworkId;
         }
 
-        public Builder setPodAddressCidrBlocks(Input<List<String>> podAddressCidrBlocks) {
+        public Builder podAddressCidrBlocks(Input<List<String>> podAddressCidrBlocks) {
             this.podAddressCidrBlocks = Objects.requireNonNull(podAddressCidrBlocks);
             return this;
         }
 
-        public Builder setPodAddressCidrBlocks(List<String> podAddressCidrBlocks) {
+        public Builder podAddressCidrBlocks(List<String> podAddressCidrBlocks) {
             this.podAddressCidrBlocks = Input.of(Objects.requireNonNull(podAddressCidrBlocks));
             return this;
         }
 
-        public Builder setServiceAddressCidrBlocks(Input<List<String>> serviceAddressCidrBlocks) {
+        public Builder serviceAddressCidrBlocks(Input<List<String>> serviceAddressCidrBlocks) {
             this.serviceAddressCidrBlocks = Objects.requireNonNull(serviceAddressCidrBlocks);
             return this;
         }
 
-        public Builder setServiceAddressCidrBlocks(List<String> serviceAddressCidrBlocks) {
+        public Builder serviceAddressCidrBlocks(List<String> serviceAddressCidrBlocks) {
             this.serviceAddressCidrBlocks = Input.of(Objects.requireNonNull(serviceAddressCidrBlocks));
             return this;
         }
 
-        public Builder setVirtualNetworkId(Input<String> virtualNetworkId) {
+        public Builder virtualNetworkId(Input<String> virtualNetworkId) {
             this.virtualNetworkId = Objects.requireNonNull(virtualNetworkId);
             return this;
         }
 
-        public Builder setVirtualNetworkId(String virtualNetworkId) {
+        public Builder virtualNetworkId(String virtualNetworkId) {
             this.virtualNetworkId = Input.of(Objects.requireNonNull(virtualNetworkId));
             return this;
         }

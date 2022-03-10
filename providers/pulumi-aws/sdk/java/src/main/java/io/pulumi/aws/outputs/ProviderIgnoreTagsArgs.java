@@ -52,12 +52,12 @@ public final class ProviderIgnoreTagsArgs {
     	      this.keys = defaults.keys;
         }
 
-        public Builder setKeyPrefixes(@Nullable Input<List<String>> keyPrefixes) {
+        public Builder keyPrefixes(@Nullable Input<List<String>> keyPrefixes) {
             this.keyPrefixes = keyPrefixes;
             return this;
         }
 
-        public Builder setKeys(@Nullable Input<List<String>> keys) {
+        public Builder keys(@Nullable Input<List<String>> keys) {
             this.keys = keys;
             return this;
         }

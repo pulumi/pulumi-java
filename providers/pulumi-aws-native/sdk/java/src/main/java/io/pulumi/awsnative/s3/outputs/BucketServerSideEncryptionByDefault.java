@@ -60,12 +60,12 @@ public final class BucketServerSideEncryptionByDefault {
     	      this.sSEAlgorithm = defaults.sSEAlgorithm;
         }
 
-        public Builder setKMSMasterKeyID(@Nullable String kMSMasterKeyID) {
+        public Builder kMSMasterKeyID(@Nullable String kMSMasterKeyID) {
             this.kMSMasterKeyID = kMSMasterKeyID;
             return this;
         }
 
-        public Builder setSSEAlgorithm(BucketServerSideEncryptionByDefaultSSEAlgorithm sSEAlgorithm) {
+        public Builder sSEAlgorithm(BucketServerSideEncryptionByDefaultSSEAlgorithm sSEAlgorithm) {
             this.sSEAlgorithm = Objects.requireNonNull(sSEAlgorithm);
             return this;
         }

@@ -92,32 +92,32 @@ public final class GoogleCloudDialogflowCxV3NluSettingsArgs extends io.pulumi.re
     	      this.modelType = defaults.modelType;
         }
 
-        public Builder setClassificationThreshold(@Nullable Input<Double> classificationThreshold) {
+        public Builder classificationThreshold(@Nullable Input<Double> classificationThreshold) {
             this.classificationThreshold = classificationThreshold;
             return this;
         }
 
-        public Builder setClassificationThreshold(@Nullable Double classificationThreshold) {
+        public Builder classificationThreshold(@Nullable Double classificationThreshold) {
             this.classificationThreshold = Input.ofNullable(classificationThreshold);
             return this;
         }
 
-        public Builder setModelTrainingMode(@Nullable Input<GoogleCloudDialogflowCxV3NluSettingsModelTrainingMode> modelTrainingMode) {
+        public Builder modelTrainingMode(@Nullable Input<GoogleCloudDialogflowCxV3NluSettingsModelTrainingMode> modelTrainingMode) {
             this.modelTrainingMode = modelTrainingMode;
             return this;
         }
 
-        public Builder setModelTrainingMode(@Nullable GoogleCloudDialogflowCxV3NluSettingsModelTrainingMode modelTrainingMode) {
+        public Builder modelTrainingMode(@Nullable GoogleCloudDialogflowCxV3NluSettingsModelTrainingMode modelTrainingMode) {
             this.modelTrainingMode = Input.ofNullable(modelTrainingMode);
             return this;
         }
 
-        public Builder setModelType(@Nullable Input<GoogleCloudDialogflowCxV3NluSettingsModelType> modelType) {
+        public Builder modelType(@Nullable Input<GoogleCloudDialogflowCxV3NluSettingsModelType> modelType) {
             this.modelType = modelType;
             return this;
         }
 
-        public Builder setModelType(@Nullable GoogleCloudDialogflowCxV3NluSettingsModelType modelType) {
+        public Builder modelType(@Nullable GoogleCloudDialogflowCxV3NluSettingsModelType modelType) {
             this.modelType = Input.ofNullable(modelType);
             return this;
         }

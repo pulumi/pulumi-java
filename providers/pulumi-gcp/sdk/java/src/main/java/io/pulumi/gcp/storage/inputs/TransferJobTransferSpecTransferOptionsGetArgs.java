@@ -87,32 +87,32 @@ public final class TransferJobTransferSpecTransferOptionsGetArgs extends io.pulu
     	      this.overwriteObjectsAlreadyExistingInSink = defaults.overwriteObjectsAlreadyExistingInSink;
         }
 
-        public Builder setDeleteObjectsFromSourceAfterTransfer(@Nullable Input<Boolean> deleteObjectsFromSourceAfterTransfer) {
+        public Builder deleteObjectsFromSourceAfterTransfer(@Nullable Input<Boolean> deleteObjectsFromSourceAfterTransfer) {
             this.deleteObjectsFromSourceAfterTransfer = deleteObjectsFromSourceAfterTransfer;
             return this;
         }
 
-        public Builder setDeleteObjectsFromSourceAfterTransfer(@Nullable Boolean deleteObjectsFromSourceAfterTransfer) {
+        public Builder deleteObjectsFromSourceAfterTransfer(@Nullable Boolean deleteObjectsFromSourceAfterTransfer) {
             this.deleteObjectsFromSourceAfterTransfer = Input.ofNullable(deleteObjectsFromSourceAfterTransfer);
             return this;
         }
 
-        public Builder setDeleteObjectsUniqueInSink(@Nullable Input<Boolean> deleteObjectsUniqueInSink) {
+        public Builder deleteObjectsUniqueInSink(@Nullable Input<Boolean> deleteObjectsUniqueInSink) {
             this.deleteObjectsUniqueInSink = deleteObjectsUniqueInSink;
             return this;
         }
 
-        public Builder setDeleteObjectsUniqueInSink(@Nullable Boolean deleteObjectsUniqueInSink) {
+        public Builder deleteObjectsUniqueInSink(@Nullable Boolean deleteObjectsUniqueInSink) {
             this.deleteObjectsUniqueInSink = Input.ofNullable(deleteObjectsUniqueInSink);
             return this;
         }
 
-        public Builder setOverwriteObjectsAlreadyExistingInSink(@Nullable Input<Boolean> overwriteObjectsAlreadyExistingInSink) {
+        public Builder overwriteObjectsAlreadyExistingInSink(@Nullable Input<Boolean> overwriteObjectsAlreadyExistingInSink) {
             this.overwriteObjectsAlreadyExistingInSink = overwriteObjectsAlreadyExistingInSink;
             return this;
         }
 
-        public Builder setOverwriteObjectsAlreadyExistingInSink(@Nullable Boolean overwriteObjectsAlreadyExistingInSink) {
+        public Builder overwriteObjectsAlreadyExistingInSink(@Nullable Boolean overwriteObjectsAlreadyExistingInSink) {
             this.overwriteObjectsAlreadyExistingInSink = Input.ofNullable(overwriteObjectsAlreadyExistingInSink);
             return this;
         }

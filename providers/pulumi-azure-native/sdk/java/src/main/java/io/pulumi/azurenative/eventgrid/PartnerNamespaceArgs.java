@@ -174,82 +174,82 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDisableLocalAuth(@Nullable Input<Boolean> disableLocalAuth) {
+        public Builder disableLocalAuth(@Nullable Input<Boolean> disableLocalAuth) {
             this.disableLocalAuth = disableLocalAuth;
             return this;
         }
 
-        public Builder setDisableLocalAuth(@Nullable Boolean disableLocalAuth) {
+        public Builder disableLocalAuth(@Nullable Boolean disableLocalAuth) {
             this.disableLocalAuth = Input.ofNullable(disableLocalAuth);
             return this;
         }
 
-        public Builder setInboundIpRules(@Nullable Input<List<InboundIpRuleArgs>> inboundIpRules) {
+        public Builder inboundIpRules(@Nullable Input<List<InboundIpRuleArgs>> inboundIpRules) {
             this.inboundIpRules = inboundIpRules;
             return this;
         }
 
-        public Builder setInboundIpRules(@Nullable List<InboundIpRuleArgs> inboundIpRules) {
+        public Builder inboundIpRules(@Nullable List<InboundIpRuleArgs> inboundIpRules) {
             this.inboundIpRules = Input.ofNullable(inboundIpRules);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPartnerNamespaceName(@Nullable Input<String> partnerNamespaceName) {
+        public Builder partnerNamespaceName(@Nullable Input<String> partnerNamespaceName) {
             this.partnerNamespaceName = partnerNamespaceName;
             return this;
         }
 
-        public Builder setPartnerNamespaceName(@Nullable String partnerNamespaceName) {
+        public Builder partnerNamespaceName(@Nullable String partnerNamespaceName) {
             this.partnerNamespaceName = Input.ofNullable(partnerNamespaceName);
             return this;
         }
 
-        public Builder setPartnerRegistrationFullyQualifiedId(@Nullable Input<String> partnerRegistrationFullyQualifiedId) {
+        public Builder partnerRegistrationFullyQualifiedId(@Nullable Input<String> partnerRegistrationFullyQualifiedId) {
             this.partnerRegistrationFullyQualifiedId = partnerRegistrationFullyQualifiedId;
             return this;
         }
 
-        public Builder setPartnerRegistrationFullyQualifiedId(@Nullable String partnerRegistrationFullyQualifiedId) {
+        public Builder partnerRegistrationFullyQualifiedId(@Nullable String partnerRegistrationFullyQualifiedId) {
             this.partnerRegistrationFullyQualifiedId = Input.ofNullable(partnerRegistrationFullyQualifiedId);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
             this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

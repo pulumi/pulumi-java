@@ -127,62 +127,62 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.testPlatform = defaults.testPlatform;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setHistoryId(@Nullable Input<String> historyId) {
+        public Builder historyId(@Nullable Input<String> historyId) {
             this.historyId = historyId;
             return this;
         }
 
-        public Builder setHistoryId(@Nullable String historyId) {
+        public Builder historyId(@Nullable String historyId) {
             this.historyId = Input.ofNullable(historyId);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setTestPlatform(@Nullable Input<HistoryTestPlatform> testPlatform) {
+        public Builder testPlatform(@Nullable Input<HistoryTestPlatform> testPlatform) {
             this.testPlatform = testPlatform;
             return this;
         }
 
-        public Builder setTestPlatform(@Nullable HistoryTestPlatform testPlatform) {
+        public Builder testPlatform(@Nullable HistoryTestPlatform testPlatform) {
             this.testPlatform = Input.ofNullable(testPlatform);
             return this;
         }

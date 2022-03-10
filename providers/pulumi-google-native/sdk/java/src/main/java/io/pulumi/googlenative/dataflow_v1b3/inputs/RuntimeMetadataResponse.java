@@ -74,12 +74,12 @@ public final class RuntimeMetadataResponse extends io.pulumi.resources.InvokeArg
     	      this.sdkInfo = defaults.sdkInfo;
         }
 
-        public Builder setParameters(List<ParameterMetadataResponse> parameters) {
+        public Builder parameters(List<ParameterMetadataResponse> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setSdkInfo(SDKInfoResponse sdkInfo) {
+        public Builder sdkInfo(SDKInfoResponse sdkInfo) {
             this.sdkInfo = Objects.requireNonNull(sdkInfo);
             return this;
         }

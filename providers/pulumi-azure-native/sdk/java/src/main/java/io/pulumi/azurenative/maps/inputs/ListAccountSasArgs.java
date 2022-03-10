@@ -170,42 +170,42 @@ public final class ListAccountSasArgs extends io.pulumi.resources.InvokeArgs {
     	      this.start = defaults.start;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setExpiry(String expiry) {
+        public Builder expiry(String expiry) {
             this.expiry = Objects.requireNonNull(expiry);
             return this;
         }
 
-        public Builder setMaxRatePerSecond(Integer maxRatePerSecond) {
+        public Builder maxRatePerSecond(Integer maxRatePerSecond) {
             this.maxRatePerSecond = Objects.requireNonNull(maxRatePerSecond);
             return this;
         }
 
-        public Builder setPrincipalId(String principalId) {
+        public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
 
-        public Builder setRegions(@Nullable List<String> regions) {
+        public Builder regions(@Nullable List<String> regions) {
             this.regions = regions;
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setSigningKey(Either<String,SigningKey> signingKey) {
+        public Builder signingKey(Either<String,SigningKey> signingKey) {
             this.signingKey = Objects.requireNonNull(signingKey);
             return this;
         }
 
-        public Builder setStart(String start) {
+        public Builder start(String start) {
             this.start = Objects.requireNonNull(start);
             return this;
         }

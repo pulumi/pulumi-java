@@ -48,12 +48,12 @@ public final class DatasetOutputFileUriValueArgs extends io.pulumi.resources.Res
     	      this.fileName = defaults.fileName;
         }
 
-        public Builder setFileName(Input<String> fileName) {
+        public Builder fileName(Input<String> fileName) {
             this.fileName = Objects.requireNonNull(fileName);
             return this;
         }
 
-        public Builder setFileName(String fileName) {
+        public Builder fileName(String fileName) {
             this.fileName = Input.of(Objects.requireNonNull(fileName));
             return this;
         }

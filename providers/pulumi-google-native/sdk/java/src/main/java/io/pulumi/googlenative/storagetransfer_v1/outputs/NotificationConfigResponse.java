@@ -82,17 +82,17 @@ public final class NotificationConfigResponse {
     	      this.pubsubTopic = defaults.pubsubTopic;
         }
 
-        public Builder setEventTypes(List<String> eventTypes) {
+        public Builder eventTypes(List<String> eventTypes) {
             this.eventTypes = Objects.requireNonNull(eventTypes);
             return this;
         }
 
-        public Builder setPayloadFormat(String payloadFormat) {
+        public Builder payloadFormat(String payloadFormat) {
             this.payloadFormat = Objects.requireNonNull(payloadFormat);
             return this;
         }
 
-        public Builder setPubsubTopic(String pubsubTopic) {
+        public Builder pubsubTopic(String pubsubTopic) {
             this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
             return this;
         }

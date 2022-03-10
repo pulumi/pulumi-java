@@ -40,7 +40,7 @@ public final class EndpointNetworkInterface {
     	      this.networkInterfaceId = defaults.networkInterfaceId;
         }
 
-        public Builder setNetworkInterfaceId(String networkInterfaceId) {
+        public Builder networkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
             return this;
         }

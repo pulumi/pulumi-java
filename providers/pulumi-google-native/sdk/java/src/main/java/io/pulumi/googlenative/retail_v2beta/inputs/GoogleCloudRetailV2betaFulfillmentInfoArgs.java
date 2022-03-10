@@ -75,22 +75,22 @@ public final class GoogleCloudRetailV2betaFulfillmentInfoArgs extends io.pulumi.
     	      this.type = defaults.type;
         }
 
-        public Builder setPlaceIds(@Nullable Input<List<String>> placeIds) {
+        public Builder placeIds(@Nullable Input<List<String>> placeIds) {
             this.placeIds = placeIds;
             return this;
         }
 
-        public Builder setPlaceIds(@Nullable List<String> placeIds) {
+        public Builder placeIds(@Nullable List<String> placeIds) {
             this.placeIds = Input.ofNullable(placeIds);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

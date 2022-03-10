@@ -124,52 +124,52 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceArgs 
     	      this.username = defaults.username;
         }
 
-        public Builder setIsCloudFunction(@Nullable Input<Boolean> isCloudFunction) {
+        public Builder isCloudFunction(@Nullable Input<Boolean> isCloudFunction) {
             this.isCloudFunction = isCloudFunction;
             return this;
         }
 
-        public Builder setIsCloudFunction(@Nullable Boolean isCloudFunction) {
+        public Builder isCloudFunction(@Nullable Boolean isCloudFunction) {
             this.isCloudFunction = Input.ofNullable(isCloudFunction);
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<String> password) {
+        public Builder password(@Nullable Input<String> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setRequestHeaders(@Nullable Input<Map<String,String>> requestHeaders) {
+        public Builder requestHeaders(@Nullable Input<Map<String,String>> requestHeaders) {
             this.requestHeaders = requestHeaders;
             return this;
         }
 
-        public Builder setRequestHeaders(@Nullable Map<String,String> requestHeaders) {
+        public Builder requestHeaders(@Nullable Map<String,String> requestHeaders) {
             this.requestHeaders = Input.ofNullable(requestHeaders);
             return this;
         }
 
-        public Builder setUri(Input<String> uri) {
+        public Builder uri(Input<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Input.of(Objects.requireNonNull(uri));
             return this;
         }
 
-        public Builder setUsername(@Nullable Input<String> username) {
+        public Builder username(@Nullable Input<String> username) {
             this.username = username;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = Input.ofNullable(username);
             return this;
         }

@@ -133,52 +133,52 @@ public final class RegionBackendServiceCdnPolicyCacheKeyPolicyArgs extends io.pu
     	      this.queryStringWhitelists = defaults.queryStringWhitelists;
         }
 
-        public Builder setIncludeHost(@Nullable Input<Boolean> includeHost) {
+        public Builder includeHost(@Nullable Input<Boolean> includeHost) {
             this.includeHost = includeHost;
             return this;
         }
 
-        public Builder setIncludeHost(@Nullable Boolean includeHost) {
+        public Builder includeHost(@Nullable Boolean includeHost) {
             this.includeHost = Input.ofNullable(includeHost);
             return this;
         }
 
-        public Builder setIncludeProtocol(@Nullable Input<Boolean> includeProtocol) {
+        public Builder includeProtocol(@Nullable Input<Boolean> includeProtocol) {
             this.includeProtocol = includeProtocol;
             return this;
         }
 
-        public Builder setIncludeProtocol(@Nullable Boolean includeProtocol) {
+        public Builder includeProtocol(@Nullable Boolean includeProtocol) {
             this.includeProtocol = Input.ofNullable(includeProtocol);
             return this;
         }
 
-        public Builder setIncludeQueryString(@Nullable Input<Boolean> includeQueryString) {
+        public Builder includeQueryString(@Nullable Input<Boolean> includeQueryString) {
             this.includeQueryString = includeQueryString;
             return this;
         }
 
-        public Builder setIncludeQueryString(@Nullable Boolean includeQueryString) {
+        public Builder includeQueryString(@Nullable Boolean includeQueryString) {
             this.includeQueryString = Input.ofNullable(includeQueryString);
             return this;
         }
 
-        public Builder setQueryStringBlacklists(@Nullable Input<List<String>> queryStringBlacklists) {
+        public Builder queryStringBlacklists(@Nullable Input<List<String>> queryStringBlacklists) {
             this.queryStringBlacklists = queryStringBlacklists;
             return this;
         }
 
-        public Builder setQueryStringBlacklists(@Nullable List<String> queryStringBlacklists) {
+        public Builder queryStringBlacklists(@Nullable List<String> queryStringBlacklists) {
             this.queryStringBlacklists = Input.ofNullable(queryStringBlacklists);
             return this;
         }
 
-        public Builder setQueryStringWhitelists(@Nullable Input<List<String>> queryStringWhitelists) {
+        public Builder queryStringWhitelists(@Nullable Input<List<String>> queryStringWhitelists) {
             this.queryStringWhitelists = queryStringWhitelists;
             return this;
         }
 
-        public Builder setQueryStringWhitelists(@Nullable List<String> queryStringWhitelists) {
+        public Builder queryStringWhitelists(@Nullable List<String> queryStringWhitelists) {
             this.queryStringWhitelists = Input.ofNullable(queryStringWhitelists);
             return this;
         }

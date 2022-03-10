@@ -67,12 +67,12 @@ public final class ClusterKeyResponse {
     	      this.orderBy = defaults.orderBy;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setOrderBy(@Nullable String orderBy) {
+        public Builder orderBy(@Nullable String orderBy) {
             this.orderBy = orderBy;
             return this;
         }

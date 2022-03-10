@@ -167,7 +167,7 @@ public class MCASDataConnector extends io.pulumi.resources.CustomResource {
     private static MCASDataConnectorArgs makeArgs(MCASDataConnectorArgs args) {
         var builder = args == null ? MCASDataConnectorArgs.builder() : MCASDataConnectorArgs.builder(args);
         return builder
-            .setKind("MicrosoftCloudAppSecurity")
+            .kind("MicrosoftCloudAppSecurity")
             .build();
     }
 

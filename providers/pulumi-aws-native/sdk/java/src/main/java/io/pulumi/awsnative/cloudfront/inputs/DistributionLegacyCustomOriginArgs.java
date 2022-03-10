@@ -100,52 +100,52 @@ public final class DistributionLegacyCustomOriginArgs extends io.pulumi.resource
     	      this.originSSLProtocols = defaults.originSSLProtocols;
         }
 
-        public Builder setDNSName(Input<String> dNSName) {
+        public Builder dNSName(Input<String> dNSName) {
             this.dNSName = Objects.requireNonNull(dNSName);
             return this;
         }
 
-        public Builder setDNSName(String dNSName) {
+        public Builder dNSName(String dNSName) {
             this.dNSName = Input.of(Objects.requireNonNull(dNSName));
             return this;
         }
 
-        public Builder setHTTPPort(@Nullable Input<Integer> hTTPPort) {
+        public Builder hTTPPort(@Nullable Input<Integer> hTTPPort) {
             this.hTTPPort = hTTPPort;
             return this;
         }
 
-        public Builder setHTTPPort(@Nullable Integer hTTPPort) {
+        public Builder hTTPPort(@Nullable Integer hTTPPort) {
             this.hTTPPort = Input.ofNullable(hTTPPort);
             return this;
         }
 
-        public Builder setHTTPSPort(@Nullable Input<Integer> hTTPSPort) {
+        public Builder hTTPSPort(@Nullable Input<Integer> hTTPSPort) {
             this.hTTPSPort = hTTPSPort;
             return this;
         }
 
-        public Builder setHTTPSPort(@Nullable Integer hTTPSPort) {
+        public Builder hTTPSPort(@Nullable Integer hTTPSPort) {
             this.hTTPSPort = Input.ofNullable(hTTPSPort);
             return this;
         }
 
-        public Builder setOriginProtocolPolicy(Input<String> originProtocolPolicy) {
+        public Builder originProtocolPolicy(Input<String> originProtocolPolicy) {
             this.originProtocolPolicy = Objects.requireNonNull(originProtocolPolicy);
             return this;
         }
 
-        public Builder setOriginProtocolPolicy(String originProtocolPolicy) {
+        public Builder originProtocolPolicy(String originProtocolPolicy) {
             this.originProtocolPolicy = Input.of(Objects.requireNonNull(originProtocolPolicy));
             return this;
         }
 
-        public Builder setOriginSSLProtocols(Input<List<String>> originSSLProtocols) {
+        public Builder originSSLProtocols(Input<List<String>> originSSLProtocols) {
             this.originSSLProtocols = Objects.requireNonNull(originSSLProtocols);
             return this;
         }
 
-        public Builder setOriginSSLProtocols(List<String> originSSLProtocols) {
+        public Builder originSSLProtocols(List<String> originSSLProtocols) {
             this.originSSLProtocols = Input.of(Objects.requireNonNull(originSSLProtocols));
             return this;
         }

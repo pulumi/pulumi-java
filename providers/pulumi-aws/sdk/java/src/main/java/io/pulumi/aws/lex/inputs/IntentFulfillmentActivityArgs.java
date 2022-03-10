@@ -73,22 +73,22 @@ public final class IntentFulfillmentActivityArgs extends io.pulumi.resources.Res
     	      this.type = defaults.type;
         }
 
-        public Builder setCodeHook(@Nullable Input<IntentFulfillmentActivityCodeHookArgs> codeHook) {
+        public Builder codeHook(@Nullable Input<IntentFulfillmentActivityCodeHookArgs> codeHook) {
             this.codeHook = codeHook;
             return this;
         }
 
-        public Builder setCodeHook(@Nullable IntentFulfillmentActivityCodeHookArgs codeHook) {
+        public Builder codeHook(@Nullable IntentFulfillmentActivityCodeHookArgs codeHook) {
             this.codeHook = Input.ofNullable(codeHook);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

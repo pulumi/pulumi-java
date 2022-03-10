@@ -58,12 +58,12 @@ public final class TrafficPortSelectorArgs extends io.pulumi.resources.ResourceA
     	      this.ports = defaults.ports;
         }
 
-        public Builder setPorts(@Nullable Input<List<String>> ports) {
+        public Builder ports(@Nullable Input<List<String>> ports) {
             this.ports = ports;
             return this;
         }
 
-        public Builder setPorts(@Nullable List<String> ports) {
+        public Builder ports(@Nullable List<String> ports) {
             this.ports = Input.ofNullable(ports);
             return this;
         }

@@ -164,42 +164,42 @@ public final class GoogleCloudApigeeV1CredentialResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setApiProducts(List<GoogleCloudApigeeV1ApiProductRefResponse> apiProducts) {
+        public Builder apiProducts(List<GoogleCloudApigeeV1ApiProductRefResponse> apiProducts) {
             this.apiProducts = Objects.requireNonNull(apiProducts);
             return this;
         }
 
-        public Builder setAttributes(List<GoogleCloudApigeeV1AttributeResponse> attributes) {
+        public Builder attributes(List<GoogleCloudApigeeV1AttributeResponse> attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
 
-        public Builder setConsumerKey(String consumerKey) {
+        public Builder consumerKey(String consumerKey) {
             this.consumerKey = Objects.requireNonNull(consumerKey);
             return this;
         }
 
-        public Builder setConsumerSecret(String consumerSecret) {
+        public Builder consumerSecret(String consumerSecret) {
             this.consumerSecret = Objects.requireNonNull(consumerSecret);
             return this;
         }
 
-        public Builder setExpiresAt(String expiresAt) {
+        public Builder expiresAt(String expiresAt) {
             this.expiresAt = Objects.requireNonNull(expiresAt);
             return this;
         }
 
-        public Builder setIssuedAt(String issuedAt) {
+        public Builder issuedAt(String issuedAt) {
             this.issuedAt = Objects.requireNonNull(issuedAt);
             return this;
         }
 
-        public Builder setScopes(List<String> scopes) {
+        public Builder scopes(List<String> scopes) {
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

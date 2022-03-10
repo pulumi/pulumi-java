@@ -49,12 +49,12 @@ public final class InstanceGroupManagerStandbyPolicyArgs extends io.pulumi.resou
     	      this.initialDelaySec = defaults.initialDelaySec;
         }
 
-        public Builder setInitialDelaySec(@Nullable Input<Integer> initialDelaySec) {
+        public Builder initialDelaySec(@Nullable Input<Integer> initialDelaySec) {
             this.initialDelaySec = initialDelaySec;
             return this;
         }
 
-        public Builder setInitialDelaySec(@Nullable Integer initialDelaySec) {
+        public Builder initialDelaySec(@Nullable Integer initialDelaySec) {
             this.initialDelaySec = Input.ofNullable(initialDelaySec);
             return this;
         }

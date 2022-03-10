@@ -204,102 +204,102 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
     	      this.updatedNumberScheduled = defaults.updatedNumberScheduled;
         }
 
-        public Builder setCollisionCount(@Nullable Input<Integer> collisionCount) {
+        public Builder collisionCount(@Nullable Input<Integer> collisionCount) {
             this.collisionCount = collisionCount;
             return this;
         }
 
-        public Builder setCollisionCount(@Nullable Integer collisionCount) {
+        public Builder collisionCount(@Nullable Integer collisionCount) {
             this.collisionCount = Input.ofNullable(collisionCount);
             return this;
         }
 
-        public Builder setConditions(@Nullable Input<List<DaemonSetConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Input<List<DaemonSetConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<DaemonSetConditionArgs> conditions) {
+        public Builder conditions(@Nullable List<DaemonSetConditionArgs> conditions) {
             this.conditions = Input.ofNullable(conditions);
             return this;
         }
 
-        public Builder setCurrentNumberScheduled(Input<Integer> currentNumberScheduled) {
+        public Builder currentNumberScheduled(Input<Integer> currentNumberScheduled) {
             this.currentNumberScheduled = Objects.requireNonNull(currentNumberScheduled);
             return this;
         }
 
-        public Builder setCurrentNumberScheduled(Integer currentNumberScheduled) {
+        public Builder currentNumberScheduled(Integer currentNumberScheduled) {
             this.currentNumberScheduled = Input.of(Objects.requireNonNull(currentNumberScheduled));
             return this;
         }
 
-        public Builder setDesiredNumberScheduled(Input<Integer> desiredNumberScheduled) {
+        public Builder desiredNumberScheduled(Input<Integer> desiredNumberScheduled) {
             this.desiredNumberScheduled = Objects.requireNonNull(desiredNumberScheduled);
             return this;
         }
 
-        public Builder setDesiredNumberScheduled(Integer desiredNumberScheduled) {
+        public Builder desiredNumberScheduled(Integer desiredNumberScheduled) {
             this.desiredNumberScheduled = Input.of(Objects.requireNonNull(desiredNumberScheduled));
             return this;
         }
 
-        public Builder setNumberAvailable(@Nullable Input<Integer> numberAvailable) {
+        public Builder numberAvailable(@Nullable Input<Integer> numberAvailable) {
             this.numberAvailable = numberAvailable;
             return this;
         }
 
-        public Builder setNumberAvailable(@Nullable Integer numberAvailable) {
+        public Builder numberAvailable(@Nullable Integer numberAvailable) {
             this.numberAvailable = Input.ofNullable(numberAvailable);
             return this;
         }
 
-        public Builder setNumberMisscheduled(Input<Integer> numberMisscheduled) {
+        public Builder numberMisscheduled(Input<Integer> numberMisscheduled) {
             this.numberMisscheduled = Objects.requireNonNull(numberMisscheduled);
             return this;
         }
 
-        public Builder setNumberMisscheduled(Integer numberMisscheduled) {
+        public Builder numberMisscheduled(Integer numberMisscheduled) {
             this.numberMisscheduled = Input.of(Objects.requireNonNull(numberMisscheduled));
             return this;
         }
 
-        public Builder setNumberReady(Input<Integer> numberReady) {
+        public Builder numberReady(Input<Integer> numberReady) {
             this.numberReady = Objects.requireNonNull(numberReady);
             return this;
         }
 
-        public Builder setNumberReady(Integer numberReady) {
+        public Builder numberReady(Integer numberReady) {
             this.numberReady = Input.of(Objects.requireNonNull(numberReady));
             return this;
         }
 
-        public Builder setNumberUnavailable(@Nullable Input<Integer> numberUnavailable) {
+        public Builder numberUnavailable(@Nullable Input<Integer> numberUnavailable) {
             this.numberUnavailable = numberUnavailable;
             return this;
         }
 
-        public Builder setNumberUnavailable(@Nullable Integer numberUnavailable) {
+        public Builder numberUnavailable(@Nullable Integer numberUnavailable) {
             this.numberUnavailable = Input.ofNullable(numberUnavailable);
             return this;
         }
 
-        public Builder setObservedGeneration(@Nullable Input<Integer> observedGeneration) {
+        public Builder observedGeneration(@Nullable Input<Integer> observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
 
-        public Builder setObservedGeneration(@Nullable Integer observedGeneration) {
+        public Builder observedGeneration(@Nullable Integer observedGeneration) {
             this.observedGeneration = Input.ofNullable(observedGeneration);
             return this;
         }
 
-        public Builder setUpdatedNumberScheduled(@Nullable Input<Integer> updatedNumberScheduled) {
+        public Builder updatedNumberScheduled(@Nullable Input<Integer> updatedNumberScheduled) {
             this.updatedNumberScheduled = updatedNumberScheduled;
             return this;
         }
 
-        public Builder setUpdatedNumberScheduled(@Nullable Integer updatedNumberScheduled) {
+        public Builder updatedNumberScheduled(@Nullable Integer updatedNumberScheduled) {
             this.updatedNumberScheduled = Input.ofNullable(updatedNumberScheduled);
             return this;
         }

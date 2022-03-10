@@ -166,42 +166,42 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
     	      this.stockState = defaults.stockState;
         }
 
-        public Builder setAvailableQuantity(String availableQuantity) {
+        public Builder availableQuantity(String availableQuantity) {
             this.availableQuantity = Objects.requireNonNull(availableQuantity);
             return this;
         }
 
-        public Builder setCanonicalProductUri(String canonicalProductUri) {
+        public Builder canonicalProductUri(String canonicalProductUri) {
             this.canonicalProductUri = Objects.requireNonNull(canonicalProductUri);
             return this;
         }
 
-        public Builder setCosts(Map<String,String> costs) {
+        public Builder costs(Map<String,String> costs) {
             this.costs = Objects.requireNonNull(costs);
             return this;
         }
 
-        public Builder setCurrencyCode(String currencyCode) {
+        public Builder currencyCode(String currencyCode) {
             this.currencyCode = Objects.requireNonNull(currencyCode);
             return this;
         }
 
-        public Builder setExactPrice(GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse exactPrice) {
+        public Builder exactPrice(GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse exactPrice) {
             this.exactPrice = Objects.requireNonNull(exactPrice);
             return this;
         }
 
-        public Builder setImages(List<GoogleCloudRecommendationengineV1beta1ImageResponse> images) {
+        public Builder images(List<GoogleCloudRecommendationengineV1beta1ImageResponse> images) {
             this.images = Objects.requireNonNull(images);
             return this;
         }
 
-        public Builder setPriceRange(GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse priceRange) {
+        public Builder priceRange(GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse priceRange) {
             this.priceRange = Objects.requireNonNull(priceRange);
             return this;
         }
 
-        public Builder setStockState(String stockState) {
+        public Builder stockState(String stockState) {
             this.stockState = Objects.requireNonNull(stockState);
             return this;
         }

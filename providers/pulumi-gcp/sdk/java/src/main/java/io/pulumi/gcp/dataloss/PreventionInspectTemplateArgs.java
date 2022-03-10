@@ -108,42 +108,42 @@ public final class PreventionInspectTemplateArgs extends io.pulumi.resources.Res
     	      this.parent = defaults.parent;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setInspectConfig(@Nullable Input<PreventionInspectTemplateInspectConfigArgs> inspectConfig) {
+        public Builder inspectConfig(@Nullable Input<PreventionInspectTemplateInspectConfigArgs> inspectConfig) {
             this.inspectConfig = inspectConfig;
             return this;
         }
 
-        public Builder setInspectConfig(@Nullable PreventionInspectTemplateInspectConfigArgs inspectConfig) {
+        public Builder inspectConfig(@Nullable PreventionInspectTemplateInspectConfigArgs inspectConfig) {
             this.inspectConfig = Input.ofNullable(inspectConfig);
             return this;
         }
 
-        public Builder setParent(Input<String> parent) {
+        public Builder parent(Input<String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
-        public Builder setParent(String parent) {
+        public Builder parent(String parent) {
             this.parent = Input.of(Objects.requireNonNull(parent));
             return this;
         }

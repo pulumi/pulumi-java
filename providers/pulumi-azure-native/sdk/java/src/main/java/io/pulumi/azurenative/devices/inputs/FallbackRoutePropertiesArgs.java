@@ -126,52 +126,52 @@ public final class FallbackRoutePropertiesArgs extends io.pulumi.resources.Resou
     	      this.source = defaults.source;
         }
 
-        public Builder setCondition(@Nullable Input<String> condition) {
+        public Builder condition(@Nullable Input<String> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable String condition) {
+        public Builder condition(@Nullable String condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }
 
-        public Builder setEndpointNames(Input<List<String>> endpointNames) {
+        public Builder endpointNames(Input<List<String>> endpointNames) {
             this.endpointNames = Objects.requireNonNull(endpointNames);
             return this;
         }
 
-        public Builder setEndpointNames(List<String> endpointNames) {
+        public Builder endpointNames(List<String> endpointNames) {
             this.endpointNames = Input.of(Objects.requireNonNull(endpointNames));
             return this;
         }
 
-        public Builder setIsEnabled(Input<Boolean> isEnabled) {
+        public Builder isEnabled(Input<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
-        public Builder setIsEnabled(Boolean isEnabled) {
+        public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Input.of(Objects.requireNonNull(isEnabled));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSource(Input<Either<String,RoutingSource>> source) {
+        public Builder source(Input<Either<String,RoutingSource>> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setSource(Either<String,RoutingSource> source) {
+        public Builder source(Either<String,RoutingSource> source) {
             this.source = Input.of(Objects.requireNonNull(source));
             return this;
         }

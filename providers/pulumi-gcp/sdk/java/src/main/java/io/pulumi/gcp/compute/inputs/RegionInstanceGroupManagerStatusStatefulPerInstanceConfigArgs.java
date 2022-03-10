@@ -53,12 +53,12 @@ public final class RegionInstanceGroupManagerStatusStatefulPerInstanceConfigArgs
     	      this.allEffective = defaults.allEffective;
         }
 
-        public Builder setAllEffective(@Nullable Input<Boolean> allEffective) {
+        public Builder allEffective(@Nullable Input<Boolean> allEffective) {
             this.allEffective = allEffective;
             return this;
         }
 
-        public Builder setAllEffective(@Nullable Boolean allEffective) {
+        public Builder allEffective(@Nullable Boolean allEffective) {
             this.allEffective = Input.ofNullable(allEffective);
             return this;
         }

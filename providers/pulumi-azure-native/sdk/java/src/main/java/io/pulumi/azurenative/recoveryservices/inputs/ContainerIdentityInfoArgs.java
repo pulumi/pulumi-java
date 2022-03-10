@@ -106,42 +106,42 @@ public final class ContainerIdentityInfoArgs extends io.pulumi.resources.Resourc
     	      this.uniqueName = defaults.uniqueName;
         }
 
-        public Builder setAadTenantId(@Nullable Input<String> aadTenantId) {
+        public Builder aadTenantId(@Nullable Input<String> aadTenantId) {
             this.aadTenantId = aadTenantId;
             return this;
         }
 
-        public Builder setAadTenantId(@Nullable String aadTenantId) {
+        public Builder aadTenantId(@Nullable String aadTenantId) {
             this.aadTenantId = Input.ofNullable(aadTenantId);
             return this;
         }
 
-        public Builder setAudience(@Nullable Input<String> audience) {
+        public Builder audience(@Nullable Input<String> audience) {
             this.audience = audience;
             return this;
         }
 
-        public Builder setAudience(@Nullable String audience) {
+        public Builder audience(@Nullable String audience) {
             this.audience = Input.ofNullable(audience);
             return this;
         }
 
-        public Builder setServicePrincipalClientId(@Nullable Input<String> servicePrincipalClientId) {
+        public Builder servicePrincipalClientId(@Nullable Input<String> servicePrincipalClientId) {
             this.servicePrincipalClientId = servicePrincipalClientId;
             return this;
         }
 
-        public Builder setServicePrincipalClientId(@Nullable String servicePrincipalClientId) {
+        public Builder servicePrincipalClientId(@Nullable String servicePrincipalClientId) {
             this.servicePrincipalClientId = Input.ofNullable(servicePrincipalClientId);
             return this;
         }
 
-        public Builder setUniqueName(@Nullable Input<String> uniqueName) {
+        public Builder uniqueName(@Nullable Input<String> uniqueName) {
             this.uniqueName = uniqueName;
             return this;
         }
 
-        public Builder setUniqueName(@Nullable String uniqueName) {
+        public Builder uniqueName(@Nullable String uniqueName) {
             this.uniqueName = Input.ofNullable(uniqueName);
             return this;
         }

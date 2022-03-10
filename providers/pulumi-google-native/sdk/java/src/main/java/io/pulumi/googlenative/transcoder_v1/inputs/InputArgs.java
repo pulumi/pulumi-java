@@ -91,32 +91,32 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setKey(@Nullable Input<String> key) {
+        public Builder key(@Nullable Input<String> key) {
             this.key = key;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = Input.ofNullable(key);
             return this;
         }
 
-        public Builder setPreprocessingConfig(@Nullable Input<PreprocessingConfigArgs> preprocessingConfig) {
+        public Builder preprocessingConfig(@Nullable Input<PreprocessingConfigArgs> preprocessingConfig) {
             this.preprocessingConfig = preprocessingConfig;
             return this;
         }
 
-        public Builder setPreprocessingConfig(@Nullable PreprocessingConfigArgs preprocessingConfig) {
+        public Builder preprocessingConfig(@Nullable PreprocessingConfigArgs preprocessingConfig) {
             this.preprocessingConfig = Input.ofNullable(preprocessingConfig);
             return this;
         }
 
-        public Builder setUri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Input<String> uri) {
             this.uri = uri;
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = Input.ofNullable(uri);
             return this;
         }

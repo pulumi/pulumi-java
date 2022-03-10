@@ -510,147 +510,147 @@ public final class GetVirtualNetworkGatewayConnectionResult {
     	      this.virtualNetworkGateway2 = defaults.virtualNetworkGateway2;
         }
 
-        public Builder setAuthorizationKey(@Nullable String authorizationKey) {
+        public Builder authorizationKey(@Nullable String authorizationKey) {
             this.authorizationKey = authorizationKey;
             return this;
         }
 
-        public Builder setConnectionMode(@Nullable String connectionMode) {
+        public Builder connectionMode(@Nullable String connectionMode) {
             this.connectionMode = connectionMode;
             return this;
         }
 
-        public Builder setConnectionProtocol(@Nullable String connectionProtocol) {
+        public Builder connectionProtocol(@Nullable String connectionProtocol) {
             this.connectionProtocol = connectionProtocol;
             return this;
         }
 
-        public Builder setConnectionStatus(String connectionStatus) {
+        public Builder connectionStatus(String connectionStatus) {
             this.connectionStatus = Objects.requireNonNull(connectionStatus);
             return this;
         }
 
-        public Builder setConnectionType(String connectionType) {
+        public Builder connectionType(String connectionType) {
             this.connectionType = Objects.requireNonNull(connectionType);
             return this;
         }
 
-        public Builder setDpdTimeoutSeconds(@Nullable Integer dpdTimeoutSeconds) {
+        public Builder dpdTimeoutSeconds(@Nullable Integer dpdTimeoutSeconds) {
             this.dpdTimeoutSeconds = dpdTimeoutSeconds;
             return this;
         }
 
-        public Builder setEgressBytesTransferred(Double egressBytesTransferred) {
+        public Builder egressBytesTransferred(Double egressBytesTransferred) {
             this.egressBytesTransferred = Objects.requireNonNull(egressBytesTransferred);
             return this;
         }
 
-        public Builder setEnableBgp(@Nullable Boolean enableBgp) {
+        public Builder enableBgp(@Nullable Boolean enableBgp) {
             this.enableBgp = enableBgp;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setExpressRouteGatewayBypass(@Nullable Boolean expressRouteGatewayBypass) {
+        public Builder expressRouteGatewayBypass(@Nullable Boolean expressRouteGatewayBypass) {
             this.expressRouteGatewayBypass = expressRouteGatewayBypass;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIngressBytesTransferred(Double ingressBytesTransferred) {
+        public Builder ingressBytesTransferred(Double ingressBytesTransferred) {
             this.ingressBytesTransferred = Objects.requireNonNull(ingressBytesTransferred);
             return this;
         }
 
-        public Builder setIpsecPolicies(@Nullable List<IpsecPolicyResponse> ipsecPolicies) {
+        public Builder ipsecPolicies(@Nullable List<IpsecPolicyResponse> ipsecPolicies) {
             this.ipsecPolicies = ipsecPolicies;
             return this;
         }
 
-        public Builder setLocalNetworkGateway2(@Nullable LocalNetworkGatewayResponse localNetworkGateway2) {
+        public Builder localNetworkGateway2(@Nullable LocalNetworkGatewayResponse localNetworkGateway2) {
             this.localNetworkGateway2 = localNetworkGateway2;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPeer(@Nullable SubResourceResponse peer) {
+        public Builder peer(@Nullable SubResourceResponse peer) {
             this.peer = peer;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setResourceGuid(String resourceGuid) {
+        public Builder resourceGuid(String resourceGuid) {
             this.resourceGuid = Objects.requireNonNull(resourceGuid);
             return this;
         }
 
-        public Builder setRoutingWeight(@Nullable Integer routingWeight) {
+        public Builder routingWeight(@Nullable Integer routingWeight) {
             this.routingWeight = routingWeight;
             return this;
         }
 
-        public Builder setSharedKey(@Nullable String sharedKey) {
+        public Builder sharedKey(@Nullable String sharedKey) {
             this.sharedKey = sharedKey;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTrafficSelectorPolicies(@Nullable List<TrafficSelectorPolicyResponse> trafficSelectorPolicies) {
+        public Builder trafficSelectorPolicies(@Nullable List<TrafficSelectorPolicyResponse> trafficSelectorPolicies) {
             this.trafficSelectorPolicies = trafficSelectorPolicies;
             return this;
         }
 
-        public Builder setTunnelConnectionStatus(List<TunnelConnectionHealthResponse> tunnelConnectionStatus) {
+        public Builder tunnelConnectionStatus(List<TunnelConnectionHealthResponse> tunnelConnectionStatus) {
             this.tunnelConnectionStatus = Objects.requireNonNull(tunnelConnectionStatus);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUseLocalAzureIpAddress(@Nullable Boolean useLocalAzureIpAddress) {
+        public Builder useLocalAzureIpAddress(@Nullable Boolean useLocalAzureIpAddress) {
             this.useLocalAzureIpAddress = useLocalAzureIpAddress;
             return this;
         }
 
-        public Builder setUsePolicyBasedTrafficSelectors(@Nullable Boolean usePolicyBasedTrafficSelectors) {
+        public Builder usePolicyBasedTrafficSelectors(@Nullable Boolean usePolicyBasedTrafficSelectors) {
             this.usePolicyBasedTrafficSelectors = usePolicyBasedTrafficSelectors;
             return this;
         }
 
-        public Builder setVirtualNetworkGateway1(VirtualNetworkGatewayResponse virtualNetworkGateway1) {
+        public Builder virtualNetworkGateway1(VirtualNetworkGatewayResponse virtualNetworkGateway1) {
             this.virtualNetworkGateway1 = Objects.requireNonNull(virtualNetworkGateway1);
             return this;
         }
 
-        public Builder setVirtualNetworkGateway2(@Nullable VirtualNetworkGatewayResponse virtualNetworkGateway2) {
+        public Builder virtualNetworkGateway2(@Nullable VirtualNetworkGatewayResponse virtualNetworkGateway2) {
             this.virtualNetworkGateway2 = virtualNetworkGateway2;
             return this;
         }

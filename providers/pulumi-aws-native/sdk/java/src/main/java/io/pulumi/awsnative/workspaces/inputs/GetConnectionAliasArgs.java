@@ -47,7 +47,7 @@ public final class GetConnectionAliasArgs extends io.pulumi.resources.InvokeArgs
     	      this.aliasId = defaults.aliasId;
         }
 
-        public Builder setAliasId(String aliasId) {
+        public Builder aliasId(String aliasId) {
             this.aliasId = Objects.requireNonNull(aliasId);
             return this;
         }

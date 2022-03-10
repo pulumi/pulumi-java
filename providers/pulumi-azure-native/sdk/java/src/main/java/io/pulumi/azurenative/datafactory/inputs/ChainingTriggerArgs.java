@@ -143,62 +143,62 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
     	      this.type = defaults.type;
         }
 
-        public Builder setAnnotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Input<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setDependsOn(Input<List<PipelineReferenceArgs>> dependsOn) {
+        public Builder dependsOn(Input<List<PipelineReferenceArgs>> dependsOn) {
             this.dependsOn = Objects.requireNonNull(dependsOn);
             return this;
         }
 
-        public Builder setDependsOn(List<PipelineReferenceArgs> dependsOn) {
+        public Builder dependsOn(List<PipelineReferenceArgs> dependsOn) {
             this.dependsOn = Input.of(Objects.requireNonNull(dependsOn));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setPipeline(Input<TriggerPipelineReferenceArgs> pipeline) {
+        public Builder pipeline(Input<TriggerPipelineReferenceArgs> pipeline) {
             this.pipeline = Objects.requireNonNull(pipeline);
             return this;
         }
 
-        public Builder setPipeline(TriggerPipelineReferenceArgs pipeline) {
+        public Builder pipeline(TriggerPipelineReferenceArgs pipeline) {
             this.pipeline = Input.of(Objects.requireNonNull(pipeline));
             return this;
         }
 
-        public Builder setRunDimension(Input<String> runDimension) {
+        public Builder runDimension(Input<String> runDimension) {
             this.runDimension = Objects.requireNonNull(runDimension);
             return this;
         }
 
-        public Builder setRunDimension(String runDimension) {
+        public Builder runDimension(String runDimension) {
             this.runDimension = Input.of(Objects.requireNonNull(runDimension));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

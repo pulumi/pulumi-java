@@ -147,37 +147,37 @@ public final class GetRoleResult {
     	      this.title = defaults.title;
         }
 
-        public Builder setDeleted(Boolean deleted) {
+        public Builder deleted(Boolean deleted) {
             this.deleted = Objects.requireNonNull(deleted);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setIncludedPermissions(List<String> includedPermissions) {
+        public Builder includedPermissions(List<String> includedPermissions) {
             this.includedPermissions = Objects.requireNonNull(includedPermissions);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setStage(String stage) {
+        public Builder stage(String stage) {
             this.stage = Objects.requireNonNull(stage);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

@@ -68,12 +68,12 @@ public final class GetVirtualMachineTemplateArgs extends io.pulumi.resources.Inv
     	      this.virtualMachineTemplateName = defaults.virtualMachineTemplateName;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setVirtualMachineTemplateName(String virtualMachineTemplateName) {
+        public Builder virtualMachineTemplateName(String virtualMachineTemplateName) {
             this.virtualMachineTemplateName = Objects.requireNonNull(virtualMachineTemplateName);
             return this;
         }

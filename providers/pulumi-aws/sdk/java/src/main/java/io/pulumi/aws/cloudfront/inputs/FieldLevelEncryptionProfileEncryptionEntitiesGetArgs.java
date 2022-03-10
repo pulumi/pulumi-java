@@ -50,12 +50,12 @@ public final class FieldLevelEncryptionProfileEncryptionEntitiesGetArgs extends 
     	      this.items = defaults.items;
         }
 
-        public Builder setItems(@Nullable Input<List<FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs>> items) {
+        public Builder items(@Nullable Input<List<FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs>> items) {
             this.items = items;
             return this;
         }
 
-        public Builder setItems(@Nullable List<FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs> items) {
+        public Builder items(@Nullable List<FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs> items) {
             this.items = Input.ofNullable(items);
             return this;
         }

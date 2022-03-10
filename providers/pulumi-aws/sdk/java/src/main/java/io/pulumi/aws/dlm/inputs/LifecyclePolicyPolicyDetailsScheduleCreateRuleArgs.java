@@ -87,32 +87,32 @@ public final class LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs extends io
     	      this.times = defaults.times;
         }
 
-        public Builder setInterval(Input<Integer> interval) {
+        public Builder interval(Input<Integer> interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
 
-        public Builder setInterval(Integer interval) {
+        public Builder interval(Integer interval) {
             this.interval = Input.of(Objects.requireNonNull(interval));
             return this;
         }
 
-        public Builder setIntervalUnit(@Nullable Input<String> intervalUnit) {
+        public Builder intervalUnit(@Nullable Input<String> intervalUnit) {
             this.intervalUnit = intervalUnit;
             return this;
         }
 
-        public Builder setIntervalUnit(@Nullable String intervalUnit) {
+        public Builder intervalUnit(@Nullable String intervalUnit) {
             this.intervalUnit = Input.ofNullable(intervalUnit);
             return this;
         }
 
-        public Builder setTimes(@Nullable Input<String> times) {
+        public Builder times(@Nullable Input<String> times) {
             this.times = times;
             return this;
         }
 
-        public Builder setTimes(@Nullable String times) {
+        public Builder times(@Nullable String times) {
             this.times = Input.ofNullable(times);
             return this;
         }

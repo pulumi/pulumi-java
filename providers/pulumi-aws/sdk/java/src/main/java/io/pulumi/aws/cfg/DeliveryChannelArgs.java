@@ -135,62 +135,62 @@ public final class DeliveryChannelArgs extends io.pulumi.resources.ResourceArgs 
     	      this.snsTopicArn = defaults.snsTopicArn;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setS3BucketName(Input<String> s3BucketName) {
+        public Builder s3BucketName(Input<String> s3BucketName) {
             this.s3BucketName = Objects.requireNonNull(s3BucketName);
             return this;
         }
 
-        public Builder setS3BucketName(String s3BucketName) {
+        public Builder s3BucketName(String s3BucketName) {
             this.s3BucketName = Input.of(Objects.requireNonNull(s3BucketName));
             return this;
         }
 
-        public Builder setS3KeyPrefix(@Nullable Input<String> s3KeyPrefix) {
+        public Builder s3KeyPrefix(@Nullable Input<String> s3KeyPrefix) {
             this.s3KeyPrefix = s3KeyPrefix;
             return this;
         }
 
-        public Builder setS3KeyPrefix(@Nullable String s3KeyPrefix) {
+        public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
             this.s3KeyPrefix = Input.ofNullable(s3KeyPrefix);
             return this;
         }
 
-        public Builder setS3KmsKeyArn(@Nullable Input<String> s3KmsKeyArn) {
+        public Builder s3KmsKeyArn(@Nullable Input<String> s3KmsKeyArn) {
             this.s3KmsKeyArn = s3KmsKeyArn;
             return this;
         }
 
-        public Builder setS3KmsKeyArn(@Nullable String s3KmsKeyArn) {
+        public Builder s3KmsKeyArn(@Nullable String s3KmsKeyArn) {
             this.s3KmsKeyArn = Input.ofNullable(s3KmsKeyArn);
             return this;
         }
 
-        public Builder setSnapshotDeliveryProperties(@Nullable Input<DeliveryChannelSnapshotDeliveryPropertiesArgs> snapshotDeliveryProperties) {
+        public Builder snapshotDeliveryProperties(@Nullable Input<DeliveryChannelSnapshotDeliveryPropertiesArgs> snapshotDeliveryProperties) {
             this.snapshotDeliveryProperties = snapshotDeliveryProperties;
             return this;
         }
 
-        public Builder setSnapshotDeliveryProperties(@Nullable DeliveryChannelSnapshotDeliveryPropertiesArgs snapshotDeliveryProperties) {
+        public Builder snapshotDeliveryProperties(@Nullable DeliveryChannelSnapshotDeliveryPropertiesArgs snapshotDeliveryProperties) {
             this.snapshotDeliveryProperties = Input.ofNullable(snapshotDeliveryProperties);
             return this;
         }
 
-        public Builder setSnsTopicArn(@Nullable Input<String> snsTopicArn) {
+        public Builder snsTopicArn(@Nullable Input<String> snsTopicArn) {
             this.snsTopicArn = snsTopicArn;
             return this;
         }
 
-        public Builder setSnsTopicArn(@Nullable String snsTopicArn) {
+        public Builder snsTopicArn(@Nullable String snsTopicArn) {
             this.snsTopicArn = Input.ofNullable(snsTopicArn);
             return this;
         }

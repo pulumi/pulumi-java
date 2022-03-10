@@ -59,17 +59,17 @@ public final class BackupVaultLockConfigurationType {
     	      this.minRetentionDays = defaults.minRetentionDays;
         }
 
-        public Builder setChangeableForDays(@Nullable Double changeableForDays) {
+        public Builder changeableForDays(@Nullable Double changeableForDays) {
             this.changeableForDays = changeableForDays;
             return this;
         }
 
-        public Builder setMaxRetentionDays(@Nullable Double maxRetentionDays) {
+        public Builder maxRetentionDays(@Nullable Double maxRetentionDays) {
             this.maxRetentionDays = maxRetentionDays;
             return this;
         }
 
-        public Builder setMinRetentionDays(Double minRetentionDays) {
+        public Builder minRetentionDays(Double minRetentionDays) {
             this.minRetentionDays = Objects.requireNonNull(minRetentionDays);
             return this;
         }

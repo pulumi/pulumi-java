@@ -75,32 +75,32 @@ public final class KeyGroupConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setComment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Input<String> comment) {
             this.comment = comment;
             return this;
         }
 
-        public Builder setComment(@Nullable String comment) {
+        public Builder comment(@Nullable String comment) {
             this.comment = Input.ofNullable(comment);
             return this;
         }
 
-        public Builder setItems(Input<List<String>> items) {
+        public Builder items(Input<List<String>> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
 
-        public Builder setItems(List<String> items) {
+        public Builder items(List<String> items) {
             this.items = Input.of(Objects.requireNonNull(items));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

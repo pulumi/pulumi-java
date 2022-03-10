@@ -185,47 +185,47 @@ public final class AwsNodePoolConfig {
     	      this.taints = defaults.taints;
         }
 
-        public Builder setConfigEncryption(AwsNodePoolConfigConfigEncryption configEncryption) {
+        public Builder configEncryption(AwsNodePoolConfigConfigEncryption configEncryption) {
             this.configEncryption = Objects.requireNonNull(configEncryption);
             return this;
         }
 
-        public Builder setIamInstanceProfile(String iamInstanceProfile) {
+        public Builder iamInstanceProfile(String iamInstanceProfile) {
             this.iamInstanceProfile = Objects.requireNonNull(iamInstanceProfile);
             return this;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setRootVolume(@Nullable AwsNodePoolConfigRootVolume rootVolume) {
+        public Builder rootVolume(@Nullable AwsNodePoolConfigRootVolume rootVolume) {
             this.rootVolume = rootVolume;
             return this;
         }
 
-        public Builder setSecurityGroupIds(@Nullable List<String> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
 
-        public Builder setSshConfig(@Nullable AwsNodePoolConfigSshConfig sshConfig) {
+        public Builder sshConfig(@Nullable AwsNodePoolConfigSshConfig sshConfig) {
             this.sshConfig = sshConfig;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTaints(@Nullable List<AwsNodePoolConfigTaint> taints) {
+        public Builder taints(@Nullable List<AwsNodePoolConfigTaint> taints) {
             this.taints = taints;
             return this;
         }

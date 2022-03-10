@@ -118,52 +118,52 @@ public final class PrefixArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setPeeringServiceName(Input<String> peeringServiceName) {
+        public Builder peeringServiceName(Input<String> peeringServiceName) {
             this.peeringServiceName = Objects.requireNonNull(peeringServiceName);
             return this;
         }
 
-        public Builder setPeeringServiceName(String peeringServiceName) {
+        public Builder peeringServiceName(String peeringServiceName) {
             this.peeringServiceName = Input.of(Objects.requireNonNull(peeringServiceName));
             return this;
         }
 
-        public Builder setPeeringServicePrefixKey(@Nullable Input<String> peeringServicePrefixKey) {
+        public Builder peeringServicePrefixKey(@Nullable Input<String> peeringServicePrefixKey) {
             this.peeringServicePrefixKey = peeringServicePrefixKey;
             return this;
         }
 
-        public Builder setPeeringServicePrefixKey(@Nullable String peeringServicePrefixKey) {
+        public Builder peeringServicePrefixKey(@Nullable String peeringServicePrefixKey) {
             this.peeringServicePrefixKey = Input.ofNullable(peeringServicePrefixKey);
             return this;
         }
 
-        public Builder setPrefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Input<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = Input.ofNullable(prefix);
             return this;
         }
 
-        public Builder setPrefixName(@Nullable Input<String> prefixName) {
+        public Builder prefixName(@Nullable Input<String> prefixName) {
             this.prefixName = prefixName;
             return this;
         }
 
-        public Builder setPrefixName(@Nullable String prefixName) {
+        public Builder prefixName(@Nullable String prefixName) {
             this.prefixName = Input.ofNullable(prefixName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

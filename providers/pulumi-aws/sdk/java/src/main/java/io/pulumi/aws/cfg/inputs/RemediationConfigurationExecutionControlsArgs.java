@@ -53,12 +53,12 @@ public final class RemediationConfigurationExecutionControlsArgs extends io.pulu
     	      this.ssmControls = defaults.ssmControls;
         }
 
-        public Builder setSsmControls(@Nullable Input<RemediationConfigurationExecutionControlsSsmControlsArgs> ssmControls) {
+        public Builder ssmControls(@Nullable Input<RemediationConfigurationExecutionControlsSsmControlsArgs> ssmControls) {
             this.ssmControls = ssmControls;
             return this;
         }
 
-        public Builder setSsmControls(@Nullable RemediationConfigurationExecutionControlsSsmControlsArgs ssmControls) {
+        public Builder ssmControls(@Nullable RemediationConfigurationExecutionControlsSsmControlsArgs ssmControls) {
             this.ssmControls = Input.ofNullable(ssmControls);
             return this;
         }

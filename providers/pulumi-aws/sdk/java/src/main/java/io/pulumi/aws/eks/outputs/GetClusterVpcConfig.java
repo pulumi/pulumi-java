@@ -147,37 +147,37 @@ public final class GetClusterVpcConfig {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setClusterSecurityGroupId(String clusterSecurityGroupId) {
+        public Builder clusterSecurityGroupId(String clusterSecurityGroupId) {
             this.clusterSecurityGroupId = Objects.requireNonNull(clusterSecurityGroupId);
             return this;
         }
 
-        public Builder setEndpointPrivateAccess(Boolean endpointPrivateAccess) {
+        public Builder endpointPrivateAccess(Boolean endpointPrivateAccess) {
             this.endpointPrivateAccess = Objects.requireNonNull(endpointPrivateAccess);
             return this;
         }
 
-        public Builder setEndpointPublicAccess(Boolean endpointPublicAccess) {
+        public Builder endpointPublicAccess(Boolean endpointPublicAccess) {
             this.endpointPublicAccess = Objects.requireNonNull(endpointPublicAccess);
             return this;
         }
 
-        public Builder setPublicAccessCidrs(List<String> publicAccessCidrs) {
+        public Builder publicAccessCidrs(List<String> publicAccessCidrs) {
             this.publicAccessCidrs = Objects.requireNonNull(publicAccessCidrs);
             return this;
         }
 
-        public Builder setSecurityGroupIds(List<String> securityGroupIds) {
+        public Builder securityGroupIds(List<String> securityGroupIds) {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
 
-        public Builder setSubnetIds(List<String> subnetIds) {
+        public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }

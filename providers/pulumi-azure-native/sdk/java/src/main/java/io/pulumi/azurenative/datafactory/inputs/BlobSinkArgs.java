@@ -238,122 +238,122 @@ public final class BlobSinkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.writeBatchTimeout = defaults.writeBatchTimeout;
         }
 
-        public Builder setBlobWriterAddHeader(@Nullable Input<Object> blobWriterAddHeader) {
+        public Builder blobWriterAddHeader(@Nullable Input<Object> blobWriterAddHeader) {
             this.blobWriterAddHeader = blobWriterAddHeader;
             return this;
         }
 
-        public Builder setBlobWriterAddHeader(@Nullable Object blobWriterAddHeader) {
+        public Builder blobWriterAddHeader(@Nullable Object blobWriterAddHeader) {
             this.blobWriterAddHeader = Input.ofNullable(blobWriterAddHeader);
             return this;
         }
 
-        public Builder setBlobWriterDateTimeFormat(@Nullable Input<Object> blobWriterDateTimeFormat) {
+        public Builder blobWriterDateTimeFormat(@Nullable Input<Object> blobWriterDateTimeFormat) {
             this.blobWriterDateTimeFormat = blobWriterDateTimeFormat;
             return this;
         }
 
-        public Builder setBlobWriterDateTimeFormat(@Nullable Object blobWriterDateTimeFormat) {
+        public Builder blobWriterDateTimeFormat(@Nullable Object blobWriterDateTimeFormat) {
             this.blobWriterDateTimeFormat = Input.ofNullable(blobWriterDateTimeFormat);
             return this;
         }
 
-        public Builder setBlobWriterOverwriteFiles(@Nullable Input<Object> blobWriterOverwriteFiles) {
+        public Builder blobWriterOverwriteFiles(@Nullable Input<Object> blobWriterOverwriteFiles) {
             this.blobWriterOverwriteFiles = blobWriterOverwriteFiles;
             return this;
         }
 
-        public Builder setBlobWriterOverwriteFiles(@Nullable Object blobWriterOverwriteFiles) {
+        public Builder blobWriterOverwriteFiles(@Nullable Object blobWriterOverwriteFiles) {
             this.blobWriterOverwriteFiles = Input.ofNullable(blobWriterOverwriteFiles);
             return this;
         }
 
-        public Builder setCopyBehavior(@Nullable Input<Object> copyBehavior) {
+        public Builder copyBehavior(@Nullable Input<Object> copyBehavior) {
             this.copyBehavior = copyBehavior;
             return this;
         }
 
-        public Builder setCopyBehavior(@Nullable Object copyBehavior) {
+        public Builder copyBehavior(@Nullable Object copyBehavior) {
             this.copyBehavior = Input.ofNullable(copyBehavior);
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Input<Object> disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Input<Object> disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Object disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = Input.ofNullable(disableMetricsCollection);
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Input<Object> maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Input<Object> maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = Input.ofNullable(maxConcurrentConnections);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<List<MetadataItemArgs>> metadata) {
+        public Builder metadata(@Nullable Input<List<MetadataItemArgs>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable List<MetadataItemArgs> metadata) {
+        public Builder metadata(@Nullable List<MetadataItemArgs> metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setSinkRetryCount(@Nullable Input<Object> sinkRetryCount) {
+        public Builder sinkRetryCount(@Nullable Input<Object> sinkRetryCount) {
             this.sinkRetryCount = sinkRetryCount;
             return this;
         }
 
-        public Builder setSinkRetryCount(@Nullable Object sinkRetryCount) {
+        public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
             this.sinkRetryCount = Input.ofNullable(sinkRetryCount);
             return this;
         }
 
-        public Builder setSinkRetryWait(@Nullable Input<Object> sinkRetryWait) {
+        public Builder sinkRetryWait(@Nullable Input<Object> sinkRetryWait) {
             this.sinkRetryWait = sinkRetryWait;
             return this;
         }
 
-        public Builder setSinkRetryWait(@Nullable Object sinkRetryWait) {
+        public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
             this.sinkRetryWait = Input.ofNullable(sinkRetryWait);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setWriteBatchSize(@Nullable Input<Object> writeBatchSize) {
+        public Builder writeBatchSize(@Nullable Input<Object> writeBatchSize) {
             this.writeBatchSize = writeBatchSize;
             return this;
         }
 
-        public Builder setWriteBatchSize(@Nullable Object writeBatchSize) {
+        public Builder writeBatchSize(@Nullable Object writeBatchSize) {
             this.writeBatchSize = Input.ofNullable(writeBatchSize);
             return this;
         }
 
-        public Builder setWriteBatchTimeout(@Nullable Input<Object> writeBatchTimeout) {
+        public Builder writeBatchTimeout(@Nullable Input<Object> writeBatchTimeout) {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
 
-        public Builder setWriteBatchTimeout(@Nullable Object writeBatchTimeout) {
+        public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
             this.writeBatchTimeout = Input.ofNullable(writeBatchTimeout);
             return this;
         }

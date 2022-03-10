@@ -74,22 +74,22 @@ public final class BlobNfsTargetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.usageModel = defaults.usageModel;
         }
 
-        public Builder setTarget(@Nullable Input<String> target) {
+        public Builder target(@Nullable Input<String> target) {
             this.target = target;
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = Input.ofNullable(target);
             return this;
         }
 
-        public Builder setUsageModel(@Nullable Input<String> usageModel) {
+        public Builder usageModel(@Nullable Input<String> usageModel) {
             this.usageModel = usageModel;
             return this;
         }
 
-        public Builder setUsageModel(@Nullable String usageModel) {
+        public Builder usageModel(@Nullable String usageModel) {
             this.usageModel = Input.ofNullable(usageModel);
             return this;
         }

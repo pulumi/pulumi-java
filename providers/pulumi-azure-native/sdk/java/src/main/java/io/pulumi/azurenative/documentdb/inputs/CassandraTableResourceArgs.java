@@ -108,42 +108,42 @@ public final class CassandraTableResourceArgs extends io.pulumi.resources.Resour
     	      this.schema = defaults.schema;
         }
 
-        public Builder setAnalyticalStorageTtl(@Nullable Input<Integer> analyticalStorageTtl) {
+        public Builder analyticalStorageTtl(@Nullable Input<Integer> analyticalStorageTtl) {
             this.analyticalStorageTtl = analyticalStorageTtl;
             return this;
         }
 
-        public Builder setAnalyticalStorageTtl(@Nullable Integer analyticalStorageTtl) {
+        public Builder analyticalStorageTtl(@Nullable Integer analyticalStorageTtl) {
             this.analyticalStorageTtl = Input.ofNullable(analyticalStorageTtl);
             return this;
         }
 
-        public Builder setDefaultTtl(@Nullable Input<Integer> defaultTtl) {
+        public Builder defaultTtl(@Nullable Input<Integer> defaultTtl) {
             this.defaultTtl = defaultTtl;
             return this;
         }
 
-        public Builder setDefaultTtl(@Nullable Integer defaultTtl) {
+        public Builder defaultTtl(@Nullable Integer defaultTtl) {
             this.defaultTtl = Input.ofNullable(defaultTtl);
             return this;
         }
 
-        public Builder setId(Input<String> id) {
+        public Builder id(Input<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder setSchema(@Nullable Input<CassandraSchemaArgs> schema) {
+        public Builder schema(@Nullable Input<CassandraSchemaArgs> schema) {
             this.schema = schema;
             return this;
         }
 
-        public Builder setSchema(@Nullable CassandraSchemaArgs schema) {
+        public Builder schema(@Nullable CassandraSchemaArgs schema) {
             this.schema = Input.ofNullable(schema);
             return this;
         }

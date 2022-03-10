@@ -153,72 +153,72 @@ public final class LivePipelineArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topologyName = defaults.topologyName;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setBitrateKbps(Input<Integer> bitrateKbps) {
+        public Builder bitrateKbps(Input<Integer> bitrateKbps) {
             this.bitrateKbps = Objects.requireNonNull(bitrateKbps);
             return this;
         }
 
-        public Builder setBitrateKbps(Integer bitrateKbps) {
+        public Builder bitrateKbps(Integer bitrateKbps) {
             this.bitrateKbps = Input.of(Objects.requireNonNull(bitrateKbps));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setLivePipelineName(@Nullable Input<String> livePipelineName) {
+        public Builder livePipelineName(@Nullable Input<String> livePipelineName) {
             this.livePipelineName = livePipelineName;
             return this;
         }
 
-        public Builder setLivePipelineName(@Nullable String livePipelineName) {
+        public Builder livePipelineName(@Nullable String livePipelineName) {
             this.livePipelineName = Input.ofNullable(livePipelineName);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<List<ParameterDefinitionArgs>> parameters) {
+        public Builder parameters(@Nullable Input<List<ParameterDefinitionArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<ParameterDefinitionArgs> parameters) {
+        public Builder parameters(@Nullable List<ParameterDefinitionArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTopologyName(Input<String> topologyName) {
+        public Builder topologyName(Input<String> topologyName) {
             this.topologyName = Objects.requireNonNull(topologyName);
             return this;
         }
 
-        public Builder setTopologyName(String topologyName) {
+        public Builder topologyName(String topologyName) {
             this.topologyName = Input.of(Objects.requireNonNull(topologyName));
             return this;
         }

@@ -261,77 +261,77 @@ public final class GetProductResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAcceptLanguage(@Nullable String acceptLanguage) {
+        public Builder acceptLanguage(@Nullable String acceptLanguage) {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setCreatedTime(String createdTime) {
+        public Builder createdTime(String createdTime) {
             this.createdTime = Objects.requireNonNull(createdTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDistributor(String distributor) {
+        public Builder distributor(String distributor) {
             this.distributor = Objects.requireNonNull(distributor);
             return this;
         }
 
-        public Builder setHasDefaultPath(Boolean hasDefaultPath) {
+        public Builder hasDefaultPath(Boolean hasDefaultPath) {
             this.hasDefaultPath = Objects.requireNonNull(hasDefaultPath);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOwner(String owner) {
+        public Builder owner(String owner) {
             this.owner = Objects.requireNonNull(owner);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setSupportDescription(String supportDescription) {
+        public Builder supportDescription(String supportDescription) {
             this.supportDescription = Objects.requireNonNull(supportDescription);
             return this;
         }
 
-        public Builder setSupportEmail(String supportEmail) {
+        public Builder supportEmail(String supportEmail) {
             this.supportEmail = Objects.requireNonNull(supportEmail);
             return this;
         }
 
-        public Builder setSupportUrl(String supportUrl) {
+        public Builder supportUrl(String supportUrl) {
             this.supportUrl = Objects.requireNonNull(supportUrl);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

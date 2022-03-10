@@ -116,27 +116,27 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse {
     	      this.dualStandbyPairName = defaults.dualStandbyPairName;
         }
 
-        public Builder setCatalogAdminPassword(@Nullable SecureStringResponse catalogAdminPassword) {
+        public Builder catalogAdminPassword(@Nullable SecureStringResponse catalogAdminPassword) {
             this.catalogAdminPassword = catalogAdminPassword;
             return this;
         }
 
-        public Builder setCatalogAdminUserName(@Nullable String catalogAdminUserName) {
+        public Builder catalogAdminUserName(@Nullable String catalogAdminUserName) {
             this.catalogAdminUserName = catalogAdminUserName;
             return this;
         }
 
-        public Builder setCatalogPricingTier(@Nullable String catalogPricingTier) {
+        public Builder catalogPricingTier(@Nullable String catalogPricingTier) {
             this.catalogPricingTier = catalogPricingTier;
             return this;
         }
 
-        public Builder setCatalogServerEndpoint(@Nullable String catalogServerEndpoint) {
+        public Builder catalogServerEndpoint(@Nullable String catalogServerEndpoint) {
             this.catalogServerEndpoint = catalogServerEndpoint;
             return this;
         }
 
-        public Builder setDualStandbyPairName(@Nullable String dualStandbyPairName) {
+        public Builder dualStandbyPairName(@Nullable String dualStandbyPairName) {
             this.dualStandbyPairName = dualStandbyPairName;
             return this;
         }

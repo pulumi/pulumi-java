@@ -121,52 +121,52 @@ public final class BucketLifecycleConfigurationRuleGetArgs extends io.pulumi.res
     	      this.status = defaults.status;
         }
 
-        public Builder setAbortIncompleteMultipartUpload(@Nullable Input<BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadGetArgs> abortIncompleteMultipartUpload) {
+        public Builder abortIncompleteMultipartUpload(@Nullable Input<BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadGetArgs> abortIncompleteMultipartUpload) {
             this.abortIncompleteMultipartUpload = abortIncompleteMultipartUpload;
             return this;
         }
 
-        public Builder setAbortIncompleteMultipartUpload(@Nullable BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadGetArgs abortIncompleteMultipartUpload) {
+        public Builder abortIncompleteMultipartUpload(@Nullable BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadGetArgs abortIncompleteMultipartUpload) {
             this.abortIncompleteMultipartUpload = Input.ofNullable(abortIncompleteMultipartUpload);
             return this;
         }
 
-        public Builder setExpiration(@Nullable Input<BucketLifecycleConfigurationRuleExpirationGetArgs> expiration) {
+        public Builder expiration(@Nullable Input<BucketLifecycleConfigurationRuleExpirationGetArgs> expiration) {
             this.expiration = expiration;
             return this;
         }
 
-        public Builder setExpiration(@Nullable BucketLifecycleConfigurationRuleExpirationGetArgs expiration) {
+        public Builder expiration(@Nullable BucketLifecycleConfigurationRuleExpirationGetArgs expiration) {
             this.expiration = Input.ofNullable(expiration);
             return this;
         }
 
-        public Builder setFilter(@Nullable Input<BucketLifecycleConfigurationRuleFilterGetArgs> filter) {
+        public Builder filter(@Nullable Input<BucketLifecycleConfigurationRuleFilterGetArgs> filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFilter(@Nullable BucketLifecycleConfigurationRuleFilterGetArgs filter) {
+        public Builder filter(@Nullable BucketLifecycleConfigurationRuleFilterGetArgs filter) {
             this.filter = Input.ofNullable(filter);
             return this;
         }
 
-        public Builder setId(Input<String> id) {
+        public Builder id(Input<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }

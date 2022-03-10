@@ -213,112 +213,112 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
     	      this.type = defaults.type;
         }
 
-        public Builder setCategories(@Nullable Input<TableFieldSchemaCategoriesArgs> categories) {
+        public Builder categories(@Nullable Input<TableFieldSchemaCategoriesArgs> categories) {
             this.categories = categories;
             return this;
         }
 
-        public Builder setCategories(@Nullable TableFieldSchemaCategoriesArgs categories) {
+        public Builder categories(@Nullable TableFieldSchemaCategoriesArgs categories) {
             this.categories = Input.ofNullable(categories);
             return this;
         }
 
-        public Builder setCollationSpec(@Nullable Input<String> collationSpec) {
+        public Builder collationSpec(@Nullable Input<String> collationSpec) {
             this.collationSpec = collationSpec;
             return this;
         }
 
-        public Builder setCollationSpec(@Nullable String collationSpec) {
+        public Builder collationSpec(@Nullable String collationSpec) {
             this.collationSpec = Input.ofNullable(collationSpec);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFields(@Nullable Input<List<TableFieldSchemaArgs>> fields) {
+        public Builder fields(@Nullable Input<List<TableFieldSchemaArgs>> fields) {
             this.fields = fields;
             return this;
         }
 
-        public Builder setFields(@Nullable List<TableFieldSchemaArgs> fields) {
+        public Builder fields(@Nullable List<TableFieldSchemaArgs> fields) {
             this.fields = Input.ofNullable(fields);
             return this;
         }
 
-        public Builder setMaxLength(@Nullable Input<String> maxLength) {
+        public Builder maxLength(@Nullable Input<String> maxLength) {
             this.maxLength = maxLength;
             return this;
         }
 
-        public Builder setMaxLength(@Nullable String maxLength) {
+        public Builder maxLength(@Nullable String maxLength) {
             this.maxLength = Input.ofNullable(maxLength);
             return this;
         }
 
-        public Builder setMode(@Nullable Input<String> mode) {
+        public Builder mode(@Nullable Input<String> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPolicyTags(@Nullable Input<TableFieldSchemaPolicyTagsArgs> policyTags) {
+        public Builder policyTags(@Nullable Input<TableFieldSchemaPolicyTagsArgs> policyTags) {
             this.policyTags = policyTags;
             return this;
         }
 
-        public Builder setPolicyTags(@Nullable TableFieldSchemaPolicyTagsArgs policyTags) {
+        public Builder policyTags(@Nullable TableFieldSchemaPolicyTagsArgs policyTags) {
             this.policyTags = Input.ofNullable(policyTags);
             return this;
         }
 
-        public Builder setPrecision(@Nullable Input<String> precision) {
+        public Builder precision(@Nullable Input<String> precision) {
             this.precision = precision;
             return this;
         }
 
-        public Builder setPrecision(@Nullable String precision) {
+        public Builder precision(@Nullable String precision) {
             this.precision = Input.ofNullable(precision);
             return this;
         }
 
-        public Builder setScale(@Nullable Input<String> scale) {
+        public Builder scale(@Nullable Input<String> scale) {
             this.scale = scale;
             return this;
         }
 
-        public Builder setScale(@Nullable String scale) {
+        public Builder scale(@Nullable String scale) {
             this.scale = Input.ofNullable(scale);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

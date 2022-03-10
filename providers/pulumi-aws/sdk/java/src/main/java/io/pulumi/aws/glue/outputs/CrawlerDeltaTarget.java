@@ -83,17 +83,17 @@ public final class CrawlerDeltaTarget {
     	      this.writeManifest = defaults.writeManifest;
         }
 
-        public Builder setConnectionName(String connectionName) {
+        public Builder connectionName(String connectionName) {
             this.connectionName = Objects.requireNonNull(connectionName);
             return this;
         }
 
-        public Builder setDeltaTables(List<String> deltaTables) {
+        public Builder deltaTables(List<String> deltaTables) {
             this.deltaTables = Objects.requireNonNull(deltaTables);
             return this;
         }
 
-        public Builder setWriteManifest(Boolean writeManifest) {
+        public Builder writeManifest(Boolean writeManifest) {
             this.writeManifest = Objects.requireNonNull(writeManifest);
             return this;
         }

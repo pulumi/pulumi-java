@@ -314,87 +314,87 @@ public final class GetMigratingVmResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setComputeEngineTargetDefaults(ComputeEngineTargetDefaultsResponse computeEngineTargetDefaults) {
+        public Builder computeEngineTargetDefaults(ComputeEngineTargetDefaultsResponse computeEngineTargetDefaults) {
             this.computeEngineTargetDefaults = Objects.requireNonNull(computeEngineTargetDefaults);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setCurrentSyncInfo(ReplicationCycleResponse currentSyncInfo) {
+        public Builder currentSyncInfo(ReplicationCycleResponse currentSyncInfo) {
             this.currentSyncInfo = Objects.requireNonNull(currentSyncInfo);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setError(StatusResponse error) {
+        public Builder error(StatusResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
 
-        public Builder setGroup(String group) {
+        public Builder group(String group) {
             this.group = Objects.requireNonNull(group);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLastSync(ReplicationSyncResponse lastSync) {
+        public Builder lastSync(ReplicationSyncResponse lastSync) {
             this.lastSync = Objects.requireNonNull(lastSync);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPolicy(SchedulePolicyResponse policy) {
+        public Builder policy(SchedulePolicyResponse policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
-        public Builder setRecentCloneJobs(List<CloneJobResponse> recentCloneJobs) {
+        public Builder recentCloneJobs(List<CloneJobResponse> recentCloneJobs) {
             this.recentCloneJobs = Objects.requireNonNull(recentCloneJobs);
             return this;
         }
 
-        public Builder setRecentCutoverJobs(List<CutoverJobResponse> recentCutoverJobs) {
+        public Builder recentCutoverJobs(List<CutoverJobResponse> recentCutoverJobs) {
             this.recentCutoverJobs = Objects.requireNonNull(recentCutoverJobs);
             return this;
         }
 
-        public Builder setSourceVmId(String sourceVmId) {
+        public Builder sourceVmId(String sourceVmId) {
             this.sourceVmId = Objects.requireNonNull(sourceVmId);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStateTime(String stateTime) {
+        public Builder stateTime(String stateTime) {
             this.stateTime = Objects.requireNonNull(stateTime);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

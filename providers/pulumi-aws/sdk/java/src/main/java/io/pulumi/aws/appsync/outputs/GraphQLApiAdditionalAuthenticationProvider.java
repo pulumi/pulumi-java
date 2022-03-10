@@ -102,22 +102,22 @@ public final class GraphQLApiAdditionalAuthenticationProvider {
     	      this.userPoolConfig = defaults.userPoolConfig;
         }
 
-        public Builder setAuthenticationType(String authenticationType) {
+        public Builder authenticationType(String authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
 
-        public Builder setLambdaAuthorizerConfig(@Nullable GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfig lambdaAuthorizerConfig) {
+        public Builder lambdaAuthorizerConfig(@Nullable GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfig lambdaAuthorizerConfig) {
             this.lambdaAuthorizerConfig = lambdaAuthorizerConfig;
             return this;
         }
 
-        public Builder setOpenidConnectConfig(@Nullable GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfig openidConnectConfig) {
+        public Builder openidConnectConfig(@Nullable GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfig openidConnectConfig) {
             this.openidConnectConfig = openidConnectConfig;
             return this;
         }
 
-        public Builder setUserPoolConfig(@Nullable GraphQLApiAdditionalAuthenticationProviderUserPoolConfig userPoolConfig) {
+        public Builder userPoolConfig(@Nullable GraphQLApiAdditionalAuthenticationProviderUserPoolConfig userPoolConfig) {
             this.userPoolConfig = userPoolConfig;
             return this;
         }

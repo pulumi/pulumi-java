@@ -119,52 +119,52 @@ public final class FieldLevelEncryptionProfileState extends io.pulumi.resources.
     	      this.name = defaults.name;
         }
 
-        public Builder setCallerReference(@Nullable Input<String> callerReference) {
+        public Builder callerReference(@Nullable Input<String> callerReference) {
             this.callerReference = callerReference;
             return this;
         }
 
-        public Builder setCallerReference(@Nullable String callerReference) {
+        public Builder callerReference(@Nullable String callerReference) {
             this.callerReference = Input.ofNullable(callerReference);
             return this;
         }
 
-        public Builder setComment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Input<String> comment) {
             this.comment = comment;
             return this;
         }
 
-        public Builder setComment(@Nullable String comment) {
+        public Builder comment(@Nullable String comment) {
             this.comment = Input.ofNullable(comment);
             return this;
         }
 
-        public Builder setEncryptionEntities(@Nullable Input<FieldLevelEncryptionProfileEncryptionEntitiesGetArgs> encryptionEntities) {
+        public Builder encryptionEntities(@Nullable Input<FieldLevelEncryptionProfileEncryptionEntitiesGetArgs> encryptionEntities) {
             this.encryptionEntities = encryptionEntities;
             return this;
         }
 
-        public Builder setEncryptionEntities(@Nullable FieldLevelEncryptionProfileEncryptionEntitiesGetArgs encryptionEntities) {
+        public Builder encryptionEntities(@Nullable FieldLevelEncryptionProfileEncryptionEntitiesGetArgs encryptionEntities) {
             this.encryptionEntities = Input.ofNullable(encryptionEntities);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

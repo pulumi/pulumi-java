@@ -350,92 +350,92 @@ public final class DelimitedTextDatasetResponse extends io.pulumi.resources.Invo
     	      this.type = defaults.type;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setColumnDelimiter(@Nullable Object columnDelimiter) {
+        public Builder columnDelimiter(@Nullable Object columnDelimiter) {
             this.columnDelimiter = columnDelimiter;
             return this;
         }
 
-        public Builder setCompressionCodec(@Nullable Object compressionCodec) {
+        public Builder compressionCodec(@Nullable Object compressionCodec) {
             this.compressionCodec = compressionCodec;
             return this;
         }
 
-        public Builder setCompressionLevel(@Nullable Object compressionLevel) {
+        public Builder compressionLevel(@Nullable Object compressionLevel) {
             this.compressionLevel = compressionLevel;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEncodingName(@Nullable Object encodingName) {
+        public Builder encodingName(@Nullable Object encodingName) {
             this.encodingName = encodingName;
             return this;
         }
 
-        public Builder setEscapeChar(@Nullable Object escapeChar) {
+        public Builder escapeChar(@Nullable Object escapeChar) {
             this.escapeChar = escapeChar;
             return this;
         }
 
-        public Builder setFirstRowAsHeader(@Nullable Object firstRowAsHeader) {
+        public Builder firstRowAsHeader(@Nullable Object firstRowAsHeader) {
             this.firstRowAsHeader = firstRowAsHeader;
             return this;
         }
 
-        public Builder setFolder(@Nullable DatasetResponseFolder folder) {
+        public Builder folder(@Nullable DatasetResponseFolder folder) {
             this.folder = folder;
             return this;
         }
 
-        public Builder setLinkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
+        public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
 
-        public Builder setLocation(Object location) {
+        public Builder location(Object location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setNullValue(@Nullable Object nullValue) {
+        public Builder nullValue(@Nullable Object nullValue) {
             this.nullValue = nullValue;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setQuoteChar(@Nullable Object quoteChar) {
+        public Builder quoteChar(@Nullable Object quoteChar) {
             this.quoteChar = quoteChar;
             return this;
         }
 
-        public Builder setRowDelimiter(@Nullable Object rowDelimiter) {
+        public Builder rowDelimiter(@Nullable Object rowDelimiter) {
             this.rowDelimiter = rowDelimiter;
             return this;
         }
 
-        public Builder setSchema(@Nullable Object schema) {
+        public Builder schema(@Nullable Object schema) {
             this.schema = schema;
             return this;
         }
 
-        public Builder setStructure(@Nullable Object structure) {
+        public Builder structure(@Nullable Object structure) {
             this.structure = structure;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -89,17 +89,17 @@ public final class BuiltImageResponse extends io.pulumi.resources.InvokeArgs {
     	      this.pushTiming = defaults.pushTiming;
         }
 
-        public Builder setDigest(String digest) {
+        public Builder digest(String digest) {
             this.digest = Objects.requireNonNull(digest);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPushTiming(TimeSpanResponse pushTiming) {
+        public Builder pushTiming(TimeSpanResponse pushTiming) {
             this.pushTiming = Objects.requireNonNull(pushTiming);
             return this;
         }

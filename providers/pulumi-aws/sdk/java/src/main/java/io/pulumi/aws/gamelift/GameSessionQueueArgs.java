@@ -122,52 +122,52 @@ public final class GameSessionQueueArgs extends io.pulumi.resources.ResourceArgs
     	      this.timeoutInSeconds = defaults.timeoutInSeconds;
         }
 
-        public Builder setDestinations(@Nullable Input<List<String>> destinations) {
+        public Builder destinations(@Nullable Input<List<String>> destinations) {
             this.destinations = destinations;
             return this;
         }
 
-        public Builder setDestinations(@Nullable List<String> destinations) {
+        public Builder destinations(@Nullable List<String> destinations) {
             this.destinations = Input.ofNullable(destinations);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPlayerLatencyPolicies(@Nullable Input<List<GameSessionQueuePlayerLatencyPolicyArgs>> playerLatencyPolicies) {
+        public Builder playerLatencyPolicies(@Nullable Input<List<GameSessionQueuePlayerLatencyPolicyArgs>> playerLatencyPolicies) {
             this.playerLatencyPolicies = playerLatencyPolicies;
             return this;
         }
 
-        public Builder setPlayerLatencyPolicies(@Nullable List<GameSessionQueuePlayerLatencyPolicyArgs> playerLatencyPolicies) {
+        public Builder playerLatencyPolicies(@Nullable List<GameSessionQueuePlayerLatencyPolicyArgs> playerLatencyPolicies) {
             this.playerLatencyPolicies = Input.ofNullable(playerLatencyPolicies);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTimeoutInSeconds(@Nullable Input<Integer> timeoutInSeconds) {
+        public Builder timeoutInSeconds(@Nullable Input<Integer> timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
 
-        public Builder setTimeoutInSeconds(@Nullable Integer timeoutInSeconds) {
+        public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
             this.timeoutInSeconds = Input.ofNullable(timeoutInSeconds);
             return this;
         }

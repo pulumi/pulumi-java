@@ -101,22 +101,22 @@ public final class GetGlobalNetworkResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setTags(@Nullable List<GlobalNetworkTag> tags) {
+        public Builder tags(@Nullable List<GlobalNetworkTag> tags) {
             this.tags = tags;
             return this;
         }

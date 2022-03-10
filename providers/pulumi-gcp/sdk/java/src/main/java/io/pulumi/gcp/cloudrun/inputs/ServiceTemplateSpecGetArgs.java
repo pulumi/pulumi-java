@@ -157,62 +157,62 @@ public final class ServiceTemplateSpecGetArgs extends io.pulumi.resources.Resour
     	      this.volumes = defaults.volumes;
         }
 
-        public Builder setContainerConcurrency(@Nullable Input<Integer> containerConcurrency) {
+        public Builder containerConcurrency(@Nullable Input<Integer> containerConcurrency) {
             this.containerConcurrency = containerConcurrency;
             return this;
         }
 
-        public Builder setContainerConcurrency(@Nullable Integer containerConcurrency) {
+        public Builder containerConcurrency(@Nullable Integer containerConcurrency) {
             this.containerConcurrency = Input.ofNullable(containerConcurrency);
             return this;
         }
 
-        public Builder setContainers(@Nullable Input<List<ServiceTemplateSpecContainerGetArgs>> containers) {
+        public Builder containers(@Nullable Input<List<ServiceTemplateSpecContainerGetArgs>> containers) {
             this.containers = containers;
             return this;
         }
 
-        public Builder setContainers(@Nullable List<ServiceTemplateSpecContainerGetArgs> containers) {
+        public Builder containers(@Nullable List<ServiceTemplateSpecContainerGetArgs> containers) {
             this.containers = Input.ofNullable(containers);
             return this;
         }
 
-        public Builder setServiceAccountName(@Nullable Input<String> serviceAccountName) {
+        public Builder serviceAccountName(@Nullable Input<String> serviceAccountName) {
             this.serviceAccountName = serviceAccountName;
             return this;
         }
 
-        public Builder setServiceAccountName(@Nullable String serviceAccountName) {
+        public Builder serviceAccountName(@Nullable String serviceAccountName) {
             this.serviceAccountName = Input.ofNullable(serviceAccountName);
             return this;
         }
 
-        public Builder setServingState(@Nullable Input<String> servingState) {
+        public Builder servingState(@Nullable Input<String> servingState) {
             this.servingState = servingState;
             return this;
         }
 
-        public Builder setServingState(@Nullable String servingState) {
+        public Builder servingState(@Nullable String servingState) {
             this.servingState = Input.ofNullable(servingState);
             return this;
         }
 
-        public Builder setTimeoutSeconds(@Nullable Input<Integer> timeoutSeconds) {
+        public Builder timeoutSeconds(@Nullable Input<Integer> timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
 
-        public Builder setTimeoutSeconds(@Nullable Integer timeoutSeconds) {
+        public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
             this.timeoutSeconds = Input.ofNullable(timeoutSeconds);
             return this;
         }
 
-        public Builder setVolumes(@Nullable Input<List<ServiceTemplateSpecVolumeGetArgs>> volumes) {
+        public Builder volumes(@Nullable Input<List<ServiceTemplateSpecVolumeGetArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
 
-        public Builder setVolumes(@Nullable List<ServiceTemplateSpecVolumeGetArgs> volumes) {
+        public Builder volumes(@Nullable List<ServiceTemplateSpecVolumeGetArgs> volumes) {
             this.volumes = Input.ofNullable(volumes);
             return this;
         }

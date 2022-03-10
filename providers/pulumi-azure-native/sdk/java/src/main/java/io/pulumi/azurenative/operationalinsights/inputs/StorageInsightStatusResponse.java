@@ -74,12 +74,12 @@ public final class StorageInsightStatusResponse extends io.pulumi.resources.Invo
     	      this.state = defaults.state;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

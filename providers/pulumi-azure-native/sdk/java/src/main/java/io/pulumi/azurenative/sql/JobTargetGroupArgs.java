@@ -120,52 +120,52 @@ public final class JobTargetGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetGroupName = defaults.targetGroupName;
         }
 
-        public Builder setJobAgentName(Input<String> jobAgentName) {
+        public Builder jobAgentName(Input<String> jobAgentName) {
             this.jobAgentName = Objects.requireNonNull(jobAgentName);
             return this;
         }
 
-        public Builder setJobAgentName(String jobAgentName) {
+        public Builder jobAgentName(String jobAgentName) {
             this.jobAgentName = Input.of(Objects.requireNonNull(jobAgentName));
             return this;
         }
 
-        public Builder setMembers(Input<List<JobTargetArgs>> members) {
+        public Builder members(Input<List<JobTargetArgs>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
 
-        public Builder setMembers(List<JobTargetArgs> members) {
+        public Builder members(List<JobTargetArgs> members) {
             this.members = Input.of(Objects.requireNonNull(members));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServerName(Input<String> serverName) {
+        public Builder serverName(Input<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
-        public Builder setServerName(String serverName) {
+        public Builder serverName(String serverName) {
             this.serverName = Input.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder setTargetGroupName(@Nullable Input<String> targetGroupName) {
+        public Builder targetGroupName(@Nullable Input<String> targetGroupName) {
             this.targetGroupName = targetGroupName;
             return this;
         }
 
-        public Builder setTargetGroupName(@Nullable String targetGroupName) {
+        public Builder targetGroupName(@Nullable String targetGroupName) {
             this.targetGroupName = Input.ofNullable(targetGroupName);
             return this;
         }

@@ -88,17 +88,17 @@ public final class DiagnosticConditionResponse extends io.pulumi.resources.Invok
     	      this.since = defaults.since;
         }
 
-        public Builder setCode(String code) {
+        public Builder code(String code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setSince(String since) {
+        public Builder since(String since) {
             this.since = Objects.requireNonNull(since);
             return this;
         }

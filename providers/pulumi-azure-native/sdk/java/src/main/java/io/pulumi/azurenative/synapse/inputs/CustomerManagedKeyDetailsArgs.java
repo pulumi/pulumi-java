@@ -57,12 +57,12 @@ public final class CustomerManagedKeyDetailsArgs extends io.pulumi.resources.Res
     	      this.key = defaults.key;
         }
 
-        public Builder setKey(@Nullable Input<WorkspaceKeyDetailsArgs> key) {
+        public Builder key(@Nullable Input<WorkspaceKeyDetailsArgs> key) {
             this.key = key;
             return this;
         }
 
-        public Builder setKey(@Nullable WorkspaceKeyDetailsArgs key) {
+        public Builder key(@Nullable WorkspaceKeyDetailsArgs key) {
             this.key = Input.ofNullable(key);
             return this;
         }

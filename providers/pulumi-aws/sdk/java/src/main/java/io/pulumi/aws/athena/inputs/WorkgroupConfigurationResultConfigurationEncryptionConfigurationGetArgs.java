@@ -70,22 +70,22 @@ public final class WorkgroupConfigurationResultConfigurationEncryptionConfigurat
     	      this.kmsKeyArn = defaults.kmsKeyArn;
         }
 
-        public Builder setEncryptionOption(@Nullable Input<String> encryptionOption) {
+        public Builder encryptionOption(@Nullable Input<String> encryptionOption) {
             this.encryptionOption = encryptionOption;
             return this;
         }
 
-        public Builder setEncryptionOption(@Nullable String encryptionOption) {
+        public Builder encryptionOption(@Nullable String encryptionOption) {
             this.encryptionOption = Input.ofNullable(encryptionOption);
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable String kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
             return this;
         }

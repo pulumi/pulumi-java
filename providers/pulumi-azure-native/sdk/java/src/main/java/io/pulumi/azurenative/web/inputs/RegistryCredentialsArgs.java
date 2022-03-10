@@ -90,32 +90,32 @@ public final class RegistryCredentialsArgs extends io.pulumi.resources.ResourceA
     	      this.username = defaults.username;
         }
 
-        public Builder setPasswordSecretRef(@Nullable Input<String> passwordSecretRef) {
+        public Builder passwordSecretRef(@Nullable Input<String> passwordSecretRef) {
             this.passwordSecretRef = passwordSecretRef;
             return this;
         }
 
-        public Builder setPasswordSecretRef(@Nullable String passwordSecretRef) {
+        public Builder passwordSecretRef(@Nullable String passwordSecretRef) {
             this.passwordSecretRef = Input.ofNullable(passwordSecretRef);
             return this;
         }
 
-        public Builder setServer(@Nullable Input<String> server) {
+        public Builder server(@Nullable Input<String> server) {
             this.server = server;
             return this;
         }
 
-        public Builder setServer(@Nullable String server) {
+        public Builder server(@Nullable String server) {
             this.server = Input.ofNullable(server);
             return this;
         }
 
-        public Builder setUsername(@Nullable Input<String> username) {
+        public Builder username(@Nullable Input<String> username) {
             this.username = username;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = Input.ofNullable(username);
             return this;
         }

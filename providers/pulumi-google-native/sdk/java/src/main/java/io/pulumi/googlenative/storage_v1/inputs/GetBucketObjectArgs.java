@@ -158,52 +158,52 @@ public final class GetBucketObjectArgs extends io.pulumi.resources.InvokeArgs {
     	      this.userProject = defaults.userProject;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setGeneration(@Nullable String generation) {
+        public Builder generation(@Nullable String generation) {
             this.generation = generation;
             return this;
         }
 
-        public Builder setIfGenerationMatch(@Nullable String ifGenerationMatch) {
+        public Builder ifGenerationMatch(@Nullable String ifGenerationMatch) {
             this.ifGenerationMatch = ifGenerationMatch;
             return this;
         }
 
-        public Builder setIfGenerationNotMatch(@Nullable String ifGenerationNotMatch) {
+        public Builder ifGenerationNotMatch(@Nullable String ifGenerationNotMatch) {
             this.ifGenerationNotMatch = ifGenerationNotMatch;
             return this;
         }
 
-        public Builder setIfMetagenerationMatch(@Nullable String ifMetagenerationMatch) {
+        public Builder ifMetagenerationMatch(@Nullable String ifMetagenerationMatch) {
             this.ifMetagenerationMatch = ifMetagenerationMatch;
             return this;
         }
 
-        public Builder setIfMetagenerationNotMatch(@Nullable String ifMetagenerationNotMatch) {
+        public Builder ifMetagenerationNotMatch(@Nullable String ifMetagenerationNotMatch) {
             this.ifMetagenerationNotMatch = ifMetagenerationNotMatch;
             return this;
         }
 
-        public Builder setObject(String object) {
+        public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }
 
-        public Builder setProjection(@Nullable String projection) {
+        public Builder projection(@Nullable String projection) {
             this.projection = projection;
             return this;
         }
 
-        public Builder setProvisionalUserProject(@Nullable String provisionalUserProject) {
+        public Builder provisionalUserProject(@Nullable String provisionalUserProject) {
             this.provisionalUserProject = provisionalUserProject;
             return this;
         }
 
-        public Builder setUserProject(@Nullable String userProject) {
+        public Builder userProject(@Nullable String userProject) {
             this.userProject = userProject;
             return this;
         }

@@ -125,52 +125,52 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi
     	      this.testTime = defaults.testTime;
         }
 
-        public Builder setConversationTurns(@Nullable Input<List<GoogleCloudDialogflowCxV3ConversationTurnArgs>> conversationTurns) {
+        public Builder conversationTurns(@Nullable Input<List<GoogleCloudDialogflowCxV3ConversationTurnArgs>> conversationTurns) {
             this.conversationTurns = conversationTurns;
             return this;
         }
 
-        public Builder setConversationTurns(@Nullable List<GoogleCloudDialogflowCxV3ConversationTurnArgs> conversationTurns) {
+        public Builder conversationTurns(@Nullable List<GoogleCloudDialogflowCxV3ConversationTurnArgs> conversationTurns) {
             this.conversationTurns = Input.ofNullable(conversationTurns);
             return this;
         }
 
-        public Builder setEnvironment(@Nullable Input<String> environment) {
+        public Builder environment(@Nullable Input<String> environment) {
             this.environment = environment;
             return this;
         }
 
-        public Builder setEnvironment(@Nullable String environment) {
+        public Builder environment(@Nullable String environment) {
             this.environment = Input.ofNullable(environment);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTestResult(@Nullable Input<GoogleCloudDialogflowCxV3TestCaseResultTestResult> testResult) {
+        public Builder testResult(@Nullable Input<GoogleCloudDialogflowCxV3TestCaseResultTestResult> testResult) {
             this.testResult = testResult;
             return this;
         }
 
-        public Builder setTestResult(@Nullable GoogleCloudDialogflowCxV3TestCaseResultTestResult testResult) {
+        public Builder testResult(@Nullable GoogleCloudDialogflowCxV3TestCaseResultTestResult testResult) {
             this.testResult = Input.ofNullable(testResult);
             return this;
         }
 
-        public Builder setTestTime(@Nullable Input<String> testTime) {
+        public Builder testTime(@Nullable Input<String> testTime) {
             this.testTime = testTime;
             return this;
         }
 
-        public Builder setTestTime(@Nullable String testTime) {
+        public Builder testTime(@Nullable String testTime) {
             this.testTime = Input.ofNullable(testTime);
             return this;
         }

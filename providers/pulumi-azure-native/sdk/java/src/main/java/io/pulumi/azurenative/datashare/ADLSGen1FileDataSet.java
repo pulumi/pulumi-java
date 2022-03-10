@@ -223,7 +223,7 @@ public class ADLSGen1FileDataSet extends io.pulumi.resources.CustomResource {
     private static ADLSGen1FileDataSetArgs makeArgs(ADLSGen1FileDataSetArgs args) {
         var builder = args == null ? ADLSGen1FileDataSetArgs.builder() : ADLSGen1FileDataSetArgs.builder(args);
         return builder
-            .setKind("AdlsGen1File")
+            .kind("AdlsGen1File")
             .build();
     }
 

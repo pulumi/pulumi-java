@@ -215,57 +215,57 @@ public final class GetApiOperationResult {
     	      this.urlTemplate = defaults.urlTemplate;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setMethod(String method) {
+        public Builder method(String method) {
             this.method = Objects.requireNonNull(method);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPolicies(@Nullable String policies) {
+        public Builder policies(@Nullable String policies) {
             this.policies = policies;
             return this;
         }
 
-        public Builder setRequest(@Nullable RequestContractResponse request) {
+        public Builder request(@Nullable RequestContractResponse request) {
             this.request = request;
             return this;
         }
 
-        public Builder setResponses(@Nullable List<ResponseContractResponse> responses) {
+        public Builder responses(@Nullable List<ResponseContractResponse> responses) {
             this.responses = responses;
             return this;
         }
 
-        public Builder setTemplateParameters(@Nullable List<ParameterContractResponse> templateParameters) {
+        public Builder templateParameters(@Nullable List<ParameterContractResponse> templateParameters) {
             this.templateParameters = templateParameters;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUrlTemplate(String urlTemplate) {
+        public Builder urlTemplate(String urlTemplate) {
             this.urlTemplate = Objects.requireNonNull(urlTemplate);
             return this;
         }

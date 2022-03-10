@@ -65,12 +65,12 @@ public final class BotAliasLambdaCodeHook {
     	      this.lambdaArn = defaults.lambdaArn;
         }
 
-        public Builder setCodeHookInterfaceVersion(String codeHookInterfaceVersion) {
+        public Builder codeHookInterfaceVersion(String codeHookInterfaceVersion) {
             this.codeHookInterfaceVersion = Objects.requireNonNull(codeHookInterfaceVersion);
             return this;
         }
 
-        public Builder setLambdaArn(String lambdaArn) {
+        public Builder lambdaArn(String lambdaArn) {
             this.lambdaArn = Objects.requireNonNull(lambdaArn);
             return this;
         }

@@ -71,22 +71,22 @@ public final class ServicePerimeterResourceArgs extends io.pulumi.resources.Reso
     	      this.resource = defaults.resource;
         }
 
-        public Builder setPerimeterName(Input<String> perimeterName) {
+        public Builder perimeterName(Input<String> perimeterName) {
             this.perimeterName = Objects.requireNonNull(perimeterName);
             return this;
         }
 
-        public Builder setPerimeterName(String perimeterName) {
+        public Builder perimeterName(String perimeterName) {
             this.perimeterName = Input.of(Objects.requireNonNull(perimeterName));
             return this;
         }
 
-        public Builder setResource(Input<String> resource) {
+        public Builder resource(Input<String> resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
 
-        public Builder setResource(String resource) {
+        public Builder resource(String resource) {
             this.resource = Input.of(Objects.requireNonNull(resource));
             return this;
         }

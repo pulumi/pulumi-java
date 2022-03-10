@@ -71,22 +71,22 @@ public final class AzureClusterFleetGetArgs extends io.pulumi.resources.Resource
     	      this.project = defaults.project;
         }
 
-        public Builder setMembership(@Nullable Input<String> membership) {
+        public Builder membership(@Nullable Input<String> membership) {
             this.membership = membership;
             return this;
         }
 
-        public Builder setMembership(@Nullable String membership) {
+        public Builder membership(@Nullable String membership) {
             this.membership = Input.ofNullable(membership);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

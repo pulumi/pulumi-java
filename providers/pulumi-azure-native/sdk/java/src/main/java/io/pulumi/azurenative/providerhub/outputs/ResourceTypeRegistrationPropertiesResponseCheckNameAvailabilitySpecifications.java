@@ -53,12 +53,12 @@ public final class ResourceTypeRegistrationPropertiesResponseCheckNameAvailabili
     	      this.resourceTypesWithCustomValidation = defaults.resourceTypesWithCustomValidation;
         }
 
-        public Builder setEnableDefaultValidation(@Nullable Boolean enableDefaultValidation) {
+        public Builder enableDefaultValidation(@Nullable Boolean enableDefaultValidation) {
             this.enableDefaultValidation = enableDefaultValidation;
             return this;
         }
 
-        public Builder setResourceTypesWithCustomValidation(@Nullable List<String> resourceTypesWithCustomValidation) {
+        public Builder resourceTypesWithCustomValidation(@Nullable List<String> resourceTypesWithCustomValidation) {
             this.resourceTypesWithCustomValidation = resourceTypesWithCustomValidation;
             return this;
         }

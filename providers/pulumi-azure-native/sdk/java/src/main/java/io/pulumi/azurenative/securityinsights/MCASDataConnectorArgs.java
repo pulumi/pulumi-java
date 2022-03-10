@@ -136,62 +136,62 @@ public final class MCASDataConnectorArgs extends io.pulumi.resources.ResourceArg
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setDataConnectorId(@Nullable Input<String> dataConnectorId) {
+        public Builder dataConnectorId(@Nullable Input<String> dataConnectorId) {
             this.dataConnectorId = dataConnectorId;
             return this;
         }
 
-        public Builder setDataConnectorId(@Nullable String dataConnectorId) {
+        public Builder dataConnectorId(@Nullable String dataConnectorId) {
             this.dataConnectorId = Input.ofNullable(dataConnectorId);
             return this;
         }
 
-        public Builder setDataTypes(@Nullable Input<MCASDataConnectorDataTypesArgs> dataTypes) {
+        public Builder dataTypes(@Nullable Input<MCASDataConnectorDataTypesArgs> dataTypes) {
             this.dataTypes = dataTypes;
             return this;
         }
 
-        public Builder setDataTypes(@Nullable MCASDataConnectorDataTypesArgs dataTypes) {
+        public Builder dataTypes(@Nullable MCASDataConnectorDataTypesArgs dataTypes) {
             this.dataTypes = Input.ofNullable(dataTypes);
             return this;
         }
 
-        public Builder setKind(Input<String> kind) {
+        public Builder kind(Input<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Input<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Input.ofNullable(tenantId);
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

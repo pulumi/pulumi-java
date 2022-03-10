@@ -83,32 +83,32 @@ public final class SubscriptionFeatureRegistrationArgs extends io.pulumi.resourc
     	      this.providerNamespace = defaults.providerNamespace;
         }
 
-        public Builder setFeatureName(@Nullable Input<String> featureName) {
+        public Builder featureName(@Nullable Input<String> featureName) {
             this.featureName = featureName;
             return this;
         }
 
-        public Builder setFeatureName(@Nullable String featureName) {
+        public Builder featureName(@Nullable String featureName) {
             this.featureName = Input.ofNullable(featureName);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<SubscriptionFeatureRegistrationPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<SubscriptionFeatureRegistrationPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable SubscriptionFeatureRegistrationPropertiesArgs properties) {
+        public Builder properties(@Nullable SubscriptionFeatureRegistrationPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setProviderNamespace(Input<String> providerNamespace) {
+        public Builder providerNamespace(Input<String> providerNamespace) {
             this.providerNamespace = Objects.requireNonNull(providerNamespace);
             return this;
         }
 
-        public Builder setProviderNamespace(String providerNamespace) {
+        public Builder providerNamespace(String providerNamespace) {
             this.providerNamespace = Input.of(Objects.requireNonNull(providerNamespace));
             return this;
         }

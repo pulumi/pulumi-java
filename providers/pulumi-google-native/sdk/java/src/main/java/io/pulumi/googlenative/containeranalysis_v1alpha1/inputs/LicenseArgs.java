@@ -74,22 +74,22 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.expression = defaults.expression;
         }
 
-        public Builder setComments(@Nullable Input<String> comments) {
+        public Builder comments(@Nullable Input<String> comments) {
             this.comments = comments;
             return this;
         }
 
-        public Builder setComments(@Nullable String comments) {
+        public Builder comments(@Nullable String comments) {
             this.comments = Input.ofNullable(comments);
             return this;
         }
 
-        public Builder setExpression(@Nullable Input<String> expression) {
+        public Builder expression(@Nullable Input<String> expression) {
             this.expression = expression;
             return this;
         }
 
-        public Builder setExpression(@Nullable String expression) {
+        public Builder expression(@Nullable String expression) {
             this.expression = Input.ofNullable(expression);
             return this;
         }

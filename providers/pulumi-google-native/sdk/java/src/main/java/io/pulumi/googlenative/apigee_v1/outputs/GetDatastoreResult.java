@@ -146,37 +146,37 @@ public final class GetDatastoreResult {
     	      this.targetType = defaults.targetType;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDatastoreConfig(GoogleCloudApigeeV1DatastoreConfigResponse datastoreConfig) {
+        public Builder datastoreConfig(GoogleCloudApigeeV1DatastoreConfigResponse datastoreConfig) {
             this.datastoreConfig = Objects.requireNonNull(datastoreConfig);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setLastUpdateTime(String lastUpdateTime) {
+        public Builder lastUpdateTime(String lastUpdateTime) {
             this.lastUpdateTime = Objects.requireNonNull(lastUpdateTime);
             return this;
         }
 
-        public Builder setOrg(String org) {
+        public Builder org(String org) {
             this.org = Objects.requireNonNull(org);
             return this;
         }
 
-        public Builder setSelf(String self) {
+        public Builder self(String self) {
             this.self = Objects.requireNonNull(self);
             return this;
         }
 
-        public Builder setTargetType(String targetType) {
+        public Builder targetType(String targetType) {
             this.targetType = Objects.requireNonNull(targetType);
             return this;
         }

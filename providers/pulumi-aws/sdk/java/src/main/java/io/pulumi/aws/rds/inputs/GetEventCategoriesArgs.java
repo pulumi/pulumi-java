@@ -53,7 +53,7 @@ public final class GetEventCategoriesArgs extends io.pulumi.resources.InvokeArgs
     	      this.sourceType = defaults.sourceType;
         }
 
-        public Builder setSourceType(@Nullable String sourceType) {
+        public Builder sourceType(@Nullable String sourceType) {
             this.sourceType = sourceType;
             return this;
         }

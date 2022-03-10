@@ -102,52 +102,52 @@ public final class ServiceActionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setAcceptLanguage(@Nullable Input<ServiceActionAcceptLanguage> acceptLanguage) {
+        public Builder acceptLanguage(@Nullable Input<ServiceActionAcceptLanguage> acceptLanguage) {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
 
-        public Builder setAcceptLanguage(@Nullable ServiceActionAcceptLanguage acceptLanguage) {
+        public Builder acceptLanguage(@Nullable ServiceActionAcceptLanguage acceptLanguage) {
             this.acceptLanguage = Input.ofNullable(acceptLanguage);
             return this;
         }
 
-        public Builder setDefinition(Input<List<ServiceActionDefinitionParameterArgs>> definition) {
+        public Builder definition(Input<List<ServiceActionDefinitionParameterArgs>> definition) {
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
 
-        public Builder setDefinition(List<ServiceActionDefinitionParameterArgs> definition) {
+        public Builder definition(List<ServiceActionDefinitionParameterArgs> definition) {
             this.definition = Input.of(Objects.requireNonNull(definition));
             return this;
         }
 
-        public Builder setDefinitionType(Input<ServiceActionDefinitionType> definitionType) {
+        public Builder definitionType(Input<ServiceActionDefinitionType> definitionType) {
             this.definitionType = Objects.requireNonNull(definitionType);
             return this;
         }
 
-        public Builder setDefinitionType(ServiceActionDefinitionType definitionType) {
+        public Builder definitionType(ServiceActionDefinitionType definitionType) {
             this.definitionType = Input.of(Objects.requireNonNull(definitionType));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

@@ -62,12 +62,12 @@ public final class GetPatchDeploymentArgs extends io.pulumi.resources.InvokeArgs
     	      this.project = defaults.project;
         }
 
-        public Builder setPatchDeploymentId(String patchDeploymentId) {
+        public Builder patchDeploymentId(String patchDeploymentId) {
             this.patchDeploymentId = Objects.requireNonNull(patchDeploymentId);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

@@ -136,62 +136,62 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tlsSettings = defaults.tlsSettings;
         }
 
-        public Builder setAzureDnsZone(@Nullable Input<ResourceReferenceArgs> azureDnsZone) {
+        public Builder azureDnsZone(@Nullable Input<ResourceReferenceArgs> azureDnsZone) {
             this.azureDnsZone = azureDnsZone;
             return this;
         }
 
-        public Builder setAzureDnsZone(@Nullable ResourceReferenceArgs azureDnsZone) {
+        public Builder azureDnsZone(@Nullable ResourceReferenceArgs azureDnsZone) {
             this.azureDnsZone = Input.ofNullable(azureDnsZone);
             return this;
         }
 
-        public Builder setCustomDomainName(@Nullable Input<String> customDomainName) {
+        public Builder customDomainName(@Nullable Input<String> customDomainName) {
             this.customDomainName = customDomainName;
             return this;
         }
 
-        public Builder setCustomDomainName(@Nullable String customDomainName) {
+        public Builder customDomainName(@Nullable String customDomainName) {
             this.customDomainName = Input.ofNullable(customDomainName);
             return this;
         }
 
-        public Builder setHostName(Input<String> hostName) {
+        public Builder hostName(Input<String> hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
 
-        public Builder setHostName(String hostName) {
+        public Builder hostName(String hostName) {
             this.hostName = Input.of(Objects.requireNonNull(hostName));
             return this;
         }
 
-        public Builder setProfileName(Input<String> profileName) {
+        public Builder profileName(Input<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
 
-        public Builder setProfileName(String profileName) {
+        public Builder profileName(String profileName) {
             this.profileName = Input.of(Objects.requireNonNull(profileName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTlsSettings(@Nullable Input<AFDDomainHttpsParametersArgs> tlsSettings) {
+        public Builder tlsSettings(@Nullable Input<AFDDomainHttpsParametersArgs> tlsSettings) {
             this.tlsSettings = tlsSettings;
             return this;
         }
 
-        public Builder setTlsSettings(@Nullable AFDDomainHttpsParametersArgs tlsSettings) {
+        public Builder tlsSettings(@Nullable AFDDomainHttpsParametersArgs tlsSettings) {
             this.tlsSettings = Input.ofNullable(tlsSettings);
             return this;
         }

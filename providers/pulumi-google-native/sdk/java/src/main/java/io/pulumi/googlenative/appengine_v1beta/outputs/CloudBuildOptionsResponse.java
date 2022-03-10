@@ -65,12 +65,12 @@ public final class CloudBuildOptionsResponse {
     	      this.cloudBuildTimeout = defaults.cloudBuildTimeout;
         }
 
-        public Builder setAppYamlPath(String appYamlPath) {
+        public Builder appYamlPath(String appYamlPath) {
             this.appYamlPath = Objects.requireNonNull(appYamlPath);
             return this;
         }
 
-        public Builder setCloudBuildTimeout(String cloudBuildTimeout) {
+        public Builder cloudBuildTimeout(String cloudBuildTimeout) {
             this.cloudBuildTimeout = Objects.requireNonNull(cloudBuildTimeout);
             return this;
         }

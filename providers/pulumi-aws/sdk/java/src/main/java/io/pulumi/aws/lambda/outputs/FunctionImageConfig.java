@@ -84,17 +84,17 @@ public final class FunctionImageConfig {
     	      this.workingDirectory = defaults.workingDirectory;
         }
 
-        public Builder setCommands(@Nullable List<String> commands) {
+        public Builder commands(@Nullable List<String> commands) {
             this.commands = commands;
             return this;
         }
 
-        public Builder setEntryPoints(@Nullable List<String> entryPoints) {
+        public Builder entryPoints(@Nullable List<String> entryPoints) {
             this.entryPoints = entryPoints;
             return this;
         }
 
-        public Builder setWorkingDirectory(@Nullable String workingDirectory) {
+        public Builder workingDirectory(@Nullable String workingDirectory) {
             this.workingDirectory = workingDirectory;
             return this;
         }

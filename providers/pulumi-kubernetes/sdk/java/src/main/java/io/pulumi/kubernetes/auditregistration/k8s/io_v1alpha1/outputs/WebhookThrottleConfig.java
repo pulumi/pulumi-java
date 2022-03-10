@@ -67,12 +67,12 @@ public final class WebhookThrottleConfig {
     	      this.qps = defaults.qps;
         }
 
-        public Builder setBurst(@Nullable Integer burst) {
+        public Builder burst(@Nullable Integer burst) {
             this.burst = burst;
             return this;
         }
 
-        public Builder setQps(@Nullable Integer qps) {
+        public Builder qps(@Nullable Integer qps) {
             this.qps = qps;
             return this;
         }

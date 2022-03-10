@@ -71,22 +71,22 @@ public final class ContainerMountVolumeOptions {
     	      this.noCopy = defaults.noCopy;
         }
 
-        public Builder setDriverName(@Nullable String driverName) {
+        public Builder driverName(@Nullable String driverName) {
             this.driverName = driverName;
             return this;
         }
 
-        public Builder setDriverOptions(@Nullable Map<String,String> driverOptions) {
+        public Builder driverOptions(@Nullable Map<String,String> driverOptions) {
             this.driverOptions = driverOptions;
             return this;
         }
 
-        public Builder setLabels(@Nullable List<ContainerMountVolumeOptionsLabel> labels) {
+        public Builder labels(@Nullable List<ContainerMountVolumeOptionsLabel> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setNoCopy(@Nullable Boolean noCopy) {
+        public Builder noCopy(@Nullable Boolean noCopy) {
             this.noCopy = noCopy;
             return this;
         }

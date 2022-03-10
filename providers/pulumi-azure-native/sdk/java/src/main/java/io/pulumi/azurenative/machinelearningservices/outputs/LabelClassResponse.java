@@ -68,12 +68,12 @@ public final class LabelClassResponse {
     	      this.subclasses = defaults.subclasses;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setSubclasses(@Nullable Map<String,LabelClassResponse> subclasses) {
+        public Builder subclasses(@Nullable Map<String,LabelClassResponse> subclasses) {
             this.subclasses = subclasses;
             return this;
         }

@@ -86,17 +86,17 @@ public final class ResponseBasedOriginErrorDetectionParametersResponse {
     	      this.responseBasedFailoverThresholdPercentage = defaults.responseBasedFailoverThresholdPercentage;
         }
 
-        public Builder setHttpErrorRanges(@Nullable List<HttpErrorRangeParametersResponse> httpErrorRanges) {
+        public Builder httpErrorRanges(@Nullable List<HttpErrorRangeParametersResponse> httpErrorRanges) {
             this.httpErrorRanges = httpErrorRanges;
             return this;
         }
 
-        public Builder setResponseBasedDetectedErrorTypes(@Nullable String responseBasedDetectedErrorTypes) {
+        public Builder responseBasedDetectedErrorTypes(@Nullable String responseBasedDetectedErrorTypes) {
             this.responseBasedDetectedErrorTypes = responseBasedDetectedErrorTypes;
             return this;
         }
 
-        public Builder setResponseBasedFailoverThresholdPercentage(@Nullable Integer responseBasedFailoverThresholdPercentage) {
+        public Builder responseBasedFailoverThresholdPercentage(@Nullable Integer responseBasedFailoverThresholdPercentage) {
             this.responseBasedFailoverThresholdPercentage = responseBasedFailoverThresholdPercentage;
             return this;
         }

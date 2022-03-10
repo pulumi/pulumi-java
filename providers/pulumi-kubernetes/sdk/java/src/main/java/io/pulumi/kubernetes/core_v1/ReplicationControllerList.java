@@ -126,8 +126,8 @@ public class ReplicationControllerList extends io.pulumi.resources.CustomResourc
     private static ReplicationControllerListArgs makeArgs(ReplicationControllerListArgs args) {
         var builder = args == null ? ReplicationControllerListArgs.builder() : ReplicationControllerListArgs.builder(args);
         return builder
-            .setApiVersion("v1")
-            .setKind("ReplicationControllerList")
+            .apiVersion("v1")
+            .kind("ReplicationControllerList")
             .build();
     }
 

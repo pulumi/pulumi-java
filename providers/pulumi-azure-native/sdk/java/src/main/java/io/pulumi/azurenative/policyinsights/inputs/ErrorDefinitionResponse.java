@@ -122,27 +122,27 @@ public final class ErrorDefinitionResponse extends io.pulumi.resources.InvokeArg
     	      this.target = defaults.target;
         }
 
-        public Builder setAdditionalInfo(List<TypedErrorInfoResponse> additionalInfo) {
+        public Builder additionalInfo(List<TypedErrorInfoResponse> additionalInfo) {
             this.additionalInfo = Objects.requireNonNull(additionalInfo);
             return this;
         }
 
-        public Builder setCode(String code) {
+        public Builder code(String code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
 
-        public Builder setDetails(List<ErrorDefinitionResponse> details) {
+        public Builder details(List<ErrorDefinitionResponse> details) {
             this.details = Objects.requireNonNull(details);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setTarget(String target) {
+        public Builder target(String target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }

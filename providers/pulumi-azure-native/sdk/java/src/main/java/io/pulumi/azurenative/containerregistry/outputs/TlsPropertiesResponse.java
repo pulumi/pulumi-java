@@ -66,12 +66,12 @@ public final class TlsPropertiesResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setCertificate(TlsCertificatePropertiesResponse certificate) {
+        public Builder certificate(TlsCertificatePropertiesResponse certificate) {
             this.certificate = Objects.requireNonNull(certificate);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

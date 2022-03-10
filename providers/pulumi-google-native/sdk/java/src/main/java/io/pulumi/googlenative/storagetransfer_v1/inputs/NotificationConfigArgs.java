@@ -93,32 +93,32 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
     	      this.pubsubTopic = defaults.pubsubTopic;
         }
 
-        public Builder setEventTypes(@Nullable Input<List<NotificationConfigEventTypesItem>> eventTypes) {
+        public Builder eventTypes(@Nullable Input<List<NotificationConfigEventTypesItem>> eventTypes) {
             this.eventTypes = eventTypes;
             return this;
         }
 
-        public Builder setEventTypes(@Nullable List<NotificationConfigEventTypesItem> eventTypes) {
+        public Builder eventTypes(@Nullable List<NotificationConfigEventTypesItem> eventTypes) {
             this.eventTypes = Input.ofNullable(eventTypes);
             return this;
         }
 
-        public Builder setPayloadFormat(Input<NotificationConfigPayloadFormat> payloadFormat) {
+        public Builder payloadFormat(Input<NotificationConfigPayloadFormat> payloadFormat) {
             this.payloadFormat = Objects.requireNonNull(payloadFormat);
             return this;
         }
 
-        public Builder setPayloadFormat(NotificationConfigPayloadFormat payloadFormat) {
+        public Builder payloadFormat(NotificationConfigPayloadFormat payloadFormat) {
             this.payloadFormat = Input.of(Objects.requireNonNull(payloadFormat));
             return this;
         }
 
-        public Builder setPubsubTopic(Input<String> pubsubTopic) {
+        public Builder pubsubTopic(Input<String> pubsubTopic) {
             this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
             return this;
         }
 
-        public Builder setPubsubTopic(String pubsubTopic) {
+        public Builder pubsubTopic(String pubsubTopic) {
             this.pubsubTopic = Input.of(Objects.requireNonNull(pubsubTopic));
             return this;
         }

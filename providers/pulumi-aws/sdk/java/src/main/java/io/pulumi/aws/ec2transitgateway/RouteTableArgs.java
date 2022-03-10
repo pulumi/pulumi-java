@@ -71,22 +71,22 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
     	      this.transitGatewayId = defaults.transitGatewayId;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTransitGatewayId(Input<String> transitGatewayId) {
+        public Builder transitGatewayId(Input<String> transitGatewayId) {
             this.transitGatewayId = Objects.requireNonNull(transitGatewayId);
             return this;
         }
 
-        public Builder setTransitGatewayId(String transitGatewayId) {
+        public Builder transitGatewayId(String transitGatewayId) {
             this.transitGatewayId = Input.of(Objects.requireNonNull(transitGatewayId));
             return this;
         }

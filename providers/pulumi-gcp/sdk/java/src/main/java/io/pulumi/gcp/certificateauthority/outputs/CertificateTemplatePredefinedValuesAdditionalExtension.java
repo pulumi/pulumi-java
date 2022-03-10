@@ -85,17 +85,17 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtension {
     	      this.value = defaults.value;
         }
 
-        public Builder setCritical(@Nullable Boolean critical) {
+        public Builder critical(@Nullable Boolean critical) {
             this.critical = critical;
             return this;
         }
 
-        public Builder setObjectId(CertificateTemplatePredefinedValuesAdditionalExtensionObjectId objectId) {
+        public Builder objectId(CertificateTemplatePredefinedValuesAdditionalExtensionObjectId objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

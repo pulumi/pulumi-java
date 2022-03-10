@@ -161,42 +161,42 @@ public final class GetDirectoryWorkspaceAccessProperty {
     	      this.deviceTypeZeroclient = defaults.deviceTypeZeroclient;
         }
 
-        public Builder setDeviceTypeAndroid(String deviceTypeAndroid) {
+        public Builder deviceTypeAndroid(String deviceTypeAndroid) {
             this.deviceTypeAndroid = Objects.requireNonNull(deviceTypeAndroid);
             return this;
         }
 
-        public Builder setDeviceTypeChromeos(String deviceTypeChromeos) {
+        public Builder deviceTypeChromeos(String deviceTypeChromeos) {
             this.deviceTypeChromeos = Objects.requireNonNull(deviceTypeChromeos);
             return this;
         }
 
-        public Builder setDeviceTypeIos(String deviceTypeIos) {
+        public Builder deviceTypeIos(String deviceTypeIos) {
             this.deviceTypeIos = Objects.requireNonNull(deviceTypeIos);
             return this;
         }
 
-        public Builder setDeviceTypeLinux(String deviceTypeLinux) {
+        public Builder deviceTypeLinux(String deviceTypeLinux) {
             this.deviceTypeLinux = Objects.requireNonNull(deviceTypeLinux);
             return this;
         }
 
-        public Builder setDeviceTypeOsx(String deviceTypeOsx) {
+        public Builder deviceTypeOsx(String deviceTypeOsx) {
             this.deviceTypeOsx = Objects.requireNonNull(deviceTypeOsx);
             return this;
         }
 
-        public Builder setDeviceTypeWeb(String deviceTypeWeb) {
+        public Builder deviceTypeWeb(String deviceTypeWeb) {
             this.deviceTypeWeb = Objects.requireNonNull(deviceTypeWeb);
             return this;
         }
 
-        public Builder setDeviceTypeWindows(String deviceTypeWindows) {
+        public Builder deviceTypeWindows(String deviceTypeWindows) {
             this.deviceTypeWindows = Objects.requireNonNull(deviceTypeWindows);
             return this;
         }
 
-        public Builder setDeviceTypeZeroclient(String deviceTypeZeroclient) {
+        public Builder deviceTypeZeroclient(String deviceTypeZeroclient) {
             this.deviceTypeZeroclient = Objects.requireNonNull(deviceTypeZeroclient);
             return this;
         }

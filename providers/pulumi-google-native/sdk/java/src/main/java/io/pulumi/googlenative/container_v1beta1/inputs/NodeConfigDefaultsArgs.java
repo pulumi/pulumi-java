@@ -57,12 +57,12 @@ public final class NodeConfigDefaultsArgs extends io.pulumi.resources.ResourceAr
     	      this.gcfsConfig = defaults.gcfsConfig;
         }
 
-        public Builder setGcfsConfig(@Nullable Input<GcfsConfigArgs> gcfsConfig) {
+        public Builder gcfsConfig(@Nullable Input<GcfsConfigArgs> gcfsConfig) {
             this.gcfsConfig = gcfsConfig;
             return this;
         }
 
-        public Builder setGcfsConfig(@Nullable GcfsConfigArgs gcfsConfig) {
+        public Builder gcfsConfig(@Nullable GcfsConfigArgs gcfsConfig) {
             this.gcfsConfig = Input.ofNullable(gcfsConfig);
             return this;
         }

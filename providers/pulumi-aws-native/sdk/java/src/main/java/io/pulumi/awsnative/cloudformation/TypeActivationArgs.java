@@ -204,102 +204,102 @@ public final class TypeActivationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.versionBump = defaults.versionBump;
         }
 
-        public Builder setAutoUpdate(@Nullable Input<Boolean> autoUpdate) {
+        public Builder autoUpdate(@Nullable Input<Boolean> autoUpdate) {
             this.autoUpdate = autoUpdate;
             return this;
         }
 
-        public Builder setAutoUpdate(@Nullable Boolean autoUpdate) {
+        public Builder autoUpdate(@Nullable Boolean autoUpdate) {
             this.autoUpdate = Input.ofNullable(autoUpdate);
             return this;
         }
 
-        public Builder setExecutionRoleArn(@Nullable Input<String> executionRoleArn) {
+        public Builder executionRoleArn(@Nullable Input<String> executionRoleArn) {
             this.executionRoleArn = executionRoleArn;
             return this;
         }
 
-        public Builder setExecutionRoleArn(@Nullable String executionRoleArn) {
+        public Builder executionRoleArn(@Nullable String executionRoleArn) {
             this.executionRoleArn = Input.ofNullable(executionRoleArn);
             return this;
         }
 
-        public Builder setLoggingConfig(@Nullable Input<TypeActivationLoggingConfigArgs> loggingConfig) {
+        public Builder loggingConfig(@Nullable Input<TypeActivationLoggingConfigArgs> loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
 
-        public Builder setLoggingConfig(@Nullable TypeActivationLoggingConfigArgs loggingConfig) {
+        public Builder loggingConfig(@Nullable TypeActivationLoggingConfigArgs loggingConfig) {
             this.loggingConfig = Input.ofNullable(loggingConfig);
             return this;
         }
 
-        public Builder setMajorVersion(@Nullable Input<String> majorVersion) {
+        public Builder majorVersion(@Nullable Input<String> majorVersion) {
             this.majorVersion = majorVersion;
             return this;
         }
 
-        public Builder setMajorVersion(@Nullable String majorVersion) {
+        public Builder majorVersion(@Nullable String majorVersion) {
             this.majorVersion = Input.ofNullable(majorVersion);
             return this;
         }
 
-        public Builder setPublicTypeArn(@Nullable Input<String> publicTypeArn) {
+        public Builder publicTypeArn(@Nullable Input<String> publicTypeArn) {
             this.publicTypeArn = publicTypeArn;
             return this;
         }
 
-        public Builder setPublicTypeArn(@Nullable String publicTypeArn) {
+        public Builder publicTypeArn(@Nullable String publicTypeArn) {
             this.publicTypeArn = Input.ofNullable(publicTypeArn);
             return this;
         }
 
-        public Builder setPublisherId(@Nullable Input<String> publisherId) {
+        public Builder publisherId(@Nullable Input<String> publisherId) {
             this.publisherId = publisherId;
             return this;
         }
 
-        public Builder setPublisherId(@Nullable String publisherId) {
+        public Builder publisherId(@Nullable String publisherId) {
             this.publisherId = Input.ofNullable(publisherId);
             return this;
         }
 
-        public Builder setType(@Nullable Input<TypeActivationType> type) {
+        public Builder type(@Nullable Input<TypeActivationType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable TypeActivationType type) {
+        public Builder type(@Nullable TypeActivationType type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setTypeName(@Nullable Input<String> typeName) {
+        public Builder typeName(@Nullable Input<String> typeName) {
             this.typeName = typeName;
             return this;
         }
 
-        public Builder setTypeName(@Nullable String typeName) {
+        public Builder typeName(@Nullable String typeName) {
             this.typeName = Input.ofNullable(typeName);
             return this;
         }
 
-        public Builder setTypeNameAlias(@Nullable Input<String> typeNameAlias) {
+        public Builder typeNameAlias(@Nullable Input<String> typeNameAlias) {
             this.typeNameAlias = typeNameAlias;
             return this;
         }
 
-        public Builder setTypeNameAlias(@Nullable String typeNameAlias) {
+        public Builder typeNameAlias(@Nullable String typeNameAlias) {
             this.typeNameAlias = Input.ofNullable(typeNameAlias);
             return this;
         }
 
-        public Builder setVersionBump(@Nullable Input<TypeActivationVersionBump> versionBump) {
+        public Builder versionBump(@Nullable Input<TypeActivationVersionBump> versionBump) {
             this.versionBump = versionBump;
             return this;
         }
 
-        public Builder setVersionBump(@Nullable TypeActivationVersionBump versionBump) {
+        public Builder versionBump(@Nullable TypeActivationVersionBump versionBump) {
             this.versionBump = Input.ofNullable(versionBump);
             return this;
         }

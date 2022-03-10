@@ -256,132 +256,132 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCacheName(@Nullable Input<String> cacheName) {
+        public Builder cacheName(@Nullable Input<String> cacheName) {
             this.cacheName = cacheName;
             return this;
         }
 
-        public Builder setCacheName(@Nullable String cacheName) {
+        public Builder cacheName(@Nullable String cacheName) {
             this.cacheName = Input.ofNullable(cacheName);
             return this;
         }
 
-        public Builder setCacheSizeGB(@Nullable Input<Integer> cacheSizeGB) {
+        public Builder cacheSizeGB(@Nullable Input<Integer> cacheSizeGB) {
             this.cacheSizeGB = cacheSizeGB;
             return this;
         }
 
-        public Builder setCacheSizeGB(@Nullable Integer cacheSizeGB) {
+        public Builder cacheSizeGB(@Nullable Integer cacheSizeGB) {
             this.cacheSizeGB = Input.ofNullable(cacheSizeGB);
             return this;
         }
 
-        public Builder setDirectoryServicesSettings(@Nullable Input<CacheDirectorySettingsArgs> directoryServicesSettings) {
+        public Builder directoryServicesSettings(@Nullable Input<CacheDirectorySettingsArgs> directoryServicesSettings) {
             this.directoryServicesSettings = directoryServicesSettings;
             return this;
         }
 
-        public Builder setDirectoryServicesSettings(@Nullable CacheDirectorySettingsArgs directoryServicesSettings) {
+        public Builder directoryServicesSettings(@Nullable CacheDirectorySettingsArgs directoryServicesSettings) {
             this.directoryServicesSettings = Input.ofNullable(directoryServicesSettings);
             return this;
         }
 
-        public Builder setEncryptionSettings(@Nullable Input<CacheEncryptionSettingsArgs> encryptionSettings) {
+        public Builder encryptionSettings(@Nullable Input<CacheEncryptionSettingsArgs> encryptionSettings) {
             this.encryptionSettings = encryptionSettings;
             return this;
         }
 
-        public Builder setEncryptionSettings(@Nullable CacheEncryptionSettingsArgs encryptionSettings) {
+        public Builder encryptionSettings(@Nullable CacheEncryptionSettingsArgs encryptionSettings) {
             this.encryptionSettings = Input.ofNullable(encryptionSettings);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<CacheIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<CacheIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable CacheIdentityArgs identity) {
+        public Builder identity(@Nullable CacheIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setNetworkSettings(@Nullable Input<CacheNetworkSettingsArgs> networkSettings) {
+        public Builder networkSettings(@Nullable Input<CacheNetworkSettingsArgs> networkSettings) {
             this.networkSettings = networkSettings;
             return this;
         }
 
-        public Builder setNetworkSettings(@Nullable CacheNetworkSettingsArgs networkSettings) {
+        public Builder networkSettings(@Nullable CacheNetworkSettingsArgs networkSettings) {
             this.networkSettings = Input.ofNullable(networkSettings);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Input<Either<String,ProvisioningStateType>> provisioningState) {
+        public Builder provisioningState(@Nullable Input<Either<String,ProvisioningStateType>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Either<String,ProvisioningStateType> provisioningState) {
+        public Builder provisioningState(@Nullable Either<String,ProvisioningStateType> provisioningState) {
             this.provisioningState = Input.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSecuritySettings(@Nullable Input<CacheSecuritySettingsArgs> securitySettings) {
+        public Builder securitySettings(@Nullable Input<CacheSecuritySettingsArgs> securitySettings) {
             this.securitySettings = securitySettings;
             return this;
         }
 
-        public Builder setSecuritySettings(@Nullable CacheSecuritySettingsArgs securitySettings) {
+        public Builder securitySettings(@Nullable CacheSecuritySettingsArgs securitySettings) {
             this.securitySettings = Input.ofNullable(securitySettings);
             return this;
         }
 
-        public Builder setSku(@Nullable Input<CacheSkuArgs> sku) {
+        public Builder sku(@Nullable Input<CacheSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable CacheSkuArgs sku) {
+        public Builder sku(@Nullable CacheSkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setSubnet(@Nullable Input<String> subnet) {
+        public Builder subnet(@Nullable Input<String> subnet) {
             this.subnet = subnet;
             return this;
         }
 
-        public Builder setSubnet(@Nullable String subnet) {
+        public Builder subnet(@Nullable String subnet) {
             this.subnet = Input.ofNullable(subnet);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

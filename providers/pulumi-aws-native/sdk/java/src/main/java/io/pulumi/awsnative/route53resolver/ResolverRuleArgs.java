@@ -138,62 +138,62 @@ public final class ResolverRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetIps = defaults.targetIps;
         }
 
-        public Builder setDomainName(Input<String> domainName) {
+        public Builder domainName(Input<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
-        public Builder setDomainName(String domainName) {
+        public Builder domainName(String domainName) {
             this.domainName = Input.of(Objects.requireNonNull(domainName));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResolverEndpointId(@Nullable Input<String> resolverEndpointId) {
+        public Builder resolverEndpointId(@Nullable Input<String> resolverEndpointId) {
             this.resolverEndpointId = resolverEndpointId;
             return this;
         }
 
-        public Builder setResolverEndpointId(@Nullable String resolverEndpointId) {
+        public Builder resolverEndpointId(@Nullable String resolverEndpointId) {
             this.resolverEndpointId = Input.ofNullable(resolverEndpointId);
             return this;
         }
 
-        public Builder setRuleType(Input<ResolverRuleRuleType> ruleType) {
+        public Builder ruleType(Input<ResolverRuleRuleType> ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
 
-        public Builder setRuleType(ResolverRuleRuleType ruleType) {
+        public Builder ruleType(ResolverRuleRuleType ruleType) {
             this.ruleType = Input.of(Objects.requireNonNull(ruleType));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<ResolverRuleTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<ResolverRuleTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ResolverRuleTagArgs> tags) {
+        public Builder tags(@Nullable List<ResolverRuleTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTargetIps(@Nullable Input<List<ResolverRuleTargetAddressArgs>> targetIps) {
+        public Builder targetIps(@Nullable Input<List<ResolverRuleTargetAddressArgs>> targetIps) {
             this.targetIps = targetIps;
             return this;
         }
 
-        public Builder setTargetIps(@Nullable List<ResolverRuleTargetAddressArgs> targetIps) {
+        public Builder targetIps(@Nullable List<ResolverRuleTargetAddressArgs> targetIps) {
             this.targetIps = Input.ofNullable(targetIps);
             return this;
         }

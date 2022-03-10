@@ -348,192 +348,192 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
     	      this.vmName = defaults.vmName;
         }
 
-        public Builder setDisksToInclude(@Nullable Input<List<String>> disksToInclude) {
+        public Builder disksToInclude(@Nullable Input<List<String>> disksToInclude) {
             this.disksToInclude = disksToInclude;
             return this;
         }
 
-        public Builder setDisksToInclude(@Nullable List<String> disksToInclude) {
+        public Builder disksToInclude(@Nullable List<String> disksToInclude) {
             this.disksToInclude = Input.ofNullable(disksToInclude);
             return this;
         }
 
-        public Builder setEnableRdpOnTargetOption(@Nullable Input<String> enableRdpOnTargetOption) {
+        public Builder enableRdpOnTargetOption(@Nullable Input<String> enableRdpOnTargetOption) {
             this.enableRdpOnTargetOption = enableRdpOnTargetOption;
             return this;
         }
 
-        public Builder setEnableRdpOnTargetOption(@Nullable String enableRdpOnTargetOption) {
+        public Builder enableRdpOnTargetOption(@Nullable String enableRdpOnTargetOption) {
             this.enableRdpOnTargetOption = Input.ofNullable(enableRdpOnTargetOption);
             return this;
         }
 
-        public Builder setHvHostVmId(@Nullable Input<String> hvHostVmId) {
+        public Builder hvHostVmId(@Nullable Input<String> hvHostVmId) {
             this.hvHostVmId = hvHostVmId;
             return this;
         }
 
-        public Builder setHvHostVmId(@Nullable String hvHostVmId) {
+        public Builder hvHostVmId(@Nullable String hvHostVmId) {
             this.hvHostVmId = Input.ofNullable(hvHostVmId);
             return this;
         }
 
-        public Builder setInstanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Input<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Input.ofNullable(instanceType);
             return this;
         }
 
-        public Builder setLogStorageAccountId(@Nullable Input<String> logStorageAccountId) {
+        public Builder logStorageAccountId(@Nullable Input<String> logStorageAccountId) {
             this.logStorageAccountId = logStorageAccountId;
             return this;
         }
 
-        public Builder setLogStorageAccountId(@Nullable String logStorageAccountId) {
+        public Builder logStorageAccountId(@Nullable String logStorageAccountId) {
             this.logStorageAccountId = Input.ofNullable(logStorageAccountId);
             return this;
         }
 
-        public Builder setOsType(@Nullable Input<String> osType) {
+        public Builder osType(@Nullable Input<String> osType) {
             this.osType = osType;
             return this;
         }
 
-        public Builder setOsType(@Nullable String osType) {
+        public Builder osType(@Nullable String osType) {
             this.osType = Input.ofNullable(osType);
             return this;
         }
 
-        public Builder setTargetAvailabilitySetId(@Nullable Input<String> targetAvailabilitySetId) {
+        public Builder targetAvailabilitySetId(@Nullable Input<String> targetAvailabilitySetId) {
             this.targetAvailabilitySetId = targetAvailabilitySetId;
             return this;
         }
 
-        public Builder setTargetAvailabilitySetId(@Nullable String targetAvailabilitySetId) {
+        public Builder targetAvailabilitySetId(@Nullable String targetAvailabilitySetId) {
             this.targetAvailabilitySetId = Input.ofNullable(targetAvailabilitySetId);
             return this;
         }
 
-        public Builder setTargetAvailabilityZone(@Nullable Input<String> targetAvailabilityZone) {
+        public Builder targetAvailabilityZone(@Nullable Input<String> targetAvailabilityZone) {
             this.targetAvailabilityZone = targetAvailabilityZone;
             return this;
         }
 
-        public Builder setTargetAvailabilityZone(@Nullable String targetAvailabilityZone) {
+        public Builder targetAvailabilityZone(@Nullable String targetAvailabilityZone) {
             this.targetAvailabilityZone = Input.ofNullable(targetAvailabilityZone);
             return this;
         }
 
-        public Builder setTargetAzureNetworkId(@Nullable Input<String> targetAzureNetworkId) {
+        public Builder targetAzureNetworkId(@Nullable Input<String> targetAzureNetworkId) {
             this.targetAzureNetworkId = targetAzureNetworkId;
             return this;
         }
 
-        public Builder setTargetAzureNetworkId(@Nullable String targetAzureNetworkId) {
+        public Builder targetAzureNetworkId(@Nullable String targetAzureNetworkId) {
             this.targetAzureNetworkId = Input.ofNullable(targetAzureNetworkId);
             return this;
         }
 
-        public Builder setTargetAzureSubnetId(@Nullable Input<String> targetAzureSubnetId) {
+        public Builder targetAzureSubnetId(@Nullable Input<String> targetAzureSubnetId) {
             this.targetAzureSubnetId = targetAzureSubnetId;
             return this;
         }
 
-        public Builder setTargetAzureSubnetId(@Nullable String targetAzureSubnetId) {
+        public Builder targetAzureSubnetId(@Nullable String targetAzureSubnetId) {
             this.targetAzureSubnetId = Input.ofNullable(targetAzureSubnetId);
             return this;
         }
 
-        public Builder setTargetAzureV1ResourceGroupId(@Nullable Input<String> targetAzureV1ResourceGroupId) {
+        public Builder targetAzureV1ResourceGroupId(@Nullable Input<String> targetAzureV1ResourceGroupId) {
             this.targetAzureV1ResourceGroupId = targetAzureV1ResourceGroupId;
             return this;
         }
 
-        public Builder setTargetAzureV1ResourceGroupId(@Nullable String targetAzureV1ResourceGroupId) {
+        public Builder targetAzureV1ResourceGroupId(@Nullable String targetAzureV1ResourceGroupId) {
             this.targetAzureV1ResourceGroupId = Input.ofNullable(targetAzureV1ResourceGroupId);
             return this;
         }
 
-        public Builder setTargetAzureV2ResourceGroupId(@Nullable Input<String> targetAzureV2ResourceGroupId) {
+        public Builder targetAzureV2ResourceGroupId(@Nullable Input<String> targetAzureV2ResourceGroupId) {
             this.targetAzureV2ResourceGroupId = targetAzureV2ResourceGroupId;
             return this;
         }
 
-        public Builder setTargetAzureV2ResourceGroupId(@Nullable String targetAzureV2ResourceGroupId) {
+        public Builder targetAzureV2ResourceGroupId(@Nullable String targetAzureV2ResourceGroupId) {
             this.targetAzureV2ResourceGroupId = Input.ofNullable(targetAzureV2ResourceGroupId);
             return this;
         }
 
-        public Builder setTargetAzureVmName(@Nullable Input<String> targetAzureVmName) {
+        public Builder targetAzureVmName(@Nullable Input<String> targetAzureVmName) {
             this.targetAzureVmName = targetAzureVmName;
             return this;
         }
 
-        public Builder setTargetAzureVmName(@Nullable String targetAzureVmName) {
+        public Builder targetAzureVmName(@Nullable String targetAzureVmName) {
             this.targetAzureVmName = Input.ofNullable(targetAzureVmName);
             return this;
         }
 
-        public Builder setTargetProximityPlacementGroupId(@Nullable Input<String> targetProximityPlacementGroupId) {
+        public Builder targetProximityPlacementGroupId(@Nullable Input<String> targetProximityPlacementGroupId) {
             this.targetProximityPlacementGroupId = targetProximityPlacementGroupId;
             return this;
         }
 
-        public Builder setTargetProximityPlacementGroupId(@Nullable String targetProximityPlacementGroupId) {
+        public Builder targetProximityPlacementGroupId(@Nullable String targetProximityPlacementGroupId) {
             this.targetProximityPlacementGroupId = Input.ofNullable(targetProximityPlacementGroupId);
             return this;
         }
 
-        public Builder setTargetStorageAccountId(@Nullable Input<String> targetStorageAccountId) {
+        public Builder targetStorageAccountId(@Nullable Input<String> targetStorageAccountId) {
             this.targetStorageAccountId = targetStorageAccountId;
             return this;
         }
 
-        public Builder setTargetStorageAccountId(@Nullable String targetStorageAccountId) {
+        public Builder targetStorageAccountId(@Nullable String targetStorageAccountId) {
             this.targetStorageAccountId = Input.ofNullable(targetStorageAccountId);
             return this;
         }
 
-        public Builder setTargetVmSize(@Nullable Input<String> targetVmSize) {
+        public Builder targetVmSize(@Nullable Input<String> targetVmSize) {
             this.targetVmSize = targetVmSize;
             return this;
         }
 
-        public Builder setTargetVmSize(@Nullable String targetVmSize) {
+        public Builder targetVmSize(@Nullable String targetVmSize) {
             this.targetVmSize = Input.ofNullable(targetVmSize);
             return this;
         }
 
-        public Builder setUseManagedDisks(@Nullable Input<String> useManagedDisks) {
+        public Builder useManagedDisks(@Nullable Input<String> useManagedDisks) {
             this.useManagedDisks = useManagedDisks;
             return this;
         }
 
-        public Builder setUseManagedDisks(@Nullable String useManagedDisks) {
+        public Builder useManagedDisks(@Nullable String useManagedDisks) {
             this.useManagedDisks = Input.ofNullable(useManagedDisks);
             return this;
         }
 
-        public Builder setVhdId(@Nullable Input<String> vhdId) {
+        public Builder vhdId(@Nullable Input<String> vhdId) {
             this.vhdId = vhdId;
             return this;
         }
 
-        public Builder setVhdId(@Nullable String vhdId) {
+        public Builder vhdId(@Nullable String vhdId) {
             this.vhdId = Input.ofNullable(vhdId);
             return this;
         }
 
-        public Builder setVmName(@Nullable Input<String> vmName) {
+        public Builder vmName(@Nullable Input<String> vmName) {
             this.vmName = vmName;
             return this;
         }
 
-        public Builder setVmName(@Nullable String vmName) {
+        public Builder vmName(@Nullable String vmName) {
             this.vmName = Input.ofNullable(vmName);
             return this;
         }

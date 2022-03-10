@@ -134,72 +134,72 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sourceTable = defaults.sourceTable;
         }
 
-        public Builder setBackupId(Input<String> backupId) {
+        public Builder backupId(Input<String> backupId) {
             this.backupId = Objects.requireNonNull(backupId);
             return this;
         }
 
-        public Builder setBackupId(String backupId) {
+        public Builder backupId(String backupId) {
             this.backupId = Input.of(Objects.requireNonNull(backupId));
             return this;
         }
 
-        public Builder setClusterId(Input<String> clusterId) {
+        public Builder clusterId(Input<String> clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
 
-        public Builder setClusterId(String clusterId) {
+        public Builder clusterId(String clusterId) {
             this.clusterId = Input.of(Objects.requireNonNull(clusterId));
             return this;
         }
 
-        public Builder setExpireTime(Input<String> expireTime) {
+        public Builder expireTime(Input<String> expireTime) {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
         }
 
-        public Builder setExpireTime(String expireTime) {
+        public Builder expireTime(String expireTime) {
             this.expireTime = Input.of(Objects.requireNonNull(expireTime));
             return this;
         }
 
-        public Builder setInstanceId(Input<String> instanceId) {
+        public Builder instanceId(Input<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Input.of(Objects.requireNonNull(instanceId));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSourceTable(Input<String> sourceTable) {
+        public Builder sourceTable(Input<String> sourceTable) {
             this.sourceTable = Objects.requireNonNull(sourceTable);
             return this;
         }
 
-        public Builder setSourceTable(String sourceTable) {
+        public Builder sourceTable(String sourceTable) {
             this.sourceTable = Input.of(Objects.requireNonNull(sourceTable));
             return this;
         }

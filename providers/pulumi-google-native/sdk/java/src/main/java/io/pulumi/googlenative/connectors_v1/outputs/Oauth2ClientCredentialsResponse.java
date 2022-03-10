@@ -66,12 +66,12 @@ public final class Oauth2ClientCredentialsResponse {
     	      this.clientSecret = defaults.clientSecret;
         }
 
-        public Builder setClientId(String clientId) {
+        public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
-        public Builder setClientSecret(SecretResponse clientSecret) {
+        public Builder clientSecret(SecretResponse clientSecret) {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
         }

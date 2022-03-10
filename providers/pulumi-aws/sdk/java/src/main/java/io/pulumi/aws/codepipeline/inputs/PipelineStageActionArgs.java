@@ -233,122 +233,122 @@ public final class PipelineStageActionArgs extends io.pulumi.resources.ResourceA
     	      this.version = defaults.version;
         }
 
-        public Builder setCategory(Input<String> category) {
+        public Builder category(Input<String> category) {
             this.category = Objects.requireNonNull(category);
             return this;
         }
 
-        public Builder setCategory(String category) {
+        public Builder category(String category) {
             this.category = Input.of(Objects.requireNonNull(category));
             return this;
         }
 
-        public Builder setConfiguration(@Nullable Input<Map<String,String>> configuration) {
+        public Builder configuration(@Nullable Input<Map<String,String>> configuration) {
             this.configuration = configuration;
             return this;
         }
 
-        public Builder setConfiguration(@Nullable Map<String,String> configuration) {
+        public Builder configuration(@Nullable Map<String,String> configuration) {
             this.configuration = Input.ofNullable(configuration);
             return this;
         }
 
-        public Builder setInputArtifacts(@Nullable Input<List<String>> inputArtifacts) {
+        public Builder inputArtifacts(@Nullable Input<List<String>> inputArtifacts) {
             this.inputArtifacts = inputArtifacts;
             return this;
         }
 
-        public Builder setInputArtifacts(@Nullable List<String> inputArtifacts) {
+        public Builder inputArtifacts(@Nullable List<String> inputArtifacts) {
             this.inputArtifacts = Input.ofNullable(inputArtifacts);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setNamespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Input<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = Input.ofNullable(namespace);
             return this;
         }
 
-        public Builder setOutputArtifacts(@Nullable Input<List<String>> outputArtifacts) {
+        public Builder outputArtifacts(@Nullable Input<List<String>> outputArtifacts) {
             this.outputArtifacts = outputArtifacts;
             return this;
         }
 
-        public Builder setOutputArtifacts(@Nullable List<String> outputArtifacts) {
+        public Builder outputArtifacts(@Nullable List<String> outputArtifacts) {
             this.outputArtifacts = Input.ofNullable(outputArtifacts);
             return this;
         }
 
-        public Builder setOwner(Input<String> owner) {
+        public Builder owner(Input<String> owner) {
             this.owner = Objects.requireNonNull(owner);
             return this;
         }
 
-        public Builder setOwner(String owner) {
+        public Builder owner(String owner) {
             this.owner = Input.of(Objects.requireNonNull(owner));
             return this;
         }
 
-        public Builder setProvider(Input<String> provider) {
+        public Builder provider(Input<String> provider) {
             this.provider = Objects.requireNonNull(provider);
             return this;
         }
 
-        public Builder setProvider(String provider) {
+        public Builder provider(String provider) {
             this.provider = Input.of(Objects.requireNonNull(provider));
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setRoleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Input<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Input.ofNullable(roleArn);
             return this;
         }
 
-        public Builder setRunOrder(@Nullable Input<Integer> runOrder) {
+        public Builder runOrder(@Nullable Input<Integer> runOrder) {
             this.runOrder = runOrder;
             return this;
         }
 
-        public Builder setRunOrder(@Nullable Integer runOrder) {
+        public Builder runOrder(@Nullable Integer runOrder) {
             this.runOrder = Input.ofNullable(runOrder);
             return this;
         }
 
-        public Builder setVersion(Input<String> version) {
+        public Builder version(Input<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Input.of(Objects.requireNonNull(version));
             return this;
         }

@@ -76,22 +76,22 @@ public final class ConnectionMonitorEndpointFilterItemArgs extends io.pulumi.res
     	      this.type = defaults.type;
         }
 
-        public Builder setAddress(@Nullable Input<String> address) {
+        public Builder address(@Nullable Input<String> address) {
             this.address = address;
             return this;
         }
 
-        public Builder setAddress(@Nullable String address) {
+        public Builder address(@Nullable String address) {
             this.address = Input.ofNullable(address);
             return this;
         }
 
-        public Builder setType(@Nullable Input<Either<String,ConnectionMonitorEndpointFilterItemType>> type) {
+        public Builder type(@Nullable Input<Either<String,ConnectionMonitorEndpointFilterItemType>> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable Either<String,ConnectionMonitorEndpointFilterItemType> type) {
+        public Builder type(@Nullable Either<String,ConnectionMonitorEndpointFilterItemType> type) {
             this.type = Input.ofNullable(type);
             return this;
         }

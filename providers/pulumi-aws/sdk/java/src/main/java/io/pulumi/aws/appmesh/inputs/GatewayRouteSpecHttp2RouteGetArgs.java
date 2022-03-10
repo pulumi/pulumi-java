@@ -70,22 +70,22 @@ public final class GatewayRouteSpecHttp2RouteGetArgs extends io.pulumi.resources
     	      this.match = defaults.match;
         }
 
-        public Builder setAction(Input<GatewayRouteSpecHttp2RouteActionGetArgs> action) {
+        public Builder action(Input<GatewayRouteSpecHttp2RouteActionGetArgs> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setAction(GatewayRouteSpecHttp2RouteActionGetArgs action) {
+        public Builder action(GatewayRouteSpecHttp2RouteActionGetArgs action) {
             this.action = Input.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder setMatch(Input<GatewayRouteSpecHttp2RouteMatchGetArgs> match) {
+        public Builder match(Input<GatewayRouteSpecHttp2RouteMatchGetArgs> match) {
             this.match = Objects.requireNonNull(match);
             return this;
         }
 
-        public Builder setMatch(GatewayRouteSpecHttp2RouteMatchGetArgs match) {
+        public Builder match(GatewayRouteSpecHttp2RouteMatchGetArgs match) {
             this.match = Input.of(Objects.requireNonNull(match));
             return this;
         }

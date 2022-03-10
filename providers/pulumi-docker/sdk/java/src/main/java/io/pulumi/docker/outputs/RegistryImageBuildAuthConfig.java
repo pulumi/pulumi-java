@@ -99,42 +99,42 @@ public final class RegistryImageBuildAuthConfig {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setAuth(@Nullable String auth) {
+        public Builder auth(@Nullable String auth) {
             this.auth = auth;
             return this;
         }
 
-        public Builder setEmail(@Nullable String email) {
+        public Builder email(@Nullable String email) {
             this.email = email;
             return this;
         }
 
-        public Builder setHostName(String hostName) {
+        public Builder hostName(String hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
 
-        public Builder setIdentityToken(@Nullable String identityToken) {
+        public Builder identityToken(@Nullable String identityToken) {
             this.identityToken = identityToken;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setRegistryToken(@Nullable String registryToken) {
+        public Builder registryToken(@Nullable String registryToken) {
             this.registryToken = registryToken;
             return this;
         }
 
-        public Builder setServerAddress(@Nullable String serverAddress) {
+        public Builder serverAddress(@Nullable String serverAddress) {
             this.serverAddress = serverAddress;
             return this;
         }
 
-        public Builder setUserName(@Nullable String userName) {
+        public Builder userName(@Nullable String userName) {
             this.userName = userName;
             return this;
         }

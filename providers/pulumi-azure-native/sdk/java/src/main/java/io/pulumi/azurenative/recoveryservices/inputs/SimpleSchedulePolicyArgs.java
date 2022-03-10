@@ -128,52 +128,52 @@ public final class SimpleSchedulePolicyArgs extends io.pulumi.resources.Resource
     	      this.scheduleWeeklyFrequency = defaults.scheduleWeeklyFrequency;
         }
 
-        public Builder setSchedulePolicyType(Input<String> schedulePolicyType) {
+        public Builder schedulePolicyType(Input<String> schedulePolicyType) {
             this.schedulePolicyType = Objects.requireNonNull(schedulePolicyType);
             return this;
         }
 
-        public Builder setSchedulePolicyType(String schedulePolicyType) {
+        public Builder schedulePolicyType(String schedulePolicyType) {
             this.schedulePolicyType = Input.of(Objects.requireNonNull(schedulePolicyType));
             return this;
         }
 
-        public Builder setScheduleRunDays(@Nullable Input<List<DayOfWeek>> scheduleRunDays) {
+        public Builder scheduleRunDays(@Nullable Input<List<DayOfWeek>> scheduleRunDays) {
             this.scheduleRunDays = scheduleRunDays;
             return this;
         }
 
-        public Builder setScheduleRunDays(@Nullable List<DayOfWeek> scheduleRunDays) {
+        public Builder scheduleRunDays(@Nullable List<DayOfWeek> scheduleRunDays) {
             this.scheduleRunDays = Input.ofNullable(scheduleRunDays);
             return this;
         }
 
-        public Builder setScheduleRunFrequency(@Nullable Input<Either<String,ScheduleRunType>> scheduleRunFrequency) {
+        public Builder scheduleRunFrequency(@Nullable Input<Either<String,ScheduleRunType>> scheduleRunFrequency) {
             this.scheduleRunFrequency = scheduleRunFrequency;
             return this;
         }
 
-        public Builder setScheduleRunFrequency(@Nullable Either<String,ScheduleRunType> scheduleRunFrequency) {
+        public Builder scheduleRunFrequency(@Nullable Either<String,ScheduleRunType> scheduleRunFrequency) {
             this.scheduleRunFrequency = Input.ofNullable(scheduleRunFrequency);
             return this;
         }
 
-        public Builder setScheduleRunTimes(@Nullable Input<List<String>> scheduleRunTimes) {
+        public Builder scheduleRunTimes(@Nullable Input<List<String>> scheduleRunTimes) {
             this.scheduleRunTimes = scheduleRunTimes;
             return this;
         }
 
-        public Builder setScheduleRunTimes(@Nullable List<String> scheduleRunTimes) {
+        public Builder scheduleRunTimes(@Nullable List<String> scheduleRunTimes) {
             this.scheduleRunTimes = Input.ofNullable(scheduleRunTimes);
             return this;
         }
 
-        public Builder setScheduleWeeklyFrequency(@Nullable Input<Integer> scheduleWeeklyFrequency) {
+        public Builder scheduleWeeklyFrequency(@Nullable Input<Integer> scheduleWeeklyFrequency) {
             this.scheduleWeeklyFrequency = scheduleWeeklyFrequency;
             return this;
         }
 
-        public Builder setScheduleWeeklyFrequency(@Nullable Integer scheduleWeeklyFrequency) {
+        public Builder scheduleWeeklyFrequency(@Nullable Integer scheduleWeeklyFrequency) {
             this.scheduleWeeklyFrequency = Input.ofNullable(scheduleWeeklyFrequency);
             return this;
         }

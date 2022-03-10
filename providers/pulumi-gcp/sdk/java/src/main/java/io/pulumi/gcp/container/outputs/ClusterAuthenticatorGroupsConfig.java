@@ -48,7 +48,7 @@ public final class ClusterAuthenticatorGroupsConfig {
     	      this.securityGroup = defaults.securityGroup;
         }
 
-        public Builder setSecurityGroup(String securityGroup) {
+        public Builder securityGroup(String securityGroup) {
             this.securityGroup = Objects.requireNonNull(securityGroup);
             return this;
         }

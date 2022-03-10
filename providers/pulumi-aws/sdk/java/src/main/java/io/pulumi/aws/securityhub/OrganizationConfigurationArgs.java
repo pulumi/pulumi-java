@@ -52,12 +52,12 @@ public final class OrganizationConfigurationArgs extends io.pulumi.resources.Res
     	      this.autoEnable = defaults.autoEnable;
         }
 
-        public Builder setAutoEnable(Input<Boolean> autoEnable) {
+        public Builder autoEnable(Input<Boolean> autoEnable) {
             this.autoEnable = Objects.requireNonNull(autoEnable);
             return this;
         }
 
-        public Builder setAutoEnable(Boolean autoEnable) {
+        public Builder autoEnable(Boolean autoEnable) {
             this.autoEnable = Input.of(Objects.requireNonNull(autoEnable));
             return this;
         }

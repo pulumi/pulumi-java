@@ -93,27 +93,27 @@ public final class GetInstanceTypeOfferingResult {
     	      this.preferredInstanceTypes = defaults.preferredInstanceTypes;
         }
 
-        public Builder setFilters(@Nullable List<GetInstanceTypeOfferingFilter> filters) {
+        public Builder filters(@Nullable List<GetInstanceTypeOfferingFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setLocationType(@Nullable String locationType) {
+        public Builder locationType(@Nullable String locationType) {
             this.locationType = locationType;
             return this;
         }
 
-        public Builder setPreferredInstanceTypes(@Nullable List<String> preferredInstanceTypes) {
+        public Builder preferredInstanceTypes(@Nullable List<String> preferredInstanceTypes) {
             this.preferredInstanceTypes = preferredInstanceTypes;
             return this;
         }

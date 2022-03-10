@@ -53,12 +53,12 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigGetArgs extends i
     	      this.infoTypeTransformations = defaults.infoTypeTransformations;
         }
 
-        public Builder setInfoTypeTransformations(Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsGetArgs> infoTypeTransformations) {
+        public Builder infoTypeTransformations(Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsGetArgs> infoTypeTransformations) {
             this.infoTypeTransformations = Objects.requireNonNull(infoTypeTransformations);
             return this;
         }
 
-        public Builder setInfoTypeTransformations(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsGetArgs infoTypeTransformations) {
+        public Builder infoTypeTransformations(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsGetArgs infoTypeTransformations) {
             this.infoTypeTransformations = Input.of(Objects.requireNonNull(infoTypeTransformations));
             return this;
         }

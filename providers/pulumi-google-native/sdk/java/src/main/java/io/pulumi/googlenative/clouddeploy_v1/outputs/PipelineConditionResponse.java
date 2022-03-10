@@ -66,12 +66,12 @@ public final class PipelineConditionResponse {
     	      this.targetsPresentCondition = defaults.targetsPresentCondition;
         }
 
-        public Builder setPipelineReadyCondition(PipelineReadyConditionResponse pipelineReadyCondition) {
+        public Builder pipelineReadyCondition(PipelineReadyConditionResponse pipelineReadyCondition) {
             this.pipelineReadyCondition = Objects.requireNonNull(pipelineReadyCondition);
             return this;
         }
 
-        public Builder setTargetsPresentCondition(TargetsPresentConditionResponse targetsPresentCondition) {
+        public Builder targetsPresentCondition(TargetsPresentConditionResponse targetsPresentCondition) {
             this.targetsPresentCondition = Objects.requireNonNull(targetsPresentCondition);
             return this;
         }

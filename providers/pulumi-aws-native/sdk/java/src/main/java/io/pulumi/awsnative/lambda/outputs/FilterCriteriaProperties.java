@@ -50,7 +50,7 @@ public final class FilterCriteriaProperties {
     	      this.filters = defaults.filters;
         }
 
-        public Builder setFilters(@Nullable List<EventSourceMappingFilter> filters) {
+        public Builder filters(@Nullable List<EventSourceMappingFilter> filters) {
             this.filters = filters;
             return this;
         }

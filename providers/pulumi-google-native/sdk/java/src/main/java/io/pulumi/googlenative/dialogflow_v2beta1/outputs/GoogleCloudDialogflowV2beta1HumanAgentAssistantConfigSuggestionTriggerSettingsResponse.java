@@ -65,12 +65,12 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     	      this.onlyEndUser = defaults.onlyEndUser;
         }
 
-        public Builder setNoSmallTalk(Boolean noSmallTalk) {
+        public Builder noSmallTalk(Boolean noSmallTalk) {
             this.noSmallTalk = Objects.requireNonNull(noSmallTalk);
             return this;
         }
 
-        public Builder setOnlyEndUser(Boolean onlyEndUser) {
+        public Builder onlyEndUser(Boolean onlyEndUser) {
             this.onlyEndUser = Objects.requireNonNull(onlyEndUser);
             return this;
         }

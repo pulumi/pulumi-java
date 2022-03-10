@@ -66,12 +66,12 @@ public final class NotificationPreferenceResponse {
     	      this.stageName = defaults.stageName;
         }
 
-        public Builder setSendNotification(Boolean sendNotification) {
+        public Builder sendNotification(Boolean sendNotification) {
             this.sendNotification = Objects.requireNonNull(sendNotification);
             return this;
         }
 
-        public Builder setStageName(String stageName) {
+        public Builder stageName(String stageName) {
             this.stageName = Objects.requireNonNull(stageName);
             return this;
         }

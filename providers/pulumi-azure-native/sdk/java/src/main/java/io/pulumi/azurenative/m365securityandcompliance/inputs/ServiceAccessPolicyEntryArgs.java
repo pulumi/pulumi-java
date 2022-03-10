@@ -56,12 +56,12 @@ public final class ServiceAccessPolicyEntryArgs extends io.pulumi.resources.Reso
     	      this.objectId = defaults.objectId;
         }
 
-        public Builder setObjectId(Input<String> objectId) {
+        public Builder objectId(Input<String> objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
 
-        public Builder setObjectId(String objectId) {
+        public Builder objectId(String objectId) {
             this.objectId = Input.of(Objects.requireNonNull(objectId));
             return this;
         }

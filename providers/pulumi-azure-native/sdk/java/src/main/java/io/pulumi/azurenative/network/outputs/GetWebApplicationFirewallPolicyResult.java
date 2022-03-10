@@ -266,72 +266,72 @@ public final class GetWebApplicationFirewallPolicyResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setApplicationGateways(List<ApplicationGatewayResponse> applicationGateways) {
+        public Builder applicationGateways(List<ApplicationGatewayResponse> applicationGateways) {
             this.applicationGateways = Objects.requireNonNull(applicationGateways);
             return this;
         }
 
-        public Builder setCustomRules(@Nullable List<WebApplicationFirewallCustomRuleResponse> customRules) {
+        public Builder customRules(@Nullable List<WebApplicationFirewallCustomRuleResponse> customRules) {
             this.customRules = customRules;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setHttpListeners(List<SubResourceResponse> httpListeners) {
+        public Builder httpListeners(List<SubResourceResponse> httpListeners) {
             this.httpListeners = Objects.requireNonNull(httpListeners);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setManagedRules(ManagedRulesDefinitionResponse managedRules) {
+        public Builder managedRules(ManagedRulesDefinitionResponse managedRules) {
             this.managedRules = Objects.requireNonNull(managedRules);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPathBasedRules(List<SubResourceResponse> pathBasedRules) {
+        public Builder pathBasedRules(List<SubResourceResponse> pathBasedRules) {
             this.pathBasedRules = Objects.requireNonNull(pathBasedRules);
             return this;
         }
 
-        public Builder setPolicySettings(@Nullable PolicySettingsResponse policySettings) {
+        public Builder policySettings(@Nullable PolicySettingsResponse policySettings) {
             this.policySettings = policySettings;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setResourceState(String resourceState) {
+        public Builder resourceState(String resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

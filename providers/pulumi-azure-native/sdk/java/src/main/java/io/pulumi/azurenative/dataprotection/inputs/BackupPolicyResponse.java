@@ -92,17 +92,17 @@ public final class BackupPolicyResponse extends io.pulumi.resources.InvokeArgs {
     	      this.policyRules = defaults.policyRules;
         }
 
-        public Builder setDatasourceTypes(List<String> datasourceTypes) {
+        public Builder datasourceTypes(List<String> datasourceTypes) {
             this.datasourceTypes = Objects.requireNonNull(datasourceTypes);
             return this;
         }
 
-        public Builder setObjectType(String objectType) {
+        public Builder objectType(String objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
 
-        public Builder setPolicyRules(List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> policyRules) {
+        public Builder policyRules(List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> policyRules) {
             this.policyRules = Objects.requireNonNull(policyRules);
             return this;
         }

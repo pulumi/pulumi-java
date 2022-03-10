@@ -100,22 +100,22 @@ public final class GetSynchronizationSettingArgs extends io.pulumi.resources.Inv
     	      this.synchronizationSettingName = defaults.synchronizationSettingName;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setShareName(String shareName) {
+        public Builder shareName(String shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
 
-        public Builder setSynchronizationSettingName(String synchronizationSettingName) {
+        public Builder synchronizationSettingName(String synchronizationSettingName) {
             this.synchronizationSettingName = Objects.requireNonNull(synchronizationSettingName);
             return this;
         }

@@ -109,42 +109,42 @@ public final class VolumeAttachmentStatusArgs extends io.pulumi.resources.Resour
     	      this.detachError = defaults.detachError;
         }
 
-        public Builder setAttachError(@Nullable Input<VolumeErrorArgs> attachError) {
+        public Builder attachError(@Nullable Input<VolumeErrorArgs> attachError) {
             this.attachError = attachError;
             return this;
         }
 
-        public Builder setAttachError(@Nullable VolumeErrorArgs attachError) {
+        public Builder attachError(@Nullable VolumeErrorArgs attachError) {
             this.attachError = Input.ofNullable(attachError);
             return this;
         }
 
-        public Builder setAttached(Input<Boolean> attached) {
+        public Builder attached(Input<Boolean> attached) {
             this.attached = Objects.requireNonNull(attached);
             return this;
         }
 
-        public Builder setAttached(Boolean attached) {
+        public Builder attached(Boolean attached) {
             this.attached = Input.of(Objects.requireNonNull(attached));
             return this;
         }
 
-        public Builder setAttachmentMetadata(@Nullable Input<Map<String,String>> attachmentMetadata) {
+        public Builder attachmentMetadata(@Nullable Input<Map<String,String>> attachmentMetadata) {
             this.attachmentMetadata = attachmentMetadata;
             return this;
         }
 
-        public Builder setAttachmentMetadata(@Nullable Map<String,String> attachmentMetadata) {
+        public Builder attachmentMetadata(@Nullable Map<String,String> attachmentMetadata) {
             this.attachmentMetadata = Input.ofNullable(attachmentMetadata);
             return this;
         }
 
-        public Builder setDetachError(@Nullable Input<VolumeErrorArgs> detachError) {
+        public Builder detachError(@Nullable Input<VolumeErrorArgs> detachError) {
             this.detachError = detachError;
             return this;
         }
 
-        public Builder setDetachError(@Nullable VolumeErrorArgs detachError) {
+        public Builder detachError(@Nullable VolumeErrorArgs detachError) {
             this.detachError = Input.ofNullable(detachError);
             return this;
         }

@@ -190,102 +190,102 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setAlternativeNameServerConfig(@Nullable Input<PolicyAlternativeNameServerConfigArgs> alternativeNameServerConfig) {
+        public Builder alternativeNameServerConfig(@Nullable Input<PolicyAlternativeNameServerConfigArgs> alternativeNameServerConfig) {
             this.alternativeNameServerConfig = alternativeNameServerConfig;
             return this;
         }
 
-        public Builder setAlternativeNameServerConfig(@Nullable PolicyAlternativeNameServerConfigArgs alternativeNameServerConfig) {
+        public Builder alternativeNameServerConfig(@Nullable PolicyAlternativeNameServerConfigArgs alternativeNameServerConfig) {
             this.alternativeNameServerConfig = Input.ofNullable(alternativeNameServerConfig);
             return this;
         }
 
-        public Builder setClientOperationId(@Nullable Input<String> clientOperationId) {
+        public Builder clientOperationId(@Nullable Input<String> clientOperationId) {
             this.clientOperationId = clientOperationId;
             return this;
         }
 
-        public Builder setClientOperationId(@Nullable String clientOperationId) {
+        public Builder clientOperationId(@Nullable String clientOperationId) {
             this.clientOperationId = Input.ofNullable(clientOperationId);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEnableInboundForwarding(@Nullable Input<Boolean> enableInboundForwarding) {
+        public Builder enableInboundForwarding(@Nullable Input<Boolean> enableInboundForwarding) {
             this.enableInboundForwarding = enableInboundForwarding;
             return this;
         }
 
-        public Builder setEnableInboundForwarding(@Nullable Boolean enableInboundForwarding) {
+        public Builder enableInboundForwarding(@Nullable Boolean enableInboundForwarding) {
             this.enableInboundForwarding = Input.ofNullable(enableInboundForwarding);
             return this;
         }
 
-        public Builder setEnableLogging(@Nullable Input<Boolean> enableLogging) {
+        public Builder enableLogging(@Nullable Input<Boolean> enableLogging) {
             this.enableLogging = enableLogging;
             return this;
         }
 
-        public Builder setEnableLogging(@Nullable Boolean enableLogging) {
+        public Builder enableLogging(@Nullable Boolean enableLogging) {
             this.enableLogging = Input.ofNullable(enableLogging);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetworks(@Nullable Input<List<PolicyNetworkArgs>> networks) {
+        public Builder networks(@Nullable Input<List<PolicyNetworkArgs>> networks) {
             this.networks = networks;
             return this;
         }
 
-        public Builder setNetworks(@Nullable List<PolicyNetworkArgs> networks) {
+        public Builder networks(@Nullable List<PolicyNetworkArgs> networks) {
             this.networks = Input.ofNullable(networks);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

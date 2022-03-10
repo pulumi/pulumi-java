@@ -69,22 +69,22 @@ public final class ComponentVersionLambdaVolumeMount {
     	      this.sourcePath = defaults.sourcePath;
         }
 
-        public Builder setAddGroupOwner(@Nullable Boolean addGroupOwner) {
+        public Builder addGroupOwner(@Nullable Boolean addGroupOwner) {
             this.addGroupOwner = addGroupOwner;
             return this;
         }
 
-        public Builder setDestinationPath(@Nullable String destinationPath) {
+        public Builder destinationPath(@Nullable String destinationPath) {
             this.destinationPath = destinationPath;
             return this;
         }
 
-        public Builder setPermission(@Nullable ComponentVersionLambdaFilesystemPermission permission) {
+        public Builder permission(@Nullable ComponentVersionLambdaFilesystemPermission permission) {
             this.permission = permission;
             return this;
         }
 
-        public Builder setSourcePath(@Nullable String sourcePath) {
+        public Builder sourcePath(@Nullable String sourcePath) {
             this.sourcePath = sourcePath;
             return this;
         }

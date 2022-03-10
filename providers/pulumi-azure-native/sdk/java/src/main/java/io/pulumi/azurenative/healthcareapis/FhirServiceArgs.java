@@ -240,122 +240,122 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setAccessPolicies(@Nullable Input<List<FhirServiceAccessPolicyEntryArgs>> accessPolicies) {
+        public Builder accessPolicies(@Nullable Input<List<FhirServiceAccessPolicyEntryArgs>> accessPolicies) {
             this.accessPolicies = accessPolicies;
             return this;
         }
 
-        public Builder setAccessPolicies(@Nullable List<FhirServiceAccessPolicyEntryArgs> accessPolicies) {
+        public Builder accessPolicies(@Nullable List<FhirServiceAccessPolicyEntryArgs> accessPolicies) {
             this.accessPolicies = Input.ofNullable(accessPolicies);
             return this;
         }
 
-        public Builder setAcrConfiguration(@Nullable Input<FhirServiceAcrConfigurationArgs> acrConfiguration) {
+        public Builder acrConfiguration(@Nullable Input<FhirServiceAcrConfigurationArgs> acrConfiguration) {
             this.acrConfiguration = acrConfiguration;
             return this;
         }
 
-        public Builder setAcrConfiguration(@Nullable FhirServiceAcrConfigurationArgs acrConfiguration) {
+        public Builder acrConfiguration(@Nullable FhirServiceAcrConfigurationArgs acrConfiguration) {
             this.acrConfiguration = Input.ofNullable(acrConfiguration);
             return this;
         }
 
-        public Builder setAuthenticationConfiguration(@Nullable Input<FhirServiceAuthenticationConfigurationArgs> authenticationConfiguration) {
+        public Builder authenticationConfiguration(@Nullable Input<FhirServiceAuthenticationConfigurationArgs> authenticationConfiguration) {
             this.authenticationConfiguration = authenticationConfiguration;
             return this;
         }
 
-        public Builder setAuthenticationConfiguration(@Nullable FhirServiceAuthenticationConfigurationArgs authenticationConfiguration) {
+        public Builder authenticationConfiguration(@Nullable FhirServiceAuthenticationConfigurationArgs authenticationConfiguration) {
             this.authenticationConfiguration = Input.ofNullable(authenticationConfiguration);
             return this;
         }
 
-        public Builder setCorsConfiguration(@Nullable Input<FhirServiceCorsConfigurationArgs> corsConfiguration) {
+        public Builder corsConfiguration(@Nullable Input<FhirServiceCorsConfigurationArgs> corsConfiguration) {
             this.corsConfiguration = corsConfiguration;
             return this;
         }
 
-        public Builder setCorsConfiguration(@Nullable FhirServiceCorsConfigurationArgs corsConfiguration) {
+        public Builder corsConfiguration(@Nullable FhirServiceCorsConfigurationArgs corsConfiguration) {
             this.corsConfiguration = Input.ofNullable(corsConfiguration);
             return this;
         }
 
-        public Builder setExportConfiguration(@Nullable Input<FhirServiceExportConfigurationArgs> exportConfiguration) {
+        public Builder exportConfiguration(@Nullable Input<FhirServiceExportConfigurationArgs> exportConfiguration) {
             this.exportConfiguration = exportConfiguration;
             return this;
         }
 
-        public Builder setExportConfiguration(@Nullable FhirServiceExportConfigurationArgs exportConfiguration) {
+        public Builder exportConfiguration(@Nullable FhirServiceExportConfigurationArgs exportConfiguration) {
             this.exportConfiguration = Input.ofNullable(exportConfiguration);
             return this;
         }
 
-        public Builder setFhirServiceName(@Nullable Input<String> fhirServiceName) {
+        public Builder fhirServiceName(@Nullable Input<String> fhirServiceName) {
             this.fhirServiceName = fhirServiceName;
             return this;
         }
 
-        public Builder setFhirServiceName(@Nullable String fhirServiceName) {
+        public Builder fhirServiceName(@Nullable String fhirServiceName) {
             this.fhirServiceName = Input.ofNullable(fhirServiceName);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<ServiceManagedIdentityIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<ServiceManagedIdentityIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable ServiceManagedIdentityIdentityArgs identity) {
+        public Builder identity(@Nullable ServiceManagedIdentityIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<Either<String,FhirServiceKind>> kind) {
+        public Builder kind(@Nullable Input<Either<String,FhirServiceKind>> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable Either<String,FhirServiceKind> kind) {
+        public Builder kind(@Nullable Either<String,FhirServiceKind> kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

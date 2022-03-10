@@ -327,152 +327,152 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
     	      this.zone = defaults.zone;
         }
 
-        public Builder setAcceleratorConfig(@Nullable Input<RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGetArgs> acceleratorConfig) {
+        public Builder acceleratorConfig(@Nullable Input<RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGetArgs> acceleratorConfig) {
             this.acceleratorConfig = acceleratorConfig;
             return this;
         }
 
-        public Builder setAcceleratorConfig(@Nullable RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGetArgs acceleratorConfig) {
+        public Builder acceleratorConfig(@Nullable RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGetArgs acceleratorConfig) {
             this.acceleratorConfig = Input.ofNullable(acceleratorConfig);
             return this;
         }
 
-        public Builder setContainerImages(@Nullable Input<List<RuntimeVirtualMachineVirtualMachineConfigContainerImageGetArgs>> containerImages) {
+        public Builder containerImages(@Nullable Input<List<RuntimeVirtualMachineVirtualMachineConfigContainerImageGetArgs>> containerImages) {
             this.containerImages = containerImages;
             return this;
         }
 
-        public Builder setContainerImages(@Nullable List<RuntimeVirtualMachineVirtualMachineConfigContainerImageGetArgs> containerImages) {
+        public Builder containerImages(@Nullable List<RuntimeVirtualMachineVirtualMachineConfigContainerImageGetArgs> containerImages) {
             this.containerImages = Input.ofNullable(containerImages);
             return this;
         }
 
-        public Builder setDataDisk(Input<RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs> dataDisk) {
+        public Builder dataDisk(Input<RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs> dataDisk) {
             this.dataDisk = Objects.requireNonNull(dataDisk);
             return this;
         }
 
-        public Builder setDataDisk(RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs dataDisk) {
+        public Builder dataDisk(RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs dataDisk) {
             this.dataDisk = Input.of(Objects.requireNonNull(dataDisk));
             return this;
         }
 
-        public Builder setEncryptionConfig(@Nullable Input<RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetArgs> encryptionConfig) {
+        public Builder encryptionConfig(@Nullable Input<RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetArgs> encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
 
-        public Builder setEncryptionConfig(@Nullable RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetArgs encryptionConfig) {
+        public Builder encryptionConfig(@Nullable RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetArgs encryptionConfig) {
             this.encryptionConfig = Input.ofNullable(encryptionConfig);
             return this;
         }
 
-        public Builder setGuestAttributes(@Nullable Input<Map<String,String>> guestAttributes) {
+        public Builder guestAttributes(@Nullable Input<Map<String,String>> guestAttributes) {
             this.guestAttributes = guestAttributes;
             return this;
         }
 
-        public Builder setGuestAttributes(@Nullable Map<String,String> guestAttributes) {
+        public Builder guestAttributes(@Nullable Map<String,String> guestAttributes) {
             this.guestAttributes = Input.ofNullable(guestAttributes);
             return this;
         }
 
-        public Builder setInternalIpOnly(@Nullable Input<Boolean> internalIpOnly) {
+        public Builder internalIpOnly(@Nullable Input<Boolean> internalIpOnly) {
             this.internalIpOnly = internalIpOnly;
             return this;
         }
 
-        public Builder setInternalIpOnly(@Nullable Boolean internalIpOnly) {
+        public Builder internalIpOnly(@Nullable Boolean internalIpOnly) {
             this.internalIpOnly = Input.ofNullable(internalIpOnly);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setMachineType(Input<String> machineType) {
+        public Builder machineType(Input<String> machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Input.of(Objects.requireNonNull(machineType));
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setNetwork(@Nullable Input<String> network) {
+        public Builder network(@Nullable Input<String> network) {
             this.network = network;
             return this;
         }
 
-        public Builder setNetwork(@Nullable String network) {
+        public Builder network(@Nullable String network) {
             this.network = Input.ofNullable(network);
             return this;
         }
 
-        public Builder setNicType(@Nullable Input<String> nicType) {
+        public Builder nicType(@Nullable Input<String> nicType) {
             this.nicType = nicType;
             return this;
         }
 
-        public Builder setNicType(@Nullable String nicType) {
+        public Builder nicType(@Nullable String nicType) {
             this.nicType = Input.ofNullable(nicType);
             return this;
         }
 
-        public Builder setShieldedInstanceConfig(@Nullable Input<RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigGetArgs> shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(@Nullable Input<RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigGetArgs> shieldedInstanceConfig) {
             this.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
 
-        public Builder setShieldedInstanceConfig(@Nullable RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigGetArgs shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(@Nullable RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigGetArgs shieldedInstanceConfig) {
             this.shieldedInstanceConfig = Input.ofNullable(shieldedInstanceConfig);
             return this;
         }
 
-        public Builder setSubnet(@Nullable Input<String> subnet) {
+        public Builder subnet(@Nullable Input<String> subnet) {
             this.subnet = subnet;
             return this;
         }
 
-        public Builder setSubnet(@Nullable String subnet) {
+        public Builder subnet(@Nullable String subnet) {
             this.subnet = Input.ofNullable(subnet);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Input<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<String> tags) {
+        public Builder tags(@Nullable List<String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setZone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Input<String> zone) {
             this.zone = zone;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = Input.ofNullable(zone);
             return this;
         }

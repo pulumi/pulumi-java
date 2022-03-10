@@ -350,182 +350,182 @@ public final class DelimitedTextDatasetArgs extends io.pulumi.resources.Resource
     	      this.type = defaults.type;
         }
 
-        public Builder setAnnotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Input<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setColumnDelimiter(@Nullable Input<Object> columnDelimiter) {
+        public Builder columnDelimiter(@Nullable Input<Object> columnDelimiter) {
             this.columnDelimiter = columnDelimiter;
             return this;
         }
 
-        public Builder setColumnDelimiter(@Nullable Object columnDelimiter) {
+        public Builder columnDelimiter(@Nullable Object columnDelimiter) {
             this.columnDelimiter = Input.ofNullable(columnDelimiter);
             return this;
         }
 
-        public Builder setCompressionCodec(@Nullable Input<Object> compressionCodec) {
+        public Builder compressionCodec(@Nullable Input<Object> compressionCodec) {
             this.compressionCodec = compressionCodec;
             return this;
         }
 
-        public Builder setCompressionCodec(@Nullable Object compressionCodec) {
+        public Builder compressionCodec(@Nullable Object compressionCodec) {
             this.compressionCodec = Input.ofNullable(compressionCodec);
             return this;
         }
 
-        public Builder setCompressionLevel(@Nullable Input<Object> compressionLevel) {
+        public Builder compressionLevel(@Nullable Input<Object> compressionLevel) {
             this.compressionLevel = compressionLevel;
             return this;
         }
 
-        public Builder setCompressionLevel(@Nullable Object compressionLevel) {
+        public Builder compressionLevel(@Nullable Object compressionLevel) {
             this.compressionLevel = Input.ofNullable(compressionLevel);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEncodingName(@Nullable Input<Object> encodingName) {
+        public Builder encodingName(@Nullable Input<Object> encodingName) {
             this.encodingName = encodingName;
             return this;
         }
 
-        public Builder setEncodingName(@Nullable Object encodingName) {
+        public Builder encodingName(@Nullable Object encodingName) {
             this.encodingName = Input.ofNullable(encodingName);
             return this;
         }
 
-        public Builder setEscapeChar(@Nullable Input<Object> escapeChar) {
+        public Builder escapeChar(@Nullable Input<Object> escapeChar) {
             this.escapeChar = escapeChar;
             return this;
         }
 
-        public Builder setEscapeChar(@Nullable Object escapeChar) {
+        public Builder escapeChar(@Nullable Object escapeChar) {
             this.escapeChar = Input.ofNullable(escapeChar);
             return this;
         }
 
-        public Builder setFirstRowAsHeader(@Nullable Input<Object> firstRowAsHeader) {
+        public Builder firstRowAsHeader(@Nullable Input<Object> firstRowAsHeader) {
             this.firstRowAsHeader = firstRowAsHeader;
             return this;
         }
 
-        public Builder setFirstRowAsHeader(@Nullable Object firstRowAsHeader) {
+        public Builder firstRowAsHeader(@Nullable Object firstRowAsHeader) {
             this.firstRowAsHeader = Input.ofNullable(firstRowAsHeader);
             return this;
         }
 
-        public Builder setFolder(@Nullable Input<DatasetFolderArgs> folder) {
+        public Builder folder(@Nullable Input<DatasetFolderArgs> folder) {
             this.folder = folder;
             return this;
         }
 
-        public Builder setFolder(@Nullable DatasetFolderArgs folder) {
+        public Builder folder(@Nullable DatasetFolderArgs folder) {
             this.folder = Input.ofNullable(folder);
             return this;
         }
 
-        public Builder setLinkedServiceName(Input<LinkedServiceReferenceArgs> linkedServiceName) {
+        public Builder linkedServiceName(Input<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
 
-        public Builder setLinkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
+        public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
             this.linkedServiceName = Input.of(Objects.requireNonNull(linkedServiceName));
             return this;
         }
 
-        public Builder setLocation(Input<Object> location) {
+        public Builder location(Input<Object> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLocation(Object location) {
+        public Builder location(Object location) {
             this.location = Input.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder setNullValue(@Nullable Input<Object> nullValue) {
+        public Builder nullValue(@Nullable Input<Object> nullValue) {
             this.nullValue = nullValue;
             return this;
         }
 
-        public Builder setNullValue(@Nullable Object nullValue) {
+        public Builder nullValue(@Nullable Object nullValue) {
             this.nullValue = Input.ofNullable(nullValue);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setQuoteChar(@Nullable Input<Object> quoteChar) {
+        public Builder quoteChar(@Nullable Input<Object> quoteChar) {
             this.quoteChar = quoteChar;
             return this;
         }
 
-        public Builder setQuoteChar(@Nullable Object quoteChar) {
+        public Builder quoteChar(@Nullable Object quoteChar) {
             this.quoteChar = Input.ofNullable(quoteChar);
             return this;
         }
 
-        public Builder setRowDelimiter(@Nullable Input<Object> rowDelimiter) {
+        public Builder rowDelimiter(@Nullable Input<Object> rowDelimiter) {
             this.rowDelimiter = rowDelimiter;
             return this;
         }
 
-        public Builder setRowDelimiter(@Nullable Object rowDelimiter) {
+        public Builder rowDelimiter(@Nullable Object rowDelimiter) {
             this.rowDelimiter = Input.ofNullable(rowDelimiter);
             return this;
         }
 
-        public Builder setSchema(@Nullable Input<Object> schema) {
+        public Builder schema(@Nullable Input<Object> schema) {
             this.schema = schema;
             return this;
         }
 
-        public Builder setSchema(@Nullable Object schema) {
+        public Builder schema(@Nullable Object schema) {
             this.schema = Input.ofNullable(schema);
             return this;
         }
 
-        public Builder setStructure(@Nullable Input<Object> structure) {
+        public Builder structure(@Nullable Input<Object> structure) {
             this.structure = structure;
             return this;
         }
 
-        public Builder setStructure(@Nullable Object structure) {
+        public Builder structure(@Nullable Object structure) {
             this.structure = Input.ofNullable(structure);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

@@ -74,22 +74,22 @@ public final class ACIServiceCreateRequestVnetConfigurationArgs extends io.pulum
     	      this.vnetName = defaults.vnetName;
         }
 
-        public Builder setSubnetName(@Nullable Input<String> subnetName) {
+        public Builder subnetName(@Nullable Input<String> subnetName) {
             this.subnetName = subnetName;
             return this;
         }
 
-        public Builder setSubnetName(@Nullable String subnetName) {
+        public Builder subnetName(@Nullable String subnetName) {
             this.subnetName = Input.ofNullable(subnetName);
             return this;
         }
 
-        public Builder setVnetName(@Nullable Input<String> vnetName) {
+        public Builder vnetName(@Nullable Input<String> vnetName) {
             this.vnetName = vnetName;
             return this;
         }
 
-        public Builder setVnetName(@Nullable String vnetName) {
+        public Builder vnetName(@Nullable String vnetName) {
             this.vnetName = Input.ofNullable(vnetName);
             return this;
         }

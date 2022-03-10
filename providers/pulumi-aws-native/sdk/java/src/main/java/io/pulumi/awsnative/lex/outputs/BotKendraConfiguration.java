@@ -68,17 +68,17 @@ public final class BotKendraConfiguration {
     	      this.queryFilterStringEnabled = defaults.queryFilterStringEnabled;
         }
 
-        public Builder setKendraIndex(String kendraIndex) {
+        public Builder kendraIndex(String kendraIndex) {
             this.kendraIndex = Objects.requireNonNull(kendraIndex);
             return this;
         }
 
-        public Builder setQueryFilterString(@Nullable String queryFilterString) {
+        public Builder queryFilterString(@Nullable String queryFilterString) {
             this.queryFilterString = queryFilterString;
             return this;
         }
 
-        public Builder setQueryFilterStringEnabled(@Nullable Boolean queryFilterStringEnabled) {
+        public Builder queryFilterStringEnabled(@Nullable Boolean queryFilterStringEnabled) {
             this.queryFilterStringEnabled = queryFilterStringEnabled;
             return this;
         }

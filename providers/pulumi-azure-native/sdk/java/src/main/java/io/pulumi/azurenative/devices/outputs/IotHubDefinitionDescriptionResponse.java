@@ -117,27 +117,27 @@ public final class IotHubDefinitionDescriptionResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setAllocationWeight(@Nullable Integer allocationWeight) {
+        public Builder allocationWeight(@Nullable Integer allocationWeight) {
             this.allocationWeight = allocationWeight;
             return this;
         }
 
-        public Builder setApplyAllocationPolicy(@Nullable Boolean applyAllocationPolicy) {
+        public Builder applyAllocationPolicy(@Nullable Boolean applyAllocationPolicy) {
             this.applyAllocationPolicy = applyAllocationPolicy;
             return this;
         }
 
-        public Builder setConnectionString(String connectionString) {
+        public Builder connectionString(String connectionString) {
             this.connectionString = Objects.requireNonNull(connectionString);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

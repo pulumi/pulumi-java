@@ -107,42 +107,42 @@ public final class PipelineParameterArgs extends io.pulumi.resources.ResourceArg
     	      this.name = defaults.name;
         }
 
-        public Builder setDefaultValue(@Nullable Input<String> defaultValue) {
+        public Builder defaultValue(@Nullable Input<String> defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
 
-        public Builder setDefaultValue(@Nullable String defaultValue) {
+        public Builder defaultValue(@Nullable String defaultValue) {
             this.defaultValue = Input.ofNullable(defaultValue);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setLocalCopy(@Nullable Input<LocalCopyArgs> localCopy) {
+        public Builder localCopy(@Nullable Input<LocalCopyArgs> localCopy) {
             this.localCopy = localCopy;
             return this;
         }
 
-        public Builder setLocalCopy(@Nullable LocalCopyArgs localCopy) {
+        public Builder localCopy(@Nullable LocalCopyArgs localCopy) {
             this.localCopy = Input.ofNullable(localCopy);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

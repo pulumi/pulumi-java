@@ -49,12 +49,12 @@ public final class DomainSubDomainSetting {
     	      this.prefix = defaults.prefix;
         }
 
-        public Builder setBranchName(String branchName) {
+        public Builder branchName(String branchName) {
             this.branchName = Objects.requireNonNull(branchName);
             return this;
         }
 
-        public Builder setPrefix(String prefix) {
+        public Builder prefix(String prefix) {
             this.prefix = Objects.requireNonNull(prefix);
             return this;
         }

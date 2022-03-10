@@ -100,22 +100,22 @@ public final class OriginEndpointMssPackage extends io.pulumi.resources.InvokeAr
     	      this.streamSelection = defaults.streamSelection;
         }
 
-        public Builder setEncryption(@Nullable OriginEndpointMssEncryption encryption) {
+        public Builder encryption(@Nullable OriginEndpointMssEncryption encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setManifestWindowSeconds(@Nullable Integer manifestWindowSeconds) {
+        public Builder manifestWindowSeconds(@Nullable Integer manifestWindowSeconds) {
             this.manifestWindowSeconds = manifestWindowSeconds;
             return this;
         }
 
-        public Builder setSegmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
+        public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
 
-        public Builder setStreamSelection(@Nullable OriginEndpointStreamSelection streamSelection) {
+        public Builder streamSelection(@Nullable OriginEndpointStreamSelection streamSelection) {
             this.streamSelection = streamSelection;
             return this;
         }

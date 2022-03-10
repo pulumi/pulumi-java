@@ -120,42 +120,42 @@ public final class RouterBgpGetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.asn = defaults.asn;
         }
 
-        public Builder setAdvertiseMode(@Nullable Input<String> advertiseMode) {
+        public Builder advertiseMode(@Nullable Input<String> advertiseMode) {
             this.advertiseMode = advertiseMode;
             return this;
         }
 
-        public Builder setAdvertiseMode(@Nullable String advertiseMode) {
+        public Builder advertiseMode(@Nullable String advertiseMode) {
             this.advertiseMode = Input.ofNullable(advertiseMode);
             return this;
         }
 
-        public Builder setAdvertisedGroups(@Nullable Input<List<String>> advertisedGroups) {
+        public Builder advertisedGroups(@Nullable Input<List<String>> advertisedGroups) {
             this.advertisedGroups = advertisedGroups;
             return this;
         }
 
-        public Builder setAdvertisedGroups(@Nullable List<String> advertisedGroups) {
+        public Builder advertisedGroups(@Nullable List<String> advertisedGroups) {
             this.advertisedGroups = Input.ofNullable(advertisedGroups);
             return this;
         }
 
-        public Builder setAdvertisedIpRanges(@Nullable Input<List<RouterBgpAdvertisedIpRangeGetArgs>> advertisedIpRanges) {
+        public Builder advertisedIpRanges(@Nullable Input<List<RouterBgpAdvertisedIpRangeGetArgs>> advertisedIpRanges) {
             this.advertisedIpRanges = advertisedIpRanges;
             return this;
         }
 
-        public Builder setAdvertisedIpRanges(@Nullable List<RouterBgpAdvertisedIpRangeGetArgs> advertisedIpRanges) {
+        public Builder advertisedIpRanges(@Nullable List<RouterBgpAdvertisedIpRangeGetArgs> advertisedIpRanges) {
             this.advertisedIpRanges = Input.ofNullable(advertisedIpRanges);
             return this;
         }
 
-        public Builder setAsn(Input<Integer> asn) {
+        public Builder asn(Input<Integer> asn) {
             this.asn = Objects.requireNonNull(asn);
             return this;
         }
 
-        public Builder setAsn(Integer asn) {
+        public Builder asn(Integer asn) {
             this.asn = Input.of(Objects.requireNonNull(asn));
             return this;
         }

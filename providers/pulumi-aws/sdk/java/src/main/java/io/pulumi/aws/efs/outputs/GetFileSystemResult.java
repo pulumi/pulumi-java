@@ -256,77 +256,77 @@ public final class GetFileSystemResult {
     	      this.throughputMode = defaults.throughputMode;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setAvailabilityZoneId(String availabilityZoneId) {
+        public Builder availabilityZoneId(String availabilityZoneId) {
             this.availabilityZoneId = Objects.requireNonNull(availabilityZoneId);
             return this;
         }
 
-        public Builder setAvailabilityZoneName(String availabilityZoneName) {
+        public Builder availabilityZoneName(String availabilityZoneName) {
             this.availabilityZoneName = Objects.requireNonNull(availabilityZoneName);
             return this;
         }
 
-        public Builder setCreationToken(String creationToken) {
+        public Builder creationToken(String creationToken) {
             this.creationToken = Objects.requireNonNull(creationToken);
             return this;
         }
 
-        public Builder setDnsName(String dnsName) {
+        public Builder dnsName(String dnsName) {
             this.dnsName = Objects.requireNonNull(dnsName);
             return this;
         }
 
-        public Builder setEncrypted(Boolean encrypted) {
+        public Builder encrypted(Boolean encrypted) {
             this.encrypted = Objects.requireNonNull(encrypted);
             return this;
         }
 
-        public Builder setFileSystemId(String fileSystemId) {
+        public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = Objects.requireNonNull(fileSystemId);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKmsKeyId(String kmsKeyId) {
+        public Builder kmsKeyId(String kmsKeyId) {
             this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
             return this;
         }
 
-        public Builder setLifecyclePolicy(GetFileSystemLifecyclePolicy lifecyclePolicy) {
+        public Builder lifecyclePolicy(GetFileSystemLifecyclePolicy lifecyclePolicy) {
             this.lifecyclePolicy = Objects.requireNonNull(lifecyclePolicy);
             return this;
         }
 
-        public Builder setPerformanceMode(String performanceMode) {
+        public Builder performanceMode(String performanceMode) {
             this.performanceMode = Objects.requireNonNull(performanceMode);
             return this;
         }
 
-        public Builder setProvisionedThroughputInMibps(Double provisionedThroughputInMibps) {
+        public Builder provisionedThroughputInMibps(Double provisionedThroughputInMibps) {
             this.provisionedThroughputInMibps = Objects.requireNonNull(provisionedThroughputInMibps);
             return this;
         }
 
-        public Builder setSizeInBytes(Integer sizeInBytes) {
+        public Builder sizeInBytes(Integer sizeInBytes) {
             this.sizeInBytes = Objects.requireNonNull(sizeInBytes);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setThroughputMode(String throughputMode) {
+        public Builder throughputMode(String throughputMode) {
             this.throughputMode = Objects.requireNonNull(throughputMode);
             return this;
         }

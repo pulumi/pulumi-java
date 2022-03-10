@@ -72,22 +72,22 @@ public final class EdgeCacheServiceRoutingArgs extends io.pulumi.resources.Resou
     	      this.pathMatchers = defaults.pathMatchers;
         }
 
-        public Builder setHostRules(Input<List<EdgeCacheServiceRoutingHostRuleArgs>> hostRules) {
+        public Builder hostRules(Input<List<EdgeCacheServiceRoutingHostRuleArgs>> hostRules) {
             this.hostRules = Objects.requireNonNull(hostRules);
             return this;
         }
 
-        public Builder setHostRules(List<EdgeCacheServiceRoutingHostRuleArgs> hostRules) {
+        public Builder hostRules(List<EdgeCacheServiceRoutingHostRuleArgs> hostRules) {
             this.hostRules = Input.of(Objects.requireNonNull(hostRules));
             return this;
         }
 
-        public Builder setPathMatchers(Input<List<EdgeCacheServiceRoutingPathMatcherArgs>> pathMatchers) {
+        public Builder pathMatchers(Input<List<EdgeCacheServiceRoutingPathMatcherArgs>> pathMatchers) {
             this.pathMatchers = Objects.requireNonNull(pathMatchers);
             return this;
         }
 
-        public Builder setPathMatchers(List<EdgeCacheServiceRoutingPathMatcherArgs> pathMatchers) {
+        public Builder pathMatchers(List<EdgeCacheServiceRoutingPathMatcherArgs> pathMatchers) {
             this.pathMatchers = Input.of(Objects.requireNonNull(pathMatchers));
             return this;
         }

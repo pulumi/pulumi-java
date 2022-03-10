@@ -67,12 +67,12 @@ public final class FirewallPolicyCertificateAuthorityResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setKeyVaultSecretId(@Nullable String keyVaultSecretId) {
+        public Builder keyVaultSecretId(@Nullable String keyVaultSecretId) {
             this.keyVaultSecretId = keyVaultSecretId;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

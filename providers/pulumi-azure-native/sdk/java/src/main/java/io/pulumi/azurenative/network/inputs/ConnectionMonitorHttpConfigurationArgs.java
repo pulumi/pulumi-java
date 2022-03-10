@@ -144,62 +144,62 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
     	      this.validStatusCodeRanges = defaults.validStatusCodeRanges;
         }
 
-        public Builder setMethod(@Nullable Input<Either<String,HTTPConfigurationMethod>> method) {
+        public Builder method(@Nullable Input<Either<String,HTTPConfigurationMethod>> method) {
             this.method = method;
             return this;
         }
 
-        public Builder setMethod(@Nullable Either<String,HTTPConfigurationMethod> method) {
+        public Builder method(@Nullable Either<String,HTTPConfigurationMethod> method) {
             this.method = Input.ofNullable(method);
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Input<Integer> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setPreferHTTPS(@Nullable Input<Boolean> preferHTTPS) {
+        public Builder preferHTTPS(@Nullable Input<Boolean> preferHTTPS) {
             this.preferHTTPS = preferHTTPS;
             return this;
         }
 
-        public Builder setPreferHTTPS(@Nullable Boolean preferHTTPS) {
+        public Builder preferHTTPS(@Nullable Boolean preferHTTPS) {
             this.preferHTTPS = Input.ofNullable(preferHTTPS);
             return this;
         }
 
-        public Builder setRequestHeaders(@Nullable Input<List<HTTPHeaderArgs>> requestHeaders) {
+        public Builder requestHeaders(@Nullable Input<List<HTTPHeaderArgs>> requestHeaders) {
             this.requestHeaders = requestHeaders;
             return this;
         }
 
-        public Builder setRequestHeaders(@Nullable List<HTTPHeaderArgs> requestHeaders) {
+        public Builder requestHeaders(@Nullable List<HTTPHeaderArgs> requestHeaders) {
             this.requestHeaders = Input.ofNullable(requestHeaders);
             return this;
         }
 
-        public Builder setValidStatusCodeRanges(@Nullable Input<List<String>> validStatusCodeRanges) {
+        public Builder validStatusCodeRanges(@Nullable Input<List<String>> validStatusCodeRanges) {
             this.validStatusCodeRanges = validStatusCodeRanges;
             return this;
         }
 
-        public Builder setValidStatusCodeRanges(@Nullable List<String> validStatusCodeRanges) {
+        public Builder validStatusCodeRanges(@Nullable List<String> validStatusCodeRanges) {
             this.validStatusCodeRanges = Input.ofNullable(validStatusCodeRanges);
             return this;
         }

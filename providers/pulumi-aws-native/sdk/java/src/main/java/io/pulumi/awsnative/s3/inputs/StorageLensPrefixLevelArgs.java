@@ -52,12 +52,12 @@ public final class StorageLensPrefixLevelArgs extends io.pulumi.resources.Resour
     	      this.storageMetrics = defaults.storageMetrics;
         }
 
-        public Builder setStorageMetrics(Input<StorageLensPrefixLevelStorageMetricsArgs> storageMetrics) {
+        public Builder storageMetrics(Input<StorageLensPrefixLevelStorageMetricsArgs> storageMetrics) {
             this.storageMetrics = Objects.requireNonNull(storageMetrics);
             return this;
         }
 
-        public Builder setStorageMetrics(StorageLensPrefixLevelStorageMetricsArgs storageMetrics) {
+        public Builder storageMetrics(StorageLensPrefixLevelStorageMetricsArgs storageMetrics) {
             this.storageMetrics = Input.of(Objects.requireNonNull(storageMetrics));
             return this;
         }

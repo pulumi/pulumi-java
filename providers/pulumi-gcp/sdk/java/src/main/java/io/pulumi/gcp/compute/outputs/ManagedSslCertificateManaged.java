@@ -51,7 +51,7 @@ public final class ManagedSslCertificateManaged {
     	      this.domains = defaults.domains;
         }
 
-        public Builder setDomains(List<String> domains) {
+        public Builder domains(List<String> domains) {
             this.domains = Objects.requireNonNull(domains);
             return this;
         }

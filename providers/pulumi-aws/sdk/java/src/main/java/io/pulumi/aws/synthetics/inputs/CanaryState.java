@@ -415,232 +415,232 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
     	      this.zipFile = defaults.zipFile;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setArtifactConfig(@Nullable Input<CanaryArtifactConfigGetArgs> artifactConfig) {
+        public Builder artifactConfig(@Nullable Input<CanaryArtifactConfigGetArgs> artifactConfig) {
             this.artifactConfig = artifactConfig;
             return this;
         }
 
-        public Builder setArtifactConfig(@Nullable CanaryArtifactConfigGetArgs artifactConfig) {
+        public Builder artifactConfig(@Nullable CanaryArtifactConfigGetArgs artifactConfig) {
             this.artifactConfig = Input.ofNullable(artifactConfig);
             return this;
         }
 
-        public Builder setArtifactS3Location(@Nullable Input<String> artifactS3Location) {
+        public Builder artifactS3Location(@Nullable Input<String> artifactS3Location) {
             this.artifactS3Location = artifactS3Location;
             return this;
         }
 
-        public Builder setArtifactS3Location(@Nullable String artifactS3Location) {
+        public Builder artifactS3Location(@Nullable String artifactS3Location) {
             this.artifactS3Location = Input.ofNullable(artifactS3Location);
             return this;
         }
 
-        public Builder setEngineArn(@Nullable Input<String> engineArn) {
+        public Builder engineArn(@Nullable Input<String> engineArn) {
             this.engineArn = engineArn;
             return this;
         }
 
-        public Builder setEngineArn(@Nullable String engineArn) {
+        public Builder engineArn(@Nullable String engineArn) {
             this.engineArn = Input.ofNullable(engineArn);
             return this;
         }
 
-        public Builder setExecutionRoleArn(@Nullable Input<String> executionRoleArn) {
+        public Builder executionRoleArn(@Nullable Input<String> executionRoleArn) {
             this.executionRoleArn = executionRoleArn;
             return this;
         }
 
-        public Builder setExecutionRoleArn(@Nullable String executionRoleArn) {
+        public Builder executionRoleArn(@Nullable String executionRoleArn) {
             this.executionRoleArn = Input.ofNullable(executionRoleArn);
             return this;
         }
 
-        public Builder setFailureRetentionPeriod(@Nullable Input<Integer> failureRetentionPeriod) {
+        public Builder failureRetentionPeriod(@Nullable Input<Integer> failureRetentionPeriod) {
             this.failureRetentionPeriod = failureRetentionPeriod;
             return this;
         }
 
-        public Builder setFailureRetentionPeriod(@Nullable Integer failureRetentionPeriod) {
+        public Builder failureRetentionPeriod(@Nullable Integer failureRetentionPeriod) {
             this.failureRetentionPeriod = Input.ofNullable(failureRetentionPeriod);
             return this;
         }
 
-        public Builder setHandler(@Nullable Input<String> handler) {
+        public Builder handler(@Nullable Input<String> handler) {
             this.handler = handler;
             return this;
         }
 
-        public Builder setHandler(@Nullable String handler) {
+        public Builder handler(@Nullable String handler) {
             this.handler = Input.ofNullable(handler);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRunConfig(@Nullable Input<CanaryRunConfigGetArgs> runConfig) {
+        public Builder runConfig(@Nullable Input<CanaryRunConfigGetArgs> runConfig) {
             this.runConfig = runConfig;
             return this;
         }
 
-        public Builder setRunConfig(@Nullable CanaryRunConfigGetArgs runConfig) {
+        public Builder runConfig(@Nullable CanaryRunConfigGetArgs runConfig) {
             this.runConfig = Input.ofNullable(runConfig);
             return this;
         }
 
-        public Builder setRuntimeVersion(@Nullable Input<String> runtimeVersion) {
+        public Builder runtimeVersion(@Nullable Input<String> runtimeVersion) {
             this.runtimeVersion = runtimeVersion;
             return this;
         }
 
-        public Builder setRuntimeVersion(@Nullable String runtimeVersion) {
+        public Builder runtimeVersion(@Nullable String runtimeVersion) {
             this.runtimeVersion = Input.ofNullable(runtimeVersion);
             return this;
         }
 
-        public Builder setS3Bucket(@Nullable Input<String> s3Bucket) {
+        public Builder s3Bucket(@Nullable Input<String> s3Bucket) {
             this.s3Bucket = s3Bucket;
             return this;
         }
 
-        public Builder setS3Bucket(@Nullable String s3Bucket) {
+        public Builder s3Bucket(@Nullable String s3Bucket) {
             this.s3Bucket = Input.ofNullable(s3Bucket);
             return this;
         }
 
-        public Builder setS3Key(@Nullable Input<String> s3Key) {
+        public Builder s3Key(@Nullable Input<String> s3Key) {
             this.s3Key = s3Key;
             return this;
         }
 
-        public Builder setS3Key(@Nullable String s3Key) {
+        public Builder s3Key(@Nullable String s3Key) {
             this.s3Key = Input.ofNullable(s3Key);
             return this;
         }
 
-        public Builder setS3Version(@Nullable Input<String> s3Version) {
+        public Builder s3Version(@Nullable Input<String> s3Version) {
             this.s3Version = s3Version;
             return this;
         }
 
-        public Builder setS3Version(@Nullable String s3Version) {
+        public Builder s3Version(@Nullable String s3Version) {
             this.s3Version = Input.ofNullable(s3Version);
             return this;
         }
 
-        public Builder setSchedule(@Nullable Input<CanaryScheduleGetArgs> schedule) {
+        public Builder schedule(@Nullable Input<CanaryScheduleGetArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setSchedule(@Nullable CanaryScheduleGetArgs schedule) {
+        public Builder schedule(@Nullable CanaryScheduleGetArgs schedule) {
             this.schedule = Input.ofNullable(schedule);
             return this;
         }
 
-        public Builder setSourceLocationArn(@Nullable Input<String> sourceLocationArn) {
+        public Builder sourceLocationArn(@Nullable Input<String> sourceLocationArn) {
             this.sourceLocationArn = sourceLocationArn;
             return this;
         }
 
-        public Builder setSourceLocationArn(@Nullable String sourceLocationArn) {
+        public Builder sourceLocationArn(@Nullable String sourceLocationArn) {
             this.sourceLocationArn = Input.ofNullable(sourceLocationArn);
             return this;
         }
 
-        public Builder setStartCanary(@Nullable Input<Boolean> startCanary) {
+        public Builder startCanary(@Nullable Input<Boolean> startCanary) {
             this.startCanary = startCanary;
             return this;
         }
 
-        public Builder setStartCanary(@Nullable Boolean startCanary) {
+        public Builder startCanary(@Nullable Boolean startCanary) {
             this.startCanary = Input.ofNullable(startCanary);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setSuccessRetentionPeriod(@Nullable Input<Integer> successRetentionPeriod) {
+        public Builder successRetentionPeriod(@Nullable Input<Integer> successRetentionPeriod) {
             this.successRetentionPeriod = successRetentionPeriod;
             return this;
         }
 
-        public Builder setSuccessRetentionPeriod(@Nullable Integer successRetentionPeriod) {
+        public Builder successRetentionPeriod(@Nullable Integer successRetentionPeriod) {
             this.successRetentionPeriod = Input.ofNullable(successRetentionPeriod);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setTimelines(@Nullable Input<List<CanaryTimelineGetArgs>> timelines) {
+        public Builder timelines(@Nullable Input<List<CanaryTimelineGetArgs>> timelines) {
             this.timelines = timelines;
             return this;
         }
 
-        public Builder setTimelines(@Nullable List<CanaryTimelineGetArgs> timelines) {
+        public Builder timelines(@Nullable List<CanaryTimelineGetArgs> timelines) {
             this.timelines = Input.ofNullable(timelines);
             return this;
         }
 
-        public Builder setVpcConfig(@Nullable Input<CanaryVpcConfigGetArgs> vpcConfig) {
+        public Builder vpcConfig(@Nullable Input<CanaryVpcConfigGetArgs> vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
         }
 
-        public Builder setVpcConfig(@Nullable CanaryVpcConfigGetArgs vpcConfig) {
+        public Builder vpcConfig(@Nullable CanaryVpcConfigGetArgs vpcConfig) {
             this.vpcConfig = Input.ofNullable(vpcConfig);
             return this;
         }
 
-        public Builder setZipFile(@Nullable Input<String> zipFile) {
+        public Builder zipFile(@Nullable Input<String> zipFile) {
             this.zipFile = zipFile;
             return this;
         }
 
-        public Builder setZipFile(@Nullable String zipFile) {
+        public Builder zipFile(@Nullable String zipFile) {
             this.zipFile = Input.ofNullable(zipFile);
             return this;
         }

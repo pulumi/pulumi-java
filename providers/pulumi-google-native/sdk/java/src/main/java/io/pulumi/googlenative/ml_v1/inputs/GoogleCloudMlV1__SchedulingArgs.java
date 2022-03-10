@@ -91,32 +91,32 @@ public final class GoogleCloudMlV1__SchedulingArgs extends io.pulumi.resources.R
     	      this.priority = defaults.priority;
         }
 
-        public Builder setMaxRunningTime(@Nullable Input<String> maxRunningTime) {
+        public Builder maxRunningTime(@Nullable Input<String> maxRunningTime) {
             this.maxRunningTime = maxRunningTime;
             return this;
         }
 
-        public Builder setMaxRunningTime(@Nullable String maxRunningTime) {
+        public Builder maxRunningTime(@Nullable String maxRunningTime) {
             this.maxRunningTime = Input.ofNullable(maxRunningTime);
             return this;
         }
 
-        public Builder setMaxWaitTime(@Nullable Input<String> maxWaitTime) {
+        public Builder maxWaitTime(@Nullable Input<String> maxWaitTime) {
             this.maxWaitTime = maxWaitTime;
             return this;
         }
 
-        public Builder setMaxWaitTime(@Nullable String maxWaitTime) {
+        public Builder maxWaitTime(@Nullable String maxWaitTime) {
             this.maxWaitTime = Input.ofNullable(maxWaitTime);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Input<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }

@@ -72,12 +72,12 @@ public final class CloudRunRewriteResponse extends io.pulumi.resources.InvokeArg
     	      this.serviceId = defaults.serviceId;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setServiceId(String serviceId) {
+        public Builder serviceId(String serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }

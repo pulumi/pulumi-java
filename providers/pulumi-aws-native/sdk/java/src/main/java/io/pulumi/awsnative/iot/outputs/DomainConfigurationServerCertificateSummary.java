@@ -60,17 +60,17 @@ public final class DomainConfigurationServerCertificateSummary {
     	      this.serverCertificateStatusDetail = defaults.serverCertificateStatusDetail;
         }
 
-        public Builder setServerCertificateArn(@Nullable String serverCertificateArn) {
+        public Builder serverCertificateArn(@Nullable String serverCertificateArn) {
             this.serverCertificateArn = serverCertificateArn;
             return this;
         }
 
-        public Builder setServerCertificateStatus(@Nullable DomainConfigurationServerCertificateSummaryServerCertificateStatus serverCertificateStatus) {
+        public Builder serverCertificateStatus(@Nullable DomainConfigurationServerCertificateSummaryServerCertificateStatus serverCertificateStatus) {
             this.serverCertificateStatus = serverCertificateStatus;
             return this;
         }
 
-        public Builder setServerCertificateStatusDetail(@Nullable String serverCertificateStatusDetail) {
+        public Builder serverCertificateStatusDetail(@Nullable String serverCertificateStatusDetail) {
             this.serverCertificateStatusDetail = serverCertificateStatusDetail;
             return this;
         }

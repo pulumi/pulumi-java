@@ -79,27 +79,27 @@ public final class IntegrationConnectorOperator {
     	      this.zendesk = defaults.zendesk;
         }
 
-        public Builder setMarketo(@Nullable IntegrationMarketoConnectorOperator marketo) {
+        public Builder marketo(@Nullable IntegrationMarketoConnectorOperator marketo) {
             this.marketo = marketo;
             return this;
         }
 
-        public Builder setS3(@Nullable IntegrationS3ConnectorOperator s3) {
+        public Builder s3(@Nullable IntegrationS3ConnectorOperator s3) {
             this.s3 = s3;
             return this;
         }
 
-        public Builder setSalesforce(@Nullable IntegrationSalesforceConnectorOperator salesforce) {
+        public Builder salesforce(@Nullable IntegrationSalesforceConnectorOperator salesforce) {
             this.salesforce = salesforce;
             return this;
         }
 
-        public Builder setServiceNow(@Nullable IntegrationServiceNowConnectorOperator serviceNow) {
+        public Builder serviceNow(@Nullable IntegrationServiceNowConnectorOperator serviceNow) {
             this.serviceNow = serviceNow;
             return this;
         }
 
-        public Builder setZendesk(@Nullable IntegrationZendeskConnectorOperator zendesk) {
+        public Builder zendesk(@Nullable IntegrationZendeskConnectorOperator zendesk) {
             this.zendesk = zendesk;
             return this;
         }

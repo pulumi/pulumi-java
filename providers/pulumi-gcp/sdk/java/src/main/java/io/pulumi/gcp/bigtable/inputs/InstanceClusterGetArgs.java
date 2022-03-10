@@ -124,52 +124,52 @@ public final class InstanceClusterGetArgs extends io.pulumi.resources.ResourceAr
     	      this.zone = defaults.zone;
         }
 
-        public Builder setClusterId(Input<String> clusterId) {
+        public Builder clusterId(Input<String> clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
 
-        public Builder setClusterId(String clusterId) {
+        public Builder clusterId(String clusterId) {
             this.clusterId = Input.of(Objects.requireNonNull(clusterId));
             return this;
         }
 
-        public Builder setKmsKeyName(@Nullable Input<String> kmsKeyName) {
+        public Builder kmsKeyName(@Nullable Input<String> kmsKeyName) {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
 
-        public Builder setKmsKeyName(@Nullable String kmsKeyName) {
+        public Builder kmsKeyName(@Nullable String kmsKeyName) {
             this.kmsKeyName = Input.ofNullable(kmsKeyName);
             return this;
         }
 
-        public Builder setNumNodes(@Nullable Input<Integer> numNodes) {
+        public Builder numNodes(@Nullable Input<Integer> numNodes) {
             this.numNodes = numNodes;
             return this;
         }
 
-        public Builder setNumNodes(@Nullable Integer numNodes) {
+        public Builder numNodes(@Nullable Integer numNodes) {
             this.numNodes = Input.ofNullable(numNodes);
             return this;
         }
 
-        public Builder setStorageType(@Nullable Input<String> storageType) {
+        public Builder storageType(@Nullable Input<String> storageType) {
             this.storageType = storageType;
             return this;
         }
 
-        public Builder setStorageType(@Nullable String storageType) {
+        public Builder storageType(@Nullable String storageType) {
             this.storageType = Input.ofNullable(storageType);
             return this;
         }
 
-        public Builder setZone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Input<String> zone) {
             this.zone = zone;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = Input.ofNullable(zone);
             return this;
         }

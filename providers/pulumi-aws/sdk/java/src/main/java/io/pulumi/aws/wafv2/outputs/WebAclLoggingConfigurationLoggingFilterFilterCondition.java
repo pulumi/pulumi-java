@@ -68,12 +68,12 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterCondition {
     	      this.labelNameCondition = defaults.labelNameCondition;
         }
 
-        public Builder setActionCondition(@Nullable WebAclLoggingConfigurationLoggingFilterFilterConditionActionCondition actionCondition) {
+        public Builder actionCondition(@Nullable WebAclLoggingConfigurationLoggingFilterFilterConditionActionCondition actionCondition) {
             this.actionCondition = actionCondition;
             return this;
         }
 
-        public Builder setLabelNameCondition(@Nullable WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameCondition labelNameCondition) {
+        public Builder labelNameCondition(@Nullable WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameCondition labelNameCondition) {
             this.labelNameCondition = labelNameCondition;
             return this;
         }

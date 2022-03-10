@@ -89,32 +89,32 @@ public final class ScaleCapacityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.minimum = defaults.minimum;
         }
 
-        public Builder set$default(Input<String> $default) {
+        public Builder $default(Input<String> $default) {
             this.$default = Objects.requireNonNull($default);
             return this;
         }
 
-        public Builder set$default(String $default) {
+        public Builder $default(String $default) {
             this.$default = Input.of(Objects.requireNonNull($default));
             return this;
         }
 
-        public Builder setMaximum(Input<String> maximum) {
+        public Builder maximum(Input<String> maximum) {
             this.maximum = Objects.requireNonNull(maximum);
             return this;
         }
 
-        public Builder setMaximum(String maximum) {
+        public Builder maximum(String maximum) {
             this.maximum = Input.of(Objects.requireNonNull(maximum));
             return this;
         }
 
-        public Builder setMinimum(Input<String> minimum) {
+        public Builder minimum(Input<String> minimum) {
             this.minimum = Objects.requireNonNull(minimum);
             return this;
         }
 
-        public Builder setMinimum(String minimum) {
+        public Builder minimum(String minimum) {
             this.minimum = Input.of(Objects.requireNonNull(minimum));
             return this;
         }

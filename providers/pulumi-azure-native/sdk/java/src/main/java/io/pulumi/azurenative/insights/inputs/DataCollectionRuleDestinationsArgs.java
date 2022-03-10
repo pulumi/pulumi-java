@@ -76,22 +76,22 @@ public final class DataCollectionRuleDestinationsArgs extends io.pulumi.resource
     	      this.logAnalytics = defaults.logAnalytics;
         }
 
-        public Builder setAzureMonitorMetrics(@Nullable Input<DestinationsSpecAzureMonitorMetricsArgs> azureMonitorMetrics) {
+        public Builder azureMonitorMetrics(@Nullable Input<DestinationsSpecAzureMonitorMetricsArgs> azureMonitorMetrics) {
             this.azureMonitorMetrics = azureMonitorMetrics;
             return this;
         }
 
-        public Builder setAzureMonitorMetrics(@Nullable DestinationsSpecAzureMonitorMetricsArgs azureMonitorMetrics) {
+        public Builder azureMonitorMetrics(@Nullable DestinationsSpecAzureMonitorMetricsArgs azureMonitorMetrics) {
             this.azureMonitorMetrics = Input.ofNullable(azureMonitorMetrics);
             return this;
         }
 
-        public Builder setLogAnalytics(@Nullable Input<List<LogAnalyticsDestinationArgs>> logAnalytics) {
+        public Builder logAnalytics(@Nullable Input<List<LogAnalyticsDestinationArgs>> logAnalytics) {
             this.logAnalytics = logAnalytics;
             return this;
         }
 
-        public Builder setLogAnalytics(@Nullable List<LogAnalyticsDestinationArgs> logAnalytics) {
+        public Builder logAnalytics(@Nullable List<LogAnalyticsDestinationArgs> logAnalytics) {
             this.logAnalytics = Input.ofNullable(logAnalytics);
             return this;
         }

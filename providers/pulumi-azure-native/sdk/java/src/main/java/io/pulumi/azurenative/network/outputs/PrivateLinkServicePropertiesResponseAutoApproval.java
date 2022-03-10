@@ -50,7 +50,7 @@ public final class PrivateLinkServicePropertiesResponseAutoApproval {
     	      this.subscriptions = defaults.subscriptions;
         }
 
-        public Builder setSubscriptions(@Nullable List<String> subscriptions) {
+        public Builder subscriptions(@Nullable List<String> subscriptions) {
             this.subscriptions = subscriptions;
             return this;
         }

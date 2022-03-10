@@ -81,17 +81,17 @@ public final class RuleGroupRuleStatementAndStatementStatementAndStatementStatem
     	      this.position = defaults.position;
         }
 
-        public Builder setFallbackBehavior(String fallbackBehavior) {
+        public Builder fallbackBehavior(String fallbackBehavior) {
             this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior);
             return this;
         }
 
-        public Builder setHeaderName(String headerName) {
+        public Builder headerName(String headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
-        public Builder setPosition(String position) {
+        public Builder position(String position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }

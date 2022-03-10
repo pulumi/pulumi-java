@@ -51,12 +51,12 @@ public final class GetAssistantResult {
     	      this.assistantId = defaults.assistantId;
         }
 
-        public Builder setAssistantArn(@Nullable String assistantArn) {
+        public Builder assistantArn(@Nullable String assistantArn) {
             this.assistantArn = assistantArn;
             return this;
         }
 
-        public Builder setAssistantId(@Nullable String assistantId) {
+        public Builder assistantId(@Nullable String assistantId) {
             this.assistantId = assistantId;
             return this;
         }

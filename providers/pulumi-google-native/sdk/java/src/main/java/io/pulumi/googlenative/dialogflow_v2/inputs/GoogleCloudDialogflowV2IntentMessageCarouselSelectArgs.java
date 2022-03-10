@@ -57,12 +57,12 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectArgs extend
     	      this.items = defaults.items;
         }
 
-        public Builder setItems(Input<List<GoogleCloudDialogflowV2IntentMessageCarouselSelectItemArgs>> items) {
+        public Builder items(Input<List<GoogleCloudDialogflowV2IntentMessageCarouselSelectItemArgs>> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
 
-        public Builder setItems(List<GoogleCloudDialogflowV2IntentMessageCarouselSelectItemArgs> items) {
+        public Builder items(List<GoogleCloudDialogflowV2IntentMessageCarouselSelectItemArgs> items) {
             this.items = Input.of(Objects.requireNonNull(items));
             return this;
         }

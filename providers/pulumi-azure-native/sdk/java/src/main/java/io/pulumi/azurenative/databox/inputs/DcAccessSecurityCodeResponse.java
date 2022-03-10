@@ -74,12 +74,12 @@ public final class DcAccessSecurityCodeResponse extends io.pulumi.resources.Invo
     	      this.reverseDCAccessCode = defaults.reverseDCAccessCode;
         }
 
-        public Builder setForwardDCAccessCode(@Nullable String forwardDCAccessCode) {
+        public Builder forwardDCAccessCode(@Nullable String forwardDCAccessCode) {
             this.forwardDCAccessCode = forwardDCAccessCode;
             return this;
         }
 
-        public Builder setReverseDCAccessCode(@Nullable String reverseDCAccessCode) {
+        public Builder reverseDCAccessCode(@Nullable String reverseDCAccessCode) {
             this.reverseDCAccessCode = reverseDCAccessCode;
             return this;
         }

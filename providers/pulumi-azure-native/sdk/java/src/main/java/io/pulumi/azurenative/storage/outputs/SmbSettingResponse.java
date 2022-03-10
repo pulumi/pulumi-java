@@ -116,27 +116,27 @@ public final class SmbSettingResponse {
     	      this.versions = defaults.versions;
         }
 
-        public Builder setAuthenticationMethods(@Nullable String authenticationMethods) {
+        public Builder authenticationMethods(@Nullable String authenticationMethods) {
             this.authenticationMethods = authenticationMethods;
             return this;
         }
 
-        public Builder setChannelEncryption(@Nullable String channelEncryption) {
+        public Builder channelEncryption(@Nullable String channelEncryption) {
             this.channelEncryption = channelEncryption;
             return this;
         }
 
-        public Builder setKerberosTicketEncryption(@Nullable String kerberosTicketEncryption) {
+        public Builder kerberosTicketEncryption(@Nullable String kerberosTicketEncryption) {
             this.kerberosTicketEncryption = kerberosTicketEncryption;
             return this;
         }
 
-        public Builder setMultichannel(@Nullable MultichannelResponse multichannel) {
+        public Builder multichannel(@Nullable MultichannelResponse multichannel) {
             this.multichannel = multichannel;
             return this;
         }
 
-        public Builder setVersions(@Nullable String versions) {
+        public Builder versions(@Nullable String versions) {
             this.versions = versions;
             return this;
         }

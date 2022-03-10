@@ -135,32 +135,32 @@ public final class SubjectAccessReviewSpec {
     	      this.user = defaults.user;
         }
 
-        public Builder setExtra(@Nullable Map<String,List<String>> extra) {
+        public Builder extra(@Nullable Map<String,List<String>> extra) {
             this.extra = extra;
             return this;
         }
 
-        public Builder setGroup(@Nullable List<String> group) {
+        public Builder group(@Nullable List<String> group) {
             this.group = group;
             return this;
         }
 
-        public Builder setNonResourceAttributes(@Nullable NonResourceAttributes nonResourceAttributes) {
+        public Builder nonResourceAttributes(@Nullable NonResourceAttributes nonResourceAttributes) {
             this.nonResourceAttributes = nonResourceAttributes;
             return this;
         }
 
-        public Builder setResourceAttributes(@Nullable ResourceAttributes resourceAttributes) {
+        public Builder resourceAttributes(@Nullable ResourceAttributes resourceAttributes) {
             this.resourceAttributes = resourceAttributes;
             return this;
         }
 
-        public Builder setUid(@Nullable String uid) {
+        public Builder uid(@Nullable String uid) {
             this.uid = uid;
             return this;
         }
 
-        public Builder setUser(@Nullable String user) {
+        public Builder user(@Nullable String user) {
             this.user = user;
             return this;
         }

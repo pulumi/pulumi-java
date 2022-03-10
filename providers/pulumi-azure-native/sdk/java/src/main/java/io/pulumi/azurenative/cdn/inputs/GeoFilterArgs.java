@@ -91,32 +91,32 @@ public final class GeoFilterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.relativePath = defaults.relativePath;
         }
 
-        public Builder setAction(Input<GeoFilterActions> action) {
+        public Builder action(Input<GeoFilterActions> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setAction(GeoFilterActions action) {
+        public Builder action(GeoFilterActions action) {
             this.action = Input.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder setCountryCodes(Input<List<String>> countryCodes) {
+        public Builder countryCodes(Input<List<String>> countryCodes) {
             this.countryCodes = Objects.requireNonNull(countryCodes);
             return this;
         }
 
-        public Builder setCountryCodes(List<String> countryCodes) {
+        public Builder countryCodes(List<String> countryCodes) {
             this.countryCodes = Input.of(Objects.requireNonNull(countryCodes));
             return this;
         }
 
-        public Builder setRelativePath(Input<String> relativePath) {
+        public Builder relativePath(Input<String> relativePath) {
             this.relativePath = Objects.requireNonNull(relativePath);
             return this;
         }
 
-        public Builder setRelativePath(String relativePath) {
+        public Builder relativePath(String relativePath) {
             this.relativePath = Input.of(Objects.requireNonNull(relativePath));
             return this;
         }

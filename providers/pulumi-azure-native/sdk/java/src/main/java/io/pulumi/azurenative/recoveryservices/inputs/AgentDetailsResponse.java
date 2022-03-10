@@ -122,27 +122,27 @@ public final class AgentDetailsResponse extends io.pulumi.resources.InvokeArgs {
     	      this.machineId = defaults.machineId;
         }
 
-        public Builder setAgentId(String agentId) {
+        public Builder agentId(String agentId) {
             this.agentId = Objects.requireNonNull(agentId);
             return this;
         }
 
-        public Builder setBiosId(String biosId) {
+        public Builder biosId(String biosId) {
             this.biosId = Objects.requireNonNull(biosId);
             return this;
         }
 
-        public Builder setDisks(List<AgentDiskDetailsResponse> disks) {
+        public Builder disks(List<AgentDiskDetailsResponse> disks) {
             this.disks = Objects.requireNonNull(disks);
             return this;
         }
 
-        public Builder setFqdn(String fqdn) {
+        public Builder fqdn(String fqdn) {
             this.fqdn = Objects.requireNonNull(fqdn);
             return this;
         }
 
-        public Builder setMachineId(String machineId) {
+        public Builder machineId(String machineId) {
             this.machineId = Objects.requireNonNull(machineId);
             return this;
         }

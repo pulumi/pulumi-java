@@ -243,67 +243,67 @@ public final class PresetVideo {
     	      this.sizingPolicy = defaults.sizingPolicy;
         }
 
-        public Builder setAspectRatio(@Nullable String aspectRatio) {
+        public Builder aspectRatio(@Nullable String aspectRatio) {
             this.aspectRatio = aspectRatio;
             return this;
         }
 
-        public Builder setBitRate(@Nullable String bitRate) {
+        public Builder bitRate(@Nullable String bitRate) {
             this.bitRate = bitRate;
             return this;
         }
 
-        public Builder setCodec(@Nullable String codec) {
+        public Builder codec(@Nullable String codec) {
             this.codec = codec;
             return this;
         }
 
-        public Builder setDisplayAspectRatio(@Nullable String displayAspectRatio) {
+        public Builder displayAspectRatio(@Nullable String displayAspectRatio) {
             this.displayAspectRatio = displayAspectRatio;
             return this;
         }
 
-        public Builder setFixedGop(@Nullable String fixedGop) {
+        public Builder fixedGop(@Nullable String fixedGop) {
             this.fixedGop = fixedGop;
             return this;
         }
 
-        public Builder setFrameRate(@Nullable String frameRate) {
+        public Builder frameRate(@Nullable String frameRate) {
             this.frameRate = frameRate;
             return this;
         }
 
-        public Builder setKeyframesMaxDist(@Nullable String keyframesMaxDist) {
+        public Builder keyframesMaxDist(@Nullable String keyframesMaxDist) {
             this.keyframesMaxDist = keyframesMaxDist;
             return this;
         }
 
-        public Builder setMaxFrameRate(@Nullable String maxFrameRate) {
+        public Builder maxFrameRate(@Nullable String maxFrameRate) {
             this.maxFrameRate = maxFrameRate;
             return this;
         }
 
-        public Builder setMaxHeight(@Nullable String maxHeight) {
+        public Builder maxHeight(@Nullable String maxHeight) {
             this.maxHeight = maxHeight;
             return this;
         }
 
-        public Builder setMaxWidth(@Nullable String maxWidth) {
+        public Builder maxWidth(@Nullable String maxWidth) {
             this.maxWidth = maxWidth;
             return this;
         }
 
-        public Builder setPaddingPolicy(@Nullable String paddingPolicy) {
+        public Builder paddingPolicy(@Nullable String paddingPolicy) {
             this.paddingPolicy = paddingPolicy;
             return this;
         }
 
-        public Builder setResolution(@Nullable String resolution) {
+        public Builder resolution(@Nullable String resolution) {
             this.resolution = resolution;
             return this;
         }
 
-        public Builder setSizingPolicy(@Nullable String sizingPolicy) {
+        public Builder sizingPolicy(@Nullable String sizingPolicy) {
             this.sizingPolicy = sizingPolicy;
             return this;
         }

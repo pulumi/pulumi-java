@@ -66,12 +66,12 @@ public final class WorkflowTemplatePlacementResponse {
     	      this.managedCluster = defaults.managedCluster;
         }
 
-        public Builder setClusterSelector(ClusterSelectorResponse clusterSelector) {
+        public Builder clusterSelector(ClusterSelectorResponse clusterSelector) {
             this.clusterSelector = Objects.requireNonNull(clusterSelector);
             return this;
         }
 
-        public Builder setManagedCluster(ManagedClusterResponse managedCluster) {
+        public Builder managedCluster(ManagedClusterResponse managedCluster) {
             this.managedCluster = Objects.requireNonNull(managedCluster);
             return this;
         }

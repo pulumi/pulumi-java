@@ -50,7 +50,7 @@ public final class VirtualHubRouteTableResponse {
     	      this.routes = defaults.routes;
         }
 
-        public Builder setRoutes(@Nullable List<VirtualHubRouteResponse> routes) {
+        public Builder routes(@Nullable List<VirtualHubRouteResponse> routes) {
             this.routes = routes;
             return this;
         }

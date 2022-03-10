@@ -68,12 +68,12 @@ public final class GetLaunchTemplateIamInstanceProfile extends io.pulumi.resourc
     	      this.name = defaults.name;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

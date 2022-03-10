@@ -73,12 +73,12 @@ public final class GooglePrivacyDlpV2LikelihoodAdjustmentResponse extends io.pul
     	      this.relativeLikelihood = defaults.relativeLikelihood;
         }
 
-        public Builder setFixedLikelihood(String fixedLikelihood) {
+        public Builder fixedLikelihood(String fixedLikelihood) {
             this.fixedLikelihood = Objects.requireNonNull(fixedLikelihood);
             return this;
         }
 
-        public Builder setRelativeLikelihood(Integer relativeLikelihood) {
+        public Builder relativeLikelihood(Integer relativeLikelihood) {
             this.relativeLikelihood = Objects.requireNonNull(relativeLikelihood);
             return this;
         }

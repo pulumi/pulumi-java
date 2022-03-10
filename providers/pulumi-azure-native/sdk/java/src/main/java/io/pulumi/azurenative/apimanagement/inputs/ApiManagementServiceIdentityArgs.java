@@ -81,22 +81,22 @@ public final class ApiManagementServiceIdentityArgs extends io.pulumi.resources.
     	      this.userAssignedIdentities = defaults.userAssignedIdentities;
         }
 
-        public Builder setType(Input<Either<String,ApimIdentityType>> type) {
+        public Builder type(Input<Either<String,ApimIdentityType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(Either<String,ApimIdentityType> type) {
+        public Builder type(Either<String,ApimIdentityType> type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setUserAssignedIdentities(@Nullable Input<Map<String,UserIdentityPropertiesArgs>> userAssignedIdentities) {
+        public Builder userAssignedIdentities(@Nullable Input<Map<String,UserIdentityPropertiesArgs>> userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
 
-        public Builder setUserAssignedIdentities(@Nullable Map<String,UserIdentityPropertiesArgs> userAssignedIdentities) {
+        public Builder userAssignedIdentities(@Nullable Map<String,UserIdentityPropertiesArgs> userAssignedIdentities) {
             this.userAssignedIdentities = Input.ofNullable(userAssignedIdentities);
             return this;
         }

@@ -71,22 +71,22 @@ public final class DataSourceHttpConfigGetArgs extends io.pulumi.resources.Resou
     	      this.endpoint = defaults.endpoint;
         }
 
-        public Builder setAuthorizationConfig(@Nullable Input<DataSourceHttpConfigAuthorizationConfigGetArgs> authorizationConfig) {
+        public Builder authorizationConfig(@Nullable Input<DataSourceHttpConfigAuthorizationConfigGetArgs> authorizationConfig) {
             this.authorizationConfig = authorizationConfig;
             return this;
         }
 
-        public Builder setAuthorizationConfig(@Nullable DataSourceHttpConfigAuthorizationConfigGetArgs authorizationConfig) {
+        public Builder authorizationConfig(@Nullable DataSourceHttpConfigAuthorizationConfigGetArgs authorizationConfig) {
             this.authorizationConfig = Input.ofNullable(authorizationConfig);
             return this;
         }
 
-        public Builder setEndpoint(Input<String> endpoint) {
+        public Builder endpoint(Input<String> endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
 
-        public Builder setEndpoint(String endpoint) {
+        public Builder endpoint(String endpoint) {
             this.endpoint = Input.of(Objects.requireNonNull(endpoint));
             return this;
         }

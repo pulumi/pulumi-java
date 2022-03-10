@@ -90,17 +90,17 @@ public final class AadAuthenticationParametersResponse extends io.pulumi.resourc
     	      this.aadTenant = defaults.aadTenant;
         }
 
-        public Builder setAadAudience(@Nullable String aadAudience) {
+        public Builder aadAudience(@Nullable String aadAudience) {
             this.aadAudience = aadAudience;
             return this;
         }
 
-        public Builder setAadIssuer(@Nullable String aadIssuer) {
+        public Builder aadIssuer(@Nullable String aadIssuer) {
             this.aadIssuer = aadIssuer;
             return this;
         }
 
-        public Builder setAadTenant(@Nullable String aadTenant) {
+        public Builder aadTenant(@Nullable String aadTenant) {
             this.aadTenant = aadTenant;
             return this;
         }

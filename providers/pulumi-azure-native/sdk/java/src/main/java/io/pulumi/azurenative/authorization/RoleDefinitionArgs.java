@@ -152,72 +152,72 @@ public final class RoleDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scope = defaults.scope;
         }
 
-        public Builder setAssignableScopes(@Nullable Input<List<String>> assignableScopes) {
+        public Builder assignableScopes(@Nullable Input<List<String>> assignableScopes) {
             this.assignableScopes = assignableScopes;
             return this;
         }
 
-        public Builder setAssignableScopes(@Nullable List<String> assignableScopes) {
+        public Builder assignableScopes(@Nullable List<String> assignableScopes) {
             this.assignableScopes = Input.ofNullable(assignableScopes);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setPermissions(@Nullable Input<List<PermissionArgs>> permissions) {
+        public Builder permissions(@Nullable Input<List<PermissionArgs>> permissions) {
             this.permissions = permissions;
             return this;
         }
 
-        public Builder setPermissions(@Nullable List<PermissionArgs> permissions) {
+        public Builder permissions(@Nullable List<PermissionArgs> permissions) {
             this.permissions = Input.ofNullable(permissions);
             return this;
         }
 
-        public Builder setRoleDefinitionId(@Nullable Input<String> roleDefinitionId) {
+        public Builder roleDefinitionId(@Nullable Input<String> roleDefinitionId) {
             this.roleDefinitionId = roleDefinitionId;
             return this;
         }
 
-        public Builder setRoleDefinitionId(@Nullable String roleDefinitionId) {
+        public Builder roleDefinitionId(@Nullable String roleDefinitionId) {
             this.roleDefinitionId = Input.ofNullable(roleDefinitionId);
             return this;
         }
 
-        public Builder setRoleName(@Nullable Input<String> roleName) {
+        public Builder roleName(@Nullable Input<String> roleName) {
             this.roleName = roleName;
             return this;
         }
 
-        public Builder setRoleName(@Nullable String roleName) {
+        public Builder roleName(@Nullable String roleName) {
             this.roleName = Input.ofNullable(roleName);
             return this;
         }
 
-        public Builder setRoleType(@Nullable Input<String> roleType) {
+        public Builder roleType(@Nullable Input<String> roleType) {
             this.roleType = roleType;
             return this;
         }
 
-        public Builder setRoleType(@Nullable String roleType) {
+        public Builder roleType(@Nullable String roleType) {
             this.roleType = Input.ofNullable(roleType);
             return this;
         }
 
-        public Builder setScope(Input<String> scope) {
+        public Builder scope(Input<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Input.of(Objects.requireNonNull(scope));
             return this;
         }

@@ -74,22 +74,22 @@ public final class UserSecretStoreArgs extends io.pulumi.resources.ResourceArgs 
     	      this.keyVaultUri = defaults.keyVaultUri;
         }
 
-        public Builder setKeyVaultId(@Nullable Input<String> keyVaultId) {
+        public Builder keyVaultId(@Nullable Input<String> keyVaultId) {
             this.keyVaultId = keyVaultId;
             return this;
         }
 
-        public Builder setKeyVaultId(@Nullable String keyVaultId) {
+        public Builder keyVaultId(@Nullable String keyVaultId) {
             this.keyVaultId = Input.ofNullable(keyVaultId);
             return this;
         }
 
-        public Builder setKeyVaultUri(@Nullable Input<String> keyVaultUri) {
+        public Builder keyVaultUri(@Nullable Input<String> keyVaultUri) {
             this.keyVaultUri = keyVaultUri;
             return this;
         }
 
-        public Builder setKeyVaultUri(@Nullable String keyVaultUri) {
+        public Builder keyVaultUri(@Nullable String keyVaultUri) {
             this.keyVaultUri = Input.ofNullable(keyVaultUri);
             return this;
         }

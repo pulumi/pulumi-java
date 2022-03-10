@@ -84,17 +84,17 @@ public final class GetProviderInstanceArgs extends io.pulumi.resources.InvokeArg
     	      this.sapMonitorName = defaults.sapMonitorName;
         }
 
-        public Builder setProviderInstanceName(String providerInstanceName) {
+        public Builder providerInstanceName(String providerInstanceName) {
             this.providerInstanceName = Objects.requireNonNull(providerInstanceName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setSapMonitorName(String sapMonitorName) {
+        public Builder sapMonitorName(String sapMonitorName) {
             this.sapMonitorName = Objects.requireNonNull(sapMonitorName);
             return this;
         }

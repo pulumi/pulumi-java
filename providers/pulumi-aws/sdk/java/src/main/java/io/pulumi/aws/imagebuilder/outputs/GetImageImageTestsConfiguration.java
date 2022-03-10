@@ -66,12 +66,12 @@ public final class GetImageImageTestsConfiguration {
     	      this.timeoutMinutes = defaults.timeoutMinutes;
         }
 
-        public Builder setImageTestsEnabled(Boolean imageTestsEnabled) {
+        public Builder imageTestsEnabled(Boolean imageTestsEnabled) {
             this.imageTestsEnabled = Objects.requireNonNull(imageTestsEnabled);
             return this;
         }
 
-        public Builder setTimeoutMinutes(Integer timeoutMinutes) {
+        public Builder timeoutMinutes(Integer timeoutMinutes) {
             this.timeoutMinutes = Objects.requireNonNull(timeoutMinutes);
             return this;
         }

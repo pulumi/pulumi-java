@@ -74,22 +74,22 @@ public final class UserPropertyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setValue(Input<Object> value) {
+        public Builder value(Input<Object> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setValue(Object value) {
+        public Builder value(Object value) {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }

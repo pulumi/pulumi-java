@@ -105,22 +105,22 @@ public final class GlobalValidationResponse {
     	      this.unauthenticatedClientAction = defaults.unauthenticatedClientAction;
         }
 
-        public Builder setExcludedPaths(@Nullable List<String> excludedPaths) {
+        public Builder excludedPaths(@Nullable List<String> excludedPaths) {
             this.excludedPaths = excludedPaths;
             return this;
         }
 
-        public Builder setRedirectToProvider(@Nullable String redirectToProvider) {
+        public Builder redirectToProvider(@Nullable String redirectToProvider) {
             this.redirectToProvider = redirectToProvider;
             return this;
         }
 
-        public Builder setRequireAuthentication(@Nullable Boolean requireAuthentication) {
+        public Builder requireAuthentication(@Nullable Boolean requireAuthentication) {
             this.requireAuthentication = requireAuthentication;
             return this;
         }
 
-        public Builder setUnauthenticatedClientAction(@Nullable String unauthenticatedClientAction) {
+        public Builder unauthenticatedClientAction(@Nullable String unauthenticatedClientAction) {
             this.unauthenticatedClientAction = unauthenticatedClientAction;
             return this;
         }

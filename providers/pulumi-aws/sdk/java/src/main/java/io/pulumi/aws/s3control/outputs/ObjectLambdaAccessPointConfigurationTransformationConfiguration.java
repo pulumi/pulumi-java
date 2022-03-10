@@ -67,12 +67,12 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
     	      this.contentTransformation = defaults.contentTransformation;
         }
 
-        public Builder setActions(List<String> actions) {
+        public Builder actions(List<String> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
-        public Builder setContentTransformation(ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformation contentTransformation) {
+        public Builder contentTransformation(ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformation contentTransformation) {
             this.contentTransformation = Objects.requireNonNull(contentTransformation);
             return this;
         }

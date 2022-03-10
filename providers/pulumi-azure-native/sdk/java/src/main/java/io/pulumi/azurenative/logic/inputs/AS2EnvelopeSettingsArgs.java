@@ -122,52 +122,52 @@ public final class AS2EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
     	      this.transmitFileNameInMimeHeader = defaults.transmitFileNameInMimeHeader;
         }
 
-        public Builder setAutogenerateFileName(Input<Boolean> autogenerateFileName) {
+        public Builder autogenerateFileName(Input<Boolean> autogenerateFileName) {
             this.autogenerateFileName = Objects.requireNonNull(autogenerateFileName);
             return this;
         }
 
-        public Builder setAutogenerateFileName(Boolean autogenerateFileName) {
+        public Builder autogenerateFileName(Boolean autogenerateFileName) {
             this.autogenerateFileName = Input.of(Objects.requireNonNull(autogenerateFileName));
             return this;
         }
 
-        public Builder setFileNameTemplate(Input<String> fileNameTemplate) {
+        public Builder fileNameTemplate(Input<String> fileNameTemplate) {
             this.fileNameTemplate = Objects.requireNonNull(fileNameTemplate);
             return this;
         }
 
-        public Builder setFileNameTemplate(String fileNameTemplate) {
+        public Builder fileNameTemplate(String fileNameTemplate) {
             this.fileNameTemplate = Input.of(Objects.requireNonNull(fileNameTemplate));
             return this;
         }
 
-        public Builder setMessageContentType(Input<String> messageContentType) {
+        public Builder messageContentType(Input<String> messageContentType) {
             this.messageContentType = Objects.requireNonNull(messageContentType);
             return this;
         }
 
-        public Builder setMessageContentType(String messageContentType) {
+        public Builder messageContentType(String messageContentType) {
             this.messageContentType = Input.of(Objects.requireNonNull(messageContentType));
             return this;
         }
 
-        public Builder setSuspendMessageOnFileNameGenerationError(Input<Boolean> suspendMessageOnFileNameGenerationError) {
+        public Builder suspendMessageOnFileNameGenerationError(Input<Boolean> suspendMessageOnFileNameGenerationError) {
             this.suspendMessageOnFileNameGenerationError = Objects.requireNonNull(suspendMessageOnFileNameGenerationError);
             return this;
         }
 
-        public Builder setSuspendMessageOnFileNameGenerationError(Boolean suspendMessageOnFileNameGenerationError) {
+        public Builder suspendMessageOnFileNameGenerationError(Boolean suspendMessageOnFileNameGenerationError) {
             this.suspendMessageOnFileNameGenerationError = Input.of(Objects.requireNonNull(suspendMessageOnFileNameGenerationError));
             return this;
         }
 
-        public Builder setTransmitFileNameInMimeHeader(Input<Boolean> transmitFileNameInMimeHeader) {
+        public Builder transmitFileNameInMimeHeader(Input<Boolean> transmitFileNameInMimeHeader) {
             this.transmitFileNameInMimeHeader = Objects.requireNonNull(transmitFileNameInMimeHeader);
             return this;
         }
 
-        public Builder setTransmitFileNameInMimeHeader(Boolean transmitFileNameInMimeHeader) {
+        public Builder transmitFileNameInMimeHeader(Boolean transmitFileNameInMimeHeader) {
             this.transmitFileNameInMimeHeader = Input.of(Objects.requireNonNull(transmitFileNameInMimeHeader));
             return this;
         }

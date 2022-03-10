@@ -102,22 +102,22 @@ public final class AzureBlobStorageLocationResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setContainer(@Nullable Object container) {
+        public Builder container(@Nullable Object container) {
             this.container = container;
             return this;
         }
 
-        public Builder setFileName(@Nullable Object fileName) {
+        public Builder fileName(@Nullable Object fileName) {
             this.fileName = fileName;
             return this;
         }
 
-        public Builder setFolderPath(@Nullable Object folderPath) {
+        public Builder folderPath(@Nullable Object folderPath) {
             this.folderPath = folderPath;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

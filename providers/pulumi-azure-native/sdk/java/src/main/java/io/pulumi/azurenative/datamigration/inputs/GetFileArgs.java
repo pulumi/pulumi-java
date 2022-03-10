@@ -100,22 +100,22 @@ public final class GetFileArgs extends io.pulumi.resources.InvokeArgs {
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setFileName(String fileName) {
+        public Builder fileName(String fileName) {
             this.fileName = Objects.requireNonNull(fileName);
             return this;
         }
 
-        public Builder setGroupName(String groupName) {
+        public Builder groupName(String groupName) {
             this.groupName = Objects.requireNonNull(groupName);
             return this;
         }
 
-        public Builder setProjectName(String projectName) {
+        public Builder projectName(String projectName) {
             this.projectName = Objects.requireNonNull(projectName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }

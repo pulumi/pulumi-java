@@ -89,17 +89,17 @@ public final class ApplicationLogPattern extends io.pulumi.resources.InvokeArgs 
     	      this.rank = defaults.rank;
         }
 
-        public Builder setPattern(String pattern) {
+        public Builder pattern(String pattern) {
             this.pattern = Objects.requireNonNull(pattern);
             return this;
         }
 
-        public Builder setPatternName(String patternName) {
+        public Builder patternName(String patternName) {
             this.patternName = Objects.requireNonNull(patternName);
             return this;
         }
 
-        public Builder setRank(Integer rank) {
+        public Builder rank(Integer rank) {
             this.rank = Objects.requireNonNull(rank);
             return this;
         }

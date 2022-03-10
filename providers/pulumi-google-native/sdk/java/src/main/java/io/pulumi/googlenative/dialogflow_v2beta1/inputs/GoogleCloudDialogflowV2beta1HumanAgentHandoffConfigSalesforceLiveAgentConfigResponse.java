@@ -104,22 +104,22 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforce
     	      this.organizationId = defaults.organizationId;
         }
 
-        public Builder setButtonId(String buttonId) {
+        public Builder buttonId(String buttonId) {
             this.buttonId = Objects.requireNonNull(buttonId);
             return this;
         }
 
-        public Builder setDeploymentId(String deploymentId) {
+        public Builder deploymentId(String deploymentId) {
             this.deploymentId = Objects.requireNonNull(deploymentId);
             return this;
         }
 
-        public Builder setEndpointDomain(String endpointDomain) {
+        public Builder endpointDomain(String endpointDomain) {
             this.endpointDomain = Objects.requireNonNull(endpointDomain);
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }

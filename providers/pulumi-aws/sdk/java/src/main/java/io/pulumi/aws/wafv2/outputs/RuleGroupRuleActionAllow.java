@@ -50,7 +50,7 @@ public final class RuleGroupRuleActionAllow {
     	      this.customRequestHandling = defaults.customRequestHandling;
         }
 
-        public Builder setCustomRequestHandling(@Nullable RuleGroupRuleActionAllowCustomRequestHandling customRequestHandling) {
+        public Builder customRequestHandling(@Nullable RuleGroupRuleActionAllowCustomRequestHandling customRequestHandling) {
             this.customRequestHandling = customRequestHandling;
             return this;
         }

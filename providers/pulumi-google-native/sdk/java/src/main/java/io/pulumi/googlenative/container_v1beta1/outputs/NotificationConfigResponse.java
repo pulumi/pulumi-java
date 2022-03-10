@@ -48,7 +48,7 @@ public final class NotificationConfigResponse {
     	      this.pubsub = defaults.pubsub;
         }
 
-        public Builder setPubsub(PubSubResponse pubsub) {
+        public Builder pubsub(PubSubResponse pubsub) {
             this.pubsub = Objects.requireNonNull(pubsub);
             return this;
         }

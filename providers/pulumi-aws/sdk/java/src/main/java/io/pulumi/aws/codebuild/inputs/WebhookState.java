@@ -152,72 +152,72 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
     	      this.url = defaults.url;
         }
 
-        public Builder setBranchFilter(@Nullable Input<String> branchFilter) {
+        public Builder branchFilter(@Nullable Input<String> branchFilter) {
             this.branchFilter = branchFilter;
             return this;
         }
 
-        public Builder setBranchFilter(@Nullable String branchFilter) {
+        public Builder branchFilter(@Nullable String branchFilter) {
             this.branchFilter = Input.ofNullable(branchFilter);
             return this;
         }
 
-        public Builder setBuildType(@Nullable Input<String> buildType) {
+        public Builder buildType(@Nullable Input<String> buildType) {
             this.buildType = buildType;
             return this;
         }
 
-        public Builder setBuildType(@Nullable String buildType) {
+        public Builder buildType(@Nullable String buildType) {
             this.buildType = Input.ofNullable(buildType);
             return this;
         }
 
-        public Builder setFilterGroups(@Nullable Input<List<WebhookFilterGroupGetArgs>> filterGroups) {
+        public Builder filterGroups(@Nullable Input<List<WebhookFilterGroupGetArgs>> filterGroups) {
             this.filterGroups = filterGroups;
             return this;
         }
 
-        public Builder setFilterGroups(@Nullable List<WebhookFilterGroupGetArgs> filterGroups) {
+        public Builder filterGroups(@Nullable List<WebhookFilterGroupGetArgs> filterGroups) {
             this.filterGroups = Input.ofNullable(filterGroups);
             return this;
         }
 
-        public Builder setPayloadUrl(@Nullable Input<String> payloadUrl) {
+        public Builder payloadUrl(@Nullable Input<String> payloadUrl) {
             this.payloadUrl = payloadUrl;
             return this;
         }
 
-        public Builder setPayloadUrl(@Nullable String payloadUrl) {
+        public Builder payloadUrl(@Nullable String payloadUrl) {
             this.payloadUrl = Input.ofNullable(payloadUrl);
             return this;
         }
 
-        public Builder setProjectName(@Nullable Input<String> projectName) {
+        public Builder projectName(@Nullable Input<String> projectName) {
             this.projectName = projectName;
             return this;
         }
 
-        public Builder setProjectName(@Nullable String projectName) {
+        public Builder projectName(@Nullable String projectName) {
             this.projectName = Input.ofNullable(projectName);
             return this;
         }
 
-        public Builder setSecret(@Nullable Input<String> secret) {
+        public Builder secret(@Nullable Input<String> secret) {
             this.secret = secret;
             return this;
         }
 
-        public Builder setSecret(@Nullable String secret) {
+        public Builder secret(@Nullable String secret) {
             this.secret = Input.ofNullable(secret);
             return this;
         }
 
-        public Builder setUrl(@Nullable Input<String> url) {
+        public Builder url(@Nullable Input<String> url) {
             this.url = url;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = Input.ofNullable(url);
             return this;
         }

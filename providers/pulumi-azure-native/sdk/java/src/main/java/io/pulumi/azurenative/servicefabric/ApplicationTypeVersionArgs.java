@@ -151,72 +151,72 @@ public final class ApplicationTypeVersionArgs extends io.pulumi.resources.Resour
     	      this.version = defaults.version;
         }
 
-        public Builder setAppPackageUrl(Input<String> appPackageUrl) {
+        public Builder appPackageUrl(Input<String> appPackageUrl) {
             this.appPackageUrl = Objects.requireNonNull(appPackageUrl);
             return this;
         }
 
-        public Builder setAppPackageUrl(String appPackageUrl) {
+        public Builder appPackageUrl(String appPackageUrl) {
             this.appPackageUrl = Input.of(Objects.requireNonNull(appPackageUrl));
             return this;
         }
 
-        public Builder setApplicationTypeName(Input<String> applicationTypeName) {
+        public Builder applicationTypeName(Input<String> applicationTypeName) {
             this.applicationTypeName = Objects.requireNonNull(applicationTypeName);
             return this;
         }
 
-        public Builder setApplicationTypeName(String applicationTypeName) {
+        public Builder applicationTypeName(String applicationTypeName) {
             this.applicationTypeName = Input.of(Objects.requireNonNull(applicationTypeName));
             return this;
         }
 
-        public Builder setClusterName(Input<String> clusterName) {
+        public Builder clusterName(Input<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Input.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

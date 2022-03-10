@@ -134,27 +134,27 @@ public final class Toleration {
     	      this.value = defaults.value;
         }
 
-        public Builder setEffect(@Nullable String effect) {
+        public Builder effect(@Nullable String effect) {
             this.effect = effect;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }
 
-        public Builder setOperator(@Nullable String operator) {
+        public Builder operator(@Nullable String operator) {
             this.operator = operator;
             return this;
         }
 
-        public Builder setTolerationSeconds(@Nullable Integer tolerationSeconds) {
+        public Builder tolerationSeconds(@Nullable Integer tolerationSeconds) {
             this.tolerationSeconds = tolerationSeconds;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

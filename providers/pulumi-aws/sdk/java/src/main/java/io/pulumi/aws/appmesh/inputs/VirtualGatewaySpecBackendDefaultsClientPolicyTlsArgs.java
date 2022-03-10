@@ -106,42 +106,42 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs extends 
     	      this.validation = defaults.validation;
         }
 
-        public Builder setCertificate(@Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateArgs> certificate) {
+        public Builder certificate(@Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateArgs> certificate) {
             this.certificate = certificate;
             return this;
         }
 
-        public Builder setCertificate(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateArgs certificate) {
+        public Builder certificate(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateArgs certificate) {
             this.certificate = Input.ofNullable(certificate);
             return this;
         }
 
-        public Builder setEnforce(@Nullable Input<Boolean> enforce) {
+        public Builder enforce(@Nullable Input<Boolean> enforce) {
             this.enforce = enforce;
             return this;
         }
 
-        public Builder setEnforce(@Nullable Boolean enforce) {
+        public Builder enforce(@Nullable Boolean enforce) {
             this.enforce = Input.ofNullable(enforce);
             return this;
         }
 
-        public Builder setPorts(@Nullable Input<List<Integer>> ports) {
+        public Builder ports(@Nullable Input<List<Integer>> ports) {
             this.ports = ports;
             return this;
         }
 
-        public Builder setPorts(@Nullable List<Integer> ports) {
+        public Builder ports(@Nullable List<Integer> ports) {
             this.ports = Input.ofNullable(ports);
             return this;
         }
 
-        public Builder setValidation(Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationArgs> validation) {
+        public Builder validation(Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationArgs> validation) {
             this.validation = Objects.requireNonNull(validation);
             return this;
         }
 
-        public Builder setValidation(VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationArgs validation) {
+        public Builder validation(VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationArgs validation) {
             this.validation = Input.of(Objects.requireNonNull(validation));
             return this;
         }

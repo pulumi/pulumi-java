@@ -152,92 +152,92 @@ public final class BqmlTrainingRunTrainingOptionsArgs extends io.pulumi.resource
     	      this.warmStart = defaults.warmStart;
         }
 
-        public Builder setEarlyStop(@Nullable Input<Boolean> earlyStop) {
+        public Builder earlyStop(@Nullable Input<Boolean> earlyStop) {
             this.earlyStop = earlyStop;
             return this;
         }
 
-        public Builder setEarlyStop(@Nullable Boolean earlyStop) {
+        public Builder earlyStop(@Nullable Boolean earlyStop) {
             this.earlyStop = Input.ofNullable(earlyStop);
             return this;
         }
 
-        public Builder setL1Reg(@Nullable Input<Double> l1Reg) {
+        public Builder l1Reg(@Nullable Input<Double> l1Reg) {
             this.l1Reg = l1Reg;
             return this;
         }
 
-        public Builder setL1Reg(@Nullable Double l1Reg) {
+        public Builder l1Reg(@Nullable Double l1Reg) {
             this.l1Reg = Input.ofNullable(l1Reg);
             return this;
         }
 
-        public Builder setL2Reg(@Nullable Input<Double> l2Reg) {
+        public Builder l2Reg(@Nullable Input<Double> l2Reg) {
             this.l2Reg = l2Reg;
             return this;
         }
 
-        public Builder setL2Reg(@Nullable Double l2Reg) {
+        public Builder l2Reg(@Nullable Double l2Reg) {
             this.l2Reg = Input.ofNullable(l2Reg);
             return this;
         }
 
-        public Builder setLearnRate(@Nullable Input<Double> learnRate) {
+        public Builder learnRate(@Nullable Input<Double> learnRate) {
             this.learnRate = learnRate;
             return this;
         }
 
-        public Builder setLearnRate(@Nullable Double learnRate) {
+        public Builder learnRate(@Nullable Double learnRate) {
             this.learnRate = Input.ofNullable(learnRate);
             return this;
         }
 
-        public Builder setLearnRateStrategy(@Nullable Input<String> learnRateStrategy) {
+        public Builder learnRateStrategy(@Nullable Input<String> learnRateStrategy) {
             this.learnRateStrategy = learnRateStrategy;
             return this;
         }
 
-        public Builder setLearnRateStrategy(@Nullable String learnRateStrategy) {
+        public Builder learnRateStrategy(@Nullable String learnRateStrategy) {
             this.learnRateStrategy = Input.ofNullable(learnRateStrategy);
             return this;
         }
 
-        public Builder setLineSearchInitLearnRate(@Nullable Input<Double> lineSearchInitLearnRate) {
+        public Builder lineSearchInitLearnRate(@Nullable Input<Double> lineSearchInitLearnRate) {
             this.lineSearchInitLearnRate = lineSearchInitLearnRate;
             return this;
         }
 
-        public Builder setLineSearchInitLearnRate(@Nullable Double lineSearchInitLearnRate) {
+        public Builder lineSearchInitLearnRate(@Nullable Double lineSearchInitLearnRate) {
             this.lineSearchInitLearnRate = Input.ofNullable(lineSearchInitLearnRate);
             return this;
         }
 
-        public Builder setMaxIteration(@Nullable Input<String> maxIteration) {
+        public Builder maxIteration(@Nullable Input<String> maxIteration) {
             this.maxIteration = maxIteration;
             return this;
         }
 
-        public Builder setMaxIteration(@Nullable String maxIteration) {
+        public Builder maxIteration(@Nullable String maxIteration) {
             this.maxIteration = Input.ofNullable(maxIteration);
             return this;
         }
 
-        public Builder setMinRelProgress(@Nullable Input<Double> minRelProgress) {
+        public Builder minRelProgress(@Nullable Input<Double> minRelProgress) {
             this.minRelProgress = minRelProgress;
             return this;
         }
 
-        public Builder setMinRelProgress(@Nullable Double minRelProgress) {
+        public Builder minRelProgress(@Nullable Double minRelProgress) {
             this.minRelProgress = Input.ofNullable(minRelProgress);
             return this;
         }
 
-        public Builder setWarmStart(@Nullable Input<Boolean> warmStart) {
+        public Builder warmStart(@Nullable Input<Boolean> warmStart) {
             this.warmStart = warmStart;
             return this;
         }
 
-        public Builder setWarmStart(@Nullable Boolean warmStart) {
+        public Builder warmStart(@Nullable Boolean warmStart) {
             this.warmStart = Input.ofNullable(warmStart);
             return this;
         }

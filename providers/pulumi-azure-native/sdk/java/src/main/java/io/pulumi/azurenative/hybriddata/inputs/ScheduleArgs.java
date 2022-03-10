@@ -75,22 +75,22 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.policyList = defaults.policyList;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPolicyList(@Nullable Input<List<String>> policyList) {
+        public Builder policyList(@Nullable Input<List<String>> policyList) {
             this.policyList = policyList;
             return this;
         }
 
-        public Builder setPolicyList(@Nullable List<String> policyList) {
+        public Builder policyList(@Nullable List<String> policyList) {
             this.policyList = Input.ofNullable(policyList);
             return this;
         }

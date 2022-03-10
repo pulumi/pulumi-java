@@ -144,32 +144,32 @@ public final class AzureVmWorkloadProtectionPolicyResponse extends io.pulumi.res
     	      this.workLoadType = defaults.workLoadType;
         }
 
-        public Builder setBackupManagementType(String backupManagementType) {
+        public Builder backupManagementType(String backupManagementType) {
             this.backupManagementType = Objects.requireNonNull(backupManagementType);
             return this;
         }
 
-        public Builder setMakePolicyConsistent(@Nullable Boolean makePolicyConsistent) {
+        public Builder makePolicyConsistent(@Nullable Boolean makePolicyConsistent) {
             this.makePolicyConsistent = makePolicyConsistent;
             return this;
         }
 
-        public Builder setProtectedItemsCount(@Nullable Integer protectedItemsCount) {
+        public Builder protectedItemsCount(@Nullable Integer protectedItemsCount) {
             this.protectedItemsCount = protectedItemsCount;
             return this;
         }
 
-        public Builder setSettings(@Nullable SettingsResponse settings) {
+        public Builder settings(@Nullable SettingsResponse settings) {
             this.settings = settings;
             return this;
         }
 
-        public Builder setSubProtectionPolicy(@Nullable List<SubProtectionPolicyResponse> subProtectionPolicy) {
+        public Builder subProtectionPolicy(@Nullable List<SubProtectionPolicyResponse> subProtectionPolicy) {
             this.subProtectionPolicy = subProtectionPolicy;
             return this;
         }
 
-        public Builder setWorkLoadType(@Nullable String workLoadType) {
+        public Builder workLoadType(@Nullable String workLoadType) {
             this.workLoadType = workLoadType;
             return this;
         }

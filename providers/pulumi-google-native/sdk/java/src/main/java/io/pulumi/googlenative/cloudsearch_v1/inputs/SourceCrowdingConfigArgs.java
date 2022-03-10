@@ -74,22 +74,22 @@ public final class SourceCrowdingConfigArgs extends io.pulumi.resources.Resource
     	      this.numSuggestions = defaults.numSuggestions;
         }
 
-        public Builder setNumResults(@Nullable Input<Integer> numResults) {
+        public Builder numResults(@Nullable Input<Integer> numResults) {
             this.numResults = numResults;
             return this;
         }
 
-        public Builder setNumResults(@Nullable Integer numResults) {
+        public Builder numResults(@Nullable Integer numResults) {
             this.numResults = Input.ofNullable(numResults);
             return this;
         }
 
-        public Builder setNumSuggestions(@Nullable Input<Integer> numSuggestions) {
+        public Builder numSuggestions(@Nullable Input<Integer> numSuggestions) {
             this.numSuggestions = numSuggestions;
             return this;
         }
 
-        public Builder setNumSuggestions(@Nullable Integer numSuggestions) {
+        public Builder numSuggestions(@Nullable Integer numSuggestions) {
             this.numSuggestions = Input.ofNullable(numSuggestions);
             return this;
         }

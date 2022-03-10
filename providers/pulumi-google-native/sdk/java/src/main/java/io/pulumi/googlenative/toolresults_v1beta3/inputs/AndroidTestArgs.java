@@ -126,52 +126,52 @@ public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
     	      this.testTimeout = defaults.testTimeout;
         }
 
-        public Builder setAndroidAppInfo(@Nullable Input<AndroidAppInfoArgs> androidAppInfo) {
+        public Builder androidAppInfo(@Nullable Input<AndroidAppInfoArgs> androidAppInfo) {
             this.androidAppInfo = androidAppInfo;
             return this;
         }
 
-        public Builder setAndroidAppInfo(@Nullable AndroidAppInfoArgs androidAppInfo) {
+        public Builder androidAppInfo(@Nullable AndroidAppInfoArgs androidAppInfo) {
             this.androidAppInfo = Input.ofNullable(androidAppInfo);
             return this;
         }
 
-        public Builder setAndroidInstrumentationTest(@Nullable Input<AndroidInstrumentationTestArgs> androidInstrumentationTest) {
+        public Builder androidInstrumentationTest(@Nullable Input<AndroidInstrumentationTestArgs> androidInstrumentationTest) {
             this.androidInstrumentationTest = androidInstrumentationTest;
             return this;
         }
 
-        public Builder setAndroidInstrumentationTest(@Nullable AndroidInstrumentationTestArgs androidInstrumentationTest) {
+        public Builder androidInstrumentationTest(@Nullable AndroidInstrumentationTestArgs androidInstrumentationTest) {
             this.androidInstrumentationTest = Input.ofNullable(androidInstrumentationTest);
             return this;
         }
 
-        public Builder setAndroidRoboTest(@Nullable Input<AndroidRoboTestArgs> androidRoboTest) {
+        public Builder androidRoboTest(@Nullable Input<AndroidRoboTestArgs> androidRoboTest) {
             this.androidRoboTest = androidRoboTest;
             return this;
         }
 
-        public Builder setAndroidRoboTest(@Nullable AndroidRoboTestArgs androidRoboTest) {
+        public Builder androidRoboTest(@Nullable AndroidRoboTestArgs androidRoboTest) {
             this.androidRoboTest = Input.ofNullable(androidRoboTest);
             return this;
         }
 
-        public Builder setAndroidTestLoop(@Nullable Input<AndroidTestLoopArgs> androidTestLoop) {
+        public Builder androidTestLoop(@Nullable Input<AndroidTestLoopArgs> androidTestLoop) {
             this.androidTestLoop = androidTestLoop;
             return this;
         }
 
-        public Builder setAndroidTestLoop(@Nullable AndroidTestLoopArgs androidTestLoop) {
+        public Builder androidTestLoop(@Nullable AndroidTestLoopArgs androidTestLoop) {
             this.androidTestLoop = Input.ofNullable(androidTestLoop);
             return this;
         }
 
-        public Builder setTestTimeout(@Nullable Input<DurationArgs> testTimeout) {
+        public Builder testTimeout(@Nullable Input<DurationArgs> testTimeout) {
             this.testTimeout = testTimeout;
             return this;
         }
 
-        public Builder setTestTimeout(@Nullable DurationArgs testTimeout) {
+        public Builder testTimeout(@Nullable DurationArgs testTimeout) {
             this.testTimeout = Input.ofNullable(testTimeout);
             return this;
         }

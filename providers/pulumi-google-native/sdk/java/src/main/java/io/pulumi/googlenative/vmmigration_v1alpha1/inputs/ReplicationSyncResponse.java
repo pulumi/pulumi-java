@@ -55,7 +55,7 @@ public final class ReplicationSyncResponse extends io.pulumi.resources.InvokeArg
     	      this.lastSyncTime = defaults.lastSyncTime;
         }
 
-        public Builder setLastSyncTime(String lastSyncTime) {
+        public Builder lastSyncTime(String lastSyncTime) {
             this.lastSyncTime = Objects.requireNonNull(lastSyncTime);
             return this;
         }

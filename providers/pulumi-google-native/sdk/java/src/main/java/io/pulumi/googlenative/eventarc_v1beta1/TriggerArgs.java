@@ -170,92 +170,92 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.validateOnly = defaults.validateOnly;
         }
 
-        public Builder setDestination(Input<DestinationArgs> destination) {
+        public Builder destination(Input<DestinationArgs> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setDestination(DestinationArgs destination) {
+        public Builder destination(DestinationArgs destination) {
             this.destination = Input.of(Objects.requireNonNull(destination));
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMatchingCriteria(Input<List<MatchingCriteriaArgs>> matchingCriteria) {
+        public Builder matchingCriteria(Input<List<MatchingCriteriaArgs>> matchingCriteria) {
             this.matchingCriteria = Objects.requireNonNull(matchingCriteria);
             return this;
         }
 
-        public Builder setMatchingCriteria(List<MatchingCriteriaArgs> matchingCriteria) {
+        public Builder matchingCriteria(List<MatchingCriteriaArgs> matchingCriteria) {
             this.matchingCriteria = Input.of(Objects.requireNonNull(matchingCriteria));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable String serviceAccount) {
+        public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Input.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder setTriggerId(Input<String> triggerId) {
+        public Builder triggerId(Input<String> triggerId) {
             this.triggerId = Objects.requireNonNull(triggerId);
             return this;
         }
 
-        public Builder setTriggerId(String triggerId) {
+        public Builder triggerId(String triggerId) {
             this.triggerId = Input.of(Objects.requireNonNull(triggerId));
             return this;
         }
 
-        public Builder setValidateOnly(Input<String> validateOnly) {
+        public Builder validateOnly(Input<String> validateOnly) {
             this.validateOnly = Objects.requireNonNull(validateOnly);
             return this;
         }
 
-        public Builder setValidateOnly(String validateOnly) {
+        public Builder validateOnly(String validateOnly) {
             this.validateOnly = Input.of(Objects.requireNonNull(validateOnly));
             return this;
         }

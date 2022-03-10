@@ -53,12 +53,12 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadi
     	      this.timeoutSec = defaults.timeoutSec;
         }
 
-        public Builder setTimeoutSec(@Nullable Input<Integer> timeoutSec) {
+        public Builder timeoutSec(@Nullable Input<Integer> timeoutSec) {
             this.timeoutSec = timeoutSec;
             return this;
         }
 
-        public Builder setTimeoutSec(@Nullable Integer timeoutSec) {
+        public Builder timeoutSec(@Nullable Integer timeoutSec) {
             this.timeoutSec = Input.ofNullable(timeoutSec);
             return this;
         }

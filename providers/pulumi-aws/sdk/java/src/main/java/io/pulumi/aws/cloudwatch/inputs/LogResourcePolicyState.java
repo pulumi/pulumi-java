@@ -70,22 +70,22 @@ public final class LogResourcePolicyState extends io.pulumi.resources.ResourceAr
     	      this.policyName = defaults.policyName;
         }
 
-        public Builder setPolicyDocument(@Nullable Input<String> policyDocument) {
+        public Builder policyDocument(@Nullable Input<String> policyDocument) {
             this.policyDocument = policyDocument;
             return this;
         }
 
-        public Builder setPolicyDocument(@Nullable String policyDocument) {
+        public Builder policyDocument(@Nullable String policyDocument) {
             this.policyDocument = Input.ofNullable(policyDocument);
             return this;
         }
 
-        public Builder setPolicyName(@Nullable Input<String> policyName) {
+        public Builder policyName(@Nullable Input<String> policyName) {
             this.policyName = policyName;
             return this;
         }
 
-        public Builder setPolicyName(@Nullable String policyName) {
+        public Builder policyName(@Nullable String policyName) {
             this.policyName = Input.ofNullable(policyName);
             return this;
         }

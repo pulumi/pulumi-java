@@ -119,52 +119,52 @@ public final class HostedConnectionArgs extends io.pulumi.resources.ResourceArgs
     	      this.vlan = defaults.vlan;
         }
 
-        public Builder setBandwidth(Input<String> bandwidth) {
+        public Builder bandwidth(Input<String> bandwidth) {
             this.bandwidth = Objects.requireNonNull(bandwidth);
             return this;
         }
 
-        public Builder setBandwidth(String bandwidth) {
+        public Builder bandwidth(String bandwidth) {
             this.bandwidth = Input.of(Objects.requireNonNull(bandwidth));
             return this;
         }
 
-        public Builder setConnectionId(Input<String> connectionId) {
+        public Builder connectionId(Input<String> connectionId) {
             this.connectionId = Objects.requireNonNull(connectionId);
             return this;
         }
 
-        public Builder setConnectionId(String connectionId) {
+        public Builder connectionId(String connectionId) {
             this.connectionId = Input.of(Objects.requireNonNull(connectionId));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOwnerAccountId(Input<String> ownerAccountId) {
+        public Builder ownerAccountId(Input<String> ownerAccountId) {
             this.ownerAccountId = Objects.requireNonNull(ownerAccountId);
             return this;
         }
 
-        public Builder setOwnerAccountId(String ownerAccountId) {
+        public Builder ownerAccountId(String ownerAccountId) {
             this.ownerAccountId = Input.of(Objects.requireNonNull(ownerAccountId));
             return this;
         }
 
-        public Builder setVlan(Input<Integer> vlan) {
+        public Builder vlan(Input<Integer> vlan) {
             this.vlan = Objects.requireNonNull(vlan);
             return this;
         }
 
-        public Builder setVlan(Integer vlan) {
+        public Builder vlan(Integer vlan) {
             this.vlan = Input.of(Objects.requireNonNull(vlan));
             return this;
         }

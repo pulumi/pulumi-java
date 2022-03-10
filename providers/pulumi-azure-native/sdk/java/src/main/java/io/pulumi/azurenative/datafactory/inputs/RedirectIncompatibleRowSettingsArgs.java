@@ -74,22 +74,22 @@ public final class RedirectIncompatibleRowSettingsArgs extends io.pulumi.resourc
     	      this.path = defaults.path;
         }
 
-        public Builder setLinkedServiceName(Input<Object> linkedServiceName) {
+        public Builder linkedServiceName(Input<Object> linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
 
-        public Builder setLinkedServiceName(Object linkedServiceName) {
+        public Builder linkedServiceName(Object linkedServiceName) {
             this.linkedServiceName = Input.of(Objects.requireNonNull(linkedServiceName));
             return this;
         }
 
-        public Builder setPath(@Nullable Input<Object> path) {
+        public Builder path(@Nullable Input<Object> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable Object path) {
+        public Builder path(@Nullable Object path) {
             this.path = Input.ofNullable(path);
             return this;
         }

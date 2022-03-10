@@ -90,32 +90,32 @@ public final class UserAssignedIdentityAuthInfoArgs extends io.pulumi.resources.
     	      this.subscriptionId = defaults.subscriptionId;
         }
 
-        public Builder setAuthType(Input<String> authType) {
+        public Builder authType(Input<String> authType) {
             this.authType = Objects.requireNonNull(authType);
             return this;
         }
 
-        public Builder setAuthType(String authType) {
+        public Builder authType(String authType) {
             this.authType = Input.of(Objects.requireNonNull(authType));
             return this;
         }
 
-        public Builder setClientId(Input<String> clientId) {
+        public Builder clientId(Input<String> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
-        public Builder setClientId(String clientId) {
+        public Builder clientId(String clientId) {
             this.clientId = Input.of(Objects.requireNonNull(clientId));
             return this;
         }
 
-        public Builder setSubscriptionId(Input<String> subscriptionId) {
+        public Builder subscriptionId(Input<String> subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
 
-        public Builder setSubscriptionId(String subscriptionId) {
+        public Builder subscriptionId(String subscriptionId) {
             this.subscriptionId = Input.of(Objects.requireNonNull(subscriptionId));
             return this;
         }

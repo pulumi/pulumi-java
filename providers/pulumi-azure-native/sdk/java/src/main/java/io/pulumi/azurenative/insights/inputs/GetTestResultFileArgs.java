@@ -152,37 +152,37 @@ public final class GetTestResultFileArgs extends io.pulumi.resources.InvokeArgs 
     	      this.webTestName = defaults.webTestName;
         }
 
-        public Builder setContinuationToken(@Nullable String continuationToken) {
+        public Builder continuationToken(@Nullable String continuationToken) {
             this.continuationToken = continuationToken;
             return this;
         }
 
-        public Builder setDownloadAs(String downloadAs) {
+        public Builder downloadAs(String downloadAs) {
             this.downloadAs = Objects.requireNonNull(downloadAs);
             return this;
         }
 
-        public Builder setGeoLocationId(String geoLocationId) {
+        public Builder geoLocationId(String geoLocationId) {
             this.geoLocationId = Objects.requireNonNull(geoLocationId);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setTestSuccessfulCriteria(@Nullable Boolean testSuccessfulCriteria) {
+        public Builder testSuccessfulCriteria(@Nullable Boolean testSuccessfulCriteria) {
             this.testSuccessfulCriteria = testSuccessfulCriteria;
             return this;
         }
 
-        public Builder setTimeStamp(Integer timeStamp) {
+        public Builder timeStamp(Integer timeStamp) {
             this.timeStamp = Objects.requireNonNull(timeStamp);
             return this;
         }
 
-        public Builder setWebTestName(String webTestName) {
+        public Builder webTestName(String webTestName) {
             this.webTestName = Objects.requireNonNull(webTestName);
             return this;
         }

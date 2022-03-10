@@ -66,12 +66,12 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigContentSecurityP
     	      this.override = defaults.override;
         }
 
-        public Builder setContentSecurityPolicy(String contentSecurityPolicy) {
+        public Builder contentSecurityPolicy(String contentSecurityPolicy) {
             this.contentSecurityPolicy = Objects.requireNonNull(contentSecurityPolicy);
             return this;
         }
 
-        public Builder setOverride(Boolean override) {
+        public Builder override(Boolean override) {
             this.override = Objects.requireNonNull(override);
             return this;
         }

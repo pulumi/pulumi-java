@@ -115,52 +115,52 @@ public final class NetworkInsightsAnalysisAnalysisRouteTableRoute {
     	      this.vpcPeeringConnectionId = defaults.vpcPeeringConnectionId;
         }
 
-        public Builder setDestinationCidr(@Nullable String destinationCidr) {
+        public Builder destinationCidr(@Nullable String destinationCidr) {
             this.destinationCidr = destinationCidr;
             return this;
         }
 
-        public Builder setDestinationPrefixListId(@Nullable String destinationPrefixListId) {
+        public Builder destinationPrefixListId(@Nullable String destinationPrefixListId) {
             this.destinationPrefixListId = destinationPrefixListId;
             return this;
         }
 
-        public Builder setEgressOnlyInternetGatewayId(@Nullable String egressOnlyInternetGatewayId) {
+        public Builder egressOnlyInternetGatewayId(@Nullable String egressOnlyInternetGatewayId) {
             this.egressOnlyInternetGatewayId = egressOnlyInternetGatewayId;
             return this;
         }
 
-        public Builder setGatewayId(@Nullable String gatewayId) {
+        public Builder gatewayId(@Nullable String gatewayId) {
             this.gatewayId = gatewayId;
             return this;
         }
 
-        public Builder setInstanceId(@Nullable String instanceId) {
+        public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
 
-        public Builder setNatGatewayId(@Nullable String natGatewayId) {
+        public Builder natGatewayId(@Nullable String natGatewayId) {
             this.natGatewayId = natGatewayId;
             return this;
         }
 
-        public Builder setNetworkInterfaceId(@Nullable String networkInterfaceId) {
+        public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
-        public Builder setOrigin(@Nullable String origin) {
+        public Builder origin(@Nullable String origin) {
             this.origin = origin;
             return this;
         }
 
-        public Builder setTransitGatewayId(@Nullable String transitGatewayId) {
+        public Builder transitGatewayId(@Nullable String transitGatewayId) {
             this.transitGatewayId = transitGatewayId;
             return this;
         }
 
-        public Builder setVpcPeeringConnectionId(@Nullable String vpcPeeringConnectionId) {
+        public Builder vpcPeeringConnectionId(@Nullable String vpcPeeringConnectionId) {
             this.vpcPeeringConnectionId = vpcPeeringConnectionId;
             return this;
         }

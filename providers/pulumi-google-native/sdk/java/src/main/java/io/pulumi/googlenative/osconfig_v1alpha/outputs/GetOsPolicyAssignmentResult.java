@@ -246,67 +246,67 @@ public final class GetOsPolicyAssignmentResult {
     	      this.uid = defaults.uid;
         }
 
-        public Builder setBaseline(Boolean baseline) {
+        public Builder baseline(Boolean baseline) {
             this.baseline = Objects.requireNonNull(baseline);
             return this;
         }
 
-        public Builder setDeleted(Boolean deleted) {
+        public Builder deleted(Boolean deleted) {
             this.deleted = Objects.requireNonNull(deleted);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setInstanceFilter(OSPolicyAssignmentInstanceFilterResponse instanceFilter) {
+        public Builder instanceFilter(OSPolicyAssignmentInstanceFilterResponse instanceFilter) {
             this.instanceFilter = Objects.requireNonNull(instanceFilter);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOsPolicies(List<OSPolicyResponse> osPolicies) {
+        public Builder osPolicies(List<OSPolicyResponse> osPolicies) {
             this.osPolicies = Objects.requireNonNull(osPolicies);
             return this;
         }
 
-        public Builder setReconciling(Boolean reconciling) {
+        public Builder reconciling(Boolean reconciling) {
             this.reconciling = Objects.requireNonNull(reconciling);
             return this;
         }
 
-        public Builder setRevisionCreateTime(String revisionCreateTime) {
+        public Builder revisionCreateTime(String revisionCreateTime) {
             this.revisionCreateTime = Objects.requireNonNull(revisionCreateTime);
             return this;
         }
 
-        public Builder setRevisionId(String revisionId) {
+        public Builder revisionId(String revisionId) {
             this.revisionId = Objects.requireNonNull(revisionId);
             return this;
         }
 
-        public Builder setRollout(OSPolicyAssignmentRolloutResponse rollout) {
+        public Builder rollout(OSPolicyAssignmentRolloutResponse rollout) {
             this.rollout = Objects.requireNonNull(rollout);
             return this;
         }
 
-        public Builder setRolloutState(String rolloutState) {
+        public Builder rolloutState(String rolloutState) {
             this.rolloutState = Objects.requireNonNull(rolloutState);
             return this;
         }
 
-        public Builder setUid(String uid) {
+        public Builder uid(String uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }

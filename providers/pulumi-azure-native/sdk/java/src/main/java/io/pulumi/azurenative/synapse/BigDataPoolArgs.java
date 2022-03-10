@@ -418,232 +418,232 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setAutoPause(@Nullable Input<AutoPausePropertiesArgs> autoPause) {
+        public Builder autoPause(@Nullable Input<AutoPausePropertiesArgs> autoPause) {
             this.autoPause = autoPause;
             return this;
         }
 
-        public Builder setAutoPause(@Nullable AutoPausePropertiesArgs autoPause) {
+        public Builder autoPause(@Nullable AutoPausePropertiesArgs autoPause) {
             this.autoPause = Input.ofNullable(autoPause);
             return this;
         }
 
-        public Builder setAutoScale(@Nullable Input<AutoScalePropertiesArgs> autoScale) {
+        public Builder autoScale(@Nullable Input<AutoScalePropertiesArgs> autoScale) {
             this.autoScale = autoScale;
             return this;
         }
 
-        public Builder setAutoScale(@Nullable AutoScalePropertiesArgs autoScale) {
+        public Builder autoScale(@Nullable AutoScalePropertiesArgs autoScale) {
             this.autoScale = Input.ofNullable(autoScale);
             return this;
         }
 
-        public Builder setBigDataPoolName(@Nullable Input<String> bigDataPoolName) {
+        public Builder bigDataPoolName(@Nullable Input<String> bigDataPoolName) {
             this.bigDataPoolName = bigDataPoolName;
             return this;
         }
 
-        public Builder setBigDataPoolName(@Nullable String bigDataPoolName) {
+        public Builder bigDataPoolName(@Nullable String bigDataPoolName) {
             this.bigDataPoolName = Input.ofNullable(bigDataPoolName);
             return this;
         }
 
-        public Builder setCacheSize(@Nullable Input<Integer> cacheSize) {
+        public Builder cacheSize(@Nullable Input<Integer> cacheSize) {
             this.cacheSize = cacheSize;
             return this;
         }
 
-        public Builder setCacheSize(@Nullable Integer cacheSize) {
+        public Builder cacheSize(@Nullable Integer cacheSize) {
             this.cacheSize = Input.ofNullable(cacheSize);
             return this;
         }
 
-        public Builder setCreationDate(@Nullable Input<String> creationDate) {
+        public Builder creationDate(@Nullable Input<String> creationDate) {
             this.creationDate = creationDate;
             return this;
         }
 
-        public Builder setCreationDate(@Nullable String creationDate) {
+        public Builder creationDate(@Nullable String creationDate) {
             this.creationDate = Input.ofNullable(creationDate);
             return this;
         }
 
-        public Builder setCustomLibraries(@Nullable Input<List<LibraryInfoArgs>> customLibraries) {
+        public Builder customLibraries(@Nullable Input<List<LibraryInfoArgs>> customLibraries) {
             this.customLibraries = customLibraries;
             return this;
         }
 
-        public Builder setCustomLibraries(@Nullable List<LibraryInfoArgs> customLibraries) {
+        public Builder customLibraries(@Nullable List<LibraryInfoArgs> customLibraries) {
             this.customLibraries = Input.ofNullable(customLibraries);
             return this;
         }
 
-        public Builder setDefaultSparkLogFolder(@Nullable Input<String> defaultSparkLogFolder) {
+        public Builder defaultSparkLogFolder(@Nullable Input<String> defaultSparkLogFolder) {
             this.defaultSparkLogFolder = defaultSparkLogFolder;
             return this;
         }
 
-        public Builder setDefaultSparkLogFolder(@Nullable String defaultSparkLogFolder) {
+        public Builder defaultSparkLogFolder(@Nullable String defaultSparkLogFolder) {
             this.defaultSparkLogFolder = Input.ofNullable(defaultSparkLogFolder);
             return this;
         }
 
-        public Builder setDynamicExecutorAllocation(@Nullable Input<DynamicExecutorAllocationArgs> dynamicExecutorAllocation) {
+        public Builder dynamicExecutorAllocation(@Nullable Input<DynamicExecutorAllocationArgs> dynamicExecutorAllocation) {
             this.dynamicExecutorAllocation = dynamicExecutorAllocation;
             return this;
         }
 
-        public Builder setDynamicExecutorAllocation(@Nullable DynamicExecutorAllocationArgs dynamicExecutorAllocation) {
+        public Builder dynamicExecutorAllocation(@Nullable DynamicExecutorAllocationArgs dynamicExecutorAllocation) {
             this.dynamicExecutorAllocation = Input.ofNullable(dynamicExecutorAllocation);
             return this;
         }
 
-        public Builder setForce(@Nullable Input<Boolean> force) {
+        public Builder force(@Nullable Input<Boolean> force) {
             this.force = force;
             return this;
         }
 
-        public Builder setForce(@Nullable Boolean force) {
+        public Builder force(@Nullable Boolean force) {
             this.force = Input.ofNullable(force);
             return this;
         }
 
-        public Builder setIsComputeIsolationEnabled(@Nullable Input<Boolean> isComputeIsolationEnabled) {
+        public Builder isComputeIsolationEnabled(@Nullable Input<Boolean> isComputeIsolationEnabled) {
             this.isComputeIsolationEnabled = isComputeIsolationEnabled;
             return this;
         }
 
-        public Builder setIsComputeIsolationEnabled(@Nullable Boolean isComputeIsolationEnabled) {
+        public Builder isComputeIsolationEnabled(@Nullable Boolean isComputeIsolationEnabled) {
             this.isComputeIsolationEnabled = Input.ofNullable(isComputeIsolationEnabled);
             return this;
         }
 
-        public Builder setLibraryRequirements(@Nullable Input<LibraryRequirementsArgs> libraryRequirements) {
+        public Builder libraryRequirements(@Nullable Input<LibraryRequirementsArgs> libraryRequirements) {
             this.libraryRequirements = libraryRequirements;
             return this;
         }
 
-        public Builder setLibraryRequirements(@Nullable LibraryRequirementsArgs libraryRequirements) {
+        public Builder libraryRequirements(@Nullable LibraryRequirementsArgs libraryRequirements) {
             this.libraryRequirements = Input.ofNullable(libraryRequirements);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setNodeCount(@Nullable Input<Integer> nodeCount) {
+        public Builder nodeCount(@Nullable Input<Integer> nodeCount) {
             this.nodeCount = nodeCount;
             return this;
         }
 
-        public Builder setNodeCount(@Nullable Integer nodeCount) {
+        public Builder nodeCount(@Nullable Integer nodeCount) {
             this.nodeCount = Input.ofNullable(nodeCount);
             return this;
         }
 
-        public Builder setNodeSize(@Nullable Input<Either<String,NodeSize>> nodeSize) {
+        public Builder nodeSize(@Nullable Input<Either<String,NodeSize>> nodeSize) {
             this.nodeSize = nodeSize;
             return this;
         }
 
-        public Builder setNodeSize(@Nullable Either<String,NodeSize> nodeSize) {
+        public Builder nodeSize(@Nullable Either<String,NodeSize> nodeSize) {
             this.nodeSize = Input.ofNullable(nodeSize);
             return this;
         }
 
-        public Builder setNodeSizeFamily(@Nullable Input<Either<String,NodeSizeFamily>> nodeSizeFamily) {
+        public Builder nodeSizeFamily(@Nullable Input<Either<String,NodeSizeFamily>> nodeSizeFamily) {
             this.nodeSizeFamily = nodeSizeFamily;
             return this;
         }
 
-        public Builder setNodeSizeFamily(@Nullable Either<String,NodeSizeFamily> nodeSizeFamily) {
+        public Builder nodeSizeFamily(@Nullable Either<String,NodeSizeFamily> nodeSizeFamily) {
             this.nodeSizeFamily = Input.ofNullable(nodeSizeFamily);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Input<String> provisioningState) {
+        public Builder provisioningState(@Nullable Input<String> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = Input.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSessionLevelPackagesEnabled(@Nullable Input<Boolean> sessionLevelPackagesEnabled) {
+        public Builder sessionLevelPackagesEnabled(@Nullable Input<Boolean> sessionLevelPackagesEnabled) {
             this.sessionLevelPackagesEnabled = sessionLevelPackagesEnabled;
             return this;
         }
 
-        public Builder setSessionLevelPackagesEnabled(@Nullable Boolean sessionLevelPackagesEnabled) {
+        public Builder sessionLevelPackagesEnabled(@Nullable Boolean sessionLevelPackagesEnabled) {
             this.sessionLevelPackagesEnabled = Input.ofNullable(sessionLevelPackagesEnabled);
             return this;
         }
 
-        public Builder setSparkConfigProperties(@Nullable Input<LibraryRequirementsArgs> sparkConfigProperties) {
+        public Builder sparkConfigProperties(@Nullable Input<LibraryRequirementsArgs> sparkConfigProperties) {
             this.sparkConfigProperties = sparkConfigProperties;
             return this;
         }
 
-        public Builder setSparkConfigProperties(@Nullable LibraryRequirementsArgs sparkConfigProperties) {
+        public Builder sparkConfigProperties(@Nullable LibraryRequirementsArgs sparkConfigProperties) {
             this.sparkConfigProperties = Input.ofNullable(sparkConfigProperties);
             return this;
         }
 
-        public Builder setSparkEventsFolder(@Nullable Input<String> sparkEventsFolder) {
+        public Builder sparkEventsFolder(@Nullable Input<String> sparkEventsFolder) {
             this.sparkEventsFolder = sparkEventsFolder;
             return this;
         }
 
-        public Builder setSparkEventsFolder(@Nullable String sparkEventsFolder) {
+        public Builder sparkEventsFolder(@Nullable String sparkEventsFolder) {
             this.sparkEventsFolder = Input.ofNullable(sparkEventsFolder);
             return this;
         }
 
-        public Builder setSparkVersion(@Nullable Input<String> sparkVersion) {
+        public Builder sparkVersion(@Nullable Input<String> sparkVersion) {
             this.sparkVersion = sparkVersion;
             return this;
         }
 
-        public Builder setSparkVersion(@Nullable String sparkVersion) {
+        public Builder sparkVersion(@Nullable String sparkVersion) {
             this.sparkVersion = Input.ofNullable(sparkVersion);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

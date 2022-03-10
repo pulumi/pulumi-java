@@ -50,7 +50,7 @@ public final class GetVirtualMachineRdpFileContentsResult {
     	      this.contents = defaults.contents;
         }
 
-        public Builder setContents(@Nullable String contents) {
+        public Builder contents(@Nullable String contents) {
             this.contents = contents;
             return this;
         }

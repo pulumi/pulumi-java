@@ -50,7 +50,7 @@ public final class FunctionSyncConfigLambdaConflictHandlerConfig {
     	      this.lambdaConflictHandlerArn = defaults.lambdaConflictHandlerArn;
         }
 
-        public Builder setLambdaConflictHandlerArn(@Nullable String lambdaConflictHandlerArn) {
+        public Builder lambdaConflictHandlerArn(@Nullable String lambdaConflictHandlerArn) {
             this.lambdaConflictHandlerArn = lambdaConflictHandlerArn;
             return this;
         }

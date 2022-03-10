@@ -73,22 +73,22 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleArgs extends
     	      this.hotwordRule = defaults.hotwordRule;
         }
 
-        public Builder setExclusionRule(@Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs> exclusionRule) {
+        public Builder exclusionRule(@Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs> exclusionRule) {
             this.exclusionRule = exclusionRule;
             return this;
         }
 
-        public Builder setExclusionRule(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs exclusionRule) {
+        public Builder exclusionRule(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs exclusionRule) {
             this.exclusionRule = Input.ofNullable(exclusionRule);
             return this;
         }
 
-        public Builder setHotwordRule(@Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs> hotwordRule) {
+        public Builder hotwordRule(@Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs> hotwordRule) {
             this.hotwordRule = hotwordRule;
             return this;
         }
 
-        public Builder setHotwordRule(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs hotwordRule) {
+        public Builder hotwordRule(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs hotwordRule) {
             this.hotwordRule = Input.ofNullable(hotwordRule);
             return this;
         }

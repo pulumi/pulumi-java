@@ -165,102 +165,102 @@ public final class DataSourceConfluenceConfigurationArgs extends io.pulumi.resou
     	      this.vpcConfiguration = defaults.vpcConfiguration;
         }
 
-        public Builder setAttachmentConfiguration(@Nullable Input<DataSourceConfluenceAttachmentConfigurationArgs> attachmentConfiguration) {
+        public Builder attachmentConfiguration(@Nullable Input<DataSourceConfluenceAttachmentConfigurationArgs> attachmentConfiguration) {
             this.attachmentConfiguration = attachmentConfiguration;
             return this;
         }
 
-        public Builder setAttachmentConfiguration(@Nullable DataSourceConfluenceAttachmentConfigurationArgs attachmentConfiguration) {
+        public Builder attachmentConfiguration(@Nullable DataSourceConfluenceAttachmentConfigurationArgs attachmentConfiguration) {
             this.attachmentConfiguration = Input.ofNullable(attachmentConfiguration);
             return this;
         }
 
-        public Builder setBlogConfiguration(@Nullable Input<DataSourceConfluenceBlogConfigurationArgs> blogConfiguration) {
+        public Builder blogConfiguration(@Nullable Input<DataSourceConfluenceBlogConfigurationArgs> blogConfiguration) {
             this.blogConfiguration = blogConfiguration;
             return this;
         }
 
-        public Builder setBlogConfiguration(@Nullable DataSourceConfluenceBlogConfigurationArgs blogConfiguration) {
+        public Builder blogConfiguration(@Nullable DataSourceConfluenceBlogConfigurationArgs blogConfiguration) {
             this.blogConfiguration = Input.ofNullable(blogConfiguration);
             return this;
         }
 
-        public Builder setExclusionPatterns(@Nullable Input<List<String>> exclusionPatterns) {
+        public Builder exclusionPatterns(@Nullable Input<List<String>> exclusionPatterns) {
             this.exclusionPatterns = exclusionPatterns;
             return this;
         }
 
-        public Builder setExclusionPatterns(@Nullable List<String> exclusionPatterns) {
+        public Builder exclusionPatterns(@Nullable List<String> exclusionPatterns) {
             this.exclusionPatterns = Input.ofNullable(exclusionPatterns);
             return this;
         }
 
-        public Builder setInclusionPatterns(@Nullable Input<List<String>> inclusionPatterns) {
+        public Builder inclusionPatterns(@Nullable Input<List<String>> inclusionPatterns) {
             this.inclusionPatterns = inclusionPatterns;
             return this;
         }
 
-        public Builder setInclusionPatterns(@Nullable List<String> inclusionPatterns) {
+        public Builder inclusionPatterns(@Nullable List<String> inclusionPatterns) {
             this.inclusionPatterns = Input.ofNullable(inclusionPatterns);
             return this;
         }
 
-        public Builder setPageConfiguration(@Nullable Input<DataSourceConfluencePageConfigurationArgs> pageConfiguration) {
+        public Builder pageConfiguration(@Nullable Input<DataSourceConfluencePageConfigurationArgs> pageConfiguration) {
             this.pageConfiguration = pageConfiguration;
             return this;
         }
 
-        public Builder setPageConfiguration(@Nullable DataSourceConfluencePageConfigurationArgs pageConfiguration) {
+        public Builder pageConfiguration(@Nullable DataSourceConfluencePageConfigurationArgs pageConfiguration) {
             this.pageConfiguration = Input.ofNullable(pageConfiguration);
             return this;
         }
 
-        public Builder setSecretArn(Input<String> secretArn) {
+        public Builder secretArn(Input<String> secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }
 
-        public Builder setSecretArn(String secretArn) {
+        public Builder secretArn(String secretArn) {
             this.secretArn = Input.of(Objects.requireNonNull(secretArn));
             return this;
         }
 
-        public Builder setServerUrl(Input<String> serverUrl) {
+        public Builder serverUrl(Input<String> serverUrl) {
             this.serverUrl = Objects.requireNonNull(serverUrl);
             return this;
         }
 
-        public Builder setServerUrl(String serverUrl) {
+        public Builder serverUrl(String serverUrl) {
             this.serverUrl = Input.of(Objects.requireNonNull(serverUrl));
             return this;
         }
 
-        public Builder setSpaceConfiguration(@Nullable Input<DataSourceConfluenceSpaceConfigurationArgs> spaceConfiguration) {
+        public Builder spaceConfiguration(@Nullable Input<DataSourceConfluenceSpaceConfigurationArgs> spaceConfiguration) {
             this.spaceConfiguration = spaceConfiguration;
             return this;
         }
 
-        public Builder setSpaceConfiguration(@Nullable DataSourceConfluenceSpaceConfigurationArgs spaceConfiguration) {
+        public Builder spaceConfiguration(@Nullable DataSourceConfluenceSpaceConfigurationArgs spaceConfiguration) {
             this.spaceConfiguration = Input.ofNullable(spaceConfiguration);
             return this;
         }
 
-        public Builder setVersion(Input<DataSourceConfluenceVersion> version) {
+        public Builder version(Input<DataSourceConfluenceVersion> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
-        public Builder setVersion(DataSourceConfluenceVersion version) {
+        public Builder version(DataSourceConfluenceVersion version) {
             this.version = Input.of(Objects.requireNonNull(version));
             return this;
         }
 
-        public Builder setVpcConfiguration(@Nullable Input<DataSourceVpcConfigurationArgs> vpcConfiguration) {
+        public Builder vpcConfiguration(@Nullable Input<DataSourceVpcConfigurationArgs> vpcConfiguration) {
             this.vpcConfiguration = vpcConfiguration;
             return this;
         }
 
-        public Builder setVpcConfiguration(@Nullable DataSourceVpcConfigurationArgs vpcConfiguration) {
+        public Builder vpcConfiguration(@Nullable DataSourceVpcConfigurationArgs vpcConfiguration) {
             this.vpcConfiguration = Input.ofNullable(vpcConfiguration);
             return this;
         }

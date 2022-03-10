@@ -88,32 +88,32 @@ public final class QueryParameterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.parameterValue = defaults.parameterValue;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParameterType(@Nullable Input<QueryParameterTypeArgs> parameterType) {
+        public Builder parameterType(@Nullable Input<QueryParameterTypeArgs> parameterType) {
             this.parameterType = parameterType;
             return this;
         }
 
-        public Builder setParameterType(@Nullable QueryParameterTypeArgs parameterType) {
+        public Builder parameterType(@Nullable QueryParameterTypeArgs parameterType) {
             this.parameterType = Input.ofNullable(parameterType);
             return this;
         }
 
-        public Builder setParameterValue(@Nullable Input<QueryParameterValueArgs> parameterValue) {
+        public Builder parameterValue(@Nullable Input<QueryParameterValueArgs> parameterValue) {
             this.parameterValue = parameterValue;
             return this;
         }
 
-        public Builder setParameterValue(@Nullable QueryParameterValueArgs parameterValue) {
+        public Builder parameterValue(@Nullable QueryParameterValueArgs parameterValue) {
             this.parameterValue = Input.ofNullable(parameterValue);
             return this;
         }

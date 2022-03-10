@@ -84,17 +84,17 @@ public final class TransferJobTransferSpecAwsS3DataSource {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setAwsAccessKey(@Nullable TransferJobTransferSpecAwsS3DataSourceAwsAccessKey awsAccessKey) {
+        public Builder awsAccessKey(@Nullable TransferJobTransferSpecAwsS3DataSourceAwsAccessKey awsAccessKey) {
             this.awsAccessKey = awsAccessKey;
             return this;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }

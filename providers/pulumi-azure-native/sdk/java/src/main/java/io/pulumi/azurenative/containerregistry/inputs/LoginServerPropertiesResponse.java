@@ -73,12 +73,12 @@ public final class LoginServerPropertiesResponse extends io.pulumi.resources.Inv
     	      this.tls = defaults.tls;
         }
 
-        public Builder setHost(String host) {
+        public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
-        public Builder setTls(TlsPropertiesResponse tls) {
+        public Builder tls(TlsPropertiesResponse tls) {
             this.tls = Objects.requireNonNull(tls);
             return this;
         }

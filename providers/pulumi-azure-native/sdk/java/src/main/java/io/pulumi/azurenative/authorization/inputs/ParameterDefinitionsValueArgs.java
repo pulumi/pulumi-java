@@ -111,42 +111,42 @@ public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.Res
     	      this.type = defaults.type;
         }
 
-        public Builder setAllowedValues(@Nullable Input<List<Object>> allowedValues) {
+        public Builder allowedValues(@Nullable Input<List<Object>> allowedValues) {
             this.allowedValues = allowedValues;
             return this;
         }
 
-        public Builder setAllowedValues(@Nullable List<Object> allowedValues) {
+        public Builder allowedValues(@Nullable List<Object> allowedValues) {
             this.allowedValues = Input.ofNullable(allowedValues);
             return this;
         }
 
-        public Builder setDefaultValue(@Nullable Input<Object> defaultValue) {
+        public Builder defaultValue(@Nullable Input<Object> defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
 
-        public Builder setDefaultValue(@Nullable Object defaultValue) {
+        public Builder defaultValue(@Nullable Object defaultValue) {
             this.defaultValue = Input.ofNullable(defaultValue);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<ParameterDefinitionsValueMetadataArgs> metadata) {
+        public Builder metadata(@Nullable Input<ParameterDefinitionsValueMetadataArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable ParameterDefinitionsValueMetadataArgs metadata) {
+        public Builder metadata(@Nullable ParameterDefinitionsValueMetadataArgs metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setType(@Nullable Input<Either<String,ParameterType>> type) {
+        public Builder type(@Nullable Input<Either<String,ParameterType>> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable Either<String,ParameterType> type) {
+        public Builder type(@Nullable Either<String,ParameterType> type) {
             this.type = Input.ofNullable(type);
             return this;
         }

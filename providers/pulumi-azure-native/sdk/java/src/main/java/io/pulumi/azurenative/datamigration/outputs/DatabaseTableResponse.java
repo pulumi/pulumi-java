@@ -66,12 +66,12 @@ public final class DatabaseTableResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setHasRows(Boolean hasRows) {
+        public Builder hasRows(Boolean hasRows) {
             this.hasRows = Objects.requireNonNull(hasRows);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

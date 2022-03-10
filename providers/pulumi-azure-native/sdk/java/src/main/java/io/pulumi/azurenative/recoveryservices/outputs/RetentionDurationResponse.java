@@ -70,12 +70,12 @@ public final class RetentionDurationResponse {
     	      this.durationType = defaults.durationType;
         }
 
-        public Builder setCount(@Nullable Integer count) {
+        public Builder count(@Nullable Integer count) {
             this.count = count;
             return this;
         }
 
-        public Builder setDurationType(@Nullable String durationType) {
+        public Builder durationType(@Nullable String durationType) {
             this.durationType = durationType;
             return this;
         }

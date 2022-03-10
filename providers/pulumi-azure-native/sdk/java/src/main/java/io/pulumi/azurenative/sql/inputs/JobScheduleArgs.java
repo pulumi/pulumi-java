@@ -124,52 +124,52 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setEndTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Input<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = Input.ofNullable(endTime);
             return this;
         }
 
-        public Builder setInterval(@Nullable Input<String> interval) {
+        public Builder interval(@Nullable Input<String> interval) {
             this.interval = interval;
             return this;
         }
 
-        public Builder setInterval(@Nullable String interval) {
+        public Builder interval(@Nullable String interval) {
             this.interval = Input.ofNullable(interval);
             return this;
         }
 
-        public Builder setStartTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Input<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
 
-        public Builder setType(@Nullable Input<JobScheduleType> type) {
+        public Builder type(@Nullable Input<JobScheduleType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable JobScheduleType type) {
+        public Builder type(@Nullable JobScheduleType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

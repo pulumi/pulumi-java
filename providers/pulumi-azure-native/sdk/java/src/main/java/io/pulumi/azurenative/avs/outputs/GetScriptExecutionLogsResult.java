@@ -329,92 +329,92 @@ public final class GetScriptExecutionLogsResult {
     	      this.warnings = defaults.warnings;
         }
 
-        public Builder setErrors(List<String> errors) {
+        public Builder errors(List<String> errors) {
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
 
-        public Builder setFailureReason(@Nullable String failureReason) {
+        public Builder failureReason(@Nullable String failureReason) {
             this.failureReason = failureReason;
             return this;
         }
 
-        public Builder setFinishedAt(String finishedAt) {
+        public Builder finishedAt(String finishedAt) {
             this.finishedAt = Objects.requireNonNull(finishedAt);
             return this;
         }
 
-        public Builder setHiddenParameters(@Nullable List<Object> hiddenParameters) {
+        public Builder hiddenParameters(@Nullable List<Object> hiddenParameters) {
             this.hiddenParameters = hiddenParameters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInformation(List<String> information) {
+        public Builder information(List<String> information) {
             this.information = Objects.requireNonNull(information);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNamedOutputs(@Nullable Map<String,Object> namedOutputs) {
+        public Builder namedOutputs(@Nullable Map<String,Object> namedOutputs) {
             this.namedOutputs = namedOutputs;
             return this;
         }
 
-        public Builder setOutput(@Nullable List<String> output) {
+        public Builder output(@Nullable List<String> output) {
             this.output = output;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<Object> parameters) {
+        public Builder parameters(@Nullable List<Object> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRetention(@Nullable String retention) {
+        public Builder retention(@Nullable String retention) {
             this.retention = retention;
             return this;
         }
 
-        public Builder setScriptCmdletId(@Nullable String scriptCmdletId) {
+        public Builder scriptCmdletId(@Nullable String scriptCmdletId) {
             this.scriptCmdletId = scriptCmdletId;
             return this;
         }
 
-        public Builder setStartedAt(String startedAt) {
+        public Builder startedAt(String startedAt) {
             this.startedAt = Objects.requireNonNull(startedAt);
             return this;
         }
 
-        public Builder setSubmittedAt(String submittedAt) {
+        public Builder submittedAt(String submittedAt) {
             this.submittedAt = Objects.requireNonNull(submittedAt);
             return this;
         }
 
-        public Builder setTimeout(String timeout) {
+        public Builder timeout(String timeout) {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWarnings(List<String> warnings) {
+        public Builder warnings(List<String> warnings) {
             this.warnings = Objects.requireNonNull(warnings);
             return this;
         }

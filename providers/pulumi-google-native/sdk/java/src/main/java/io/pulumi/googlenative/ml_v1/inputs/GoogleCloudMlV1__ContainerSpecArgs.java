@@ -125,52 +125,52 @@ public final class GoogleCloudMlV1__ContainerSpecArgs extends io.pulumi.resource
     	      this.ports = defaults.ports;
         }
 
-        public Builder setArgs(@Nullable Input<List<String>> args) {
+        public Builder args(@Nullable Input<List<String>> args) {
             this.args = args;
             return this;
         }
 
-        public Builder setArgs(@Nullable List<String> args) {
+        public Builder args(@Nullable List<String> args) {
             this.args = Input.ofNullable(args);
             return this;
         }
 
-        public Builder setCommand(@Nullable Input<List<String>> command) {
+        public Builder command(@Nullable Input<List<String>> command) {
             this.command = command;
             return this;
         }
 
-        public Builder setCommand(@Nullable List<String> command) {
+        public Builder command(@Nullable List<String> command) {
             this.command = Input.ofNullable(command);
             return this;
         }
 
-        public Builder setEnv(@Nullable Input<List<GoogleCloudMlV1__EnvVarArgs>> env) {
+        public Builder env(@Nullable Input<List<GoogleCloudMlV1__EnvVarArgs>> env) {
             this.env = env;
             return this;
         }
 
-        public Builder setEnv(@Nullable List<GoogleCloudMlV1__EnvVarArgs> env) {
+        public Builder env(@Nullable List<GoogleCloudMlV1__EnvVarArgs> env) {
             this.env = Input.ofNullable(env);
             return this;
         }
 
-        public Builder setImage(@Nullable Input<String> image) {
+        public Builder image(@Nullable Input<String> image) {
             this.image = image;
             return this;
         }
 
-        public Builder setImage(@Nullable String image) {
+        public Builder image(@Nullable String image) {
             this.image = Input.ofNullable(image);
             return this;
         }
 
-        public Builder setPorts(@Nullable Input<List<GoogleCloudMlV1__ContainerPortArgs>> ports) {
+        public Builder ports(@Nullable Input<List<GoogleCloudMlV1__ContainerPortArgs>> ports) {
             this.ports = ports;
             return this;
         }
 
-        public Builder setPorts(@Nullable List<GoogleCloudMlV1__ContainerPortArgs> ports) {
+        public Builder ports(@Nullable List<GoogleCloudMlV1__ContainerPortArgs> ports) {
             this.ports = Input.ofNullable(ports);
             return this;
         }

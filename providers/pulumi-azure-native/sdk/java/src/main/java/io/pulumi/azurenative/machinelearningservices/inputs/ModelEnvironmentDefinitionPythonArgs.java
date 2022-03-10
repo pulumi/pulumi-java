@@ -104,42 +104,42 @@ public final class ModelEnvironmentDefinitionPythonArgs extends io.pulumi.resour
     	      this.userManagedDependencies = defaults.userManagedDependencies;
         }
 
-        public Builder setBaseCondaEnvironment(@Nullable Input<String> baseCondaEnvironment) {
+        public Builder baseCondaEnvironment(@Nullable Input<String> baseCondaEnvironment) {
             this.baseCondaEnvironment = baseCondaEnvironment;
             return this;
         }
 
-        public Builder setBaseCondaEnvironment(@Nullable String baseCondaEnvironment) {
+        public Builder baseCondaEnvironment(@Nullable String baseCondaEnvironment) {
             this.baseCondaEnvironment = Input.ofNullable(baseCondaEnvironment);
             return this;
         }
 
-        public Builder setCondaDependencies(@Nullable Input<Object> condaDependencies) {
+        public Builder condaDependencies(@Nullable Input<Object> condaDependencies) {
             this.condaDependencies = condaDependencies;
             return this;
         }
 
-        public Builder setCondaDependencies(@Nullable Object condaDependencies) {
+        public Builder condaDependencies(@Nullable Object condaDependencies) {
             this.condaDependencies = Input.ofNullable(condaDependencies);
             return this;
         }
 
-        public Builder setInterpreterPath(@Nullable Input<String> interpreterPath) {
+        public Builder interpreterPath(@Nullable Input<String> interpreterPath) {
             this.interpreterPath = interpreterPath;
             return this;
         }
 
-        public Builder setInterpreterPath(@Nullable String interpreterPath) {
+        public Builder interpreterPath(@Nullable String interpreterPath) {
             this.interpreterPath = Input.ofNullable(interpreterPath);
             return this;
         }
 
-        public Builder setUserManagedDependencies(@Nullable Input<Boolean> userManagedDependencies) {
+        public Builder userManagedDependencies(@Nullable Input<Boolean> userManagedDependencies) {
             this.userManagedDependencies = userManagedDependencies;
             return this;
         }
 
-        public Builder setUserManagedDependencies(@Nullable Boolean userManagedDependencies) {
+        public Builder userManagedDependencies(@Nullable Boolean userManagedDependencies) {
             this.userManagedDependencies = Input.ofNullable(userManagedDependencies);
             return this;
         }

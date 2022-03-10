@@ -53,7 +53,7 @@ public final class SeedNodeResponse extends io.pulumi.resources.InvokeArgs {
     	      this.ipAddress = defaults.ipAddress;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }

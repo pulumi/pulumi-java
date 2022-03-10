@@ -126,52 +126,52 @@ public final class GoogleCloudDialogflowV2FulfillmentArgs extends io.pulumi.reso
     	      this.name = defaults.name;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setFeatures(@Nullable Input<List<GoogleCloudDialogflowV2FulfillmentFeatureArgs>> features) {
+        public Builder features(@Nullable Input<List<GoogleCloudDialogflowV2FulfillmentFeatureArgs>> features) {
             this.features = features;
             return this;
         }
 
-        public Builder setFeatures(@Nullable List<GoogleCloudDialogflowV2FulfillmentFeatureArgs> features) {
+        public Builder features(@Nullable List<GoogleCloudDialogflowV2FulfillmentFeatureArgs> features) {
             this.features = Input.ofNullable(features);
             return this;
         }
 
-        public Builder setGenericWebService(@Nullable Input<GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs> genericWebService) {
+        public Builder genericWebService(@Nullable Input<GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs> genericWebService) {
             this.genericWebService = genericWebService;
             return this;
         }
 
-        public Builder setGenericWebService(@Nullable GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs genericWebService) {
+        public Builder genericWebService(@Nullable GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs genericWebService) {
             this.genericWebService = Input.ofNullable(genericWebService);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

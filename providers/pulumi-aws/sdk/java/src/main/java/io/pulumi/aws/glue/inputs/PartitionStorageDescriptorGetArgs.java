@@ -238,122 +238,122 @@ public final class PartitionStorageDescriptorGetArgs extends io.pulumi.resources
     	      this.storedAsSubDirectories = defaults.storedAsSubDirectories;
         }
 
-        public Builder setBucketColumns(@Nullable Input<List<String>> bucketColumns) {
+        public Builder bucketColumns(@Nullable Input<List<String>> bucketColumns) {
             this.bucketColumns = bucketColumns;
             return this;
         }
 
-        public Builder setBucketColumns(@Nullable List<String> bucketColumns) {
+        public Builder bucketColumns(@Nullable List<String> bucketColumns) {
             this.bucketColumns = Input.ofNullable(bucketColumns);
             return this;
         }
 
-        public Builder setColumns(@Nullable Input<List<PartitionStorageDescriptorColumnGetArgs>> columns) {
+        public Builder columns(@Nullable Input<List<PartitionStorageDescriptorColumnGetArgs>> columns) {
             this.columns = columns;
             return this;
         }
 
-        public Builder setColumns(@Nullable List<PartitionStorageDescriptorColumnGetArgs> columns) {
+        public Builder columns(@Nullable List<PartitionStorageDescriptorColumnGetArgs> columns) {
             this.columns = Input.ofNullable(columns);
             return this;
         }
 
-        public Builder setCompressed(@Nullable Input<Boolean> compressed) {
+        public Builder compressed(@Nullable Input<Boolean> compressed) {
             this.compressed = compressed;
             return this;
         }
 
-        public Builder setCompressed(@Nullable Boolean compressed) {
+        public Builder compressed(@Nullable Boolean compressed) {
             this.compressed = Input.ofNullable(compressed);
             return this;
         }
 
-        public Builder setInputFormat(@Nullable Input<String> inputFormat) {
+        public Builder inputFormat(@Nullable Input<String> inputFormat) {
             this.inputFormat = inputFormat;
             return this;
         }
 
-        public Builder setInputFormat(@Nullable String inputFormat) {
+        public Builder inputFormat(@Nullable String inputFormat) {
             this.inputFormat = Input.ofNullable(inputFormat);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setNumberOfBuckets(@Nullable Input<Integer> numberOfBuckets) {
+        public Builder numberOfBuckets(@Nullable Input<Integer> numberOfBuckets) {
             this.numberOfBuckets = numberOfBuckets;
             return this;
         }
 
-        public Builder setNumberOfBuckets(@Nullable Integer numberOfBuckets) {
+        public Builder numberOfBuckets(@Nullable Integer numberOfBuckets) {
             this.numberOfBuckets = Input.ofNullable(numberOfBuckets);
             return this;
         }
 
-        public Builder setOutputFormat(@Nullable Input<String> outputFormat) {
+        public Builder outputFormat(@Nullable Input<String> outputFormat) {
             this.outputFormat = outputFormat;
             return this;
         }
 
-        public Builder setOutputFormat(@Nullable String outputFormat) {
+        public Builder outputFormat(@Nullable String outputFormat) {
             this.outputFormat = Input.ofNullable(outputFormat);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,String>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,String> parameters) {
+        public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setSerDeInfo(@Nullable Input<PartitionStorageDescriptorSerDeInfoGetArgs> serDeInfo) {
+        public Builder serDeInfo(@Nullable Input<PartitionStorageDescriptorSerDeInfoGetArgs> serDeInfo) {
             this.serDeInfo = serDeInfo;
             return this;
         }
 
-        public Builder setSerDeInfo(@Nullable PartitionStorageDescriptorSerDeInfoGetArgs serDeInfo) {
+        public Builder serDeInfo(@Nullable PartitionStorageDescriptorSerDeInfoGetArgs serDeInfo) {
             this.serDeInfo = Input.ofNullable(serDeInfo);
             return this;
         }
 
-        public Builder setSkewedInfo(@Nullable Input<PartitionStorageDescriptorSkewedInfoGetArgs> skewedInfo) {
+        public Builder skewedInfo(@Nullable Input<PartitionStorageDescriptorSkewedInfoGetArgs> skewedInfo) {
             this.skewedInfo = skewedInfo;
             return this;
         }
 
-        public Builder setSkewedInfo(@Nullable PartitionStorageDescriptorSkewedInfoGetArgs skewedInfo) {
+        public Builder skewedInfo(@Nullable PartitionStorageDescriptorSkewedInfoGetArgs skewedInfo) {
             this.skewedInfo = Input.ofNullable(skewedInfo);
             return this;
         }
 
-        public Builder setSortColumns(@Nullable Input<List<PartitionStorageDescriptorSortColumnGetArgs>> sortColumns) {
+        public Builder sortColumns(@Nullable Input<List<PartitionStorageDescriptorSortColumnGetArgs>> sortColumns) {
             this.sortColumns = sortColumns;
             return this;
         }
 
-        public Builder setSortColumns(@Nullable List<PartitionStorageDescriptorSortColumnGetArgs> sortColumns) {
+        public Builder sortColumns(@Nullable List<PartitionStorageDescriptorSortColumnGetArgs> sortColumns) {
             this.sortColumns = Input.ofNullable(sortColumns);
             return this;
         }
 
-        public Builder setStoredAsSubDirectories(@Nullable Input<Boolean> storedAsSubDirectories) {
+        public Builder storedAsSubDirectories(@Nullable Input<Boolean> storedAsSubDirectories) {
             this.storedAsSubDirectories = storedAsSubDirectories;
             return this;
         }
 
-        public Builder setStoredAsSubDirectories(@Nullable Boolean storedAsSubDirectories) {
+        public Builder storedAsSubDirectories(@Nullable Boolean storedAsSubDirectories) {
             this.storedAsSubDirectories = Input.ofNullable(storedAsSubDirectories);
             return this;
         }

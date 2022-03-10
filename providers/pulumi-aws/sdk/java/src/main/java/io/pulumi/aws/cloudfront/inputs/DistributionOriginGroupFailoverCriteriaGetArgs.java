@@ -53,12 +53,12 @@ public final class DistributionOriginGroupFailoverCriteriaGetArgs extends io.pul
     	      this.statusCodes = defaults.statusCodes;
         }
 
-        public Builder setStatusCodes(Input<List<Integer>> statusCodes) {
+        public Builder statusCodes(Input<List<Integer>> statusCodes) {
             this.statusCodes = Objects.requireNonNull(statusCodes);
             return this;
         }
 
-        public Builder setStatusCodes(List<Integer> statusCodes) {
+        public Builder statusCodes(List<Integer> statusCodes) {
             this.statusCodes = Input.of(Objects.requireNonNull(statusCodes));
             return this;
         }

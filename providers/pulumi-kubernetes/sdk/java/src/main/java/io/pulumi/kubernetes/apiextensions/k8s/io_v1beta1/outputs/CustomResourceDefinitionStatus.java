@@ -85,17 +85,17 @@ public final class CustomResourceDefinitionStatus {
     	      this.storedVersions = defaults.storedVersions;
         }
 
-        public Builder setAcceptedNames(CustomResourceDefinitionNames acceptedNames) {
+        public Builder acceptedNames(CustomResourceDefinitionNames acceptedNames) {
             this.acceptedNames = Objects.requireNonNull(acceptedNames);
             return this;
         }
 
-        public Builder setConditions(@Nullable List<CustomResourceDefinitionCondition> conditions) {
+        public Builder conditions(@Nullable List<CustomResourceDefinitionCondition> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setStoredVersions(List<String> storedVersions) {
+        public Builder storedVersions(List<String> storedVersions) {
             this.storedVersions = Objects.requireNonNull(storedVersions);
             return this;
         }

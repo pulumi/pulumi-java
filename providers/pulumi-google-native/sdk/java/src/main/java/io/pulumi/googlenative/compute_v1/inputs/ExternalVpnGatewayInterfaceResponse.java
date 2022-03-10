@@ -55,7 +55,7 @@ public final class ExternalVpnGatewayInterfaceResponse extends io.pulumi.resourc
     	      this.ipAddress = defaults.ipAddress;
         }
 
-        public Builder setIpAddress(String ipAddress) {
+        public Builder ipAddress(String ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }

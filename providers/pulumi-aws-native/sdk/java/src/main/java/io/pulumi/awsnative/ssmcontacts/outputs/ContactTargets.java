@@ -52,12 +52,12 @@ public final class ContactTargets {
     	      this.contactTargetInfo = defaults.contactTargetInfo;
         }
 
-        public Builder setChannelTargetInfo(@Nullable ContactChannelTargetInfo channelTargetInfo) {
+        public Builder channelTargetInfo(@Nullable ContactChannelTargetInfo channelTargetInfo) {
             this.channelTargetInfo = channelTargetInfo;
             return this;
         }
 
-        public Builder setContactTargetInfo(@Nullable ContactTargetInfo contactTargetInfo) {
+        public Builder contactTargetInfo(@Nullable ContactTargetInfo contactTargetInfo) {
             this.contactTargetInfo = contactTargetInfo;
             return this;
         }

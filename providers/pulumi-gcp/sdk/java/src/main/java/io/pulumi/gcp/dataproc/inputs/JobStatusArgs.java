@@ -86,42 +86,42 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
     	      this.substate = defaults.substate;
         }
 
-        public Builder setDetails(@Nullable Input<String> details) {
+        public Builder details(@Nullable Input<String> details) {
             this.details = details;
             return this;
         }
 
-        public Builder setDetails(@Nullable String details) {
+        public Builder details(@Nullable String details) {
             this.details = Input.ofNullable(details);
             return this;
         }
 
-        public Builder setState(@Nullable Input<String> state) {
+        public Builder state(@Nullable Input<String> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setStateStartTime(@Nullable Input<String> stateStartTime) {
+        public Builder stateStartTime(@Nullable Input<String> stateStartTime) {
             this.stateStartTime = stateStartTime;
             return this;
         }
 
-        public Builder setStateStartTime(@Nullable String stateStartTime) {
+        public Builder stateStartTime(@Nullable String stateStartTime) {
             this.stateStartTime = Input.ofNullable(stateStartTime);
             return this;
         }
 
-        public Builder setSubstate(@Nullable Input<String> substate) {
+        public Builder substate(@Nullable Input<String> substate) {
             this.substate = substate;
             return this;
         }
 
-        public Builder setSubstate(@Nullable String substate) {
+        public Builder substate(@Nullable String substate) {
             this.substate = Input.ofNullable(substate);
             return this;
         }

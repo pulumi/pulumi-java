@@ -126,52 +126,52 @@ public final class GenericProtectionPolicyArgs extends io.pulumi.resources.Resou
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setBackupManagementType(Input<String> backupManagementType) {
+        public Builder backupManagementType(Input<String> backupManagementType) {
             this.backupManagementType = Objects.requireNonNull(backupManagementType);
             return this;
         }
 
-        public Builder setBackupManagementType(String backupManagementType) {
+        public Builder backupManagementType(String backupManagementType) {
             this.backupManagementType = Input.of(Objects.requireNonNull(backupManagementType));
             return this;
         }
 
-        public Builder setFabricName(@Nullable Input<String> fabricName) {
+        public Builder fabricName(@Nullable Input<String> fabricName) {
             this.fabricName = fabricName;
             return this;
         }
 
-        public Builder setFabricName(@Nullable String fabricName) {
+        public Builder fabricName(@Nullable String fabricName) {
             this.fabricName = Input.ofNullable(fabricName);
             return this;
         }
 
-        public Builder setProtectedItemsCount(@Nullable Input<Integer> protectedItemsCount) {
+        public Builder protectedItemsCount(@Nullable Input<Integer> protectedItemsCount) {
             this.protectedItemsCount = protectedItemsCount;
             return this;
         }
 
-        public Builder setProtectedItemsCount(@Nullable Integer protectedItemsCount) {
+        public Builder protectedItemsCount(@Nullable Integer protectedItemsCount) {
             this.protectedItemsCount = Input.ofNullable(protectedItemsCount);
             return this;
         }
 
-        public Builder setSubProtectionPolicy(@Nullable Input<List<SubProtectionPolicyArgs>> subProtectionPolicy) {
+        public Builder subProtectionPolicy(@Nullable Input<List<SubProtectionPolicyArgs>> subProtectionPolicy) {
             this.subProtectionPolicy = subProtectionPolicy;
             return this;
         }
 
-        public Builder setSubProtectionPolicy(@Nullable List<SubProtectionPolicyArgs> subProtectionPolicy) {
+        public Builder subProtectionPolicy(@Nullable List<SubProtectionPolicyArgs> subProtectionPolicy) {
             this.subProtectionPolicy = Input.ofNullable(subProtectionPolicy);
             return this;
         }
 
-        public Builder setTimeZone(@Nullable Input<String> timeZone) {
+        public Builder timeZone(@Nullable Input<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Input.ofNullable(timeZone);
             return this;
         }

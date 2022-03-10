@@ -318,87 +318,87 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
     	      this.termId = defaults.termId;
         }
 
-        public Builder setAutoRenew(@Nullable Boolean autoRenew) {
+        public Builder autoRenew(@Nullable Boolean autoRenew) {
             this.autoRenew = autoRenew;
             return this;
         }
 
-        public Builder setCreated(String created) {
+        public Builder created(String created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
 
-        public Builder setIsFreeTrial(@Nullable Boolean isFreeTrial) {
+        public Builder isFreeTrial(@Nullable Boolean isFreeTrial) {
             this.isFreeTrial = isFreeTrial;
             return this;
         }
 
-        public Builder setLastModified(@Nullable String lastModified) {
+        public Builder lastModified(@Nullable String lastModified) {
             this.lastModified = lastModified;
             return this;
         }
 
-        public Builder setOfferId(@Nullable String offerId) {
+        public Builder offerId(@Nullable String offerId) {
             this.offerId = offerId;
             return this;
         }
 
-        public Builder setPaymentChannelMetadata(@Nullable Map<String,String> paymentChannelMetadata) {
+        public Builder paymentChannelMetadata(@Nullable Map<String,String> paymentChannelMetadata) {
             this.paymentChannelMetadata = paymentChannelMetadata;
             return this;
         }
 
-        public Builder setPaymentChannelType(@Nullable String paymentChannelType) {
+        public Builder paymentChannelType(@Nullable String paymentChannelType) {
             this.paymentChannelType = paymentChannelType;
             return this;
         }
 
-        public Builder setPublisherId(@Nullable String publisherId) {
+        public Builder publisherId(@Nullable String publisherId) {
             this.publisherId = publisherId;
             return this;
         }
 
-        public Builder setPublisherTestEnvironment(@Nullable String publisherTestEnvironment) {
+        public Builder publisherTestEnvironment(@Nullable String publisherTestEnvironment) {
             this.publisherTestEnvironment = publisherTestEnvironment;
             return this;
         }
 
-        public Builder setQuantity(@Nullable Double quantity) {
+        public Builder quantity(@Nullable Double quantity) {
             this.quantity = quantity;
             return this;
         }
 
-        public Builder setSaasResourceName(@Nullable String saasResourceName) {
+        public Builder saasResourceName(@Nullable String saasResourceName) {
             this.saasResourceName = saasResourceName;
             return this;
         }
 
-        public Builder setSaasSessionId(@Nullable String saasSessionId) {
+        public Builder saasSessionId(@Nullable String saasSessionId) {
             this.saasSessionId = saasSessionId;
             return this;
         }
 
-        public Builder setSaasSubscriptionId(@Nullable String saasSubscriptionId) {
+        public Builder saasSubscriptionId(@Nullable String saasSubscriptionId) {
             this.saasSubscriptionId = saasSubscriptionId;
             return this;
         }
 
-        public Builder setSkuId(@Nullable String skuId) {
+        public Builder skuId(@Nullable String skuId) {
             this.skuId = skuId;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setTerm(@Nullable SaasPropertiesResponseTerm term) {
+        public Builder term(@Nullable SaasPropertiesResponseTerm term) {
             this.term = term;
             return this;
         }
 
-        public Builder setTermId(@Nullable String termId) {
+        public Builder termId(@Nullable String termId) {
             this.termId = termId;
             return this;
         }

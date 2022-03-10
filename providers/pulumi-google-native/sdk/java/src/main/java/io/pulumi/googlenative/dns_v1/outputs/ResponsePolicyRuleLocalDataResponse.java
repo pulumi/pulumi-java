@@ -49,7 +49,7 @@ public final class ResponsePolicyRuleLocalDataResponse {
     	      this.localDatas = defaults.localDatas;
         }
 
-        public Builder setLocalDatas(List<ResourceRecordSetResponse> localDatas) {
+        public Builder localDatas(List<ResourceRecordSetResponse> localDatas) {
             this.localDatas = Objects.requireNonNull(localDatas);
             return this;
         }

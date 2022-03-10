@@ -51,7 +51,7 @@ public final class GetNodeGroupsArgs extends io.pulumi.resources.InvokeArgs {
     	      this.clusterName = defaults.clusterName;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }

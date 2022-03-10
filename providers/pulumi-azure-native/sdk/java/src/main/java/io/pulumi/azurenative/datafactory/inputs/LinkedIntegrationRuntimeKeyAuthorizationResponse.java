@@ -74,12 +74,12 @@ public final class LinkedIntegrationRuntimeKeyAuthorizationResponse extends io.p
     	      this.key = defaults.key;
         }
 
-        public Builder setAuthorizationType(String authorizationType) {
+        public Builder authorizationType(String authorizationType) {
             this.authorizationType = Objects.requireNonNull(authorizationType);
             return this;
         }
 
-        public Builder setKey(SecureStringResponse key) {
+        public Builder key(SecureStringResponse key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }

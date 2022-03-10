@@ -52,12 +52,12 @@ public final class ClusterClusterConfigSecurityConfigGetArgs extends io.pulumi.r
     	      this.kerberosConfig = defaults.kerberosConfig;
         }
 
-        public Builder setKerberosConfig(Input<ClusterClusterConfigSecurityConfigKerberosConfigGetArgs> kerberosConfig) {
+        public Builder kerberosConfig(Input<ClusterClusterConfigSecurityConfigKerberosConfigGetArgs> kerberosConfig) {
             this.kerberosConfig = Objects.requireNonNull(kerberosConfig);
             return this;
         }
 
-        public Builder setKerberosConfig(ClusterClusterConfigSecurityConfigKerberosConfigGetArgs kerberosConfig) {
+        public Builder kerberosConfig(ClusterClusterConfigSecurityConfigKerberosConfigGetArgs kerberosConfig) {
             this.kerberosConfig = Input.of(Objects.requireNonNull(kerberosConfig));
             return this;
         }

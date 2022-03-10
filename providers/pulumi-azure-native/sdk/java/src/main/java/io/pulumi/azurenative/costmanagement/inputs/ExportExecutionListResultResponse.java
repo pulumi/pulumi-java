@@ -56,7 +56,7 @@ public final class ExportExecutionListResultResponse extends io.pulumi.resources
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(List<ExportExecutionResponse> value) {
+        public Builder value(List<ExportExecutionResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

@@ -102,27 +102,27 @@ public final class GetGroupResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setFilterExpression(@Nullable String filterExpression) {
+        public Builder filterExpression(@Nullable String filterExpression) {
             this.filterExpression = filterExpression;
             return this;
         }
 
-        public Builder setGroupARN(@Nullable String groupARN) {
+        public Builder groupARN(@Nullable String groupARN) {
             this.groupARN = groupARN;
             return this;
         }
 
-        public Builder setGroupName(@Nullable String groupName) {
+        public Builder groupName(@Nullable String groupName) {
             this.groupName = groupName;
             return this;
         }
 
-        public Builder setInsightsConfiguration(@Nullable GroupInsightsConfiguration insightsConfiguration) {
+        public Builder insightsConfiguration(@Nullable GroupInsightsConfiguration insightsConfiguration) {
             this.insightsConfiguration = insightsConfiguration;
             return this;
         }
 
-        public Builder setTags(@Nullable List<TagsItemProperties> tags) {
+        public Builder tags(@Nullable List<TagsItemProperties> tags) {
             this.tags = tags;
             return this;
         }

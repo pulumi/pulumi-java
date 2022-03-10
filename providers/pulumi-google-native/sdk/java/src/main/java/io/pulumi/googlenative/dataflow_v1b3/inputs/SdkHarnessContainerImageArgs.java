@@ -91,32 +91,32 @@ public final class SdkHarnessContainerImageArgs extends io.pulumi.resources.Reso
     	      this.useSingleCorePerContainer = defaults.useSingleCorePerContainer;
         }
 
-        public Builder setContainerImage(@Nullable Input<String> containerImage) {
+        public Builder containerImage(@Nullable Input<String> containerImage) {
             this.containerImage = containerImage;
             return this;
         }
 
-        public Builder setContainerImage(@Nullable String containerImage) {
+        public Builder containerImage(@Nullable String containerImage) {
             this.containerImage = Input.ofNullable(containerImage);
             return this;
         }
 
-        public Builder setEnvironmentId(@Nullable Input<String> environmentId) {
+        public Builder environmentId(@Nullable Input<String> environmentId) {
             this.environmentId = environmentId;
             return this;
         }
 
-        public Builder setEnvironmentId(@Nullable String environmentId) {
+        public Builder environmentId(@Nullable String environmentId) {
             this.environmentId = Input.ofNullable(environmentId);
             return this;
         }
 
-        public Builder setUseSingleCorePerContainer(@Nullable Input<Boolean> useSingleCorePerContainer) {
+        public Builder useSingleCorePerContainer(@Nullable Input<Boolean> useSingleCorePerContainer) {
             this.useSingleCorePerContainer = useSingleCorePerContainer;
             return this;
         }
 
-        public Builder setUseSingleCorePerContainer(@Nullable Boolean useSingleCorePerContainer) {
+        public Builder useSingleCorePerContainer(@Nullable Boolean useSingleCorePerContainer) {
             this.useSingleCorePerContainer = Input.ofNullable(useSingleCorePerContainer);
             return this;
         }

@@ -53,7 +53,7 @@ public final class JobCsvOutputOptions extends io.pulumi.resources.InvokeArgs {
     	      this.delimiter = defaults.delimiter;
         }
 
-        public Builder setDelimiter(@Nullable String delimiter) {
+        public Builder delimiter(@Nullable String delimiter) {
             this.delimiter = delimiter;
             return this;
         }

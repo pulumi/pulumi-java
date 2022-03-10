@@ -77,22 +77,22 @@ public final class SecretEnvSourceArgs extends io.pulumi.resources.ResourceArgs 
     	      this.optional = defaults.optional;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOptional(@Nullable Input<Boolean> optional) {
+        public Builder optional(@Nullable Input<Boolean> optional) {
             this.optional = optional;
             return this;
         }
 
-        public Builder setOptional(@Nullable Boolean optional) {
+        public Builder optional(@Nullable Boolean optional) {
             this.optional = Input.ofNullable(optional);
             return this;
         }

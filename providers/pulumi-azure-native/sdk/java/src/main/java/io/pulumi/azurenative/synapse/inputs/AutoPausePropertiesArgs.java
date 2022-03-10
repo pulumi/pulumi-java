@@ -75,22 +75,22 @@ public final class AutoPausePropertiesArgs extends io.pulumi.resources.ResourceA
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setDelayInMinutes(@Nullable Input<Integer> delayInMinutes) {
+        public Builder delayInMinutes(@Nullable Input<Integer> delayInMinutes) {
             this.delayInMinutes = delayInMinutes;
             return this;
         }
 
-        public Builder setDelayInMinutes(@Nullable Integer delayInMinutes) {
+        public Builder delayInMinutes(@Nullable Integer delayInMinutes) {
             this.delayInMinutes = Input.ofNullable(delayInMinutes);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }

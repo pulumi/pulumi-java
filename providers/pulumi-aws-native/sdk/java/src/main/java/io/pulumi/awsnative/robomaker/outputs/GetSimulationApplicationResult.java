@@ -153,42 +153,42 @@ public final class GetSimulationApplicationResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCurrentRevisionId(@Nullable String currentRevisionId) {
+        public Builder currentRevisionId(@Nullable String currentRevisionId) {
             this.currentRevisionId = currentRevisionId;
             return this;
         }
 
-        public Builder setEnvironment(@Nullable String environment) {
+        public Builder environment(@Nullable String environment) {
             this.environment = environment;
             return this;
         }
 
-        public Builder setRenderingEngine(@Nullable SimulationApplicationRenderingEngine renderingEngine) {
+        public Builder renderingEngine(@Nullable SimulationApplicationRenderingEngine renderingEngine) {
             this.renderingEngine = renderingEngine;
             return this;
         }
 
-        public Builder setRobotSoftwareSuite(@Nullable SimulationApplicationRobotSoftwareSuite robotSoftwareSuite) {
+        public Builder robotSoftwareSuite(@Nullable SimulationApplicationRobotSoftwareSuite robotSoftwareSuite) {
             this.robotSoftwareSuite = robotSoftwareSuite;
             return this;
         }
 
-        public Builder setSimulationSoftwareSuite(@Nullable SimulationApplicationSimulationSoftwareSuite simulationSoftwareSuite) {
+        public Builder simulationSoftwareSuite(@Nullable SimulationApplicationSimulationSoftwareSuite simulationSoftwareSuite) {
             this.simulationSoftwareSuite = simulationSoftwareSuite;
             return this;
         }
 
-        public Builder setSources(@Nullable List<SimulationApplicationSourceConfig> sources) {
+        public Builder sources(@Nullable List<SimulationApplicationSourceConfig> sources) {
             this.sources = sources;
             return this;
         }
 
-        public Builder setTags(@Nullable SimulationApplicationTags tags) {
+        public Builder tags(@Nullable SimulationApplicationTags tags) {
             this.tags = tags;
             return this;
         }

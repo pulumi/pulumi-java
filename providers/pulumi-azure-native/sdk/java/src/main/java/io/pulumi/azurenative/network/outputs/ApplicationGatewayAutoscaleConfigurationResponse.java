@@ -67,12 +67,12 @@ public final class ApplicationGatewayAutoscaleConfigurationResponse {
     	      this.minCapacity = defaults.minCapacity;
         }
 
-        public Builder setMaxCapacity(@Nullable Integer maxCapacity) {
+        public Builder maxCapacity(@Nullable Integer maxCapacity) {
             this.maxCapacity = maxCapacity;
             return this;
         }
 
-        public Builder setMinCapacity(Integer minCapacity) {
+        public Builder minCapacity(Integer minCapacity) {
             this.minCapacity = Objects.requireNonNull(minCapacity);
             return this;
         }

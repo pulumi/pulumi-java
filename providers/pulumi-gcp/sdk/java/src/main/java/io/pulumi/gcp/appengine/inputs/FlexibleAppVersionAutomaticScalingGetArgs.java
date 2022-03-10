@@ -242,122 +242,122 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends io.pulumi.r
     	      this.requestUtilization = defaults.requestUtilization;
         }
 
-        public Builder setCoolDownPeriod(@Nullable Input<String> coolDownPeriod) {
+        public Builder coolDownPeriod(@Nullable Input<String> coolDownPeriod) {
             this.coolDownPeriod = coolDownPeriod;
             return this;
         }
 
-        public Builder setCoolDownPeriod(@Nullable String coolDownPeriod) {
+        public Builder coolDownPeriod(@Nullable String coolDownPeriod) {
             this.coolDownPeriod = Input.ofNullable(coolDownPeriod);
             return this;
         }
 
-        public Builder setCpuUtilization(Input<FlexibleAppVersionAutomaticScalingCpuUtilizationGetArgs> cpuUtilization) {
+        public Builder cpuUtilization(Input<FlexibleAppVersionAutomaticScalingCpuUtilizationGetArgs> cpuUtilization) {
             this.cpuUtilization = Objects.requireNonNull(cpuUtilization);
             return this;
         }
 
-        public Builder setCpuUtilization(FlexibleAppVersionAutomaticScalingCpuUtilizationGetArgs cpuUtilization) {
+        public Builder cpuUtilization(FlexibleAppVersionAutomaticScalingCpuUtilizationGetArgs cpuUtilization) {
             this.cpuUtilization = Input.of(Objects.requireNonNull(cpuUtilization));
             return this;
         }
 
-        public Builder setDiskUtilization(@Nullable Input<FlexibleAppVersionAutomaticScalingDiskUtilizationGetArgs> diskUtilization) {
+        public Builder diskUtilization(@Nullable Input<FlexibleAppVersionAutomaticScalingDiskUtilizationGetArgs> diskUtilization) {
             this.diskUtilization = diskUtilization;
             return this;
         }
 
-        public Builder setDiskUtilization(@Nullable FlexibleAppVersionAutomaticScalingDiskUtilizationGetArgs diskUtilization) {
+        public Builder diskUtilization(@Nullable FlexibleAppVersionAutomaticScalingDiskUtilizationGetArgs diskUtilization) {
             this.diskUtilization = Input.ofNullable(diskUtilization);
             return this;
         }
 
-        public Builder setMaxConcurrentRequests(@Nullable Input<Integer> maxConcurrentRequests) {
+        public Builder maxConcurrentRequests(@Nullable Input<Integer> maxConcurrentRequests) {
             this.maxConcurrentRequests = maxConcurrentRequests;
             return this;
         }
 
-        public Builder setMaxConcurrentRequests(@Nullable Integer maxConcurrentRequests) {
+        public Builder maxConcurrentRequests(@Nullable Integer maxConcurrentRequests) {
             this.maxConcurrentRequests = Input.ofNullable(maxConcurrentRequests);
             return this;
         }
 
-        public Builder setMaxIdleInstances(@Nullable Input<Integer> maxIdleInstances) {
+        public Builder maxIdleInstances(@Nullable Input<Integer> maxIdleInstances) {
             this.maxIdleInstances = maxIdleInstances;
             return this;
         }
 
-        public Builder setMaxIdleInstances(@Nullable Integer maxIdleInstances) {
+        public Builder maxIdleInstances(@Nullable Integer maxIdleInstances) {
             this.maxIdleInstances = Input.ofNullable(maxIdleInstances);
             return this;
         }
 
-        public Builder setMaxPendingLatency(@Nullable Input<String> maxPendingLatency) {
+        public Builder maxPendingLatency(@Nullable Input<String> maxPendingLatency) {
             this.maxPendingLatency = maxPendingLatency;
             return this;
         }
 
-        public Builder setMaxPendingLatency(@Nullable String maxPendingLatency) {
+        public Builder maxPendingLatency(@Nullable String maxPendingLatency) {
             this.maxPendingLatency = Input.ofNullable(maxPendingLatency);
             return this;
         }
 
-        public Builder setMaxTotalInstances(@Nullable Input<Integer> maxTotalInstances) {
+        public Builder maxTotalInstances(@Nullable Input<Integer> maxTotalInstances) {
             this.maxTotalInstances = maxTotalInstances;
             return this;
         }
 
-        public Builder setMaxTotalInstances(@Nullable Integer maxTotalInstances) {
+        public Builder maxTotalInstances(@Nullable Integer maxTotalInstances) {
             this.maxTotalInstances = Input.ofNullable(maxTotalInstances);
             return this;
         }
 
-        public Builder setMinIdleInstances(@Nullable Input<Integer> minIdleInstances) {
+        public Builder minIdleInstances(@Nullable Input<Integer> minIdleInstances) {
             this.minIdleInstances = minIdleInstances;
             return this;
         }
 
-        public Builder setMinIdleInstances(@Nullable Integer minIdleInstances) {
+        public Builder minIdleInstances(@Nullable Integer minIdleInstances) {
             this.minIdleInstances = Input.ofNullable(minIdleInstances);
             return this;
         }
 
-        public Builder setMinPendingLatency(@Nullable Input<String> minPendingLatency) {
+        public Builder minPendingLatency(@Nullable Input<String> minPendingLatency) {
             this.minPendingLatency = minPendingLatency;
             return this;
         }
 
-        public Builder setMinPendingLatency(@Nullable String minPendingLatency) {
+        public Builder minPendingLatency(@Nullable String minPendingLatency) {
             this.minPendingLatency = Input.ofNullable(minPendingLatency);
             return this;
         }
 
-        public Builder setMinTotalInstances(@Nullable Input<Integer> minTotalInstances) {
+        public Builder minTotalInstances(@Nullable Input<Integer> minTotalInstances) {
             this.minTotalInstances = minTotalInstances;
             return this;
         }
 
-        public Builder setMinTotalInstances(@Nullable Integer minTotalInstances) {
+        public Builder minTotalInstances(@Nullable Integer minTotalInstances) {
             this.minTotalInstances = Input.ofNullable(minTotalInstances);
             return this;
         }
 
-        public Builder setNetworkUtilization(@Nullable Input<FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs> networkUtilization) {
+        public Builder networkUtilization(@Nullable Input<FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs> networkUtilization) {
             this.networkUtilization = networkUtilization;
             return this;
         }
 
-        public Builder setNetworkUtilization(@Nullable FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs networkUtilization) {
+        public Builder networkUtilization(@Nullable FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs networkUtilization) {
             this.networkUtilization = Input.ofNullable(networkUtilization);
             return this;
         }
 
-        public Builder setRequestUtilization(@Nullable Input<FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs> requestUtilization) {
+        public Builder requestUtilization(@Nullable Input<FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs> requestUtilization) {
             this.requestUtilization = requestUtilization;
             return this;
         }
 
-        public Builder setRequestUtilization(@Nullable FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs requestUtilization) {
+        public Builder requestUtilization(@Nullable FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs requestUtilization) {
             this.requestUtilization = Input.ofNullable(requestUtilization);
             return this;
         }

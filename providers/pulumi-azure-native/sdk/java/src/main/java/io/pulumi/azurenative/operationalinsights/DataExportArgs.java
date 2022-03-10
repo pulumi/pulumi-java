@@ -200,102 +200,102 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setCreatedDate(@Nullable Input<String> createdDate) {
+        public Builder createdDate(@Nullable Input<String> createdDate) {
             this.createdDate = createdDate;
             return this;
         }
 
-        public Builder setCreatedDate(@Nullable String createdDate) {
+        public Builder createdDate(@Nullable String createdDate) {
             this.createdDate = Input.ofNullable(createdDate);
             return this;
         }
 
-        public Builder setDataExportId(@Nullable Input<String> dataExportId) {
+        public Builder dataExportId(@Nullable Input<String> dataExportId) {
             this.dataExportId = dataExportId;
             return this;
         }
 
-        public Builder setDataExportId(@Nullable String dataExportId) {
+        public Builder dataExportId(@Nullable String dataExportId) {
             this.dataExportId = Input.ofNullable(dataExportId);
             return this;
         }
 
-        public Builder setDataExportName(@Nullable Input<String> dataExportName) {
+        public Builder dataExportName(@Nullable Input<String> dataExportName) {
             this.dataExportName = dataExportName;
             return this;
         }
 
-        public Builder setDataExportName(@Nullable String dataExportName) {
+        public Builder dataExportName(@Nullable String dataExportName) {
             this.dataExportName = Input.ofNullable(dataExportName);
             return this;
         }
 
-        public Builder setEnable(@Nullable Input<Boolean> enable) {
+        public Builder enable(@Nullable Input<Boolean> enable) {
             this.enable = enable;
             return this;
         }
 
-        public Builder setEnable(@Nullable Boolean enable) {
+        public Builder enable(@Nullable Boolean enable) {
             this.enable = Input.ofNullable(enable);
             return this;
         }
 
-        public Builder setEventHubName(@Nullable Input<String> eventHubName) {
+        public Builder eventHubName(@Nullable Input<String> eventHubName) {
             this.eventHubName = eventHubName;
             return this;
         }
 
-        public Builder setEventHubName(@Nullable String eventHubName) {
+        public Builder eventHubName(@Nullable String eventHubName) {
             this.eventHubName = Input.ofNullable(eventHubName);
             return this;
         }
 
-        public Builder setLastModifiedDate(@Nullable Input<String> lastModifiedDate) {
+        public Builder lastModifiedDate(@Nullable Input<String> lastModifiedDate) {
             this.lastModifiedDate = lastModifiedDate;
             return this;
         }
 
-        public Builder setLastModifiedDate(@Nullable String lastModifiedDate) {
+        public Builder lastModifiedDate(@Nullable String lastModifiedDate) {
             this.lastModifiedDate = Input.ofNullable(lastModifiedDate);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceId(Input<String> resourceId) {
+        public Builder resourceId(Input<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Input.of(Objects.requireNonNull(resourceId));
             return this;
         }
 
-        public Builder setTableNames(Input<List<String>> tableNames) {
+        public Builder tableNames(Input<List<String>> tableNames) {
             this.tableNames = Objects.requireNonNull(tableNames);
             return this;
         }
 
-        public Builder setTableNames(List<String> tableNames) {
+        public Builder tableNames(List<String> tableNames) {
             this.tableNames = Input.of(Objects.requireNonNull(tableNames));
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

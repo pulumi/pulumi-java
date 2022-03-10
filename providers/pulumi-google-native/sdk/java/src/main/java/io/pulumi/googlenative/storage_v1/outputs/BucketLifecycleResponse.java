@@ -49,7 +49,7 @@ public final class BucketLifecycleResponse {
     	      this.rule = defaults.rule;
         }
 
-        public Builder setRule(List<BucketLifecycleRuleItemResponse> rule) {
+        public Builder rule(List<BucketLifecycleRuleItemResponse> rule) {
             this.rule = Objects.requireNonNull(rule);
             return this;
         }

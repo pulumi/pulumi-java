@@ -75,22 +75,22 @@ public final class BucketSourceSelectionCriteriaArgs extends io.pulumi.resources
     	      this.sseKmsEncryptedObjects = defaults.sseKmsEncryptedObjects;
         }
 
-        public Builder setReplicaModifications(@Nullable Input<BucketReplicaModificationsArgs> replicaModifications) {
+        public Builder replicaModifications(@Nullable Input<BucketReplicaModificationsArgs> replicaModifications) {
             this.replicaModifications = replicaModifications;
             return this;
         }
 
-        public Builder setReplicaModifications(@Nullable BucketReplicaModificationsArgs replicaModifications) {
+        public Builder replicaModifications(@Nullable BucketReplicaModificationsArgs replicaModifications) {
             this.replicaModifications = Input.ofNullable(replicaModifications);
             return this;
         }
 
-        public Builder setSseKmsEncryptedObjects(@Nullable Input<BucketSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects) {
+        public Builder sseKmsEncryptedObjects(@Nullable Input<BucketSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects) {
             this.sseKmsEncryptedObjects = sseKmsEncryptedObjects;
             return this;
         }
 
-        public Builder setSseKmsEncryptedObjects(@Nullable BucketSseKmsEncryptedObjectsArgs sseKmsEncryptedObjects) {
+        public Builder sseKmsEncryptedObjects(@Nullable BucketSseKmsEncryptedObjectsArgs sseKmsEncryptedObjects) {
             this.sseKmsEncryptedObjects = Input.ofNullable(sseKmsEncryptedObjects);
             return this;
         }

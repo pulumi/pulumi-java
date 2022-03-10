@@ -82,17 +82,17 @@ public final class StackTraceElementResponse {
     	      this.step = defaults.step;
         }
 
-        public Builder setPosition(PositionResponse position) {
+        public Builder position(PositionResponse position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }
 
-        public Builder setRoutine(String routine) {
+        public Builder routine(String routine) {
             this.routine = Objects.requireNonNull(routine);
             return this;
         }
 
-        public Builder setStep(String step) {
+        public Builder step(String step) {
             this.step = Objects.requireNonNull(step);
             return this;
         }

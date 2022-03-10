@@ -95,22 +95,22 @@ public final class EventChannelFilterArgs extends io.pulumi.resources.ResourceAr
     	      this.enableAdvancedFilteringOnArrays = defaults.enableAdvancedFilteringOnArrays;
         }
 
-        public Builder setAdvancedFilters(@Nullable Input<List<Object>> advancedFilters) {
+        public Builder advancedFilters(@Nullable Input<List<Object>> advancedFilters) {
             this.advancedFilters = advancedFilters;
             return this;
         }
 
-        public Builder setAdvancedFilters(@Nullable List<Object> advancedFilters) {
+        public Builder advancedFilters(@Nullable List<Object> advancedFilters) {
             this.advancedFilters = Input.ofNullable(advancedFilters);
             return this;
         }
 
-        public Builder setEnableAdvancedFilteringOnArrays(@Nullable Input<Boolean> enableAdvancedFilteringOnArrays) {
+        public Builder enableAdvancedFilteringOnArrays(@Nullable Input<Boolean> enableAdvancedFilteringOnArrays) {
             this.enableAdvancedFilteringOnArrays = enableAdvancedFilteringOnArrays;
             return this;
         }
 
-        public Builder setEnableAdvancedFilteringOnArrays(@Nullable Boolean enableAdvancedFilteringOnArrays) {
+        public Builder enableAdvancedFilteringOnArrays(@Nullable Boolean enableAdvancedFilteringOnArrays) {
             this.enableAdvancedFilteringOnArrays = Input.ofNullable(enableAdvancedFilteringOnArrays);
             return this;
         }

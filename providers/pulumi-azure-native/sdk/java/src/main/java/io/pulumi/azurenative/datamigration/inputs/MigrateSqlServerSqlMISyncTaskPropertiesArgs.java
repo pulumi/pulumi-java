@@ -76,22 +76,22 @@ public final class MigrateSqlServerSqlMISyncTaskPropertiesArgs extends io.pulumi
     	      this.taskType = defaults.taskType;
         }
 
-        public Builder setInput(@Nullable Input<MigrateSqlServerSqlMISyncTaskInputArgs> input) {
+        public Builder input(@Nullable Input<MigrateSqlServerSqlMISyncTaskInputArgs> input) {
             this.input = input;
             return this;
         }
 
-        public Builder setInput(@Nullable MigrateSqlServerSqlMISyncTaskInputArgs input) {
+        public Builder input(@Nullable MigrateSqlServerSqlMISyncTaskInputArgs input) {
             this.input = Input.ofNullable(input);
             return this;
         }
 
-        public Builder setTaskType(Input<String> taskType) {
+        public Builder taskType(Input<String> taskType) {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
 
-        public Builder setTaskType(String taskType) {
+        public Builder taskType(String taskType) {
             this.taskType = Input.of(Objects.requireNonNull(taskType));
             return this;
         }

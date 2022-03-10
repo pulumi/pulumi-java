@@ -141,32 +141,32 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setFilters(@Nullable List<GetInstanceFilter> filters) {
+        public Builder filters(@Nullable List<GetInstanceFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setGetPasswordData(@Nullable Boolean getPasswordData) {
+        public Builder getPasswordData(@Nullable Boolean getPasswordData) {
             this.getPasswordData = getPasswordData;
             return this;
         }
 
-        public Builder setGetUserData(@Nullable Boolean getUserData) {
+        public Builder getUserData(@Nullable Boolean getUserData) {
             this.getUserData = getUserData;
             return this;
         }
 
-        public Builder setInstanceId(@Nullable String instanceId) {
+        public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
 
-        public Builder setInstanceTags(@Nullable Map<String,String> instanceTags) {
+        public Builder instanceTags(@Nullable Map<String,String> instanceTags) {
             this.instanceTags = instanceTags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }

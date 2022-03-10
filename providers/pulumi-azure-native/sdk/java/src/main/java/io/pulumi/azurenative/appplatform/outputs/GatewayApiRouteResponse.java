@@ -182,47 +182,47 @@ public final class GatewayApiRouteResponse {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setFilters(@Nullable List<String> filters) {
+        public Builder filters(@Nullable List<String> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setOrder(@Nullable Integer order) {
+        public Builder order(@Nullable Integer order) {
             this.order = order;
             return this;
         }
 
-        public Builder setPredicates(@Nullable List<String> predicates) {
+        public Builder predicates(@Nullable List<String> predicates) {
             this.predicates = predicates;
             return this;
         }
 
-        public Builder setSsoEnabled(@Nullable Boolean ssoEnabled) {
+        public Builder ssoEnabled(@Nullable Boolean ssoEnabled) {
             this.ssoEnabled = ssoEnabled;
             return this;
         }
 
-        public Builder setTags(@Nullable List<String> tags) {
+        public Builder tags(@Nullable List<String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }
 
-        public Builder setTokenRelay(@Nullable Boolean tokenRelay) {
+        public Builder tokenRelay(@Nullable Boolean tokenRelay) {
             this.tokenRelay = tokenRelay;
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
         }

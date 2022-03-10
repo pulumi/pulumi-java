@@ -85,17 +85,17 @@ public final class GetLocationFSxWindowsResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setLocationArn(@Nullable String locationArn) {
+        public Builder locationArn(@Nullable String locationArn) {
             this.locationArn = locationArn;
             return this;
         }
 
-        public Builder setLocationUri(@Nullable String locationUri) {
+        public Builder locationUri(@Nullable String locationUri) {
             this.locationUri = locationUri;
             return this;
         }
 
-        public Builder setTags(@Nullable List<LocationFSxWindowsTag> tags) {
+        public Builder tags(@Nullable List<LocationFSxWindowsTag> tags) {
             this.tags = tags;
             return this;
         }

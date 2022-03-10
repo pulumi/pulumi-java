@@ -55,7 +55,7 @@ public final class MetastoreConfigResponse extends io.pulumi.resources.InvokeArg
     	      this.dataprocMetastoreService = defaults.dataprocMetastoreService;
         }
 
-        public Builder setDataprocMetastoreService(String dataprocMetastoreService) {
+        public Builder dataprocMetastoreService(String dataprocMetastoreService) {
             this.dataprocMetastoreService = Objects.requireNonNull(dataprocMetastoreService);
             return this;
         }

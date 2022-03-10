@@ -86,32 +86,32 @@ public final class FileSystemSizeInByteGetArgs extends io.pulumi.resources.Resou
     	      this.valueInStandard = defaults.valueInStandard;
         }
 
-        public Builder setValue(@Nullable Input<Integer> value) {
+        public Builder value(@Nullable Input<Integer> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable Integer value) {
+        public Builder value(@Nullable Integer value) {
             this.value = Input.ofNullable(value);
             return this;
         }
 
-        public Builder setValueInIa(@Nullable Input<Integer> valueInIa) {
+        public Builder valueInIa(@Nullable Input<Integer> valueInIa) {
             this.valueInIa = valueInIa;
             return this;
         }
 
-        public Builder setValueInIa(@Nullable Integer valueInIa) {
+        public Builder valueInIa(@Nullable Integer valueInIa) {
             this.valueInIa = Input.ofNullable(valueInIa);
             return this;
         }
 
-        public Builder setValueInStandard(@Nullable Input<Integer> valueInStandard) {
+        public Builder valueInStandard(@Nullable Input<Integer> valueInStandard) {
             this.valueInStandard = valueInStandard;
             return this;
         }
 
-        public Builder setValueInStandard(@Nullable Integer valueInStandard) {
+        public Builder valueInStandard(@Nullable Integer valueInStandard) {
             this.valueInStandard = Input.ofNullable(valueInStandard);
             return this;
         }

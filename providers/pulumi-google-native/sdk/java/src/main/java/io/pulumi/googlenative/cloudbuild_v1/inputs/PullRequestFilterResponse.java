@@ -89,17 +89,17 @@ public final class PullRequestFilterResponse extends io.pulumi.resources.InvokeA
     	      this.invertRegex = defaults.invertRegex;
         }
 
-        public Builder setBranch(String branch) {
+        public Builder branch(String branch) {
             this.branch = Objects.requireNonNull(branch);
             return this;
         }
 
-        public Builder setCommentControl(String commentControl) {
+        public Builder commentControl(String commentControl) {
             this.commentControl = Objects.requireNonNull(commentControl);
             return this;
         }
 
-        public Builder setInvertRegex(Boolean invertRegex) {
+        public Builder invertRegex(Boolean invertRegex) {
             this.invertRegex = Objects.requireNonNull(invertRegex);
             return this;
         }

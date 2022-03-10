@@ -176,92 +176,92 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.primaryContactInfo = defaults.primaryContactInfo;
         }
 
-        public Builder setAccountId(Input<String> accountId) {
+        public Builder accountId(Input<String> accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
 
-        public Builder setAccountId(String accountId) {
+        public Builder accountId(String accountId) {
             this.accountId = Input.of(Objects.requireNonNull(accountId));
             return this;
         }
 
-        public Builder setAlternateEmail(@Nullable Input<String> alternateEmail) {
+        public Builder alternateEmail(@Nullable Input<String> alternateEmail) {
             this.alternateEmail = alternateEmail;
             return this;
         }
 
-        public Builder setAlternateEmail(@Nullable String alternateEmail) {
+        public Builder alternateEmail(@Nullable String alternateEmail) {
             this.alternateEmail = Input.ofNullable(alternateEmail);
             return this;
         }
 
-        public Builder setChannelPartnerId(@Nullable Input<String> channelPartnerId) {
+        public Builder channelPartnerId(@Nullable Input<String> channelPartnerId) {
             this.channelPartnerId = channelPartnerId;
             return this;
         }
 
-        public Builder setChannelPartnerId(@Nullable String channelPartnerId) {
+        public Builder channelPartnerId(@Nullable String channelPartnerId) {
             this.channelPartnerId = Input.ofNullable(channelPartnerId);
             return this;
         }
 
-        public Builder setChannelPartnerLinkId(Input<String> channelPartnerLinkId) {
+        public Builder channelPartnerLinkId(Input<String> channelPartnerLinkId) {
             this.channelPartnerLinkId = Objects.requireNonNull(channelPartnerLinkId);
             return this;
         }
 
-        public Builder setChannelPartnerLinkId(String channelPartnerLinkId) {
+        public Builder channelPartnerLinkId(String channelPartnerLinkId) {
             this.channelPartnerLinkId = Input.of(Objects.requireNonNull(channelPartnerLinkId));
             return this;
         }
 
-        public Builder setDomain(Input<String> domain) {
+        public Builder domain(Input<String> domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
-        public Builder setDomain(String domain) {
+        public Builder domain(String domain) {
             this.domain = Input.of(Objects.requireNonNull(domain));
             return this;
         }
 
-        public Builder setLanguageCode(@Nullable Input<String> languageCode) {
+        public Builder languageCode(@Nullable Input<String> languageCode) {
             this.languageCode = languageCode;
             return this;
         }
 
-        public Builder setLanguageCode(@Nullable String languageCode) {
+        public Builder languageCode(@Nullable String languageCode) {
             this.languageCode = Input.ofNullable(languageCode);
             return this;
         }
 
-        public Builder setOrgDisplayName(Input<String> orgDisplayName) {
+        public Builder orgDisplayName(Input<String> orgDisplayName) {
             this.orgDisplayName = Objects.requireNonNull(orgDisplayName);
             return this;
         }
 
-        public Builder setOrgDisplayName(String orgDisplayName) {
+        public Builder orgDisplayName(String orgDisplayName) {
             this.orgDisplayName = Input.of(Objects.requireNonNull(orgDisplayName));
             return this;
         }
 
-        public Builder setOrgPostalAddress(Input<GoogleTypePostalAddressArgs> orgPostalAddress) {
+        public Builder orgPostalAddress(Input<GoogleTypePostalAddressArgs> orgPostalAddress) {
             this.orgPostalAddress = Objects.requireNonNull(orgPostalAddress);
             return this;
         }
 
-        public Builder setOrgPostalAddress(GoogleTypePostalAddressArgs orgPostalAddress) {
+        public Builder orgPostalAddress(GoogleTypePostalAddressArgs orgPostalAddress) {
             this.orgPostalAddress = Input.of(Objects.requireNonNull(orgPostalAddress));
             return this;
         }
 
-        public Builder setPrimaryContactInfo(@Nullable Input<GoogleCloudChannelV1ContactInfoArgs> primaryContactInfo) {
+        public Builder primaryContactInfo(@Nullable Input<GoogleCloudChannelV1ContactInfoArgs> primaryContactInfo) {
             this.primaryContactInfo = primaryContactInfo;
             return this;
         }
 
-        public Builder setPrimaryContactInfo(@Nullable GoogleCloudChannelV1ContactInfoArgs primaryContactInfo) {
+        public Builder primaryContactInfo(@Nullable GoogleCloudChannelV1ContactInfoArgs primaryContactInfo) {
             this.primaryContactInfo = Input.ofNullable(primaryContactInfo);
             return this;
         }

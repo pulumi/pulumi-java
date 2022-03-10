@@ -152,52 +152,52 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.foo = defaults.foo;
         }
 
-        public Builder setA(Boolean a) {
+        public Builder a(Boolean a) {
             this.a = Objects.requireNonNull(a);
             return this;
         }
 
-        public Builder setB(@Nullable Boolean b) {
+        public Builder b(@Nullable Boolean b) {
             this.b = b;
             return this;
         }
 
-        public Builder setBar(@Nullable Foo bar) {
+        public Builder bar(@Nullable Foo bar) {
             this.bar = bar;
             return this;
         }
 
-        public Builder setBaz(@Nullable List<Foo> baz) {
+        public Builder baz(@Nullable List<Foo> baz) {
             this.baz = baz;
             return this;
         }
 
-        public Builder setC(Integer c) {
+        public Builder c(Integer c) {
             this.c = Objects.requireNonNull(c);
             return this;
         }
 
-        public Builder setD(@Nullable Integer d) {
+        public Builder d(@Nullable Integer d) {
             this.d = d;
             return this;
         }
 
-        public Builder setE(String e) {
+        public Builder e(String e) {
             this.e = Objects.requireNonNull(e);
             return this;
         }
 
-        public Builder setF(@Nullable String f) {
+        public Builder f(@Nullable String f) {
             this.f = f;
             return this;
         }
 
-        public Builder setFoo(@Nullable Input<FooArgs> foo) {
+        public Builder foo(@Nullable Input<FooArgs> foo) {
             this.foo = foo;
             return this;
         }
 
-        public Builder setFoo(@Nullable FooArgs foo) {
+        public Builder foo(@Nullable FooArgs foo) {
             this.foo = Input.ofNullable(foo);
             return this;
         }

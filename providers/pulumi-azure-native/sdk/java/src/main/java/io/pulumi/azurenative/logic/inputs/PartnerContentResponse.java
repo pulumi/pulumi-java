@@ -57,7 +57,7 @@ public final class PartnerContentResponse extends io.pulumi.resources.InvokeArgs
     	      this.b2b = defaults.b2b;
         }
 
-        public Builder setB2b(@Nullable B2BPartnerContentResponse b2b) {
+        public Builder b2b(@Nullable B2BPartnerContentResponse b2b) {
             this.b2b = b2b;
             return this;
         }

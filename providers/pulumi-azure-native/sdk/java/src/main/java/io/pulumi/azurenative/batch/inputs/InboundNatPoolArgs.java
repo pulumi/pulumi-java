@@ -134,62 +134,62 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setBackendPort(Input<Integer> backendPort) {
+        public Builder backendPort(Input<Integer> backendPort) {
             this.backendPort = Objects.requireNonNull(backendPort);
             return this;
         }
 
-        public Builder setBackendPort(Integer backendPort) {
+        public Builder backendPort(Integer backendPort) {
             this.backendPort = Input.of(Objects.requireNonNull(backendPort));
             return this;
         }
 
-        public Builder setFrontendPortRangeEnd(Input<Integer> frontendPortRangeEnd) {
+        public Builder frontendPortRangeEnd(Input<Integer> frontendPortRangeEnd) {
             this.frontendPortRangeEnd = Objects.requireNonNull(frontendPortRangeEnd);
             return this;
         }
 
-        public Builder setFrontendPortRangeEnd(Integer frontendPortRangeEnd) {
+        public Builder frontendPortRangeEnd(Integer frontendPortRangeEnd) {
             this.frontendPortRangeEnd = Input.of(Objects.requireNonNull(frontendPortRangeEnd));
             return this;
         }
 
-        public Builder setFrontendPortRangeStart(Input<Integer> frontendPortRangeStart) {
+        public Builder frontendPortRangeStart(Input<Integer> frontendPortRangeStart) {
             this.frontendPortRangeStart = Objects.requireNonNull(frontendPortRangeStart);
             return this;
         }
 
-        public Builder setFrontendPortRangeStart(Integer frontendPortRangeStart) {
+        public Builder frontendPortRangeStart(Integer frontendPortRangeStart) {
             this.frontendPortRangeStart = Input.of(Objects.requireNonNull(frontendPortRangeStart));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setNetworkSecurityGroupRules(@Nullable Input<List<NetworkSecurityGroupRuleArgs>> networkSecurityGroupRules) {
+        public Builder networkSecurityGroupRules(@Nullable Input<List<NetworkSecurityGroupRuleArgs>> networkSecurityGroupRules) {
             this.networkSecurityGroupRules = networkSecurityGroupRules;
             return this;
         }
 
-        public Builder setNetworkSecurityGroupRules(@Nullable List<NetworkSecurityGroupRuleArgs> networkSecurityGroupRules) {
+        public Builder networkSecurityGroupRules(@Nullable List<NetworkSecurityGroupRuleArgs> networkSecurityGroupRules) {
             this.networkSecurityGroupRules = Input.ofNullable(networkSecurityGroupRules);
             return this;
         }
 
-        public Builder setProtocol(Input<InboundEndpointProtocol> protocol) {
+        public Builder protocol(Input<InboundEndpointProtocol> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setProtocol(InboundEndpointProtocol protocol) {
+        public Builder protocol(InboundEndpointProtocol protocol) {
             this.protocol = Input.of(Objects.requireNonNull(protocol));
             return this;
         }

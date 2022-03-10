@@ -52,12 +52,12 @@ public final class VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesGe
     	      this.match = defaults.match;
         }
 
-        public Builder setMatch(Input<VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatchGetArgs> match) {
+        public Builder match(Input<VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatchGetArgs> match) {
             this.match = Objects.requireNonNull(match);
             return this;
         }
 
-        public Builder setMatch(VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatchGetArgs match) {
+        public Builder match(VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatchGetArgs match) {
             this.match = Input.of(Objects.requireNonNull(match));
             return this;
         }

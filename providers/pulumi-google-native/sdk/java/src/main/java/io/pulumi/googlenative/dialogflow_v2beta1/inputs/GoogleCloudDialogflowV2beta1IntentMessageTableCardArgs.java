@@ -143,62 +143,62 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs extend
     	      this.title = defaults.title;
         }
 
-        public Builder setButtons(@Nullable Input<List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonArgs>> buttons) {
+        public Builder buttons(@Nullable Input<List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonArgs>> buttons) {
             this.buttons = buttons;
             return this;
         }
 
-        public Builder setButtons(@Nullable List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonArgs> buttons) {
+        public Builder buttons(@Nullable List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonArgs> buttons) {
             this.buttons = Input.ofNullable(buttons);
             return this;
         }
 
-        public Builder setColumnProperties(@Nullable Input<List<GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesArgs>> columnProperties) {
+        public Builder columnProperties(@Nullable Input<List<GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesArgs>> columnProperties) {
             this.columnProperties = columnProperties;
             return this;
         }
 
-        public Builder setColumnProperties(@Nullable List<GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesArgs> columnProperties) {
+        public Builder columnProperties(@Nullable List<GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesArgs> columnProperties) {
             this.columnProperties = Input.ofNullable(columnProperties);
             return this;
         }
 
-        public Builder setImage(@Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image) {
+        public Builder image(@Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image) {
             this.image = image;
             return this;
         }
 
-        public Builder setImage(@Nullable GoogleCloudDialogflowV2beta1IntentMessageImageArgs image) {
+        public Builder image(@Nullable GoogleCloudDialogflowV2beta1IntentMessageImageArgs image) {
             this.image = Input.ofNullable(image);
             return this;
         }
 
-        public Builder setRows(@Nullable Input<List<GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs>> rows) {
+        public Builder rows(@Nullable Input<List<GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs>> rows) {
             this.rows = rows;
             return this;
         }
 
-        public Builder setRows(@Nullable List<GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs> rows) {
+        public Builder rows(@Nullable List<GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs> rows) {
             this.rows = Input.ofNullable(rows);
             return this;
         }
 
-        public Builder setSubtitle(@Nullable Input<String> subtitle) {
+        public Builder subtitle(@Nullable Input<String> subtitle) {
             this.subtitle = subtitle;
             return this;
         }
 
-        public Builder setSubtitle(@Nullable String subtitle) {
+        public Builder subtitle(@Nullable String subtitle) {
             this.subtitle = Input.ofNullable(subtitle);
             return this;
         }
 
-        public Builder setTitle(Input<String> title) {
+        public Builder title(Input<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Input.of(Objects.requireNonNull(title));
             return this;
         }

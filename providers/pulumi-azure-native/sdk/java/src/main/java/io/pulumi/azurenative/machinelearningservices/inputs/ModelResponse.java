@@ -384,107 +384,107 @@ public final class ModelResponse extends io.pulumi.resources.InvokeArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setDatasets(@Nullable List<DatasetReferenceResponse> datasets) {
+        public Builder datasets(@Nullable List<DatasetReferenceResponse> datasets) {
             this.datasets = datasets;
             return this;
         }
 
-        public Builder setDerivedModelIds(@Nullable List<String> derivedModelIds) {
+        public Builder derivedModelIds(@Nullable List<String> derivedModelIds) {
             this.derivedModelIds = derivedModelIds;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setExperimentName(@Nullable String experimentName) {
+        public Builder experimentName(@Nullable String experimentName) {
             this.experimentName = experimentName;
             return this;
         }
 
-        public Builder setFramework(@Nullable String framework) {
+        public Builder framework(@Nullable String framework) {
             this.framework = framework;
             return this;
         }
 
-        public Builder setFrameworkVersion(@Nullable String frameworkVersion) {
+        public Builder frameworkVersion(@Nullable String frameworkVersion) {
             this.frameworkVersion = frameworkVersion;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setKvTags(@Nullable Map<String,String> kvTags) {
+        public Builder kvTags(@Nullable Map<String,String> kvTags) {
             this.kvTags = kvTags;
             return this;
         }
 
-        public Builder setMimeType(String mimeType) {
+        public Builder mimeType(String mimeType) {
             this.mimeType = Objects.requireNonNull(mimeType);
             return this;
         }
 
-        public Builder setModifiedTime(@Nullable String modifiedTime) {
+        public Builder modifiedTime(@Nullable String modifiedTime) {
             this.modifiedTime = modifiedTime;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParentModelId(@Nullable String parentModelId) {
+        public Builder parentModelId(@Nullable String parentModelId) {
             this.parentModelId = parentModelId;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setResourceRequirements(@Nullable ContainerResourceRequirementsResponse resourceRequirements) {
+        public Builder resourceRequirements(@Nullable ContainerResourceRequirementsResponse resourceRequirements) {
             this.resourceRequirements = resourceRequirements;
             return this;
         }
 
-        public Builder setRunId(@Nullable String runId) {
+        public Builder runId(@Nullable String runId) {
             this.runId = runId;
             return this;
         }
 
-        public Builder setSampleInputData(@Nullable String sampleInputData) {
+        public Builder sampleInputData(@Nullable String sampleInputData) {
             this.sampleInputData = sampleInputData;
             return this;
         }
 
-        public Builder setSampleOutputData(@Nullable String sampleOutputData) {
+        public Builder sampleOutputData(@Nullable String sampleOutputData) {
             this.sampleOutputData = sampleOutputData;
             return this;
         }
 
-        public Builder setUnpack(@Nullable Boolean unpack) {
+        public Builder unpack(@Nullable Boolean unpack) {
             this.unpack = unpack;
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
-        public Builder setVersion(@Nullable Double version) {
+        public Builder version(@Nullable Double version) {
             this.version = version;
             return this;
         }

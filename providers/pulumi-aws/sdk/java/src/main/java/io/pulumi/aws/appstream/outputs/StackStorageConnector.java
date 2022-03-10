@@ -84,17 +84,17 @@ public final class StackStorageConnector {
     	      this.resourceIdentifier = defaults.resourceIdentifier;
         }
 
-        public Builder setConnectorType(String connectorType) {
+        public Builder connectorType(String connectorType) {
             this.connectorType = Objects.requireNonNull(connectorType);
             return this;
         }
 
-        public Builder setDomains(@Nullable List<String> domains) {
+        public Builder domains(@Nullable List<String> domains) {
             this.domains = domains;
             return this;
         }
 
-        public Builder setResourceIdentifier(@Nullable String resourceIdentifier) {
+        public Builder resourceIdentifier(@Nullable String resourceIdentifier) {
             this.resourceIdentifier = resourceIdentifier;
             return this;
         }

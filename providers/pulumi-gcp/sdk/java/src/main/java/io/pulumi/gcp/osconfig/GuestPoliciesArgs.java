@@ -189,82 +189,82 @@ public final class GuestPoliciesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.recipes = defaults.recipes;
         }
 
-        public Builder setAssignment(Input<GuestPoliciesAssignmentArgs> assignment) {
+        public Builder assignment(Input<GuestPoliciesAssignmentArgs> assignment) {
             this.assignment = Objects.requireNonNull(assignment);
             return this;
         }
 
-        public Builder setAssignment(GuestPoliciesAssignmentArgs assignment) {
+        public Builder assignment(GuestPoliciesAssignmentArgs assignment) {
             this.assignment = Input.of(Objects.requireNonNull(assignment));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setGuestPolicyId(Input<String> guestPolicyId) {
+        public Builder guestPolicyId(Input<String> guestPolicyId) {
             this.guestPolicyId = Objects.requireNonNull(guestPolicyId);
             return this;
         }
 
-        public Builder setGuestPolicyId(String guestPolicyId) {
+        public Builder guestPolicyId(String guestPolicyId) {
             this.guestPolicyId = Input.of(Objects.requireNonNull(guestPolicyId));
             return this;
         }
 
-        public Builder setPackageRepositories(@Nullable Input<List<GuestPoliciesPackageRepositoryArgs>> packageRepositories) {
+        public Builder packageRepositories(@Nullable Input<List<GuestPoliciesPackageRepositoryArgs>> packageRepositories) {
             this.packageRepositories = packageRepositories;
             return this;
         }
 
-        public Builder setPackageRepositories(@Nullable List<GuestPoliciesPackageRepositoryArgs> packageRepositories) {
+        public Builder packageRepositories(@Nullable List<GuestPoliciesPackageRepositoryArgs> packageRepositories) {
             this.packageRepositories = Input.ofNullable(packageRepositories);
             return this;
         }
 
-        public Builder setPackages(@Nullable Input<List<GuestPoliciesPackageArgs>> packages) {
+        public Builder packages(@Nullable Input<List<GuestPoliciesPackageArgs>> packages) {
             this.packages = packages;
             return this;
         }
 
-        public Builder setPackages(@Nullable List<GuestPoliciesPackageArgs> packages) {
+        public Builder packages(@Nullable List<GuestPoliciesPackageArgs> packages) {
             this.packages = Input.ofNullable(packages);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRecipes(@Nullable Input<List<GuestPoliciesRecipeArgs>> recipes) {
+        public Builder recipes(@Nullable Input<List<GuestPoliciesRecipeArgs>> recipes) {
             this.recipes = recipes;
             return this;
         }
 
-        public Builder setRecipes(@Nullable List<GuestPoliciesRecipeArgs> recipes) {
+        public Builder recipes(@Nullable List<GuestPoliciesRecipeArgs> recipes) {
             this.recipes = Input.ofNullable(recipes);
             return this;
         }

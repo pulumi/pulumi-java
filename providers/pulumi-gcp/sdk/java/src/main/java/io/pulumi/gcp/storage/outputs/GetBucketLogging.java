@@ -49,12 +49,12 @@ public final class GetBucketLogging {
     	      this.logObjectPrefix = defaults.logObjectPrefix;
         }
 
-        public Builder setLogBucket(String logBucket) {
+        public Builder logBucket(String logBucket) {
             this.logBucket = Objects.requireNonNull(logBucket);
             return this;
         }
 
-        public Builder setLogObjectPrefix(String logObjectPrefix) {
+        public Builder logObjectPrefix(String logObjectPrefix) {
             this.logObjectPrefix = Objects.requireNonNull(logObjectPrefix);
             return this;
         }

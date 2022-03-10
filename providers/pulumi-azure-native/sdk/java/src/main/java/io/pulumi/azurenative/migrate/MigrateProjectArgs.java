@@ -136,62 +136,62 @@ public final class MigrateProjectArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setETag(@Nullable Input<String> eTag) {
+        public Builder eTag(@Nullable Input<String> eTag) {
             this.eTag = eTag;
             return this;
         }
 
-        public Builder setETag(@Nullable String eTag) {
+        public Builder eTag(@Nullable String eTag) {
             this.eTag = Input.ofNullable(eTag);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMigrateProjectName(@Nullable Input<String> migrateProjectName) {
+        public Builder migrateProjectName(@Nullable Input<String> migrateProjectName) {
             this.migrateProjectName = migrateProjectName;
             return this;
         }
 
-        public Builder setMigrateProjectName(@Nullable String migrateProjectName) {
+        public Builder migrateProjectName(@Nullable String migrateProjectName) {
             this.migrateProjectName = Input.ofNullable(migrateProjectName);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<MigrateProjectPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<MigrateProjectPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable MigrateProjectPropertiesArgs properties) {
+        public Builder properties(@Nullable MigrateProjectPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<MigrateProjectTagsArgs> tags) {
+        public Builder tags(@Nullable Input<MigrateProjectTagsArgs> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable MigrateProjectTagsArgs tags) {
+        public Builder tags(@Nullable MigrateProjectTagsArgs tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

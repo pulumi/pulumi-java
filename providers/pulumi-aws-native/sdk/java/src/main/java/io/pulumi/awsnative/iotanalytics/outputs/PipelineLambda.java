@@ -68,22 +68,22 @@ public final class PipelineLambda {
     	      this.next = defaults.next;
         }
 
-        public Builder setBatchSize(Integer batchSize) {
+        public Builder batchSize(Integer batchSize) {
             this.batchSize = Objects.requireNonNull(batchSize);
             return this;
         }
 
-        public Builder setLambdaName(String lambdaName) {
+        public Builder lambdaName(String lambdaName) {
             this.lambdaName = Objects.requireNonNull(lambdaName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNext(@Nullable String next) {
+        public Builder next(@Nullable String next) {
             this.next = next;
             return this;
         }

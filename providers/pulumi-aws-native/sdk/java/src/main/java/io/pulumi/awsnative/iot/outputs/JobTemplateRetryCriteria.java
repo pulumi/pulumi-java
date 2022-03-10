@@ -52,12 +52,12 @@ public final class JobTemplateRetryCriteria {
     	      this.numberOfRetries = defaults.numberOfRetries;
         }
 
-        public Builder setFailureType(@Nullable JobTemplateJobRetryFailureType failureType) {
+        public Builder failureType(@Nullable JobTemplateJobRetryFailureType failureType) {
             this.failureType = failureType;
             return this;
         }
 
-        public Builder setNumberOfRetries(@Nullable Integer numberOfRetries) {
+        public Builder numberOfRetries(@Nullable Integer numberOfRetries) {
             this.numberOfRetries = numberOfRetries;
             return this;
         }

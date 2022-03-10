@@ -84,17 +84,17 @@ public final class GetHubVirtualNetworkConnectionArgs extends io.pulumi.resource
     	      this.virtualHubName = defaults.virtualHubName;
         }
 
-        public Builder setConnectionName(String connectionName) {
+        public Builder connectionName(String connectionName) {
             this.connectionName = Objects.requireNonNull(connectionName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setVirtualHubName(String virtualHubName) {
+        public Builder virtualHubName(String virtualHubName) {
             this.virtualHubName = Objects.requireNonNull(virtualHubName);
             return this;
         }

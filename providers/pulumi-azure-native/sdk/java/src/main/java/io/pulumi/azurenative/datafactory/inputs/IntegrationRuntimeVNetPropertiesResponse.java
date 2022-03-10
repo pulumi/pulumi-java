@@ -107,22 +107,22 @@ public final class IntegrationRuntimeVNetPropertiesResponse extends io.pulumi.re
     	      this.vNetId = defaults.vNetId;
         }
 
-        public Builder setPublicIPs(@Nullable List<String> publicIPs) {
+        public Builder publicIPs(@Nullable List<String> publicIPs) {
             this.publicIPs = publicIPs;
             return this;
         }
 
-        public Builder setSubnet(@Nullable String subnet) {
+        public Builder subnet(@Nullable String subnet) {
             this.subnet = subnet;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setVNetId(@Nullable String vNetId) {
+        public Builder vNetId(@Nullable String vNetId) {
             this.vNetId = vNetId;
             return this;
         }

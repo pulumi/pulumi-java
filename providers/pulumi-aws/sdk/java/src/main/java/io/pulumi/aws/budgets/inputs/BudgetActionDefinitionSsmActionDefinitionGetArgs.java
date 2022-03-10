@@ -86,32 +86,32 @@ public final class BudgetActionDefinitionSsmActionDefinitionGetArgs extends io.p
     	      this.region = defaults.region;
         }
 
-        public Builder setActionSubType(Input<String> actionSubType) {
+        public Builder actionSubType(Input<String> actionSubType) {
             this.actionSubType = Objects.requireNonNull(actionSubType);
             return this;
         }
 
-        public Builder setActionSubType(String actionSubType) {
+        public Builder actionSubType(String actionSubType) {
             this.actionSubType = Input.of(Objects.requireNonNull(actionSubType));
             return this;
         }
 
-        public Builder setInstanceIds(Input<List<String>> instanceIds) {
+        public Builder instanceIds(Input<List<String>> instanceIds) {
             this.instanceIds = Objects.requireNonNull(instanceIds);
             return this;
         }
 
-        public Builder setInstanceIds(List<String> instanceIds) {
+        public Builder instanceIds(List<String> instanceIds) {
             this.instanceIds = Input.of(Objects.requireNonNull(instanceIds));
             return this;
         }
 
-        public Builder setRegion(Input<String> region) {
+        public Builder region(Input<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Input.of(Objects.requireNonNull(region));
             return this;
         }

@@ -93,17 +93,17 @@ public final class GalleryImageVersionStorageProfileResponse extends io.pulumi.r
     	      this.source = defaults.source;
         }
 
-        public Builder setDataDiskImages(@Nullable List<GalleryDataDiskImageResponse> dataDiskImages) {
+        public Builder dataDiskImages(@Nullable List<GalleryDataDiskImageResponse> dataDiskImages) {
             this.dataDiskImages = dataDiskImages;
             return this;
         }
 
-        public Builder setOsDiskImage(@Nullable GalleryOSDiskImageResponse osDiskImage) {
+        public Builder osDiskImage(@Nullable GalleryOSDiskImageResponse osDiskImage) {
             this.osDiskImage = osDiskImage;
             return this;
         }
 
-        public Builder setSource(@Nullable GalleryArtifactVersionSourceResponse source) {
+        public Builder source(@Nullable GalleryArtifactVersionSourceResponse source) {
             this.source = source;
             return this;
         }

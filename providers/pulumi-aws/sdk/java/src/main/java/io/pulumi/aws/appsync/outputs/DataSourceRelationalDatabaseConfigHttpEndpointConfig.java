@@ -115,27 +115,27 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfig {
     	      this.schema = defaults.schema;
         }
 
-        public Builder setAwsSecretStoreArn(String awsSecretStoreArn) {
+        public Builder awsSecretStoreArn(String awsSecretStoreArn) {
             this.awsSecretStoreArn = Objects.requireNonNull(awsSecretStoreArn);
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable String databaseName) {
+        public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
-        public Builder setDbClusterIdentifier(String dbClusterIdentifier) {
+        public Builder dbClusterIdentifier(String dbClusterIdentifier) {
             this.dbClusterIdentifier = Objects.requireNonNull(dbClusterIdentifier);
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
 
-        public Builder setSchema(@Nullable String schema) {
+        public Builder schema(@Nullable String schema) {
             this.schema = schema;
             return this;
         }

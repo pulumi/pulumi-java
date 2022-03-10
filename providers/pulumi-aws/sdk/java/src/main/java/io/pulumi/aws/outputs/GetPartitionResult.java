@@ -97,22 +97,22 @@ public final class GetPartitionResult {
     	      this.reverseDnsPrefix = defaults.reverseDnsPrefix;
         }
 
-        public Builder setDnsSuffix(String dnsSuffix) {
+        public Builder dnsSuffix(String dnsSuffix) {
             this.dnsSuffix = Objects.requireNonNull(dnsSuffix);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setPartition(String partition) {
+        public Builder partition(String partition) {
             this.partition = Objects.requireNonNull(partition);
             return this;
         }
 
-        public Builder setReverseDnsPrefix(String reverseDnsPrefix) {
+        public Builder reverseDnsPrefix(String reverseDnsPrefix) {
             this.reverseDnsPrefix = Objects.requireNonNull(reverseDnsPrefix);
             return this;
         }

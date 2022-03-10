@@ -83,17 +83,17 @@ public final class QueueOutboundCallerConfig {
     	      this.outboundFlowId = defaults.outboundFlowId;
         }
 
-        public Builder setOutboundCallerIdName(@Nullable String outboundCallerIdName) {
+        public Builder outboundCallerIdName(@Nullable String outboundCallerIdName) {
             this.outboundCallerIdName = outboundCallerIdName;
             return this;
         }
 
-        public Builder setOutboundCallerIdNumberId(@Nullable String outboundCallerIdNumberId) {
+        public Builder outboundCallerIdNumberId(@Nullable String outboundCallerIdNumberId) {
             this.outboundCallerIdNumberId = outboundCallerIdNumberId;
             return this;
         }
 
-        public Builder setOutboundFlowId(@Nullable String outboundFlowId) {
+        public Builder outboundFlowId(@Nullable String outboundFlowId) {
             this.outboundFlowId = outboundFlowId;
             return this;
         }

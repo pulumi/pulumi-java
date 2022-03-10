@@ -188,92 +188,92 @@ public final class PermissionsState extends io.pulumi.resources.ResourceArgs {
     	      this.tableWithColumns = defaults.tableWithColumns;
         }
 
-        public Builder setCatalogId(@Nullable Input<String> catalogId) {
+        public Builder catalogId(@Nullable Input<String> catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
-        public Builder setCatalogId(@Nullable String catalogId) {
+        public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = Input.ofNullable(catalogId);
             return this;
         }
 
-        public Builder setCatalogResource(@Nullable Input<Boolean> catalogResource) {
+        public Builder catalogResource(@Nullable Input<Boolean> catalogResource) {
             this.catalogResource = catalogResource;
             return this;
         }
 
-        public Builder setCatalogResource(@Nullable Boolean catalogResource) {
+        public Builder catalogResource(@Nullable Boolean catalogResource) {
             this.catalogResource = Input.ofNullable(catalogResource);
             return this;
         }
 
-        public Builder setDataLocation(@Nullable Input<PermissionsDataLocationGetArgs> dataLocation) {
+        public Builder dataLocation(@Nullable Input<PermissionsDataLocationGetArgs> dataLocation) {
             this.dataLocation = dataLocation;
             return this;
         }
 
-        public Builder setDataLocation(@Nullable PermissionsDataLocationGetArgs dataLocation) {
+        public Builder dataLocation(@Nullable PermissionsDataLocationGetArgs dataLocation) {
             this.dataLocation = Input.ofNullable(dataLocation);
             return this;
         }
 
-        public Builder setDatabase(@Nullable Input<PermissionsDatabaseGetArgs> database) {
+        public Builder database(@Nullable Input<PermissionsDatabaseGetArgs> database) {
             this.database = database;
             return this;
         }
 
-        public Builder setDatabase(@Nullable PermissionsDatabaseGetArgs database) {
+        public Builder database(@Nullable PermissionsDatabaseGetArgs database) {
             this.database = Input.ofNullable(database);
             return this;
         }
 
-        public Builder setPermissions(@Nullable Input<List<String>> permissions) {
+        public Builder permissions(@Nullable Input<List<String>> permissions) {
             this.permissions = permissions;
             return this;
         }
 
-        public Builder setPermissions(@Nullable List<String> permissions) {
+        public Builder permissions(@Nullable List<String> permissions) {
             this.permissions = Input.ofNullable(permissions);
             return this;
         }
 
-        public Builder setPermissionsWithGrantOptions(@Nullable Input<List<String>> permissionsWithGrantOptions) {
+        public Builder permissionsWithGrantOptions(@Nullable Input<List<String>> permissionsWithGrantOptions) {
             this.permissionsWithGrantOptions = permissionsWithGrantOptions;
             return this;
         }
 
-        public Builder setPermissionsWithGrantOptions(@Nullable List<String> permissionsWithGrantOptions) {
+        public Builder permissionsWithGrantOptions(@Nullable List<String> permissionsWithGrantOptions) {
             this.permissionsWithGrantOptions = Input.ofNullable(permissionsWithGrantOptions);
             return this;
         }
 
-        public Builder setPrincipal(@Nullable Input<String> principal) {
+        public Builder principal(@Nullable Input<String> principal) {
             this.principal = principal;
             return this;
         }
 
-        public Builder setPrincipal(@Nullable String principal) {
+        public Builder principal(@Nullable String principal) {
             this.principal = Input.ofNullable(principal);
             return this;
         }
 
-        public Builder setTable(@Nullable Input<PermissionsTableGetArgs> table) {
+        public Builder table(@Nullable Input<PermissionsTableGetArgs> table) {
             this.table = table;
             return this;
         }
 
-        public Builder setTable(@Nullable PermissionsTableGetArgs table) {
+        public Builder table(@Nullable PermissionsTableGetArgs table) {
             this.table = Input.ofNullable(table);
             return this;
         }
 
-        public Builder setTableWithColumns(@Nullable Input<PermissionsTableWithColumnsGetArgs> tableWithColumns) {
+        public Builder tableWithColumns(@Nullable Input<PermissionsTableWithColumnsGetArgs> tableWithColumns) {
             this.tableWithColumns = tableWithColumns;
             return this;
         }
 
-        public Builder setTableWithColumns(@Nullable PermissionsTableWithColumnsGetArgs tableWithColumns) {
+        public Builder tableWithColumns(@Nullable PermissionsTableWithColumnsGetArgs tableWithColumns) {
             this.tableWithColumns = Input.ofNullable(tableWithColumns);
             return this;
         }

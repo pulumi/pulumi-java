@@ -98,22 +98,22 @@ public final class PipelineParameterResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setDefaultValue(String defaultValue) {
+        public Builder defaultValue(String defaultValue) {
             this.defaultValue = Objects.requireNonNull(defaultValue);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setLocalCopy(LocalCopyResponse localCopy) {
+        public Builder localCopy(LocalCopyResponse localCopy) {
             this.localCopy = Objects.requireNonNull(localCopy);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

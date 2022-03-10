@@ -74,12 +74,12 @@ public final class ReportConfigSortingResponse extends io.pulumi.resources.Invok
     	      this.name = defaults.name;
         }
 
-        public Builder setDirection(@Nullable String direction) {
+        public Builder direction(@Nullable String direction) {
             this.direction = direction;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

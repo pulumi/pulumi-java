@@ -50,7 +50,7 @@ public final class AzureClusterControlPlaneMainVolume {
     	      this.sizeGib = defaults.sizeGib;
         }
 
-        public Builder setSizeGib(@Nullable Integer sizeGib) {
+        public Builder sizeGib(@Nullable Integer sizeGib) {
             this.sizeGib = sizeGib;
             return this;
         }

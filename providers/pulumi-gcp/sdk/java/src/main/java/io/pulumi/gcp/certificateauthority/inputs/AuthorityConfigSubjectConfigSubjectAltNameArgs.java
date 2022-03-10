@@ -103,42 +103,42 @@ public final class AuthorityConfigSubjectConfigSubjectAltNameArgs extends io.pul
     	      this.uris = defaults.uris;
         }
 
-        public Builder setDnsNames(@Nullable Input<List<String>> dnsNames) {
+        public Builder dnsNames(@Nullable Input<List<String>> dnsNames) {
             this.dnsNames = dnsNames;
             return this;
         }
 
-        public Builder setDnsNames(@Nullable List<String> dnsNames) {
+        public Builder dnsNames(@Nullable List<String> dnsNames) {
             this.dnsNames = Input.ofNullable(dnsNames);
             return this;
         }
 
-        public Builder setEmailAddresses(@Nullable Input<List<String>> emailAddresses) {
+        public Builder emailAddresses(@Nullable Input<List<String>> emailAddresses) {
             this.emailAddresses = emailAddresses;
             return this;
         }
 
-        public Builder setEmailAddresses(@Nullable List<String> emailAddresses) {
+        public Builder emailAddresses(@Nullable List<String> emailAddresses) {
             this.emailAddresses = Input.ofNullable(emailAddresses);
             return this;
         }
 
-        public Builder setIpAddresses(@Nullable Input<List<String>> ipAddresses) {
+        public Builder ipAddresses(@Nullable Input<List<String>> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
 
-        public Builder setIpAddresses(@Nullable List<String> ipAddresses) {
+        public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             this.ipAddresses = Input.ofNullable(ipAddresses);
             return this;
         }
 
-        public Builder setUris(@Nullable Input<List<String>> uris) {
+        public Builder uris(@Nullable Input<List<String>> uris) {
             this.uris = uris;
             return this;
         }
 
-        public Builder setUris(@Nullable List<String> uris) {
+        public Builder uris(@Nullable List<String> uris) {
             this.uris = Input.ofNullable(uris);
             return this;
         }

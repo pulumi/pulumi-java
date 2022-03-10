@@ -50,7 +50,7 @@ public final class RGitHubPackageResponseResponse {
     	      this.repository = defaults.repository;
         }
 
-        public Builder setRepository(@Nullable String repository) {
+        public Builder repository(@Nullable String repository) {
             this.repository = repository;
             return this;
         }

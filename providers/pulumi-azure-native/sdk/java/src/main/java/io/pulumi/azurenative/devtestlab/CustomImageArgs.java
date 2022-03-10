@@ -269,142 +269,142 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vm = defaults.vm;
         }
 
-        public Builder setAuthor(@Nullable Input<String> author) {
+        public Builder author(@Nullable Input<String> author) {
             this.author = author;
             return this;
         }
 
-        public Builder setAuthor(@Nullable String author) {
+        public Builder author(@Nullable String author) {
             this.author = Input.ofNullable(author);
             return this;
         }
 
-        public Builder setCustomImagePlan(@Nullable Input<CustomImagePropertiesFromPlanArgs> customImagePlan) {
+        public Builder customImagePlan(@Nullable Input<CustomImagePropertiesFromPlanArgs> customImagePlan) {
             this.customImagePlan = customImagePlan;
             return this;
         }
 
-        public Builder setCustomImagePlan(@Nullable CustomImagePropertiesFromPlanArgs customImagePlan) {
+        public Builder customImagePlan(@Nullable CustomImagePropertiesFromPlanArgs customImagePlan) {
             this.customImagePlan = Input.ofNullable(customImagePlan);
             return this;
         }
 
-        public Builder setDataDiskStorageInfo(@Nullable Input<List<DataDiskStorageTypeInfoArgs>> dataDiskStorageInfo) {
+        public Builder dataDiskStorageInfo(@Nullable Input<List<DataDiskStorageTypeInfoArgs>> dataDiskStorageInfo) {
             this.dataDiskStorageInfo = dataDiskStorageInfo;
             return this;
         }
 
-        public Builder setDataDiskStorageInfo(@Nullable List<DataDiskStorageTypeInfoArgs> dataDiskStorageInfo) {
+        public Builder dataDiskStorageInfo(@Nullable List<DataDiskStorageTypeInfoArgs> dataDiskStorageInfo) {
             this.dataDiskStorageInfo = Input.ofNullable(dataDiskStorageInfo);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setIsPlanAuthorized(@Nullable Input<Boolean> isPlanAuthorized) {
+        public Builder isPlanAuthorized(@Nullable Input<Boolean> isPlanAuthorized) {
             this.isPlanAuthorized = isPlanAuthorized;
             return this;
         }
 
-        public Builder setIsPlanAuthorized(@Nullable Boolean isPlanAuthorized) {
+        public Builder isPlanAuthorized(@Nullable Boolean isPlanAuthorized) {
             this.isPlanAuthorized = Input.ofNullable(isPlanAuthorized);
             return this;
         }
 
-        public Builder setLabName(Input<String> labName) {
+        public Builder labName(Input<String> labName) {
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
 
-        public Builder setLabName(String labName) {
+        public Builder labName(String labName) {
             this.labName = Input.of(Objects.requireNonNull(labName));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setManagedImageId(@Nullable Input<String> managedImageId) {
+        public Builder managedImageId(@Nullable Input<String> managedImageId) {
             this.managedImageId = managedImageId;
             return this;
         }
 
-        public Builder setManagedImageId(@Nullable String managedImageId) {
+        public Builder managedImageId(@Nullable String managedImageId) {
             this.managedImageId = Input.ofNullable(managedImageId);
             return this;
         }
 
-        public Builder setManagedSnapshotId(@Nullable Input<String> managedSnapshotId) {
+        public Builder managedSnapshotId(@Nullable Input<String> managedSnapshotId) {
             this.managedSnapshotId = managedSnapshotId;
             return this;
         }
 
-        public Builder setManagedSnapshotId(@Nullable String managedSnapshotId) {
+        public Builder managedSnapshotId(@Nullable String managedSnapshotId) {
             this.managedSnapshotId = Input.ofNullable(managedSnapshotId);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVhd(@Nullable Input<CustomImagePropertiesCustomArgs> vhd) {
+        public Builder vhd(@Nullable Input<CustomImagePropertiesCustomArgs> vhd) {
             this.vhd = vhd;
             return this;
         }
 
-        public Builder setVhd(@Nullable CustomImagePropertiesCustomArgs vhd) {
+        public Builder vhd(@Nullable CustomImagePropertiesCustomArgs vhd) {
             this.vhd = Input.ofNullable(vhd);
             return this;
         }
 
-        public Builder setVm(@Nullable Input<CustomImagePropertiesFromVmArgs> vm) {
+        public Builder vm(@Nullable Input<CustomImagePropertiesFromVmArgs> vm) {
             this.vm = vm;
             return this;
         }
 
-        public Builder setVm(@Nullable CustomImagePropertiesFromVmArgs vm) {
+        public Builder vm(@Nullable CustomImagePropertiesFromVmArgs vm) {
             this.vm = Input.ofNullable(vm);
             return this;
         }

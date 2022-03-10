@@ -193,92 +193,92 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
     	      this.storageAccountVersion = defaults.storageAccountVersion;
         }
 
-        public Builder setBackupManagementType(@Nullable Input<Either<String,BackupManagementType>> backupManagementType) {
+        public Builder backupManagementType(@Nullable Input<Either<String,BackupManagementType>> backupManagementType) {
             this.backupManagementType = backupManagementType;
             return this;
         }
 
-        public Builder setBackupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
+        public Builder backupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
             this.backupManagementType = Input.ofNullable(backupManagementType);
             return this;
         }
 
-        public Builder setContainerType(Input<String> containerType) {
+        public Builder containerType(Input<String> containerType) {
             this.containerType = Objects.requireNonNull(containerType);
             return this;
         }
 
-        public Builder setContainerType(String containerType) {
+        public Builder containerType(String containerType) {
             this.containerType = Input.of(Objects.requireNonNull(containerType));
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Input<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Input.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder setHealthStatus(@Nullable Input<String> healthStatus) {
+        public Builder healthStatus(@Nullable Input<String> healthStatus) {
             this.healthStatus = healthStatus;
             return this;
         }
 
-        public Builder setHealthStatus(@Nullable String healthStatus) {
+        public Builder healthStatus(@Nullable String healthStatus) {
             this.healthStatus = Input.ofNullable(healthStatus);
             return this;
         }
 
-        public Builder setProtectedItemCount(@Nullable Input<Double> protectedItemCount) {
+        public Builder protectedItemCount(@Nullable Input<Double> protectedItemCount) {
             this.protectedItemCount = protectedItemCount;
             return this;
         }
 
-        public Builder setProtectedItemCount(@Nullable Double protectedItemCount) {
+        public Builder protectedItemCount(@Nullable Double protectedItemCount) {
             this.protectedItemCount = Input.ofNullable(protectedItemCount);
             return this;
         }
 
-        public Builder setRegistrationStatus(@Nullable Input<String> registrationStatus) {
+        public Builder registrationStatus(@Nullable Input<String> registrationStatus) {
             this.registrationStatus = registrationStatus;
             return this;
         }
 
-        public Builder setRegistrationStatus(@Nullable String registrationStatus) {
+        public Builder registrationStatus(@Nullable String registrationStatus) {
             this.registrationStatus = Input.ofNullable(registrationStatus);
             return this;
         }
 
-        public Builder setResourceGroup(@Nullable Input<String> resourceGroup) {
+        public Builder resourceGroup(@Nullable Input<String> resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
 
-        public Builder setResourceGroup(@Nullable String resourceGroup) {
+        public Builder resourceGroup(@Nullable String resourceGroup) {
             this.resourceGroup = Input.ofNullable(resourceGroup);
             return this;
         }
 
-        public Builder setSourceResourceId(@Nullable Input<String> sourceResourceId) {
+        public Builder sourceResourceId(@Nullable Input<String> sourceResourceId) {
             this.sourceResourceId = sourceResourceId;
             return this;
         }
 
-        public Builder setSourceResourceId(@Nullable String sourceResourceId) {
+        public Builder sourceResourceId(@Nullable String sourceResourceId) {
             this.sourceResourceId = Input.ofNullable(sourceResourceId);
             return this;
         }
 
-        public Builder setStorageAccountVersion(@Nullable Input<String> storageAccountVersion) {
+        public Builder storageAccountVersion(@Nullable Input<String> storageAccountVersion) {
             this.storageAccountVersion = storageAccountVersion;
             return this;
         }
 
-        public Builder setStorageAccountVersion(@Nullable String storageAccountVersion) {
+        public Builder storageAccountVersion(@Nullable String storageAccountVersion) {
             this.storageAccountVersion = Input.ofNullable(storageAccountVersion);
             return this;
         }

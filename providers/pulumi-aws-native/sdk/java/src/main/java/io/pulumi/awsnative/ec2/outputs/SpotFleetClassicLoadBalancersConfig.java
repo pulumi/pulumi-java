@@ -41,7 +41,7 @@ public final class SpotFleetClassicLoadBalancersConfig {
     	      this.classicLoadBalancers = defaults.classicLoadBalancers;
         }
 
-        public Builder setClassicLoadBalancers(List<SpotFleetClassicLoadBalancer> classicLoadBalancers) {
+        public Builder classicLoadBalancers(List<SpotFleetClassicLoadBalancer> classicLoadBalancers) {
             this.classicLoadBalancers = Objects.requireNonNull(classicLoadBalancers);
             return this;
         }

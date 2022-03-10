@@ -50,7 +50,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicy {
     	      this.tls = defaults.tls;
         }
 
-        public Builder setTls(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTls tls) {
+        public Builder tls(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTls tls) {
             this.tls = tls;
             return this;
         }

@@ -51,7 +51,7 @@ public final class GetModuleDefaultVersionArgs extends io.pulumi.resources.Invok
     	      this.arn = defaults.arn;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }

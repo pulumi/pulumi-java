@@ -186,92 +186,92 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder setLevel(Input<Either<String,LockLevel>> level) {
+        public Builder level(Input<Either<String,LockLevel>> level) {
             this.level = Objects.requireNonNull(level);
             return this;
         }
 
-        public Builder setLevel(Either<String,LockLevel> level) {
+        public Builder level(Either<String,LockLevel> level) {
             this.level = Input.of(Objects.requireNonNull(level));
             return this;
         }
 
-        public Builder setLockName(@Nullable Input<String> lockName) {
+        public Builder lockName(@Nullable Input<String> lockName) {
             this.lockName = lockName;
             return this;
         }
 
-        public Builder setLockName(@Nullable String lockName) {
+        public Builder lockName(@Nullable String lockName) {
             this.lockName = Input.ofNullable(lockName);
             return this;
         }
 
-        public Builder setNotes(@Nullable Input<String> notes) {
+        public Builder notes(@Nullable Input<String> notes) {
             this.notes = notes;
             return this;
         }
 
-        public Builder setNotes(@Nullable String notes) {
+        public Builder notes(@Nullable String notes) {
             this.notes = Input.ofNullable(notes);
             return this;
         }
 
-        public Builder setOwners(@Nullable Input<List<ManagementLockOwnerArgs>> owners) {
+        public Builder owners(@Nullable Input<List<ManagementLockOwnerArgs>> owners) {
             this.owners = owners;
             return this;
         }
 
-        public Builder setOwners(@Nullable List<ManagementLockOwnerArgs> owners) {
+        public Builder owners(@Nullable List<ManagementLockOwnerArgs> owners) {
             this.owners = Input.ofNullable(owners);
             return this;
         }
 
-        public Builder setParentResourcePath(Input<String> parentResourcePath) {
+        public Builder parentResourcePath(Input<String> parentResourcePath) {
             this.parentResourcePath = Objects.requireNonNull(parentResourcePath);
             return this;
         }
 
-        public Builder setParentResourcePath(String parentResourcePath) {
+        public Builder parentResourcePath(String parentResourcePath) {
             this.parentResourcePath = Input.of(Objects.requireNonNull(parentResourcePath));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceName(Input<String> resourceName) {
+        public Builder resourceName(Input<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
-        public Builder setResourceName(String resourceName) {
+        public Builder resourceName(String resourceName) {
             this.resourceName = Input.of(Objects.requireNonNull(resourceName));
             return this;
         }
 
-        public Builder setResourceProviderNamespace(Input<String> resourceProviderNamespace) {
+        public Builder resourceProviderNamespace(Input<String> resourceProviderNamespace) {
             this.resourceProviderNamespace = Objects.requireNonNull(resourceProviderNamespace);
             return this;
         }
 
-        public Builder setResourceProviderNamespace(String resourceProviderNamespace) {
+        public Builder resourceProviderNamespace(String resourceProviderNamespace) {
             this.resourceProviderNamespace = Input.of(Objects.requireNonNull(resourceProviderNamespace));
             return this;
         }
 
-        public Builder setResourceType(Input<String> resourceType) {
+        public Builder resourceType(Input<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Input.of(Objects.requireNonNull(resourceType));
             return this;
         }

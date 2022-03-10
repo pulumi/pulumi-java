@@ -40,7 +40,7 @@ public final class ConnectorPlugin {
     	      this.customPlugin = defaults.customPlugin;
         }
 
-        public Builder setCustomPlugin(ConnectorCustomPlugin customPlugin) {
+        public Builder customPlugin(ConnectorCustomPlugin customPlugin) {
             this.customPlugin = Objects.requireNonNull(customPlugin);
             return this;
         }

@@ -297,82 +297,82 @@ public final class GetDscpConfigurationResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAssociatedNetworkInterfaces(List<NetworkInterfaceResponse> associatedNetworkInterfaces) {
+        public Builder associatedNetworkInterfaces(List<NetworkInterfaceResponse> associatedNetworkInterfaces) {
             this.associatedNetworkInterfaces = Objects.requireNonNull(associatedNetworkInterfaces);
             return this;
         }
 
-        public Builder setDestinationIpRanges(@Nullable List<QosIpRangeResponse> destinationIpRanges) {
+        public Builder destinationIpRanges(@Nullable List<QosIpRangeResponse> destinationIpRanges) {
             this.destinationIpRanges = destinationIpRanges;
             return this;
         }
 
-        public Builder setDestinationPortRanges(@Nullable List<QosPortRangeResponse> destinationPortRanges) {
+        public Builder destinationPortRanges(@Nullable List<QosPortRangeResponse> destinationPortRanges) {
             this.destinationPortRanges = destinationPortRanges;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setMarkings(@Nullable List<Integer> markings) {
+        public Builder markings(@Nullable List<Integer> markings) {
             this.markings = markings;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setQosCollectionId(String qosCollectionId) {
+        public Builder qosCollectionId(String qosCollectionId) {
             this.qosCollectionId = Objects.requireNonNull(qosCollectionId);
             return this;
         }
 
-        public Builder setResourceGuid(String resourceGuid) {
+        public Builder resourceGuid(String resourceGuid) {
             this.resourceGuid = Objects.requireNonNull(resourceGuid);
             return this;
         }
 
-        public Builder setSourceIpRanges(@Nullable List<QosIpRangeResponse> sourceIpRanges) {
+        public Builder sourceIpRanges(@Nullable List<QosIpRangeResponse> sourceIpRanges) {
             this.sourceIpRanges = sourceIpRanges;
             return this;
         }
 
-        public Builder setSourcePortRanges(@Nullable List<QosPortRangeResponse> sourcePortRanges) {
+        public Builder sourcePortRanges(@Nullable List<QosPortRangeResponse> sourcePortRanges) {
             this.sourcePortRanges = sourcePortRanges;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -86,22 +86,22 @@ public final class LaunchGroupObject extends io.pulumi.resources.InvokeArgs {
     	      this.variation = defaults.variation;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setFeature(String feature) {
+        public Builder feature(String feature) {
             this.feature = Objects.requireNonNull(feature);
             return this;
         }
 
-        public Builder setGroupName(String groupName) {
+        public Builder groupName(String groupName) {
             this.groupName = Objects.requireNonNull(groupName);
             return this;
         }
 
-        public Builder setVariation(String variation) {
+        public Builder variation(String variation) {
             this.variation = Objects.requireNonNull(variation);
             return this;
         }

@@ -130,52 +130,52 @@ public final class FirewallPolicyFilterRuleArgs extends io.pulumi.resources.Reso
     	      this.ruleType = defaults.ruleType;
         }
 
-        public Builder setAction(@Nullable Input<FirewallPolicyFilterRuleActionArgs> action) {
+        public Builder action(@Nullable Input<FirewallPolicyFilterRuleActionArgs> action) {
             this.action = action;
             return this;
         }
 
-        public Builder setAction(@Nullable FirewallPolicyFilterRuleActionArgs action) {
+        public Builder action(@Nullable FirewallPolicyFilterRuleActionArgs action) {
             this.action = Input.ofNullable(action);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Input<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setRuleConditions(@Nullable Input<List<Object>> ruleConditions) {
+        public Builder ruleConditions(@Nullable Input<List<Object>> ruleConditions) {
             this.ruleConditions = ruleConditions;
             return this;
         }
 
-        public Builder setRuleConditions(@Nullable List<Object> ruleConditions) {
+        public Builder ruleConditions(@Nullable List<Object> ruleConditions) {
             this.ruleConditions = Input.ofNullable(ruleConditions);
             return this;
         }
 
-        public Builder setRuleType(Input<String> ruleType) {
+        public Builder ruleType(Input<String> ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
 
-        public Builder setRuleType(String ruleType) {
+        public Builder ruleType(String ruleType) {
             this.ruleType = Input.of(Objects.requireNonNull(ruleType));
             return this;
         }

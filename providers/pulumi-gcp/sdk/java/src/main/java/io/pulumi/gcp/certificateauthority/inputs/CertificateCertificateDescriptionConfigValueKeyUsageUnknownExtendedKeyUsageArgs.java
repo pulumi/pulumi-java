@@ -50,12 +50,12 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageUnknownEx
     	      this.obectIds = defaults.obectIds;
         }
 
-        public Builder setObectIds(@Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdArgs>> obectIds) {
+        public Builder obectIds(@Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdArgs>> obectIds) {
             this.obectIds = obectIds;
             return this;
         }
 
-        public Builder setObectIds(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdArgs> obectIds) {
+        public Builder obectIds(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdArgs> obectIds) {
             this.obectIds = Input.ofNullable(obectIds);
             return this;
         }

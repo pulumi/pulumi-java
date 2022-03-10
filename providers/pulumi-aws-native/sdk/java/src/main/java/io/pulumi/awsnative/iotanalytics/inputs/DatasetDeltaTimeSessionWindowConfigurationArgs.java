@@ -48,12 +48,12 @@ public final class DatasetDeltaTimeSessionWindowConfigurationArgs extends io.pul
     	      this.timeoutInMinutes = defaults.timeoutInMinutes;
         }
 
-        public Builder setTimeoutInMinutes(Input<Integer> timeoutInMinutes) {
+        public Builder timeoutInMinutes(Input<Integer> timeoutInMinutes) {
             this.timeoutInMinutes = Objects.requireNonNull(timeoutInMinutes);
             return this;
         }
 
-        public Builder setTimeoutInMinutes(Integer timeoutInMinutes) {
+        public Builder timeoutInMinutes(Integer timeoutInMinutes) {
             this.timeoutInMinutes = Input.of(Objects.requireNonNull(timeoutInMinutes));
             return this;
         }

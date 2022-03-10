@@ -90,17 +90,17 @@ public final class PlatformPropertiesResponse extends io.pulumi.resources.Invoke
     	      this.variant = defaults.variant;
         }
 
-        public Builder setArchitecture(@Nullable String architecture) {
+        public Builder architecture(@Nullable String architecture) {
             this.architecture = architecture;
             return this;
         }
 
-        public Builder setOs(String os) {
+        public Builder os(String os) {
             this.os = Objects.requireNonNull(os);
             return this;
         }
 
-        public Builder setVariant(@Nullable String variant) {
+        public Builder variant(@Nullable String variant) {
             this.variant = variant;
             return this;
         }

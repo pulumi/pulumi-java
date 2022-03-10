@@ -83,17 +83,17 @@ public final class EnvironmentMatrixResponse {
     	      this.iosDeviceList = defaults.iosDeviceList;
         }
 
-        public Builder setAndroidDeviceList(AndroidDeviceListResponse androidDeviceList) {
+        public Builder androidDeviceList(AndroidDeviceListResponse androidDeviceList) {
             this.androidDeviceList = Objects.requireNonNull(androidDeviceList);
             return this;
         }
 
-        public Builder setAndroidMatrix(AndroidMatrixResponse androidMatrix) {
+        public Builder androidMatrix(AndroidMatrixResponse androidMatrix) {
             this.androidMatrix = Objects.requireNonNull(androidMatrix);
             return this;
         }
 
-        public Builder setIosDeviceList(IosDeviceListResponse iosDeviceList) {
+        public Builder iosDeviceList(IosDeviceListResponse iosDeviceList) {
             this.iosDeviceList = Objects.requireNonNull(iosDeviceList);
             return this;
         }

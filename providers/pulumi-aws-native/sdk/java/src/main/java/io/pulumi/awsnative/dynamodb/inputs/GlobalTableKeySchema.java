@@ -60,12 +60,12 @@ public final class GlobalTableKeySchema extends io.pulumi.resources.InvokeArgs {
     	      this.keyType = defaults.keyType;
         }
 
-        public Builder setAttributeName(String attributeName) {
+        public Builder attributeName(String attributeName) {
             this.attributeName = Objects.requireNonNull(attributeName);
             return this;
         }
 
-        public Builder setKeyType(String keyType) {
+        public Builder keyType(String keyType) {
             this.keyType = Objects.requireNonNull(keyType);
             return this;
         }

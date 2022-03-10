@@ -67,12 +67,12 @@ public final class DashboardSourceTemplate {
     	      this.dataSetReferences = defaults.dataSetReferences;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setDataSetReferences(List<DashboardDataSetReference> dataSetReferences) {
+        public Builder dataSetReferences(List<DashboardDataSetReference> dataSetReferences) {
             this.dataSetReferences = Objects.requireNonNull(dataSetReferences);
             return this;
         }

@@ -49,12 +49,12 @@ public final class TaskDefinitionSecret {
     	      this.valueFrom = defaults.valueFrom;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setValueFrom(String valueFrom) {
+        public Builder valueFrom(String valueFrom) {
             this.valueFrom = Objects.requireNonNull(valueFrom);
             return this;
         }

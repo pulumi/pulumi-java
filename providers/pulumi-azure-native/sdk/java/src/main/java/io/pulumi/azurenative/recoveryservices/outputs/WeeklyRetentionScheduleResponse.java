@@ -85,17 +85,17 @@ public final class WeeklyRetentionScheduleResponse {
     	      this.retentionTimes = defaults.retentionTimes;
         }
 
-        public Builder setDaysOfTheWeek(@Nullable List<String> daysOfTheWeek) {
+        public Builder daysOfTheWeek(@Nullable List<String> daysOfTheWeek) {
             this.daysOfTheWeek = daysOfTheWeek;
             return this;
         }
 
-        public Builder setRetentionDuration(@Nullable RetentionDurationResponse retentionDuration) {
+        public Builder retentionDuration(@Nullable RetentionDurationResponse retentionDuration) {
             this.retentionDuration = retentionDuration;
             return this;
         }
 
-        public Builder setRetentionTimes(@Nullable List<String> retentionTimes) {
+        public Builder retentionTimes(@Nullable List<String> retentionTimes) {
             this.retentionTimes = retentionTimes;
             return this;
         }

@@ -119,52 +119,52 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setIsActiveCMK(@Nullable Input<Boolean> isActiveCMK) {
+        public Builder isActiveCMK(@Nullable Input<Boolean> isActiveCMK) {
             this.isActiveCMK = isActiveCMK;
             return this;
         }
 
-        public Builder setIsActiveCMK(@Nullable Boolean isActiveCMK) {
+        public Builder isActiveCMK(@Nullable Boolean isActiveCMK) {
             this.isActiveCMK = Input.ofNullable(isActiveCMK);
             return this;
         }
 
-        public Builder setKeyName(@Nullable Input<String> keyName) {
+        public Builder keyName(@Nullable Input<String> keyName) {
             this.keyName = keyName;
             return this;
         }
 
-        public Builder setKeyName(@Nullable String keyName) {
+        public Builder keyName(@Nullable String keyName) {
             this.keyName = Input.ofNullable(keyName);
             return this;
         }
 
-        public Builder setKeyVaultUrl(@Nullable Input<String> keyVaultUrl) {
+        public Builder keyVaultUrl(@Nullable Input<String> keyVaultUrl) {
             this.keyVaultUrl = keyVaultUrl;
             return this;
         }
 
-        public Builder setKeyVaultUrl(@Nullable String keyVaultUrl) {
+        public Builder keyVaultUrl(@Nullable String keyVaultUrl) {
             this.keyVaultUrl = Input.ofNullable(keyVaultUrl);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

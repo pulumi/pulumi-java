@@ -87,32 +87,32 @@ public final class VpcIpamPoolCidrArgs extends io.pulumi.resources.ResourceArgs 
     	      this.ipamPoolId = defaults.ipamPoolId;
         }
 
-        public Builder setCidr(@Nullable Input<String> cidr) {
+        public Builder cidr(@Nullable Input<String> cidr) {
             this.cidr = cidr;
             return this;
         }
 
-        public Builder setCidr(@Nullable String cidr) {
+        public Builder cidr(@Nullable String cidr) {
             this.cidr = Input.ofNullable(cidr);
             return this;
         }
 
-        public Builder setCidrAuthorizationContext(@Nullable Input<VpcIpamPoolCidrCidrAuthorizationContextArgs> cidrAuthorizationContext) {
+        public Builder cidrAuthorizationContext(@Nullable Input<VpcIpamPoolCidrCidrAuthorizationContextArgs> cidrAuthorizationContext) {
             this.cidrAuthorizationContext = cidrAuthorizationContext;
             return this;
         }
 
-        public Builder setCidrAuthorizationContext(@Nullable VpcIpamPoolCidrCidrAuthorizationContextArgs cidrAuthorizationContext) {
+        public Builder cidrAuthorizationContext(@Nullable VpcIpamPoolCidrCidrAuthorizationContextArgs cidrAuthorizationContext) {
             this.cidrAuthorizationContext = Input.ofNullable(cidrAuthorizationContext);
             return this;
         }
 
-        public Builder setIpamPoolId(Input<String> ipamPoolId) {
+        public Builder ipamPoolId(Input<String> ipamPoolId) {
             this.ipamPoolId = Objects.requireNonNull(ipamPoolId);
             return this;
         }
 
-        public Builder setIpamPoolId(String ipamPoolId) {
+        public Builder ipamPoolId(String ipamPoolId) {
             this.ipamPoolId = Input.of(Objects.requireNonNull(ipamPoolId));
             return this;
         }

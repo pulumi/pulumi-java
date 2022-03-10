@@ -200,52 +200,52 @@ public final class VirtualMachineScaleSetIPConfigurationResponse {
     	      this.subnet = defaults.subnet;
         }
 
-        public Builder setApplicationGatewayBackendAddressPools(@Nullable List<SubResourceResponse> applicationGatewayBackendAddressPools) {
+        public Builder applicationGatewayBackendAddressPools(@Nullable List<SubResourceResponse> applicationGatewayBackendAddressPools) {
             this.applicationGatewayBackendAddressPools = applicationGatewayBackendAddressPools;
             return this;
         }
 
-        public Builder setApplicationSecurityGroups(@Nullable List<SubResourceResponse> applicationSecurityGroups) {
+        public Builder applicationSecurityGroups(@Nullable List<SubResourceResponse> applicationSecurityGroups) {
             this.applicationSecurityGroups = applicationSecurityGroups;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLoadBalancerBackendAddressPools(@Nullable List<SubResourceResponse> loadBalancerBackendAddressPools) {
+        public Builder loadBalancerBackendAddressPools(@Nullable List<SubResourceResponse> loadBalancerBackendAddressPools) {
             this.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;
             return this;
         }
 
-        public Builder setLoadBalancerInboundNatPools(@Nullable List<SubResourceResponse> loadBalancerInboundNatPools) {
+        public Builder loadBalancerInboundNatPools(@Nullable List<SubResourceResponse> loadBalancerInboundNatPools) {
             this.loadBalancerInboundNatPools = loadBalancerInboundNatPools;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrimary(@Nullable Boolean primary) {
+        public Builder primary(@Nullable Boolean primary) {
             this.primary = primary;
             return this;
         }
 
-        public Builder setPrivateIPAddressVersion(@Nullable String privateIPAddressVersion) {
+        public Builder privateIPAddressVersion(@Nullable String privateIPAddressVersion) {
             this.privateIPAddressVersion = privateIPAddressVersion;
             return this;
         }
 
-        public Builder setPublicIPAddressConfiguration(@Nullable VirtualMachineScaleSetPublicIPAddressConfigurationResponse publicIPAddressConfiguration) {
+        public Builder publicIPAddressConfiguration(@Nullable VirtualMachineScaleSetPublicIPAddressConfigurationResponse publicIPAddressConfiguration) {
             this.publicIPAddressConfiguration = publicIPAddressConfiguration;
             return this;
         }
 
-        public Builder setSubnet(@Nullable ApiEntityReferenceResponse subnet) {
+        public Builder subnet(@Nullable ApiEntityReferenceResponse subnet) {
             this.subnet = subnet;
             return this;
         }

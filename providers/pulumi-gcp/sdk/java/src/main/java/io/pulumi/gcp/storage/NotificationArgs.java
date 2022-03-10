@@ -139,62 +139,62 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topic = defaults.topic;
         }
 
-        public Builder setBucket(Input<String> bucket) {
+        public Builder bucket(Input<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Input.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder setCustomAttributes(@Nullable Input<Map<String,String>> customAttributes) {
+        public Builder customAttributes(@Nullable Input<Map<String,String>> customAttributes) {
             this.customAttributes = customAttributes;
             return this;
         }
 
-        public Builder setCustomAttributes(@Nullable Map<String,String> customAttributes) {
+        public Builder customAttributes(@Nullable Map<String,String> customAttributes) {
             this.customAttributes = Input.ofNullable(customAttributes);
             return this;
         }
 
-        public Builder setEventTypes(@Nullable Input<List<String>> eventTypes) {
+        public Builder eventTypes(@Nullable Input<List<String>> eventTypes) {
             this.eventTypes = eventTypes;
             return this;
         }
 
-        public Builder setEventTypes(@Nullable List<String> eventTypes) {
+        public Builder eventTypes(@Nullable List<String> eventTypes) {
             this.eventTypes = Input.ofNullable(eventTypes);
             return this;
         }
 
-        public Builder setObjectNamePrefix(@Nullable Input<String> objectNamePrefix) {
+        public Builder objectNamePrefix(@Nullable Input<String> objectNamePrefix) {
             this.objectNamePrefix = objectNamePrefix;
             return this;
         }
 
-        public Builder setObjectNamePrefix(@Nullable String objectNamePrefix) {
+        public Builder objectNamePrefix(@Nullable String objectNamePrefix) {
             this.objectNamePrefix = Input.ofNullable(objectNamePrefix);
             return this;
         }
 
-        public Builder setPayloadFormat(Input<String> payloadFormat) {
+        public Builder payloadFormat(Input<String> payloadFormat) {
             this.payloadFormat = Objects.requireNonNull(payloadFormat);
             return this;
         }
 
-        public Builder setPayloadFormat(String payloadFormat) {
+        public Builder payloadFormat(String payloadFormat) {
             this.payloadFormat = Input.of(Objects.requireNonNull(payloadFormat));
             return this;
         }
 
-        public Builder setTopic(Input<String> topic) {
+        public Builder topic(Input<String> topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
 
-        public Builder setTopic(String topic) {
+        public Builder topic(String topic) {
             this.topic = Input.of(Objects.requireNonNull(topic));
             return this;
         }

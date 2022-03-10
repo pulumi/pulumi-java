@@ -75,12 +75,12 @@ public final class FirewallPolicyRuleApplicationProtocolResponse extends io.pulu
     	      this.protocolType = defaults.protocolType;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
 
-        public Builder setProtocolType(@Nullable String protocolType) {
+        public Builder protocolType(@Nullable String protocolType) {
             this.protocolType = protocolType;
             return this;
         }

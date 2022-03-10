@@ -173,82 +173,82 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
     	      this.entityPath = defaults.entityPath;
         }
 
-        public Builder setAuthenticationType(@Nullable Input<Either<String,AuthenticationType>> authenticationType) {
+        public Builder authenticationType(@Nullable Input<Either<String,AuthenticationType>> authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
 
-        public Builder setAuthenticationType(@Nullable Either<String,AuthenticationType> authenticationType) {
+        public Builder authenticationType(@Nullable Either<String,AuthenticationType> authenticationType) {
             this.authenticationType = Input.ofNullable(authenticationType);
             return this;
         }
 
-        public Builder setConnectionStringPrimaryKey(@Nullable Input<String> connectionStringPrimaryKey) {
+        public Builder connectionStringPrimaryKey(@Nullable Input<String> connectionStringPrimaryKey) {
             this.connectionStringPrimaryKey = connectionStringPrimaryKey;
             return this;
         }
 
-        public Builder setConnectionStringPrimaryKey(@Nullable String connectionStringPrimaryKey) {
+        public Builder connectionStringPrimaryKey(@Nullable String connectionStringPrimaryKey) {
             this.connectionStringPrimaryKey = Input.ofNullable(connectionStringPrimaryKey);
             return this;
         }
 
-        public Builder setConnectionStringSecondaryKey(@Nullable Input<String> connectionStringSecondaryKey) {
+        public Builder connectionStringSecondaryKey(@Nullable Input<String> connectionStringSecondaryKey) {
             this.connectionStringSecondaryKey = connectionStringSecondaryKey;
             return this;
         }
 
-        public Builder setConnectionStringSecondaryKey(@Nullable String connectionStringSecondaryKey) {
+        public Builder connectionStringSecondaryKey(@Nullable String connectionStringSecondaryKey) {
             this.connectionStringSecondaryKey = Input.ofNullable(connectionStringSecondaryKey);
             return this;
         }
 
-        public Builder setDeadLetterSecret(@Nullable Input<String> deadLetterSecret) {
+        public Builder deadLetterSecret(@Nullable Input<String> deadLetterSecret) {
             this.deadLetterSecret = deadLetterSecret;
             return this;
         }
 
-        public Builder setDeadLetterSecret(@Nullable String deadLetterSecret) {
+        public Builder deadLetterSecret(@Nullable String deadLetterSecret) {
             this.deadLetterSecret = Input.ofNullable(deadLetterSecret);
             return this;
         }
 
-        public Builder setDeadLetterUri(@Nullable Input<String> deadLetterUri) {
+        public Builder deadLetterUri(@Nullable Input<String> deadLetterUri) {
             this.deadLetterUri = deadLetterUri;
             return this;
         }
 
-        public Builder setDeadLetterUri(@Nullable String deadLetterUri) {
+        public Builder deadLetterUri(@Nullable String deadLetterUri) {
             this.deadLetterUri = Input.ofNullable(deadLetterUri);
             return this;
         }
 
-        public Builder setEndpointType(Input<String> endpointType) {
+        public Builder endpointType(Input<String> endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
 
-        public Builder setEndpointType(String endpointType) {
+        public Builder endpointType(String endpointType) {
             this.endpointType = Input.of(Objects.requireNonNull(endpointType));
             return this;
         }
 
-        public Builder setEndpointUri(@Nullable Input<String> endpointUri) {
+        public Builder endpointUri(@Nullable Input<String> endpointUri) {
             this.endpointUri = endpointUri;
             return this;
         }
 
-        public Builder setEndpointUri(@Nullable String endpointUri) {
+        public Builder endpointUri(@Nullable String endpointUri) {
             this.endpointUri = Input.ofNullable(endpointUri);
             return this;
         }
 
-        public Builder setEntityPath(@Nullable Input<String> entityPath) {
+        public Builder entityPath(@Nullable Input<String> entityPath) {
             this.entityPath = entityPath;
             return this;
         }
 
-        public Builder setEntityPath(@Nullable String entityPath) {
+        public Builder entityPath(@Nullable String entityPath) {
             this.entityPath = Input.ofNullable(entityPath);
             return this;
         }

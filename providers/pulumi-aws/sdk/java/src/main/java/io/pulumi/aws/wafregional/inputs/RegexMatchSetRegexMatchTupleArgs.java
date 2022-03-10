@@ -89,32 +89,32 @@ public final class RegexMatchSetRegexMatchTupleArgs extends io.pulumi.resources.
     	      this.textTransformation = defaults.textTransformation;
         }
 
-        public Builder setFieldToMatch(Input<RegexMatchSetRegexMatchTupleFieldToMatchArgs> fieldToMatch) {
+        public Builder fieldToMatch(Input<RegexMatchSetRegexMatchTupleFieldToMatchArgs> fieldToMatch) {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
 
-        public Builder setFieldToMatch(RegexMatchSetRegexMatchTupleFieldToMatchArgs fieldToMatch) {
+        public Builder fieldToMatch(RegexMatchSetRegexMatchTupleFieldToMatchArgs fieldToMatch) {
             this.fieldToMatch = Input.of(Objects.requireNonNull(fieldToMatch));
             return this;
         }
 
-        public Builder setRegexPatternSetId(Input<String> regexPatternSetId) {
+        public Builder regexPatternSetId(Input<String> regexPatternSetId) {
             this.regexPatternSetId = Objects.requireNonNull(regexPatternSetId);
             return this;
         }
 
-        public Builder setRegexPatternSetId(String regexPatternSetId) {
+        public Builder regexPatternSetId(String regexPatternSetId) {
             this.regexPatternSetId = Input.of(Objects.requireNonNull(regexPatternSetId));
             return this;
         }
 
-        public Builder setTextTransformation(Input<String> textTransformation) {
+        public Builder textTransformation(Input<String> textTransformation) {
             this.textTransformation = Objects.requireNonNull(textTransformation);
             return this;
         }
 
-        public Builder setTextTransformation(String textTransformation) {
+        public Builder textTransformation(String textTransformation) {
             this.textTransformation = Input.of(Objects.requireNonNull(textTransformation));
             return this;
         }

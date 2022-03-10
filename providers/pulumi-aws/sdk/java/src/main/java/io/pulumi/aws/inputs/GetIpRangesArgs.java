@@ -93,17 +93,17 @@ public final class GetIpRangesArgs extends io.pulumi.resources.InvokeArgs {
     	      this.url = defaults.url;
         }
 
-        public Builder setRegions(@Nullable List<String> regions) {
+        public Builder regions(@Nullable List<String> regions) {
             this.regions = regions;
             return this;
         }
 
-        public Builder setServices(List<String> services) {
+        public Builder services(List<String> services) {
             this.services = Objects.requireNonNull(services);
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }

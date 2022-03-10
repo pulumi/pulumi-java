@@ -87,32 +87,32 @@ public final class ServiceTemplateSpecContainerPortArgs extends io.pulumi.resour
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setContainerPort(Input<Integer> containerPort) {
+        public Builder containerPort(Input<Integer> containerPort) {
             this.containerPort = Objects.requireNonNull(containerPort);
             return this;
         }
 
-        public Builder setContainerPort(Integer containerPort) {
+        public Builder containerPort(Integer containerPort) {
             this.containerPort = Input.of(Objects.requireNonNull(containerPort));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProtocol(@Nullable Input<String> protocol) {
+        public Builder protocol(@Nullable Input<String> protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = Input.ofNullable(protocol);
             return this;
         }

@@ -48,7 +48,7 @@ public final class GoogleCloudMlV1__ManualScalingResponse {
     	      this.nodes = defaults.nodes;
         }
 
-        public Builder setNodes(Integer nodes) {
+        public Builder nodes(Integer nodes) {
             this.nodes = Objects.requireNonNull(nodes);
             return this;
         }

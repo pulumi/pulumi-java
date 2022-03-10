@@ -58,7 +58,7 @@ public final class PolicyParametersResponse extends io.pulumi.resources.InvokeAr
     	      this.dataStoreParametersList = defaults.dataStoreParametersList;
         }
 
-        public Builder setDataStoreParametersList(@Nullable List<AzureOperationalStoreParametersResponse> dataStoreParametersList) {
+        public Builder dataStoreParametersList(@Nullable List<AzureOperationalStoreParametersResponse> dataStoreParametersList) {
             this.dataStoreParametersList = dataStoreParametersList;
             return this;
         }

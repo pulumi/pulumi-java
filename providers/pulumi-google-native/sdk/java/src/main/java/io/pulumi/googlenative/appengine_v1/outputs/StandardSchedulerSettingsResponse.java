@@ -98,22 +98,22 @@ public final class StandardSchedulerSettingsResponse {
     	      this.targetThroughputUtilization = defaults.targetThroughputUtilization;
         }
 
-        public Builder setMaxInstances(Integer maxInstances) {
+        public Builder maxInstances(Integer maxInstances) {
             this.maxInstances = Objects.requireNonNull(maxInstances);
             return this;
         }
 
-        public Builder setMinInstances(Integer minInstances) {
+        public Builder minInstances(Integer minInstances) {
             this.minInstances = Objects.requireNonNull(minInstances);
             return this;
         }
 
-        public Builder setTargetCpuUtilization(Double targetCpuUtilization) {
+        public Builder targetCpuUtilization(Double targetCpuUtilization) {
             this.targetCpuUtilization = Objects.requireNonNull(targetCpuUtilization);
             return this;
         }
 
-        public Builder setTargetThroughputUtilization(Double targetThroughputUtilization) {
+        public Builder targetThroughputUtilization(Double targetThroughputUtilization) {
             this.targetThroughputUtilization = Objects.requireNonNull(targetThroughputUtilization);
             return this;
         }

@@ -98,22 +98,22 @@ public final class AclResponse {
     	      this.username = defaults.username;
         }
 
-        public Builder setInitiatorIqn(String initiatorIqn) {
+        public Builder initiatorIqn(String initiatorIqn) {
             this.initiatorIqn = Objects.requireNonNull(initiatorIqn);
             return this;
         }
 
-        public Builder setMappedLuns(List<String> mappedLuns) {
+        public Builder mappedLuns(List<String> mappedLuns) {
             this.mappedLuns = Objects.requireNonNull(mappedLuns);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

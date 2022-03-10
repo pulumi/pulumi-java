@@ -66,17 +66,17 @@ public final class GetDatabaseInstanceRestoreBackupContext {
     	      this.project = defaults.project;
         }
 
-        public Builder setBackupRunId(Integer backupRunId) {
+        public Builder backupRunId(Integer backupRunId) {
             this.backupRunId = Objects.requireNonNull(backupRunId);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }

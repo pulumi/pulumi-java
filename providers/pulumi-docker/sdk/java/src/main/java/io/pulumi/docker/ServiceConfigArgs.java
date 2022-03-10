@@ -70,22 +70,22 @@ public final class ServiceConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setData(Input<String> data) {
+        public Builder data(Input<String> data) {
             this.data = Objects.requireNonNull(data);
             return this;
         }
 
-        public Builder setData(String data) {
+        public Builder data(String data) {
             this.data = Input.of(Objects.requireNonNull(data));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

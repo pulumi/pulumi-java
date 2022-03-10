@@ -66,12 +66,12 @@ public final class BucketReplicationConfigRuleDestinationReplicationTime {
     	      this.time = defaults.time;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTime(BucketReplicationConfigRuleDestinationReplicationTimeTime time) {
+        public Builder time(BucketReplicationConfigRuleDestinationReplicationTimeTime time) {
             this.time = Objects.requireNonNull(time);
             return this;
         }

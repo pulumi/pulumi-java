@@ -111,42 +111,42 @@ public final class DockerBuildArgs extends io.pulumi.resources.ResourceArgs {
     	      this.platform = defaults.platform;
         }
 
-        public Builder setContext(@Nullable Input<String> context) {
+        public Builder context(@Nullable Input<String> context) {
             this.context = context;
             return this;
         }
 
-        public Builder setContext(@Nullable String context) {
+        public Builder context(@Nullable String context) {
             this.context = Input.ofNullable(context);
             return this;
         }
 
-        public Builder setDockerSpecificationType(Input<String> dockerSpecificationType) {
+        public Builder dockerSpecificationType(Input<String> dockerSpecificationType) {
             this.dockerSpecificationType = Objects.requireNonNull(dockerSpecificationType);
             return this;
         }
 
-        public Builder setDockerSpecificationType(String dockerSpecificationType) {
+        public Builder dockerSpecificationType(String dockerSpecificationType) {
             this.dockerSpecificationType = Input.of(Objects.requireNonNull(dockerSpecificationType));
             return this;
         }
 
-        public Builder setDockerfile(Input<String> dockerfile) {
+        public Builder dockerfile(Input<String> dockerfile) {
             this.dockerfile = Objects.requireNonNull(dockerfile);
             return this;
         }
 
-        public Builder setDockerfile(String dockerfile) {
+        public Builder dockerfile(String dockerfile) {
             this.dockerfile = Input.of(Objects.requireNonNull(dockerfile));
             return this;
         }
 
-        public Builder setPlatform(@Nullable Input<DockerImagePlatformArgs> platform) {
+        public Builder platform(@Nullable Input<DockerImagePlatformArgs> platform) {
             this.platform = platform;
             return this;
         }
 
-        public Builder setPlatform(@Nullable DockerImagePlatformArgs platform) {
+        public Builder platform(@Nullable DockerImagePlatformArgs platform) {
             this.platform = Input.ofNullable(platform);
             return this;
         }

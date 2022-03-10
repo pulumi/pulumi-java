@@ -66,12 +66,12 @@ public final class GooglePrivacyDlpV2InfoTypeStatsResponse {
     	      this.infoType = defaults.infoType;
         }
 
-        public Builder setCount(String count) {
+        public Builder count(String count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setInfoType(GooglePrivacyDlpV2InfoTypeResponse infoType) {
+        public Builder infoType(GooglePrivacyDlpV2InfoTypeResponse infoType) {
             this.infoType = Objects.requireNonNull(infoType);
             return this;
         }

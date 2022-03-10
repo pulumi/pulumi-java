@@ -76,12 +76,12 @@ public final class GetInsightsResultsMetadataResponse extends io.pulumi.resource
     	      this.totalCount = defaults.totalCount;
         }
 
-        public Builder setErrors(@Nullable List<GetInsightsErrorResponse> errors) {
+        public Builder errors(@Nullable List<GetInsightsErrorResponse> errors) {
             this.errors = errors;
             return this;
         }
 
-        public Builder setTotalCount(Integer totalCount) {
+        public Builder totalCount(Integer totalCount) {
             this.totalCount = Objects.requireNonNull(totalCount);
             return this;
         }

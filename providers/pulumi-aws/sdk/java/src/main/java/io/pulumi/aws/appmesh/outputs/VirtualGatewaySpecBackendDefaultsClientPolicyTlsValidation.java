@@ -68,12 +68,12 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidation {
     	      this.trust = defaults.trust;
         }
 
-        public Builder setSubjectAlternativeNames(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNames subjectAlternativeNames) {
+        public Builder subjectAlternativeNames(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNames subjectAlternativeNames) {
             this.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
 
-        public Builder setTrust(VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrust trust) {
+        public Builder trust(VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrust trust) {
             this.trust = Objects.requireNonNull(trust);
             return this;
         }

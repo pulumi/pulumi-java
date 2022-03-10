@@ -42,7 +42,7 @@ public final class BucketDeleteMarkerReplication {
     	      this.status = defaults.status;
         }
 
-        public Builder setStatus(@Nullable BucketDeleteMarkerReplicationStatus status) {
+        public Builder status(@Nullable BucketDeleteMarkerReplicationStatus status) {
             this.status = status;
             return this;
         }

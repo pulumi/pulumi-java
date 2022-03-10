@@ -105,22 +105,22 @@ public final class ApiKeyAuthenticationResponse extends io.pulumi.resources.Invo
     	      this.value = defaults.value;
         }
 
-        public Builder setIn(String in) {
+        public Builder in(String in) {
             this.in = Objects.requireNonNull(in);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

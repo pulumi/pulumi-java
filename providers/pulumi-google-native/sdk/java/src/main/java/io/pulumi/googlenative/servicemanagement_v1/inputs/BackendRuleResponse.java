@@ -166,42 +166,42 @@ public final class BackendRuleResponse extends io.pulumi.resources.InvokeArgs {
     	      this.selector = defaults.selector;
         }
 
-        public Builder setAddress(String address) {
+        public Builder address(String address) {
             this.address = Objects.requireNonNull(address);
             return this;
         }
 
-        public Builder setDeadline(Double deadline) {
+        public Builder deadline(Double deadline) {
             this.deadline = Objects.requireNonNull(deadline);
             return this;
         }
 
-        public Builder setDisableAuth(Boolean disableAuth) {
+        public Builder disableAuth(Boolean disableAuth) {
             this.disableAuth = Objects.requireNonNull(disableAuth);
             return this;
         }
 
-        public Builder setJwtAudience(String jwtAudience) {
+        public Builder jwtAudience(String jwtAudience) {
             this.jwtAudience = Objects.requireNonNull(jwtAudience);
             return this;
         }
 
-        public Builder setOperationDeadline(Double operationDeadline) {
+        public Builder operationDeadline(Double operationDeadline) {
             this.operationDeadline = Objects.requireNonNull(operationDeadline);
             return this;
         }
 
-        public Builder setPathTranslation(String pathTranslation) {
+        public Builder pathTranslation(String pathTranslation) {
             this.pathTranslation = Objects.requireNonNull(pathTranslation);
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setSelector(String selector) {
+        public Builder selector(String selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }

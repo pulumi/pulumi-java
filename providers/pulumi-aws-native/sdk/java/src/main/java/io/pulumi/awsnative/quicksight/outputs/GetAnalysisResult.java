@@ -179,42 +179,42 @@ public final class GetAnalysisResult {
     	      this.themeArn = defaults.themeArn;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setDataSetArns(@Nullable List<String> dataSetArns) {
+        public Builder dataSetArns(@Nullable List<String> dataSetArns) {
             this.dataSetArns = dataSetArns;
             return this;
         }
 
-        public Builder setErrors(@Nullable List<AnalysisError> errors) {
+        public Builder errors(@Nullable List<AnalysisError> errors) {
             this.errors = errors;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPermissions(@Nullable List<AnalysisResourcePermission> permissions) {
+        public Builder permissions(@Nullable List<AnalysisResourcePermission> permissions) {
             this.permissions = permissions;
             return this;
         }
 
-        public Builder setTags(@Nullable List<AnalysisTag> tags) {
+        public Builder tags(@Nullable List<AnalysisTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setThemeArn(@Nullable String themeArn) {
+        public Builder themeArn(@Nullable String themeArn) {
             this.themeArn = themeArn;
             return this;
         }

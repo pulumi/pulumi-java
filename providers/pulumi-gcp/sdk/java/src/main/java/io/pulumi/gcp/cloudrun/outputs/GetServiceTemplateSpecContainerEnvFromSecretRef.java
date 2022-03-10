@@ -51,12 +51,12 @@ public final class GetServiceTemplateSpecContainerEnvFromSecretRef {
     	      this.optional = defaults.optional;
         }
 
-        public Builder setLocalObjectReferences(List<GetServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference> localObjectReferences) {
+        public Builder localObjectReferences(List<GetServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference> localObjectReferences) {
             this.localObjectReferences = Objects.requireNonNull(localObjectReferences);
             return this;
         }
 
-        public Builder setOptional(Boolean optional) {
+        public Builder optional(Boolean optional) {
             this.optional = Objects.requireNonNull(optional);
             return this;
         }

@@ -106,22 +106,22 @@ public final class MetadataSupportResponse extends io.pulumi.resources.InvokeArg
     	      this.tier = defaults.tier;
         }
 
-        public Builder setEmail(@Nullable String email) {
+        public Builder email(@Nullable String email) {
             this.email = email;
             return this;
         }
 
-        public Builder setLink(@Nullable String link) {
+        public Builder link(@Nullable String link) {
             this.link = link;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTier(String tier) {
+        public Builder tier(String tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }

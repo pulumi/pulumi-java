@@ -243,62 +243,62 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
     	      this.stepId = defaults.stepId;
         }
 
-        public Builder setHadoopJob(HadoopJobResponse hadoopJob) {
+        public Builder hadoopJob(HadoopJobResponse hadoopJob) {
             this.hadoopJob = Objects.requireNonNull(hadoopJob);
             return this;
         }
 
-        public Builder setHiveJob(HiveJobResponse hiveJob) {
+        public Builder hiveJob(HiveJobResponse hiveJob) {
             this.hiveJob = Objects.requireNonNull(hiveJob);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setPigJob(PigJobResponse pigJob) {
+        public Builder pigJob(PigJobResponse pigJob) {
             this.pigJob = Objects.requireNonNull(pigJob);
             return this;
         }
 
-        public Builder setPrerequisiteStepIds(List<String> prerequisiteStepIds) {
+        public Builder prerequisiteStepIds(List<String> prerequisiteStepIds) {
             this.prerequisiteStepIds = Objects.requireNonNull(prerequisiteStepIds);
             return this;
         }
 
-        public Builder setPrestoJob(PrestoJobResponse prestoJob) {
+        public Builder prestoJob(PrestoJobResponse prestoJob) {
             this.prestoJob = Objects.requireNonNull(prestoJob);
             return this;
         }
 
-        public Builder setPysparkJob(PySparkJobResponse pysparkJob) {
+        public Builder pysparkJob(PySparkJobResponse pysparkJob) {
             this.pysparkJob = Objects.requireNonNull(pysparkJob);
             return this;
         }
 
-        public Builder setScheduling(JobSchedulingResponse scheduling) {
+        public Builder scheduling(JobSchedulingResponse scheduling) {
             this.scheduling = Objects.requireNonNull(scheduling);
             return this;
         }
 
-        public Builder setSparkJob(SparkJobResponse sparkJob) {
+        public Builder sparkJob(SparkJobResponse sparkJob) {
             this.sparkJob = Objects.requireNonNull(sparkJob);
             return this;
         }
 
-        public Builder setSparkRJob(SparkRJobResponse sparkRJob) {
+        public Builder sparkRJob(SparkRJobResponse sparkRJob) {
             this.sparkRJob = Objects.requireNonNull(sparkRJob);
             return this;
         }
 
-        public Builder setSparkSqlJob(SparkSqlJobResponse sparkSqlJob) {
+        public Builder sparkSqlJob(SparkSqlJobResponse sparkSqlJob) {
             this.sparkSqlJob = Objects.requireNonNull(sparkSqlJob);
             return this;
         }
 
-        public Builder setStepId(String stepId) {
+        public Builder stepId(String stepId) {
             this.stepId = Objects.requireNonNull(stepId);
             return this;
         }

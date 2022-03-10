@@ -68,12 +68,12 @@ public final class TaskSetScale {
     	      this.value = defaults.value;
         }
 
-        public Builder setUnit(@Nullable String unit) {
+        public Builder unit(@Nullable String unit) {
             this.unit = unit;
             return this;
         }
 
-        public Builder setValue(@Nullable Double value) {
+        public Builder value(@Nullable Double value) {
             this.value = value;
             return this;
         }

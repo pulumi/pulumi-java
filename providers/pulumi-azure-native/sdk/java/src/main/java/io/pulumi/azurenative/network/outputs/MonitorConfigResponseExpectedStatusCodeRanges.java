@@ -67,12 +67,12 @@ public final class MonitorConfigResponseExpectedStatusCodeRanges {
     	      this.min = defaults.min;
         }
 
-        public Builder setMax(@Nullable Integer max) {
+        public Builder max(@Nullable Integer max) {
             this.max = max;
             return this;
         }
 
-        public Builder setMin(@Nullable Integer min) {
+        public Builder min(@Nullable Integer min) {
             this.min = min;
             return this;
         }

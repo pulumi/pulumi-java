@@ -74,17 +74,17 @@ public final class GetRealmArgs extends io.pulumi.resources.InvokeArgs {
     	      this.realmId = defaults.realmId;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setRealmId(String realmId) {
+        public Builder realmId(String realmId) {
             this.realmId = Objects.requireNonNull(realmId);
             return this;
         }

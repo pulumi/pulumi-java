@@ -73,22 +73,22 @@ public final class ResourceRequestsArgs extends io.pulumi.resources.ResourceArgs
     	      this.memoryInGB = defaults.memoryInGB;
         }
 
-        public Builder setCpu(Input<Double> cpu) {
+        public Builder cpu(Input<Double> cpu) {
             this.cpu = Objects.requireNonNull(cpu);
             return this;
         }
 
-        public Builder setCpu(Double cpu) {
+        public Builder cpu(Double cpu) {
             this.cpu = Input.of(Objects.requireNonNull(cpu));
             return this;
         }
 
-        public Builder setMemoryInGB(Input<Double> memoryInGB) {
+        public Builder memoryInGB(Input<Double> memoryInGB) {
             this.memoryInGB = Objects.requireNonNull(memoryInGB);
             return this;
         }
 
-        public Builder setMemoryInGB(Double memoryInGB) {
+        public Builder memoryInGB(Double memoryInGB) {
             this.memoryInGB = Input.of(Objects.requireNonNull(memoryInGB));
             return this;
         }

@@ -109,42 +109,42 @@ public final class FacebookChannelPropertiesArgs extends io.pulumi.resources.Res
     	      this.pages = defaults.pages;
         }
 
-        public Builder setAppId(Input<String> appId) {
+        public Builder appId(Input<String> appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
 
-        public Builder setAppId(String appId) {
+        public Builder appId(String appId) {
             this.appId = Input.of(Objects.requireNonNull(appId));
             return this;
         }
 
-        public Builder setAppSecret(@Nullable Input<String> appSecret) {
+        public Builder appSecret(@Nullable Input<String> appSecret) {
             this.appSecret = appSecret;
             return this;
         }
 
-        public Builder setAppSecret(@Nullable String appSecret) {
+        public Builder appSecret(@Nullable String appSecret) {
             this.appSecret = Input.ofNullable(appSecret);
             return this;
         }
 
-        public Builder setIsEnabled(Input<Boolean> isEnabled) {
+        public Builder isEnabled(Input<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
-        public Builder setIsEnabled(Boolean isEnabled) {
+        public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Input.of(Objects.requireNonNull(isEnabled));
             return this;
         }
 
-        public Builder setPages(@Nullable Input<List<FacebookPageArgs>> pages) {
+        public Builder pages(@Nullable Input<List<FacebookPageArgs>> pages) {
             this.pages = pages;
             return this;
         }
 
-        public Builder setPages(@Nullable List<FacebookPageArgs> pages) {
+        public Builder pages(@Nullable List<FacebookPageArgs> pages) {
             this.pages = Input.ofNullable(pages);
             return this;
         }

@@ -75,22 +75,22 @@ public final class GoogleCloudRetailV2betaConditionQueryTermArgs extends io.pulu
     	      this.value = defaults.value;
         }
 
-        public Builder setFullMatch(@Nullable Input<Boolean> fullMatch) {
+        public Builder fullMatch(@Nullable Input<Boolean> fullMatch) {
             this.fullMatch = fullMatch;
             return this;
         }
 
-        public Builder setFullMatch(@Nullable Boolean fullMatch) {
+        public Builder fullMatch(@Nullable Boolean fullMatch) {
             this.fullMatch = Input.ofNullable(fullMatch);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }

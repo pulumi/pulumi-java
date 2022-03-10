@@ -72,17 +72,17 @@ public final class GetListenerDefaultActionFixedResponse extends io.pulumi.resou
     	      this.statusCode = defaults.statusCode;
         }
 
-        public Builder setContentType(String contentType) {
+        public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
-        public Builder setMessageBody(String messageBody) {
+        public Builder messageBody(String messageBody) {
             this.messageBody = Objects.requireNonNull(messageBody);
             return this;
         }
 
-        public Builder setStatusCode(String statusCode) {
+        public Builder statusCode(String statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }

@@ -144,32 +144,32 @@ public final class CxFlowTransitionRoute {
     	      this.triggerFulfillment = defaults.triggerFulfillment;
         }
 
-        public Builder setCondition(@Nullable String condition) {
+        public Builder condition(@Nullable String condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setIntent(@Nullable String intent) {
+        public Builder intent(@Nullable String intent) {
             this.intent = intent;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTargetFlow(@Nullable String targetFlow) {
+        public Builder targetFlow(@Nullable String targetFlow) {
             this.targetFlow = targetFlow;
             return this;
         }
 
-        public Builder setTargetPage(@Nullable String targetPage) {
+        public Builder targetPage(@Nullable String targetPage) {
             this.targetPage = targetPage;
             return this;
         }
 
-        public Builder setTriggerFulfillment(@Nullable CxFlowTransitionRouteTriggerFulfillment triggerFulfillment) {
+        public Builder triggerFulfillment(@Nullable CxFlowTransitionRouteTriggerFulfillment triggerFulfillment) {
             this.triggerFulfillment = triggerFulfillment;
             return this;
         }

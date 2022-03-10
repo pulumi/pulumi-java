@@ -57,12 +57,12 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     	      this.cloudSecret = defaults.cloudSecret;
         }
 
-        public Builder setCloudSecret(@Nullable Input<String> cloudSecret) {
+        public Builder cloudSecret(@Nullable Input<String> cloudSecret) {
             this.cloudSecret = cloudSecret;
             return this;
         }
 
-        public Builder setCloudSecret(@Nullable String cloudSecret) {
+        public Builder cloudSecret(@Nullable String cloudSecret) {
             this.cloudSecret = Input.ofNullable(cloudSecret);
             return this;
         }

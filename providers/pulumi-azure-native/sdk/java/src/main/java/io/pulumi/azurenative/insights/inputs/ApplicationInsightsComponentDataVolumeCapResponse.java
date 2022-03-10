@@ -140,32 +140,32 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse extends io.
     	      this.warningThreshold = defaults.warningThreshold;
         }
 
-        public Builder setCap(@Nullable Double cap) {
+        public Builder cap(@Nullable Double cap) {
             this.cap = cap;
             return this;
         }
 
-        public Builder setMaxHistoryCap(Double maxHistoryCap) {
+        public Builder maxHistoryCap(Double maxHistoryCap) {
             this.maxHistoryCap = Objects.requireNonNull(maxHistoryCap);
             return this;
         }
 
-        public Builder setResetTime(Integer resetTime) {
+        public Builder resetTime(Integer resetTime) {
             this.resetTime = Objects.requireNonNull(resetTime);
             return this;
         }
 
-        public Builder setStopSendNotificationWhenHitCap(@Nullable Boolean stopSendNotificationWhenHitCap) {
+        public Builder stopSendNotificationWhenHitCap(@Nullable Boolean stopSendNotificationWhenHitCap) {
             this.stopSendNotificationWhenHitCap = stopSendNotificationWhenHitCap;
             return this;
         }
 
-        public Builder setStopSendNotificationWhenHitThreshold(@Nullable Boolean stopSendNotificationWhenHitThreshold) {
+        public Builder stopSendNotificationWhenHitThreshold(@Nullable Boolean stopSendNotificationWhenHitThreshold) {
             this.stopSendNotificationWhenHitThreshold = stopSendNotificationWhenHitThreshold;
             return this;
         }
 
-        public Builder setWarningThreshold(@Nullable Integer warningThreshold) {
+        public Builder warningThreshold(@Nullable Integer warningThreshold) {
             this.warningThreshold = warningThreshold;
             return this;
         }

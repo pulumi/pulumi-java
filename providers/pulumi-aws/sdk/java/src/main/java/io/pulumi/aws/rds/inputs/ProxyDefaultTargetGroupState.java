@@ -103,42 +103,42 @@ public final class ProxyDefaultTargetGroupState extends io.pulumi.resources.Reso
     	      this.name = defaults.name;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setConnectionPoolConfig(@Nullable Input<ProxyDefaultTargetGroupConnectionPoolConfigGetArgs> connectionPoolConfig) {
+        public Builder connectionPoolConfig(@Nullable Input<ProxyDefaultTargetGroupConnectionPoolConfigGetArgs> connectionPoolConfig) {
             this.connectionPoolConfig = connectionPoolConfig;
             return this;
         }
 
-        public Builder setConnectionPoolConfig(@Nullable ProxyDefaultTargetGroupConnectionPoolConfigGetArgs connectionPoolConfig) {
+        public Builder connectionPoolConfig(@Nullable ProxyDefaultTargetGroupConnectionPoolConfigGetArgs connectionPoolConfig) {
             this.connectionPoolConfig = Input.ofNullable(connectionPoolConfig);
             return this;
         }
 
-        public Builder setDbProxyName(@Nullable Input<String> dbProxyName) {
+        public Builder dbProxyName(@Nullable Input<String> dbProxyName) {
             this.dbProxyName = dbProxyName;
             return this;
         }
 
-        public Builder setDbProxyName(@Nullable String dbProxyName) {
+        public Builder dbProxyName(@Nullable String dbProxyName) {
             this.dbProxyName = Input.ofNullable(dbProxyName);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

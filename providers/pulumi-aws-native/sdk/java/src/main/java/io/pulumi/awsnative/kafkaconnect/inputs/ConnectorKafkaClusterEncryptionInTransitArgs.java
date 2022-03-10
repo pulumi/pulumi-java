@@ -52,12 +52,12 @@ public final class ConnectorKafkaClusterEncryptionInTransitArgs extends io.pulum
     	      this.encryptionType = defaults.encryptionType;
         }
 
-        public Builder setEncryptionType(Input<ConnectorKafkaClusterEncryptionInTransitType> encryptionType) {
+        public Builder encryptionType(Input<ConnectorKafkaClusterEncryptionInTransitType> encryptionType) {
             this.encryptionType = Objects.requireNonNull(encryptionType);
             return this;
         }
 
-        public Builder setEncryptionType(ConnectorKafkaClusterEncryptionInTransitType encryptionType) {
+        public Builder encryptionType(ConnectorKafkaClusterEncryptionInTransitType encryptionType) {
             this.encryptionType = Input.of(Objects.requireNonNull(encryptionType));
             return this;
         }

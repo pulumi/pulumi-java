@@ -102,42 +102,42 @@ public final class CertificateTemplateIdentityConstraintsCelExpressionGetArgs ex
     	      this.title = defaults.title;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setExpression(@Nullable Input<String> expression) {
+        public Builder expression(@Nullable Input<String> expression) {
             this.expression = expression;
             return this;
         }
 
-        public Builder setExpression(@Nullable String expression) {
+        public Builder expression(@Nullable String expression) {
             this.expression = Input.ofNullable(expression);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setTitle(@Nullable Input<String> title) {
+        public Builder title(@Nullable Input<String> title) {
             this.title = title;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = Input.ofNullable(title);
             return this;
         }

@@ -349,102 +349,102 @@ public final class GetBatchAccountResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAccountEndpoint(String accountEndpoint) {
+        public Builder accountEndpoint(String accountEndpoint) {
             this.accountEndpoint = Objects.requireNonNull(accountEndpoint);
             return this;
         }
 
-        public Builder setActiveJobAndJobScheduleQuota(Integer activeJobAndJobScheduleQuota) {
+        public Builder activeJobAndJobScheduleQuota(Integer activeJobAndJobScheduleQuota) {
             this.activeJobAndJobScheduleQuota = Objects.requireNonNull(activeJobAndJobScheduleQuota);
             return this;
         }
 
-        public Builder setAutoStorage(AutoStoragePropertiesResponse autoStorage) {
+        public Builder autoStorage(AutoStoragePropertiesResponse autoStorage) {
             this.autoStorage = Objects.requireNonNull(autoStorage);
             return this;
         }
 
-        public Builder setDedicatedCoreQuota(Integer dedicatedCoreQuota) {
+        public Builder dedicatedCoreQuota(Integer dedicatedCoreQuota) {
             this.dedicatedCoreQuota = Objects.requireNonNull(dedicatedCoreQuota);
             return this;
         }
 
-        public Builder setDedicatedCoreQuotaPerVMFamily(List<VirtualMachineFamilyCoreQuotaResponse> dedicatedCoreQuotaPerVMFamily) {
+        public Builder dedicatedCoreQuotaPerVMFamily(List<VirtualMachineFamilyCoreQuotaResponse> dedicatedCoreQuotaPerVMFamily) {
             this.dedicatedCoreQuotaPerVMFamily = Objects.requireNonNull(dedicatedCoreQuotaPerVMFamily);
             return this;
         }
 
-        public Builder setDedicatedCoreQuotaPerVMFamilyEnforced(Boolean dedicatedCoreQuotaPerVMFamilyEnforced) {
+        public Builder dedicatedCoreQuotaPerVMFamilyEnforced(Boolean dedicatedCoreQuotaPerVMFamilyEnforced) {
             this.dedicatedCoreQuotaPerVMFamilyEnforced = Objects.requireNonNull(dedicatedCoreQuotaPerVMFamilyEnforced);
             return this;
         }
 
-        public Builder setEncryption(EncryptionPropertiesResponse encryption) {
+        public Builder encryption(EncryptionPropertiesResponse encryption) {
             this.encryption = Objects.requireNonNull(encryption);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable BatchAccountIdentityResponse identity) {
+        public Builder identity(@Nullable BatchAccountIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setKeyVaultReference(KeyVaultReferenceResponse keyVaultReference) {
+        public Builder keyVaultReference(KeyVaultReferenceResponse keyVaultReference) {
             this.keyVaultReference = Objects.requireNonNull(keyVaultReference);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLowPriorityCoreQuota(Integer lowPriorityCoreQuota) {
+        public Builder lowPriorityCoreQuota(Integer lowPriorityCoreQuota) {
             this.lowPriorityCoreQuota = Objects.requireNonNull(lowPriorityCoreQuota);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPoolAllocationMode(String poolAllocationMode) {
+        public Builder poolAllocationMode(String poolAllocationMode) {
             this.poolAllocationMode = Objects.requireNonNull(poolAllocationMode);
             return this;
         }
 
-        public Builder setPoolQuota(Integer poolQuota) {
+        public Builder poolQuota(Integer poolQuota) {
             this.poolQuota = Objects.requireNonNull(poolQuota);
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
+        public Builder privateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(String publicNetworkAccess) {
+        public Builder publicNetworkAccess(String publicNetworkAccess) {
             this.publicNetworkAccess = Objects.requireNonNull(publicNetworkAccess);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

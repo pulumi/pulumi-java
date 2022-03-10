@@ -58,12 +58,12 @@ public final class EndpointHintsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.forZones = defaults.forZones;
         }
 
-        public Builder setForZones(@Nullable Input<List<ForZoneArgs>> forZones) {
+        public Builder forZones(@Nullable Input<List<ForZoneArgs>> forZones) {
             this.forZones = forZones;
             return this;
         }
 
-        public Builder setForZones(@Nullable List<ForZoneArgs> forZones) {
+        public Builder forZones(@Nullable List<ForZoneArgs> forZones) {
             this.forZones = Input.ofNullable(forZones);
             return this;
         }

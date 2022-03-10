@@ -107,42 +107,42 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.virtualNetworks = defaults.virtualNetworks;
         }
 
-        public Builder setManagementGroups(@Nullable Input<List<ResourceIdArgs>> managementGroups) {
+        public Builder managementGroups(@Nullable Input<List<ResourceIdArgs>> managementGroups) {
             this.managementGroups = managementGroups;
             return this;
         }
 
-        public Builder setManagementGroups(@Nullable List<ResourceIdArgs> managementGroups) {
+        public Builder managementGroups(@Nullable List<ResourceIdArgs> managementGroups) {
             this.managementGroups = Input.ofNullable(managementGroups);
             return this;
         }
 
-        public Builder setSubnets(@Nullable Input<List<ResourceIdArgs>> subnets) {
+        public Builder subnets(@Nullable Input<List<ResourceIdArgs>> subnets) {
             this.subnets = subnets;
             return this;
         }
 
-        public Builder setSubnets(@Nullable List<ResourceIdArgs> subnets) {
+        public Builder subnets(@Nullable List<ResourceIdArgs> subnets) {
             this.subnets = Input.ofNullable(subnets);
             return this;
         }
 
-        public Builder setSubscriptions(@Nullable Input<List<ResourceIdArgs>> subscriptions) {
+        public Builder subscriptions(@Nullable Input<List<ResourceIdArgs>> subscriptions) {
             this.subscriptions = subscriptions;
             return this;
         }
 
-        public Builder setSubscriptions(@Nullable List<ResourceIdArgs> subscriptions) {
+        public Builder subscriptions(@Nullable List<ResourceIdArgs> subscriptions) {
             this.subscriptions = Input.ofNullable(subscriptions);
             return this;
         }
 
-        public Builder setVirtualNetworks(@Nullable Input<List<ResourceIdArgs>> virtualNetworks) {
+        public Builder virtualNetworks(@Nullable Input<List<ResourceIdArgs>> virtualNetworks) {
             this.virtualNetworks = virtualNetworks;
             return this;
         }
 
-        public Builder setVirtualNetworks(@Nullable List<ResourceIdArgs> virtualNetworks) {
+        public Builder virtualNetworks(@Nullable List<ResourceIdArgs> virtualNetworks) {
             this.virtualNetworks = Input.ofNullable(virtualNetworks);
             return this;
         }

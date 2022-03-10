@@ -258,42 +258,42 @@ public final class CertificateSigningRequestSpec {
     	      this.username = defaults.username;
         }
 
-        public Builder setExpirationSeconds(@Nullable Integer expirationSeconds) {
+        public Builder expirationSeconds(@Nullable Integer expirationSeconds) {
             this.expirationSeconds = expirationSeconds;
             return this;
         }
 
-        public Builder setExtra(@Nullable Map<String,List<String>> extra) {
+        public Builder extra(@Nullable Map<String,List<String>> extra) {
             this.extra = extra;
             return this;
         }
 
-        public Builder setGroups(@Nullable List<String> groups) {
+        public Builder groups(@Nullable List<String> groups) {
             this.groups = groups;
             return this;
         }
 
-        public Builder setRequest(String request) {
+        public Builder request(String request) {
             this.request = Objects.requireNonNull(request);
             return this;
         }
 
-        public Builder setSignerName(String signerName) {
+        public Builder signerName(String signerName) {
             this.signerName = Objects.requireNonNull(signerName);
             return this;
         }
 
-        public Builder setUid(@Nullable String uid) {
+        public Builder uid(@Nullable String uid) {
             this.uid = uid;
             return this;
         }
 
-        public Builder setUsages(@Nullable List<String> usages) {
+        public Builder usages(@Nullable List<String> usages) {
             this.usages = usages;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = username;
             return this;
         }

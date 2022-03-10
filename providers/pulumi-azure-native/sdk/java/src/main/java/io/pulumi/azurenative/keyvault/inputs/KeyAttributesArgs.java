@@ -91,32 +91,32 @@ public final class KeyAttributesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.notBefore = defaults.notBefore;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setExpires(@Nullable Input<Double> expires) {
+        public Builder expires(@Nullable Input<Double> expires) {
             this.expires = expires;
             return this;
         }
 
-        public Builder setExpires(@Nullable Double expires) {
+        public Builder expires(@Nullable Double expires) {
             this.expires = Input.ofNullable(expires);
             return this;
         }
 
-        public Builder setNotBefore(@Nullable Input<Double> notBefore) {
+        public Builder notBefore(@Nullable Input<Double> notBefore) {
             this.notBefore = notBefore;
             return this;
         }
 
-        public Builder setNotBefore(@Nullable Double notBefore) {
+        public Builder notBefore(@Nullable Double notBefore) {
             this.notBefore = Input.ofNullable(notBefore);
             return this;
         }

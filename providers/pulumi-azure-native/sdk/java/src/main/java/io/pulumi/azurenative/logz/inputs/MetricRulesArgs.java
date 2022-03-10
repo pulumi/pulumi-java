@@ -76,22 +76,22 @@ public final class MetricRulesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subscriptionId = defaults.subscriptionId;
         }
 
-        public Builder setFilteringTags(@Nullable Input<List<FilteringTagArgs>> filteringTags) {
+        public Builder filteringTags(@Nullable Input<List<FilteringTagArgs>> filteringTags) {
             this.filteringTags = filteringTags;
             return this;
         }
 
-        public Builder setFilteringTags(@Nullable List<FilteringTagArgs> filteringTags) {
+        public Builder filteringTags(@Nullable List<FilteringTagArgs> filteringTags) {
             this.filteringTags = Input.ofNullable(filteringTags);
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable Input<String> subscriptionId) {
+        public Builder subscriptionId(@Nullable Input<String> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable String subscriptionId) {
+        public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = Input.ofNullable(subscriptionId);
             return this;
         }

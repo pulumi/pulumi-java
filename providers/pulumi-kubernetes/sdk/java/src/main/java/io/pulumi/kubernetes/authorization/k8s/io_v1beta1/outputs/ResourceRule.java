@@ -101,22 +101,22 @@ public final class ResourceRule {
     	      this.verbs = defaults.verbs;
         }
 
-        public Builder setApiGroups(@Nullable List<String> apiGroups) {
+        public Builder apiGroups(@Nullable List<String> apiGroups) {
             this.apiGroups = apiGroups;
             return this;
         }
 
-        public Builder setResourceNames(@Nullable List<String> resourceNames) {
+        public Builder resourceNames(@Nullable List<String> resourceNames) {
             this.resourceNames = resourceNames;
             return this;
         }
 
-        public Builder setResources(@Nullable List<String> resources) {
+        public Builder resources(@Nullable List<String> resources) {
             this.resources = resources;
             return this;
         }
 
-        public Builder setVerbs(List<String> verbs) {
+        public Builder verbs(List<String> verbs) {
             this.verbs = Objects.requireNonNull(verbs);
             return this;
         }

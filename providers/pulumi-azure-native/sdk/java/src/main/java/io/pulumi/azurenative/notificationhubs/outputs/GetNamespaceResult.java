@@ -342,97 +342,97 @@ public final class GetNamespaceResult {
     	      this.updatedAt = defaults.updatedAt;
         }
 
-        public Builder setCreatedAt(@Nullable String createdAt) {
+        public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-        public Builder setCritical(@Nullable Boolean critical) {
+        public Builder critical(@Nullable Boolean critical) {
             this.critical = critical;
             return this;
         }
 
-        public Builder setDataCenter(@Nullable String dataCenter) {
+        public Builder dataCenter(@Nullable String dataCenter) {
             this.dataCenter = dataCenter;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setMetricId(String metricId) {
+        public Builder metricId(String metricId) {
             this.metricId = Objects.requireNonNull(metricId);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNamespaceType(@Nullable String namespaceType) {
+        public Builder namespaceType(@Nullable String namespaceType) {
             this.namespaceType = namespaceType;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
 
-        public Builder setScaleUnit(@Nullable String scaleUnit) {
+        public Builder scaleUnit(@Nullable String scaleUnit) {
             this.scaleUnit = scaleUnit;
             return this;
         }
 
-        public Builder setServiceBusEndpoint(@Nullable String serviceBusEndpoint) {
+        public Builder serviceBusEndpoint(@Nullable String serviceBusEndpoint) {
             this.serviceBusEndpoint = serviceBusEndpoint;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuResponse sku) {
+        public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable String subscriptionId) {
+        public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUpdatedAt(@Nullable String updatedAt) {
+        public Builder updatedAt(@Nullable String updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }

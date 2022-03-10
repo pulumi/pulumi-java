@@ -72,12 +72,12 @@ public final class HttpHeaderMatchResponse extends io.pulumi.resources.InvokeArg
     	      this.regexMatch = defaults.regexMatch;
         }
 
-        public Builder setHeaderName(String headerName) {
+        public Builder headerName(String headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
-        public Builder setRegexMatch(String regexMatch) {
+        public Builder regexMatch(String regexMatch) {
             this.regexMatch = Objects.requireNonNull(regexMatch);
             return this;
         }

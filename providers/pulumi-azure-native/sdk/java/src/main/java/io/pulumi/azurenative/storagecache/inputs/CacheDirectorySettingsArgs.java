@@ -75,22 +75,22 @@ public final class CacheDirectorySettingsArgs extends io.pulumi.resources.Resour
     	      this.usernameDownload = defaults.usernameDownload;
         }
 
-        public Builder setActiveDirectory(@Nullable Input<CacheActiveDirectorySettingsArgs> activeDirectory) {
+        public Builder activeDirectory(@Nullable Input<CacheActiveDirectorySettingsArgs> activeDirectory) {
             this.activeDirectory = activeDirectory;
             return this;
         }
 
-        public Builder setActiveDirectory(@Nullable CacheActiveDirectorySettingsArgs activeDirectory) {
+        public Builder activeDirectory(@Nullable CacheActiveDirectorySettingsArgs activeDirectory) {
             this.activeDirectory = Input.ofNullable(activeDirectory);
             return this;
         }
 
-        public Builder setUsernameDownload(@Nullable Input<CacheUsernameDownloadSettingsArgs> usernameDownload) {
+        public Builder usernameDownload(@Nullable Input<CacheUsernameDownloadSettingsArgs> usernameDownload) {
             this.usernameDownload = usernameDownload;
             return this;
         }
 
-        public Builder setUsernameDownload(@Nullable CacheUsernameDownloadSettingsArgs usernameDownload) {
+        public Builder usernameDownload(@Nullable CacheUsernameDownloadSettingsArgs usernameDownload) {
             this.usernameDownload = Input.ofNullable(usernameDownload);
             return this;
         }

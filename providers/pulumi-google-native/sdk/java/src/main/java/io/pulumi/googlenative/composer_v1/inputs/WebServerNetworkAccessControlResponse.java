@@ -56,7 +56,7 @@ public final class WebServerNetworkAccessControlResponse extends io.pulumi.resou
     	      this.allowedIpRanges = defaults.allowedIpRanges;
         }
 
-        public Builder setAllowedIpRanges(List<AllowedIpRangeResponse> allowedIpRanges) {
+        public Builder allowedIpRanges(List<AllowedIpRangeResponse> allowedIpRanges) {
             this.allowedIpRanges = Objects.requireNonNull(allowedIpRanges);
             return this;
         }

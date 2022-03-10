@@ -105,42 +105,42 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setMetricName(@Nullable Input<String> metricName) {
+        public Builder metricName(@Nullable Input<String> metricName) {
             this.metricName = metricName;
             return this;
         }
 
-        public Builder setMetricName(@Nullable String metricName) {
+        public Builder metricName(@Nullable String metricName) {
             this.metricName = Input.ofNullable(metricName);
             return this;
         }
 
-        public Builder setMetricType(Input<CustomMetricMetricType> metricType) {
+        public Builder metricType(Input<CustomMetricMetricType> metricType) {
             this.metricType = Objects.requireNonNull(metricType);
             return this;
         }
 
-        public Builder setMetricType(CustomMetricMetricType metricType) {
+        public Builder metricType(CustomMetricMetricType metricType) {
             this.metricType = Input.of(Objects.requireNonNull(metricType));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<CustomMetricTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<CustomMetricTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<CustomMetricTagArgs> tags) {
+        public Builder tags(@Nullable List<CustomMetricTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

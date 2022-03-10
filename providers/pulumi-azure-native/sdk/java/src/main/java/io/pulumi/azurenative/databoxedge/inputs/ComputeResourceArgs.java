@@ -74,22 +74,22 @@ public final class ComputeResourceArgs extends io.pulumi.resources.ResourceArgs 
     	      this.processorCount = defaults.processorCount;
         }
 
-        public Builder setMemoryInGB(Input<Double> memoryInGB) {
+        public Builder memoryInGB(Input<Double> memoryInGB) {
             this.memoryInGB = Objects.requireNonNull(memoryInGB);
             return this;
         }
 
-        public Builder setMemoryInGB(Double memoryInGB) {
+        public Builder memoryInGB(Double memoryInGB) {
             this.memoryInGB = Input.of(Objects.requireNonNull(memoryInGB));
             return this;
         }
 
-        public Builder setProcessorCount(Input<Integer> processorCount) {
+        public Builder processorCount(Input<Integer> processorCount) {
             this.processorCount = Objects.requireNonNull(processorCount);
             return this;
         }
 
-        public Builder setProcessorCount(Integer processorCount) {
+        public Builder processorCount(Integer processorCount) {
             this.processorCount = Input.of(Objects.requireNonNull(processorCount));
             return this;
         }

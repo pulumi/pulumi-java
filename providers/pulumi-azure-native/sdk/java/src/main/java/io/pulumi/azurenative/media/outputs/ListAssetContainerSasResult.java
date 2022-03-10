@@ -50,7 +50,7 @@ public final class ListAssetContainerSasResult {
     	      this.assetContainerSasUrls = defaults.assetContainerSasUrls;
         }
 
-        public Builder setAssetContainerSasUrls(@Nullable List<String> assetContainerSasUrls) {
+        public Builder assetContainerSasUrls(@Nullable List<String> assetContainerSasUrls) {
             this.assetContainerSasUrls = assetContainerSasUrls;
             return this;
         }

@@ -126,52 +126,52 @@ public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceAr
     	      this.zones = defaults.zones;
         }
 
-        public Builder setDisableGateway(@Nullable Input<Boolean> disableGateway) {
+        public Builder disableGateway(@Nullable Input<Boolean> disableGateway) {
             this.disableGateway = disableGateway;
             return this;
         }
 
-        public Builder setDisableGateway(@Nullable Boolean disableGateway) {
+        public Builder disableGateway(@Nullable Boolean disableGateway) {
             this.disableGateway = Input.ofNullable(disableGateway);
             return this;
         }
 
-        public Builder setLocation(Input<String> location) {
+        public Builder location(Input<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Input.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder setSku(Input<ApiManagementServiceSkuPropertiesArgs> sku) {
+        public Builder sku(Input<ApiManagementServiceSkuPropertiesArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setSku(ApiManagementServiceSkuPropertiesArgs sku) {
+        public Builder sku(ApiManagementServiceSkuPropertiesArgs sku) {
             this.sku = Input.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder setVirtualNetworkConfiguration(@Nullable Input<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration) {
+        public Builder virtualNetworkConfiguration(@Nullable Input<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration) {
             this.virtualNetworkConfiguration = virtualNetworkConfiguration;
             return this;
         }
 
-        public Builder setVirtualNetworkConfiguration(@Nullable VirtualNetworkConfigurationArgs virtualNetworkConfiguration) {
+        public Builder virtualNetworkConfiguration(@Nullable VirtualNetworkConfigurationArgs virtualNetworkConfiguration) {
             this.virtualNetworkConfiguration = Input.ofNullable(virtualNetworkConfiguration);
             return this;
         }
 
-        public Builder setZones(@Nullable Input<List<String>> zones) {
+        public Builder zones(@Nullable Input<List<String>> zones) {
             this.zones = zones;
             return this;
         }
 
-        public Builder setZones(@Nullable List<String> zones) {
+        public Builder zones(@Nullable List<String> zones) {
             this.zones = Input.ofNullable(zones);
             return this;
         }

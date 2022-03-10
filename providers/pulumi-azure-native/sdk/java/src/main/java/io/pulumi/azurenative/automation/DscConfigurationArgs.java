@@ -218,112 +218,112 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAutomationAccountName(Input<String> automationAccountName) {
+        public Builder automationAccountName(Input<String> automationAccountName) {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
 
-        public Builder setAutomationAccountName(String automationAccountName) {
+        public Builder automationAccountName(String automationAccountName) {
             this.automationAccountName = Input.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
 
-        public Builder setConfigurationName(@Nullable Input<String> configurationName) {
+        public Builder configurationName(@Nullable Input<String> configurationName) {
             this.configurationName = configurationName;
             return this;
         }
 
-        public Builder setConfigurationName(@Nullable String configurationName) {
+        public Builder configurationName(@Nullable String configurationName) {
             this.configurationName = Input.ofNullable(configurationName);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setLogProgress(@Nullable Input<Boolean> logProgress) {
+        public Builder logProgress(@Nullable Input<Boolean> logProgress) {
             this.logProgress = logProgress;
             return this;
         }
 
-        public Builder setLogProgress(@Nullable Boolean logProgress) {
+        public Builder logProgress(@Nullable Boolean logProgress) {
             this.logProgress = Input.ofNullable(logProgress);
             return this;
         }
 
-        public Builder setLogVerbose(@Nullable Input<Boolean> logVerbose) {
+        public Builder logVerbose(@Nullable Input<Boolean> logVerbose) {
             this.logVerbose = logVerbose;
             return this;
         }
 
-        public Builder setLogVerbose(@Nullable Boolean logVerbose) {
+        public Builder logVerbose(@Nullable Boolean logVerbose) {
             this.logVerbose = Input.ofNullable(logVerbose);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,DscConfigurationParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,DscConfigurationParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,DscConfigurationParameterArgs> parameters) {
+        public Builder parameters(@Nullable Map<String,DscConfigurationParameterArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSource(Input<ContentSourceArgs> source) {
+        public Builder source(Input<ContentSourceArgs> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setSource(ContentSourceArgs source) {
+        public Builder source(ContentSourceArgs source) {
             this.source = Input.of(Objects.requireNonNull(source));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

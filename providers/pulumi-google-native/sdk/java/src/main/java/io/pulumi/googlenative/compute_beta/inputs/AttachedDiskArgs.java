@@ -226,112 +226,112 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setAutoDelete(@Nullable Input<Boolean> autoDelete) {
+        public Builder autoDelete(@Nullable Input<Boolean> autoDelete) {
             this.autoDelete = autoDelete;
             return this;
         }
 
-        public Builder setAutoDelete(@Nullable Boolean autoDelete) {
+        public Builder autoDelete(@Nullable Boolean autoDelete) {
             this.autoDelete = Input.ofNullable(autoDelete);
             return this;
         }
 
-        public Builder setBoot(@Nullable Input<Boolean> boot) {
+        public Builder boot(@Nullable Input<Boolean> boot) {
             this.boot = boot;
             return this;
         }
 
-        public Builder setBoot(@Nullable Boolean boot) {
+        public Builder boot(@Nullable Boolean boot) {
             this.boot = Input.ofNullable(boot);
             return this;
         }
 
-        public Builder setDeviceName(@Nullable Input<String> deviceName) {
+        public Builder deviceName(@Nullable Input<String> deviceName) {
             this.deviceName = deviceName;
             return this;
         }
 
-        public Builder setDeviceName(@Nullable String deviceName) {
+        public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = Input.ofNullable(deviceName);
             return this;
         }
 
-        public Builder setDiskEncryptionKey(@Nullable Input<CustomerEncryptionKeyArgs> diskEncryptionKey) {
+        public Builder diskEncryptionKey(@Nullable Input<CustomerEncryptionKeyArgs> diskEncryptionKey) {
             this.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
 
-        public Builder setDiskEncryptionKey(@Nullable CustomerEncryptionKeyArgs diskEncryptionKey) {
+        public Builder diskEncryptionKey(@Nullable CustomerEncryptionKeyArgs diskEncryptionKey) {
             this.diskEncryptionKey = Input.ofNullable(diskEncryptionKey);
             return this;
         }
 
-        public Builder setDiskSizeGb(@Nullable Input<String> diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Input<String> diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
 
-        public Builder setDiskSizeGb(@Nullable String diskSizeGb) {
+        public Builder diskSizeGb(@Nullable String diskSizeGb) {
             this.diskSizeGb = Input.ofNullable(diskSizeGb);
             return this;
         }
 
-        public Builder setGuestOsFeatures(@Nullable Input<List<GuestOsFeatureArgs>> guestOsFeatures) {
+        public Builder guestOsFeatures(@Nullable Input<List<GuestOsFeatureArgs>> guestOsFeatures) {
             this.guestOsFeatures = guestOsFeatures;
             return this;
         }
 
-        public Builder setGuestOsFeatures(@Nullable List<GuestOsFeatureArgs> guestOsFeatures) {
+        public Builder guestOsFeatures(@Nullable List<GuestOsFeatureArgs> guestOsFeatures) {
             this.guestOsFeatures = Input.ofNullable(guestOsFeatures);
             return this;
         }
 
-        public Builder setInitializeParams(@Nullable Input<AttachedDiskInitializeParamsArgs> initializeParams) {
+        public Builder initializeParams(@Nullable Input<AttachedDiskInitializeParamsArgs> initializeParams) {
             this.initializeParams = initializeParams;
             return this;
         }
 
-        public Builder setInitializeParams(@Nullable AttachedDiskInitializeParamsArgs initializeParams) {
+        public Builder initializeParams(@Nullable AttachedDiskInitializeParamsArgs initializeParams) {
             this.initializeParams = Input.ofNullable(initializeParams);
             return this;
         }
 
-        public Builder set$interface(@Nullable Input<AttachedDiskInterface> $interface) {
+        public Builder $interface(@Nullable Input<AttachedDiskInterface> $interface) {
             this.$interface = $interface;
             return this;
         }
 
-        public Builder set$interface(@Nullable AttachedDiskInterface $interface) {
+        public Builder $interface(@Nullable AttachedDiskInterface $interface) {
             this.$interface = Input.ofNullable($interface);
             return this;
         }
 
-        public Builder setMode(@Nullable Input<AttachedDiskMode> mode) {
+        public Builder mode(@Nullable Input<AttachedDiskMode> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable AttachedDiskMode mode) {
+        public Builder mode(@Nullable AttachedDiskMode mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }
 
-        public Builder setSource(@Nullable Input<String> source) {
+        public Builder source(@Nullable Input<String> source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSource(@Nullable String source) {
+        public Builder source(@Nullable String source) {
             this.source = Input.ofNullable(source);
             return this;
         }
 
-        public Builder setType(@Nullable Input<AttachedDiskType> type) {
+        public Builder type(@Nullable Input<AttachedDiskType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable AttachedDiskType type) {
+        public Builder type(@Nullable AttachedDiskType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

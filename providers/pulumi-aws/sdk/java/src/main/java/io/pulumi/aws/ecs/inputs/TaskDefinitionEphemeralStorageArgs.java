@@ -52,12 +52,12 @@ public final class TaskDefinitionEphemeralStorageArgs extends io.pulumi.resource
     	      this.sizeInGib = defaults.sizeInGib;
         }
 
-        public Builder setSizeInGib(Input<Integer> sizeInGib) {
+        public Builder sizeInGib(Input<Integer> sizeInGib) {
             this.sizeInGib = Objects.requireNonNull(sizeInGib);
             return this;
         }
 
-        public Builder setSizeInGib(Integer sizeInGib) {
+        public Builder sizeInGib(Integer sizeInGib) {
             this.sizeInGib = Input.of(Objects.requireNonNull(sizeInGib));
             return this;
         }

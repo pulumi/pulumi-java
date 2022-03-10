@@ -100,22 +100,22 @@ public final class GetActivityCustomEntityQueryArgs extends io.pulumi.resources.
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setEntityQueryId(String entityQueryId) {
+        public Builder entityQueryId(String entityQueryId) {
             this.entityQueryId = Objects.requireNonNull(entityQueryId);
             return this;
         }
 
-        public Builder setOperationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
+        public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }

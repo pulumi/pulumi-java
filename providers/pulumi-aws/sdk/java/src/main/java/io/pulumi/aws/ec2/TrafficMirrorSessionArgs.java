@@ -168,82 +168,82 @@ public final class TrafficMirrorSessionArgs extends io.pulumi.resources.Resource
     	      this.virtualNetworkId = defaults.virtualNetworkId;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setNetworkInterfaceId(Input<String> networkInterfaceId) {
+        public Builder networkInterfaceId(Input<String> networkInterfaceId) {
             this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
             return this;
         }
 
-        public Builder setNetworkInterfaceId(String networkInterfaceId) {
+        public Builder networkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = Input.of(Objects.requireNonNull(networkInterfaceId));
             return this;
         }
 
-        public Builder setPacketLength(@Nullable Input<Integer> packetLength) {
+        public Builder packetLength(@Nullable Input<Integer> packetLength) {
             this.packetLength = packetLength;
             return this;
         }
 
-        public Builder setPacketLength(@Nullable Integer packetLength) {
+        public Builder packetLength(@Nullable Integer packetLength) {
             this.packetLength = Input.ofNullable(packetLength);
             return this;
         }
 
-        public Builder setSessionNumber(Input<Integer> sessionNumber) {
+        public Builder sessionNumber(Input<Integer> sessionNumber) {
             this.sessionNumber = Objects.requireNonNull(sessionNumber);
             return this;
         }
 
-        public Builder setSessionNumber(Integer sessionNumber) {
+        public Builder sessionNumber(Integer sessionNumber) {
             this.sessionNumber = Input.of(Objects.requireNonNull(sessionNumber));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTrafficMirrorFilterId(Input<String> trafficMirrorFilterId) {
+        public Builder trafficMirrorFilterId(Input<String> trafficMirrorFilterId) {
             this.trafficMirrorFilterId = Objects.requireNonNull(trafficMirrorFilterId);
             return this;
         }
 
-        public Builder setTrafficMirrorFilterId(String trafficMirrorFilterId) {
+        public Builder trafficMirrorFilterId(String trafficMirrorFilterId) {
             this.trafficMirrorFilterId = Input.of(Objects.requireNonNull(trafficMirrorFilterId));
             return this;
         }
 
-        public Builder setTrafficMirrorTargetId(Input<String> trafficMirrorTargetId) {
+        public Builder trafficMirrorTargetId(Input<String> trafficMirrorTargetId) {
             this.trafficMirrorTargetId = Objects.requireNonNull(trafficMirrorTargetId);
             return this;
         }
 
-        public Builder setTrafficMirrorTargetId(String trafficMirrorTargetId) {
+        public Builder trafficMirrorTargetId(String trafficMirrorTargetId) {
             this.trafficMirrorTargetId = Input.of(Objects.requireNonNull(trafficMirrorTargetId));
             return this;
         }
 
-        public Builder setVirtualNetworkId(@Nullable Input<Integer> virtualNetworkId) {
+        public Builder virtualNetworkId(@Nullable Input<Integer> virtualNetworkId) {
             this.virtualNetworkId = virtualNetworkId;
             return this;
         }
 
-        public Builder setVirtualNetworkId(@Nullable Integer virtualNetworkId) {
+        public Builder virtualNetworkId(@Nullable Integer virtualNetworkId) {
             this.virtualNetworkId = Input.ofNullable(virtualNetworkId);
             return this;
         }

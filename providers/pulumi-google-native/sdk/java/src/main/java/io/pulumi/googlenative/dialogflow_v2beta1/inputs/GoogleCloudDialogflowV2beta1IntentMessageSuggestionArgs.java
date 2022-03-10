@@ -56,12 +56,12 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionArgs exten
     	      this.title = defaults.title;
         }
 
-        public Builder setTitle(Input<String> title) {
+        public Builder title(Input<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Input.of(Objects.requireNonNull(title));
             return this;
         }

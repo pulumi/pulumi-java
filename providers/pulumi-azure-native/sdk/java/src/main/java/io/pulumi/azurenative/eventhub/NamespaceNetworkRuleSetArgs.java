@@ -123,52 +123,52 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
     	      this.virtualNetworkRules = defaults.virtualNetworkRules;
         }
 
-        public Builder setDefaultAction(@Nullable Input<Either<String,DefaultAction>> defaultAction) {
+        public Builder defaultAction(@Nullable Input<Either<String,DefaultAction>> defaultAction) {
             this.defaultAction = defaultAction;
             return this;
         }
 
-        public Builder setDefaultAction(@Nullable Either<String,DefaultAction> defaultAction) {
+        public Builder defaultAction(@Nullable Either<String,DefaultAction> defaultAction) {
             this.defaultAction = Input.ofNullable(defaultAction);
             return this;
         }
 
-        public Builder setIpRules(@Nullable Input<List<NWRuleSetIpRulesArgs>> ipRules) {
+        public Builder ipRules(@Nullable Input<List<NWRuleSetIpRulesArgs>> ipRules) {
             this.ipRules = ipRules;
             return this;
         }
 
-        public Builder setIpRules(@Nullable List<NWRuleSetIpRulesArgs> ipRules) {
+        public Builder ipRules(@Nullable List<NWRuleSetIpRulesArgs> ipRules) {
             this.ipRules = Input.ofNullable(ipRules);
             return this;
         }
 
-        public Builder setNamespaceName(Input<String> namespaceName) {
+        public Builder namespaceName(Input<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
 
-        public Builder setNamespaceName(String namespaceName) {
+        public Builder namespaceName(String namespaceName) {
             this.namespaceName = Input.of(Objects.requireNonNull(namespaceName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setVirtualNetworkRules(@Nullable Input<List<NWRuleSetVirtualNetworkRulesArgs>> virtualNetworkRules) {
+        public Builder virtualNetworkRules(@Nullable Input<List<NWRuleSetVirtualNetworkRulesArgs>> virtualNetworkRules) {
             this.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
 
-        public Builder setVirtualNetworkRules(@Nullable List<NWRuleSetVirtualNetworkRulesArgs> virtualNetworkRules) {
+        public Builder virtualNetworkRules(@Nullable List<NWRuleSetVirtualNetworkRulesArgs> virtualNetworkRules) {
             this.virtualNetworkRules = Input.ofNullable(virtualNetworkRules);
             return this;
         }

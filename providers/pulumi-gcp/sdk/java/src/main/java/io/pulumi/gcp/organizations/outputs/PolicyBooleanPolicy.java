@@ -48,7 +48,7 @@ public final class PolicyBooleanPolicy {
     	      this.enforced = defaults.enforced;
         }
 
-        public Builder setEnforced(Boolean enforced) {
+        public Builder enforced(Boolean enforced) {
             this.enforced = Objects.requireNonNull(enforced);
             return this;
         }

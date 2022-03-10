@@ -74,22 +74,22 @@ public final class ProxyServerPropertiesArgs extends io.pulumi.resources.Resourc
     	      this.port = defaults.port;
         }
 
-        public Builder setIp(@Nullable Input<String> ip) {
+        public Builder ip(@Nullable Input<String> ip) {
             this.ip = ip;
             return this;
         }
 
-        public Builder setIp(@Nullable String ip) {
+        public Builder ip(@Nullable String ip) {
             this.ip = Input.ofNullable(ip);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<String> port) {
+        public Builder port(@Nullable Input<String> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable String port) {
+        public Builder port(@Nullable String port) {
             this.port = Input.ofNullable(port);
             return this;
         }

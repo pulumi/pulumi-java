@@ -50,7 +50,7 @@ public final class AdhocBasedTaggingCriteriaResponse {
     	      this.tagInfo = defaults.tagInfo;
         }
 
-        public Builder setTagInfo(@Nullable RetentionTagResponse tagInfo) {
+        public Builder tagInfo(@Nullable RetentionTagResponse tagInfo) {
             this.tagInfo = tagInfo;
             return this;
         }

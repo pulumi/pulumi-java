@@ -56,7 +56,7 @@ public final class DataplexConfigResponse extends io.pulumi.resources.InvokeArgs
     	      this.lakeResources = defaults.lakeResources;
         }
 
-        public Builder setLakeResources(Map<String,String> lakeResources) {
+        public Builder lakeResources(Map<String,String> lakeResources) {
             this.lakeResources = Objects.requireNonNull(lakeResources);
             return this;
         }

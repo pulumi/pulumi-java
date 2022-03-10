@@ -81,17 +81,17 @@ public final class IpFilterRuleResponse {
     	      this.ipMask = defaults.ipMask;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setFilterName(String filterName) {
+        public Builder filterName(String filterName) {
             this.filterName = Objects.requireNonNull(filterName);
             return this;
         }
 
-        public Builder setIpMask(String ipMask) {
+        public Builder ipMask(String ipMask) {
             this.ipMask = Objects.requireNonNull(ipMask);
             return this;
         }

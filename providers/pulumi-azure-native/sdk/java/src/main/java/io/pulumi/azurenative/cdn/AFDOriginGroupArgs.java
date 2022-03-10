@@ -172,82 +172,82 @@ public final class AFDOriginGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = defaults.trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
         }
 
-        public Builder setHealthProbeSettings(@Nullable Input<HealthProbeParametersArgs> healthProbeSettings) {
+        public Builder healthProbeSettings(@Nullable Input<HealthProbeParametersArgs> healthProbeSettings) {
             this.healthProbeSettings = healthProbeSettings;
             return this;
         }
 
-        public Builder setHealthProbeSettings(@Nullable HealthProbeParametersArgs healthProbeSettings) {
+        public Builder healthProbeSettings(@Nullable HealthProbeParametersArgs healthProbeSettings) {
             this.healthProbeSettings = Input.ofNullable(healthProbeSettings);
             return this;
         }
 
-        public Builder setLoadBalancingSettings(@Nullable Input<LoadBalancingSettingsParametersArgs> loadBalancingSettings) {
+        public Builder loadBalancingSettings(@Nullable Input<LoadBalancingSettingsParametersArgs> loadBalancingSettings) {
             this.loadBalancingSettings = loadBalancingSettings;
             return this;
         }
 
-        public Builder setLoadBalancingSettings(@Nullable LoadBalancingSettingsParametersArgs loadBalancingSettings) {
+        public Builder loadBalancingSettings(@Nullable LoadBalancingSettingsParametersArgs loadBalancingSettings) {
             this.loadBalancingSettings = Input.ofNullable(loadBalancingSettings);
             return this;
         }
 
-        public Builder setOriginGroupName(@Nullable Input<String> originGroupName) {
+        public Builder originGroupName(@Nullable Input<String> originGroupName) {
             this.originGroupName = originGroupName;
             return this;
         }
 
-        public Builder setOriginGroupName(@Nullable String originGroupName) {
+        public Builder originGroupName(@Nullable String originGroupName) {
             this.originGroupName = Input.ofNullable(originGroupName);
             return this;
         }
 
-        public Builder setProfileName(Input<String> profileName) {
+        public Builder profileName(Input<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
 
-        public Builder setProfileName(String profileName) {
+        public Builder profileName(String profileName) {
             this.profileName = Input.of(Objects.requireNonNull(profileName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResponseBasedAfdOriginErrorDetectionSettings(@Nullable Input<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedAfdOriginErrorDetectionSettings) {
+        public Builder responseBasedAfdOriginErrorDetectionSettings(@Nullable Input<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedAfdOriginErrorDetectionSettings) {
             this.responseBasedAfdOriginErrorDetectionSettings = responseBasedAfdOriginErrorDetectionSettings;
             return this;
         }
 
-        public Builder setResponseBasedAfdOriginErrorDetectionSettings(@Nullable ResponseBasedOriginErrorDetectionParametersArgs responseBasedAfdOriginErrorDetectionSettings) {
+        public Builder responseBasedAfdOriginErrorDetectionSettings(@Nullable ResponseBasedOriginErrorDetectionParametersArgs responseBasedAfdOriginErrorDetectionSettings) {
             this.responseBasedAfdOriginErrorDetectionSettings = Input.ofNullable(responseBasedAfdOriginErrorDetectionSettings);
             return this;
         }
 
-        public Builder setSessionAffinityState(@Nullable Input<Either<String,EnabledState>> sessionAffinityState) {
+        public Builder sessionAffinityState(@Nullable Input<Either<String,EnabledState>> sessionAffinityState) {
             this.sessionAffinityState = sessionAffinityState;
             return this;
         }
 
-        public Builder setSessionAffinityState(@Nullable Either<String,EnabledState> sessionAffinityState) {
+        public Builder sessionAffinityState(@Nullable Either<String,EnabledState> sessionAffinityState) {
             this.sessionAffinityState = Input.ofNullable(sessionAffinityState);
             return this;
         }
 
-        public Builder setTrafficRestorationTimeToHealedOrNewEndpointsInMinutes(@Nullable Input<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
+        public Builder trafficRestorationTimeToHealedOrNewEndpointsInMinutes(@Nullable Input<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
             this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
             return this;
         }
 
-        public Builder setTrafficRestorationTimeToHealedOrNewEndpointsInMinutes(@Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
+        public Builder trafficRestorationTimeToHealedOrNewEndpointsInMinutes(@Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
             this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = Input.ofNullable(trafficRestorationTimeToHealedOrNewEndpointsInMinutes);
             return this;
         }

@@ -60,17 +60,17 @@ public final class DomainAdvancedSecurityOptionsInput {
     	      this.masterUserOptions = defaults.masterUserOptions;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setInternalUserDatabaseEnabled(@Nullable Boolean internalUserDatabaseEnabled) {
+        public Builder internalUserDatabaseEnabled(@Nullable Boolean internalUserDatabaseEnabled) {
             this.internalUserDatabaseEnabled = internalUserDatabaseEnabled;
             return this;
         }
 
-        public Builder setMasterUserOptions(@Nullable DomainMasterUserOptions masterUserOptions) {
+        public Builder masterUserOptions(@Nullable DomainMasterUserOptions masterUserOptions) {
             this.masterUserOptions = masterUserOptions;
             return this;
         }

@@ -217,112 +217,112 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.templateUrl = defaults.templateUrl;
         }
 
-        public Builder setAdministrationRoleArn(@Nullable Input<String> administrationRoleArn) {
+        public Builder administrationRoleArn(@Nullable Input<String> administrationRoleArn) {
             this.administrationRoleArn = administrationRoleArn;
             return this;
         }
 
-        public Builder setAdministrationRoleArn(@Nullable String administrationRoleArn) {
+        public Builder administrationRoleArn(@Nullable String administrationRoleArn) {
             this.administrationRoleArn = Input.ofNullable(administrationRoleArn);
             return this;
         }
 
-        public Builder setAutoDeployment(@Nullable Input<StackSetAutoDeploymentArgs> autoDeployment) {
+        public Builder autoDeployment(@Nullable Input<StackSetAutoDeploymentArgs> autoDeployment) {
             this.autoDeployment = autoDeployment;
             return this;
         }
 
-        public Builder setAutoDeployment(@Nullable StackSetAutoDeploymentArgs autoDeployment) {
+        public Builder autoDeployment(@Nullable StackSetAutoDeploymentArgs autoDeployment) {
             this.autoDeployment = Input.ofNullable(autoDeployment);
             return this;
         }
 
-        public Builder setCapabilities(@Nullable Input<List<String>> capabilities) {
+        public Builder capabilities(@Nullable Input<List<String>> capabilities) {
             this.capabilities = capabilities;
             return this;
         }
 
-        public Builder setCapabilities(@Nullable List<String> capabilities) {
+        public Builder capabilities(@Nullable List<String> capabilities) {
             this.capabilities = Input.ofNullable(capabilities);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setExecutionRoleName(@Nullable Input<String> executionRoleName) {
+        public Builder executionRoleName(@Nullable Input<String> executionRoleName) {
             this.executionRoleName = executionRoleName;
             return this;
         }
 
-        public Builder setExecutionRoleName(@Nullable String executionRoleName) {
+        public Builder executionRoleName(@Nullable String executionRoleName) {
             this.executionRoleName = Input.ofNullable(executionRoleName);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,String>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,String> parameters) {
+        public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setPermissionModel(@Nullable Input<String> permissionModel) {
+        public Builder permissionModel(@Nullable Input<String> permissionModel) {
             this.permissionModel = permissionModel;
             return this;
         }
 
-        public Builder setPermissionModel(@Nullable String permissionModel) {
+        public Builder permissionModel(@Nullable String permissionModel) {
             this.permissionModel = Input.ofNullable(permissionModel);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTemplateBody(@Nullable Input<String> templateBody) {
+        public Builder templateBody(@Nullable Input<String> templateBody) {
             this.templateBody = templateBody;
             return this;
         }
 
-        public Builder setTemplateBody(@Nullable String templateBody) {
+        public Builder templateBody(@Nullable String templateBody) {
             this.templateBody = Input.ofNullable(templateBody);
             return this;
         }
 
-        public Builder setTemplateUrl(@Nullable Input<String> templateUrl) {
+        public Builder templateUrl(@Nullable Input<String> templateUrl) {
             this.templateUrl = templateUrl;
             return this;
         }
 
-        public Builder setTemplateUrl(@Nullable String templateUrl) {
+        public Builder templateUrl(@Nullable String templateUrl) {
             this.templateUrl = Input.ofNullable(templateUrl);
             return this;
         }

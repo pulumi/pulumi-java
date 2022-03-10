@@ -106,42 +106,42 @@ public final class FlexibleAppVersionResourcesGetArgs extends io.pulumi.resource
     	      this.volumes = defaults.volumes;
         }
 
-        public Builder setCpu(@Nullable Input<Integer> cpu) {
+        public Builder cpu(@Nullable Input<Integer> cpu) {
             this.cpu = cpu;
             return this;
         }
 
-        public Builder setCpu(@Nullable Integer cpu) {
+        public Builder cpu(@Nullable Integer cpu) {
             this.cpu = Input.ofNullable(cpu);
             return this;
         }
 
-        public Builder setDiskGb(@Nullable Input<Integer> diskGb) {
+        public Builder diskGb(@Nullable Input<Integer> diskGb) {
             this.diskGb = diskGb;
             return this;
         }
 
-        public Builder setDiskGb(@Nullable Integer diskGb) {
+        public Builder diskGb(@Nullable Integer diskGb) {
             this.diskGb = Input.ofNullable(diskGb);
             return this;
         }
 
-        public Builder setMemoryGb(@Nullable Input<Double> memoryGb) {
+        public Builder memoryGb(@Nullable Input<Double> memoryGb) {
             this.memoryGb = memoryGb;
             return this;
         }
 
-        public Builder setMemoryGb(@Nullable Double memoryGb) {
+        public Builder memoryGb(@Nullable Double memoryGb) {
             this.memoryGb = Input.ofNullable(memoryGb);
             return this;
         }
 
-        public Builder setVolumes(@Nullable Input<List<FlexibleAppVersionResourcesVolumeGetArgs>> volumes) {
+        public Builder volumes(@Nullable Input<List<FlexibleAppVersionResourcesVolumeGetArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
 
-        public Builder setVolumes(@Nullable List<FlexibleAppVersionResourcesVolumeGetArgs> volumes) {
+        public Builder volumes(@Nullable List<FlexibleAppVersionResourcesVolumeGetArgs> volumes) {
             this.volumes = Input.ofNullable(volumes);
             return this;
         }

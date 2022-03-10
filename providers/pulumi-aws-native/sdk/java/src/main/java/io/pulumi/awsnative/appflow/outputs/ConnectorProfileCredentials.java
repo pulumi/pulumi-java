@@ -178,82 +178,82 @@ public final class ConnectorProfileCredentials {
     	      this.zendesk = defaults.zendesk;
         }
 
-        public Builder setAmplitude(@Nullable ConnectorProfileAmplitudeConnectorProfileCredentials amplitude) {
+        public Builder amplitude(@Nullable ConnectorProfileAmplitudeConnectorProfileCredentials amplitude) {
             this.amplitude = amplitude;
             return this;
         }
 
-        public Builder setDatadog(@Nullable ConnectorProfileDatadogConnectorProfileCredentials datadog) {
+        public Builder datadog(@Nullable ConnectorProfileDatadogConnectorProfileCredentials datadog) {
             this.datadog = datadog;
             return this;
         }
 
-        public Builder setDynatrace(@Nullable ConnectorProfileDynatraceConnectorProfileCredentials dynatrace) {
+        public Builder dynatrace(@Nullable ConnectorProfileDynatraceConnectorProfileCredentials dynatrace) {
             this.dynatrace = dynatrace;
             return this;
         }
 
-        public Builder setGoogleAnalytics(@Nullable ConnectorProfileGoogleAnalyticsConnectorProfileCredentials googleAnalytics) {
+        public Builder googleAnalytics(@Nullable ConnectorProfileGoogleAnalyticsConnectorProfileCredentials googleAnalytics) {
             this.googleAnalytics = googleAnalytics;
             return this;
         }
 
-        public Builder setInforNexus(@Nullable ConnectorProfileInforNexusConnectorProfileCredentials inforNexus) {
+        public Builder inforNexus(@Nullable ConnectorProfileInforNexusConnectorProfileCredentials inforNexus) {
             this.inforNexus = inforNexus;
             return this;
         }
 
-        public Builder setMarketo(@Nullable ConnectorProfileMarketoConnectorProfileCredentials marketo) {
+        public Builder marketo(@Nullable ConnectorProfileMarketoConnectorProfileCredentials marketo) {
             this.marketo = marketo;
             return this;
         }
 
-        public Builder setRedshift(@Nullable ConnectorProfileRedshiftConnectorProfileCredentials redshift) {
+        public Builder redshift(@Nullable ConnectorProfileRedshiftConnectorProfileCredentials redshift) {
             this.redshift = redshift;
             return this;
         }
 
-        public Builder setSAPOData(@Nullable ConnectorProfileSAPODataConnectorProfileCredentials sAPOData) {
+        public Builder sAPOData(@Nullable ConnectorProfileSAPODataConnectorProfileCredentials sAPOData) {
             this.sAPOData = sAPOData;
             return this;
         }
 
-        public Builder setSalesforce(@Nullable ConnectorProfileSalesforceConnectorProfileCredentials salesforce) {
+        public Builder salesforce(@Nullable ConnectorProfileSalesforceConnectorProfileCredentials salesforce) {
             this.salesforce = salesforce;
             return this;
         }
 
-        public Builder setServiceNow(@Nullable ConnectorProfileServiceNowConnectorProfileCredentials serviceNow) {
+        public Builder serviceNow(@Nullable ConnectorProfileServiceNowConnectorProfileCredentials serviceNow) {
             this.serviceNow = serviceNow;
             return this;
         }
 
-        public Builder setSingular(@Nullable ConnectorProfileSingularConnectorProfileCredentials singular) {
+        public Builder singular(@Nullable ConnectorProfileSingularConnectorProfileCredentials singular) {
             this.singular = singular;
             return this;
         }
 
-        public Builder setSlack(@Nullable ConnectorProfileSlackConnectorProfileCredentials slack) {
+        public Builder slack(@Nullable ConnectorProfileSlackConnectorProfileCredentials slack) {
             this.slack = slack;
             return this;
         }
 
-        public Builder setSnowflake(@Nullable ConnectorProfileSnowflakeConnectorProfileCredentials snowflake) {
+        public Builder snowflake(@Nullable ConnectorProfileSnowflakeConnectorProfileCredentials snowflake) {
             this.snowflake = snowflake;
             return this;
         }
 
-        public Builder setTrendmicro(@Nullable ConnectorProfileTrendmicroConnectorProfileCredentials trendmicro) {
+        public Builder trendmicro(@Nullable ConnectorProfileTrendmicroConnectorProfileCredentials trendmicro) {
             this.trendmicro = trendmicro;
             return this;
         }
 
-        public Builder setVeeva(@Nullable ConnectorProfileVeevaConnectorProfileCredentials veeva) {
+        public Builder veeva(@Nullable ConnectorProfileVeevaConnectorProfileCredentials veeva) {
             this.veeva = veeva;
             return this;
         }
 
-        public Builder setZendesk(@Nullable ConnectorProfileZendeskConnectorProfileCredentials zendesk) {
+        public Builder zendesk(@Nullable ConnectorProfileZendeskConnectorProfileCredentials zendesk) {
             this.zendesk = zendesk;
             return this;
         }

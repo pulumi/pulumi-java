@@ -68,12 +68,12 @@ public final class ServiceBackendPort {
     	      this.number = defaults.number;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNumber(@Nullable Integer number) {
+        public Builder number(@Nullable Integer number) {
             this.number = number;
             return this;
         }

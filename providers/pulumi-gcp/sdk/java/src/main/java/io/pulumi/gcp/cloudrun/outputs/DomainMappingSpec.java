@@ -96,17 +96,17 @@ public final class DomainMappingSpec {
     	      this.routeName = defaults.routeName;
         }
 
-        public Builder setCertificateMode(@Nullable String certificateMode) {
+        public Builder certificateMode(@Nullable String certificateMode) {
             this.certificateMode = certificateMode;
             return this;
         }
 
-        public Builder setForceOverride(@Nullable Boolean forceOverride) {
+        public Builder forceOverride(@Nullable Boolean forceOverride) {
             this.forceOverride = forceOverride;
             return this;
         }
 
-        public Builder setRouteName(String routeName) {
+        public Builder routeName(String routeName) {
             this.routeName = Objects.requireNonNull(routeName);
             return this;
         }

@@ -211,112 +211,112 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
     	      this.volumeUsageInBytes = defaults.volumeUsageInBytes;
         }
 
-        public Builder setAccountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Input<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
-        public Builder setAccountId(@Nullable String accountId) {
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = Input.ofNullable(accountId);
             return this;
         }
 
-        public Builder setAdministratorId(@Nullable Input<String> administratorId) {
+        public Builder administratorId(@Nullable Input<String> administratorId) {
             this.administratorId = administratorId;
             return this;
         }
 
-        public Builder setAdministratorId(@Nullable String administratorId) {
+        public Builder administratorId(@Nullable String administratorId) {
             this.administratorId = Input.ofNullable(administratorId);
             return this;
         }
 
-        public Builder setDisableEmailNotification(@Nullable Input<Boolean> disableEmailNotification) {
+        public Builder disableEmailNotification(@Nullable Input<Boolean> disableEmailNotification) {
             this.disableEmailNotification = disableEmailNotification;
             return this;
         }
 
-        public Builder setDisableEmailNotification(@Nullable Boolean disableEmailNotification) {
+        public Builder disableEmailNotification(@Nullable Boolean disableEmailNotification) {
             this.disableEmailNotification = Input.ofNullable(disableEmailNotification);
             return this;
         }
 
-        public Builder setDisabledReason(@Nullable Input<String> disabledReason) {
+        public Builder disabledReason(@Nullable Input<String> disabledReason) {
             this.disabledReason = disabledReason;
             return this;
         }
 
-        public Builder setDisabledReason(@Nullable String disabledReason) {
+        public Builder disabledReason(@Nullable String disabledReason) {
             this.disabledReason = Input.ofNullable(disabledReason);
             return this;
         }
 
-        public Builder setEmailAddress(@Nullable Input<String> emailAddress) {
+        public Builder emailAddress(@Nullable Input<String> emailAddress) {
             this.emailAddress = emailAddress;
             return this;
         }
 
-        public Builder setEmailAddress(@Nullable String emailAddress) {
+        public Builder emailAddress(@Nullable String emailAddress) {
             this.emailAddress = Input.ofNullable(emailAddress);
             return this;
         }
 
-        public Builder setGraphArn(@Nullable Input<String> graphArn) {
+        public Builder graphArn(@Nullable Input<String> graphArn) {
             this.graphArn = graphArn;
             return this;
         }
 
-        public Builder setGraphArn(@Nullable String graphArn) {
+        public Builder graphArn(@Nullable String graphArn) {
             this.graphArn = Input.ofNullable(graphArn);
             return this;
         }
 
-        public Builder setInvitedTime(@Nullable Input<String> invitedTime) {
+        public Builder invitedTime(@Nullable Input<String> invitedTime) {
             this.invitedTime = invitedTime;
             return this;
         }
 
-        public Builder setInvitedTime(@Nullable String invitedTime) {
+        public Builder invitedTime(@Nullable String invitedTime) {
             this.invitedTime = Input.ofNullable(invitedTime);
             return this;
         }
 
-        public Builder setMessage(@Nullable Input<String> message) {
+        public Builder message(@Nullable Input<String> message) {
             this.message = message;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = Input.ofNullable(message);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setUpdatedTime(@Nullable Input<String> updatedTime) {
+        public Builder updatedTime(@Nullable Input<String> updatedTime) {
             this.updatedTime = updatedTime;
             return this;
         }
 
-        public Builder setUpdatedTime(@Nullable String updatedTime) {
+        public Builder updatedTime(@Nullable String updatedTime) {
             this.updatedTime = Input.ofNullable(updatedTime);
             return this;
         }
 
-        public Builder setVolumeUsageInBytes(@Nullable Input<String> volumeUsageInBytes) {
+        public Builder volumeUsageInBytes(@Nullable Input<String> volumeUsageInBytes) {
             this.volumeUsageInBytes = volumeUsageInBytes;
             return this;
         }
 
-        public Builder setVolumeUsageInBytes(@Nullable String volumeUsageInBytes) {
+        public Builder volumeUsageInBytes(@Nullable String volumeUsageInBytes) {
             this.volumeUsageInBytes = Input.ofNullable(volumeUsageInBytes);
             return this;
         }

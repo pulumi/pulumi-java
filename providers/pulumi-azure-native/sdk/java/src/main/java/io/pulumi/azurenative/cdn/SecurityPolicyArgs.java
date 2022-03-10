@@ -103,42 +103,42 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.securityPolicyName = defaults.securityPolicyName;
         }
 
-        public Builder setParameters(@Nullable Input<SecurityPolicyWebApplicationFirewallParametersArgs> parameters) {
+        public Builder parameters(@Nullable Input<SecurityPolicyWebApplicationFirewallParametersArgs> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable SecurityPolicyWebApplicationFirewallParametersArgs parameters) {
+        public Builder parameters(@Nullable SecurityPolicyWebApplicationFirewallParametersArgs parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setProfileName(Input<String> profileName) {
+        public Builder profileName(Input<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
 
-        public Builder setProfileName(String profileName) {
+        public Builder profileName(String profileName) {
             this.profileName = Input.of(Objects.requireNonNull(profileName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSecurityPolicyName(@Nullable Input<String> securityPolicyName) {
+        public Builder securityPolicyName(@Nullable Input<String> securityPolicyName) {
             this.securityPolicyName = securityPolicyName;
             return this;
         }
 
-        public Builder setSecurityPolicyName(@Nullable String securityPolicyName) {
+        public Builder securityPolicyName(@Nullable String securityPolicyName) {
             this.securityPolicyName = Input.ofNullable(securityPolicyName);
             return this;
         }

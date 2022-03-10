@@ -121,52 +121,52 @@ public final class EventHubAuthorizationRuleArgs extends io.pulumi.resources.Res
     	      this.rights = defaults.rights;
         }
 
-        public Builder setAuthorizationRuleName(@Nullable Input<String> authorizationRuleName) {
+        public Builder authorizationRuleName(@Nullable Input<String> authorizationRuleName) {
             this.authorizationRuleName = authorizationRuleName;
             return this;
         }
 
-        public Builder setAuthorizationRuleName(@Nullable String authorizationRuleName) {
+        public Builder authorizationRuleName(@Nullable String authorizationRuleName) {
             this.authorizationRuleName = Input.ofNullable(authorizationRuleName);
             return this;
         }
 
-        public Builder setEventHubName(Input<String> eventHubName) {
+        public Builder eventHubName(Input<String> eventHubName) {
             this.eventHubName = Objects.requireNonNull(eventHubName);
             return this;
         }
 
-        public Builder setEventHubName(String eventHubName) {
+        public Builder eventHubName(String eventHubName) {
             this.eventHubName = Input.of(Objects.requireNonNull(eventHubName));
             return this;
         }
 
-        public Builder setNamespaceName(Input<String> namespaceName) {
+        public Builder namespaceName(Input<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
 
-        public Builder setNamespaceName(String namespaceName) {
+        public Builder namespaceName(String namespaceName) {
             this.namespaceName = Input.of(Objects.requireNonNull(namespaceName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRights(Input<List<Either<String,AccessRights>>> rights) {
+        public Builder rights(Input<List<Either<String,AccessRights>>> rights) {
             this.rights = Objects.requireNonNull(rights);
             return this;
         }
 
-        public Builder setRights(List<Either<String,AccessRights>> rights) {
+        public Builder rights(List<Either<String,AccessRights>> rights) {
             this.rights = Input.of(Objects.requireNonNull(rights));
             return this;
         }

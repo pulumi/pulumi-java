@@ -382,212 +382,212 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcConfig = defaults.vpcConfig;
         }
 
-        public Builder setArchitectures(@Nullable Input<List<FunctionArchitecturesItem>> architectures) {
+        public Builder architectures(@Nullable Input<List<FunctionArchitecturesItem>> architectures) {
             this.architectures = architectures;
             return this;
         }
 
-        public Builder setArchitectures(@Nullable List<FunctionArchitecturesItem> architectures) {
+        public Builder architectures(@Nullable List<FunctionArchitecturesItem> architectures) {
             this.architectures = Input.ofNullable(architectures);
             return this;
         }
 
-        public Builder setCode(Input<FunctionCodeArgs> code) {
+        public Builder code(Input<FunctionCodeArgs> code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
 
-        public Builder setCode(FunctionCodeArgs code) {
+        public Builder code(FunctionCodeArgs code) {
             this.code = Input.of(Objects.requireNonNull(code));
             return this;
         }
 
-        public Builder setCodeSigningConfigArn(@Nullable Input<String> codeSigningConfigArn) {
+        public Builder codeSigningConfigArn(@Nullable Input<String> codeSigningConfigArn) {
             this.codeSigningConfigArn = codeSigningConfigArn;
             return this;
         }
 
-        public Builder setCodeSigningConfigArn(@Nullable String codeSigningConfigArn) {
+        public Builder codeSigningConfigArn(@Nullable String codeSigningConfigArn) {
             this.codeSigningConfigArn = Input.ofNullable(codeSigningConfigArn);
             return this;
         }
 
-        public Builder setDeadLetterConfig(@Nullable Input<FunctionDeadLetterConfigArgs> deadLetterConfig) {
+        public Builder deadLetterConfig(@Nullable Input<FunctionDeadLetterConfigArgs> deadLetterConfig) {
             this.deadLetterConfig = deadLetterConfig;
             return this;
         }
 
-        public Builder setDeadLetterConfig(@Nullable FunctionDeadLetterConfigArgs deadLetterConfig) {
+        public Builder deadLetterConfig(@Nullable FunctionDeadLetterConfigArgs deadLetterConfig) {
             this.deadLetterConfig = Input.ofNullable(deadLetterConfig);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEnvironment(@Nullable Input<FunctionEnvironmentArgs> environment) {
+        public Builder environment(@Nullable Input<FunctionEnvironmentArgs> environment) {
             this.environment = environment;
             return this;
         }
 
-        public Builder setEnvironment(@Nullable FunctionEnvironmentArgs environment) {
+        public Builder environment(@Nullable FunctionEnvironmentArgs environment) {
             this.environment = Input.ofNullable(environment);
             return this;
         }
 
-        public Builder setFileSystemConfigs(@Nullable Input<List<FunctionFileSystemConfigArgs>> fileSystemConfigs) {
+        public Builder fileSystemConfigs(@Nullable Input<List<FunctionFileSystemConfigArgs>> fileSystemConfigs) {
             this.fileSystemConfigs = fileSystemConfigs;
             return this;
         }
 
-        public Builder setFileSystemConfigs(@Nullable List<FunctionFileSystemConfigArgs> fileSystemConfigs) {
+        public Builder fileSystemConfigs(@Nullable List<FunctionFileSystemConfigArgs> fileSystemConfigs) {
             this.fileSystemConfigs = Input.ofNullable(fileSystemConfigs);
             return this;
         }
 
-        public Builder setFunctionName(@Nullable Input<String> functionName) {
+        public Builder functionName(@Nullable Input<String> functionName) {
             this.functionName = functionName;
             return this;
         }
 
-        public Builder setFunctionName(@Nullable String functionName) {
+        public Builder functionName(@Nullable String functionName) {
             this.functionName = Input.ofNullable(functionName);
             return this;
         }
 
-        public Builder setHandler(@Nullable Input<String> handler) {
+        public Builder handler(@Nullable Input<String> handler) {
             this.handler = handler;
             return this;
         }
 
-        public Builder setHandler(@Nullable String handler) {
+        public Builder handler(@Nullable String handler) {
             this.handler = Input.ofNullable(handler);
             return this;
         }
 
-        public Builder setImageConfig(@Nullable Input<FunctionImageConfigArgs> imageConfig) {
+        public Builder imageConfig(@Nullable Input<FunctionImageConfigArgs> imageConfig) {
             this.imageConfig = imageConfig;
             return this;
         }
 
-        public Builder setImageConfig(@Nullable FunctionImageConfigArgs imageConfig) {
+        public Builder imageConfig(@Nullable FunctionImageConfigArgs imageConfig) {
             this.imageConfig = Input.ofNullable(imageConfig);
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable String kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
             return this;
         }
 
-        public Builder setLayers(@Nullable Input<List<String>> layers) {
+        public Builder layers(@Nullable Input<List<String>> layers) {
             this.layers = layers;
             return this;
         }
 
-        public Builder setLayers(@Nullable List<String> layers) {
+        public Builder layers(@Nullable List<String> layers) {
             this.layers = Input.ofNullable(layers);
             return this;
         }
 
-        public Builder setMemorySize(@Nullable Input<Integer> memorySize) {
+        public Builder memorySize(@Nullable Input<Integer> memorySize) {
             this.memorySize = memorySize;
             return this;
         }
 
-        public Builder setMemorySize(@Nullable Integer memorySize) {
+        public Builder memorySize(@Nullable Integer memorySize) {
             this.memorySize = Input.ofNullable(memorySize);
             return this;
         }
 
-        public Builder setPackageType(@Nullable Input<FunctionPackageType> packageType) {
+        public Builder packageType(@Nullable Input<FunctionPackageType> packageType) {
             this.packageType = packageType;
             return this;
         }
 
-        public Builder setPackageType(@Nullable FunctionPackageType packageType) {
+        public Builder packageType(@Nullable FunctionPackageType packageType) {
             this.packageType = Input.ofNullable(packageType);
             return this;
         }
 
-        public Builder setReservedConcurrentExecutions(@Nullable Input<Integer> reservedConcurrentExecutions) {
+        public Builder reservedConcurrentExecutions(@Nullable Input<Integer> reservedConcurrentExecutions) {
             this.reservedConcurrentExecutions = reservedConcurrentExecutions;
             return this;
         }
 
-        public Builder setReservedConcurrentExecutions(@Nullable Integer reservedConcurrentExecutions) {
+        public Builder reservedConcurrentExecutions(@Nullable Integer reservedConcurrentExecutions) {
             this.reservedConcurrentExecutions = Input.ofNullable(reservedConcurrentExecutions);
             return this;
         }
 
-        public Builder setRole(Input<String> role) {
+        public Builder role(Input<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
 
-        public Builder setRuntime(@Nullable Input<String> runtime) {
+        public Builder runtime(@Nullable Input<String> runtime) {
             this.runtime = runtime;
             return this;
         }
 
-        public Builder setRuntime(@Nullable String runtime) {
+        public Builder runtime(@Nullable String runtime) {
             this.runtime = Input.ofNullable(runtime);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<FunctionTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<FunctionTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<FunctionTagArgs> tags) {
+        public Builder tags(@Nullable List<FunctionTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<Integer> timeout) {
+        public Builder timeout(@Nullable Input<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable Integer timeout) {
+        public Builder timeout(@Nullable Integer timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }
 
-        public Builder setTracingConfig(@Nullable Input<FunctionTracingConfigArgs> tracingConfig) {
+        public Builder tracingConfig(@Nullable Input<FunctionTracingConfigArgs> tracingConfig) {
             this.tracingConfig = tracingConfig;
             return this;
         }
 
-        public Builder setTracingConfig(@Nullable FunctionTracingConfigArgs tracingConfig) {
+        public Builder tracingConfig(@Nullable FunctionTracingConfigArgs tracingConfig) {
             this.tracingConfig = Input.ofNullable(tracingConfig);
             return this;
         }
 
-        public Builder setVpcConfig(@Nullable Input<FunctionVpcConfigArgs> vpcConfig) {
+        public Builder vpcConfig(@Nullable Input<FunctionVpcConfigArgs> vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
         }
 
-        public Builder setVpcConfig(@Nullable FunctionVpcConfigArgs vpcConfig) {
+        public Builder vpcConfig(@Nullable FunctionVpcConfigArgs vpcConfig) {
             this.vpcConfig = Input.ofNullable(vpcConfig);
             return this;
         }

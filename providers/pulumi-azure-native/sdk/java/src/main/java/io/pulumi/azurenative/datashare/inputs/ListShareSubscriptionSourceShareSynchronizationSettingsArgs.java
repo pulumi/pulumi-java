@@ -102,22 +102,22 @@ public final class ListShareSubscriptionSourceShareSynchronizationSettingsArgs e
     	      this.skipToken = defaults.skipToken;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setShareSubscriptionName(String shareSubscriptionName) {
+        public Builder shareSubscriptionName(String shareSubscriptionName) {
             this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName);
             return this;
         }
 
-        public Builder setSkipToken(@Nullable String skipToken) {
+        public Builder skipToken(@Nullable String skipToken) {
             this.skipToken = skipToken;
             return this;
         }

@@ -120,52 +120,52 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vaultName = defaults.vaultName;
         }
 
-        public Builder setProperties(Input<SecretPropertiesArgs> properties) {
+        public Builder properties(Input<SecretPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
-        public Builder setProperties(SecretPropertiesArgs properties) {
+        public Builder properties(SecretPropertiesArgs properties) {
             this.properties = Input.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSecretName(@Nullable Input<String> secretName) {
+        public Builder secretName(@Nullable Input<String> secretName) {
             this.secretName = secretName;
             return this;
         }
 
-        public Builder setSecretName(@Nullable String secretName) {
+        public Builder secretName(@Nullable String secretName) {
             this.secretName = Input.ofNullable(secretName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVaultName(Input<String> vaultName) {
+        public Builder vaultName(Input<String> vaultName) {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
         }
 
-        public Builder setVaultName(String vaultName) {
+        public Builder vaultName(String vaultName) {
             this.vaultName = Input.of(Objects.requireNonNull(vaultName));
             return this;
         }

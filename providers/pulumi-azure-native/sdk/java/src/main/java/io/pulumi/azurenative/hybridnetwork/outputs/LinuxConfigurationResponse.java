@@ -50,7 +50,7 @@ public final class LinuxConfigurationResponse {
     	      this.ssh = defaults.ssh;
         }
 
-        public Builder setSsh(@Nullable SshConfigurationResponse ssh) {
+        public Builder ssh(@Nullable SshConfigurationResponse ssh) {
             this.ssh = ssh;
             return this;
         }

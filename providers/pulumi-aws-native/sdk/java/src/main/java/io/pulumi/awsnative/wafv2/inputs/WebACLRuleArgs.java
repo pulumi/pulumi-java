@@ -150,82 +150,82 @@ public final class WebACLRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.visibilityConfig = defaults.visibilityConfig;
         }
 
-        public Builder setAction(@Nullable Input<WebACLRuleActionArgs> action) {
+        public Builder action(@Nullable Input<WebACLRuleActionArgs> action) {
             this.action = action;
             return this;
         }
 
-        public Builder setAction(@Nullable WebACLRuleActionArgs action) {
+        public Builder action(@Nullable WebACLRuleActionArgs action) {
             this.action = Input.ofNullable(action);
             return this;
         }
 
-        public Builder setCaptchaConfig(@Nullable Input<WebACLCaptchaConfigArgs> captchaConfig) {
+        public Builder captchaConfig(@Nullable Input<WebACLCaptchaConfigArgs> captchaConfig) {
             this.captchaConfig = captchaConfig;
             return this;
         }
 
-        public Builder setCaptchaConfig(@Nullable WebACLCaptchaConfigArgs captchaConfig) {
+        public Builder captchaConfig(@Nullable WebACLCaptchaConfigArgs captchaConfig) {
             this.captchaConfig = Input.ofNullable(captchaConfig);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setOverrideAction(@Nullable Input<WebACLOverrideActionArgs> overrideAction) {
+        public Builder overrideAction(@Nullable Input<WebACLOverrideActionArgs> overrideAction) {
             this.overrideAction = overrideAction;
             return this;
         }
 
-        public Builder setOverrideAction(@Nullable WebACLOverrideActionArgs overrideAction) {
+        public Builder overrideAction(@Nullable WebACLOverrideActionArgs overrideAction) {
             this.overrideAction = Input.ofNullable(overrideAction);
             return this;
         }
 
-        public Builder setPriority(Input<Integer> priority) {
+        public Builder priority(Input<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Input.of(Objects.requireNonNull(priority));
             return this;
         }
 
-        public Builder setRuleLabels(@Nullable Input<List<WebACLLabelArgs>> ruleLabels) {
+        public Builder ruleLabels(@Nullable Input<List<WebACLLabelArgs>> ruleLabels) {
             this.ruleLabels = ruleLabels;
             return this;
         }
 
-        public Builder setRuleLabels(@Nullable List<WebACLLabelArgs> ruleLabels) {
+        public Builder ruleLabels(@Nullable List<WebACLLabelArgs> ruleLabels) {
             this.ruleLabels = Input.ofNullable(ruleLabels);
             return this;
         }
 
-        public Builder setStatement(Input<WebACLStatementArgs> statement) {
+        public Builder statement(Input<WebACLStatementArgs> statement) {
             this.statement = Objects.requireNonNull(statement);
             return this;
         }
 
-        public Builder setStatement(WebACLStatementArgs statement) {
+        public Builder statement(WebACLStatementArgs statement) {
             this.statement = Input.of(Objects.requireNonNull(statement));
             return this;
         }
 
-        public Builder setVisibilityConfig(Input<WebACLVisibilityConfigArgs> visibilityConfig) {
+        public Builder visibilityConfig(Input<WebACLVisibilityConfigArgs> visibilityConfig) {
             this.visibilityConfig = Objects.requireNonNull(visibilityConfig);
             return this;
         }
 
-        public Builder setVisibilityConfig(WebACLVisibilityConfigArgs visibilityConfig) {
+        public Builder visibilityConfig(WebACLVisibilityConfigArgs visibilityConfig) {
             this.visibilityConfig = Input.of(Objects.requireNonNull(visibilityConfig));
             return this;
         }

@@ -126,8 +126,8 @@ public class ServiceAccountList extends io.pulumi.resources.CustomResource {
     private static ServiceAccountListArgs makeArgs(ServiceAccountListArgs args) {
         var builder = args == null ? ServiceAccountListArgs.builder() : ServiceAccountListArgs.builder(args);
         return builder
-            .setApiVersion("v1")
-            .setKind("ServiceAccountList")
+            .apiVersion("v1")
+            .kind("ServiceAccountList")
             .build();
     }
 

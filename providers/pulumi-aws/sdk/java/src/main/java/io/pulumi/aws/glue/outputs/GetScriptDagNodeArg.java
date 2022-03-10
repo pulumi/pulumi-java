@@ -84,17 +84,17 @@ public final class GetScriptDagNodeArg {
     	      this.value = defaults.value;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParam(@Nullable Boolean param) {
+        public Builder param(@Nullable Boolean param) {
             this.param = param;
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

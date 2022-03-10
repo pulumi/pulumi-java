@@ -50,7 +50,7 @@ public final class BulkCreationParametersResponse {
     	      this.instanceCount = defaults.instanceCount;
         }
 
-        public Builder setInstanceCount(@Nullable Integer instanceCount) {
+        public Builder instanceCount(@Nullable Integer instanceCount) {
             this.instanceCount = instanceCount;
             return this;
         }

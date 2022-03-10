@@ -173,42 +173,42 @@ public final class GetModuleVersionResult {
     	      this.visibility = defaults.visibility;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDocumentationUrl(@Nullable String documentationUrl) {
+        public Builder documentationUrl(@Nullable String documentationUrl) {
             this.documentationUrl = documentationUrl;
             return this;
         }
 
-        public Builder setIsDefaultVersion(@Nullable Boolean isDefaultVersion) {
+        public Builder isDefaultVersion(@Nullable Boolean isDefaultVersion) {
             this.isDefaultVersion = isDefaultVersion;
             return this;
         }
 
-        public Builder setSchema(@Nullable String schema) {
+        public Builder schema(@Nullable String schema) {
             this.schema = schema;
             return this;
         }
 
-        public Builder setTimeCreated(@Nullable String timeCreated) {
+        public Builder timeCreated(@Nullable String timeCreated) {
             this.timeCreated = timeCreated;
             return this;
         }
 
-        public Builder setVersionId(@Nullable String versionId) {
+        public Builder versionId(@Nullable String versionId) {
             this.versionId = versionId;
             return this;
         }
 
-        public Builder setVisibility(@Nullable ModuleVersionVisibility visibility) {
+        public Builder visibility(@Nullable ModuleVersionVisibility visibility) {
             this.visibility = visibility;
             return this;
         }

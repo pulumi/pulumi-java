@@ -51,7 +51,7 @@ public final class GetUserSettingsArgs extends io.pulumi.resources.InvokeArgs {
     	      this.userSettingsName = defaults.userSettingsName;
         }
 
-        public Builder setUserSettingsName(String userSettingsName) {
+        public Builder userSettingsName(String userSettingsName) {
             this.userSettingsName = Objects.requireNonNull(userSettingsName);
             return this;
         }

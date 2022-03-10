@@ -49,12 +49,12 @@ public final class SecurityPolicyAdvancedOptionsConfigResponse {
     	      this.logLevel = defaults.logLevel;
         }
 
-        public Builder setJsonParsing(String jsonParsing) {
+        public Builder jsonParsing(String jsonParsing) {
             this.jsonParsing = Objects.requireNonNull(jsonParsing);
             return this;
         }
 
-        public Builder setLogLevel(String logLevel) {
+        public Builder logLevel(String logLevel) {
             this.logLevel = Objects.requireNonNull(logLevel);
             return this;
         }

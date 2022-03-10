@@ -86,32 +86,32 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
     	      this.prometheusEndpoint = defaults.prometheusEndpoint;
         }
 
-        public Builder setAlias(@Nullable Input<String> alias) {
+        public Builder alias(@Nullable Input<String> alias) {
             this.alias = alias;
             return this;
         }
 
-        public Builder setAlias(@Nullable String alias) {
+        public Builder alias(@Nullable String alias) {
             this.alias = Input.ofNullable(alias);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setPrometheusEndpoint(@Nullable Input<String> prometheusEndpoint) {
+        public Builder prometheusEndpoint(@Nullable Input<String> prometheusEndpoint) {
             this.prometheusEndpoint = prometheusEndpoint;
             return this;
         }
 
-        public Builder setPrometheusEndpoint(@Nullable String prometheusEndpoint) {
+        public Builder prometheusEndpoint(@Nullable String prometheusEndpoint) {
             this.prometheusEndpoint = Input.ofNullable(prometheusEndpoint);
             return this;
         }

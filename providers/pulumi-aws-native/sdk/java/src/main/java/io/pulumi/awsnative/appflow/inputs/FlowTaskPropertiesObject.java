@@ -65,12 +65,12 @@ public final class FlowTaskPropertiesObject extends io.pulumi.resources.InvokeAr
     	      this.value = defaults.value;
         }
 
-        public Builder setKey(FlowOperatorPropertiesKeys key) {
+        public Builder key(FlowOperatorPropertiesKeys key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

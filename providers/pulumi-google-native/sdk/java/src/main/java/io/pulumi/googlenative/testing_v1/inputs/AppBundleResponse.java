@@ -55,7 +55,7 @@ public final class AppBundleResponse extends io.pulumi.resources.InvokeArgs {
     	      this.bundleLocation = defaults.bundleLocation;
         }
 
-        public Builder setBundleLocation(FileReferenceResponse bundleLocation) {
+        public Builder bundleLocation(FileReferenceResponse bundleLocation) {
             this.bundleLocation = Objects.requireNonNull(bundleLocation);
             return this;
         }

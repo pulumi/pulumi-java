@@ -234,62 +234,62 @@ public final class GetAutomationRuleResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setActions(List<Either<AutomationRuleModifyPropertiesActionResponse,AutomationRuleRunPlaybookActionResponse>> actions) {
+        public Builder actions(List<Either<AutomationRuleModifyPropertiesActionResponse,AutomationRuleRunPlaybookActionResponse>> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
-        public Builder setCreatedBy(ClientInfoResponse createdBy) {
+        public Builder createdBy(ClientInfoResponse createdBy) {
             this.createdBy = Objects.requireNonNull(createdBy);
             return this;
         }
 
-        public Builder setCreatedTimeUtc(String createdTimeUtc) {
+        public Builder createdTimeUtc(String createdTimeUtc) {
             this.createdTimeUtc = Objects.requireNonNull(createdTimeUtc);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastModifiedBy(ClientInfoResponse lastModifiedBy) {
+        public Builder lastModifiedBy(ClientInfoResponse lastModifiedBy) {
             this.lastModifiedBy = Objects.requireNonNull(lastModifiedBy);
             return this;
         }
 
-        public Builder setLastModifiedTimeUtc(String lastModifiedTimeUtc) {
+        public Builder lastModifiedTimeUtc(String lastModifiedTimeUtc) {
             this.lastModifiedTimeUtc = Objects.requireNonNull(lastModifiedTimeUtc);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOrder(Integer order) {
+        public Builder order(Integer order) {
             this.order = Objects.requireNonNull(order);
             return this;
         }
 
-        public Builder setTriggeringLogic(AutomationRuleTriggeringLogicResponse triggeringLogic) {
+        public Builder triggeringLogic(AutomationRuleTriggeringLogicResponse triggeringLogic) {
             this.triggeringLogic = Objects.requireNonNull(triggeringLogic);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

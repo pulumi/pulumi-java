@@ -105,32 +105,32 @@ public final class ServiceTemplateSpecVolumeSecretGetArgs extends io.pulumi.reso
     	      this.secretName = defaults.secretName;
         }
 
-        public Builder setDefaultMode(@Nullable Input<Integer> defaultMode) {
+        public Builder defaultMode(@Nullable Input<Integer> defaultMode) {
             this.defaultMode = defaultMode;
             return this;
         }
 
-        public Builder setDefaultMode(@Nullable Integer defaultMode) {
+        public Builder defaultMode(@Nullable Integer defaultMode) {
             this.defaultMode = Input.ofNullable(defaultMode);
             return this;
         }
 
-        public Builder setItems(@Nullable Input<List<ServiceTemplateSpecVolumeSecretItemGetArgs>> items) {
+        public Builder items(@Nullable Input<List<ServiceTemplateSpecVolumeSecretItemGetArgs>> items) {
             this.items = items;
             return this;
         }
 
-        public Builder setItems(@Nullable List<ServiceTemplateSpecVolumeSecretItemGetArgs> items) {
+        public Builder items(@Nullable List<ServiceTemplateSpecVolumeSecretItemGetArgs> items) {
             this.items = Input.ofNullable(items);
             return this;
         }
 
-        public Builder setSecretName(Input<String> secretName) {
+        public Builder secretName(Input<String> secretName) {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }
 
-        public Builder setSecretName(String secretName) {
+        public Builder secretName(String secretName) {
             this.secretName = Input.of(Objects.requireNonNull(secretName));
             return this;
         }

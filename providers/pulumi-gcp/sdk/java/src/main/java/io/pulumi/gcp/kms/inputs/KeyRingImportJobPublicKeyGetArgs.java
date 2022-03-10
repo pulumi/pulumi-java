@@ -49,12 +49,12 @@ public final class KeyRingImportJobPublicKeyGetArgs extends io.pulumi.resources.
     	      this.pem = defaults.pem;
         }
 
-        public Builder setPem(@Nullable Input<String> pem) {
+        public Builder pem(@Nullable Input<String> pem) {
             this.pem = pem;
             return this;
         }
 
-        public Builder setPem(@Nullable String pem) {
+        public Builder pem(@Nullable String pem) {
             this.pem = Input.ofNullable(pem);
             return this;
         }

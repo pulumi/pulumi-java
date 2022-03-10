@@ -67,12 +67,12 @@ public final class MatchVariableResponse {
     	      this.variableName = defaults.variableName;
         }
 
-        public Builder setSelector(@Nullable String selector) {
+        public Builder selector(@Nullable String selector) {
             this.selector = selector;
             return this;
         }
 
-        public Builder setVariableName(String variableName) {
+        public Builder variableName(String variableName) {
             this.variableName = Objects.requireNonNull(variableName);
             return this;
         }

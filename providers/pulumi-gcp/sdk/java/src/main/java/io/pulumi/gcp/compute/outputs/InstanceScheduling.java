@@ -139,27 +139,27 @@ public final class InstanceScheduling {
     	      this.preemptible = defaults.preemptible;
         }
 
-        public Builder setAutomaticRestart(@Nullable Boolean automaticRestart) {
+        public Builder automaticRestart(@Nullable Boolean automaticRestart) {
             this.automaticRestart = automaticRestart;
             return this;
         }
 
-        public Builder setMinNodeCpus(@Nullable Integer minNodeCpus) {
+        public Builder minNodeCpus(@Nullable Integer minNodeCpus) {
             this.minNodeCpus = minNodeCpus;
             return this;
         }
 
-        public Builder setNodeAffinities(@Nullable List<InstanceSchedulingNodeAffinity> nodeAffinities) {
+        public Builder nodeAffinities(@Nullable List<InstanceSchedulingNodeAffinity> nodeAffinities) {
             this.nodeAffinities = nodeAffinities;
             return this;
         }
 
-        public Builder setOnHostMaintenance(@Nullable String onHostMaintenance) {
+        public Builder onHostMaintenance(@Nullable String onHostMaintenance) {
             this.onHostMaintenance = onHostMaintenance;
             return this;
         }
 
-        public Builder setPreemptible(@Nullable Boolean preemptible) {
+        public Builder preemptible(@Nullable Boolean preemptible) {
             this.preemptible = preemptible;
             return this;
         }

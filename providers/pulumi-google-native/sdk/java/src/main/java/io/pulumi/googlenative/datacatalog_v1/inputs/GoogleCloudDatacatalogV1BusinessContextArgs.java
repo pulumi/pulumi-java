@@ -75,22 +75,22 @@ public final class GoogleCloudDatacatalogV1BusinessContextArgs extends io.pulumi
     	      this.entryOverview = defaults.entryOverview;
         }
 
-        public Builder setContacts(@Nullable Input<GoogleCloudDatacatalogV1ContactsArgs> contacts) {
+        public Builder contacts(@Nullable Input<GoogleCloudDatacatalogV1ContactsArgs> contacts) {
             this.contacts = contacts;
             return this;
         }
 
-        public Builder setContacts(@Nullable GoogleCloudDatacatalogV1ContactsArgs contacts) {
+        public Builder contacts(@Nullable GoogleCloudDatacatalogV1ContactsArgs contacts) {
             this.contacts = Input.ofNullable(contacts);
             return this;
         }
 
-        public Builder setEntryOverview(@Nullable Input<GoogleCloudDatacatalogV1EntryOverviewArgs> entryOverview) {
+        public Builder entryOverview(@Nullable Input<GoogleCloudDatacatalogV1EntryOverviewArgs> entryOverview) {
             this.entryOverview = entryOverview;
             return this;
         }
 
-        public Builder setEntryOverview(@Nullable GoogleCloudDatacatalogV1EntryOverviewArgs entryOverview) {
+        public Builder entryOverview(@Nullable GoogleCloudDatacatalogV1EntryOverviewArgs entryOverview) {
             this.entryOverview = Input.ofNullable(entryOverview);
             return this;
         }

@@ -73,12 +73,12 @@ public final class SnapshotSourceDiskEncryptionKey {
     	      this.rawKey = defaults.rawKey;
         }
 
-        public Builder setKmsKeyServiceAccount(@Nullable String kmsKeyServiceAccount) {
+        public Builder kmsKeyServiceAccount(@Nullable String kmsKeyServiceAccount) {
             this.kmsKeyServiceAccount = kmsKeyServiceAccount;
             return this;
         }
 
-        public Builder setRawKey(@Nullable String rawKey) {
+        public Builder rawKey(@Nullable String rawKey) {
             this.rawKey = rawKey;
             return this;
         }

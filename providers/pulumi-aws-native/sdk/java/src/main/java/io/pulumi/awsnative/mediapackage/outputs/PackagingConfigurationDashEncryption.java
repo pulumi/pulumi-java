@@ -40,7 +40,7 @@ public final class PackagingConfigurationDashEncryption {
     	      this.spekeKeyProvider = defaults.spekeKeyProvider;
         }
 
-        public Builder setSpekeKeyProvider(PackagingConfigurationSpekeKeyProvider spekeKeyProvider) {
+        public Builder spekeKeyProvider(PackagingConfigurationSpekeKeyProvider spekeKeyProvider) {
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
         }

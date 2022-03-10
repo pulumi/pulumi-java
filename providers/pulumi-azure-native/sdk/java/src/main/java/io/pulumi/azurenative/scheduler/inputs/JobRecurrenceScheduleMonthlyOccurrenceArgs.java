@@ -71,22 +71,22 @@ public final class JobRecurrenceScheduleMonthlyOccurrenceArgs extends io.pulumi.
     	      this.occurrence = defaults.occurrence;
         }
 
-        public Builder setDay(@Nullable Input<JobScheduleDay> day) {
+        public Builder day(@Nullable Input<JobScheduleDay> day) {
             this.day = day;
             return this;
         }
 
-        public Builder setDay(@Nullable JobScheduleDay day) {
+        public Builder day(@Nullable JobScheduleDay day) {
             this.day = Input.ofNullable(day);
             return this;
         }
 
-        public Builder setOccurrence(@Nullable Input<Integer> occurrence) {
+        public Builder occurrence(@Nullable Input<Integer> occurrence) {
             this.occurrence = occurrence;
             return this;
         }
 
-        public Builder setOccurrence(@Nullable Integer occurrence) {
+        public Builder occurrence(@Nullable Integer occurrence) {
             this.occurrence = Input.ofNullable(occurrence);
             return this;
         }

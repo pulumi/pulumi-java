@@ -42,7 +42,7 @@ public final class GetSubnetNetworkAclAssociationResult {
     	      this.associationId = defaults.associationId;
         }
 
-        public Builder setAssociationId(@Nullable String associationId) {
+        public Builder associationId(@Nullable String associationId) {
             this.associationId = associationId;
             return this;
         }

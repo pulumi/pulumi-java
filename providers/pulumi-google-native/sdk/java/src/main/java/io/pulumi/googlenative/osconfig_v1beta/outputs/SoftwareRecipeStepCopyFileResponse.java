@@ -98,22 +98,22 @@ public final class SoftwareRecipeStepCopyFileResponse {
     	      this.permissions = defaults.permissions;
         }
 
-        public Builder setArtifactId(String artifactId) {
+        public Builder artifactId(String artifactId) {
             this.artifactId = Objects.requireNonNull(artifactId);
             return this;
         }
 
-        public Builder setDestination(String destination) {
+        public Builder destination(String destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setOverwrite(Boolean overwrite) {
+        public Builder overwrite(Boolean overwrite) {
             this.overwrite = Objects.requireNonNull(overwrite);
             return this;
         }
 
-        public Builder setPermissions(String permissions) {
+        public Builder permissions(String permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }

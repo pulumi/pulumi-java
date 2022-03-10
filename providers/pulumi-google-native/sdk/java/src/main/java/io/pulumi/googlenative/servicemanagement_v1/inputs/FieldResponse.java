@@ -204,52 +204,52 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
     	      this.typeUrl = defaults.typeUrl;
         }
 
-        public Builder setCardinality(String cardinality) {
+        public Builder cardinality(String cardinality) {
             this.cardinality = Objects.requireNonNull(cardinality);
             return this;
         }
 
-        public Builder setDefaultValue(String defaultValue) {
+        public Builder defaultValue(String defaultValue) {
             this.defaultValue = Objects.requireNonNull(defaultValue);
             return this;
         }
 
-        public Builder setJsonName(String jsonName) {
+        public Builder jsonName(String jsonName) {
             this.jsonName = Objects.requireNonNull(jsonName);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNumber(Integer number) {
+        public Builder number(Integer number) {
             this.number = Objects.requireNonNull(number);
             return this;
         }
 
-        public Builder setOneofIndex(Integer oneofIndex) {
+        public Builder oneofIndex(Integer oneofIndex) {
             this.oneofIndex = Objects.requireNonNull(oneofIndex);
             return this;
         }
 
-        public Builder setOptions(List<OptionResponse> options) {
+        public Builder options(List<OptionResponse> options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }
 
-        public Builder setPacked(Boolean packed) {
+        public Builder packed(Boolean packed) {
             this.packed = Objects.requireNonNull(packed);
             return this;
         }
 
-        public Builder setTypeUrl(String typeUrl) {
+        public Builder typeUrl(String typeUrl) {
             this.typeUrl = Objects.requireNonNull(typeUrl);
             return this;
         }

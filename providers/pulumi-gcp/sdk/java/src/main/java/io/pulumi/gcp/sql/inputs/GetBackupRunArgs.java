@@ -90,17 +90,17 @@ public final class GetBackupRunArgs extends io.pulumi.resources.InvokeArgs {
     	      this.mostRecent = defaults.mostRecent;
         }
 
-        public Builder setBackupId(@Nullable Integer backupId) {
+        public Builder backupId(@Nullable Integer backupId) {
             this.backupId = backupId;
             return this;
         }
 
-        public Builder setInstance(String instance) {
+        public Builder instance(String instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
 
-        public Builder setMostRecent(@Nullable Boolean mostRecent) {
+        public Builder mostRecent(@Nullable Boolean mostRecent) {
             this.mostRecent = mostRecent;
             return this;
         }

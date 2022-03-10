@@ -80,22 +80,22 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs e
     	      this.filterMatchCriteria = defaults.filterMatchCriteria;
         }
 
-        public Builder setFilterLabels(Input<List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelArgs>> filterLabels) {
+        public Builder filterLabels(Input<List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelArgs>> filterLabels) {
             this.filterLabels = Objects.requireNonNull(filterLabels);
             return this;
         }
 
-        public Builder setFilterLabels(List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelArgs> filterLabels) {
+        public Builder filterLabels(List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelArgs> filterLabels) {
             this.filterLabels = Input.of(Objects.requireNonNull(filterLabels));
             return this;
         }
 
-        public Builder setFilterMatchCriteria(Input<String> filterMatchCriteria) {
+        public Builder filterMatchCriteria(Input<String> filterMatchCriteria) {
             this.filterMatchCriteria = Objects.requireNonNull(filterMatchCriteria);
             return this;
         }
 
-        public Builder setFilterMatchCriteria(String filterMatchCriteria) {
+        public Builder filterMatchCriteria(String filterMatchCriteria) {
             this.filterMatchCriteria = Input.of(Objects.requireNonNull(filterMatchCriteria));
             return this;
         }

@@ -103,32 +103,32 @@ public final class SloRequestBasedSliGoodTotalRatioArgs extends io.pulumi.resour
     	      this.totalServiceFilter = defaults.totalServiceFilter;
         }
 
-        public Builder setBadServiceFilter(@Nullable Input<String> badServiceFilter) {
+        public Builder badServiceFilter(@Nullable Input<String> badServiceFilter) {
             this.badServiceFilter = badServiceFilter;
             return this;
         }
 
-        public Builder setBadServiceFilter(@Nullable String badServiceFilter) {
+        public Builder badServiceFilter(@Nullable String badServiceFilter) {
             this.badServiceFilter = Input.ofNullable(badServiceFilter);
             return this;
         }
 
-        public Builder setGoodServiceFilter(@Nullable Input<String> goodServiceFilter) {
+        public Builder goodServiceFilter(@Nullable Input<String> goodServiceFilter) {
             this.goodServiceFilter = goodServiceFilter;
             return this;
         }
 
-        public Builder setGoodServiceFilter(@Nullable String goodServiceFilter) {
+        public Builder goodServiceFilter(@Nullable String goodServiceFilter) {
             this.goodServiceFilter = Input.ofNullable(goodServiceFilter);
             return this;
         }
 
-        public Builder setTotalServiceFilter(@Nullable Input<String> totalServiceFilter) {
+        public Builder totalServiceFilter(@Nullable Input<String> totalServiceFilter) {
             this.totalServiceFilter = totalServiceFilter;
             return this;
         }
 
-        public Builder setTotalServiceFilter(@Nullable String totalServiceFilter) {
+        public Builder totalServiceFilter(@Nullable String totalServiceFilter) {
             this.totalServiceFilter = Input.ofNullable(totalServiceFilter);
             return this;
         }

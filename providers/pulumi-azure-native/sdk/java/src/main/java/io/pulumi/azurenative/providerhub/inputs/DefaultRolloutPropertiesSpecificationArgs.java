@@ -142,82 +142,82 @@ public final class DefaultRolloutPropertiesSpecificationArgs extends io.pulumi.r
     	      this.restOfTheWorldGroupTwo = defaults.restOfTheWorldGroupTwo;
         }
 
-        public Builder setCanary(@Nullable Input<DefaultRolloutSpecificationCanaryArgs> canary) {
+        public Builder canary(@Nullable Input<DefaultRolloutSpecificationCanaryArgs> canary) {
             this.canary = canary;
             return this;
         }
 
-        public Builder setCanary(@Nullable DefaultRolloutSpecificationCanaryArgs canary) {
+        public Builder canary(@Nullable DefaultRolloutSpecificationCanaryArgs canary) {
             this.canary = Input.ofNullable(canary);
             return this;
         }
 
-        public Builder setHighTraffic(@Nullable Input<DefaultRolloutSpecificationHighTrafficArgs> highTraffic) {
+        public Builder highTraffic(@Nullable Input<DefaultRolloutSpecificationHighTrafficArgs> highTraffic) {
             this.highTraffic = highTraffic;
             return this;
         }
 
-        public Builder setHighTraffic(@Nullable DefaultRolloutSpecificationHighTrafficArgs highTraffic) {
+        public Builder highTraffic(@Nullable DefaultRolloutSpecificationHighTrafficArgs highTraffic) {
             this.highTraffic = Input.ofNullable(highTraffic);
             return this;
         }
 
-        public Builder setLowTraffic(@Nullable Input<DefaultRolloutSpecificationLowTrafficArgs> lowTraffic) {
+        public Builder lowTraffic(@Nullable Input<DefaultRolloutSpecificationLowTrafficArgs> lowTraffic) {
             this.lowTraffic = lowTraffic;
             return this;
         }
 
-        public Builder setLowTraffic(@Nullable DefaultRolloutSpecificationLowTrafficArgs lowTraffic) {
+        public Builder lowTraffic(@Nullable DefaultRolloutSpecificationLowTrafficArgs lowTraffic) {
             this.lowTraffic = Input.ofNullable(lowTraffic);
             return this;
         }
 
-        public Builder setMediumTraffic(@Nullable Input<DefaultRolloutSpecificationMediumTrafficArgs> mediumTraffic) {
+        public Builder mediumTraffic(@Nullable Input<DefaultRolloutSpecificationMediumTrafficArgs> mediumTraffic) {
             this.mediumTraffic = mediumTraffic;
             return this;
         }
 
-        public Builder setMediumTraffic(@Nullable DefaultRolloutSpecificationMediumTrafficArgs mediumTraffic) {
+        public Builder mediumTraffic(@Nullable DefaultRolloutSpecificationMediumTrafficArgs mediumTraffic) {
             this.mediumTraffic = Input.ofNullable(mediumTraffic);
             return this;
         }
 
-        public Builder setProviderRegistration(@Nullable Input<DefaultRolloutSpecificationProviderRegistrationArgs> providerRegistration) {
+        public Builder providerRegistration(@Nullable Input<DefaultRolloutSpecificationProviderRegistrationArgs> providerRegistration) {
             this.providerRegistration = providerRegistration;
             return this;
         }
 
-        public Builder setProviderRegistration(@Nullable DefaultRolloutSpecificationProviderRegistrationArgs providerRegistration) {
+        public Builder providerRegistration(@Nullable DefaultRolloutSpecificationProviderRegistrationArgs providerRegistration) {
             this.providerRegistration = Input.ofNullable(providerRegistration);
             return this;
         }
 
-        public Builder setResourceTypeRegistrations(@Nullable Input<List<ResourceTypeRegistrationArgs>> resourceTypeRegistrations) {
+        public Builder resourceTypeRegistrations(@Nullable Input<List<ResourceTypeRegistrationArgs>> resourceTypeRegistrations) {
             this.resourceTypeRegistrations = resourceTypeRegistrations;
             return this;
         }
 
-        public Builder setResourceTypeRegistrations(@Nullable List<ResourceTypeRegistrationArgs> resourceTypeRegistrations) {
+        public Builder resourceTypeRegistrations(@Nullable List<ResourceTypeRegistrationArgs> resourceTypeRegistrations) {
             this.resourceTypeRegistrations = Input.ofNullable(resourceTypeRegistrations);
             return this;
         }
 
-        public Builder setRestOfTheWorldGroupOne(@Nullable Input<DefaultRolloutSpecificationRestOfTheWorldGroupOneArgs> restOfTheWorldGroupOne) {
+        public Builder restOfTheWorldGroupOne(@Nullable Input<DefaultRolloutSpecificationRestOfTheWorldGroupOneArgs> restOfTheWorldGroupOne) {
             this.restOfTheWorldGroupOne = restOfTheWorldGroupOne;
             return this;
         }
 
-        public Builder setRestOfTheWorldGroupOne(@Nullable DefaultRolloutSpecificationRestOfTheWorldGroupOneArgs restOfTheWorldGroupOne) {
+        public Builder restOfTheWorldGroupOne(@Nullable DefaultRolloutSpecificationRestOfTheWorldGroupOneArgs restOfTheWorldGroupOne) {
             this.restOfTheWorldGroupOne = Input.ofNullable(restOfTheWorldGroupOne);
             return this;
         }
 
-        public Builder setRestOfTheWorldGroupTwo(@Nullable Input<DefaultRolloutSpecificationRestOfTheWorldGroupTwoArgs> restOfTheWorldGroupTwo) {
+        public Builder restOfTheWorldGroupTwo(@Nullable Input<DefaultRolloutSpecificationRestOfTheWorldGroupTwoArgs> restOfTheWorldGroupTwo) {
             this.restOfTheWorldGroupTwo = restOfTheWorldGroupTwo;
             return this;
         }
 
-        public Builder setRestOfTheWorldGroupTwo(@Nullable DefaultRolloutSpecificationRestOfTheWorldGroupTwoArgs restOfTheWorldGroupTwo) {
+        public Builder restOfTheWorldGroupTwo(@Nullable DefaultRolloutSpecificationRestOfTheWorldGroupTwoArgs restOfTheWorldGroupTwo) {
             this.restOfTheWorldGroupTwo = Input.ofNullable(restOfTheWorldGroupTwo);
             return this;
         }

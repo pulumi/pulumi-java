@@ -185,47 +185,47 @@ public final class GremlinGraphGetPropertiesResponseResource {
     	      this.uniqueKeyPolicy = defaults.uniqueKeyPolicy;
         }
 
-        public Builder setConflictResolutionPolicy(@Nullable ConflictResolutionPolicyResponse conflictResolutionPolicy) {
+        public Builder conflictResolutionPolicy(@Nullable ConflictResolutionPolicyResponse conflictResolutionPolicy) {
             this.conflictResolutionPolicy = conflictResolutionPolicy;
             return this;
         }
 
-        public Builder setDefaultTtl(@Nullable Integer defaultTtl) {
+        public Builder defaultTtl(@Nullable Integer defaultTtl) {
             this.defaultTtl = defaultTtl;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIndexingPolicy(@Nullable IndexingPolicyResponse indexingPolicy) {
+        public Builder indexingPolicy(@Nullable IndexingPolicyResponse indexingPolicy) {
             this.indexingPolicy = indexingPolicy;
             return this;
         }
 
-        public Builder setPartitionKey(@Nullable ContainerPartitionKeyResponse partitionKey) {
+        public Builder partitionKey(@Nullable ContainerPartitionKeyResponse partitionKey) {
             this.partitionKey = partitionKey;
             return this;
         }
 
-        public Builder setRid(String rid) {
+        public Builder rid(String rid) {
             this.rid = Objects.requireNonNull(rid);
             return this;
         }
 
-        public Builder setTs(Double ts) {
+        public Builder ts(Double ts) {
             this.ts = Objects.requireNonNull(ts);
             return this;
         }
 
-        public Builder setUniqueKeyPolicy(@Nullable UniqueKeyPolicyResponse uniqueKeyPolicy) {
+        public Builder uniqueKeyPolicy(@Nullable UniqueKeyPolicyResponse uniqueKeyPolicy) {
             this.uniqueKeyPolicy = uniqueKeyPolicy;
             return this;
         }

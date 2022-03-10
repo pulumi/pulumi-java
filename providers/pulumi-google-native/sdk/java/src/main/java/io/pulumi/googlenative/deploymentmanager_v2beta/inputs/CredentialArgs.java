@@ -92,32 +92,32 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
     	      this.useProjectDefault = defaults.useProjectDefault;
         }
 
-        public Builder setBasicAuth(@Nullable Input<BasicAuthArgs> basicAuth) {
+        public Builder basicAuth(@Nullable Input<BasicAuthArgs> basicAuth) {
             this.basicAuth = basicAuth;
             return this;
         }
 
-        public Builder setBasicAuth(@Nullable BasicAuthArgs basicAuth) {
+        public Builder basicAuth(@Nullable BasicAuthArgs basicAuth) {
             this.basicAuth = Input.ofNullable(basicAuth);
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable Input<ServiceAccountArgs> serviceAccount) {
+        public Builder serviceAccount(@Nullable Input<ServiceAccountArgs> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable ServiceAccountArgs serviceAccount) {
+        public Builder serviceAccount(@Nullable ServiceAccountArgs serviceAccount) {
             this.serviceAccount = Input.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder setUseProjectDefault(@Nullable Input<Boolean> useProjectDefault) {
+        public Builder useProjectDefault(@Nullable Input<Boolean> useProjectDefault) {
             this.useProjectDefault = useProjectDefault;
             return this;
         }
 
-        public Builder setUseProjectDefault(@Nullable Boolean useProjectDefault) {
+        public Builder useProjectDefault(@Nullable Boolean useProjectDefault) {
             this.useProjectDefault = Input.ofNullable(useProjectDefault);
             return this;
         }

@@ -50,7 +50,7 @@ public final class ServiceManagedResourcesSettingsResponse {
     	      this.cosmosDb = defaults.cosmosDb;
         }
 
-        public Builder setCosmosDb(@Nullable CosmosDbSettingsResponse cosmosDb) {
+        public Builder cosmosDb(@Nullable CosmosDbSettingsResponse cosmosDb) {
             this.cosmosDb = cosmosDb;
             return this;
         }

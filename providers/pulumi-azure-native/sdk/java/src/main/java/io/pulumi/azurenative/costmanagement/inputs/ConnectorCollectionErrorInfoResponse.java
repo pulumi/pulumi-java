@@ -104,22 +104,22 @@ public final class ConnectorCollectionErrorInfoResponse extends io.pulumi.resour
     	      this.errorStartTime = defaults.errorStartTime;
         }
 
-        public Builder setErrorCode(String errorCode) {
+        public Builder errorCode(String errorCode) {
             this.errorCode = Objects.requireNonNull(errorCode);
             return this;
         }
 
-        public Builder setErrorInnerMessage(String errorInnerMessage) {
+        public Builder errorInnerMessage(String errorInnerMessage) {
             this.errorInnerMessage = Objects.requireNonNull(errorInnerMessage);
             return this;
         }
 
-        public Builder setErrorMessage(String errorMessage) {
+        public Builder errorMessage(String errorMessage) {
             this.errorMessage = Objects.requireNonNull(errorMessage);
             return this;
         }
 
-        public Builder setErrorStartTime(String errorStartTime) {
+        public Builder errorStartTime(String errorStartTime) {
             this.errorStartTime = Objects.requireNonNull(errorStartTime);
             return this;
         }

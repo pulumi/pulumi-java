@@ -67,12 +67,12 @@ public final class ComputeEnvironmentComputeResourcesEc2Configuration {
     	      this.imageType = defaults.imageType;
         }
 
-        public Builder setImageIdOverride(@Nullable String imageIdOverride) {
+        public Builder imageIdOverride(@Nullable String imageIdOverride) {
             this.imageIdOverride = imageIdOverride;
             return this;
         }
 
-        public Builder setImageType(@Nullable String imageType) {
+        public Builder imageType(@Nullable String imageType) {
             this.imageType = imageType;
             return this;
         }

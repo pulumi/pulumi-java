@@ -214,102 +214,102 @@ public final class TargetSSLProxyState extends io.pulumi.resources.ResourceArgs 
     	      this.sslPolicy = defaults.sslPolicy;
         }
 
-        public Builder setBackendService(@Nullable Input<String> backendService) {
+        public Builder backendService(@Nullable Input<String> backendService) {
             this.backendService = backendService;
             return this;
         }
 
-        public Builder setBackendService(@Nullable String backendService) {
+        public Builder backendService(@Nullable String backendService) {
             this.backendService = Input.ofNullable(backendService);
             return this;
         }
 
-        public Builder setCreationTimestamp(@Nullable Input<String> creationTimestamp) {
+        public Builder creationTimestamp(@Nullable Input<String> creationTimestamp) {
             this.creationTimestamp = creationTimestamp;
             return this;
         }
 
-        public Builder setCreationTimestamp(@Nullable String creationTimestamp) {
+        public Builder creationTimestamp(@Nullable String creationTimestamp) {
             this.creationTimestamp = Input.ofNullable(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setProxyHeader(@Nullable Input<String> proxyHeader) {
+        public Builder proxyHeader(@Nullable Input<String> proxyHeader) {
             this.proxyHeader = proxyHeader;
             return this;
         }
 
-        public Builder setProxyHeader(@Nullable String proxyHeader) {
+        public Builder proxyHeader(@Nullable String proxyHeader) {
             this.proxyHeader = Input.ofNullable(proxyHeader);
             return this;
         }
 
-        public Builder setProxyId(@Nullable Input<Integer> proxyId) {
+        public Builder proxyId(@Nullable Input<Integer> proxyId) {
             this.proxyId = proxyId;
             return this;
         }
 
-        public Builder setProxyId(@Nullable Integer proxyId) {
+        public Builder proxyId(@Nullable Integer proxyId) {
             this.proxyId = Input.ofNullable(proxyId);
             return this;
         }
 
-        public Builder setSelfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Input<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
-        public Builder setSelfLink(@Nullable String selfLink) {
+        public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Input.ofNullable(selfLink);
             return this;
         }
 
-        public Builder setSslCertificates(@Nullable Input<List<String>> sslCertificates) {
+        public Builder sslCertificates(@Nullable Input<List<String>> sslCertificates) {
             this.sslCertificates = sslCertificates;
             return this;
         }
 
-        public Builder setSslCertificates(@Nullable List<String> sslCertificates) {
+        public Builder sslCertificates(@Nullable List<String> sslCertificates) {
             this.sslCertificates = Input.ofNullable(sslCertificates);
             return this;
         }
 
-        public Builder setSslPolicy(@Nullable Input<String> sslPolicy) {
+        public Builder sslPolicy(@Nullable Input<String> sslPolicy) {
             this.sslPolicy = sslPolicy;
             return this;
         }
 
-        public Builder setSslPolicy(@Nullable String sslPolicy) {
+        public Builder sslPolicy(@Nullable String sslPolicy) {
             this.sslPolicy = Input.ofNullable(sslPolicy);
             return this;
         }

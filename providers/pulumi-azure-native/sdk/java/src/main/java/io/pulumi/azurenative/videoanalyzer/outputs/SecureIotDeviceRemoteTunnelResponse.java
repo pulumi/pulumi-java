@@ -83,17 +83,17 @@ public final class SecureIotDeviceRemoteTunnelResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDeviceId(String deviceId) {
+        public Builder deviceId(String deviceId) {
             this.deviceId = Objects.requireNonNull(deviceId);
             return this;
         }
 
-        public Builder setIotHubName(String iotHubName) {
+        public Builder iotHubName(String iotHubName) {
             this.iotHubName = Objects.requireNonNull(iotHubName);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

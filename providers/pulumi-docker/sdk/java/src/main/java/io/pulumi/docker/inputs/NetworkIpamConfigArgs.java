@@ -88,42 +88,42 @@ public final class NetworkIpamConfigArgs extends io.pulumi.resources.ResourceArg
     	      this.subnet = defaults.subnet;
         }
 
-        public Builder setAuxAddress(@Nullable Input<Map<String,Object>> auxAddress) {
+        public Builder auxAddress(@Nullable Input<Map<String,Object>> auxAddress) {
             this.auxAddress = auxAddress;
             return this;
         }
 
-        public Builder setAuxAddress(@Nullable Map<String,Object> auxAddress) {
+        public Builder auxAddress(@Nullable Map<String,Object> auxAddress) {
             this.auxAddress = Input.ofNullable(auxAddress);
             return this;
         }
 
-        public Builder setGateway(@Nullable Input<String> gateway) {
+        public Builder gateway(@Nullable Input<String> gateway) {
             this.gateway = gateway;
             return this;
         }
 
-        public Builder setGateway(@Nullable String gateway) {
+        public Builder gateway(@Nullable String gateway) {
             this.gateway = Input.ofNullable(gateway);
             return this;
         }
 
-        public Builder setIpRange(@Nullable Input<String> ipRange) {
+        public Builder ipRange(@Nullable Input<String> ipRange) {
             this.ipRange = ipRange;
             return this;
         }
 
-        public Builder setIpRange(@Nullable String ipRange) {
+        public Builder ipRange(@Nullable String ipRange) {
             this.ipRange = Input.ofNullable(ipRange);
             return this;
         }
 
-        public Builder setSubnet(@Nullable Input<String> subnet) {
+        public Builder subnet(@Nullable Input<String> subnet) {
             this.subnet = subnet;
             return this;
         }
 
-        public Builder setSubnet(@Nullable String subnet) {
+        public Builder subnet(@Nullable String subnet) {
             this.subnet = Input.ofNullable(subnet);
             return this;
         }

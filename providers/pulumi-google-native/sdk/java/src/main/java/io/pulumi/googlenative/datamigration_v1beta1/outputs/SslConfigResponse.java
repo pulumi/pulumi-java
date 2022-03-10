@@ -97,22 +97,22 @@ public final class SslConfigResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setCaCertificate(String caCertificate) {
+        public Builder caCertificate(String caCertificate) {
             this.caCertificate = Objects.requireNonNull(caCertificate);
             return this;
         }
 
-        public Builder setClientCertificate(String clientCertificate) {
+        public Builder clientCertificate(String clientCertificate) {
             this.clientCertificate = Objects.requireNonNull(clientCertificate);
             return this;
         }
 
-        public Builder setClientKey(String clientKey) {
+        public Builder clientKey(String clientKey) {
             this.clientKey = Objects.requireNonNull(clientKey);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

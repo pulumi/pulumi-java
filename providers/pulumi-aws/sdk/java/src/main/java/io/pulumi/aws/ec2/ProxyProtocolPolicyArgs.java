@@ -72,22 +72,22 @@ public final class ProxyProtocolPolicyArgs extends io.pulumi.resources.ResourceA
     	      this.loadBalancer = defaults.loadBalancer;
         }
 
-        public Builder setInstancePorts(Input<List<String>> instancePorts) {
+        public Builder instancePorts(Input<List<String>> instancePorts) {
             this.instancePorts = Objects.requireNonNull(instancePorts);
             return this;
         }
 
-        public Builder setInstancePorts(List<String> instancePorts) {
+        public Builder instancePorts(List<String> instancePorts) {
             this.instancePorts = Input.of(Objects.requireNonNull(instancePorts));
             return this;
         }
 
-        public Builder setLoadBalancer(Input<String> loadBalancer) {
+        public Builder loadBalancer(Input<String> loadBalancer) {
             this.loadBalancer = Objects.requireNonNull(loadBalancer);
             return this;
         }
 
-        public Builder setLoadBalancer(String loadBalancer) {
+        public Builder loadBalancer(String loadBalancer) {
             this.loadBalancer = Input.of(Objects.requireNonNull(loadBalancer));
             return this;
         }

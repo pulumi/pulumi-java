@@ -51,12 +51,12 @@ public final class GetDomainNameApiAssociationResult {
     	      this.apiId = defaults.apiId;
         }
 
-        public Builder setApiAssociationIdentifier(@Nullable String apiAssociationIdentifier) {
+        public Builder apiAssociationIdentifier(@Nullable String apiAssociationIdentifier) {
             this.apiAssociationIdentifier = apiAssociationIdentifier;
             return this;
         }
 
-        public Builder setApiId(@Nullable String apiId) {
+        public Builder apiId(@Nullable String apiId) {
             this.apiId = apiId;
             return this;
         }

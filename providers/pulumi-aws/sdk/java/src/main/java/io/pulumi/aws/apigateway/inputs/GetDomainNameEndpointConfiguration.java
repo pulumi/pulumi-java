@@ -52,7 +52,7 @@ public final class GetDomainNameEndpointConfiguration extends io.pulumi.resource
     	      this.types = defaults.types;
         }
 
-        public Builder setTypes(List<String> types) {
+        public Builder types(List<String> types) {
             this.types = Objects.requireNonNull(types);
             return this;
         }

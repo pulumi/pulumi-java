@@ -76,22 +76,22 @@ public final class InterconnectMacsecArgs extends io.pulumi.resources.ResourceAr
     	      this.preSharedKeys = defaults.preSharedKeys;
         }
 
-        public Builder setFailOpen(@Nullable Input<Boolean> failOpen) {
+        public Builder failOpen(@Nullable Input<Boolean> failOpen) {
             this.failOpen = failOpen;
             return this;
         }
 
-        public Builder setFailOpen(@Nullable Boolean failOpen) {
+        public Builder failOpen(@Nullable Boolean failOpen) {
             this.failOpen = Input.ofNullable(failOpen);
             return this;
         }
 
-        public Builder setPreSharedKeys(Input<List<InterconnectMacsecPreSharedKeyArgs>> preSharedKeys) {
+        public Builder preSharedKeys(Input<List<InterconnectMacsecPreSharedKeyArgs>> preSharedKeys) {
             this.preSharedKeys = Objects.requireNonNull(preSharedKeys);
             return this;
         }
 
-        public Builder setPreSharedKeys(List<InterconnectMacsecPreSharedKeyArgs> preSharedKeys) {
+        public Builder preSharedKeys(List<InterconnectMacsecPreSharedKeyArgs> preSharedKeys) {
             this.preSharedKeys = Input.of(Objects.requireNonNull(preSharedKeys));
             return this;
         }

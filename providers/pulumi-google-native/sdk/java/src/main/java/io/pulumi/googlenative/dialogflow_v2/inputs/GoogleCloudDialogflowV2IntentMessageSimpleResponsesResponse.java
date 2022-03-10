@@ -56,7 +56,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponsesResponse e
     	      this.simpleResponses = defaults.simpleResponses;
         }
 
-        public Builder setSimpleResponses(List<GoogleCloudDialogflowV2IntentMessageSimpleResponseResponse> simpleResponses) {
+        public Builder simpleResponses(List<GoogleCloudDialogflowV2IntentMessageSimpleResponseResponse> simpleResponses) {
             this.simpleResponses = Objects.requireNonNull(simpleResponses);
             return this;
         }

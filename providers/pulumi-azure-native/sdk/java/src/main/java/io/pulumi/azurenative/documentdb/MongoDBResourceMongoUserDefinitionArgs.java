@@ -184,92 +184,92 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
     	      this.userName = defaults.userName;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setCustomData(@Nullable Input<String> customData) {
+        public Builder customData(@Nullable Input<String> customData) {
             this.customData = customData;
             return this;
         }
 
-        public Builder setCustomData(@Nullable String customData) {
+        public Builder customData(@Nullable String customData) {
             this.customData = Input.ofNullable(customData);
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable Input<String> databaseName) {
+        public Builder databaseName(@Nullable Input<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable String databaseName) {
+        public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = Input.ofNullable(databaseName);
             return this;
         }
 
-        public Builder setMechanisms(@Nullable Input<String> mechanisms) {
+        public Builder mechanisms(@Nullable Input<String> mechanisms) {
             this.mechanisms = mechanisms;
             return this;
         }
 
-        public Builder setMechanisms(@Nullable String mechanisms) {
+        public Builder mechanisms(@Nullable String mechanisms) {
             this.mechanisms = Input.ofNullable(mechanisms);
             return this;
         }
 
-        public Builder setMongoUserDefinitionId(@Nullable Input<String> mongoUserDefinitionId) {
+        public Builder mongoUserDefinitionId(@Nullable Input<String> mongoUserDefinitionId) {
             this.mongoUserDefinitionId = mongoUserDefinitionId;
             return this;
         }
 
-        public Builder setMongoUserDefinitionId(@Nullable String mongoUserDefinitionId) {
+        public Builder mongoUserDefinitionId(@Nullable String mongoUserDefinitionId) {
             this.mongoUserDefinitionId = Input.ofNullable(mongoUserDefinitionId);
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<String> password) {
+        public Builder password(@Nullable Input<String> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRoles(@Nullable Input<List<RoleArgs>> roles) {
+        public Builder roles(@Nullable Input<List<RoleArgs>> roles) {
             this.roles = roles;
             return this;
         }
 
-        public Builder setRoles(@Nullable List<RoleArgs> roles) {
+        public Builder roles(@Nullable List<RoleArgs> roles) {
             this.roles = Input.ofNullable(roles);
             return this;
         }
 
-        public Builder setUserName(@Nullable Input<String> userName) {
+        public Builder userName(@Nullable Input<String> userName) {
             this.userName = userName;
             return this;
         }
 
-        public Builder setUserName(@Nullable String userName) {
+        public Builder userName(@Nullable String userName) {
             this.userName = Input.ofNullable(userName);
             return this;
         }

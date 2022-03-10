@@ -274,142 +274,142 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder setCompilationMode(@Nullable Input<Object> compilationMode) {
+        public Builder compilationMode(@Nullable Input<Object> compilationMode) {
             this.compilationMode = compilationMode;
             return this;
         }
 
-        public Builder setCompilationMode(@Nullable Object compilationMode) {
+        public Builder compilationMode(@Nullable Object compilationMode) {
             this.compilationMode = Input.ofNullable(compilationMode);
             return this;
         }
 
-        public Builder setDegreeOfParallelism(@Nullable Input<Object> degreeOfParallelism) {
+        public Builder degreeOfParallelism(@Nullable Input<Object> degreeOfParallelism) {
             this.degreeOfParallelism = degreeOfParallelism;
             return this;
         }
 
-        public Builder setDegreeOfParallelism(@Nullable Object degreeOfParallelism) {
+        public Builder degreeOfParallelism(@Nullable Object degreeOfParallelism) {
             this.degreeOfParallelism = Input.ofNullable(degreeOfParallelism);
             return this;
         }
 
-        public Builder setDependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
+        public Builder dependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
+        public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
             this.dependsOn = Input.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setLinkedServiceName(@Nullable Input<LinkedServiceReferenceArgs> linkedServiceName) {
+        public Builder linkedServiceName(@Nullable Input<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
 
-        public Builder setLinkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
+        public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
             this.linkedServiceName = Input.ofNullable(linkedServiceName);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,Object>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,Object>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,Object> parameters) {
+        public Builder parameters(@Nullable Map<String,Object> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setPolicy(@Nullable Input<ActivityPolicyArgs> policy) {
+        public Builder policy(@Nullable Input<ActivityPolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPolicy(@Nullable ActivityPolicyArgs policy) {
+        public Builder policy(@Nullable ActivityPolicyArgs policy) {
             this.policy = Input.ofNullable(policy);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Object> priority) {
+        public Builder priority(@Nullable Input<Object> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Object priority) {
+        public Builder priority(@Nullable Object priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setRuntimeVersion(@Nullable Input<Object> runtimeVersion) {
+        public Builder runtimeVersion(@Nullable Input<Object> runtimeVersion) {
             this.runtimeVersion = runtimeVersion;
             return this;
         }
 
-        public Builder setRuntimeVersion(@Nullable Object runtimeVersion) {
+        public Builder runtimeVersion(@Nullable Object runtimeVersion) {
             this.runtimeVersion = Input.ofNullable(runtimeVersion);
             return this;
         }
 
-        public Builder setScriptLinkedService(Input<LinkedServiceReferenceArgs> scriptLinkedService) {
+        public Builder scriptLinkedService(Input<LinkedServiceReferenceArgs> scriptLinkedService) {
             this.scriptLinkedService = Objects.requireNonNull(scriptLinkedService);
             return this;
         }
 
-        public Builder setScriptLinkedService(LinkedServiceReferenceArgs scriptLinkedService) {
+        public Builder scriptLinkedService(LinkedServiceReferenceArgs scriptLinkedService) {
             this.scriptLinkedService = Input.of(Objects.requireNonNull(scriptLinkedService));
             return this;
         }
 
-        public Builder setScriptPath(Input<Object> scriptPath) {
+        public Builder scriptPath(Input<Object> scriptPath) {
             this.scriptPath = Objects.requireNonNull(scriptPath);
             return this;
         }
 
-        public Builder setScriptPath(Object scriptPath) {
+        public Builder scriptPath(Object scriptPath) {
             this.scriptPath = Input.of(Objects.requireNonNull(scriptPath));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setUserProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
+        public Builder userProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
 
-        public Builder setUserProperties(@Nullable List<UserPropertyArgs> userProperties) {
+        public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
             this.userProperties = Input.ofNullable(userProperties);
             return this;
         }

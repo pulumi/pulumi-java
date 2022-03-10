@@ -107,22 +107,22 @@ public final class GoogleCloudApigeeV1AddonsConfigResponse extends io.pulumi.res
     	      this.monetizationConfig = defaults.monetizationConfig;
         }
 
-        public Builder setAdvancedApiOpsConfig(GoogleCloudApigeeV1AdvancedApiOpsConfigResponse advancedApiOpsConfig) {
+        public Builder advancedApiOpsConfig(GoogleCloudApigeeV1AdvancedApiOpsConfigResponse advancedApiOpsConfig) {
             this.advancedApiOpsConfig = Objects.requireNonNull(advancedApiOpsConfig);
             return this;
         }
 
-        public Builder setConnectorsPlatformConfig(GoogleCloudApigeeV1ConnectorsPlatformConfigResponse connectorsPlatformConfig) {
+        public Builder connectorsPlatformConfig(GoogleCloudApigeeV1ConnectorsPlatformConfigResponse connectorsPlatformConfig) {
             this.connectorsPlatformConfig = Objects.requireNonNull(connectorsPlatformConfig);
             return this;
         }
 
-        public Builder setIntegrationConfig(GoogleCloudApigeeV1IntegrationConfigResponse integrationConfig) {
+        public Builder integrationConfig(GoogleCloudApigeeV1IntegrationConfigResponse integrationConfig) {
             this.integrationConfig = Objects.requireNonNull(integrationConfig);
             return this;
         }
 
-        public Builder setMonetizationConfig(GoogleCloudApigeeV1MonetizationConfigResponse monetizationConfig) {
+        public Builder monetizationConfig(GoogleCloudApigeeV1MonetizationConfigResponse monetizationConfig) {
             this.monetizationConfig = Objects.requireNonNull(monetizationConfig);
             return this;
         }

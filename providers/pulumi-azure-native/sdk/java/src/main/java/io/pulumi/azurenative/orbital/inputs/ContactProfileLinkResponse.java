@@ -125,27 +125,27 @@ public final class ContactProfileLinkResponse extends io.pulumi.resources.Invoke
     	      this.polarization = defaults.polarization;
         }
 
-        public Builder setChannels(List<ContactProfileLinkChannelResponse> channels) {
+        public Builder channels(List<ContactProfileLinkChannelResponse> channels) {
             this.channels = Objects.requireNonNull(channels);
             return this;
         }
 
-        public Builder setDirection(String direction) {
+        public Builder direction(String direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
-        public Builder setEirpdBW(@Nullable Double eirpdBW) {
+        public Builder eirpdBW(@Nullable Double eirpdBW) {
             this.eirpdBW = eirpdBW;
             return this;
         }
 
-        public Builder setGainOverTemperature(@Nullable Double gainOverTemperature) {
+        public Builder gainOverTemperature(@Nullable Double gainOverTemperature) {
             this.gainOverTemperature = gainOverTemperature;
             return this;
         }
 
-        public Builder setPolarization(String polarization) {
+        public Builder polarization(String polarization) {
             this.polarization = Objects.requireNonNull(polarization);
             return this;
         }

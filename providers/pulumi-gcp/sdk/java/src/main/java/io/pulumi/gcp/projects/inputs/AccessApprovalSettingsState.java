@@ -151,62 +151,62 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
     	      this.projectId = defaults.projectId;
         }
 
-        public Builder setEnrolledAncestor(@Nullable Input<Boolean> enrolledAncestor) {
+        public Builder enrolledAncestor(@Nullable Input<Boolean> enrolledAncestor) {
             this.enrolledAncestor = enrolledAncestor;
             return this;
         }
 
-        public Builder setEnrolledAncestor(@Nullable Boolean enrolledAncestor) {
+        public Builder enrolledAncestor(@Nullable Boolean enrolledAncestor) {
             this.enrolledAncestor = Input.ofNullable(enrolledAncestor);
             return this;
         }
 
-        public Builder setEnrolledServices(@Nullable Input<List<AccessApprovalSettingsEnrolledServiceGetArgs>> enrolledServices) {
+        public Builder enrolledServices(@Nullable Input<List<AccessApprovalSettingsEnrolledServiceGetArgs>> enrolledServices) {
             this.enrolledServices = enrolledServices;
             return this;
         }
 
-        public Builder setEnrolledServices(@Nullable List<AccessApprovalSettingsEnrolledServiceGetArgs> enrolledServices) {
+        public Builder enrolledServices(@Nullable List<AccessApprovalSettingsEnrolledServiceGetArgs> enrolledServices) {
             this.enrolledServices = Input.ofNullable(enrolledServices);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNotificationEmails(@Nullable Input<List<String>> notificationEmails) {
+        public Builder notificationEmails(@Nullable Input<List<String>> notificationEmails) {
             this.notificationEmails = notificationEmails;
             return this;
         }
 
-        public Builder setNotificationEmails(@Nullable List<String> notificationEmails) {
+        public Builder notificationEmails(@Nullable List<String> notificationEmails) {
             this.notificationEmails = Input.ofNullable(notificationEmails);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setProjectId(@Nullable Input<String> projectId) {
+        public Builder projectId(@Nullable Input<String> projectId) {
             this.projectId = projectId;
             return this;
         }
 
-        public Builder setProjectId(@Nullable String projectId) {
+        public Builder projectId(@Nullable String projectId) {
             this.projectId = Input.ofNullable(projectId);
             return this;
         }

@@ -71,22 +71,22 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
     	      this.throttleSettings = defaults.throttleSettings;
         }
 
-        public Builder setCloudwatchRoleArn(@Nullable Input<String> cloudwatchRoleArn) {
+        public Builder cloudwatchRoleArn(@Nullable Input<String> cloudwatchRoleArn) {
             this.cloudwatchRoleArn = cloudwatchRoleArn;
             return this;
         }
 
-        public Builder setCloudwatchRoleArn(@Nullable String cloudwatchRoleArn) {
+        public Builder cloudwatchRoleArn(@Nullable String cloudwatchRoleArn) {
             this.cloudwatchRoleArn = Input.ofNullable(cloudwatchRoleArn);
             return this;
         }
 
-        public Builder setThrottleSettings(@Nullable Input<AccountThrottleSettingsGetArgs> throttleSettings) {
+        public Builder throttleSettings(@Nullable Input<AccountThrottleSettingsGetArgs> throttleSettings) {
             this.throttleSettings = throttleSettings;
             return this;
         }
 
-        public Builder setThrottleSettings(@Nullable AccountThrottleSettingsGetArgs throttleSettings) {
+        public Builder throttleSettings(@Nullable AccountThrottleSettingsGetArgs throttleSettings) {
             this.throttleSettings = Input.ofNullable(throttleSettings);
             return this;
         }

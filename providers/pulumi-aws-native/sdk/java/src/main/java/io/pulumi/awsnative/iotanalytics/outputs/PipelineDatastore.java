@@ -49,12 +49,12 @@ public final class PipelineDatastore {
     	      this.name = defaults.name;
         }
 
-        public Builder setDatastoreName(String datastoreName) {
+        public Builder datastoreName(String datastoreName) {
             this.datastoreName = Objects.requireNonNull(datastoreName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

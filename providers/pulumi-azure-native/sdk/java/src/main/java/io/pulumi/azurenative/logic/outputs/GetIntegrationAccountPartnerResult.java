@@ -198,52 +198,52 @@ public final class GetIntegrationAccountPartnerResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setChangedTime(String changedTime) {
+        public Builder changedTime(String changedTime) {
             this.changedTime = Objects.requireNonNull(changedTime);
             return this;
         }
 
-        public Builder setContent(PartnerContentResponse content) {
+        public Builder content(PartnerContentResponse content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
-        public Builder setCreatedTime(String createdTime) {
+        public Builder createdTime(String createdTime) {
             this.createdTime = Objects.requireNonNull(createdTime);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Object metadata) {
+        public Builder metadata(@Nullable Object metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPartnerType(String partnerType) {
+        public Builder partnerType(String partnerType) {
             this.partnerType = Objects.requireNonNull(partnerType);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

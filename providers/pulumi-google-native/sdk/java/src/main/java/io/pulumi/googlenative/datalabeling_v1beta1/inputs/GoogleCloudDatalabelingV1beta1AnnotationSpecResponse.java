@@ -89,17 +89,17 @@ public final class GoogleCloudDatalabelingV1beta1AnnotationSpecResponse extends 
     	      this.index = defaults.index;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setIndex(Integer index) {
+        public Builder index(Integer index) {
             this.index = Objects.requireNonNull(index);
             return this;
         }

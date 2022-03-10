@@ -76,12 +76,12 @@ public final class HubPublicIPAddressesResponse extends io.pulumi.resources.Invo
     	      this.count = defaults.count;
         }
 
-        public Builder setAddresses(@Nullable List<AzureFirewallPublicIPAddressResponse> addresses) {
+        public Builder addresses(@Nullable List<AzureFirewallPublicIPAddressResponse> addresses) {
             this.addresses = addresses;
             return this;
         }
 
-        public Builder setCount(@Nullable Integer count) {
+        public Builder count(@Nullable Integer count) {
             this.count = count;
             return this;
         }

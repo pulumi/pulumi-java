@@ -52,12 +52,12 @@ public final class FlowDefinitionHumanLoopRequestSourceGetArgs extends io.pulumi
     	      this.awsManagedHumanLoopRequestSource = defaults.awsManagedHumanLoopRequestSource;
         }
 
-        public Builder setAwsManagedHumanLoopRequestSource(Input<String> awsManagedHumanLoopRequestSource) {
+        public Builder awsManagedHumanLoopRequestSource(Input<String> awsManagedHumanLoopRequestSource) {
             this.awsManagedHumanLoopRequestSource = Objects.requireNonNull(awsManagedHumanLoopRequestSource);
             return this;
         }
 
-        public Builder setAwsManagedHumanLoopRequestSource(String awsManagedHumanLoopRequestSource) {
+        public Builder awsManagedHumanLoopRequestSource(String awsManagedHumanLoopRequestSource) {
             this.awsManagedHumanLoopRequestSource = Input.of(Objects.requireNonNull(awsManagedHumanLoopRequestSource));
             return this;
         }

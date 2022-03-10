@@ -87,42 +87,42 @@ public final class ResponseHeadersPolicyXSSProtectionArgs extends io.pulumi.reso
     	      this.reportUri = defaults.reportUri;
         }
 
-        public Builder setModeBlock(@Nullable Input<Boolean> modeBlock) {
+        public Builder modeBlock(@Nullable Input<Boolean> modeBlock) {
             this.modeBlock = modeBlock;
             return this;
         }
 
-        public Builder setModeBlock(@Nullable Boolean modeBlock) {
+        public Builder modeBlock(@Nullable Boolean modeBlock) {
             this.modeBlock = Input.ofNullable(modeBlock);
             return this;
         }
 
-        public Builder setOverride(Input<Boolean> override) {
+        public Builder override(Input<Boolean> override) {
             this.override = Objects.requireNonNull(override);
             return this;
         }
 
-        public Builder setOverride(Boolean override) {
+        public Builder override(Boolean override) {
             this.override = Input.of(Objects.requireNonNull(override));
             return this;
         }
 
-        public Builder setProtection(Input<Boolean> protection) {
+        public Builder protection(Input<Boolean> protection) {
             this.protection = Objects.requireNonNull(protection);
             return this;
         }
 
-        public Builder setProtection(Boolean protection) {
+        public Builder protection(Boolean protection) {
             this.protection = Input.of(Objects.requireNonNull(protection));
             return this;
         }
 
-        public Builder setReportUri(@Nullable Input<String> reportUri) {
+        public Builder reportUri(@Nullable Input<String> reportUri) {
             this.reportUri = reportUri;
             return this;
         }
 
-        public Builder setReportUri(@Nullable String reportUri) {
+        public Builder reportUri(@Nullable String reportUri) {
             this.reportUri = Input.ofNullable(reportUri);
             return this;
         }

@@ -100,22 +100,22 @@ public final class GetManagedPrivateEndpointArgs extends io.pulumi.resources.Inv
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setFactoryName(String factoryName) {
+        public Builder factoryName(String factoryName) {
             this.factoryName = Objects.requireNonNull(factoryName);
             return this;
         }
 
-        public Builder setManagedPrivateEndpointName(String managedPrivateEndpointName) {
+        public Builder managedPrivateEndpointName(String managedPrivateEndpointName) {
             this.managedPrivateEndpointName = Objects.requireNonNull(managedPrivateEndpointName);
             return this;
         }
 
-        public Builder setManagedVirtualNetworkName(String managedVirtualNetworkName) {
+        public Builder managedVirtualNetworkName(String managedVirtualNetworkName) {
             this.managedVirtualNetworkName = Objects.requireNonNull(managedVirtualNetworkName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

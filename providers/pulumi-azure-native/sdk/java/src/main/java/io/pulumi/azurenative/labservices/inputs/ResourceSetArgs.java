@@ -74,22 +74,22 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vmResourceId = defaults.vmResourceId;
         }
 
-        public Builder setResourceSettingId(@Nullable Input<String> resourceSettingId) {
+        public Builder resourceSettingId(@Nullable Input<String> resourceSettingId) {
             this.resourceSettingId = resourceSettingId;
             return this;
         }
 
-        public Builder setResourceSettingId(@Nullable String resourceSettingId) {
+        public Builder resourceSettingId(@Nullable String resourceSettingId) {
             this.resourceSettingId = Input.ofNullable(resourceSettingId);
             return this;
         }
 
-        public Builder setVmResourceId(@Nullable Input<String> vmResourceId) {
+        public Builder vmResourceId(@Nullable Input<String> vmResourceId) {
             this.vmResourceId = vmResourceId;
             return this;
         }
 
-        public Builder setVmResourceId(@Nullable String vmResourceId) {
+        public Builder vmResourceId(@Nullable String vmResourceId) {
             this.vmResourceId = Input.ofNullable(vmResourceId);
             return this;
         }

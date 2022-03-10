@@ -91,17 +91,17 @@ public final class RadiusServerResponse extends io.pulumi.resources.InvokeArgs {
     	      this.radiusServerSecret = defaults.radiusServerSecret;
         }
 
-        public Builder setRadiusServerAddress(String radiusServerAddress) {
+        public Builder radiusServerAddress(String radiusServerAddress) {
             this.radiusServerAddress = Objects.requireNonNull(radiusServerAddress);
             return this;
         }
 
-        public Builder setRadiusServerScore(@Nullable Double radiusServerScore) {
+        public Builder radiusServerScore(@Nullable Double radiusServerScore) {
             this.radiusServerScore = radiusServerScore;
             return this;
         }
 
-        public Builder setRadiusServerSecret(@Nullable String radiusServerSecret) {
+        public Builder radiusServerSecret(@Nullable String radiusServerSecret) {
             this.radiusServerSecret = radiusServerSecret;
             return this;
         }

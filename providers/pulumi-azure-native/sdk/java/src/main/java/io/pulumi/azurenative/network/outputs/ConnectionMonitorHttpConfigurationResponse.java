@@ -135,32 +135,32 @@ public final class ConnectionMonitorHttpConfigurationResponse {
     	      this.validStatusCodeRanges = defaults.validStatusCodeRanges;
         }
 
-        public Builder setMethod(@Nullable String method) {
+        public Builder method(@Nullable String method) {
             this.method = method;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPreferHTTPS(@Nullable Boolean preferHTTPS) {
+        public Builder preferHTTPS(@Nullable Boolean preferHTTPS) {
             this.preferHTTPS = preferHTTPS;
             return this;
         }
 
-        public Builder setRequestHeaders(@Nullable List<HTTPHeaderResponse> requestHeaders) {
+        public Builder requestHeaders(@Nullable List<HTTPHeaderResponse> requestHeaders) {
             this.requestHeaders = requestHeaders;
             return this;
         }
 
-        public Builder setValidStatusCodeRanges(@Nullable List<String> validStatusCodeRanges) {
+        public Builder validStatusCodeRanges(@Nullable List<String> validStatusCodeRanges) {
             this.validStatusCodeRanges = validStatusCodeRanges;
             return this;
         }

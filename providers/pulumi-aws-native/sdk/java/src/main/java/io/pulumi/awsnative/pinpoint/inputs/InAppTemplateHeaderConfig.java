@@ -75,17 +75,17 @@ public final class InAppTemplateHeaderConfig extends io.pulumi.resources.InvokeA
     	      this.textColor = defaults.textColor;
         }
 
-        public Builder setAlignment(@Nullable InAppTemplateAlignment alignment) {
+        public Builder alignment(@Nullable InAppTemplateAlignment alignment) {
             this.alignment = alignment;
             return this;
         }
 
-        public Builder setHeader(@Nullable String header) {
+        public Builder header(@Nullable String header) {
             this.header = header;
             return this;
         }
 
-        public Builder setTextColor(@Nullable String textColor) {
+        public Builder textColor(@Nullable String textColor) {
             this.textColor = textColor;
             return this;
         }

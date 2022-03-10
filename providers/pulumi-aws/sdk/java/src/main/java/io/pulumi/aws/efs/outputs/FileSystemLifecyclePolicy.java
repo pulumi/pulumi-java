@@ -67,12 +67,12 @@ public final class FileSystemLifecyclePolicy {
     	      this.transitionToPrimaryStorageClass = defaults.transitionToPrimaryStorageClass;
         }
 
-        public Builder setTransitionToIa(@Nullable String transitionToIa) {
+        public Builder transitionToIa(@Nullable String transitionToIa) {
             this.transitionToIa = transitionToIa;
             return this;
         }
 
-        public Builder setTransitionToPrimaryStorageClass(@Nullable String transitionToPrimaryStorageClass) {
+        public Builder transitionToPrimaryStorageClass(@Nullable String transitionToPrimaryStorageClass) {
             this.transitionToPrimaryStorageClass = transitionToPrimaryStorageClass;
             return this;
         }

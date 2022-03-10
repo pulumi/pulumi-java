@@ -190,102 +190,102 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.routingConfig = defaults.routingConfig;
         }
 
-        public Builder setAutoCreateSubnetworks(@Nullable Input<Boolean> autoCreateSubnetworks) {
+        public Builder autoCreateSubnetworks(@Nullable Input<Boolean> autoCreateSubnetworks) {
             this.autoCreateSubnetworks = autoCreateSubnetworks;
             return this;
         }
 
-        public Builder setAutoCreateSubnetworks(@Nullable Boolean autoCreateSubnetworks) {
+        public Builder autoCreateSubnetworks(@Nullable Boolean autoCreateSubnetworks) {
             this.autoCreateSubnetworks = Input.ofNullable(autoCreateSubnetworks);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEnableUlaInternalIpv6(@Nullable Input<Boolean> enableUlaInternalIpv6) {
+        public Builder enableUlaInternalIpv6(@Nullable Input<Boolean> enableUlaInternalIpv6) {
             this.enableUlaInternalIpv6 = enableUlaInternalIpv6;
             return this;
         }
 
-        public Builder setEnableUlaInternalIpv6(@Nullable Boolean enableUlaInternalIpv6) {
+        public Builder enableUlaInternalIpv6(@Nullable Boolean enableUlaInternalIpv6) {
             this.enableUlaInternalIpv6 = Input.ofNullable(enableUlaInternalIpv6);
             return this;
         }
 
-        public Builder setInternalIpv6Range(@Nullable Input<String> internalIpv6Range) {
+        public Builder internalIpv6Range(@Nullable Input<String> internalIpv6Range) {
             this.internalIpv6Range = internalIpv6Range;
             return this;
         }
 
-        public Builder setInternalIpv6Range(@Nullable String internalIpv6Range) {
+        public Builder internalIpv6Range(@Nullable String internalIpv6Range) {
             this.internalIpv6Range = Input.ofNullable(internalIpv6Range);
             return this;
         }
 
-        public Builder setMtu(@Nullable Input<Integer> mtu) {
+        public Builder mtu(@Nullable Input<Integer> mtu) {
             this.mtu = mtu;
             return this;
         }
 
-        public Builder setMtu(@Nullable Integer mtu) {
+        public Builder mtu(@Nullable Integer mtu) {
             this.mtu = Input.ofNullable(mtu);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetworkFirewallPolicyEnforcementOrder(@Nullable Input<NetworkNetworkFirewallPolicyEnforcementOrder> networkFirewallPolicyEnforcementOrder) {
+        public Builder networkFirewallPolicyEnforcementOrder(@Nullable Input<NetworkNetworkFirewallPolicyEnforcementOrder> networkFirewallPolicyEnforcementOrder) {
             this.networkFirewallPolicyEnforcementOrder = networkFirewallPolicyEnforcementOrder;
             return this;
         }
 
-        public Builder setNetworkFirewallPolicyEnforcementOrder(@Nullable NetworkNetworkFirewallPolicyEnforcementOrder networkFirewallPolicyEnforcementOrder) {
+        public Builder networkFirewallPolicyEnforcementOrder(@Nullable NetworkNetworkFirewallPolicyEnforcementOrder networkFirewallPolicyEnforcementOrder) {
             this.networkFirewallPolicyEnforcementOrder = Input.ofNullable(networkFirewallPolicyEnforcementOrder);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setRoutingConfig(@Nullable Input<NetworkRoutingConfigArgs> routingConfig) {
+        public Builder routingConfig(@Nullable Input<NetworkRoutingConfigArgs> routingConfig) {
             this.routingConfig = routingConfig;
             return this;
         }
 
-        public Builder setRoutingConfig(@Nullable NetworkRoutingConfigArgs routingConfig) {
+        public Builder routingConfig(@Nullable NetworkRoutingConfigArgs routingConfig) {
             this.routingConfig = Input.ofNullable(routingConfig);
             return this;
         }

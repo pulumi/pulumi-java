@@ -53,7 +53,7 @@ public final class ThemeTileStyle extends io.pulumi.resources.InvokeArgs {
     	      this.border = defaults.border;
         }
 
-        public Builder setBorder(@Nullable ThemeBorderStyle border) {
+        public Builder border(@Nullable ThemeBorderStyle border) {
             this.border = border;
             return this;
         }

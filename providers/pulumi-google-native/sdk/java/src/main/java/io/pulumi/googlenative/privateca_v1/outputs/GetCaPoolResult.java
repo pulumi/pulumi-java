@@ -116,27 +116,27 @@ public final class GetCaPoolResult {
     	      this.tier = defaults.tier;
         }
 
-        public Builder setIssuancePolicy(IssuancePolicyResponse issuancePolicy) {
+        public Builder issuancePolicy(IssuancePolicyResponse issuancePolicy) {
             this.issuancePolicy = Objects.requireNonNull(issuancePolicy);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPublishingOptions(PublishingOptionsResponse publishingOptions) {
+        public Builder publishingOptions(PublishingOptionsResponse publishingOptions) {
             this.publishingOptions = Objects.requireNonNull(publishingOptions);
             return this;
         }
 
-        public Builder setTier(String tier) {
+        public Builder tier(String tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }

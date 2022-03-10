@@ -240,122 +240,122 @@ public final class NodePoolNodeConfig {
     	      this.workloadMetadataConfig = defaults.workloadMetadataConfig;
         }
 
-        public Builder setBootDiskKmsKey(@Nullable String bootDiskKmsKey) {
+        public Builder bootDiskKmsKey(@Nullable String bootDiskKmsKey) {
             this.bootDiskKmsKey = bootDiskKmsKey;
             return this;
         }
 
-        public Builder setDiskSizeGb(@Nullable Integer diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
 
-        public Builder setDiskType(@Nullable String diskType) {
+        public Builder diskType(@Nullable String diskType) {
             this.diskType = diskType;
             return this;
         }
 
-        public Builder setEphemeralStorageConfig(@Nullable NodePoolNodeConfigEphemeralStorageConfig ephemeralStorageConfig) {
+        public Builder ephemeralStorageConfig(@Nullable NodePoolNodeConfigEphemeralStorageConfig ephemeralStorageConfig) {
             this.ephemeralStorageConfig = ephemeralStorageConfig;
             return this;
         }
 
-        public Builder setGcfsConfig(@Nullable NodePoolNodeConfigGcfsConfig gcfsConfig) {
+        public Builder gcfsConfig(@Nullable NodePoolNodeConfigGcfsConfig gcfsConfig) {
             this.gcfsConfig = gcfsConfig;
             return this;
         }
 
-        public Builder setGuestAccelerators(@Nullable List<NodePoolNodeConfigGuestAccelerator> guestAccelerators) {
+        public Builder guestAccelerators(@Nullable List<NodePoolNodeConfigGuestAccelerator> guestAccelerators) {
             this.guestAccelerators = guestAccelerators;
             return this;
         }
 
-        public Builder setImageType(@Nullable String imageType) {
+        public Builder imageType(@Nullable String imageType) {
             this.imageType = imageType;
             return this;
         }
 
-        public Builder setKubeletConfig(@Nullable NodePoolNodeConfigKubeletConfig kubeletConfig) {
+        public Builder kubeletConfig(@Nullable NodePoolNodeConfigKubeletConfig kubeletConfig) {
             this.kubeletConfig = kubeletConfig;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLinuxNodeConfig(@Nullable NodePoolNodeConfigLinuxNodeConfig linuxNodeConfig) {
+        public Builder linuxNodeConfig(@Nullable NodePoolNodeConfigLinuxNodeConfig linuxNodeConfig) {
             this.linuxNodeConfig = linuxNodeConfig;
             return this;
         }
 
-        public Builder setLocalSsdCount(@Nullable Integer localSsdCount) {
+        public Builder localSsdCount(@Nullable Integer localSsdCount) {
             this.localSsdCount = localSsdCount;
             return this;
         }
 
-        public Builder setMachineType(@Nullable String machineType) {
+        public Builder machineType(@Nullable String machineType) {
             this.machineType = machineType;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMinCpuPlatform(@Nullable String minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
-        public Builder setNodeGroup(@Nullable String nodeGroup) {
+        public Builder nodeGroup(@Nullable String nodeGroup) {
             this.nodeGroup = nodeGroup;
             return this;
         }
 
-        public Builder setOauthScopes(@Nullable List<String> oauthScopes) {
+        public Builder oauthScopes(@Nullable List<String> oauthScopes) {
             this.oauthScopes = oauthScopes;
             return this;
         }
 
-        public Builder setPreemptible(@Nullable Boolean preemptible) {
+        public Builder preemptible(@Nullable Boolean preemptible) {
             this.preemptible = preemptible;
             return this;
         }
 
-        public Builder setSandboxConfig(@Nullable NodePoolNodeConfigSandboxConfig sandboxConfig) {
+        public Builder sandboxConfig(@Nullable NodePoolNodeConfigSandboxConfig sandboxConfig) {
             this.sandboxConfig = sandboxConfig;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable String serviceAccount) {
+        public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setShieldedInstanceConfig(@Nullable NodePoolNodeConfigShieldedInstanceConfig shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(@Nullable NodePoolNodeConfigShieldedInstanceConfig shieldedInstanceConfig) {
             this.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
 
-        public Builder setSpot(@Nullable Boolean spot) {
+        public Builder spot(@Nullable Boolean spot) {
             this.spot = spot;
             return this;
         }
 
-        public Builder setTags(@Nullable List<String> tags) {
+        public Builder tags(@Nullable List<String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTaints(@Nullable List<NodePoolNodeConfigTaint> taints) {
+        public Builder taints(@Nullable List<NodePoolNodeConfigTaint> taints) {
             this.taints = taints;
             return this;
         }
 
-        public Builder setWorkloadMetadataConfig(@Nullable NodePoolNodeConfigWorkloadMetadataConfig workloadMetadataConfig) {
+        public Builder workloadMetadataConfig(@Nullable NodePoolNodeConfigWorkloadMetadataConfig workloadMetadataConfig) {
             this.workloadMetadataConfig = workloadMetadataConfig;
             return this;
         }

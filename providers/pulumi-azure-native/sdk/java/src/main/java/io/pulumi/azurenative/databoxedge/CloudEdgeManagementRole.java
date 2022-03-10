@@ -182,7 +182,7 @@ public class CloudEdgeManagementRole extends io.pulumi.resources.CustomResource 
     private static CloudEdgeManagementRoleArgs makeArgs(CloudEdgeManagementRoleArgs args) {
         var builder = args == null ? CloudEdgeManagementRoleArgs.builder() : CloudEdgeManagementRoleArgs.builder(args);
         return builder
-            .setKind("CloudEdgeManagement")
+            .kind("CloudEdgeManagement")
             .build();
     }
 

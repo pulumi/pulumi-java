@@ -102,27 +102,27 @@ public final class GetAccessPointResult {
     	      this.publicAccessBlockConfiguration = defaults.publicAccessBlockConfiguration;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCreationDate(@Nullable String creationDate) {
+        public Builder creationDate(@Nullable String creationDate) {
             this.creationDate = creationDate;
             return this;
         }
 
-        public Builder setObjectLambdaConfiguration(@Nullable AccessPointObjectLambdaConfiguration objectLambdaConfiguration) {
+        public Builder objectLambdaConfiguration(@Nullable AccessPointObjectLambdaConfiguration objectLambdaConfiguration) {
             this.objectLambdaConfiguration = objectLambdaConfiguration;
             return this;
         }
 
-        public Builder setPolicyStatus(@Nullable PolicyStatusProperties policyStatus) {
+        public Builder policyStatus(@Nullable PolicyStatusProperties policyStatus) {
             this.policyStatus = policyStatus;
             return this;
         }
 
-        public Builder setPublicAccessBlockConfiguration(@Nullable AccessPointPublicAccessBlockConfiguration publicAccessBlockConfiguration) {
+        public Builder publicAccessBlockConfiguration(@Nullable AccessPointPublicAccessBlockConfiguration publicAccessBlockConfiguration) {
             this.publicAccessBlockConfiguration = publicAccessBlockConfiguration;
             return this;
         }

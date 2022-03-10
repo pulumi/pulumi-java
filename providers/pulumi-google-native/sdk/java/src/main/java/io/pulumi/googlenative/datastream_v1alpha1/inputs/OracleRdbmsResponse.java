@@ -56,7 +56,7 @@ public final class OracleRdbmsResponse extends io.pulumi.resources.InvokeArgs {
     	      this.oracleSchemas = defaults.oracleSchemas;
         }
 
-        public Builder setOracleSchemas(List<OracleSchemaResponse> oracleSchemas) {
+        public Builder oracleSchemas(List<OracleSchemaResponse> oracleSchemas) {
             this.oracleSchemas = Objects.requireNonNull(oracleSchemas);
             return this;
         }

@@ -56,12 +56,12 @@ public final class IdentityForCmkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userAssignedIdentity = defaults.userAssignedIdentity;
         }
 
-        public Builder setUserAssignedIdentity(Input<String> userAssignedIdentity) {
+        public Builder userAssignedIdentity(Input<String> userAssignedIdentity) {
             this.userAssignedIdentity = Objects.requireNonNull(userAssignedIdentity);
             return this;
         }
 
-        public Builder setUserAssignedIdentity(String userAssignedIdentity) {
+        public Builder userAssignedIdentity(String userAssignedIdentity) {
             this.userAssignedIdentity = Input.of(Objects.requireNonNull(userAssignedIdentity));
             return this;
         }

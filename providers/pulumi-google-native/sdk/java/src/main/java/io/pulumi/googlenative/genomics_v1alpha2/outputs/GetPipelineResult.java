@@ -165,42 +165,42 @@ public final class GetPipelineResult {
     	      this.resources = defaults.resources;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDocker(DockerExecutorResponse docker) {
+        public Builder docker(DockerExecutorResponse docker) {
             this.docker = Objects.requireNonNull(docker);
             return this;
         }
 
-        public Builder setInputParameters(List<PipelineParameterResponse> inputParameters) {
+        public Builder inputParameters(List<PipelineParameterResponse> inputParameters) {
             this.inputParameters = Objects.requireNonNull(inputParameters);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOutputParameters(List<PipelineParameterResponse> outputParameters) {
+        public Builder outputParameters(List<PipelineParameterResponse> outputParameters) {
             this.outputParameters = Objects.requireNonNull(outputParameters);
             return this;
         }
 
-        public Builder setPipelineId(String pipelineId) {
+        public Builder pipelineId(String pipelineId) {
             this.pipelineId = Objects.requireNonNull(pipelineId);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setResources(PipelineResourcesResponse resources) {
+        public Builder resources(PipelineResourcesResponse resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }

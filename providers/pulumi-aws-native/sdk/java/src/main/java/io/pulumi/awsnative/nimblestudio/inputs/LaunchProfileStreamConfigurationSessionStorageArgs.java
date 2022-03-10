@@ -73,22 +73,22 @@ public final class LaunchProfileStreamConfigurationSessionStorageArgs extends io
     	      this.root = defaults.root;
         }
 
-        public Builder setMode(@Nullable Input<List<LaunchProfileStreamingSessionStorageMode>> mode) {
+        public Builder mode(@Nullable Input<List<LaunchProfileStreamingSessionStorageMode>> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable List<LaunchProfileStreamingSessionStorageMode> mode) {
+        public Builder mode(@Nullable List<LaunchProfileStreamingSessionStorageMode> mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }
 
-        public Builder setRoot(@Nullable Input<LaunchProfileStreamingSessionStorageRootArgs> root) {
+        public Builder root(@Nullable Input<LaunchProfileStreamingSessionStorageRootArgs> root) {
             this.root = root;
             return this;
         }
 
-        public Builder setRoot(@Nullable LaunchProfileStreamingSessionStorageRootArgs root) {
+        public Builder root(@Nullable LaunchProfileStreamingSessionStorageRootArgs root) {
             this.root = Input.ofNullable(root);
             return this;
         }

@@ -318,172 +318,172 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
     	      this.udpIdleTimeoutSec = defaults.udpIdleTimeoutSec;
         }
 
-        public Builder setDrainNatIps(@Nullable Input<List<String>> drainNatIps) {
+        public Builder drainNatIps(@Nullable Input<List<String>> drainNatIps) {
             this.drainNatIps = drainNatIps;
             return this;
         }
 
-        public Builder setDrainNatIps(@Nullable List<String> drainNatIps) {
+        public Builder drainNatIps(@Nullable List<String> drainNatIps) {
             this.drainNatIps = Input.ofNullable(drainNatIps);
             return this;
         }
 
-        public Builder setEnableDynamicPortAllocation(@Nullable Input<Boolean> enableDynamicPortAllocation) {
+        public Builder enableDynamicPortAllocation(@Nullable Input<Boolean> enableDynamicPortAllocation) {
             this.enableDynamicPortAllocation = enableDynamicPortAllocation;
             return this;
         }
 
-        public Builder setEnableDynamicPortAllocation(@Nullable Boolean enableDynamicPortAllocation) {
+        public Builder enableDynamicPortAllocation(@Nullable Boolean enableDynamicPortAllocation) {
             this.enableDynamicPortAllocation = Input.ofNullable(enableDynamicPortAllocation);
             return this;
         }
 
-        public Builder setEnableEndpointIndependentMapping(@Nullable Input<Boolean> enableEndpointIndependentMapping) {
+        public Builder enableEndpointIndependentMapping(@Nullable Input<Boolean> enableEndpointIndependentMapping) {
             this.enableEndpointIndependentMapping = enableEndpointIndependentMapping;
             return this;
         }
 
-        public Builder setEnableEndpointIndependentMapping(@Nullable Boolean enableEndpointIndependentMapping) {
+        public Builder enableEndpointIndependentMapping(@Nullable Boolean enableEndpointIndependentMapping) {
             this.enableEndpointIndependentMapping = Input.ofNullable(enableEndpointIndependentMapping);
             return this;
         }
 
-        public Builder setIcmpIdleTimeoutSec(@Nullable Input<Integer> icmpIdleTimeoutSec) {
+        public Builder icmpIdleTimeoutSec(@Nullable Input<Integer> icmpIdleTimeoutSec) {
             this.icmpIdleTimeoutSec = icmpIdleTimeoutSec;
             return this;
         }
 
-        public Builder setIcmpIdleTimeoutSec(@Nullable Integer icmpIdleTimeoutSec) {
+        public Builder icmpIdleTimeoutSec(@Nullable Integer icmpIdleTimeoutSec) {
             this.icmpIdleTimeoutSec = Input.ofNullable(icmpIdleTimeoutSec);
             return this;
         }
 
-        public Builder setLogConfig(@Nullable Input<RouterNatLogConfigArgs> logConfig) {
+        public Builder logConfig(@Nullable Input<RouterNatLogConfigArgs> logConfig) {
             this.logConfig = logConfig;
             return this;
         }
 
-        public Builder setLogConfig(@Nullable RouterNatLogConfigArgs logConfig) {
+        public Builder logConfig(@Nullable RouterNatLogConfigArgs logConfig) {
             this.logConfig = Input.ofNullable(logConfig);
             return this;
         }
 
-        public Builder setMaxPortsPerVm(@Nullable Input<Integer> maxPortsPerVm) {
+        public Builder maxPortsPerVm(@Nullable Input<Integer> maxPortsPerVm) {
             this.maxPortsPerVm = maxPortsPerVm;
             return this;
         }
 
-        public Builder setMaxPortsPerVm(@Nullable Integer maxPortsPerVm) {
+        public Builder maxPortsPerVm(@Nullable Integer maxPortsPerVm) {
             this.maxPortsPerVm = Input.ofNullable(maxPortsPerVm);
             return this;
         }
 
-        public Builder setMinPortsPerVm(@Nullable Input<Integer> minPortsPerVm) {
+        public Builder minPortsPerVm(@Nullable Input<Integer> minPortsPerVm) {
             this.minPortsPerVm = minPortsPerVm;
             return this;
         }
 
-        public Builder setMinPortsPerVm(@Nullable Integer minPortsPerVm) {
+        public Builder minPortsPerVm(@Nullable Integer minPortsPerVm) {
             this.minPortsPerVm = Input.ofNullable(minPortsPerVm);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNatIpAllocateOption(@Nullable Input<RouterNatNatIpAllocateOption> natIpAllocateOption) {
+        public Builder natIpAllocateOption(@Nullable Input<RouterNatNatIpAllocateOption> natIpAllocateOption) {
             this.natIpAllocateOption = natIpAllocateOption;
             return this;
         }
 
-        public Builder setNatIpAllocateOption(@Nullable RouterNatNatIpAllocateOption natIpAllocateOption) {
+        public Builder natIpAllocateOption(@Nullable RouterNatNatIpAllocateOption natIpAllocateOption) {
             this.natIpAllocateOption = Input.ofNullable(natIpAllocateOption);
             return this;
         }
 
-        public Builder setNatIps(@Nullable Input<List<String>> natIps) {
+        public Builder natIps(@Nullable Input<List<String>> natIps) {
             this.natIps = natIps;
             return this;
         }
 
-        public Builder setNatIps(@Nullable List<String> natIps) {
+        public Builder natIps(@Nullable List<String> natIps) {
             this.natIps = Input.ofNullable(natIps);
             return this;
         }
 
-        public Builder setRules(@Nullable Input<List<RouterNatRuleArgs>> rules) {
+        public Builder rules(@Nullable Input<List<RouterNatRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setRules(@Nullable List<RouterNatRuleArgs> rules) {
+        public Builder rules(@Nullable List<RouterNatRuleArgs> rules) {
             this.rules = Input.ofNullable(rules);
             return this;
         }
 
-        public Builder setSourceSubnetworkIpRangesToNat(@Nullable Input<RouterNatSourceSubnetworkIpRangesToNat> sourceSubnetworkIpRangesToNat) {
+        public Builder sourceSubnetworkIpRangesToNat(@Nullable Input<RouterNatSourceSubnetworkIpRangesToNat> sourceSubnetworkIpRangesToNat) {
             this.sourceSubnetworkIpRangesToNat = sourceSubnetworkIpRangesToNat;
             return this;
         }
 
-        public Builder setSourceSubnetworkIpRangesToNat(@Nullable RouterNatSourceSubnetworkIpRangesToNat sourceSubnetworkIpRangesToNat) {
+        public Builder sourceSubnetworkIpRangesToNat(@Nullable RouterNatSourceSubnetworkIpRangesToNat sourceSubnetworkIpRangesToNat) {
             this.sourceSubnetworkIpRangesToNat = Input.ofNullable(sourceSubnetworkIpRangesToNat);
             return this;
         }
 
-        public Builder setSubnetworks(@Nullable Input<List<RouterNatSubnetworkToNatArgs>> subnetworks) {
+        public Builder subnetworks(@Nullable Input<List<RouterNatSubnetworkToNatArgs>> subnetworks) {
             this.subnetworks = subnetworks;
             return this;
         }
 
-        public Builder setSubnetworks(@Nullable List<RouterNatSubnetworkToNatArgs> subnetworks) {
+        public Builder subnetworks(@Nullable List<RouterNatSubnetworkToNatArgs> subnetworks) {
             this.subnetworks = Input.ofNullable(subnetworks);
             return this;
         }
 
-        public Builder setTcpEstablishedIdleTimeoutSec(@Nullable Input<Integer> tcpEstablishedIdleTimeoutSec) {
+        public Builder tcpEstablishedIdleTimeoutSec(@Nullable Input<Integer> tcpEstablishedIdleTimeoutSec) {
             this.tcpEstablishedIdleTimeoutSec = tcpEstablishedIdleTimeoutSec;
             return this;
         }
 
-        public Builder setTcpEstablishedIdleTimeoutSec(@Nullable Integer tcpEstablishedIdleTimeoutSec) {
+        public Builder tcpEstablishedIdleTimeoutSec(@Nullable Integer tcpEstablishedIdleTimeoutSec) {
             this.tcpEstablishedIdleTimeoutSec = Input.ofNullable(tcpEstablishedIdleTimeoutSec);
             return this;
         }
 
-        public Builder setTcpTimeWaitTimeoutSec(@Nullable Input<Integer> tcpTimeWaitTimeoutSec) {
+        public Builder tcpTimeWaitTimeoutSec(@Nullable Input<Integer> tcpTimeWaitTimeoutSec) {
             this.tcpTimeWaitTimeoutSec = tcpTimeWaitTimeoutSec;
             return this;
         }
 
-        public Builder setTcpTimeWaitTimeoutSec(@Nullable Integer tcpTimeWaitTimeoutSec) {
+        public Builder tcpTimeWaitTimeoutSec(@Nullable Integer tcpTimeWaitTimeoutSec) {
             this.tcpTimeWaitTimeoutSec = Input.ofNullable(tcpTimeWaitTimeoutSec);
             return this;
         }
 
-        public Builder setTcpTransitoryIdleTimeoutSec(@Nullable Input<Integer> tcpTransitoryIdleTimeoutSec) {
+        public Builder tcpTransitoryIdleTimeoutSec(@Nullable Input<Integer> tcpTransitoryIdleTimeoutSec) {
             this.tcpTransitoryIdleTimeoutSec = tcpTransitoryIdleTimeoutSec;
             return this;
         }
 
-        public Builder setTcpTransitoryIdleTimeoutSec(@Nullable Integer tcpTransitoryIdleTimeoutSec) {
+        public Builder tcpTransitoryIdleTimeoutSec(@Nullable Integer tcpTransitoryIdleTimeoutSec) {
             this.tcpTransitoryIdleTimeoutSec = Input.ofNullable(tcpTransitoryIdleTimeoutSec);
             return this;
         }
 
-        public Builder setUdpIdleTimeoutSec(@Nullable Input<Integer> udpIdleTimeoutSec) {
+        public Builder udpIdleTimeoutSec(@Nullable Input<Integer> udpIdleTimeoutSec) {
             this.udpIdleTimeoutSec = udpIdleTimeoutSec;
             return this;
         }
 
-        public Builder setUdpIdleTimeoutSec(@Nullable Integer udpIdleTimeoutSec) {
+        public Builder udpIdleTimeoutSec(@Nullable Integer udpIdleTimeoutSec) {
             this.udpIdleTimeoutSec = Input.ofNullable(udpIdleTimeoutSec);
             return this;
         }

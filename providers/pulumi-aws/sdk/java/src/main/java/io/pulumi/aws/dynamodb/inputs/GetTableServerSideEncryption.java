@@ -61,12 +61,12 @@ public final class GetTableServerSideEncryption extends io.pulumi.resources.Invo
     	      this.kmsKeyArn = defaults.kmsKeyArn;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setKmsKeyArn(String kmsKeyArn) {
+        public Builder kmsKeyArn(String kmsKeyArn) {
             this.kmsKeyArn = Objects.requireNonNull(kmsKeyArn);
             return this;
         }

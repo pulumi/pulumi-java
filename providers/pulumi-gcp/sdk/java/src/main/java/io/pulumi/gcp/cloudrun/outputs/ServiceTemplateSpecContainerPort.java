@@ -84,17 +84,17 @@ public final class ServiceTemplateSpecContainerPort {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setContainerPort(Integer containerPort) {
+        public Builder containerPort(Integer containerPort) {
             this.containerPort = Objects.requireNonNull(containerPort);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }

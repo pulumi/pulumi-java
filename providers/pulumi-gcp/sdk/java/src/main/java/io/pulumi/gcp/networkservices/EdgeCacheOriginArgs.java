@@ -250,112 +250,112 @@ public final class EdgeCacheOriginArgs extends io.pulumi.resources.ResourceArgs 
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFailoverOrigin(@Nullable Input<String> failoverOrigin) {
+        public Builder failoverOrigin(@Nullable Input<String> failoverOrigin) {
             this.failoverOrigin = failoverOrigin;
             return this;
         }
 
-        public Builder setFailoverOrigin(@Nullable String failoverOrigin) {
+        public Builder failoverOrigin(@Nullable String failoverOrigin) {
             this.failoverOrigin = Input.ofNullable(failoverOrigin);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setMaxAttempts(@Nullable Input<Integer> maxAttempts) {
+        public Builder maxAttempts(@Nullable Input<Integer> maxAttempts) {
             this.maxAttempts = maxAttempts;
             return this;
         }
 
-        public Builder setMaxAttempts(@Nullable Integer maxAttempts) {
+        public Builder maxAttempts(@Nullable Integer maxAttempts) {
             this.maxAttempts = Input.ofNullable(maxAttempts);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOriginAddress(Input<String> originAddress) {
+        public Builder originAddress(Input<String> originAddress) {
             this.originAddress = Objects.requireNonNull(originAddress);
             return this;
         }
 
-        public Builder setOriginAddress(String originAddress) {
+        public Builder originAddress(String originAddress) {
             this.originAddress = Input.of(Objects.requireNonNull(originAddress));
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Input<Integer> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setProtocol(@Nullable Input<String> protocol) {
+        public Builder protocol(@Nullable Input<String> protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = Input.ofNullable(protocol);
             return this;
         }
 
-        public Builder setRetryConditions(@Nullable Input<List<String>> retryConditions) {
+        public Builder retryConditions(@Nullable Input<List<String>> retryConditions) {
             this.retryConditions = retryConditions;
             return this;
         }
 
-        public Builder setRetryConditions(@Nullable List<String> retryConditions) {
+        public Builder retryConditions(@Nullable List<String> retryConditions) {
             this.retryConditions = Input.ofNullable(retryConditions);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<EdgeCacheOriginTimeoutArgs> timeout) {
+        public Builder timeout(@Nullable Input<EdgeCacheOriginTimeoutArgs> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable EdgeCacheOriginTimeoutArgs timeout) {
+        public Builder timeout(@Nullable EdgeCacheOriginTimeoutArgs timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }

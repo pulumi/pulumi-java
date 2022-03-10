@@ -120,52 +120,52 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
     	      this.transparentDataEncryptionName = defaults.transparentDataEncryptionName;
         }
 
-        public Builder setDatabaseName(Input<String> databaseName) {
+        public Builder databaseName(Input<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Input.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServerName(Input<String> serverName) {
+        public Builder serverName(Input<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
-        public Builder setServerName(String serverName) {
+        public Builder serverName(String serverName) {
             this.serverName = Input.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<Either<String,TransparentDataEncryptionStatus>> status) {
+        public Builder status(@Nullable Input<Either<String,TransparentDataEncryptionStatus>> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable Either<String,TransparentDataEncryptionStatus> status) {
+        public Builder status(@Nullable Either<String,TransparentDataEncryptionStatus> status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setTransparentDataEncryptionName(@Nullable Input<String> transparentDataEncryptionName) {
+        public Builder transparentDataEncryptionName(@Nullable Input<String> transparentDataEncryptionName) {
             this.transparentDataEncryptionName = transparentDataEncryptionName;
             return this;
         }
 
-        public Builder setTransparentDataEncryptionName(@Nullable String transparentDataEncryptionName) {
+        public Builder transparentDataEncryptionName(@Nullable String transparentDataEncryptionName) {
             this.transparentDataEncryptionName = Input.ofNullable(transparentDataEncryptionName);
             return this;
         }

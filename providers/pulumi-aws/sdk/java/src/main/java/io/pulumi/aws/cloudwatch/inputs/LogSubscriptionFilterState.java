@@ -134,57 +134,57 @@ public final class LogSubscriptionFilterState extends io.pulumi.resources.Resour
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setDestinationArn(@Nullable Input<String> destinationArn) {
+        public Builder destinationArn(@Nullable Input<String> destinationArn) {
             this.destinationArn = destinationArn;
             return this;
         }
 
-        public Builder setDestinationArn(@Nullable String destinationArn) {
+        public Builder destinationArn(@Nullable String destinationArn) {
             this.destinationArn = Input.ofNullable(destinationArn);
             return this;
         }
 
-        public Builder setDistribution(@Nullable Input<String> distribution) {
+        public Builder distribution(@Nullable Input<String> distribution) {
             this.distribution = distribution;
             return this;
         }
 
-        public Builder setDistribution(@Nullable String distribution) {
+        public Builder distribution(@Nullable String distribution) {
             this.distribution = Input.ofNullable(distribution);
             return this;
         }
 
-        public Builder setFilterPattern(@Nullable Input<String> filterPattern) {
+        public Builder filterPattern(@Nullable Input<String> filterPattern) {
             this.filterPattern = filterPattern;
             return this;
         }
 
-        public Builder setFilterPattern(@Nullable String filterPattern) {
+        public Builder filterPattern(@Nullable String filterPattern) {
             this.filterPattern = Input.ofNullable(filterPattern);
             return this;
         }
 
-        public Builder setLogGroup(@Nullable Input<String> logGroup) {
+        public Builder logGroup(@Nullable Input<String> logGroup) {
             this.logGroup = logGroup;
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRoleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Input<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Input.ofNullable(roleArn);
             return this;
         }

@@ -322,172 +322,172 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     	      this.states = defaults.states;
         }
 
-        public Builder setBlocked(@Nullable Input<Boolean> blocked) {
+        public Builder blocked(@Nullable Input<Boolean> blocked) {
             this.blocked = blocked;
             return this;
         }
 
-        public Builder setBlocked(@Nullable Boolean blocked) {
+        public Builder blocked(@Nullable Boolean blocked) {
             this.blocked = Input.ofNullable(blocked);
             return this;
         }
 
-        public Builder setConfigs(@Nullable Input<List<DeviceConfigGetArgs>> configs) {
+        public Builder configs(@Nullable Input<List<DeviceConfigGetArgs>> configs) {
             this.configs = configs;
             return this;
         }
 
-        public Builder setConfigs(@Nullable List<DeviceConfigGetArgs> configs) {
+        public Builder configs(@Nullable List<DeviceConfigGetArgs> configs) {
             this.configs = Input.ofNullable(configs);
             return this;
         }
 
-        public Builder setCredentials(@Nullable Input<List<DeviceCredentialGetArgs>> credentials) {
+        public Builder credentials(@Nullable Input<List<DeviceCredentialGetArgs>> credentials) {
             this.credentials = credentials;
             return this;
         }
 
-        public Builder setCredentials(@Nullable List<DeviceCredentialGetArgs> credentials) {
+        public Builder credentials(@Nullable List<DeviceCredentialGetArgs> credentials) {
             this.credentials = Input.ofNullable(credentials);
             return this;
         }
 
-        public Builder setGatewayConfig(@Nullable Input<DeviceGatewayConfigGetArgs> gatewayConfig) {
+        public Builder gatewayConfig(@Nullable Input<DeviceGatewayConfigGetArgs> gatewayConfig) {
             this.gatewayConfig = gatewayConfig;
             return this;
         }
 
-        public Builder setGatewayConfig(@Nullable DeviceGatewayConfigGetArgs gatewayConfig) {
+        public Builder gatewayConfig(@Nullable DeviceGatewayConfigGetArgs gatewayConfig) {
             this.gatewayConfig = Input.ofNullable(gatewayConfig);
             return this;
         }
 
-        public Builder setLastConfigAckTime(@Nullable Input<String> lastConfigAckTime) {
+        public Builder lastConfigAckTime(@Nullable Input<String> lastConfigAckTime) {
             this.lastConfigAckTime = lastConfigAckTime;
             return this;
         }
 
-        public Builder setLastConfigAckTime(@Nullable String lastConfigAckTime) {
+        public Builder lastConfigAckTime(@Nullable String lastConfigAckTime) {
             this.lastConfigAckTime = Input.ofNullable(lastConfigAckTime);
             return this;
         }
 
-        public Builder setLastConfigSendTime(@Nullable Input<String> lastConfigSendTime) {
+        public Builder lastConfigSendTime(@Nullable Input<String> lastConfigSendTime) {
             this.lastConfigSendTime = lastConfigSendTime;
             return this;
         }
 
-        public Builder setLastConfigSendTime(@Nullable String lastConfigSendTime) {
+        public Builder lastConfigSendTime(@Nullable String lastConfigSendTime) {
             this.lastConfigSendTime = Input.ofNullable(lastConfigSendTime);
             return this;
         }
 
-        public Builder setLastErrorStatuses(@Nullable Input<List<DeviceLastErrorStatusGetArgs>> lastErrorStatuses) {
+        public Builder lastErrorStatuses(@Nullable Input<List<DeviceLastErrorStatusGetArgs>> lastErrorStatuses) {
             this.lastErrorStatuses = lastErrorStatuses;
             return this;
         }
 
-        public Builder setLastErrorStatuses(@Nullable List<DeviceLastErrorStatusGetArgs> lastErrorStatuses) {
+        public Builder lastErrorStatuses(@Nullable List<DeviceLastErrorStatusGetArgs> lastErrorStatuses) {
             this.lastErrorStatuses = Input.ofNullable(lastErrorStatuses);
             return this;
         }
 
-        public Builder setLastErrorTime(@Nullable Input<String> lastErrorTime) {
+        public Builder lastErrorTime(@Nullable Input<String> lastErrorTime) {
             this.lastErrorTime = lastErrorTime;
             return this;
         }
 
-        public Builder setLastErrorTime(@Nullable String lastErrorTime) {
+        public Builder lastErrorTime(@Nullable String lastErrorTime) {
             this.lastErrorTime = Input.ofNullable(lastErrorTime);
             return this;
         }
 
-        public Builder setLastEventTime(@Nullable Input<String> lastEventTime) {
+        public Builder lastEventTime(@Nullable Input<String> lastEventTime) {
             this.lastEventTime = lastEventTime;
             return this;
         }
 
-        public Builder setLastEventTime(@Nullable String lastEventTime) {
+        public Builder lastEventTime(@Nullable String lastEventTime) {
             this.lastEventTime = Input.ofNullable(lastEventTime);
             return this;
         }
 
-        public Builder setLastHeartbeatTime(@Nullable Input<String> lastHeartbeatTime) {
+        public Builder lastHeartbeatTime(@Nullable Input<String> lastHeartbeatTime) {
             this.lastHeartbeatTime = lastHeartbeatTime;
             return this;
         }
 
-        public Builder setLastHeartbeatTime(@Nullable String lastHeartbeatTime) {
+        public Builder lastHeartbeatTime(@Nullable String lastHeartbeatTime) {
             this.lastHeartbeatTime = Input.ofNullable(lastHeartbeatTime);
             return this;
         }
 
-        public Builder setLastStateTime(@Nullable Input<String> lastStateTime) {
+        public Builder lastStateTime(@Nullable Input<String> lastStateTime) {
             this.lastStateTime = lastStateTime;
             return this;
         }
 
-        public Builder setLastStateTime(@Nullable String lastStateTime) {
+        public Builder lastStateTime(@Nullable String lastStateTime) {
             this.lastStateTime = Input.ofNullable(lastStateTime);
             return this;
         }
 
-        public Builder setLogLevel(@Nullable Input<String> logLevel) {
+        public Builder logLevel(@Nullable Input<String> logLevel) {
             this.logLevel = logLevel;
             return this;
         }
 
-        public Builder setLogLevel(@Nullable String logLevel) {
+        public Builder logLevel(@Nullable String logLevel) {
             this.logLevel = Input.ofNullable(logLevel);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNumId(@Nullable Input<String> numId) {
+        public Builder numId(@Nullable Input<String> numId) {
             this.numId = numId;
             return this;
         }
 
-        public Builder setNumId(@Nullable String numId) {
+        public Builder numId(@Nullable String numId) {
             this.numId = Input.ofNullable(numId);
             return this;
         }
 
-        public Builder setRegistry(@Nullable Input<String> registry) {
+        public Builder registry(@Nullable Input<String> registry) {
             this.registry = registry;
             return this;
         }
 
-        public Builder setRegistry(@Nullable String registry) {
+        public Builder registry(@Nullable String registry) {
             this.registry = Input.ofNullable(registry);
             return this;
         }
 
-        public Builder setStates(@Nullable Input<List<DeviceStateGetArgs>> states) {
+        public Builder states(@Nullable Input<List<DeviceStateGetArgs>> states) {
             this.states = states;
             return this;
         }
 
-        public Builder setStates(@Nullable List<DeviceStateGetArgs> states) {
+        public Builder states(@Nullable List<DeviceStateGetArgs> states) {
             this.states = Input.ofNullable(states);
             return this;
         }

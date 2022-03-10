@@ -73,22 +73,22 @@ public final class ClusterAddonsConfigCloudrunConfigGetArgs extends io.pulumi.re
     	      this.loadBalancerType = defaults.loadBalancerType;
         }
 
-        public Builder setDisabled(Input<Boolean> disabled) {
+        public Builder disabled(Input<Boolean> disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
 
-        public Builder setDisabled(Boolean disabled) {
+        public Builder disabled(Boolean disabled) {
             this.disabled = Input.of(Objects.requireNonNull(disabled));
             return this;
         }
 
-        public Builder setLoadBalancerType(@Nullable Input<String> loadBalancerType) {
+        public Builder loadBalancerType(@Nullable Input<String> loadBalancerType) {
             this.loadBalancerType = loadBalancerType;
             return this;
         }
 
-        public Builder setLoadBalancerType(@Nullable String loadBalancerType) {
+        public Builder loadBalancerType(@Nullable String loadBalancerType) {
             this.loadBalancerType = Input.ofNullable(loadBalancerType);
             return this;
         }

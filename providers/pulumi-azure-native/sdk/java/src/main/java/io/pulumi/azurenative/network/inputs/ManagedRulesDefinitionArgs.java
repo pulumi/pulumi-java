@@ -76,22 +76,22 @@ public final class ManagedRulesDefinitionArgs extends io.pulumi.resources.Resour
     	      this.managedRuleSets = defaults.managedRuleSets;
         }
 
-        public Builder setExclusions(@Nullable Input<List<OwaspCrsExclusionEntryArgs>> exclusions) {
+        public Builder exclusions(@Nullable Input<List<OwaspCrsExclusionEntryArgs>> exclusions) {
             this.exclusions = exclusions;
             return this;
         }
 
-        public Builder setExclusions(@Nullable List<OwaspCrsExclusionEntryArgs> exclusions) {
+        public Builder exclusions(@Nullable List<OwaspCrsExclusionEntryArgs> exclusions) {
             this.exclusions = Input.ofNullable(exclusions);
             return this;
         }
 
-        public Builder setManagedRuleSets(Input<List<ManagedRuleSetArgs>> managedRuleSets) {
+        public Builder managedRuleSets(Input<List<ManagedRuleSetArgs>> managedRuleSets) {
             this.managedRuleSets = Objects.requireNonNull(managedRuleSets);
             return this;
         }
 
-        public Builder setManagedRuleSets(List<ManagedRuleSetArgs> managedRuleSets) {
+        public Builder managedRuleSets(List<ManagedRuleSetArgs> managedRuleSets) {
             this.managedRuleSets = Input.of(Objects.requireNonNull(managedRuleSets));
             return this;
         }

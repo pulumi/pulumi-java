@@ -58,12 +58,12 @@ public final class RemediationFiltersArgs extends io.pulumi.resources.ResourceAr
     	      this.locations = defaults.locations;
         }
 
-        public Builder setLocations(@Nullable Input<List<String>> locations) {
+        public Builder locations(@Nullable Input<List<String>> locations) {
             this.locations = locations;
             return this;
         }
 
-        public Builder setLocations(@Nullable List<String> locations) {
+        public Builder locations(@Nullable List<String> locations) {
             this.locations = Input.ofNullable(locations);
             return this;
         }

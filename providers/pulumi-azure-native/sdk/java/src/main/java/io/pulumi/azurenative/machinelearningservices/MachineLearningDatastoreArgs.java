@@ -585,342 +585,342 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
     	      this.workspaceSystemAssignedIdentity = defaults.workspaceSystemAssignedIdentity;
         }
 
-        public Builder setAccountKey(@Nullable Input<String> accountKey) {
+        public Builder accountKey(@Nullable Input<String> accountKey) {
             this.accountKey = accountKey;
             return this;
         }
 
-        public Builder setAccountKey(@Nullable String accountKey) {
+        public Builder accountKey(@Nullable String accountKey) {
             this.accountKey = Input.ofNullable(accountKey);
             return this;
         }
 
-        public Builder setAccountName(@Nullable Input<String> accountName) {
+        public Builder accountName(@Nullable Input<String> accountName) {
             this.accountName = accountName;
             return this;
         }
 
-        public Builder setAccountName(@Nullable String accountName) {
+        public Builder accountName(@Nullable String accountName) {
             this.accountName = Input.ofNullable(accountName);
             return this;
         }
 
-        public Builder setAdlsResourceGroup(@Nullable Input<String> adlsResourceGroup) {
+        public Builder adlsResourceGroup(@Nullable Input<String> adlsResourceGroup) {
             this.adlsResourceGroup = adlsResourceGroup;
             return this;
         }
 
-        public Builder setAdlsResourceGroup(@Nullable String adlsResourceGroup) {
+        public Builder adlsResourceGroup(@Nullable String adlsResourceGroup) {
             this.adlsResourceGroup = Input.ofNullable(adlsResourceGroup);
             return this;
         }
 
-        public Builder setAdlsSubscriptionId(@Nullable Input<String> adlsSubscriptionId) {
+        public Builder adlsSubscriptionId(@Nullable Input<String> adlsSubscriptionId) {
             this.adlsSubscriptionId = adlsSubscriptionId;
             return this;
         }
 
-        public Builder setAdlsSubscriptionId(@Nullable String adlsSubscriptionId) {
+        public Builder adlsSubscriptionId(@Nullable String adlsSubscriptionId) {
             this.adlsSubscriptionId = Input.ofNullable(adlsSubscriptionId);
             return this;
         }
 
-        public Builder setAuthorityUrl(@Nullable Input<String> authorityUrl) {
+        public Builder authorityUrl(@Nullable Input<String> authorityUrl) {
             this.authorityUrl = authorityUrl;
             return this;
         }
 
-        public Builder setAuthorityUrl(@Nullable String authorityUrl) {
+        public Builder authorityUrl(@Nullable String authorityUrl) {
             this.authorityUrl = Input.ofNullable(authorityUrl);
             return this;
         }
 
-        public Builder setClientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Input<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = Input.ofNullable(clientId);
             return this;
         }
 
-        public Builder setClientSecret(@Nullable Input<String> clientSecret) {
+        public Builder clientSecret(@Nullable Input<String> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
-        public Builder setClientSecret(@Nullable String clientSecret) {
+        public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = Input.ofNullable(clientSecret);
             return this;
         }
 
-        public Builder setContainerName(@Nullable Input<String> containerName) {
+        public Builder containerName(@Nullable Input<String> containerName) {
             this.containerName = containerName;
             return this;
         }
 
-        public Builder setContainerName(@Nullable String containerName) {
+        public Builder containerName(@Nullable String containerName) {
             this.containerName = Input.ofNullable(containerName);
             return this;
         }
 
-        public Builder setDataStoreType(Input<Either<String,DatastoreTypeArm>> dataStoreType) {
+        public Builder dataStoreType(Input<Either<String,DatastoreTypeArm>> dataStoreType) {
             this.dataStoreType = Objects.requireNonNull(dataStoreType);
             return this;
         }
 
-        public Builder setDataStoreType(Either<String,DatastoreTypeArm> dataStoreType) {
+        public Builder dataStoreType(Either<String,DatastoreTypeArm> dataStoreType) {
             this.dataStoreType = Input.of(Objects.requireNonNull(dataStoreType));
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable Input<String> databaseName) {
+        public Builder databaseName(@Nullable Input<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable String databaseName) {
+        public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = Input.ofNullable(databaseName);
             return this;
         }
 
-        public Builder setDatastoreName(@Nullable Input<String> datastoreName) {
+        public Builder datastoreName(@Nullable Input<String> datastoreName) {
             this.datastoreName = datastoreName;
             return this;
         }
 
-        public Builder setDatastoreName(@Nullable String datastoreName) {
+        public Builder datastoreName(@Nullable String datastoreName) {
             this.datastoreName = Input.ofNullable(datastoreName);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEndpoint(@Nullable Input<String> endpoint) {
+        public Builder endpoint(@Nullable Input<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setEndpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = Input.ofNullable(endpoint);
             return this;
         }
 
-        public Builder setEnforceSSL(@Nullable Input<Boolean> enforceSSL) {
+        public Builder enforceSSL(@Nullable Input<Boolean> enforceSSL) {
             this.enforceSSL = enforceSSL;
             return this;
         }
 
-        public Builder setEnforceSSL(@Nullable Boolean enforceSSL) {
+        public Builder enforceSSL(@Nullable Boolean enforceSSL) {
             this.enforceSSL = Input.ofNullable(enforceSSL);
             return this;
         }
 
-        public Builder setFileSystem(@Nullable Input<String> fileSystem) {
+        public Builder fileSystem(@Nullable Input<String> fileSystem) {
             this.fileSystem = fileSystem;
             return this;
         }
 
-        public Builder setFileSystem(@Nullable String fileSystem) {
+        public Builder fileSystem(@Nullable String fileSystem) {
             this.fileSystem = Input.ofNullable(fileSystem);
             return this;
         }
 
-        public Builder setIncludeSecret(@Nullable Input<Boolean> includeSecret) {
+        public Builder includeSecret(@Nullable Input<Boolean> includeSecret) {
             this.includeSecret = includeSecret;
             return this;
         }
 
-        public Builder setIncludeSecret(@Nullable Boolean includeSecret) {
+        public Builder includeSecret(@Nullable Boolean includeSecret) {
             this.includeSecret = Input.ofNullable(includeSecret);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<String> password) {
+        public Builder password(@Nullable Input<String> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<String> port) {
+        public Builder port(@Nullable Input<String> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable String port) {
+        public Builder port(@Nullable String port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setProtocol(@Nullable Input<String> protocol) {
+        public Builder protocol(@Nullable Input<String> protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = Input.ofNullable(protocol);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceUrl(@Nullable Input<String> resourceUrl) {
+        public Builder resourceUrl(@Nullable Input<String> resourceUrl) {
             this.resourceUrl = resourceUrl;
             return this;
         }
 
-        public Builder setResourceUrl(@Nullable String resourceUrl) {
+        public Builder resourceUrl(@Nullable String resourceUrl) {
             this.resourceUrl = Input.ofNullable(resourceUrl);
             return this;
         }
 
-        public Builder setSasToken(@Nullable Input<String> sasToken) {
+        public Builder sasToken(@Nullable Input<String> sasToken) {
             this.sasToken = sasToken;
             return this;
         }
 
-        public Builder setSasToken(@Nullable String sasToken) {
+        public Builder sasToken(@Nullable String sasToken) {
             this.sasToken = Input.ofNullable(sasToken);
             return this;
         }
 
-        public Builder setServerName(@Nullable Input<String> serverName) {
+        public Builder serverName(@Nullable Input<String> serverName) {
             this.serverName = serverName;
             return this;
         }
 
-        public Builder setServerName(@Nullable String serverName) {
+        public Builder serverName(@Nullable String serverName) {
             this.serverName = Input.ofNullable(serverName);
             return this;
         }
 
-        public Builder setShareName(@Nullable Input<String> shareName) {
+        public Builder shareName(@Nullable Input<String> shareName) {
             this.shareName = shareName;
             return this;
         }
 
-        public Builder setShareName(@Nullable String shareName) {
+        public Builder shareName(@Nullable String shareName) {
             this.shareName = Input.ofNullable(shareName);
             return this;
         }
 
-        public Builder setSkipValidation(@Nullable Input<Boolean> skipValidation) {
+        public Builder skipValidation(@Nullable Input<Boolean> skipValidation) {
             this.skipValidation = skipValidation;
             return this;
         }
 
-        public Builder setSkipValidation(@Nullable Boolean skipValidation) {
+        public Builder skipValidation(@Nullable Boolean skipValidation) {
             this.skipValidation = Input.ofNullable(skipValidation);
             return this;
         }
 
-        public Builder setStorageAccountResourceGroup(@Nullable Input<String> storageAccountResourceGroup) {
+        public Builder storageAccountResourceGroup(@Nullable Input<String> storageAccountResourceGroup) {
             this.storageAccountResourceGroup = storageAccountResourceGroup;
             return this;
         }
 
-        public Builder setStorageAccountResourceGroup(@Nullable String storageAccountResourceGroup) {
+        public Builder storageAccountResourceGroup(@Nullable String storageAccountResourceGroup) {
             this.storageAccountResourceGroup = Input.ofNullable(storageAccountResourceGroup);
             return this;
         }
 
-        public Builder setStorageAccountSubscriptionId(@Nullable Input<String> storageAccountSubscriptionId) {
+        public Builder storageAccountSubscriptionId(@Nullable Input<String> storageAccountSubscriptionId) {
             this.storageAccountSubscriptionId = storageAccountSubscriptionId;
             return this;
         }
 
-        public Builder setStorageAccountSubscriptionId(@Nullable String storageAccountSubscriptionId) {
+        public Builder storageAccountSubscriptionId(@Nullable String storageAccountSubscriptionId) {
             this.storageAccountSubscriptionId = Input.ofNullable(storageAccountSubscriptionId);
             return this;
         }
 
-        public Builder setStoreName(@Nullable Input<String> storeName) {
+        public Builder storeName(@Nullable Input<String> storeName) {
             this.storeName = storeName;
             return this;
         }
 
-        public Builder setStoreName(@Nullable String storeName) {
+        public Builder storeName(@Nullable String storeName) {
             this.storeName = Input.ofNullable(storeName);
             return this;
         }
 
-        public Builder setTenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Input<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Input.ofNullable(tenantId);
             return this;
         }
 
-        public Builder setUserId(@Nullable Input<String> userId) {
+        public Builder userId(@Nullable Input<String> userId) {
             this.userId = userId;
             return this;
         }
 
-        public Builder setUserId(@Nullable String userId) {
+        public Builder userId(@Nullable String userId) {
             this.userId = Input.ofNullable(userId);
             return this;
         }
 
-        public Builder setUserName(@Nullable Input<String> userName) {
+        public Builder userName(@Nullable Input<String> userName) {
             this.userName = userName;
             return this;
         }
 
-        public Builder setUserName(@Nullable String userName) {
+        public Builder userName(@Nullable String userName) {
             this.userName = Input.ofNullable(userName);
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
 
-        public Builder setWorkspaceSystemAssignedIdentity(@Nullable Input<Boolean> workspaceSystemAssignedIdentity) {
+        public Builder workspaceSystemAssignedIdentity(@Nullable Input<Boolean> workspaceSystemAssignedIdentity) {
             this.workspaceSystemAssignedIdentity = workspaceSystemAssignedIdentity;
             return this;
         }
 
-        public Builder setWorkspaceSystemAssignedIdentity(@Nullable Boolean workspaceSystemAssignedIdentity) {
+        public Builder workspaceSystemAssignedIdentity(@Nullable Boolean workspaceSystemAssignedIdentity) {
             this.workspaceSystemAssignedIdentity = Input.ofNullable(workspaceSystemAssignedIdentity);
             return this;
         }

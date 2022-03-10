@@ -102,42 +102,42 @@ public final class DiagnosticLoggerArgs extends io.pulumi.resources.ResourceArgs
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setDiagnosticId(Input<String> diagnosticId) {
+        public Builder diagnosticId(Input<String> diagnosticId) {
             this.diagnosticId = Objects.requireNonNull(diagnosticId);
             return this;
         }
 
-        public Builder setDiagnosticId(String diagnosticId) {
+        public Builder diagnosticId(String diagnosticId) {
             this.diagnosticId = Input.of(Objects.requireNonNull(diagnosticId));
             return this;
         }
 
-        public Builder setLoggerid(@Nullable Input<String> loggerid) {
+        public Builder loggerid(@Nullable Input<String> loggerid) {
             this.loggerid = loggerid;
             return this;
         }
 
-        public Builder setLoggerid(@Nullable String loggerid) {
+        public Builder loggerid(@Nullable String loggerid) {
             this.loggerid = Input.ofNullable(loggerid);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }

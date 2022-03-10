@@ -67,12 +67,12 @@ public final class ListGatewayKeysResult {
     	      this.secondary = defaults.secondary;
         }
 
-        public Builder setPrimary(@Nullable String primary) {
+        public Builder primary(@Nullable String primary) {
             this.primary = primary;
             return this;
         }
 
-        public Builder setSecondary(@Nullable String secondary) {
+        public Builder secondary(@Nullable String secondary) {
             this.secondary = secondary;
             return this;
         }

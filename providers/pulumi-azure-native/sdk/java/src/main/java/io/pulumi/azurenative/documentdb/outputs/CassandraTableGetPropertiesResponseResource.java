@@ -150,37 +150,37 @@ public final class CassandraTableGetPropertiesResponseResource {
     	      this.ts = defaults.ts;
         }
 
-        public Builder setAnalyticalStorageTtl(@Nullable Integer analyticalStorageTtl) {
+        public Builder analyticalStorageTtl(@Nullable Integer analyticalStorageTtl) {
             this.analyticalStorageTtl = analyticalStorageTtl;
             return this;
         }
 
-        public Builder setDefaultTtl(@Nullable Integer defaultTtl) {
+        public Builder defaultTtl(@Nullable Integer defaultTtl) {
             this.defaultTtl = defaultTtl;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setRid(String rid) {
+        public Builder rid(String rid) {
             this.rid = Objects.requireNonNull(rid);
             return this;
         }
 
-        public Builder setSchema(@Nullable CassandraSchemaResponse schema) {
+        public Builder schema(@Nullable CassandraSchemaResponse schema) {
             this.schema = schema;
             return this;
         }
 
-        public Builder setTs(Double ts) {
+        public Builder ts(Double ts) {
             this.ts = Objects.requireNonNull(ts);
             return this;
         }

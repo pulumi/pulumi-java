@@ -51,12 +51,12 @@ public final class ServiceTaskSpecContainerSpecPrivilegesCredentialSpec {
     	      this.registry = defaults.registry;
         }
 
-        public Builder setFile(@Nullable String file) {
+        public Builder file(@Nullable String file) {
             this.file = file;
             return this;
         }
 
-        public Builder setRegistry(@Nullable String registry) {
+        public Builder registry(@Nullable String registry) {
             this.registry = registry;
             return this;
         }

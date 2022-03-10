@@ -129,52 +129,52 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     	      this.queryScope = defaults.queryScope;
         }
 
-        public Builder setCollection(Input<String> collection) {
+        public Builder collection(Input<String> collection) {
             this.collection = Objects.requireNonNull(collection);
             return this;
         }
 
-        public Builder setCollection(String collection) {
+        public Builder collection(String collection) {
             this.collection = Input.of(Objects.requireNonNull(collection));
             return this;
         }
 
-        public Builder setDatabase(@Nullable Input<String> database) {
+        public Builder database(@Nullable Input<String> database) {
             this.database = database;
             return this;
         }
 
-        public Builder setDatabase(@Nullable String database) {
+        public Builder database(@Nullable String database) {
             this.database = Input.ofNullable(database);
             return this;
         }
 
-        public Builder setFields(Input<List<IndexFieldArgs>> fields) {
+        public Builder fields(Input<List<IndexFieldArgs>> fields) {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
 
-        public Builder setFields(List<IndexFieldArgs> fields) {
+        public Builder fields(List<IndexFieldArgs> fields) {
             this.fields = Input.of(Objects.requireNonNull(fields));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setQueryScope(@Nullable Input<String> queryScope) {
+        public Builder queryScope(@Nullable Input<String> queryScope) {
             this.queryScope = queryScope;
             return this;
         }
 
-        public Builder setQueryScope(@Nullable String queryScope) {
+        public Builder queryScope(@Nullable String queryScope) {
             this.queryScope = Input.ofNullable(queryScope);
             return this;
         }

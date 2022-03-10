@@ -70,22 +70,22 @@ public final class DataSourceParametersTwitterArgs extends io.pulumi.resources.R
     	      this.query = defaults.query;
         }
 
-        public Builder setMaxRows(Input<Integer> maxRows) {
+        public Builder maxRows(Input<Integer> maxRows) {
             this.maxRows = Objects.requireNonNull(maxRows);
             return this;
         }
 
-        public Builder setMaxRows(Integer maxRows) {
+        public Builder maxRows(Integer maxRows) {
             this.maxRows = Input.of(Objects.requireNonNull(maxRows));
             return this;
         }
 
-        public Builder setQuery(Input<String> query) {
+        public Builder query(Input<String> query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
 
-        public Builder setQuery(String query) {
+        public Builder query(String query) {
             this.query = Input.of(Objects.requireNonNull(query));
             return this;
         }

@@ -101,32 +101,32 @@ public final class GuestPoliciesPackageArgs extends io.pulumi.resources.Resource
     	      this.name = defaults.name;
         }
 
-        public Builder setDesiredState(@Nullable Input<String> desiredState) {
+        public Builder desiredState(@Nullable Input<String> desiredState) {
             this.desiredState = desiredState;
             return this;
         }
 
-        public Builder setDesiredState(@Nullable String desiredState) {
+        public Builder desiredState(@Nullable String desiredState) {
             this.desiredState = Input.ofNullable(desiredState);
             return this;
         }
 
-        public Builder setManager(@Nullable Input<String> manager) {
+        public Builder manager(@Nullable Input<String> manager) {
             this.manager = manager;
             return this;
         }
 
-        public Builder setManager(@Nullable String manager) {
+        public Builder manager(@Nullable String manager) {
             this.manager = Input.ofNullable(manager);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

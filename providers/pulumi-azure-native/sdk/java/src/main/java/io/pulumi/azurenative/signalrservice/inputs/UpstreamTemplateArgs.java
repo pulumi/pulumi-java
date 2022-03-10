@@ -120,42 +120,42 @@ public final class UpstreamTemplateArgs extends io.pulumi.resources.ResourceArgs
     	      this.urlTemplate = defaults.urlTemplate;
         }
 
-        public Builder setCategoryPattern(@Nullable Input<String> categoryPattern) {
+        public Builder categoryPattern(@Nullable Input<String> categoryPattern) {
             this.categoryPattern = categoryPattern;
             return this;
         }
 
-        public Builder setCategoryPattern(@Nullable String categoryPattern) {
+        public Builder categoryPattern(@Nullable String categoryPattern) {
             this.categoryPattern = Input.ofNullable(categoryPattern);
             return this;
         }
 
-        public Builder setEventPattern(@Nullable Input<String> eventPattern) {
+        public Builder eventPattern(@Nullable Input<String> eventPattern) {
             this.eventPattern = eventPattern;
             return this;
         }
 
-        public Builder setEventPattern(@Nullable String eventPattern) {
+        public Builder eventPattern(@Nullable String eventPattern) {
             this.eventPattern = Input.ofNullable(eventPattern);
             return this;
         }
 
-        public Builder setHubPattern(@Nullable Input<String> hubPattern) {
+        public Builder hubPattern(@Nullable Input<String> hubPattern) {
             this.hubPattern = hubPattern;
             return this;
         }
 
-        public Builder setHubPattern(@Nullable String hubPattern) {
+        public Builder hubPattern(@Nullable String hubPattern) {
             this.hubPattern = Input.ofNullable(hubPattern);
             return this;
         }
 
-        public Builder setUrlTemplate(Input<String> urlTemplate) {
+        public Builder urlTemplate(Input<String> urlTemplate) {
             this.urlTemplate = Objects.requireNonNull(urlTemplate);
             return this;
         }
 
-        public Builder setUrlTemplate(String urlTemplate) {
+        public Builder urlTemplate(String urlTemplate) {
             this.urlTemplate = Input.of(Objects.requireNonNull(urlTemplate));
             return this;
         }

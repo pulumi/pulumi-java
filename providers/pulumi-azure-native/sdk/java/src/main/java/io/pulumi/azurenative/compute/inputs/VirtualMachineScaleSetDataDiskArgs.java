@@ -193,92 +193,92 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
     	      this.writeAcceleratorEnabled = defaults.writeAcceleratorEnabled;
         }
 
-        public Builder setCaching(@Nullable Input<CachingTypes> caching) {
+        public Builder caching(@Nullable Input<CachingTypes> caching) {
             this.caching = caching;
             return this;
         }
 
-        public Builder setCaching(@Nullable CachingTypes caching) {
+        public Builder caching(@Nullable CachingTypes caching) {
             this.caching = Input.ofNullable(caching);
             return this;
         }
 
-        public Builder setCreateOption(Input<Either<String,DiskCreateOptionTypes>> createOption) {
+        public Builder createOption(Input<Either<String,DiskCreateOptionTypes>> createOption) {
             this.createOption = Objects.requireNonNull(createOption);
             return this;
         }
 
-        public Builder setCreateOption(Either<String,DiskCreateOptionTypes> createOption) {
+        public Builder createOption(Either<String,DiskCreateOptionTypes> createOption) {
             this.createOption = Input.of(Objects.requireNonNull(createOption));
             return this;
         }
 
-        public Builder setDiskIOPSReadWrite(@Nullable Input<Double> diskIOPSReadWrite) {
+        public Builder diskIOPSReadWrite(@Nullable Input<Double> diskIOPSReadWrite) {
             this.diskIOPSReadWrite = diskIOPSReadWrite;
             return this;
         }
 
-        public Builder setDiskIOPSReadWrite(@Nullable Double diskIOPSReadWrite) {
+        public Builder diskIOPSReadWrite(@Nullable Double diskIOPSReadWrite) {
             this.diskIOPSReadWrite = Input.ofNullable(diskIOPSReadWrite);
             return this;
         }
 
-        public Builder setDiskMBpsReadWrite(@Nullable Input<Double> diskMBpsReadWrite) {
+        public Builder diskMBpsReadWrite(@Nullable Input<Double> diskMBpsReadWrite) {
             this.diskMBpsReadWrite = diskMBpsReadWrite;
             return this;
         }
 
-        public Builder setDiskMBpsReadWrite(@Nullable Double diskMBpsReadWrite) {
+        public Builder diskMBpsReadWrite(@Nullable Double diskMBpsReadWrite) {
             this.diskMBpsReadWrite = Input.ofNullable(diskMBpsReadWrite);
             return this;
         }
 
-        public Builder setDiskSizeGB(@Nullable Input<Integer> diskSizeGB) {
+        public Builder diskSizeGB(@Nullable Input<Integer> diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
 
-        public Builder setDiskSizeGB(@Nullable Integer diskSizeGB) {
+        public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = Input.ofNullable(diskSizeGB);
             return this;
         }
 
-        public Builder setLun(Input<Integer> lun) {
+        public Builder lun(Input<Integer> lun) {
             this.lun = Objects.requireNonNull(lun);
             return this;
         }
 
-        public Builder setLun(Integer lun) {
+        public Builder lun(Integer lun) {
             this.lun = Input.of(Objects.requireNonNull(lun));
             return this;
         }
 
-        public Builder setManagedDisk(@Nullable Input<VirtualMachineScaleSetManagedDiskParametersArgs> managedDisk) {
+        public Builder managedDisk(@Nullable Input<VirtualMachineScaleSetManagedDiskParametersArgs> managedDisk) {
             this.managedDisk = managedDisk;
             return this;
         }
 
-        public Builder setManagedDisk(@Nullable VirtualMachineScaleSetManagedDiskParametersArgs managedDisk) {
+        public Builder managedDisk(@Nullable VirtualMachineScaleSetManagedDiskParametersArgs managedDisk) {
             this.managedDisk = Input.ofNullable(managedDisk);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setWriteAcceleratorEnabled(@Nullable Input<Boolean> writeAcceleratorEnabled) {
+        public Builder writeAcceleratorEnabled(@Nullable Input<Boolean> writeAcceleratorEnabled) {
             this.writeAcceleratorEnabled = writeAcceleratorEnabled;
             return this;
         }
 
-        public Builder setWriteAcceleratorEnabled(@Nullable Boolean writeAcceleratorEnabled) {
+        public Builder writeAcceleratorEnabled(@Nullable Boolean writeAcceleratorEnabled) {
             this.writeAcceleratorEnabled = Input.ofNullable(writeAcceleratorEnabled);
             return this;
         }

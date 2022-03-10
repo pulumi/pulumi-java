@@ -76,22 +76,22 @@ public final class NetworkPolicyIngressRuleArgs extends io.pulumi.resources.Reso
     	      this.ports = defaults.ports;
         }
 
-        public Builder setFrom(@Nullable Input<List<NetworkPolicyPeerArgs>> from) {
+        public Builder from(@Nullable Input<List<NetworkPolicyPeerArgs>> from) {
             this.from = from;
             return this;
         }
 
-        public Builder setFrom(@Nullable List<NetworkPolicyPeerArgs> from) {
+        public Builder from(@Nullable List<NetworkPolicyPeerArgs> from) {
             this.from = Input.ofNullable(from);
             return this;
         }
 
-        public Builder setPorts(@Nullable Input<List<NetworkPolicyPortArgs>> ports) {
+        public Builder ports(@Nullable Input<List<NetworkPolicyPortArgs>> ports) {
             this.ports = ports;
             return this;
         }
 
-        public Builder setPorts(@Nullable List<NetworkPolicyPortArgs> ports) {
+        public Builder ports(@Nullable List<NetworkPolicyPortArgs> ports) {
             this.ports = Input.ofNullable(ports);
             return this;
         }

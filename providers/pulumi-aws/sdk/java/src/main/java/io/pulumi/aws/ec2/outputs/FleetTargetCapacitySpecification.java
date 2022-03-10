@@ -100,22 +100,22 @@ public final class FleetTargetCapacitySpecification {
     	      this.totalTargetCapacity = defaults.totalTargetCapacity;
         }
 
-        public Builder setDefaultTargetCapacityType(String defaultTargetCapacityType) {
+        public Builder defaultTargetCapacityType(String defaultTargetCapacityType) {
             this.defaultTargetCapacityType = Objects.requireNonNull(defaultTargetCapacityType);
             return this;
         }
 
-        public Builder setOnDemandTargetCapacity(@Nullable Integer onDemandTargetCapacity) {
+        public Builder onDemandTargetCapacity(@Nullable Integer onDemandTargetCapacity) {
             this.onDemandTargetCapacity = onDemandTargetCapacity;
             return this;
         }
 
-        public Builder setSpotTargetCapacity(@Nullable Integer spotTargetCapacity) {
+        public Builder spotTargetCapacity(@Nullable Integer spotTargetCapacity) {
             this.spotTargetCapacity = spotTargetCapacity;
             return this;
         }
 
-        public Builder setTotalTargetCapacity(Integer totalTargetCapacity) {
+        public Builder totalTargetCapacity(Integer totalTargetCapacity) {
             this.totalTargetCapacity = Objects.requireNonNull(totalTargetCapacity);
             return this;
         }

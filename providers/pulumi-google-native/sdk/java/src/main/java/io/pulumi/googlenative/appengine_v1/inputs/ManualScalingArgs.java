@@ -57,12 +57,12 @@ public final class ManualScalingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.instances = defaults.instances;
         }
 
-        public Builder setInstances(@Nullable Input<Integer> instances) {
+        public Builder instances(@Nullable Input<Integer> instances) {
             this.instances = instances;
             return this;
         }
 
-        public Builder setInstances(@Nullable Integer instances) {
+        public Builder instances(@Nullable Integer instances) {
             this.instances = Input.ofNullable(instances);
             return this;
         }

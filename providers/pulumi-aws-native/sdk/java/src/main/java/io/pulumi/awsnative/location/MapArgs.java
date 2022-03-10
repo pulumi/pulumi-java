@@ -88,42 +88,42 @@ public final class MapArgs extends io.pulumi.resources.ResourceArgs {
     	      this.pricingPlan = defaults.pricingPlan;
         }
 
-        public Builder setConfiguration(Input<MapConfigurationArgs> configuration) {
+        public Builder configuration(Input<MapConfigurationArgs> configuration) {
             this.configuration = Objects.requireNonNull(configuration);
             return this;
         }
 
-        public Builder setConfiguration(MapConfigurationArgs configuration) {
+        public Builder configuration(MapConfigurationArgs configuration) {
             this.configuration = Input.of(Objects.requireNonNull(configuration));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setMapName(@Nullable Input<String> mapName) {
+        public Builder mapName(@Nullable Input<String> mapName) {
             this.mapName = mapName;
             return this;
         }
 
-        public Builder setMapName(@Nullable String mapName) {
+        public Builder mapName(@Nullable String mapName) {
             this.mapName = Input.ofNullable(mapName);
             return this;
         }
 
-        public Builder setPricingPlan(@Nullable Input<MapPricingPlan> pricingPlan) {
+        public Builder pricingPlan(@Nullable Input<MapPricingPlan> pricingPlan) {
             this.pricingPlan = pricingPlan;
             return this;
         }
 
-        public Builder setPricingPlan(@Nullable MapPricingPlan pricingPlan) {
+        public Builder pricingPlan(@Nullable MapPricingPlan pricingPlan) {
             this.pricingPlan = Input.ofNullable(pricingPlan);
             return this;
         }

@@ -63,22 +63,22 @@ public final class ComponentVersionLambdaEventSourceArgs extends io.pulumi.resou
     	      this.type = defaults.type;
         }
 
-        public Builder setTopic(@Nullable Input<String> topic) {
+        public Builder topic(@Nullable Input<String> topic) {
             this.topic = topic;
             return this;
         }
 
-        public Builder setTopic(@Nullable String topic) {
+        public Builder topic(@Nullable String topic) {
             this.topic = Input.ofNullable(topic);
             return this;
         }
 
-        public Builder setType(@Nullable Input<ComponentVersionLambdaEventSourceType> type) {
+        public Builder type(@Nullable Input<ComponentVersionLambdaEventSourceType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable ComponentVersionLambdaEventSourceType type) {
+        public Builder type(@Nullable ComponentVersionLambdaEventSourceType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

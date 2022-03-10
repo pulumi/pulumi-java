@@ -57,7 +57,7 @@ public final class ScopeElementResponse extends io.pulumi.resources.InvokeArgs {
     	      this.field = defaults.field;
         }
 
-        public Builder setField(@Nullable String field) {
+        public Builder field(@Nullable String field) {
             this.field = field;
             return this;
         }

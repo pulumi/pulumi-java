@@ -84,17 +84,17 @@ public final class GetResolverDNSSECConfigResult {
     	      this.validationStatus = defaults.validationStatus;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setOwnerId(@Nullable String ownerId) {
+        public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
-        public Builder setValidationStatus(@Nullable ResolverDNSSECConfigValidationStatus validationStatus) {
+        public Builder validationStatus(@Nullable ResolverDNSSECConfigValidationStatus validationStatus) {
             this.validationStatus = validationStatus;
             return this;
         }

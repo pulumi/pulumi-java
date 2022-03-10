@@ -98,22 +98,22 @@ public final class EditAtomResponse {
     	      this.startTimeOffset = defaults.startTimeOffset;
         }
 
-        public Builder setEndTimeOffset(String endTimeOffset) {
+        public Builder endTimeOffset(String endTimeOffset) {
             this.endTimeOffset = Objects.requireNonNull(endTimeOffset);
             return this;
         }
 
-        public Builder setInputs(List<String> inputs) {
+        public Builder inputs(List<String> inputs) {
             this.inputs = Objects.requireNonNull(inputs);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setStartTimeOffset(String startTimeOffset) {
+        public Builder startTimeOffset(String startTimeOffset) {
             this.startTimeOffset = Objects.requireNonNull(startTimeOffset);
             return this;
         }

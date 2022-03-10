@@ -213,57 +213,57 @@ public final class GetStreamResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setClosedShards(List<String> closedShards) {
+        public Builder closedShards(List<String> closedShards) {
             this.closedShards = Objects.requireNonNull(closedShards);
             return this;
         }
 
-        public Builder setCreationTimestamp(Integer creationTimestamp) {
+        public Builder creationTimestamp(Integer creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOpenShards(List<String> openShards) {
+        public Builder openShards(List<String> openShards) {
             this.openShards = Objects.requireNonNull(openShards);
             return this;
         }
 
-        public Builder setRetentionPeriod(Integer retentionPeriod) {
+        public Builder retentionPeriod(Integer retentionPeriod) {
             this.retentionPeriod = Objects.requireNonNull(retentionPeriod);
             return this;
         }
 
-        public Builder setShardLevelMetrics(List<String> shardLevelMetrics) {
+        public Builder shardLevelMetrics(List<String> shardLevelMetrics) {
             this.shardLevelMetrics = Objects.requireNonNull(shardLevelMetrics);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStreamModeDetails(List<GetStreamStreamModeDetail> streamModeDetails) {
+        public Builder streamModeDetails(List<GetStreamStreamModeDetail> streamModeDetails) {
             this.streamModeDetails = Objects.requireNonNull(streamModeDetails);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

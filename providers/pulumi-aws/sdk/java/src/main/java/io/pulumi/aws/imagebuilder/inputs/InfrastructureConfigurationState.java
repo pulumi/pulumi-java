@@ -298,162 +298,162 @@ public final class InfrastructureConfigurationState extends io.pulumi.resources.
     	      this.terminateInstanceOnFailure = defaults.terminateInstanceOnFailure;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDateCreated(@Nullable Input<String> dateCreated) {
+        public Builder dateCreated(@Nullable Input<String> dateCreated) {
             this.dateCreated = dateCreated;
             return this;
         }
 
-        public Builder setDateCreated(@Nullable String dateCreated) {
+        public Builder dateCreated(@Nullable String dateCreated) {
             this.dateCreated = Input.ofNullable(dateCreated);
             return this;
         }
 
-        public Builder setDateUpdated(@Nullable Input<String> dateUpdated) {
+        public Builder dateUpdated(@Nullable Input<String> dateUpdated) {
             this.dateUpdated = dateUpdated;
             return this;
         }
 
-        public Builder setDateUpdated(@Nullable String dateUpdated) {
+        public Builder dateUpdated(@Nullable String dateUpdated) {
             this.dateUpdated = Input.ofNullable(dateUpdated);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setInstanceProfileName(@Nullable Input<String> instanceProfileName) {
+        public Builder instanceProfileName(@Nullable Input<String> instanceProfileName) {
             this.instanceProfileName = instanceProfileName;
             return this;
         }
 
-        public Builder setInstanceProfileName(@Nullable String instanceProfileName) {
+        public Builder instanceProfileName(@Nullable String instanceProfileName) {
             this.instanceProfileName = Input.ofNullable(instanceProfileName);
             return this;
         }
 
-        public Builder setInstanceTypes(@Nullable Input<List<String>> instanceTypes) {
+        public Builder instanceTypes(@Nullable Input<List<String>> instanceTypes) {
             this.instanceTypes = instanceTypes;
             return this;
         }
 
-        public Builder setInstanceTypes(@Nullable List<String> instanceTypes) {
+        public Builder instanceTypes(@Nullable List<String> instanceTypes) {
             this.instanceTypes = Input.ofNullable(instanceTypes);
             return this;
         }
 
-        public Builder setKeyPair(@Nullable Input<String> keyPair) {
+        public Builder keyPair(@Nullable Input<String> keyPair) {
             this.keyPair = keyPair;
             return this;
         }
 
-        public Builder setKeyPair(@Nullable String keyPair) {
+        public Builder keyPair(@Nullable String keyPair) {
             this.keyPair = Input.ofNullable(keyPair);
             return this;
         }
 
-        public Builder setLogging(@Nullable Input<InfrastructureConfigurationLoggingGetArgs> logging) {
+        public Builder logging(@Nullable Input<InfrastructureConfigurationLoggingGetArgs> logging) {
             this.logging = logging;
             return this;
         }
 
-        public Builder setLogging(@Nullable InfrastructureConfigurationLoggingGetArgs logging) {
+        public Builder logging(@Nullable InfrastructureConfigurationLoggingGetArgs logging) {
             this.logging = Input.ofNullable(logging);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResourceTags(@Nullable Input<Map<String,String>> resourceTags) {
+        public Builder resourceTags(@Nullable Input<Map<String,String>> resourceTags) {
             this.resourceTags = resourceTags;
             return this;
         }
 
-        public Builder setResourceTags(@Nullable Map<String,String> resourceTags) {
+        public Builder resourceTags(@Nullable Map<String,String> resourceTags) {
             this.resourceTags = Input.ofNullable(resourceTags);
             return this;
         }
 
-        public Builder setSecurityGroupIds(@Nullable Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable Input<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
 
-        public Builder setSecurityGroupIds(@Nullable List<String> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = Input.ofNullable(securityGroupIds);
             return this;
         }
 
-        public Builder setSnsTopicArn(@Nullable Input<String> snsTopicArn) {
+        public Builder snsTopicArn(@Nullable Input<String> snsTopicArn) {
             this.snsTopicArn = snsTopicArn;
             return this;
         }
 
-        public Builder setSnsTopicArn(@Nullable String snsTopicArn) {
+        public Builder snsTopicArn(@Nullable String snsTopicArn) {
             this.snsTopicArn = Input.ofNullable(snsTopicArn);
             return this;
         }
 
-        public Builder setSubnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Input<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Input.ofNullable(subnetId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setTerminateInstanceOnFailure(@Nullable Input<Boolean> terminateInstanceOnFailure) {
+        public Builder terminateInstanceOnFailure(@Nullable Input<Boolean> terminateInstanceOnFailure) {
             this.terminateInstanceOnFailure = terminateInstanceOnFailure;
             return this;
         }
 
-        public Builder setTerminateInstanceOnFailure(@Nullable Boolean terminateInstanceOnFailure) {
+        public Builder terminateInstanceOnFailure(@Nullable Boolean terminateInstanceOnFailure) {
             this.terminateInstanceOnFailure = Input.ofNullable(terminateInstanceOnFailure);
             return this;
         }

@@ -123,27 +123,27 @@ public final class RolloutOperationInfoResponse extends io.pulumi.resources.Invo
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setError(CloudErrorBodyResponse error) {
+        public Builder error(CloudErrorBodyResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
 
-        public Builder setRetryAttempt(Integer retryAttempt) {
+        public Builder retryAttempt(Integer retryAttempt) {
             this.retryAttempt = Objects.requireNonNull(retryAttempt);
             return this;
         }
 
-        public Builder setSkipSucceededOnRetry(Boolean skipSucceededOnRetry) {
+        public Builder skipSucceededOnRetry(Boolean skipSucceededOnRetry) {
             this.skipSucceededOnRetry = Objects.requireNonNull(skipSucceededOnRetry);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }

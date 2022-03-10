@@ -135,62 +135,62 @@ public final class LayerVersionPermissionArgs extends io.pulumi.resources.Resour
     	      this.versionNumber = defaults.versionNumber;
         }
 
-        public Builder setAction(Input<String> action) {
+        public Builder action(Input<String> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Input.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder setLayerName(Input<String> layerName) {
+        public Builder layerName(Input<String> layerName) {
             this.layerName = Objects.requireNonNull(layerName);
             return this;
         }
 
-        public Builder setLayerName(String layerName) {
+        public Builder layerName(String layerName) {
             this.layerName = Input.of(Objects.requireNonNull(layerName));
             return this;
         }
 
-        public Builder setOrganizationId(@Nullable Input<String> organizationId) {
+        public Builder organizationId(@Nullable Input<String> organizationId) {
             this.organizationId = organizationId;
             return this;
         }
 
-        public Builder setOrganizationId(@Nullable String organizationId) {
+        public Builder organizationId(@Nullable String organizationId) {
             this.organizationId = Input.ofNullable(organizationId);
             return this;
         }
 
-        public Builder setPrincipal(Input<String> principal) {
+        public Builder principal(Input<String> principal) {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
 
-        public Builder setPrincipal(String principal) {
+        public Builder principal(String principal) {
             this.principal = Input.of(Objects.requireNonNull(principal));
             return this;
         }
 
-        public Builder setStatementId(Input<String> statementId) {
+        public Builder statementId(Input<String> statementId) {
             this.statementId = Objects.requireNonNull(statementId);
             return this;
         }
 
-        public Builder setStatementId(String statementId) {
+        public Builder statementId(String statementId) {
             this.statementId = Input.of(Objects.requireNonNull(statementId));
             return this;
         }
 
-        public Builder setVersionNumber(Input<Integer> versionNumber) {
+        public Builder versionNumber(Input<Integer> versionNumber) {
             this.versionNumber = Objects.requireNonNull(versionNumber);
             return this;
         }
 
-        public Builder setVersionNumber(Integer versionNumber) {
+        public Builder versionNumber(Integer versionNumber) {
             this.versionNumber = Input.of(Objects.requireNonNull(versionNumber));
             return this;
         }

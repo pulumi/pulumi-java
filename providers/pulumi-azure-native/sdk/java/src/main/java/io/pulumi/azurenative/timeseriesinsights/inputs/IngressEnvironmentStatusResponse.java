@@ -75,12 +75,12 @@ public final class IngressEnvironmentStatusResponse extends io.pulumi.resources.
     	      this.stateDetails = defaults.stateDetails;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
 
-        public Builder setStateDetails(EnvironmentStateDetailsResponse stateDetails) {
+        public Builder stateDetails(EnvironmentStateDetailsResponse stateDetails) {
             this.stateDetails = Objects.requireNonNull(stateDetails);
             return this;
         }

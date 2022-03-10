@@ -110,22 +110,22 @@ public final class PeeringPropertiesDirectResponse extends io.pulumi.resources.I
     	      this.useForPeeringService = defaults.useForPeeringService;
         }
 
-        public Builder setConnections(@Nullable List<DirectConnectionResponse> connections) {
+        public Builder connections(@Nullable List<DirectConnectionResponse> connections) {
             this.connections = connections;
             return this;
         }
 
-        public Builder setDirectPeeringType(@Nullable String directPeeringType) {
+        public Builder directPeeringType(@Nullable String directPeeringType) {
             this.directPeeringType = directPeeringType;
             return this;
         }
 
-        public Builder setPeerAsn(@Nullable SubResourceResponse peerAsn) {
+        public Builder peerAsn(@Nullable SubResourceResponse peerAsn) {
             this.peerAsn = peerAsn;
             return this;
         }
 
-        public Builder setUseForPeeringService(Boolean useForPeeringService) {
+        public Builder useForPeeringService(Boolean useForPeeringService) {
             this.useForPeeringService = Objects.requireNonNull(useForPeeringService);
             return this;
         }

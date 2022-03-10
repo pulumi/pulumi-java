@@ -86,22 +86,22 @@ public final class GetTrialArgs extends io.pulumi.resources.InvokeArgs {
     	      this.trialId = defaults.trialId;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setStudyId(String studyId) {
+        public Builder studyId(String studyId) {
             this.studyId = Objects.requireNonNull(studyId);
             return this;
         }
 
-        public Builder setTrialId(String trialId) {
+        public Builder trialId(String trialId) {
             this.trialId = Objects.requireNonNull(trialId);
             return this;
         }

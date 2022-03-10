@@ -57,12 +57,12 @@ public final class AnthosClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.membership = defaults.membership;
         }
 
-        public Builder setMembership(@Nullable Input<String> membership) {
+        public Builder membership(@Nullable Input<String> membership) {
             this.membership = membership;
             return this;
         }
 
-        public Builder setMembership(@Nullable String membership) {
+        public Builder membership(@Nullable String membership) {
             this.membership = Input.ofNullable(membership);
             return this;
         }

@@ -189,92 +189,92 @@ public final class X12DelimiterOverridesArgs extends io.pulumi.resources.Resourc
     	      this.targetNamespace = defaults.targetNamespace;
         }
 
-        public Builder setComponentSeparator(Input<Integer> componentSeparator) {
+        public Builder componentSeparator(Input<Integer> componentSeparator) {
             this.componentSeparator = Objects.requireNonNull(componentSeparator);
             return this;
         }
 
-        public Builder setComponentSeparator(Integer componentSeparator) {
+        public Builder componentSeparator(Integer componentSeparator) {
             this.componentSeparator = Input.of(Objects.requireNonNull(componentSeparator));
             return this;
         }
 
-        public Builder setDataElementSeparator(Input<Integer> dataElementSeparator) {
+        public Builder dataElementSeparator(Input<Integer> dataElementSeparator) {
             this.dataElementSeparator = Objects.requireNonNull(dataElementSeparator);
             return this;
         }
 
-        public Builder setDataElementSeparator(Integer dataElementSeparator) {
+        public Builder dataElementSeparator(Integer dataElementSeparator) {
             this.dataElementSeparator = Input.of(Objects.requireNonNull(dataElementSeparator));
             return this;
         }
 
-        public Builder setMessageId(@Nullable Input<String> messageId) {
+        public Builder messageId(@Nullable Input<String> messageId) {
             this.messageId = messageId;
             return this;
         }
 
-        public Builder setMessageId(@Nullable String messageId) {
+        public Builder messageId(@Nullable String messageId) {
             this.messageId = Input.ofNullable(messageId);
             return this;
         }
 
-        public Builder setProtocolVersion(@Nullable Input<String> protocolVersion) {
+        public Builder protocolVersion(@Nullable Input<String> protocolVersion) {
             this.protocolVersion = protocolVersion;
             return this;
         }
 
-        public Builder setProtocolVersion(@Nullable String protocolVersion) {
+        public Builder protocolVersion(@Nullable String protocolVersion) {
             this.protocolVersion = Input.ofNullable(protocolVersion);
             return this;
         }
 
-        public Builder setReplaceCharacter(Input<Integer> replaceCharacter) {
+        public Builder replaceCharacter(Input<Integer> replaceCharacter) {
             this.replaceCharacter = Objects.requireNonNull(replaceCharacter);
             return this;
         }
 
-        public Builder setReplaceCharacter(Integer replaceCharacter) {
+        public Builder replaceCharacter(Integer replaceCharacter) {
             this.replaceCharacter = Input.of(Objects.requireNonNull(replaceCharacter));
             return this;
         }
 
-        public Builder setReplaceSeparatorsInPayload(Input<Boolean> replaceSeparatorsInPayload) {
+        public Builder replaceSeparatorsInPayload(Input<Boolean> replaceSeparatorsInPayload) {
             this.replaceSeparatorsInPayload = Objects.requireNonNull(replaceSeparatorsInPayload);
             return this;
         }
 
-        public Builder setReplaceSeparatorsInPayload(Boolean replaceSeparatorsInPayload) {
+        public Builder replaceSeparatorsInPayload(Boolean replaceSeparatorsInPayload) {
             this.replaceSeparatorsInPayload = Input.of(Objects.requireNonNull(replaceSeparatorsInPayload));
             return this;
         }
 
-        public Builder setSegmentTerminator(Input<Integer> segmentTerminator) {
+        public Builder segmentTerminator(Input<Integer> segmentTerminator) {
             this.segmentTerminator = Objects.requireNonNull(segmentTerminator);
             return this;
         }
 
-        public Builder setSegmentTerminator(Integer segmentTerminator) {
+        public Builder segmentTerminator(Integer segmentTerminator) {
             this.segmentTerminator = Input.of(Objects.requireNonNull(segmentTerminator));
             return this;
         }
 
-        public Builder setSegmentTerminatorSuffix(Input<SegmentTerminatorSuffix> segmentTerminatorSuffix) {
+        public Builder segmentTerminatorSuffix(Input<SegmentTerminatorSuffix> segmentTerminatorSuffix) {
             this.segmentTerminatorSuffix = Objects.requireNonNull(segmentTerminatorSuffix);
             return this;
         }
 
-        public Builder setSegmentTerminatorSuffix(SegmentTerminatorSuffix segmentTerminatorSuffix) {
+        public Builder segmentTerminatorSuffix(SegmentTerminatorSuffix segmentTerminatorSuffix) {
             this.segmentTerminatorSuffix = Input.of(Objects.requireNonNull(segmentTerminatorSuffix));
             return this;
         }
 
-        public Builder setTargetNamespace(@Nullable Input<String> targetNamespace) {
+        public Builder targetNamespace(@Nullable Input<String> targetNamespace) {
             this.targetNamespace = targetNamespace;
             return this;
         }
 
-        public Builder setTargetNamespace(@Nullable String targetNamespace) {
+        public Builder targetNamespace(@Nullable String targetNamespace) {
             this.targetNamespace = Input.ofNullable(targetNamespace);
             return this;
         }

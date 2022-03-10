@@ -74,22 +74,22 @@ public final class VaultCertificateArgs extends io.pulumi.resources.ResourceArgs
     	      this.certificateUrl = defaults.certificateUrl;
         }
 
-        public Builder setCertificateStore(@Nullable Input<String> certificateStore) {
+        public Builder certificateStore(@Nullable Input<String> certificateStore) {
             this.certificateStore = certificateStore;
             return this;
         }
 
-        public Builder setCertificateStore(@Nullable String certificateStore) {
+        public Builder certificateStore(@Nullable String certificateStore) {
             this.certificateStore = Input.ofNullable(certificateStore);
             return this;
         }
 
-        public Builder setCertificateUrl(@Nullable Input<String> certificateUrl) {
+        public Builder certificateUrl(@Nullable Input<String> certificateUrl) {
             this.certificateUrl = certificateUrl;
             return this;
         }
 
-        public Builder setCertificateUrl(@Nullable String certificateUrl) {
+        public Builder certificateUrl(@Nullable String certificateUrl) {
             this.certificateUrl = Input.ofNullable(certificateUrl);
             return this;
         }

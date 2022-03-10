@@ -92,32 +92,32 @@ public final class ManagedRuleExclusionArgs extends io.pulumi.resources.Resource
     	      this.selectorMatchOperator = defaults.selectorMatchOperator;
         }
 
-        public Builder setMatchVariable(Input<Either<String,ManagedRuleExclusionMatchVariable>> matchVariable) {
+        public Builder matchVariable(Input<Either<String,ManagedRuleExclusionMatchVariable>> matchVariable) {
             this.matchVariable = Objects.requireNonNull(matchVariable);
             return this;
         }
 
-        public Builder setMatchVariable(Either<String,ManagedRuleExclusionMatchVariable> matchVariable) {
+        public Builder matchVariable(Either<String,ManagedRuleExclusionMatchVariable> matchVariable) {
             this.matchVariable = Input.of(Objects.requireNonNull(matchVariable));
             return this;
         }
 
-        public Builder setSelector(Input<String> selector) {
+        public Builder selector(Input<String> selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
 
-        public Builder setSelector(String selector) {
+        public Builder selector(String selector) {
             this.selector = Input.of(Objects.requireNonNull(selector));
             return this;
         }
 
-        public Builder setSelectorMatchOperator(Input<Either<String,ManagedRuleExclusionSelectorMatchOperator>> selectorMatchOperator) {
+        public Builder selectorMatchOperator(Input<Either<String,ManagedRuleExclusionSelectorMatchOperator>> selectorMatchOperator) {
             this.selectorMatchOperator = Objects.requireNonNull(selectorMatchOperator);
             return this;
         }
 
-        public Builder setSelectorMatchOperator(Either<String,ManagedRuleExclusionSelectorMatchOperator> selectorMatchOperator) {
+        public Builder selectorMatchOperator(Either<String,ManagedRuleExclusionSelectorMatchOperator> selectorMatchOperator) {
             this.selectorMatchOperator = Input.of(Objects.requireNonNull(selectorMatchOperator));
             return this;
         }

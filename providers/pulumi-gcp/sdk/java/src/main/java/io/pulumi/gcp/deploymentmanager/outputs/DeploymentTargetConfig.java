@@ -48,7 +48,7 @@ public final class DeploymentTargetConfig {
     	      this.content = defaults.content;
         }
 
-        public Builder setContent(String content) {
+        public Builder content(String content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }

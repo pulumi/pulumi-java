@@ -197,92 +197,92 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setAttestation(@Nullable Input<OccurenceAttestationGetArgs> attestation) {
+        public Builder attestation(@Nullable Input<OccurenceAttestationGetArgs> attestation) {
             this.attestation = attestation;
             return this;
         }
 
-        public Builder setAttestation(@Nullable OccurenceAttestationGetArgs attestation) {
+        public Builder attestation(@Nullable OccurenceAttestationGetArgs attestation) {
             this.attestation = Input.ofNullable(attestation);
             return this;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNoteName(@Nullable Input<String> noteName) {
+        public Builder noteName(@Nullable Input<String> noteName) {
             this.noteName = noteName;
             return this;
         }
 
-        public Builder setNoteName(@Nullable String noteName) {
+        public Builder noteName(@Nullable String noteName) {
             this.noteName = Input.ofNullable(noteName);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRemediation(@Nullable Input<String> remediation) {
+        public Builder remediation(@Nullable Input<String> remediation) {
             this.remediation = remediation;
             return this;
         }
 
-        public Builder setRemediation(@Nullable String remediation) {
+        public Builder remediation(@Nullable String remediation) {
             this.remediation = Input.ofNullable(remediation);
             return this;
         }
 
-        public Builder setResourceUri(@Nullable Input<String> resourceUri) {
+        public Builder resourceUri(@Nullable Input<String> resourceUri) {
             this.resourceUri = resourceUri;
             return this;
         }
 
-        public Builder setResourceUri(@Nullable String resourceUri) {
+        public Builder resourceUri(@Nullable String resourceUri) {
             this.resourceUri = Input.ofNullable(resourceUri);
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Input<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable String updateTime) {
+        public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Input.ofNullable(updateTime);
             return this;
         }

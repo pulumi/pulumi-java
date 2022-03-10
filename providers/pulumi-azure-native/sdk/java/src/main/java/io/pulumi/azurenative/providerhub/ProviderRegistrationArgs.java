@@ -67,22 +67,22 @@ public final class ProviderRegistrationArgs extends io.pulumi.resources.Resource
     	      this.providerNamespace = defaults.providerNamespace;
         }
 
-        public Builder setProperties(@Nullable Input<ProviderRegistrationPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<ProviderRegistrationPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable ProviderRegistrationPropertiesArgs properties) {
+        public Builder properties(@Nullable ProviderRegistrationPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setProviderNamespace(@Nullable Input<String> providerNamespace) {
+        public Builder providerNamespace(@Nullable Input<String> providerNamespace) {
             this.providerNamespace = providerNamespace;
             return this;
         }
 
-        public Builder setProviderNamespace(@Nullable String providerNamespace) {
+        public Builder providerNamespace(@Nullable String providerNamespace) {
             this.providerNamespace = Input.ofNullable(providerNamespace);
             return this;
         }

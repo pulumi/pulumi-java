@@ -75,22 +75,22 @@ public final class RecurringTimeWindowArgs extends io.pulumi.resources.ResourceA
     	      this.window = defaults.window;
         }
 
-        public Builder setRecurrence(@Nullable Input<String> recurrence) {
+        public Builder recurrence(@Nullable Input<String> recurrence) {
             this.recurrence = recurrence;
             return this;
         }
 
-        public Builder setRecurrence(@Nullable String recurrence) {
+        public Builder recurrence(@Nullable String recurrence) {
             this.recurrence = Input.ofNullable(recurrence);
             return this;
         }
 
-        public Builder setWindow(@Nullable Input<TimeWindowArgs> window) {
+        public Builder window(@Nullable Input<TimeWindowArgs> window) {
             this.window = window;
             return this;
         }
 
-        public Builder setWindow(@Nullable TimeWindowArgs window) {
+        public Builder window(@Nullable TimeWindowArgs window) {
             this.window = Input.ofNullable(window);
             return this;
         }

@@ -48,7 +48,7 @@ public final class TaskDefinitionEphemeralStorage {
     	      this.sizeInGib = defaults.sizeInGib;
         }
 
-        public Builder setSizeInGib(Integer sizeInGib) {
+        public Builder sizeInGib(Integer sizeInGib) {
             this.sizeInGib = Objects.requireNonNull(sizeInGib);
             return this;
         }

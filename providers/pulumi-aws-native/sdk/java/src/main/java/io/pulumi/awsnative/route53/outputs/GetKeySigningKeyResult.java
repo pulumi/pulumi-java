@@ -50,7 +50,7 @@ public final class GetKeySigningKeyResult {
     	      this.status = defaults.status;
         }
 
-        public Builder setStatus(@Nullable KeySigningKeyStatus status) {
+        public Builder status(@Nullable KeySigningKeyStatus status) {
             this.status = status;
             return this;
         }

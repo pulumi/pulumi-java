@@ -66,12 +66,12 @@ public final class RuleGroupRuleGroupRuleVariablesPortSet {
     	      this.portSet = defaults.portSet;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setPortSet(RuleGroupRuleGroupRuleVariablesPortSetPortSet portSet) {
+        public Builder portSet(RuleGroupRuleGroupRuleVariablesPortSetPortSet portSet) {
             this.portSet = Objects.requireNonNull(portSet);
             return this;
         }

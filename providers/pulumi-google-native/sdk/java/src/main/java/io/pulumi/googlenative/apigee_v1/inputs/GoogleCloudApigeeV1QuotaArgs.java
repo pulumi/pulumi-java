@@ -90,32 +90,32 @@ public final class GoogleCloudApigeeV1QuotaArgs extends io.pulumi.resources.Reso
     	      this.timeUnit = defaults.timeUnit;
         }
 
-        public Builder setInterval(Input<String> interval) {
+        public Builder interval(Input<String> interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
 
-        public Builder setInterval(String interval) {
+        public Builder interval(String interval) {
             this.interval = Input.of(Objects.requireNonNull(interval));
             return this;
         }
 
-        public Builder setLimit(Input<String> limit) {
+        public Builder limit(Input<String> limit) {
             this.limit = Objects.requireNonNull(limit);
             return this;
         }
 
-        public Builder setLimit(String limit) {
+        public Builder limit(String limit) {
             this.limit = Input.of(Objects.requireNonNull(limit));
             return this;
         }
 
-        public Builder setTimeUnit(@Nullable Input<String> timeUnit) {
+        public Builder timeUnit(@Nullable Input<String> timeUnit) {
             this.timeUnit = timeUnit;
             return this;
         }
 
-        public Builder setTimeUnit(@Nullable String timeUnit) {
+        public Builder timeUnit(@Nullable String timeUnit) {
             this.timeUnit = Input.ofNullable(timeUnit);
             return this;
         }

@@ -66,12 +66,12 @@ public final class LatencyPercentileResponse {
     	      this.percent = defaults.percent;
         }
 
-        public Builder setLatencyMicros(String latencyMicros) {
+        public Builder latencyMicros(String latencyMicros) {
             this.latencyMicros = Objects.requireNonNull(latencyMicros);
             return this;
         }
 
-        public Builder setPercent(Integer percent) {
+        public Builder percent(Integer percent) {
             this.percent = Objects.requireNonNull(percent);
             return this;
         }

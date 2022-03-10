@@ -158,72 +158,72 @@ public final class X12FramingSettingsArgs extends io.pulumi.resources.ResourceAr
     	      this.segmentTerminatorSuffix = defaults.segmentTerminatorSuffix;
         }
 
-        public Builder setCharacterSet(Input<Either<String,X12CharacterSet>> characterSet) {
+        public Builder characterSet(Input<Either<String,X12CharacterSet>> characterSet) {
             this.characterSet = Objects.requireNonNull(characterSet);
             return this;
         }
 
-        public Builder setCharacterSet(Either<String,X12CharacterSet> characterSet) {
+        public Builder characterSet(Either<String,X12CharacterSet> characterSet) {
             this.characterSet = Input.of(Objects.requireNonNull(characterSet));
             return this;
         }
 
-        public Builder setComponentSeparator(Input<Integer> componentSeparator) {
+        public Builder componentSeparator(Input<Integer> componentSeparator) {
             this.componentSeparator = Objects.requireNonNull(componentSeparator);
             return this;
         }
 
-        public Builder setComponentSeparator(Integer componentSeparator) {
+        public Builder componentSeparator(Integer componentSeparator) {
             this.componentSeparator = Input.of(Objects.requireNonNull(componentSeparator));
             return this;
         }
 
-        public Builder setDataElementSeparator(Input<Integer> dataElementSeparator) {
+        public Builder dataElementSeparator(Input<Integer> dataElementSeparator) {
             this.dataElementSeparator = Objects.requireNonNull(dataElementSeparator);
             return this;
         }
 
-        public Builder setDataElementSeparator(Integer dataElementSeparator) {
+        public Builder dataElementSeparator(Integer dataElementSeparator) {
             this.dataElementSeparator = Input.of(Objects.requireNonNull(dataElementSeparator));
             return this;
         }
 
-        public Builder setReplaceCharacter(Input<Integer> replaceCharacter) {
+        public Builder replaceCharacter(Input<Integer> replaceCharacter) {
             this.replaceCharacter = Objects.requireNonNull(replaceCharacter);
             return this;
         }
 
-        public Builder setReplaceCharacter(Integer replaceCharacter) {
+        public Builder replaceCharacter(Integer replaceCharacter) {
             this.replaceCharacter = Input.of(Objects.requireNonNull(replaceCharacter));
             return this;
         }
 
-        public Builder setReplaceSeparatorsInPayload(Input<Boolean> replaceSeparatorsInPayload) {
+        public Builder replaceSeparatorsInPayload(Input<Boolean> replaceSeparatorsInPayload) {
             this.replaceSeparatorsInPayload = Objects.requireNonNull(replaceSeparatorsInPayload);
             return this;
         }
 
-        public Builder setReplaceSeparatorsInPayload(Boolean replaceSeparatorsInPayload) {
+        public Builder replaceSeparatorsInPayload(Boolean replaceSeparatorsInPayload) {
             this.replaceSeparatorsInPayload = Input.of(Objects.requireNonNull(replaceSeparatorsInPayload));
             return this;
         }
 
-        public Builder setSegmentTerminator(Input<Integer> segmentTerminator) {
+        public Builder segmentTerminator(Input<Integer> segmentTerminator) {
             this.segmentTerminator = Objects.requireNonNull(segmentTerminator);
             return this;
         }
 
-        public Builder setSegmentTerminator(Integer segmentTerminator) {
+        public Builder segmentTerminator(Integer segmentTerminator) {
             this.segmentTerminator = Input.of(Objects.requireNonNull(segmentTerminator));
             return this;
         }
 
-        public Builder setSegmentTerminatorSuffix(Input<SegmentTerminatorSuffix> segmentTerminatorSuffix) {
+        public Builder segmentTerminatorSuffix(Input<SegmentTerminatorSuffix> segmentTerminatorSuffix) {
             this.segmentTerminatorSuffix = Objects.requireNonNull(segmentTerminatorSuffix);
             return this;
         }
 
-        public Builder setSegmentTerminatorSuffix(SegmentTerminatorSuffix segmentTerminatorSuffix) {
+        public Builder segmentTerminatorSuffix(SegmentTerminatorSuffix segmentTerminatorSuffix) {
             this.segmentTerminatorSuffix = Input.of(Objects.requireNonNull(segmentTerminatorSuffix));
             return this;
         }

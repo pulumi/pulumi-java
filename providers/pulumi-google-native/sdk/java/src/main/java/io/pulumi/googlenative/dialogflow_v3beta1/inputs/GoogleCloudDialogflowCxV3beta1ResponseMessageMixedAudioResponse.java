@@ -56,7 +56,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioRespon
     	      this.segments = defaults.segments;
         }
 
-        public Builder setSegments(List<GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse> segments) {
+        public Builder segments(List<GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse> segments) {
             this.segments = Objects.requireNonNull(segments);
             return this;
         }

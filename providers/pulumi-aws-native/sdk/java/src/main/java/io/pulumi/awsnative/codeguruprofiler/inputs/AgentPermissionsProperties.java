@@ -56,7 +56,7 @@ public final class AgentPermissionsProperties extends io.pulumi.resources.Invoke
     	      this.principals = defaults.principals;
         }
 
-        public Builder setPrincipals(List<String> principals) {
+        public Builder principals(List<String> principals) {
             this.principals = Objects.requireNonNull(principals);
             return this;
         }

@@ -163,72 +163,72 @@ public final class MembershipState extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setAuthority(@Nullable Input<MembershipAuthorityGetArgs> authority) {
+        public Builder authority(@Nullable Input<MembershipAuthorityGetArgs> authority) {
             this.authority = authority;
             return this;
         }
 
-        public Builder setAuthority(@Nullable MembershipAuthorityGetArgs authority) {
+        public Builder authority(@Nullable MembershipAuthorityGetArgs authority) {
             this.authority = Input.ofNullable(authority);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEndpoint(@Nullable Input<MembershipEndpointGetArgs> endpoint) {
+        public Builder endpoint(@Nullable Input<MembershipEndpointGetArgs> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setEndpoint(@Nullable MembershipEndpointGetArgs endpoint) {
+        public Builder endpoint(@Nullable MembershipEndpointGetArgs endpoint) {
             this.endpoint = Input.ofNullable(endpoint);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setMembershipId(@Nullable Input<String> membershipId) {
+        public Builder membershipId(@Nullable Input<String> membershipId) {
             this.membershipId = membershipId;
             return this;
         }
 
-        public Builder setMembershipId(@Nullable String membershipId) {
+        public Builder membershipId(@Nullable String membershipId) {
             this.membershipId = Input.ofNullable(membershipId);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

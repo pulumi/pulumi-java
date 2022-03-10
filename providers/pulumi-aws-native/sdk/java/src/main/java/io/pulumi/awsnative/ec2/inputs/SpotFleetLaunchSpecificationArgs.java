@@ -265,182 +265,182 @@ public final class SpotFleetLaunchSpecificationArgs extends io.pulumi.resources.
     	      this.weightedCapacity = defaults.weightedCapacity;
         }
 
-        public Builder setBlockDeviceMappings(@Nullable Input<List<SpotFleetBlockDeviceMappingArgs>> blockDeviceMappings) {
+        public Builder blockDeviceMappings(@Nullable Input<List<SpotFleetBlockDeviceMappingArgs>> blockDeviceMappings) {
             this.blockDeviceMappings = blockDeviceMappings;
             return this;
         }
 
-        public Builder setBlockDeviceMappings(@Nullable List<SpotFleetBlockDeviceMappingArgs> blockDeviceMappings) {
+        public Builder blockDeviceMappings(@Nullable List<SpotFleetBlockDeviceMappingArgs> blockDeviceMappings) {
             this.blockDeviceMappings = Input.ofNullable(blockDeviceMappings);
             return this;
         }
 
-        public Builder setEbsOptimized(@Nullable Input<Boolean> ebsOptimized) {
+        public Builder ebsOptimized(@Nullable Input<Boolean> ebsOptimized) {
             this.ebsOptimized = ebsOptimized;
             return this;
         }
 
-        public Builder setEbsOptimized(@Nullable Boolean ebsOptimized) {
+        public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
             this.ebsOptimized = Input.ofNullable(ebsOptimized);
             return this;
         }
 
-        public Builder setIamInstanceProfile(@Nullable Input<SpotFleetIamInstanceProfileSpecificationArgs> iamInstanceProfile) {
+        public Builder iamInstanceProfile(@Nullable Input<SpotFleetIamInstanceProfileSpecificationArgs> iamInstanceProfile) {
             this.iamInstanceProfile = iamInstanceProfile;
             return this;
         }
 
-        public Builder setIamInstanceProfile(@Nullable SpotFleetIamInstanceProfileSpecificationArgs iamInstanceProfile) {
+        public Builder iamInstanceProfile(@Nullable SpotFleetIamInstanceProfileSpecificationArgs iamInstanceProfile) {
             this.iamInstanceProfile = Input.ofNullable(iamInstanceProfile);
             return this;
         }
 
-        public Builder setImageId(Input<String> imageId) {
+        public Builder imageId(Input<String> imageId) {
             this.imageId = Objects.requireNonNull(imageId);
             return this;
         }
 
-        public Builder setImageId(String imageId) {
+        public Builder imageId(String imageId) {
             this.imageId = Input.of(Objects.requireNonNull(imageId));
             return this;
         }
 
-        public Builder setInstanceRequirements(@Nullable Input<SpotFleetInstanceRequirementsRequestArgs> instanceRequirements) {
+        public Builder instanceRequirements(@Nullable Input<SpotFleetInstanceRequirementsRequestArgs> instanceRequirements) {
             this.instanceRequirements = instanceRequirements;
             return this;
         }
 
-        public Builder setInstanceRequirements(@Nullable SpotFleetInstanceRequirementsRequestArgs instanceRequirements) {
+        public Builder instanceRequirements(@Nullable SpotFleetInstanceRequirementsRequestArgs instanceRequirements) {
             this.instanceRequirements = Input.ofNullable(instanceRequirements);
             return this;
         }
 
-        public Builder setInstanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Input<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Input.ofNullable(instanceType);
             return this;
         }
 
-        public Builder setKernelId(@Nullable Input<String> kernelId) {
+        public Builder kernelId(@Nullable Input<String> kernelId) {
             this.kernelId = kernelId;
             return this;
         }
 
-        public Builder setKernelId(@Nullable String kernelId) {
+        public Builder kernelId(@Nullable String kernelId) {
             this.kernelId = Input.ofNullable(kernelId);
             return this;
         }
 
-        public Builder setKeyName(@Nullable Input<String> keyName) {
+        public Builder keyName(@Nullable Input<String> keyName) {
             this.keyName = keyName;
             return this;
         }
 
-        public Builder setKeyName(@Nullable String keyName) {
+        public Builder keyName(@Nullable String keyName) {
             this.keyName = Input.ofNullable(keyName);
             return this;
         }
 
-        public Builder setMonitoring(@Nullable Input<SpotFleetMonitoringArgs> monitoring) {
+        public Builder monitoring(@Nullable Input<SpotFleetMonitoringArgs> monitoring) {
             this.monitoring = monitoring;
             return this;
         }
 
-        public Builder setMonitoring(@Nullable SpotFleetMonitoringArgs monitoring) {
+        public Builder monitoring(@Nullable SpotFleetMonitoringArgs monitoring) {
             this.monitoring = Input.ofNullable(monitoring);
             return this;
         }
 
-        public Builder setNetworkInterfaces(@Nullable Input<List<SpotFleetInstanceNetworkInterfaceSpecificationArgs>> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable Input<List<SpotFleetInstanceNetworkInterfaceSpecificationArgs>> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
 
-        public Builder setNetworkInterfaces(@Nullable List<SpotFleetInstanceNetworkInterfaceSpecificationArgs> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable List<SpotFleetInstanceNetworkInterfaceSpecificationArgs> networkInterfaces) {
             this.networkInterfaces = Input.ofNullable(networkInterfaces);
             return this;
         }
 
-        public Builder setPlacement(@Nullable Input<SpotFleetSpotPlacementArgs> placement) {
+        public Builder placement(@Nullable Input<SpotFleetSpotPlacementArgs> placement) {
             this.placement = placement;
             return this;
         }
 
-        public Builder setPlacement(@Nullable SpotFleetSpotPlacementArgs placement) {
+        public Builder placement(@Nullable SpotFleetSpotPlacementArgs placement) {
             this.placement = Input.ofNullable(placement);
             return this;
         }
 
-        public Builder setRamdiskId(@Nullable Input<String> ramdiskId) {
+        public Builder ramdiskId(@Nullable Input<String> ramdiskId) {
             this.ramdiskId = ramdiskId;
             return this;
         }
 
-        public Builder setRamdiskId(@Nullable String ramdiskId) {
+        public Builder ramdiskId(@Nullable String ramdiskId) {
             this.ramdiskId = Input.ofNullable(ramdiskId);
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable Input<List<SpotFleetGroupIdentifierArgs>> securityGroups) {
+        public Builder securityGroups(@Nullable Input<List<SpotFleetGroupIdentifierArgs>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable List<SpotFleetGroupIdentifierArgs> securityGroups) {
+        public Builder securityGroups(@Nullable List<SpotFleetGroupIdentifierArgs> securityGroups) {
             this.securityGroups = Input.ofNullable(securityGroups);
             return this;
         }
 
-        public Builder setSpotPrice(@Nullable Input<String> spotPrice) {
+        public Builder spotPrice(@Nullable Input<String> spotPrice) {
             this.spotPrice = spotPrice;
             return this;
         }
 
-        public Builder setSpotPrice(@Nullable String spotPrice) {
+        public Builder spotPrice(@Nullable String spotPrice) {
             this.spotPrice = Input.ofNullable(spotPrice);
             return this;
         }
 
-        public Builder setSubnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Input<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Input.ofNullable(subnetId);
             return this;
         }
 
-        public Builder setTagSpecifications(@Nullable Input<List<SpotFleetTagSpecificationArgs>> tagSpecifications) {
+        public Builder tagSpecifications(@Nullable Input<List<SpotFleetTagSpecificationArgs>> tagSpecifications) {
             this.tagSpecifications = tagSpecifications;
             return this;
         }
 
-        public Builder setTagSpecifications(@Nullable List<SpotFleetTagSpecificationArgs> tagSpecifications) {
+        public Builder tagSpecifications(@Nullable List<SpotFleetTagSpecificationArgs> tagSpecifications) {
             this.tagSpecifications = Input.ofNullable(tagSpecifications);
             return this;
         }
 
-        public Builder setUserData(@Nullable Input<String> userData) {
+        public Builder userData(@Nullable Input<String> userData) {
             this.userData = userData;
             return this;
         }
 
-        public Builder setUserData(@Nullable String userData) {
+        public Builder userData(@Nullable String userData) {
             this.userData = Input.ofNullable(userData);
             return this;
         }
 
-        public Builder setWeightedCapacity(@Nullable Input<Double> weightedCapacity) {
+        public Builder weightedCapacity(@Nullable Input<Double> weightedCapacity) {
             this.weightedCapacity = weightedCapacity;
             return this;
         }
 
-        public Builder setWeightedCapacity(@Nullable Double weightedCapacity) {
+        public Builder weightedCapacity(@Nullable Double weightedCapacity) {
             this.weightedCapacity = Input.ofNullable(weightedCapacity);
             return this;
         }

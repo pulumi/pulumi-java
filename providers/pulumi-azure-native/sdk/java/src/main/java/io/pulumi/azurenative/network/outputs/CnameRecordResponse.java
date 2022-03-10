@@ -50,7 +50,7 @@ public final class CnameRecordResponse {
     	      this.cname = defaults.cname;
         }
 
-        public Builder setCname(@Nullable String cname) {
+        public Builder cname(@Nullable String cname) {
             this.cname = cname;
             return this;
         }

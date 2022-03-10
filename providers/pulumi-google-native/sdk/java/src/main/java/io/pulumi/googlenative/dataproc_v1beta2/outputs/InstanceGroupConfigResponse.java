@@ -216,57 +216,57 @@ public final class InstanceGroupConfigResponse {
     	      this.preemptibility = defaults.preemptibility;
         }
 
-        public Builder setAccelerators(List<AcceleratorConfigResponse> accelerators) {
+        public Builder accelerators(List<AcceleratorConfigResponse> accelerators) {
             this.accelerators = Objects.requireNonNull(accelerators);
             return this;
         }
 
-        public Builder setDiskConfig(DiskConfigResponse diskConfig) {
+        public Builder diskConfig(DiskConfigResponse diskConfig) {
             this.diskConfig = Objects.requireNonNull(diskConfig);
             return this;
         }
 
-        public Builder setImageUri(String imageUri) {
+        public Builder imageUri(String imageUri) {
             this.imageUri = Objects.requireNonNull(imageUri);
             return this;
         }
 
-        public Builder setInstanceNames(List<String> instanceNames) {
+        public Builder instanceNames(List<String> instanceNames) {
             this.instanceNames = Objects.requireNonNull(instanceNames);
             return this;
         }
 
-        public Builder setInstanceReferences(List<InstanceReferenceResponse> instanceReferences) {
+        public Builder instanceReferences(List<InstanceReferenceResponse> instanceReferences) {
             this.instanceReferences = Objects.requireNonNull(instanceReferences);
             return this;
         }
 
-        public Builder setIsPreemptible(Boolean isPreemptible) {
+        public Builder isPreemptible(Boolean isPreemptible) {
             this.isPreemptible = Objects.requireNonNull(isPreemptible);
             return this;
         }
 
-        public Builder setMachineTypeUri(String machineTypeUri) {
+        public Builder machineTypeUri(String machineTypeUri) {
             this.machineTypeUri = Objects.requireNonNull(machineTypeUri);
             return this;
         }
 
-        public Builder setManagedGroupConfig(ManagedGroupConfigResponse managedGroupConfig) {
+        public Builder managedGroupConfig(ManagedGroupConfigResponse managedGroupConfig) {
             this.managedGroupConfig = Objects.requireNonNull(managedGroupConfig);
             return this;
         }
 
-        public Builder setMinCpuPlatform(String minCpuPlatform) {
+        public Builder minCpuPlatform(String minCpuPlatform) {
             this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
             return this;
         }
 
-        public Builder setNumInstances(Integer numInstances) {
+        public Builder numInstances(Integer numInstances) {
             this.numInstances = Objects.requireNonNull(numInstances);
             return this;
         }
 
-        public Builder setPreemptibility(String preemptibility) {
+        public Builder preemptibility(String preemptibility) {
             this.preemptibility = Objects.requireNonNull(preemptibility);
             return this;
         }

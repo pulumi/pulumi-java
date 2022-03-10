@@ -48,7 +48,7 @@ public final class FeatureResourceStateResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

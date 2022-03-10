@@ -496,292 +496,292 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userLicenses = defaults.userLicenses;
         }
 
-        public Builder setArchitecture(@Nullable Input<RegionDiskArchitecture> architecture) {
+        public Builder architecture(@Nullable Input<RegionDiskArchitecture> architecture) {
             this.architecture = architecture;
             return this;
         }
 
-        public Builder setArchitecture(@Nullable RegionDiskArchitecture architecture) {
+        public Builder architecture(@Nullable RegionDiskArchitecture architecture) {
             this.architecture = Input.ofNullable(architecture);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDiskEncryptionKey(@Nullable Input<CustomerEncryptionKeyArgs> diskEncryptionKey) {
+        public Builder diskEncryptionKey(@Nullable Input<CustomerEncryptionKeyArgs> diskEncryptionKey) {
             this.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
 
-        public Builder setDiskEncryptionKey(@Nullable CustomerEncryptionKeyArgs diskEncryptionKey) {
+        public Builder diskEncryptionKey(@Nullable CustomerEncryptionKeyArgs diskEncryptionKey) {
             this.diskEncryptionKey = Input.ofNullable(diskEncryptionKey);
             return this;
         }
 
-        public Builder setEraseWindowsVssSignature(@Nullable Input<Boolean> eraseWindowsVssSignature) {
+        public Builder eraseWindowsVssSignature(@Nullable Input<Boolean> eraseWindowsVssSignature) {
             this.eraseWindowsVssSignature = eraseWindowsVssSignature;
             return this;
         }
 
-        public Builder setEraseWindowsVssSignature(@Nullable Boolean eraseWindowsVssSignature) {
+        public Builder eraseWindowsVssSignature(@Nullable Boolean eraseWindowsVssSignature) {
             this.eraseWindowsVssSignature = Input.ofNullable(eraseWindowsVssSignature);
             return this;
         }
 
-        public Builder setGuestOsFeatures(@Nullable Input<List<GuestOsFeatureArgs>> guestOsFeatures) {
+        public Builder guestOsFeatures(@Nullable Input<List<GuestOsFeatureArgs>> guestOsFeatures) {
             this.guestOsFeatures = guestOsFeatures;
             return this;
         }
 
-        public Builder setGuestOsFeatures(@Nullable List<GuestOsFeatureArgs> guestOsFeatures) {
+        public Builder guestOsFeatures(@Nullable List<GuestOsFeatureArgs> guestOsFeatures) {
             this.guestOsFeatures = Input.ofNullable(guestOsFeatures);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLicenseCodes(@Nullable Input<List<String>> licenseCodes) {
+        public Builder licenseCodes(@Nullable Input<List<String>> licenseCodes) {
             this.licenseCodes = licenseCodes;
             return this;
         }
 
-        public Builder setLicenseCodes(@Nullable List<String> licenseCodes) {
+        public Builder licenseCodes(@Nullable List<String> licenseCodes) {
             this.licenseCodes = Input.ofNullable(licenseCodes);
             return this;
         }
 
-        public Builder setLicenses(@Nullable Input<List<String>> licenses) {
+        public Builder licenses(@Nullable Input<List<String>> licenses) {
             this.licenses = licenses;
             return this;
         }
 
-        public Builder setLicenses(@Nullable List<String> licenses) {
+        public Builder licenses(@Nullable List<String> licenses) {
             this.licenses = Input.ofNullable(licenses);
             return this;
         }
 
-        public Builder setLocationHint(@Nullable Input<String> locationHint) {
+        public Builder locationHint(@Nullable Input<String> locationHint) {
             this.locationHint = locationHint;
             return this;
         }
 
-        public Builder setLocationHint(@Nullable String locationHint) {
+        public Builder locationHint(@Nullable String locationHint) {
             this.locationHint = Input.ofNullable(locationHint);
             return this;
         }
 
-        public Builder setMultiWriter(@Nullable Input<Boolean> multiWriter) {
+        public Builder multiWriter(@Nullable Input<Boolean> multiWriter) {
             this.multiWriter = multiWriter;
             return this;
         }
 
-        public Builder setMultiWriter(@Nullable Boolean multiWriter) {
+        public Builder multiWriter(@Nullable Boolean multiWriter) {
             this.multiWriter = Input.ofNullable(multiWriter);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOptions(@Nullable Input<String> options) {
+        public Builder options(@Nullable Input<String> options) {
             this.options = options;
             return this;
         }
 
-        public Builder setOptions(@Nullable String options) {
+        public Builder options(@Nullable String options) {
             this.options = Input.ofNullable(options);
             return this;
         }
 
-        public Builder setPhysicalBlockSizeBytes(@Nullable Input<String> physicalBlockSizeBytes) {
+        public Builder physicalBlockSizeBytes(@Nullable Input<String> physicalBlockSizeBytes) {
             this.physicalBlockSizeBytes = physicalBlockSizeBytes;
             return this;
         }
 
-        public Builder setPhysicalBlockSizeBytes(@Nullable String physicalBlockSizeBytes) {
+        public Builder physicalBlockSizeBytes(@Nullable String physicalBlockSizeBytes) {
             this.physicalBlockSizeBytes = Input.ofNullable(physicalBlockSizeBytes);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setProvisionedIops(@Nullable Input<String> provisionedIops) {
+        public Builder provisionedIops(@Nullable Input<String> provisionedIops) {
             this.provisionedIops = provisionedIops;
             return this;
         }
 
-        public Builder setProvisionedIops(@Nullable String provisionedIops) {
+        public Builder provisionedIops(@Nullable String provisionedIops) {
             this.provisionedIops = Input.ofNullable(provisionedIops);
             return this;
         }
 
-        public Builder setRegion(Input<String> region) {
+        public Builder region(Input<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Input.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder setReplicaZones(@Nullable Input<List<String>> replicaZones) {
+        public Builder replicaZones(@Nullable Input<List<String>> replicaZones) {
             this.replicaZones = replicaZones;
             return this;
         }
 
-        public Builder setReplicaZones(@Nullable List<String> replicaZones) {
+        public Builder replicaZones(@Nullable List<String> replicaZones) {
             this.replicaZones = Input.ofNullable(replicaZones);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setResourcePolicies(@Nullable Input<List<String>> resourcePolicies) {
+        public Builder resourcePolicies(@Nullable Input<List<String>> resourcePolicies) {
             this.resourcePolicies = resourcePolicies;
             return this;
         }
 
-        public Builder setResourcePolicies(@Nullable List<String> resourcePolicies) {
+        public Builder resourcePolicies(@Nullable List<String> resourcePolicies) {
             this.resourcePolicies = Input.ofNullable(resourcePolicies);
             return this;
         }
 
-        public Builder setSizeGb(@Nullable Input<String> sizeGb) {
+        public Builder sizeGb(@Nullable Input<String> sizeGb) {
             this.sizeGb = sizeGb;
             return this;
         }
 
-        public Builder setSizeGb(@Nullable String sizeGb) {
+        public Builder sizeGb(@Nullable String sizeGb) {
             this.sizeGb = Input.ofNullable(sizeGb);
             return this;
         }
 
-        public Builder setSourceDisk(@Nullable Input<String> sourceDisk) {
+        public Builder sourceDisk(@Nullable Input<String> sourceDisk) {
             this.sourceDisk = sourceDisk;
             return this;
         }
 
-        public Builder setSourceDisk(@Nullable String sourceDisk) {
+        public Builder sourceDisk(@Nullable String sourceDisk) {
             this.sourceDisk = Input.ofNullable(sourceDisk);
             return this;
         }
 
-        public Builder setSourceImage(@Nullable Input<String> sourceImage) {
+        public Builder sourceImage(@Nullable Input<String> sourceImage) {
             this.sourceImage = sourceImage;
             return this;
         }
 
-        public Builder setSourceImage(@Nullable String sourceImage) {
+        public Builder sourceImage(@Nullable String sourceImage) {
             this.sourceImage = Input.ofNullable(sourceImage);
             return this;
         }
 
-        public Builder setSourceImageEncryptionKey(@Nullable Input<CustomerEncryptionKeyArgs> sourceImageEncryptionKey) {
+        public Builder sourceImageEncryptionKey(@Nullable Input<CustomerEncryptionKeyArgs> sourceImageEncryptionKey) {
             this.sourceImageEncryptionKey = sourceImageEncryptionKey;
             return this;
         }
 
-        public Builder setSourceImageEncryptionKey(@Nullable CustomerEncryptionKeyArgs sourceImageEncryptionKey) {
+        public Builder sourceImageEncryptionKey(@Nullable CustomerEncryptionKeyArgs sourceImageEncryptionKey) {
             this.sourceImageEncryptionKey = Input.ofNullable(sourceImageEncryptionKey);
             return this;
         }
 
-        public Builder setSourceInstantSnapshot(@Nullable Input<String> sourceInstantSnapshot) {
+        public Builder sourceInstantSnapshot(@Nullable Input<String> sourceInstantSnapshot) {
             this.sourceInstantSnapshot = sourceInstantSnapshot;
             return this;
         }
 
-        public Builder setSourceInstantSnapshot(@Nullable String sourceInstantSnapshot) {
+        public Builder sourceInstantSnapshot(@Nullable String sourceInstantSnapshot) {
             this.sourceInstantSnapshot = Input.ofNullable(sourceInstantSnapshot);
             return this;
         }
 
-        public Builder setSourceSnapshot(@Nullable Input<String> sourceSnapshot) {
+        public Builder sourceSnapshot(@Nullable Input<String> sourceSnapshot) {
             this.sourceSnapshot = sourceSnapshot;
             return this;
         }
 
-        public Builder setSourceSnapshot(@Nullable String sourceSnapshot) {
+        public Builder sourceSnapshot(@Nullable String sourceSnapshot) {
             this.sourceSnapshot = Input.ofNullable(sourceSnapshot);
             return this;
         }
 
-        public Builder setSourceSnapshotEncryptionKey(@Nullable Input<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey) {
+        public Builder sourceSnapshotEncryptionKey(@Nullable Input<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey) {
             this.sourceSnapshotEncryptionKey = sourceSnapshotEncryptionKey;
             return this;
         }
 
-        public Builder setSourceSnapshotEncryptionKey(@Nullable CustomerEncryptionKeyArgs sourceSnapshotEncryptionKey) {
+        public Builder sourceSnapshotEncryptionKey(@Nullable CustomerEncryptionKeyArgs sourceSnapshotEncryptionKey) {
             this.sourceSnapshotEncryptionKey = Input.ofNullable(sourceSnapshotEncryptionKey);
             return this;
         }
 
-        public Builder setSourceStorageObject(@Nullable Input<String> sourceStorageObject) {
+        public Builder sourceStorageObject(@Nullable Input<String> sourceStorageObject) {
             this.sourceStorageObject = sourceStorageObject;
             return this;
         }
 
-        public Builder setSourceStorageObject(@Nullable String sourceStorageObject) {
+        public Builder sourceStorageObject(@Nullable String sourceStorageObject) {
             this.sourceStorageObject = Input.ofNullable(sourceStorageObject);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setUserLicenses(@Nullable Input<List<String>> userLicenses) {
+        public Builder userLicenses(@Nullable Input<List<String>> userLicenses) {
             this.userLicenses = userLicenses;
             return this;
         }
 
-        public Builder setUserLicenses(@Nullable List<String> userLicenses) {
+        public Builder userLicenses(@Nullable List<String> userLicenses) {
             this.userLicenses = Input.ofNullable(userLicenses);
             return this;
         }

@@ -68,12 +68,12 @@ public final class ApplicationGatewayFirewallDisabledRuleGroupResponse {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setRuleGroupName(String ruleGroupName) {
+        public Builder ruleGroupName(String ruleGroupName) {
             this.ruleGroupName = Objects.requireNonNull(ruleGroupName);
             return this;
         }
 
-        public Builder setRules(@Nullable List<Integer> rules) {
+        public Builder rules(@Nullable List<Integer> rules) {
             this.rules = rules;
             return this;
         }

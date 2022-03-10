@@ -68,12 +68,12 @@ public final class DeploymentStrategy {
     	      this.type = defaults.type;
         }
 
-        public Builder setRollingUpdate(@Nullable RollingUpdateDeployment rollingUpdate) {
+        public Builder rollingUpdate(@Nullable RollingUpdateDeployment rollingUpdate) {
             this.rollingUpdate = rollingUpdate;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

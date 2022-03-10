@@ -87,32 +87,32 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
     	      this.values = defaults.values;
         }
 
-        public Builder setConsumeReservationType(@Nullable Input<String> consumeReservationType) {
+        public Builder consumeReservationType(@Nullable Input<String> consumeReservationType) {
             this.consumeReservationType = consumeReservationType;
             return this;
         }
 
-        public Builder setConsumeReservationType(@Nullable String consumeReservationType) {
+        public Builder consumeReservationType(@Nullable String consumeReservationType) {
             this.consumeReservationType = Input.ofNullable(consumeReservationType);
             return this;
         }
 
-        public Builder setKey(@Nullable Input<String> key) {
+        public Builder key(@Nullable Input<String> key) {
             this.key = key;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = Input.ofNullable(key);
             return this;
         }
 
-        public Builder setValues(@Nullable Input<List<String>> values) {
+        public Builder values(@Nullable Input<List<String>> values) {
             this.values = values;
             return this;
         }
 
-        public Builder setValues(@Nullable List<String> values) {
+        public Builder values(@Nullable List<String> values) {
             this.values = Input.ofNullable(values);
             return this;
         }

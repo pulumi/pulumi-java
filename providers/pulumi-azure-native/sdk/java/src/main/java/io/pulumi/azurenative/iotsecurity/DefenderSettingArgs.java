@@ -106,42 +106,42 @@ public final class DefenderSettingArgs extends io.pulumi.resources.ResourceArgs 
     	      this.sentinelWorkspaceResourceIds = defaults.sentinelWorkspaceResourceIds;
         }
 
-        public Builder setDeviceQuota(Input<Integer> deviceQuota) {
+        public Builder deviceQuota(Input<Integer> deviceQuota) {
             this.deviceQuota = Objects.requireNonNull(deviceQuota);
             return this;
         }
 
-        public Builder setDeviceQuota(Integer deviceQuota) {
+        public Builder deviceQuota(Integer deviceQuota) {
             this.deviceQuota = Input.of(Objects.requireNonNull(deviceQuota));
             return this;
         }
 
-        public Builder setMdeIntegration(Input<DefenderSettingsPropertiesMdeIntegrationArgs> mdeIntegration) {
+        public Builder mdeIntegration(Input<DefenderSettingsPropertiesMdeIntegrationArgs> mdeIntegration) {
             this.mdeIntegration = Objects.requireNonNull(mdeIntegration);
             return this;
         }
 
-        public Builder setMdeIntegration(DefenderSettingsPropertiesMdeIntegrationArgs mdeIntegration) {
+        public Builder mdeIntegration(DefenderSettingsPropertiesMdeIntegrationArgs mdeIntegration) {
             this.mdeIntegration = Input.of(Objects.requireNonNull(mdeIntegration));
             return this;
         }
 
-        public Builder setOnboardingKind(Input<Either<String,OnboardingKind>> onboardingKind) {
+        public Builder onboardingKind(Input<Either<String,OnboardingKind>> onboardingKind) {
             this.onboardingKind = Objects.requireNonNull(onboardingKind);
             return this;
         }
 
-        public Builder setOnboardingKind(Either<String,OnboardingKind> onboardingKind) {
+        public Builder onboardingKind(Either<String,OnboardingKind> onboardingKind) {
             this.onboardingKind = Input.of(Objects.requireNonNull(onboardingKind));
             return this;
         }
 
-        public Builder setSentinelWorkspaceResourceIds(Input<List<String>> sentinelWorkspaceResourceIds) {
+        public Builder sentinelWorkspaceResourceIds(Input<List<String>> sentinelWorkspaceResourceIds) {
             this.sentinelWorkspaceResourceIds = Objects.requireNonNull(sentinelWorkspaceResourceIds);
             return this;
         }
 
-        public Builder setSentinelWorkspaceResourceIds(List<String> sentinelWorkspaceResourceIds) {
+        public Builder sentinelWorkspaceResourceIds(List<String> sentinelWorkspaceResourceIds) {
             this.sentinelWorkspaceResourceIds = Input.of(Objects.requireNonNull(sentinelWorkspaceResourceIds));
             return this;
         }

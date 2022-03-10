@@ -57,7 +57,7 @@ public final class LocationSMBMountOptions extends io.pulumi.resources.InvokeArg
     	      this.version = defaults.version;
         }
 
-        public Builder setVersion(@Nullable LocationSMBMountOptionsVersion version) {
+        public Builder version(@Nullable LocationSMBMountOptionsVersion version) {
             this.version = version;
             return this;
         }

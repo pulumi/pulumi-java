@@ -74,32 +74,32 @@ public final class ConfigS3RecordingConfigArgs extends io.pulumi.resources.Resou
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setBucketArn(@Nullable Input<String> bucketArn) {
+        public Builder bucketArn(@Nullable Input<String> bucketArn) {
             this.bucketArn = bucketArn;
             return this;
         }
 
-        public Builder setBucketArn(@Nullable String bucketArn) {
+        public Builder bucketArn(@Nullable String bucketArn) {
             this.bucketArn = Input.ofNullable(bucketArn);
             return this;
         }
 
-        public Builder setPrefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Input<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = Input.ofNullable(prefix);
             return this;
         }
 
-        public Builder setRoleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Input<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Input.ofNullable(roleArn);
             return this;
         }

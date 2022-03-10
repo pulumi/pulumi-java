@@ -67,22 +67,22 @@ public final class ThemeTileLayoutStyleArgs extends io.pulumi.resources.Resource
     	      this.margin = defaults.margin;
         }
 
-        public Builder setGutter(@Nullable Input<ThemeGutterStyleArgs> gutter) {
+        public Builder gutter(@Nullable Input<ThemeGutterStyleArgs> gutter) {
             this.gutter = gutter;
             return this;
         }
 
-        public Builder setGutter(@Nullable ThemeGutterStyleArgs gutter) {
+        public Builder gutter(@Nullable ThemeGutterStyleArgs gutter) {
             this.gutter = Input.ofNullable(gutter);
             return this;
         }
 
-        public Builder setMargin(@Nullable Input<ThemeMarginStyleArgs> margin) {
+        public Builder margin(@Nullable Input<ThemeMarginStyleArgs> margin) {
             this.margin = margin;
             return this;
         }
 
-        public Builder setMargin(@Nullable ThemeMarginStyleArgs margin) {
+        public Builder margin(@Nullable ThemeMarginStyleArgs margin) {
             this.margin = Input.ofNullable(margin);
             return this;
         }

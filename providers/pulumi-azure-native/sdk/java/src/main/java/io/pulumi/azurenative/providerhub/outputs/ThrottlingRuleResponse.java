@@ -60,17 +60,17 @@ public final class ThrottlingRuleResponse {
     	      this.requiredFeatures = defaults.requiredFeatures;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setMetrics(List<ThrottlingMetricResponse> metrics) {
+        public Builder metrics(List<ThrottlingMetricResponse> metrics) {
             this.metrics = Objects.requireNonNull(metrics);
             return this;
         }
 
-        public Builder setRequiredFeatures(@Nullable List<String> requiredFeatures) {
+        public Builder requiredFeatures(@Nullable List<String> requiredFeatures) {
             this.requiredFeatures = requiredFeatures;
             return this;
         }

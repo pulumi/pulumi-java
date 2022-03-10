@@ -52,12 +52,12 @@ public final class ClusterClusterConfigMetastoreConfigArgs extends io.pulumi.res
     	      this.dataprocMetastoreService = defaults.dataprocMetastoreService;
         }
 
-        public Builder setDataprocMetastoreService(Input<String> dataprocMetastoreService) {
+        public Builder dataprocMetastoreService(Input<String> dataprocMetastoreService) {
             this.dataprocMetastoreService = Objects.requireNonNull(dataprocMetastoreService);
             return this;
         }
 
-        public Builder setDataprocMetastoreService(String dataprocMetastoreService) {
+        public Builder dataprocMetastoreService(String dataprocMetastoreService) {
             this.dataprocMetastoreService = Input.of(Objects.requireNonNull(dataprocMetastoreService));
             return this;
         }

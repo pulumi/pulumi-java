@@ -55,7 +55,7 @@ public final class IapTestServiceAccountInfoResponse extends io.pulumi.resources
     	      this.targetAudienceClientId = defaults.targetAudienceClientId;
         }
 
-        public Builder setTargetAudienceClientId(String targetAudienceClientId) {
+        public Builder targetAudienceClientId(String targetAudienceClientId) {
             this.targetAudienceClientId = Objects.requireNonNull(targetAudienceClientId);
             return this;
         }

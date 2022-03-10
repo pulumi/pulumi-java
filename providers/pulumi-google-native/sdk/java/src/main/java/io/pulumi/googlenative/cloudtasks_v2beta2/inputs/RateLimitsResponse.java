@@ -89,17 +89,17 @@ public final class RateLimitsResponse extends io.pulumi.resources.InvokeArgs {
     	      this.maxTasksDispatchedPerSecond = defaults.maxTasksDispatchedPerSecond;
         }
 
-        public Builder setMaxBurstSize(Integer maxBurstSize) {
+        public Builder maxBurstSize(Integer maxBurstSize) {
             this.maxBurstSize = Objects.requireNonNull(maxBurstSize);
             return this;
         }
 
-        public Builder setMaxConcurrentTasks(Integer maxConcurrentTasks) {
+        public Builder maxConcurrentTasks(Integer maxConcurrentTasks) {
             this.maxConcurrentTasks = Objects.requireNonNull(maxConcurrentTasks);
             return this;
         }
 
-        public Builder setMaxTasksDispatchedPerSecond(Double maxTasksDispatchedPerSecond) {
+        public Builder maxTasksDispatchedPerSecond(Double maxTasksDispatchedPerSecond) {
             this.maxTasksDispatchedPerSecond = Objects.requireNonNull(maxTasksDispatchedPerSecond);
             return this;
         }

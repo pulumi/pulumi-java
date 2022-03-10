@@ -206,102 +206,102 @@ public final class AzureClusterControlPlaneArgs extends io.pulumi.resources.Reso
     	      this.vmSize = defaults.vmSize;
         }
 
-        public Builder setDatabaseEncryption(@Nullable Input<AzureClusterControlPlaneDatabaseEncryptionArgs> databaseEncryption) {
+        public Builder databaseEncryption(@Nullable Input<AzureClusterControlPlaneDatabaseEncryptionArgs> databaseEncryption) {
             this.databaseEncryption = databaseEncryption;
             return this;
         }
 
-        public Builder setDatabaseEncryption(@Nullable AzureClusterControlPlaneDatabaseEncryptionArgs databaseEncryption) {
+        public Builder databaseEncryption(@Nullable AzureClusterControlPlaneDatabaseEncryptionArgs databaseEncryption) {
             this.databaseEncryption = Input.ofNullable(databaseEncryption);
             return this;
         }
 
-        public Builder setMainVolume(@Nullable Input<AzureClusterControlPlaneMainVolumeArgs> mainVolume) {
+        public Builder mainVolume(@Nullable Input<AzureClusterControlPlaneMainVolumeArgs> mainVolume) {
             this.mainVolume = mainVolume;
             return this;
         }
 
-        public Builder setMainVolume(@Nullable AzureClusterControlPlaneMainVolumeArgs mainVolume) {
+        public Builder mainVolume(@Nullable AzureClusterControlPlaneMainVolumeArgs mainVolume) {
             this.mainVolume = Input.ofNullable(mainVolume);
             return this;
         }
 
-        public Builder setProxyConfig(@Nullable Input<AzureClusterControlPlaneProxyConfigArgs> proxyConfig) {
+        public Builder proxyConfig(@Nullable Input<AzureClusterControlPlaneProxyConfigArgs> proxyConfig) {
             this.proxyConfig = proxyConfig;
             return this;
         }
 
-        public Builder setProxyConfig(@Nullable AzureClusterControlPlaneProxyConfigArgs proxyConfig) {
+        public Builder proxyConfig(@Nullable AzureClusterControlPlaneProxyConfigArgs proxyConfig) {
             this.proxyConfig = Input.ofNullable(proxyConfig);
             return this;
         }
 
-        public Builder setReplicaPlacements(@Nullable Input<List<AzureClusterControlPlaneReplicaPlacementArgs>> replicaPlacements) {
+        public Builder replicaPlacements(@Nullable Input<List<AzureClusterControlPlaneReplicaPlacementArgs>> replicaPlacements) {
             this.replicaPlacements = replicaPlacements;
             return this;
         }
 
-        public Builder setReplicaPlacements(@Nullable List<AzureClusterControlPlaneReplicaPlacementArgs> replicaPlacements) {
+        public Builder replicaPlacements(@Nullable List<AzureClusterControlPlaneReplicaPlacementArgs> replicaPlacements) {
             this.replicaPlacements = Input.ofNullable(replicaPlacements);
             return this;
         }
 
-        public Builder setRootVolume(@Nullable Input<AzureClusterControlPlaneRootVolumeArgs> rootVolume) {
+        public Builder rootVolume(@Nullable Input<AzureClusterControlPlaneRootVolumeArgs> rootVolume) {
             this.rootVolume = rootVolume;
             return this;
         }
 
-        public Builder setRootVolume(@Nullable AzureClusterControlPlaneRootVolumeArgs rootVolume) {
+        public Builder rootVolume(@Nullable AzureClusterControlPlaneRootVolumeArgs rootVolume) {
             this.rootVolume = Input.ofNullable(rootVolume);
             return this;
         }
 
-        public Builder setSshConfig(Input<AzureClusterControlPlaneSshConfigArgs> sshConfig) {
+        public Builder sshConfig(Input<AzureClusterControlPlaneSshConfigArgs> sshConfig) {
             this.sshConfig = Objects.requireNonNull(sshConfig);
             return this;
         }
 
-        public Builder setSshConfig(AzureClusterControlPlaneSshConfigArgs sshConfig) {
+        public Builder sshConfig(AzureClusterControlPlaneSshConfigArgs sshConfig) {
             this.sshConfig = Input.of(Objects.requireNonNull(sshConfig));
             return this;
         }
 
-        public Builder setSubnetId(Input<String> subnetId) {
+        public Builder subnetId(Input<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
-        public Builder setSubnetId(String subnetId) {
+        public Builder subnetId(String subnetId) {
             this.subnetId = Input.of(Objects.requireNonNull(subnetId));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVersion(Input<String> version) {
+        public Builder version(Input<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Input.of(Objects.requireNonNull(version));
             return this;
         }
 
-        public Builder setVmSize(@Nullable Input<String> vmSize) {
+        public Builder vmSize(@Nullable Input<String> vmSize) {
             this.vmSize = vmSize;
             return this;
         }
 
-        public Builder setVmSize(@Nullable String vmSize) {
+        public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = Input.ofNullable(vmSize);
             return this;
         }

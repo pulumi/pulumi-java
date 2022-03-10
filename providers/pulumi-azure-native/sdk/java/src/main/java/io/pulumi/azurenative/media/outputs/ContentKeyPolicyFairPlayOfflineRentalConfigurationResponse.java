@@ -65,12 +65,12 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse {
     	      this.storageDurationSeconds = defaults.storageDurationSeconds;
         }
 
-        public Builder setPlaybackDurationSeconds(Double playbackDurationSeconds) {
+        public Builder playbackDurationSeconds(Double playbackDurationSeconds) {
             this.playbackDurationSeconds = Objects.requireNonNull(playbackDurationSeconds);
             return this;
         }
 
-        public Builder setStorageDurationSeconds(Double storageDurationSeconds) {
+        public Builder storageDurationSeconds(Double storageDurationSeconds) {
             this.storageDurationSeconds = Objects.requireNonNull(storageDurationSeconds);
             return this;
         }

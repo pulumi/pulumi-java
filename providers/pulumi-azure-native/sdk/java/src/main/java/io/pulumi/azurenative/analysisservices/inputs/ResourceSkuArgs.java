@@ -93,32 +93,32 @@ public final class ResourceSkuArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tier = defaults.tier;
         }
 
-        public Builder setCapacity(@Nullable Input<Integer> capacity) {
+        public Builder capacity(@Nullable Input<Integer> capacity) {
             this.capacity = capacity;
             return this;
         }
 
-        public Builder setCapacity(@Nullable Integer capacity) {
+        public Builder capacity(@Nullable Integer capacity) {
             this.capacity = Input.ofNullable(capacity);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setTier(@Nullable Input<Either<String,SkuTier>> tier) {
+        public Builder tier(@Nullable Input<Either<String,SkuTier>> tier) {
             this.tier = tier;
             return this;
         }
 
-        public Builder setTier(@Nullable Either<String,SkuTier> tier) {
+        public Builder tier(@Nullable Either<String,SkuTier> tier) {
             this.tier = Input.ofNullable(tier);
             return this;
         }

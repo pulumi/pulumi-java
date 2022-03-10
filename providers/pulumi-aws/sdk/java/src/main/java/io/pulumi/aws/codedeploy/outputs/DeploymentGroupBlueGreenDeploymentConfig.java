@@ -85,17 +85,17 @@ public final class DeploymentGroupBlueGreenDeploymentConfig {
     	      this.terminateBlueInstancesOnDeploymentSuccess = defaults.terminateBlueInstancesOnDeploymentSuccess;
         }
 
-        public Builder setDeploymentReadyOption(@Nullable DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption deploymentReadyOption) {
+        public Builder deploymentReadyOption(@Nullable DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption deploymentReadyOption) {
             this.deploymentReadyOption = deploymentReadyOption;
             return this;
         }
 
-        public Builder setGreenFleetProvisioningOption(@Nullable DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOption greenFleetProvisioningOption) {
+        public Builder greenFleetProvisioningOption(@Nullable DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOption greenFleetProvisioningOption) {
             this.greenFleetProvisioningOption = greenFleetProvisioningOption;
             return this;
         }
 
-        public Builder setTerminateBlueInstancesOnDeploymentSuccess(@Nullable DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccess terminateBlueInstancesOnDeploymentSuccess) {
+        public Builder terminateBlueInstancesOnDeploymentSuccess(@Nullable DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccess terminateBlueInstancesOnDeploymentSuccess) {
             this.terminateBlueInstancesOnDeploymentSuccess = terminateBlueInstancesOnDeploymentSuccess;
             return this;
         }

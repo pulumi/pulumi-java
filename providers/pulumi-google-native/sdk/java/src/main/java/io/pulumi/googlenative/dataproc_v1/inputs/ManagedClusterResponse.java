@@ -90,17 +90,17 @@ public final class ManagedClusterResponse extends io.pulumi.resources.InvokeArgs
     	      this.labels = defaults.labels;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setConfig(ClusterConfigResponse config) {
+        public Builder config(ClusterConfigResponse config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }

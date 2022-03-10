@@ -375,107 +375,107 @@ public final class A2AProtectedDiskDetailsResponse {
     	      this.secretIdentifier = defaults.secretIdentifier;
         }
 
-        public Builder setAllowedDiskLevelOperation(@Nullable List<String> allowedDiskLevelOperation) {
+        public Builder allowedDiskLevelOperation(@Nullable List<String> allowedDiskLevelOperation) {
             this.allowedDiskLevelOperation = allowedDiskLevelOperation;
             return this;
         }
 
-        public Builder setDataPendingAtSourceAgentInMB(@Nullable Double dataPendingAtSourceAgentInMB) {
+        public Builder dataPendingAtSourceAgentInMB(@Nullable Double dataPendingAtSourceAgentInMB) {
             this.dataPendingAtSourceAgentInMB = dataPendingAtSourceAgentInMB;
             return this;
         }
 
-        public Builder setDataPendingInStagingStorageAccountInMB(@Nullable Double dataPendingInStagingStorageAccountInMB) {
+        public Builder dataPendingInStagingStorageAccountInMB(@Nullable Double dataPendingInStagingStorageAccountInMB) {
             this.dataPendingInStagingStorageAccountInMB = dataPendingInStagingStorageAccountInMB;
             return this;
         }
 
-        public Builder setDekKeyVaultArmId(@Nullable String dekKeyVaultArmId) {
+        public Builder dekKeyVaultArmId(@Nullable String dekKeyVaultArmId) {
             this.dekKeyVaultArmId = dekKeyVaultArmId;
             return this;
         }
 
-        public Builder setDiskCapacityInBytes(@Nullable Double diskCapacityInBytes) {
+        public Builder diskCapacityInBytes(@Nullable Double diskCapacityInBytes) {
             this.diskCapacityInBytes = diskCapacityInBytes;
             return this;
         }
 
-        public Builder setDiskName(@Nullable String diskName) {
+        public Builder diskName(@Nullable String diskName) {
             this.diskName = diskName;
             return this;
         }
 
-        public Builder setDiskState(@Nullable String diskState) {
+        public Builder diskState(@Nullable String diskState) {
             this.diskState = diskState;
             return this;
         }
 
-        public Builder setDiskType(@Nullable String diskType) {
+        public Builder diskType(@Nullable String diskType) {
             this.diskType = diskType;
             return this;
         }
 
-        public Builder setDiskUri(@Nullable String diskUri) {
+        public Builder diskUri(@Nullable String diskUri) {
             this.diskUri = diskUri;
             return this;
         }
 
-        public Builder setIsDiskEncrypted(@Nullable Boolean isDiskEncrypted) {
+        public Builder isDiskEncrypted(@Nullable Boolean isDiskEncrypted) {
             this.isDiskEncrypted = isDiskEncrypted;
             return this;
         }
 
-        public Builder setIsDiskKeyEncrypted(@Nullable Boolean isDiskKeyEncrypted) {
+        public Builder isDiskKeyEncrypted(@Nullable Boolean isDiskKeyEncrypted) {
             this.isDiskKeyEncrypted = isDiskKeyEncrypted;
             return this;
         }
 
-        public Builder setKekKeyVaultArmId(@Nullable String kekKeyVaultArmId) {
+        public Builder kekKeyVaultArmId(@Nullable String kekKeyVaultArmId) {
             this.kekKeyVaultArmId = kekKeyVaultArmId;
             return this;
         }
 
-        public Builder setKeyIdentifier(@Nullable String keyIdentifier) {
+        public Builder keyIdentifier(@Nullable String keyIdentifier) {
             this.keyIdentifier = keyIdentifier;
             return this;
         }
 
-        public Builder setMonitoringJobType(@Nullable String monitoringJobType) {
+        public Builder monitoringJobType(@Nullable String monitoringJobType) {
             this.monitoringJobType = monitoringJobType;
             return this;
         }
 
-        public Builder setMonitoringPercentageCompletion(@Nullable Integer monitoringPercentageCompletion) {
+        public Builder monitoringPercentageCompletion(@Nullable Integer monitoringPercentageCompletion) {
             this.monitoringPercentageCompletion = monitoringPercentageCompletion;
             return this;
         }
 
-        public Builder setPrimaryDiskAzureStorageAccountId(@Nullable String primaryDiskAzureStorageAccountId) {
+        public Builder primaryDiskAzureStorageAccountId(@Nullable String primaryDiskAzureStorageAccountId) {
             this.primaryDiskAzureStorageAccountId = primaryDiskAzureStorageAccountId;
             return this;
         }
 
-        public Builder setPrimaryStagingAzureStorageAccountId(@Nullable String primaryStagingAzureStorageAccountId) {
+        public Builder primaryStagingAzureStorageAccountId(@Nullable String primaryStagingAzureStorageAccountId) {
             this.primaryStagingAzureStorageAccountId = primaryStagingAzureStorageAccountId;
             return this;
         }
 
-        public Builder setRecoveryAzureStorageAccountId(@Nullable String recoveryAzureStorageAccountId) {
+        public Builder recoveryAzureStorageAccountId(@Nullable String recoveryAzureStorageAccountId) {
             this.recoveryAzureStorageAccountId = recoveryAzureStorageAccountId;
             return this;
         }
 
-        public Builder setRecoveryDiskUri(@Nullable String recoveryDiskUri) {
+        public Builder recoveryDiskUri(@Nullable String recoveryDiskUri) {
             this.recoveryDiskUri = recoveryDiskUri;
             return this;
         }
 
-        public Builder setResyncRequired(@Nullable Boolean resyncRequired) {
+        public Builder resyncRequired(@Nullable Boolean resyncRequired) {
             this.resyncRequired = resyncRequired;
             return this;
         }
 
-        public Builder setSecretIdentifier(@Nullable String secretIdentifier) {
+        public Builder secretIdentifier(@Nullable String secretIdentifier) {
             this.secretIdentifier = secretIdentifier;
             return this;
         }

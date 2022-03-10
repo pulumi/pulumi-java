@@ -141,62 +141,62 @@ public final class GoogleCloudMlV1__ReplicaConfigArgs extends io.pulumi.resource
     	      this.tpuTfVersion = defaults.tpuTfVersion;
         }
 
-        public Builder setAcceleratorConfig(@Nullable Input<GoogleCloudMlV1__AcceleratorConfigArgs> acceleratorConfig) {
+        public Builder acceleratorConfig(@Nullable Input<GoogleCloudMlV1__AcceleratorConfigArgs> acceleratorConfig) {
             this.acceleratorConfig = acceleratorConfig;
             return this;
         }
 
-        public Builder setAcceleratorConfig(@Nullable GoogleCloudMlV1__AcceleratorConfigArgs acceleratorConfig) {
+        public Builder acceleratorConfig(@Nullable GoogleCloudMlV1__AcceleratorConfigArgs acceleratorConfig) {
             this.acceleratorConfig = Input.ofNullable(acceleratorConfig);
             return this;
         }
 
-        public Builder setContainerArgs(@Nullable Input<List<String>> containerArgs) {
+        public Builder containerArgs(@Nullable Input<List<String>> containerArgs) {
             this.containerArgs = containerArgs;
             return this;
         }
 
-        public Builder setContainerArgs(@Nullable List<String> containerArgs) {
+        public Builder containerArgs(@Nullable List<String> containerArgs) {
             this.containerArgs = Input.ofNullable(containerArgs);
             return this;
         }
 
-        public Builder setContainerCommand(@Nullable Input<List<String>> containerCommand) {
+        public Builder containerCommand(@Nullable Input<List<String>> containerCommand) {
             this.containerCommand = containerCommand;
             return this;
         }
 
-        public Builder setContainerCommand(@Nullable List<String> containerCommand) {
+        public Builder containerCommand(@Nullable List<String> containerCommand) {
             this.containerCommand = Input.ofNullable(containerCommand);
             return this;
         }
 
-        public Builder setDiskConfig(@Nullable Input<GoogleCloudMlV1__DiskConfigArgs> diskConfig) {
+        public Builder diskConfig(@Nullable Input<GoogleCloudMlV1__DiskConfigArgs> diskConfig) {
             this.diskConfig = diskConfig;
             return this;
         }
 
-        public Builder setDiskConfig(@Nullable GoogleCloudMlV1__DiskConfigArgs diskConfig) {
+        public Builder diskConfig(@Nullable GoogleCloudMlV1__DiskConfigArgs diskConfig) {
             this.diskConfig = Input.ofNullable(diskConfig);
             return this;
         }
 
-        public Builder setImageUri(@Nullable Input<String> imageUri) {
+        public Builder imageUri(@Nullable Input<String> imageUri) {
             this.imageUri = imageUri;
             return this;
         }
 
-        public Builder setImageUri(@Nullable String imageUri) {
+        public Builder imageUri(@Nullable String imageUri) {
             this.imageUri = Input.ofNullable(imageUri);
             return this;
         }
 
-        public Builder setTpuTfVersion(@Nullable Input<String> tpuTfVersion) {
+        public Builder tpuTfVersion(@Nullable Input<String> tpuTfVersion) {
             this.tpuTfVersion = tpuTfVersion;
             return this;
         }
 
-        public Builder setTpuTfVersion(@Nullable String tpuTfVersion) {
+        public Builder tpuTfVersion(@Nullable String tpuTfVersion) {
             this.tpuTfVersion = Input.ofNullable(tpuTfVersion);
             return this;
         }

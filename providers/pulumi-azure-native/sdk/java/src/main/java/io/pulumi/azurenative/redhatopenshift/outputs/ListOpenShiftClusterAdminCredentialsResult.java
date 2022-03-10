@@ -50,7 +50,7 @@ public final class ListOpenShiftClusterAdminCredentialsResult {
     	      this.kubeconfig = defaults.kubeconfig;
         }
 
-        public Builder setKubeconfig(@Nullable String kubeconfig) {
+        public Builder kubeconfig(@Nullable String kubeconfig) {
             this.kubeconfig = kubeconfig;
             return this;
         }

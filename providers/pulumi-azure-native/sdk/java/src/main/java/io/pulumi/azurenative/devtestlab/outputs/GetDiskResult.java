@@ -293,82 +293,82 @@ public final class GetDiskResult {
     	      this.uniqueIdentifier = defaults.uniqueIdentifier;
         }
 
-        public Builder setCreatedDate(String createdDate) {
+        public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
 
-        public Builder setDiskBlobName(@Nullable String diskBlobName) {
+        public Builder diskBlobName(@Nullable String diskBlobName) {
             this.diskBlobName = diskBlobName;
             return this;
         }
 
-        public Builder setDiskSizeGiB(@Nullable Integer diskSizeGiB) {
+        public Builder diskSizeGiB(@Nullable Integer diskSizeGiB) {
             this.diskSizeGiB = diskSizeGiB;
             return this;
         }
 
-        public Builder setDiskType(@Nullable String diskType) {
+        public Builder diskType(@Nullable String diskType) {
             this.diskType = diskType;
             return this;
         }
 
-        public Builder setDiskUri(@Nullable String diskUri) {
+        public Builder diskUri(@Nullable String diskUri) {
             this.diskUri = diskUri;
             return this;
         }
 
-        public Builder setHostCaching(@Nullable String hostCaching) {
+        public Builder hostCaching(@Nullable String hostCaching) {
             this.hostCaching = hostCaching;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLeasedByLabVmId(@Nullable String leasedByLabVmId) {
+        public Builder leasedByLabVmId(@Nullable String leasedByLabVmId) {
             this.leasedByLabVmId = leasedByLabVmId;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setManagedDiskId(@Nullable String managedDiskId) {
+        public Builder managedDiskId(@Nullable String managedDiskId) {
             this.managedDiskId = managedDiskId;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setStorageAccountId(@Nullable String storageAccountId) {
+        public Builder storageAccountId(@Nullable String storageAccountId) {
             this.storageAccountId = storageAccountId;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUniqueIdentifier(String uniqueIdentifier) {
+        public Builder uniqueIdentifier(String uniqueIdentifier) {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
         }

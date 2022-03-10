@@ -384,107 +384,107 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setAutoscalingSettings(AutoscalingSettingsResponse autoscalingSettings) {
+        public Builder autoscalingSettings(AutoscalingSettingsResponse autoscalingSettings) {
             this.autoscalingSettings = Objects.requireNonNull(autoscalingSettings);
             return this;
         }
 
-        public Builder setDataDisks(List<DiskResponse> dataDisks) {
+        public Builder dataDisks(List<DiskResponse> dataDisks) {
             this.dataDisks = Objects.requireNonNull(dataDisks);
             return this;
         }
 
-        public Builder setDefaultPackageSet(String defaultPackageSet) {
+        public Builder defaultPackageSet(String defaultPackageSet) {
             this.defaultPackageSet = Objects.requireNonNull(defaultPackageSet);
             return this;
         }
 
-        public Builder setDiskSizeGb(Integer diskSizeGb) {
+        public Builder diskSizeGb(Integer diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
 
-        public Builder setDiskSourceImage(String diskSourceImage) {
+        public Builder diskSourceImage(String diskSourceImage) {
             this.diskSourceImage = Objects.requireNonNull(diskSourceImage);
             return this;
         }
 
-        public Builder setDiskType(String diskType) {
+        public Builder diskType(String diskType) {
             this.diskType = Objects.requireNonNull(diskType);
             return this;
         }
 
-        public Builder setIpConfiguration(String ipConfiguration) {
+        public Builder ipConfiguration(String ipConfiguration) {
             this.ipConfiguration = Objects.requireNonNull(ipConfiguration);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
 
-        public Builder setMetadata(Map<String,String> metadata) {
+        public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setNumThreadsPerWorker(Integer numThreadsPerWorker) {
+        public Builder numThreadsPerWorker(Integer numThreadsPerWorker) {
             this.numThreadsPerWorker = Objects.requireNonNull(numThreadsPerWorker);
             return this;
         }
 
-        public Builder setNumWorkers(Integer numWorkers) {
+        public Builder numWorkers(Integer numWorkers) {
             this.numWorkers = Objects.requireNonNull(numWorkers);
             return this;
         }
 
-        public Builder setOnHostMaintenance(String onHostMaintenance) {
+        public Builder onHostMaintenance(String onHostMaintenance) {
             this.onHostMaintenance = Objects.requireNonNull(onHostMaintenance);
             return this;
         }
 
-        public Builder setPackages(List<PackageResponse> packages) {
+        public Builder packages(List<PackageResponse> packages) {
             this.packages = Objects.requireNonNull(packages);
             return this;
         }
 
-        public Builder setPoolArgs(Map<String,String> poolArgs) {
+        public Builder poolArgs(Map<String,String> poolArgs) {
             this.poolArgs = Objects.requireNonNull(poolArgs);
             return this;
         }
 
-        public Builder setSdkHarnessContainerImages(List<SdkHarnessContainerImageResponse> sdkHarnessContainerImages) {
+        public Builder sdkHarnessContainerImages(List<SdkHarnessContainerImageResponse> sdkHarnessContainerImages) {
             this.sdkHarnessContainerImages = Objects.requireNonNull(sdkHarnessContainerImages);
             return this;
         }
 
-        public Builder setSubnetwork(String subnetwork) {
+        public Builder subnetwork(String subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }
 
-        public Builder setTaskrunnerSettings(TaskRunnerSettingsResponse taskrunnerSettings) {
+        public Builder taskrunnerSettings(TaskRunnerSettingsResponse taskrunnerSettings) {
             this.taskrunnerSettings = Objects.requireNonNull(taskrunnerSettings);
             return this;
         }
 
-        public Builder setTeardownPolicy(String teardownPolicy) {
+        public Builder teardownPolicy(String teardownPolicy) {
             this.teardownPolicy = Objects.requireNonNull(teardownPolicy);
             return this;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

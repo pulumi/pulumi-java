@@ -51,7 +51,7 @@ public final class GetGatewayArgs extends io.pulumi.resources.InvokeArgs {
     	      this.gatewayId = defaults.gatewayId;
         }
 
-        public Builder setGatewayId(String gatewayId) {
+        public Builder gatewayId(String gatewayId) {
             this.gatewayId = Objects.requireNonNull(gatewayId);
             return this;
         }

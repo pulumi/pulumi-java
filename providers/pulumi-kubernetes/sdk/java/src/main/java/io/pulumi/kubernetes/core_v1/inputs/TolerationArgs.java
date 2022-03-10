@@ -132,52 +132,52 @@ public final class TolerationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setEffect(@Nullable Input<String> effect) {
+        public Builder effect(@Nullable Input<String> effect) {
             this.effect = effect;
             return this;
         }
 
-        public Builder setEffect(@Nullable String effect) {
+        public Builder effect(@Nullable String effect) {
             this.effect = Input.ofNullable(effect);
             return this;
         }
 
-        public Builder setKey(@Nullable Input<String> key) {
+        public Builder key(@Nullable Input<String> key) {
             this.key = key;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = Input.ofNullable(key);
             return this;
         }
 
-        public Builder setOperator(@Nullable Input<String> operator) {
+        public Builder operator(@Nullable Input<String> operator) {
             this.operator = operator;
             return this;
         }
 
-        public Builder setOperator(@Nullable String operator) {
+        public Builder operator(@Nullable String operator) {
             this.operator = Input.ofNullable(operator);
             return this;
         }
 
-        public Builder setTolerationSeconds(@Nullable Input<Integer> tolerationSeconds) {
+        public Builder tolerationSeconds(@Nullable Input<Integer> tolerationSeconds) {
             this.tolerationSeconds = tolerationSeconds;
             return this;
         }
 
-        public Builder setTolerationSeconds(@Nullable Integer tolerationSeconds) {
+        public Builder tolerationSeconds(@Nullable Integer tolerationSeconds) {
             this.tolerationSeconds = Input.ofNullable(tolerationSeconds);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }

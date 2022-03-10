@@ -142,82 +142,82 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setDataSourceConfiguration(@Nullable Input<DataSourceConfigurationArgs> dataSourceConfiguration) {
+        public Builder dataSourceConfiguration(@Nullable Input<DataSourceConfigurationArgs> dataSourceConfiguration) {
             this.dataSourceConfiguration = dataSourceConfiguration;
             return this;
         }
 
-        public Builder setDataSourceConfiguration(@Nullable DataSourceConfigurationArgs dataSourceConfiguration) {
+        public Builder dataSourceConfiguration(@Nullable DataSourceConfigurationArgs dataSourceConfiguration) {
             this.dataSourceConfiguration = Input.ofNullable(dataSourceConfiguration);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setIndexId(Input<String> indexId) {
+        public Builder indexId(Input<String> indexId) {
             this.indexId = Objects.requireNonNull(indexId);
             return this;
         }
 
-        public Builder setIndexId(String indexId) {
+        public Builder indexId(String indexId) {
             this.indexId = Input.of(Objects.requireNonNull(indexId));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRoleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Input<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Input.ofNullable(roleArn);
             return this;
         }
 
-        public Builder setSchedule(@Nullable Input<String> schedule) {
+        public Builder schedule(@Nullable Input<String> schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setSchedule(@Nullable String schedule) {
+        public Builder schedule(@Nullable String schedule) {
             this.schedule = Input.ofNullable(schedule);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<DataSourceTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<DataSourceTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DataSourceTagArgs> tags) {
+        public Builder tags(@Nullable List<DataSourceTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setType(Input<DataSourceType> type) {
+        public Builder type(Input<DataSourceType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(DataSourceType type) {
+        public Builder type(DataSourceType type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

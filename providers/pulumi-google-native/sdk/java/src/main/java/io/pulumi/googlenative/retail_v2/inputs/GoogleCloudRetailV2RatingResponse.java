@@ -90,17 +90,17 @@ public final class GoogleCloudRetailV2RatingResponse extends io.pulumi.resources
     	      this.ratingHistogram = defaults.ratingHistogram;
         }
 
-        public Builder setAverageRating(Double averageRating) {
+        public Builder averageRating(Double averageRating) {
             this.averageRating = Objects.requireNonNull(averageRating);
             return this;
         }
 
-        public Builder setRatingCount(Integer ratingCount) {
+        public Builder ratingCount(Integer ratingCount) {
             this.ratingCount = Objects.requireNonNull(ratingCount);
             return this;
         }
 
-        public Builder setRatingHistogram(List<Integer> ratingHistogram) {
+        public Builder ratingHistogram(List<Integer> ratingHistogram) {
             this.ratingHistogram = Objects.requireNonNull(ratingHistogram);
             return this;
         }

@@ -81,17 +81,17 @@ public final class HttpFilterConfigResponse {
     	      this.filterName = defaults.filterName;
         }
 
-        public Builder setConfig(String config) {
+        public Builder config(String config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
-        public Builder setConfigTypeUrl(String configTypeUrl) {
+        public Builder configTypeUrl(String configTypeUrl) {
             this.configTypeUrl = Objects.requireNonNull(configTypeUrl);
             return this;
         }
 
-        public Builder setFilterName(String filterName) {
+        public Builder filterName(String filterName) {
             this.filterName = Objects.requireNonNull(filterName);
             return this;
         }

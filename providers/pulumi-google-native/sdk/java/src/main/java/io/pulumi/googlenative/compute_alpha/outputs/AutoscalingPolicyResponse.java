@@ -185,52 +185,52 @@ public final class AutoscalingPolicyResponse {
     	      this.scalingSchedules = defaults.scalingSchedules;
         }
 
-        public Builder setCoolDownPeriodSec(Integer coolDownPeriodSec) {
+        public Builder coolDownPeriodSec(Integer coolDownPeriodSec) {
             this.coolDownPeriodSec = Objects.requireNonNull(coolDownPeriodSec);
             return this;
         }
 
-        public Builder setCpuUtilization(AutoscalingPolicyCpuUtilizationResponse cpuUtilization) {
+        public Builder cpuUtilization(AutoscalingPolicyCpuUtilizationResponse cpuUtilization) {
             this.cpuUtilization = Objects.requireNonNull(cpuUtilization);
             return this;
         }
 
-        public Builder setCustomMetricUtilizations(List<AutoscalingPolicyCustomMetricUtilizationResponse> customMetricUtilizations) {
+        public Builder customMetricUtilizations(List<AutoscalingPolicyCustomMetricUtilizationResponse> customMetricUtilizations) {
             this.customMetricUtilizations = Objects.requireNonNull(customMetricUtilizations);
             return this;
         }
 
-        public Builder setLoadBalancingUtilization(AutoscalingPolicyLoadBalancingUtilizationResponse loadBalancingUtilization) {
+        public Builder loadBalancingUtilization(AutoscalingPolicyLoadBalancingUtilizationResponse loadBalancingUtilization) {
             this.loadBalancingUtilization = Objects.requireNonNull(loadBalancingUtilization);
             return this;
         }
 
-        public Builder setMaxNumReplicas(Integer maxNumReplicas) {
+        public Builder maxNumReplicas(Integer maxNumReplicas) {
             this.maxNumReplicas = Objects.requireNonNull(maxNumReplicas);
             return this;
         }
 
-        public Builder setMinNumReplicas(Integer minNumReplicas) {
+        public Builder minNumReplicas(Integer minNumReplicas) {
             this.minNumReplicas = Objects.requireNonNull(minNumReplicas);
             return this;
         }
 
-        public Builder setMode(String mode) {
+        public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
-        public Builder setScaleDownControl(AutoscalingPolicyScaleDownControlResponse scaleDownControl) {
+        public Builder scaleDownControl(AutoscalingPolicyScaleDownControlResponse scaleDownControl) {
             this.scaleDownControl = Objects.requireNonNull(scaleDownControl);
             return this;
         }
 
-        public Builder setScaleInControl(AutoscalingPolicyScaleInControlResponse scaleInControl) {
+        public Builder scaleInControl(AutoscalingPolicyScaleInControlResponse scaleInControl) {
             this.scaleInControl = Objects.requireNonNull(scaleInControl);
             return this;
         }
 
-        public Builder setScalingSchedules(Map<String,String> scalingSchedules) {
+        public Builder scalingSchedules(Map<String,String> scalingSchedules) {
             this.scalingSchedules = Objects.requireNonNull(scalingSchedules);
             return this;
         }

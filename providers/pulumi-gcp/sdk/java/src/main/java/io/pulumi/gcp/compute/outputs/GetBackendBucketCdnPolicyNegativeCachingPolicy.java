@@ -49,12 +49,12 @@ public final class GetBackendBucketCdnPolicyNegativeCachingPolicy {
     	      this.ttl = defaults.ttl;
         }
 
-        public Builder setCode(Integer code) {
+        public Builder code(Integer code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
 
-        public Builder setTtl(Integer ttl) {
+        public Builder ttl(Integer ttl) {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }

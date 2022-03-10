@@ -89,42 +89,42 @@ public final class TaskDefinitionVolumeArgs extends io.pulumi.resources.Resource
     	      this.name = defaults.name;
         }
 
-        public Builder setDockerVolumeConfiguration(@Nullable Input<TaskDefinitionDockerVolumeConfigurationArgs> dockerVolumeConfiguration) {
+        public Builder dockerVolumeConfiguration(@Nullable Input<TaskDefinitionDockerVolumeConfigurationArgs> dockerVolumeConfiguration) {
             this.dockerVolumeConfiguration = dockerVolumeConfiguration;
             return this;
         }
 
-        public Builder setDockerVolumeConfiguration(@Nullable TaskDefinitionDockerVolumeConfigurationArgs dockerVolumeConfiguration) {
+        public Builder dockerVolumeConfiguration(@Nullable TaskDefinitionDockerVolumeConfigurationArgs dockerVolumeConfiguration) {
             this.dockerVolumeConfiguration = Input.ofNullable(dockerVolumeConfiguration);
             return this;
         }
 
-        public Builder setEFSVolumeConfiguration(@Nullable Input<TaskDefinitionEFSVolumeConfigurationArgs> eFSVolumeConfiguration) {
+        public Builder eFSVolumeConfiguration(@Nullable Input<TaskDefinitionEFSVolumeConfigurationArgs> eFSVolumeConfiguration) {
             this.eFSVolumeConfiguration = eFSVolumeConfiguration;
             return this;
         }
 
-        public Builder setEFSVolumeConfiguration(@Nullable TaskDefinitionEFSVolumeConfigurationArgs eFSVolumeConfiguration) {
+        public Builder eFSVolumeConfiguration(@Nullable TaskDefinitionEFSVolumeConfigurationArgs eFSVolumeConfiguration) {
             this.eFSVolumeConfiguration = Input.ofNullable(eFSVolumeConfiguration);
             return this;
         }
 
-        public Builder setHost(@Nullable Input<TaskDefinitionHostVolumePropertiesArgs> host) {
+        public Builder host(@Nullable Input<TaskDefinitionHostVolumePropertiesArgs> host) {
             this.host = host;
             return this;
         }
 
-        public Builder setHost(@Nullable TaskDefinitionHostVolumePropertiesArgs host) {
+        public Builder host(@Nullable TaskDefinitionHostVolumePropertiesArgs host) {
             this.host = Input.ofNullable(host);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

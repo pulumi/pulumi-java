@@ -60,17 +60,17 @@ public final class BucketDefaultRetention {
     	      this.years = defaults.years;
         }
 
-        public Builder setDays(@Nullable Integer days) {
+        public Builder days(@Nullable Integer days) {
             this.days = days;
             return this;
         }
 
-        public Builder setMode(@Nullable BucketDefaultRetentionMode mode) {
+        public Builder mode(@Nullable BucketDefaultRetentionMode mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setYears(@Nullable Integer years) {
+        public Builder years(@Nullable Integer years) {
             this.years = years;
             return this;
         }

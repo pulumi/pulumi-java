@@ -74,22 +74,22 @@ public final class GoogleCloudDialogflowV2IntentMessageCardButtonArgs extends io
     	      this.text = defaults.text;
         }
 
-        public Builder setPostback(@Nullable Input<String> postback) {
+        public Builder postback(@Nullable Input<String> postback) {
             this.postback = postback;
             return this;
         }
 
-        public Builder setPostback(@Nullable String postback) {
+        public Builder postback(@Nullable String postback) {
             this.postback = Input.ofNullable(postback);
             return this;
         }
 
-        public Builder setText(@Nullable Input<String> text) {
+        public Builder text(@Nullable Input<String> text) {
             this.text = text;
             return this;
         }
 
-        public Builder setText(@Nullable String text) {
+        public Builder text(@Nullable String text) {
             this.text = Input.ofNullable(text);
             return this;
         }

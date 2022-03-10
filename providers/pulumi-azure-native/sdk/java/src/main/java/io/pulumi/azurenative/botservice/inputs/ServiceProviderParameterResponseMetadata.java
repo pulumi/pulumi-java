@@ -57,7 +57,7 @@ public final class ServiceProviderParameterResponseMetadata extends io.pulumi.re
     	      this.constraints = defaults.constraints;
         }
 
-        public Builder setConstraints(@Nullable ServiceProviderParameterResponseConstraints constraints) {
+        public Builder constraints(@Nullable ServiceProviderParameterResponseConstraints constraints) {
             this.constraints = constraints;
             return this;
         }

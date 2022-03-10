@@ -110,42 +110,42 @@ public final class PeeringSkuArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tier = defaults.tier;
         }
 
-        public Builder setFamily(@Nullable Input<Either<String,Family>> family) {
+        public Builder family(@Nullable Input<Either<String,Family>> family) {
             this.family = family;
             return this;
         }
 
-        public Builder setFamily(@Nullable Either<String,Family> family) {
+        public Builder family(@Nullable Either<String,Family> family) {
             this.family = Input.ofNullable(family);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSize(@Nullable Input<Either<String,Size>> size) {
+        public Builder size(@Nullable Input<Either<String,Size>> size) {
             this.size = size;
             return this;
         }
 
-        public Builder setSize(@Nullable Either<String,Size> size) {
+        public Builder size(@Nullable Either<String,Size> size) {
             this.size = Input.ofNullable(size);
             return this;
         }
 
-        public Builder setTier(@Nullable Input<Either<String,Tier>> tier) {
+        public Builder tier(@Nullable Input<Either<String,Tier>> tier) {
             this.tier = tier;
             return this;
         }
 
-        public Builder setTier(@Nullable Either<String,Tier> tier) {
+        public Builder tier(@Nullable Either<String,Tier> tier) {
             this.tier = Input.ofNullable(tier);
             return this;
         }

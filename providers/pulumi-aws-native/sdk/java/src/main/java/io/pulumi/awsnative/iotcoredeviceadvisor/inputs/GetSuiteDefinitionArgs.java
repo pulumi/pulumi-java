@@ -51,7 +51,7 @@ public final class GetSuiteDefinitionArgs extends io.pulumi.resources.InvokeArgs
     	      this.suiteDefinitionId = defaults.suiteDefinitionId;
         }
 
-        public Builder setSuiteDefinitionId(String suiteDefinitionId) {
+        public Builder suiteDefinitionId(String suiteDefinitionId) {
             this.suiteDefinitionId = Objects.requireNonNull(suiteDefinitionId);
             return this;
         }

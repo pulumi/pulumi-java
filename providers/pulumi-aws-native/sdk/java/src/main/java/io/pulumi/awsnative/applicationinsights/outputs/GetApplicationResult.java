@@ -185,47 +185,47 @@ public final class GetApplicationResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setApplicationARN(@Nullable String applicationARN) {
+        public Builder applicationARN(@Nullable String applicationARN) {
             this.applicationARN = applicationARN;
             return this;
         }
 
-        public Builder setAutoConfigurationEnabled(@Nullable Boolean autoConfigurationEnabled) {
+        public Builder autoConfigurationEnabled(@Nullable Boolean autoConfigurationEnabled) {
             this.autoConfigurationEnabled = autoConfigurationEnabled;
             return this;
         }
 
-        public Builder setCWEMonitorEnabled(@Nullable Boolean cWEMonitorEnabled) {
+        public Builder cWEMonitorEnabled(@Nullable Boolean cWEMonitorEnabled) {
             this.cWEMonitorEnabled = cWEMonitorEnabled;
             return this;
         }
 
-        public Builder setComponentMonitoringSettings(@Nullable List<ApplicationComponentMonitoringSetting> componentMonitoringSettings) {
+        public Builder componentMonitoringSettings(@Nullable List<ApplicationComponentMonitoringSetting> componentMonitoringSettings) {
             this.componentMonitoringSettings = componentMonitoringSettings;
             return this;
         }
 
-        public Builder setCustomComponents(@Nullable List<ApplicationCustomComponent> customComponents) {
+        public Builder customComponents(@Nullable List<ApplicationCustomComponent> customComponents) {
             this.customComponents = customComponents;
             return this;
         }
 
-        public Builder setLogPatternSets(@Nullable List<ApplicationLogPatternSet> logPatternSets) {
+        public Builder logPatternSets(@Nullable List<ApplicationLogPatternSet> logPatternSets) {
             this.logPatternSets = logPatternSets;
             return this;
         }
 
-        public Builder setOpsCenterEnabled(@Nullable Boolean opsCenterEnabled) {
+        public Builder opsCenterEnabled(@Nullable Boolean opsCenterEnabled) {
             this.opsCenterEnabled = opsCenterEnabled;
             return this;
         }
 
-        public Builder setOpsItemSNSTopicArn(@Nullable String opsItemSNSTopicArn) {
+        public Builder opsItemSNSTopicArn(@Nullable String opsItemSNSTopicArn) {
             this.opsItemSNSTopicArn = opsItemSNSTopicArn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ApplicationTag> tags) {
+        public Builder tags(@Nullable List<ApplicationTag> tags) {
             this.tags = tags;
             return this;
         }

@@ -59,12 +59,12 @@ public final class ManagedZoneForwardingConfigResponse {
     	      this.targetNameServers = defaults.targetNameServers;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setTargetNameServers(List<ManagedZoneForwardingConfigNameServerTargetResponse> targetNameServers) {
+        public Builder targetNameServers(List<ManagedZoneForwardingConfigNameServerTargetResponse> targetNameServers) {
             this.targetNameServers = Objects.requireNonNull(targetNameServers);
             return this;
         }

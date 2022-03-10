@@ -100,52 +100,52 @@ public final class TopicRulePutAssetPropertyValueEntryArgs extends io.pulumi.res
     	      this.propertyValues = defaults.propertyValues;
         }
 
-        public Builder setAssetId(@Nullable Input<String> assetId) {
+        public Builder assetId(@Nullable Input<String> assetId) {
             this.assetId = assetId;
             return this;
         }
 
-        public Builder setAssetId(@Nullable String assetId) {
+        public Builder assetId(@Nullable String assetId) {
             this.assetId = Input.ofNullable(assetId);
             return this;
         }
 
-        public Builder setEntryId(@Nullable Input<String> entryId) {
+        public Builder entryId(@Nullable Input<String> entryId) {
             this.entryId = entryId;
             return this;
         }
 
-        public Builder setEntryId(@Nullable String entryId) {
+        public Builder entryId(@Nullable String entryId) {
             this.entryId = Input.ofNullable(entryId);
             return this;
         }
 
-        public Builder setPropertyAlias(@Nullable Input<String> propertyAlias) {
+        public Builder propertyAlias(@Nullable Input<String> propertyAlias) {
             this.propertyAlias = propertyAlias;
             return this;
         }
 
-        public Builder setPropertyAlias(@Nullable String propertyAlias) {
+        public Builder propertyAlias(@Nullable String propertyAlias) {
             this.propertyAlias = Input.ofNullable(propertyAlias);
             return this;
         }
 
-        public Builder setPropertyId(@Nullable Input<String> propertyId) {
+        public Builder propertyId(@Nullable Input<String> propertyId) {
             this.propertyId = propertyId;
             return this;
         }
 
-        public Builder setPropertyId(@Nullable String propertyId) {
+        public Builder propertyId(@Nullable String propertyId) {
             this.propertyId = Input.ofNullable(propertyId);
             return this;
         }
 
-        public Builder setPropertyValues(Input<List<TopicRuleAssetPropertyValueArgs>> propertyValues) {
+        public Builder propertyValues(Input<List<TopicRuleAssetPropertyValueArgs>> propertyValues) {
             this.propertyValues = Objects.requireNonNull(propertyValues);
             return this;
         }
 
-        public Builder setPropertyValues(List<TopicRuleAssetPropertyValueArgs> propertyValues) {
+        public Builder propertyValues(List<TopicRuleAssetPropertyValueArgs> propertyValues) {
             this.propertyValues = Input.of(Objects.requireNonNull(propertyValues));
             return this;
         }

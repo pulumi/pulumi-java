@@ -247,142 +247,142 @@ public final class ClusterNodePoolGetArgs extends io.pulumi.resources.ResourceAr
     	      this.version = defaults.version;
         }
 
-        public Builder setAutoscaling(@Nullable Input<ClusterNodePoolAutoscalingGetArgs> autoscaling) {
+        public Builder autoscaling(@Nullable Input<ClusterNodePoolAutoscalingGetArgs> autoscaling) {
             this.autoscaling = autoscaling;
             return this;
         }
 
-        public Builder setAutoscaling(@Nullable ClusterNodePoolAutoscalingGetArgs autoscaling) {
+        public Builder autoscaling(@Nullable ClusterNodePoolAutoscalingGetArgs autoscaling) {
             this.autoscaling = Input.ofNullable(autoscaling);
             return this;
         }
 
-        public Builder setInitialNodeCount(@Nullable Input<Integer> initialNodeCount) {
+        public Builder initialNodeCount(@Nullable Input<Integer> initialNodeCount) {
             this.initialNodeCount = initialNodeCount;
             return this;
         }
 
-        public Builder setInitialNodeCount(@Nullable Integer initialNodeCount) {
+        public Builder initialNodeCount(@Nullable Integer initialNodeCount) {
             this.initialNodeCount = Input.ofNullable(initialNodeCount);
             return this;
         }
 
-        public Builder setInstanceGroupUrls(@Nullable Input<List<String>> instanceGroupUrls) {
+        public Builder instanceGroupUrls(@Nullable Input<List<String>> instanceGroupUrls) {
             this.instanceGroupUrls = instanceGroupUrls;
             return this;
         }
 
-        public Builder setInstanceGroupUrls(@Nullable List<String> instanceGroupUrls) {
+        public Builder instanceGroupUrls(@Nullable List<String> instanceGroupUrls) {
             this.instanceGroupUrls = Input.ofNullable(instanceGroupUrls);
             return this;
         }
 
-        public Builder setManagedInstanceGroupUrls(@Nullable Input<List<String>> managedInstanceGroupUrls) {
+        public Builder managedInstanceGroupUrls(@Nullable Input<List<String>> managedInstanceGroupUrls) {
             this.managedInstanceGroupUrls = managedInstanceGroupUrls;
             return this;
         }
 
-        public Builder setManagedInstanceGroupUrls(@Nullable List<String> managedInstanceGroupUrls) {
+        public Builder managedInstanceGroupUrls(@Nullable List<String> managedInstanceGroupUrls) {
             this.managedInstanceGroupUrls = Input.ofNullable(managedInstanceGroupUrls);
             return this;
         }
 
-        public Builder setManagement(@Nullable Input<ClusterNodePoolManagementGetArgs> management) {
+        public Builder management(@Nullable Input<ClusterNodePoolManagementGetArgs> management) {
             this.management = management;
             return this;
         }
 
-        public Builder setManagement(@Nullable ClusterNodePoolManagementGetArgs management) {
+        public Builder management(@Nullable ClusterNodePoolManagementGetArgs management) {
             this.management = Input.ofNullable(management);
             return this;
         }
 
-        public Builder setMaxPodsPerNode(@Nullable Input<Integer> maxPodsPerNode) {
+        public Builder maxPodsPerNode(@Nullable Input<Integer> maxPodsPerNode) {
             this.maxPodsPerNode = maxPodsPerNode;
             return this;
         }
 
-        public Builder setMaxPodsPerNode(@Nullable Integer maxPodsPerNode) {
+        public Builder maxPodsPerNode(@Nullable Integer maxPodsPerNode) {
             this.maxPodsPerNode = Input.ofNullable(maxPodsPerNode);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Input<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable String namePrefix) {
+        public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Input.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder setNetworkConfig(@Nullable Input<ClusterNodePoolNetworkConfigGetArgs> networkConfig) {
+        public Builder networkConfig(@Nullable Input<ClusterNodePoolNetworkConfigGetArgs> networkConfig) {
             this.networkConfig = networkConfig;
             return this;
         }
 
-        public Builder setNetworkConfig(@Nullable ClusterNodePoolNetworkConfigGetArgs networkConfig) {
+        public Builder networkConfig(@Nullable ClusterNodePoolNetworkConfigGetArgs networkConfig) {
             this.networkConfig = Input.ofNullable(networkConfig);
             return this;
         }
 
-        public Builder setNodeConfig(@Nullable Input<ClusterNodePoolNodeConfigGetArgs> nodeConfig) {
+        public Builder nodeConfig(@Nullable Input<ClusterNodePoolNodeConfigGetArgs> nodeConfig) {
             this.nodeConfig = nodeConfig;
             return this;
         }
 
-        public Builder setNodeConfig(@Nullable ClusterNodePoolNodeConfigGetArgs nodeConfig) {
+        public Builder nodeConfig(@Nullable ClusterNodePoolNodeConfigGetArgs nodeConfig) {
             this.nodeConfig = Input.ofNullable(nodeConfig);
             return this;
         }
 
-        public Builder setNodeCount(@Nullable Input<Integer> nodeCount) {
+        public Builder nodeCount(@Nullable Input<Integer> nodeCount) {
             this.nodeCount = nodeCount;
             return this;
         }
 
-        public Builder setNodeCount(@Nullable Integer nodeCount) {
+        public Builder nodeCount(@Nullable Integer nodeCount) {
             this.nodeCount = Input.ofNullable(nodeCount);
             return this;
         }
 
-        public Builder setNodeLocations(@Nullable Input<List<String>> nodeLocations) {
+        public Builder nodeLocations(@Nullable Input<List<String>> nodeLocations) {
             this.nodeLocations = nodeLocations;
             return this;
         }
 
-        public Builder setNodeLocations(@Nullable List<String> nodeLocations) {
+        public Builder nodeLocations(@Nullable List<String> nodeLocations) {
             this.nodeLocations = Input.ofNullable(nodeLocations);
             return this;
         }
 
-        public Builder setUpgradeSettings(@Nullable Input<ClusterNodePoolUpgradeSettingsGetArgs> upgradeSettings) {
+        public Builder upgradeSettings(@Nullable Input<ClusterNodePoolUpgradeSettingsGetArgs> upgradeSettings) {
             this.upgradeSettings = upgradeSettings;
             return this;
         }
 
-        public Builder setUpgradeSettings(@Nullable ClusterNodePoolUpgradeSettingsGetArgs upgradeSettings) {
+        public Builder upgradeSettings(@Nullable ClusterNodePoolUpgradeSettingsGetArgs upgradeSettings) {
             this.upgradeSettings = Input.ofNullable(upgradeSettings);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

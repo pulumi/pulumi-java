@@ -110,42 +110,42 @@ public final class FlowSchemaSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setDistinguisherMethod(@Nullable Input<FlowDistinguisherMethodArgs> distinguisherMethod) {
+        public Builder distinguisherMethod(@Nullable Input<FlowDistinguisherMethodArgs> distinguisherMethod) {
             this.distinguisherMethod = distinguisherMethod;
             return this;
         }
 
-        public Builder setDistinguisherMethod(@Nullable FlowDistinguisherMethodArgs distinguisherMethod) {
+        public Builder distinguisherMethod(@Nullable FlowDistinguisherMethodArgs distinguisherMethod) {
             this.distinguisherMethod = Input.ofNullable(distinguisherMethod);
             return this;
         }
 
-        public Builder setMatchingPrecedence(@Nullable Input<Integer> matchingPrecedence) {
+        public Builder matchingPrecedence(@Nullable Input<Integer> matchingPrecedence) {
             this.matchingPrecedence = matchingPrecedence;
             return this;
         }
 
-        public Builder setMatchingPrecedence(@Nullable Integer matchingPrecedence) {
+        public Builder matchingPrecedence(@Nullable Integer matchingPrecedence) {
             this.matchingPrecedence = Input.ofNullable(matchingPrecedence);
             return this;
         }
 
-        public Builder setPriorityLevelConfiguration(Input<PriorityLevelConfigurationReferenceArgs> priorityLevelConfiguration) {
+        public Builder priorityLevelConfiguration(Input<PriorityLevelConfigurationReferenceArgs> priorityLevelConfiguration) {
             this.priorityLevelConfiguration = Objects.requireNonNull(priorityLevelConfiguration);
             return this;
         }
 
-        public Builder setPriorityLevelConfiguration(PriorityLevelConfigurationReferenceArgs priorityLevelConfiguration) {
+        public Builder priorityLevelConfiguration(PriorityLevelConfigurationReferenceArgs priorityLevelConfiguration) {
             this.priorityLevelConfiguration = Input.of(Objects.requireNonNull(priorityLevelConfiguration));
             return this;
         }
 
-        public Builder setRules(@Nullable Input<List<PolicyRulesWithSubjectsArgs>> rules) {
+        public Builder rules(@Nullable Input<List<PolicyRulesWithSubjectsArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setRules(@Nullable List<PolicyRulesWithSubjectsArgs> rules) {
+        public Builder rules(@Nullable List<PolicyRulesWithSubjectsArgs> rules) {
             this.rules = Input.ofNullable(rules);
             return this;
         }

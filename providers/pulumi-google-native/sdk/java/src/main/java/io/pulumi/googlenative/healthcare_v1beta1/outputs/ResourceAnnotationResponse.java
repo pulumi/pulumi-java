@@ -48,7 +48,7 @@ public final class ResourceAnnotationResponse {
     	      this.label = defaults.label;
         }
 
-        public Builder setLabel(String label) {
+        public Builder label(String label) {
             this.label = Objects.requireNonNull(label);
             return this;
         }

@@ -188,47 +188,47 @@ public final class FlowSourceEncryption extends io.pulumi.resources.InvokeArgs {
     	      this.url = defaults.url;
         }
 
-        public Builder setAlgorithm(FlowSourceEncryptionAlgorithm algorithm) {
+        public Builder algorithm(FlowSourceEncryptionAlgorithm algorithm) {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
 
-        public Builder setConstantInitializationVector(@Nullable String constantInitializationVector) {
+        public Builder constantInitializationVector(@Nullable String constantInitializationVector) {
             this.constantInitializationVector = constantInitializationVector;
             return this;
         }
 
-        public Builder setDeviceId(@Nullable String deviceId) {
+        public Builder deviceId(@Nullable String deviceId) {
             this.deviceId = deviceId;
             return this;
         }
 
-        public Builder setKeyType(@Nullable FlowSourceEncryptionKeyType keyType) {
+        public Builder keyType(@Nullable FlowSourceEncryptionKeyType keyType) {
             this.keyType = keyType;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setSecretArn(@Nullable String secretArn) {
+        public Builder secretArn(@Nullable String secretArn) {
             this.secretArn = secretArn;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }

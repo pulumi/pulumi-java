@@ -82,17 +82,17 @@ public final class GetInstancesResult {
     	      this.identityStoreIds = defaults.identityStoreIds;
         }
 
-        public Builder setArns(List<String> arns) {
+        public Builder arns(List<String> arns) {
             this.arns = Objects.requireNonNull(arns);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentityStoreIds(List<String> identityStoreIds) {
+        public Builder identityStoreIds(List<String> identityStoreIds) {
             this.identityStoreIds = Objects.requireNonNull(identityStoreIds);
             return this;
         }

@@ -238,122 +238,122 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
     	      this.scope = defaults.scope;
         }
 
-        public Builder setAttachable(@Nullable Input<Boolean> attachable) {
+        public Builder attachable(@Nullable Input<Boolean> attachable) {
             this.attachable = attachable;
             return this;
         }
 
-        public Builder setAttachable(@Nullable Boolean attachable) {
+        public Builder attachable(@Nullable Boolean attachable) {
             this.attachable = Input.ofNullable(attachable);
             return this;
         }
 
-        public Builder setCheckDuplicate(@Nullable Input<Boolean> checkDuplicate) {
+        public Builder checkDuplicate(@Nullable Input<Boolean> checkDuplicate) {
             this.checkDuplicate = checkDuplicate;
             return this;
         }
 
-        public Builder setCheckDuplicate(@Nullable Boolean checkDuplicate) {
+        public Builder checkDuplicate(@Nullable Boolean checkDuplicate) {
             this.checkDuplicate = Input.ofNullable(checkDuplicate);
             return this;
         }
 
-        public Builder setDriver(@Nullable Input<String> driver) {
+        public Builder driver(@Nullable Input<String> driver) {
             this.driver = driver;
             return this;
         }
 
-        public Builder setDriver(@Nullable String driver) {
+        public Builder driver(@Nullable String driver) {
             this.driver = Input.ofNullable(driver);
             return this;
         }
 
-        public Builder setIngress(@Nullable Input<Boolean> ingress) {
+        public Builder ingress(@Nullable Input<Boolean> ingress) {
             this.ingress = ingress;
             return this;
         }
 
-        public Builder setIngress(@Nullable Boolean ingress) {
+        public Builder ingress(@Nullable Boolean ingress) {
             this.ingress = Input.ofNullable(ingress);
             return this;
         }
 
-        public Builder setInternal(@Nullable Input<Boolean> internal) {
+        public Builder internal(@Nullable Input<Boolean> internal) {
             this.internal = internal;
             return this;
         }
 
-        public Builder setInternal(@Nullable Boolean internal) {
+        public Builder internal(@Nullable Boolean internal) {
             this.internal = Input.ofNullable(internal);
             return this;
         }
 
-        public Builder setIpamConfigs(@Nullable Input<List<NetworkIpamConfigGetArgs>> ipamConfigs) {
+        public Builder ipamConfigs(@Nullable Input<List<NetworkIpamConfigGetArgs>> ipamConfigs) {
             this.ipamConfigs = ipamConfigs;
             return this;
         }
 
-        public Builder setIpamConfigs(@Nullable List<NetworkIpamConfigGetArgs> ipamConfigs) {
+        public Builder ipamConfigs(@Nullable List<NetworkIpamConfigGetArgs> ipamConfigs) {
             this.ipamConfigs = Input.ofNullable(ipamConfigs);
             return this;
         }
 
-        public Builder setIpamDriver(@Nullable Input<String> ipamDriver) {
+        public Builder ipamDriver(@Nullable Input<String> ipamDriver) {
             this.ipamDriver = ipamDriver;
             return this;
         }
 
-        public Builder setIpamDriver(@Nullable String ipamDriver) {
+        public Builder ipamDriver(@Nullable String ipamDriver) {
             this.ipamDriver = Input.ofNullable(ipamDriver);
             return this;
         }
 
-        public Builder setIpv6(@Nullable Input<Boolean> ipv6) {
+        public Builder ipv6(@Nullable Input<Boolean> ipv6) {
             this.ipv6 = ipv6;
             return this;
         }
 
-        public Builder setIpv6(@Nullable Boolean ipv6) {
+        public Builder ipv6(@Nullable Boolean ipv6) {
             this.ipv6 = Input.ofNullable(ipv6);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<List<NetworkLabelGetArgs>> labels) {
+        public Builder labels(@Nullable Input<List<NetworkLabelGetArgs>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable List<NetworkLabelGetArgs> labels) {
+        public Builder labels(@Nullable List<NetworkLabelGetArgs> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOptions(@Nullable Input<Map<String,Object>> options) {
+        public Builder options(@Nullable Input<Map<String,Object>> options) {
             this.options = options;
             return this;
         }
 
-        public Builder setOptions(@Nullable Map<String,Object> options) {
+        public Builder options(@Nullable Map<String,Object> options) {
             this.options = Input.ofNullable(options);
             return this;
         }
 
-        public Builder setScope(@Nullable Input<String> scope) {
+        public Builder scope(@Nullable Input<String> scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setScope(@Nullable String scope) {
+        public Builder scope(@Nullable String scope) {
             this.scope = Input.ofNullable(scope);
             return this;
         }

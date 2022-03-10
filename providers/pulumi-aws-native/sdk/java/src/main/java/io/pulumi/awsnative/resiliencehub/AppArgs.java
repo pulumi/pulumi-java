@@ -133,62 +133,62 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAppTemplateBody(Input<String> appTemplateBody) {
+        public Builder appTemplateBody(Input<String> appTemplateBody) {
             this.appTemplateBody = Objects.requireNonNull(appTemplateBody);
             return this;
         }
 
-        public Builder setAppTemplateBody(String appTemplateBody) {
+        public Builder appTemplateBody(String appTemplateBody) {
             this.appTemplateBody = Input.of(Objects.requireNonNull(appTemplateBody));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResiliencyPolicyArn(@Nullable Input<String> resiliencyPolicyArn) {
+        public Builder resiliencyPolicyArn(@Nullable Input<String> resiliencyPolicyArn) {
             this.resiliencyPolicyArn = resiliencyPolicyArn;
             return this;
         }
 
-        public Builder setResiliencyPolicyArn(@Nullable String resiliencyPolicyArn) {
+        public Builder resiliencyPolicyArn(@Nullable String resiliencyPolicyArn) {
             this.resiliencyPolicyArn = Input.ofNullable(resiliencyPolicyArn);
             return this;
         }
 
-        public Builder setResourceMappings(Input<List<AppResourceMappingArgs>> resourceMappings) {
+        public Builder resourceMappings(Input<List<AppResourceMappingArgs>> resourceMappings) {
             this.resourceMappings = Objects.requireNonNull(resourceMappings);
             return this;
         }
 
-        public Builder setResourceMappings(List<AppResourceMappingArgs> resourceMappings) {
+        public Builder resourceMappings(List<AppResourceMappingArgs> resourceMappings) {
             this.resourceMappings = Input.of(Objects.requireNonNull(resourceMappings));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<AppTagMapArgs> tags) {
+        public Builder tags(@Nullable Input<AppTagMapArgs> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable AppTagMapArgs tags) {
+        public Builder tags(@Nullable AppTagMapArgs tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

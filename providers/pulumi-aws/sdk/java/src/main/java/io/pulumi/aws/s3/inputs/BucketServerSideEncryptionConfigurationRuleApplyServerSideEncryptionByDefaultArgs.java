@@ -70,22 +70,22 @@ public final class BucketServerSideEncryptionConfigurationRuleApplyServerSideEnc
     	      this.sseAlgorithm = defaults.sseAlgorithm;
         }
 
-        public Builder setKmsMasterKeyId(@Nullable Input<String> kmsMasterKeyId) {
+        public Builder kmsMasterKeyId(@Nullable Input<String> kmsMasterKeyId) {
             this.kmsMasterKeyId = kmsMasterKeyId;
             return this;
         }
 
-        public Builder setKmsMasterKeyId(@Nullable String kmsMasterKeyId) {
+        public Builder kmsMasterKeyId(@Nullable String kmsMasterKeyId) {
             this.kmsMasterKeyId = Input.ofNullable(kmsMasterKeyId);
             return this;
         }
 
-        public Builder setSseAlgorithm(Input<String> sseAlgorithm) {
+        public Builder sseAlgorithm(Input<String> sseAlgorithm) {
             this.sseAlgorithm = Objects.requireNonNull(sseAlgorithm);
             return this;
         }
 
-        public Builder setSseAlgorithm(String sseAlgorithm) {
+        public Builder sseAlgorithm(String sseAlgorithm) {
             this.sseAlgorithm = Input.of(Objects.requireNonNull(sseAlgorithm));
             return this;
         }

@@ -154,72 +154,72 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
     	      this.uid = defaults.uid;
         }
 
-        public Builder setApiVersion(@Nullable Input<String> apiVersion) {
+        public Builder apiVersion(@Nullable Input<String> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Input.ofNullable(apiVersion);
             return this;
         }
 
-        public Builder setFieldPath(@Nullable Input<String> fieldPath) {
+        public Builder fieldPath(@Nullable Input<String> fieldPath) {
             this.fieldPath = fieldPath;
             return this;
         }
 
-        public Builder setFieldPath(@Nullable String fieldPath) {
+        public Builder fieldPath(@Nullable String fieldPath) {
             this.fieldPath = Input.ofNullable(fieldPath);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Input<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = Input.ofNullable(namespace);
             return this;
         }
 
-        public Builder setResourceVersion(@Nullable Input<String> resourceVersion) {
+        public Builder resourceVersion(@Nullable Input<String> resourceVersion) {
             this.resourceVersion = resourceVersion;
             return this;
         }
 
-        public Builder setResourceVersion(@Nullable String resourceVersion) {
+        public Builder resourceVersion(@Nullable String resourceVersion) {
             this.resourceVersion = Input.ofNullable(resourceVersion);
             return this;
         }
 
-        public Builder setUid(@Nullable Input<String> uid) {
+        public Builder uid(@Nullable Input<String> uid) {
             this.uid = uid;
             return this;
         }
 
-        public Builder setUid(@Nullable String uid) {
+        public Builder uid(@Nullable String uid) {
             this.uid = Input.ofNullable(uid);
             return this;
         }

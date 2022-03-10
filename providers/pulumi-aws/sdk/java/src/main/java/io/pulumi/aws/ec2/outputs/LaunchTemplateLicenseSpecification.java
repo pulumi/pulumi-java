@@ -48,7 +48,7 @@ public final class LaunchTemplateLicenseSpecification {
     	      this.licenseConfigurationArn = defaults.licenseConfigurationArn;
         }
 
-        public Builder setLicenseConfigurationArn(String licenseConfigurationArn) {
+        public Builder licenseConfigurationArn(String licenseConfigurationArn) {
             this.licenseConfigurationArn = Objects.requireNonNull(licenseConfigurationArn);
             return this;
         }

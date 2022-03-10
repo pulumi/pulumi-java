@@ -74,22 +74,22 @@ public final class CodeConfigurationArgs extends io.pulumi.resources.ResourceArg
     	      this.scoringScript = defaults.scoringScript;
         }
 
-        public Builder setCodeId(@Nullable Input<String> codeId) {
+        public Builder codeId(@Nullable Input<String> codeId) {
             this.codeId = codeId;
             return this;
         }
 
-        public Builder setCodeId(@Nullable String codeId) {
+        public Builder codeId(@Nullable String codeId) {
             this.codeId = Input.ofNullable(codeId);
             return this;
         }
 
-        public Builder setScoringScript(Input<String> scoringScript) {
+        public Builder scoringScript(Input<String> scoringScript) {
             this.scoringScript = Objects.requireNonNull(scoringScript);
             return this;
         }
 
-        public Builder setScoringScript(String scoringScript) {
+        public Builder scoringScript(String scoringScript) {
             this.scoringScript = Input.of(Objects.requireNonNull(scoringScript));
             return this;
         }

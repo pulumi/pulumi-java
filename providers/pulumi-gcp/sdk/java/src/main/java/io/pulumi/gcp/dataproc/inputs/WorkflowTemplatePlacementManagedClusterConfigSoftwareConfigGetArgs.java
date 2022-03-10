@@ -84,32 +84,32 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigGe
     	      this.properties = defaults.properties;
         }
 
-        public Builder setImageVersion(@Nullable Input<String> imageVersion) {
+        public Builder imageVersion(@Nullable Input<String> imageVersion) {
             this.imageVersion = imageVersion;
             return this;
         }
 
-        public Builder setImageVersion(@Nullable String imageVersion) {
+        public Builder imageVersion(@Nullable String imageVersion) {
             this.imageVersion = Input.ofNullable(imageVersion);
             return this;
         }
 
-        public Builder setOptionalComponents(@Nullable Input<List<String>> optionalComponents) {
+        public Builder optionalComponents(@Nullable Input<List<String>> optionalComponents) {
             this.optionalComponents = optionalComponents;
             return this;
         }
 
-        public Builder setOptionalComponents(@Nullable List<String> optionalComponents) {
+        public Builder optionalComponents(@Nullable List<String> optionalComponents) {
             this.optionalComponents = Input.ofNullable(optionalComponents);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Input<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }

@@ -64,22 +64,22 @@ public final class SubscriptionStateOverrideActionArgs extends io.pulumi.resourc
     	      this.state = defaults.state;
         }
 
-        public Builder setAction(Input<Either<String,SubscriptionNotificationOperation>> action) {
+        public Builder action(Input<Either<String,SubscriptionNotificationOperation>> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setAction(Either<String,SubscriptionNotificationOperation> action) {
+        public Builder action(Either<String,SubscriptionNotificationOperation> action) {
             this.action = Input.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder setState(Input<Either<String,SubscriptionTransitioningState>> state) {
+        public Builder state(Input<Either<String,SubscriptionTransitioningState>> state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setState(Either<String,SubscriptionTransitioningState> state) {
+        public Builder state(Either<String,SubscriptionTransitioningState> state) {
             this.state = Input.of(Objects.requireNonNull(state));
             return this;
         }

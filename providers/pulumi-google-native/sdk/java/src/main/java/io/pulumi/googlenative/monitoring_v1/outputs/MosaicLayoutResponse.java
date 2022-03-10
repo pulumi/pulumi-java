@@ -67,12 +67,12 @@ public final class MosaicLayoutResponse {
     	      this.tiles = defaults.tiles;
         }
 
-        public Builder setColumns(Integer columns) {
+        public Builder columns(Integer columns) {
             this.columns = Objects.requireNonNull(columns);
             return this;
         }
 
-        public Builder setTiles(List<TileResponse> tiles) {
+        public Builder tiles(List<TileResponse> tiles) {
             this.tiles = Objects.requireNonNull(tiles);
             return this;
         }

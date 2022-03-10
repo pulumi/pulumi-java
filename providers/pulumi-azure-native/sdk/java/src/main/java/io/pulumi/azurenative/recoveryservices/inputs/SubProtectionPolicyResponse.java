@@ -97,17 +97,17 @@ public final class SubProtectionPolicyResponse extends io.pulumi.resources.Invok
     	      this.schedulePolicy = defaults.schedulePolicy;
         }
 
-        public Builder setPolicyType(@Nullable String policyType) {
+        public Builder policyType(@Nullable String policyType) {
             this.policyType = policyType;
             return this;
         }
 
-        public Builder setRetentionPolicy(@Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy) {
+        public Builder retentionPolicy(@Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
 
-        public Builder setSchedulePolicy(@Nullable Object schedulePolicy) {
+        public Builder schedulePolicy(@Nullable Object schedulePolicy) {
             this.schedulePolicy = schedulePolicy;
             return this;
         }

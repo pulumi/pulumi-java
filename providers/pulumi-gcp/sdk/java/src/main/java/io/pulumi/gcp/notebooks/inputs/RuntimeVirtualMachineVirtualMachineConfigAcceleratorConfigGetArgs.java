@@ -73,22 +73,22 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGet
     	      this.type = defaults.type;
         }
 
-        public Builder setCoreCount(@Nullable Input<Integer> coreCount) {
+        public Builder coreCount(@Nullable Input<Integer> coreCount) {
             this.coreCount = coreCount;
             return this;
         }
 
-        public Builder setCoreCount(@Nullable Integer coreCount) {
+        public Builder coreCount(@Nullable Integer coreCount) {
             this.coreCount = Input.ofNullable(coreCount);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

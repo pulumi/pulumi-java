@@ -106,42 +106,42 @@ public final class PadArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topPixels = defaults.topPixels;
         }
 
-        public Builder setBottomPixels(@Nullable Input<Integer> bottomPixels) {
+        public Builder bottomPixels(@Nullable Input<Integer> bottomPixels) {
             this.bottomPixels = bottomPixels;
             return this;
         }
 
-        public Builder setBottomPixels(@Nullable Integer bottomPixels) {
+        public Builder bottomPixels(@Nullable Integer bottomPixels) {
             this.bottomPixels = Input.ofNullable(bottomPixels);
             return this;
         }
 
-        public Builder setLeftPixels(@Nullable Input<Integer> leftPixels) {
+        public Builder leftPixels(@Nullable Input<Integer> leftPixels) {
             this.leftPixels = leftPixels;
             return this;
         }
 
-        public Builder setLeftPixels(@Nullable Integer leftPixels) {
+        public Builder leftPixels(@Nullable Integer leftPixels) {
             this.leftPixels = Input.ofNullable(leftPixels);
             return this;
         }
 
-        public Builder setRightPixels(@Nullable Input<Integer> rightPixels) {
+        public Builder rightPixels(@Nullable Input<Integer> rightPixels) {
             this.rightPixels = rightPixels;
             return this;
         }
 
-        public Builder setRightPixels(@Nullable Integer rightPixels) {
+        public Builder rightPixels(@Nullable Integer rightPixels) {
             this.rightPixels = Input.ofNullable(rightPixels);
             return this;
         }
 
-        public Builder setTopPixels(@Nullable Input<Integer> topPixels) {
+        public Builder topPixels(@Nullable Input<Integer> topPixels) {
             this.topPixels = topPixels;
             return this;
         }
 
-        public Builder setTopPixels(@Nullable Integer topPixels) {
+        public Builder topPixels(@Nullable Integer topPixels) {
             this.topPixels = Input.ofNullable(topPixels);
             return this;
         }

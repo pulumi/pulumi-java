@@ -168,7 +168,7 @@ public class Anomalies extends io.pulumi.resources.CustomResource {
     private static AnomaliesArgs makeArgs(AnomaliesArgs args) {
         var builder = args == null ? AnomaliesArgs.builder() : AnomaliesArgs.builder(args);
         return builder
-            .setKind("Anomalies")
+            .kind("Anomalies")
             .build();
     }
 

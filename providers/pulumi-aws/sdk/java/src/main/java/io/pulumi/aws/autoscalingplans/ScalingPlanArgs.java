@@ -89,32 +89,32 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scalingInstructions = defaults.scalingInstructions;
         }
 
-        public Builder setApplicationSource(Input<ScalingPlanApplicationSourceArgs> applicationSource) {
+        public Builder applicationSource(Input<ScalingPlanApplicationSourceArgs> applicationSource) {
             this.applicationSource = Objects.requireNonNull(applicationSource);
             return this;
         }
 
-        public Builder setApplicationSource(ScalingPlanApplicationSourceArgs applicationSource) {
+        public Builder applicationSource(ScalingPlanApplicationSourceArgs applicationSource) {
             this.applicationSource = Input.of(Objects.requireNonNull(applicationSource));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setScalingInstructions(Input<List<ScalingPlanScalingInstructionArgs>> scalingInstructions) {
+        public Builder scalingInstructions(Input<List<ScalingPlanScalingInstructionArgs>> scalingInstructions) {
             this.scalingInstructions = Objects.requireNonNull(scalingInstructions);
             return this;
         }
 
-        public Builder setScalingInstructions(List<ScalingPlanScalingInstructionArgs> scalingInstructions) {
+        public Builder scalingInstructions(List<ScalingPlanScalingInstructionArgs> scalingInstructions) {
             this.scalingInstructions = Input.of(Objects.requireNonNull(scalingInstructions));
             return this;
         }

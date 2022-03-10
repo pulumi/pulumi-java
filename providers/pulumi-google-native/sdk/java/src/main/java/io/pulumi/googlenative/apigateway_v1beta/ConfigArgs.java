@@ -204,112 +204,112 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setApiConfigId(Input<String> apiConfigId) {
+        public Builder apiConfigId(Input<String> apiConfigId) {
             this.apiConfigId = Objects.requireNonNull(apiConfigId);
             return this;
         }
 
-        public Builder setApiConfigId(String apiConfigId) {
+        public Builder apiConfigId(String apiConfigId) {
             this.apiConfigId = Input.of(Objects.requireNonNull(apiConfigId));
             return this;
         }
 
-        public Builder setApiId(Input<String> apiId) {
+        public Builder apiId(Input<String> apiId) {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
 
-        public Builder setApiId(String apiId) {
+        public Builder apiId(String apiId) {
             this.apiId = Input.of(Objects.requireNonNull(apiId));
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setGatewayConfig(@Nullable Input<ApigatewayGatewayConfigArgs> gatewayConfig) {
+        public Builder gatewayConfig(@Nullable Input<ApigatewayGatewayConfigArgs> gatewayConfig) {
             this.gatewayConfig = gatewayConfig;
             return this;
         }
 
-        public Builder setGatewayConfig(@Nullable ApigatewayGatewayConfigArgs gatewayConfig) {
+        public Builder gatewayConfig(@Nullable ApigatewayGatewayConfigArgs gatewayConfig) {
             this.gatewayConfig = Input.ofNullable(gatewayConfig);
             return this;
         }
 
-        public Builder setGatewayServiceAccount(@Nullable Input<String> gatewayServiceAccount) {
+        public Builder gatewayServiceAccount(@Nullable Input<String> gatewayServiceAccount) {
             this.gatewayServiceAccount = gatewayServiceAccount;
             return this;
         }
 
-        public Builder setGatewayServiceAccount(@Nullable String gatewayServiceAccount) {
+        public Builder gatewayServiceAccount(@Nullable String gatewayServiceAccount) {
             this.gatewayServiceAccount = Input.ofNullable(gatewayServiceAccount);
             return this;
         }
 
-        public Builder setGrpcServices(@Nullable Input<List<ApigatewayApiConfigGrpcServiceDefinitionArgs>> grpcServices) {
+        public Builder grpcServices(@Nullable Input<List<ApigatewayApiConfigGrpcServiceDefinitionArgs>> grpcServices) {
             this.grpcServices = grpcServices;
             return this;
         }
 
-        public Builder setGrpcServices(@Nullable List<ApigatewayApiConfigGrpcServiceDefinitionArgs> grpcServices) {
+        public Builder grpcServices(@Nullable List<ApigatewayApiConfigGrpcServiceDefinitionArgs> grpcServices) {
             this.grpcServices = Input.ofNullable(grpcServices);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setManagedServiceConfigs(@Nullable Input<List<ApigatewayApiConfigFileArgs>> managedServiceConfigs) {
+        public Builder managedServiceConfigs(@Nullable Input<List<ApigatewayApiConfigFileArgs>> managedServiceConfigs) {
             this.managedServiceConfigs = managedServiceConfigs;
             return this;
         }
 
-        public Builder setManagedServiceConfigs(@Nullable List<ApigatewayApiConfigFileArgs> managedServiceConfigs) {
+        public Builder managedServiceConfigs(@Nullable List<ApigatewayApiConfigFileArgs> managedServiceConfigs) {
             this.managedServiceConfigs = Input.ofNullable(managedServiceConfigs);
             return this;
         }
 
-        public Builder setOpenapiDocuments(@Nullable Input<List<ApigatewayApiConfigOpenApiDocumentArgs>> openapiDocuments) {
+        public Builder openapiDocuments(@Nullable Input<List<ApigatewayApiConfigOpenApiDocumentArgs>> openapiDocuments) {
             this.openapiDocuments = openapiDocuments;
             return this;
         }
 
-        public Builder setOpenapiDocuments(@Nullable List<ApigatewayApiConfigOpenApiDocumentArgs> openapiDocuments) {
+        public Builder openapiDocuments(@Nullable List<ApigatewayApiConfigOpenApiDocumentArgs> openapiDocuments) {
             this.openapiDocuments = Input.ofNullable(openapiDocuments);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

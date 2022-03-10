@@ -108,42 +108,42 @@ public final class LinuxOSConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.transparentHugePageEnabled = defaults.transparentHugePageEnabled;
         }
 
-        public Builder setSwapFileSizeMB(@Nullable Input<Integer> swapFileSizeMB) {
+        public Builder swapFileSizeMB(@Nullable Input<Integer> swapFileSizeMB) {
             this.swapFileSizeMB = swapFileSizeMB;
             return this;
         }
 
-        public Builder setSwapFileSizeMB(@Nullable Integer swapFileSizeMB) {
+        public Builder swapFileSizeMB(@Nullable Integer swapFileSizeMB) {
             this.swapFileSizeMB = Input.ofNullable(swapFileSizeMB);
             return this;
         }
 
-        public Builder setSysctls(@Nullable Input<SysctlConfigArgs> sysctls) {
+        public Builder sysctls(@Nullable Input<SysctlConfigArgs> sysctls) {
             this.sysctls = sysctls;
             return this;
         }
 
-        public Builder setSysctls(@Nullable SysctlConfigArgs sysctls) {
+        public Builder sysctls(@Nullable SysctlConfigArgs sysctls) {
             this.sysctls = Input.ofNullable(sysctls);
             return this;
         }
 
-        public Builder setTransparentHugePageDefrag(@Nullable Input<String> transparentHugePageDefrag) {
+        public Builder transparentHugePageDefrag(@Nullable Input<String> transparentHugePageDefrag) {
             this.transparentHugePageDefrag = transparentHugePageDefrag;
             return this;
         }
 
-        public Builder setTransparentHugePageDefrag(@Nullable String transparentHugePageDefrag) {
+        public Builder transparentHugePageDefrag(@Nullable String transparentHugePageDefrag) {
             this.transparentHugePageDefrag = Input.ofNullable(transparentHugePageDefrag);
             return this;
         }
 
-        public Builder setTransparentHugePageEnabled(@Nullable Input<String> transparentHugePageEnabled) {
+        public Builder transparentHugePageEnabled(@Nullable Input<String> transparentHugePageEnabled) {
             this.transparentHugePageEnabled = transparentHugePageEnabled;
             return this;
         }
 
-        public Builder setTransparentHugePageEnabled(@Nullable String transparentHugePageEnabled) {
+        public Builder transparentHugePageEnabled(@Nullable String transparentHugePageEnabled) {
             this.transparentHugePageEnabled = Input.ofNullable(transparentHugePageEnabled);
             return this;
         }

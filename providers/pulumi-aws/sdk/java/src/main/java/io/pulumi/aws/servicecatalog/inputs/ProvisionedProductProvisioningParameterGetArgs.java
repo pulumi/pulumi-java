@@ -87,32 +87,32 @@ public final class ProvisionedProductProvisioningParameterGetArgs extends io.pul
     	      this.value = defaults.value;
         }
 
-        public Builder setKey(Input<String> key) {
+        public Builder key(Input<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Input.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder setUsePreviousValue(@Nullable Input<Boolean> usePreviousValue) {
+        public Builder usePreviousValue(@Nullable Input<Boolean> usePreviousValue) {
             this.usePreviousValue = usePreviousValue;
             return this;
         }
 
-        public Builder setUsePreviousValue(@Nullable Boolean usePreviousValue) {
+        public Builder usePreviousValue(@Nullable Boolean usePreviousValue) {
             this.usePreviousValue = Input.ofNullable(usePreviousValue);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }

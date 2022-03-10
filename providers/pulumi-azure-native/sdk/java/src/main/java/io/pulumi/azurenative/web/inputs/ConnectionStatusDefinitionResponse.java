@@ -91,17 +91,17 @@ public final class ConnectionStatusDefinitionResponse extends io.pulumi.resource
     	      this.target = defaults.target;
         }
 
-        public Builder setError(@Nullable ConnectionErrorResponse error) {
+        public Builder error(@Nullable ConnectionErrorResponse error) {
             this.error = error;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = target;
             return this;
         }

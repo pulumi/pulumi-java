@@ -74,12 +74,12 @@ public final class GoogleCloudApigeeV1OperationGroupResponse extends io.pulumi.r
     	      this.operationConfigs = defaults.operationConfigs;
         }
 
-        public Builder setOperationConfigType(String operationConfigType) {
+        public Builder operationConfigType(String operationConfigType) {
             this.operationConfigType = Objects.requireNonNull(operationConfigType);
             return this;
         }
 
-        public Builder setOperationConfigs(List<GoogleCloudApigeeV1OperationConfigResponse> operationConfigs) {
+        public Builder operationConfigs(List<GoogleCloudApigeeV1OperationConfigResponse> operationConfigs) {
             this.operationConfigs = Objects.requireNonNull(operationConfigs);
             return this;
         }

@@ -101,22 +101,22 @@ public final class ApplicationAppversionLifecycle {
     	      this.serviceRole = defaults.serviceRole;
         }
 
-        public Builder setDeleteSourceFromS3(@Nullable Boolean deleteSourceFromS3) {
+        public Builder deleteSourceFromS3(@Nullable Boolean deleteSourceFromS3) {
             this.deleteSourceFromS3 = deleteSourceFromS3;
             return this;
         }
 
-        public Builder setMaxAgeInDays(@Nullable Integer maxAgeInDays) {
+        public Builder maxAgeInDays(@Nullable Integer maxAgeInDays) {
             this.maxAgeInDays = maxAgeInDays;
             return this;
         }
 
-        public Builder setMaxCount(@Nullable Integer maxCount) {
+        public Builder maxCount(@Nullable Integer maxCount) {
             this.maxCount = maxCount;
             return this;
         }
 
-        public Builder setServiceRole(String serviceRole) {
+        public Builder serviceRole(String serviceRole) {
             this.serviceRole = Objects.requireNonNull(serviceRole);
             return this;
         }

@@ -69,12 +69,12 @@ public final class MonitoringScheduleMonitoringOutputConfig {
     	      this.monitoringOutputs = defaults.monitoringOutputs;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setMonitoringOutputs(List<MonitoringScheduleMonitoringOutput> monitoringOutputs) {
+        public Builder monitoringOutputs(List<MonitoringScheduleMonitoringOutput> monitoringOutputs) {
             this.monitoringOutputs = Objects.requireNonNull(monitoringOutputs);
             return this;
         }

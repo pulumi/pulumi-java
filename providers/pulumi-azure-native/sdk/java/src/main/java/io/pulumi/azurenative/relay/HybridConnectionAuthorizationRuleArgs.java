@@ -120,52 +120,52 @@ public final class HybridConnectionAuthorizationRuleArgs extends io.pulumi.resou
     	      this.rights = defaults.rights;
         }
 
-        public Builder setAuthorizationRuleName(@Nullable Input<String> authorizationRuleName) {
+        public Builder authorizationRuleName(@Nullable Input<String> authorizationRuleName) {
             this.authorizationRuleName = authorizationRuleName;
             return this;
         }
 
-        public Builder setAuthorizationRuleName(@Nullable String authorizationRuleName) {
+        public Builder authorizationRuleName(@Nullable String authorizationRuleName) {
             this.authorizationRuleName = Input.ofNullable(authorizationRuleName);
             return this;
         }
 
-        public Builder setHybridConnectionName(Input<String> hybridConnectionName) {
+        public Builder hybridConnectionName(Input<String> hybridConnectionName) {
             this.hybridConnectionName = Objects.requireNonNull(hybridConnectionName);
             return this;
         }
 
-        public Builder setHybridConnectionName(String hybridConnectionName) {
+        public Builder hybridConnectionName(String hybridConnectionName) {
             this.hybridConnectionName = Input.of(Objects.requireNonNull(hybridConnectionName));
             return this;
         }
 
-        public Builder setNamespaceName(Input<String> namespaceName) {
+        public Builder namespaceName(Input<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
 
-        public Builder setNamespaceName(String namespaceName) {
+        public Builder namespaceName(String namespaceName) {
             this.namespaceName = Input.of(Objects.requireNonNull(namespaceName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRights(Input<List<AccessRights>> rights) {
+        public Builder rights(Input<List<AccessRights>> rights) {
             this.rights = Objects.requireNonNull(rights);
             return this;
         }
 
-        public Builder setRights(List<AccessRights> rights) {
+        public Builder rights(List<AccessRights> rights) {
             this.rights = Input.of(Objects.requireNonNull(rights));
             return this;
         }

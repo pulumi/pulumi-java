@@ -69,12 +69,12 @@ public final class GetInternetGatewayResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setInternetGatewayId(@Nullable String internetGatewayId) {
+        public Builder internetGatewayId(@Nullable String internetGatewayId) {
             this.internetGatewayId = internetGatewayId;
             return this;
         }
 
-        public Builder setTags(@Nullable List<InternetGatewayTag> tags) {
+        public Builder tags(@Nullable List<InternetGatewayTag> tags) {
             this.tags = tags;
             return this;
         }

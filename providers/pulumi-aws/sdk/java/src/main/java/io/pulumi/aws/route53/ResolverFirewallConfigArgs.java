@@ -70,22 +70,22 @@ public final class ResolverFirewallConfigArgs extends io.pulumi.resources.Resour
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder setFirewallFailOpen(@Nullable Input<String> firewallFailOpen) {
+        public Builder firewallFailOpen(@Nullable Input<String> firewallFailOpen) {
             this.firewallFailOpen = firewallFailOpen;
             return this;
         }
 
-        public Builder setFirewallFailOpen(@Nullable String firewallFailOpen) {
+        public Builder firewallFailOpen(@Nullable String firewallFailOpen) {
             this.firewallFailOpen = Input.ofNullable(firewallFailOpen);
             return this;
         }
 
-        public Builder setResourceId(Input<String> resourceId) {
+        public Builder resourceId(Input<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Input.of(Objects.requireNonNull(resourceId));
             return this;
         }

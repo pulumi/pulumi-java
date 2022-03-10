@@ -136,62 +136,62 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setAppendUserAgent(@Nullable Input<String> appendUserAgent) {
+        public Builder appendUserAgent(@Nullable Input<String> appendUserAgent) {
             this.appendUserAgent = appendUserAgent;
             return this;
         }
 
-        public Builder setAppendUserAgent(@Nullable String appendUserAgent) {
+        public Builder appendUserAgent(@Nullable String appendUserAgent) {
             this.appendUserAgent = Input.ofNullable(appendUserAgent);
             return this;
         }
 
-        public Builder setDisablePartnerName(@Nullable Input<Boolean> disablePartnerName) {
+        public Builder disablePartnerName(@Nullable Input<Boolean> disablePartnerName) {
             this.disablePartnerName = disablePartnerName;
             return this;
         }
 
-        public Builder setDisablePartnerName(@Nullable Boolean disablePartnerName) {
+        public Builder disablePartnerName(@Nullable Boolean disablePartnerName) {
             this.disablePartnerName = Input.ofNullable(disablePartnerName);
             return this;
         }
 
-        public Builder setPartnerName(@Nullable Input<String> partnerName) {
+        public Builder partnerName(@Nullable Input<String> partnerName) {
             this.partnerName = partnerName;
             return this;
         }
 
-        public Builder setPartnerName(@Nullable String partnerName) {
+        public Builder partnerName(@Nullable String partnerName) {
             this.partnerName = Input.ofNullable(partnerName);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setZone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Input<String> zone) {
             this.zone = zone;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = Input.ofNullable(zone);
             return this;
         }

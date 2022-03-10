@@ -120,52 +120,52 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Input<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable String namePrefix) {
+        public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Input.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder setPlatformId(Input<String> platformId) {
+        public Builder platformId(Input<String> platformId) {
             this.platformId = Objects.requireNonNull(platformId);
             return this;
         }
 
-        public Builder setPlatformId(String platformId) {
+        public Builder platformId(String platformId) {
             this.platformId = Input.of(Objects.requireNonNull(platformId));
             return this;
         }
 
-        public Builder setSignatureValidityPeriod(@Nullable Input<SigningProfileSignatureValidityPeriodArgs> signatureValidityPeriod) {
+        public Builder signatureValidityPeriod(@Nullable Input<SigningProfileSignatureValidityPeriodArgs> signatureValidityPeriod) {
             this.signatureValidityPeriod = signatureValidityPeriod;
             return this;
         }
 
-        public Builder setSignatureValidityPeriod(@Nullable SigningProfileSignatureValidityPeriodArgs signatureValidityPeriod) {
+        public Builder signatureValidityPeriod(@Nullable SigningProfileSignatureValidityPeriodArgs signatureValidityPeriod) {
             this.signatureValidityPeriod = Input.ofNullable(signatureValidityPeriod);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

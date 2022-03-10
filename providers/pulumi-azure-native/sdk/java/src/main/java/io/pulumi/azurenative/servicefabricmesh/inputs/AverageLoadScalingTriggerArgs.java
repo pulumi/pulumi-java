@@ -125,52 +125,52 @@ public final class AverageLoadScalingTriggerArgs extends io.pulumi.resources.Res
     	      this.upperLoadThreshold = defaults.upperLoadThreshold;
         }
 
-        public Builder setKind(Input<String> kind) {
+        public Builder kind(Input<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setLowerLoadThreshold(Input<Double> lowerLoadThreshold) {
+        public Builder lowerLoadThreshold(Input<Double> lowerLoadThreshold) {
             this.lowerLoadThreshold = Objects.requireNonNull(lowerLoadThreshold);
             return this;
         }
 
-        public Builder setLowerLoadThreshold(Double lowerLoadThreshold) {
+        public Builder lowerLoadThreshold(Double lowerLoadThreshold) {
             this.lowerLoadThreshold = Input.of(Objects.requireNonNull(lowerLoadThreshold));
             return this;
         }
 
-        public Builder setMetric(Input<AutoScalingResourceMetricArgs> metric) {
+        public Builder metric(Input<AutoScalingResourceMetricArgs> metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
 
-        public Builder setMetric(AutoScalingResourceMetricArgs metric) {
+        public Builder metric(AutoScalingResourceMetricArgs metric) {
             this.metric = Input.of(Objects.requireNonNull(metric));
             return this;
         }
 
-        public Builder setScaleIntervalInSeconds(Input<Integer> scaleIntervalInSeconds) {
+        public Builder scaleIntervalInSeconds(Input<Integer> scaleIntervalInSeconds) {
             this.scaleIntervalInSeconds = Objects.requireNonNull(scaleIntervalInSeconds);
             return this;
         }
 
-        public Builder setScaleIntervalInSeconds(Integer scaleIntervalInSeconds) {
+        public Builder scaleIntervalInSeconds(Integer scaleIntervalInSeconds) {
             this.scaleIntervalInSeconds = Input.of(Objects.requireNonNull(scaleIntervalInSeconds));
             return this;
         }
 
-        public Builder setUpperLoadThreshold(Input<Double> upperLoadThreshold) {
+        public Builder upperLoadThreshold(Input<Double> upperLoadThreshold) {
             this.upperLoadThreshold = Objects.requireNonNull(upperLoadThreshold);
             return this;
         }
 
-        public Builder setUpperLoadThreshold(Double upperLoadThreshold) {
+        public Builder upperLoadThreshold(Double upperLoadThreshold) {
             this.upperLoadThreshold = Input.of(Objects.requireNonNull(upperLoadThreshold));
             return this;
         }

@@ -55,7 +55,7 @@ public final class GooglePrivacyDlpV2ScheduleResponse extends io.pulumi.resource
     	      this.recurrencePeriodDuration = defaults.recurrencePeriodDuration;
         }
 
-        public Builder setRecurrencePeriodDuration(String recurrencePeriodDuration) {
+        public Builder recurrencePeriodDuration(String recurrencePeriodDuration) {
             this.recurrencePeriodDuration = Objects.requireNonNull(recurrencePeriodDuration);
             return this;
         }

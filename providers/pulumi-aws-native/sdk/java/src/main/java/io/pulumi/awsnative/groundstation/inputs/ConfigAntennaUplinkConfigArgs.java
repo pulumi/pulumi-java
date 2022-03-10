@@ -76,32 +76,32 @@ public final class ConfigAntennaUplinkConfigArgs extends io.pulumi.resources.Res
     	      this.transmitDisabled = defaults.transmitDisabled;
         }
 
-        public Builder setSpectrumConfig(@Nullable Input<ConfigUplinkSpectrumConfigArgs> spectrumConfig) {
+        public Builder spectrumConfig(@Nullable Input<ConfigUplinkSpectrumConfigArgs> spectrumConfig) {
             this.spectrumConfig = spectrumConfig;
             return this;
         }
 
-        public Builder setSpectrumConfig(@Nullable ConfigUplinkSpectrumConfigArgs spectrumConfig) {
+        public Builder spectrumConfig(@Nullable ConfigUplinkSpectrumConfigArgs spectrumConfig) {
             this.spectrumConfig = Input.ofNullable(spectrumConfig);
             return this;
         }
 
-        public Builder setTargetEirp(@Nullable Input<ConfigEirpArgs> targetEirp) {
+        public Builder targetEirp(@Nullable Input<ConfigEirpArgs> targetEirp) {
             this.targetEirp = targetEirp;
             return this;
         }
 
-        public Builder setTargetEirp(@Nullable ConfigEirpArgs targetEirp) {
+        public Builder targetEirp(@Nullable ConfigEirpArgs targetEirp) {
             this.targetEirp = Input.ofNullable(targetEirp);
             return this;
         }
 
-        public Builder setTransmitDisabled(@Nullable Input<Boolean> transmitDisabled) {
+        public Builder transmitDisabled(@Nullable Input<Boolean> transmitDisabled) {
             this.transmitDisabled = transmitDisabled;
             return this;
         }
 
-        public Builder setTransmitDisabled(@Nullable Boolean transmitDisabled) {
+        public Builder transmitDisabled(@Nullable Boolean transmitDisabled) {
             this.transmitDisabled = Input.ofNullable(transmitDisabled);
             return this;
         }

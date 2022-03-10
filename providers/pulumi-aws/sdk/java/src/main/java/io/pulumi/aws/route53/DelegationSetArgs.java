@@ -54,12 +54,12 @@ public final class DelegationSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.referenceName = defaults.referenceName;
         }
 
-        public Builder setReferenceName(@Nullable Input<String> referenceName) {
+        public Builder referenceName(@Nullable Input<String> referenceName) {
             this.referenceName = referenceName;
             return this;
         }
 
-        public Builder setReferenceName(@Nullable String referenceName) {
+        public Builder referenceName(@Nullable String referenceName) {
             this.referenceName = Input.ofNullable(referenceName);
             return this;
         }

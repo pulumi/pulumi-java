@@ -121,37 +121,37 @@ public final class GetUserSshKeyResult {
     	      this.username = defaults.username;
         }
 
-        public Builder setEncoding(String encoding) {
+        public Builder encoding(String encoding) {
             this.encoding = Objects.requireNonNull(encoding);
             return this;
         }
 
-        public Builder setFingerprint(String fingerprint) {
+        public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setPublicKey(String publicKey) {
+        public Builder publicKey(String publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
 
-        public Builder setSshPublicKeyId(String sshPublicKeyId) {
+        public Builder sshPublicKeyId(String sshPublicKeyId) {
             this.sshPublicKeyId = Objects.requireNonNull(sshPublicKeyId);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

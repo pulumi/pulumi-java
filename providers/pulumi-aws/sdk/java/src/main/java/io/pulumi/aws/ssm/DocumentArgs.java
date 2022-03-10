@@ -185,92 +185,92 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.versionName = defaults.versionName;
         }
 
-        public Builder setAttachmentsSources(@Nullable Input<List<DocumentAttachmentsSourceArgs>> attachmentsSources) {
+        public Builder attachmentsSources(@Nullable Input<List<DocumentAttachmentsSourceArgs>> attachmentsSources) {
             this.attachmentsSources = attachmentsSources;
             return this;
         }
 
-        public Builder setAttachmentsSources(@Nullable List<DocumentAttachmentsSourceArgs> attachmentsSources) {
+        public Builder attachmentsSources(@Nullable List<DocumentAttachmentsSourceArgs> attachmentsSources) {
             this.attachmentsSources = Input.ofNullable(attachmentsSources);
             return this;
         }
 
-        public Builder setContent(Input<String> content) {
+        public Builder content(Input<String> content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
-        public Builder setContent(String content) {
+        public Builder content(String content) {
             this.content = Input.of(Objects.requireNonNull(content));
             return this;
         }
 
-        public Builder setDocumentFormat(@Nullable Input<String> documentFormat) {
+        public Builder documentFormat(@Nullable Input<String> documentFormat) {
             this.documentFormat = documentFormat;
             return this;
         }
 
-        public Builder setDocumentFormat(@Nullable String documentFormat) {
+        public Builder documentFormat(@Nullable String documentFormat) {
             this.documentFormat = Input.ofNullable(documentFormat);
             return this;
         }
 
-        public Builder setDocumentType(Input<String> documentType) {
+        public Builder documentType(Input<String> documentType) {
             this.documentType = Objects.requireNonNull(documentType);
             return this;
         }
 
-        public Builder setDocumentType(String documentType) {
+        public Builder documentType(String documentType) {
             this.documentType = Input.of(Objects.requireNonNull(documentType));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPermissions(@Nullable Input<Map<String,String>> permissions) {
+        public Builder permissions(@Nullable Input<Map<String,String>> permissions) {
             this.permissions = permissions;
             return this;
         }
 
-        public Builder setPermissions(@Nullable Map<String,String> permissions) {
+        public Builder permissions(@Nullable Map<String,String> permissions) {
             this.permissions = Input.ofNullable(permissions);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTargetType(@Nullable Input<String> targetType) {
+        public Builder targetType(@Nullable Input<String> targetType) {
             this.targetType = targetType;
             return this;
         }
 
-        public Builder setTargetType(@Nullable String targetType) {
+        public Builder targetType(@Nullable String targetType) {
             this.targetType = Input.ofNullable(targetType);
             return this;
         }
 
-        public Builder setVersionName(@Nullable Input<String> versionName) {
+        public Builder versionName(@Nullable Input<String> versionName) {
             this.versionName = versionName;
             return this;
         }
 
-        public Builder setVersionName(@Nullable String versionName) {
+        public Builder versionName(@Nullable String versionName) {
             this.versionName = Input.ofNullable(versionName);
             return this;
         }

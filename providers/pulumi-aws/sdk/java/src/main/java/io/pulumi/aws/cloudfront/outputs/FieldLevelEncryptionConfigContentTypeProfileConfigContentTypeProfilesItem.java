@@ -83,17 +83,17 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
     	      this.profileId = defaults.profileId;
         }
 
-        public Builder setContentType(String contentType) {
+        public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
-        public Builder setFormat(String format) {
+        public Builder format(String format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
-        public Builder setProfileId(@Nullable String profileId) {
+        public Builder profileId(@Nullable String profileId) {
             this.profileId = profileId;
             return this;
         }

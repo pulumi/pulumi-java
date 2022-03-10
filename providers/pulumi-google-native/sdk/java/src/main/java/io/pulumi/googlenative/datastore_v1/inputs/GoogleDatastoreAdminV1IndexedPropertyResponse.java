@@ -72,12 +72,12 @@ public final class GoogleDatastoreAdminV1IndexedPropertyResponse extends io.pulu
     	      this.name = defaults.name;
         }
 
-        public Builder setDirection(String direction) {
+        public Builder direction(String direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

@@ -136,32 +136,32 @@ public final class VirtualNodeSpecListener {
     	      this.tls = defaults.tls;
         }
 
-        public Builder setConnectionPool(@Nullable VirtualNodeSpecListenerConnectionPool connectionPool) {
+        public Builder connectionPool(@Nullable VirtualNodeSpecListenerConnectionPool connectionPool) {
             this.connectionPool = connectionPool;
             return this;
         }
 
-        public Builder setHealthCheck(@Nullable VirtualNodeSpecListenerHealthCheck healthCheck) {
+        public Builder healthCheck(@Nullable VirtualNodeSpecListenerHealthCheck healthCheck) {
             this.healthCheck = healthCheck;
             return this;
         }
 
-        public Builder setOutlierDetection(@Nullable VirtualNodeSpecListenerOutlierDetection outlierDetection) {
+        public Builder outlierDetection(@Nullable VirtualNodeSpecListenerOutlierDetection outlierDetection) {
             this.outlierDetection = outlierDetection;
             return this;
         }
 
-        public Builder setPortMapping(VirtualNodeSpecListenerPortMapping portMapping) {
+        public Builder portMapping(VirtualNodeSpecListenerPortMapping portMapping) {
             this.portMapping = Objects.requireNonNull(portMapping);
             return this;
         }
 
-        public Builder setTimeout(@Nullable VirtualNodeSpecListenerTimeout timeout) {
+        public Builder timeout(@Nullable VirtualNodeSpecListenerTimeout timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTls(@Nullable VirtualNodeSpecListenerTls tls) {
+        public Builder tls(@Nullable VirtualNodeSpecListenerTls tls) {
             this.tls = tls;
             return this;
         }

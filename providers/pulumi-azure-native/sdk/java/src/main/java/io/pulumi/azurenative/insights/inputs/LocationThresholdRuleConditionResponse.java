@@ -111,22 +111,22 @@ public final class LocationThresholdRuleConditionResponse extends io.pulumi.reso
     	      this.windowSize = defaults.windowSize;
         }
 
-        public Builder setDataSource(@Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource) {
+        public Builder dataSource(@Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource) {
             this.dataSource = dataSource;
             return this;
         }
 
-        public Builder setFailedLocationCount(Integer failedLocationCount) {
+        public Builder failedLocationCount(Integer failedLocationCount) {
             this.failedLocationCount = Objects.requireNonNull(failedLocationCount);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setWindowSize(@Nullable String windowSize) {
+        public Builder windowSize(@Nullable String windowSize) {
             this.windowSize = windowSize;
             return this;
         }

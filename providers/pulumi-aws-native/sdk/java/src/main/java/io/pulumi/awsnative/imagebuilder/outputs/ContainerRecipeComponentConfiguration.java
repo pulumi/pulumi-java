@@ -50,7 +50,7 @@ public final class ContainerRecipeComponentConfiguration {
     	      this.componentArn = defaults.componentArn;
         }
 
-        public Builder setComponentArn(@Nullable String componentArn) {
+        public Builder componentArn(@Nullable String componentArn) {
             this.componentArn = componentArn;
             return this;
         }

@@ -57,12 +57,12 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
     	      this.pubsubTopic = defaults.pubsubTopic;
         }
 
-        public Builder setPubsubTopic(@Nullable Input<String> pubsubTopic) {
+        public Builder pubsubTopic(@Nullable Input<String> pubsubTopic) {
             this.pubsubTopic = pubsubTopic;
             return this;
         }
 
-        public Builder setPubsubTopic(@Nullable String pubsubTopic) {
+        public Builder pubsubTopic(@Nullable String pubsubTopic) {
             this.pubsubTopic = Input.ofNullable(pubsubTopic);
             return this;
         }

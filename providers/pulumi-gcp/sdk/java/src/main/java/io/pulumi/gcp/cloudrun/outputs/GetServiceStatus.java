@@ -76,27 +76,27 @@ public final class GetServiceStatus {
     	      this.url = defaults.url;
         }
 
-        public Builder setConditions(List<GetServiceStatusCondition> conditions) {
+        public Builder conditions(List<GetServiceStatusCondition> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
 
-        public Builder setLatestCreatedRevisionName(String latestCreatedRevisionName) {
+        public Builder latestCreatedRevisionName(String latestCreatedRevisionName) {
             this.latestCreatedRevisionName = Objects.requireNonNull(latestCreatedRevisionName);
             return this;
         }
 
-        public Builder setLatestReadyRevisionName(String latestReadyRevisionName) {
+        public Builder latestReadyRevisionName(String latestReadyRevisionName) {
             this.latestReadyRevisionName = Objects.requireNonNull(latestReadyRevisionName);
             return this;
         }
 
-        public Builder setObservedGeneration(Integer observedGeneration) {
+        public Builder observedGeneration(Integer observedGeneration) {
             this.observedGeneration = Objects.requireNonNull(observedGeneration);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

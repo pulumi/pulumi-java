@@ -74,17 +74,17 @@ public final class GetConnectivityTestIamPolicyArgs extends io.pulumi.resources.
     	      this.project = defaults.project;
         }
 
-        public Builder setConnectivityTestId(String connectivityTestId) {
+        public Builder connectivityTestId(String connectivityTestId) {
             this.connectivityTestId = Objects.requireNonNull(connectivityTestId);
             return this;
         }
 
-        public Builder setOptionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

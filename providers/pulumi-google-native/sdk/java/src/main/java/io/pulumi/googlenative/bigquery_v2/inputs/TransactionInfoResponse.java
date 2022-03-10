@@ -51,7 +51,7 @@ public final class TransactionInfoResponse extends io.pulumi.resources.InvokeArg
     	      this.transactionId = defaults.transactionId;
         }
 
-        public Builder setTransactionId(String transactionId) {
+        public Builder transactionId(String transactionId) {
             this.transactionId = Objects.requireNonNull(transactionId);
             return this;
         }

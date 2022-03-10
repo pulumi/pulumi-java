@@ -49,12 +49,12 @@ public final class GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setDay(String day) {
+        public Builder day(String day) {
             this.day = Objects.requireNonNull(day);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }

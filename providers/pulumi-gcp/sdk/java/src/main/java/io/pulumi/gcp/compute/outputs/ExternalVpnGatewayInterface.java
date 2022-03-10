@@ -82,12 +82,12 @@ public final class ExternalVpnGatewayInterface {
     	      this.ipAddress = defaults.ipAddress;
         }
 
-        public Builder setId(@Nullable Integer id) {
+        public Builder id(@Nullable Integer id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }

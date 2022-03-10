@@ -51,12 +51,12 @@ public final class JobTemplateRateIncreaseCriteria {
     	      this.numberOfSucceededThings = defaults.numberOfSucceededThings;
         }
 
-        public Builder setNumberOfNotifiedThings(@Nullable Integer numberOfNotifiedThings) {
+        public Builder numberOfNotifiedThings(@Nullable Integer numberOfNotifiedThings) {
             this.numberOfNotifiedThings = numberOfNotifiedThings;
             return this;
         }
 
-        public Builder setNumberOfSucceededThings(@Nullable Integer numberOfSucceededThings) {
+        public Builder numberOfSucceededThings(@Nullable Integer numberOfSucceededThings) {
             this.numberOfSucceededThings = numberOfSucceededThings;
             return this;
         }

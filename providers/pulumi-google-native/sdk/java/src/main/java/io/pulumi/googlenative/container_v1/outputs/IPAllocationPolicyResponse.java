@@ -194,52 +194,52 @@ public final class IPAllocationPolicyResponse {
     	      this.useRoutes = defaults.useRoutes;
         }
 
-        public Builder setClusterIpv4CidrBlock(String clusterIpv4CidrBlock) {
+        public Builder clusterIpv4CidrBlock(String clusterIpv4CidrBlock) {
             this.clusterIpv4CidrBlock = Objects.requireNonNull(clusterIpv4CidrBlock);
             return this;
         }
 
-        public Builder setClusterSecondaryRangeName(String clusterSecondaryRangeName) {
+        public Builder clusterSecondaryRangeName(String clusterSecondaryRangeName) {
             this.clusterSecondaryRangeName = Objects.requireNonNull(clusterSecondaryRangeName);
             return this;
         }
 
-        public Builder setCreateSubnetwork(Boolean createSubnetwork) {
+        public Builder createSubnetwork(Boolean createSubnetwork) {
             this.createSubnetwork = Objects.requireNonNull(createSubnetwork);
             return this;
         }
 
-        public Builder setNodeIpv4CidrBlock(String nodeIpv4CidrBlock) {
+        public Builder nodeIpv4CidrBlock(String nodeIpv4CidrBlock) {
             this.nodeIpv4CidrBlock = Objects.requireNonNull(nodeIpv4CidrBlock);
             return this;
         }
 
-        public Builder setServicesIpv4CidrBlock(String servicesIpv4CidrBlock) {
+        public Builder servicesIpv4CidrBlock(String servicesIpv4CidrBlock) {
             this.servicesIpv4CidrBlock = Objects.requireNonNull(servicesIpv4CidrBlock);
             return this;
         }
 
-        public Builder setServicesSecondaryRangeName(String servicesSecondaryRangeName) {
+        public Builder servicesSecondaryRangeName(String servicesSecondaryRangeName) {
             this.servicesSecondaryRangeName = Objects.requireNonNull(servicesSecondaryRangeName);
             return this;
         }
 
-        public Builder setSubnetworkName(String subnetworkName) {
+        public Builder subnetworkName(String subnetworkName) {
             this.subnetworkName = Objects.requireNonNull(subnetworkName);
             return this;
         }
 
-        public Builder setTpuIpv4CidrBlock(String tpuIpv4CidrBlock) {
+        public Builder tpuIpv4CidrBlock(String tpuIpv4CidrBlock) {
             this.tpuIpv4CidrBlock = Objects.requireNonNull(tpuIpv4CidrBlock);
             return this;
         }
 
-        public Builder setUseIpAliases(Boolean useIpAliases) {
+        public Builder useIpAliases(Boolean useIpAliases) {
             this.useIpAliases = Objects.requireNonNull(useIpAliases);
             return this;
         }
 
-        public Builder setUseRoutes(Boolean useRoutes) {
+        public Builder useRoutes(Boolean useRoutes) {
             this.useRoutes = Objects.requireNonNull(useRoutes);
             return this;
         }

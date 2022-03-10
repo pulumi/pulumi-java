@@ -52,12 +52,12 @@ public final class GetFleetResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setTags(@Nullable FleetTags tags) {
+        public Builder tags(@Nullable FleetTags tags) {
             this.tags = tags;
             return this;
         }

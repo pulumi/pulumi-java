@@ -106,42 +106,42 @@ public final class ExpressRouteCircuitStatsArgs extends io.pulumi.resources.Reso
     	      this.secondarybytesOut = defaults.secondarybytesOut;
         }
 
-        public Builder setPrimarybytesIn(@Nullable Input<Double> primarybytesIn) {
+        public Builder primarybytesIn(@Nullable Input<Double> primarybytesIn) {
             this.primarybytesIn = primarybytesIn;
             return this;
         }
 
-        public Builder setPrimarybytesIn(@Nullable Double primarybytesIn) {
+        public Builder primarybytesIn(@Nullable Double primarybytesIn) {
             this.primarybytesIn = Input.ofNullable(primarybytesIn);
             return this;
         }
 
-        public Builder setPrimarybytesOut(@Nullable Input<Double> primarybytesOut) {
+        public Builder primarybytesOut(@Nullable Input<Double> primarybytesOut) {
             this.primarybytesOut = primarybytesOut;
             return this;
         }
 
-        public Builder setPrimarybytesOut(@Nullable Double primarybytesOut) {
+        public Builder primarybytesOut(@Nullable Double primarybytesOut) {
             this.primarybytesOut = Input.ofNullable(primarybytesOut);
             return this;
         }
 
-        public Builder setSecondarybytesIn(@Nullable Input<Double> secondarybytesIn) {
+        public Builder secondarybytesIn(@Nullable Input<Double> secondarybytesIn) {
             this.secondarybytesIn = secondarybytesIn;
             return this;
         }
 
-        public Builder setSecondarybytesIn(@Nullable Double secondarybytesIn) {
+        public Builder secondarybytesIn(@Nullable Double secondarybytesIn) {
             this.secondarybytesIn = Input.ofNullable(secondarybytesIn);
             return this;
         }
 
-        public Builder setSecondarybytesOut(@Nullable Input<Double> secondarybytesOut) {
+        public Builder secondarybytesOut(@Nullable Input<Double> secondarybytesOut) {
             this.secondarybytesOut = secondarybytesOut;
             return this;
         }
 
-        public Builder setSecondarybytesOut(@Nullable Double secondarybytesOut) {
+        public Builder secondarybytesOut(@Nullable Double secondarybytesOut) {
             this.secondarybytesOut = Input.ofNullable(secondarybytesOut);
             return this;
         }

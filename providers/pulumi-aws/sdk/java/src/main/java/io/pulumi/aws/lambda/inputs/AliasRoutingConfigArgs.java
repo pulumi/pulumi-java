@@ -55,12 +55,12 @@ public final class AliasRoutingConfigArgs extends io.pulumi.resources.ResourceAr
     	      this.additionalVersionWeights = defaults.additionalVersionWeights;
         }
 
-        public Builder setAdditionalVersionWeights(@Nullable Input<Map<String,Double>> additionalVersionWeights) {
+        public Builder additionalVersionWeights(@Nullable Input<Map<String,Double>> additionalVersionWeights) {
             this.additionalVersionWeights = additionalVersionWeights;
             return this;
         }
 
-        public Builder setAdditionalVersionWeights(@Nullable Map<String,Double> additionalVersionWeights) {
+        public Builder additionalVersionWeights(@Nullable Map<String,Double> additionalVersionWeights) {
             this.additionalVersionWeights = Input.ofNullable(additionalVersionWeights);
             return this;
         }

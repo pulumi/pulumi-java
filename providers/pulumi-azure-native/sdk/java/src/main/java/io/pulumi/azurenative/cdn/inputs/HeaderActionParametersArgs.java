@@ -104,42 +104,42 @@ public final class HeaderActionParametersArgs extends io.pulumi.resources.Resour
     	      this.value = defaults.value;
         }
 
-        public Builder setHeaderAction(Input<Either<String,HeaderAction>> headerAction) {
+        public Builder headerAction(Input<Either<String,HeaderAction>> headerAction) {
             this.headerAction = Objects.requireNonNull(headerAction);
             return this;
         }
 
-        public Builder setHeaderAction(Either<String,HeaderAction> headerAction) {
+        public Builder headerAction(Either<String,HeaderAction> headerAction) {
             this.headerAction = Input.of(Objects.requireNonNull(headerAction));
             return this;
         }
 
-        public Builder setHeaderName(Input<String> headerName) {
+        public Builder headerName(Input<String> headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
-        public Builder setHeaderName(String headerName) {
+        public Builder headerName(String headerName) {
             this.headerName = Input.of(Objects.requireNonNull(headerName));
             return this;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }

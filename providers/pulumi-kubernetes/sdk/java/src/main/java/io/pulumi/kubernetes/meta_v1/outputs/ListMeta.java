@@ -104,22 +104,22 @@ public final class ListMeta {
     	      this.selfLink = defaults.selfLink;
         }
 
-        public Builder set$continue(@Nullable String $continue) {
+        public Builder $continue(@Nullable String $continue) {
             this.$continue = $continue;
             return this;
         }
 
-        public Builder setRemainingItemCount(@Nullable Integer remainingItemCount) {
+        public Builder remainingItemCount(@Nullable Integer remainingItemCount) {
             this.remainingItemCount = remainingItemCount;
             return this;
         }
 
-        public Builder setResourceVersion(@Nullable String resourceVersion) {
+        public Builder resourceVersion(@Nullable String resourceVersion) {
             this.resourceVersion = resourceVersion;
             return this;
         }
 
-        public Builder setSelfLink(@Nullable String selfLink) {
+        public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = selfLink;
             return this;
         }

@@ -75,12 +75,12 @@ public final class MetricAlertActionResponse extends io.pulumi.resources.InvokeA
     	      this.webHookProperties = defaults.webHookProperties;
         }
 
-        public Builder setActionGroupId(@Nullable String actionGroupId) {
+        public Builder actionGroupId(@Nullable String actionGroupId) {
             this.actionGroupId = actionGroupId;
             return this;
         }
 
-        public Builder setWebHookProperties(@Nullable Map<String,String> webHookProperties) {
+        public Builder webHookProperties(@Nullable Map<String,String> webHookProperties) {
             this.webHookProperties = webHookProperties;
             return this;
         }

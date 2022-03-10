@@ -84,17 +84,17 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRule {
     	      this.ruleOptions = defaults.ruleOptions;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setHeader(RuleGroupRuleGroupRulesSourceStatefulRuleHeader header) {
+        public Builder header(RuleGroupRuleGroupRulesSourceStatefulRuleHeader header) {
             this.header = Objects.requireNonNull(header);
             return this;
         }
 
-        public Builder setRuleOptions(List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOption> ruleOptions) {
+        public Builder ruleOptions(List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOption> ruleOptions) {
             this.ruleOptions = Objects.requireNonNull(ruleOptions);
             return this;
         }

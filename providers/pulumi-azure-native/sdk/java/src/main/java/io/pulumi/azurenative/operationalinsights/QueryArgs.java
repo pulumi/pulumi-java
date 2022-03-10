@@ -186,92 +186,92 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setBody(Input<String> body) {
+        public Builder body(Input<String> body) {
             this.body = Objects.requireNonNull(body);
             return this;
         }
 
-        public Builder setBody(String body) {
+        public Builder body(String body) {
             this.body = Input.of(Objects.requireNonNull(body));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<Object> properties) {
+        public Builder properties(@Nullable Input<Object> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable Object properties) {
+        public Builder properties(@Nullable Object properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setQueryPackName(Input<String> queryPackName) {
+        public Builder queryPackName(Input<String> queryPackName) {
             this.queryPackName = Objects.requireNonNull(queryPackName);
             return this;
         }
 
-        public Builder setQueryPackName(String queryPackName) {
+        public Builder queryPackName(String queryPackName) {
             this.queryPackName = Input.of(Objects.requireNonNull(queryPackName));
             return this;
         }
 
-        public Builder setRelated(@Nullable Input<LogAnalyticsQueryPackQueryPropertiesRelatedArgs> related) {
+        public Builder related(@Nullable Input<LogAnalyticsQueryPackQueryPropertiesRelatedArgs> related) {
             this.related = related;
             return this;
         }
 
-        public Builder setRelated(@Nullable LogAnalyticsQueryPackQueryPropertiesRelatedArgs related) {
+        public Builder related(@Nullable LogAnalyticsQueryPackQueryPropertiesRelatedArgs related) {
             this.related = Input.ofNullable(related);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,List<String>>> tags) {
+        public Builder tags(@Nullable Input<Map<String,List<String>>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,List<String>> tags) {
+        public Builder tags(@Nullable Map<String,List<String>> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

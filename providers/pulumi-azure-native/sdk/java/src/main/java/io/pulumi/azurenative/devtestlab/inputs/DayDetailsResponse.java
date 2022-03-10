@@ -57,7 +57,7 @@ public final class DayDetailsResponse extends io.pulumi.resources.InvokeArgs {
     	      this.time = defaults.time;
         }
 
-        public Builder setTime(@Nullable String time) {
+        public Builder time(@Nullable String time) {
             this.time = time;
             return this;
         }

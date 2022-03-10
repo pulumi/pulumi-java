@@ -56,7 +56,7 @@ public final class BucketEncryption extends io.pulumi.resources.InvokeArgs {
     	      this.serverSideEncryptionConfiguration = defaults.serverSideEncryptionConfiguration;
         }
 
-        public Builder setServerSideEncryptionConfiguration(List<BucketServerSideEncryptionRule> serverSideEncryptionConfiguration) {
+        public Builder serverSideEncryptionConfiguration(List<BucketServerSideEncryptionRule> serverSideEncryptionConfiguration) {
             this.serverSideEncryptionConfiguration = Objects.requireNonNull(serverSideEncryptionConfiguration);
             return this;
         }

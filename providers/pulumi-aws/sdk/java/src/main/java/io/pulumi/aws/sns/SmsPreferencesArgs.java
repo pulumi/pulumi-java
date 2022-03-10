@@ -135,62 +135,62 @@ public final class SmsPreferencesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.usageReportS3Bucket = defaults.usageReportS3Bucket;
         }
 
-        public Builder setDefaultSenderId(@Nullable Input<String> defaultSenderId) {
+        public Builder defaultSenderId(@Nullable Input<String> defaultSenderId) {
             this.defaultSenderId = defaultSenderId;
             return this;
         }
 
-        public Builder setDefaultSenderId(@Nullable String defaultSenderId) {
+        public Builder defaultSenderId(@Nullable String defaultSenderId) {
             this.defaultSenderId = Input.ofNullable(defaultSenderId);
             return this;
         }
 
-        public Builder setDefaultSmsType(@Nullable Input<String> defaultSmsType) {
+        public Builder defaultSmsType(@Nullable Input<String> defaultSmsType) {
             this.defaultSmsType = defaultSmsType;
             return this;
         }
 
-        public Builder setDefaultSmsType(@Nullable String defaultSmsType) {
+        public Builder defaultSmsType(@Nullable String defaultSmsType) {
             this.defaultSmsType = Input.ofNullable(defaultSmsType);
             return this;
         }
 
-        public Builder setDeliveryStatusIamRoleArn(@Nullable Input<String> deliveryStatusIamRoleArn) {
+        public Builder deliveryStatusIamRoleArn(@Nullable Input<String> deliveryStatusIamRoleArn) {
             this.deliveryStatusIamRoleArn = deliveryStatusIamRoleArn;
             return this;
         }
 
-        public Builder setDeliveryStatusIamRoleArn(@Nullable String deliveryStatusIamRoleArn) {
+        public Builder deliveryStatusIamRoleArn(@Nullable String deliveryStatusIamRoleArn) {
             this.deliveryStatusIamRoleArn = Input.ofNullable(deliveryStatusIamRoleArn);
             return this;
         }
 
-        public Builder setDeliveryStatusSuccessSamplingRate(@Nullable Input<String> deliveryStatusSuccessSamplingRate) {
+        public Builder deliveryStatusSuccessSamplingRate(@Nullable Input<String> deliveryStatusSuccessSamplingRate) {
             this.deliveryStatusSuccessSamplingRate = deliveryStatusSuccessSamplingRate;
             return this;
         }
 
-        public Builder setDeliveryStatusSuccessSamplingRate(@Nullable String deliveryStatusSuccessSamplingRate) {
+        public Builder deliveryStatusSuccessSamplingRate(@Nullable String deliveryStatusSuccessSamplingRate) {
             this.deliveryStatusSuccessSamplingRate = Input.ofNullable(deliveryStatusSuccessSamplingRate);
             return this;
         }
 
-        public Builder setMonthlySpendLimit(@Nullable Input<Integer> monthlySpendLimit) {
+        public Builder monthlySpendLimit(@Nullable Input<Integer> monthlySpendLimit) {
             this.monthlySpendLimit = monthlySpendLimit;
             return this;
         }
 
-        public Builder setMonthlySpendLimit(@Nullable Integer monthlySpendLimit) {
+        public Builder monthlySpendLimit(@Nullable Integer monthlySpendLimit) {
             this.monthlySpendLimit = Input.ofNullable(monthlySpendLimit);
             return this;
         }
 
-        public Builder setUsageReportS3Bucket(@Nullable Input<String> usageReportS3Bucket) {
+        public Builder usageReportS3Bucket(@Nullable Input<String> usageReportS3Bucket) {
             this.usageReportS3Bucket = usageReportS3Bucket;
             return this;
         }
 
-        public Builder setUsageReportS3Bucket(@Nullable String usageReportS3Bucket) {
+        public Builder usageReportS3Bucket(@Nullable String usageReportS3Bucket) {
             this.usageReportS3Bucket = Input.ofNullable(usageReportS3Bucket);
             return this;
         }

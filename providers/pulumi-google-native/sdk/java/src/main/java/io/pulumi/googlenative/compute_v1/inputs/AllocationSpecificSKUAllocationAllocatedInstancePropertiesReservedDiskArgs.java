@@ -71,22 +71,22 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
     	      this.$interface = defaults.$interface;
         }
 
-        public Builder setDiskSizeGb(@Nullable Input<String> diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Input<String> diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
 
-        public Builder setDiskSizeGb(@Nullable String diskSizeGb) {
+        public Builder diskSizeGb(@Nullable String diskSizeGb) {
             this.diskSizeGb = Input.ofNullable(diskSizeGb);
             return this;
         }
 
-        public Builder set$interface(@Nullable Input<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface> $interface) {
+        public Builder $interface(@Nullable Input<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface> $interface) {
             this.$interface = $interface;
             return this;
         }
 
-        public Builder set$interface(@Nullable AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface $interface) {
+        public Builder $interface(@Nullable AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface $interface) {
             this.$interface = Input.ofNullable($interface);
             return this;
         }

@@ -163,42 +163,42 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubject {
     	      this.streetAddress = defaults.streetAddress;
         }
 
-        public Builder setCommonName(@Nullable String commonName) {
+        public Builder commonName(@Nullable String commonName) {
             this.commonName = commonName;
             return this;
         }
 
-        public Builder setCountryCode(@Nullable String countryCode) {
+        public Builder countryCode(@Nullable String countryCode) {
             this.countryCode = countryCode;
             return this;
         }
 
-        public Builder setLocality(@Nullable String locality) {
+        public Builder locality(@Nullable String locality) {
             this.locality = locality;
             return this;
         }
 
-        public Builder setOrganization(@Nullable String organization) {
+        public Builder organization(@Nullable String organization) {
             this.organization = organization;
             return this;
         }
 
-        public Builder setOrganizationalUnit(@Nullable String organizationalUnit) {
+        public Builder organizationalUnit(@Nullable String organizationalUnit) {
             this.organizationalUnit = organizationalUnit;
             return this;
         }
 
-        public Builder setPostalCode(@Nullable String postalCode) {
+        public Builder postalCode(@Nullable String postalCode) {
             this.postalCode = postalCode;
             return this;
         }
 
-        public Builder setProvince(@Nullable String province) {
+        public Builder province(@Nullable String province) {
             this.province = province;
             return this;
         }
 
-        public Builder setStreetAddress(@Nullable String streetAddress) {
+        public Builder streetAddress(@Nullable String streetAddress) {
             this.streetAddress = streetAddress;
             return this;
         }

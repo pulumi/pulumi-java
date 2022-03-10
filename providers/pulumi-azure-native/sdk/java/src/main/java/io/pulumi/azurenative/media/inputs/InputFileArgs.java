@@ -99,32 +99,32 @@ public final class InputFileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setFilename(@Nullable Input<String> filename) {
+        public Builder filename(@Nullable Input<String> filename) {
             this.filename = filename;
             return this;
         }
 
-        public Builder setFilename(@Nullable String filename) {
+        public Builder filename(@Nullable String filename) {
             this.filename = Input.ofNullable(filename);
             return this;
         }
 
-        public Builder setIncludedTracks(@Nullable Input<List<Object>> includedTracks) {
+        public Builder includedTracks(@Nullable Input<List<Object>> includedTracks) {
             this.includedTracks = includedTracks;
             return this;
         }
 
-        public Builder setIncludedTracks(@Nullable List<Object> includedTracks) {
+        public Builder includedTracks(@Nullable List<Object> includedTracks) {
             this.includedTracks = Input.ofNullable(includedTracks);
             return this;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }

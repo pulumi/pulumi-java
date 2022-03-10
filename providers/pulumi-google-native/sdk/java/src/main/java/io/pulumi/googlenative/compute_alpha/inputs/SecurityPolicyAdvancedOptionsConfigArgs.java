@@ -63,22 +63,22 @@ public final class SecurityPolicyAdvancedOptionsConfigArgs extends io.pulumi.res
     	      this.logLevel = defaults.logLevel;
         }
 
-        public Builder setJsonParsing(@Nullable Input<SecurityPolicyAdvancedOptionsConfigJsonParsing> jsonParsing) {
+        public Builder jsonParsing(@Nullable Input<SecurityPolicyAdvancedOptionsConfigJsonParsing> jsonParsing) {
             this.jsonParsing = jsonParsing;
             return this;
         }
 
-        public Builder setJsonParsing(@Nullable SecurityPolicyAdvancedOptionsConfigJsonParsing jsonParsing) {
+        public Builder jsonParsing(@Nullable SecurityPolicyAdvancedOptionsConfigJsonParsing jsonParsing) {
             this.jsonParsing = Input.ofNullable(jsonParsing);
             return this;
         }
 
-        public Builder setLogLevel(@Nullable Input<SecurityPolicyAdvancedOptionsConfigLogLevel> logLevel) {
+        public Builder logLevel(@Nullable Input<SecurityPolicyAdvancedOptionsConfigLogLevel> logLevel) {
             this.logLevel = logLevel;
             return this;
         }
 
-        public Builder setLogLevel(@Nullable SecurityPolicyAdvancedOptionsConfigLogLevel logLevel) {
+        public Builder logLevel(@Nullable SecurityPolicyAdvancedOptionsConfigLogLevel logLevel) {
             this.logLevel = Input.ofNullable(logLevel);
             return this;
         }

@@ -100,22 +100,22 @@ public final class GetTransparentDataEncryptionArgs extends io.pulumi.resources.
     	      this.transparentDataEncryptionName = defaults.transparentDataEncryptionName;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setServerName(String serverName) {
+        public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
-        public Builder setTransparentDataEncryptionName(String transparentDataEncryptionName) {
+        public Builder transparentDataEncryptionName(String transparentDataEncryptionName) {
             this.transparentDataEncryptionName = Objects.requireNonNull(transparentDataEncryptionName);
             return this;
         }

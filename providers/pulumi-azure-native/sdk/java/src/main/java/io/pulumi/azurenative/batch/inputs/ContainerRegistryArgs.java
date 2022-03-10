@@ -78,32 +78,32 @@ public final class ContainerRegistryArgs extends io.pulumi.resources.ResourceArg
     	      this.userName = defaults.userName;
         }
 
-        public Builder setPassword(Input<String> password) {
+        public Builder password(Input<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Input.of(Objects.requireNonNull(password));
             return this;
         }
 
-        public Builder setRegistryServer(@Nullable Input<String> registryServer) {
+        public Builder registryServer(@Nullable Input<String> registryServer) {
             this.registryServer = registryServer;
             return this;
         }
 
-        public Builder setRegistryServer(@Nullable String registryServer) {
+        public Builder registryServer(@Nullable String registryServer) {
             this.registryServer = Input.ofNullable(registryServer);
             return this;
         }
 
-        public Builder setUserName(Input<String> userName) {
+        public Builder userName(Input<String> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Input.of(Objects.requireNonNull(userName));
             return this;
         }

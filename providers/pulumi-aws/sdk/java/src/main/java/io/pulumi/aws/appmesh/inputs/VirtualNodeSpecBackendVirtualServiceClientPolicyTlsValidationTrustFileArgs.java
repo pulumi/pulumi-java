@@ -52,12 +52,12 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
     	      this.certificateChain = defaults.certificateChain;
         }
 
-        public Builder setCertificateChain(Input<String> certificateChain) {
+        public Builder certificateChain(Input<String> certificateChain) {
             this.certificateChain = Objects.requireNonNull(certificateChain);
             return this;
         }
 
-        public Builder setCertificateChain(String certificateChain) {
+        public Builder certificateChain(String certificateChain) {
             this.certificateChain = Input.of(Objects.requireNonNull(certificateChain));
             return this;
         }

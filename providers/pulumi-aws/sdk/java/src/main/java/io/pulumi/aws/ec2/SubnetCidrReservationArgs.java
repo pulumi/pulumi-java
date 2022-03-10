@@ -102,42 +102,42 @@ public final class SubnetCidrReservationArgs extends io.pulumi.resources.Resourc
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setCidrBlock(Input<String> cidrBlock) {
+        public Builder cidrBlock(Input<String> cidrBlock) {
             this.cidrBlock = Objects.requireNonNull(cidrBlock);
             return this;
         }
 
-        public Builder setCidrBlock(String cidrBlock) {
+        public Builder cidrBlock(String cidrBlock) {
             this.cidrBlock = Input.of(Objects.requireNonNull(cidrBlock));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setReservationType(Input<String> reservationType) {
+        public Builder reservationType(Input<String> reservationType) {
             this.reservationType = Objects.requireNonNull(reservationType);
             return this;
         }
 
-        public Builder setReservationType(String reservationType) {
+        public Builder reservationType(String reservationType) {
             this.reservationType = Input.of(Objects.requireNonNull(reservationType));
             return this;
         }
 
-        public Builder setSubnetId(Input<String> subnetId) {
+        public Builder subnetId(Input<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
-        public Builder setSubnetId(String subnetId) {
+        public Builder subnetId(String subnetId) {
             this.subnetId = Input.of(Objects.requireNonNull(subnetId));
             return this;
         }

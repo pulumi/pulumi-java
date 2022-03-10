@@ -67,12 +67,12 @@ public final class ListQueryKeyBySearchServiceResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setNextLink(String nextLink) {
+        public Builder nextLink(String nextLink) {
             this.nextLink = Objects.requireNonNull(nextLink);
             return this;
         }
 
-        public Builder setValue(List<QueryKeyResponse> value) {
+        public Builder value(List<QueryKeyResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

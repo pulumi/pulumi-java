@@ -52,12 +52,12 @@ public final class RegistryPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.policyText = defaults.policyText;
         }
 
-        public Builder setPolicyText(Input<Object> policyText) {
+        public Builder policyText(Input<Object> policyText) {
             this.policyText = Objects.requireNonNull(policyText);
             return this;
         }
 
-        public Builder setPolicyText(Object policyText) {
+        public Builder policyText(Object policyText) {
             this.policyText = Input.of(Objects.requireNonNull(policyText));
             return this;
         }

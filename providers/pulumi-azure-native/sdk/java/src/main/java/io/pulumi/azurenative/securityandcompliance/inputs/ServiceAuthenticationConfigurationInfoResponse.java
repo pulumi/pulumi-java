@@ -91,17 +91,17 @@ public final class ServiceAuthenticationConfigurationInfoResponse extends io.pul
     	      this.smartProxyEnabled = defaults.smartProxyEnabled;
         }
 
-        public Builder setAudience(@Nullable String audience) {
+        public Builder audience(@Nullable String audience) {
             this.audience = audience;
             return this;
         }
 
-        public Builder setAuthority(@Nullable String authority) {
+        public Builder authority(@Nullable String authority) {
             this.authority = authority;
             return this;
         }
 
-        public Builder setSmartProxyEnabled(@Nullable Boolean smartProxyEnabled) {
+        public Builder smartProxyEnabled(@Nullable Boolean smartProxyEnabled) {
             this.smartProxyEnabled = smartProxyEnabled;
             return this;
         }

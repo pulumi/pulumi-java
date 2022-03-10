@@ -98,52 +98,52 @@ public final class ProfilePermissionArgs extends io.pulumi.resources.ResourceArg
     	      this.statementId = defaults.statementId;
         }
 
-        public Builder setAction(Input<String> action) {
+        public Builder action(Input<String> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Input.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder setPrincipal(Input<String> principal) {
+        public Builder principal(Input<String> principal) {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
 
-        public Builder setPrincipal(String principal) {
+        public Builder principal(String principal) {
             this.principal = Input.of(Objects.requireNonNull(principal));
             return this;
         }
 
-        public Builder setProfileName(Input<String> profileName) {
+        public Builder profileName(Input<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
 
-        public Builder setProfileName(String profileName) {
+        public Builder profileName(String profileName) {
             this.profileName = Input.of(Objects.requireNonNull(profileName));
             return this;
         }
 
-        public Builder setProfileVersion(@Nullable Input<String> profileVersion) {
+        public Builder profileVersion(@Nullable Input<String> profileVersion) {
             this.profileVersion = profileVersion;
             return this;
         }
 
-        public Builder setProfileVersion(@Nullable String profileVersion) {
+        public Builder profileVersion(@Nullable String profileVersion) {
             this.profileVersion = Input.ofNullable(profileVersion);
             return this;
         }
 
-        public Builder setStatementId(Input<String> statementId) {
+        public Builder statementId(Input<String> statementId) {
             this.statementId = Objects.requireNonNull(statementId);
             return this;
         }
 
-        public Builder setStatementId(String statementId) {
+        public Builder statementId(String statementId) {
             this.statementId = Input.of(Objects.requireNonNull(statementId));
             return this;
         }

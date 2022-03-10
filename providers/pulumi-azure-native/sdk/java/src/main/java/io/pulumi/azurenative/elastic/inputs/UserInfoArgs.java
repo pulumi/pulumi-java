@@ -123,52 +123,52 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.lastName = defaults.lastName;
         }
 
-        public Builder setCompanyInfo(@Nullable Input<CompanyInfoArgs> companyInfo) {
+        public Builder companyInfo(@Nullable Input<CompanyInfoArgs> companyInfo) {
             this.companyInfo = companyInfo;
             return this;
         }
 
-        public Builder setCompanyInfo(@Nullable CompanyInfoArgs companyInfo) {
+        public Builder companyInfo(@Nullable CompanyInfoArgs companyInfo) {
             this.companyInfo = Input.ofNullable(companyInfo);
             return this;
         }
 
-        public Builder setCompanyName(@Nullable Input<String> companyName) {
+        public Builder companyName(@Nullable Input<String> companyName) {
             this.companyName = companyName;
             return this;
         }
 
-        public Builder setCompanyName(@Nullable String companyName) {
+        public Builder companyName(@Nullable String companyName) {
             this.companyName = Input.ofNullable(companyName);
             return this;
         }
 
-        public Builder setEmailAddress(@Nullable Input<String> emailAddress) {
+        public Builder emailAddress(@Nullable Input<String> emailAddress) {
             this.emailAddress = emailAddress;
             return this;
         }
 
-        public Builder setEmailAddress(@Nullable String emailAddress) {
+        public Builder emailAddress(@Nullable String emailAddress) {
             this.emailAddress = Input.ofNullable(emailAddress);
             return this;
         }
 
-        public Builder setFirstName(@Nullable Input<String> firstName) {
+        public Builder firstName(@Nullable Input<String> firstName) {
             this.firstName = firstName;
             return this;
         }
 
-        public Builder setFirstName(@Nullable String firstName) {
+        public Builder firstName(@Nullable String firstName) {
             this.firstName = Input.ofNullable(firstName);
             return this;
         }
 
-        public Builder setLastName(@Nullable Input<String> lastName) {
+        public Builder lastName(@Nullable Input<String> lastName) {
             this.lastName = lastName;
             return this;
         }
 
-        public Builder setLastName(@Nullable String lastName) {
+        public Builder lastName(@Nullable String lastName) {
             this.lastName = Input.ofNullable(lastName);
             return this;
         }

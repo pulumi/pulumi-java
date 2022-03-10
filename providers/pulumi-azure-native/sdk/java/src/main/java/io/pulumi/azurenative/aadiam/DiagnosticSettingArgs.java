@@ -152,72 +152,72 @@ public final class DiagnosticSettingArgs extends io.pulumi.resources.ResourceArg
     	      this.workspaceId = defaults.workspaceId;
         }
 
-        public Builder setEventHubAuthorizationRuleId(@Nullable Input<String> eventHubAuthorizationRuleId) {
+        public Builder eventHubAuthorizationRuleId(@Nullable Input<String> eventHubAuthorizationRuleId) {
             this.eventHubAuthorizationRuleId = eventHubAuthorizationRuleId;
             return this;
         }
 
-        public Builder setEventHubAuthorizationRuleId(@Nullable String eventHubAuthorizationRuleId) {
+        public Builder eventHubAuthorizationRuleId(@Nullable String eventHubAuthorizationRuleId) {
             this.eventHubAuthorizationRuleId = Input.ofNullable(eventHubAuthorizationRuleId);
             return this;
         }
 
-        public Builder setEventHubName(@Nullable Input<String> eventHubName) {
+        public Builder eventHubName(@Nullable Input<String> eventHubName) {
             this.eventHubName = eventHubName;
             return this;
         }
 
-        public Builder setEventHubName(@Nullable String eventHubName) {
+        public Builder eventHubName(@Nullable String eventHubName) {
             this.eventHubName = Input.ofNullable(eventHubName);
             return this;
         }
 
-        public Builder setLogs(@Nullable Input<List<LogSettingsArgs>> logs) {
+        public Builder logs(@Nullable Input<List<LogSettingsArgs>> logs) {
             this.logs = logs;
             return this;
         }
 
-        public Builder setLogs(@Nullable List<LogSettingsArgs> logs) {
+        public Builder logs(@Nullable List<LogSettingsArgs> logs) {
             this.logs = Input.ofNullable(logs);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setServiceBusRuleId(@Nullable Input<String> serviceBusRuleId) {
+        public Builder serviceBusRuleId(@Nullable Input<String> serviceBusRuleId) {
             this.serviceBusRuleId = serviceBusRuleId;
             return this;
         }
 
-        public Builder setServiceBusRuleId(@Nullable String serviceBusRuleId) {
+        public Builder serviceBusRuleId(@Nullable String serviceBusRuleId) {
             this.serviceBusRuleId = Input.ofNullable(serviceBusRuleId);
             return this;
         }
 
-        public Builder setStorageAccountId(@Nullable Input<String> storageAccountId) {
+        public Builder storageAccountId(@Nullable Input<String> storageAccountId) {
             this.storageAccountId = storageAccountId;
             return this;
         }
 
-        public Builder setStorageAccountId(@Nullable String storageAccountId) {
+        public Builder storageAccountId(@Nullable String storageAccountId) {
             this.storageAccountId = Input.ofNullable(storageAccountId);
             return this;
         }
 
-        public Builder setWorkspaceId(@Nullable Input<String> workspaceId) {
+        public Builder workspaceId(@Nullable Input<String> workspaceId) {
             this.workspaceId = workspaceId;
             return this;
         }
 
-        public Builder setWorkspaceId(@Nullable String workspaceId) {
+        public Builder workspaceId(@Nullable String workspaceId) {
             this.workspaceId = Input.ofNullable(workspaceId);
             return this;
         }

@@ -340,97 +340,97 @@ public final class GetShareSubscriptionResult {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setCreatedAt(String createdAt) {
+        public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
 
-        public Builder setExpirationDate(@Nullable String expirationDate) {
+        public Builder expirationDate(@Nullable String expirationDate) {
             this.expirationDate = expirationDate;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInvitationId(String invitationId) {
+        public Builder invitationId(String invitationId) {
             this.invitationId = Objects.requireNonNull(invitationId);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProviderEmail(String providerEmail) {
+        public Builder providerEmail(String providerEmail) {
             this.providerEmail = Objects.requireNonNull(providerEmail);
             return this;
         }
 
-        public Builder setProviderName(String providerName) {
+        public Builder providerName(String providerName) {
             this.providerName = Objects.requireNonNull(providerName);
             return this;
         }
 
-        public Builder setProviderTenantName(String providerTenantName) {
+        public Builder providerTenantName(String providerTenantName) {
             this.providerTenantName = Objects.requireNonNull(providerTenantName);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setShareDescription(String shareDescription) {
+        public Builder shareDescription(String shareDescription) {
             this.shareDescription = Objects.requireNonNull(shareDescription);
             return this;
         }
 
-        public Builder setShareKind(String shareKind) {
+        public Builder shareKind(String shareKind) {
             this.shareKind = Objects.requireNonNull(shareKind);
             return this;
         }
 
-        public Builder setShareName(String shareName) {
+        public Builder shareName(String shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
 
-        public Builder setShareSubscriptionStatus(String shareSubscriptionStatus) {
+        public Builder shareSubscriptionStatus(String shareSubscriptionStatus) {
             this.shareSubscriptionStatus = Objects.requireNonNull(shareSubscriptionStatus);
             return this;
         }
 
-        public Builder setShareTerms(String shareTerms) {
+        public Builder shareTerms(String shareTerms) {
             this.shareTerms = Objects.requireNonNull(shareTerms);
             return this;
         }
 
-        public Builder setSourceShareLocation(String sourceShareLocation) {
+        public Builder sourceShareLocation(String sourceShareLocation) {
             this.sourceShareLocation = Objects.requireNonNull(sourceShareLocation);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserEmail(String userEmail) {
+        public Builder userEmail(String userEmail) {
             this.userEmail = Objects.requireNonNull(userEmail);
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }

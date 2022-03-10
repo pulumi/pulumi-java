@@ -269,72 +269,72 @@ public final class DPMProtectedItemExtendedInfoResponse extends io.pulumi.resour
     	      this.totalDiskStorageSizeInBytes = defaults.totalDiskStorageSizeInBytes;
         }
 
-        public Builder setDiskStorageUsedInBytes(@Nullable String diskStorageUsedInBytes) {
+        public Builder diskStorageUsedInBytes(@Nullable String diskStorageUsedInBytes) {
             this.diskStorageUsedInBytes = diskStorageUsedInBytes;
             return this;
         }
 
-        public Builder setIsCollocated(@Nullable Boolean isCollocated) {
+        public Builder isCollocated(@Nullable Boolean isCollocated) {
             this.isCollocated = isCollocated;
             return this;
         }
 
-        public Builder setIsPresentOnCloud(@Nullable Boolean isPresentOnCloud) {
+        public Builder isPresentOnCloud(@Nullable Boolean isPresentOnCloud) {
             this.isPresentOnCloud = isPresentOnCloud;
             return this;
         }
 
-        public Builder setLastBackupStatus(@Nullable String lastBackupStatus) {
+        public Builder lastBackupStatus(@Nullable String lastBackupStatus) {
             this.lastBackupStatus = lastBackupStatus;
             return this;
         }
 
-        public Builder setLastRefreshedAt(@Nullable String lastRefreshedAt) {
+        public Builder lastRefreshedAt(@Nullable String lastRefreshedAt) {
             this.lastRefreshedAt = lastRefreshedAt;
             return this;
         }
 
-        public Builder setOldestRecoveryPoint(@Nullable String oldestRecoveryPoint) {
+        public Builder oldestRecoveryPoint(@Nullable String oldestRecoveryPoint) {
             this.oldestRecoveryPoint = oldestRecoveryPoint;
             return this;
         }
 
-        public Builder setOnPremiseLatestRecoveryPoint(@Nullable String onPremiseLatestRecoveryPoint) {
+        public Builder onPremiseLatestRecoveryPoint(@Nullable String onPremiseLatestRecoveryPoint) {
             this.onPremiseLatestRecoveryPoint = onPremiseLatestRecoveryPoint;
             return this;
         }
 
-        public Builder setOnPremiseOldestRecoveryPoint(@Nullable String onPremiseOldestRecoveryPoint) {
+        public Builder onPremiseOldestRecoveryPoint(@Nullable String onPremiseOldestRecoveryPoint) {
             this.onPremiseOldestRecoveryPoint = onPremiseOldestRecoveryPoint;
             return this;
         }
 
-        public Builder setOnPremiseRecoveryPointCount(@Nullable Integer onPremiseRecoveryPointCount) {
+        public Builder onPremiseRecoveryPointCount(@Nullable Integer onPremiseRecoveryPointCount) {
             this.onPremiseRecoveryPointCount = onPremiseRecoveryPointCount;
             return this;
         }
 
-        public Builder setProtectableObjectLoadPath(@Nullable Map<String,String> protectableObjectLoadPath) {
+        public Builder protectableObjectLoadPath(@Nullable Map<String,String> protectableObjectLoadPath) {
             this.protectableObjectLoadPath = protectableObjectLoadPath;
             return this;
         }
 
-        public Builder set$protected(@Nullable Boolean $protected) {
+        public Builder $protected(@Nullable Boolean $protected) {
             this.$protected = $protected;
             return this;
         }
 
-        public Builder setProtectionGroupName(@Nullable String protectionGroupName) {
+        public Builder protectionGroupName(@Nullable String protectionGroupName) {
             this.protectionGroupName = protectionGroupName;
             return this;
         }
 
-        public Builder setRecoveryPointCount(@Nullable Integer recoveryPointCount) {
+        public Builder recoveryPointCount(@Nullable Integer recoveryPointCount) {
             this.recoveryPointCount = recoveryPointCount;
             return this;
         }
 
-        public Builder setTotalDiskStorageSizeInBytes(@Nullable String totalDiskStorageSizeInBytes) {
+        public Builder totalDiskStorageSizeInBytes(@Nullable String totalDiskStorageSizeInBytes) {
             this.totalDiskStorageSizeInBytes = totalDiskStorageSizeInBytes;
             return this;
         }

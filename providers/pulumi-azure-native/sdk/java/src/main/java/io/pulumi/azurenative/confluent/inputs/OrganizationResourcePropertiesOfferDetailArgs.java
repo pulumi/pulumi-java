@@ -122,52 +122,52 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends io.pulu
     	      this.termUnit = defaults.termUnit;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setPlanId(@Nullable Input<String> planId) {
+        public Builder planId(@Nullable Input<String> planId) {
             this.planId = planId;
             return this;
         }
 
-        public Builder setPlanId(@Nullable String planId) {
+        public Builder planId(@Nullable String planId) {
             this.planId = Input.ofNullable(planId);
             return this;
         }
 
-        public Builder setPlanName(@Nullable Input<String> planName) {
+        public Builder planName(@Nullable Input<String> planName) {
             this.planName = planName;
             return this;
         }
 
-        public Builder setPlanName(@Nullable String planName) {
+        public Builder planName(@Nullable String planName) {
             this.planName = Input.ofNullable(planName);
             return this;
         }
 
-        public Builder setPublisherId(@Nullable Input<String> publisherId) {
+        public Builder publisherId(@Nullable Input<String> publisherId) {
             this.publisherId = publisherId;
             return this;
         }
 
-        public Builder setPublisherId(@Nullable String publisherId) {
+        public Builder publisherId(@Nullable String publisherId) {
             this.publisherId = Input.ofNullable(publisherId);
             return this;
         }
 
-        public Builder setTermUnit(@Nullable Input<String> termUnit) {
+        public Builder termUnit(@Nullable Input<String> termUnit) {
             this.termUnit = termUnit;
             return this;
         }
 
-        public Builder setTermUnit(@Nullable String termUnit) {
+        public Builder termUnit(@Nullable String termUnit) {
             this.termUnit = Input.ofNullable(termUnit);
             return this;
         }

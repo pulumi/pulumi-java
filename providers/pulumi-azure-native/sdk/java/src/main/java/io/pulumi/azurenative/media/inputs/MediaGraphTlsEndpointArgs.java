@@ -126,52 +126,52 @@ public final class MediaGraphTlsEndpointArgs extends io.pulumi.resources.Resourc
     	      this.validationOptions = defaults.validationOptions;
         }
 
-        public Builder setCredentials(@Nullable Input<MediaGraphUsernamePasswordCredentialsArgs> credentials) {
+        public Builder credentials(@Nullable Input<MediaGraphUsernamePasswordCredentialsArgs> credentials) {
             this.credentials = credentials;
             return this;
         }
 
-        public Builder setCredentials(@Nullable MediaGraphUsernamePasswordCredentialsArgs credentials) {
+        public Builder credentials(@Nullable MediaGraphUsernamePasswordCredentialsArgs credentials) {
             this.credentials = Input.ofNullable(credentials);
             return this;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder setTrustedCertificates(@Nullable Input<MediaGraphPemCertificateListArgs> trustedCertificates) {
+        public Builder trustedCertificates(@Nullable Input<MediaGraphPemCertificateListArgs> trustedCertificates) {
             this.trustedCertificates = trustedCertificates;
             return this;
         }
 
-        public Builder setTrustedCertificates(@Nullable MediaGraphPemCertificateListArgs trustedCertificates) {
+        public Builder trustedCertificates(@Nullable MediaGraphPemCertificateListArgs trustedCertificates) {
             this.trustedCertificates = Input.ofNullable(trustedCertificates);
             return this;
         }
 
-        public Builder setUrl(Input<String> url) {
+        public Builder url(Input<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Input.of(Objects.requireNonNull(url));
             return this;
         }
 
-        public Builder setValidationOptions(@Nullable Input<MediaGraphTlsValidationOptionsArgs> validationOptions) {
+        public Builder validationOptions(@Nullable Input<MediaGraphTlsValidationOptionsArgs> validationOptions) {
             this.validationOptions = validationOptions;
             return this;
         }
 
-        public Builder setValidationOptions(@Nullable MediaGraphTlsValidationOptionsArgs validationOptions) {
+        public Builder validationOptions(@Nullable MediaGraphTlsValidationOptionsArgs validationOptions) {
             this.validationOptions = Input.ofNullable(validationOptions);
             return this;
         }

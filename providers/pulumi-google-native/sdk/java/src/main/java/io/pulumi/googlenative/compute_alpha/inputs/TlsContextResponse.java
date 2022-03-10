@@ -73,12 +73,12 @@ public final class TlsContextResponse extends io.pulumi.resources.InvokeArgs {
     	      this.validationContext = defaults.validationContext;
         }
 
-        public Builder setCertificateContext(TlsCertificateContextResponse certificateContext) {
+        public Builder certificateContext(TlsCertificateContextResponse certificateContext) {
             this.certificateContext = Objects.requireNonNull(certificateContext);
             return this;
         }
 
-        public Builder setValidationContext(TlsValidationContextResponse validationContext) {
+        public Builder validationContext(TlsValidationContextResponse validationContext) {
             this.validationContext = Objects.requireNonNull(validationContext);
             return this;
         }

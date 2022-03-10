@@ -263,142 +263,142 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder setDigestAlgorithmMnemonic(@Nullable Input<String> digestAlgorithmMnemonic) {
+        public Builder digestAlgorithmMnemonic(@Nullable Input<String> digestAlgorithmMnemonic) {
             this.digestAlgorithmMnemonic = digestAlgorithmMnemonic;
             return this;
         }
 
-        public Builder setDigestAlgorithmMnemonic(@Nullable String digestAlgorithmMnemonic) {
+        public Builder digestAlgorithmMnemonic(@Nullable String digestAlgorithmMnemonic) {
             this.digestAlgorithmMnemonic = Input.ofNullable(digestAlgorithmMnemonic);
             return this;
         }
 
-        public Builder setDigestAlgorithmType(@Nullable Input<Integer> digestAlgorithmType) {
+        public Builder digestAlgorithmType(@Nullable Input<Integer> digestAlgorithmType) {
             this.digestAlgorithmType = digestAlgorithmType;
             return this;
         }
 
-        public Builder setDigestAlgorithmType(@Nullable Integer digestAlgorithmType) {
+        public Builder digestAlgorithmType(@Nullable Integer digestAlgorithmType) {
             this.digestAlgorithmType = Input.ofNullable(digestAlgorithmType);
             return this;
         }
 
-        public Builder setDigestValue(@Nullable Input<String> digestValue) {
+        public Builder digestValue(@Nullable Input<String> digestValue) {
             this.digestValue = digestValue;
             return this;
         }
 
-        public Builder setDigestValue(@Nullable String digestValue) {
+        public Builder digestValue(@Nullable String digestValue) {
             this.digestValue = Input.ofNullable(digestValue);
             return this;
         }
 
-        public Builder setDnskeyRecord(@Nullable Input<String> dnskeyRecord) {
+        public Builder dnskeyRecord(@Nullable Input<String> dnskeyRecord) {
             this.dnskeyRecord = dnskeyRecord;
             return this;
         }
 
-        public Builder setDnskeyRecord(@Nullable String dnskeyRecord) {
+        public Builder dnskeyRecord(@Nullable String dnskeyRecord) {
             this.dnskeyRecord = Input.ofNullable(dnskeyRecord);
             return this;
         }
 
-        public Builder setDsRecord(@Nullable Input<String> dsRecord) {
+        public Builder dsRecord(@Nullable Input<String> dsRecord) {
             this.dsRecord = dsRecord;
             return this;
         }
 
-        public Builder setDsRecord(@Nullable String dsRecord) {
+        public Builder dsRecord(@Nullable String dsRecord) {
             this.dsRecord = Input.ofNullable(dsRecord);
             return this;
         }
 
-        public Builder setFlag(@Nullable Input<Integer> flag) {
+        public Builder flag(@Nullable Input<Integer> flag) {
             this.flag = flag;
             return this;
         }
 
-        public Builder setFlag(@Nullable Integer flag) {
+        public Builder flag(@Nullable Integer flag) {
             this.flag = Input.ofNullable(flag);
             return this;
         }
 
-        public Builder setHostedZoneId(@Nullable Input<String> hostedZoneId) {
+        public Builder hostedZoneId(@Nullable Input<String> hostedZoneId) {
             this.hostedZoneId = hostedZoneId;
             return this;
         }
 
-        public Builder setHostedZoneId(@Nullable String hostedZoneId) {
+        public Builder hostedZoneId(@Nullable String hostedZoneId) {
             this.hostedZoneId = Input.ofNullable(hostedZoneId);
             return this;
         }
 
-        public Builder setKeyManagementServiceArn(@Nullable Input<String> keyManagementServiceArn) {
+        public Builder keyManagementServiceArn(@Nullable Input<String> keyManagementServiceArn) {
             this.keyManagementServiceArn = keyManagementServiceArn;
             return this;
         }
 
-        public Builder setKeyManagementServiceArn(@Nullable String keyManagementServiceArn) {
+        public Builder keyManagementServiceArn(@Nullable String keyManagementServiceArn) {
             this.keyManagementServiceArn = Input.ofNullable(keyManagementServiceArn);
             return this;
         }
 
-        public Builder setKeyTag(@Nullable Input<Integer> keyTag) {
+        public Builder keyTag(@Nullable Input<Integer> keyTag) {
             this.keyTag = keyTag;
             return this;
         }
 
-        public Builder setKeyTag(@Nullable Integer keyTag) {
+        public Builder keyTag(@Nullable Integer keyTag) {
             this.keyTag = Input.ofNullable(keyTag);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPublicKey(@Nullable Input<String> publicKey) {
+        public Builder publicKey(@Nullable Input<String> publicKey) {
             this.publicKey = publicKey;
             return this;
         }
 
-        public Builder setPublicKey(@Nullable String publicKey) {
+        public Builder publicKey(@Nullable String publicKey) {
             this.publicKey = Input.ofNullable(publicKey);
             return this;
         }
 
-        public Builder setSigningAlgorithmMnemonic(@Nullable Input<String> signingAlgorithmMnemonic) {
+        public Builder signingAlgorithmMnemonic(@Nullable Input<String> signingAlgorithmMnemonic) {
             this.signingAlgorithmMnemonic = signingAlgorithmMnemonic;
             return this;
         }
 
-        public Builder setSigningAlgorithmMnemonic(@Nullable String signingAlgorithmMnemonic) {
+        public Builder signingAlgorithmMnemonic(@Nullable String signingAlgorithmMnemonic) {
             this.signingAlgorithmMnemonic = Input.ofNullable(signingAlgorithmMnemonic);
             return this;
         }
 
-        public Builder setSigningAlgorithmType(@Nullable Input<Integer> signingAlgorithmType) {
+        public Builder signingAlgorithmType(@Nullable Input<Integer> signingAlgorithmType) {
             this.signingAlgorithmType = signingAlgorithmType;
             return this;
         }
 
-        public Builder setSigningAlgorithmType(@Nullable Integer signingAlgorithmType) {
+        public Builder signingAlgorithmType(@Nullable Integer signingAlgorithmType) {
             this.signingAlgorithmType = Input.ofNullable(signingAlgorithmType);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }

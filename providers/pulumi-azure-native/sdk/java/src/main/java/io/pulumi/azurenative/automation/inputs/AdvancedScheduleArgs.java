@@ -93,32 +93,32 @@ public final class AdvancedScheduleArgs extends io.pulumi.resources.ResourceArgs
     	      this.weekDays = defaults.weekDays;
         }
 
-        public Builder setMonthDays(@Nullable Input<List<Integer>> monthDays) {
+        public Builder monthDays(@Nullable Input<List<Integer>> monthDays) {
             this.monthDays = monthDays;
             return this;
         }
 
-        public Builder setMonthDays(@Nullable List<Integer> monthDays) {
+        public Builder monthDays(@Nullable List<Integer> monthDays) {
             this.monthDays = Input.ofNullable(monthDays);
             return this;
         }
 
-        public Builder setMonthlyOccurrences(@Nullable Input<List<AdvancedScheduleMonthlyOccurrenceArgs>> monthlyOccurrences) {
+        public Builder monthlyOccurrences(@Nullable Input<List<AdvancedScheduleMonthlyOccurrenceArgs>> monthlyOccurrences) {
             this.monthlyOccurrences = monthlyOccurrences;
             return this;
         }
 
-        public Builder setMonthlyOccurrences(@Nullable List<AdvancedScheduleMonthlyOccurrenceArgs> monthlyOccurrences) {
+        public Builder monthlyOccurrences(@Nullable List<AdvancedScheduleMonthlyOccurrenceArgs> monthlyOccurrences) {
             this.monthlyOccurrences = Input.ofNullable(monthlyOccurrences);
             return this;
         }
 
-        public Builder setWeekDays(@Nullable Input<List<String>> weekDays) {
+        public Builder weekDays(@Nullable Input<List<String>> weekDays) {
             this.weekDays = weekDays;
             return this;
         }
 
-        public Builder setWeekDays(@Nullable List<String> weekDays) {
+        public Builder weekDays(@Nullable List<String> weekDays) {
             this.weekDays = Input.ofNullable(weekDays);
             return this;
         }

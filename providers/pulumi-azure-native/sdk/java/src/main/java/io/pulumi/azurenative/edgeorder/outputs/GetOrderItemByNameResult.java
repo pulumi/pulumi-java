@@ -198,52 +198,52 @@ public final class GetOrderItemByNameResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAddressDetails(AddressDetailsResponse addressDetails) {
+        public Builder addressDetails(AddressDetailsResponse addressDetails) {
             this.addressDetails = Objects.requireNonNull(addressDetails);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOrderId(String orderId) {
+        public Builder orderId(String orderId) {
             this.orderId = Objects.requireNonNull(orderId);
             return this;
         }
 
-        public Builder setOrderItemDetails(OrderItemDetailsResponse orderItemDetails) {
+        public Builder orderItemDetails(OrderItemDetailsResponse orderItemDetails) {
             this.orderItemDetails = Objects.requireNonNull(orderItemDetails);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -103,22 +103,22 @@ public final class RouteSpecGrpcRouteMatch {
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setMetadatas(@Nullable List<RouteSpecGrpcRouteMatchMetadata> metadatas) {
+        public Builder metadatas(@Nullable List<RouteSpecGrpcRouteMatchMetadata> metadatas) {
             this.metadatas = metadatas;
             return this;
         }
 
-        public Builder setMethodName(@Nullable String methodName) {
+        public Builder methodName(@Nullable String methodName) {
             this.methodName = methodName;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setServiceName(@Nullable String serviceName) {
+        public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = serviceName;
             return this;
         }

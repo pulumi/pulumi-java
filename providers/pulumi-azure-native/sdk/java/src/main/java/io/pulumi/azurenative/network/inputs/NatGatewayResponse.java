@@ -271,72 +271,72 @@ public final class NatGatewayResponse extends io.pulumi.resources.InvokeArgs {
     	      this.zones = defaults.zones;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIdleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
+        public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicIpAddresses(@Nullable List<SubResourceResponse> publicIpAddresses) {
+        public Builder publicIpAddresses(@Nullable List<SubResourceResponse> publicIpAddresses) {
             this.publicIpAddresses = publicIpAddresses;
             return this;
         }
 
-        public Builder setPublicIpPrefixes(@Nullable List<SubResourceResponse> publicIpPrefixes) {
+        public Builder publicIpPrefixes(@Nullable List<SubResourceResponse> publicIpPrefixes) {
             this.publicIpPrefixes = publicIpPrefixes;
             return this;
         }
 
-        public Builder setResourceGuid(String resourceGuid) {
+        public Builder resourceGuid(String resourceGuid) {
             this.resourceGuid = Objects.requireNonNull(resourceGuid);
             return this;
         }
 
-        public Builder setSku(@Nullable NatGatewaySkuResponse sku) {
+        public Builder sku(@Nullable NatGatewaySkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSubnets(List<SubResourceResponse> subnets) {
+        public Builder subnets(List<SubResourceResponse> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setZones(@Nullable List<String> zones) {
+        public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }

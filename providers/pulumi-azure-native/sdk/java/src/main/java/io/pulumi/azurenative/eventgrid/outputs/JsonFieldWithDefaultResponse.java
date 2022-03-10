@@ -67,12 +67,12 @@ public final class JsonFieldWithDefaultResponse {
     	      this.sourceField = defaults.sourceField;
         }
 
-        public Builder setDefaultValue(@Nullable String defaultValue) {
+        public Builder defaultValue(@Nullable String defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
 
-        public Builder setSourceField(@Nullable String sourceField) {
+        public Builder sourceField(@Nullable String sourceField) {
             this.sourceField = sourceField;
             return this;
         }

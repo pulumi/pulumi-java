@@ -92,32 +92,32 @@ public final class ManagementPolicyFilterArgs extends io.pulumi.resources.Resour
     	      this.prefixMatch = defaults.prefixMatch;
         }
 
-        public Builder setBlobIndexMatch(@Nullable Input<List<TagFilterArgs>> blobIndexMatch) {
+        public Builder blobIndexMatch(@Nullable Input<List<TagFilterArgs>> blobIndexMatch) {
             this.blobIndexMatch = blobIndexMatch;
             return this;
         }
 
-        public Builder setBlobIndexMatch(@Nullable List<TagFilterArgs> blobIndexMatch) {
+        public Builder blobIndexMatch(@Nullable List<TagFilterArgs> blobIndexMatch) {
             this.blobIndexMatch = Input.ofNullable(blobIndexMatch);
             return this;
         }
 
-        public Builder setBlobTypes(Input<List<String>> blobTypes) {
+        public Builder blobTypes(Input<List<String>> blobTypes) {
             this.blobTypes = Objects.requireNonNull(blobTypes);
             return this;
         }
 
-        public Builder setBlobTypes(List<String> blobTypes) {
+        public Builder blobTypes(List<String> blobTypes) {
             this.blobTypes = Input.of(Objects.requireNonNull(blobTypes));
             return this;
         }
 
-        public Builder setPrefixMatch(@Nullable Input<List<String>> prefixMatch) {
+        public Builder prefixMatch(@Nullable Input<List<String>> prefixMatch) {
             this.prefixMatch = prefixMatch;
             return this;
         }
 
-        public Builder setPrefixMatch(@Nullable List<String> prefixMatch) {
+        public Builder prefixMatch(@Nullable List<String> prefixMatch) {
             this.prefixMatch = Input.ofNullable(prefixMatch);
             return this;
         }

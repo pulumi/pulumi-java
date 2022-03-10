@@ -68,12 +68,12 @@ public final class GetAppImageConfigResult {
     	      this.kernelGatewayImageConfig = defaults.kernelGatewayImageConfig;
         }
 
-        public Builder setAppImageConfigArn(@Nullable String appImageConfigArn) {
+        public Builder appImageConfigArn(@Nullable String appImageConfigArn) {
             this.appImageConfigArn = appImageConfigArn;
             return this;
         }
 
-        public Builder setKernelGatewayImageConfig(@Nullable AppImageConfigKernelGatewayImageConfig kernelGatewayImageConfig) {
+        public Builder kernelGatewayImageConfig(@Nullable AppImageConfigKernelGatewayImageConfig kernelGatewayImageConfig) {
             this.kernelGatewayImageConfig = kernelGatewayImageConfig;
             return this;
         }

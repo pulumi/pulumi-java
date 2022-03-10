@@ -57,12 +57,12 @@ public final class GooglePrivacyDlpV2ReplaceDictionaryConfigArgs extends io.pulu
     	      this.wordList = defaults.wordList;
         }
 
-        public Builder setWordList(@Nullable Input<GooglePrivacyDlpV2WordListArgs> wordList) {
+        public Builder wordList(@Nullable Input<GooglePrivacyDlpV2WordListArgs> wordList) {
             this.wordList = wordList;
             return this;
         }
 
-        public Builder setWordList(@Nullable GooglePrivacyDlpV2WordListArgs wordList) {
+        public Builder wordList(@Nullable GooglePrivacyDlpV2WordListArgs wordList) {
             this.wordList = Input.ofNullable(wordList);
             return this;
         }

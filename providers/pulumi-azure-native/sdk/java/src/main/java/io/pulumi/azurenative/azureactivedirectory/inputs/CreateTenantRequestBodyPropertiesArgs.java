@@ -70,22 +70,22 @@ public final class CreateTenantRequestBodyPropertiesArgs extends io.pulumi.resou
     	      this.displayName = defaults.displayName;
         }
 
-        public Builder setCountryCode(@Nullable Input<String> countryCode) {
+        public Builder countryCode(@Nullable Input<String> countryCode) {
             this.countryCode = countryCode;
             return this;
         }
 
-        public Builder setCountryCode(@Nullable String countryCode) {
+        public Builder countryCode(@Nullable String countryCode) {
             this.countryCode = Input.ofNullable(countryCode);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }

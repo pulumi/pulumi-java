@@ -68,22 +68,22 @@ public final class DatasetS3DestinationConfiguration {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setGlueConfiguration(@Nullable DatasetGlueConfiguration glueConfiguration) {
+        public Builder glueConfiguration(@Nullable DatasetGlueConfiguration glueConfiguration) {
             this.glueConfiguration = glueConfiguration;
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }

@@ -77,27 +77,27 @@ public final class GetBackupPlanResult {
     	      this.versionId = defaults.versionId;
         }
 
-        public Builder setBackupPlan(@Nullable BackupPlanResourceType backupPlan) {
+        public Builder backupPlan(@Nullable BackupPlanResourceType backupPlan) {
             this.backupPlan = backupPlan;
             return this;
         }
 
-        public Builder setBackupPlanArn(@Nullable String backupPlanArn) {
+        public Builder backupPlanArn(@Nullable String backupPlanArn) {
             this.backupPlanArn = backupPlanArn;
             return this;
         }
 
-        public Builder setBackupPlanId(@Nullable String backupPlanId) {
+        public Builder backupPlanId(@Nullable String backupPlanId) {
             this.backupPlanId = backupPlanId;
             return this;
         }
 
-        public Builder setBackupPlanTags(@Nullable Object backupPlanTags) {
+        public Builder backupPlanTags(@Nullable Object backupPlanTags) {
             this.backupPlanTags = backupPlanTags;
             return this;
         }
 
-        public Builder setVersionId(@Nullable String versionId) {
+        public Builder versionId(@Nullable String versionId) {
             this.versionId = versionId;
             return this;
         }

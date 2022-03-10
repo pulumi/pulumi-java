@@ -57,12 +57,12 @@ public final class PackageOccurrenceArgs extends io.pulumi.resources.ResourceArg
     	      this.location = defaults.location;
         }
 
-        public Builder setLocation(Input<List<LocationArgs>> location) {
+        public Builder location(Input<List<LocationArgs>> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLocation(List<LocationArgs> location) {
+        public Builder location(List<LocationArgs> location) {
             this.location = Input.of(Objects.requireNonNull(location));
             return this;
         }

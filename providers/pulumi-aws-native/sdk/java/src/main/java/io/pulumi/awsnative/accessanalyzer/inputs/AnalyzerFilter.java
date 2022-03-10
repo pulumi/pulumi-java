@@ -100,27 +100,27 @@ public final class AnalyzerFilter extends io.pulumi.resources.InvokeArgs {
     	      this.property = defaults.property;
         }
 
-        public Builder setContains(@Nullable List<String> contains) {
+        public Builder contains(@Nullable List<String> contains) {
             this.contains = contains;
             return this;
         }
 
-        public Builder setEq(@Nullable List<String> eq) {
+        public Builder eq(@Nullable List<String> eq) {
             this.eq = eq;
             return this;
         }
 
-        public Builder setExists(@Nullable Boolean exists) {
+        public Builder exists(@Nullable Boolean exists) {
             this.exists = exists;
             return this;
         }
 
-        public Builder setNeq(@Nullable List<String> neq) {
+        public Builder neq(@Nullable List<String> neq) {
             this.neq = neq;
             return this;
         }
 
-        public Builder setProperty(String property) {
+        public Builder property(String property) {
             this.property = Objects.requireNonNull(property);
             return this;
         }

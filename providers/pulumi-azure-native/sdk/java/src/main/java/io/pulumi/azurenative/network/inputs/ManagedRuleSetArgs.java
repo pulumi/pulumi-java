@@ -92,32 +92,32 @@ public final class ManagedRuleSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ruleSetVersion = defaults.ruleSetVersion;
         }
 
-        public Builder setRuleGroupOverrides(@Nullable Input<List<ManagedRuleGroupOverrideArgs>> ruleGroupOverrides) {
+        public Builder ruleGroupOverrides(@Nullable Input<List<ManagedRuleGroupOverrideArgs>> ruleGroupOverrides) {
             this.ruleGroupOverrides = ruleGroupOverrides;
             return this;
         }
 
-        public Builder setRuleGroupOverrides(@Nullable List<ManagedRuleGroupOverrideArgs> ruleGroupOverrides) {
+        public Builder ruleGroupOverrides(@Nullable List<ManagedRuleGroupOverrideArgs> ruleGroupOverrides) {
             this.ruleGroupOverrides = Input.ofNullable(ruleGroupOverrides);
             return this;
         }
 
-        public Builder setRuleSetType(Input<String> ruleSetType) {
+        public Builder ruleSetType(Input<String> ruleSetType) {
             this.ruleSetType = Objects.requireNonNull(ruleSetType);
             return this;
         }
 
-        public Builder setRuleSetType(String ruleSetType) {
+        public Builder ruleSetType(String ruleSetType) {
             this.ruleSetType = Input.of(Objects.requireNonNull(ruleSetType));
             return this;
         }
 
-        public Builder setRuleSetVersion(Input<String> ruleSetVersion) {
+        public Builder ruleSetVersion(Input<String> ruleSetVersion) {
             this.ruleSetVersion = Objects.requireNonNull(ruleSetVersion);
             return this;
         }
 
-        public Builder setRuleSetVersion(String ruleSetVersion) {
+        public Builder ruleSetVersion(String ruleSetVersion) {
             this.ruleSetVersion = Input.of(Objects.requireNonNull(ruleSetVersion));
             return this;
         }

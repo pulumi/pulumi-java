@@ -91,32 +91,32 @@ public final class RoboDirectiveArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceName = defaults.resourceName;
         }
 
-        public Builder setActionType(Input<RoboDirectiveActionType> actionType) {
+        public Builder actionType(Input<RoboDirectiveActionType> actionType) {
             this.actionType = Objects.requireNonNull(actionType);
             return this;
         }
 
-        public Builder setActionType(RoboDirectiveActionType actionType) {
+        public Builder actionType(RoboDirectiveActionType actionType) {
             this.actionType = Input.of(Objects.requireNonNull(actionType));
             return this;
         }
 
-        public Builder setInputText(@Nullable Input<String> inputText) {
+        public Builder inputText(@Nullable Input<String> inputText) {
             this.inputText = inputText;
             return this;
         }
 
-        public Builder setInputText(@Nullable String inputText) {
+        public Builder inputText(@Nullable String inputText) {
             this.inputText = Input.ofNullable(inputText);
             return this;
         }
 
-        public Builder setResourceName(Input<String> resourceName) {
+        public Builder resourceName(Input<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
-        public Builder setResourceName(String resourceName) {
+        public Builder resourceName(String resourceName) {
             this.resourceName = Input.of(Objects.requireNonNull(resourceName));
             return this;
         }

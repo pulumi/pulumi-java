@@ -156,82 +156,82 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setEncryptionConfig(@Nullable Input<List<ClusterEncryptionConfigArgs>> encryptionConfig) {
+        public Builder encryptionConfig(@Nullable Input<List<ClusterEncryptionConfigArgs>> encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
 
-        public Builder setEncryptionConfig(@Nullable List<ClusterEncryptionConfigArgs> encryptionConfig) {
+        public Builder encryptionConfig(@Nullable List<ClusterEncryptionConfigArgs> encryptionConfig) {
             this.encryptionConfig = Input.ofNullable(encryptionConfig);
             return this;
         }
 
-        public Builder setKubernetesNetworkConfig(@Nullable Input<ClusterKubernetesNetworkConfigArgs> kubernetesNetworkConfig) {
+        public Builder kubernetesNetworkConfig(@Nullable Input<ClusterKubernetesNetworkConfigArgs> kubernetesNetworkConfig) {
             this.kubernetesNetworkConfig = kubernetesNetworkConfig;
             return this;
         }
 
-        public Builder setKubernetesNetworkConfig(@Nullable ClusterKubernetesNetworkConfigArgs kubernetesNetworkConfig) {
+        public Builder kubernetesNetworkConfig(@Nullable ClusterKubernetesNetworkConfigArgs kubernetesNetworkConfig) {
             this.kubernetesNetworkConfig = Input.ofNullable(kubernetesNetworkConfig);
             return this;
         }
 
-        public Builder setLogging(@Nullable Input<ClusterLoggingArgs> logging) {
+        public Builder logging(@Nullable Input<ClusterLoggingArgs> logging) {
             this.logging = logging;
             return this;
         }
 
-        public Builder setLogging(@Nullable ClusterLoggingArgs logging) {
+        public Builder logging(@Nullable ClusterLoggingArgs logging) {
             this.logging = Input.ofNullable(logging);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResourcesVpcConfig(Input<ClusterResourcesVpcConfigArgs> resourcesVpcConfig) {
+        public Builder resourcesVpcConfig(Input<ClusterResourcesVpcConfigArgs> resourcesVpcConfig) {
             this.resourcesVpcConfig = Objects.requireNonNull(resourcesVpcConfig);
             return this;
         }
 
-        public Builder setResourcesVpcConfig(ClusterResourcesVpcConfigArgs resourcesVpcConfig) {
+        public Builder resourcesVpcConfig(ClusterResourcesVpcConfigArgs resourcesVpcConfig) {
             this.resourcesVpcConfig = Input.of(Objects.requireNonNull(resourcesVpcConfig));
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<ClusterTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<ClusterTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ClusterTagArgs> tags) {
+        public Builder tags(@Nullable List<ClusterTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

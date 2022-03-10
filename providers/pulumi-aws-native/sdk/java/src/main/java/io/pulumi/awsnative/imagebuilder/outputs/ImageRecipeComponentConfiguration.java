@@ -69,12 +69,12 @@ public final class ImageRecipeComponentConfiguration {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setComponentArn(@Nullable String componentArn) {
+        public Builder componentArn(@Nullable String componentArn) {
             this.componentArn = componentArn;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<ImageRecipeComponentParameter> parameters) {
+        public Builder parameters(@Nullable List<ImageRecipeComponentParameter> parameters) {
             this.parameters = parameters;
             return this;
         }

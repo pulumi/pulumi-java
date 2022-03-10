@@ -55,7 +55,7 @@ public final class X12MessageFilterResponse extends io.pulumi.resources.InvokeAr
     	      this.messageFilterType = defaults.messageFilterType;
         }
 
-        public Builder setMessageFilterType(String messageFilterType) {
+        public Builder messageFilterType(String messageFilterType) {
             this.messageFilterType = Objects.requireNonNull(messageFilterType);
             return this;
         }

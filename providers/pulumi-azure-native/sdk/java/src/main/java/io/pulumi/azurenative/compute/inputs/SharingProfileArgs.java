@@ -59,12 +59,12 @@ public final class SharingProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.permissions = defaults.permissions;
         }
 
-        public Builder setPermissions(@Nullable Input<Either<String,GallerySharingPermissionTypes>> permissions) {
+        public Builder permissions(@Nullable Input<Either<String,GallerySharingPermissionTypes>> permissions) {
             this.permissions = permissions;
             return this;
         }
 
-        public Builder setPermissions(@Nullable Either<String,GallerySharingPermissionTypes> permissions) {
+        public Builder permissions(@Nullable Either<String,GallerySharingPermissionTypes> permissions) {
             this.permissions = Input.ofNullable(permissions);
             return this;
         }

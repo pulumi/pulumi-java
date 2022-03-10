@@ -197,102 +197,102 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
     	      this.startTimeOffset = defaults.startTimeOffset;
         }
 
-        public Builder setEndTimeOffset(@Nullable Input<String> endTimeOffset) {
+        public Builder endTimeOffset(@Nullable Input<String> endTimeOffset) {
             this.endTimeOffset = endTimeOffset;
             return this;
         }
 
-        public Builder setEndTimeOffset(@Nullable String endTimeOffset) {
+        public Builder endTimeOffset(@Nullable String endTimeOffset) {
             this.endTimeOffset = Input.ofNullable(endTimeOffset);
             return this;
         }
 
-        public Builder setEndpointName(Input<String> endpointName) {
+        public Builder endpointName(Input<String> endpointName) {
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
 
-        public Builder setEndpointName(String endpointName) {
+        public Builder endpointName(String endpointName) {
             this.endpointName = Input.of(Objects.requireNonNull(endpointName));
             return this;
         }
 
-        public Builder setFeaturesAttribute(@Nullable Input<String> featuresAttribute) {
+        public Builder featuresAttribute(@Nullable Input<String> featuresAttribute) {
             this.featuresAttribute = featuresAttribute;
             return this;
         }
 
-        public Builder setFeaturesAttribute(@Nullable String featuresAttribute) {
+        public Builder featuresAttribute(@Nullable String featuresAttribute) {
             this.featuresAttribute = Input.ofNullable(featuresAttribute);
             return this;
         }
 
-        public Builder setInferenceAttribute(@Nullable Input<String> inferenceAttribute) {
+        public Builder inferenceAttribute(@Nullable Input<String> inferenceAttribute) {
             this.inferenceAttribute = inferenceAttribute;
             return this;
         }
 
-        public Builder setInferenceAttribute(@Nullable String inferenceAttribute) {
+        public Builder inferenceAttribute(@Nullable String inferenceAttribute) {
             this.inferenceAttribute = Input.ofNullable(inferenceAttribute);
             return this;
         }
 
-        public Builder setLocalPath(Input<String> localPath) {
+        public Builder localPath(Input<String> localPath) {
             this.localPath = Objects.requireNonNull(localPath);
             return this;
         }
 
-        public Builder setLocalPath(String localPath) {
+        public Builder localPath(String localPath) {
             this.localPath = Input.of(Objects.requireNonNull(localPath));
             return this;
         }
 
-        public Builder setProbabilityAttribute(@Nullable Input<String> probabilityAttribute) {
+        public Builder probabilityAttribute(@Nullable Input<String> probabilityAttribute) {
             this.probabilityAttribute = probabilityAttribute;
             return this;
         }
 
-        public Builder setProbabilityAttribute(@Nullable String probabilityAttribute) {
+        public Builder probabilityAttribute(@Nullable String probabilityAttribute) {
             this.probabilityAttribute = Input.ofNullable(probabilityAttribute);
             return this;
         }
 
-        public Builder setProbabilityThresholdAttribute(@Nullable Input<Double> probabilityThresholdAttribute) {
+        public Builder probabilityThresholdAttribute(@Nullable Input<Double> probabilityThresholdAttribute) {
             this.probabilityThresholdAttribute = probabilityThresholdAttribute;
             return this;
         }
 
-        public Builder setProbabilityThresholdAttribute(@Nullable Double probabilityThresholdAttribute) {
+        public Builder probabilityThresholdAttribute(@Nullable Double probabilityThresholdAttribute) {
             this.probabilityThresholdAttribute = Input.ofNullable(probabilityThresholdAttribute);
             return this;
         }
 
-        public Builder setS3DataDistributionType(@Nullable Input<ModelBiasJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType) {
+        public Builder s3DataDistributionType(@Nullable Input<ModelBiasJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType) {
             this.s3DataDistributionType = s3DataDistributionType;
             return this;
         }
 
-        public Builder setS3DataDistributionType(@Nullable ModelBiasJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType) {
+        public Builder s3DataDistributionType(@Nullable ModelBiasJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType) {
             this.s3DataDistributionType = Input.ofNullable(s3DataDistributionType);
             return this;
         }
 
-        public Builder setS3InputMode(@Nullable Input<ModelBiasJobDefinitionEndpointInputS3InputMode> s3InputMode) {
+        public Builder s3InputMode(@Nullable Input<ModelBiasJobDefinitionEndpointInputS3InputMode> s3InputMode) {
             this.s3InputMode = s3InputMode;
             return this;
         }
 
-        public Builder setS3InputMode(@Nullable ModelBiasJobDefinitionEndpointInputS3InputMode s3InputMode) {
+        public Builder s3InputMode(@Nullable ModelBiasJobDefinitionEndpointInputS3InputMode s3InputMode) {
             this.s3InputMode = Input.ofNullable(s3InputMode);
             return this;
         }
 
-        public Builder setStartTimeOffset(@Nullable Input<String> startTimeOffset) {
+        public Builder startTimeOffset(@Nullable Input<String> startTimeOffset) {
             this.startTimeOffset = startTimeOffset;
             return this;
         }
 
-        public Builder setStartTimeOffset(@Nullable String startTimeOffset) {
+        public Builder startTimeOffset(@Nullable String startTimeOffset) {
             this.startTimeOffset = Input.ofNullable(startTimeOffset);
             return this;
         }

@@ -92,32 +92,32 @@ public final class AuthorityConfigX509ConfigKeyUsageGetArgs extends io.pulumi.re
     	      this.unknownExtendedKeyUsages = defaults.unknownExtendedKeyUsages;
         }
 
-        public Builder setBaseKeyUsage(Input<AuthorityConfigX509ConfigKeyUsageBaseKeyUsageGetArgs> baseKeyUsage) {
+        public Builder baseKeyUsage(Input<AuthorityConfigX509ConfigKeyUsageBaseKeyUsageGetArgs> baseKeyUsage) {
             this.baseKeyUsage = Objects.requireNonNull(baseKeyUsage);
             return this;
         }
 
-        public Builder setBaseKeyUsage(AuthorityConfigX509ConfigKeyUsageBaseKeyUsageGetArgs baseKeyUsage) {
+        public Builder baseKeyUsage(AuthorityConfigX509ConfigKeyUsageBaseKeyUsageGetArgs baseKeyUsage) {
             this.baseKeyUsage = Input.of(Objects.requireNonNull(baseKeyUsage));
             return this;
         }
 
-        public Builder setExtendedKeyUsage(Input<AuthorityConfigX509ConfigKeyUsageExtendedKeyUsageGetArgs> extendedKeyUsage) {
+        public Builder extendedKeyUsage(Input<AuthorityConfigX509ConfigKeyUsageExtendedKeyUsageGetArgs> extendedKeyUsage) {
             this.extendedKeyUsage = Objects.requireNonNull(extendedKeyUsage);
             return this;
         }
 
-        public Builder setExtendedKeyUsage(AuthorityConfigX509ConfigKeyUsageExtendedKeyUsageGetArgs extendedKeyUsage) {
+        public Builder extendedKeyUsage(AuthorityConfigX509ConfigKeyUsageExtendedKeyUsageGetArgs extendedKeyUsage) {
             this.extendedKeyUsage = Input.of(Objects.requireNonNull(extendedKeyUsage));
             return this;
         }
 
-        public Builder setUnknownExtendedKeyUsages(@Nullable Input<List<AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages) {
+        public Builder unknownExtendedKeyUsages(@Nullable Input<List<AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages) {
             this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
             return this;
         }
 
-        public Builder setUnknownExtendedKeyUsages(@Nullable List<AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs> unknownExtendedKeyUsages) {
+        public Builder unknownExtendedKeyUsages(@Nullable List<AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs> unknownExtendedKeyUsages) {
             this.unknownExtendedKeyUsages = Input.ofNullable(unknownExtendedKeyUsages);
             return this;
         }

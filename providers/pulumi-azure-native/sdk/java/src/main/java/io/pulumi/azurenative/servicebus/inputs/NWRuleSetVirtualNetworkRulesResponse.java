@@ -75,12 +75,12 @@ public final class NWRuleSetVirtualNetworkRulesResponse extends io.pulumi.resour
     	      this.subnet = defaults.subnet;
         }
 
-        public Builder setIgnoreMissingVnetServiceEndpoint(@Nullable Boolean ignoreMissingVnetServiceEndpoint) {
+        public Builder ignoreMissingVnetServiceEndpoint(@Nullable Boolean ignoreMissingVnetServiceEndpoint) {
             this.ignoreMissingVnetServiceEndpoint = ignoreMissingVnetServiceEndpoint;
             return this;
         }
 
-        public Builder setSubnet(@Nullable SubnetResponse subnet) {
+        public Builder subnet(@Nullable SubnetResponse subnet) {
             this.subnet = subnet;
             return this;
         }

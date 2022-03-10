@@ -84,32 +84,32 @@ public final class ServiceTaskSpecContainerSpecSecret {
     	      this.secretName = defaults.secretName;
         }
 
-        public Builder setFileGid(@Nullable String fileGid) {
+        public Builder fileGid(@Nullable String fileGid) {
             this.fileGid = fileGid;
             return this;
         }
 
-        public Builder setFileMode(@Nullable Integer fileMode) {
+        public Builder fileMode(@Nullable Integer fileMode) {
             this.fileMode = fileMode;
             return this;
         }
 
-        public Builder setFileName(String fileName) {
+        public Builder fileName(String fileName) {
             this.fileName = Objects.requireNonNull(fileName);
             return this;
         }
 
-        public Builder setFileUid(@Nullable String fileUid) {
+        public Builder fileUid(@Nullable String fileUid) {
             this.fileUid = fileUid;
             return this;
         }
 
-        public Builder setSecretId(String secretId) {
+        public Builder secretId(String secretId) {
             this.secretId = Objects.requireNonNull(secretId);
             return this;
         }
 
-        public Builder setSecretName(@Nullable String secretName) {
+        public Builder secretName(@Nullable String secretName) {
             this.secretName = secretName;
             return this;
         }

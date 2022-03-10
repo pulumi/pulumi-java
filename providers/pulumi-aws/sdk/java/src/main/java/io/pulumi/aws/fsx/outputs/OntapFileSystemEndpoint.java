@@ -68,12 +68,12 @@ public final class OntapFileSystemEndpoint {
     	      this.managements = defaults.managements;
         }
 
-        public Builder setInterclusters(@Nullable List<OntapFileSystemEndpointIntercluster> interclusters) {
+        public Builder interclusters(@Nullable List<OntapFileSystemEndpointIntercluster> interclusters) {
             this.interclusters = interclusters;
             return this;
         }
 
-        public Builder setManagements(@Nullable List<OntapFileSystemEndpointManagement> managements) {
+        public Builder managements(@Nullable List<OntapFileSystemEndpointManagement> managements) {
             this.managements = managements;
             return this;
         }

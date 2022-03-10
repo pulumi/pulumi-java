@@ -92,32 +92,32 @@ public final class ScheduleEntryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.startHourUtc = defaults.startHourUtc;
         }
 
-        public Builder setDayOfWeek(Input<DayOfWeek> dayOfWeek) {
+        public Builder dayOfWeek(Input<DayOfWeek> dayOfWeek) {
             this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
             return this;
         }
 
-        public Builder setDayOfWeek(DayOfWeek dayOfWeek) {
+        public Builder dayOfWeek(DayOfWeek dayOfWeek) {
             this.dayOfWeek = Input.of(Objects.requireNonNull(dayOfWeek));
             return this;
         }
 
-        public Builder setMaintenanceWindow(@Nullable Input<String> maintenanceWindow) {
+        public Builder maintenanceWindow(@Nullable Input<String> maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
 
-        public Builder setMaintenanceWindow(@Nullable String maintenanceWindow) {
+        public Builder maintenanceWindow(@Nullable String maintenanceWindow) {
             this.maintenanceWindow = Input.ofNullable(maintenanceWindow);
             return this;
         }
 
-        public Builder setStartHourUtc(Input<Integer> startHourUtc) {
+        public Builder startHourUtc(Input<Integer> startHourUtc) {
             this.startHourUtc = Objects.requireNonNull(startHourUtc);
             return this;
         }
 
-        public Builder setStartHourUtc(Integer startHourUtc) {
+        public Builder startHourUtc(Integer startHourUtc) {
             this.startHourUtc = Input.of(Objects.requireNonNull(startHourUtc));
             return this;
         }

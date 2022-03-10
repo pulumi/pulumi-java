@@ -115,27 +115,27 @@ public final class SlsaMetadataResponse {
     	      this.reproducible = defaults.reproducible;
         }
 
-        public Builder setBuildFinishedOn(String buildFinishedOn) {
+        public Builder buildFinishedOn(String buildFinishedOn) {
             this.buildFinishedOn = Objects.requireNonNull(buildFinishedOn);
             return this;
         }
 
-        public Builder setBuildInvocationId(String buildInvocationId) {
+        public Builder buildInvocationId(String buildInvocationId) {
             this.buildInvocationId = Objects.requireNonNull(buildInvocationId);
             return this;
         }
 
-        public Builder setBuildStartedOn(String buildStartedOn) {
+        public Builder buildStartedOn(String buildStartedOn) {
             this.buildStartedOn = Objects.requireNonNull(buildStartedOn);
             return this;
         }
 
-        public Builder setCompleteness(SlsaCompletenessResponse completeness) {
+        public Builder completeness(SlsaCompletenessResponse completeness) {
             this.completeness = Objects.requireNonNull(completeness);
             return this;
         }
 
-        public Builder setReproducible(Boolean reproducible) {
+        public Builder reproducible(Boolean reproducible) {
             this.reproducible = Objects.requireNonNull(reproducible);
             return this;
         }

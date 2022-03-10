@@ -87,17 +87,17 @@ public final class AssetModelMetric extends io.pulumi.resources.InvokeArgs {
     	      this.window = defaults.window;
         }
 
-        public Builder setExpression(String expression) {
+        public Builder expression(String expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
 
-        public Builder setVariables(List<AssetModelExpressionVariable> variables) {
+        public Builder variables(List<AssetModelExpressionVariable> variables) {
             this.variables = Objects.requireNonNull(variables);
             return this;
         }
 
-        public Builder setWindow(AssetModelMetricWindow window) {
+        public Builder window(AssetModelMetricWindow window) {
             this.window = Objects.requireNonNull(window);
             return this;
         }

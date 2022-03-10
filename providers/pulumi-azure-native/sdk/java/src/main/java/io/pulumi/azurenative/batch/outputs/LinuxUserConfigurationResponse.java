@@ -84,17 +84,17 @@ public final class LinuxUserConfigurationResponse {
     	      this.uid = defaults.uid;
         }
 
-        public Builder setGid(@Nullable Integer gid) {
+        public Builder gid(@Nullable Integer gid) {
             this.gid = gid;
             return this;
         }
 
-        public Builder setSshPrivateKey(@Nullable String sshPrivateKey) {
+        public Builder sshPrivateKey(@Nullable String sshPrivateKey) {
             this.sshPrivateKey = sshPrivateKey;
             return this;
         }
 
-        public Builder setUid(@Nullable Integer uid) {
+        public Builder uid(@Nullable Integer uid) {
             this.uid = uid;
             return this;
         }

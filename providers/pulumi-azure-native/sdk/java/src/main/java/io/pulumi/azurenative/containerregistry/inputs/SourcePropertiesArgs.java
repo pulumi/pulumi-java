@@ -110,42 +110,42 @@ public final class SourcePropertiesArgs extends io.pulumi.resources.ResourceArgs
     	      this.sourceControlType = defaults.sourceControlType;
         }
 
-        public Builder setBranch(@Nullable Input<String> branch) {
+        public Builder branch(@Nullable Input<String> branch) {
             this.branch = branch;
             return this;
         }
 
-        public Builder setBranch(@Nullable String branch) {
+        public Builder branch(@Nullable String branch) {
             this.branch = Input.ofNullable(branch);
             return this;
         }
 
-        public Builder setRepositoryUrl(Input<String> repositoryUrl) {
+        public Builder repositoryUrl(Input<String> repositoryUrl) {
             this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
             return this;
         }
 
-        public Builder setRepositoryUrl(String repositoryUrl) {
+        public Builder repositoryUrl(String repositoryUrl) {
             this.repositoryUrl = Input.of(Objects.requireNonNull(repositoryUrl));
             return this;
         }
 
-        public Builder setSourceControlAuthProperties(@Nullable Input<AuthInfoArgs> sourceControlAuthProperties) {
+        public Builder sourceControlAuthProperties(@Nullable Input<AuthInfoArgs> sourceControlAuthProperties) {
             this.sourceControlAuthProperties = sourceControlAuthProperties;
             return this;
         }
 
-        public Builder setSourceControlAuthProperties(@Nullable AuthInfoArgs sourceControlAuthProperties) {
+        public Builder sourceControlAuthProperties(@Nullable AuthInfoArgs sourceControlAuthProperties) {
             this.sourceControlAuthProperties = Input.ofNullable(sourceControlAuthProperties);
             return this;
         }
 
-        public Builder setSourceControlType(Input<Either<String,SourceControlType>> sourceControlType) {
+        public Builder sourceControlType(Input<Either<String,SourceControlType>> sourceControlType) {
             this.sourceControlType = Objects.requireNonNull(sourceControlType);
             return this;
         }
 
-        public Builder setSourceControlType(Either<String,SourceControlType> sourceControlType) {
+        public Builder sourceControlType(Either<String,SourceControlType> sourceControlType) {
             this.sourceControlType = Input.of(Objects.requireNonNull(sourceControlType));
             return this;
         }

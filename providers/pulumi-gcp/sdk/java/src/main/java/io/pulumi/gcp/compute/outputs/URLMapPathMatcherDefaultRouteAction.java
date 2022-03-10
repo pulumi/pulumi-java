@@ -198,37 +198,37 @@ public final class URLMapPathMatcherDefaultRouteAction {
     	      this.weightedBackendServices = defaults.weightedBackendServices;
         }
 
-        public Builder setCorsPolicy(@Nullable URLMapPathMatcherDefaultRouteActionCorsPolicy corsPolicy) {
+        public Builder corsPolicy(@Nullable URLMapPathMatcherDefaultRouteActionCorsPolicy corsPolicy) {
             this.corsPolicy = corsPolicy;
             return this;
         }
 
-        public Builder setFaultInjectionPolicy(@Nullable URLMapPathMatcherDefaultRouteActionFaultInjectionPolicy faultInjectionPolicy) {
+        public Builder faultInjectionPolicy(@Nullable URLMapPathMatcherDefaultRouteActionFaultInjectionPolicy faultInjectionPolicy) {
             this.faultInjectionPolicy = faultInjectionPolicy;
             return this;
         }
 
-        public Builder setRequestMirrorPolicy(@Nullable URLMapPathMatcherDefaultRouteActionRequestMirrorPolicy requestMirrorPolicy) {
+        public Builder requestMirrorPolicy(@Nullable URLMapPathMatcherDefaultRouteActionRequestMirrorPolicy requestMirrorPolicy) {
             this.requestMirrorPolicy = requestMirrorPolicy;
             return this;
         }
 
-        public Builder setRetryPolicy(@Nullable URLMapPathMatcherDefaultRouteActionRetryPolicy retryPolicy) {
+        public Builder retryPolicy(@Nullable URLMapPathMatcherDefaultRouteActionRetryPolicy retryPolicy) {
             this.retryPolicy = retryPolicy;
             return this;
         }
 
-        public Builder setTimeout(@Nullable URLMapPathMatcherDefaultRouteActionTimeout timeout) {
+        public Builder timeout(@Nullable URLMapPathMatcherDefaultRouteActionTimeout timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setUrlRewrite(@Nullable URLMapPathMatcherDefaultRouteActionUrlRewrite urlRewrite) {
+        public Builder urlRewrite(@Nullable URLMapPathMatcherDefaultRouteActionUrlRewrite urlRewrite) {
             this.urlRewrite = urlRewrite;
             return this;
         }
 
-        public Builder setWeightedBackendServices(@Nullable List<URLMapPathMatcherDefaultRouteActionWeightedBackendService> weightedBackendServices) {
+        public Builder weightedBackendServices(@Nullable List<URLMapPathMatcherDefaultRouteActionWeightedBackendService> weightedBackendServices) {
             this.weightedBackendServices = weightedBackendServices;
             return this;
         }

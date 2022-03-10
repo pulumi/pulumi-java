@@ -72,22 +72,22 @@ public final class S3BucketAssociationClassificationTypeGetArgs extends io.pulum
     	      this.oneTime = defaults.oneTime;
         }
 
-        public Builder setContinuous(@Nullable Input<String> continuous) {
+        public Builder continuous(@Nullable Input<String> continuous) {
             this.continuous = continuous;
             return this;
         }
 
-        public Builder setContinuous(@Nullable String continuous) {
+        public Builder continuous(@Nullable String continuous) {
             this.continuous = Input.ofNullable(continuous);
             return this;
         }
 
-        public Builder setOneTime(@Nullable Input<String> oneTime) {
+        public Builder oneTime(@Nullable Input<String> oneTime) {
             this.oneTime = oneTime;
             return this;
         }
 
-        public Builder setOneTime(@Nullable String oneTime) {
+        public Builder oneTime(@Nullable String oneTime) {
             this.oneTime = Input.ofNullable(oneTime);
             return this;
         }

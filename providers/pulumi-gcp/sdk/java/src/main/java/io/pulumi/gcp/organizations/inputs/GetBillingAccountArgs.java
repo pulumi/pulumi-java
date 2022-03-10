@@ -87,17 +87,17 @@ public final class GetBillingAccountArgs extends io.pulumi.resources.InvokeArgs 
     	      this.open = defaults.open;
         }
 
-        public Builder setBillingAccount(@Nullable String billingAccount) {
+        public Builder billingAccount(@Nullable String billingAccount) {
             this.billingAccount = billingAccount;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setOpen(@Nullable Boolean open) {
+        public Builder open(@Nullable Boolean open) {
             this.open = open;
             return this;
         }

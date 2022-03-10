@@ -290,162 +290,162 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAllowConflictingSubnetworks(@Nullable Input<Boolean> allowConflictingSubnetworks) {
+        public Builder allowConflictingSubnetworks(@Nullable Input<Boolean> allowConflictingSubnetworks) {
             this.allowConflictingSubnetworks = allowConflictingSubnetworks;
             return this;
         }
 
-        public Builder setAllowConflictingSubnetworks(@Nullable Boolean allowConflictingSubnetworks) {
+        public Builder allowConflictingSubnetworks(@Nullable Boolean allowConflictingSubnetworks) {
             this.allowConflictingSubnetworks = Input.ofNullable(allowConflictingSubnetworks);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDestRange(@Nullable Input<String> destRange) {
+        public Builder destRange(@Nullable Input<String> destRange) {
             this.destRange = destRange;
             return this;
         }
 
-        public Builder setDestRange(@Nullable String destRange) {
+        public Builder destRange(@Nullable String destRange) {
             this.destRange = Input.ofNullable(destRange);
             return this;
         }
 
-        public Builder setIlbRouteBehaviorOnUnhealthy(@Nullable Input<RouteIlbRouteBehaviorOnUnhealthy> ilbRouteBehaviorOnUnhealthy) {
+        public Builder ilbRouteBehaviorOnUnhealthy(@Nullable Input<RouteIlbRouteBehaviorOnUnhealthy> ilbRouteBehaviorOnUnhealthy) {
             this.ilbRouteBehaviorOnUnhealthy = ilbRouteBehaviorOnUnhealthy;
             return this;
         }
 
-        public Builder setIlbRouteBehaviorOnUnhealthy(@Nullable RouteIlbRouteBehaviorOnUnhealthy ilbRouteBehaviorOnUnhealthy) {
+        public Builder ilbRouteBehaviorOnUnhealthy(@Nullable RouteIlbRouteBehaviorOnUnhealthy ilbRouteBehaviorOnUnhealthy) {
             this.ilbRouteBehaviorOnUnhealthy = Input.ofNullable(ilbRouteBehaviorOnUnhealthy);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetwork(@Nullable Input<String> network) {
+        public Builder network(@Nullable Input<String> network) {
             this.network = network;
             return this;
         }
 
-        public Builder setNetwork(@Nullable String network) {
+        public Builder network(@Nullable String network) {
             this.network = Input.ofNullable(network);
             return this;
         }
 
-        public Builder setNextHopGateway(@Nullable Input<String> nextHopGateway) {
+        public Builder nextHopGateway(@Nullable Input<String> nextHopGateway) {
             this.nextHopGateway = nextHopGateway;
             return this;
         }
 
-        public Builder setNextHopGateway(@Nullable String nextHopGateway) {
+        public Builder nextHopGateway(@Nullable String nextHopGateway) {
             this.nextHopGateway = Input.ofNullable(nextHopGateway);
             return this;
         }
 
-        public Builder setNextHopIlb(@Nullable Input<String> nextHopIlb) {
+        public Builder nextHopIlb(@Nullable Input<String> nextHopIlb) {
             this.nextHopIlb = nextHopIlb;
             return this;
         }
 
-        public Builder setNextHopIlb(@Nullable String nextHopIlb) {
+        public Builder nextHopIlb(@Nullable String nextHopIlb) {
             this.nextHopIlb = Input.ofNullable(nextHopIlb);
             return this;
         }
 
-        public Builder setNextHopInstance(@Nullable Input<String> nextHopInstance) {
+        public Builder nextHopInstance(@Nullable Input<String> nextHopInstance) {
             this.nextHopInstance = nextHopInstance;
             return this;
         }
 
-        public Builder setNextHopInstance(@Nullable String nextHopInstance) {
+        public Builder nextHopInstance(@Nullable String nextHopInstance) {
             this.nextHopInstance = Input.ofNullable(nextHopInstance);
             return this;
         }
 
-        public Builder setNextHopIp(@Nullable Input<String> nextHopIp) {
+        public Builder nextHopIp(@Nullable Input<String> nextHopIp) {
             this.nextHopIp = nextHopIp;
             return this;
         }
 
-        public Builder setNextHopIp(@Nullable String nextHopIp) {
+        public Builder nextHopIp(@Nullable String nextHopIp) {
             this.nextHopIp = Input.ofNullable(nextHopIp);
             return this;
         }
 
-        public Builder setNextHopNetwork(@Nullable Input<String> nextHopNetwork) {
+        public Builder nextHopNetwork(@Nullable Input<String> nextHopNetwork) {
             this.nextHopNetwork = nextHopNetwork;
             return this;
         }
 
-        public Builder setNextHopNetwork(@Nullable String nextHopNetwork) {
+        public Builder nextHopNetwork(@Nullable String nextHopNetwork) {
             this.nextHopNetwork = Input.ofNullable(nextHopNetwork);
             return this;
         }
 
-        public Builder setNextHopVpnTunnel(@Nullable Input<String> nextHopVpnTunnel) {
+        public Builder nextHopVpnTunnel(@Nullable Input<String> nextHopVpnTunnel) {
             this.nextHopVpnTunnel = nextHopVpnTunnel;
             return this;
         }
 
-        public Builder setNextHopVpnTunnel(@Nullable String nextHopVpnTunnel) {
+        public Builder nextHopVpnTunnel(@Nullable String nextHopVpnTunnel) {
             this.nextHopVpnTunnel = Input.ofNullable(nextHopVpnTunnel);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Input<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Input<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<String> tags) {
+        public Builder tags(@Nullable List<String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

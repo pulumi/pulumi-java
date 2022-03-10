@@ -108,22 +108,22 @@ public final class ContentKeyPolicyOptionResponse {
     	      this.restriction = defaults.restriction;
         }
 
-        public Builder setConfiguration(Object configuration) {
+        public Builder configuration(Object configuration) {
             this.configuration = Objects.requireNonNull(configuration);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPolicyOptionId(String policyOptionId) {
+        public Builder policyOptionId(String policyOptionId) {
             this.policyOptionId = Objects.requireNonNull(policyOptionId);
             return this;
         }
 
-        public Builder setRestriction(Object restriction) {
+        public Builder restriction(Object restriction) {
             this.restriction = Objects.requireNonNull(restriction);
             return this;
         }

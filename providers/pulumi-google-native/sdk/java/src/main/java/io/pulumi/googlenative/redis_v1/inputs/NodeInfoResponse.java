@@ -55,7 +55,7 @@ public final class NodeInfoResponse extends io.pulumi.resources.InvokeArgs {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

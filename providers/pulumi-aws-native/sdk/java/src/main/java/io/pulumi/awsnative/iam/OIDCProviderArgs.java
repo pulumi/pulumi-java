@@ -88,42 +88,42 @@ public final class OIDCProviderArgs extends io.pulumi.resources.ResourceArgs {
     	      this.url = defaults.url;
         }
 
-        public Builder setClientIdList(@Nullable Input<List<String>> clientIdList) {
+        public Builder clientIdList(@Nullable Input<List<String>> clientIdList) {
             this.clientIdList = clientIdList;
             return this;
         }
 
-        public Builder setClientIdList(@Nullable List<String> clientIdList) {
+        public Builder clientIdList(@Nullable List<String> clientIdList) {
             this.clientIdList = Input.ofNullable(clientIdList);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<OIDCProviderTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<OIDCProviderTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<OIDCProviderTagArgs> tags) {
+        public Builder tags(@Nullable List<OIDCProviderTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setThumbprintList(Input<List<String>> thumbprintList) {
+        public Builder thumbprintList(Input<List<String>> thumbprintList) {
             this.thumbprintList = Objects.requireNonNull(thumbprintList);
             return this;
         }
 
-        public Builder setThumbprintList(List<String> thumbprintList) {
+        public Builder thumbprintList(List<String> thumbprintList) {
             this.thumbprintList = Input.of(Objects.requireNonNull(thumbprintList));
             return this;
         }
 
-        public Builder setUrl(@Nullable Input<String> url) {
+        public Builder url(@Nullable Input<String> url) {
             this.url = url;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = Input.ofNullable(url);
             return this;
         }

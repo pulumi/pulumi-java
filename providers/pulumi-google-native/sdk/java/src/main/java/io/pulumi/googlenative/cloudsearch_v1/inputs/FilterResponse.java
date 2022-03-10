@@ -65,12 +65,12 @@ public final class FilterResponse extends io.pulumi.resources.InvokeArgs {
     	      this.valueFilter = defaults.valueFilter;
         }
 
-        public Builder setCompositeFilter(CompositeFilterResponse compositeFilter) {
+        public Builder compositeFilter(CompositeFilterResponse compositeFilter) {
             this.compositeFilter = Objects.requireNonNull(compositeFilter);
             return this;
         }
 
-        public Builder setValueFilter(ValueFilterResponse valueFilter) {
+        public Builder valueFilter(ValueFilterResponse valueFilter) {
             this.valueFilter = Objects.requireNonNull(valueFilter);
             return this;
         }

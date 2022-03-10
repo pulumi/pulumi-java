@@ -114,62 +114,62 @@ public final class IntegrationFlowDefinitionArgs extends io.pulumi.resources.Res
     	      this.triggerConfig = defaults.triggerConfig;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFlowName(Input<String> flowName) {
+        public Builder flowName(Input<String> flowName) {
             this.flowName = Objects.requireNonNull(flowName);
             return this;
         }
 
-        public Builder setFlowName(String flowName) {
+        public Builder flowName(String flowName) {
             this.flowName = Input.of(Objects.requireNonNull(flowName));
             return this;
         }
 
-        public Builder setKmsArn(Input<String> kmsArn) {
+        public Builder kmsArn(Input<String> kmsArn) {
             this.kmsArn = Objects.requireNonNull(kmsArn);
             return this;
         }
 
-        public Builder setKmsArn(String kmsArn) {
+        public Builder kmsArn(String kmsArn) {
             this.kmsArn = Input.of(Objects.requireNonNull(kmsArn));
             return this;
         }
 
-        public Builder setSourceFlowConfig(Input<IntegrationSourceFlowConfigArgs> sourceFlowConfig) {
+        public Builder sourceFlowConfig(Input<IntegrationSourceFlowConfigArgs> sourceFlowConfig) {
             this.sourceFlowConfig = Objects.requireNonNull(sourceFlowConfig);
             return this;
         }
 
-        public Builder setSourceFlowConfig(IntegrationSourceFlowConfigArgs sourceFlowConfig) {
+        public Builder sourceFlowConfig(IntegrationSourceFlowConfigArgs sourceFlowConfig) {
             this.sourceFlowConfig = Input.of(Objects.requireNonNull(sourceFlowConfig));
             return this;
         }
 
-        public Builder setTasks(Input<List<IntegrationTaskArgs>> tasks) {
+        public Builder tasks(Input<List<IntegrationTaskArgs>> tasks) {
             this.tasks = Objects.requireNonNull(tasks);
             return this;
         }
 
-        public Builder setTasks(List<IntegrationTaskArgs> tasks) {
+        public Builder tasks(List<IntegrationTaskArgs> tasks) {
             this.tasks = Input.of(Objects.requireNonNull(tasks));
             return this;
         }
 
-        public Builder setTriggerConfig(Input<IntegrationTriggerConfigArgs> triggerConfig) {
+        public Builder triggerConfig(Input<IntegrationTriggerConfigArgs> triggerConfig) {
             this.triggerConfig = Objects.requireNonNull(triggerConfig);
             return this;
         }
 
-        public Builder setTriggerConfig(IntegrationTriggerConfigArgs triggerConfig) {
+        public Builder triggerConfig(IntegrationTriggerConfigArgs triggerConfig) {
             this.triggerConfig = Input.of(Objects.requireNonNull(triggerConfig));
             return this;
         }

@@ -70,22 +70,22 @@ public final class SecurityConfigurationEncryptionConfigurationCloudwatchEncrypt
     	      this.kmsKeyArn = defaults.kmsKeyArn;
         }
 
-        public Builder setCloudwatchEncryptionMode(@Nullable Input<String> cloudwatchEncryptionMode) {
+        public Builder cloudwatchEncryptionMode(@Nullable Input<String> cloudwatchEncryptionMode) {
             this.cloudwatchEncryptionMode = cloudwatchEncryptionMode;
             return this;
         }
 
-        public Builder setCloudwatchEncryptionMode(@Nullable String cloudwatchEncryptionMode) {
+        public Builder cloudwatchEncryptionMode(@Nullable String cloudwatchEncryptionMode) {
             this.cloudwatchEncryptionMode = Input.ofNullable(cloudwatchEncryptionMode);
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable String kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
             return this;
         }

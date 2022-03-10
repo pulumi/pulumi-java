@@ -67,12 +67,12 @@ public final class AutoUserSpecificationResponse {
     	      this.scope = defaults.scope;
         }
 
-        public Builder setElevationLevel(@Nullable String elevationLevel) {
+        public Builder elevationLevel(@Nullable String elevationLevel) {
             this.elevationLevel = elevationLevel;
             return this;
         }
 
-        public Builder setScope(@Nullable String scope) {
+        public Builder scope(@Nullable String scope) {
             this.scope = scope;
             return this;
         }

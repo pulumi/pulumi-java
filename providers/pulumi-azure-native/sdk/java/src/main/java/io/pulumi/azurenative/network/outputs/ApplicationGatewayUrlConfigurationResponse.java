@@ -84,17 +84,17 @@ public final class ApplicationGatewayUrlConfigurationResponse {
     	      this.reroute = defaults.reroute;
         }
 
-        public Builder setModifiedPath(@Nullable String modifiedPath) {
+        public Builder modifiedPath(@Nullable String modifiedPath) {
             this.modifiedPath = modifiedPath;
             return this;
         }
 
-        public Builder setModifiedQueryString(@Nullable String modifiedQueryString) {
+        public Builder modifiedQueryString(@Nullable String modifiedQueryString) {
             this.modifiedQueryString = modifiedQueryString;
             return this;
         }
 
-        public Builder setReroute(@Nullable Boolean reroute) {
+        public Builder reroute(@Nullable Boolean reroute) {
             this.reroute = reroute;
             return this;
         }

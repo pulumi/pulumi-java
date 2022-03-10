@@ -53,12 +53,12 @@ public final class RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs extends io.pulu
     	      this.definitions = defaults.definitions;
         }
 
-        public Builder setDefinitions(Input<List<String>> definitions) {
+        public Builder definitions(Input<List<String>> definitions) {
             this.definitions = Objects.requireNonNull(definitions);
             return this;
         }
 
-        public Builder setDefinitions(List<String> definitions) {
+        public Builder definitions(List<String> definitions) {
             this.definitions = Input.of(Objects.requireNonNull(definitions));
             return this;
         }

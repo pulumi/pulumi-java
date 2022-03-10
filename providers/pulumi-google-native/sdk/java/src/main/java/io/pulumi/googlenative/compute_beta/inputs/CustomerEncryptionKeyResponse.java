@@ -116,27 +116,27 @@ public final class CustomerEncryptionKeyResponse extends io.pulumi.resources.Inv
     	      this.sha256 = defaults.sha256;
         }
 
-        public Builder setKmsKeyName(String kmsKeyName) {
+        public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
 
-        public Builder setKmsKeyServiceAccount(String kmsKeyServiceAccount) {
+        public Builder kmsKeyServiceAccount(String kmsKeyServiceAccount) {
             this.kmsKeyServiceAccount = Objects.requireNonNull(kmsKeyServiceAccount);
             return this;
         }
 
-        public Builder setRawKey(String rawKey) {
+        public Builder rawKey(String rawKey) {
             this.rawKey = Objects.requireNonNull(rawKey);
             return this;
         }
 
-        public Builder setRsaEncryptedKey(String rsaEncryptedKey) {
+        public Builder rsaEncryptedKey(String rsaEncryptedKey) {
             this.rsaEncryptedKey = Objects.requireNonNull(rsaEncryptedKey);
             return this;
         }
 
-        public Builder setSha256(String sha256) {
+        public Builder sha256(String sha256) {
             this.sha256 = Objects.requireNonNull(sha256);
             return this;
         }

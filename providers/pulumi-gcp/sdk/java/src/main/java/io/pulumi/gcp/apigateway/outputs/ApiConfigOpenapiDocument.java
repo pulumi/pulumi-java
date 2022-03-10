@@ -50,7 +50,7 @@ public final class ApiConfigOpenapiDocument {
     	      this.document = defaults.document;
         }
 
-        public Builder setDocument(ApiConfigOpenapiDocumentDocument document) {
+        public Builder document(ApiConfigOpenapiDocumentDocument document) {
             this.document = Objects.requireNonNull(document);
             return this;
         }

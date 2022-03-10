@@ -86,32 +86,32 @@ public final class DatasetDatetimeOptionsArgs extends io.pulumi.resources.Resour
     	      this.timezoneOffset = defaults.timezoneOffset;
         }
 
-        public Builder setFormat(Input<String> format) {
+        public Builder format(Input<String> format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
-        public Builder setFormat(String format) {
+        public Builder format(String format) {
             this.format = Input.of(Objects.requireNonNull(format));
             return this;
         }
 
-        public Builder setLocaleCode(@Nullable Input<String> localeCode) {
+        public Builder localeCode(@Nullable Input<String> localeCode) {
             this.localeCode = localeCode;
             return this;
         }
 
-        public Builder setLocaleCode(@Nullable String localeCode) {
+        public Builder localeCode(@Nullable String localeCode) {
             this.localeCode = Input.ofNullable(localeCode);
             return this;
         }
 
-        public Builder setTimezoneOffset(@Nullable Input<String> timezoneOffset) {
+        public Builder timezoneOffset(@Nullable Input<String> timezoneOffset) {
             this.timezoneOffset = timezoneOffset;
             return this;
         }
 
-        public Builder setTimezoneOffset(@Nullable String timezoneOffset) {
+        public Builder timezoneOffset(@Nullable String timezoneOffset) {
             this.timezoneOffset = Input.ofNullable(timezoneOffset);
             return this;
         }

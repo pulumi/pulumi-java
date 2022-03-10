@@ -130,57 +130,57 @@ public final class GetServiceResult {
     	      this.taskDefinition = defaults.taskDefinition;
         }
 
-        public Builder setCapacityProviderStrategy(@Nullable List<ServiceCapacityProviderStrategyItem> capacityProviderStrategy) {
+        public Builder capacityProviderStrategy(@Nullable List<ServiceCapacityProviderStrategyItem> capacityProviderStrategy) {
             this.capacityProviderStrategy = capacityProviderStrategy;
             return this;
         }
 
-        public Builder setDeploymentConfiguration(@Nullable ServiceDeploymentConfiguration deploymentConfiguration) {
+        public Builder deploymentConfiguration(@Nullable ServiceDeploymentConfiguration deploymentConfiguration) {
             this.deploymentConfiguration = deploymentConfiguration;
             return this;
         }
 
-        public Builder setDesiredCount(@Nullable Integer desiredCount) {
+        public Builder desiredCount(@Nullable Integer desiredCount) {
             this.desiredCount = desiredCount;
             return this;
         }
 
-        public Builder setEnableExecuteCommand(@Nullable Boolean enableExecuteCommand) {
+        public Builder enableExecuteCommand(@Nullable Boolean enableExecuteCommand) {
             this.enableExecuteCommand = enableExecuteCommand;
             return this;
         }
 
-        public Builder setHealthCheckGracePeriodSeconds(@Nullable Integer healthCheckGracePeriodSeconds) {
+        public Builder healthCheckGracePeriodSeconds(@Nullable Integer healthCheckGracePeriodSeconds) {
             this.healthCheckGracePeriodSeconds = healthCheckGracePeriodSeconds;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNetworkConfiguration(@Nullable ServiceNetworkConfiguration networkConfiguration) {
+        public Builder networkConfiguration(@Nullable ServiceNetworkConfiguration networkConfiguration) {
             this.networkConfiguration = networkConfiguration;
             return this;
         }
 
-        public Builder setPlatformVersion(@Nullable String platformVersion) {
+        public Builder platformVersion(@Nullable String platformVersion) {
             this.platformVersion = platformVersion;
             return this;
         }
 
-        public Builder setServiceArn(@Nullable String serviceArn) {
+        public Builder serviceArn(@Nullable String serviceArn) {
             this.serviceArn = serviceArn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ServiceTag> tags) {
+        public Builder tags(@Nullable List<ServiceTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTaskDefinition(@Nullable String taskDefinition) {
+        public Builder taskDefinition(@Nullable String taskDefinition) {
             this.taskDefinition = taskDefinition;
             return this;
         }

@@ -106,22 +106,22 @@ public final class ExpressRouteCircuitStatsResponse extends io.pulumi.resources.
     	      this.secondarybytesOut = defaults.secondarybytesOut;
         }
 
-        public Builder setPrimarybytesIn(@Nullable Double primarybytesIn) {
+        public Builder primarybytesIn(@Nullable Double primarybytesIn) {
             this.primarybytesIn = primarybytesIn;
             return this;
         }
 
-        public Builder setPrimarybytesOut(@Nullable Double primarybytesOut) {
+        public Builder primarybytesOut(@Nullable Double primarybytesOut) {
             this.primarybytesOut = primarybytesOut;
             return this;
         }
 
-        public Builder setSecondarybytesIn(@Nullable Double secondarybytesIn) {
+        public Builder secondarybytesIn(@Nullable Double secondarybytesIn) {
             this.secondarybytesIn = secondarybytesIn;
             return this;
         }
 
-        public Builder setSecondarybytesOut(@Nullable Double secondarybytesOut) {
+        public Builder secondarybytesOut(@Nullable Double secondarybytesOut) {
             this.secondarybytesOut = secondarybytesOut;
             return this;
         }

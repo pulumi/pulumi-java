@@ -47,7 +47,7 @@ public final class TopicRulePutItemInput extends io.pulumi.resources.InvokeArgs 
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }

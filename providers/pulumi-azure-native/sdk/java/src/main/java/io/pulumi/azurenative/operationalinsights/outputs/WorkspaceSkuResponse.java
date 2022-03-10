@@ -84,17 +84,17 @@ public final class WorkspaceSkuResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setCapacityReservationLevel(@Nullable Integer capacityReservationLevel) {
+        public Builder capacityReservationLevel(@Nullable Integer capacityReservationLevel) {
             this.capacityReservationLevel = capacityReservationLevel;
             return this;
         }
 
-        public Builder setLastSkuUpdate(String lastSkuUpdate) {
+        public Builder lastSkuUpdate(String lastSkuUpdate) {
             this.lastSkuUpdate = Objects.requireNonNull(lastSkuUpdate);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

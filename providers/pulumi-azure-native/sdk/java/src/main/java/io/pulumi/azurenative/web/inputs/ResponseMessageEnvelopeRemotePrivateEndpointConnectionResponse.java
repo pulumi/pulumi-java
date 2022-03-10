@@ -243,62 +243,62 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
     	      this.zones = defaults.zones;
         }
 
-        public Builder setError(@Nullable ErrorEntityResponse error) {
+        public Builder error(@Nullable ErrorEntityResponse error) {
             this.error = error;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIdentity(@Nullable ManagedServiceIdentityResponse identity) {
+        public Builder identity(@Nullable ManagedServiceIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPlan(@Nullable ArmPlanResponse plan) {
+        public Builder plan(@Nullable ArmPlanResponse plan) {
             this.plan = plan;
             return this;
         }
 
-        public Builder setProperties(@Nullable RemotePrivateEndpointConnectionResponse properties) {
+        public Builder properties(@Nullable RemotePrivateEndpointConnectionResponse properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuDescriptionResponse sku) {
+        public Builder sku(@Nullable SkuDescriptionResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setZones(@Nullable List<String> zones) {
+        public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }

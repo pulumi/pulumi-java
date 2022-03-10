@@ -187,92 +187,92 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
     	      this.regionalConfigurations = defaults.regionalConfigurations;
         }
 
-        public Builder setAutomaticFailoverEnabled(@Nullable Input<Boolean> automaticFailoverEnabled) {
+        public Builder automaticFailoverEnabled(@Nullable Input<Boolean> automaticFailoverEnabled) {
             this.automaticFailoverEnabled = automaticFailoverEnabled;
             return this;
         }
 
-        public Builder setAutomaticFailoverEnabled(@Nullable Boolean automaticFailoverEnabled) {
+        public Builder automaticFailoverEnabled(@Nullable Boolean automaticFailoverEnabled) {
             this.automaticFailoverEnabled = Input.ofNullable(automaticFailoverEnabled);
             return this;
         }
 
-        public Builder setCacheNodeType(@Nullable Input<String> cacheNodeType) {
+        public Builder cacheNodeType(@Nullable Input<String> cacheNodeType) {
             this.cacheNodeType = cacheNodeType;
             return this;
         }
 
-        public Builder setCacheNodeType(@Nullable String cacheNodeType) {
+        public Builder cacheNodeType(@Nullable String cacheNodeType) {
             this.cacheNodeType = Input.ofNullable(cacheNodeType);
             return this;
         }
 
-        public Builder setCacheParameterGroupName(@Nullable Input<String> cacheParameterGroupName) {
+        public Builder cacheParameterGroupName(@Nullable Input<String> cacheParameterGroupName) {
             this.cacheParameterGroupName = cacheParameterGroupName;
             return this;
         }
 
-        public Builder setCacheParameterGroupName(@Nullable String cacheParameterGroupName) {
+        public Builder cacheParameterGroupName(@Nullable String cacheParameterGroupName) {
             this.cacheParameterGroupName = Input.ofNullable(cacheParameterGroupName);
             return this;
         }
 
-        public Builder setEngineVersion(@Nullable Input<String> engineVersion) {
+        public Builder engineVersion(@Nullable Input<String> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
 
-        public Builder setEngineVersion(@Nullable String engineVersion) {
+        public Builder engineVersion(@Nullable String engineVersion) {
             this.engineVersion = Input.ofNullable(engineVersion);
             return this;
         }
 
-        public Builder setGlobalNodeGroupCount(@Nullable Input<Integer> globalNodeGroupCount) {
+        public Builder globalNodeGroupCount(@Nullable Input<Integer> globalNodeGroupCount) {
             this.globalNodeGroupCount = globalNodeGroupCount;
             return this;
         }
 
-        public Builder setGlobalNodeGroupCount(@Nullable Integer globalNodeGroupCount) {
+        public Builder globalNodeGroupCount(@Nullable Integer globalNodeGroupCount) {
             this.globalNodeGroupCount = Input.ofNullable(globalNodeGroupCount);
             return this;
         }
 
-        public Builder setGlobalReplicationGroupDescription(@Nullable Input<String> globalReplicationGroupDescription) {
+        public Builder globalReplicationGroupDescription(@Nullable Input<String> globalReplicationGroupDescription) {
             this.globalReplicationGroupDescription = globalReplicationGroupDescription;
             return this;
         }
 
-        public Builder setGlobalReplicationGroupDescription(@Nullable String globalReplicationGroupDescription) {
+        public Builder globalReplicationGroupDescription(@Nullable String globalReplicationGroupDescription) {
             this.globalReplicationGroupDescription = Input.ofNullable(globalReplicationGroupDescription);
             return this;
         }
 
-        public Builder setGlobalReplicationGroupIdSuffix(@Nullable Input<String> globalReplicationGroupIdSuffix) {
+        public Builder globalReplicationGroupIdSuffix(@Nullable Input<String> globalReplicationGroupIdSuffix) {
             this.globalReplicationGroupIdSuffix = globalReplicationGroupIdSuffix;
             return this;
         }
 
-        public Builder setGlobalReplicationGroupIdSuffix(@Nullable String globalReplicationGroupIdSuffix) {
+        public Builder globalReplicationGroupIdSuffix(@Nullable String globalReplicationGroupIdSuffix) {
             this.globalReplicationGroupIdSuffix = Input.ofNullable(globalReplicationGroupIdSuffix);
             return this;
         }
 
-        public Builder setMembers(Input<List<GlobalReplicationGroupMemberArgs>> members) {
+        public Builder members(Input<List<GlobalReplicationGroupMemberArgs>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
 
-        public Builder setMembers(List<GlobalReplicationGroupMemberArgs> members) {
+        public Builder members(List<GlobalReplicationGroupMemberArgs> members) {
             this.members = Input.of(Objects.requireNonNull(members));
             return this;
         }
 
-        public Builder setRegionalConfigurations(@Nullable Input<List<GlobalReplicationGroupRegionalConfigurationArgs>> regionalConfigurations) {
+        public Builder regionalConfigurations(@Nullable Input<List<GlobalReplicationGroupRegionalConfigurationArgs>> regionalConfigurations) {
             this.regionalConfigurations = regionalConfigurations;
             return this;
         }
 
-        public Builder setRegionalConfigurations(@Nullable List<GlobalReplicationGroupRegionalConfigurationArgs> regionalConfigurations) {
+        public Builder regionalConfigurations(@Nullable List<GlobalReplicationGroupRegionalConfigurationArgs> regionalConfigurations) {
             this.regionalConfigurations = Input.ofNullable(regionalConfigurations);
             return this;
         }

@@ -109,42 +109,42 @@ public final class CacheConfigurationArgs extends io.pulumi.resources.ResourceAr
     	      this.queryParameters = defaults.queryParameters;
         }
 
-        public Builder setCacheDuration(@Nullable Input<String> cacheDuration) {
+        public Builder cacheDuration(@Nullable Input<String> cacheDuration) {
             this.cacheDuration = cacheDuration;
             return this;
         }
 
-        public Builder setCacheDuration(@Nullable String cacheDuration) {
+        public Builder cacheDuration(@Nullable String cacheDuration) {
             this.cacheDuration = Input.ofNullable(cacheDuration);
             return this;
         }
 
-        public Builder setDynamicCompression(@Nullable Input<Either<String,DynamicCompressionEnabled>> dynamicCompression) {
+        public Builder dynamicCompression(@Nullable Input<Either<String,DynamicCompressionEnabled>> dynamicCompression) {
             this.dynamicCompression = dynamicCompression;
             return this;
         }
 
-        public Builder setDynamicCompression(@Nullable Either<String,DynamicCompressionEnabled> dynamicCompression) {
+        public Builder dynamicCompression(@Nullable Either<String,DynamicCompressionEnabled> dynamicCompression) {
             this.dynamicCompression = Input.ofNullable(dynamicCompression);
             return this;
         }
 
-        public Builder setQueryParameterStripDirective(@Nullable Input<Either<String,FrontDoorQuery>> queryParameterStripDirective) {
+        public Builder queryParameterStripDirective(@Nullable Input<Either<String,FrontDoorQuery>> queryParameterStripDirective) {
             this.queryParameterStripDirective = queryParameterStripDirective;
             return this;
         }
 
-        public Builder setQueryParameterStripDirective(@Nullable Either<String,FrontDoorQuery> queryParameterStripDirective) {
+        public Builder queryParameterStripDirective(@Nullable Either<String,FrontDoorQuery> queryParameterStripDirective) {
             this.queryParameterStripDirective = Input.ofNullable(queryParameterStripDirective);
             return this;
         }
 
-        public Builder setQueryParameters(@Nullable Input<String> queryParameters) {
+        public Builder queryParameters(@Nullable Input<String> queryParameters) {
             this.queryParameters = queryParameters;
             return this;
         }
 
-        public Builder setQueryParameters(@Nullable String queryParameters) {
+        public Builder queryParameters(@Nullable String queryParameters) {
             this.queryParameters = Input.ofNullable(queryParameters);
             return this;
         }

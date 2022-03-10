@@ -123,62 +123,62 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAssertionRule(@Nullable Input<SafetyRuleAssertionRuleArgs> assertionRule) {
+        public Builder assertionRule(@Nullable Input<SafetyRuleAssertionRuleArgs> assertionRule) {
             this.assertionRule = assertionRule;
             return this;
         }
 
-        public Builder setAssertionRule(@Nullable SafetyRuleAssertionRuleArgs assertionRule) {
+        public Builder assertionRule(@Nullable SafetyRuleAssertionRuleArgs assertionRule) {
             this.assertionRule = Input.ofNullable(assertionRule);
             return this;
         }
 
-        public Builder setControlPanelArn(@Nullable Input<String> controlPanelArn) {
+        public Builder controlPanelArn(@Nullable Input<String> controlPanelArn) {
             this.controlPanelArn = controlPanelArn;
             return this;
         }
 
-        public Builder setControlPanelArn(@Nullable String controlPanelArn) {
+        public Builder controlPanelArn(@Nullable String controlPanelArn) {
             this.controlPanelArn = Input.ofNullable(controlPanelArn);
             return this;
         }
 
-        public Builder setGatingRule(@Nullable Input<SafetyRuleGatingRuleArgs> gatingRule) {
+        public Builder gatingRule(@Nullable Input<SafetyRuleGatingRuleArgs> gatingRule) {
             this.gatingRule = gatingRule;
             return this;
         }
 
-        public Builder setGatingRule(@Nullable SafetyRuleGatingRuleArgs gatingRule) {
+        public Builder gatingRule(@Nullable SafetyRuleGatingRuleArgs gatingRule) {
             this.gatingRule = Input.ofNullable(gatingRule);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRuleConfig(@Nullable Input<SafetyRuleRuleConfigArgs> ruleConfig) {
+        public Builder ruleConfig(@Nullable Input<SafetyRuleRuleConfigArgs> ruleConfig) {
             this.ruleConfig = ruleConfig;
             return this;
         }
 
-        public Builder setRuleConfig(@Nullable SafetyRuleRuleConfigArgs ruleConfig) {
+        public Builder ruleConfig(@Nullable SafetyRuleRuleConfigArgs ruleConfig) {
             this.ruleConfig = Input.ofNullable(ruleConfig);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<SafetyRuleTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<SafetyRuleTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<SafetyRuleTagArgs> tags) {
+        public Builder tags(@Nullable List<SafetyRuleTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

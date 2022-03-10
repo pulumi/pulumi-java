@@ -140,32 +140,32 @@ public final class BatchEndpointResponse extends io.pulumi.resources.InvokeArgs 
     	      this.traffic = defaults.traffic;
         }
 
-        public Builder setAuthMode(@Nullable String authMode) {
+        public Builder authMode(@Nullable String authMode) {
             this.authMode = authMode;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setScoringUri(String scoringUri) {
+        public Builder scoringUri(String scoringUri) {
             this.scoringUri = Objects.requireNonNull(scoringUri);
             return this;
         }
 
-        public Builder setSwaggerUri(String swaggerUri) {
+        public Builder swaggerUri(String swaggerUri) {
             this.swaggerUri = Objects.requireNonNull(swaggerUri);
             return this;
         }
 
-        public Builder setTraffic(@Nullable Map<String,Integer> traffic) {
+        public Builder traffic(@Nullable Map<String,Integer> traffic) {
             this.traffic = traffic;
             return this;
         }

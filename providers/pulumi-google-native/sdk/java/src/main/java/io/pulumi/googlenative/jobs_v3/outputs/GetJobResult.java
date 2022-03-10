@@ -504,147 +504,147 @@ public final class GetJobResult {
     	      this.title = defaults.title;
         }
 
-        public Builder setAddresses(List<String> addresses) {
+        public Builder addresses(List<String> addresses) {
             this.addresses = Objects.requireNonNull(addresses);
             return this;
         }
 
-        public Builder setApplicationInfo(ApplicationInfoResponse applicationInfo) {
+        public Builder applicationInfo(ApplicationInfoResponse applicationInfo) {
             this.applicationInfo = Objects.requireNonNull(applicationInfo);
             return this;
         }
 
-        public Builder setCompanyDisplayName(String companyDisplayName) {
+        public Builder companyDisplayName(String companyDisplayName) {
             this.companyDisplayName = Objects.requireNonNull(companyDisplayName);
             return this;
         }
 
-        public Builder setCompanyName(String companyName) {
+        public Builder companyName(String companyName) {
             this.companyName = Objects.requireNonNull(companyName);
             return this;
         }
 
-        public Builder setCompensationInfo(CompensationInfoResponse compensationInfo) {
+        public Builder compensationInfo(CompensationInfoResponse compensationInfo) {
             this.compensationInfo = Objects.requireNonNull(compensationInfo);
             return this;
         }
 
-        public Builder setCustomAttributes(Map<String,String> customAttributes) {
+        public Builder customAttributes(Map<String,String> customAttributes) {
             this.customAttributes = Objects.requireNonNull(customAttributes);
             return this;
         }
 
-        public Builder setDegreeTypes(List<String> degreeTypes) {
+        public Builder degreeTypes(List<String> degreeTypes) {
             this.degreeTypes = Objects.requireNonNull(degreeTypes);
             return this;
         }
 
-        public Builder setDepartment(String department) {
+        public Builder department(String department) {
             this.department = Objects.requireNonNull(department);
             return this;
         }
 
-        public Builder setDerivedInfo(JobDerivedInfoResponse derivedInfo) {
+        public Builder derivedInfo(JobDerivedInfoResponse derivedInfo) {
             this.derivedInfo = Objects.requireNonNull(derivedInfo);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEmploymentTypes(List<String> employmentTypes) {
+        public Builder employmentTypes(List<String> employmentTypes) {
             this.employmentTypes = Objects.requireNonNull(employmentTypes);
             return this;
         }
 
-        public Builder setIncentives(String incentives) {
+        public Builder incentives(String incentives) {
             this.incentives = Objects.requireNonNull(incentives);
             return this;
         }
 
-        public Builder setJobBenefits(List<String> jobBenefits) {
+        public Builder jobBenefits(List<String> jobBenefits) {
             this.jobBenefits = Objects.requireNonNull(jobBenefits);
             return this;
         }
 
-        public Builder setJobEndTime(String jobEndTime) {
+        public Builder jobEndTime(String jobEndTime) {
             this.jobEndTime = Objects.requireNonNull(jobEndTime);
             return this;
         }
 
-        public Builder setJobLevel(String jobLevel) {
+        public Builder jobLevel(String jobLevel) {
             this.jobLevel = Objects.requireNonNull(jobLevel);
             return this;
         }
 
-        public Builder setJobStartTime(String jobStartTime) {
+        public Builder jobStartTime(String jobStartTime) {
             this.jobStartTime = Objects.requireNonNull(jobStartTime);
             return this;
         }
 
-        public Builder setLanguageCode(String languageCode) {
+        public Builder languageCode(String languageCode) {
             this.languageCode = Objects.requireNonNull(languageCode);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPostingCreateTime(String postingCreateTime) {
+        public Builder postingCreateTime(String postingCreateTime) {
             this.postingCreateTime = Objects.requireNonNull(postingCreateTime);
             return this;
         }
 
-        public Builder setPostingExpireTime(String postingExpireTime) {
+        public Builder postingExpireTime(String postingExpireTime) {
             this.postingExpireTime = Objects.requireNonNull(postingExpireTime);
             return this;
         }
 
-        public Builder setPostingPublishTime(String postingPublishTime) {
+        public Builder postingPublishTime(String postingPublishTime) {
             this.postingPublishTime = Objects.requireNonNull(postingPublishTime);
             return this;
         }
 
-        public Builder setPostingRegion(String postingRegion) {
+        public Builder postingRegion(String postingRegion) {
             this.postingRegion = Objects.requireNonNull(postingRegion);
             return this;
         }
 
-        public Builder setPostingUpdateTime(String postingUpdateTime) {
+        public Builder postingUpdateTime(String postingUpdateTime) {
             this.postingUpdateTime = Objects.requireNonNull(postingUpdateTime);
             return this;
         }
 
-        public Builder setProcessingOptions(ProcessingOptionsResponse processingOptions) {
+        public Builder processingOptions(ProcessingOptionsResponse processingOptions) {
             this.processingOptions = Objects.requireNonNull(processingOptions);
             return this;
         }
 
-        public Builder setPromotionValue(Integer promotionValue) {
+        public Builder promotionValue(Integer promotionValue) {
             this.promotionValue = Objects.requireNonNull(promotionValue);
             return this;
         }
 
-        public Builder setQualifications(String qualifications) {
+        public Builder qualifications(String qualifications) {
             this.qualifications = Objects.requireNonNull(qualifications);
             return this;
         }
 
-        public Builder setRequisitionId(String requisitionId) {
+        public Builder requisitionId(String requisitionId) {
             this.requisitionId = Objects.requireNonNull(requisitionId);
             return this;
         }
 
-        public Builder setResponsibilities(String responsibilities) {
+        public Builder responsibilities(String responsibilities) {
             this.responsibilities = Objects.requireNonNull(responsibilities);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

@@ -56,7 +56,7 @@ public final class ContextResponse extends io.pulumi.resources.InvokeArgs {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setRules(List<ContextRuleResponse> rules) {
+        public Builder rules(List<ContextRuleResponse> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }

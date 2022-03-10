@@ -87,32 +87,32 @@ public final class RegistrationAssignmentArgs extends io.pulumi.resources.Resour
     	      this.scope = defaults.scope;
         }
 
-        public Builder setProperties(@Nullable Input<RegistrationAssignmentPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<RegistrationAssignmentPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable RegistrationAssignmentPropertiesArgs properties) {
+        public Builder properties(@Nullable RegistrationAssignmentPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setRegistrationAssignmentId(@Nullable Input<String> registrationAssignmentId) {
+        public Builder registrationAssignmentId(@Nullable Input<String> registrationAssignmentId) {
             this.registrationAssignmentId = registrationAssignmentId;
             return this;
         }
 
-        public Builder setRegistrationAssignmentId(@Nullable String registrationAssignmentId) {
+        public Builder registrationAssignmentId(@Nullable String registrationAssignmentId) {
             this.registrationAssignmentId = Input.ofNullable(registrationAssignmentId);
             return this;
         }
 
-        public Builder setScope(Input<String> scope) {
+        public Builder scope(Input<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Input.of(Objects.requireNonNull(scope));
             return this;
         }

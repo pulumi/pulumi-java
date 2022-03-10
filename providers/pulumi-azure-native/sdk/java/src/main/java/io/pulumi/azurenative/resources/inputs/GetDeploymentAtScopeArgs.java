@@ -68,12 +68,12 @@ public final class GetDeploymentAtScopeArgs extends io.pulumi.resources.InvokeAr
     	      this.scope = defaults.scope;
         }
 
-        public Builder setDeploymentName(String deploymentName) {
+        public Builder deploymentName(String deploymentName) {
             this.deploymentName = Objects.requireNonNull(deploymentName);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }

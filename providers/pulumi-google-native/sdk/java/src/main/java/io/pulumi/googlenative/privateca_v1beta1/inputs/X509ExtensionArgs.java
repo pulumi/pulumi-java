@@ -91,32 +91,32 @@ public final class X509ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setCritical(Input<Boolean> critical) {
+        public Builder critical(Input<Boolean> critical) {
             this.critical = Objects.requireNonNull(critical);
             return this;
         }
 
-        public Builder setCritical(Boolean critical) {
+        public Builder critical(Boolean critical) {
             this.critical = Input.of(Objects.requireNonNull(critical));
             return this;
         }
 
-        public Builder setObjectId(Input<ObjectIdArgs> objectId) {
+        public Builder objectId(Input<ObjectIdArgs> objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
 
-        public Builder setObjectId(ObjectIdArgs objectId) {
+        public Builder objectId(ObjectIdArgs objectId) {
             this.objectId = Input.of(Objects.requireNonNull(objectId));
             return this;
         }
 
-        public Builder setValue(Input<String> value) {
+        public Builder value(Input<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }

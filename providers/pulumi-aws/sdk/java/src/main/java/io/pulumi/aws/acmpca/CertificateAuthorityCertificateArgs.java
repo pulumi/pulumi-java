@@ -86,32 +86,32 @@ public final class CertificateAuthorityCertificateArgs extends io.pulumi.resourc
     	      this.certificateChain = defaults.certificateChain;
         }
 
-        public Builder setCertificate(Input<String> certificate) {
+        public Builder certificate(Input<String> certificate) {
             this.certificate = Objects.requireNonNull(certificate);
             return this;
         }
 
-        public Builder setCertificate(String certificate) {
+        public Builder certificate(String certificate) {
             this.certificate = Input.of(Objects.requireNonNull(certificate));
             return this;
         }
 
-        public Builder setCertificateAuthorityArn(Input<String> certificateAuthorityArn) {
+        public Builder certificateAuthorityArn(Input<String> certificateAuthorityArn) {
             this.certificateAuthorityArn = Objects.requireNonNull(certificateAuthorityArn);
             return this;
         }
 
-        public Builder setCertificateAuthorityArn(String certificateAuthorityArn) {
+        public Builder certificateAuthorityArn(String certificateAuthorityArn) {
             this.certificateAuthorityArn = Input.of(Objects.requireNonNull(certificateAuthorityArn));
             return this;
         }
 
-        public Builder setCertificateChain(@Nullable Input<String> certificateChain) {
+        public Builder certificateChain(@Nullable Input<String> certificateChain) {
             this.certificateChain = certificateChain;
             return this;
         }
 
-        public Builder setCertificateChain(@Nullable String certificateChain) {
+        public Builder certificateChain(@Nullable String certificateChain) {
             this.certificateChain = Input.ofNullable(certificateChain);
             return this;
         }

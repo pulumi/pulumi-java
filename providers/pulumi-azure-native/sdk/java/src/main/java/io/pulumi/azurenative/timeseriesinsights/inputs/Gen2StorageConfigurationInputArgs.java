@@ -73,22 +73,22 @@ public final class Gen2StorageConfigurationInputArgs extends io.pulumi.resources
     	      this.managementKey = defaults.managementKey;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setManagementKey(Input<String> managementKey) {
+        public Builder managementKey(Input<String> managementKey) {
             this.managementKey = Objects.requireNonNull(managementKey);
             return this;
         }
 
-        public Builder setManagementKey(String managementKey) {
+        public Builder managementKey(String managementKey) {
             this.managementKey = Input.of(Objects.requireNonNull(managementKey));
             return this;
         }

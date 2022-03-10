@@ -252,132 +252,132 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
     	      this.transitEncryptionEnabled = defaults.transitEncryptionEnabled;
         }
 
-        public Builder setActualEngineVersion(@Nullable Input<String> actualEngineVersion) {
+        public Builder actualEngineVersion(@Nullable Input<String> actualEngineVersion) {
             this.actualEngineVersion = actualEngineVersion;
             return this;
         }
 
-        public Builder setActualEngineVersion(@Nullable String actualEngineVersion) {
+        public Builder actualEngineVersion(@Nullable String actualEngineVersion) {
             this.actualEngineVersion = Input.ofNullable(actualEngineVersion);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAtRestEncryptionEnabled(@Nullable Input<Boolean> atRestEncryptionEnabled) {
+        public Builder atRestEncryptionEnabled(@Nullable Input<Boolean> atRestEncryptionEnabled) {
             this.atRestEncryptionEnabled = atRestEncryptionEnabled;
             return this;
         }
 
-        public Builder setAtRestEncryptionEnabled(@Nullable Boolean atRestEncryptionEnabled) {
+        public Builder atRestEncryptionEnabled(@Nullable Boolean atRestEncryptionEnabled) {
             this.atRestEncryptionEnabled = Input.ofNullable(atRestEncryptionEnabled);
             return this;
         }
 
-        public Builder setAuthTokenEnabled(@Nullable Input<Boolean> authTokenEnabled) {
+        public Builder authTokenEnabled(@Nullable Input<Boolean> authTokenEnabled) {
             this.authTokenEnabled = authTokenEnabled;
             return this;
         }
 
-        public Builder setAuthTokenEnabled(@Nullable Boolean authTokenEnabled) {
+        public Builder authTokenEnabled(@Nullable Boolean authTokenEnabled) {
             this.authTokenEnabled = Input.ofNullable(authTokenEnabled);
             return this;
         }
 
-        public Builder setCacheNodeType(@Nullable Input<String> cacheNodeType) {
+        public Builder cacheNodeType(@Nullable Input<String> cacheNodeType) {
             this.cacheNodeType = cacheNodeType;
             return this;
         }
 
-        public Builder setCacheNodeType(@Nullable String cacheNodeType) {
+        public Builder cacheNodeType(@Nullable String cacheNodeType) {
             this.cacheNodeType = Input.ofNullable(cacheNodeType);
             return this;
         }
 
-        public Builder setClusterEnabled(@Nullable Input<Boolean> clusterEnabled) {
+        public Builder clusterEnabled(@Nullable Input<Boolean> clusterEnabled) {
             this.clusterEnabled = clusterEnabled;
             return this;
         }
 
-        public Builder setClusterEnabled(@Nullable Boolean clusterEnabled) {
+        public Builder clusterEnabled(@Nullable Boolean clusterEnabled) {
             this.clusterEnabled = Input.ofNullable(clusterEnabled);
             return this;
         }
 
-        public Builder setEngine(@Nullable Input<String> engine) {
+        public Builder engine(@Nullable Input<String> engine) {
             this.engine = engine;
             return this;
         }
 
-        public Builder setEngine(@Nullable String engine) {
+        public Builder engine(@Nullable String engine) {
             this.engine = Input.ofNullable(engine);
             return this;
         }
 
-        public Builder setEngineVersionActual(@Nullable Input<String> engineVersionActual) {
+        public Builder engineVersionActual(@Nullable Input<String> engineVersionActual) {
             this.engineVersionActual = engineVersionActual;
             return this;
         }
 
-        public Builder setEngineVersionActual(@Nullable String engineVersionActual) {
+        public Builder engineVersionActual(@Nullable String engineVersionActual) {
             this.engineVersionActual = Input.ofNullable(engineVersionActual);
             return this;
         }
 
-        public Builder setGlobalReplicationGroupDescription(@Nullable Input<String> globalReplicationGroupDescription) {
+        public Builder globalReplicationGroupDescription(@Nullable Input<String> globalReplicationGroupDescription) {
             this.globalReplicationGroupDescription = globalReplicationGroupDescription;
             return this;
         }
 
-        public Builder setGlobalReplicationGroupDescription(@Nullable String globalReplicationGroupDescription) {
+        public Builder globalReplicationGroupDescription(@Nullable String globalReplicationGroupDescription) {
             this.globalReplicationGroupDescription = Input.ofNullable(globalReplicationGroupDescription);
             return this;
         }
 
-        public Builder setGlobalReplicationGroupId(@Nullable Input<String> globalReplicationGroupId) {
+        public Builder globalReplicationGroupId(@Nullable Input<String> globalReplicationGroupId) {
             this.globalReplicationGroupId = globalReplicationGroupId;
             return this;
         }
 
-        public Builder setGlobalReplicationGroupId(@Nullable String globalReplicationGroupId) {
+        public Builder globalReplicationGroupId(@Nullable String globalReplicationGroupId) {
             this.globalReplicationGroupId = Input.ofNullable(globalReplicationGroupId);
             return this;
         }
 
-        public Builder setGlobalReplicationGroupIdSuffix(@Nullable Input<String> globalReplicationGroupIdSuffix) {
+        public Builder globalReplicationGroupIdSuffix(@Nullable Input<String> globalReplicationGroupIdSuffix) {
             this.globalReplicationGroupIdSuffix = globalReplicationGroupIdSuffix;
             return this;
         }
 
-        public Builder setGlobalReplicationGroupIdSuffix(@Nullable String globalReplicationGroupIdSuffix) {
+        public Builder globalReplicationGroupIdSuffix(@Nullable String globalReplicationGroupIdSuffix) {
             this.globalReplicationGroupIdSuffix = Input.ofNullable(globalReplicationGroupIdSuffix);
             return this;
         }
 
-        public Builder setPrimaryReplicationGroupId(@Nullable Input<String> primaryReplicationGroupId) {
+        public Builder primaryReplicationGroupId(@Nullable Input<String> primaryReplicationGroupId) {
             this.primaryReplicationGroupId = primaryReplicationGroupId;
             return this;
         }
 
-        public Builder setPrimaryReplicationGroupId(@Nullable String primaryReplicationGroupId) {
+        public Builder primaryReplicationGroupId(@Nullable String primaryReplicationGroupId) {
             this.primaryReplicationGroupId = Input.ofNullable(primaryReplicationGroupId);
             return this;
         }
 
-        public Builder setTransitEncryptionEnabled(@Nullable Input<Boolean> transitEncryptionEnabled) {
+        public Builder transitEncryptionEnabled(@Nullable Input<Boolean> transitEncryptionEnabled) {
             this.transitEncryptionEnabled = transitEncryptionEnabled;
             return this;
         }
 
-        public Builder setTransitEncryptionEnabled(@Nullable Boolean transitEncryptionEnabled) {
+        public Builder transitEncryptionEnabled(@Nullable Boolean transitEncryptionEnabled) {
             this.transitEncryptionEnabled = Input.ofNullable(transitEncryptionEnabled);
             return this;
         }

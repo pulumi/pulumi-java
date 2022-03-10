@@ -87,32 +87,32 @@ public final class BucketLifecycleRuleTransitionArgs extends io.pulumi.resources
     	      this.storageClass = defaults.storageClass;
         }
 
-        public Builder setDate(@Nullable Input<String> date) {
+        public Builder date(@Nullable Input<String> date) {
             this.date = date;
             return this;
         }
 
-        public Builder setDate(@Nullable String date) {
+        public Builder date(@Nullable String date) {
             this.date = Input.ofNullable(date);
             return this;
         }
 
-        public Builder setDays(@Nullable Input<Integer> days) {
+        public Builder days(@Nullable Input<Integer> days) {
             this.days = days;
             return this;
         }
 
-        public Builder setDays(@Nullable Integer days) {
+        public Builder days(@Nullable Integer days) {
             this.days = Input.ofNullable(days);
             return this;
         }
 
-        public Builder setStorageClass(Input<String> storageClass) {
+        public Builder storageClass(Input<String> storageClass) {
             this.storageClass = Objects.requireNonNull(storageClass);
             return this;
         }
 
-        public Builder setStorageClass(String storageClass) {
+        public Builder storageClass(String storageClass) {
             this.storageClass = Input.of(Objects.requireNonNull(storageClass));
             return this;
         }

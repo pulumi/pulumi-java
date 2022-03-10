@@ -40,7 +40,7 @@ public final class ModelBiasJobDefinitionMonitoringResources {
     	      this.clusterConfig = defaults.clusterConfig;
         }
 
-        public Builder setClusterConfig(ModelBiasJobDefinitionClusterConfig clusterConfig) {
+        public Builder clusterConfig(ModelBiasJobDefinitionClusterConfig clusterConfig) {
             this.clusterConfig = Objects.requireNonNull(clusterConfig);
             return this;
         }

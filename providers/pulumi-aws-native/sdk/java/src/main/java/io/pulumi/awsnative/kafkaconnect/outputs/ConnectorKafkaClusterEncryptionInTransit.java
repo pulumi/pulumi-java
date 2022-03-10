@@ -40,7 +40,7 @@ public final class ConnectorKafkaClusterEncryptionInTransit {
     	      this.encryptionType = defaults.encryptionType;
         }
 
-        public Builder setEncryptionType(ConnectorKafkaClusterEncryptionInTransitType encryptionType) {
+        public Builder encryptionType(ConnectorKafkaClusterEncryptionInTransitType encryptionType) {
             this.encryptionType = Objects.requireNonNull(encryptionType);
             return this;
         }

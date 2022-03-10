@@ -91,17 +91,17 @@ public final class AutomationActionLogicAppResponse extends io.pulumi.resources.
     	      this.uri = defaults.uri;
         }
 
-        public Builder setActionType(String actionType) {
+        public Builder actionType(String actionType) {
             this.actionType = Objects.requireNonNull(actionType);
             return this;
         }
 
-        public Builder setLogicAppResourceId(@Nullable String logicAppResourceId) {
+        public Builder logicAppResourceId(@Nullable String logicAppResourceId) {
             this.logicAppResourceId = logicAppResourceId;
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
         }

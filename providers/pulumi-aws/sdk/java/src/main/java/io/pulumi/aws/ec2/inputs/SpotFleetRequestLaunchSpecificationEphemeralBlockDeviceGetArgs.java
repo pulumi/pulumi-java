@@ -61,22 +61,22 @@ public final class SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceGetArg
     	      this.virtualName = defaults.virtualName;
         }
 
-        public Builder setDeviceName(Input<String> deviceName) {
+        public Builder deviceName(Input<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Input.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder setVirtualName(Input<String> virtualName) {
+        public Builder virtualName(Input<String> virtualName) {
             this.virtualName = Objects.requireNonNull(virtualName);
             return this;
         }
 
-        public Builder setVirtualName(String virtualName) {
+        public Builder virtualName(String virtualName) {
             this.virtualName = Input.of(Objects.requireNonNull(virtualName));
             return this;
         }

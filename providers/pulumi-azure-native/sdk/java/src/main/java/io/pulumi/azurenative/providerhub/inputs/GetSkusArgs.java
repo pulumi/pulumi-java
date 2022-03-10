@@ -84,17 +84,17 @@ public final class GetSkusArgs extends io.pulumi.resources.InvokeArgs {
     	      this.sku = defaults.sku;
         }
 
-        public Builder setProviderNamespace(String providerNamespace) {
+        public Builder providerNamespace(String providerNamespace) {
             this.providerNamespace = Objects.requireNonNull(providerNamespace);
             return this;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
-        public Builder setSku(String sku) {
+        public Builder sku(String sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }

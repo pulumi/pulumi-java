@@ -100,22 +100,22 @@ public final class GetJobCredentialArgs extends io.pulumi.resources.InvokeArgs {
     	      this.serverName = defaults.serverName;
         }
 
-        public Builder setCredentialName(String credentialName) {
+        public Builder credentialName(String credentialName) {
             this.credentialName = Objects.requireNonNull(credentialName);
             return this;
         }
 
-        public Builder setJobAgentName(String jobAgentName) {
+        public Builder jobAgentName(String jobAgentName) {
             this.jobAgentName = Objects.requireNonNull(jobAgentName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setServerName(String serverName) {
+        public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }

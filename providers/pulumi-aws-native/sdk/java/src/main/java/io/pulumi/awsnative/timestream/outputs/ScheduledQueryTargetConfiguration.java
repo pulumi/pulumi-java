@@ -40,7 +40,7 @@ public final class ScheduledQueryTargetConfiguration {
     	      this.timestreamConfiguration = defaults.timestreamConfiguration;
         }
 
-        public Builder setTimestreamConfiguration(ScheduledQueryTimestreamConfiguration timestreamConfiguration) {
+        public Builder timestreamConfiguration(ScheduledQueryTimestreamConfiguration timestreamConfiguration) {
             this.timestreamConfiguration = Objects.requireNonNull(timestreamConfiguration);
             return this;
         }

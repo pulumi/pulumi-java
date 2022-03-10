@@ -598,322 +598,322 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vmImage = defaults.vmImage;
         }
 
-        public Builder setAcceleratorConfig(@Nullable Input<InstanceAcceleratorConfigArgs> acceleratorConfig) {
+        public Builder acceleratorConfig(@Nullable Input<InstanceAcceleratorConfigArgs> acceleratorConfig) {
             this.acceleratorConfig = acceleratorConfig;
             return this;
         }
 
-        public Builder setAcceleratorConfig(@Nullable InstanceAcceleratorConfigArgs acceleratorConfig) {
+        public Builder acceleratorConfig(@Nullable InstanceAcceleratorConfigArgs acceleratorConfig) {
             this.acceleratorConfig = Input.ofNullable(acceleratorConfig);
             return this;
         }
 
-        public Builder setBootDiskSizeGb(@Nullable Input<Integer> bootDiskSizeGb) {
+        public Builder bootDiskSizeGb(@Nullable Input<Integer> bootDiskSizeGb) {
             this.bootDiskSizeGb = bootDiskSizeGb;
             return this;
         }
 
-        public Builder setBootDiskSizeGb(@Nullable Integer bootDiskSizeGb) {
+        public Builder bootDiskSizeGb(@Nullable Integer bootDiskSizeGb) {
             this.bootDiskSizeGb = Input.ofNullable(bootDiskSizeGb);
             return this;
         }
 
-        public Builder setBootDiskType(@Nullable Input<String> bootDiskType) {
+        public Builder bootDiskType(@Nullable Input<String> bootDiskType) {
             this.bootDiskType = bootDiskType;
             return this;
         }
 
-        public Builder setBootDiskType(@Nullable String bootDiskType) {
+        public Builder bootDiskType(@Nullable String bootDiskType) {
             this.bootDiskType = Input.ofNullable(bootDiskType);
             return this;
         }
 
-        public Builder setContainerImage(@Nullable Input<InstanceContainerImageArgs> containerImage) {
+        public Builder containerImage(@Nullable Input<InstanceContainerImageArgs> containerImage) {
             this.containerImage = containerImage;
             return this;
         }
 
-        public Builder setContainerImage(@Nullable InstanceContainerImageArgs containerImage) {
+        public Builder containerImage(@Nullable InstanceContainerImageArgs containerImage) {
             this.containerImage = Input.ofNullable(containerImage);
             return this;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setCustomGpuDriverPath(@Nullable Input<String> customGpuDriverPath) {
+        public Builder customGpuDriverPath(@Nullable Input<String> customGpuDriverPath) {
             this.customGpuDriverPath = customGpuDriverPath;
             return this;
         }
 
-        public Builder setCustomGpuDriverPath(@Nullable String customGpuDriverPath) {
+        public Builder customGpuDriverPath(@Nullable String customGpuDriverPath) {
             this.customGpuDriverPath = Input.ofNullable(customGpuDriverPath);
             return this;
         }
 
-        public Builder setDataDiskSizeGb(@Nullable Input<Integer> dataDiskSizeGb) {
+        public Builder dataDiskSizeGb(@Nullable Input<Integer> dataDiskSizeGb) {
             this.dataDiskSizeGb = dataDiskSizeGb;
             return this;
         }
 
-        public Builder setDataDiskSizeGb(@Nullable Integer dataDiskSizeGb) {
+        public Builder dataDiskSizeGb(@Nullable Integer dataDiskSizeGb) {
             this.dataDiskSizeGb = Input.ofNullable(dataDiskSizeGb);
             return this;
         }
 
-        public Builder setDataDiskType(@Nullable Input<String> dataDiskType) {
+        public Builder dataDiskType(@Nullable Input<String> dataDiskType) {
             this.dataDiskType = dataDiskType;
             return this;
         }
 
-        public Builder setDataDiskType(@Nullable String dataDiskType) {
+        public Builder dataDiskType(@Nullable String dataDiskType) {
             this.dataDiskType = Input.ofNullable(dataDiskType);
             return this;
         }
 
-        public Builder setDiskEncryption(@Nullable Input<String> diskEncryption) {
+        public Builder diskEncryption(@Nullable Input<String> diskEncryption) {
             this.diskEncryption = diskEncryption;
             return this;
         }
 
-        public Builder setDiskEncryption(@Nullable String diskEncryption) {
+        public Builder diskEncryption(@Nullable String diskEncryption) {
             this.diskEncryption = Input.ofNullable(diskEncryption);
             return this;
         }
 
-        public Builder setInstallGpuDriver(@Nullable Input<Boolean> installGpuDriver) {
+        public Builder installGpuDriver(@Nullable Input<Boolean> installGpuDriver) {
             this.installGpuDriver = installGpuDriver;
             return this;
         }
 
-        public Builder setInstallGpuDriver(@Nullable Boolean installGpuDriver) {
+        public Builder installGpuDriver(@Nullable Boolean installGpuDriver) {
             this.installGpuDriver = Input.ofNullable(installGpuDriver);
             return this;
         }
 
-        public Builder setInstanceOwners(@Nullable Input<List<String>> instanceOwners) {
+        public Builder instanceOwners(@Nullable Input<List<String>> instanceOwners) {
             this.instanceOwners = instanceOwners;
             return this;
         }
 
-        public Builder setInstanceOwners(@Nullable List<String> instanceOwners) {
+        public Builder instanceOwners(@Nullable List<String> instanceOwners) {
             this.instanceOwners = Input.ofNullable(instanceOwners);
             return this;
         }
 
-        public Builder setKmsKey(@Nullable Input<String> kmsKey) {
+        public Builder kmsKey(@Nullable Input<String> kmsKey) {
             this.kmsKey = kmsKey;
             return this;
         }
 
-        public Builder setKmsKey(@Nullable String kmsKey) {
+        public Builder kmsKey(@Nullable String kmsKey) {
             this.kmsKey = Input.ofNullable(kmsKey);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(Input<String> location) {
+        public Builder location(Input<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Input.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder setMachineType(Input<String> machineType) {
+        public Builder machineType(Input<String> machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Input.of(Objects.requireNonNull(machineType));
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetwork(@Nullable Input<String> network) {
+        public Builder network(@Nullable Input<String> network) {
             this.network = network;
             return this;
         }
 
-        public Builder setNetwork(@Nullable String network) {
+        public Builder network(@Nullable String network) {
             this.network = Input.ofNullable(network);
             return this;
         }
 
-        public Builder setNicType(@Nullable Input<String> nicType) {
+        public Builder nicType(@Nullable Input<String> nicType) {
             this.nicType = nicType;
             return this;
         }
 
-        public Builder setNicType(@Nullable String nicType) {
+        public Builder nicType(@Nullable String nicType) {
             this.nicType = Input.ofNullable(nicType);
             return this;
         }
 
-        public Builder setNoProxyAccess(@Nullable Input<Boolean> noProxyAccess) {
+        public Builder noProxyAccess(@Nullable Input<Boolean> noProxyAccess) {
             this.noProxyAccess = noProxyAccess;
             return this;
         }
 
-        public Builder setNoProxyAccess(@Nullable Boolean noProxyAccess) {
+        public Builder noProxyAccess(@Nullable Boolean noProxyAccess) {
             this.noProxyAccess = Input.ofNullable(noProxyAccess);
             return this;
         }
 
-        public Builder setNoPublicIp(@Nullable Input<Boolean> noPublicIp) {
+        public Builder noPublicIp(@Nullable Input<Boolean> noPublicIp) {
             this.noPublicIp = noPublicIp;
             return this;
         }
 
-        public Builder setNoPublicIp(@Nullable Boolean noPublicIp) {
+        public Builder noPublicIp(@Nullable Boolean noPublicIp) {
             this.noPublicIp = Input.ofNullable(noPublicIp);
             return this;
         }
 
-        public Builder setNoRemoveDataDisk(@Nullable Input<Boolean> noRemoveDataDisk) {
+        public Builder noRemoveDataDisk(@Nullable Input<Boolean> noRemoveDataDisk) {
             this.noRemoveDataDisk = noRemoveDataDisk;
             return this;
         }
 
-        public Builder setNoRemoveDataDisk(@Nullable Boolean noRemoveDataDisk) {
+        public Builder noRemoveDataDisk(@Nullable Boolean noRemoveDataDisk) {
             this.noRemoveDataDisk = Input.ofNullable(noRemoveDataDisk);
             return this;
         }
 
-        public Builder setPostStartupScript(@Nullable Input<String> postStartupScript) {
+        public Builder postStartupScript(@Nullable Input<String> postStartupScript) {
             this.postStartupScript = postStartupScript;
             return this;
         }
 
-        public Builder setPostStartupScript(@Nullable String postStartupScript) {
+        public Builder postStartupScript(@Nullable String postStartupScript) {
             this.postStartupScript = Input.ofNullable(postStartupScript);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setReservationAffinity(@Nullable Input<InstanceReservationAffinityArgs> reservationAffinity) {
+        public Builder reservationAffinity(@Nullable Input<InstanceReservationAffinityArgs> reservationAffinity) {
             this.reservationAffinity = reservationAffinity;
             return this;
         }
 
-        public Builder setReservationAffinity(@Nullable InstanceReservationAffinityArgs reservationAffinity) {
+        public Builder reservationAffinity(@Nullable InstanceReservationAffinityArgs reservationAffinity) {
             this.reservationAffinity = Input.ofNullable(reservationAffinity);
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable String serviceAccount) {
+        public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Input.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder setServiceAccountScopes(@Nullable Input<List<String>> serviceAccountScopes) {
+        public Builder serviceAccountScopes(@Nullable Input<List<String>> serviceAccountScopes) {
             this.serviceAccountScopes = serviceAccountScopes;
             return this;
         }
 
-        public Builder setServiceAccountScopes(@Nullable List<String> serviceAccountScopes) {
+        public Builder serviceAccountScopes(@Nullable List<String> serviceAccountScopes) {
             this.serviceAccountScopes = Input.ofNullable(serviceAccountScopes);
             return this;
         }
 
-        public Builder setShieldedInstanceConfig(@Nullable Input<InstanceShieldedInstanceConfigArgs> shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(@Nullable Input<InstanceShieldedInstanceConfigArgs> shieldedInstanceConfig) {
             this.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
 
-        public Builder setShieldedInstanceConfig(@Nullable InstanceShieldedInstanceConfigArgs shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(@Nullable InstanceShieldedInstanceConfigArgs shieldedInstanceConfig) {
             this.shieldedInstanceConfig = Input.ofNullable(shieldedInstanceConfig);
             return this;
         }
 
-        public Builder setSubnet(@Nullable Input<String> subnet) {
+        public Builder subnet(@Nullable Input<String> subnet) {
             this.subnet = subnet;
             return this;
         }
 
-        public Builder setSubnet(@Nullable String subnet) {
+        public Builder subnet(@Nullable String subnet) {
             this.subnet = Input.ofNullable(subnet);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Input<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<String> tags) {
+        public Builder tags(@Nullable List<String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Input<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable String updateTime) {
+        public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Input.ofNullable(updateTime);
             return this;
         }
 
-        public Builder setVmImage(@Nullable Input<InstanceVmImageArgs> vmImage) {
+        public Builder vmImage(@Nullable Input<InstanceVmImageArgs> vmImage) {
             this.vmImage = vmImage;
             return this;
         }
 
-        public Builder setVmImage(@Nullable InstanceVmImageArgs vmImage) {
+        public Builder vmImage(@Nullable InstanceVmImageArgs vmImage) {
             this.vmImage = Input.ofNullable(vmImage);
             return this;
         }

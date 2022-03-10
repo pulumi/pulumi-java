@@ -133,32 +133,32 @@ public final class GetProjectResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAssetIds(@Nullable List<String> assetIds) {
+        public Builder assetIds(@Nullable List<String> assetIds) {
             this.assetIds = assetIds;
             return this;
         }
 
-        public Builder setProjectArn(@Nullable String projectArn) {
+        public Builder projectArn(@Nullable String projectArn) {
             this.projectArn = projectArn;
             return this;
         }
 
-        public Builder setProjectDescription(@Nullable String projectDescription) {
+        public Builder projectDescription(@Nullable String projectDescription) {
             this.projectDescription = projectDescription;
             return this;
         }
 
-        public Builder setProjectId(@Nullable String projectId) {
+        public Builder projectId(@Nullable String projectId) {
             this.projectId = projectId;
             return this;
         }
 
-        public Builder setProjectName(@Nullable String projectName) {
+        public Builder projectName(@Nullable String projectName) {
             this.projectName = projectName;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ProjectTag> tags) {
+        public Builder tags(@Nullable List<ProjectTag> tags) {
             this.tags = tags;
             return this;
         }

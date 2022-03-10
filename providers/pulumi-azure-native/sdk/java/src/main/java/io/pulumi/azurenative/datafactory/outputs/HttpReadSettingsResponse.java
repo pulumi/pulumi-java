@@ -183,47 +183,47 @@ public final class HttpReadSettingsResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAdditionalHeaders(@Nullable Object additionalHeaders) {
+        public Builder additionalHeaders(@Nullable Object additionalHeaders) {
             this.additionalHeaders = additionalHeaders;
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Object disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
-        public Builder setEnablePartitionDiscovery(@Nullable Boolean enablePartitionDiscovery) {
+        public Builder enablePartitionDiscovery(@Nullable Boolean enablePartitionDiscovery) {
             this.enablePartitionDiscovery = enablePartitionDiscovery;
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
-        public Builder setPartitionRootPath(@Nullable Object partitionRootPath) {
+        public Builder partitionRootPath(@Nullable Object partitionRootPath) {
             this.partitionRootPath = partitionRootPath;
             return this;
         }
 
-        public Builder setRequestBody(@Nullable Object requestBody) {
+        public Builder requestBody(@Nullable Object requestBody) {
             this.requestBody = requestBody;
             return this;
         }
 
-        public Builder setRequestMethod(@Nullable Object requestMethod) {
+        public Builder requestMethod(@Nullable Object requestMethod) {
             this.requestMethod = requestMethod;
             return this;
         }
 
-        public Builder setRequestTimeout(@Nullable Object requestTimeout) {
+        public Builder requestTimeout(@Nullable Object requestTimeout) {
             this.requestTimeout = requestTimeout;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

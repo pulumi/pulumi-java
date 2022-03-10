@@ -136,32 +136,32 @@ public final class CloudSQLInstanceInfoResponse extends io.pulumi.resources.Invo
     	      this.uri = defaults.uri;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setExternalIp(String externalIp) {
+        public Builder externalIp(String externalIp) {
             this.externalIp = Objects.requireNonNull(externalIp);
             return this;
         }
 
-        public Builder setInternalIp(String internalIp) {
+        public Builder internalIp(String internalIp) {
             this.internalIp = Objects.requireNonNull(internalIp);
             return this;
         }
 
-        public Builder setNetworkUri(String networkUri) {
+        public Builder networkUri(String networkUri) {
             this.networkUri = Objects.requireNonNull(networkUri);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

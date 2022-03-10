@@ -172,42 +172,42 @@ public final class ExecutePipelineActivityResponse {
     	      this.waitOnCompletion = defaults.waitOnCompletion;
         }
 
-        public Builder setDependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
+        public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,Object> parameters) {
+        public Builder parameters(@Nullable Map<String,Object> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setPipeline(PipelineReferenceResponse pipeline) {
+        public Builder pipeline(PipelineReferenceResponse pipeline) {
             this.pipeline = Objects.requireNonNull(pipeline);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserProperties(@Nullable List<UserPropertyResponse> userProperties) {
+        public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
 
-        public Builder setWaitOnCompletion(@Nullable Boolean waitOnCompletion) {
+        public Builder waitOnCompletion(@Nullable Boolean waitOnCompletion) {
             this.waitOnCompletion = waitOnCompletion;
             return this;
         }

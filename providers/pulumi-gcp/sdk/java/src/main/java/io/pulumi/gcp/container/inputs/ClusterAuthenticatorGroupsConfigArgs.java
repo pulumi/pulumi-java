@@ -52,12 +52,12 @@ public final class ClusterAuthenticatorGroupsConfigArgs extends io.pulumi.resour
     	      this.securityGroup = defaults.securityGroup;
         }
 
-        public Builder setSecurityGroup(Input<String> securityGroup) {
+        public Builder securityGroup(Input<String> securityGroup) {
             this.securityGroup = Objects.requireNonNull(securityGroup);
             return this;
         }
 
-        public Builder setSecurityGroup(String securityGroup) {
+        public Builder securityGroup(String securityGroup) {
             this.securityGroup = Input.of(Objects.requireNonNull(securityGroup));
             return this;
         }

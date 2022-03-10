@@ -169,82 +169,82 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
     	      this.tags = defaults.tags;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setEventCategories(@Nullable Input<List<String>> eventCategories) {
+        public Builder eventCategories(@Nullable Input<List<String>> eventCategories) {
             this.eventCategories = eventCategories;
             return this;
         }
 
-        public Builder setEventCategories(@Nullable List<String> eventCategories) {
+        public Builder eventCategories(@Nullable List<String> eventCategories) {
             this.eventCategories = Input.ofNullable(eventCategories);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Input<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable String namePrefix) {
+        public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Input.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder setSnsTopicArn(Input<String> snsTopicArn) {
+        public Builder snsTopicArn(Input<String> snsTopicArn) {
             this.snsTopicArn = Objects.requireNonNull(snsTopicArn);
             return this;
         }
 
-        public Builder setSnsTopicArn(String snsTopicArn) {
+        public Builder snsTopicArn(String snsTopicArn) {
             this.snsTopicArn = Input.of(Objects.requireNonNull(snsTopicArn));
             return this;
         }
 
-        public Builder setSourceIds(@Nullable Input<List<String>> sourceIds) {
+        public Builder sourceIds(@Nullable Input<List<String>> sourceIds) {
             this.sourceIds = sourceIds;
             return this;
         }
 
-        public Builder setSourceIds(@Nullable List<String> sourceIds) {
+        public Builder sourceIds(@Nullable List<String> sourceIds) {
             this.sourceIds = Input.ofNullable(sourceIds);
             return this;
         }
 
-        public Builder setSourceType(@Nullable Input<String> sourceType) {
+        public Builder sourceType(@Nullable Input<String> sourceType) {
             this.sourceType = sourceType;
             return this;
         }
 
-        public Builder setSourceType(@Nullable String sourceType) {
+        public Builder sourceType(@Nullable String sourceType) {
             this.sourceType = Input.ofNullable(sourceType);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

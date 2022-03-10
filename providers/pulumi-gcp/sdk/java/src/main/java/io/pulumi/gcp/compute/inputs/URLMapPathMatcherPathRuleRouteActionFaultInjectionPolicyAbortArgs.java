@@ -72,22 +72,22 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort
     	      this.percentage = defaults.percentage;
         }
 
-        public Builder setHttpStatus(Input<Integer> httpStatus) {
+        public Builder httpStatus(Input<Integer> httpStatus) {
             this.httpStatus = Objects.requireNonNull(httpStatus);
             return this;
         }
 
-        public Builder setHttpStatus(Integer httpStatus) {
+        public Builder httpStatus(Integer httpStatus) {
             this.httpStatus = Input.of(Objects.requireNonNull(httpStatus));
             return this;
         }
 
-        public Builder setPercentage(Input<Double> percentage) {
+        public Builder percentage(Input<Double> percentage) {
             this.percentage = Objects.requireNonNull(percentage);
             return this;
         }
 
-        public Builder setPercentage(Double percentage) {
+        public Builder percentage(Double percentage) {
             this.percentage = Input.of(Objects.requireNonNull(percentage));
             return this;
         }

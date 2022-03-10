@@ -74,32 +74,32 @@ public final class DatastoreCustomerManagedS3Args extends io.pulumi.resources.Re
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setBucket(Input<String> bucket) {
+        public Builder bucket(Input<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Input.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder setKeyPrefix(@Nullable Input<String> keyPrefix) {
+        public Builder keyPrefix(@Nullable Input<String> keyPrefix) {
             this.keyPrefix = keyPrefix;
             return this;
         }
 
-        public Builder setKeyPrefix(@Nullable String keyPrefix) {
+        public Builder keyPrefix(@Nullable String keyPrefix) {
             this.keyPrefix = Input.ofNullable(keyPrefix);
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }

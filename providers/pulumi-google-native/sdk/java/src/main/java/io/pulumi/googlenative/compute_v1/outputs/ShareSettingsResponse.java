@@ -66,12 +66,12 @@ public final class ShareSettingsResponse {
     	      this.shareType = defaults.shareType;
         }
 
-        public Builder setProjectMap(Map<String,String> projectMap) {
+        public Builder projectMap(Map<String,String> projectMap) {
             this.projectMap = Objects.requireNonNull(projectMap);
             return this;
         }
 
-        public Builder setShareType(String shareType) {
+        public Builder shareType(String shareType) {
             this.shareType = Objects.requireNonNull(shareType);
             return this;
         }

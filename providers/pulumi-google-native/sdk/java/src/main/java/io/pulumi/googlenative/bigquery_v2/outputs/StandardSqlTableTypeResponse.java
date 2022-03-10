@@ -49,7 +49,7 @@ public final class StandardSqlTableTypeResponse {
     	      this.columns = defaults.columns;
         }
 
-        public Builder setColumns(List<StandardSqlFieldResponse> columns) {
+        public Builder columns(List<StandardSqlFieldResponse> columns) {
             this.columns = Objects.requireNonNull(columns);
             return this;
         }

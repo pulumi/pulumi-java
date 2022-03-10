@@ -138,32 +138,32 @@ public final class SyncPropertiesResponse extends io.pulumi.resources.InvokeArgs
     	      this.tokenId = defaults.tokenId;
         }
 
-        public Builder setGatewayEndpoint(String gatewayEndpoint) {
+        public Builder gatewayEndpoint(String gatewayEndpoint) {
             this.gatewayEndpoint = Objects.requireNonNull(gatewayEndpoint);
             return this;
         }
 
-        public Builder setLastSyncTime(String lastSyncTime) {
+        public Builder lastSyncTime(String lastSyncTime) {
             this.lastSyncTime = Objects.requireNonNull(lastSyncTime);
             return this;
         }
 
-        public Builder setMessageTtl(String messageTtl) {
+        public Builder messageTtl(String messageTtl) {
             this.messageTtl = Objects.requireNonNull(messageTtl);
             return this;
         }
 
-        public Builder setSchedule(@Nullable String schedule) {
+        public Builder schedule(@Nullable String schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setSyncWindow(@Nullable String syncWindow) {
+        public Builder syncWindow(@Nullable String syncWindow) {
             this.syncWindow = syncWindow;
             return this;
         }
 
-        public Builder setTokenId(String tokenId) {
+        public Builder tokenId(String tokenId) {
             this.tokenId = Objects.requireNonNull(tokenId);
             return this;
         }

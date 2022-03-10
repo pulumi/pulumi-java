@@ -58,12 +58,12 @@ public final class BotSlotPriority {
     	      this.slotName = defaults.slotName;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setSlotName(String slotName) {
+        public Builder slotName(String slotName) {
             this.slotName = Objects.requireNonNull(slotName);
             return this;
         }

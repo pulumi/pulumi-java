@@ -118,27 +118,27 @@ public final class DirectLineSpeechChannelResponse {
     	      this.provisioningState = defaults.provisioningState;
         }
 
-        public Builder setChannelName(String channelName) {
+        public Builder channelName(String channelName) {
             this.channelName = Objects.requireNonNull(channelName);
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setProperties(@Nullable DirectLineSpeechChannelPropertiesResponse properties) {
+        public Builder properties(@Nullable DirectLineSpeechChannelPropertiesResponse properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }

@@ -101,22 +101,22 @@ public final class PrivateLinkServiceConnectionResponse {
     	      this.requestMessage = defaults.requestMessage;
         }
 
-        public Builder setGroupIds(@Nullable List<String> groupIds) {
+        public Builder groupIds(@Nullable List<String> groupIds) {
             this.groupIds = groupIds;
             return this;
         }
 
-        public Builder setPrivateLinkServiceConnectionState(@Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState) {
+        public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
 
-        public Builder setPrivateLinkServiceId(@Nullable String privateLinkServiceId) {
+        public Builder privateLinkServiceId(@Nullable String privateLinkServiceId) {
             this.privateLinkServiceId = privateLinkServiceId;
             return this;
         }
 
-        public Builder setRequestMessage(@Nullable String requestMessage) {
+        public Builder requestMessage(@Nullable String requestMessage) {
             this.requestMessage = requestMessage;
             return this;
         }

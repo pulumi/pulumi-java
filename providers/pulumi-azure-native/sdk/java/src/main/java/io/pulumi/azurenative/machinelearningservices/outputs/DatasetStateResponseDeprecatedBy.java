@@ -67,12 +67,12 @@ public final class DatasetStateResponseDeprecatedBy {
     	      this.definitionVersion = defaults.definitionVersion;
         }
 
-        public Builder setDatasetId(String datasetId) {
+        public Builder datasetId(String datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
-        public Builder setDefinitionVersion(@Nullable String definitionVersion) {
+        public Builder definitionVersion(@Nullable String definitionVersion) {
             this.definitionVersion = definitionVersion;
             return this;
         }

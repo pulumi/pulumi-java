@@ -148,37 +148,37 @@ public final class GetFeedResult {
     	      this.relationshipTypes = defaults.relationshipTypes;
         }
 
-        public Builder setAssetNames(List<String> assetNames) {
+        public Builder assetNames(List<String> assetNames) {
             this.assetNames = Objects.requireNonNull(assetNames);
             return this;
         }
 
-        public Builder setAssetTypes(List<String> assetTypes) {
+        public Builder assetTypes(List<String> assetTypes) {
             this.assetTypes = Objects.requireNonNull(assetTypes);
             return this;
         }
 
-        public Builder setCondition(ExprResponse condition) {
+        public Builder condition(ExprResponse condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
 
-        public Builder setContentType(String contentType) {
+        public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
-        public Builder setFeedOutputConfig(FeedOutputConfigResponse feedOutputConfig) {
+        public Builder feedOutputConfig(FeedOutputConfigResponse feedOutputConfig) {
             this.feedOutputConfig = Objects.requireNonNull(feedOutputConfig);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRelationshipTypes(List<String> relationshipTypes) {
+        public Builder relationshipTypes(List<String> relationshipTypes) {
             this.relationshipTypes = Objects.requireNonNull(relationshipTypes);
             return this;
         }

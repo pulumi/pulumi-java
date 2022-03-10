@@ -90,42 +90,42 @@ public final class ComponentVersionLambdaContainerParamsArgs extends io.pulumi.r
     	      this.volumes = defaults.volumes;
         }
 
-        public Builder setDevices(@Nullable Input<List<ComponentVersionLambdaDeviceMountArgs>> devices) {
+        public Builder devices(@Nullable Input<List<ComponentVersionLambdaDeviceMountArgs>> devices) {
             this.devices = devices;
             return this;
         }
 
-        public Builder setDevices(@Nullable List<ComponentVersionLambdaDeviceMountArgs> devices) {
+        public Builder devices(@Nullable List<ComponentVersionLambdaDeviceMountArgs> devices) {
             this.devices = Input.ofNullable(devices);
             return this;
         }
 
-        public Builder setMemorySizeInKB(@Nullable Input<Integer> memorySizeInKB) {
+        public Builder memorySizeInKB(@Nullable Input<Integer> memorySizeInKB) {
             this.memorySizeInKB = memorySizeInKB;
             return this;
         }
 
-        public Builder setMemorySizeInKB(@Nullable Integer memorySizeInKB) {
+        public Builder memorySizeInKB(@Nullable Integer memorySizeInKB) {
             this.memorySizeInKB = Input.ofNullable(memorySizeInKB);
             return this;
         }
 
-        public Builder setMountROSysfs(@Nullable Input<Boolean> mountROSysfs) {
+        public Builder mountROSysfs(@Nullable Input<Boolean> mountROSysfs) {
             this.mountROSysfs = mountROSysfs;
             return this;
         }
 
-        public Builder setMountROSysfs(@Nullable Boolean mountROSysfs) {
+        public Builder mountROSysfs(@Nullable Boolean mountROSysfs) {
             this.mountROSysfs = Input.ofNullable(mountROSysfs);
             return this;
         }
 
-        public Builder setVolumes(@Nullable Input<List<ComponentVersionLambdaVolumeMountArgs>> volumes) {
+        public Builder volumes(@Nullable Input<List<ComponentVersionLambdaVolumeMountArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
 
-        public Builder setVolumes(@Nullable List<ComponentVersionLambdaVolumeMountArgs> volumes) {
+        public Builder volumes(@Nullable List<ComponentVersionLambdaVolumeMountArgs> volumes) {
             this.volumes = Input.ofNullable(volumes);
             return this;
         }

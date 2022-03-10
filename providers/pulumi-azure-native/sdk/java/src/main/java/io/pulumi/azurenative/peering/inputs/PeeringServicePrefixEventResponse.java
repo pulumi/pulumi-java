@@ -120,27 +120,27 @@ public final class PeeringServicePrefixEventResponse extends io.pulumi.resources
     	      this.eventType = defaults.eventType;
         }
 
-        public Builder setEventDescription(String eventDescription) {
+        public Builder eventDescription(String eventDescription) {
             this.eventDescription = Objects.requireNonNull(eventDescription);
             return this;
         }
 
-        public Builder setEventLevel(String eventLevel) {
+        public Builder eventLevel(String eventLevel) {
             this.eventLevel = Objects.requireNonNull(eventLevel);
             return this;
         }
 
-        public Builder setEventSummary(String eventSummary) {
+        public Builder eventSummary(String eventSummary) {
             this.eventSummary = Objects.requireNonNull(eventSummary);
             return this;
         }
 
-        public Builder setEventTimestamp(String eventTimestamp) {
+        public Builder eventTimestamp(String eventTimestamp) {
             this.eventTimestamp = Objects.requireNonNull(eventTimestamp);
             return this;
         }
 
-        public Builder setEventType(String eventType) {
+        public Builder eventType(String eventType) {
             this.eventType = Objects.requireNonNull(eventType);
             return this;
         }

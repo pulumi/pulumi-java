@@ -186,92 +186,92 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEnabledState(@Nullable Input<Either<String,State>> enabledState) {
+        public Builder enabledState(@Nullable Input<Either<String,State>> enabledState) {
             this.enabledState = enabledState;
             return this;
         }
 
-        public Builder setEnabledState(@Nullable Either<String,State> enabledState) {
+        public Builder enabledState(@Nullable Either<String,State> enabledState) {
             this.enabledState = Input.ofNullable(enabledState);
             return this;
         }
 
-        public Builder setEndpointA(@Nullable Input<ExperimentEndpointArgs> endpointA) {
+        public Builder endpointA(@Nullable Input<ExperimentEndpointArgs> endpointA) {
             this.endpointA = endpointA;
             return this;
         }
 
-        public Builder setEndpointA(@Nullable ExperimentEndpointArgs endpointA) {
+        public Builder endpointA(@Nullable ExperimentEndpointArgs endpointA) {
             this.endpointA = Input.ofNullable(endpointA);
             return this;
         }
 
-        public Builder setEndpointB(@Nullable Input<ExperimentEndpointArgs> endpointB) {
+        public Builder endpointB(@Nullable Input<ExperimentEndpointArgs> endpointB) {
             this.endpointB = endpointB;
             return this;
         }
 
-        public Builder setEndpointB(@Nullable ExperimentEndpointArgs endpointB) {
+        public Builder endpointB(@Nullable ExperimentEndpointArgs endpointB) {
             this.endpointB = Input.ofNullable(endpointB);
             return this;
         }
 
-        public Builder setExperimentName(@Nullable Input<String> experimentName) {
+        public Builder experimentName(@Nullable Input<String> experimentName) {
             this.experimentName = experimentName;
             return this;
         }
 
-        public Builder setExperimentName(@Nullable String experimentName) {
+        public Builder experimentName(@Nullable String experimentName) {
             this.experimentName = Input.ofNullable(experimentName);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProfileName(Input<String> profileName) {
+        public Builder profileName(Input<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
 
-        public Builder setProfileName(String profileName) {
+        public Builder profileName(String profileName) {
             this.profileName = Input.of(Objects.requireNonNull(profileName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

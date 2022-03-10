@@ -75,12 +75,12 @@ public final class JavaScriptFunctionBindingResponse extends io.pulumi.resources
     	      this.type = defaults.type;
         }
 
-        public Builder setScript(@Nullable String script) {
+        public Builder script(@Nullable String script) {
             this.script = script;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

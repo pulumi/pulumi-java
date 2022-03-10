@@ -52,12 +52,12 @@ public final class StackApplicationSettings {
     	      this.settingsGroup = defaults.settingsGroup;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setSettingsGroup(@Nullable String settingsGroup) {
+        public Builder settingsGroup(@Nullable String settingsGroup) {
             this.settingsGroup = settingsGroup;
             return this;
         }

@@ -90,17 +90,17 @@ public final class VideoStreamResponse extends io.pulumi.resources.InvokeArgs {
     	      this.vp9 = defaults.vp9;
         }
 
-        public Builder setH264(H264CodecSettingsResponse h264) {
+        public Builder h264(H264CodecSettingsResponse h264) {
             this.h264 = Objects.requireNonNull(h264);
             return this;
         }
 
-        public Builder setH265(H265CodecSettingsResponse h265) {
+        public Builder h265(H265CodecSettingsResponse h265) {
             this.h265 = Objects.requireNonNull(h265);
             return this;
         }
 
-        public Builder setVp9(Vp9CodecSettingsResponse vp9) {
+        public Builder vp9(Vp9CodecSettingsResponse vp9) {
             this.vp9 = Objects.requireNonNull(vp9);
             return this;
         }

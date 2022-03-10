@@ -75,22 +75,22 @@ public final class GetUserTablesSqlTaskInputArgs extends io.pulumi.resources.Res
     	      this.selectedDatabases = defaults.selectedDatabases;
         }
 
-        public Builder setConnectionInfo(Input<SqlConnectionInfoArgs> connectionInfo) {
+        public Builder connectionInfo(Input<SqlConnectionInfoArgs> connectionInfo) {
             this.connectionInfo = Objects.requireNonNull(connectionInfo);
             return this;
         }
 
-        public Builder setConnectionInfo(SqlConnectionInfoArgs connectionInfo) {
+        public Builder connectionInfo(SqlConnectionInfoArgs connectionInfo) {
             this.connectionInfo = Input.of(Objects.requireNonNull(connectionInfo));
             return this;
         }
 
-        public Builder setSelectedDatabases(Input<List<String>> selectedDatabases) {
+        public Builder selectedDatabases(Input<List<String>> selectedDatabases) {
             this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
             return this;
         }
 
-        public Builder setSelectedDatabases(List<String> selectedDatabases) {
+        public Builder selectedDatabases(List<String> selectedDatabases) {
             this.selectedDatabases = Input.of(Objects.requireNonNull(selectedDatabases));
             return this;
         }

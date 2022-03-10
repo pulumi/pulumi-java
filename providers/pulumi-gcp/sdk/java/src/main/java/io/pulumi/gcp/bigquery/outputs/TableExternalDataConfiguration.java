@@ -259,52 +259,52 @@ public final class TableExternalDataConfiguration {
     	      this.sourceUris = defaults.sourceUris;
         }
 
-        public Builder setAutodetect(Boolean autodetect) {
+        public Builder autodetect(Boolean autodetect) {
             this.autodetect = Objects.requireNonNull(autodetect);
             return this;
         }
 
-        public Builder setCompression(@Nullable String compression) {
+        public Builder compression(@Nullable String compression) {
             this.compression = compression;
             return this;
         }
 
-        public Builder setCsvOptions(@Nullable TableExternalDataConfigurationCsvOptions csvOptions) {
+        public Builder csvOptions(@Nullable TableExternalDataConfigurationCsvOptions csvOptions) {
             this.csvOptions = csvOptions;
             return this;
         }
 
-        public Builder setGoogleSheetsOptions(@Nullable TableExternalDataConfigurationGoogleSheetsOptions googleSheetsOptions) {
+        public Builder googleSheetsOptions(@Nullable TableExternalDataConfigurationGoogleSheetsOptions googleSheetsOptions) {
             this.googleSheetsOptions = googleSheetsOptions;
             return this;
         }
 
-        public Builder setHivePartitioningOptions(@Nullable TableExternalDataConfigurationHivePartitioningOptions hivePartitioningOptions) {
+        public Builder hivePartitioningOptions(@Nullable TableExternalDataConfigurationHivePartitioningOptions hivePartitioningOptions) {
             this.hivePartitioningOptions = hivePartitioningOptions;
             return this;
         }
 
-        public Builder setIgnoreUnknownValues(@Nullable Boolean ignoreUnknownValues) {
+        public Builder ignoreUnknownValues(@Nullable Boolean ignoreUnknownValues) {
             this.ignoreUnknownValues = ignoreUnknownValues;
             return this;
         }
 
-        public Builder setMaxBadRecords(@Nullable Integer maxBadRecords) {
+        public Builder maxBadRecords(@Nullable Integer maxBadRecords) {
             this.maxBadRecords = maxBadRecords;
             return this;
         }
 
-        public Builder setSchema(@Nullable String schema) {
+        public Builder schema(@Nullable String schema) {
             this.schema = schema;
             return this;
         }
 
-        public Builder setSourceFormat(String sourceFormat) {
+        public Builder sourceFormat(String sourceFormat) {
             this.sourceFormat = Objects.requireNonNull(sourceFormat);
             return this;
         }
 
-        public Builder setSourceUris(List<String> sourceUris) {
+        public Builder sourceUris(List<String> sourceUris) {
             this.sourceUris = Objects.requireNonNull(sourceUris);
             return this;
         }

@@ -67,12 +67,12 @@ public final class GetIAMPolicyAuditConfigAuditLogConfig {
     	      this.logType = defaults.logType;
         }
 
-        public Builder setExemptedMembers(@Nullable List<String> exemptedMembers) {
+        public Builder exemptedMembers(@Nullable List<String> exemptedMembers) {
             this.exemptedMembers = exemptedMembers;
             return this;
         }
 
-        public Builder setLogType(String logType) {
+        public Builder logType(String logType) {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }

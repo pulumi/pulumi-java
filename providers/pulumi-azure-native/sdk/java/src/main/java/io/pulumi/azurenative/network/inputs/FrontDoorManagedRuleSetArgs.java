@@ -127,52 +127,52 @@ public final class FrontDoorManagedRuleSetArgs extends io.pulumi.resources.Resou
     	      this.ruleSetVersion = defaults.ruleSetVersion;
         }
 
-        public Builder setExclusions(@Nullable Input<List<ManagedRuleExclusionArgs>> exclusions) {
+        public Builder exclusions(@Nullable Input<List<ManagedRuleExclusionArgs>> exclusions) {
             this.exclusions = exclusions;
             return this;
         }
 
-        public Builder setExclusions(@Nullable List<ManagedRuleExclusionArgs> exclusions) {
+        public Builder exclusions(@Nullable List<ManagedRuleExclusionArgs> exclusions) {
             this.exclusions = Input.ofNullable(exclusions);
             return this;
         }
 
-        public Builder setRuleGroupOverrides(@Nullable Input<List<FrontDoorManagedRuleGroupOverrideArgs>> ruleGroupOverrides) {
+        public Builder ruleGroupOverrides(@Nullable Input<List<FrontDoorManagedRuleGroupOverrideArgs>> ruleGroupOverrides) {
             this.ruleGroupOverrides = ruleGroupOverrides;
             return this;
         }
 
-        public Builder setRuleGroupOverrides(@Nullable List<FrontDoorManagedRuleGroupOverrideArgs> ruleGroupOverrides) {
+        public Builder ruleGroupOverrides(@Nullable List<FrontDoorManagedRuleGroupOverrideArgs> ruleGroupOverrides) {
             this.ruleGroupOverrides = Input.ofNullable(ruleGroupOverrides);
             return this;
         }
 
-        public Builder setRuleSetAction(@Nullable Input<Either<String,ManagedRuleSetActionType>> ruleSetAction) {
+        public Builder ruleSetAction(@Nullable Input<Either<String,ManagedRuleSetActionType>> ruleSetAction) {
             this.ruleSetAction = ruleSetAction;
             return this;
         }
 
-        public Builder setRuleSetAction(@Nullable Either<String,ManagedRuleSetActionType> ruleSetAction) {
+        public Builder ruleSetAction(@Nullable Either<String,ManagedRuleSetActionType> ruleSetAction) {
             this.ruleSetAction = Input.ofNullable(ruleSetAction);
             return this;
         }
 
-        public Builder setRuleSetType(Input<String> ruleSetType) {
+        public Builder ruleSetType(Input<String> ruleSetType) {
             this.ruleSetType = Objects.requireNonNull(ruleSetType);
             return this;
         }
 
-        public Builder setRuleSetType(String ruleSetType) {
+        public Builder ruleSetType(String ruleSetType) {
             this.ruleSetType = Input.of(Objects.requireNonNull(ruleSetType));
             return this;
         }
 
-        public Builder setRuleSetVersion(Input<String> ruleSetVersion) {
+        public Builder ruleSetVersion(Input<String> ruleSetVersion) {
             this.ruleSetVersion = Objects.requireNonNull(ruleSetVersion);
             return this;
         }
 
-        public Builder setRuleSetVersion(String ruleSetVersion) {
+        public Builder ruleSetVersion(String ruleSetVersion) {
             this.ruleSetVersion = Input.of(Objects.requireNonNull(ruleSetVersion));
             return this;
         }

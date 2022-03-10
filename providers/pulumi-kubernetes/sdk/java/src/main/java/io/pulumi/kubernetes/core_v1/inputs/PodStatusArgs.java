@@ -270,132 +270,132 @@ public final class PodStatusArgs extends io.pulumi.resources.ResourceArgs {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setConditions(@Nullable Input<List<PodConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Input<List<PodConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<PodConditionArgs> conditions) {
+        public Builder conditions(@Nullable List<PodConditionArgs> conditions) {
             this.conditions = Input.ofNullable(conditions);
             return this;
         }
 
-        public Builder setContainerStatuses(@Nullable Input<List<ContainerStatusArgs>> containerStatuses) {
+        public Builder containerStatuses(@Nullable Input<List<ContainerStatusArgs>> containerStatuses) {
             this.containerStatuses = containerStatuses;
             return this;
         }
 
-        public Builder setContainerStatuses(@Nullable List<ContainerStatusArgs> containerStatuses) {
+        public Builder containerStatuses(@Nullable List<ContainerStatusArgs> containerStatuses) {
             this.containerStatuses = Input.ofNullable(containerStatuses);
             return this;
         }
 
-        public Builder setEphemeralContainerStatuses(@Nullable Input<List<ContainerStatusArgs>> ephemeralContainerStatuses) {
+        public Builder ephemeralContainerStatuses(@Nullable Input<List<ContainerStatusArgs>> ephemeralContainerStatuses) {
             this.ephemeralContainerStatuses = ephemeralContainerStatuses;
             return this;
         }
 
-        public Builder setEphemeralContainerStatuses(@Nullable List<ContainerStatusArgs> ephemeralContainerStatuses) {
+        public Builder ephemeralContainerStatuses(@Nullable List<ContainerStatusArgs> ephemeralContainerStatuses) {
             this.ephemeralContainerStatuses = Input.ofNullable(ephemeralContainerStatuses);
             return this;
         }
 
-        public Builder setHostIP(@Nullable Input<String> hostIP) {
+        public Builder hostIP(@Nullable Input<String> hostIP) {
             this.hostIP = hostIP;
             return this;
         }
 
-        public Builder setHostIP(@Nullable String hostIP) {
+        public Builder hostIP(@Nullable String hostIP) {
             this.hostIP = Input.ofNullable(hostIP);
             return this;
         }
 
-        public Builder setInitContainerStatuses(@Nullable Input<List<ContainerStatusArgs>> initContainerStatuses) {
+        public Builder initContainerStatuses(@Nullable Input<List<ContainerStatusArgs>> initContainerStatuses) {
             this.initContainerStatuses = initContainerStatuses;
             return this;
         }
 
-        public Builder setInitContainerStatuses(@Nullable List<ContainerStatusArgs> initContainerStatuses) {
+        public Builder initContainerStatuses(@Nullable List<ContainerStatusArgs> initContainerStatuses) {
             this.initContainerStatuses = Input.ofNullable(initContainerStatuses);
             return this;
         }
 
-        public Builder setMessage(@Nullable Input<String> message) {
+        public Builder message(@Nullable Input<String> message) {
             this.message = message;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = Input.ofNullable(message);
             return this;
         }
 
-        public Builder setNominatedNodeName(@Nullable Input<String> nominatedNodeName) {
+        public Builder nominatedNodeName(@Nullable Input<String> nominatedNodeName) {
             this.nominatedNodeName = nominatedNodeName;
             return this;
         }
 
-        public Builder setNominatedNodeName(@Nullable String nominatedNodeName) {
+        public Builder nominatedNodeName(@Nullable String nominatedNodeName) {
             this.nominatedNodeName = Input.ofNullable(nominatedNodeName);
             return this;
         }
 
-        public Builder setPhase(@Nullable Input<String> phase) {
+        public Builder phase(@Nullable Input<String> phase) {
             this.phase = phase;
             return this;
         }
 
-        public Builder setPhase(@Nullable String phase) {
+        public Builder phase(@Nullable String phase) {
             this.phase = Input.ofNullable(phase);
             return this;
         }
 
-        public Builder setPodIP(@Nullable Input<String> podIP) {
+        public Builder podIP(@Nullable Input<String> podIP) {
             this.podIP = podIP;
             return this;
         }
 
-        public Builder setPodIP(@Nullable String podIP) {
+        public Builder podIP(@Nullable String podIP) {
             this.podIP = Input.ofNullable(podIP);
             return this;
         }
 
-        public Builder setPodIPs(@Nullable Input<List<PodIPArgs>> podIPs) {
+        public Builder podIPs(@Nullable Input<List<PodIPArgs>> podIPs) {
             this.podIPs = podIPs;
             return this;
         }
 
-        public Builder setPodIPs(@Nullable List<PodIPArgs> podIPs) {
+        public Builder podIPs(@Nullable List<PodIPArgs> podIPs) {
             this.podIPs = Input.ofNullable(podIPs);
             return this;
         }
 
-        public Builder setQosClass(@Nullable Input<String> qosClass) {
+        public Builder qosClass(@Nullable Input<String> qosClass) {
             this.qosClass = qosClass;
             return this;
         }
 
-        public Builder setQosClass(@Nullable String qosClass) {
+        public Builder qosClass(@Nullable String qosClass) {
             this.qosClass = Input.ofNullable(qosClass);
             return this;
         }
 
-        public Builder setReason(@Nullable Input<String> reason) {
+        public Builder reason(@Nullable Input<String> reason) {
             this.reason = reason;
             return this;
         }
 
-        public Builder setReason(@Nullable String reason) {
+        public Builder reason(@Nullable String reason) {
             this.reason = Input.ofNullable(reason);
             return this;
         }
 
-        public Builder setStartTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Input<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }

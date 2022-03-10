@@ -230,57 +230,57 @@ public final class NodeStatus {
     	      this.volumesInUse = defaults.volumesInUse;
         }
 
-        public Builder setAddresses(@Nullable List<NodeAddress> addresses) {
+        public Builder addresses(@Nullable List<NodeAddress> addresses) {
             this.addresses = addresses;
             return this;
         }
 
-        public Builder setAllocatable(@Nullable Map<String,String> allocatable) {
+        public Builder allocatable(@Nullable Map<String,String> allocatable) {
             this.allocatable = allocatable;
             return this;
         }
 
-        public Builder setCapacity(@Nullable Map<String,String> capacity) {
+        public Builder capacity(@Nullable Map<String,String> capacity) {
             this.capacity = capacity;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<NodeCondition> conditions) {
+        public Builder conditions(@Nullable List<NodeCondition> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setConfig(@Nullable NodeConfigStatus config) {
+        public Builder config(@Nullable NodeConfigStatus config) {
             this.config = config;
             return this;
         }
 
-        public Builder setDaemonEndpoints(@Nullable NodeDaemonEndpoints daemonEndpoints) {
+        public Builder daemonEndpoints(@Nullable NodeDaemonEndpoints daemonEndpoints) {
             this.daemonEndpoints = daemonEndpoints;
             return this;
         }
 
-        public Builder setImages(@Nullable List<ContainerImage> images) {
+        public Builder images(@Nullable List<ContainerImage> images) {
             this.images = images;
             return this;
         }
 
-        public Builder setNodeInfo(@Nullable NodeSystemInfo nodeInfo) {
+        public Builder nodeInfo(@Nullable NodeSystemInfo nodeInfo) {
             this.nodeInfo = nodeInfo;
             return this;
         }
 
-        public Builder setPhase(@Nullable String phase) {
+        public Builder phase(@Nullable String phase) {
             this.phase = phase;
             return this;
         }
 
-        public Builder setVolumesAttached(@Nullable List<AttachedVolume> volumesAttached) {
+        public Builder volumesAttached(@Nullable List<AttachedVolume> volumesAttached) {
             this.volumesAttached = volumesAttached;
             return this;
         }
 
-        public Builder setVolumesInUse(@Nullable List<String> volumesInUse) {
+        public Builder volumesInUse(@Nullable List<String> volumesInUse) {
             this.volumesInUse = volumesInUse;
             return this;
         }

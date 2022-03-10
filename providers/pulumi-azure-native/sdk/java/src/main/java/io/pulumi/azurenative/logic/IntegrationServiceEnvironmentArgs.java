@@ -154,72 +154,72 @@ public final class IntegrationServiceEnvironmentArgs extends io.pulumi.resources
     	      this.tags = defaults.tags;
         }
 
-        public Builder setIdentity(@Nullable Input<ManagedServiceIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<ManagedServiceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable ManagedServiceIdentityArgs identity) {
+        public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setIntegrationServiceEnvironmentName(@Nullable Input<String> integrationServiceEnvironmentName) {
+        public Builder integrationServiceEnvironmentName(@Nullable Input<String> integrationServiceEnvironmentName) {
             this.integrationServiceEnvironmentName = integrationServiceEnvironmentName;
             return this;
         }
 
-        public Builder setIntegrationServiceEnvironmentName(@Nullable String integrationServiceEnvironmentName) {
+        public Builder integrationServiceEnvironmentName(@Nullable String integrationServiceEnvironmentName) {
             this.integrationServiceEnvironmentName = Input.ofNullable(integrationServiceEnvironmentName);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<IntegrationServiceEnvironmentPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<IntegrationServiceEnvironmentPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable IntegrationServiceEnvironmentPropertiesArgs properties) {
+        public Builder properties(@Nullable IntegrationServiceEnvironmentPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroup(Input<String> resourceGroup) {
+        public Builder resourceGroup(Input<String> resourceGroup) {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
         }
 
-        public Builder setResourceGroup(String resourceGroup) {
+        public Builder resourceGroup(String resourceGroup) {
             this.resourceGroup = Input.of(Objects.requireNonNull(resourceGroup));
             return this;
         }
 
-        public Builder setSku(@Nullable Input<IntegrationServiceEnvironmentSkuArgs> sku) {
+        public Builder sku(@Nullable Input<IntegrationServiceEnvironmentSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable IntegrationServiceEnvironmentSkuArgs sku) {
+        public Builder sku(@Nullable IntegrationServiceEnvironmentSkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

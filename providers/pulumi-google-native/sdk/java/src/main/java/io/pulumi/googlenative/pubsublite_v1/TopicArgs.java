@@ -141,72 +141,72 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topicId = defaults.topicId;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPartitionConfig(@Nullable Input<PartitionConfigArgs> partitionConfig) {
+        public Builder partitionConfig(@Nullable Input<PartitionConfigArgs> partitionConfig) {
             this.partitionConfig = partitionConfig;
             return this;
         }
 
-        public Builder setPartitionConfig(@Nullable PartitionConfigArgs partitionConfig) {
+        public Builder partitionConfig(@Nullable PartitionConfigArgs partitionConfig) {
             this.partitionConfig = Input.ofNullable(partitionConfig);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setReservationConfig(@Nullable Input<ReservationConfigArgs> reservationConfig) {
+        public Builder reservationConfig(@Nullable Input<ReservationConfigArgs> reservationConfig) {
             this.reservationConfig = reservationConfig;
             return this;
         }
 
-        public Builder setReservationConfig(@Nullable ReservationConfigArgs reservationConfig) {
+        public Builder reservationConfig(@Nullable ReservationConfigArgs reservationConfig) {
             this.reservationConfig = Input.ofNullable(reservationConfig);
             return this;
         }
 
-        public Builder setRetentionConfig(@Nullable Input<RetentionConfigArgs> retentionConfig) {
+        public Builder retentionConfig(@Nullable Input<RetentionConfigArgs> retentionConfig) {
             this.retentionConfig = retentionConfig;
             return this;
         }
 
-        public Builder setRetentionConfig(@Nullable RetentionConfigArgs retentionConfig) {
+        public Builder retentionConfig(@Nullable RetentionConfigArgs retentionConfig) {
             this.retentionConfig = Input.ofNullable(retentionConfig);
             return this;
         }
 
-        public Builder setTopicId(Input<String> topicId) {
+        public Builder topicId(Input<String> topicId) {
             this.topicId = Objects.requireNonNull(topicId);
             return this;
         }
 
-        public Builder setTopicId(String topicId) {
+        public Builder topicId(String topicId) {
             this.topicId = Input.of(Objects.requireNonNull(topicId));
             return this;
         }

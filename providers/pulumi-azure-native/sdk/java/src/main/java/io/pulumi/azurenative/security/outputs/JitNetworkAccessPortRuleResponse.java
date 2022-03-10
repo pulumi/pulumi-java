@@ -101,27 +101,27 @@ public final class JitNetworkAccessPortRuleResponse {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setAllowedSourceAddressPrefix(@Nullable String allowedSourceAddressPrefix) {
+        public Builder allowedSourceAddressPrefix(@Nullable String allowedSourceAddressPrefix) {
             this.allowedSourceAddressPrefix = allowedSourceAddressPrefix;
             return this;
         }
 
-        public Builder setAllowedSourceAddressPrefixes(@Nullable List<String> allowedSourceAddressPrefixes) {
+        public Builder allowedSourceAddressPrefixes(@Nullable List<String> allowedSourceAddressPrefixes) {
             this.allowedSourceAddressPrefixes = allowedSourceAddressPrefixes;
             return this;
         }
 
-        public Builder setMaxRequestAccessDuration(String maxRequestAccessDuration) {
+        public Builder maxRequestAccessDuration(String maxRequestAccessDuration) {
             this.maxRequestAccessDuration = Objects.requireNonNull(maxRequestAccessDuration);
             return this;
         }
 
-        public Builder setNumber(Integer number) {
+        public Builder number(Integer number) {
             this.number = Objects.requireNonNull(number);
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }

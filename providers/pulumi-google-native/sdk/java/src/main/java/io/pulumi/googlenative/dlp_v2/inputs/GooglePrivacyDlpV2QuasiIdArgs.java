@@ -109,42 +109,42 @@ public final class GooglePrivacyDlpV2QuasiIdArgs extends io.pulumi.resources.Res
     	      this.infoType = defaults.infoType;
         }
 
-        public Builder setCustomTag(@Nullable Input<String> customTag) {
+        public Builder customTag(@Nullable Input<String> customTag) {
             this.customTag = customTag;
             return this;
         }
 
-        public Builder setCustomTag(@Nullable String customTag) {
+        public Builder customTag(@Nullable String customTag) {
             this.customTag = Input.ofNullable(customTag);
             return this;
         }
 
-        public Builder setField(Input<GooglePrivacyDlpV2FieldIdArgs> field) {
+        public Builder field(Input<GooglePrivacyDlpV2FieldIdArgs> field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
 
-        public Builder setField(GooglePrivacyDlpV2FieldIdArgs field) {
+        public Builder field(GooglePrivacyDlpV2FieldIdArgs field) {
             this.field = Input.of(Objects.requireNonNull(field));
             return this;
         }
 
-        public Builder setInferred(@Nullable Input<GoogleProtobufEmptyArgs> inferred) {
+        public Builder inferred(@Nullable Input<GoogleProtobufEmptyArgs> inferred) {
             this.inferred = inferred;
             return this;
         }
 
-        public Builder setInferred(@Nullable GoogleProtobufEmptyArgs inferred) {
+        public Builder inferred(@Nullable GoogleProtobufEmptyArgs inferred) {
             this.inferred = Input.ofNullable(inferred);
             return this;
         }
 
-        public Builder setInfoType(@Nullable Input<GooglePrivacyDlpV2InfoTypeArgs> infoType) {
+        public Builder infoType(@Nullable Input<GooglePrivacyDlpV2InfoTypeArgs> infoType) {
             this.infoType = infoType;
             return this;
         }
 
-        public Builder setInfoType(@Nullable GooglePrivacyDlpV2InfoTypeArgs infoType) {
+        public Builder infoType(@Nullable GooglePrivacyDlpV2InfoTypeArgs infoType) {
             this.infoType = Input.ofNullable(infoType);
             return this;
         }

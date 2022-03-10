@@ -84,17 +84,17 @@ public final class PredictionResponseSystemGeneratedEntities {
     	      this.generatedLinks = defaults.generatedLinks;
         }
 
-        public Builder setGeneratedInteractionTypes(@Nullable List<String> generatedInteractionTypes) {
+        public Builder generatedInteractionTypes(@Nullable List<String> generatedInteractionTypes) {
             this.generatedInteractionTypes = generatedInteractionTypes;
             return this;
         }
 
-        public Builder setGeneratedKpis(@Nullable Map<String,String> generatedKpis) {
+        public Builder generatedKpis(@Nullable Map<String,String> generatedKpis) {
             this.generatedKpis = generatedKpis;
             return this;
         }
 
-        public Builder setGeneratedLinks(@Nullable List<String> generatedLinks) {
+        public Builder generatedLinks(@Nullable List<String> generatedLinks) {
             this.generatedLinks = generatedLinks;
             return this;
         }

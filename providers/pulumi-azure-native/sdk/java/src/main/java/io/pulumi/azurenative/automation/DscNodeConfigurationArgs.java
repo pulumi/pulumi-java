@@ -170,82 +170,82 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAutomationAccountName(Input<String> automationAccountName) {
+        public Builder automationAccountName(Input<String> automationAccountName) {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
 
-        public Builder setAutomationAccountName(String automationAccountName) {
+        public Builder automationAccountName(String automationAccountName) {
             this.automationAccountName = Input.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
 
-        public Builder setConfiguration(Input<DscConfigurationAssociationPropertyArgs> configuration) {
+        public Builder configuration(Input<DscConfigurationAssociationPropertyArgs> configuration) {
             this.configuration = Objects.requireNonNull(configuration);
             return this;
         }
 
-        public Builder setConfiguration(DscConfigurationAssociationPropertyArgs configuration) {
+        public Builder configuration(DscConfigurationAssociationPropertyArgs configuration) {
             this.configuration = Input.of(Objects.requireNonNull(configuration));
             return this;
         }
 
-        public Builder setIncrementNodeConfigurationBuild(@Nullable Input<Boolean> incrementNodeConfigurationBuild) {
+        public Builder incrementNodeConfigurationBuild(@Nullable Input<Boolean> incrementNodeConfigurationBuild) {
             this.incrementNodeConfigurationBuild = incrementNodeConfigurationBuild;
             return this;
         }
 
-        public Builder setIncrementNodeConfigurationBuild(@Nullable Boolean incrementNodeConfigurationBuild) {
+        public Builder incrementNodeConfigurationBuild(@Nullable Boolean incrementNodeConfigurationBuild) {
             this.incrementNodeConfigurationBuild = Input.ofNullable(incrementNodeConfigurationBuild);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNodeConfigurationName(@Nullable Input<String> nodeConfigurationName) {
+        public Builder nodeConfigurationName(@Nullable Input<String> nodeConfigurationName) {
             this.nodeConfigurationName = nodeConfigurationName;
             return this;
         }
 
-        public Builder setNodeConfigurationName(@Nullable String nodeConfigurationName) {
+        public Builder nodeConfigurationName(@Nullable String nodeConfigurationName) {
             this.nodeConfigurationName = Input.ofNullable(nodeConfigurationName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSource(Input<ContentSourceArgs> source) {
+        public Builder source(Input<ContentSourceArgs> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setSource(ContentSourceArgs source) {
+        public Builder source(ContentSourceArgs source) {
             this.source = Input.of(Objects.requireNonNull(source));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

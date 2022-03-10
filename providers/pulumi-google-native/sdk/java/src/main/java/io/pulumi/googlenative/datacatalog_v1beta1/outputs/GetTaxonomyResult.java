@@ -132,32 +132,32 @@ public final class GetTaxonomyResult {
     	      this.taxonomyTimestamps = defaults.taxonomyTimestamps;
         }
 
-        public Builder setActivatedPolicyTypes(List<String> activatedPolicyTypes) {
+        public Builder activatedPolicyTypes(List<String> activatedPolicyTypes) {
             this.activatedPolicyTypes = Objects.requireNonNull(activatedPolicyTypes);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPolicyTagCount(Integer policyTagCount) {
+        public Builder policyTagCount(Integer policyTagCount) {
             this.policyTagCount = Objects.requireNonNull(policyTagCount);
             return this;
         }
 
-        public Builder setTaxonomyTimestamps(GoogleCloudDatacatalogV1beta1SystemTimestampsResponse taxonomyTimestamps) {
+        public Builder taxonomyTimestamps(GoogleCloudDatacatalogV1beta1SystemTimestampsResponse taxonomyTimestamps) {
             this.taxonomyTimestamps = Objects.requireNonNull(taxonomyTimestamps);
             return this;
         }

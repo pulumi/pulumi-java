@@ -66,12 +66,12 @@ public final class ManagedInstancePecPropertyResponse {
     	      this.properties = defaults.properties;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setProperties(ManagedInstancePrivateEndpointConnectionPropertiesResponse properties) {
+        public Builder properties(ManagedInstancePrivateEndpointConnectionPropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }

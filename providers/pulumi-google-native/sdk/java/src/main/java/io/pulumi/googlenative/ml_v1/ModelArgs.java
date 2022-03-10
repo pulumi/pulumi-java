@@ -165,82 +165,82 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.regions = defaults.regions;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOnlinePredictionConsoleLogging(@Nullable Input<Boolean> onlinePredictionConsoleLogging) {
+        public Builder onlinePredictionConsoleLogging(@Nullable Input<Boolean> onlinePredictionConsoleLogging) {
             this.onlinePredictionConsoleLogging = onlinePredictionConsoleLogging;
             return this;
         }
 
-        public Builder setOnlinePredictionConsoleLogging(@Nullable Boolean onlinePredictionConsoleLogging) {
+        public Builder onlinePredictionConsoleLogging(@Nullable Boolean onlinePredictionConsoleLogging) {
             this.onlinePredictionConsoleLogging = Input.ofNullable(onlinePredictionConsoleLogging);
             return this;
         }
 
-        public Builder setOnlinePredictionLogging(@Nullable Input<Boolean> onlinePredictionLogging) {
+        public Builder onlinePredictionLogging(@Nullable Input<Boolean> onlinePredictionLogging) {
             this.onlinePredictionLogging = onlinePredictionLogging;
             return this;
         }
 
-        public Builder setOnlinePredictionLogging(@Nullable Boolean onlinePredictionLogging) {
+        public Builder onlinePredictionLogging(@Nullable Boolean onlinePredictionLogging) {
             this.onlinePredictionLogging = Input.ofNullable(onlinePredictionLogging);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegions(@Nullable Input<List<String>> regions) {
+        public Builder regions(@Nullable Input<List<String>> regions) {
             this.regions = regions;
             return this;
         }
 
-        public Builder setRegions(@Nullable List<String> regions) {
+        public Builder regions(@Nullable List<String> regions) {
             this.regions = Input.ofNullable(regions);
             return this;
         }

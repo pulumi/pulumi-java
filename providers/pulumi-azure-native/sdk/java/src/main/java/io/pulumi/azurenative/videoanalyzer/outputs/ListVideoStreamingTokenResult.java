@@ -65,12 +65,12 @@ public final class ListVideoStreamingTokenResult {
     	      this.token = defaults.token;
         }
 
-        public Builder setExpirationDate(String expirationDate) {
+        public Builder expirationDate(String expirationDate) {
             this.expirationDate = Objects.requireNonNull(expirationDate);
             return this;
         }
 
-        public Builder setToken(String token) {
+        public Builder token(String token) {
             this.token = Objects.requireNonNull(token);
             return this;
         }

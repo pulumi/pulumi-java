@@ -48,7 +48,7 @@ public final class ClusterEncryptionConfigProvider {
     	      this.keyArn = defaults.keyArn;
         }
 
-        public Builder setKeyArn(String keyArn) {
+        public Builder keyArn(String keyArn) {
             this.keyArn = Objects.requireNonNull(keyArn);
             return this;
         }

@@ -67,12 +67,12 @@ public final class GetAccessPointRootDirectory {
     	      this.path = defaults.path;
         }
 
-        public Builder setCreationInfos(List<GetAccessPointRootDirectoryCreationInfo> creationInfos) {
+        public Builder creationInfos(List<GetAccessPointRootDirectoryCreationInfo> creationInfos) {
             this.creationInfos = Objects.requireNonNull(creationInfos);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }

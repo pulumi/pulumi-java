@@ -42,7 +42,7 @@ public final class LogAnalyticsConfigurationResponse {
     	      this.customerId = defaults.customerId;
         }
 
-        public Builder setCustomerId(@Nullable String customerId) {
+        public Builder customerId(@Nullable String customerId) {
             this.customerId = customerId;
             return this;
         }

@@ -255,52 +255,52 @@ public final class RegionAutoscalerAutoscalingPolicy {
     	      this.scalingSchedules = defaults.scalingSchedules;
         }
 
-        public Builder setCooldownPeriod(@Nullable Integer cooldownPeriod) {
+        public Builder cooldownPeriod(@Nullable Integer cooldownPeriod) {
             this.cooldownPeriod = cooldownPeriod;
             return this;
         }
 
-        public Builder setCpuUtilization(@Nullable RegionAutoscalerAutoscalingPolicyCpuUtilization cpuUtilization) {
+        public Builder cpuUtilization(@Nullable RegionAutoscalerAutoscalingPolicyCpuUtilization cpuUtilization) {
             this.cpuUtilization = cpuUtilization;
             return this;
         }
 
-        public Builder setLoadBalancingUtilization(@Nullable RegionAutoscalerAutoscalingPolicyLoadBalancingUtilization loadBalancingUtilization) {
+        public Builder loadBalancingUtilization(@Nullable RegionAutoscalerAutoscalingPolicyLoadBalancingUtilization loadBalancingUtilization) {
             this.loadBalancingUtilization = loadBalancingUtilization;
             return this;
         }
 
-        public Builder setMaxReplicas(Integer maxReplicas) {
+        public Builder maxReplicas(Integer maxReplicas) {
             this.maxReplicas = Objects.requireNonNull(maxReplicas);
             return this;
         }
 
-        public Builder setMetrics(@Nullable List<RegionAutoscalerAutoscalingPolicyMetric> metrics) {
+        public Builder metrics(@Nullable List<RegionAutoscalerAutoscalingPolicyMetric> metrics) {
             this.metrics = metrics;
             return this;
         }
 
-        public Builder setMinReplicas(Integer minReplicas) {
+        public Builder minReplicas(Integer minReplicas) {
             this.minReplicas = Objects.requireNonNull(minReplicas);
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setScaleDownControl(@Nullable RegionAutoscalerAutoscalingPolicyScaleDownControl scaleDownControl) {
+        public Builder scaleDownControl(@Nullable RegionAutoscalerAutoscalingPolicyScaleDownControl scaleDownControl) {
             this.scaleDownControl = scaleDownControl;
             return this;
         }
 
-        public Builder setScaleInControl(@Nullable RegionAutoscalerAutoscalingPolicyScaleInControl scaleInControl) {
+        public Builder scaleInControl(@Nullable RegionAutoscalerAutoscalingPolicyScaleInControl scaleInControl) {
             this.scaleInControl = scaleInControl;
             return this;
         }
 
-        public Builder setScalingSchedules(@Nullable List<RegionAutoscalerAutoscalingPolicyScalingSchedule> scalingSchedules) {
+        public Builder scalingSchedules(@Nullable List<RegionAutoscalerAutoscalingPolicyScalingSchedule> scalingSchedules) {
             this.scalingSchedules = scalingSchedules;
             return this;
         }

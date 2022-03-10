@@ -141,62 +141,62 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.summary = defaults.summary;
         }
 
-        public Builder setDocumentationRootUrl(@Nullable Input<String> documentationRootUrl) {
+        public Builder documentationRootUrl(@Nullable Input<String> documentationRootUrl) {
             this.documentationRootUrl = documentationRootUrl;
             return this;
         }
 
-        public Builder setDocumentationRootUrl(@Nullable String documentationRootUrl) {
+        public Builder documentationRootUrl(@Nullable String documentationRootUrl) {
             this.documentationRootUrl = Input.ofNullable(documentationRootUrl);
             return this;
         }
 
-        public Builder setOverview(@Nullable Input<String> overview) {
+        public Builder overview(@Nullable Input<String> overview) {
             this.overview = overview;
             return this;
         }
 
-        public Builder setOverview(@Nullable String overview) {
+        public Builder overview(@Nullable String overview) {
             this.overview = Input.ofNullable(overview);
             return this;
         }
 
-        public Builder setPages(@Nullable Input<List<PageArgs>> pages) {
+        public Builder pages(@Nullable Input<List<PageArgs>> pages) {
             this.pages = pages;
             return this;
         }
 
-        public Builder setPages(@Nullable List<PageArgs> pages) {
+        public Builder pages(@Nullable List<PageArgs> pages) {
             this.pages = Input.ofNullable(pages);
             return this;
         }
 
-        public Builder setRules(@Nullable Input<List<DocumentationRuleArgs>> rules) {
+        public Builder rules(@Nullable Input<List<DocumentationRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setRules(@Nullable List<DocumentationRuleArgs> rules) {
+        public Builder rules(@Nullable List<DocumentationRuleArgs> rules) {
             this.rules = Input.ofNullable(rules);
             return this;
         }
 
-        public Builder setServiceRootUrl(@Nullable Input<String> serviceRootUrl) {
+        public Builder serviceRootUrl(@Nullable Input<String> serviceRootUrl) {
             this.serviceRootUrl = serviceRootUrl;
             return this;
         }
 
-        public Builder setServiceRootUrl(@Nullable String serviceRootUrl) {
+        public Builder serviceRootUrl(@Nullable String serviceRootUrl) {
             this.serviceRootUrl = Input.ofNullable(serviceRootUrl);
             return this;
         }
 
-        public Builder setSummary(@Nullable Input<String> summary) {
+        public Builder summary(@Nullable Input<String> summary) {
             this.summary = summary;
             return this;
         }
 
-        public Builder setSummary(@Nullable String summary) {
+        public Builder summary(@Nullable String summary) {
             this.summary = Input.ofNullable(summary);
             return this;
         }

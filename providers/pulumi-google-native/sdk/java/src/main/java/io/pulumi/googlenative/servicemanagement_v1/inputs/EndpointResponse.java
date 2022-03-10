@@ -89,17 +89,17 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
     	      this.target = defaults.target;
         }
 
-        public Builder setAllowCors(Boolean allowCors) {
+        public Builder allowCors(Boolean allowCors) {
             this.allowCors = Objects.requireNonNull(allowCors);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTarget(String target) {
+        public Builder target(String target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }

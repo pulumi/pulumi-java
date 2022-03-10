@@ -56,12 +56,12 @@ public final class X12MessageIdentifierArgs extends io.pulumi.resources.Resource
     	      this.messageId = defaults.messageId;
         }
 
-        public Builder setMessageId(Input<String> messageId) {
+        public Builder messageId(Input<String> messageId) {
             this.messageId = Objects.requireNonNull(messageId);
             return this;
         }
 
-        public Builder setMessageId(String messageId) {
+        public Builder messageId(String messageId) {
             this.messageId = Input.of(Objects.requireNonNull(messageId));
             return this;
         }

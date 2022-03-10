@@ -83,17 +83,17 @@ public final class CloudRepoSourceContextResponse {
     	      this.revisionId = defaults.revisionId;
         }
 
-        public Builder setAliasContext(AliasContextResponse aliasContext) {
+        public Builder aliasContext(AliasContextResponse aliasContext) {
             this.aliasContext = Objects.requireNonNull(aliasContext);
             return this;
         }
 
-        public Builder setRepoId(RepoIdResponse repoId) {
+        public Builder repoId(RepoIdResponse repoId) {
             this.repoId = Objects.requireNonNull(repoId);
             return this;
         }
 
-        public Builder setRevisionId(String revisionId) {
+        public Builder revisionId(String revisionId) {
             this.revisionId = Objects.requireNonNull(revisionId);
             return this;
         }

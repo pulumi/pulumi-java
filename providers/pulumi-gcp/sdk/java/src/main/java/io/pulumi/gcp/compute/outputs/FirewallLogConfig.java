@@ -50,7 +50,7 @@ public final class FirewallLogConfig {
     	      this.metadata = defaults.metadata;
         }
 
-        public Builder setMetadata(String metadata) {
+        public Builder metadata(String metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }

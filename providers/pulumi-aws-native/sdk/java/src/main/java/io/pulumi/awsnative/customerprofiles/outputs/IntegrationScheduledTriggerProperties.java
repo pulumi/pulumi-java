@@ -94,37 +94,37 @@ public final class IntegrationScheduledTriggerProperties {
     	      this.timezone = defaults.timezone;
         }
 
-        public Builder setDataPullMode(@Nullable IntegrationScheduledTriggerPropertiesDataPullMode dataPullMode) {
+        public Builder dataPullMode(@Nullable IntegrationScheduledTriggerPropertiesDataPullMode dataPullMode) {
             this.dataPullMode = dataPullMode;
             return this;
         }
 
-        public Builder setFirstExecutionFrom(@Nullable Double firstExecutionFrom) {
+        public Builder firstExecutionFrom(@Nullable Double firstExecutionFrom) {
             this.firstExecutionFrom = firstExecutionFrom;
             return this;
         }
 
-        public Builder setScheduleEndTime(@Nullable Double scheduleEndTime) {
+        public Builder scheduleEndTime(@Nullable Double scheduleEndTime) {
             this.scheduleEndTime = scheduleEndTime;
             return this;
         }
 
-        public Builder setScheduleExpression(String scheduleExpression) {
+        public Builder scheduleExpression(String scheduleExpression) {
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
         }
 
-        public Builder setScheduleOffset(@Nullable Integer scheduleOffset) {
+        public Builder scheduleOffset(@Nullable Integer scheduleOffset) {
             this.scheduleOffset = scheduleOffset;
             return this;
         }
 
-        public Builder setScheduleStartTime(@Nullable Double scheduleStartTime) {
+        public Builder scheduleStartTime(@Nullable Double scheduleStartTime) {
             this.scheduleStartTime = scheduleStartTime;
             return this;
         }
 
-        public Builder setTimezone(@Nullable String timezone) {
+        public Builder timezone(@Nullable String timezone) {
             this.timezone = timezone;
             return this;
         }

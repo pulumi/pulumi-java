@@ -83,17 +83,17 @@ public final class ApplicationJMXPrometheusExporter {
     	      this.prometheusPort = defaults.prometheusPort;
         }
 
-        public Builder setHostPort(@Nullable String hostPort) {
+        public Builder hostPort(@Nullable String hostPort) {
             this.hostPort = hostPort;
             return this;
         }
 
-        public Builder setJMXURL(@Nullable String jMXURL) {
+        public Builder jMXURL(@Nullable String jMXURL) {
             this.jMXURL = jMXURL;
             return this;
         }
 
-        public Builder setPrometheusPort(@Nullable String prometheusPort) {
+        public Builder prometheusPort(@Nullable String prometheusPort) {
             this.prometheusPort = prometheusPort;
             return this;
         }

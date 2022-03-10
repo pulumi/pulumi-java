@@ -135,62 +135,62 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setCertificateId(@Nullable Input<String> certificateId) {
+        public Builder certificateId(@Nullable Input<String> certificateId) {
             this.certificateId = certificateId;
             return this;
         }
 
-        public Builder setCertificateId(@Nullable String certificateId) {
+        public Builder certificateId(@Nullable String certificateId) {
             this.certificateId = Input.ofNullable(certificateId);
             return this;
         }
 
-        public Builder setData(@Nullable Input<String> data) {
+        public Builder data(@Nullable Input<String> data) {
             this.data = data;
             return this;
         }
 
-        public Builder setData(@Nullable String data) {
+        public Builder data(@Nullable String data) {
             this.data = Input.ofNullable(data);
             return this;
         }
 
-        public Builder setKeyVault(@Nullable Input<KeyVaultContractCreatePropertiesArgs> keyVault) {
+        public Builder keyVault(@Nullable Input<KeyVaultContractCreatePropertiesArgs> keyVault) {
             this.keyVault = keyVault;
             return this;
         }
 
-        public Builder setKeyVault(@Nullable KeyVaultContractCreatePropertiesArgs keyVault) {
+        public Builder keyVault(@Nullable KeyVaultContractCreatePropertiesArgs keyVault) {
             this.keyVault = Input.ofNullable(keyVault);
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<String> password) {
+        public Builder password(@Nullable Input<String> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }

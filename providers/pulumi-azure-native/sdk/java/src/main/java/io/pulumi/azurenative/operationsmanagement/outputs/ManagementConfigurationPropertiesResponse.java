@@ -118,27 +118,27 @@ public final class ManagementConfigurationPropertiesResponse {
     	      this.template = defaults.template;
         }
 
-        public Builder setApplicationId(@Nullable String applicationId) {
+        public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
-        public Builder setParameters(List<ArmTemplateParameterResponse> parameters) {
+        public Builder parameters(List<ArmTemplateParameterResponse> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setParentResourceType(String parentResourceType) {
+        public Builder parentResourceType(String parentResourceType) {
             this.parentResourceType = Objects.requireNonNull(parentResourceType);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setTemplate(Object template) {
+        public Builder template(Object template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }

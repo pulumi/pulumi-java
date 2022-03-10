@@ -69,12 +69,12 @@ public final class RecoveryPlanManualActionDetailsResponse {
     	      this.instanceType = defaults.instanceType;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }

@@ -57,7 +57,7 @@ public final class ClfsTargetResponse extends io.pulumi.resources.InvokeArgs {
     	      this.target = defaults.target;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = target;
             return this;
         }

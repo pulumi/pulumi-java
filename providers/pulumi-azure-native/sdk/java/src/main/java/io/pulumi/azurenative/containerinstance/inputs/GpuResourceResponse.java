@@ -73,12 +73,12 @@ public final class GpuResourceResponse extends io.pulumi.resources.InvokeArgs {
     	      this.sku = defaults.sku;
         }
 
-        public Builder setCount(Integer count) {
+        public Builder count(Integer count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setSku(String sku) {
+        public Builder sku(String sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }

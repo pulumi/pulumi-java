@@ -128,52 +128,52 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.transforms = defaults.transforms;
         }
 
-        public Builder setMatchValues(Input<List<String>> matchValues) {
+        public Builder matchValues(Input<List<String>> matchValues) {
             this.matchValues = Objects.requireNonNull(matchValues);
             return this;
         }
 
-        public Builder setMatchValues(List<String> matchValues) {
+        public Builder matchValues(List<String> matchValues) {
             this.matchValues = Input.of(Objects.requireNonNull(matchValues));
             return this;
         }
 
-        public Builder setMatchVariables(Input<List<MatchVariableArgs>> matchVariables) {
+        public Builder matchVariables(Input<List<MatchVariableArgs>> matchVariables) {
             this.matchVariables = Objects.requireNonNull(matchVariables);
             return this;
         }
 
-        public Builder setMatchVariables(List<MatchVariableArgs> matchVariables) {
+        public Builder matchVariables(List<MatchVariableArgs> matchVariables) {
             this.matchVariables = Input.of(Objects.requireNonNull(matchVariables));
             return this;
         }
 
-        public Builder setNegationConditon(@Nullable Input<Boolean> negationConditon) {
+        public Builder negationConditon(@Nullable Input<Boolean> negationConditon) {
             this.negationConditon = negationConditon;
             return this;
         }
 
-        public Builder setNegationConditon(@Nullable Boolean negationConditon) {
+        public Builder negationConditon(@Nullable Boolean negationConditon) {
             this.negationConditon = Input.ofNullable(negationConditon);
             return this;
         }
 
-        public Builder setOperator(Input<Either<String,WebApplicationFirewallOperator>> operator) {
+        public Builder operator(Input<Either<String,WebApplicationFirewallOperator>> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
 
-        public Builder setOperator(Either<String,WebApplicationFirewallOperator> operator) {
+        public Builder operator(Either<String,WebApplicationFirewallOperator> operator) {
             this.operator = Input.of(Objects.requireNonNull(operator));
             return this;
         }
 
-        public Builder setTransforms(@Nullable Input<List<Either<String,WebApplicationFirewallTransform>>> transforms) {
+        public Builder transforms(@Nullable Input<List<Either<String,WebApplicationFirewallTransform>>> transforms) {
             this.transforms = transforms;
             return this;
         }
 
-        public Builder setTransforms(@Nullable List<Either<String,WebApplicationFirewallTransform>> transforms) {
+        public Builder transforms(@Nullable List<Either<String,WebApplicationFirewallTransform>> transforms) {
             this.transforms = Input.ofNullable(transforms);
             return this;
         }

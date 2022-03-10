@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2UnwrappedCryptoKeyResponse {
     	      this.key = defaults.key;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }

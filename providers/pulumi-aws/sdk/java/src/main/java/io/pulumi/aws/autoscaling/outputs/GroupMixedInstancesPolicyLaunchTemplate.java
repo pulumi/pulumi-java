@@ -68,12 +68,12 @@ public final class GroupMixedInstancesPolicyLaunchTemplate {
     	      this.overrides = defaults.overrides;
         }
 
-        public Builder setLaunchTemplateSpecification(GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification launchTemplateSpecification) {
+        public Builder launchTemplateSpecification(GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification launchTemplateSpecification) {
             this.launchTemplateSpecification = Objects.requireNonNull(launchTemplateSpecification);
             return this;
         }
 
-        public Builder setOverrides(@Nullable List<GroupMixedInstancesPolicyLaunchTemplateOverride> overrides) {
+        public Builder overrides(@Nullable List<GroupMixedInstancesPolicyLaunchTemplateOverride> overrides) {
             this.overrides = overrides;
             return this;
         }

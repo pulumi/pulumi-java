@@ -41,7 +41,7 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
     	      this.items = defaults.items;
         }
 
-        public Builder setItems(List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItem> items) {
+        public Builder items(List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItem> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }

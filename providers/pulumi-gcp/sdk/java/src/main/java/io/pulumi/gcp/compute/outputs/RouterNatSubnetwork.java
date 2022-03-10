@@ -95,17 +95,17 @@ public final class RouterNatSubnetwork {
     	      this.sourceIpRangesToNats = defaults.sourceIpRangesToNats;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSecondaryIpRangeNames(@Nullable List<String> secondaryIpRangeNames) {
+        public Builder secondaryIpRangeNames(@Nullable List<String> secondaryIpRangeNames) {
             this.secondaryIpRangeNames = secondaryIpRangeNames;
             return this;
         }
 
-        public Builder setSourceIpRangesToNats(List<String> sourceIpRangesToNats) {
+        public Builder sourceIpRangesToNats(List<String> sourceIpRangesToNats) {
             this.sourceIpRangesToNats = Objects.requireNonNull(sourceIpRangesToNats);
             return this;
         }

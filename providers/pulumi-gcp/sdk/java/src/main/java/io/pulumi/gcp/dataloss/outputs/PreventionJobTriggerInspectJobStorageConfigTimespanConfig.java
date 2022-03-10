@@ -107,22 +107,22 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfig {
     	      this.timestampField = defaults.timestampField;
         }
 
-        public Builder setEnableAutoPopulationOfTimespanConfig(@Nullable Boolean enableAutoPopulationOfTimespanConfig) {
+        public Builder enableAutoPopulationOfTimespanConfig(@Nullable Boolean enableAutoPopulationOfTimespanConfig) {
             this.enableAutoPopulationOfTimespanConfig = enableAutoPopulationOfTimespanConfig;
             return this;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setTimestampField(PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField timestampField) {
+        public Builder timestampField(PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField timestampField) {
             this.timestampField = Objects.requireNonNull(timestampField);
             return this;
         }

@@ -298,77 +298,77 @@ public final class GetPartnerTopicEventSubscriptionResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDeadLetterDestination(@Nullable StorageBlobDeadLetterDestinationResponse deadLetterDestination) {
+        public Builder deadLetterDestination(@Nullable StorageBlobDeadLetterDestinationResponse deadLetterDestination) {
             this.deadLetterDestination = deadLetterDestination;
             return this;
         }
 
-        public Builder setDeadLetterWithResourceIdentity(@Nullable DeadLetterWithResourceIdentityResponse deadLetterWithResourceIdentity) {
+        public Builder deadLetterWithResourceIdentity(@Nullable DeadLetterWithResourceIdentityResponse deadLetterWithResourceIdentity) {
             this.deadLetterWithResourceIdentity = deadLetterWithResourceIdentity;
             return this;
         }
 
-        public Builder setDeliveryWithResourceIdentity(@Nullable DeliveryWithResourceIdentityResponse deliveryWithResourceIdentity) {
+        public Builder deliveryWithResourceIdentity(@Nullable DeliveryWithResourceIdentityResponse deliveryWithResourceIdentity) {
             this.deliveryWithResourceIdentity = deliveryWithResourceIdentity;
             return this;
         }
 
-        public Builder setDestination(@Nullable Object destination) {
+        public Builder destination(@Nullable Object destination) {
             this.destination = destination;
             return this;
         }
 
-        public Builder setEventDeliverySchema(@Nullable String eventDeliverySchema) {
+        public Builder eventDeliverySchema(@Nullable String eventDeliverySchema) {
             this.eventDeliverySchema = eventDeliverySchema;
             return this;
         }
 
-        public Builder setExpirationTimeUtc(@Nullable String expirationTimeUtc) {
+        public Builder expirationTimeUtc(@Nullable String expirationTimeUtc) {
             this.expirationTimeUtc = expirationTimeUtc;
             return this;
         }
 
-        public Builder setFilter(@Nullable EventSubscriptionFilterResponse filter) {
+        public Builder filter(@Nullable EventSubscriptionFilterResponse filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLabels(@Nullable List<String> labels) {
+        public Builder labels(@Nullable List<String> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRetryPolicy(@Nullable RetryPolicyResponse retryPolicy) {
+        public Builder retryPolicy(@Nullable RetryPolicyResponse retryPolicy) {
             this.retryPolicy = retryPolicy;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTopic(String topic) {
+        public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

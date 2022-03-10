@@ -83,17 +83,17 @@ public final class RecipeConditionExpression {
     	      this.value = defaults.value;
         }
 
-        public Builder setCondition(String condition) {
+        public Builder condition(String condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
 
-        public Builder setTargetColumn(String targetColumn) {
+        public Builder targetColumn(String targetColumn) {
             this.targetColumn = Objects.requireNonNull(targetColumn);
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

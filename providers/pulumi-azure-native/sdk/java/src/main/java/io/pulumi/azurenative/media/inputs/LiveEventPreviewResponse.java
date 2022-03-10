@@ -125,27 +125,27 @@ public final class LiveEventPreviewResponse extends io.pulumi.resources.InvokeAr
     	      this.streamingPolicyName = defaults.streamingPolicyName;
         }
 
-        public Builder setAccessControl(@Nullable LiveEventPreviewAccessControlResponse accessControl) {
+        public Builder accessControl(@Nullable LiveEventPreviewAccessControlResponse accessControl) {
             this.accessControl = accessControl;
             return this;
         }
 
-        public Builder setAlternativeMediaId(@Nullable String alternativeMediaId) {
+        public Builder alternativeMediaId(@Nullable String alternativeMediaId) {
             this.alternativeMediaId = alternativeMediaId;
             return this;
         }
 
-        public Builder setEndpoints(@Nullable List<LiveEventEndpointResponse> endpoints) {
+        public Builder endpoints(@Nullable List<LiveEventEndpointResponse> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
-        public Builder setPreviewLocator(@Nullable String previewLocator) {
+        public Builder previewLocator(@Nullable String previewLocator) {
             this.previewLocator = previewLocator;
             return this;
         }
 
-        public Builder setStreamingPolicyName(@Nullable String streamingPolicyName) {
+        public Builder streamingPolicyName(@Nullable String streamingPolicyName) {
             this.streamingPolicyName = streamingPolicyName;
             return this;
         }

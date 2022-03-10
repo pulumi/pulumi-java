@@ -57,12 +57,12 @@ public final class StandardComponentPropertiesArgs extends io.pulumi.resources.R
     	      this.key = defaults.key;
         }
 
-        public Builder setKey(@Nullable Input<String> key) {
+        public Builder key(@Nullable Input<String> key) {
             this.key = key;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = Input.ofNullable(key);
             return this;
         }

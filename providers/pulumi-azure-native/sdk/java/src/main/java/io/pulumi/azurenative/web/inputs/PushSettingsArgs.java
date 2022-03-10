@@ -126,52 +126,52 @@ public final class PushSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tagsRequiringAuth = defaults.tagsRequiringAuth;
         }
 
-        public Builder setDynamicTagsJson(@Nullable Input<String> dynamicTagsJson) {
+        public Builder dynamicTagsJson(@Nullable Input<String> dynamicTagsJson) {
             this.dynamicTagsJson = dynamicTagsJson;
             return this;
         }
 
-        public Builder setDynamicTagsJson(@Nullable String dynamicTagsJson) {
+        public Builder dynamicTagsJson(@Nullable String dynamicTagsJson) {
             this.dynamicTagsJson = Input.ofNullable(dynamicTagsJson);
             return this;
         }
 
-        public Builder setIsPushEnabled(Input<Boolean> isPushEnabled) {
+        public Builder isPushEnabled(Input<Boolean> isPushEnabled) {
             this.isPushEnabled = Objects.requireNonNull(isPushEnabled);
             return this;
         }
 
-        public Builder setIsPushEnabled(Boolean isPushEnabled) {
+        public Builder isPushEnabled(Boolean isPushEnabled) {
             this.isPushEnabled = Input.of(Objects.requireNonNull(isPushEnabled));
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setTagWhitelistJson(@Nullable Input<String> tagWhitelistJson) {
+        public Builder tagWhitelistJson(@Nullable Input<String> tagWhitelistJson) {
             this.tagWhitelistJson = tagWhitelistJson;
             return this;
         }
 
-        public Builder setTagWhitelistJson(@Nullable String tagWhitelistJson) {
+        public Builder tagWhitelistJson(@Nullable String tagWhitelistJson) {
             this.tagWhitelistJson = Input.ofNullable(tagWhitelistJson);
             return this;
         }
 
-        public Builder setTagsRequiringAuth(@Nullable Input<String> tagsRequiringAuth) {
+        public Builder tagsRequiringAuth(@Nullable Input<String> tagsRequiringAuth) {
             this.tagsRequiringAuth = tagsRequiringAuth;
             return this;
         }
 
-        public Builder setTagsRequiringAuth(@Nullable String tagsRequiringAuth) {
+        public Builder tagsRequiringAuth(@Nullable String tagsRequiringAuth) {
             this.tagsRequiringAuth = Input.ofNullable(tagsRequiringAuth);
             return this;
         }

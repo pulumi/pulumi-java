@@ -69,12 +69,12 @@ public final class IsNullOrUndefinedAdvancedFilterResponse {
     	      this.operatorType = defaults.operatorType;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }
 
-        public Builder setOperatorType(String operatorType) {
+        public Builder operatorType(String operatorType) {
             this.operatorType = Objects.requireNonNull(operatorType);
             return this;
         }

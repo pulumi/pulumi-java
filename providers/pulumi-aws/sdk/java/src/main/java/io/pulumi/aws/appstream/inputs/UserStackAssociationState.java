@@ -103,42 +103,42 @@ public final class UserStackAssociationState extends io.pulumi.resources.Resourc
     	      this.userName = defaults.userName;
         }
 
-        public Builder setAuthenticationType(@Nullable Input<String> authenticationType) {
+        public Builder authenticationType(@Nullable Input<String> authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
 
-        public Builder setAuthenticationType(@Nullable String authenticationType) {
+        public Builder authenticationType(@Nullable String authenticationType) {
             this.authenticationType = Input.ofNullable(authenticationType);
             return this;
         }
 
-        public Builder setSendEmailNotification(@Nullable Input<Boolean> sendEmailNotification) {
+        public Builder sendEmailNotification(@Nullable Input<Boolean> sendEmailNotification) {
             this.sendEmailNotification = sendEmailNotification;
             return this;
         }
 
-        public Builder setSendEmailNotification(@Nullable Boolean sendEmailNotification) {
+        public Builder sendEmailNotification(@Nullable Boolean sendEmailNotification) {
             this.sendEmailNotification = Input.ofNullable(sendEmailNotification);
             return this;
         }
 
-        public Builder setStackName(@Nullable Input<String> stackName) {
+        public Builder stackName(@Nullable Input<String> stackName) {
             this.stackName = stackName;
             return this;
         }
 
-        public Builder setStackName(@Nullable String stackName) {
+        public Builder stackName(@Nullable String stackName) {
             this.stackName = Input.ofNullable(stackName);
             return this;
         }
 
-        public Builder setUserName(@Nullable Input<String> userName) {
+        public Builder userName(@Nullable Input<String> userName) {
             this.userName = userName;
             return this;
         }
 
-        public Builder setUserName(@Nullable String userName) {
+        public Builder userName(@Nullable String userName) {
             this.userName = Input.ofNullable(userName);
             return this;
         }

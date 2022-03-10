@@ -67,12 +67,12 @@ public final class ExecuteDataFlowActivityTypePropertiesResponseCompute {
     	      this.coreCount = defaults.coreCount;
         }
 
-        public Builder setComputeType(@Nullable Object computeType) {
+        public Builder computeType(@Nullable Object computeType) {
             this.computeType = computeType;
             return this;
         }
 
-        public Builder setCoreCount(@Nullable Object coreCount) {
+        public Builder coreCount(@Nullable Object coreCount) {
             this.coreCount = coreCount;
             return this;
         }

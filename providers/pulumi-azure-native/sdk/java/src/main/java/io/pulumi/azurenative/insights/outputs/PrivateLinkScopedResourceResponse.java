@@ -67,12 +67,12 @@ public final class PrivateLinkScopedResourceResponse {
     	      this.scopeId = defaults.scopeId;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setScopeId(@Nullable String scopeId) {
+        public Builder scopeId(@Nullable String scopeId) {
             this.scopeId = scopeId;
             return this;
         }

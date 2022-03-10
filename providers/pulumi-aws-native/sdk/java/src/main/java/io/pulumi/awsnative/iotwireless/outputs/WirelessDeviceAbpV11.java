@@ -50,12 +50,12 @@ public final class WirelessDeviceAbpV11 {
     	      this.sessionKeys = defaults.sessionKeys;
         }
 
-        public Builder setDevAddr(String devAddr) {
+        public Builder devAddr(String devAddr) {
             this.devAddr = Objects.requireNonNull(devAddr);
             return this;
         }
 
-        public Builder setSessionKeys(WirelessDeviceSessionKeysAbpV11 sessionKeys) {
+        public Builder sessionKeys(WirelessDeviceSessionKeysAbpV11 sessionKeys) {
             this.sessionKeys = Objects.requireNonNull(sessionKeys);
             return this;
         }

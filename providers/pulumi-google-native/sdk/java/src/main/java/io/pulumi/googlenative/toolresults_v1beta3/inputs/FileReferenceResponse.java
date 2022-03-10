@@ -55,7 +55,7 @@ public final class FileReferenceResponse extends io.pulumi.resources.InvokeArgs 
     	      this.fileUri = defaults.fileUri;
         }
 
-        public Builder setFileUri(String fileUri) {
+        public Builder fileUri(String fileUri) {
             this.fileUri = Objects.requireNonNull(fileUri);
             return this;
         }

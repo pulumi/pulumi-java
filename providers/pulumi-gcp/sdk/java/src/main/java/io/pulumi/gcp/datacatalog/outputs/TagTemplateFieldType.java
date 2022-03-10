@@ -76,12 +76,12 @@ public final class TagTemplateFieldType {
     	      this.primitiveType = defaults.primitiveType;
         }
 
-        public Builder setEnumType(@Nullable TagTemplateFieldTypeEnumType enumType) {
+        public Builder enumType(@Nullable TagTemplateFieldTypeEnumType enumType) {
             this.enumType = enumType;
             return this;
         }
 
-        public Builder setPrimitiveType(@Nullable String primitiveType) {
+        public Builder primitiveType(@Nullable String primitiveType) {
             this.primitiveType = primitiveType;
             return this;
         }

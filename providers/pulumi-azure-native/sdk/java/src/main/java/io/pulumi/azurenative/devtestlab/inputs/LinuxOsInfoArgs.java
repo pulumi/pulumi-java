@@ -59,12 +59,12 @@ public final class LinuxOsInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.linuxOsState = defaults.linuxOsState;
         }
 
-        public Builder setLinuxOsState(@Nullable Input<Either<String,LinuxOsState>> linuxOsState) {
+        public Builder linuxOsState(@Nullable Input<Either<String,LinuxOsState>> linuxOsState) {
             this.linuxOsState = linuxOsState;
             return this;
         }
 
-        public Builder setLinuxOsState(@Nullable Either<String,LinuxOsState> linuxOsState) {
+        public Builder linuxOsState(@Nullable Either<String,LinuxOsState> linuxOsState) {
             this.linuxOsState = Input.ofNullable(linuxOsState);
             return this;
         }

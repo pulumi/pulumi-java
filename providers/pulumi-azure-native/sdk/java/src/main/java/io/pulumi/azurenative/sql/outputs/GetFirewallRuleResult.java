@@ -115,27 +115,27 @@ public final class GetFirewallRuleResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setEndIpAddress(@Nullable String endIpAddress) {
+        public Builder endIpAddress(@Nullable String endIpAddress) {
             this.endIpAddress = endIpAddress;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setStartIpAddress(@Nullable String startIpAddress) {
+        public Builder startIpAddress(@Nullable String startIpAddress) {
             this.startIpAddress = startIpAddress;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

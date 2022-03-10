@@ -67,12 +67,12 @@ public final class AzureBackupParamsResponse {
     	      this.objectType = defaults.objectType;
         }
 
-        public Builder setBackupType(String backupType) {
+        public Builder backupType(String backupType) {
             this.backupType = Objects.requireNonNull(backupType);
             return this;
         }
 
-        public Builder setObjectType(String objectType) {
+        public Builder objectType(String objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }

@@ -83,17 +83,17 @@ public final class UserAccountCredentialsResponse {
     	      this.adminUserSshPublicKey = defaults.adminUserSshPublicKey;
         }
 
-        public Builder setAdminUserName(String adminUserName) {
+        public Builder adminUserName(String adminUserName) {
             this.adminUserName = Objects.requireNonNull(adminUserName);
             return this;
         }
 
-        public Builder setAdminUserPassword(@Nullable String adminUserPassword) {
+        public Builder adminUserPassword(@Nullable String adminUserPassword) {
             this.adminUserPassword = adminUserPassword;
             return this;
         }
 
-        public Builder setAdminUserSshPublicKey(@Nullable String adminUserSshPublicKey) {
+        public Builder adminUserSshPublicKey(@Nullable String adminUserSshPublicKey) {
             this.adminUserSshPublicKey = adminUserSshPublicKey;
             return this;
         }

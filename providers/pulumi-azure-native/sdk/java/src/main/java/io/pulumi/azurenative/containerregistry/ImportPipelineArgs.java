@@ -172,82 +172,82 @@ public final class ImportPipelineArgs extends io.pulumi.resources.ResourceArgs {
     	      this.trigger = defaults.trigger;
         }
 
-        public Builder setIdentity(@Nullable Input<IdentityPropertiesArgs> identity) {
+        public Builder identity(@Nullable Input<IdentityPropertiesArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable IdentityPropertiesArgs identity) {
+        public Builder identity(@Nullable IdentityPropertiesArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setImportPipelineName(@Nullable Input<String> importPipelineName) {
+        public Builder importPipelineName(@Nullable Input<String> importPipelineName) {
             this.importPipelineName = importPipelineName;
             return this;
         }
 
-        public Builder setImportPipelineName(@Nullable String importPipelineName) {
+        public Builder importPipelineName(@Nullable String importPipelineName) {
             this.importPipelineName = Input.ofNullable(importPipelineName);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setOptions(@Nullable Input<List<Either<String,PipelineOptions>>> options) {
+        public Builder options(@Nullable Input<List<Either<String,PipelineOptions>>> options) {
             this.options = options;
             return this;
         }
 
-        public Builder setOptions(@Nullable List<Either<String,PipelineOptions>> options) {
+        public Builder options(@Nullable List<Either<String,PipelineOptions>> options) {
             this.options = Input.ofNullable(options);
             return this;
         }
 
-        public Builder setRegistryName(Input<String> registryName) {
+        public Builder registryName(Input<String> registryName) {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
 
-        public Builder setRegistryName(String registryName) {
+        public Builder registryName(String registryName) {
             this.registryName = Input.of(Objects.requireNonNull(registryName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSource(Input<ImportPipelineSourcePropertiesArgs> source) {
+        public Builder source(Input<ImportPipelineSourcePropertiesArgs> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setSource(ImportPipelineSourcePropertiesArgs source) {
+        public Builder source(ImportPipelineSourcePropertiesArgs source) {
             this.source = Input.of(Objects.requireNonNull(source));
             return this;
         }
 
-        public Builder setTrigger(@Nullable Input<PipelineTriggerPropertiesArgs> trigger) {
+        public Builder trigger(@Nullable Input<PipelineTriggerPropertiesArgs> trigger) {
             this.trigger = trigger;
             return this;
         }
 
-        public Builder setTrigger(@Nullable PipelineTriggerPropertiesArgs trigger) {
+        public Builder trigger(@Nullable PipelineTriggerPropertiesArgs trigger) {
             this.trigger = Input.ofNullable(trigger);
             return this;
         }

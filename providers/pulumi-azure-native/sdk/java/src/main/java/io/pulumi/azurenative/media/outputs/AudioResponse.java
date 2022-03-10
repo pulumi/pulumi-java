@@ -118,27 +118,27 @@ public final class AudioResponse {
     	      this.samplingRate = defaults.samplingRate;
         }
 
-        public Builder setBitrate(@Nullable Integer bitrate) {
+        public Builder bitrate(@Nullable Integer bitrate) {
             this.bitrate = bitrate;
             return this;
         }
 
-        public Builder setChannels(@Nullable Integer channels) {
+        public Builder channels(@Nullable Integer channels) {
             this.channels = channels;
             return this;
         }
 
-        public Builder setLabel(@Nullable String label) {
+        public Builder label(@Nullable String label) {
             this.label = label;
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setSamplingRate(@Nullable Integer samplingRate) {
+        public Builder samplingRate(@Nullable Integer samplingRate) {
             this.samplingRate = samplingRate;
             return this;
         }

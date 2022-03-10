@@ -124,72 +124,72 @@ public final class ArcConfigurationArgs extends io.pulumi.resources.ResourceArgs
     	      this.kubeConfig = defaults.kubeConfig;
         }
 
-        public Builder setArtifactStorageAccessMode(@Nullable Input<String> artifactStorageAccessMode) {
+        public Builder artifactStorageAccessMode(@Nullable Input<String> artifactStorageAccessMode) {
             this.artifactStorageAccessMode = artifactStorageAccessMode;
             return this;
         }
 
-        public Builder setArtifactStorageAccessMode(@Nullable String artifactStorageAccessMode) {
+        public Builder artifactStorageAccessMode(@Nullable String artifactStorageAccessMode) {
             this.artifactStorageAccessMode = Input.ofNullable(artifactStorageAccessMode);
             return this;
         }
 
-        public Builder setArtifactStorageClassName(@Nullable Input<String> artifactStorageClassName) {
+        public Builder artifactStorageClassName(@Nullable Input<String> artifactStorageClassName) {
             this.artifactStorageClassName = artifactStorageClassName;
             return this;
         }
 
-        public Builder setArtifactStorageClassName(@Nullable String artifactStorageClassName) {
+        public Builder artifactStorageClassName(@Nullable String artifactStorageClassName) {
             this.artifactStorageClassName = Input.ofNullable(artifactStorageClassName);
             return this;
         }
 
-        public Builder setArtifactStorageMountPath(@Nullable Input<String> artifactStorageMountPath) {
+        public Builder artifactStorageMountPath(@Nullable Input<String> artifactStorageMountPath) {
             this.artifactStorageMountPath = artifactStorageMountPath;
             return this;
         }
 
-        public Builder setArtifactStorageMountPath(@Nullable String artifactStorageMountPath) {
+        public Builder artifactStorageMountPath(@Nullable String artifactStorageMountPath) {
             this.artifactStorageMountPath = Input.ofNullable(artifactStorageMountPath);
             return this;
         }
 
-        public Builder setArtifactStorageNodeName(@Nullable Input<String> artifactStorageNodeName) {
+        public Builder artifactStorageNodeName(@Nullable Input<String> artifactStorageNodeName) {
             this.artifactStorageNodeName = artifactStorageNodeName;
             return this;
         }
 
-        public Builder setArtifactStorageNodeName(@Nullable String artifactStorageNodeName) {
+        public Builder artifactStorageNodeName(@Nullable String artifactStorageNodeName) {
             this.artifactStorageNodeName = Input.ofNullable(artifactStorageNodeName);
             return this;
         }
 
-        public Builder setArtifactsStorageType(@Nullable Input<StorageType> artifactsStorageType) {
+        public Builder artifactsStorageType(@Nullable Input<StorageType> artifactsStorageType) {
             this.artifactsStorageType = artifactsStorageType;
             return this;
         }
 
-        public Builder setArtifactsStorageType(@Nullable StorageType artifactsStorageType) {
+        public Builder artifactsStorageType(@Nullable StorageType artifactsStorageType) {
             this.artifactsStorageType = Input.ofNullable(artifactsStorageType);
             return this;
         }
 
-        public Builder setFrontEndServiceConfiguration(@Nullable Input<FrontEndConfigurationArgs> frontEndServiceConfiguration) {
+        public Builder frontEndServiceConfiguration(@Nullable Input<FrontEndConfigurationArgs> frontEndServiceConfiguration) {
             this.frontEndServiceConfiguration = frontEndServiceConfiguration;
             return this;
         }
 
-        public Builder setFrontEndServiceConfiguration(@Nullable FrontEndConfigurationArgs frontEndServiceConfiguration) {
+        public Builder frontEndServiceConfiguration(@Nullable FrontEndConfigurationArgs frontEndServiceConfiguration) {
             this.frontEndServiceConfiguration = Input.ofNullable(frontEndServiceConfiguration);
             return this;
         }
 
-        public Builder setKubeConfig(@Nullable Input<String> kubeConfig) {
+        public Builder kubeConfig(@Nullable Input<String> kubeConfig) {
             this.kubeConfig = kubeConfig;
             return this;
         }
 
-        public Builder setKubeConfig(@Nullable String kubeConfig) {
+        public Builder kubeConfig(@Nullable String kubeConfig) {
             this.kubeConfig = Input.ofNullable(kubeConfig);
             return this;
         }

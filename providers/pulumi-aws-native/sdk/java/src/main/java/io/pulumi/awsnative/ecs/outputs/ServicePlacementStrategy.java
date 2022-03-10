@@ -52,12 +52,12 @@ public final class ServicePlacementStrategy {
     	      this.type = defaults.type;
         }
 
-        public Builder setField(@Nullable String field) {
+        public Builder field(@Nullable String field) {
             this.field = field;
             return this;
         }
 
-        public Builder setType(ServicePlacementStrategyType type) {
+        public Builder type(ServicePlacementStrategyType type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

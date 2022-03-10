@@ -348,97 +348,97 @@ public final class GetLiveEventResult {
     	      this.useStaticHostname = defaults.useStaticHostname;
         }
 
-        public Builder setCreated(String created) {
+        public Builder created(String created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
 
-        public Builder setCrossSiteAccessPolicies(@Nullable CrossSiteAccessPoliciesResponse crossSiteAccessPolicies) {
+        public Builder crossSiteAccessPolicies(@Nullable CrossSiteAccessPoliciesResponse crossSiteAccessPolicies) {
             this.crossSiteAccessPolicies = crossSiteAccessPolicies;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEncoding(@Nullable LiveEventEncodingResponse encoding) {
+        public Builder encoding(@Nullable LiveEventEncodingResponse encoding) {
             this.encoding = encoding;
             return this;
         }
 
-        public Builder setHostnamePrefix(@Nullable String hostnamePrefix) {
+        public Builder hostnamePrefix(@Nullable String hostnamePrefix) {
             this.hostnamePrefix = hostnamePrefix;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInput(LiveEventInputResponse input) {
+        public Builder input(LiveEventInputResponse input) {
             this.input = Objects.requireNonNull(input);
             return this;
         }
 
-        public Builder setLastModified(String lastModified) {
+        public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPreview(@Nullable LiveEventPreviewResponse preview) {
+        public Builder preview(@Nullable LiveEventPreviewResponse preview) {
             this.preview = preview;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setResourceState(String resourceState) {
+        public Builder resourceState(String resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
 
-        public Builder setStreamOptions(@Nullable List<String> streamOptions) {
+        public Builder streamOptions(@Nullable List<String> streamOptions) {
             this.streamOptions = streamOptions;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTranscriptions(@Nullable List<LiveEventTranscriptionResponse> transcriptions) {
+        public Builder transcriptions(@Nullable List<LiveEventTranscriptionResponse> transcriptions) {
             this.transcriptions = transcriptions;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUseStaticHostname(@Nullable Boolean useStaticHostname) {
+        public Builder useStaticHostname(@Nullable Boolean useStaticHostname) {
             this.useStaticHostname = useStaticHostname;
             return this;
         }

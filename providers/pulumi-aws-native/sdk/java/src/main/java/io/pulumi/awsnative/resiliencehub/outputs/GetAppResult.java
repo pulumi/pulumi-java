@@ -126,32 +126,32 @@ public final class GetAppResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAppArn(@Nullable String appArn) {
+        public Builder appArn(@Nullable String appArn) {
             this.appArn = appArn;
             return this;
         }
 
-        public Builder setAppTemplateBody(@Nullable String appTemplateBody) {
+        public Builder appTemplateBody(@Nullable String appTemplateBody) {
             this.appTemplateBody = appTemplateBody;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setResiliencyPolicyArn(@Nullable String resiliencyPolicyArn) {
+        public Builder resiliencyPolicyArn(@Nullable String resiliencyPolicyArn) {
             this.resiliencyPolicyArn = resiliencyPolicyArn;
             return this;
         }
 
-        public Builder setResourceMappings(@Nullable List<AppResourceMapping> resourceMappings) {
+        public Builder resourceMappings(@Nullable List<AppResourceMapping> resourceMappings) {
             this.resourceMappings = resourceMappings;
             return this;
         }
 
-        public Builder setTags(@Nullable AppTagMap tags) {
+        public Builder tags(@Nullable AppTagMap tags) {
             this.tags = tags;
             return this;
         }

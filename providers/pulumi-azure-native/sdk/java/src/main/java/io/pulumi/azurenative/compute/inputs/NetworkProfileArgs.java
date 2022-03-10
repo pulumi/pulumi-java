@@ -95,32 +95,32 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.networkInterfaces = defaults.networkInterfaces;
         }
 
-        public Builder setNetworkApiVersion(@Nullable Input<Either<String,NetworkApiVersion>> networkApiVersion) {
+        public Builder networkApiVersion(@Nullable Input<Either<String,NetworkApiVersion>> networkApiVersion) {
             this.networkApiVersion = networkApiVersion;
             return this;
         }
 
-        public Builder setNetworkApiVersion(@Nullable Either<String,NetworkApiVersion> networkApiVersion) {
+        public Builder networkApiVersion(@Nullable Either<String,NetworkApiVersion> networkApiVersion) {
             this.networkApiVersion = Input.ofNullable(networkApiVersion);
             return this;
         }
 
-        public Builder setNetworkInterfaceConfigurations(@Nullable Input<List<VirtualMachineNetworkInterfaceConfigurationArgs>> networkInterfaceConfigurations) {
+        public Builder networkInterfaceConfigurations(@Nullable Input<List<VirtualMachineNetworkInterfaceConfigurationArgs>> networkInterfaceConfigurations) {
             this.networkInterfaceConfigurations = networkInterfaceConfigurations;
             return this;
         }
 
-        public Builder setNetworkInterfaceConfigurations(@Nullable List<VirtualMachineNetworkInterfaceConfigurationArgs> networkInterfaceConfigurations) {
+        public Builder networkInterfaceConfigurations(@Nullable List<VirtualMachineNetworkInterfaceConfigurationArgs> networkInterfaceConfigurations) {
             this.networkInterfaceConfigurations = Input.ofNullable(networkInterfaceConfigurations);
             return this;
         }
 
-        public Builder setNetworkInterfaces(@Nullable Input<List<NetworkInterfaceReferenceArgs>> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable Input<List<NetworkInterfaceReferenceArgs>> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
 
-        public Builder setNetworkInterfaces(@Nullable List<NetworkInterfaceReferenceArgs> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable List<NetworkInterfaceReferenceArgs> networkInterfaces) {
             this.networkInterfaces = Input.ofNullable(networkInterfaces);
             return this;
         }

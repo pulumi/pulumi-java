@@ -66,12 +66,12 @@ public final class ResourceMetricSource {
     	      this.target = defaults.target;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTarget(MetricTarget target) {
+        public Builder target(MetricTarget target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }

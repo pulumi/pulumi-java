@@ -83,17 +83,17 @@ public final class SchemaVersionSchema {
     	      this.schemaName = defaults.schemaName;
         }
 
-        public Builder setRegistryName(@Nullable String registryName) {
+        public Builder registryName(@Nullable String registryName) {
             this.registryName = registryName;
             return this;
         }
 
-        public Builder setSchemaArn(@Nullable String schemaArn) {
+        public Builder schemaArn(@Nullable String schemaArn) {
             this.schemaArn = schemaArn;
             return this;
         }
 
-        public Builder setSchemaName(@Nullable String schemaName) {
+        public Builder schemaName(@Nullable String schemaName) {
             this.schemaName = schemaName;
             return this;
         }

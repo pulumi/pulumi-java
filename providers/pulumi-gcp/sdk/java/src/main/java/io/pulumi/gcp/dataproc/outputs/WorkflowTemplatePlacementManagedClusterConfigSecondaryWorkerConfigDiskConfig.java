@@ -84,17 +84,17 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
     	      this.numLocalSsds = defaults.numLocalSsds;
         }
 
-        public Builder setBootDiskSizeGb(@Nullable Integer bootDiskSizeGb) {
+        public Builder bootDiskSizeGb(@Nullable Integer bootDiskSizeGb) {
             this.bootDiskSizeGb = bootDiskSizeGb;
             return this;
         }
 
-        public Builder setBootDiskType(@Nullable String bootDiskType) {
+        public Builder bootDiskType(@Nullable String bootDiskType) {
             this.bootDiskType = bootDiskType;
             return this;
         }
 
-        public Builder setNumLocalSsds(@Nullable Integer numLocalSsds) {
+        public Builder numLocalSsds(@Nullable Integer numLocalSsds) {
             this.numLocalSsds = numLocalSsds;
             return this;
         }

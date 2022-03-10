@@ -124,52 +124,52 @@ public final class TaskDefinitionHealthCheckArgs extends io.pulumi.resources.Res
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setCommand(@Nullable Input<List<String>> command) {
+        public Builder command(@Nullable Input<List<String>> command) {
             this.command = command;
             return this;
         }
 
-        public Builder setCommand(@Nullable List<String> command) {
+        public Builder command(@Nullable List<String> command) {
             this.command = Input.ofNullable(command);
             return this;
         }
 
-        public Builder setInterval(@Nullable Input<Integer> interval) {
+        public Builder interval(@Nullable Input<Integer> interval) {
             this.interval = interval;
             return this;
         }
 
-        public Builder setInterval(@Nullable Integer interval) {
+        public Builder interval(@Nullable Integer interval) {
             this.interval = Input.ofNullable(interval);
             return this;
         }
 
-        public Builder setRetries(@Nullable Input<Integer> retries) {
+        public Builder retries(@Nullable Input<Integer> retries) {
             this.retries = retries;
             return this;
         }
 
-        public Builder setRetries(@Nullable Integer retries) {
+        public Builder retries(@Nullable Integer retries) {
             this.retries = Input.ofNullable(retries);
             return this;
         }
 
-        public Builder setStartPeriod(@Nullable Input<Integer> startPeriod) {
+        public Builder startPeriod(@Nullable Input<Integer> startPeriod) {
             this.startPeriod = startPeriod;
             return this;
         }
 
-        public Builder setStartPeriod(@Nullable Integer startPeriod) {
+        public Builder startPeriod(@Nullable Integer startPeriod) {
             this.startPeriod = Input.ofNullable(startPeriod);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<Integer> timeout) {
+        public Builder timeout(@Nullable Input<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable Integer timeout) {
+        public Builder timeout(@Nullable Integer timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }

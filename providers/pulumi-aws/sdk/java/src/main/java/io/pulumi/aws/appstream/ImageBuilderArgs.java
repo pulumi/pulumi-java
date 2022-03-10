@@ -252,132 +252,132 @@ public final class ImageBuilderArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcConfig = defaults.vpcConfig;
         }
 
-        public Builder setAccessEndpoints(@Nullable Input<List<ImageBuilderAccessEndpointArgs>> accessEndpoints) {
+        public Builder accessEndpoints(@Nullable Input<List<ImageBuilderAccessEndpointArgs>> accessEndpoints) {
             this.accessEndpoints = accessEndpoints;
             return this;
         }
 
-        public Builder setAccessEndpoints(@Nullable List<ImageBuilderAccessEndpointArgs> accessEndpoints) {
+        public Builder accessEndpoints(@Nullable List<ImageBuilderAccessEndpointArgs> accessEndpoints) {
             this.accessEndpoints = Input.ofNullable(accessEndpoints);
             return this;
         }
 
-        public Builder setAppstreamAgentVersion(@Nullable Input<String> appstreamAgentVersion) {
+        public Builder appstreamAgentVersion(@Nullable Input<String> appstreamAgentVersion) {
             this.appstreamAgentVersion = appstreamAgentVersion;
             return this;
         }
 
-        public Builder setAppstreamAgentVersion(@Nullable String appstreamAgentVersion) {
+        public Builder appstreamAgentVersion(@Nullable String appstreamAgentVersion) {
             this.appstreamAgentVersion = Input.ofNullable(appstreamAgentVersion);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setDomainJoinInfo(@Nullable Input<ImageBuilderDomainJoinInfoArgs> domainJoinInfo) {
+        public Builder domainJoinInfo(@Nullable Input<ImageBuilderDomainJoinInfoArgs> domainJoinInfo) {
             this.domainJoinInfo = domainJoinInfo;
             return this;
         }
 
-        public Builder setDomainJoinInfo(@Nullable ImageBuilderDomainJoinInfoArgs domainJoinInfo) {
+        public Builder domainJoinInfo(@Nullable ImageBuilderDomainJoinInfoArgs domainJoinInfo) {
             this.domainJoinInfo = Input.ofNullable(domainJoinInfo);
             return this;
         }
 
-        public Builder setEnableDefaultInternetAccess(@Nullable Input<Boolean> enableDefaultInternetAccess) {
+        public Builder enableDefaultInternetAccess(@Nullable Input<Boolean> enableDefaultInternetAccess) {
             this.enableDefaultInternetAccess = enableDefaultInternetAccess;
             return this;
         }
 
-        public Builder setEnableDefaultInternetAccess(@Nullable Boolean enableDefaultInternetAccess) {
+        public Builder enableDefaultInternetAccess(@Nullable Boolean enableDefaultInternetAccess) {
             this.enableDefaultInternetAccess = Input.ofNullable(enableDefaultInternetAccess);
             return this;
         }
 
-        public Builder setIamRoleArn(@Nullable Input<String> iamRoleArn) {
+        public Builder iamRoleArn(@Nullable Input<String> iamRoleArn) {
             this.iamRoleArn = iamRoleArn;
             return this;
         }
 
-        public Builder setIamRoleArn(@Nullable String iamRoleArn) {
+        public Builder iamRoleArn(@Nullable String iamRoleArn) {
             this.iamRoleArn = Input.ofNullable(iamRoleArn);
             return this;
         }
 
-        public Builder setImageArn(@Nullable Input<String> imageArn) {
+        public Builder imageArn(@Nullable Input<String> imageArn) {
             this.imageArn = imageArn;
             return this;
         }
 
-        public Builder setImageArn(@Nullable String imageArn) {
+        public Builder imageArn(@Nullable String imageArn) {
             this.imageArn = Input.ofNullable(imageArn);
             return this;
         }
 
-        public Builder setImageName(@Nullable Input<String> imageName) {
+        public Builder imageName(@Nullable Input<String> imageName) {
             this.imageName = imageName;
             return this;
         }
 
-        public Builder setImageName(@Nullable String imageName) {
+        public Builder imageName(@Nullable String imageName) {
             this.imageName = Input.ofNullable(imageName);
             return this;
         }
 
-        public Builder setInstanceType(Input<String> instanceType) {
+        public Builder instanceType(Input<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Input.of(Objects.requireNonNull(instanceType));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVpcConfig(@Nullable Input<ImageBuilderVpcConfigArgs> vpcConfig) {
+        public Builder vpcConfig(@Nullable Input<ImageBuilderVpcConfigArgs> vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
         }
 
-        public Builder setVpcConfig(@Nullable ImageBuilderVpcConfigArgs vpcConfig) {
+        public Builder vpcConfig(@Nullable ImageBuilderVpcConfigArgs vpcConfig) {
             this.vpcConfig = Input.ofNullable(vpcConfig);
             return this;
         }

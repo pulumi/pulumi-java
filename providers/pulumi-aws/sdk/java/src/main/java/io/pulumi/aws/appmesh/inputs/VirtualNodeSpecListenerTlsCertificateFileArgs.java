@@ -69,22 +69,22 @@ public final class VirtualNodeSpecListenerTlsCertificateFileArgs extends io.pulu
     	      this.privateKey = defaults.privateKey;
         }
 
-        public Builder setCertificateChain(Input<String> certificateChain) {
+        public Builder certificateChain(Input<String> certificateChain) {
             this.certificateChain = Objects.requireNonNull(certificateChain);
             return this;
         }
 
-        public Builder setCertificateChain(String certificateChain) {
+        public Builder certificateChain(String certificateChain) {
             this.certificateChain = Input.of(Objects.requireNonNull(certificateChain));
             return this;
         }
 
-        public Builder setPrivateKey(Input<String> privateKey) {
+        public Builder privateKey(Input<String> privateKey) {
             this.privateKey = Objects.requireNonNull(privateKey);
             return this;
         }
 
-        public Builder setPrivateKey(String privateKey) {
+        public Builder privateKey(String privateKey) {
             this.privateKey = Input.of(Objects.requireNonNull(privateKey));
             return this;
         }

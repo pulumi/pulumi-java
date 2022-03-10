@@ -179,47 +179,47 @@ public final class AuthorityConfigX509ConfigKeyUsageBaseKeyUsage {
     	      this.keyEncipherment = defaults.keyEncipherment;
         }
 
-        public Builder setCertSign(@Nullable Boolean certSign) {
+        public Builder certSign(@Nullable Boolean certSign) {
             this.certSign = certSign;
             return this;
         }
 
-        public Builder setContentCommitment(@Nullable Boolean contentCommitment) {
+        public Builder contentCommitment(@Nullable Boolean contentCommitment) {
             this.contentCommitment = contentCommitment;
             return this;
         }
 
-        public Builder setCrlSign(@Nullable Boolean crlSign) {
+        public Builder crlSign(@Nullable Boolean crlSign) {
             this.crlSign = crlSign;
             return this;
         }
 
-        public Builder setDataEncipherment(@Nullable Boolean dataEncipherment) {
+        public Builder dataEncipherment(@Nullable Boolean dataEncipherment) {
             this.dataEncipherment = dataEncipherment;
             return this;
         }
 
-        public Builder setDecipherOnly(@Nullable Boolean decipherOnly) {
+        public Builder decipherOnly(@Nullable Boolean decipherOnly) {
             this.decipherOnly = decipherOnly;
             return this;
         }
 
-        public Builder setDigitalSignature(@Nullable Boolean digitalSignature) {
+        public Builder digitalSignature(@Nullable Boolean digitalSignature) {
             this.digitalSignature = digitalSignature;
             return this;
         }
 
-        public Builder setEncipherOnly(@Nullable Boolean encipherOnly) {
+        public Builder encipherOnly(@Nullable Boolean encipherOnly) {
             this.encipherOnly = encipherOnly;
             return this;
         }
 
-        public Builder setKeyAgreement(@Nullable Boolean keyAgreement) {
+        public Builder keyAgreement(@Nullable Boolean keyAgreement) {
             this.keyAgreement = keyAgreement;
             return this;
         }
 
-        public Builder setKeyEncipherment(@Nullable Boolean keyEncipherment) {
+        public Builder keyEncipherment(@Nullable Boolean keyEncipherment) {
             this.keyEncipherment = keyEncipherment;
             return this;
         }

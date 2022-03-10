@@ -87,32 +87,32 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumeId = defaults.volumeId;
         }
 
-        public Builder setFileSystemId(@Nullable Input<String> fileSystemId) {
+        public Builder fileSystemId(@Nullable Input<String> fileSystemId) {
             this.fileSystemId = fileSystemId;
             return this;
         }
 
-        public Builder setFileSystemId(@Nullable String fileSystemId) {
+        public Builder fileSystemId(@Nullable String fileSystemId) {
             this.fileSystemId = Input.ofNullable(fileSystemId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVolumeId(@Nullable Input<String> volumeId) {
+        public Builder volumeId(@Nullable Input<String> volumeId) {
             this.volumeId = volumeId;
             return this;
         }
 
-        public Builder setVolumeId(@Nullable String volumeId) {
+        public Builder volumeId(@Nullable String volumeId) {
             this.volumeId = Input.ofNullable(volumeId);
             return this;
         }

@@ -75,22 +75,22 @@ public final class GooglePrivacyDlpV2LikelihoodAdjustmentArgs extends io.pulumi.
     	      this.relativeLikelihood = defaults.relativeLikelihood;
         }
 
-        public Builder setFixedLikelihood(@Nullable Input<GooglePrivacyDlpV2LikelihoodAdjustmentFixedLikelihood> fixedLikelihood) {
+        public Builder fixedLikelihood(@Nullable Input<GooglePrivacyDlpV2LikelihoodAdjustmentFixedLikelihood> fixedLikelihood) {
             this.fixedLikelihood = fixedLikelihood;
             return this;
         }
 
-        public Builder setFixedLikelihood(@Nullable GooglePrivacyDlpV2LikelihoodAdjustmentFixedLikelihood fixedLikelihood) {
+        public Builder fixedLikelihood(@Nullable GooglePrivacyDlpV2LikelihoodAdjustmentFixedLikelihood fixedLikelihood) {
             this.fixedLikelihood = Input.ofNullable(fixedLikelihood);
             return this;
         }
 
-        public Builder setRelativeLikelihood(@Nullable Input<Integer> relativeLikelihood) {
+        public Builder relativeLikelihood(@Nullable Input<Integer> relativeLikelihood) {
             this.relativeLikelihood = relativeLikelihood;
             return this;
         }
 
-        public Builder setRelativeLikelihood(@Nullable Integer relativeLikelihood) {
+        public Builder relativeLikelihood(@Nullable Integer relativeLikelihood) {
             this.relativeLikelihood = Input.ofNullable(relativeLikelihood);
             return this;
         }

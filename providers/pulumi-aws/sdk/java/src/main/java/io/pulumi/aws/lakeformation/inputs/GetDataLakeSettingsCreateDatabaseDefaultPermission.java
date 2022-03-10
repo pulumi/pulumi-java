@@ -69,12 +69,12 @@ public final class GetDataLakeSettingsCreateDatabaseDefaultPermission extends io
     	      this.principal = defaults.principal;
         }
 
-        public Builder setPermissions(List<String> permissions) {
+        public Builder permissions(List<String> permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
 
-        public Builder setPrincipal(String principal) {
+        public Builder principal(String principal) {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }

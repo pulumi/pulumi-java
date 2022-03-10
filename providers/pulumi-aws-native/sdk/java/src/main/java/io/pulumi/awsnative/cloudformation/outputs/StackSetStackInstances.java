@@ -77,17 +77,17 @@ public final class StackSetStackInstances {
     	      this.regions = defaults.regions;
         }
 
-        public Builder setDeploymentTargets(StackSetDeploymentTargets deploymentTargets) {
+        public Builder deploymentTargets(StackSetDeploymentTargets deploymentTargets) {
             this.deploymentTargets = Objects.requireNonNull(deploymentTargets);
             return this;
         }
 
-        public Builder setParameterOverrides(@Nullable List<StackSetParameter> parameterOverrides) {
+        public Builder parameterOverrides(@Nullable List<StackSetParameter> parameterOverrides) {
             this.parameterOverrides = parameterOverrides;
             return this;
         }
 
-        public Builder setRegions(List<String> regions) {
+        public Builder regions(List<String> regions) {
             this.regions = Objects.requireNonNull(regions);
             return this;
         }

@@ -99,22 +99,22 @@ public final class AzureIaaSVMHealthDetailsResponse {
     	      this.title = defaults.title;
         }
 
-        public Builder setCode(Integer code) {
+        public Builder code(Integer code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setRecommendations(List<String> recommendations) {
+        public Builder recommendations(List<String> recommendations) {
             this.recommendations = Objects.requireNonNull(recommendations);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

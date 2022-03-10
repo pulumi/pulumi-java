@@ -74,22 +74,22 @@ public final class ClusterClusterConfigInitializationActionArgs extends io.pulum
     	      this.timeoutSec = defaults.timeoutSec;
         }
 
-        public Builder setScript(Input<String> script) {
+        public Builder script(Input<String> script) {
             this.script = Objects.requireNonNull(script);
             return this;
         }
 
-        public Builder setScript(String script) {
+        public Builder script(String script) {
             this.script = Input.of(Objects.requireNonNull(script));
             return this;
         }
 
-        public Builder setTimeoutSec(@Nullable Input<Integer> timeoutSec) {
+        public Builder timeoutSec(@Nullable Input<Integer> timeoutSec) {
             this.timeoutSec = timeoutSec;
             return this;
         }
 
-        public Builder setTimeoutSec(@Nullable Integer timeoutSec) {
+        public Builder timeoutSec(@Nullable Integer timeoutSec) {
             this.timeoutSec = Input.ofNullable(timeoutSec);
             return this;
         }

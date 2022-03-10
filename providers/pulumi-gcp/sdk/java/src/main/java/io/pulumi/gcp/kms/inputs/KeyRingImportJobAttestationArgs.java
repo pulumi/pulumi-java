@@ -62,22 +62,22 @@ public final class KeyRingImportJobAttestationArgs extends io.pulumi.resources.R
     	      this.format = defaults.format;
         }
 
-        public Builder setContent(@Nullable Input<String> content) {
+        public Builder content(@Nullable Input<String> content) {
             this.content = content;
             return this;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = Input.ofNullable(content);
             return this;
         }
 
-        public Builder setFormat(@Nullable Input<String> format) {
+        public Builder format(@Nullable Input<String> format) {
             this.format = format;
             return this;
         }
 
-        public Builder setFormat(@Nullable String format) {
+        public Builder format(@Nullable String format) {
             this.format = Input.ofNullable(format);
             return this;
         }

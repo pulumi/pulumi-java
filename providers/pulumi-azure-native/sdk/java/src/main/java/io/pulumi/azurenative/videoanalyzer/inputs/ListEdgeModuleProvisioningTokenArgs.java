@@ -100,22 +100,22 @@ public final class ListEdgeModuleProvisioningTokenArgs extends io.pulumi.resourc
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setEdgeModuleName(String edgeModuleName) {
+        public Builder edgeModuleName(String edgeModuleName) {
             this.edgeModuleName = Objects.requireNonNull(edgeModuleName);
             return this;
         }
 
-        public Builder setExpirationDate(String expirationDate) {
+        public Builder expirationDate(String expirationDate) {
             this.expirationDate = Objects.requireNonNull(expirationDate);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

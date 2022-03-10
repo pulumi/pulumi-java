@@ -40,7 +40,7 @@ public final class SpotFleetGroupIdentifier {
     	      this.groupId = defaults.groupId;
         }
 
-        public Builder setGroupId(String groupId) {
+        public Builder groupId(String groupId) {
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }

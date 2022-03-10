@@ -106,42 +106,42 @@ public final class RuleGroupRuleGroupRulesSourceArgs extends io.pulumi.resources
     	      this.statelessRulesAndCustomActions = defaults.statelessRulesAndCustomActions;
         }
 
-        public Builder setRulesSourceList(@Nullable Input<RuleGroupRuleGroupRulesSourceRulesSourceListArgs> rulesSourceList) {
+        public Builder rulesSourceList(@Nullable Input<RuleGroupRuleGroupRulesSourceRulesSourceListArgs> rulesSourceList) {
             this.rulesSourceList = rulesSourceList;
             return this;
         }
 
-        public Builder setRulesSourceList(@Nullable RuleGroupRuleGroupRulesSourceRulesSourceListArgs rulesSourceList) {
+        public Builder rulesSourceList(@Nullable RuleGroupRuleGroupRulesSourceRulesSourceListArgs rulesSourceList) {
             this.rulesSourceList = Input.ofNullable(rulesSourceList);
             return this;
         }
 
-        public Builder setRulesString(@Nullable Input<String> rulesString) {
+        public Builder rulesString(@Nullable Input<String> rulesString) {
             this.rulesString = rulesString;
             return this;
         }
 
-        public Builder setRulesString(@Nullable String rulesString) {
+        public Builder rulesString(@Nullable String rulesString) {
             this.rulesString = Input.ofNullable(rulesString);
             return this;
         }
 
-        public Builder setStatefulRules(@Nullable Input<List<RuleGroupRuleGroupRulesSourceStatefulRuleArgs>> statefulRules) {
+        public Builder statefulRules(@Nullable Input<List<RuleGroupRuleGroupRulesSourceStatefulRuleArgs>> statefulRules) {
             this.statefulRules = statefulRules;
             return this;
         }
 
-        public Builder setStatefulRules(@Nullable List<RuleGroupRuleGroupRulesSourceStatefulRuleArgs> statefulRules) {
+        public Builder statefulRules(@Nullable List<RuleGroupRuleGroupRulesSourceStatefulRuleArgs> statefulRules) {
             this.statefulRules = Input.ofNullable(statefulRules);
             return this;
         }
 
-        public Builder setStatelessRulesAndCustomActions(@Nullable Input<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs> statelessRulesAndCustomActions) {
+        public Builder statelessRulesAndCustomActions(@Nullable Input<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs> statelessRulesAndCustomActions) {
             this.statelessRulesAndCustomActions = statelessRulesAndCustomActions;
             return this;
         }
 
-        public Builder setStatelessRulesAndCustomActions(@Nullable RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs statelessRulesAndCustomActions) {
+        public Builder statelessRulesAndCustomActions(@Nullable RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs statelessRulesAndCustomActions) {
             this.statelessRulesAndCustomActions = Input.ofNullable(statelessRulesAndCustomActions);
             return this;
         }

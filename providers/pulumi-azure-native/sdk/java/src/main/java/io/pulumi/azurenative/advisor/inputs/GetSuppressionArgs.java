@@ -84,17 +84,17 @@ public final class GetSuppressionArgs extends io.pulumi.resources.InvokeArgs {
     	      this.resourceUri = defaults.resourceUri;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRecommendationId(String recommendationId) {
+        public Builder recommendationId(String recommendationId) {
             this.recommendationId = Objects.requireNonNull(recommendationId);
             return this;
         }
 
-        public Builder setResourceUri(String resourceUri) {
+        public Builder resourceUri(String resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }

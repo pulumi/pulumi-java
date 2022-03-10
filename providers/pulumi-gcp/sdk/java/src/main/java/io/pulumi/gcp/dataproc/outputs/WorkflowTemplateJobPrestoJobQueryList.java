@@ -49,7 +49,7 @@ public final class WorkflowTemplateJobPrestoJobQueryList {
     	      this.queries = defaults.queries;
         }
 
-        public Builder setQueries(List<String> queries) {
+        public Builder queries(List<String> queries) {
             this.queries = Objects.requireNonNull(queries);
             return this;
         }

@@ -65,12 +65,12 @@ public final class ValidationOptionsResponse {
     	      this.undeclaredProperties = defaults.undeclaredProperties;
         }
 
-        public Builder setSchemaValidation(String schemaValidation) {
+        public Builder schemaValidation(String schemaValidation) {
             this.schemaValidation = Objects.requireNonNull(schemaValidation);
             return this;
         }
 
-        public Builder setUndeclaredProperties(String undeclaredProperties) {
+        public Builder undeclaredProperties(String undeclaredProperties) {
             this.undeclaredProperties = Objects.requireNonNull(undeclaredProperties);
             return this;
         }

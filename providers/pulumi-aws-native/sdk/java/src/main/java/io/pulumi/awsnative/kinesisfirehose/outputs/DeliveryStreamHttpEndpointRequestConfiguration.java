@@ -53,12 +53,12 @@ public final class DeliveryStreamHttpEndpointRequestConfiguration {
     	      this.contentEncoding = defaults.contentEncoding;
         }
 
-        public Builder setCommonAttributes(@Nullable List<DeliveryStreamHttpEndpointCommonAttribute> commonAttributes) {
+        public Builder commonAttributes(@Nullable List<DeliveryStreamHttpEndpointCommonAttribute> commonAttributes) {
             this.commonAttributes = commonAttributes;
             return this;
         }
 
-        public Builder setContentEncoding(@Nullable DeliveryStreamHttpEndpointRequestConfigurationContentEncoding contentEncoding) {
+        public Builder contentEncoding(@Nullable DeliveryStreamHttpEndpointRequestConfigurationContentEncoding contentEncoding) {
             this.contentEncoding = contentEncoding;
             return this;
         }

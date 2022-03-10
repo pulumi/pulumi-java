@@ -67,12 +67,12 @@ public final class StepResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setBranches(List<BranchResponse> branches) {
+        public Builder branches(List<BranchResponse> branches) {
             this.branches = Objects.requireNonNull(branches);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

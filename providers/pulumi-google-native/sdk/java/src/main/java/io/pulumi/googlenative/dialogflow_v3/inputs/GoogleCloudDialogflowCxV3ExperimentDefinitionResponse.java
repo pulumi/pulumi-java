@@ -73,12 +73,12 @@ public final class GoogleCloudDialogflowCxV3ExperimentDefinitionResponse extends
     	      this.versionVariants = defaults.versionVariants;
         }
 
-        public Builder setCondition(String condition) {
+        public Builder condition(String condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
 
-        public Builder setVersionVariants(GoogleCloudDialogflowCxV3VersionVariantsResponse versionVariants) {
+        public Builder versionVariants(GoogleCloudDialogflowCxV3VersionVariantsResponse versionVariants) {
             this.versionVariants = Objects.requireNonNull(versionVariants);
             return this;
         }

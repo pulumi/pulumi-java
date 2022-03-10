@@ -109,52 +109,52 @@ public final class DBProxyTargetGroupArgs extends io.pulumi.resources.ResourceAr
     	      this.targetGroupName = defaults.targetGroupName;
         }
 
-        public Builder setConnectionPoolConfigurationInfo(@Nullable Input<DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs> connectionPoolConfigurationInfo) {
+        public Builder connectionPoolConfigurationInfo(@Nullable Input<DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs> connectionPoolConfigurationInfo) {
             this.connectionPoolConfigurationInfo = connectionPoolConfigurationInfo;
             return this;
         }
 
-        public Builder setConnectionPoolConfigurationInfo(@Nullable DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs connectionPoolConfigurationInfo) {
+        public Builder connectionPoolConfigurationInfo(@Nullable DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs connectionPoolConfigurationInfo) {
             this.connectionPoolConfigurationInfo = Input.ofNullable(connectionPoolConfigurationInfo);
             return this;
         }
 
-        public Builder setDBClusterIdentifiers(@Nullable Input<List<String>> dBClusterIdentifiers) {
+        public Builder dBClusterIdentifiers(@Nullable Input<List<String>> dBClusterIdentifiers) {
             this.dBClusterIdentifiers = dBClusterIdentifiers;
             return this;
         }
 
-        public Builder setDBClusterIdentifiers(@Nullable List<String> dBClusterIdentifiers) {
+        public Builder dBClusterIdentifiers(@Nullable List<String> dBClusterIdentifiers) {
             this.dBClusterIdentifiers = Input.ofNullable(dBClusterIdentifiers);
             return this;
         }
 
-        public Builder setDBInstanceIdentifiers(@Nullable Input<List<String>> dBInstanceIdentifiers) {
+        public Builder dBInstanceIdentifiers(@Nullable Input<List<String>> dBInstanceIdentifiers) {
             this.dBInstanceIdentifiers = dBInstanceIdentifiers;
             return this;
         }
 
-        public Builder setDBInstanceIdentifiers(@Nullable List<String> dBInstanceIdentifiers) {
+        public Builder dBInstanceIdentifiers(@Nullable List<String> dBInstanceIdentifiers) {
             this.dBInstanceIdentifiers = Input.ofNullable(dBInstanceIdentifiers);
             return this;
         }
 
-        public Builder setDBProxyName(Input<String> dBProxyName) {
+        public Builder dBProxyName(Input<String> dBProxyName) {
             this.dBProxyName = Objects.requireNonNull(dBProxyName);
             return this;
         }
 
-        public Builder setDBProxyName(String dBProxyName) {
+        public Builder dBProxyName(String dBProxyName) {
             this.dBProxyName = Input.of(Objects.requireNonNull(dBProxyName));
             return this;
         }
 
-        public Builder setTargetGroupName(Input<DBProxyTargetGroupTargetGroupName> targetGroupName) {
+        public Builder targetGroupName(Input<DBProxyTargetGroupTargetGroupName> targetGroupName) {
             this.targetGroupName = Objects.requireNonNull(targetGroupName);
             return this;
         }
 
-        public Builder setTargetGroupName(DBProxyTargetGroupTargetGroupName targetGroupName) {
+        public Builder targetGroupName(DBProxyTargetGroupTargetGroupName targetGroupName) {
             this.targetGroupName = Input.of(Objects.requireNonNull(targetGroupName));
             return this;
         }

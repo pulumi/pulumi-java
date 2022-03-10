@@ -55,7 +55,7 @@ public final class DataSourceAmazonOpenSearchParameters extends io.pulumi.resour
     	      this.domain = defaults.domain;
         }
 
-        public Builder setDomain(String domain) {
+        public Builder domain(String domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }

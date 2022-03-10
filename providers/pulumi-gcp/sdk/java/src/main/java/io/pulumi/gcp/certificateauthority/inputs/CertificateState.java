@@ -310,162 +310,162 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setCertificateAuthority(@Nullable Input<String> certificateAuthority) {
+        public Builder certificateAuthority(@Nullable Input<String> certificateAuthority) {
             this.certificateAuthority = certificateAuthority;
             return this;
         }
 
-        public Builder setCertificateAuthority(@Nullable String certificateAuthority) {
+        public Builder certificateAuthority(@Nullable String certificateAuthority) {
             this.certificateAuthority = Input.ofNullable(certificateAuthority);
             return this;
         }
 
-        public Builder setCertificateDescriptions(@Nullable Input<List<CertificateCertificateDescriptionGetArgs>> certificateDescriptions) {
+        public Builder certificateDescriptions(@Nullable Input<List<CertificateCertificateDescriptionGetArgs>> certificateDescriptions) {
             this.certificateDescriptions = certificateDescriptions;
             return this;
         }
 
-        public Builder setCertificateDescriptions(@Nullable List<CertificateCertificateDescriptionGetArgs> certificateDescriptions) {
+        public Builder certificateDescriptions(@Nullable List<CertificateCertificateDescriptionGetArgs> certificateDescriptions) {
             this.certificateDescriptions = Input.ofNullable(certificateDescriptions);
             return this;
         }
 
-        public Builder setCertificateTemplate(@Nullable Input<String> certificateTemplate) {
+        public Builder certificateTemplate(@Nullable Input<String> certificateTemplate) {
             this.certificateTemplate = certificateTemplate;
             return this;
         }
 
-        public Builder setCertificateTemplate(@Nullable String certificateTemplate) {
+        public Builder certificateTemplate(@Nullable String certificateTemplate) {
             this.certificateTemplate = Input.ofNullable(certificateTemplate);
             return this;
         }
 
-        public Builder setConfig(@Nullable Input<CertificateConfigGetArgs> config) {
+        public Builder config(@Nullable Input<CertificateConfigGetArgs> config) {
             this.config = config;
             return this;
         }
 
-        public Builder setConfig(@Nullable CertificateConfigGetArgs config) {
+        public Builder config(@Nullable CertificateConfigGetArgs config) {
             this.config = Input.ofNullable(config);
             return this;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLifetime(@Nullable Input<String> lifetime) {
+        public Builder lifetime(@Nullable Input<String> lifetime) {
             this.lifetime = lifetime;
             return this;
         }
 
-        public Builder setLifetime(@Nullable String lifetime) {
+        public Builder lifetime(@Nullable String lifetime) {
             this.lifetime = Input.ofNullable(lifetime);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPemCertificate(@Nullable Input<String> pemCertificate) {
+        public Builder pemCertificate(@Nullable Input<String> pemCertificate) {
             this.pemCertificate = pemCertificate;
             return this;
         }
 
-        public Builder setPemCertificate(@Nullable String pemCertificate) {
+        public Builder pemCertificate(@Nullable String pemCertificate) {
             this.pemCertificate = Input.ofNullable(pemCertificate);
             return this;
         }
 
-        public Builder setPemCertificates(@Nullable Input<List<String>> pemCertificates) {
+        public Builder pemCertificates(@Nullable Input<List<String>> pemCertificates) {
             this.pemCertificates = pemCertificates;
             return this;
         }
 
-        public Builder setPemCertificates(@Nullable List<String> pemCertificates) {
+        public Builder pemCertificates(@Nullable List<String> pemCertificates) {
             this.pemCertificates = Input.ofNullable(pemCertificates);
             return this;
         }
 
-        public Builder setPemCsr(@Nullable Input<String> pemCsr) {
+        public Builder pemCsr(@Nullable Input<String> pemCsr) {
             this.pemCsr = pemCsr;
             return this;
         }
 
-        public Builder setPemCsr(@Nullable String pemCsr) {
+        public Builder pemCsr(@Nullable String pemCsr) {
             this.pemCsr = Input.ofNullable(pemCsr);
             return this;
         }
 
-        public Builder setPool(@Nullable Input<String> pool) {
+        public Builder pool(@Nullable Input<String> pool) {
             this.pool = pool;
             return this;
         }
 
-        public Builder setPool(@Nullable String pool) {
+        public Builder pool(@Nullable String pool) {
             this.pool = Input.ofNullable(pool);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRevocationDetails(@Nullable Input<List<CertificateRevocationDetailGetArgs>> revocationDetails) {
+        public Builder revocationDetails(@Nullable Input<List<CertificateRevocationDetailGetArgs>> revocationDetails) {
             this.revocationDetails = revocationDetails;
             return this;
         }
 
-        public Builder setRevocationDetails(@Nullable List<CertificateRevocationDetailGetArgs> revocationDetails) {
+        public Builder revocationDetails(@Nullable List<CertificateRevocationDetailGetArgs> revocationDetails) {
             this.revocationDetails = Input.ofNullable(revocationDetails);
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Input<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable String updateTime) {
+        public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Input.ofNullable(updateTime);
             return this;
         }

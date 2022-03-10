@@ -100,22 +100,22 @@ public final class SecurityConnectorPropertiesResponseOrganizationalData {
     	      this.stacksetName = defaults.stacksetName;
         }
 
-        public Builder setExcludedAccountIds(@Nullable List<String> excludedAccountIds) {
+        public Builder excludedAccountIds(@Nullable List<String> excludedAccountIds) {
             this.excludedAccountIds = excludedAccountIds;
             return this;
         }
 
-        public Builder setOrganizationMembershipType(@Nullable String organizationMembershipType) {
+        public Builder organizationMembershipType(@Nullable String organizationMembershipType) {
             this.organizationMembershipType = organizationMembershipType;
             return this;
         }
 
-        public Builder setParentHierarchyId(@Nullable String parentHierarchyId) {
+        public Builder parentHierarchyId(@Nullable String parentHierarchyId) {
             this.parentHierarchyId = parentHierarchyId;
             return this;
         }
 
-        public Builder setStacksetName(@Nullable String stacksetName) {
+        public Builder stacksetName(@Nullable String stacksetName) {
             this.stacksetName = stacksetName;
             return this;
         }

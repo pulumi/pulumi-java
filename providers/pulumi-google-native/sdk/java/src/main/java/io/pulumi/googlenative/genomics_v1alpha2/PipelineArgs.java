@@ -170,82 +170,82 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resources = defaults.resources;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDocker(@Nullable Input<DockerExecutorArgs> docker) {
+        public Builder docker(@Nullable Input<DockerExecutorArgs> docker) {
             this.docker = docker;
             return this;
         }
 
-        public Builder setDocker(@Nullable DockerExecutorArgs docker) {
+        public Builder docker(@Nullable DockerExecutorArgs docker) {
             this.docker = Input.ofNullable(docker);
             return this;
         }
 
-        public Builder setInputParameters(@Nullable Input<List<PipelineParameterArgs>> inputParameters) {
+        public Builder inputParameters(@Nullable Input<List<PipelineParameterArgs>> inputParameters) {
             this.inputParameters = inputParameters;
             return this;
         }
 
-        public Builder setInputParameters(@Nullable List<PipelineParameterArgs> inputParameters) {
+        public Builder inputParameters(@Nullable List<PipelineParameterArgs> inputParameters) {
             this.inputParameters = Input.ofNullable(inputParameters);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOutputParameters(@Nullable Input<List<PipelineParameterArgs>> outputParameters) {
+        public Builder outputParameters(@Nullable Input<List<PipelineParameterArgs>> outputParameters) {
             this.outputParameters = outputParameters;
             return this;
         }
 
-        public Builder setOutputParameters(@Nullable List<PipelineParameterArgs> outputParameters) {
+        public Builder outputParameters(@Nullable List<PipelineParameterArgs> outputParameters) {
             this.outputParameters = Input.ofNullable(outputParameters);
             return this;
         }
 
-        public Builder setPipelineId(@Nullable Input<String> pipelineId) {
+        public Builder pipelineId(@Nullable Input<String> pipelineId) {
             this.pipelineId = pipelineId;
             return this;
         }
 
-        public Builder setPipelineId(@Nullable String pipelineId) {
+        public Builder pipelineId(@Nullable String pipelineId) {
             this.pipelineId = Input.ofNullable(pipelineId);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setResources(Input<PipelineResourcesArgs> resources) {
+        public Builder resources(Input<PipelineResourcesArgs> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
 
-        public Builder setResources(PipelineResourcesArgs resources) {
+        public Builder resources(PipelineResourcesArgs resources) {
             this.resources = Input.of(Objects.requireNonNull(resources));
             return this;
         }

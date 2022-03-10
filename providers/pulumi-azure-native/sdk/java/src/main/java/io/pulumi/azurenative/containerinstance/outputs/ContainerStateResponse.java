@@ -114,27 +114,27 @@ public final class ContainerStateResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setDetailStatus(String detailStatus) {
+        public Builder detailStatus(String detailStatus) {
             this.detailStatus = Objects.requireNonNull(detailStatus);
             return this;
         }
 
-        public Builder setExitCode(Integer exitCode) {
+        public Builder exitCode(Integer exitCode) {
             this.exitCode = Objects.requireNonNull(exitCode);
             return this;
         }
 
-        public Builder setFinishTime(String finishTime) {
+        public Builder finishTime(String finishTime) {
             this.finishTime = Objects.requireNonNull(finishTime);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

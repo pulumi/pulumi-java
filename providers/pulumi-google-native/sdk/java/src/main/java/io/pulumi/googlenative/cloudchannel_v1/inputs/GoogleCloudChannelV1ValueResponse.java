@@ -123,27 +123,27 @@ public final class GoogleCloudChannelV1ValueResponse extends io.pulumi.resources
     	      this.stringValue = defaults.stringValue;
         }
 
-        public Builder setBoolValue(Boolean boolValue) {
+        public Builder boolValue(Boolean boolValue) {
             this.boolValue = Objects.requireNonNull(boolValue);
             return this;
         }
 
-        public Builder setDoubleValue(Double doubleValue) {
+        public Builder doubleValue(Double doubleValue) {
             this.doubleValue = Objects.requireNonNull(doubleValue);
             return this;
         }
 
-        public Builder setInt64Value(String int64Value) {
+        public Builder int64Value(String int64Value) {
             this.int64Value = Objects.requireNonNull(int64Value);
             return this;
         }
 
-        public Builder setProtoValue(Map<String,String> protoValue) {
+        public Builder protoValue(Map<String,String> protoValue) {
             this.protoValue = Objects.requireNonNull(protoValue);
             return this;
         }
 
-        public Builder setStringValue(String stringValue) {
+        public Builder stringValue(String stringValue) {
             this.stringValue = Objects.requireNonNull(stringValue);
             return this;
         }

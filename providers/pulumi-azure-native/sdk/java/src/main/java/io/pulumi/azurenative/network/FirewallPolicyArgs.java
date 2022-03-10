@@ -290,152 +290,152 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.transportSecurity = defaults.transportSecurity;
         }
 
-        public Builder setBasePolicy(@Nullable Input<SubResourceArgs> basePolicy) {
+        public Builder basePolicy(@Nullable Input<SubResourceArgs> basePolicy) {
             this.basePolicy = basePolicy;
             return this;
         }
 
-        public Builder setBasePolicy(@Nullable SubResourceArgs basePolicy) {
+        public Builder basePolicy(@Nullable SubResourceArgs basePolicy) {
             this.basePolicy = Input.ofNullable(basePolicy);
             return this;
         }
 
-        public Builder setDnsSettings(@Nullable Input<DnsSettingsArgs> dnsSettings) {
+        public Builder dnsSettings(@Nullable Input<DnsSettingsArgs> dnsSettings) {
             this.dnsSettings = dnsSettings;
             return this;
         }
 
-        public Builder setDnsSettings(@Nullable DnsSettingsArgs dnsSettings) {
+        public Builder dnsSettings(@Nullable DnsSettingsArgs dnsSettings) {
             this.dnsSettings = Input.ofNullable(dnsSettings);
             return this;
         }
 
-        public Builder setFirewallPolicyName(@Nullable Input<String> firewallPolicyName) {
+        public Builder firewallPolicyName(@Nullable Input<String> firewallPolicyName) {
             this.firewallPolicyName = firewallPolicyName;
             return this;
         }
 
-        public Builder setFirewallPolicyName(@Nullable String firewallPolicyName) {
+        public Builder firewallPolicyName(@Nullable String firewallPolicyName) {
             this.firewallPolicyName = Input.ofNullable(firewallPolicyName);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<ManagedServiceIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<ManagedServiceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable ManagedServiceIdentityArgs identity) {
+        public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setInsights(@Nullable Input<FirewallPolicyInsightsArgs> insights) {
+        public Builder insights(@Nullable Input<FirewallPolicyInsightsArgs> insights) {
             this.insights = insights;
             return this;
         }
 
-        public Builder setInsights(@Nullable FirewallPolicyInsightsArgs insights) {
+        public Builder insights(@Nullable FirewallPolicyInsightsArgs insights) {
             this.insights = Input.ofNullable(insights);
             return this;
         }
 
-        public Builder setIntrusionDetection(@Nullable Input<FirewallPolicyIntrusionDetectionArgs> intrusionDetection) {
+        public Builder intrusionDetection(@Nullable Input<FirewallPolicyIntrusionDetectionArgs> intrusionDetection) {
             this.intrusionDetection = intrusionDetection;
             return this;
         }
 
-        public Builder setIntrusionDetection(@Nullable FirewallPolicyIntrusionDetectionArgs intrusionDetection) {
+        public Builder intrusionDetection(@Nullable FirewallPolicyIntrusionDetectionArgs intrusionDetection) {
             this.intrusionDetection = Input.ofNullable(intrusionDetection);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(@Nullable Input<FirewallPolicySkuArgs> sku) {
+        public Builder sku(@Nullable Input<FirewallPolicySkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable FirewallPolicySkuArgs sku) {
+        public Builder sku(@Nullable FirewallPolicySkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setSnat(@Nullable Input<FirewallPolicySNATArgs> snat) {
+        public Builder snat(@Nullable Input<FirewallPolicySNATArgs> snat) {
             this.snat = snat;
             return this;
         }
 
-        public Builder setSnat(@Nullable FirewallPolicySNATArgs snat) {
+        public Builder snat(@Nullable FirewallPolicySNATArgs snat) {
             this.snat = Input.ofNullable(snat);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setThreatIntelMode(@Nullable Input<Either<String,AzureFirewallThreatIntelMode>> threatIntelMode) {
+        public Builder threatIntelMode(@Nullable Input<Either<String,AzureFirewallThreatIntelMode>> threatIntelMode) {
             this.threatIntelMode = threatIntelMode;
             return this;
         }
 
-        public Builder setThreatIntelMode(@Nullable Either<String,AzureFirewallThreatIntelMode> threatIntelMode) {
+        public Builder threatIntelMode(@Nullable Either<String,AzureFirewallThreatIntelMode> threatIntelMode) {
             this.threatIntelMode = Input.ofNullable(threatIntelMode);
             return this;
         }
 
-        public Builder setThreatIntelWhitelist(@Nullable Input<FirewallPolicyThreatIntelWhitelistArgs> threatIntelWhitelist) {
+        public Builder threatIntelWhitelist(@Nullable Input<FirewallPolicyThreatIntelWhitelistArgs> threatIntelWhitelist) {
             this.threatIntelWhitelist = threatIntelWhitelist;
             return this;
         }
 
-        public Builder setThreatIntelWhitelist(@Nullable FirewallPolicyThreatIntelWhitelistArgs threatIntelWhitelist) {
+        public Builder threatIntelWhitelist(@Nullable FirewallPolicyThreatIntelWhitelistArgs threatIntelWhitelist) {
             this.threatIntelWhitelist = Input.ofNullable(threatIntelWhitelist);
             return this;
         }
 
-        public Builder setTransportSecurity(@Nullable Input<FirewallPolicyTransportSecurityArgs> transportSecurity) {
+        public Builder transportSecurity(@Nullable Input<FirewallPolicyTransportSecurityArgs> transportSecurity) {
             this.transportSecurity = transportSecurity;
             return this;
         }
 
-        public Builder setTransportSecurity(@Nullable FirewallPolicyTransportSecurityArgs transportSecurity) {
+        public Builder transportSecurity(@Nullable FirewallPolicyTransportSecurityArgs transportSecurity) {
             this.transportSecurity = Input.ofNullable(transportSecurity);
             return this;
         }

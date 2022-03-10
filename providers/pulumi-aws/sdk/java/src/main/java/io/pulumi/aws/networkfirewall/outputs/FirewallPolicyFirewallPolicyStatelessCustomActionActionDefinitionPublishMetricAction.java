@@ -49,7 +49,7 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefini
     	      this.dimensions = defaults.dimensions;
         }
 
-        public Builder setDimensions(List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimension> dimensions) {
+        public Builder dimensions(List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimension> dimensions) {
             this.dimensions = Objects.requireNonNull(dimensions);
             return this;
         }

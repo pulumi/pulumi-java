@@ -119,52 +119,52 @@ public final class DpsCertificateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setCertificate(@Nullable Input<String> certificate) {
+        public Builder certificate(@Nullable Input<String> certificate) {
             this.certificate = certificate;
             return this;
         }
 
-        public Builder setCertificate(@Nullable String certificate) {
+        public Builder certificate(@Nullable String certificate) {
             this.certificate = Input.ofNullable(certificate);
             return this;
         }
 
-        public Builder setCertificateName(@Nullable Input<String> certificateName) {
+        public Builder certificateName(@Nullable Input<String> certificateName) {
             this.certificateName = certificateName;
             return this;
         }
 
-        public Builder setCertificateName(@Nullable String certificateName) {
+        public Builder certificateName(@Nullable String certificateName) {
             this.certificateName = Input.ofNullable(certificateName);
             return this;
         }
 
-        public Builder setIsVerified(@Nullable Input<Boolean> isVerified) {
+        public Builder isVerified(@Nullable Input<Boolean> isVerified) {
             this.isVerified = isVerified;
             return this;
         }
 
-        public Builder setIsVerified(@Nullable Boolean isVerified) {
+        public Builder isVerified(@Nullable Boolean isVerified) {
             this.isVerified = Input.ofNullable(isVerified);
             return this;
         }
 
-        public Builder setProvisioningServiceName(Input<String> provisioningServiceName) {
+        public Builder provisioningServiceName(Input<String> provisioningServiceName) {
             this.provisioningServiceName = Objects.requireNonNull(provisioningServiceName);
             return this;
         }
 
-        public Builder setProvisioningServiceName(String provisioningServiceName) {
+        public Builder provisioningServiceName(String provisioningServiceName) {
             this.provisioningServiceName = Input.of(Objects.requireNonNull(provisioningServiceName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

@@ -57,7 +57,7 @@ public final class DatabaseStatisticsResponse extends io.pulumi.resources.Invoke
     	      this.size = defaults.size;
         }
 
-        public Builder setSize(@Nullable Double size) {
+        public Builder size(@Nullable Double size) {
             this.size = size;
             return this;
         }

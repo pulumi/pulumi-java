@@ -67,12 +67,12 @@ public final class ApiOperationResponse {
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setMethodSelectors(List<MethodSelectorResponse> methodSelectors) {
+        public Builder methodSelectors(List<MethodSelectorResponse> methodSelectors) {
             this.methodSelectors = Objects.requireNonNull(methodSelectors);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }

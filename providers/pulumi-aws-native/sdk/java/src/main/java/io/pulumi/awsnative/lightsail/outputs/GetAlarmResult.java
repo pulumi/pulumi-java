@@ -191,52 +191,52 @@ public final class GetAlarmResult {
     	      this.treatMissingData = defaults.treatMissingData;
         }
 
-        public Builder setAlarmArn(@Nullable String alarmArn) {
+        public Builder alarmArn(@Nullable String alarmArn) {
             this.alarmArn = alarmArn;
             return this;
         }
 
-        public Builder setComparisonOperator(@Nullable String comparisonOperator) {
+        public Builder comparisonOperator(@Nullable String comparisonOperator) {
             this.comparisonOperator = comparisonOperator;
             return this;
         }
 
-        public Builder setContactProtocols(@Nullable List<String> contactProtocols) {
+        public Builder contactProtocols(@Nullable List<String> contactProtocols) {
             this.contactProtocols = contactProtocols;
             return this;
         }
 
-        public Builder setDatapointsToAlarm(@Nullable Integer datapointsToAlarm) {
+        public Builder datapointsToAlarm(@Nullable Integer datapointsToAlarm) {
             this.datapointsToAlarm = datapointsToAlarm;
             return this;
         }
 
-        public Builder setEvaluationPeriods(@Nullable Integer evaluationPeriods) {
+        public Builder evaluationPeriods(@Nullable Integer evaluationPeriods) {
             this.evaluationPeriods = evaluationPeriods;
             return this;
         }
 
-        public Builder setNotificationEnabled(@Nullable Boolean notificationEnabled) {
+        public Builder notificationEnabled(@Nullable Boolean notificationEnabled) {
             this.notificationEnabled = notificationEnabled;
             return this;
         }
 
-        public Builder setNotificationTriggers(@Nullable List<String> notificationTriggers) {
+        public Builder notificationTriggers(@Nullable List<String> notificationTriggers) {
             this.notificationTriggers = notificationTriggers;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
 
-        public Builder setThreshold(@Nullable Double threshold) {
+        public Builder threshold(@Nullable Double threshold) {
             this.threshold = threshold;
             return this;
         }
 
-        public Builder setTreatMissingData(@Nullable String treatMissingData) {
+        public Builder treatMissingData(@Nullable String treatMissingData) {
             this.treatMissingData = treatMissingData;
             return this;
         }

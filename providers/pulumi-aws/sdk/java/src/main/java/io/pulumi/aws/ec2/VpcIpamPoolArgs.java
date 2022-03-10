@@ -250,132 +250,132 @@ public final class VpcIpamPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAddressFamily(Input<String> addressFamily) {
+        public Builder addressFamily(Input<String> addressFamily) {
             this.addressFamily = Objects.requireNonNull(addressFamily);
             return this;
         }
 
-        public Builder setAddressFamily(String addressFamily) {
+        public Builder addressFamily(String addressFamily) {
             this.addressFamily = Input.of(Objects.requireNonNull(addressFamily));
             return this;
         }
 
-        public Builder setAllocationDefaultNetmaskLength(@Nullable Input<Integer> allocationDefaultNetmaskLength) {
+        public Builder allocationDefaultNetmaskLength(@Nullable Input<Integer> allocationDefaultNetmaskLength) {
             this.allocationDefaultNetmaskLength = allocationDefaultNetmaskLength;
             return this;
         }
 
-        public Builder setAllocationDefaultNetmaskLength(@Nullable Integer allocationDefaultNetmaskLength) {
+        public Builder allocationDefaultNetmaskLength(@Nullable Integer allocationDefaultNetmaskLength) {
             this.allocationDefaultNetmaskLength = Input.ofNullable(allocationDefaultNetmaskLength);
             return this;
         }
 
-        public Builder setAllocationMaxNetmaskLength(@Nullable Input<Integer> allocationMaxNetmaskLength) {
+        public Builder allocationMaxNetmaskLength(@Nullable Input<Integer> allocationMaxNetmaskLength) {
             this.allocationMaxNetmaskLength = allocationMaxNetmaskLength;
             return this;
         }
 
-        public Builder setAllocationMaxNetmaskLength(@Nullable Integer allocationMaxNetmaskLength) {
+        public Builder allocationMaxNetmaskLength(@Nullable Integer allocationMaxNetmaskLength) {
             this.allocationMaxNetmaskLength = Input.ofNullable(allocationMaxNetmaskLength);
             return this;
         }
 
-        public Builder setAllocationMinNetmaskLength(@Nullable Input<Integer> allocationMinNetmaskLength) {
+        public Builder allocationMinNetmaskLength(@Nullable Input<Integer> allocationMinNetmaskLength) {
             this.allocationMinNetmaskLength = allocationMinNetmaskLength;
             return this;
         }
 
-        public Builder setAllocationMinNetmaskLength(@Nullable Integer allocationMinNetmaskLength) {
+        public Builder allocationMinNetmaskLength(@Nullable Integer allocationMinNetmaskLength) {
             this.allocationMinNetmaskLength = Input.ofNullable(allocationMinNetmaskLength);
             return this;
         }
 
-        public Builder setAllocationResourceTags(@Nullable Input<Map<String,String>> allocationResourceTags) {
+        public Builder allocationResourceTags(@Nullable Input<Map<String,String>> allocationResourceTags) {
             this.allocationResourceTags = allocationResourceTags;
             return this;
         }
 
-        public Builder setAllocationResourceTags(@Nullable Map<String,String> allocationResourceTags) {
+        public Builder allocationResourceTags(@Nullable Map<String,String> allocationResourceTags) {
             this.allocationResourceTags = Input.ofNullable(allocationResourceTags);
             return this;
         }
 
-        public Builder setAutoImport(@Nullable Input<Boolean> autoImport) {
+        public Builder autoImport(@Nullable Input<Boolean> autoImport) {
             this.autoImport = autoImport;
             return this;
         }
 
-        public Builder setAutoImport(@Nullable Boolean autoImport) {
+        public Builder autoImport(@Nullable Boolean autoImport) {
             this.autoImport = Input.ofNullable(autoImport);
             return this;
         }
 
-        public Builder setAwsService(@Nullable Input<String> awsService) {
+        public Builder awsService(@Nullable Input<String> awsService) {
             this.awsService = awsService;
             return this;
         }
 
-        public Builder setAwsService(@Nullable String awsService) {
+        public Builder awsService(@Nullable String awsService) {
             this.awsService = Input.ofNullable(awsService);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setIpamScopeId(Input<String> ipamScopeId) {
+        public Builder ipamScopeId(Input<String> ipamScopeId) {
             this.ipamScopeId = Objects.requireNonNull(ipamScopeId);
             return this;
         }
 
-        public Builder setIpamScopeId(String ipamScopeId) {
+        public Builder ipamScopeId(String ipamScopeId) {
             this.ipamScopeId = Input.of(Objects.requireNonNull(ipamScopeId));
             return this;
         }
 
-        public Builder setLocale(@Nullable Input<String> locale) {
+        public Builder locale(@Nullable Input<String> locale) {
             this.locale = locale;
             return this;
         }
 
-        public Builder setLocale(@Nullable String locale) {
+        public Builder locale(@Nullable String locale) {
             this.locale = Input.ofNullable(locale);
             return this;
         }
 
-        public Builder setPubliclyAdvertisable(@Nullable Input<Boolean> publiclyAdvertisable) {
+        public Builder publiclyAdvertisable(@Nullable Input<Boolean> publiclyAdvertisable) {
             this.publiclyAdvertisable = publiclyAdvertisable;
             return this;
         }
 
-        public Builder setPubliclyAdvertisable(@Nullable Boolean publiclyAdvertisable) {
+        public Builder publiclyAdvertisable(@Nullable Boolean publiclyAdvertisable) {
             this.publiclyAdvertisable = Input.ofNullable(publiclyAdvertisable);
             return this;
         }
 
-        public Builder setSourceIpamPoolId(@Nullable Input<String> sourceIpamPoolId) {
+        public Builder sourceIpamPoolId(@Nullable Input<String> sourceIpamPoolId) {
             this.sourceIpamPoolId = sourceIpamPoolId;
             return this;
         }
 
-        public Builder setSourceIpamPoolId(@Nullable String sourceIpamPoolId) {
+        public Builder sourceIpamPoolId(@Nullable String sourceIpamPoolId) {
             this.sourceIpamPoolId = Input.ofNullable(sourceIpamPoolId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

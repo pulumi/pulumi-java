@@ -57,7 +57,7 @@ public final class SecurityProfileMachineLearningDetectionConfig extends io.pulu
     	      this.confidenceLevel = defaults.confidenceLevel;
         }
 
-        public Builder setConfidenceLevel(@Nullable SecurityProfileMachineLearningDetectionConfigConfidenceLevel confidenceLevel) {
+        public Builder confidenceLevel(@Nullable SecurityProfileMachineLearningDetectionConfigConfidenceLevel confidenceLevel) {
             this.confidenceLevel = confidenceLevel;
             return this;
         }

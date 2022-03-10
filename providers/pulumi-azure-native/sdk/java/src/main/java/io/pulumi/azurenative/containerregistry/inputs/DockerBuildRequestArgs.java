@@ -291,152 +291,152 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
     	      this.type = defaults.type;
         }
 
-        public Builder setAgentConfiguration(@Nullable Input<AgentPropertiesArgs> agentConfiguration) {
+        public Builder agentConfiguration(@Nullable Input<AgentPropertiesArgs> agentConfiguration) {
             this.agentConfiguration = agentConfiguration;
             return this;
         }
 
-        public Builder setAgentConfiguration(@Nullable AgentPropertiesArgs agentConfiguration) {
+        public Builder agentConfiguration(@Nullable AgentPropertiesArgs agentConfiguration) {
             this.agentConfiguration = Input.ofNullable(agentConfiguration);
             return this;
         }
 
-        public Builder setAgentPoolName(@Nullable Input<String> agentPoolName) {
+        public Builder agentPoolName(@Nullable Input<String> agentPoolName) {
             this.agentPoolName = agentPoolName;
             return this;
         }
 
-        public Builder setAgentPoolName(@Nullable String agentPoolName) {
+        public Builder agentPoolName(@Nullable String agentPoolName) {
             this.agentPoolName = Input.ofNullable(agentPoolName);
             return this;
         }
 
-        public Builder setArguments(@Nullable Input<List<ArgumentArgs>> arguments) {
+        public Builder arguments(@Nullable Input<List<ArgumentArgs>> arguments) {
             this.arguments = arguments;
             return this;
         }
 
-        public Builder setArguments(@Nullable List<ArgumentArgs> arguments) {
+        public Builder arguments(@Nullable List<ArgumentArgs> arguments) {
             this.arguments = Input.ofNullable(arguments);
             return this;
         }
 
-        public Builder setCredentials(@Nullable Input<CredentialsArgs> credentials) {
+        public Builder credentials(@Nullable Input<CredentialsArgs> credentials) {
             this.credentials = credentials;
             return this;
         }
 
-        public Builder setCredentials(@Nullable CredentialsArgs credentials) {
+        public Builder credentials(@Nullable CredentialsArgs credentials) {
             this.credentials = Input.ofNullable(credentials);
             return this;
         }
 
-        public Builder setDockerFilePath(Input<String> dockerFilePath) {
+        public Builder dockerFilePath(Input<String> dockerFilePath) {
             this.dockerFilePath = Objects.requireNonNull(dockerFilePath);
             return this;
         }
 
-        public Builder setDockerFilePath(String dockerFilePath) {
+        public Builder dockerFilePath(String dockerFilePath) {
             this.dockerFilePath = Input.of(Objects.requireNonNull(dockerFilePath));
             return this;
         }
 
-        public Builder setImageNames(@Nullable Input<List<String>> imageNames) {
+        public Builder imageNames(@Nullable Input<List<String>> imageNames) {
             this.imageNames = imageNames;
             return this;
         }
 
-        public Builder setImageNames(@Nullable List<String> imageNames) {
+        public Builder imageNames(@Nullable List<String> imageNames) {
             this.imageNames = Input.ofNullable(imageNames);
             return this;
         }
 
-        public Builder setIsArchiveEnabled(@Nullable Input<Boolean> isArchiveEnabled) {
+        public Builder isArchiveEnabled(@Nullable Input<Boolean> isArchiveEnabled) {
             this.isArchiveEnabled = isArchiveEnabled;
             return this;
         }
 
-        public Builder setIsArchiveEnabled(@Nullable Boolean isArchiveEnabled) {
+        public Builder isArchiveEnabled(@Nullable Boolean isArchiveEnabled) {
             this.isArchiveEnabled = Input.ofNullable(isArchiveEnabled);
             return this;
         }
 
-        public Builder setIsPushEnabled(@Nullable Input<Boolean> isPushEnabled) {
+        public Builder isPushEnabled(@Nullable Input<Boolean> isPushEnabled) {
             this.isPushEnabled = isPushEnabled;
             return this;
         }
 
-        public Builder setIsPushEnabled(@Nullable Boolean isPushEnabled) {
+        public Builder isPushEnabled(@Nullable Boolean isPushEnabled) {
             this.isPushEnabled = Input.ofNullable(isPushEnabled);
             return this;
         }
 
-        public Builder setLogTemplate(@Nullable Input<String> logTemplate) {
+        public Builder logTemplate(@Nullable Input<String> logTemplate) {
             this.logTemplate = logTemplate;
             return this;
         }
 
-        public Builder setLogTemplate(@Nullable String logTemplate) {
+        public Builder logTemplate(@Nullable String logTemplate) {
             this.logTemplate = Input.ofNullable(logTemplate);
             return this;
         }
 
-        public Builder setNoCache(@Nullable Input<Boolean> noCache) {
+        public Builder noCache(@Nullable Input<Boolean> noCache) {
             this.noCache = noCache;
             return this;
         }
 
-        public Builder setNoCache(@Nullable Boolean noCache) {
+        public Builder noCache(@Nullable Boolean noCache) {
             this.noCache = Input.ofNullable(noCache);
             return this;
         }
 
-        public Builder setPlatform(Input<PlatformPropertiesArgs> platform) {
+        public Builder platform(Input<PlatformPropertiesArgs> platform) {
             this.platform = Objects.requireNonNull(platform);
             return this;
         }
 
-        public Builder setPlatform(PlatformPropertiesArgs platform) {
+        public Builder platform(PlatformPropertiesArgs platform) {
             this.platform = Input.of(Objects.requireNonNull(platform));
             return this;
         }
 
-        public Builder setSourceLocation(@Nullable Input<String> sourceLocation) {
+        public Builder sourceLocation(@Nullable Input<String> sourceLocation) {
             this.sourceLocation = sourceLocation;
             return this;
         }
 
-        public Builder setSourceLocation(@Nullable String sourceLocation) {
+        public Builder sourceLocation(@Nullable String sourceLocation) {
             this.sourceLocation = Input.ofNullable(sourceLocation);
             return this;
         }
 
-        public Builder setTarget(@Nullable Input<String> target) {
+        public Builder target(@Nullable Input<String> target) {
             this.target = target;
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = Input.ofNullable(target);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<Integer> timeout) {
+        public Builder timeout(@Nullable Input<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable Integer timeout) {
+        public Builder timeout(@Nullable Integer timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

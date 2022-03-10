@@ -85,17 +85,17 @@ public final class GetWorkflowResult {
     	      this.workflowId = defaults.workflowId;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<WorkflowTag> tags) {
+        public Builder tags(@Nullable List<WorkflowTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setWorkflowId(@Nullable String workflowId) {
+        public Builder workflowId(@Nullable String workflowId) {
             this.workflowId = workflowId;
             return this;
         }

@@ -83,17 +83,17 @@ public final class ApplicationPolicyResponse {
     	      this.policyDefinitionId = defaults.policyDefinitionId;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setParameters(@Nullable String parameters) {
+        public Builder parameters(@Nullable String parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setPolicyDefinitionId(@Nullable String policyDefinitionId) {
+        public Builder policyDefinitionId(@Nullable String policyDefinitionId) {
             this.policyDefinitionId = policyDefinitionId;
             return this;
         }

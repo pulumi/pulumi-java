@@ -73,22 +73,22 @@ public final class PatchDeploymentPatchConfigPostStepArgs extends io.pulumi.reso
     	      this.windowsExecStepConfig = defaults.windowsExecStepConfig;
         }
 
-        public Builder setLinuxExecStepConfig(@Nullable Input<PatchDeploymentPatchConfigPostStepLinuxExecStepConfigArgs> linuxExecStepConfig) {
+        public Builder linuxExecStepConfig(@Nullable Input<PatchDeploymentPatchConfigPostStepLinuxExecStepConfigArgs> linuxExecStepConfig) {
             this.linuxExecStepConfig = linuxExecStepConfig;
             return this;
         }
 
-        public Builder setLinuxExecStepConfig(@Nullable PatchDeploymentPatchConfigPostStepLinuxExecStepConfigArgs linuxExecStepConfig) {
+        public Builder linuxExecStepConfig(@Nullable PatchDeploymentPatchConfigPostStepLinuxExecStepConfigArgs linuxExecStepConfig) {
             this.linuxExecStepConfig = Input.ofNullable(linuxExecStepConfig);
             return this;
         }
 
-        public Builder setWindowsExecStepConfig(@Nullable Input<PatchDeploymentPatchConfigPostStepWindowsExecStepConfigArgs> windowsExecStepConfig) {
+        public Builder windowsExecStepConfig(@Nullable Input<PatchDeploymentPatchConfigPostStepWindowsExecStepConfigArgs> windowsExecStepConfig) {
             this.windowsExecStepConfig = windowsExecStepConfig;
             return this;
         }
 
-        public Builder setWindowsExecStepConfig(@Nullable PatchDeploymentPatchConfigPostStepWindowsExecStepConfigArgs windowsExecStepConfig) {
+        public Builder windowsExecStepConfig(@Nullable PatchDeploymentPatchConfigPostStepWindowsExecStepConfigArgs windowsExecStepConfig) {
             this.windowsExecStepConfig = Input.ofNullable(windowsExecStepConfig);
             return this;
         }

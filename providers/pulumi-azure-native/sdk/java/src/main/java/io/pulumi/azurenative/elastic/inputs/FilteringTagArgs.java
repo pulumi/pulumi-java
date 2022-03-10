@@ -92,32 +92,32 @@ public final class FilteringTagArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setAction(@Nullable Input<Either<String,TagAction>> action) {
+        public Builder action(@Nullable Input<Either<String,TagAction>> action) {
             this.action = action;
             return this;
         }
 
-        public Builder setAction(@Nullable Either<String,TagAction> action) {
+        public Builder action(@Nullable Either<String,TagAction> action) {
             this.action = Input.ofNullable(action);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }

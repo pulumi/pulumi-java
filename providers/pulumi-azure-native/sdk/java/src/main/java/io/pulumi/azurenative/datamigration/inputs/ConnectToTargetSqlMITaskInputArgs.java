@@ -56,12 +56,12 @@ public final class ConnectToTargetSqlMITaskInputArgs extends io.pulumi.resources
     	      this.targetConnectionInfo = defaults.targetConnectionInfo;
         }
 
-        public Builder setTargetConnectionInfo(Input<SqlConnectionInfoArgs> targetConnectionInfo) {
+        public Builder targetConnectionInfo(Input<SqlConnectionInfoArgs> targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
 
-        public Builder setTargetConnectionInfo(SqlConnectionInfoArgs targetConnectionInfo) {
+        public Builder targetConnectionInfo(SqlConnectionInfoArgs targetConnectionInfo) {
             this.targetConnectionInfo = Input.of(Objects.requireNonNull(targetConnectionInfo));
             return this;
         }

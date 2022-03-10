@@ -57,12 +57,12 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationsArgs extends io.pulu
     	      this.transformations = defaults.transformations;
         }
 
-        public Builder setTransformations(Input<List<GooglePrivacyDlpV2InfoTypeTransformationArgs>> transformations) {
+        public Builder transformations(Input<List<GooglePrivacyDlpV2InfoTypeTransformationArgs>> transformations) {
             this.transformations = Objects.requireNonNull(transformations);
             return this;
         }
 
-        public Builder setTransformations(List<GooglePrivacyDlpV2InfoTypeTransformationArgs> transformations) {
+        public Builder transformations(List<GooglePrivacyDlpV2InfoTypeTransformationArgs> transformations) {
             this.transformations = Input.of(Objects.requireNonNull(transformations));
             return this;
         }

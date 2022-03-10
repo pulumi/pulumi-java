@@ -267,142 +267,142 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.showInPortal = defaults.showInPortal;
         }
 
-        public Builder setApplicationGroupName(Input<String> applicationGroupName) {
+        public Builder applicationGroupName(Input<String> applicationGroupName) {
             this.applicationGroupName = Objects.requireNonNull(applicationGroupName);
             return this;
         }
 
-        public Builder setApplicationGroupName(String applicationGroupName) {
+        public Builder applicationGroupName(String applicationGroupName) {
             this.applicationGroupName = Input.of(Objects.requireNonNull(applicationGroupName));
             return this;
         }
 
-        public Builder setApplicationName(@Nullable Input<String> applicationName) {
+        public Builder applicationName(@Nullable Input<String> applicationName) {
             this.applicationName = applicationName;
             return this;
         }
 
-        public Builder setApplicationName(@Nullable String applicationName) {
+        public Builder applicationName(@Nullable String applicationName) {
             this.applicationName = Input.ofNullable(applicationName);
             return this;
         }
 
-        public Builder setApplicationType(@Nullable Input<Either<String,RemoteApplicationType>> applicationType) {
+        public Builder applicationType(@Nullable Input<Either<String,RemoteApplicationType>> applicationType) {
             this.applicationType = applicationType;
             return this;
         }
 
-        public Builder setApplicationType(@Nullable Either<String,RemoteApplicationType> applicationType) {
+        public Builder applicationType(@Nullable Either<String,RemoteApplicationType> applicationType) {
             this.applicationType = Input.ofNullable(applicationType);
             return this;
         }
 
-        public Builder setCommandLineArguments(@Nullable Input<String> commandLineArguments) {
+        public Builder commandLineArguments(@Nullable Input<String> commandLineArguments) {
             this.commandLineArguments = commandLineArguments;
             return this;
         }
 
-        public Builder setCommandLineArguments(@Nullable String commandLineArguments) {
+        public Builder commandLineArguments(@Nullable String commandLineArguments) {
             this.commandLineArguments = Input.ofNullable(commandLineArguments);
             return this;
         }
 
-        public Builder setCommandLineSetting(Input<Either<String,CommandLineSetting>> commandLineSetting) {
+        public Builder commandLineSetting(Input<Either<String,CommandLineSetting>> commandLineSetting) {
             this.commandLineSetting = Objects.requireNonNull(commandLineSetting);
             return this;
         }
 
-        public Builder setCommandLineSetting(Either<String,CommandLineSetting> commandLineSetting) {
+        public Builder commandLineSetting(Either<String,CommandLineSetting> commandLineSetting) {
             this.commandLineSetting = Input.of(Objects.requireNonNull(commandLineSetting));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFilePath(@Nullable Input<String> filePath) {
+        public Builder filePath(@Nullable Input<String> filePath) {
             this.filePath = filePath;
             return this;
         }
 
-        public Builder setFilePath(@Nullable String filePath) {
+        public Builder filePath(@Nullable String filePath) {
             this.filePath = Input.ofNullable(filePath);
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Input<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Input.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder setIconIndex(@Nullable Input<Integer> iconIndex) {
+        public Builder iconIndex(@Nullable Input<Integer> iconIndex) {
             this.iconIndex = iconIndex;
             return this;
         }
 
-        public Builder setIconIndex(@Nullable Integer iconIndex) {
+        public Builder iconIndex(@Nullable Integer iconIndex) {
             this.iconIndex = Input.ofNullable(iconIndex);
             return this;
         }
 
-        public Builder setIconPath(@Nullable Input<String> iconPath) {
+        public Builder iconPath(@Nullable Input<String> iconPath) {
             this.iconPath = iconPath;
             return this;
         }
 
-        public Builder setIconPath(@Nullable String iconPath) {
+        public Builder iconPath(@Nullable String iconPath) {
             this.iconPath = Input.ofNullable(iconPath);
             return this;
         }
 
-        public Builder setMsixPackageApplicationId(@Nullable Input<String> msixPackageApplicationId) {
+        public Builder msixPackageApplicationId(@Nullable Input<String> msixPackageApplicationId) {
             this.msixPackageApplicationId = msixPackageApplicationId;
             return this;
         }
 
-        public Builder setMsixPackageApplicationId(@Nullable String msixPackageApplicationId) {
+        public Builder msixPackageApplicationId(@Nullable String msixPackageApplicationId) {
             this.msixPackageApplicationId = Input.ofNullable(msixPackageApplicationId);
             return this;
         }
 
-        public Builder setMsixPackageFamilyName(@Nullable Input<String> msixPackageFamilyName) {
+        public Builder msixPackageFamilyName(@Nullable Input<String> msixPackageFamilyName) {
             this.msixPackageFamilyName = msixPackageFamilyName;
             return this;
         }
 
-        public Builder setMsixPackageFamilyName(@Nullable String msixPackageFamilyName) {
+        public Builder msixPackageFamilyName(@Nullable String msixPackageFamilyName) {
             this.msixPackageFamilyName = Input.ofNullable(msixPackageFamilyName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setShowInPortal(@Nullable Input<Boolean> showInPortal) {
+        public Builder showInPortal(@Nullable Input<Boolean> showInPortal) {
             this.showInPortal = showInPortal;
             return this;
         }
 
-        public Builder setShowInPortal(@Nullable Boolean showInPortal) {
+        public Builder showInPortal(@Nullable Boolean showInPortal) {
             this.showInPortal = Input.ofNullable(showInPortal);
             return this;
         }

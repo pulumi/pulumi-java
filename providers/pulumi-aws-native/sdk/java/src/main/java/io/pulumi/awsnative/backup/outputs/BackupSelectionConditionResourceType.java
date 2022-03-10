@@ -57,17 +57,17 @@ public final class BackupSelectionConditionResourceType {
     	      this.conditionValue = defaults.conditionValue;
         }
 
-        public Builder setConditionKey(String conditionKey) {
+        public Builder conditionKey(String conditionKey) {
             this.conditionKey = Objects.requireNonNull(conditionKey);
             return this;
         }
 
-        public Builder setConditionType(String conditionType) {
+        public Builder conditionType(String conditionType) {
             this.conditionType = Objects.requireNonNull(conditionType);
             return this;
         }
 
-        public Builder setConditionValue(String conditionValue) {
+        public Builder conditionValue(String conditionValue) {
             this.conditionValue = Objects.requireNonNull(conditionValue);
             return this;
         }

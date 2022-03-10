@@ -120,27 +120,27 @@ public final class HttpRequestResponse {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setAuthentication(@Nullable Object authentication) {
+        public Builder authentication(@Nullable Object authentication) {
             this.authentication = authentication;
             return this;
         }
 
-        public Builder setBody(@Nullable String body) {
+        public Builder body(@Nullable String body) {
             this.body = body;
             return this;
         }
 
-        public Builder setHeaders(@Nullable Map<String,String> headers) {
+        public Builder headers(@Nullable Map<String,String> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setMethod(@Nullable String method) {
+        public Builder method(@Nullable String method) {
             this.method = method;
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
         }

@@ -155,72 +155,72 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
     	      this.zones = defaults.zones;
         }
 
-        public Builder setDomainNameLabel(@Nullable Input<String> domainNameLabel) {
+        public Builder domainNameLabel(@Nullable Input<String> domainNameLabel) {
             this.domainNameLabel = domainNameLabel;
             return this;
         }
 
-        public Builder setDomainNameLabel(@Nullable String domainNameLabel) {
+        public Builder domainNameLabel(@Nullable String domainNameLabel) {
             this.domainNameLabel = Input.ofNullable(domainNameLabel);
             return this;
         }
 
-        public Builder setFqdn(@Nullable Input<String> fqdn) {
+        public Builder fqdn(@Nullable Input<String> fqdn) {
             this.fqdn = fqdn;
             return this;
         }
 
-        public Builder setFqdn(@Nullable String fqdn) {
+        public Builder fqdn(@Nullable String fqdn) {
             this.fqdn = Input.ofNullable(fqdn);
             return this;
         }
 
-        public Builder setPublicIpAllocationMethod(@Nullable Input<String> publicIpAllocationMethod) {
+        public Builder publicIpAllocationMethod(@Nullable Input<String> publicIpAllocationMethod) {
             this.publicIpAllocationMethod = publicIpAllocationMethod;
             return this;
         }
 
-        public Builder setPublicIpAllocationMethod(@Nullable String publicIpAllocationMethod) {
+        public Builder publicIpAllocationMethod(@Nullable String publicIpAllocationMethod) {
             this.publicIpAllocationMethod = Input.ofNullable(publicIpAllocationMethod);
             return this;
         }
 
-        public Builder setResourceType(Input<String> resourceType) {
+        public Builder resourceType(Input<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Input.of(Objects.requireNonNull(resourceType));
             return this;
         }
 
-        public Builder setSku(@Nullable Input<String> sku) {
+        public Builder sku(@Nullable Input<String> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable String sku) {
+        public Builder sku(@Nullable String sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setTargetResourceName(Input<String> targetResourceName) {
+        public Builder targetResourceName(Input<String> targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
 
-        public Builder setTargetResourceName(String targetResourceName) {
+        public Builder targetResourceName(String targetResourceName) {
             this.targetResourceName = Input.of(Objects.requireNonNull(targetResourceName));
             return this;
         }
 
-        public Builder setZones(@Nullable Input<String> zones) {
+        public Builder zones(@Nullable Input<String> zones) {
             this.zones = zones;
             return this;
         }
 
-        public Builder setZones(@Nullable String zones) {
+        public Builder zones(@Nullable String zones) {
             this.zones = Input.ofNullable(zones);
             return this;
         }

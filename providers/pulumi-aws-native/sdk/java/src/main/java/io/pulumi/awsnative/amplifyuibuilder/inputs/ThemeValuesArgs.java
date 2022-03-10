@@ -63,22 +63,22 @@ public final class ThemeValuesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setKey(@Nullable Input<String> key) {
+        public Builder key(@Nullable Input<String> key) {
             this.key = key;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = Input.ofNullable(key);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<ThemeValueArgs> value) {
+        public Builder value(@Nullable Input<ThemeValueArgs> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable ThemeValueArgs value) {
+        public Builder value(@Nullable ThemeValueArgs value) {
             this.value = Input.ofNullable(value);
             return this;
         }

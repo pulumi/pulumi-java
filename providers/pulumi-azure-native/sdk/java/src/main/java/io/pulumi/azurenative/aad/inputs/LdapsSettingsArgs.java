@@ -109,42 +109,42 @@ public final class LdapsSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.pfxCertificatePassword = defaults.pfxCertificatePassword;
         }
 
-        public Builder setExternalAccess(@Nullable Input<Either<String,ExternalAccess>> externalAccess) {
+        public Builder externalAccess(@Nullable Input<Either<String,ExternalAccess>> externalAccess) {
             this.externalAccess = externalAccess;
             return this;
         }
 
-        public Builder setExternalAccess(@Nullable Either<String,ExternalAccess> externalAccess) {
+        public Builder externalAccess(@Nullable Either<String,ExternalAccess> externalAccess) {
             this.externalAccess = Input.ofNullable(externalAccess);
             return this;
         }
 
-        public Builder setLdaps(@Nullable Input<Either<String,Ldaps>> ldaps) {
+        public Builder ldaps(@Nullable Input<Either<String,Ldaps>> ldaps) {
             this.ldaps = ldaps;
             return this;
         }
 
-        public Builder setLdaps(@Nullable Either<String,Ldaps> ldaps) {
+        public Builder ldaps(@Nullable Either<String,Ldaps> ldaps) {
             this.ldaps = Input.ofNullable(ldaps);
             return this;
         }
 
-        public Builder setPfxCertificate(@Nullable Input<String> pfxCertificate) {
+        public Builder pfxCertificate(@Nullable Input<String> pfxCertificate) {
             this.pfxCertificate = pfxCertificate;
             return this;
         }
 
-        public Builder setPfxCertificate(@Nullable String pfxCertificate) {
+        public Builder pfxCertificate(@Nullable String pfxCertificate) {
             this.pfxCertificate = Input.ofNullable(pfxCertificate);
             return this;
         }
 
-        public Builder setPfxCertificatePassword(@Nullable Input<String> pfxCertificatePassword) {
+        public Builder pfxCertificatePassword(@Nullable Input<String> pfxCertificatePassword) {
             this.pfxCertificatePassword = pfxCertificatePassword;
             return this;
         }
 
-        public Builder setPfxCertificatePassword(@Nullable String pfxCertificatePassword) {
+        public Builder pfxCertificatePassword(@Nullable String pfxCertificatePassword) {
             this.pfxCertificatePassword = Input.ofNullable(pfxCertificatePassword);
             return this;
         }

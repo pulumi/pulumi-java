@@ -344,97 +344,97 @@ public final class GetScheduledAlertRuleResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAlertRuleTemplateName(@Nullable String alertRuleTemplateName) {
+        public Builder alertRuleTemplateName(@Nullable String alertRuleTemplateName) {
             this.alertRuleTemplateName = alertRuleTemplateName;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLastModifiedUtc(String lastModifiedUtc) {
+        public Builder lastModifiedUtc(String lastModifiedUtc) {
             this.lastModifiedUtc = Objects.requireNonNull(lastModifiedUtc);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setQuery(String query) {
+        public Builder query(String query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
 
-        public Builder setQueryFrequency(String queryFrequency) {
+        public Builder queryFrequency(String queryFrequency) {
             this.queryFrequency = Objects.requireNonNull(queryFrequency);
             return this;
         }
 
-        public Builder setQueryPeriod(String queryPeriod) {
+        public Builder queryPeriod(String queryPeriod) {
             this.queryPeriod = Objects.requireNonNull(queryPeriod);
             return this;
         }
 
-        public Builder setSeverity(String severity) {
+        public Builder severity(String severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
 
-        public Builder setSuppressionDuration(String suppressionDuration) {
+        public Builder suppressionDuration(String suppressionDuration) {
             this.suppressionDuration = Objects.requireNonNull(suppressionDuration);
             return this;
         }
 
-        public Builder setSuppressionEnabled(Boolean suppressionEnabled) {
+        public Builder suppressionEnabled(Boolean suppressionEnabled) {
             this.suppressionEnabled = Objects.requireNonNull(suppressionEnabled);
             return this;
         }
 
-        public Builder setTactics(@Nullable List<String> tactics) {
+        public Builder tactics(@Nullable List<String> tactics) {
             this.tactics = tactics;
             return this;
         }
 
-        public Builder setTriggerOperator(String triggerOperator) {
+        public Builder triggerOperator(String triggerOperator) {
             this.triggerOperator = Objects.requireNonNull(triggerOperator);
             return this;
         }
 
-        public Builder setTriggerThreshold(Integer triggerThreshold) {
+        public Builder triggerThreshold(Integer triggerThreshold) {
             this.triggerThreshold = Objects.requireNonNull(triggerThreshold);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

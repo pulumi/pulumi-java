@@ -70,22 +70,22 @@ public final class PolicySecurityServicePolicyDataGetArgs extends io.pulumi.reso
     	      this.type = defaults.type;
         }
 
-        public Builder setManagedServiceData(@Nullable Input<String> managedServiceData) {
+        public Builder managedServiceData(@Nullable Input<String> managedServiceData) {
             this.managedServiceData = managedServiceData;
             return this;
         }
 
-        public Builder setManagedServiceData(@Nullable String managedServiceData) {
+        public Builder managedServiceData(@Nullable String managedServiceData) {
             this.managedServiceData = Input.ofNullable(managedServiceData);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

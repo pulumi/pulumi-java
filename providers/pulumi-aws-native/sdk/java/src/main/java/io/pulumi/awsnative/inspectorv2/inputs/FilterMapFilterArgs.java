@@ -75,32 +75,32 @@ public final class FilterMapFilterArgs extends io.pulumi.resources.ResourceArgs 
     	      this.value = defaults.value;
         }
 
-        public Builder setComparison(Input<FilterMapComparison> comparison) {
+        public Builder comparison(Input<FilterMapComparison> comparison) {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
 
-        public Builder setComparison(FilterMapComparison comparison) {
+        public Builder comparison(FilterMapComparison comparison) {
             this.comparison = Input.of(Objects.requireNonNull(comparison));
             return this;
         }
 
-        public Builder setKey(@Nullable Input<String> key) {
+        public Builder key(@Nullable Input<String> key) {
             this.key = key;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = Input.ofNullable(key);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }

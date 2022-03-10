@@ -88,32 +88,32 @@ public final class CellArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCellName(@Nullable Input<String> cellName) {
+        public Builder cellName(@Nullable Input<String> cellName) {
             this.cellName = cellName;
             return this;
         }
 
-        public Builder setCellName(@Nullable String cellName) {
+        public Builder cellName(@Nullable String cellName) {
             this.cellName = Input.ofNullable(cellName);
             return this;
         }
 
-        public Builder setCells(@Nullable Input<List<String>> cells) {
+        public Builder cells(@Nullable Input<List<String>> cells) {
             this.cells = cells;
             return this;
         }
 
-        public Builder setCells(@Nullable List<String> cells) {
+        public Builder cells(@Nullable List<String> cells) {
             this.cells = Input.ofNullable(cells);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<CellTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<CellTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<CellTagArgs> tags) {
+        public Builder tags(@Nullable List<CellTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

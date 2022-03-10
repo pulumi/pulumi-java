@@ -51,7 +51,7 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadi
     	      this.timeoutSec = defaults.timeoutSec;
         }
 
-        public Builder setTimeoutSec(Integer timeoutSec) {
+        public Builder timeoutSec(Integer timeoutSec) {
             this.timeoutSec = Objects.requireNonNull(timeoutSec);
             return this;
         }

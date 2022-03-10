@@ -87,32 +87,32 @@ public final class CrawlerJdbcTargetGetArgs extends io.pulumi.resources.Resource
     	      this.path = defaults.path;
         }
 
-        public Builder setConnectionName(Input<String> connectionName) {
+        public Builder connectionName(Input<String> connectionName) {
             this.connectionName = Objects.requireNonNull(connectionName);
             return this;
         }
 
-        public Builder setConnectionName(String connectionName) {
+        public Builder connectionName(String connectionName) {
             this.connectionName = Input.of(Objects.requireNonNull(connectionName));
             return this;
         }
 
-        public Builder setExclusions(@Nullable Input<List<String>> exclusions) {
+        public Builder exclusions(@Nullable Input<List<String>> exclusions) {
             this.exclusions = exclusions;
             return this;
         }
 
-        public Builder setExclusions(@Nullable List<String> exclusions) {
+        public Builder exclusions(@Nullable List<String> exclusions) {
             this.exclusions = Input.ofNullable(exclusions);
             return this;
         }
 
-        public Builder setPath(Input<String> path) {
+        public Builder path(Input<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Input.of(Objects.requireNonNull(path));
             return this;
         }

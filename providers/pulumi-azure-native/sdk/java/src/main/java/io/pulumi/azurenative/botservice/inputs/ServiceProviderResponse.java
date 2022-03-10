@@ -57,7 +57,7 @@ public final class ServiceProviderResponse extends io.pulumi.resources.InvokeArg
     	      this.properties = defaults.properties;
         }
 
-        public Builder setProperties(@Nullable ServiceProviderPropertiesResponse properties) {
+        public Builder properties(@Nullable ServiceProviderPropertiesResponse properties) {
             this.properties = properties;
             return this;
         }

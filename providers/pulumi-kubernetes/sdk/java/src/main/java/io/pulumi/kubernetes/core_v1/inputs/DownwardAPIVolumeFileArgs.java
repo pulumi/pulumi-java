@@ -109,42 +109,42 @@ public final class DownwardAPIVolumeFileArgs extends io.pulumi.resources.Resourc
     	      this.resourceFieldRef = defaults.resourceFieldRef;
         }
 
-        public Builder setFieldRef(@Nullable Input<ObjectFieldSelectorArgs> fieldRef) {
+        public Builder fieldRef(@Nullable Input<ObjectFieldSelectorArgs> fieldRef) {
             this.fieldRef = fieldRef;
             return this;
         }
 
-        public Builder setFieldRef(@Nullable ObjectFieldSelectorArgs fieldRef) {
+        public Builder fieldRef(@Nullable ObjectFieldSelectorArgs fieldRef) {
             this.fieldRef = Input.ofNullable(fieldRef);
             return this;
         }
 
-        public Builder setMode(@Nullable Input<Integer> mode) {
+        public Builder mode(@Nullable Input<Integer> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable Integer mode) {
+        public Builder mode(@Nullable Integer mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }
 
-        public Builder setPath(Input<String> path) {
+        public Builder path(Input<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Input.of(Objects.requireNonNull(path));
             return this;
         }
 
-        public Builder setResourceFieldRef(@Nullable Input<ResourceFieldSelectorArgs> resourceFieldRef) {
+        public Builder resourceFieldRef(@Nullable Input<ResourceFieldSelectorArgs> resourceFieldRef) {
             this.resourceFieldRef = resourceFieldRef;
             return this;
         }
 
-        public Builder setResourceFieldRef(@Nullable ResourceFieldSelectorArgs resourceFieldRef) {
+        public Builder resourceFieldRef(@Nullable ResourceFieldSelectorArgs resourceFieldRef) {
             this.resourceFieldRef = Input.ofNullable(resourceFieldRef);
             return this;
         }

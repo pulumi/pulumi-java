@@ -54,12 +54,12 @@ public final class WorkflowTemplateJobHadoopJobLoggingConfigGetArgs extends io.p
     	      this.driverLogLevels = defaults.driverLogLevels;
         }
 
-        public Builder setDriverLogLevels(@Nullable Input<Map<String,String>> driverLogLevels) {
+        public Builder driverLogLevels(@Nullable Input<Map<String,String>> driverLogLevels) {
             this.driverLogLevels = driverLogLevels;
             return this;
         }
 
-        public Builder setDriverLogLevels(@Nullable Map<String,String> driverLogLevels) {
+        public Builder driverLogLevels(@Nullable Map<String,String> driverLogLevels) {
             this.driverLogLevels = Input.ofNullable(driverLogLevels);
             return this;
         }

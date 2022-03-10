@@ -110,42 +110,42 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecArgs extends io.
     	      this.limit = defaults.limit;
         }
 
-        public Builder setEnableDynamicPosition(@Nullable Input<Boolean> enableDynamicPosition) {
+        public Builder enableDynamicPosition(@Nullable Input<Boolean> enableDynamicPosition) {
             this.enableDynamicPosition = enableDynamicPosition;
             return this;
         }
 
-        public Builder setEnableDynamicPosition(@Nullable Boolean enableDynamicPosition) {
+        public Builder enableDynamicPosition(@Nullable Boolean enableDynamicPosition) {
             this.enableDynamicPosition = Input.ofNullable(enableDynamicPosition);
             return this;
         }
 
-        public Builder setExcludedFilterKeys(@Nullable Input<List<String>> excludedFilterKeys) {
+        public Builder excludedFilterKeys(@Nullable Input<List<String>> excludedFilterKeys) {
             this.excludedFilterKeys = excludedFilterKeys;
             return this;
         }
 
-        public Builder setExcludedFilterKeys(@Nullable List<String> excludedFilterKeys) {
+        public Builder excludedFilterKeys(@Nullable List<String> excludedFilterKeys) {
             this.excludedFilterKeys = Input.ofNullable(excludedFilterKeys);
             return this;
         }
 
-        public Builder setFacetKey(Input<GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs> facetKey) {
+        public Builder facetKey(Input<GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs> facetKey) {
             this.facetKey = Objects.requireNonNull(facetKey);
             return this;
         }
 
-        public Builder setFacetKey(GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs facetKey) {
+        public Builder facetKey(GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyArgs facetKey) {
             this.facetKey = Input.of(Objects.requireNonNull(facetKey));
             return this;
         }
 
-        public Builder setLimit(@Nullable Input<Integer> limit) {
+        public Builder limit(@Nullable Input<Integer> limit) {
             this.limit = limit;
             return this;
         }
 
-        public Builder setLimit(@Nullable Integer limit) {
+        public Builder limit(@Nullable Integer limit) {
             this.limit = Input.ofNullable(limit);
             return this;
         }

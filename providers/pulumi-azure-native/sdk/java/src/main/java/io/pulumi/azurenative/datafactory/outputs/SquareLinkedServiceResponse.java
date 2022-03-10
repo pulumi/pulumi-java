@@ -269,72 +269,72 @@ public final class SquareLinkedServiceResponse {
     	      this.usePeerVerification = defaults.usePeerVerification;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setClientId(@Nullable Object clientId) {
+        public Builder clientId(@Nullable Object clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setClientSecret(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret) {
+        public Builder clientSecret(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
-        public Builder setConnectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
+        public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setConnectionProperties(@Nullable Object connectionProperties) {
+        public Builder connectionProperties(@Nullable Object connectionProperties) {
             this.connectionProperties = connectionProperties;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Object encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
-        public Builder setHost(@Nullable Object host) {
+        public Builder host(@Nullable Object host) {
             this.host = host;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setRedirectUri(@Nullable Object redirectUri) {
+        public Builder redirectUri(@Nullable Object redirectUri) {
             this.redirectUri = redirectUri;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUseEncryptedEndpoints(@Nullable Object useEncryptedEndpoints) {
+        public Builder useEncryptedEndpoints(@Nullable Object useEncryptedEndpoints) {
             this.useEncryptedEndpoints = useEncryptedEndpoints;
             return this;
         }
 
-        public Builder setUseHostVerification(@Nullable Object useHostVerification) {
+        public Builder useHostVerification(@Nullable Object useHostVerification) {
             this.useHostVerification = useHostVerification;
             return this;
         }
 
-        public Builder setUsePeerVerification(@Nullable Object usePeerVerification) {
+        public Builder usePeerVerification(@Nullable Object usePeerVerification) {
             this.usePeerVerification = usePeerVerification;
             return this;
         }

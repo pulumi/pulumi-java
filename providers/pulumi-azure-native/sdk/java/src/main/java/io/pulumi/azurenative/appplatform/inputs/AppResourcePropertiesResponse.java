@@ -189,47 +189,47 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
     	      this.url = defaults.url;
         }
 
-        public Builder setActiveDeploymentName(@Nullable String activeDeploymentName) {
+        public Builder activeDeploymentName(@Nullable String activeDeploymentName) {
             this.activeDeploymentName = activeDeploymentName;
             return this;
         }
 
-        public Builder setCreatedTime(String createdTime) {
+        public Builder createdTime(String createdTime) {
             this.createdTime = Objects.requireNonNull(createdTime);
             return this;
         }
 
-        public Builder setFqdn(@Nullable String fqdn) {
+        public Builder fqdn(@Nullable String fqdn) {
             this.fqdn = fqdn;
             return this;
         }
 
-        public Builder setHttpsOnly(@Nullable Boolean httpsOnly) {
+        public Builder httpsOnly(@Nullable Boolean httpsOnly) {
             this.httpsOnly = httpsOnly;
             return this;
         }
 
-        public Builder setPersistentDisk(@Nullable PersistentDiskResponse persistentDisk) {
+        public Builder persistentDisk(@Nullable PersistentDiskResponse persistentDisk) {
             this.persistentDisk = persistentDisk;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder set$public(@Nullable Boolean $public) {
+        public Builder $public(@Nullable Boolean $public) {
             this.$public = $public;
             return this;
         }
 
-        public Builder setTemporaryDisk(@Nullable TemporaryDiskResponse temporaryDisk) {
+        public Builder temporaryDisk(@Nullable TemporaryDiskResponse temporaryDisk) {
             this.temporaryDisk = temporaryDisk;
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

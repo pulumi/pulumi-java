@@ -118,52 +118,52 @@ public final class LocationS3Args extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setS3BucketArn(Input<String> s3BucketArn) {
+        public Builder s3BucketArn(Input<String> s3BucketArn) {
             this.s3BucketArn = Objects.requireNonNull(s3BucketArn);
             return this;
         }
 
-        public Builder setS3BucketArn(String s3BucketArn) {
+        public Builder s3BucketArn(String s3BucketArn) {
             this.s3BucketArn = Input.of(Objects.requireNonNull(s3BucketArn));
             return this;
         }
 
-        public Builder setS3Config(Input<LocationS3S3ConfigArgs> s3Config) {
+        public Builder s3Config(Input<LocationS3S3ConfigArgs> s3Config) {
             this.s3Config = Objects.requireNonNull(s3Config);
             return this;
         }
 
-        public Builder setS3Config(LocationS3S3ConfigArgs s3Config) {
+        public Builder s3Config(LocationS3S3ConfigArgs s3Config) {
             this.s3Config = Input.of(Objects.requireNonNull(s3Config));
             return this;
         }
 
-        public Builder setS3StorageClass(@Nullable Input<LocationS3S3StorageClass> s3StorageClass) {
+        public Builder s3StorageClass(@Nullable Input<LocationS3S3StorageClass> s3StorageClass) {
             this.s3StorageClass = s3StorageClass;
             return this;
         }
 
-        public Builder setS3StorageClass(@Nullable LocationS3S3StorageClass s3StorageClass) {
+        public Builder s3StorageClass(@Nullable LocationS3S3StorageClass s3StorageClass) {
             this.s3StorageClass = Input.ofNullable(s3StorageClass);
             return this;
         }
 
-        public Builder setSubdirectory(@Nullable Input<String> subdirectory) {
+        public Builder subdirectory(@Nullable Input<String> subdirectory) {
             this.subdirectory = subdirectory;
             return this;
         }
 
-        public Builder setSubdirectory(@Nullable String subdirectory) {
+        public Builder subdirectory(@Nullable String subdirectory) {
             this.subdirectory = Input.ofNullable(subdirectory);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<LocationS3TagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<LocationS3TagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<LocationS3TagArgs> tags) {
+        public Builder tags(@Nullable List<LocationS3TagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

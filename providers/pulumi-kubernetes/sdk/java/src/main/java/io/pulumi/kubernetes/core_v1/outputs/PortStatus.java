@@ -100,17 +100,17 @@ public final class PortStatus {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setError(@Nullable String error) {
+        public Builder error(@Nullable String error) {
             this.error = error;
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }

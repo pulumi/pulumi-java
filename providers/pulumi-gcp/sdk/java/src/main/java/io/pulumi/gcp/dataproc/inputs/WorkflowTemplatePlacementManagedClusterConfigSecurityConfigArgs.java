@@ -53,12 +53,12 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigAr
     	      this.kerberosConfig = defaults.kerberosConfig;
         }
 
-        public Builder setKerberosConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigArgs> kerberosConfig) {
+        public Builder kerberosConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigArgs> kerberosConfig) {
             this.kerberosConfig = kerberosConfig;
             return this;
         }
 
-        public Builder setKerberosConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigArgs kerberosConfig) {
+        public Builder kerberosConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigArgs kerberosConfig) {
             this.kerberosConfig = Input.ofNullable(kerberosConfig);
             return this;
         }

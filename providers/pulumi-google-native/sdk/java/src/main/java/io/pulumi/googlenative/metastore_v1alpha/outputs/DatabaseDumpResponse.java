@@ -97,22 +97,22 @@ public final class DatabaseDumpResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDatabaseType(String databaseType) {
+        public Builder databaseType(String databaseType) {
             this.databaseType = Objects.requireNonNull(databaseType);
             return this;
         }
 
-        public Builder setGcsUri(String gcsUri) {
+        public Builder gcsUri(String gcsUri) {
             this.gcsUri = Objects.requireNonNull(gcsUri);
             return this;
         }
 
-        public Builder setSourceDatabase(String sourceDatabase) {
+        public Builder sourceDatabase(String sourceDatabase) {
             this.sourceDatabase = Objects.requireNonNull(sourceDatabase);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

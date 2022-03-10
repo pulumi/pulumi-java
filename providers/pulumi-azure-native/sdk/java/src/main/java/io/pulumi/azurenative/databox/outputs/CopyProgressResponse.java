@@ -277,77 +277,77 @@ public final class CopyProgressResponse {
     	      this.transferType = defaults.transferType;
         }
 
-        public Builder setAccountId(String accountId) {
+        public Builder accountId(String accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
 
-        public Builder setBytesProcessed(Double bytesProcessed) {
+        public Builder bytesProcessed(Double bytesProcessed) {
             this.bytesProcessed = Objects.requireNonNull(bytesProcessed);
             return this;
         }
 
-        public Builder setDataAccountType(String dataAccountType) {
+        public Builder dataAccountType(String dataAccountType) {
             this.dataAccountType = Objects.requireNonNull(dataAccountType);
             return this;
         }
 
-        public Builder setDirectoriesErroredOut(Double directoriesErroredOut) {
+        public Builder directoriesErroredOut(Double directoriesErroredOut) {
             this.directoriesErroredOut = Objects.requireNonNull(directoriesErroredOut);
             return this;
         }
 
-        public Builder setFilesErroredOut(Double filesErroredOut) {
+        public Builder filesErroredOut(Double filesErroredOut) {
             this.filesErroredOut = Objects.requireNonNull(filesErroredOut);
             return this;
         }
 
-        public Builder setFilesProcessed(Double filesProcessed) {
+        public Builder filesProcessed(Double filesProcessed) {
             this.filesProcessed = Objects.requireNonNull(filesProcessed);
             return this;
         }
 
-        public Builder setInvalidDirectoriesProcessed(Double invalidDirectoriesProcessed) {
+        public Builder invalidDirectoriesProcessed(Double invalidDirectoriesProcessed) {
             this.invalidDirectoriesProcessed = Objects.requireNonNull(invalidDirectoriesProcessed);
             return this;
         }
 
-        public Builder setInvalidFileBytesUploaded(Double invalidFileBytesUploaded) {
+        public Builder invalidFileBytesUploaded(Double invalidFileBytesUploaded) {
             this.invalidFileBytesUploaded = Objects.requireNonNull(invalidFileBytesUploaded);
             return this;
         }
 
-        public Builder setInvalidFilesProcessed(Double invalidFilesProcessed) {
+        public Builder invalidFilesProcessed(Double invalidFilesProcessed) {
             this.invalidFilesProcessed = Objects.requireNonNull(invalidFilesProcessed);
             return this;
         }
 
-        public Builder setIsEnumerationInProgress(Boolean isEnumerationInProgress) {
+        public Builder isEnumerationInProgress(Boolean isEnumerationInProgress) {
             this.isEnumerationInProgress = Objects.requireNonNull(isEnumerationInProgress);
             return this;
         }
 
-        public Builder setRenamedContainerCount(Double renamedContainerCount) {
+        public Builder renamedContainerCount(Double renamedContainerCount) {
             this.renamedContainerCount = Objects.requireNonNull(renamedContainerCount);
             return this;
         }
 
-        public Builder setStorageAccountName(String storageAccountName) {
+        public Builder storageAccountName(String storageAccountName) {
             this.storageAccountName = Objects.requireNonNull(storageAccountName);
             return this;
         }
 
-        public Builder setTotalBytesToProcess(Double totalBytesToProcess) {
+        public Builder totalBytesToProcess(Double totalBytesToProcess) {
             this.totalBytesToProcess = Objects.requireNonNull(totalBytesToProcess);
             return this;
         }
 
-        public Builder setTotalFilesToProcess(Double totalFilesToProcess) {
+        public Builder totalFilesToProcess(Double totalFilesToProcess) {
             this.totalFilesToProcess = Objects.requireNonNull(totalFilesToProcess);
             return this;
         }
 
-        public Builder setTransferType(String transferType) {
+        public Builder transferType(String transferType) {
             this.transferType = Objects.requireNonNull(transferType);
             return this;
         }

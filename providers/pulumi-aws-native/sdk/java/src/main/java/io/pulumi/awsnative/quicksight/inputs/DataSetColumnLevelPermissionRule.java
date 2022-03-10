@@ -63,12 +63,12 @@ public final class DataSetColumnLevelPermissionRule extends io.pulumi.resources.
     	      this.principals = defaults.principals;
         }
 
-        public Builder setColumnNames(@Nullable List<String> columnNames) {
+        public Builder columnNames(@Nullable List<String> columnNames) {
             this.columnNames = columnNames;
             return this;
         }
 
-        public Builder setPrincipals(@Nullable List<String> principals) {
+        public Builder principals(@Nullable List<String> principals) {
             this.principals = principals;
             return this;
         }

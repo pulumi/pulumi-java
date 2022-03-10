@@ -107,22 +107,22 @@ public final class UserSourceInfoResponse extends io.pulumi.resources.InvokeArgs
     	      this.version = defaults.version;
         }
 
-        public Builder setArtifactSelector(@Nullable String artifactSelector) {
+        public Builder artifactSelector(@Nullable String artifactSelector) {
             this.artifactSelector = artifactSelector;
             return this;
         }
 
-        public Builder setRelativePath(@Nullable String relativePath) {
+        public Builder relativePath(@Nullable String relativePath) {
             this.relativePath = relativePath;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

@@ -88,17 +88,17 @@ public final class AuthPlatformResponse {
     	      this.runtimeVersion = defaults.runtimeVersion;
         }
 
-        public Builder setConfigFilePath(@Nullable String configFilePath) {
+        public Builder configFilePath(@Nullable String configFilePath) {
             this.configFilePath = configFilePath;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setRuntimeVersion(@Nullable String runtimeVersion) {
+        public Builder runtimeVersion(@Nullable String runtimeVersion) {
             this.runtimeVersion = runtimeVersion;
             return this;
         }

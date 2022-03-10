@@ -68,12 +68,12 @@ public final class FHIRDatastoreKmsEncryptionConfig {
     	      this.kmsKeyId = defaults.kmsKeyId;
         }
 
-        public Builder setCmkType(FHIRDatastoreKmsEncryptionConfigCmkType cmkType) {
+        public Builder cmkType(FHIRDatastoreKmsEncryptionConfigCmkType cmkType) {
             this.cmkType = Objects.requireNonNull(cmkType);
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }

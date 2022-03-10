@@ -115,27 +115,27 @@ public final class SubjectAltNamesResponse {
     	      this.uris = defaults.uris;
         }
 
-        public Builder setCustomSans(List<X509ExtensionResponse> customSans) {
+        public Builder customSans(List<X509ExtensionResponse> customSans) {
             this.customSans = Objects.requireNonNull(customSans);
             return this;
         }
 
-        public Builder setDnsNames(List<String> dnsNames) {
+        public Builder dnsNames(List<String> dnsNames) {
             this.dnsNames = Objects.requireNonNull(dnsNames);
             return this;
         }
 
-        public Builder setEmailAddresses(List<String> emailAddresses) {
+        public Builder emailAddresses(List<String> emailAddresses) {
             this.emailAddresses = Objects.requireNonNull(emailAddresses);
             return this;
         }
 
-        public Builder setIpAddresses(List<String> ipAddresses) {
+        public Builder ipAddresses(List<String> ipAddresses) {
             this.ipAddresses = Objects.requireNonNull(ipAddresses);
             return this;
         }
 
-        public Builder setUris(List<String> uris) {
+        public Builder uris(List<String> uris) {
             this.uris = Objects.requireNonNull(uris);
             return this;
         }

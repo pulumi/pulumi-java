@@ -147,37 +147,37 @@ public final class JobTargetResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDatabaseName(@Nullable String databaseName) {
+        public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
-        public Builder setElasticPoolName(@Nullable String elasticPoolName) {
+        public Builder elasticPoolName(@Nullable String elasticPoolName) {
             this.elasticPoolName = elasticPoolName;
             return this;
         }
 
-        public Builder setMembershipType(@Nullable String membershipType) {
+        public Builder membershipType(@Nullable String membershipType) {
             this.membershipType = membershipType;
             return this;
         }
 
-        public Builder setRefreshCredential(@Nullable String refreshCredential) {
+        public Builder refreshCredential(@Nullable String refreshCredential) {
             this.refreshCredential = refreshCredential;
             return this;
         }
 
-        public Builder setServerName(@Nullable String serverName) {
+        public Builder serverName(@Nullable String serverName) {
             this.serverName = serverName;
             return this;
         }
 
-        public Builder setShardMapName(@Nullable String shardMapName) {
+        public Builder shardMapName(@Nullable String shardMapName) {
             this.shardMapName = shardMapName;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

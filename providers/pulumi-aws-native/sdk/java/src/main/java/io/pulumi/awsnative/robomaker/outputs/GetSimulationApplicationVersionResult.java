@@ -51,12 +51,12 @@ public final class GetSimulationApplicationVersionResult {
     	      this.arn = defaults.arn;
         }
 
-        public Builder setApplicationVersion(@Nullable String applicationVersion) {
+        public Builder applicationVersion(@Nullable String applicationVersion) {
             this.applicationVersion = applicationVersion;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }

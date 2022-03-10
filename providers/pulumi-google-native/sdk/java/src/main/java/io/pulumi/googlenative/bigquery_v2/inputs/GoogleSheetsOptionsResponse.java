@@ -68,12 +68,12 @@ public final class GoogleSheetsOptionsResponse extends io.pulumi.resources.Invok
     	      this.skipLeadingRows = defaults.skipLeadingRows;
         }
 
-        public Builder setRange(String range) {
+        public Builder range(String range) {
             this.range = Objects.requireNonNull(range);
             return this;
         }
 
-        public Builder setSkipLeadingRows(String skipLeadingRows) {
+        public Builder skipLeadingRows(String skipLeadingRows) {
             this.skipLeadingRows = Objects.requireNonNull(skipLeadingRows);
             return this;
         }

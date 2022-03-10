@@ -50,7 +50,7 @@ public final class VirtualNodeSpecLogging {
     	      this.accessLog = defaults.accessLog;
         }
 
-        public Builder setAccessLog(@Nullable VirtualNodeSpecLoggingAccessLog accessLog) {
+        public Builder accessLog(@Nullable VirtualNodeSpecLoggingAccessLog accessLog) {
             this.accessLog = accessLog;
             return this;
         }

@@ -74,12 +74,12 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionCon
     	      this.groupSuggestionResponses = defaults.groupSuggestionResponses;
         }
 
-        public Builder setFeatureConfigs(List<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigResponse> featureConfigs) {
+        public Builder featureConfigs(List<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigResponse> featureConfigs) {
             this.featureConfigs = Objects.requireNonNull(featureConfigs);
             return this;
         }
 
-        public Builder setGroupSuggestionResponses(Boolean groupSuggestionResponses) {
+        public Builder groupSuggestionResponses(Boolean groupSuggestionResponses) {
             this.groupSuggestionResponses = Objects.requireNonNull(groupSuggestionResponses);
             return this;
         }

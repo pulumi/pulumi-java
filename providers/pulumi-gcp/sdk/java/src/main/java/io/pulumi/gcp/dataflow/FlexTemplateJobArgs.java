@@ -168,72 +168,72 @@ public final class FlexTemplateJobArgs extends io.pulumi.resources.ResourceArgs 
     	      this.region = defaults.region;
         }
 
-        public Builder setContainerSpecGcsPath(Input<String> containerSpecGcsPath) {
+        public Builder containerSpecGcsPath(Input<String> containerSpecGcsPath) {
             this.containerSpecGcsPath = Objects.requireNonNull(containerSpecGcsPath);
             return this;
         }
 
-        public Builder setContainerSpecGcsPath(String containerSpecGcsPath) {
+        public Builder containerSpecGcsPath(String containerSpecGcsPath) {
             this.containerSpecGcsPath = Input.of(Objects.requireNonNull(containerSpecGcsPath));
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,Object>> labels) {
+        public Builder labels(@Nullable Input<Map<String,Object>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,Object> labels) {
+        public Builder labels(@Nullable Map<String,Object> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOnDelete(@Nullable Input<String> onDelete) {
+        public Builder onDelete(@Nullable Input<String> onDelete) {
             this.onDelete = onDelete;
             return this;
         }
 
-        public Builder setOnDelete(@Nullable String onDelete) {
+        public Builder onDelete(@Nullable String onDelete) {
             this.onDelete = Input.ofNullable(onDelete);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,Object>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,Object>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,Object> parameters) {
+        public Builder parameters(@Nullable Map<String,Object> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }

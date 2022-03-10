@@ -104,52 +104,52 @@ public final class RRSetRoutingPolicyArgs extends io.pulumi.resources.ResourceAr
     	      this.wrrPolicy = defaults.wrrPolicy;
         }
 
-        public Builder setGeo(@Nullable Input<RRSetRoutingPolicyGeoPolicyArgs> geo) {
+        public Builder geo(@Nullable Input<RRSetRoutingPolicyGeoPolicyArgs> geo) {
             this.geo = geo;
             return this;
         }
 
-        public Builder setGeo(@Nullable RRSetRoutingPolicyGeoPolicyArgs geo) {
+        public Builder geo(@Nullable RRSetRoutingPolicyGeoPolicyArgs geo) {
             this.geo = Input.ofNullable(geo);
             return this;
         }
 
-        public Builder setGeoPolicy(@Nullable Input<RRSetRoutingPolicyGeoPolicyArgs> geoPolicy) {
+        public Builder geoPolicy(@Nullable Input<RRSetRoutingPolicyGeoPolicyArgs> geoPolicy) {
             this.geoPolicy = geoPolicy;
             return this;
         }
 
-        public Builder setGeoPolicy(@Nullable RRSetRoutingPolicyGeoPolicyArgs geoPolicy) {
+        public Builder geoPolicy(@Nullable RRSetRoutingPolicyGeoPolicyArgs geoPolicy) {
             this.geoPolicy = Input.ofNullable(geoPolicy);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setWrr(@Nullable Input<RRSetRoutingPolicyWrrPolicyArgs> wrr) {
+        public Builder wrr(@Nullable Input<RRSetRoutingPolicyWrrPolicyArgs> wrr) {
             this.wrr = wrr;
             return this;
         }
 
-        public Builder setWrr(@Nullable RRSetRoutingPolicyWrrPolicyArgs wrr) {
+        public Builder wrr(@Nullable RRSetRoutingPolicyWrrPolicyArgs wrr) {
             this.wrr = Input.ofNullable(wrr);
             return this;
         }
 
-        public Builder setWrrPolicy(@Nullable Input<RRSetRoutingPolicyWrrPolicyArgs> wrrPolicy) {
+        public Builder wrrPolicy(@Nullable Input<RRSetRoutingPolicyWrrPolicyArgs> wrrPolicy) {
             this.wrrPolicy = wrrPolicy;
             return this;
         }
 
-        public Builder setWrrPolicy(@Nullable RRSetRoutingPolicyWrrPolicyArgs wrrPolicy) {
+        public Builder wrrPolicy(@Nullable RRSetRoutingPolicyWrrPolicyArgs wrrPolicy) {
             this.wrrPolicy = Input.ofNullable(wrrPolicy);
             return this;
         }

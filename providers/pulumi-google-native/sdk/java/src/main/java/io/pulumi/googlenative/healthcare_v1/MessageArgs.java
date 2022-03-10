@@ -218,122 +218,122 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sendTime = defaults.sendTime;
         }
 
-        public Builder setData(@Nullable Input<String> data) {
+        public Builder data(@Nullable Input<String> data) {
             this.data = data;
             return this;
         }
 
-        public Builder setData(@Nullable String data) {
+        public Builder data(@Nullable String data) {
             this.data = Input.ofNullable(data);
             return this;
         }
 
-        public Builder setDatasetId(Input<String> datasetId) {
+        public Builder datasetId(Input<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
-        public Builder setDatasetId(String datasetId) {
+        public Builder datasetId(String datasetId) {
             this.datasetId = Input.of(Objects.requireNonNull(datasetId));
             return this;
         }
 
-        public Builder setHl7V2StoreId(Input<String> hl7V2StoreId) {
+        public Builder hl7V2StoreId(Input<String> hl7V2StoreId) {
             this.hl7V2StoreId = Objects.requireNonNull(hl7V2StoreId);
             return this;
         }
 
-        public Builder setHl7V2StoreId(String hl7V2StoreId) {
+        public Builder hl7V2StoreId(String hl7V2StoreId) {
             this.hl7V2StoreId = Input.of(Objects.requireNonNull(hl7V2StoreId));
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMessageType(@Nullable Input<String> messageType) {
+        public Builder messageType(@Nullable Input<String> messageType) {
             this.messageType = messageType;
             return this;
         }
 
-        public Builder setMessageType(@Nullable String messageType) {
+        public Builder messageType(@Nullable String messageType) {
             this.messageType = Input.ofNullable(messageType);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPatientIds(@Nullable Input<List<PatientIdArgs>> patientIds) {
+        public Builder patientIds(@Nullable Input<List<PatientIdArgs>> patientIds) {
             this.patientIds = patientIds;
             return this;
         }
 
-        public Builder setPatientIds(@Nullable List<PatientIdArgs> patientIds) {
+        public Builder patientIds(@Nullable List<PatientIdArgs> patientIds) {
             this.patientIds = Input.ofNullable(patientIds);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSchematizedData(@Nullable Input<SchematizedDataArgs> schematizedData) {
+        public Builder schematizedData(@Nullable Input<SchematizedDataArgs> schematizedData) {
             this.schematizedData = schematizedData;
             return this;
         }
 
-        public Builder setSchematizedData(@Nullable SchematizedDataArgs schematizedData) {
+        public Builder schematizedData(@Nullable SchematizedDataArgs schematizedData) {
             this.schematizedData = Input.ofNullable(schematizedData);
             return this;
         }
 
-        public Builder setSendFacility(@Nullable Input<String> sendFacility) {
+        public Builder sendFacility(@Nullable Input<String> sendFacility) {
             this.sendFacility = sendFacility;
             return this;
         }
 
-        public Builder setSendFacility(@Nullable String sendFacility) {
+        public Builder sendFacility(@Nullable String sendFacility) {
             this.sendFacility = Input.ofNullable(sendFacility);
             return this;
         }
 
-        public Builder setSendTime(@Nullable Input<String> sendTime) {
+        public Builder sendTime(@Nullable Input<String> sendTime) {
             this.sendTime = sendTime;
             return this;
         }
 
-        public Builder setSendTime(@Nullable String sendTime) {
+        public Builder sendTime(@Nullable String sendTime) {
             this.sendTime = Input.ofNullable(sendTime);
             return this;
         }

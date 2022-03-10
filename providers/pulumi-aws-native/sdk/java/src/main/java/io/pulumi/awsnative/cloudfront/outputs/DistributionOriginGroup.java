@@ -59,17 +59,17 @@ public final class DistributionOriginGroup {
     	      this.members = defaults.members;
         }
 
-        public Builder setFailoverCriteria(DistributionOriginGroupFailoverCriteria failoverCriteria) {
+        public Builder failoverCriteria(DistributionOriginGroupFailoverCriteria failoverCriteria) {
             this.failoverCriteria = Objects.requireNonNull(failoverCriteria);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setMembers(DistributionOriginGroupMembers members) {
+        public Builder members(DistributionOriginGroupMembers members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }

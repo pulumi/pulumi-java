@@ -60,17 +60,17 @@ public final class TaskDefinitionPortMapping {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setContainerPort(@Nullable Integer containerPort) {
+        public Builder containerPort(@Nullable Integer containerPort) {
             this.containerPort = containerPort;
             return this;
         }
 
-        public Builder setHostPort(@Nullable Integer hostPort) {
+        public Builder hostPort(@Nullable Integer hostPort) {
             this.hostPort = hostPort;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }

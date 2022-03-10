@@ -154,72 +154,72 @@ public final class GetComponentResult {
     	      this.variants = defaults.variants;
         }
 
-        public Builder setAppId(@Nullable String appId) {
+        public Builder appId(@Nullable String appId) {
             this.appId = appId;
             return this;
         }
 
-        public Builder setBindingProperties(@Nullable ComponentBindingProperties bindingProperties) {
+        public Builder bindingProperties(@Nullable ComponentBindingProperties bindingProperties) {
             this.bindingProperties = bindingProperties;
             return this;
         }
 
-        public Builder setChildren(@Nullable List<ComponentChild> children) {
+        public Builder children(@Nullable List<ComponentChild> children) {
             this.children = children;
             return this;
         }
 
-        public Builder setCollectionProperties(@Nullable ComponentCollectionProperties collectionProperties) {
+        public Builder collectionProperties(@Nullable ComponentCollectionProperties collectionProperties) {
             this.collectionProperties = collectionProperties;
             return this;
         }
 
-        public Builder setComponentType(@Nullable String componentType) {
+        public Builder componentType(@Nullable String componentType) {
             this.componentType = componentType;
             return this;
         }
 
-        public Builder setCreatedAt(@Nullable String createdAt) {
+        public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-        public Builder setEnvironmentName(@Nullable String environmentName) {
+        public Builder environmentName(@Nullable String environmentName) {
             this.environmentName = environmentName;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setModifiedAt(@Nullable String modifiedAt) {
+        public Builder modifiedAt(@Nullable String modifiedAt) {
             this.modifiedAt = modifiedAt;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setOverrides(@Nullable ComponentOverrides overrides) {
+        public Builder overrides(@Nullable ComponentOverrides overrides) {
             this.overrides = overrides;
             return this;
         }
 
-        public Builder setProperties(@Nullable ComponentProperties properties) {
+        public Builder properties(@Nullable ComponentProperties properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setSourceId(@Nullable String sourceId) {
+        public Builder sourceId(@Nullable String sourceId) {
             this.sourceId = sourceId;
             return this;
         }
 
-        public Builder setVariants(@Nullable List<ComponentVariant> variants) {
+        public Builder variants(@Nullable List<ComponentVariant> variants) {
             this.variants = variants;
             return this;
         }

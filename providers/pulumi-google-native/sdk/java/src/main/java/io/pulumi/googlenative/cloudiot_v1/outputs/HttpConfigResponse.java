@@ -48,7 +48,7 @@ public final class HttpConfigResponse {
     	      this.httpEnabledState = defaults.httpEnabledState;
         }
 
-        public Builder setHttpEnabledState(String httpEnabledState) {
+        public Builder httpEnabledState(String httpEnabledState) {
             this.httpEnabledState = Objects.requireNonNull(httpEnabledState);
             return this;
         }

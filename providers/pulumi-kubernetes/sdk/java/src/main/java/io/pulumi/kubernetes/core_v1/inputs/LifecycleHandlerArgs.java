@@ -92,32 +92,32 @@ public final class LifecycleHandlerArgs extends io.pulumi.resources.ResourceArgs
     	      this.tcpSocket = defaults.tcpSocket;
         }
 
-        public Builder setExec(@Nullable Input<ExecActionArgs> exec) {
+        public Builder exec(@Nullable Input<ExecActionArgs> exec) {
             this.exec = exec;
             return this;
         }
 
-        public Builder setExec(@Nullable ExecActionArgs exec) {
+        public Builder exec(@Nullable ExecActionArgs exec) {
             this.exec = Input.ofNullable(exec);
             return this;
         }
 
-        public Builder setHttpGet(@Nullable Input<HTTPGetActionArgs> httpGet) {
+        public Builder httpGet(@Nullable Input<HTTPGetActionArgs> httpGet) {
             this.httpGet = httpGet;
             return this;
         }
 
-        public Builder setHttpGet(@Nullable HTTPGetActionArgs httpGet) {
+        public Builder httpGet(@Nullable HTTPGetActionArgs httpGet) {
             this.httpGet = Input.ofNullable(httpGet);
             return this;
         }
 
-        public Builder setTcpSocket(@Nullable Input<TCPSocketActionArgs> tcpSocket) {
+        public Builder tcpSocket(@Nullable Input<TCPSocketActionArgs> tcpSocket) {
             this.tcpSocket = tcpSocket;
             return this;
         }
 
-        public Builder setTcpSocket(@Nullable TCPSocketActionArgs tcpSocket) {
+        public Builder tcpSocket(@Nullable TCPSocketActionArgs tcpSocket) {
             this.tcpSocket = Input.ofNullable(tcpSocket);
             return this;
         }

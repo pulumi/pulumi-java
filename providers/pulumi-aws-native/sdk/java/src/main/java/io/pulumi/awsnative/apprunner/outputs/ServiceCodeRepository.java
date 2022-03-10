@@ -69,17 +69,17 @@ public final class ServiceCodeRepository {
     	      this.sourceCodeVersion = defaults.sourceCodeVersion;
         }
 
-        public Builder setCodeConfiguration(@Nullable ServiceCodeConfiguration codeConfiguration) {
+        public Builder codeConfiguration(@Nullable ServiceCodeConfiguration codeConfiguration) {
             this.codeConfiguration = codeConfiguration;
             return this;
         }
 
-        public Builder setRepositoryUrl(String repositoryUrl) {
+        public Builder repositoryUrl(String repositoryUrl) {
             this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
             return this;
         }
 
-        public Builder setSourceCodeVersion(ServiceSourceCodeVersion sourceCodeVersion) {
+        public Builder sourceCodeVersion(ServiceSourceCodeVersion sourceCodeVersion) {
             this.sourceCodeVersion = Objects.requireNonNull(sourceCodeVersion);
             return this;
         }

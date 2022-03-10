@@ -110,42 +110,42 @@ public final class ToolExecutionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.toolOutputs = defaults.toolOutputs;
         }
 
-        public Builder setCommandLineArguments(@Nullable Input<List<String>> commandLineArguments) {
+        public Builder commandLineArguments(@Nullable Input<List<String>> commandLineArguments) {
             this.commandLineArguments = commandLineArguments;
             return this;
         }
 
-        public Builder setCommandLineArguments(@Nullable List<String> commandLineArguments) {
+        public Builder commandLineArguments(@Nullable List<String> commandLineArguments) {
             this.commandLineArguments = Input.ofNullable(commandLineArguments);
             return this;
         }
 
-        public Builder setExitCode(@Nullable Input<ToolExitCodeArgs> exitCode) {
+        public Builder exitCode(@Nullable Input<ToolExitCodeArgs> exitCode) {
             this.exitCode = exitCode;
             return this;
         }
 
-        public Builder setExitCode(@Nullable ToolExitCodeArgs exitCode) {
+        public Builder exitCode(@Nullable ToolExitCodeArgs exitCode) {
             this.exitCode = Input.ofNullable(exitCode);
             return this;
         }
 
-        public Builder setToolLogs(@Nullable Input<List<FileReferenceArgs>> toolLogs) {
+        public Builder toolLogs(@Nullable Input<List<FileReferenceArgs>> toolLogs) {
             this.toolLogs = toolLogs;
             return this;
         }
 
-        public Builder setToolLogs(@Nullable List<FileReferenceArgs> toolLogs) {
+        public Builder toolLogs(@Nullable List<FileReferenceArgs> toolLogs) {
             this.toolLogs = Input.ofNullable(toolLogs);
             return this;
         }
 
-        public Builder setToolOutputs(@Nullable Input<List<ToolOutputReferenceArgs>> toolOutputs) {
+        public Builder toolOutputs(@Nullable Input<List<ToolOutputReferenceArgs>> toolOutputs) {
             this.toolOutputs = toolOutputs;
             return this;
         }
 
-        public Builder setToolOutputs(@Nullable List<ToolOutputReferenceArgs> toolOutputs) {
+        public Builder toolOutputs(@Nullable List<ToolOutputReferenceArgs> toolOutputs) {
             this.toolOutputs = Input.ofNullable(toolOutputs);
             return this;
         }

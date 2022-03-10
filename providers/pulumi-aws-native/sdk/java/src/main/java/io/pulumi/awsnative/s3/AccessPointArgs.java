@@ -118,52 +118,52 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcConfiguration = defaults.vpcConfiguration;
         }
 
-        public Builder setBucket(Input<String> bucket) {
+        public Builder bucket(Input<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Input.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder setPolicy(@Nullable Input<Object> policy) {
+        public Builder policy(@Nullable Input<Object> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPolicy(@Nullable Object policy) {
+        public Builder policy(@Nullable Object policy) {
             this.policy = Input.ofNullable(policy);
             return this;
         }
 
-        public Builder setPolicyStatus(@Nullable Input<PolicyStatusPropertiesArgs> policyStatus) {
+        public Builder policyStatus(@Nullable Input<PolicyStatusPropertiesArgs> policyStatus) {
             this.policyStatus = policyStatus;
             return this;
         }
 
-        public Builder setPolicyStatus(@Nullable PolicyStatusPropertiesArgs policyStatus) {
+        public Builder policyStatus(@Nullable PolicyStatusPropertiesArgs policyStatus) {
             this.policyStatus = Input.ofNullable(policyStatus);
             return this;
         }
 
-        public Builder setPublicAccessBlockConfiguration(@Nullable Input<AccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration) {
+        public Builder publicAccessBlockConfiguration(@Nullable Input<AccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration) {
             this.publicAccessBlockConfiguration = publicAccessBlockConfiguration;
             return this;
         }
 
-        public Builder setPublicAccessBlockConfiguration(@Nullable AccessPointPublicAccessBlockConfigurationArgs publicAccessBlockConfiguration) {
+        public Builder publicAccessBlockConfiguration(@Nullable AccessPointPublicAccessBlockConfigurationArgs publicAccessBlockConfiguration) {
             this.publicAccessBlockConfiguration = Input.ofNullable(publicAccessBlockConfiguration);
             return this;
         }
 
-        public Builder setVpcConfiguration(@Nullable Input<AccessPointVpcConfigurationArgs> vpcConfiguration) {
+        public Builder vpcConfiguration(@Nullable Input<AccessPointVpcConfigurationArgs> vpcConfiguration) {
             this.vpcConfiguration = vpcConfiguration;
             return this;
         }
 
-        public Builder setVpcConfiguration(@Nullable AccessPointVpcConfigurationArgs vpcConfiguration) {
+        public Builder vpcConfiguration(@Nullable AccessPointVpcConfigurationArgs vpcConfiguration) {
             this.vpcConfiguration = Input.ofNullable(vpcConfiguration);
             return this;
         }

@@ -133,32 +133,32 @@ public final class DenylistCustomAlertRuleResponse {
     	      this.valueType = defaults.valueType;
         }
 
-        public Builder setDenylistValues(List<String> denylistValues) {
+        public Builder denylistValues(List<String> denylistValues) {
             this.denylistValues = Objects.requireNonNull(denylistValues);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setIsEnabled(Boolean isEnabled) {
+        public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
-        public Builder setRuleType(String ruleType) {
+        public Builder ruleType(String ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
 
-        public Builder setValueType(String valueType) {
+        public Builder valueType(String valueType) {
             this.valueType = Objects.requireNonNull(valueType);
             return this;
         }

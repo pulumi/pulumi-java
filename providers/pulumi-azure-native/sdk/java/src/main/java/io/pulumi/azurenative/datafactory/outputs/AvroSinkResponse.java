@@ -189,47 +189,47 @@ public final class AvroSinkResponse {
     	      this.writeBatchTimeout = defaults.writeBatchTimeout;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Object disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
-        public Builder setFormatSettings(@Nullable AvroWriteSettingsResponse formatSettings) {
+        public Builder formatSettings(@Nullable AvroWriteSettingsResponse formatSettings) {
             this.formatSettings = formatSettings;
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
-        public Builder setSinkRetryCount(@Nullable Object sinkRetryCount) {
+        public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
             this.sinkRetryCount = sinkRetryCount;
             return this;
         }
 
-        public Builder setSinkRetryWait(@Nullable Object sinkRetryWait) {
+        public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
             this.sinkRetryWait = sinkRetryWait;
             return this;
         }
 
-        public Builder setStoreSettings(@Nullable Object storeSettings) {
+        public Builder storeSettings(@Nullable Object storeSettings) {
             this.storeSettings = storeSettings;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWriteBatchSize(@Nullable Object writeBatchSize) {
+        public Builder writeBatchSize(@Nullable Object writeBatchSize) {
             this.writeBatchSize = writeBatchSize;
             return this;
         }
 
-        public Builder setWriteBatchTimeout(@Nullable Object writeBatchTimeout) {
+        public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }

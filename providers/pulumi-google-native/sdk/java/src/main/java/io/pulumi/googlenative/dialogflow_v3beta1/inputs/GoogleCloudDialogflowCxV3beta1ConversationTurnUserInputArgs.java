@@ -109,42 +109,42 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputArgs e
     	      this.isWebhookEnabled = defaults.isWebhookEnabled;
         }
 
-        public Builder setEnableSentimentAnalysis(@Nullable Input<Boolean> enableSentimentAnalysis) {
+        public Builder enableSentimentAnalysis(@Nullable Input<Boolean> enableSentimentAnalysis) {
             this.enableSentimentAnalysis = enableSentimentAnalysis;
             return this;
         }
 
-        public Builder setEnableSentimentAnalysis(@Nullable Boolean enableSentimentAnalysis) {
+        public Builder enableSentimentAnalysis(@Nullable Boolean enableSentimentAnalysis) {
             this.enableSentimentAnalysis = Input.ofNullable(enableSentimentAnalysis);
             return this;
         }
 
-        public Builder setInjectedParameters(@Nullable Input<Map<String,String>> injectedParameters) {
+        public Builder injectedParameters(@Nullable Input<Map<String,String>> injectedParameters) {
             this.injectedParameters = injectedParameters;
             return this;
         }
 
-        public Builder setInjectedParameters(@Nullable Map<String,String> injectedParameters) {
+        public Builder injectedParameters(@Nullable Map<String,String> injectedParameters) {
             this.injectedParameters = Input.ofNullable(injectedParameters);
             return this;
         }
 
-        public Builder setInput(@Nullable Input<GoogleCloudDialogflowCxV3beta1QueryInputArgs> input) {
+        public Builder input(@Nullable Input<GoogleCloudDialogflowCxV3beta1QueryInputArgs> input) {
             this.input = input;
             return this;
         }
 
-        public Builder setInput(@Nullable GoogleCloudDialogflowCxV3beta1QueryInputArgs input) {
+        public Builder input(@Nullable GoogleCloudDialogflowCxV3beta1QueryInputArgs input) {
             this.input = Input.ofNullable(input);
             return this;
         }
 
-        public Builder setIsWebhookEnabled(@Nullable Input<Boolean> isWebhookEnabled) {
+        public Builder isWebhookEnabled(@Nullable Input<Boolean> isWebhookEnabled) {
             this.isWebhookEnabled = isWebhookEnabled;
             return this;
         }
 
-        public Builder setIsWebhookEnabled(@Nullable Boolean isWebhookEnabled) {
+        public Builder isWebhookEnabled(@Nullable Boolean isWebhookEnabled) {
             this.isWebhookEnabled = Input.ofNullable(isWebhookEnabled);
             return this;
         }

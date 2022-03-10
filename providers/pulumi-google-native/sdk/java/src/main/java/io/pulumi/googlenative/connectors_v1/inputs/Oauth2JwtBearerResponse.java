@@ -73,12 +73,12 @@ public final class Oauth2JwtBearerResponse extends io.pulumi.resources.InvokeArg
     	      this.jwtClaims = defaults.jwtClaims;
         }
 
-        public Builder setClientKey(SecretResponse clientKey) {
+        public Builder clientKey(SecretResponse clientKey) {
             this.clientKey = Objects.requireNonNull(clientKey);
             return this;
         }
 
-        public Builder setJwtClaims(JwtClaimsResponse jwtClaims) {
+        public Builder jwtClaims(JwtClaimsResponse jwtClaims) {
             this.jwtClaims = Objects.requireNonNull(jwtClaims);
             return this;
         }

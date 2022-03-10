@@ -148,62 +148,62 @@ public final class TableExternalDataConfigurationCsvOptionsArgs extends io.pulum
     	      this.skipLeadingRows = defaults.skipLeadingRows;
         }
 
-        public Builder setAllowJaggedRows(@Nullable Input<Boolean> allowJaggedRows) {
+        public Builder allowJaggedRows(@Nullable Input<Boolean> allowJaggedRows) {
             this.allowJaggedRows = allowJaggedRows;
             return this;
         }
 
-        public Builder setAllowJaggedRows(@Nullable Boolean allowJaggedRows) {
+        public Builder allowJaggedRows(@Nullable Boolean allowJaggedRows) {
             this.allowJaggedRows = Input.ofNullable(allowJaggedRows);
             return this;
         }
 
-        public Builder setAllowQuotedNewlines(@Nullable Input<Boolean> allowQuotedNewlines) {
+        public Builder allowQuotedNewlines(@Nullable Input<Boolean> allowQuotedNewlines) {
             this.allowQuotedNewlines = allowQuotedNewlines;
             return this;
         }
 
-        public Builder setAllowQuotedNewlines(@Nullable Boolean allowQuotedNewlines) {
+        public Builder allowQuotedNewlines(@Nullable Boolean allowQuotedNewlines) {
             this.allowQuotedNewlines = Input.ofNullable(allowQuotedNewlines);
             return this;
         }
 
-        public Builder setEncoding(@Nullable Input<String> encoding) {
+        public Builder encoding(@Nullable Input<String> encoding) {
             this.encoding = encoding;
             return this;
         }
 
-        public Builder setEncoding(@Nullable String encoding) {
+        public Builder encoding(@Nullable String encoding) {
             this.encoding = Input.ofNullable(encoding);
             return this;
         }
 
-        public Builder setFieldDelimiter(@Nullable Input<String> fieldDelimiter) {
+        public Builder fieldDelimiter(@Nullable Input<String> fieldDelimiter) {
             this.fieldDelimiter = fieldDelimiter;
             return this;
         }
 
-        public Builder setFieldDelimiter(@Nullable String fieldDelimiter) {
+        public Builder fieldDelimiter(@Nullable String fieldDelimiter) {
             this.fieldDelimiter = Input.ofNullable(fieldDelimiter);
             return this;
         }
 
-        public Builder setQuote(Input<String> quote) {
+        public Builder quote(Input<String> quote) {
             this.quote = Objects.requireNonNull(quote);
             return this;
         }
 
-        public Builder setQuote(String quote) {
+        public Builder quote(String quote) {
             this.quote = Input.of(Objects.requireNonNull(quote));
             return this;
         }
 
-        public Builder setSkipLeadingRows(@Nullable Input<Integer> skipLeadingRows) {
+        public Builder skipLeadingRows(@Nullable Input<Integer> skipLeadingRows) {
             this.skipLeadingRows = skipLeadingRows;
             return this;
         }
 
-        public Builder setSkipLeadingRows(@Nullable Integer skipLeadingRows) {
+        public Builder skipLeadingRows(@Nullable Integer skipLeadingRows) {
             this.skipLeadingRows = Input.ofNullable(skipLeadingRows);
             return this;
         }

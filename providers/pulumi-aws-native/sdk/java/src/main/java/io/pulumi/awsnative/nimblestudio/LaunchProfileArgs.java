@@ -164,82 +164,82 @@ public final class LaunchProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEc2SubnetIds(Input<List<String>> ec2SubnetIds) {
+        public Builder ec2SubnetIds(Input<List<String>> ec2SubnetIds) {
             this.ec2SubnetIds = Objects.requireNonNull(ec2SubnetIds);
             return this;
         }
 
-        public Builder setEc2SubnetIds(List<String> ec2SubnetIds) {
+        public Builder ec2SubnetIds(List<String> ec2SubnetIds) {
             this.ec2SubnetIds = Input.of(Objects.requireNonNull(ec2SubnetIds));
             return this;
         }
 
-        public Builder setLaunchProfileProtocolVersions(Input<List<String>> launchProfileProtocolVersions) {
+        public Builder launchProfileProtocolVersions(Input<List<String>> launchProfileProtocolVersions) {
             this.launchProfileProtocolVersions = Objects.requireNonNull(launchProfileProtocolVersions);
             return this;
         }
 
-        public Builder setLaunchProfileProtocolVersions(List<String> launchProfileProtocolVersions) {
+        public Builder launchProfileProtocolVersions(List<String> launchProfileProtocolVersions) {
             this.launchProfileProtocolVersions = Input.of(Objects.requireNonNull(launchProfileProtocolVersions));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setStreamConfiguration(Input<LaunchProfileStreamConfigurationArgs> streamConfiguration) {
+        public Builder streamConfiguration(Input<LaunchProfileStreamConfigurationArgs> streamConfiguration) {
             this.streamConfiguration = Objects.requireNonNull(streamConfiguration);
             return this;
         }
 
-        public Builder setStreamConfiguration(LaunchProfileStreamConfigurationArgs streamConfiguration) {
+        public Builder streamConfiguration(LaunchProfileStreamConfigurationArgs streamConfiguration) {
             this.streamConfiguration = Input.of(Objects.requireNonNull(streamConfiguration));
             return this;
         }
 
-        public Builder setStudioComponentIds(Input<List<String>> studioComponentIds) {
+        public Builder studioComponentIds(Input<List<String>> studioComponentIds) {
             this.studioComponentIds = Objects.requireNonNull(studioComponentIds);
             return this;
         }
 
-        public Builder setStudioComponentIds(List<String> studioComponentIds) {
+        public Builder studioComponentIds(List<String> studioComponentIds) {
             this.studioComponentIds = Input.of(Objects.requireNonNull(studioComponentIds));
             return this;
         }
 
-        public Builder setStudioId(Input<String> studioId) {
+        public Builder studioId(Input<String> studioId) {
             this.studioId = Objects.requireNonNull(studioId);
             return this;
         }
 
-        public Builder setStudioId(String studioId) {
+        public Builder studioId(String studioId) {
             this.studioId = Input.of(Objects.requireNonNull(studioId));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<LaunchProfileTagsArgs> tags) {
+        public Builder tags(@Nullable Input<LaunchProfileTagsArgs> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable LaunchProfileTagsArgs tags) {
+        public Builder tags(@Nullable LaunchProfileTagsArgs tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

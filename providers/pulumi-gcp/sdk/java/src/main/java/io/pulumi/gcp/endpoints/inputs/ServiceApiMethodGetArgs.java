@@ -86,42 +86,42 @@ public final class ServiceApiMethodGetArgs extends io.pulumi.resources.ResourceA
     	      this.syntax = defaults.syntax;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRequestType(@Nullable Input<String> requestType) {
+        public Builder requestType(@Nullable Input<String> requestType) {
             this.requestType = requestType;
             return this;
         }
 
-        public Builder setRequestType(@Nullable String requestType) {
+        public Builder requestType(@Nullable String requestType) {
             this.requestType = Input.ofNullable(requestType);
             return this;
         }
 
-        public Builder setResponseType(@Nullable Input<String> responseType) {
+        public Builder responseType(@Nullable Input<String> responseType) {
             this.responseType = responseType;
             return this;
         }
 
-        public Builder setResponseType(@Nullable String responseType) {
+        public Builder responseType(@Nullable String responseType) {
             this.responseType = Input.ofNullable(responseType);
             return this;
         }
 
-        public Builder setSyntax(@Nullable Input<String> syntax) {
+        public Builder syntax(@Nullable Input<String> syntax) {
             this.syntax = syntax;
             return this;
         }
 
-        public Builder setSyntax(@Nullable String syntax) {
+        public Builder syntax(@Nullable String syntax) {
             this.syntax = Input.ofNullable(syntax);
             return this;
         }

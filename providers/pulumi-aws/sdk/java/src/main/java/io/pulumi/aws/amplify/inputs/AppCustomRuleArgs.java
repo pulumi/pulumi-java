@@ -102,42 +102,42 @@ public final class AppCustomRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.target = defaults.target;
         }
 
-        public Builder setCondition(@Nullable Input<String> condition) {
+        public Builder condition(@Nullable Input<String> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable String condition) {
+        public Builder condition(@Nullable String condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }
 
-        public Builder setSource(Input<String> source) {
+        public Builder source(Input<String> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Input.of(Objects.requireNonNull(source));
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setTarget(Input<String> target) {
+        public Builder target(Input<String> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
 
-        public Builder setTarget(String target) {
+        public Builder target(String target) {
             this.target = Input.of(Objects.requireNonNull(target));
             return this;
         }

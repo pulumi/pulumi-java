@@ -85,17 +85,17 @@ public final class EventConnectionAuthParametersOauthOauthHttpParameters {
     	      this.queryStrings = defaults.queryStrings;
         }
 
-        public Builder setBodies(@Nullable List<EventConnectionAuthParametersOauthOauthHttpParametersBody> bodies) {
+        public Builder bodies(@Nullable List<EventConnectionAuthParametersOauthOauthHttpParametersBody> bodies) {
             this.bodies = bodies;
             return this;
         }
 
-        public Builder setHeaders(@Nullable List<EventConnectionAuthParametersOauthOauthHttpParametersHeader> headers) {
+        public Builder headers(@Nullable List<EventConnectionAuthParametersOauthOauthHttpParametersHeader> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setQueryStrings(@Nullable List<EventConnectionAuthParametersOauthOauthHttpParametersQueryString> queryStrings) {
+        public Builder queryStrings(@Nullable List<EventConnectionAuthParametersOauthOauthHttpParametersQueryString> queryStrings) {
             this.queryStrings = queryStrings;
             return this;
         }

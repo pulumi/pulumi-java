@@ -95,32 +95,32 @@ public final class ManagementEventRuleConditionArgs extends io.pulumi.resources.
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setAggregation(@Nullable Input<ManagementEventAggregationConditionArgs> aggregation) {
+        public Builder aggregation(@Nullable Input<ManagementEventAggregationConditionArgs> aggregation) {
             this.aggregation = aggregation;
             return this;
         }
 
-        public Builder setAggregation(@Nullable ManagementEventAggregationConditionArgs aggregation) {
+        public Builder aggregation(@Nullable ManagementEventAggregationConditionArgs aggregation) {
             this.aggregation = Input.ofNullable(aggregation);
             return this;
         }
 
-        public Builder setDataSource(@Nullable Input<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource) {
+        public Builder dataSource(@Nullable Input<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource) {
             this.dataSource = dataSource;
             return this;
         }
 
-        public Builder setDataSource(@Nullable Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs> dataSource) {
+        public Builder dataSource(@Nullable Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs> dataSource) {
             this.dataSource = Input.ofNullable(dataSource);
             return this;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }

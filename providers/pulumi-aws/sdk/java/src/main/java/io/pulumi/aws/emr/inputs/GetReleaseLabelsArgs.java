@@ -53,7 +53,7 @@ public final class GetReleaseLabelsArgs extends io.pulumi.resources.InvokeArgs {
     	      this.filters = defaults.filters;
         }
 
-        public Builder setFilters(@Nullable GetReleaseLabelsFilters filters) {
+        public Builder filters(@Nullable GetReleaseLabelsFilters filters) {
             this.filters = filters;
             return this;
         }

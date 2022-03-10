@@ -90,17 +90,17 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfigResponse extends i
     	      this.surrogateInfoType = defaults.surrogateInfoType;
         }
 
-        public Builder setContext(GooglePrivacyDlpV2FieldIdResponse context) {
+        public Builder context(GooglePrivacyDlpV2FieldIdResponse context) {
             this.context = Objects.requireNonNull(context);
             return this;
         }
 
-        public Builder setCryptoKey(GooglePrivacyDlpV2CryptoKeyResponse cryptoKey) {
+        public Builder cryptoKey(GooglePrivacyDlpV2CryptoKeyResponse cryptoKey) {
             this.cryptoKey = Objects.requireNonNull(cryptoKey);
             return this;
         }
 
-        public Builder setSurrogateInfoType(GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType) {
+        public Builder surrogateInfoType(GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType) {
             this.surrogateInfoType = Objects.requireNonNull(surrogateInfoType);
             return this;
         }

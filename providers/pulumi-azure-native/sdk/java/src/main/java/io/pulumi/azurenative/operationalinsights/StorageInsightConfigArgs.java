@@ -169,82 +169,82 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setContainers(@Nullable Input<List<String>> containers) {
+        public Builder containers(@Nullable Input<List<String>> containers) {
             this.containers = containers;
             return this;
         }
 
-        public Builder setContainers(@Nullable List<String> containers) {
+        public Builder containers(@Nullable List<String> containers) {
             this.containers = Input.ofNullable(containers);
             return this;
         }
 
-        public Builder setETag(@Nullable Input<String> eTag) {
+        public Builder eTag(@Nullable Input<String> eTag) {
             this.eTag = eTag;
             return this;
         }
 
-        public Builder setETag(@Nullable String eTag) {
+        public Builder eTag(@Nullable String eTag) {
             this.eTag = Input.ofNullable(eTag);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setStorageAccount(Input<StorageAccountArgs> storageAccount) {
+        public Builder storageAccount(Input<StorageAccountArgs> storageAccount) {
             this.storageAccount = Objects.requireNonNull(storageAccount);
             return this;
         }
 
-        public Builder setStorageAccount(StorageAccountArgs storageAccount) {
+        public Builder storageAccount(StorageAccountArgs storageAccount) {
             this.storageAccount = Input.of(Objects.requireNonNull(storageAccount));
             return this;
         }
 
-        public Builder setStorageInsightName(@Nullable Input<String> storageInsightName) {
+        public Builder storageInsightName(@Nullable Input<String> storageInsightName) {
             this.storageInsightName = storageInsightName;
             return this;
         }
 
-        public Builder setStorageInsightName(@Nullable String storageInsightName) {
+        public Builder storageInsightName(@Nullable String storageInsightName) {
             this.storageInsightName = Input.ofNullable(storageInsightName);
             return this;
         }
 
-        public Builder setTables(@Nullable Input<List<String>> tables) {
+        public Builder tables(@Nullable Input<List<String>> tables) {
             this.tables = tables;
             return this;
         }
 
-        public Builder setTables(@Nullable List<String> tables) {
+        public Builder tables(@Nullable List<String> tables) {
             this.tables = Input.ofNullable(tables);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

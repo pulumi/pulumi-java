@@ -68,12 +68,12 @@ public final class PropagatedRouteTableResponse {
     	      this.labels = defaults.labels;
         }
 
-        public Builder setIds(@Nullable List<SubResourceResponse> ids) {
+        public Builder ids(@Nullable List<SubResourceResponse> ids) {
             this.ids = ids;
             return this;
         }
 
-        public Builder setLabels(@Nullable List<String> labels) {
+        public Builder labels(@Nullable List<String> labels) {
             this.labels = labels;
             return this;
         }

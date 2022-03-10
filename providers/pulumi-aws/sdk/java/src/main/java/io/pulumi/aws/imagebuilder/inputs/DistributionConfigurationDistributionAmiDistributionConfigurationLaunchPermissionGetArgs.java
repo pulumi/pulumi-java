@@ -71,22 +71,22 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     	      this.userIds = defaults.userIds;
         }
 
-        public Builder setUserGroups(@Nullable Input<List<String>> userGroups) {
+        public Builder userGroups(@Nullable Input<List<String>> userGroups) {
             this.userGroups = userGroups;
             return this;
         }
 
-        public Builder setUserGroups(@Nullable List<String> userGroups) {
+        public Builder userGroups(@Nullable List<String> userGroups) {
             this.userGroups = Input.ofNullable(userGroups);
             return this;
         }
 
-        public Builder setUserIds(@Nullable Input<List<String>> userIds) {
+        public Builder userIds(@Nullable Input<List<String>> userIds) {
             this.userIds = userIds;
             return this;
         }
 
-        public Builder setUserIds(@Nullable List<String> userIds) {
+        public Builder userIds(@Nullable List<String> userIds) {
             this.userIds = Input.ofNullable(userIds);
             return this;
         }

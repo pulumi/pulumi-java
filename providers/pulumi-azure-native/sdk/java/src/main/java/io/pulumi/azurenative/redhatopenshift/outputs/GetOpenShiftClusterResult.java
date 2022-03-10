@@ -269,72 +269,72 @@ public final class GetOpenShiftClusterResult {
     	      this.workerProfiles = defaults.workerProfiles;
         }
 
-        public Builder setApiserverProfile(@Nullable APIServerProfileResponse apiserverProfile) {
+        public Builder apiserverProfile(@Nullable APIServerProfileResponse apiserverProfile) {
             this.apiserverProfile = apiserverProfile;
             return this;
         }
 
-        public Builder setClusterProfile(@Nullable ClusterProfileResponse clusterProfile) {
+        public Builder clusterProfile(@Nullable ClusterProfileResponse clusterProfile) {
             this.clusterProfile = clusterProfile;
             return this;
         }
 
-        public Builder setConsoleProfile(@Nullable ConsoleProfileResponse consoleProfile) {
+        public Builder consoleProfile(@Nullable ConsoleProfileResponse consoleProfile) {
             this.consoleProfile = consoleProfile;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIngressProfiles(@Nullable List<IngressProfileResponse> ingressProfiles) {
+        public Builder ingressProfiles(@Nullable List<IngressProfileResponse> ingressProfiles) {
             this.ingressProfiles = ingressProfiles;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMasterProfile(@Nullable MasterProfileResponse masterProfile) {
+        public Builder masterProfile(@Nullable MasterProfileResponse masterProfile) {
             this.masterProfile = masterProfile;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetworkProfile(@Nullable NetworkProfileResponse networkProfile) {
+        public Builder networkProfile(@Nullable NetworkProfileResponse networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setServicePrincipalProfile(@Nullable ServicePrincipalProfileResponse servicePrincipalProfile) {
+        public Builder servicePrincipalProfile(@Nullable ServicePrincipalProfileResponse servicePrincipalProfile) {
             this.servicePrincipalProfile = servicePrincipalProfile;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWorkerProfiles(@Nullable List<WorkerProfileResponse> workerProfiles) {
+        public Builder workerProfiles(@Nullable List<WorkerProfileResponse> workerProfiles) {
             this.workerProfiles = workerProfiles;
             return this;
         }

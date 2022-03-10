@@ -203,52 +203,52 @@ public final class ListStorageAccountSASArgs extends io.pulumi.resources.InvokeA
     	      this.sharedAccessStartTime = defaults.sharedAccessStartTime;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setIPAddressOrRange(@Nullable String iPAddressOrRange) {
+        public Builder iPAddressOrRange(@Nullable String iPAddressOrRange) {
             this.iPAddressOrRange = iPAddressOrRange;
             return this;
         }
 
-        public Builder setKeyToSign(@Nullable String keyToSign) {
+        public Builder keyToSign(@Nullable String keyToSign) {
             this.keyToSign = keyToSign;
             return this;
         }
 
-        public Builder setPermissions(Either<String,Permissions> permissions) {
+        public Builder permissions(Either<String,Permissions> permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
 
-        public Builder setProtocols(@Nullable HttpProtocol protocols) {
+        public Builder protocols(@Nullable HttpProtocol protocols) {
             this.protocols = protocols;
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceTypes(Either<String,SignedResourceTypes> resourceTypes) {
+        public Builder resourceTypes(Either<String,SignedResourceTypes> resourceTypes) {
             this.resourceTypes = Objects.requireNonNull(resourceTypes);
             return this;
         }
 
-        public Builder setServices(Either<String,Services> services) {
+        public Builder services(Either<String,Services> services) {
             this.services = Objects.requireNonNull(services);
             return this;
         }
 
-        public Builder setSharedAccessExpiryTime(String sharedAccessExpiryTime) {
+        public Builder sharedAccessExpiryTime(String sharedAccessExpiryTime) {
             this.sharedAccessExpiryTime = Objects.requireNonNull(sharedAccessExpiryTime);
             return this;
         }
 
-        public Builder setSharedAccessStartTime(@Nullable String sharedAccessStartTime) {
+        public Builder sharedAccessStartTime(@Nullable String sharedAccessStartTime) {
             this.sharedAccessStartTime = sharedAccessStartTime;
             return this;
         }

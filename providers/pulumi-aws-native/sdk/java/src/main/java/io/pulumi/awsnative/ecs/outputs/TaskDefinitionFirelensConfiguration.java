@@ -52,12 +52,12 @@ public final class TaskDefinitionFirelensConfiguration {
     	      this.type = defaults.type;
         }
 
-        public Builder setOptions(@Nullable Object options) {
+        public Builder options(@Nullable Object options) {
             this.options = options;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

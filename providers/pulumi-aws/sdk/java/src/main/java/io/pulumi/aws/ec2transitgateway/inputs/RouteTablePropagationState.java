@@ -102,42 +102,42 @@ public final class RouteTablePropagationState extends io.pulumi.resources.Resour
     	      this.transitGatewayRouteTableId = defaults.transitGatewayRouteTableId;
         }
 
-        public Builder setResourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Input<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Input.ofNullable(resourceId);
             return this;
         }
 
-        public Builder setResourceType(@Nullable Input<String> resourceType) {
+        public Builder resourceType(@Nullable Input<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
-        public Builder setResourceType(@Nullable String resourceType) {
+        public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = Input.ofNullable(resourceType);
             return this;
         }
 
-        public Builder setTransitGatewayAttachmentId(@Nullable Input<String> transitGatewayAttachmentId) {
+        public Builder transitGatewayAttachmentId(@Nullable Input<String> transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = transitGatewayAttachmentId;
             return this;
         }
 
-        public Builder setTransitGatewayAttachmentId(@Nullable String transitGatewayAttachmentId) {
+        public Builder transitGatewayAttachmentId(@Nullable String transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = Input.ofNullable(transitGatewayAttachmentId);
             return this;
         }
 
-        public Builder setTransitGatewayRouteTableId(@Nullable Input<String> transitGatewayRouteTableId) {
+        public Builder transitGatewayRouteTableId(@Nullable Input<String> transitGatewayRouteTableId) {
             this.transitGatewayRouteTableId = transitGatewayRouteTableId;
             return this;
         }
 
-        public Builder setTransitGatewayRouteTableId(@Nullable String transitGatewayRouteTableId) {
+        public Builder transitGatewayRouteTableId(@Nullable String transitGatewayRouteTableId) {
             this.transitGatewayRouteTableId = Input.ofNullable(transitGatewayRouteTableId);
             return this;
         }

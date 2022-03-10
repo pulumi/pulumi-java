@@ -74,22 +74,22 @@ public final class TrafficSelectorPolicyArgs extends io.pulumi.resources.Resourc
     	      this.remoteAddressRanges = defaults.remoteAddressRanges;
         }
 
-        public Builder setLocalAddressRanges(Input<List<String>> localAddressRanges) {
+        public Builder localAddressRanges(Input<List<String>> localAddressRanges) {
             this.localAddressRanges = Objects.requireNonNull(localAddressRanges);
             return this;
         }
 
-        public Builder setLocalAddressRanges(List<String> localAddressRanges) {
+        public Builder localAddressRanges(List<String> localAddressRanges) {
             this.localAddressRanges = Input.of(Objects.requireNonNull(localAddressRanges));
             return this;
         }
 
-        public Builder setRemoteAddressRanges(Input<List<String>> remoteAddressRanges) {
+        public Builder remoteAddressRanges(Input<List<String>> remoteAddressRanges) {
             this.remoteAddressRanges = Objects.requireNonNull(remoteAddressRanges);
             return this;
         }
 
-        public Builder setRemoteAddressRanges(List<String> remoteAddressRanges) {
+        public Builder remoteAddressRanges(List<String> remoteAddressRanges) {
             this.remoteAddressRanges = Input.of(Objects.requireNonNull(remoteAddressRanges));
             return this;
         }

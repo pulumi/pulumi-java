@@ -480,137 +480,137 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemResponse extends i
     	      this.workloadType = defaults.workloadType;
         }
 
-        public Builder setBackupManagementType(@Nullable String backupManagementType) {
+        public Builder backupManagementType(@Nullable String backupManagementType) {
             this.backupManagementType = backupManagementType;
             return this;
         }
 
-        public Builder setBackupSetName(@Nullable String backupSetName) {
+        public Builder backupSetName(@Nullable String backupSetName) {
             this.backupSetName = backupSetName;
             return this;
         }
 
-        public Builder setContainerName(@Nullable String containerName) {
+        public Builder containerName(@Nullable String containerName) {
             this.containerName = containerName;
             return this;
         }
 
-        public Builder setCreateMode(@Nullable String createMode) {
+        public Builder createMode(@Nullable String createMode) {
             this.createMode = createMode;
             return this;
         }
 
-        public Builder setDeferredDeleteTimeInUTC(@Nullable String deferredDeleteTimeInUTC) {
+        public Builder deferredDeleteTimeInUTC(@Nullable String deferredDeleteTimeInUTC) {
             this.deferredDeleteTimeInUTC = deferredDeleteTimeInUTC;
             return this;
         }
 
-        public Builder setDeferredDeleteTimeRemaining(@Nullable String deferredDeleteTimeRemaining) {
+        public Builder deferredDeleteTimeRemaining(@Nullable String deferredDeleteTimeRemaining) {
             this.deferredDeleteTimeRemaining = deferredDeleteTimeRemaining;
             return this;
         }
 
-        public Builder setExtendedInfo(@Nullable AzureVmWorkloadProtectedItemExtendedInfoResponse extendedInfo) {
+        public Builder extendedInfo(@Nullable AzureVmWorkloadProtectedItemExtendedInfoResponse extendedInfo) {
             this.extendedInfo = extendedInfo;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setIsDeferredDeleteScheduleUpcoming(@Nullable Boolean isDeferredDeleteScheduleUpcoming) {
+        public Builder isDeferredDeleteScheduleUpcoming(@Nullable Boolean isDeferredDeleteScheduleUpcoming) {
             this.isDeferredDeleteScheduleUpcoming = isDeferredDeleteScheduleUpcoming;
             return this;
         }
 
-        public Builder setIsRehydrate(@Nullable Boolean isRehydrate) {
+        public Builder isRehydrate(@Nullable Boolean isRehydrate) {
             this.isRehydrate = isRehydrate;
             return this;
         }
 
-        public Builder setIsScheduledForDeferredDelete(@Nullable Boolean isScheduledForDeferredDelete) {
+        public Builder isScheduledForDeferredDelete(@Nullable Boolean isScheduledForDeferredDelete) {
             this.isScheduledForDeferredDelete = isScheduledForDeferredDelete;
             return this;
         }
 
-        public Builder setKpisHealths(@Nullable Map<String,KPIResourceHealthDetailsResponse> kpisHealths) {
+        public Builder kpisHealths(@Nullable Map<String,KPIResourceHealthDetailsResponse> kpisHealths) {
             this.kpisHealths = kpisHealths;
             return this;
         }
 
-        public Builder setLastBackupErrorDetail(@Nullable ErrorDetailResponse lastBackupErrorDetail) {
+        public Builder lastBackupErrorDetail(@Nullable ErrorDetailResponse lastBackupErrorDetail) {
             this.lastBackupErrorDetail = lastBackupErrorDetail;
             return this;
         }
 
-        public Builder setLastBackupStatus(@Nullable String lastBackupStatus) {
+        public Builder lastBackupStatus(@Nullable String lastBackupStatus) {
             this.lastBackupStatus = lastBackupStatus;
             return this;
         }
 
-        public Builder setLastBackupTime(@Nullable String lastBackupTime) {
+        public Builder lastBackupTime(@Nullable String lastBackupTime) {
             this.lastBackupTime = lastBackupTime;
             return this;
         }
 
-        public Builder setLastRecoveryPoint(@Nullable String lastRecoveryPoint) {
+        public Builder lastRecoveryPoint(@Nullable String lastRecoveryPoint) {
             this.lastRecoveryPoint = lastRecoveryPoint;
             return this;
         }
 
-        public Builder setParentName(@Nullable String parentName) {
+        public Builder parentName(@Nullable String parentName) {
             this.parentName = parentName;
             return this;
         }
 
-        public Builder setParentType(@Nullable String parentType) {
+        public Builder parentType(@Nullable String parentType) {
             this.parentType = parentType;
             return this;
         }
 
-        public Builder setPolicyId(@Nullable String policyId) {
+        public Builder policyId(@Nullable String policyId) {
             this.policyId = policyId;
             return this;
         }
 
-        public Builder setProtectedItemDataSourceId(@Nullable String protectedItemDataSourceId) {
+        public Builder protectedItemDataSourceId(@Nullable String protectedItemDataSourceId) {
             this.protectedItemDataSourceId = protectedItemDataSourceId;
             return this;
         }
 
-        public Builder setProtectedItemHealthStatus(@Nullable String protectedItemHealthStatus) {
+        public Builder protectedItemHealthStatus(@Nullable String protectedItemHealthStatus) {
             this.protectedItemHealthStatus = protectedItemHealthStatus;
             return this;
         }
 
-        public Builder setProtectedItemType(String protectedItemType) {
+        public Builder protectedItemType(String protectedItemType) {
             this.protectedItemType = Objects.requireNonNull(protectedItemType);
             return this;
         }
 
-        public Builder setProtectionState(@Nullable String protectionState) {
+        public Builder protectionState(@Nullable String protectionState) {
             this.protectionState = protectionState;
             return this;
         }
 
-        public Builder setProtectionStatus(@Nullable String protectionStatus) {
+        public Builder protectionStatus(@Nullable String protectionStatus) {
             this.protectionStatus = protectionStatus;
             return this;
         }
 
-        public Builder setServerName(@Nullable String serverName) {
+        public Builder serverName(@Nullable String serverName) {
             this.serverName = serverName;
             return this;
         }
 
-        public Builder setSourceResourceId(@Nullable String sourceResourceId) {
+        public Builder sourceResourceId(@Nullable String sourceResourceId) {
             this.sourceResourceId = sourceResourceId;
             return this;
         }
 
-        public Builder setWorkloadType(@Nullable String workloadType) {
+        public Builder workloadType(@Nullable String workloadType) {
             this.workloadType = workloadType;
             return this;
         }

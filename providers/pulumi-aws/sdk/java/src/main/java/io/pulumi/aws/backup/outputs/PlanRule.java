@@ -185,47 +185,47 @@ public final class PlanRule {
     	      this.targetVaultName = defaults.targetVaultName;
         }
 
-        public Builder setCompletionWindow(@Nullable Integer completionWindow) {
+        public Builder completionWindow(@Nullable Integer completionWindow) {
             this.completionWindow = completionWindow;
             return this;
         }
 
-        public Builder setCopyActions(@Nullable List<PlanRuleCopyAction> copyActions) {
+        public Builder copyActions(@Nullable List<PlanRuleCopyAction> copyActions) {
             this.copyActions = copyActions;
             return this;
         }
 
-        public Builder setEnableContinuousBackup(@Nullable Boolean enableContinuousBackup) {
+        public Builder enableContinuousBackup(@Nullable Boolean enableContinuousBackup) {
             this.enableContinuousBackup = enableContinuousBackup;
             return this;
         }
 
-        public Builder setLifecycle(@Nullable PlanRuleLifecycle lifecycle) {
+        public Builder lifecycle(@Nullable PlanRuleLifecycle lifecycle) {
             this.lifecycle = lifecycle;
             return this;
         }
 
-        public Builder setRecoveryPointTags(@Nullable Map<String,String> recoveryPointTags) {
+        public Builder recoveryPointTags(@Nullable Map<String,String> recoveryPointTags) {
             this.recoveryPointTags = recoveryPointTags;
             return this;
         }
 
-        public Builder setRuleName(String ruleName) {
+        public Builder ruleName(String ruleName) {
             this.ruleName = Objects.requireNonNull(ruleName);
             return this;
         }
 
-        public Builder setSchedule(@Nullable String schedule) {
+        public Builder schedule(@Nullable String schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setStartWindow(@Nullable Integer startWindow) {
+        public Builder startWindow(@Nullable Integer startWindow) {
             this.startWindow = startWindow;
             return this;
         }
 
-        public Builder setTargetVaultName(String targetVaultName) {
+        public Builder targetVaultName(String targetVaultName) {
             this.targetVaultName = Objects.requireNonNull(targetVaultName);
             return this;
         }

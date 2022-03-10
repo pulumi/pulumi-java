@@ -89,17 +89,17 @@ public final class ManagementEventRuleConditionResponse {
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setAggregation(@Nullable ManagementEventAggregationConditionResponse aggregation) {
+        public Builder aggregation(@Nullable ManagementEventAggregationConditionResponse aggregation) {
             this.aggregation = aggregation;
             return this;
         }
 
-        public Builder setDataSource(@Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource) {
+        public Builder dataSource(@Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource) {
             this.dataSource = dataSource;
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }

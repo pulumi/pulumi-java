@@ -52,12 +52,12 @@ public final class FeatureSpecMulticlusteringressGetArgs extends io.pulumi.resou
     	      this.configMembership = defaults.configMembership;
         }
 
-        public Builder setConfigMembership(Input<String> configMembership) {
+        public Builder configMembership(Input<String> configMembership) {
             this.configMembership = Objects.requireNonNull(configMembership);
             return this;
         }
 
-        public Builder setConfigMembership(String configMembership) {
+        public Builder configMembership(String configMembership) {
             this.configMembership = Input.of(Objects.requireNonNull(configMembership));
             return this;
         }

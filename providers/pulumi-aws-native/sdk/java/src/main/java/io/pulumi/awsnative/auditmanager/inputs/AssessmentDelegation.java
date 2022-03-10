@@ -177,57 +177,57 @@ public final class AssessmentDelegation extends io.pulumi.resources.InvokeArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder setAssessmentId(@Nullable String assessmentId) {
+        public Builder assessmentId(@Nullable String assessmentId) {
             this.assessmentId = assessmentId;
             return this;
         }
 
-        public Builder setAssessmentName(@Nullable String assessmentName) {
+        public Builder assessmentName(@Nullable String assessmentName) {
             this.assessmentName = assessmentName;
             return this;
         }
 
-        public Builder setComment(@Nullable String comment) {
+        public Builder comment(@Nullable String comment) {
             this.comment = comment;
             return this;
         }
 
-        public Builder setControlSetId(@Nullable String controlSetId) {
+        public Builder controlSetId(@Nullable String controlSetId) {
             this.controlSetId = controlSetId;
             return this;
         }
 
-        public Builder setCreatedBy(@Nullable String createdBy) {
+        public Builder createdBy(@Nullable String createdBy) {
             this.createdBy = createdBy;
             return this;
         }
 
-        public Builder setCreationTime(@Nullable Double creationTime) {
+        public Builder creationTime(@Nullable Double creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLastUpdated(@Nullable Double lastUpdated) {
+        public Builder lastUpdated(@Nullable Double lastUpdated) {
             this.lastUpdated = lastUpdated;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRoleType(@Nullable AssessmentRoleType roleType) {
+        public Builder roleType(@Nullable AssessmentRoleType roleType) {
             this.roleType = roleType;
             return this;
         }
 
-        public Builder setStatus(@Nullable AssessmentDelegationStatus status) {
+        public Builder status(@Nullable AssessmentDelegationStatus status) {
             this.status = status;
             return this;
         }

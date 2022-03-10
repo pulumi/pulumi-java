@@ -50,12 +50,12 @@ public final class InstanceAccessControlAttributeConfigurationAccessControlAttri
     	      this.value = defaults.value;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setValue(InstanceAccessControlAttributeConfigurationAccessControlAttributeValue value) {
+        public Builder value(InstanceAccessControlAttributeConfigurationAccessControlAttributeValue value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

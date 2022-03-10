@@ -448,127 +448,127 @@ public final class GetApplicationResult {
     	      this.updatedBy = defaults.updatedBy;
         }
 
-        public Builder setApplicationDefinitionId(@Nullable String applicationDefinitionId) {
+        public Builder applicationDefinitionId(@Nullable String applicationDefinitionId) {
             this.applicationDefinitionId = applicationDefinitionId;
             return this;
         }
 
-        public Builder setArtifacts(List<ApplicationArtifactResponse> artifacts) {
+        public Builder artifacts(List<ApplicationArtifactResponse> artifacts) {
             this.artifacts = Objects.requireNonNull(artifacts);
             return this;
         }
 
-        public Builder setAuthorizations(List<ApplicationAuthorizationResponse> authorizations) {
+        public Builder authorizations(List<ApplicationAuthorizationResponse> authorizations) {
             this.authorizations = Objects.requireNonNull(authorizations);
             return this;
         }
 
-        public Builder setBillingDetails(ApplicationBillingDetailsDefinitionResponse billingDetails) {
+        public Builder billingDetails(ApplicationBillingDetailsDefinitionResponse billingDetails) {
             this.billingDetails = Objects.requireNonNull(billingDetails);
             return this;
         }
 
-        public Builder setCreatedBy(ApplicationClientDetailsResponse createdBy) {
+        public Builder createdBy(ApplicationClientDetailsResponse createdBy) {
             this.createdBy = Objects.requireNonNull(createdBy);
             return this;
         }
 
-        public Builder setCustomerSupport(ApplicationPackageContactResponse customerSupport) {
+        public Builder customerSupport(ApplicationPackageContactResponse customerSupport) {
             this.customerSupport = Objects.requireNonNull(customerSupport);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable IdentityResponse identity) {
+        public Builder identity(@Nullable IdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setJitAccessPolicy(@Nullable ApplicationJitAccessPolicyResponse jitAccessPolicy) {
+        public Builder jitAccessPolicy(@Nullable ApplicationJitAccessPolicyResponse jitAccessPolicy) {
             this.jitAccessPolicy = jitAccessPolicy;
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setManagedBy(@Nullable String managedBy) {
+        public Builder managedBy(@Nullable String managedBy) {
             this.managedBy = managedBy;
             return this;
         }
 
-        public Builder setManagedResourceGroupId(@Nullable String managedResourceGroupId) {
+        public Builder managedResourceGroupId(@Nullable String managedResourceGroupId) {
             this.managedResourceGroupId = managedResourceGroupId;
             return this;
         }
 
-        public Builder setManagementMode(String managementMode) {
+        public Builder managementMode(String managementMode) {
             this.managementMode = Objects.requireNonNull(managementMode);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOutputs(Object outputs) {
+        public Builder outputs(Object outputs) {
             this.outputs = Objects.requireNonNull(outputs);
             return this;
         }
 
-        public Builder setParameters(@Nullable Object parameters) {
+        public Builder parameters(@Nullable Object parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setPlan(@Nullable PlanResponse plan) {
+        public Builder plan(@Nullable PlanResponse plan) {
             this.plan = plan;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublisherTenantId(String publisherTenantId) {
+        public Builder publisherTenantId(String publisherTenantId) {
             this.publisherTenantId = Objects.requireNonNull(publisherTenantId);
             return this;
         }
 
-        public Builder setSku(@Nullable SkuResponse sku) {
+        public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSupportUrls(ApplicationPackageSupportUrlsResponse supportUrls) {
+        public Builder supportUrls(ApplicationPackageSupportUrlsResponse supportUrls) {
             this.supportUrls = Objects.requireNonNull(supportUrls);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUpdatedBy(ApplicationClientDetailsResponse updatedBy) {
+        public Builder updatedBy(ApplicationClientDetailsResponse updatedBy) {
             this.updatedBy = Objects.requireNonNull(updatedBy);
             return this;
         }

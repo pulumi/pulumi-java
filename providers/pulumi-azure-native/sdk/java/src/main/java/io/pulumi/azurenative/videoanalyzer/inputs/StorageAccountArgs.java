@@ -75,22 +75,22 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.identity = defaults.identity;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<ResourceIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<ResourceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable ResourceIdentityArgs identity) {
+        public Builder identity(@Nullable ResourceIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }

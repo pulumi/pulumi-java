@@ -247,132 +247,132 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.verifyMode = defaults.verifyMode;
         }
 
-        public Builder setAtime(@Nullable Input<String> atime) {
+        public Builder atime(@Nullable Input<String> atime) {
             this.atime = atime;
             return this;
         }
 
-        public Builder setAtime(@Nullable String atime) {
+        public Builder atime(@Nullable String atime) {
             this.atime = Input.ofNullable(atime);
             return this;
         }
 
-        public Builder setBytesPerSecond(@Nullable Input<Integer> bytesPerSecond) {
+        public Builder bytesPerSecond(@Nullable Input<Integer> bytesPerSecond) {
             this.bytesPerSecond = bytesPerSecond;
             return this;
         }
 
-        public Builder setBytesPerSecond(@Nullable Integer bytesPerSecond) {
+        public Builder bytesPerSecond(@Nullable Integer bytesPerSecond) {
             this.bytesPerSecond = Input.ofNullable(bytesPerSecond);
             return this;
         }
 
-        public Builder setGid(@Nullable Input<String> gid) {
+        public Builder gid(@Nullable Input<String> gid) {
             this.gid = gid;
             return this;
         }
 
-        public Builder setGid(@Nullable String gid) {
+        public Builder gid(@Nullable String gid) {
             this.gid = Input.ofNullable(gid);
             return this;
         }
 
-        public Builder setLogLevel(@Nullable Input<String> logLevel) {
+        public Builder logLevel(@Nullable Input<String> logLevel) {
             this.logLevel = logLevel;
             return this;
         }
 
-        public Builder setLogLevel(@Nullable String logLevel) {
+        public Builder logLevel(@Nullable String logLevel) {
             this.logLevel = Input.ofNullable(logLevel);
             return this;
         }
 
-        public Builder setMtime(@Nullable Input<String> mtime) {
+        public Builder mtime(@Nullable Input<String> mtime) {
             this.mtime = mtime;
             return this;
         }
 
-        public Builder setMtime(@Nullable String mtime) {
+        public Builder mtime(@Nullable String mtime) {
             this.mtime = Input.ofNullable(mtime);
             return this;
         }
 
-        public Builder setOverwriteMode(@Nullable Input<String> overwriteMode) {
+        public Builder overwriteMode(@Nullable Input<String> overwriteMode) {
             this.overwriteMode = overwriteMode;
             return this;
         }
 
-        public Builder setOverwriteMode(@Nullable String overwriteMode) {
+        public Builder overwriteMode(@Nullable String overwriteMode) {
             this.overwriteMode = Input.ofNullable(overwriteMode);
             return this;
         }
 
-        public Builder setPosixPermissions(@Nullable Input<String> posixPermissions) {
+        public Builder posixPermissions(@Nullable Input<String> posixPermissions) {
             this.posixPermissions = posixPermissions;
             return this;
         }
 
-        public Builder setPosixPermissions(@Nullable String posixPermissions) {
+        public Builder posixPermissions(@Nullable String posixPermissions) {
             this.posixPermissions = Input.ofNullable(posixPermissions);
             return this;
         }
 
-        public Builder setPreserveDeletedFiles(@Nullable Input<String> preserveDeletedFiles) {
+        public Builder preserveDeletedFiles(@Nullable Input<String> preserveDeletedFiles) {
             this.preserveDeletedFiles = preserveDeletedFiles;
             return this;
         }
 
-        public Builder setPreserveDeletedFiles(@Nullable String preserveDeletedFiles) {
+        public Builder preserveDeletedFiles(@Nullable String preserveDeletedFiles) {
             this.preserveDeletedFiles = Input.ofNullable(preserveDeletedFiles);
             return this;
         }
 
-        public Builder setPreserveDevices(@Nullable Input<String> preserveDevices) {
+        public Builder preserveDevices(@Nullable Input<String> preserveDevices) {
             this.preserveDevices = preserveDevices;
             return this;
         }
 
-        public Builder setPreserveDevices(@Nullable String preserveDevices) {
+        public Builder preserveDevices(@Nullable String preserveDevices) {
             this.preserveDevices = Input.ofNullable(preserveDevices);
             return this;
         }
 
-        public Builder setTaskQueueing(@Nullable Input<String> taskQueueing) {
+        public Builder taskQueueing(@Nullable Input<String> taskQueueing) {
             this.taskQueueing = taskQueueing;
             return this;
         }
 
-        public Builder setTaskQueueing(@Nullable String taskQueueing) {
+        public Builder taskQueueing(@Nullable String taskQueueing) {
             this.taskQueueing = Input.ofNullable(taskQueueing);
             return this;
         }
 
-        public Builder setTransferMode(@Nullable Input<String> transferMode) {
+        public Builder transferMode(@Nullable Input<String> transferMode) {
             this.transferMode = transferMode;
             return this;
         }
 
-        public Builder setTransferMode(@Nullable String transferMode) {
+        public Builder transferMode(@Nullable String transferMode) {
             this.transferMode = Input.ofNullable(transferMode);
             return this;
         }
 
-        public Builder setUid(@Nullable Input<String> uid) {
+        public Builder uid(@Nullable Input<String> uid) {
             this.uid = uid;
             return this;
         }
 
-        public Builder setUid(@Nullable String uid) {
+        public Builder uid(@Nullable String uid) {
             this.uid = Input.ofNullable(uid);
             return this;
         }
 
-        public Builder setVerifyMode(@Nullable Input<String> verifyMode) {
+        public Builder verifyMode(@Nullable Input<String> verifyMode) {
             this.verifyMode = verifyMode;
             return this;
         }
 
-        public Builder setVerifyMode(@Nullable String verifyMode) {
+        public Builder verifyMode(@Nullable String verifyMode) {
             this.verifyMode = Input.ofNullable(verifyMode);
             return this;
         }

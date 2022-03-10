@@ -126,52 +126,52 @@ public final class CodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.repositoryType = defaults.repositoryType;
         }
 
-        public Builder setAuthorization(@Nullable Input<AuthorizationArgs> authorization) {
+        public Builder authorization(@Nullable Input<AuthorizationArgs> authorization) {
             this.authorization = authorization;
             return this;
         }
 
-        public Builder setAuthorization(@Nullable AuthorizationArgs authorization) {
+        public Builder authorization(@Nullable AuthorizationArgs authorization) {
             this.authorization = Input.ofNullable(authorization);
             return this;
         }
 
-        public Builder setDefaultBranch(Input<String> defaultBranch) {
+        public Builder defaultBranch(Input<String> defaultBranch) {
             this.defaultBranch = Objects.requireNonNull(defaultBranch);
             return this;
         }
 
-        public Builder setDefaultBranch(String defaultBranch) {
+        public Builder defaultBranch(String defaultBranch) {
             this.defaultBranch = Input.of(Objects.requireNonNull(defaultBranch));
             return this;
         }
 
-        public Builder setId(Input<String> id) {
+        public Builder id(Input<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Input<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setRepositoryType(Input<Either<String,CodeRepositoryType>> repositoryType) {
+        public Builder repositoryType(Input<Either<String,CodeRepositoryType>> repositoryType) {
             this.repositoryType = Objects.requireNonNull(repositoryType);
             return this;
         }
 
-        public Builder setRepositoryType(Either<String,CodeRepositoryType> repositoryType) {
+        public Builder repositoryType(Either<String,CodeRepositoryType> repositoryType) {
             this.repositoryType = Input.of(Objects.requireNonNull(repositoryType));
             return this;
         }

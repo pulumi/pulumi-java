@@ -71,22 +71,22 @@ public final class DomainSamlOptionsArgs extends io.pulumi.resources.ResourceArg
     	      this.samlOptions = defaults.samlOptions;
         }
 
-        public Builder setDomainName(Input<String> domainName) {
+        public Builder domainName(Input<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
-        public Builder setDomainName(String domainName) {
+        public Builder domainName(String domainName) {
             this.domainName = Input.of(Objects.requireNonNull(domainName));
             return this;
         }
 
-        public Builder setSamlOptions(@Nullable Input<DomainSamlOptionsSamlOptionsArgs> samlOptions) {
+        public Builder samlOptions(@Nullable Input<DomainSamlOptionsSamlOptionsArgs> samlOptions) {
             this.samlOptions = samlOptions;
             return this;
         }
 
-        public Builder setSamlOptions(@Nullable DomainSamlOptionsSamlOptionsArgs samlOptions) {
+        public Builder samlOptions(@Nullable DomainSamlOptionsSamlOptionsArgs samlOptions) {
             this.samlOptions = Input.ofNullable(samlOptions);
             return this;
         }

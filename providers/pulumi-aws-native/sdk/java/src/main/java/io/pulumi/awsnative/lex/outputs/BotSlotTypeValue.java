@@ -51,12 +51,12 @@ public final class BotSlotTypeValue {
     	      this.synonyms = defaults.synonyms;
         }
 
-        public Builder setSampleValue(BotSampleValue sampleValue) {
+        public Builder sampleValue(BotSampleValue sampleValue) {
             this.sampleValue = Objects.requireNonNull(sampleValue);
             return this;
         }
 
-        public Builder setSynonyms(@Nullable List<BotSampleValue> synonyms) {
+        public Builder synonyms(@Nullable List<BotSampleValue> synonyms) {
             this.synonyms = synonyms;
             return this;
         }

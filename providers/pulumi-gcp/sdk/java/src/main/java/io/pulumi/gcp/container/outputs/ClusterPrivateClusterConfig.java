@@ -177,37 +177,37 @@ public final class ClusterPrivateClusterConfig {
     	      this.publicEndpoint = defaults.publicEndpoint;
         }
 
-        public Builder setEnablePrivateEndpoint(Boolean enablePrivateEndpoint) {
+        public Builder enablePrivateEndpoint(Boolean enablePrivateEndpoint) {
             this.enablePrivateEndpoint = Objects.requireNonNull(enablePrivateEndpoint);
             return this;
         }
 
-        public Builder setEnablePrivateNodes(@Nullable Boolean enablePrivateNodes) {
+        public Builder enablePrivateNodes(@Nullable Boolean enablePrivateNodes) {
             this.enablePrivateNodes = enablePrivateNodes;
             return this;
         }
 
-        public Builder setMasterGlobalAccessConfig(@Nullable ClusterPrivateClusterConfigMasterGlobalAccessConfig masterGlobalAccessConfig) {
+        public Builder masterGlobalAccessConfig(@Nullable ClusterPrivateClusterConfigMasterGlobalAccessConfig masterGlobalAccessConfig) {
             this.masterGlobalAccessConfig = masterGlobalAccessConfig;
             return this;
         }
 
-        public Builder setMasterIpv4CidrBlock(@Nullable String masterIpv4CidrBlock) {
+        public Builder masterIpv4CidrBlock(@Nullable String masterIpv4CidrBlock) {
             this.masterIpv4CidrBlock = masterIpv4CidrBlock;
             return this;
         }
 
-        public Builder setPeeringName(@Nullable String peeringName) {
+        public Builder peeringName(@Nullable String peeringName) {
             this.peeringName = peeringName;
             return this;
         }
 
-        public Builder setPrivateEndpoint(@Nullable String privateEndpoint) {
+        public Builder privateEndpoint(@Nullable String privateEndpoint) {
             this.privateEndpoint = privateEndpoint;
             return this;
         }
 
-        public Builder setPublicEndpoint(@Nullable String publicEndpoint) {
+        public Builder publicEndpoint(@Nullable String publicEndpoint) {
             this.publicEndpoint = publicEndpoint;
             return this;
         }

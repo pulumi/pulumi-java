@@ -57,7 +57,7 @@ public final class FunctionDeadLetterConfig extends io.pulumi.resources.InvokeAr
     	      this.targetArn = defaults.targetArn;
         }
 
-        public Builder setTargetArn(@Nullable String targetArn) {
+        public Builder targetArn(@Nullable String targetArn) {
             this.targetArn = targetArn;
             return this;
         }

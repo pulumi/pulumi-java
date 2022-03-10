@@ -129,32 +129,32 @@ public final class GetDirectoryConnectSetting extends io.pulumi.resources.Invoke
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setAvailabilityZones(List<String> availabilityZones) {
+        public Builder availabilityZones(List<String> availabilityZones) {
             this.availabilityZones = Objects.requireNonNull(availabilityZones);
             return this;
         }
 
-        public Builder setConnectIps(List<String> connectIps) {
+        public Builder connectIps(List<String> connectIps) {
             this.connectIps = Objects.requireNonNull(connectIps);
             return this;
         }
 
-        public Builder setCustomerDnsIps(List<String> customerDnsIps) {
+        public Builder customerDnsIps(List<String> customerDnsIps) {
             this.customerDnsIps = Objects.requireNonNull(customerDnsIps);
             return this;
         }
 
-        public Builder setCustomerUsername(String customerUsername) {
+        public Builder customerUsername(String customerUsername) {
             this.customerUsername = Objects.requireNonNull(customerUsername);
             return this;
         }
 
-        public Builder setSubnetIds(List<String> subnetIds) {
+        public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }

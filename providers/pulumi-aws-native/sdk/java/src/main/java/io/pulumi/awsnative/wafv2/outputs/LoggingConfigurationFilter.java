@@ -84,17 +84,17 @@ public final class LoggingConfigurationFilter {
     	      this.requirement = defaults.requirement;
         }
 
-        public Builder setBehavior(LoggingConfigurationFilterBehavior behavior) {
+        public Builder behavior(LoggingConfigurationFilterBehavior behavior) {
             this.behavior = Objects.requireNonNull(behavior);
             return this;
         }
 
-        public Builder setConditions(List<LoggingConfigurationCondition> conditions) {
+        public Builder conditions(List<LoggingConfigurationCondition> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
 
-        public Builder setRequirement(LoggingConfigurationFilterRequirement requirement) {
+        public Builder requirement(LoggingConfigurationFilterRequirement requirement) {
             this.requirement = Objects.requireNonNull(requirement);
             return this;
         }

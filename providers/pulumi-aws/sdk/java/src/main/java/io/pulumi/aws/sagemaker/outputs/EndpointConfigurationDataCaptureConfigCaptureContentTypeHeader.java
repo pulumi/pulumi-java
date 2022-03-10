@@ -67,12 +67,12 @@ public final class EndpointConfigurationDataCaptureConfigCaptureContentTypeHeade
     	      this.jsonContentTypes = defaults.jsonContentTypes;
         }
 
-        public Builder setCsvContentTypes(@Nullable List<String> csvContentTypes) {
+        public Builder csvContentTypes(@Nullable List<String> csvContentTypes) {
             this.csvContentTypes = csvContentTypes;
             return this;
         }
 
-        public Builder setJsonContentTypes(@Nullable List<String> jsonContentTypes) {
+        public Builder jsonContentTypes(@Nullable List<String> jsonContentTypes) {
             this.jsonContentTypes = jsonContentTypes;
             return this;
         }

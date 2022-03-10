@@ -66,12 +66,12 @@ public final class ObbFileResponse {
     	      this.obbFileName = defaults.obbFileName;
         }
 
-        public Builder setObb(FileReferenceResponse obb) {
+        public Builder obb(FileReferenceResponse obb) {
             this.obb = Objects.requireNonNull(obb);
             return this;
         }
 
-        public Builder setObbFileName(String obbFileName) {
+        public Builder obbFileName(String obbFileName) {
             this.obbFileName = Objects.requireNonNull(obbFileName);
             return this;
         }

@@ -72,12 +72,12 @@ public final class IngestionConnectionStringResponse extends io.pulumi.resources
     	      this.value = defaults.value;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

@@ -82,17 +82,17 @@ public final class GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse {
     	      this.synonyms = defaults.synonyms;
         }
 
-        public Builder setOnewayTerms(List<String> onewayTerms) {
+        public Builder onewayTerms(List<String> onewayTerms) {
             this.onewayTerms = Objects.requireNonNull(onewayTerms);
             return this;
         }
 
-        public Builder setQueryTerms(List<String> queryTerms) {
+        public Builder queryTerms(List<String> queryTerms) {
             this.queryTerms = Objects.requireNonNull(queryTerms);
             return this;
         }
 
-        public Builder setSynonyms(List<String> synonyms) {
+        public Builder synonyms(List<String> synonyms) {
             this.synonyms = Objects.requireNonNull(synonyms);
             return this;
         }

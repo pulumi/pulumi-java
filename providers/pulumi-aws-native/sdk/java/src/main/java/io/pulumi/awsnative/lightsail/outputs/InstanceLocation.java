@@ -67,12 +67,12 @@ public final class InstanceLocation {
     	      this.regionName = defaults.regionName;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
-        public Builder setRegionName(@Nullable String regionName) {
+        public Builder regionName(@Nullable String regionName) {
             this.regionName = regionName;
             return this;
         }

@@ -71,22 +71,22 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameArgs extends io.pulumi.re
     	      this.wildcardMatch = defaults.wildcardMatch;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }
 
-        public Builder setWildcardMatch(@Nullable Input<Boolean> wildcardMatch) {
+        public Builder wildcardMatch(@Nullable Input<Boolean> wildcardMatch) {
             this.wildcardMatch = wildcardMatch;
             return this;
         }
 
-        public Builder setWildcardMatch(@Nullable Boolean wildcardMatch) {
+        public Builder wildcardMatch(@Nullable Boolean wildcardMatch) {
             this.wildcardMatch = Input.ofNullable(wildcardMatch);
             return this;
         }

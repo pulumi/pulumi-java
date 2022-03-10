@@ -87,32 +87,32 @@ public final class LogDestinationPolicyArgs extends io.pulumi.resources.Resource
     	      this.forceUpdate = defaults.forceUpdate;
         }
 
-        public Builder setAccessPolicy(Input<String> accessPolicy) {
+        public Builder accessPolicy(Input<String> accessPolicy) {
             this.accessPolicy = Objects.requireNonNull(accessPolicy);
             return this;
         }
 
-        public Builder setAccessPolicy(String accessPolicy) {
+        public Builder accessPolicy(String accessPolicy) {
             this.accessPolicy = Input.of(Objects.requireNonNull(accessPolicy));
             return this;
         }
 
-        public Builder setDestinationName(Input<String> destinationName) {
+        public Builder destinationName(Input<String> destinationName) {
             this.destinationName = Objects.requireNonNull(destinationName);
             return this;
         }
 
-        public Builder setDestinationName(String destinationName) {
+        public Builder destinationName(String destinationName) {
             this.destinationName = Input.of(Objects.requireNonNull(destinationName));
             return this;
         }
 
-        public Builder setForceUpdate(@Nullable Input<Boolean> forceUpdate) {
+        public Builder forceUpdate(@Nullable Input<Boolean> forceUpdate) {
             this.forceUpdate = forceUpdate;
             return this;
         }
 
-        public Builder setForceUpdate(@Nullable Boolean forceUpdate) {
+        public Builder forceUpdate(@Nullable Boolean forceUpdate) {
             this.forceUpdate = Input.ofNullable(forceUpdate);
             return this;
         }

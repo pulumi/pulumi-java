@@ -67,12 +67,12 @@ public final class SasAuthenticationResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setSasUri(String sasUri) {
+        public Builder sasUri(String sasUri) {
             this.sasUri = Objects.requireNonNull(sasUri);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

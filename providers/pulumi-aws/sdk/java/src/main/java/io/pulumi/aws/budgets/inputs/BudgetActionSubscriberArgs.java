@@ -69,22 +69,22 @@ public final class BudgetActionSubscriberArgs extends io.pulumi.resources.Resour
     	      this.subscriptionType = defaults.subscriptionType;
         }
 
-        public Builder setAddress(Input<String> address) {
+        public Builder address(Input<String> address) {
             this.address = Objects.requireNonNull(address);
             return this;
         }
 
-        public Builder setAddress(String address) {
+        public Builder address(String address) {
             this.address = Input.of(Objects.requireNonNull(address));
             return this;
         }
 
-        public Builder setSubscriptionType(Input<String> subscriptionType) {
+        public Builder subscriptionType(Input<String> subscriptionType) {
             this.subscriptionType = Objects.requireNonNull(subscriptionType);
             return this;
         }
 
-        public Builder setSubscriptionType(String subscriptionType) {
+        public Builder subscriptionType(String subscriptionType) {
             this.subscriptionType = Input.of(Objects.requireNonNull(subscriptionType));
             return this;
         }

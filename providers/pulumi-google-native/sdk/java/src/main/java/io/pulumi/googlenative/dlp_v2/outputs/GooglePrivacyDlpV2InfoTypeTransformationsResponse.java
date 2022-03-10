@@ -49,7 +49,7 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationsResponse {
     	      this.transformations = defaults.transformations;
         }
 
-        public Builder setTransformations(List<GooglePrivacyDlpV2InfoTypeTransformationResponse> transformations) {
+        public Builder transformations(List<GooglePrivacyDlpV2InfoTypeTransformationResponse> transformations) {
             this.transformations = Objects.requireNonNull(transformations);
             return this;
         }

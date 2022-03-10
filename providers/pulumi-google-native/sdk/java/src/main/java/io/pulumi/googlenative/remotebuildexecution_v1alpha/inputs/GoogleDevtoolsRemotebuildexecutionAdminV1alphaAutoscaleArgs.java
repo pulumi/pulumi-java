@@ -74,22 +74,22 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs e
     	      this.minSize = defaults.minSize;
         }
 
-        public Builder setMaxSize(@Nullable Input<String> maxSize) {
+        public Builder maxSize(@Nullable Input<String> maxSize) {
             this.maxSize = maxSize;
             return this;
         }
 
-        public Builder setMaxSize(@Nullable String maxSize) {
+        public Builder maxSize(@Nullable String maxSize) {
             this.maxSize = Input.ofNullable(maxSize);
             return this;
         }
 
-        public Builder setMinSize(@Nullable Input<String> minSize) {
+        public Builder minSize(@Nullable Input<String> minSize) {
             this.minSize = minSize;
             return this;
         }
 
-        public Builder setMinSize(@Nullable String minSize) {
+        public Builder minSize(@Nullable String minSize) {
             this.minSize = Input.ofNullable(minSize);
             return this;
         }

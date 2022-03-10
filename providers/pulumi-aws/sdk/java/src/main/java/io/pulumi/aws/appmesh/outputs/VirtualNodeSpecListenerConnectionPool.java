@@ -102,22 +102,22 @@ public final class VirtualNodeSpecListenerConnectionPool {
     	      this.tcp = defaults.tcp;
         }
 
-        public Builder setGrpc(@Nullable VirtualNodeSpecListenerConnectionPoolGrpc grpc) {
+        public Builder grpc(@Nullable VirtualNodeSpecListenerConnectionPoolGrpc grpc) {
             this.grpc = grpc;
             return this;
         }
 
-        public Builder setHttp(@Nullable VirtualNodeSpecListenerConnectionPoolHttp http) {
+        public Builder http(@Nullable VirtualNodeSpecListenerConnectionPoolHttp http) {
             this.http = http;
             return this;
         }
 
-        public Builder setHttp2(@Nullable VirtualNodeSpecListenerConnectionPoolHttp2 http2) {
+        public Builder http2(@Nullable VirtualNodeSpecListenerConnectionPoolHttp2 http2) {
             this.http2 = http2;
             return this;
         }
 
-        public Builder setTcp(@Nullable VirtualNodeSpecListenerConnectionPoolTcp tcp) {
+        public Builder tcp(@Nullable VirtualNodeSpecListenerConnectionPoolTcp tcp) {
             this.tcp = tcp;
             return this;
         }

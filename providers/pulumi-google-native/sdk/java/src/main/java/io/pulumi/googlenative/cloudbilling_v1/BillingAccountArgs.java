@@ -70,22 +70,22 @@ public final class BillingAccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.masterBillingAccount = defaults.masterBillingAccount;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setMasterBillingAccount(@Nullable Input<String> masterBillingAccount) {
+        public Builder masterBillingAccount(@Nullable Input<String> masterBillingAccount) {
             this.masterBillingAccount = masterBillingAccount;
             return this;
         }
 
-        public Builder setMasterBillingAccount(@Nullable String masterBillingAccount) {
+        public Builder masterBillingAccount(@Nullable String masterBillingAccount) {
             this.masterBillingAccount = Input.ofNullable(masterBillingAccount);
             return this;
         }

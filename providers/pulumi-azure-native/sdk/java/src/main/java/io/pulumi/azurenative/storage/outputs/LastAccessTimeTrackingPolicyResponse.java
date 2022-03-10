@@ -102,22 +102,22 @@ public final class LastAccessTimeTrackingPolicyResponse {
     	      this.trackingGranularityInDays = defaults.trackingGranularityInDays;
         }
 
-        public Builder setBlobType(@Nullable List<String> blobType) {
+        public Builder blobType(@Nullable List<String> blobType) {
             this.blobType = blobType;
             return this;
         }
 
-        public Builder setEnable(Boolean enable) {
+        public Builder enable(Boolean enable) {
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTrackingGranularityInDays(@Nullable Integer trackingGranularityInDays) {
+        public Builder trackingGranularityInDays(@Nullable Integer trackingGranularityInDays) {
             this.trackingGranularityInDays = trackingGranularityInDays;
             return this;
         }

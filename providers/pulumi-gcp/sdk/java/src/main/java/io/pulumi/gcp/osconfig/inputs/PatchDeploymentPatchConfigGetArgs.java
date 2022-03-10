@@ -181,82 +181,82 @@ public final class PatchDeploymentPatchConfigGetArgs extends io.pulumi.resources
     	      this.zypper = defaults.zypper;
         }
 
-        public Builder setApt(@Nullable Input<PatchDeploymentPatchConfigAptGetArgs> apt) {
+        public Builder apt(@Nullable Input<PatchDeploymentPatchConfigAptGetArgs> apt) {
             this.apt = apt;
             return this;
         }
 
-        public Builder setApt(@Nullable PatchDeploymentPatchConfigAptGetArgs apt) {
+        public Builder apt(@Nullable PatchDeploymentPatchConfigAptGetArgs apt) {
             this.apt = Input.ofNullable(apt);
             return this;
         }
 
-        public Builder setGoo(@Nullable Input<PatchDeploymentPatchConfigGooGetArgs> goo) {
+        public Builder goo(@Nullable Input<PatchDeploymentPatchConfigGooGetArgs> goo) {
             this.goo = goo;
             return this;
         }
 
-        public Builder setGoo(@Nullable PatchDeploymentPatchConfigGooGetArgs goo) {
+        public Builder goo(@Nullable PatchDeploymentPatchConfigGooGetArgs goo) {
             this.goo = Input.ofNullable(goo);
             return this;
         }
 
-        public Builder setPostStep(@Nullable Input<PatchDeploymentPatchConfigPostStepGetArgs> postStep) {
+        public Builder postStep(@Nullable Input<PatchDeploymentPatchConfigPostStepGetArgs> postStep) {
             this.postStep = postStep;
             return this;
         }
 
-        public Builder setPostStep(@Nullable PatchDeploymentPatchConfigPostStepGetArgs postStep) {
+        public Builder postStep(@Nullable PatchDeploymentPatchConfigPostStepGetArgs postStep) {
             this.postStep = Input.ofNullable(postStep);
             return this;
         }
 
-        public Builder setPreStep(@Nullable Input<PatchDeploymentPatchConfigPreStepGetArgs> preStep) {
+        public Builder preStep(@Nullable Input<PatchDeploymentPatchConfigPreStepGetArgs> preStep) {
             this.preStep = preStep;
             return this;
         }
 
-        public Builder setPreStep(@Nullable PatchDeploymentPatchConfigPreStepGetArgs preStep) {
+        public Builder preStep(@Nullable PatchDeploymentPatchConfigPreStepGetArgs preStep) {
             this.preStep = Input.ofNullable(preStep);
             return this;
         }
 
-        public Builder setRebootConfig(@Nullable Input<String> rebootConfig) {
+        public Builder rebootConfig(@Nullable Input<String> rebootConfig) {
             this.rebootConfig = rebootConfig;
             return this;
         }
 
-        public Builder setRebootConfig(@Nullable String rebootConfig) {
+        public Builder rebootConfig(@Nullable String rebootConfig) {
             this.rebootConfig = Input.ofNullable(rebootConfig);
             return this;
         }
 
-        public Builder setWindowsUpdate(@Nullable Input<PatchDeploymentPatchConfigWindowsUpdateGetArgs> windowsUpdate) {
+        public Builder windowsUpdate(@Nullable Input<PatchDeploymentPatchConfigWindowsUpdateGetArgs> windowsUpdate) {
             this.windowsUpdate = windowsUpdate;
             return this;
         }
 
-        public Builder setWindowsUpdate(@Nullable PatchDeploymentPatchConfigWindowsUpdateGetArgs windowsUpdate) {
+        public Builder windowsUpdate(@Nullable PatchDeploymentPatchConfigWindowsUpdateGetArgs windowsUpdate) {
             this.windowsUpdate = Input.ofNullable(windowsUpdate);
             return this;
         }
 
-        public Builder setYum(@Nullable Input<PatchDeploymentPatchConfigYumGetArgs> yum) {
+        public Builder yum(@Nullable Input<PatchDeploymentPatchConfigYumGetArgs> yum) {
             this.yum = yum;
             return this;
         }
 
-        public Builder setYum(@Nullable PatchDeploymentPatchConfigYumGetArgs yum) {
+        public Builder yum(@Nullable PatchDeploymentPatchConfigYumGetArgs yum) {
             this.yum = Input.ofNullable(yum);
             return this;
         }
 
-        public Builder setZypper(@Nullable Input<PatchDeploymentPatchConfigZypperGetArgs> zypper) {
+        public Builder zypper(@Nullable Input<PatchDeploymentPatchConfigZypperGetArgs> zypper) {
             this.zypper = zypper;
             return this;
         }
 
-        public Builder setZypper(@Nullable PatchDeploymentPatchConfigZypperGetArgs zypper) {
+        public Builder zypper(@Nullable PatchDeploymentPatchConfigZypperGetArgs zypper) {
             this.zypper = Input.ofNullable(zypper);
             return this;
         }

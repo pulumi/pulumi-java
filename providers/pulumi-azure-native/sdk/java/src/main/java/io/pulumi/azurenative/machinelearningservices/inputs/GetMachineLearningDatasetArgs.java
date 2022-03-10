@@ -84,17 +84,17 @@ public final class GetMachineLearningDatasetArgs extends io.pulumi.resources.Inv
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setDatasetName(String datasetName) {
+        public Builder datasetName(String datasetName) {
             this.datasetName = Objects.requireNonNull(datasetName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }

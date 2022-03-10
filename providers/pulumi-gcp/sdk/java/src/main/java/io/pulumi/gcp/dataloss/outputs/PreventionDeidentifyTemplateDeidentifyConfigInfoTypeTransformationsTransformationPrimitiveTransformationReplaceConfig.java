@@ -50,7 +50,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     	      this.newValue = defaults.newValue;
         }
 
-        public Builder setNewValue(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValue newValue) {
+        public Builder newValue(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValue newValue) {
             this.newValue = Objects.requireNonNull(newValue);
             return this;
         }

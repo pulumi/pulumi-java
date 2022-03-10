@@ -47,7 +47,7 @@ public final class GetAssistantArgs extends io.pulumi.resources.InvokeArgs {
     	      this.assistantId = defaults.assistantId;
         }
 
-        public Builder setAssistantId(String assistantId) {
+        public Builder assistantId(String assistantId) {
             this.assistantId = Objects.requireNonNull(assistantId);
             return this;
         }

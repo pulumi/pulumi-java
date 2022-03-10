@@ -173,42 +173,42 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends io.pulum
     	      this.statuses = defaults.statuses;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setError(@Nullable String error) {
+        public Builder error(@Nullable String error) {
             this.error = error;
             return this;
         }
 
-        public Builder setExecutionMessage(@Nullable String executionMessage) {
+        public Builder executionMessage(@Nullable String executionMessage) {
             this.executionMessage = executionMessage;
             return this;
         }
 
-        public Builder setExecutionState(@Nullable String executionState) {
+        public Builder executionState(@Nullable String executionState) {
             this.executionState = executionState;
             return this;
         }
 
-        public Builder setExitCode(@Nullable Integer exitCode) {
+        public Builder exitCode(@Nullable Integer exitCode) {
             this.exitCode = exitCode;
             return this;
         }
 
-        public Builder setOutput(@Nullable String output) {
+        public Builder output(@Nullable String output) {
             this.output = output;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStatuses(@Nullable List<InstanceViewStatusResponse> statuses) {
+        public Builder statuses(@Nullable List<InstanceViewStatusResponse> statuses) {
             this.statuses = statuses;
             return this;
         }

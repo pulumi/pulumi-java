@@ -184,47 +184,47 @@ public final class GetInstanceFailoverGroupResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setManagedInstancePairs(List<ManagedInstancePairInfoResponse> managedInstancePairs) {
+        public Builder managedInstancePairs(List<ManagedInstancePairInfoResponse> managedInstancePairs) {
             this.managedInstancePairs = Objects.requireNonNull(managedInstancePairs);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPartnerRegions(List<PartnerRegionInfoResponse> partnerRegions) {
+        public Builder partnerRegions(List<PartnerRegionInfoResponse> partnerRegions) {
             this.partnerRegions = Objects.requireNonNull(partnerRegions);
             return this;
         }
 
-        public Builder setReadOnlyEndpoint(@Nullable InstanceFailoverGroupReadOnlyEndpointResponse readOnlyEndpoint) {
+        public Builder readOnlyEndpoint(@Nullable InstanceFailoverGroupReadOnlyEndpointResponse readOnlyEndpoint) {
             this.readOnlyEndpoint = readOnlyEndpoint;
             return this;
         }
 
-        public Builder setReadWriteEndpoint(InstanceFailoverGroupReadWriteEndpointResponse readWriteEndpoint) {
+        public Builder readWriteEndpoint(InstanceFailoverGroupReadWriteEndpointResponse readWriteEndpoint) {
             this.readWriteEndpoint = Objects.requireNonNull(readWriteEndpoint);
             return this;
         }
 
-        public Builder setReplicationRole(String replicationRole) {
+        public Builder replicationRole(String replicationRole) {
             this.replicationRole = Objects.requireNonNull(replicationRole);
             return this;
         }
 
-        public Builder setReplicationState(String replicationState) {
+        public Builder replicationState(String replicationState) {
             this.replicationState = Objects.requireNonNull(replicationState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

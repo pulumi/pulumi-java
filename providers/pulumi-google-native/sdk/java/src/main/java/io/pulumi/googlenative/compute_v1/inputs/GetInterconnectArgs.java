@@ -62,12 +62,12 @@ public final class GetInterconnectArgs extends io.pulumi.resources.InvokeArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setInterconnect(String interconnect) {
+        public Builder interconnect(String interconnect) {
             this.interconnect = Objects.requireNonNull(interconnect);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

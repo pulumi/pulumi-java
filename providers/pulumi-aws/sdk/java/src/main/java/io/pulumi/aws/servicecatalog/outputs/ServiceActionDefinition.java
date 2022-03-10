@@ -115,27 +115,27 @@ public final class ServiceActionDefinition {
     	      this.version = defaults.version;
         }
 
-        public Builder setAssumeRole(@Nullable String assumeRole) {
+        public Builder assumeRole(@Nullable String assumeRole) {
             this.assumeRole = assumeRole;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(@Nullable String parameters) {
+        public Builder parameters(@Nullable String parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

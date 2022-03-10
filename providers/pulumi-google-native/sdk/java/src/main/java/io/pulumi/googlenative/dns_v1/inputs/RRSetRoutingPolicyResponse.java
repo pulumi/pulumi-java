@@ -78,17 +78,17 @@ public final class RRSetRoutingPolicyResponse extends io.pulumi.resources.Invoke
     	      this.wrr = defaults.wrr;
         }
 
-        public Builder setGeo(RRSetRoutingPolicyGeoPolicyResponse geo) {
+        public Builder geo(RRSetRoutingPolicyGeoPolicyResponse geo) {
             this.geo = Objects.requireNonNull(geo);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setWrr(RRSetRoutingPolicyWrrPolicyResponse wrr) {
+        public Builder wrr(RRSetRoutingPolicyWrrPolicyResponse wrr) {
             this.wrr = Objects.requireNonNull(wrr);
             return this;
         }

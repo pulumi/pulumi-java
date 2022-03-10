@@ -94,27 +94,27 @@ public final class GetRouteTablesResult {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setFilters(@Nullable List<GetRouteTablesFilter> filters) {
+        public Builder filters(@Nullable List<GetRouteTablesFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIds(List<String> ids) {
+        public Builder ids(List<String> ids) {
             this.ids = Objects.requireNonNull(ids);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = vpcId;
             return this;
         }

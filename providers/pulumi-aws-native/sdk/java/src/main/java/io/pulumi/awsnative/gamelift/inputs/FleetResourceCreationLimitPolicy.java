@@ -76,12 +76,12 @@ public final class FleetResourceCreationLimitPolicy extends io.pulumi.resources.
     	      this.policyPeriodInMinutes = defaults.policyPeriodInMinutes;
         }
 
-        public Builder setNewGameSessionsPerCreator(@Nullable Integer newGameSessionsPerCreator) {
+        public Builder newGameSessionsPerCreator(@Nullable Integer newGameSessionsPerCreator) {
             this.newGameSessionsPerCreator = newGameSessionsPerCreator;
             return this;
         }
 
-        public Builder setPolicyPeriodInMinutes(@Nullable Integer policyPeriodInMinutes) {
+        public Builder policyPeriodInMinutes(@Nullable Integer policyPeriodInMinutes) {
             this.policyPeriodInMinutes = policyPeriodInMinutes;
             return this;
         }

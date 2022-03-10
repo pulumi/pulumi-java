@@ -55,7 +55,7 @@ public final class ConfidentialInstanceConfigResponse extends io.pulumi.resource
     	      this.enableConfidentialCompute = defaults.enableConfidentialCompute;
         }
 
-        public Builder setEnableConfidentialCompute(Boolean enableConfidentialCompute) {
+        public Builder enableConfidentialCompute(Boolean enableConfidentialCompute) {
             this.enableConfidentialCompute = Objects.requireNonNull(enableConfidentialCompute);
             return this;
         }

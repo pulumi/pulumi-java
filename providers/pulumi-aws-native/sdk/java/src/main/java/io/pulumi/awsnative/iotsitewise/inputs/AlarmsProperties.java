@@ -74,12 +74,12 @@ public final class AlarmsProperties extends io.pulumi.resources.InvokeArgs {
     	      this.notificationLambdaArn = defaults.notificationLambdaArn;
         }
 
-        public Builder setAlarmRoleArn(@Nullable String alarmRoleArn) {
+        public Builder alarmRoleArn(@Nullable String alarmRoleArn) {
             this.alarmRoleArn = alarmRoleArn;
             return this;
         }
 
-        public Builder setNotificationLambdaArn(@Nullable String notificationLambdaArn) {
+        public Builder notificationLambdaArn(@Nullable String notificationLambdaArn) {
             this.notificationLambdaArn = notificationLambdaArn;
             return this;
         }

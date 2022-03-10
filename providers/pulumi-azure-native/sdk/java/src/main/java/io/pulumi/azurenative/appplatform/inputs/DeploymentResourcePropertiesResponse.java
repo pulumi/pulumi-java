@@ -175,42 +175,42 @@ public final class DeploymentResourcePropertiesResponse extends io.pulumi.resour
     	      this.status = defaults.status;
         }
 
-        public Builder setActive(Boolean active) {
+        public Builder active(Boolean active) {
             this.active = Objects.requireNonNull(active);
             return this;
         }
 
-        public Builder setAppName(String appName) {
+        public Builder appName(String appName) {
             this.appName = Objects.requireNonNull(appName);
             return this;
         }
 
-        public Builder setCreatedTime(String createdTime) {
+        public Builder createdTime(String createdTime) {
             this.createdTime = Objects.requireNonNull(createdTime);
             return this;
         }
 
-        public Builder setDeploymentSettings(@Nullable DeploymentSettingsResponse deploymentSettings) {
+        public Builder deploymentSettings(@Nullable DeploymentSettingsResponse deploymentSettings) {
             this.deploymentSettings = deploymentSettings;
             return this;
         }
 
-        public Builder setInstances(List<DeploymentInstanceResponse> instances) {
+        public Builder instances(List<DeploymentInstanceResponse> instances) {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSource(@Nullable UserSourceInfoResponse source) {
+        public Builder source(@Nullable UserSourceInfoResponse source) {
             this.source = source;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

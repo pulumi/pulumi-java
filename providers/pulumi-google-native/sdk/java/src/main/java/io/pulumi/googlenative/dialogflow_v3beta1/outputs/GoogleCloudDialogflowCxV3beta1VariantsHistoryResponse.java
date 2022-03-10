@@ -66,12 +66,12 @@ public final class GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse {
     	      this.versionVariants = defaults.versionVariants;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
 
-        public Builder setVersionVariants(GoogleCloudDialogflowCxV3beta1VersionVariantsResponse versionVariants) {
+        public Builder versionVariants(GoogleCloudDialogflowCxV3beta1VersionVariantsResponse versionVariants) {
             this.versionVariants = Objects.requireNonNull(versionVariants);
             return this;
         }

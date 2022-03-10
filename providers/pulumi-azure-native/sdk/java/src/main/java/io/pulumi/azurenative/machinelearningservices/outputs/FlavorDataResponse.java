@@ -50,7 +50,7 @@ public final class FlavorDataResponse {
     	      this.data = defaults.data;
         }
 
-        public Builder setData(@Nullable Map<String,String> data) {
+        public Builder data(@Nullable Map<String,String> data) {
             this.data = data;
             return this;
         }

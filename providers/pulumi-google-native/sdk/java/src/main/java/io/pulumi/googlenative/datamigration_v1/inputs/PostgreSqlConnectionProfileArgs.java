@@ -140,62 +140,62 @@ public final class PostgreSqlConnectionProfileArgs extends io.pulumi.resources.R
     	      this.username = defaults.username;
         }
 
-        public Builder setCloudSqlId(@Nullable Input<String> cloudSqlId) {
+        public Builder cloudSqlId(@Nullable Input<String> cloudSqlId) {
             this.cloudSqlId = cloudSqlId;
             return this;
         }
 
-        public Builder setCloudSqlId(@Nullable String cloudSqlId) {
+        public Builder cloudSqlId(@Nullable String cloudSqlId) {
             this.cloudSqlId = Input.ofNullable(cloudSqlId);
             return this;
         }
 
-        public Builder setHost(Input<String> host) {
+        public Builder host(Input<String> host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
-        public Builder setHost(String host) {
+        public Builder host(String host) {
             this.host = Input.of(Objects.requireNonNull(host));
             return this;
         }
 
-        public Builder setPassword(Input<String> password) {
+        public Builder password(Input<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Input.of(Objects.requireNonNull(password));
             return this;
         }
 
-        public Builder setPort(Input<Integer> port) {
+        public Builder port(Input<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Input.of(Objects.requireNonNull(port));
             return this;
         }
 
-        public Builder setSsl(@Nullable Input<SslConfigArgs> ssl) {
+        public Builder ssl(@Nullable Input<SslConfigArgs> ssl) {
             this.ssl = ssl;
             return this;
         }
 
-        public Builder setSsl(@Nullable SslConfigArgs ssl) {
+        public Builder ssl(@Nullable SslConfigArgs ssl) {
             this.ssl = Input.ofNullable(ssl);
             return this;
         }
 
-        public Builder setUsername(Input<String> username) {
+        public Builder username(Input<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Input.of(Objects.requireNonNull(username));
             return this;
         }

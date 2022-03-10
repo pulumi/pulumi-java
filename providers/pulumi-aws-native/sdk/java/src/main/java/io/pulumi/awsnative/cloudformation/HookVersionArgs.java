@@ -107,42 +107,42 @@ public final class HookVersionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.typeName = defaults.typeName;
         }
 
-        public Builder setExecutionRoleArn(@Nullable Input<String> executionRoleArn) {
+        public Builder executionRoleArn(@Nullable Input<String> executionRoleArn) {
             this.executionRoleArn = executionRoleArn;
             return this;
         }
 
-        public Builder setExecutionRoleArn(@Nullable String executionRoleArn) {
+        public Builder executionRoleArn(@Nullable String executionRoleArn) {
             this.executionRoleArn = Input.ofNullable(executionRoleArn);
             return this;
         }
 
-        public Builder setLoggingConfig(@Nullable Input<HookVersionLoggingConfigArgs> loggingConfig) {
+        public Builder loggingConfig(@Nullable Input<HookVersionLoggingConfigArgs> loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
 
-        public Builder setLoggingConfig(@Nullable HookVersionLoggingConfigArgs loggingConfig) {
+        public Builder loggingConfig(@Nullable HookVersionLoggingConfigArgs loggingConfig) {
             this.loggingConfig = Input.ofNullable(loggingConfig);
             return this;
         }
 
-        public Builder setSchemaHandlerPackage(Input<String> schemaHandlerPackage) {
+        public Builder schemaHandlerPackage(Input<String> schemaHandlerPackage) {
             this.schemaHandlerPackage = Objects.requireNonNull(schemaHandlerPackage);
             return this;
         }
 
-        public Builder setSchemaHandlerPackage(String schemaHandlerPackage) {
+        public Builder schemaHandlerPackage(String schemaHandlerPackage) {
             this.schemaHandlerPackage = Input.of(Objects.requireNonNull(schemaHandlerPackage));
             return this;
         }
 
-        public Builder setTypeName(Input<String> typeName) {
+        public Builder typeName(Input<String> typeName) {
             this.typeName = Objects.requireNonNull(typeName);
             return this;
         }
 
-        public Builder setTypeName(String typeName) {
+        public Builder typeName(String typeName) {
             this.typeName = Input.of(Objects.requireNonNull(typeName));
             return this;
         }

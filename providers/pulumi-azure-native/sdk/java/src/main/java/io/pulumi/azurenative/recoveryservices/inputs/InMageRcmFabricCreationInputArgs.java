@@ -124,52 +124,52 @@ public final class InMageRcmFabricCreationInputArgs extends io.pulumi.resources.
     	      this.vmwareSiteId = defaults.vmwareSiteId;
         }
 
-        public Builder setAuthCertificate(@Nullable Input<String> authCertificate) {
+        public Builder authCertificate(@Nullable Input<String> authCertificate) {
             this.authCertificate = authCertificate;
             return this;
         }
 
-        public Builder setAuthCertificate(@Nullable String authCertificate) {
+        public Builder authCertificate(@Nullable String authCertificate) {
             this.authCertificate = Input.ofNullable(authCertificate);
             return this;
         }
 
-        public Builder setInstanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Input<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Input.ofNullable(instanceType);
             return this;
         }
 
-        public Builder setPhysicalSiteId(@Nullable Input<String> physicalSiteId) {
+        public Builder physicalSiteId(@Nullable Input<String> physicalSiteId) {
             this.physicalSiteId = physicalSiteId;
             return this;
         }
 
-        public Builder setPhysicalSiteId(@Nullable String physicalSiteId) {
+        public Builder physicalSiteId(@Nullable String physicalSiteId) {
             this.physicalSiteId = Input.ofNullable(physicalSiteId);
             return this;
         }
 
-        public Builder setSourceAgentIdentity(@Nullable Input<IdentityProviderInputArgs> sourceAgentIdentity) {
+        public Builder sourceAgentIdentity(@Nullable Input<IdentityProviderInputArgs> sourceAgentIdentity) {
             this.sourceAgentIdentity = sourceAgentIdentity;
             return this;
         }
 
-        public Builder setSourceAgentIdentity(@Nullable IdentityProviderInputArgs sourceAgentIdentity) {
+        public Builder sourceAgentIdentity(@Nullable IdentityProviderInputArgs sourceAgentIdentity) {
             this.sourceAgentIdentity = Input.ofNullable(sourceAgentIdentity);
             return this;
         }
 
-        public Builder setVmwareSiteId(@Nullable Input<String> vmwareSiteId) {
+        public Builder vmwareSiteId(@Nullable Input<String> vmwareSiteId) {
             this.vmwareSiteId = vmwareSiteId;
             return this;
         }
 
-        public Builder setVmwareSiteId(@Nullable String vmwareSiteId) {
+        public Builder vmwareSiteId(@Nullable String vmwareSiteId) {
             this.vmwareSiteId = Input.ofNullable(vmwareSiteId);
             return this;
         }

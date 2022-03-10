@@ -70,22 +70,22 @@ public final class WorkflowTemplateJobSchedulingArgs extends io.pulumi.resources
     	      this.maxFailuresTotal = defaults.maxFailuresTotal;
         }
 
-        public Builder setMaxFailuresPerHour(@Nullable Input<Integer> maxFailuresPerHour) {
+        public Builder maxFailuresPerHour(@Nullable Input<Integer> maxFailuresPerHour) {
             this.maxFailuresPerHour = maxFailuresPerHour;
             return this;
         }
 
-        public Builder setMaxFailuresPerHour(@Nullable Integer maxFailuresPerHour) {
+        public Builder maxFailuresPerHour(@Nullable Integer maxFailuresPerHour) {
             this.maxFailuresPerHour = Input.ofNullable(maxFailuresPerHour);
             return this;
         }
 
-        public Builder setMaxFailuresTotal(@Nullable Input<Integer> maxFailuresTotal) {
+        public Builder maxFailuresTotal(@Nullable Input<Integer> maxFailuresTotal) {
             this.maxFailuresTotal = maxFailuresTotal;
             return this;
         }
 
-        public Builder setMaxFailuresTotal(@Nullable Integer maxFailuresTotal) {
+        public Builder maxFailuresTotal(@Nullable Integer maxFailuresTotal) {
             this.maxFailuresTotal = Input.ofNullable(maxFailuresTotal);
             return this;
         }

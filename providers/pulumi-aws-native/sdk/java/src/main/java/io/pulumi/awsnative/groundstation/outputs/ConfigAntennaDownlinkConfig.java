@@ -42,7 +42,7 @@ public final class ConfigAntennaDownlinkConfig {
     	      this.spectrumConfig = defaults.spectrumConfig;
         }
 
-        public Builder setSpectrumConfig(@Nullable ConfigSpectrumConfig spectrumConfig) {
+        public Builder spectrumConfig(@Nullable ConfigSpectrumConfig spectrumConfig) {
             this.spectrumConfig = spectrumConfig;
             return this;
         }

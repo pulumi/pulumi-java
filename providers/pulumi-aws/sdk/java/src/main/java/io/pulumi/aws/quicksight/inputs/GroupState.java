@@ -118,52 +118,52 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAwsAccountId(@Nullable Input<String> awsAccountId) {
+        public Builder awsAccountId(@Nullable Input<String> awsAccountId) {
             this.awsAccountId = awsAccountId;
             return this;
         }
 
-        public Builder setAwsAccountId(@Nullable String awsAccountId) {
+        public Builder awsAccountId(@Nullable String awsAccountId) {
             this.awsAccountId = Input.ofNullable(awsAccountId);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setGroupName(@Nullable Input<String> groupName) {
+        public Builder groupName(@Nullable Input<String> groupName) {
             this.groupName = groupName;
             return this;
         }
 
-        public Builder setGroupName(@Nullable String groupName) {
+        public Builder groupName(@Nullable String groupName) {
             this.groupName = Input.ofNullable(groupName);
             return this;
         }
 
-        public Builder setNamespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Input<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = Input.ofNullable(namespace);
             return this;
         }

@@ -91,17 +91,17 @@ public final class AzureFileFilterDetailsResponse extends io.pulumi.resources.In
     	      this.fileShareList = defaults.fileShareList;
         }
 
-        public Builder setFilePathList(@Nullable List<String> filePathList) {
+        public Builder filePathList(@Nullable List<String> filePathList) {
             this.filePathList = filePathList;
             return this;
         }
 
-        public Builder setFilePrefixList(@Nullable List<String> filePrefixList) {
+        public Builder filePrefixList(@Nullable List<String> filePrefixList) {
             this.filePrefixList = filePrefixList;
             return this;
         }
 
-        public Builder setFileShareList(@Nullable List<String> fileShareList) {
+        public Builder fileShareList(@Nullable List<String> fileShareList) {
             this.fileShareList = fileShareList;
             return this;
         }

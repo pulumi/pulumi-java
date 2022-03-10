@@ -105,42 +105,42 @@ public final class VirtualNodeSpecListenerConnectionPoolArgs extends io.pulumi.r
     	      this.tcp = defaults.tcp;
         }
 
-        public Builder setGrpc(@Nullable Input<VirtualNodeSpecListenerConnectionPoolGrpcArgs> grpc) {
+        public Builder grpc(@Nullable Input<VirtualNodeSpecListenerConnectionPoolGrpcArgs> grpc) {
             this.grpc = grpc;
             return this;
         }
 
-        public Builder setGrpc(@Nullable VirtualNodeSpecListenerConnectionPoolGrpcArgs grpc) {
+        public Builder grpc(@Nullable VirtualNodeSpecListenerConnectionPoolGrpcArgs grpc) {
             this.grpc = Input.ofNullable(grpc);
             return this;
         }
 
-        public Builder setHttp(@Nullable Input<VirtualNodeSpecListenerConnectionPoolHttpArgs> http) {
+        public Builder http(@Nullable Input<VirtualNodeSpecListenerConnectionPoolHttpArgs> http) {
             this.http = http;
             return this;
         }
 
-        public Builder setHttp(@Nullable VirtualNodeSpecListenerConnectionPoolHttpArgs http) {
+        public Builder http(@Nullable VirtualNodeSpecListenerConnectionPoolHttpArgs http) {
             this.http = Input.ofNullable(http);
             return this;
         }
 
-        public Builder setHttp2(@Nullable Input<VirtualNodeSpecListenerConnectionPoolHttp2Args> http2) {
+        public Builder http2(@Nullable Input<VirtualNodeSpecListenerConnectionPoolHttp2Args> http2) {
             this.http2 = http2;
             return this;
         }
 
-        public Builder setHttp2(@Nullable VirtualNodeSpecListenerConnectionPoolHttp2Args http2) {
+        public Builder http2(@Nullable VirtualNodeSpecListenerConnectionPoolHttp2Args http2) {
             this.http2 = Input.ofNullable(http2);
             return this;
         }
 
-        public Builder setTcp(@Nullable Input<VirtualNodeSpecListenerConnectionPoolTcpArgs> tcp) {
+        public Builder tcp(@Nullable Input<VirtualNodeSpecListenerConnectionPoolTcpArgs> tcp) {
             this.tcp = tcp;
             return this;
         }
 
-        public Builder setTcp(@Nullable VirtualNodeSpecListenerConnectionPoolTcpArgs tcp) {
+        public Builder tcp(@Nullable VirtualNodeSpecListenerConnectionPoolTcpArgs tcp) {
             this.tcp = Input.ofNullable(tcp);
             return this;
         }

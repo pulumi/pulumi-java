@@ -210,57 +210,57 @@ public final class SpriteSheetResponse {
     	      this.totalCount = defaults.totalCount;
         }
 
-        public Builder setColumnCount(Integer columnCount) {
+        public Builder columnCount(Integer columnCount) {
             this.columnCount = Objects.requireNonNull(columnCount);
             return this;
         }
 
-        public Builder setEndTimeOffset(String endTimeOffset) {
+        public Builder endTimeOffset(String endTimeOffset) {
             this.endTimeOffset = Objects.requireNonNull(endTimeOffset);
             return this;
         }
 
-        public Builder setFilePrefix(String filePrefix) {
+        public Builder filePrefix(String filePrefix) {
             this.filePrefix = Objects.requireNonNull(filePrefix);
             return this;
         }
 
-        public Builder setFormat(String format) {
+        public Builder format(String format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
-        public Builder setInterval(String interval) {
+        public Builder interval(String interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
 
-        public Builder setQuality(Integer quality) {
+        public Builder quality(Integer quality) {
             this.quality = Objects.requireNonNull(quality);
             return this;
         }
 
-        public Builder setRowCount(Integer rowCount) {
+        public Builder rowCount(Integer rowCount) {
             this.rowCount = Objects.requireNonNull(rowCount);
             return this;
         }
 
-        public Builder setSpriteHeightPixels(Integer spriteHeightPixels) {
+        public Builder spriteHeightPixels(Integer spriteHeightPixels) {
             this.spriteHeightPixels = Objects.requireNonNull(spriteHeightPixels);
             return this;
         }
 
-        public Builder setSpriteWidthPixels(Integer spriteWidthPixels) {
+        public Builder spriteWidthPixels(Integer spriteWidthPixels) {
             this.spriteWidthPixels = Objects.requireNonNull(spriteWidthPixels);
             return this;
         }
 
-        public Builder setStartTimeOffset(String startTimeOffset) {
+        public Builder startTimeOffset(String startTimeOffset) {
             this.startTimeOffset = Objects.requireNonNull(startTimeOffset);
             return this;
         }
 
-        public Builder setTotalCount(Integer totalCount) {
+        public Builder totalCount(Integer totalCount) {
             this.totalCount = Objects.requireNonNull(totalCount);
             return this;
         }

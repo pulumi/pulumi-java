@@ -74,12 +74,12 @@ public final class ApiConnectionTestLinkResponse extends io.pulumi.resources.Inv
     	      this.requestUri = defaults.requestUri;
         }
 
-        public Builder setMethod(@Nullable String method) {
+        public Builder method(@Nullable String method) {
             this.method = method;
             return this;
         }
 
-        public Builder setRequestUri(@Nullable String requestUri) {
+        public Builder requestUri(@Nullable String requestUri) {
             this.requestUri = requestUri;
             return this;
         }

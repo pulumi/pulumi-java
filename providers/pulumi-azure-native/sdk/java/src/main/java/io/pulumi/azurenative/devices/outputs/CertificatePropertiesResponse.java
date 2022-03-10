@@ -146,37 +146,37 @@ public final class CertificatePropertiesResponse {
     	      this.updated = defaults.updated;
         }
 
-        public Builder setCertificate(String certificate) {
+        public Builder certificate(String certificate) {
             this.certificate = Objects.requireNonNull(certificate);
             return this;
         }
 
-        public Builder setCreated(String created) {
+        public Builder created(String created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
 
-        public Builder setExpiry(String expiry) {
+        public Builder expiry(String expiry) {
             this.expiry = Objects.requireNonNull(expiry);
             return this;
         }
 
-        public Builder setIsVerified(Boolean isVerified) {
+        public Builder isVerified(Boolean isVerified) {
             this.isVerified = Objects.requireNonNull(isVerified);
             return this;
         }
 
-        public Builder setSubject(String subject) {
+        public Builder subject(String subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
 
-        public Builder setThumbprint(String thumbprint) {
+        public Builder thumbprint(String thumbprint) {
             this.thumbprint = Objects.requireNonNull(thumbprint);
             return this;
         }
 
-        public Builder setUpdated(String updated) {
+        public Builder updated(String updated) {
             this.updated = Objects.requireNonNull(updated);
             return this;
         }

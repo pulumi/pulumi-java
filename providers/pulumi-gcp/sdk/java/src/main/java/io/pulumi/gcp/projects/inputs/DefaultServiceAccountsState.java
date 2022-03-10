@@ -107,42 +107,42 @@ public final class DefaultServiceAccountsState extends io.pulumi.resources.Resou
     	      this.serviceAccounts = defaults.serviceAccounts;
         }
 
-        public Builder setAction(@Nullable Input<String> action) {
+        public Builder action(@Nullable Input<String> action) {
             this.action = action;
             return this;
         }
 
-        public Builder setAction(@Nullable String action) {
+        public Builder action(@Nullable String action) {
             this.action = Input.ofNullable(action);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRestorePolicy(@Nullable Input<String> restorePolicy) {
+        public Builder restorePolicy(@Nullable Input<String> restorePolicy) {
             this.restorePolicy = restorePolicy;
             return this;
         }
 
-        public Builder setRestorePolicy(@Nullable String restorePolicy) {
+        public Builder restorePolicy(@Nullable String restorePolicy) {
             this.restorePolicy = Input.ofNullable(restorePolicy);
             return this;
         }
 
-        public Builder setServiceAccounts(@Nullable Input<Map<String,Object>> serviceAccounts) {
+        public Builder serviceAccounts(@Nullable Input<Map<String,Object>> serviceAccounts) {
             this.serviceAccounts = serviceAccounts;
             return this;
         }
 
-        public Builder setServiceAccounts(@Nullable Map<String,Object> serviceAccounts) {
+        public Builder serviceAccounts(@Nullable Map<String,Object> serviceAccounts) {
             this.serviceAccounts = Input.ofNullable(serviceAccounts);
             return this;
         }

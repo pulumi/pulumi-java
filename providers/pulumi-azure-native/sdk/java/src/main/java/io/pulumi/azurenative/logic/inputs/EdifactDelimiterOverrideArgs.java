@@ -237,122 +237,122 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
     	      this.targetNamespace = defaults.targetNamespace;
         }
 
-        public Builder setComponentSeparator(Input<Integer> componentSeparator) {
+        public Builder componentSeparator(Input<Integer> componentSeparator) {
             this.componentSeparator = Objects.requireNonNull(componentSeparator);
             return this;
         }
 
-        public Builder setComponentSeparator(Integer componentSeparator) {
+        public Builder componentSeparator(Integer componentSeparator) {
             this.componentSeparator = Input.of(Objects.requireNonNull(componentSeparator));
             return this;
         }
 
-        public Builder setDataElementSeparator(Input<Integer> dataElementSeparator) {
+        public Builder dataElementSeparator(Input<Integer> dataElementSeparator) {
             this.dataElementSeparator = Objects.requireNonNull(dataElementSeparator);
             return this;
         }
 
-        public Builder setDataElementSeparator(Integer dataElementSeparator) {
+        public Builder dataElementSeparator(Integer dataElementSeparator) {
             this.dataElementSeparator = Input.of(Objects.requireNonNull(dataElementSeparator));
             return this;
         }
 
-        public Builder setDecimalPointIndicator(Input<EdifactDecimalIndicator> decimalPointIndicator) {
+        public Builder decimalPointIndicator(Input<EdifactDecimalIndicator> decimalPointIndicator) {
             this.decimalPointIndicator = Objects.requireNonNull(decimalPointIndicator);
             return this;
         }
 
-        public Builder setDecimalPointIndicator(EdifactDecimalIndicator decimalPointIndicator) {
+        public Builder decimalPointIndicator(EdifactDecimalIndicator decimalPointIndicator) {
             this.decimalPointIndicator = Input.of(Objects.requireNonNull(decimalPointIndicator));
             return this;
         }
 
-        public Builder setMessageAssociationAssignedCode(@Nullable Input<String> messageAssociationAssignedCode) {
+        public Builder messageAssociationAssignedCode(@Nullable Input<String> messageAssociationAssignedCode) {
             this.messageAssociationAssignedCode = messageAssociationAssignedCode;
             return this;
         }
 
-        public Builder setMessageAssociationAssignedCode(@Nullable String messageAssociationAssignedCode) {
+        public Builder messageAssociationAssignedCode(@Nullable String messageAssociationAssignedCode) {
             this.messageAssociationAssignedCode = Input.ofNullable(messageAssociationAssignedCode);
             return this;
         }
 
-        public Builder setMessageId(@Nullable Input<String> messageId) {
+        public Builder messageId(@Nullable Input<String> messageId) {
             this.messageId = messageId;
             return this;
         }
 
-        public Builder setMessageId(@Nullable String messageId) {
+        public Builder messageId(@Nullable String messageId) {
             this.messageId = Input.ofNullable(messageId);
             return this;
         }
 
-        public Builder setMessageRelease(@Nullable Input<String> messageRelease) {
+        public Builder messageRelease(@Nullable Input<String> messageRelease) {
             this.messageRelease = messageRelease;
             return this;
         }
 
-        public Builder setMessageRelease(@Nullable String messageRelease) {
+        public Builder messageRelease(@Nullable String messageRelease) {
             this.messageRelease = Input.ofNullable(messageRelease);
             return this;
         }
 
-        public Builder setMessageVersion(@Nullable Input<String> messageVersion) {
+        public Builder messageVersion(@Nullable Input<String> messageVersion) {
             this.messageVersion = messageVersion;
             return this;
         }
 
-        public Builder setMessageVersion(@Nullable String messageVersion) {
+        public Builder messageVersion(@Nullable String messageVersion) {
             this.messageVersion = Input.ofNullable(messageVersion);
             return this;
         }
 
-        public Builder setReleaseIndicator(Input<Integer> releaseIndicator) {
+        public Builder releaseIndicator(Input<Integer> releaseIndicator) {
             this.releaseIndicator = Objects.requireNonNull(releaseIndicator);
             return this;
         }
 
-        public Builder setReleaseIndicator(Integer releaseIndicator) {
+        public Builder releaseIndicator(Integer releaseIndicator) {
             this.releaseIndicator = Input.of(Objects.requireNonNull(releaseIndicator));
             return this;
         }
 
-        public Builder setRepetitionSeparator(Input<Integer> repetitionSeparator) {
+        public Builder repetitionSeparator(Input<Integer> repetitionSeparator) {
             this.repetitionSeparator = Objects.requireNonNull(repetitionSeparator);
             return this;
         }
 
-        public Builder setRepetitionSeparator(Integer repetitionSeparator) {
+        public Builder repetitionSeparator(Integer repetitionSeparator) {
             this.repetitionSeparator = Input.of(Objects.requireNonNull(repetitionSeparator));
             return this;
         }
 
-        public Builder setSegmentTerminator(Input<Integer> segmentTerminator) {
+        public Builder segmentTerminator(Input<Integer> segmentTerminator) {
             this.segmentTerminator = Objects.requireNonNull(segmentTerminator);
             return this;
         }
 
-        public Builder setSegmentTerminator(Integer segmentTerminator) {
+        public Builder segmentTerminator(Integer segmentTerminator) {
             this.segmentTerminator = Input.of(Objects.requireNonNull(segmentTerminator));
             return this;
         }
 
-        public Builder setSegmentTerminatorSuffix(Input<SegmentTerminatorSuffix> segmentTerminatorSuffix) {
+        public Builder segmentTerminatorSuffix(Input<SegmentTerminatorSuffix> segmentTerminatorSuffix) {
             this.segmentTerminatorSuffix = Objects.requireNonNull(segmentTerminatorSuffix);
             return this;
         }
 
-        public Builder setSegmentTerminatorSuffix(SegmentTerminatorSuffix segmentTerminatorSuffix) {
+        public Builder segmentTerminatorSuffix(SegmentTerminatorSuffix segmentTerminatorSuffix) {
             this.segmentTerminatorSuffix = Input.of(Objects.requireNonNull(segmentTerminatorSuffix));
             return this;
         }
 
-        public Builder setTargetNamespace(@Nullable Input<String> targetNamespace) {
+        public Builder targetNamespace(@Nullable Input<String> targetNamespace) {
             this.targetNamespace = targetNamespace;
             return this;
         }
 
-        public Builder setTargetNamespace(@Nullable String targetNamespace) {
+        public Builder targetNamespace(@Nullable String targetNamespace) {
             this.targetNamespace = Input.ofNullable(targetNamespace);
             return this;
         }

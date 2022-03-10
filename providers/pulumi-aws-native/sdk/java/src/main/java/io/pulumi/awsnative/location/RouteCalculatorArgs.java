@@ -87,42 +87,42 @@ public final class RouteCalculatorArgs extends io.pulumi.resources.ResourceArgs 
     	      this.pricingPlan = defaults.pricingPlan;
         }
 
-        public Builder setCalculatorName(Input<String> calculatorName) {
+        public Builder calculatorName(Input<String> calculatorName) {
             this.calculatorName = Objects.requireNonNull(calculatorName);
             return this;
         }
 
-        public Builder setCalculatorName(String calculatorName) {
+        public Builder calculatorName(String calculatorName) {
             this.calculatorName = Input.of(Objects.requireNonNull(calculatorName));
             return this;
         }
 
-        public Builder setDataSource(Input<String> dataSource) {
+        public Builder dataSource(Input<String> dataSource) {
             this.dataSource = Objects.requireNonNull(dataSource);
             return this;
         }
 
-        public Builder setDataSource(String dataSource) {
+        public Builder dataSource(String dataSource) {
             this.dataSource = Input.of(Objects.requireNonNull(dataSource));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setPricingPlan(@Nullable Input<RouteCalculatorPricingPlan> pricingPlan) {
+        public Builder pricingPlan(@Nullable Input<RouteCalculatorPricingPlan> pricingPlan) {
             this.pricingPlan = pricingPlan;
             return this;
         }
 
-        public Builder setPricingPlan(@Nullable RouteCalculatorPricingPlan pricingPlan) {
+        public Builder pricingPlan(@Nullable RouteCalculatorPricingPlan pricingPlan) {
             this.pricingPlan = Input.ofNullable(pricingPlan);
             return this;
         }

@@ -111,8 +111,8 @@ public class APIServiceList extends io.pulumi.resources.CustomResource {
     private static APIServiceListArgs makeArgs(APIServiceListArgs args) {
         var builder = args == null ? APIServiceListArgs.builder() : APIServiceListArgs.builder(args);
         return builder
-            .setApiVersion("apiregistration.k8s.io/v1beta1")
-            .setKind("APIServiceList")
+            .apiVersion("apiregistration.k8s.io/v1beta1")
+            .kind("APIServiceList")
             .build();
     }
 

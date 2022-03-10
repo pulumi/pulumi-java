@@ -90,17 +90,17 @@ public final class DaprMetadataResponse extends io.pulumi.resources.InvokeArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setSecretRef(@Nullable String secretRef) {
+        public Builder secretRef(@Nullable String secretRef) {
             this.secretRef = secretRef;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

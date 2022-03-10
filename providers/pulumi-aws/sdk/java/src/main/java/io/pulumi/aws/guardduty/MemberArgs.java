@@ -135,62 +135,62 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
     	      this.invite = defaults.invite;
         }
 
-        public Builder setAccountId(Input<String> accountId) {
+        public Builder accountId(Input<String> accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
 
-        public Builder setAccountId(String accountId) {
+        public Builder accountId(String accountId) {
             this.accountId = Input.of(Objects.requireNonNull(accountId));
             return this;
         }
 
-        public Builder setDetectorId(Input<String> detectorId) {
+        public Builder detectorId(Input<String> detectorId) {
             this.detectorId = Objects.requireNonNull(detectorId);
             return this;
         }
 
-        public Builder setDetectorId(String detectorId) {
+        public Builder detectorId(String detectorId) {
             this.detectorId = Input.of(Objects.requireNonNull(detectorId));
             return this;
         }
 
-        public Builder setDisableEmailNotification(@Nullable Input<Boolean> disableEmailNotification) {
+        public Builder disableEmailNotification(@Nullable Input<Boolean> disableEmailNotification) {
             this.disableEmailNotification = disableEmailNotification;
             return this;
         }
 
-        public Builder setDisableEmailNotification(@Nullable Boolean disableEmailNotification) {
+        public Builder disableEmailNotification(@Nullable Boolean disableEmailNotification) {
             this.disableEmailNotification = Input.ofNullable(disableEmailNotification);
             return this;
         }
 
-        public Builder setEmail(Input<String> email) {
+        public Builder email(Input<String> email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Input.of(Objects.requireNonNull(email));
             return this;
         }
 
-        public Builder setInvitationMessage(@Nullable Input<String> invitationMessage) {
+        public Builder invitationMessage(@Nullable Input<String> invitationMessage) {
             this.invitationMessage = invitationMessage;
             return this;
         }
 
-        public Builder setInvitationMessage(@Nullable String invitationMessage) {
+        public Builder invitationMessage(@Nullable String invitationMessage) {
             this.invitationMessage = Input.ofNullable(invitationMessage);
             return this;
         }
 
-        public Builder setInvite(@Nullable Input<Boolean> invite) {
+        public Builder invite(@Nullable Input<Boolean> invite) {
             this.invite = invite;
             return this;
         }
 
-        public Builder setInvite(@Nullable Boolean invite) {
+        public Builder invite(@Nullable Boolean invite) {
             this.invite = Input.ofNullable(invite);
             return this;
         }

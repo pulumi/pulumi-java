@@ -65,12 +65,12 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfil
     	      this.queryArg = defaults.queryArg;
         }
 
-        public Builder setProfileId(String profileId) {
+        public Builder profileId(String profileId) {
             this.profileId = Objects.requireNonNull(profileId);
             return this;
         }
 
-        public Builder setQueryArg(String queryArg) {
+        public Builder queryArg(String queryArg) {
             this.queryArg = Objects.requireNonNull(queryArg);
             return this;
         }

@@ -50,7 +50,7 @@ public final class ScopeNamespaceResponse {
     	      this.targetNamespace = defaults.targetNamespace;
         }
 
-        public Builder setTargetNamespace(@Nullable String targetNamespace) {
+        public Builder targetNamespace(@Nullable String targetNamespace) {
             this.targetNamespace = targetNamespace;
             return this;
         }

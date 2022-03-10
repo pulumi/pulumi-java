@@ -51,7 +51,7 @@ public final class GetTransitGatewayConnectArgs extends io.pulumi.resources.Invo
     	      this.transitGatewayAttachmentId = defaults.transitGatewayAttachmentId;
         }
 
-        public Builder setTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
+        public Builder transitGatewayAttachmentId(String transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = Objects.requireNonNull(transitGatewayAttachmentId);
             return this;
         }

@@ -60,12 +60,12 @@ public final class GetBotVersionArgs extends io.pulumi.resources.InvokeArgs {
     	      this.botVersion = defaults.botVersion;
         }
 
-        public Builder setBotId(String botId) {
+        public Builder botId(String botId) {
             this.botId = Objects.requireNonNull(botId);
             return this;
         }
 
-        public Builder setBotVersion(String botVersion) {
+        public Builder botVersion(String botVersion) {
             this.botVersion = Objects.requireNonNull(botVersion);
             return this;
         }

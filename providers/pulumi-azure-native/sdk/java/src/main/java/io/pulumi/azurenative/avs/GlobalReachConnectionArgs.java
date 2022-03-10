@@ -118,52 +118,52 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAuthorizationKey(@Nullable Input<String> authorizationKey) {
+        public Builder authorizationKey(@Nullable Input<String> authorizationKey) {
             this.authorizationKey = authorizationKey;
             return this;
         }
 
-        public Builder setAuthorizationKey(@Nullable String authorizationKey) {
+        public Builder authorizationKey(@Nullable String authorizationKey) {
             this.authorizationKey = Input.ofNullable(authorizationKey);
             return this;
         }
 
-        public Builder setGlobalReachConnectionName(@Nullable Input<String> globalReachConnectionName) {
+        public Builder globalReachConnectionName(@Nullable Input<String> globalReachConnectionName) {
             this.globalReachConnectionName = globalReachConnectionName;
             return this;
         }
 
-        public Builder setGlobalReachConnectionName(@Nullable String globalReachConnectionName) {
+        public Builder globalReachConnectionName(@Nullable String globalReachConnectionName) {
             this.globalReachConnectionName = Input.ofNullable(globalReachConnectionName);
             return this;
         }
 
-        public Builder setPeerExpressRouteCircuit(@Nullable Input<String> peerExpressRouteCircuit) {
+        public Builder peerExpressRouteCircuit(@Nullable Input<String> peerExpressRouteCircuit) {
             this.peerExpressRouteCircuit = peerExpressRouteCircuit;
             return this;
         }
 
-        public Builder setPeerExpressRouteCircuit(@Nullable String peerExpressRouteCircuit) {
+        public Builder peerExpressRouteCircuit(@Nullable String peerExpressRouteCircuit) {
             this.peerExpressRouteCircuit = Input.ofNullable(peerExpressRouteCircuit);
             return this;
         }
 
-        public Builder setPrivateCloudName(Input<String> privateCloudName) {
+        public Builder privateCloudName(Input<String> privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
 
-        public Builder setPrivateCloudName(String privateCloudName) {
+        public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Input.of(Objects.requireNonNull(privateCloudName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

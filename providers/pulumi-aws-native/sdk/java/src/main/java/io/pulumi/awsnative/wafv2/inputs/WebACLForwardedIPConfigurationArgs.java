@@ -62,22 +62,22 @@ public final class WebACLForwardedIPConfigurationArgs extends io.pulumi.resource
     	      this.headerName = defaults.headerName;
         }
 
-        public Builder setFallbackBehavior(Input<WebACLForwardedIPConfigurationFallbackBehavior> fallbackBehavior) {
+        public Builder fallbackBehavior(Input<WebACLForwardedIPConfigurationFallbackBehavior> fallbackBehavior) {
             this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior);
             return this;
         }
 
-        public Builder setFallbackBehavior(WebACLForwardedIPConfigurationFallbackBehavior fallbackBehavior) {
+        public Builder fallbackBehavior(WebACLForwardedIPConfigurationFallbackBehavior fallbackBehavior) {
             this.fallbackBehavior = Input.of(Objects.requireNonNull(fallbackBehavior));
             return this;
         }
 
-        public Builder setHeaderName(Input<String> headerName) {
+        public Builder headerName(Input<String> headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
-        public Builder setHeaderName(String headerName) {
+        public Builder headerName(String headerName) {
             this.headerName = Input.of(Objects.requireNonNull(headerName));
             return this;
         }

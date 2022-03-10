@@ -82,17 +82,17 @@ public final class HeaderResponse {
     	      this.regex = defaults.regex;
         }
 
-        public Builder setGlob(String glob) {
+        public Builder glob(String glob) {
             this.glob = Objects.requireNonNull(glob);
             return this;
         }
 
-        public Builder setHeaders(Map<String,String> headers) {
+        public Builder headers(Map<String,String> headers) {
             this.headers = Objects.requireNonNull(headers);
             return this;
         }
 
-        public Builder setRegex(String regex) {
+        public Builder regex(String regex) {
             this.regex = Objects.requireNonNull(regex);
             return this;
         }

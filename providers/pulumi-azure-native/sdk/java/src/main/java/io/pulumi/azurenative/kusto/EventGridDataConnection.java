@@ -265,7 +265,7 @@ public class EventGridDataConnection extends io.pulumi.resources.CustomResource 
     private static EventGridDataConnectionArgs makeArgs(EventGridDataConnectionArgs args) {
         var builder = args == null ? EventGridDataConnectionArgs.builder() : EventGridDataConnectionArgs.builder(args);
         return builder
-            .setKind("EventGrid")
+            .kind("EventGrid")
             .build();
     }
 

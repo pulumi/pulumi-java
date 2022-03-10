@@ -74,17 +74,17 @@ public final class GetCapacityCommitmentArgs extends io.pulumi.resources.InvokeA
     	      this.project = defaults.project;
         }
 
-        public Builder setCapacityCommitmentId(String capacityCommitmentId) {
+        public Builder capacityCommitmentId(String capacityCommitmentId) {
             this.capacityCommitmentId = Objects.requireNonNull(capacityCommitmentId);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

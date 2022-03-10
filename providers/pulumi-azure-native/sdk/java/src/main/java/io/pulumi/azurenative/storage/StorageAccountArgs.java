@@ -423,232 +423,232 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAccessTier(@Nullable Input<AccessTier> accessTier) {
+        public Builder accessTier(@Nullable Input<AccessTier> accessTier) {
             this.accessTier = accessTier;
             return this;
         }
 
-        public Builder setAccessTier(@Nullable AccessTier accessTier) {
+        public Builder accessTier(@Nullable AccessTier accessTier) {
             this.accessTier = Input.ofNullable(accessTier);
             return this;
         }
 
-        public Builder setAccountName(@Nullable Input<String> accountName) {
+        public Builder accountName(@Nullable Input<String> accountName) {
             this.accountName = accountName;
             return this;
         }
 
-        public Builder setAccountName(@Nullable String accountName) {
+        public Builder accountName(@Nullable String accountName) {
             this.accountName = Input.ofNullable(accountName);
             return this;
         }
 
-        public Builder setAllowBlobPublicAccess(@Nullable Input<Boolean> allowBlobPublicAccess) {
+        public Builder allowBlobPublicAccess(@Nullable Input<Boolean> allowBlobPublicAccess) {
             this.allowBlobPublicAccess = allowBlobPublicAccess;
             return this;
         }
 
-        public Builder setAllowBlobPublicAccess(@Nullable Boolean allowBlobPublicAccess) {
+        public Builder allowBlobPublicAccess(@Nullable Boolean allowBlobPublicAccess) {
             this.allowBlobPublicAccess = Input.ofNullable(allowBlobPublicAccess);
             return this;
         }
 
-        public Builder setAllowSharedKeyAccess(@Nullable Input<Boolean> allowSharedKeyAccess) {
+        public Builder allowSharedKeyAccess(@Nullable Input<Boolean> allowSharedKeyAccess) {
             this.allowSharedKeyAccess = allowSharedKeyAccess;
             return this;
         }
 
-        public Builder setAllowSharedKeyAccess(@Nullable Boolean allowSharedKeyAccess) {
+        public Builder allowSharedKeyAccess(@Nullable Boolean allowSharedKeyAccess) {
             this.allowSharedKeyAccess = Input.ofNullable(allowSharedKeyAccess);
             return this;
         }
 
-        public Builder setAzureFilesIdentityBasedAuthentication(@Nullable Input<AzureFilesIdentityBasedAuthenticationArgs> azureFilesIdentityBasedAuthentication) {
+        public Builder azureFilesIdentityBasedAuthentication(@Nullable Input<AzureFilesIdentityBasedAuthenticationArgs> azureFilesIdentityBasedAuthentication) {
             this.azureFilesIdentityBasedAuthentication = azureFilesIdentityBasedAuthentication;
             return this;
         }
 
-        public Builder setAzureFilesIdentityBasedAuthentication(@Nullable AzureFilesIdentityBasedAuthenticationArgs azureFilesIdentityBasedAuthentication) {
+        public Builder azureFilesIdentityBasedAuthentication(@Nullable AzureFilesIdentityBasedAuthenticationArgs azureFilesIdentityBasedAuthentication) {
             this.azureFilesIdentityBasedAuthentication = Input.ofNullable(azureFilesIdentityBasedAuthentication);
             return this;
         }
 
-        public Builder setCustomDomain(@Nullable Input<CustomDomainArgs> customDomain) {
+        public Builder customDomain(@Nullable Input<CustomDomainArgs> customDomain) {
             this.customDomain = customDomain;
             return this;
         }
 
-        public Builder setCustomDomain(@Nullable CustomDomainArgs customDomain) {
+        public Builder customDomain(@Nullable CustomDomainArgs customDomain) {
             this.customDomain = Input.ofNullable(customDomain);
             return this;
         }
 
-        public Builder setEnableHttpsTrafficOnly(@Nullable Input<Boolean> enableHttpsTrafficOnly) {
+        public Builder enableHttpsTrafficOnly(@Nullable Input<Boolean> enableHttpsTrafficOnly) {
             this.enableHttpsTrafficOnly = enableHttpsTrafficOnly;
             return this;
         }
 
-        public Builder setEnableHttpsTrafficOnly(@Nullable Boolean enableHttpsTrafficOnly) {
+        public Builder enableHttpsTrafficOnly(@Nullable Boolean enableHttpsTrafficOnly) {
             this.enableHttpsTrafficOnly = Input.ofNullable(enableHttpsTrafficOnly);
             return this;
         }
 
-        public Builder setEnableNfsV3(@Nullable Input<Boolean> enableNfsV3) {
+        public Builder enableNfsV3(@Nullable Input<Boolean> enableNfsV3) {
             this.enableNfsV3 = enableNfsV3;
             return this;
         }
 
-        public Builder setEnableNfsV3(@Nullable Boolean enableNfsV3) {
+        public Builder enableNfsV3(@Nullable Boolean enableNfsV3) {
             this.enableNfsV3 = Input.ofNullable(enableNfsV3);
             return this;
         }
 
-        public Builder setEncryption(@Nullable Input<EncryptionArgs> encryption) {
+        public Builder encryption(@Nullable Input<EncryptionArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setEncryption(@Nullable EncryptionArgs encryption) {
+        public Builder encryption(@Nullable EncryptionArgs encryption) {
             this.encryption = Input.ofNullable(encryption);
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
+        public Builder extendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
+        public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
             this.extendedLocation = Input.ofNullable(extendedLocation);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<IdentityArgs> identity) {
+        public Builder identity(@Nullable Input<IdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable IdentityArgs identity) {
+        public Builder identity(@Nullable IdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setIsHnsEnabled(@Nullable Input<Boolean> isHnsEnabled) {
+        public Builder isHnsEnabled(@Nullable Input<Boolean> isHnsEnabled) {
             this.isHnsEnabled = isHnsEnabled;
             return this;
         }
 
-        public Builder setIsHnsEnabled(@Nullable Boolean isHnsEnabled) {
+        public Builder isHnsEnabled(@Nullable Boolean isHnsEnabled) {
             this.isHnsEnabled = Input.ofNullable(isHnsEnabled);
             return this;
         }
 
-        public Builder setKeyPolicy(@Nullable Input<KeyPolicyArgs> keyPolicy) {
+        public Builder keyPolicy(@Nullable Input<KeyPolicyArgs> keyPolicy) {
             this.keyPolicy = keyPolicy;
             return this;
         }
 
-        public Builder setKeyPolicy(@Nullable KeyPolicyArgs keyPolicy) {
+        public Builder keyPolicy(@Nullable KeyPolicyArgs keyPolicy) {
             this.keyPolicy = Input.ofNullable(keyPolicy);
             return this;
         }
 
-        public Builder setKind(Input<Either<String,Kind>> kind) {
+        public Builder kind(Input<Either<String,Kind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(Either<String,Kind> kind) {
+        public Builder kind(Either<String,Kind> kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setLargeFileSharesState(@Nullable Input<Either<String,LargeFileSharesState>> largeFileSharesState) {
+        public Builder largeFileSharesState(@Nullable Input<Either<String,LargeFileSharesState>> largeFileSharesState) {
             this.largeFileSharesState = largeFileSharesState;
             return this;
         }
 
-        public Builder setLargeFileSharesState(@Nullable Either<String,LargeFileSharesState> largeFileSharesState) {
+        public Builder largeFileSharesState(@Nullable Either<String,LargeFileSharesState> largeFileSharesState) {
             this.largeFileSharesState = Input.ofNullable(largeFileSharesState);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMinimumTlsVersion(@Nullable Input<Either<String,MinimumTlsVersion>> minimumTlsVersion) {
+        public Builder minimumTlsVersion(@Nullable Input<Either<String,MinimumTlsVersion>> minimumTlsVersion) {
             this.minimumTlsVersion = minimumTlsVersion;
             return this;
         }
 
-        public Builder setMinimumTlsVersion(@Nullable Either<String,MinimumTlsVersion> minimumTlsVersion) {
+        public Builder minimumTlsVersion(@Nullable Either<String,MinimumTlsVersion> minimumTlsVersion) {
             this.minimumTlsVersion = Input.ofNullable(minimumTlsVersion);
             return this;
         }
 
-        public Builder setNetworkRuleSet(@Nullable Input<NetworkRuleSetArgs> networkRuleSet) {
+        public Builder networkRuleSet(@Nullable Input<NetworkRuleSetArgs> networkRuleSet) {
             this.networkRuleSet = networkRuleSet;
             return this;
         }
 
-        public Builder setNetworkRuleSet(@Nullable NetworkRuleSetArgs networkRuleSet) {
+        public Builder networkRuleSet(@Nullable NetworkRuleSetArgs networkRuleSet) {
             this.networkRuleSet = Input.ofNullable(networkRuleSet);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRoutingPreference(@Nullable Input<RoutingPreferenceArgs> routingPreference) {
+        public Builder routingPreference(@Nullable Input<RoutingPreferenceArgs> routingPreference) {
             this.routingPreference = routingPreference;
             return this;
         }
 
-        public Builder setRoutingPreference(@Nullable RoutingPreferenceArgs routingPreference) {
+        public Builder routingPreference(@Nullable RoutingPreferenceArgs routingPreference) {
             this.routingPreference = Input.ofNullable(routingPreference);
             return this;
         }
 
-        public Builder setSasPolicy(@Nullable Input<SasPolicyArgs> sasPolicy) {
+        public Builder sasPolicy(@Nullable Input<SasPolicyArgs> sasPolicy) {
             this.sasPolicy = sasPolicy;
             return this;
         }
 
-        public Builder setSasPolicy(@Nullable SasPolicyArgs sasPolicy) {
+        public Builder sasPolicy(@Nullable SasPolicyArgs sasPolicy) {
             this.sasPolicy = Input.ofNullable(sasPolicy);
             return this;
         }
 
-        public Builder setSku(Input<SkuArgs> sku) {
+        public Builder sku(Input<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setSku(SkuArgs sku) {
+        public Builder sku(SkuArgs sku) {
             this.sku = Input.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

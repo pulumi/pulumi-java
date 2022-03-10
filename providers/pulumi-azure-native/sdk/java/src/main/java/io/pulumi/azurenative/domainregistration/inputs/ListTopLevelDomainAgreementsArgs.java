@@ -87,17 +87,17 @@ public final class ListTopLevelDomainAgreementsArgs extends io.pulumi.resources.
     	      this.name = defaults.name;
         }
 
-        public Builder setForTransfer(@Nullable Boolean forTransfer) {
+        public Builder forTransfer(@Nullable Boolean forTransfer) {
             this.forTransfer = forTransfer;
             return this;
         }
 
-        public Builder setIncludePrivacy(@Nullable Boolean includePrivacy) {
+        public Builder includePrivacy(@Nullable Boolean includePrivacy) {
             this.includePrivacy = includePrivacy;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

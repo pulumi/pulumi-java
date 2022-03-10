@@ -67,12 +67,12 @@ public final class IotHubLocationDescriptionResponse {
     	      this.role = defaults.role;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setRole(@Nullable String role) {
+        public Builder role(@Nullable String role) {
             this.role = role;
             return this;
         }

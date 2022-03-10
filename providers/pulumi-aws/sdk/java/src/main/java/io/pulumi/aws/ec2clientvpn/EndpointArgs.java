@@ -203,102 +203,102 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.transportProtocol = defaults.transportProtocol;
         }
 
-        public Builder setAuthenticationOptions(Input<List<EndpointAuthenticationOptionArgs>> authenticationOptions) {
+        public Builder authenticationOptions(Input<List<EndpointAuthenticationOptionArgs>> authenticationOptions) {
             this.authenticationOptions = Objects.requireNonNull(authenticationOptions);
             return this;
         }
 
-        public Builder setAuthenticationOptions(List<EndpointAuthenticationOptionArgs> authenticationOptions) {
+        public Builder authenticationOptions(List<EndpointAuthenticationOptionArgs> authenticationOptions) {
             this.authenticationOptions = Input.of(Objects.requireNonNull(authenticationOptions));
             return this;
         }
 
-        public Builder setClientCidrBlock(Input<String> clientCidrBlock) {
+        public Builder clientCidrBlock(Input<String> clientCidrBlock) {
             this.clientCidrBlock = Objects.requireNonNull(clientCidrBlock);
             return this;
         }
 
-        public Builder setClientCidrBlock(String clientCidrBlock) {
+        public Builder clientCidrBlock(String clientCidrBlock) {
             this.clientCidrBlock = Input.of(Objects.requireNonNull(clientCidrBlock));
             return this;
         }
 
-        public Builder setConnectionLogOptions(Input<EndpointConnectionLogOptionsArgs> connectionLogOptions) {
+        public Builder connectionLogOptions(Input<EndpointConnectionLogOptionsArgs> connectionLogOptions) {
             this.connectionLogOptions = Objects.requireNonNull(connectionLogOptions);
             return this;
         }
 
-        public Builder setConnectionLogOptions(EndpointConnectionLogOptionsArgs connectionLogOptions) {
+        public Builder connectionLogOptions(EndpointConnectionLogOptionsArgs connectionLogOptions) {
             this.connectionLogOptions = Input.of(Objects.requireNonNull(connectionLogOptions));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDnsServers(@Nullable Input<List<String>> dnsServers) {
+        public Builder dnsServers(@Nullable Input<List<String>> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
 
-        public Builder setDnsServers(@Nullable List<String> dnsServers) {
+        public Builder dnsServers(@Nullable List<String> dnsServers) {
             this.dnsServers = Input.ofNullable(dnsServers);
             return this;
         }
 
-        public Builder setSelfServicePortal(@Nullable Input<String> selfServicePortal) {
+        public Builder selfServicePortal(@Nullable Input<String> selfServicePortal) {
             this.selfServicePortal = selfServicePortal;
             return this;
         }
 
-        public Builder setSelfServicePortal(@Nullable String selfServicePortal) {
+        public Builder selfServicePortal(@Nullable String selfServicePortal) {
             this.selfServicePortal = Input.ofNullable(selfServicePortal);
             return this;
         }
 
-        public Builder setServerCertificateArn(Input<String> serverCertificateArn) {
+        public Builder serverCertificateArn(Input<String> serverCertificateArn) {
             this.serverCertificateArn = Objects.requireNonNull(serverCertificateArn);
             return this;
         }
 
-        public Builder setServerCertificateArn(String serverCertificateArn) {
+        public Builder serverCertificateArn(String serverCertificateArn) {
             this.serverCertificateArn = Input.of(Objects.requireNonNull(serverCertificateArn));
             return this;
         }
 
-        public Builder setSplitTunnel(@Nullable Input<Boolean> splitTunnel) {
+        public Builder splitTunnel(@Nullable Input<Boolean> splitTunnel) {
             this.splitTunnel = splitTunnel;
             return this;
         }
 
-        public Builder setSplitTunnel(@Nullable Boolean splitTunnel) {
+        public Builder splitTunnel(@Nullable Boolean splitTunnel) {
             this.splitTunnel = Input.ofNullable(splitTunnel);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTransportProtocol(@Nullable Input<String> transportProtocol) {
+        public Builder transportProtocol(@Nullable Input<String> transportProtocol) {
             this.transportProtocol = transportProtocol;
             return this;
         }
 
-        public Builder setTransportProtocol(@Nullable String transportProtocol) {
+        public Builder transportProtocol(@Nullable String transportProtocol) {
             this.transportProtocol = Input.ofNullable(transportProtocol);
             return this;
         }

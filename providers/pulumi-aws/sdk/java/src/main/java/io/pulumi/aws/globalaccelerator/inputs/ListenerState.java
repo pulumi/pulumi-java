@@ -104,42 +104,42 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setAcceleratorArn(@Nullable Input<String> acceleratorArn) {
+        public Builder acceleratorArn(@Nullable Input<String> acceleratorArn) {
             this.acceleratorArn = acceleratorArn;
             return this;
         }
 
-        public Builder setAcceleratorArn(@Nullable String acceleratorArn) {
+        public Builder acceleratorArn(@Nullable String acceleratorArn) {
             this.acceleratorArn = Input.ofNullable(acceleratorArn);
             return this;
         }
 
-        public Builder setClientAffinity(@Nullable Input<String> clientAffinity) {
+        public Builder clientAffinity(@Nullable Input<String> clientAffinity) {
             this.clientAffinity = clientAffinity;
             return this;
         }
 
-        public Builder setClientAffinity(@Nullable String clientAffinity) {
+        public Builder clientAffinity(@Nullable String clientAffinity) {
             this.clientAffinity = Input.ofNullable(clientAffinity);
             return this;
         }
 
-        public Builder setPortRanges(@Nullable Input<List<ListenerPortRangeGetArgs>> portRanges) {
+        public Builder portRanges(@Nullable Input<List<ListenerPortRangeGetArgs>> portRanges) {
             this.portRanges = portRanges;
             return this;
         }
 
-        public Builder setPortRanges(@Nullable List<ListenerPortRangeGetArgs> portRanges) {
+        public Builder portRanges(@Nullable List<ListenerPortRangeGetArgs> portRanges) {
             this.portRanges = Input.ofNullable(portRanges);
             return this;
         }
 
-        public Builder setProtocol(@Nullable Input<String> protocol) {
+        public Builder protocol(@Nullable Input<String> protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = Input.ofNullable(protocol);
             return this;
         }

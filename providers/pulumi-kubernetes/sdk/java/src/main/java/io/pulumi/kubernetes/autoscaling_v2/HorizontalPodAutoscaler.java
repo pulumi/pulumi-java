@@ -142,8 +142,8 @@ public class HorizontalPodAutoscaler extends io.pulumi.resources.CustomResource 
     private static HorizontalPodAutoscalerArgs makeArgs(@Nullable HorizontalPodAutoscalerArgs args) {
         var builder = args == null ? HorizontalPodAutoscalerArgs.builder() : HorizontalPodAutoscalerArgs.builder(args);
         return builder
-            .setApiVersion("autoscaling/v2")
-            .setKind("HorizontalPodAutoscaler")
+            .apiVersion("autoscaling/v2")
+            .kind("HorizontalPodAutoscaler")
             .build();
     }
 

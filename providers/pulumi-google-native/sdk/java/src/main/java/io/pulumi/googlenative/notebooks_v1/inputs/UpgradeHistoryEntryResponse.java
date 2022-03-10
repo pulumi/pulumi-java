@@ -200,52 +200,52 @@ public final class UpgradeHistoryEntryResponse extends io.pulumi.resources.Invok
     	      this.vmImage = defaults.vmImage;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setContainerImage(String containerImage) {
+        public Builder containerImage(String containerImage) {
             this.containerImage = Objects.requireNonNull(containerImage);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setFramework(String framework) {
+        public Builder framework(String framework) {
             this.framework = Objects.requireNonNull(framework);
             return this;
         }
 
-        public Builder setSnapshot(String snapshot) {
+        public Builder snapshot(String snapshot) {
             this.snapshot = Objects.requireNonNull(snapshot);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTargetImage(String targetImage) {
+        public Builder targetImage(String targetImage) {
             this.targetImage = Objects.requireNonNull(targetImage);
             return this;
         }
 
-        public Builder setTargetVersion(String targetVersion) {
+        public Builder targetVersion(String targetVersion) {
             this.targetVersion = Objects.requireNonNull(targetVersion);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
-        public Builder setVmImage(String vmImage) {
+        public Builder vmImage(String vmImage) {
             this.vmImage = Objects.requireNonNull(vmImage);
             return this;
         }

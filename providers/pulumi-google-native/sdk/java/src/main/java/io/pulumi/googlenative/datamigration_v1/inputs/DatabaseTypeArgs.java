@@ -75,22 +75,22 @@ public final class DatabaseTypeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.provider = defaults.provider;
         }
 
-        public Builder setEngine(@Nullable Input<DatabaseTypeEngine> engine) {
+        public Builder engine(@Nullable Input<DatabaseTypeEngine> engine) {
             this.engine = engine;
             return this;
         }
 
-        public Builder setEngine(@Nullable DatabaseTypeEngine engine) {
+        public Builder engine(@Nullable DatabaseTypeEngine engine) {
             this.engine = Input.ofNullable(engine);
             return this;
         }
 
-        public Builder setProvider(@Nullable Input<DatabaseTypeProvider> provider) {
+        public Builder provider(@Nullable Input<DatabaseTypeProvider> provider) {
             this.provider = provider;
             return this;
         }
 
-        public Builder setProvider(@Nullable DatabaseTypeProvider provider) {
+        public Builder provider(@Nullable DatabaseTypeProvider provider) {
             this.provider = Input.ofNullable(provider);
             return this;
         }

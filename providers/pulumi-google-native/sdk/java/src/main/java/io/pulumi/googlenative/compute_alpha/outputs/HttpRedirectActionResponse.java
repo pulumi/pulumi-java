@@ -130,32 +130,32 @@ public final class HttpRedirectActionResponse {
     	      this.stripQuery = defaults.stripQuery;
         }
 
-        public Builder setHostRedirect(String hostRedirect) {
+        public Builder hostRedirect(String hostRedirect) {
             this.hostRedirect = Objects.requireNonNull(hostRedirect);
             return this;
         }
 
-        public Builder setHttpsRedirect(Boolean httpsRedirect) {
+        public Builder httpsRedirect(Boolean httpsRedirect) {
             this.httpsRedirect = Objects.requireNonNull(httpsRedirect);
             return this;
         }
 
-        public Builder setPathRedirect(String pathRedirect) {
+        public Builder pathRedirect(String pathRedirect) {
             this.pathRedirect = Objects.requireNonNull(pathRedirect);
             return this;
         }
 
-        public Builder setPrefixRedirect(String prefixRedirect) {
+        public Builder prefixRedirect(String prefixRedirect) {
             this.prefixRedirect = Objects.requireNonNull(prefixRedirect);
             return this;
         }
 
-        public Builder setRedirectResponseCode(String redirectResponseCode) {
+        public Builder redirectResponseCode(String redirectResponseCode) {
             this.redirectResponseCode = Objects.requireNonNull(redirectResponseCode);
             return this;
         }
 
-        public Builder setStripQuery(Boolean stripQuery) {
+        public Builder stripQuery(Boolean stripQuery) {
             this.stripQuery = Objects.requireNonNull(stripQuery);
             return this;
         }

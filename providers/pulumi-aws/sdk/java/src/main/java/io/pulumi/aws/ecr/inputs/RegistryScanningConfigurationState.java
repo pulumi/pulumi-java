@@ -88,32 +88,32 @@ public final class RegistryScanningConfigurationState extends io.pulumi.resource
     	      this.scanType = defaults.scanType;
         }
 
-        public Builder setRegistryId(@Nullable Input<String> registryId) {
+        public Builder registryId(@Nullable Input<String> registryId) {
             this.registryId = registryId;
             return this;
         }
 
-        public Builder setRegistryId(@Nullable String registryId) {
+        public Builder registryId(@Nullable String registryId) {
             this.registryId = Input.ofNullable(registryId);
             return this;
         }
 
-        public Builder setRules(@Nullable Input<List<RegistryScanningConfigurationRuleGetArgs>> rules) {
+        public Builder rules(@Nullable Input<List<RegistryScanningConfigurationRuleGetArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setRules(@Nullable List<RegistryScanningConfigurationRuleGetArgs> rules) {
+        public Builder rules(@Nullable List<RegistryScanningConfigurationRuleGetArgs> rules) {
             this.rules = Input.ofNullable(rules);
             return this;
         }
 
-        public Builder setScanType(@Nullable Input<String> scanType) {
+        public Builder scanType(@Nullable Input<String> scanType) {
             this.scanType = scanType;
             return this;
         }
 
-        public Builder setScanType(@Nullable String scanType) {
+        public Builder scanType(@Nullable String scanType) {
             this.scanType = Input.ofNullable(scanType);
             return this;
         }

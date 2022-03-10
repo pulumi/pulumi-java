@@ -82,17 +82,17 @@ public final class JobPlacementResponse {
     	      this.clusterUuid = defaults.clusterUuid;
         }
 
-        public Builder setClusterLabels(Map<String,String> clusterLabels) {
+        public Builder clusterLabels(Map<String,String> clusterLabels) {
             this.clusterLabels = Objects.requireNonNull(clusterLabels);
             return this;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setClusterUuid(String clusterUuid) {
+        public Builder clusterUuid(String clusterUuid) {
             this.clusterUuid = Objects.requireNonNull(clusterUuid);
             return this;
         }

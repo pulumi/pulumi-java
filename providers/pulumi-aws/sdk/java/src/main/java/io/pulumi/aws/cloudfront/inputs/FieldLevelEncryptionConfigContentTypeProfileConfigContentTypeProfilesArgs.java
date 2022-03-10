@@ -49,12 +49,12 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
     	      this.items = defaults.items;
         }
 
-        public Builder setItems(Input<List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemArgs>> items) {
+        public Builder items(Input<List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemArgs>> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
 
-        public Builder setItems(List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemArgs> items) {
+        public Builder items(List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemArgs> items) {
             this.items = Input.of(Objects.requireNonNull(items));
             return this;
         }

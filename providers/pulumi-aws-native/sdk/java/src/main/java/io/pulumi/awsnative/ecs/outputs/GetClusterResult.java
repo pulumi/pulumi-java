@@ -96,32 +96,32 @@ public final class GetClusterResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCapacityProviders(@Nullable List<String> capacityProviders) {
+        public Builder capacityProviders(@Nullable List<String> capacityProviders) {
             this.capacityProviders = capacityProviders;
             return this;
         }
 
-        public Builder setClusterSettings(@Nullable List<ClusterSettings> clusterSettings) {
+        public Builder clusterSettings(@Nullable List<ClusterSettings> clusterSettings) {
             this.clusterSettings = clusterSettings;
             return this;
         }
 
-        public Builder setConfiguration(@Nullable ClusterConfiguration configuration) {
+        public Builder configuration(@Nullable ClusterConfiguration configuration) {
             this.configuration = configuration;
             return this;
         }
 
-        public Builder setDefaultCapacityProviderStrategy(@Nullable List<ClusterCapacityProviderStrategyItem> defaultCapacityProviderStrategy) {
+        public Builder defaultCapacityProviderStrategy(@Nullable List<ClusterCapacityProviderStrategyItem> defaultCapacityProviderStrategy) {
             this.defaultCapacityProviderStrategy = defaultCapacityProviderStrategy;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ClusterTag> tags) {
+        public Builder tags(@Nullable List<ClusterTag> tags) {
             this.tags = tags;
             return this;
         }

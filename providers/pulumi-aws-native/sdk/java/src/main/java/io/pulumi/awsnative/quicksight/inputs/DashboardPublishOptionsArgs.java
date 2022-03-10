@@ -80,32 +80,32 @@ public final class DashboardPublishOptionsArgs extends io.pulumi.resources.Resou
     	      this.sheetControlsOption = defaults.sheetControlsOption;
         }
 
-        public Builder setAdHocFilteringOption(@Nullable Input<DashboardAdHocFilteringOptionArgs> adHocFilteringOption) {
+        public Builder adHocFilteringOption(@Nullable Input<DashboardAdHocFilteringOptionArgs> adHocFilteringOption) {
             this.adHocFilteringOption = adHocFilteringOption;
             return this;
         }
 
-        public Builder setAdHocFilteringOption(@Nullable DashboardAdHocFilteringOptionArgs adHocFilteringOption) {
+        public Builder adHocFilteringOption(@Nullable DashboardAdHocFilteringOptionArgs adHocFilteringOption) {
             this.adHocFilteringOption = Input.ofNullable(adHocFilteringOption);
             return this;
         }
 
-        public Builder setExportToCSVOption(@Nullable Input<DashboardExportToCSVOptionArgs> exportToCSVOption) {
+        public Builder exportToCSVOption(@Nullable Input<DashboardExportToCSVOptionArgs> exportToCSVOption) {
             this.exportToCSVOption = exportToCSVOption;
             return this;
         }
 
-        public Builder setExportToCSVOption(@Nullable DashboardExportToCSVOptionArgs exportToCSVOption) {
+        public Builder exportToCSVOption(@Nullable DashboardExportToCSVOptionArgs exportToCSVOption) {
             this.exportToCSVOption = Input.ofNullable(exportToCSVOption);
             return this;
         }
 
-        public Builder setSheetControlsOption(@Nullable Input<DashboardSheetControlsOptionArgs> sheetControlsOption) {
+        public Builder sheetControlsOption(@Nullable Input<DashboardSheetControlsOptionArgs> sheetControlsOption) {
             this.sheetControlsOption = sheetControlsOption;
             return this;
         }
 
-        public Builder setSheetControlsOption(@Nullable DashboardSheetControlsOptionArgs sheetControlsOption) {
+        public Builder sheetControlsOption(@Nullable DashboardSheetControlsOptionArgs sheetControlsOption) {
             this.sheetControlsOption = Input.ofNullable(sheetControlsOption);
             return this;
         }

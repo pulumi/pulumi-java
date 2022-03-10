@@ -73,22 +73,22 @@ public final class VpcPeeringConfigArgs extends io.pulumi.resources.ResourceArgs
     	      this.vpcName = defaults.vpcName;
         }
 
-        public Builder setSubnet(Input<String> subnet) {
+        public Builder subnet(Input<String> subnet) {
             this.subnet = Objects.requireNonNull(subnet);
             return this;
         }
 
-        public Builder setSubnet(String subnet) {
+        public Builder subnet(String subnet) {
             this.subnet = Input.of(Objects.requireNonNull(subnet));
             return this;
         }
 
-        public Builder setVpcName(Input<String> vpcName) {
+        public Builder vpcName(Input<String> vpcName) {
             this.vpcName = Objects.requireNonNull(vpcName);
             return this;
         }
 
-        public Builder setVpcName(String vpcName) {
+        public Builder vpcName(String vpcName) {
             this.vpcName = Input.of(Objects.requireNonNull(vpcName));
             return this;
         }

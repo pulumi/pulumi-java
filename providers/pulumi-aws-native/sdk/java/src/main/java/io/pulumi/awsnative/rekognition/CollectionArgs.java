@@ -68,22 +68,22 @@ public final class CollectionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCollectionId(Input<String> collectionId) {
+        public Builder collectionId(Input<String> collectionId) {
             this.collectionId = Objects.requireNonNull(collectionId);
             return this;
         }
 
-        public Builder setCollectionId(String collectionId) {
+        public Builder collectionId(String collectionId) {
             this.collectionId = Input.of(Objects.requireNonNull(collectionId));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<CollectionTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<CollectionTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<CollectionTagArgs> tags) {
+        public Builder tags(@Nullable List<CollectionTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

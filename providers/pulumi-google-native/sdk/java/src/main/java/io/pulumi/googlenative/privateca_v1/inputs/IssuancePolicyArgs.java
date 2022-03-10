@@ -144,62 +144,62 @@ public final class IssuancePolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.passthroughExtensions = defaults.passthroughExtensions;
         }
 
-        public Builder setAllowedIssuanceModes(@Nullable Input<IssuanceModesArgs> allowedIssuanceModes) {
+        public Builder allowedIssuanceModes(@Nullable Input<IssuanceModesArgs> allowedIssuanceModes) {
             this.allowedIssuanceModes = allowedIssuanceModes;
             return this;
         }
 
-        public Builder setAllowedIssuanceModes(@Nullable IssuanceModesArgs allowedIssuanceModes) {
+        public Builder allowedIssuanceModes(@Nullable IssuanceModesArgs allowedIssuanceModes) {
             this.allowedIssuanceModes = Input.ofNullable(allowedIssuanceModes);
             return this;
         }
 
-        public Builder setAllowedKeyTypes(@Nullable Input<List<AllowedKeyTypeArgs>> allowedKeyTypes) {
+        public Builder allowedKeyTypes(@Nullable Input<List<AllowedKeyTypeArgs>> allowedKeyTypes) {
             this.allowedKeyTypes = allowedKeyTypes;
             return this;
         }
 
-        public Builder setAllowedKeyTypes(@Nullable List<AllowedKeyTypeArgs> allowedKeyTypes) {
+        public Builder allowedKeyTypes(@Nullable List<AllowedKeyTypeArgs> allowedKeyTypes) {
             this.allowedKeyTypes = Input.ofNullable(allowedKeyTypes);
             return this;
         }
 
-        public Builder setBaselineValues(@Nullable Input<X509ParametersArgs> baselineValues) {
+        public Builder baselineValues(@Nullable Input<X509ParametersArgs> baselineValues) {
             this.baselineValues = baselineValues;
             return this;
         }
 
-        public Builder setBaselineValues(@Nullable X509ParametersArgs baselineValues) {
+        public Builder baselineValues(@Nullable X509ParametersArgs baselineValues) {
             this.baselineValues = Input.ofNullable(baselineValues);
             return this;
         }
 
-        public Builder setIdentityConstraints(@Nullable Input<CertificateIdentityConstraintsArgs> identityConstraints) {
+        public Builder identityConstraints(@Nullable Input<CertificateIdentityConstraintsArgs> identityConstraints) {
             this.identityConstraints = identityConstraints;
             return this;
         }
 
-        public Builder setIdentityConstraints(@Nullable CertificateIdentityConstraintsArgs identityConstraints) {
+        public Builder identityConstraints(@Nullable CertificateIdentityConstraintsArgs identityConstraints) {
             this.identityConstraints = Input.ofNullable(identityConstraints);
             return this;
         }
 
-        public Builder setMaximumLifetime(@Nullable Input<String> maximumLifetime) {
+        public Builder maximumLifetime(@Nullable Input<String> maximumLifetime) {
             this.maximumLifetime = maximumLifetime;
             return this;
         }
 
-        public Builder setMaximumLifetime(@Nullable String maximumLifetime) {
+        public Builder maximumLifetime(@Nullable String maximumLifetime) {
             this.maximumLifetime = Input.ofNullable(maximumLifetime);
             return this;
         }
 
-        public Builder setPassthroughExtensions(@Nullable Input<CertificateExtensionConstraintsArgs> passthroughExtensions) {
+        public Builder passthroughExtensions(@Nullable Input<CertificateExtensionConstraintsArgs> passthroughExtensions) {
             this.passthroughExtensions = passthroughExtensions;
             return this;
         }
 
-        public Builder setPassthroughExtensions(@Nullable CertificateExtensionConstraintsArgs passthroughExtensions) {
+        public Builder passthroughExtensions(@Nullable CertificateExtensionConstraintsArgs passthroughExtensions) {
             this.passthroughExtensions = Input.ofNullable(passthroughExtensions);
             return this;
         }

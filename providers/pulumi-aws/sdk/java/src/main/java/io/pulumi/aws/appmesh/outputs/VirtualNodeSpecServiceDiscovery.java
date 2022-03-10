@@ -68,12 +68,12 @@ public final class VirtualNodeSpecServiceDiscovery {
     	      this.dns = defaults.dns;
         }
 
-        public Builder setAwsCloudMap(@Nullable VirtualNodeSpecServiceDiscoveryAwsCloudMap awsCloudMap) {
+        public Builder awsCloudMap(@Nullable VirtualNodeSpecServiceDiscoveryAwsCloudMap awsCloudMap) {
             this.awsCloudMap = awsCloudMap;
             return this;
         }
 
-        public Builder setDns(@Nullable VirtualNodeSpecServiceDiscoveryDns dns) {
+        public Builder dns(@Nullable VirtualNodeSpecServiceDiscoveryDns dns) {
             this.dns = dns;
             return this;
         }

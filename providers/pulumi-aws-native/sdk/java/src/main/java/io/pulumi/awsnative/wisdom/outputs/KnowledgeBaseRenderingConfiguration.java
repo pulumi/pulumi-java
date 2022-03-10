@@ -42,7 +42,7 @@ public final class KnowledgeBaseRenderingConfiguration {
     	      this.templateUri = defaults.templateUri;
         }
 
-        public Builder setTemplateUri(@Nullable String templateUri) {
+        public Builder templateUri(@Nullable String templateUri) {
             this.templateUri = templateUri;
             return this;
         }

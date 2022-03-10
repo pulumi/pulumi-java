@@ -121,52 +121,52 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.role = defaults.role;
         }
 
-        public Builder setAccessPolicyName(@Nullable Input<String> accessPolicyName) {
+        public Builder accessPolicyName(@Nullable Input<String> accessPolicyName) {
             this.accessPolicyName = accessPolicyName;
             return this;
         }
 
-        public Builder setAccessPolicyName(@Nullable String accessPolicyName) {
+        public Builder accessPolicyName(@Nullable String accessPolicyName) {
             this.accessPolicyName = Input.ofNullable(accessPolicyName);
             return this;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setAuthentication(@Nullable Input<JwtAuthenticationArgs> authentication) {
+        public Builder authentication(@Nullable Input<JwtAuthenticationArgs> authentication) {
             this.authentication = authentication;
             return this;
         }
 
-        public Builder setAuthentication(@Nullable JwtAuthenticationArgs authentication) {
+        public Builder authentication(@Nullable JwtAuthenticationArgs authentication) {
             this.authentication = Input.ofNullable(authentication);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRole(@Nullable Input<Either<String,AccessPolicyRole>> role) {
+        public Builder role(@Nullable Input<Either<String,AccessPolicyRole>> role) {
             this.role = role;
             return this;
         }
 
-        public Builder setRole(@Nullable Either<String,AccessPolicyRole> role) {
+        public Builder role(@Nullable Either<String,AccessPolicyRole> role) {
             this.role = Input.ofNullable(role);
             return this;
         }

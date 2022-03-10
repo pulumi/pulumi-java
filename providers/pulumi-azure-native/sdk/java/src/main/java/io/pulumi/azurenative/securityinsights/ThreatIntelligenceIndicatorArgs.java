@@ -576,332 +576,332 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setConfidence(@Nullable Input<Integer> confidence) {
+        public Builder confidence(@Nullable Input<Integer> confidence) {
             this.confidence = confidence;
             return this;
         }
 
-        public Builder setConfidence(@Nullable Integer confidence) {
+        public Builder confidence(@Nullable Integer confidence) {
             this.confidence = Input.ofNullable(confidence);
             return this;
         }
 
-        public Builder setCreated(@Nullable Input<String> created) {
+        public Builder created(@Nullable Input<String> created) {
             this.created = created;
             return this;
         }
 
-        public Builder setCreated(@Nullable String created) {
+        public Builder created(@Nullable String created) {
             this.created = Input.ofNullable(created);
             return this;
         }
 
-        public Builder setCreatedByRef(@Nullable Input<String> createdByRef) {
+        public Builder createdByRef(@Nullable Input<String> createdByRef) {
             this.createdByRef = createdByRef;
             return this;
         }
 
-        public Builder setCreatedByRef(@Nullable String createdByRef) {
+        public Builder createdByRef(@Nullable String createdByRef) {
             this.createdByRef = Input.ofNullable(createdByRef);
             return this;
         }
 
-        public Builder setDefanged(@Nullable Input<Boolean> defanged) {
+        public Builder defanged(@Nullable Input<Boolean> defanged) {
             this.defanged = defanged;
             return this;
         }
 
-        public Builder setDefanged(@Nullable Boolean defanged) {
+        public Builder defanged(@Nullable Boolean defanged) {
             this.defanged = Input.ofNullable(defanged);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setExtensions(@Nullable Input<Object> extensions) {
+        public Builder extensions(@Nullable Input<Object> extensions) {
             this.extensions = extensions;
             return this;
         }
 
-        public Builder setExtensions(@Nullable Object extensions) {
+        public Builder extensions(@Nullable Object extensions) {
             this.extensions = Input.ofNullable(extensions);
             return this;
         }
 
-        public Builder setExternalId(@Nullable Input<String> externalId) {
+        public Builder externalId(@Nullable Input<String> externalId) {
             this.externalId = externalId;
             return this;
         }
 
-        public Builder setExternalId(@Nullable String externalId) {
+        public Builder externalId(@Nullable String externalId) {
             this.externalId = Input.ofNullable(externalId);
             return this;
         }
 
-        public Builder setExternalLastUpdatedTimeUtc(@Nullable Input<String> externalLastUpdatedTimeUtc) {
+        public Builder externalLastUpdatedTimeUtc(@Nullable Input<String> externalLastUpdatedTimeUtc) {
             this.externalLastUpdatedTimeUtc = externalLastUpdatedTimeUtc;
             return this;
         }
 
-        public Builder setExternalLastUpdatedTimeUtc(@Nullable String externalLastUpdatedTimeUtc) {
+        public Builder externalLastUpdatedTimeUtc(@Nullable String externalLastUpdatedTimeUtc) {
             this.externalLastUpdatedTimeUtc = Input.ofNullable(externalLastUpdatedTimeUtc);
             return this;
         }
 
-        public Builder setExternalReferences(@Nullable Input<List<ThreatIntelligenceExternalReferenceArgs>> externalReferences) {
+        public Builder externalReferences(@Nullable Input<List<ThreatIntelligenceExternalReferenceArgs>> externalReferences) {
             this.externalReferences = externalReferences;
             return this;
         }
 
-        public Builder setExternalReferences(@Nullable List<ThreatIntelligenceExternalReferenceArgs> externalReferences) {
+        public Builder externalReferences(@Nullable List<ThreatIntelligenceExternalReferenceArgs> externalReferences) {
             this.externalReferences = Input.ofNullable(externalReferences);
             return this;
         }
 
-        public Builder setGranularMarkings(@Nullable Input<List<ThreatIntelligenceGranularMarkingModelArgs>> granularMarkings) {
+        public Builder granularMarkings(@Nullable Input<List<ThreatIntelligenceGranularMarkingModelArgs>> granularMarkings) {
             this.granularMarkings = granularMarkings;
             return this;
         }
 
-        public Builder setGranularMarkings(@Nullable List<ThreatIntelligenceGranularMarkingModelArgs> granularMarkings) {
+        public Builder granularMarkings(@Nullable List<ThreatIntelligenceGranularMarkingModelArgs> granularMarkings) {
             this.granularMarkings = Input.ofNullable(granularMarkings);
             return this;
         }
 
-        public Builder setIndicatorTypes(@Nullable Input<List<String>> indicatorTypes) {
+        public Builder indicatorTypes(@Nullable Input<List<String>> indicatorTypes) {
             this.indicatorTypes = indicatorTypes;
             return this;
         }
 
-        public Builder setIndicatorTypes(@Nullable List<String> indicatorTypes) {
+        public Builder indicatorTypes(@Nullable List<String> indicatorTypes) {
             this.indicatorTypes = Input.ofNullable(indicatorTypes);
             return this;
         }
 
-        public Builder setKillChainPhases(@Nullable Input<List<ThreatIntelligenceKillChainPhaseArgs>> killChainPhases) {
+        public Builder killChainPhases(@Nullable Input<List<ThreatIntelligenceKillChainPhaseArgs>> killChainPhases) {
             this.killChainPhases = killChainPhases;
             return this;
         }
 
-        public Builder setKillChainPhases(@Nullable List<ThreatIntelligenceKillChainPhaseArgs> killChainPhases) {
+        public Builder killChainPhases(@Nullable List<ThreatIntelligenceKillChainPhaseArgs> killChainPhases) {
             this.killChainPhases = Input.ofNullable(killChainPhases);
             return this;
         }
 
-        public Builder setKind(Input<Either<String,ThreatIntelligenceResourceKind>> kind) {
+        public Builder kind(Input<Either<String,ThreatIntelligenceResourceKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(Either<String,ThreatIntelligenceResourceKind> kind) {
+        public Builder kind(Either<String,ThreatIntelligenceResourceKind> kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<List<String>> labels) {
+        public Builder labels(@Nullable Input<List<String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable List<String> labels) {
+        public Builder labels(@Nullable List<String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLanguage(@Nullable Input<String> language) {
+        public Builder language(@Nullable Input<String> language) {
             this.language = language;
             return this;
         }
 
-        public Builder setLanguage(@Nullable String language) {
+        public Builder language(@Nullable String language) {
             this.language = Input.ofNullable(language);
             return this;
         }
 
-        public Builder setLastUpdatedTimeUtc(@Nullable Input<String> lastUpdatedTimeUtc) {
+        public Builder lastUpdatedTimeUtc(@Nullable Input<String> lastUpdatedTimeUtc) {
             this.lastUpdatedTimeUtc = lastUpdatedTimeUtc;
             return this;
         }
 
-        public Builder setLastUpdatedTimeUtc(@Nullable String lastUpdatedTimeUtc) {
+        public Builder lastUpdatedTimeUtc(@Nullable String lastUpdatedTimeUtc) {
             this.lastUpdatedTimeUtc = Input.ofNullable(lastUpdatedTimeUtc);
             return this;
         }
 
-        public Builder setModified(@Nullable Input<String> modified) {
+        public Builder modified(@Nullable Input<String> modified) {
             this.modified = modified;
             return this;
         }
 
-        public Builder setModified(@Nullable String modified) {
+        public Builder modified(@Nullable String modified) {
             this.modified = Input.ofNullable(modified);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setObjectMarkingRefs(@Nullable Input<List<String>> objectMarkingRefs) {
+        public Builder objectMarkingRefs(@Nullable Input<List<String>> objectMarkingRefs) {
             this.objectMarkingRefs = objectMarkingRefs;
             return this;
         }
 
-        public Builder setObjectMarkingRefs(@Nullable List<String> objectMarkingRefs) {
+        public Builder objectMarkingRefs(@Nullable List<String> objectMarkingRefs) {
             this.objectMarkingRefs = Input.ofNullable(objectMarkingRefs);
             return this;
         }
 
-        public Builder setOperationalInsightsResourceProvider(Input<String> operationalInsightsResourceProvider) {
+        public Builder operationalInsightsResourceProvider(Input<String> operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
 
-        public Builder setOperationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
+        public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Input.of(Objects.requireNonNull(operationalInsightsResourceProvider));
             return this;
         }
 
-        public Builder setParsedPattern(@Nullable Input<List<ThreatIntelligenceParsedPatternArgs>> parsedPattern) {
+        public Builder parsedPattern(@Nullable Input<List<ThreatIntelligenceParsedPatternArgs>> parsedPattern) {
             this.parsedPattern = parsedPattern;
             return this;
         }
 
-        public Builder setParsedPattern(@Nullable List<ThreatIntelligenceParsedPatternArgs> parsedPattern) {
+        public Builder parsedPattern(@Nullable List<ThreatIntelligenceParsedPatternArgs> parsedPattern) {
             this.parsedPattern = Input.ofNullable(parsedPattern);
             return this;
         }
 
-        public Builder setPattern(@Nullable Input<String> pattern) {
+        public Builder pattern(@Nullable Input<String> pattern) {
             this.pattern = pattern;
             return this;
         }
 
-        public Builder setPattern(@Nullable String pattern) {
+        public Builder pattern(@Nullable String pattern) {
             this.pattern = Input.ofNullable(pattern);
             return this;
         }
 
-        public Builder setPatternType(@Nullable Input<String> patternType) {
+        public Builder patternType(@Nullable Input<String> patternType) {
             this.patternType = patternType;
             return this;
         }
 
-        public Builder setPatternType(@Nullable String patternType) {
+        public Builder patternType(@Nullable String patternType) {
             this.patternType = Input.ofNullable(patternType);
             return this;
         }
 
-        public Builder setPatternVersion(@Nullable Input<String> patternVersion) {
+        public Builder patternVersion(@Nullable Input<String> patternVersion) {
             this.patternVersion = patternVersion;
             return this;
         }
 
-        public Builder setPatternVersion(@Nullable String patternVersion) {
+        public Builder patternVersion(@Nullable String patternVersion) {
             this.patternVersion = Input.ofNullable(patternVersion);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRevoked(@Nullable Input<Boolean> revoked) {
+        public Builder revoked(@Nullable Input<Boolean> revoked) {
             this.revoked = revoked;
             return this;
         }
 
-        public Builder setRevoked(@Nullable Boolean revoked) {
+        public Builder revoked(@Nullable Boolean revoked) {
             this.revoked = Input.ofNullable(revoked);
             return this;
         }
 
-        public Builder setSource(@Nullable Input<String> source) {
+        public Builder source(@Nullable Input<String> source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSource(@Nullable String source) {
+        public Builder source(@Nullable String source) {
             this.source = Input.ofNullable(source);
             return this;
         }
 
-        public Builder setThreatIntelligenceTags(@Nullable Input<List<String>> threatIntelligenceTags) {
+        public Builder threatIntelligenceTags(@Nullable Input<List<String>> threatIntelligenceTags) {
             this.threatIntelligenceTags = threatIntelligenceTags;
             return this;
         }
 
-        public Builder setThreatIntelligenceTags(@Nullable List<String> threatIntelligenceTags) {
+        public Builder threatIntelligenceTags(@Nullable List<String> threatIntelligenceTags) {
             this.threatIntelligenceTags = Input.ofNullable(threatIntelligenceTags);
             return this;
         }
 
-        public Builder setThreatTypes(@Nullable Input<List<String>> threatTypes) {
+        public Builder threatTypes(@Nullable Input<List<String>> threatTypes) {
             this.threatTypes = threatTypes;
             return this;
         }
 
-        public Builder setThreatTypes(@Nullable List<String> threatTypes) {
+        public Builder threatTypes(@Nullable List<String> threatTypes) {
             this.threatTypes = Input.ofNullable(threatTypes);
             return this;
         }
 
-        public Builder setValidFrom(@Nullable Input<String> validFrom) {
+        public Builder validFrom(@Nullable Input<String> validFrom) {
             this.validFrom = validFrom;
             return this;
         }
 
-        public Builder setValidFrom(@Nullable String validFrom) {
+        public Builder validFrom(@Nullable String validFrom) {
             this.validFrom = Input.ofNullable(validFrom);
             return this;
         }
 
-        public Builder setValidUntil(@Nullable Input<String> validUntil) {
+        public Builder validUntil(@Nullable Input<String> validUntil) {
             this.validUntil = validUntil;
             return this;
         }
 
-        public Builder setValidUntil(@Nullable String validUntil) {
+        public Builder validUntil(@Nullable String validUntil) {
             this.validUntil = Input.ofNullable(validUntil);
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

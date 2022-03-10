@@ -91,32 +91,32 @@ public final class AzureSqlProtectedItemExtendedInfoArgs extends io.pulumi.resou
     	      this.recoveryPointCount = defaults.recoveryPointCount;
         }
 
-        public Builder setOldestRecoveryPoint(@Nullable Input<String> oldestRecoveryPoint) {
+        public Builder oldestRecoveryPoint(@Nullable Input<String> oldestRecoveryPoint) {
             this.oldestRecoveryPoint = oldestRecoveryPoint;
             return this;
         }
 
-        public Builder setOldestRecoveryPoint(@Nullable String oldestRecoveryPoint) {
+        public Builder oldestRecoveryPoint(@Nullable String oldestRecoveryPoint) {
             this.oldestRecoveryPoint = Input.ofNullable(oldestRecoveryPoint);
             return this;
         }
 
-        public Builder setPolicyState(@Nullable Input<String> policyState) {
+        public Builder policyState(@Nullable Input<String> policyState) {
             this.policyState = policyState;
             return this;
         }
 
-        public Builder setPolicyState(@Nullable String policyState) {
+        public Builder policyState(@Nullable String policyState) {
             this.policyState = Input.ofNullable(policyState);
             return this;
         }
 
-        public Builder setRecoveryPointCount(@Nullable Input<Integer> recoveryPointCount) {
+        public Builder recoveryPointCount(@Nullable Input<Integer> recoveryPointCount) {
             this.recoveryPointCount = recoveryPointCount;
             return this;
         }
 
-        public Builder setRecoveryPointCount(@Nullable Integer recoveryPointCount) {
+        public Builder recoveryPointCount(@Nullable Integer recoveryPointCount) {
             this.recoveryPointCount = Input.ofNullable(recoveryPointCount);
             return this;
         }

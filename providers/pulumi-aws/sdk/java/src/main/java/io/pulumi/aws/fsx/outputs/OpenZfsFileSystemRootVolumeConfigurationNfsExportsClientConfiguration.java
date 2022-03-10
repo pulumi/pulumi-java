@@ -66,12 +66,12 @@ public final class OpenZfsFileSystemRootVolumeConfigurationNfsExportsClientConfi
     	      this.options = defaults.options;
         }
 
-        public Builder setClients(String clients) {
+        public Builder clients(String clients) {
             this.clients = Objects.requireNonNull(clients);
             return this;
         }
 
-        public Builder setOptions(List<String> options) {
+        public Builder options(List<String> options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }

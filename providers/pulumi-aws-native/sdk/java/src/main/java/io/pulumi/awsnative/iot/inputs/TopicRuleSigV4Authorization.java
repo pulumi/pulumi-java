@@ -72,17 +72,17 @@ public final class TopicRuleSigV4Authorization extends io.pulumi.resources.Invok
     	      this.signingRegion = defaults.signingRegion;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setSigningRegion(String signingRegion) {
+        public Builder signingRegion(String signingRegion) {
             this.signingRegion = Objects.requireNonNull(signingRegion);
             return this;
         }

@@ -108,42 +108,42 @@ public final class SitePropertiesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.servicePrincipalIdentityDetails = defaults.servicePrincipalIdentityDetails;
         }
 
-        public Builder setAgentDetails(@Nullable Input<SiteAgentPropertiesArgs> agentDetails) {
+        public Builder agentDetails(@Nullable Input<SiteAgentPropertiesArgs> agentDetails) {
             this.agentDetails = agentDetails;
             return this;
         }
 
-        public Builder setAgentDetails(@Nullable SiteAgentPropertiesArgs agentDetails) {
+        public Builder agentDetails(@Nullable SiteAgentPropertiesArgs agentDetails) {
             this.agentDetails = Input.ofNullable(agentDetails);
             return this;
         }
 
-        public Builder setApplianceName(@Nullable Input<String> applianceName) {
+        public Builder applianceName(@Nullable Input<String> applianceName) {
             this.applianceName = applianceName;
             return this;
         }
 
-        public Builder setApplianceName(@Nullable String applianceName) {
+        public Builder applianceName(@Nullable String applianceName) {
             this.applianceName = Input.ofNullable(applianceName);
             return this;
         }
 
-        public Builder setDiscoverySolutionId(@Nullable Input<String> discoverySolutionId) {
+        public Builder discoverySolutionId(@Nullable Input<String> discoverySolutionId) {
             this.discoverySolutionId = discoverySolutionId;
             return this;
         }
 
-        public Builder setDiscoverySolutionId(@Nullable String discoverySolutionId) {
+        public Builder discoverySolutionId(@Nullable String discoverySolutionId) {
             this.discoverySolutionId = Input.ofNullable(discoverySolutionId);
             return this;
         }
 
-        public Builder setServicePrincipalIdentityDetails(@Nullable Input<SiteSpnPropertiesArgs> servicePrincipalIdentityDetails) {
+        public Builder servicePrincipalIdentityDetails(@Nullable Input<SiteSpnPropertiesArgs> servicePrincipalIdentityDetails) {
             this.servicePrincipalIdentityDetails = servicePrincipalIdentityDetails;
             return this;
         }
 
-        public Builder setServicePrincipalIdentityDetails(@Nullable SiteSpnPropertiesArgs servicePrincipalIdentityDetails) {
+        public Builder servicePrincipalIdentityDetails(@Nullable SiteSpnPropertiesArgs servicePrincipalIdentityDetails) {
             this.servicePrincipalIdentityDetails = Input.ofNullable(servicePrincipalIdentityDetails);
             return this;
         }

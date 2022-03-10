@@ -122,52 +122,52 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs extend
     	      this.repository = defaults.repository;
         }
 
-        public Builder setExec(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs> exec) {
+        public Builder exec(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs> exec) {
             this.exec = exec;
             return this;
         }
 
-        public Builder setExec(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs exec) {
+        public Builder exec(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs exec) {
             this.exec = Input.ofNullable(exec);
             return this;
         }
 
-        public Builder setFile(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs> file) {
+        public Builder file(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs> file) {
             this.file = file;
             return this;
         }
 
-        public Builder setFile(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs file) {
+        public Builder file(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs file) {
             this.file = Input.ofNullable(file);
             return this;
         }
 
-        public Builder setId(Input<String> id) {
+        public Builder id(Input<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder setPkg(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs> pkg) {
+        public Builder pkg(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs> pkg) {
             this.pkg = pkg;
             return this;
         }
 
-        public Builder setPkg(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs pkg) {
+        public Builder pkg(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs pkg) {
             this.pkg = Input.ofNullable(pkg);
             return this;
         }
 
-        public Builder setRepository(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetArgs> repository) {
+        public Builder repository(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetArgs> repository) {
             this.repository = repository;
             return this;
         }
 
-        public Builder setRepository(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetArgs repository) {
+        public Builder repository(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetArgs repository) {
             this.repository = Input.ofNullable(repository);
             return this;
         }

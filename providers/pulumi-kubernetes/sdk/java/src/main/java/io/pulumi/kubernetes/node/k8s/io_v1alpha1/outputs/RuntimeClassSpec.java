@@ -85,17 +85,17 @@ public final class RuntimeClassSpec {
     	      this.scheduling = defaults.scheduling;
         }
 
-        public Builder setOverhead(@Nullable Overhead overhead) {
+        public Builder overhead(@Nullable Overhead overhead) {
             this.overhead = overhead;
             return this;
         }
 
-        public Builder setRuntimeHandler(String runtimeHandler) {
+        public Builder runtimeHandler(String runtimeHandler) {
             this.runtimeHandler = Objects.requireNonNull(runtimeHandler);
             return this;
         }
 
-        public Builder setScheduling(@Nullable Scheduling scheduling) {
+        public Builder scheduling(@Nullable Scheduling scheduling) {
             this.scheduling = scheduling;
             return this;
         }

@@ -184,92 +184,92 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
     	      this.sourceIp = defaults.sourceIp;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setDnsServerIps(@Nullable Input<List<String>> dnsServerIps) {
+        public Builder dnsServerIps(@Nullable Input<List<String>> dnsServerIps) {
             this.dnsServerIps = dnsServerIps;
             return this;
         }
 
-        public Builder setDnsServerIps(@Nullable List<String> dnsServerIps) {
+        public Builder dnsServerIps(@Nullable List<String> dnsServerIps) {
             this.dnsServerIps = Input.ofNullable(dnsServerIps);
             return this;
         }
 
-        public Builder setDnsServices(@Nullable Input<Double> dnsServices) {
+        public Builder dnsServices(@Nullable Input<Double> dnsServices) {
             this.dnsServices = dnsServices;
             return this;
         }
 
-        public Builder setDnsServices(@Nullable Double dnsServices) {
+        public Builder dnsServices(@Nullable Double dnsServices) {
             this.dnsServices = Input.ofNullable(dnsServices);
             return this;
         }
 
-        public Builder setDnsZoneId(@Nullable Input<String> dnsZoneId) {
+        public Builder dnsZoneId(@Nullable Input<String> dnsZoneId) {
             this.dnsZoneId = dnsZoneId;
             return this;
         }
 
-        public Builder setDnsZoneId(@Nullable String dnsZoneId) {
+        public Builder dnsZoneId(@Nullable String dnsZoneId) {
             this.dnsZoneId = Input.ofNullable(dnsZoneId);
             return this;
         }
 
-        public Builder setDomain(@Nullable Input<List<String>> domain) {
+        public Builder domain(@Nullable Input<List<String>> domain) {
             this.domain = domain;
             return this;
         }
 
-        public Builder setDomain(@Nullable List<String> domain) {
+        public Builder domain(@Nullable List<String> domain) {
             this.domain = Input.ofNullable(domain);
             return this;
         }
 
-        public Builder setPrivateCloudName(Input<String> privateCloudName) {
+        public Builder privateCloudName(Input<String> privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
 
-        public Builder setPrivateCloudName(String privateCloudName) {
+        public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Input.of(Objects.requireNonNull(privateCloudName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRevision(@Nullable Input<Double> revision) {
+        public Builder revision(@Nullable Input<Double> revision) {
             this.revision = revision;
             return this;
         }
 
-        public Builder setRevision(@Nullable Double revision) {
+        public Builder revision(@Nullable Double revision) {
             this.revision = Input.ofNullable(revision);
             return this;
         }
 
-        public Builder setSourceIp(@Nullable Input<String> sourceIp) {
+        public Builder sourceIp(@Nullable Input<String> sourceIp) {
             this.sourceIp = sourceIp;
             return this;
         }
 
-        public Builder setSourceIp(@Nullable String sourceIp) {
+        public Builder sourceIp(@Nullable String sourceIp) {
             this.sourceIp = Input.ofNullable(sourceIp);
             return this;
         }

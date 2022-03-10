@@ -129,52 +129,52 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
     	      this.scope = defaults.scope;
         }
 
-        public Builder setApiGroups(@Nullable Input<List<String>> apiGroups) {
+        public Builder apiGroups(@Nullable Input<List<String>> apiGroups) {
             this.apiGroups = apiGroups;
             return this;
         }
 
-        public Builder setApiGroups(@Nullable List<String> apiGroups) {
+        public Builder apiGroups(@Nullable List<String> apiGroups) {
             this.apiGroups = Input.ofNullable(apiGroups);
             return this;
         }
 
-        public Builder setApiVersions(@Nullable Input<List<String>> apiVersions) {
+        public Builder apiVersions(@Nullable Input<List<String>> apiVersions) {
             this.apiVersions = apiVersions;
             return this;
         }
 
-        public Builder setApiVersions(@Nullable List<String> apiVersions) {
+        public Builder apiVersions(@Nullable List<String> apiVersions) {
             this.apiVersions = Input.ofNullable(apiVersions);
             return this;
         }
 
-        public Builder setOperations(@Nullable Input<List<String>> operations) {
+        public Builder operations(@Nullable Input<List<String>> operations) {
             this.operations = operations;
             return this;
         }
 
-        public Builder setOperations(@Nullable List<String> operations) {
+        public Builder operations(@Nullable List<String> operations) {
             this.operations = Input.ofNullable(operations);
             return this;
         }
 
-        public Builder setResources(@Nullable Input<List<String>> resources) {
+        public Builder resources(@Nullable Input<List<String>> resources) {
             this.resources = resources;
             return this;
         }
 
-        public Builder setResources(@Nullable List<String> resources) {
+        public Builder resources(@Nullable List<String> resources) {
             this.resources = Input.ofNullable(resources);
             return this;
         }
 
-        public Builder setScope(@Nullable Input<String> scope) {
+        public Builder scope(@Nullable Input<String> scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setScope(@Nullable String scope) {
+        public Builder scope(@Nullable String scope) {
             this.scope = Input.ofNullable(scope);
             return this;
         }

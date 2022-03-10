@@ -67,12 +67,12 @@ public final class JwtClaimChecksResponse {
     	      this.allowedGroups = defaults.allowedGroups;
         }
 
-        public Builder setAllowedClientApplications(@Nullable List<String> allowedClientApplications) {
+        public Builder allowedClientApplications(@Nullable List<String> allowedClientApplications) {
             this.allowedClientApplications = allowedClientApplications;
             return this;
         }
 
-        public Builder setAllowedGroups(@Nullable List<String> allowedGroups) {
+        public Builder allowedGroups(@Nullable List<String> allowedGroups) {
             this.allowedGroups = allowedGroups;
             return this;
         }

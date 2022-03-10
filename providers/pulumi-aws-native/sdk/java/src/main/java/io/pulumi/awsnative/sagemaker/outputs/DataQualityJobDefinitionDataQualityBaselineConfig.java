@@ -61,17 +61,17 @@ public final class DataQualityJobDefinitionDataQualityBaselineConfig {
     	      this.statisticsResource = defaults.statisticsResource;
         }
 
-        public Builder setBaseliningJobName(@Nullable String baseliningJobName) {
+        public Builder baseliningJobName(@Nullable String baseliningJobName) {
             this.baseliningJobName = baseliningJobName;
             return this;
         }
 
-        public Builder setConstraintsResource(@Nullable DataQualityJobDefinitionConstraintsResource constraintsResource) {
+        public Builder constraintsResource(@Nullable DataQualityJobDefinitionConstraintsResource constraintsResource) {
             this.constraintsResource = constraintsResource;
             return this;
         }
 
-        public Builder setStatisticsResource(@Nullable DataQualityJobDefinitionStatisticsResource statisticsResource) {
+        public Builder statisticsResource(@Nullable DataQualityJobDefinitionStatisticsResource statisticsResource) {
             this.statisticsResource = statisticsResource;
             return this;
         }

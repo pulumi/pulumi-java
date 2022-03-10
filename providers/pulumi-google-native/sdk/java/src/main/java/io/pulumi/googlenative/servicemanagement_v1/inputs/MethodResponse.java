@@ -155,37 +155,37 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
     	      this.syntax = defaults.syntax;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOptions(List<OptionResponse> options) {
+        public Builder options(List<OptionResponse> options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }
 
-        public Builder setRequestStreaming(Boolean requestStreaming) {
+        public Builder requestStreaming(Boolean requestStreaming) {
             this.requestStreaming = Objects.requireNonNull(requestStreaming);
             return this;
         }
 
-        public Builder setRequestTypeUrl(String requestTypeUrl) {
+        public Builder requestTypeUrl(String requestTypeUrl) {
             this.requestTypeUrl = Objects.requireNonNull(requestTypeUrl);
             return this;
         }
 
-        public Builder setResponseStreaming(Boolean responseStreaming) {
+        public Builder responseStreaming(Boolean responseStreaming) {
             this.responseStreaming = Objects.requireNonNull(responseStreaming);
             return this;
         }
 
-        public Builder setResponseTypeUrl(String responseTypeUrl) {
+        public Builder responseTypeUrl(String responseTypeUrl) {
             this.responseTypeUrl = Objects.requireNonNull(responseTypeUrl);
             return this;
         }
 
-        public Builder setSyntax(String syntax) {
+        public Builder syntax(String syntax) {
             this.syntax = Objects.requireNonNull(syntax);
             return this;
         }

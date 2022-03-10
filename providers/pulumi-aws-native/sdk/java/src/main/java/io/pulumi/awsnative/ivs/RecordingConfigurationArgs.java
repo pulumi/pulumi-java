@@ -98,42 +98,42 @@ public final class RecordingConfigurationArgs extends io.pulumi.resources.Resour
     	      this.thumbnailConfiguration = defaults.thumbnailConfiguration;
         }
 
-        public Builder setDestinationConfiguration(Input<RecordingConfigurationDestinationConfigurationArgs> destinationConfiguration) {
+        public Builder destinationConfiguration(Input<RecordingConfigurationDestinationConfigurationArgs> destinationConfiguration) {
             this.destinationConfiguration = Objects.requireNonNull(destinationConfiguration);
             return this;
         }
 
-        public Builder setDestinationConfiguration(RecordingConfigurationDestinationConfigurationArgs destinationConfiguration) {
+        public Builder destinationConfiguration(RecordingConfigurationDestinationConfigurationArgs destinationConfiguration) {
             this.destinationConfiguration = Input.of(Objects.requireNonNull(destinationConfiguration));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<RecordingConfigurationTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<RecordingConfigurationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<RecordingConfigurationTagArgs> tags) {
+        public Builder tags(@Nullable List<RecordingConfigurationTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setThumbnailConfiguration(@Nullable Input<RecordingConfigurationThumbnailConfigurationArgs> thumbnailConfiguration) {
+        public Builder thumbnailConfiguration(@Nullable Input<RecordingConfigurationThumbnailConfigurationArgs> thumbnailConfiguration) {
             this.thumbnailConfiguration = thumbnailConfiguration;
             return this;
         }
 
-        public Builder setThumbnailConfiguration(@Nullable RecordingConfigurationThumbnailConfigurationArgs thumbnailConfiguration) {
+        public Builder thumbnailConfiguration(@Nullable RecordingConfigurationThumbnailConfigurationArgs thumbnailConfiguration) {
             this.thumbnailConfiguration = Input.ofNullable(thumbnailConfiguration);
             return this;
         }

@@ -67,12 +67,12 @@ public final class DynamicGroupMetadataResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setQueries(List<DynamicGroupQueryResponse> queries) {
+        public Builder queries(List<DynamicGroupQueryResponse> queries) {
             this.queries = Objects.requireNonNull(queries);
             return this;
         }
 
-        public Builder setStatus(DynamicGroupStatusResponse status) {
+        public Builder status(DynamicGroupStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

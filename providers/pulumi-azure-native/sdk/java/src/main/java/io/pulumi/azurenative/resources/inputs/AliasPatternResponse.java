@@ -90,17 +90,17 @@ public final class AliasPatternResponse extends io.pulumi.resources.InvokeArgs {
     	      this.variable = defaults.variable;
         }
 
-        public Builder setPhrase(@Nullable String phrase) {
+        public Builder phrase(@Nullable String phrase) {
             this.phrase = phrase;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setVariable(@Nullable String variable) {
+        public Builder variable(@Nullable String variable) {
             this.variable = variable;
             return this;
         }

@@ -52,12 +52,12 @@ public final class CodeSigningConfigPoliciesArgs extends io.pulumi.resources.Res
     	      this.untrustedArtifactOnDeployment = defaults.untrustedArtifactOnDeployment;
         }
 
-        public Builder setUntrustedArtifactOnDeployment(Input<String> untrustedArtifactOnDeployment) {
+        public Builder untrustedArtifactOnDeployment(Input<String> untrustedArtifactOnDeployment) {
             this.untrustedArtifactOnDeployment = Objects.requireNonNull(untrustedArtifactOnDeployment);
             return this;
         }
 
-        public Builder setUntrustedArtifactOnDeployment(String untrustedArtifactOnDeployment) {
+        public Builder untrustedArtifactOnDeployment(String untrustedArtifactOnDeployment) {
             this.untrustedArtifactOnDeployment = Input.of(Objects.requireNonNull(untrustedArtifactOnDeployment));
             return this;
         }

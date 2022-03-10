@@ -87,32 +87,32 @@ public final class UserSettingsWithLocationArgs extends io.pulumi.resources.Reso
     	      this.userSettingsName = defaults.userSettingsName;
         }
 
-        public Builder setLocation(Input<String> location) {
+        public Builder location(Input<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Input.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder setProperties(Input<UserPropertiesArgs> properties) {
+        public Builder properties(Input<UserPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
-        public Builder setProperties(UserPropertiesArgs properties) {
+        public Builder properties(UserPropertiesArgs properties) {
             this.properties = Input.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder setUserSettingsName(@Nullable Input<String> userSettingsName) {
+        public Builder userSettingsName(@Nullable Input<String> userSettingsName) {
             this.userSettingsName = userSettingsName;
             return this;
         }
 
-        public Builder setUserSettingsName(@Nullable String userSettingsName) {
+        public Builder userSettingsName(@Nullable String userSettingsName) {
             this.userSettingsName = Input.ofNullable(userSettingsName);
             return this;
         }

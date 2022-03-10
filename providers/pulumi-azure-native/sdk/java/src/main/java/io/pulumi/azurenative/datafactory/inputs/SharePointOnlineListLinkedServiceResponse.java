@@ -211,52 +211,52 @@ public final class SharePointOnlineListLinkedServiceResponse extends io.pulumi.r
     	      this.type = defaults.type;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setConnectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
+        public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Object encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setServicePrincipalId(Object servicePrincipalId) {
+        public Builder servicePrincipalId(Object servicePrincipalId) {
             this.servicePrincipalId = Objects.requireNonNull(servicePrincipalId);
             return this;
         }
 
-        public Builder setServicePrincipalKey(Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
+        public Builder servicePrincipalKey(Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
             this.servicePrincipalKey = Objects.requireNonNull(servicePrincipalKey);
             return this;
         }
 
-        public Builder setSiteUrl(Object siteUrl) {
+        public Builder siteUrl(Object siteUrl) {
             this.siteUrl = Objects.requireNonNull(siteUrl);
             return this;
         }
 
-        public Builder setTenantId(Object tenantId) {
+        public Builder tenantId(Object tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

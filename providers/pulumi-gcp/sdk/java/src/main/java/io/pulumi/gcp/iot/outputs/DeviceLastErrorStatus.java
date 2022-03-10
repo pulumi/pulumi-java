@@ -63,17 +63,17 @@ public final class DeviceLastErrorStatus {
     	      this.number = defaults.number;
         }
 
-        public Builder setDetails(@Nullable List<Map<String,Object>> details) {
+        public Builder details(@Nullable List<Map<String,Object>> details) {
             this.details = details;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setNumber(@Nullable Integer number) {
+        public Builder number(@Nullable Integer number) {
             this.number = number;
             return this;
         }

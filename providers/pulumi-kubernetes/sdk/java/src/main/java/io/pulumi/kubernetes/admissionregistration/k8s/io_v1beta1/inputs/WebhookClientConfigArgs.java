@@ -103,32 +103,32 @@ public final class WebhookClientConfigArgs extends io.pulumi.resources.ResourceA
     	      this.url = defaults.url;
         }
 
-        public Builder setCaBundle(@Nullable Input<String> caBundle) {
+        public Builder caBundle(@Nullable Input<String> caBundle) {
             this.caBundle = caBundle;
             return this;
         }
 
-        public Builder setCaBundle(@Nullable String caBundle) {
+        public Builder caBundle(@Nullable String caBundle) {
             this.caBundle = Input.ofNullable(caBundle);
             return this;
         }
 
-        public Builder setService(@Nullable Input<ServiceReferenceArgs> service) {
+        public Builder service(@Nullable Input<ServiceReferenceArgs> service) {
             this.service = service;
             return this;
         }
 
-        public Builder setService(@Nullable ServiceReferenceArgs service) {
+        public Builder service(@Nullable ServiceReferenceArgs service) {
             this.service = Input.ofNullable(service);
             return this;
         }
 
-        public Builder setUrl(@Nullable Input<String> url) {
+        public Builder url(@Nullable Input<String> url) {
             this.url = url;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = Input.ofNullable(url);
             return this;
         }

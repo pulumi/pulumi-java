@@ -98,27 +98,27 @@ public final class GetGameServerClusterArgs extends io.pulumi.resources.InvokeAr
     	      this.view = defaults.view;
         }
 
-        public Builder setGameServerClusterId(String gameServerClusterId) {
+        public Builder gameServerClusterId(String gameServerClusterId) {
             this.gameServerClusterId = Objects.requireNonNull(gameServerClusterId);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setRealmId(String realmId) {
+        public Builder realmId(String realmId) {
             this.realmId = Objects.requireNonNull(realmId);
             return this;
         }
 
-        public Builder setView(@Nullable String view) {
+        public Builder view(@Nullable String view) {
             this.view = view;
             return this;
         }

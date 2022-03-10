@@ -70,22 +70,22 @@ public final class ServiceSourceConfigurationAuthenticationConfigurationArgs ext
     	      this.connectionArn = defaults.connectionArn;
         }
 
-        public Builder setAccessRoleArn(@Nullable Input<String> accessRoleArn) {
+        public Builder accessRoleArn(@Nullable Input<String> accessRoleArn) {
             this.accessRoleArn = accessRoleArn;
             return this;
         }
 
-        public Builder setAccessRoleArn(@Nullable String accessRoleArn) {
+        public Builder accessRoleArn(@Nullable String accessRoleArn) {
             this.accessRoleArn = Input.ofNullable(accessRoleArn);
             return this;
         }
 
-        public Builder setConnectionArn(@Nullable Input<String> connectionArn) {
+        public Builder connectionArn(@Nullable Input<String> connectionArn) {
             this.connectionArn = connectionArn;
             return this;
         }
 
-        public Builder setConnectionArn(@Nullable String connectionArn) {
+        public Builder connectionArn(@Nullable String connectionArn) {
             this.connectionArn = Input.ofNullable(connectionArn);
             return this;
         }

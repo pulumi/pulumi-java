@@ -85,17 +85,17 @@ public final class AzureOperationalStoreParametersResponse {
     	      this.resourceGroupId = defaults.resourceGroupId;
         }
 
-        public Builder setDataStoreType(String dataStoreType) {
+        public Builder dataStoreType(String dataStoreType) {
             this.dataStoreType = Objects.requireNonNull(dataStoreType);
             return this;
         }
 
-        public Builder setObjectType(String objectType) {
+        public Builder objectType(String objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
 
-        public Builder setResourceGroupId(@Nullable String resourceGroupId) {
+        public Builder resourceGroupId(@Nullable String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
         }

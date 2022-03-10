@@ -494,142 +494,142 @@ public final class GetBuildResult {
     	      this.warnings = defaults.warnings;
         }
 
-        public Builder setApproval(BuildApprovalResponse approval) {
+        public Builder approval(BuildApprovalResponse approval) {
             this.approval = Objects.requireNonNull(approval);
             return this;
         }
 
-        public Builder setArtifacts(ArtifactsResponse artifacts) {
+        public Builder artifacts(ArtifactsResponse artifacts) {
             this.artifacts = Objects.requireNonNull(artifacts);
             return this;
         }
 
-        public Builder setAvailableSecrets(SecretsResponse availableSecrets) {
+        public Builder availableSecrets(SecretsResponse availableSecrets) {
             this.availableSecrets = Objects.requireNonNull(availableSecrets);
             return this;
         }
 
-        public Builder setBuildTriggerId(String buildTriggerId) {
+        public Builder buildTriggerId(String buildTriggerId) {
             this.buildTriggerId = Objects.requireNonNull(buildTriggerId);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setFailureInfo(FailureInfoResponse failureInfo) {
+        public Builder failureInfo(FailureInfoResponse failureInfo) {
             this.failureInfo = Objects.requireNonNull(failureInfo);
             return this;
         }
 
-        public Builder setFinishTime(String finishTime) {
+        public Builder finishTime(String finishTime) {
             this.finishTime = Objects.requireNonNull(finishTime);
             return this;
         }
 
-        public Builder setImages(List<String> images) {
+        public Builder images(List<String> images) {
             this.images = Objects.requireNonNull(images);
             return this;
         }
 
-        public Builder setLogUrl(String logUrl) {
+        public Builder logUrl(String logUrl) {
             this.logUrl = Objects.requireNonNull(logUrl);
             return this;
         }
 
-        public Builder setLogsBucket(String logsBucket) {
+        public Builder logsBucket(String logsBucket) {
             this.logsBucket = Objects.requireNonNull(logsBucket);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOptions(BuildOptionsResponse options) {
+        public Builder options(BuildOptionsResponse options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setQueueTtl(String queueTtl) {
+        public Builder queueTtl(String queueTtl) {
             this.queueTtl = Objects.requireNonNull(queueTtl);
             return this;
         }
 
-        public Builder setResults(ResultsResponse results) {
+        public Builder results(ResultsResponse results) {
             this.results = Objects.requireNonNull(results);
             return this;
         }
 
-        public Builder setSecrets(List<SecretResponse> secrets) {
+        public Builder secrets(List<SecretResponse> secrets) {
             this.secrets = Objects.requireNonNull(secrets);
             return this;
         }
 
-        public Builder setServiceAccount(String serviceAccount) {
+        public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
 
-        public Builder setSource(SourceResponse source) {
+        public Builder source(SourceResponse source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setSourceProvenance(SourceProvenanceResponse sourceProvenance) {
+        public Builder sourceProvenance(SourceProvenanceResponse sourceProvenance) {
             this.sourceProvenance = Objects.requireNonNull(sourceProvenance);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatusDetail(String statusDetail) {
+        public Builder statusDetail(String statusDetail) {
             this.statusDetail = Objects.requireNonNull(statusDetail);
             return this;
         }
 
-        public Builder setSteps(List<BuildStepResponse> steps) {
+        public Builder steps(List<BuildStepResponse> steps) {
             this.steps = Objects.requireNonNull(steps);
             return this;
         }
 
-        public Builder setSubstitutions(Map<String,String> substitutions) {
+        public Builder substitutions(Map<String,String> substitutions) {
             this.substitutions = Objects.requireNonNull(substitutions);
             return this;
         }
 
-        public Builder setTags(List<String> tags) {
+        public Builder tags(List<String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setTimeout(String timeout) {
+        public Builder timeout(String timeout) {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
 
-        public Builder setTiming(Map<String,String> timing) {
+        public Builder timing(Map<String,String> timing) {
             this.timing = Objects.requireNonNull(timing);
             return this;
         }
 
-        public Builder setWarnings(List<WarningResponse> warnings) {
+        public Builder warnings(List<WarningResponse> warnings) {
             this.warnings = Objects.requireNonNull(warnings);
             return this;
         }

@@ -250,87 +250,87 @@ public final class GetDatabaseInstanceSetting extends io.pulumi.resources.Invoke
     	      this.version = defaults.version;
         }
 
-        public Builder setActivationPolicy(String activationPolicy) {
+        public Builder activationPolicy(String activationPolicy) {
             this.activationPolicy = Objects.requireNonNull(activationPolicy);
             return this;
         }
 
-        public Builder setAvailabilityType(String availabilityType) {
+        public Builder availabilityType(String availabilityType) {
             this.availabilityType = Objects.requireNonNull(availabilityType);
             return this;
         }
 
-        public Builder setBackupConfigurations(List<GetDatabaseInstanceSettingBackupConfiguration> backupConfigurations) {
+        public Builder backupConfigurations(List<GetDatabaseInstanceSettingBackupConfiguration> backupConfigurations) {
             this.backupConfigurations = Objects.requireNonNull(backupConfigurations);
             return this;
         }
 
-        public Builder setCollation(String collation) {
+        public Builder collation(String collation) {
             this.collation = Objects.requireNonNull(collation);
             return this;
         }
 
-        public Builder setDatabaseFlags(List<GetDatabaseInstanceSettingDatabaseFlag> databaseFlags) {
+        public Builder databaseFlags(List<GetDatabaseInstanceSettingDatabaseFlag> databaseFlags) {
             this.databaseFlags = Objects.requireNonNull(databaseFlags);
             return this;
         }
 
-        public Builder setDiskAutoresize(Boolean diskAutoresize) {
+        public Builder diskAutoresize(Boolean diskAutoresize) {
             this.diskAutoresize = Objects.requireNonNull(diskAutoresize);
             return this;
         }
 
-        public Builder setDiskAutoresizeLimit(Integer diskAutoresizeLimit) {
+        public Builder diskAutoresizeLimit(Integer diskAutoresizeLimit) {
             this.diskAutoresizeLimit = Objects.requireNonNull(diskAutoresizeLimit);
             return this;
         }
 
-        public Builder setDiskSize(Integer diskSize) {
+        public Builder diskSize(Integer diskSize) {
             this.diskSize = Objects.requireNonNull(diskSize);
             return this;
         }
 
-        public Builder setDiskType(String diskType) {
+        public Builder diskType(String diskType) {
             this.diskType = Objects.requireNonNull(diskType);
             return this;
         }
 
-        public Builder setInsightsConfigs(List<GetDatabaseInstanceSettingInsightsConfig> insightsConfigs) {
+        public Builder insightsConfigs(List<GetDatabaseInstanceSettingInsightsConfig> insightsConfigs) {
             this.insightsConfigs = Objects.requireNonNull(insightsConfigs);
             return this;
         }
 
-        public Builder setIpConfigurations(List<GetDatabaseInstanceSettingIpConfiguration> ipConfigurations) {
+        public Builder ipConfigurations(List<GetDatabaseInstanceSettingIpConfiguration> ipConfigurations) {
             this.ipConfigurations = Objects.requireNonNull(ipConfigurations);
             return this;
         }
 
-        public Builder setLocationPreferences(List<GetDatabaseInstanceSettingLocationPreference> locationPreferences) {
+        public Builder locationPreferences(List<GetDatabaseInstanceSettingLocationPreference> locationPreferences) {
             this.locationPreferences = Objects.requireNonNull(locationPreferences);
             return this;
         }
 
-        public Builder setMaintenanceWindows(List<GetDatabaseInstanceSettingMaintenanceWindow> maintenanceWindows) {
+        public Builder maintenanceWindows(List<GetDatabaseInstanceSettingMaintenanceWindow> maintenanceWindows) {
             this.maintenanceWindows = Objects.requireNonNull(maintenanceWindows);
             return this;
         }
 
-        public Builder setPricingPlan(String pricingPlan) {
+        public Builder pricingPlan(String pricingPlan) {
             this.pricingPlan = Objects.requireNonNull(pricingPlan);
             return this;
         }
 
-        public Builder setTier(String tier) {
+        public Builder tier(String tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
 
-        public Builder setUserLabels(Map<String,String> userLabels) {
+        public Builder userLabels(Map<String,String> userLabels) {
             this.userLabels = Objects.requireNonNull(userLabels);
             return this;
         }
 
-        public Builder setVersion(Integer version) {
+        public Builder version(Integer version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

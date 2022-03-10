@@ -50,12 +50,12 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUs
     	      this.keyUsageOptions = defaults.keyUsageOptions;
         }
 
-        public Builder setKeyUsageOptions(@Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionArgs>> keyUsageOptions) {
+        public Builder keyUsageOptions(@Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionArgs>> keyUsageOptions) {
             this.keyUsageOptions = keyUsageOptions;
             return this;
         }
 
-        public Builder setKeyUsageOptions(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionArgs> keyUsageOptions) {
+        public Builder keyUsageOptions(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionArgs> keyUsageOptions) {
             this.keyUsageOptions = Input.ofNullable(keyUsageOptions);
             return this;
         }

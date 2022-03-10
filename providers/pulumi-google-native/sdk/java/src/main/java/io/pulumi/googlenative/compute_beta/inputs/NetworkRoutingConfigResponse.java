@@ -55,7 +55,7 @@ public final class NetworkRoutingConfigResponse extends io.pulumi.resources.Invo
     	      this.routingMode = defaults.routingMode;
         }
 
-        public Builder setRoutingMode(String routingMode) {
+        public Builder routingMode(String routingMode) {
             this.routingMode = Objects.requireNonNull(routingMode);
             return this;
         }

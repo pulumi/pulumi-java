@@ -178,47 +178,47 @@ public final class GetCanaryEvaluationResult {
     	      this.verdict = defaults.verdict;
         }
 
-        public Builder setControl(String control) {
+        public Builder control(String control) {
             this.control = Objects.requireNonNull(control);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setMetricLabels(GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse metricLabels) {
+        public Builder metricLabels(GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse metricLabels) {
             this.metricLabels = Objects.requireNonNull(metricLabels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTreatment(String treatment) {
+        public Builder treatment(String treatment) {
             this.treatment = Objects.requireNonNull(treatment);
             return this;
         }
 
-        public Builder setVerdict(String verdict) {
+        public Builder verdict(String verdict) {
             this.verdict = Objects.requireNonNull(verdict);
             return this;
         }

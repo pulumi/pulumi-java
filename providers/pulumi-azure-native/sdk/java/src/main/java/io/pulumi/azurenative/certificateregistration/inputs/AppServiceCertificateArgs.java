@@ -74,22 +74,22 @@ public final class AppServiceCertificateArgs extends io.pulumi.resources.Resourc
     	      this.keyVaultSecretName = defaults.keyVaultSecretName;
         }
 
-        public Builder setKeyVaultId(@Nullable Input<String> keyVaultId) {
+        public Builder keyVaultId(@Nullable Input<String> keyVaultId) {
             this.keyVaultId = keyVaultId;
             return this;
         }
 
-        public Builder setKeyVaultId(@Nullable String keyVaultId) {
+        public Builder keyVaultId(@Nullable String keyVaultId) {
             this.keyVaultId = Input.ofNullable(keyVaultId);
             return this;
         }
 
-        public Builder setKeyVaultSecretName(@Nullable Input<String> keyVaultSecretName) {
+        public Builder keyVaultSecretName(@Nullable Input<String> keyVaultSecretName) {
             this.keyVaultSecretName = keyVaultSecretName;
             return this;
         }
 
-        public Builder setKeyVaultSecretName(@Nullable String keyVaultSecretName) {
+        public Builder keyVaultSecretName(@Nullable String keyVaultSecretName) {
             this.keyVaultSecretName = Input.ofNullable(keyVaultSecretName);
             return this;
         }

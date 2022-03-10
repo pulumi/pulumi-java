@@ -53,7 +53,7 @@ public final class PipelineSourceTriggerDescriptorResponse extends io.pulumi.res
     	      this.timestamp = defaults.timestamp;
         }
 
-        public Builder setTimestamp(@Nullable String timestamp) {
+        public Builder timestamp(@Nullable String timestamp) {
             this.timestamp = timestamp;
             return this;
         }

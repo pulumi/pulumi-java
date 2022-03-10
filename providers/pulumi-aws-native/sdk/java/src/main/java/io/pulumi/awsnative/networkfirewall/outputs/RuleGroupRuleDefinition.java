@@ -51,12 +51,12 @@ public final class RuleGroupRuleDefinition {
     	      this.matchAttributes = defaults.matchAttributes;
         }
 
-        public Builder setActions(List<String> actions) {
+        public Builder actions(List<String> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
-        public Builder setMatchAttributes(RuleGroupMatchAttributes matchAttributes) {
+        public Builder matchAttributes(RuleGroupMatchAttributes matchAttributes) {
             this.matchAttributes = Objects.requireNonNull(matchAttributes);
             return this;
         }

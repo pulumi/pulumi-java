@@ -309,172 +309,172 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetTags = defaults.targetTags;
         }
 
-        public Builder setAllowed(@Nullable Input<List<FirewallAllowedItemArgs>> allowed) {
+        public Builder allowed(@Nullable Input<List<FirewallAllowedItemArgs>> allowed) {
             this.allowed = allowed;
             return this;
         }
 
-        public Builder setAllowed(@Nullable List<FirewallAllowedItemArgs> allowed) {
+        public Builder allowed(@Nullable List<FirewallAllowedItemArgs> allowed) {
             this.allowed = Input.ofNullable(allowed);
             return this;
         }
 
-        public Builder setDenied(@Nullable Input<List<FirewallDeniedItemArgs>> denied) {
+        public Builder denied(@Nullable Input<List<FirewallDeniedItemArgs>> denied) {
             this.denied = denied;
             return this;
         }
 
-        public Builder setDenied(@Nullable List<FirewallDeniedItemArgs> denied) {
+        public Builder denied(@Nullable List<FirewallDeniedItemArgs> denied) {
             this.denied = Input.ofNullable(denied);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDestinationRanges(@Nullable Input<List<String>> destinationRanges) {
+        public Builder destinationRanges(@Nullable Input<List<String>> destinationRanges) {
             this.destinationRanges = destinationRanges;
             return this;
         }
 
-        public Builder setDestinationRanges(@Nullable List<String> destinationRanges) {
+        public Builder destinationRanges(@Nullable List<String> destinationRanges) {
             this.destinationRanges = Input.ofNullable(destinationRanges);
             return this;
         }
 
-        public Builder setDirection(@Nullable Input<FirewallDirection> direction) {
+        public Builder direction(@Nullable Input<FirewallDirection> direction) {
             this.direction = direction;
             return this;
         }
 
-        public Builder setDirection(@Nullable FirewallDirection direction) {
+        public Builder direction(@Nullable FirewallDirection direction) {
             this.direction = Input.ofNullable(direction);
             return this;
         }
 
-        public Builder setDisabled(@Nullable Input<Boolean> disabled) {
+        public Builder disabled(@Nullable Input<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
 
-        public Builder setDisabled(@Nullable Boolean disabled) {
+        public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Input.ofNullable(disabled);
             return this;
         }
 
-        public Builder setLogConfig(@Nullable Input<FirewallLogConfigArgs> logConfig) {
+        public Builder logConfig(@Nullable Input<FirewallLogConfigArgs> logConfig) {
             this.logConfig = logConfig;
             return this;
         }
 
-        public Builder setLogConfig(@Nullable FirewallLogConfigArgs logConfig) {
+        public Builder logConfig(@Nullable FirewallLogConfigArgs logConfig) {
             this.logConfig = Input.ofNullable(logConfig);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetwork(@Nullable Input<String> network) {
+        public Builder network(@Nullable Input<String> network) {
             this.network = network;
             return this;
         }
 
-        public Builder setNetwork(@Nullable String network) {
+        public Builder network(@Nullable String network) {
             this.network = Input.ofNullable(network);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Input<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setSourceRanges(@Nullable Input<List<String>> sourceRanges) {
+        public Builder sourceRanges(@Nullable Input<List<String>> sourceRanges) {
             this.sourceRanges = sourceRanges;
             return this;
         }
 
-        public Builder setSourceRanges(@Nullable List<String> sourceRanges) {
+        public Builder sourceRanges(@Nullable List<String> sourceRanges) {
             this.sourceRanges = Input.ofNullable(sourceRanges);
             return this;
         }
 
-        public Builder setSourceServiceAccounts(@Nullable Input<List<String>> sourceServiceAccounts) {
+        public Builder sourceServiceAccounts(@Nullable Input<List<String>> sourceServiceAccounts) {
             this.sourceServiceAccounts = sourceServiceAccounts;
             return this;
         }
 
-        public Builder setSourceServiceAccounts(@Nullable List<String> sourceServiceAccounts) {
+        public Builder sourceServiceAccounts(@Nullable List<String> sourceServiceAccounts) {
             this.sourceServiceAccounts = Input.ofNullable(sourceServiceAccounts);
             return this;
         }
 
-        public Builder setSourceTags(@Nullable Input<List<String>> sourceTags) {
+        public Builder sourceTags(@Nullable Input<List<String>> sourceTags) {
             this.sourceTags = sourceTags;
             return this;
         }
 
-        public Builder setSourceTags(@Nullable List<String> sourceTags) {
+        public Builder sourceTags(@Nullable List<String> sourceTags) {
             this.sourceTags = Input.ofNullable(sourceTags);
             return this;
         }
 
-        public Builder setTargetServiceAccounts(@Nullable Input<List<String>> targetServiceAccounts) {
+        public Builder targetServiceAccounts(@Nullable Input<List<String>> targetServiceAccounts) {
             this.targetServiceAccounts = targetServiceAccounts;
             return this;
         }
 
-        public Builder setTargetServiceAccounts(@Nullable List<String> targetServiceAccounts) {
+        public Builder targetServiceAccounts(@Nullable List<String> targetServiceAccounts) {
             this.targetServiceAccounts = Input.ofNullable(targetServiceAccounts);
             return this;
         }
 
-        public Builder setTargetTags(@Nullable Input<List<String>> targetTags) {
+        public Builder targetTags(@Nullable Input<List<String>> targetTags) {
             this.targetTags = targetTags;
             return this;
         }
 
-        public Builder setTargetTags(@Nullable List<String> targetTags) {
+        public Builder targetTags(@Nullable List<String> targetTags) {
             this.targetTags = Input.ofNullable(targetTags);
             return this;
         }

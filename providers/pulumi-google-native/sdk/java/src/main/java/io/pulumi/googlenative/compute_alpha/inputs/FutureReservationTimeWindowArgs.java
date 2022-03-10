@@ -79,32 +79,32 @@ public final class FutureReservationTimeWindowArgs extends io.pulumi.resources.R
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setDuration(@Nullable Input<DurationArgs> duration) {
+        public Builder duration(@Nullable Input<DurationArgs> duration) {
             this.duration = duration;
             return this;
         }
 
-        public Builder setDuration(@Nullable DurationArgs duration) {
+        public Builder duration(@Nullable DurationArgs duration) {
             this.duration = Input.ofNullable(duration);
             return this;
         }
 
-        public Builder setEndTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Input<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = Input.ofNullable(endTime);
             return this;
         }
 
-        public Builder setStartTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Input<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }

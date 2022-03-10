@@ -99,42 +99,42 @@ public final class MultiRegionAccessPointPolicyState extends io.pulumi.resources
     	      this.proposed = defaults.proposed;
         }
 
-        public Builder setAccountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Input<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
-        public Builder setAccountId(@Nullable String accountId) {
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = Input.ofNullable(accountId);
             return this;
         }
 
-        public Builder setDetails(@Nullable Input<MultiRegionAccessPointPolicyDetailsGetArgs> details) {
+        public Builder details(@Nullable Input<MultiRegionAccessPointPolicyDetailsGetArgs> details) {
             this.details = details;
             return this;
         }
 
-        public Builder setDetails(@Nullable MultiRegionAccessPointPolicyDetailsGetArgs details) {
+        public Builder details(@Nullable MultiRegionAccessPointPolicyDetailsGetArgs details) {
             this.details = Input.ofNullable(details);
             return this;
         }
 
-        public Builder setEstablished(@Nullable Input<String> established) {
+        public Builder established(@Nullable Input<String> established) {
             this.established = established;
             return this;
         }
 
-        public Builder setEstablished(@Nullable String established) {
+        public Builder established(@Nullable String established) {
             this.established = Input.ofNullable(established);
             return this;
         }
 
-        public Builder setProposed(@Nullable Input<String> proposed) {
+        public Builder proposed(@Nullable Input<String> proposed) {
             this.proposed = proposed;
             return this;
         }
 
-        public Builder setProposed(@Nullable String proposed) {
+        public Builder proposed(@Nullable String proposed) {
             this.proposed = Input.ofNullable(proposed);
             return this;
         }

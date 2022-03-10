@@ -73,17 +73,17 @@ public final class GetAcceleratorAttribute extends io.pulumi.resources.InvokeArg
     	      this.flowLogsS3Prefix = defaults.flowLogsS3Prefix;
         }
 
-        public Builder setFlowLogsEnabled(Boolean flowLogsEnabled) {
+        public Builder flowLogsEnabled(Boolean flowLogsEnabled) {
             this.flowLogsEnabled = Objects.requireNonNull(flowLogsEnabled);
             return this;
         }
 
-        public Builder setFlowLogsS3Bucket(String flowLogsS3Bucket) {
+        public Builder flowLogsS3Bucket(String flowLogsS3Bucket) {
             this.flowLogsS3Bucket = Objects.requireNonNull(flowLogsS3Bucket);
             return this;
         }
 
-        public Builder setFlowLogsS3Prefix(String flowLogsS3Prefix) {
+        public Builder flowLogsS3Prefix(String flowLogsS3Prefix) {
             this.flowLogsS3Prefix = Objects.requireNonNull(flowLogsS3Prefix);
             return this;
         }

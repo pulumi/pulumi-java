@@ -186,92 +186,92 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAccessKey(@Nullable Input<String> accessKey) {
+        public Builder accessKey(@Nullable Input<String> accessKey) {
             this.accessKey = accessKey;
             return this;
         }
 
-        public Builder setAccessKey(@Nullable String accessKey) {
+        public Builder accessKey(@Nullable String accessKey) {
             this.accessKey = Input.ofNullable(accessKey);
             return this;
         }
 
-        public Builder setAgentArns(Input<List<String>> agentArns) {
+        public Builder agentArns(Input<List<String>> agentArns) {
             this.agentArns = Objects.requireNonNull(agentArns);
             return this;
         }
 
-        public Builder setAgentArns(List<String> agentArns) {
+        public Builder agentArns(List<String> agentArns) {
             this.agentArns = Input.of(Objects.requireNonNull(agentArns));
             return this;
         }
 
-        public Builder setBucketName(Input<String> bucketName) {
+        public Builder bucketName(Input<String> bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Input.of(Objects.requireNonNull(bucketName));
             return this;
         }
 
-        public Builder setSecretKey(@Nullable Input<String> secretKey) {
+        public Builder secretKey(@Nullable Input<String> secretKey) {
             this.secretKey = secretKey;
             return this;
         }
 
-        public Builder setSecretKey(@Nullable String secretKey) {
+        public Builder secretKey(@Nullable String secretKey) {
             this.secretKey = Input.ofNullable(secretKey);
             return this;
         }
 
-        public Builder setServerHostname(Input<String> serverHostname) {
+        public Builder serverHostname(Input<String> serverHostname) {
             this.serverHostname = Objects.requireNonNull(serverHostname);
             return this;
         }
 
-        public Builder setServerHostname(String serverHostname) {
+        public Builder serverHostname(String serverHostname) {
             this.serverHostname = Input.of(Objects.requireNonNull(serverHostname));
             return this;
         }
 
-        public Builder setServerPort(@Nullable Input<Integer> serverPort) {
+        public Builder serverPort(@Nullable Input<Integer> serverPort) {
             this.serverPort = serverPort;
             return this;
         }
 
-        public Builder setServerPort(@Nullable Integer serverPort) {
+        public Builder serverPort(@Nullable Integer serverPort) {
             this.serverPort = Input.ofNullable(serverPort);
             return this;
         }
 
-        public Builder setServerProtocol(@Nullable Input<LocationObjectStorageServerProtocol> serverProtocol) {
+        public Builder serverProtocol(@Nullable Input<LocationObjectStorageServerProtocol> serverProtocol) {
             this.serverProtocol = serverProtocol;
             return this;
         }
 
-        public Builder setServerProtocol(@Nullable LocationObjectStorageServerProtocol serverProtocol) {
+        public Builder serverProtocol(@Nullable LocationObjectStorageServerProtocol serverProtocol) {
             this.serverProtocol = Input.ofNullable(serverProtocol);
             return this;
         }
 
-        public Builder setSubdirectory(@Nullable Input<String> subdirectory) {
+        public Builder subdirectory(@Nullable Input<String> subdirectory) {
             this.subdirectory = subdirectory;
             return this;
         }
 
-        public Builder setSubdirectory(@Nullable String subdirectory) {
+        public Builder subdirectory(@Nullable String subdirectory) {
             this.subdirectory = Input.ofNullable(subdirectory);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<LocationObjectStorageTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<LocationObjectStorageTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<LocationObjectStorageTagArgs> tags) {
+        public Builder tags(@Nullable List<LocationObjectStorageTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

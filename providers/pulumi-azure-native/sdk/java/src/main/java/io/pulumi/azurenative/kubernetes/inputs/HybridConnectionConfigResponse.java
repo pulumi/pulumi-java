@@ -105,22 +105,22 @@ public final class HybridConnectionConfigResponse extends io.pulumi.resources.In
     	      this.token = defaults.token;
         }
 
-        public Builder setExpirationTime(Double expirationTime) {
+        public Builder expirationTime(Double expirationTime) {
             this.expirationTime = Objects.requireNonNull(expirationTime);
             return this;
         }
 
-        public Builder setHybridConnectionName(String hybridConnectionName) {
+        public Builder hybridConnectionName(String hybridConnectionName) {
             this.hybridConnectionName = Objects.requireNonNull(hybridConnectionName);
             return this;
         }
 
-        public Builder setRelay(String relay) {
+        public Builder relay(String relay) {
             this.relay = Objects.requireNonNull(relay);
             return this;
         }
 
-        public Builder setToken(String token) {
+        public Builder token(String token) {
             this.token = Objects.requireNonNull(token);
             return this;
         }

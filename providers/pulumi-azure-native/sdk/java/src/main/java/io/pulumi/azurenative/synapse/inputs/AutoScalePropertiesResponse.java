@@ -91,17 +91,17 @@ public final class AutoScalePropertiesResponse extends io.pulumi.resources.Invok
     	      this.minNodeCount = defaults.minNodeCount;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setMaxNodeCount(@Nullable Integer maxNodeCount) {
+        public Builder maxNodeCount(@Nullable Integer maxNodeCount) {
             this.maxNodeCount = maxNodeCount;
             return this;
         }
 
-        public Builder setMinNodeCount(@Nullable Integer minNodeCount) {
+        public Builder minNodeCount(@Nullable Integer minNodeCount) {
             this.minNodeCount = minNodeCount;
             return this;
         }

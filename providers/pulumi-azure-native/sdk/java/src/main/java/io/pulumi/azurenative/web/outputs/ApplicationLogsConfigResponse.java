@@ -85,17 +85,17 @@ public final class ApplicationLogsConfigResponse {
     	      this.fileSystem = defaults.fileSystem;
         }
 
-        public Builder setAzureBlobStorage(@Nullable AzureBlobStorageApplicationLogsConfigResponse azureBlobStorage) {
+        public Builder azureBlobStorage(@Nullable AzureBlobStorageApplicationLogsConfigResponse azureBlobStorage) {
             this.azureBlobStorage = azureBlobStorage;
             return this;
         }
 
-        public Builder setAzureTableStorage(@Nullable AzureTableStorageApplicationLogsConfigResponse azureTableStorage) {
+        public Builder azureTableStorage(@Nullable AzureTableStorageApplicationLogsConfigResponse azureTableStorage) {
             this.azureTableStorage = azureTableStorage;
             return this;
         }
 
-        public Builder setFileSystem(@Nullable FileSystemApplicationLogsConfigResponse fileSystem) {
+        public Builder fileSystem(@Nullable FileSystemApplicationLogsConfigResponse fileSystem) {
             this.fileSystem = fileSystem;
             return this;
         }

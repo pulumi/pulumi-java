@@ -67,12 +67,12 @@ public final class SpokeLinkedRouterApplianceInstancesInstance {
     	      this.virtualMachine = defaults.virtualMachine;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setVirtualMachine(@Nullable String virtualMachine) {
+        public Builder virtualMachine(@Nullable String virtualMachine) {
             this.virtualMachine = virtualMachine;
             return this;
         }

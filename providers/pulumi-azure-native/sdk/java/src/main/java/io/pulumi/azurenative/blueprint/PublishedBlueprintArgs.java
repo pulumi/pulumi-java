@@ -187,92 +187,92 @@ public final class PublishedBlueprintArgs extends io.pulumi.resources.ResourceAr
     	      this.versionId = defaults.versionId;
         }
 
-        public Builder setBlueprintName(Input<String> blueprintName) {
+        public Builder blueprintName(Input<String> blueprintName) {
             this.blueprintName = Objects.requireNonNull(blueprintName);
             return this;
         }
 
-        public Builder setBlueprintName(String blueprintName) {
+        public Builder blueprintName(String blueprintName) {
             this.blueprintName = Input.of(Objects.requireNonNull(blueprintName));
             return this;
         }
 
-        public Builder setChangeNotes(@Nullable Input<String> changeNotes) {
+        public Builder changeNotes(@Nullable Input<String> changeNotes) {
             this.changeNotes = changeNotes;
             return this;
         }
 
-        public Builder setChangeNotes(@Nullable String changeNotes) {
+        public Builder changeNotes(@Nullable String changeNotes) {
             this.changeNotes = Input.ofNullable(changeNotes);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,ParameterDefinitionArgs>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,ParameterDefinitionArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterDefinitionArgs> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterDefinitionArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setResourceGroups(@Nullable Input<Map<String,ResourceGroupDefinitionArgs>> resourceGroups) {
+        public Builder resourceGroups(@Nullable Input<Map<String,ResourceGroupDefinitionArgs>> resourceGroups) {
             this.resourceGroups = resourceGroups;
             return this;
         }
 
-        public Builder setResourceGroups(@Nullable Map<String,ResourceGroupDefinitionArgs> resourceGroups) {
+        public Builder resourceGroups(@Nullable Map<String,ResourceGroupDefinitionArgs> resourceGroups) {
             this.resourceGroups = Input.ofNullable(resourceGroups);
             return this;
         }
 
-        public Builder setResourceScope(Input<String> resourceScope) {
+        public Builder resourceScope(Input<String> resourceScope) {
             this.resourceScope = Objects.requireNonNull(resourceScope);
             return this;
         }
 
-        public Builder setResourceScope(String resourceScope) {
+        public Builder resourceScope(String resourceScope) {
             this.resourceScope = Input.of(Objects.requireNonNull(resourceScope));
             return this;
         }
 
-        public Builder setTargetScope(@Nullable Input<Either<String,BlueprintTargetScope>> targetScope) {
+        public Builder targetScope(@Nullable Input<Either<String,BlueprintTargetScope>> targetScope) {
             this.targetScope = targetScope;
             return this;
         }
 
-        public Builder setTargetScope(@Nullable Either<String,BlueprintTargetScope> targetScope) {
+        public Builder targetScope(@Nullable Either<String,BlueprintTargetScope> targetScope) {
             this.targetScope = Input.ofNullable(targetScope);
             return this;
         }
 
-        public Builder setVersionId(@Nullable Input<String> versionId) {
+        public Builder versionId(@Nullable Input<String> versionId) {
             this.versionId = versionId;
             return this;
         }
 
-        public Builder setVersionId(@Nullable String versionId) {
+        public Builder versionId(@Nullable String versionId) {
             this.versionId = Input.ofNullable(versionId);
             return this;
         }

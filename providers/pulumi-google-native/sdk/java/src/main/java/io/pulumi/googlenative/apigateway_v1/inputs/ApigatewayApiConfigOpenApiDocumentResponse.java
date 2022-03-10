@@ -55,7 +55,7 @@ public final class ApigatewayApiConfigOpenApiDocumentResponse extends io.pulumi.
     	      this.document = defaults.document;
         }
 
-        public Builder setDocument(ApigatewayApiConfigFileResponse document) {
+        public Builder document(ApigatewayApiConfigFileResponse document) {
             this.document = Objects.requireNonNull(document);
             return this;
         }

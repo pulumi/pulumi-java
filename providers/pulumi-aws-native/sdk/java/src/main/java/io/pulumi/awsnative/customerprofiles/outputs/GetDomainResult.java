@@ -134,32 +134,32 @@ public final class GetDomainResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCreatedAt(@Nullable String createdAt) {
+        public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-        public Builder setDeadLetterQueueUrl(@Nullable String deadLetterQueueUrl) {
+        public Builder deadLetterQueueUrl(@Nullable String deadLetterQueueUrl) {
             this.deadLetterQueueUrl = deadLetterQueueUrl;
             return this;
         }
 
-        public Builder setDefaultEncryptionKey(@Nullable String defaultEncryptionKey) {
+        public Builder defaultEncryptionKey(@Nullable String defaultEncryptionKey) {
             this.defaultEncryptionKey = defaultEncryptionKey;
             return this;
         }
 
-        public Builder setDefaultExpirationDays(@Nullable Integer defaultExpirationDays) {
+        public Builder defaultExpirationDays(@Nullable Integer defaultExpirationDays) {
             this.defaultExpirationDays = defaultExpirationDays;
             return this;
         }
 
-        public Builder setLastUpdatedAt(@Nullable String lastUpdatedAt) {
+        public Builder lastUpdatedAt(@Nullable String lastUpdatedAt) {
             this.lastUpdatedAt = lastUpdatedAt;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DomainTag> tags) {
+        public Builder tags(@Nullable List<DomainTag> tags) {
             this.tags = tags;
             return this;
         }

@@ -57,12 +57,12 @@ public final class GoogleCloudDialogflowV2LoggingConfigArgs extends io.pulumi.re
     	      this.enableStackdriverLogging = defaults.enableStackdriverLogging;
         }
 
-        public Builder setEnableStackdriverLogging(@Nullable Input<Boolean> enableStackdriverLogging) {
+        public Builder enableStackdriverLogging(@Nullable Input<Boolean> enableStackdriverLogging) {
             this.enableStackdriverLogging = enableStackdriverLogging;
             return this;
         }
 
-        public Builder setEnableStackdriverLogging(@Nullable Boolean enableStackdriverLogging) {
+        public Builder enableStackdriverLogging(@Nullable Boolean enableStackdriverLogging) {
             this.enableStackdriverLogging = Input.ofNullable(enableStackdriverLogging);
             return this;
         }

@@ -121,27 +121,27 @@ public final class ListNetworkManagerDeploymentStatusArgs extends io.pulumi.reso
     	      this.skipToken = defaults.skipToken;
         }
 
-        public Builder setDeploymentTypes(@Nullable List<Either<String,ConfigurationType>> deploymentTypes) {
+        public Builder deploymentTypes(@Nullable List<Either<String,ConfigurationType>> deploymentTypes) {
             this.deploymentTypes = deploymentTypes;
             return this;
         }
 
-        public Builder setNetworkManagerName(String networkManagerName) {
+        public Builder networkManagerName(String networkManagerName) {
             this.networkManagerName = Objects.requireNonNull(networkManagerName);
             return this;
         }
 
-        public Builder setRegions(@Nullable List<String> regions) {
+        public Builder regions(@Nullable List<String> regions) {
             this.regions = regions;
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setSkipToken(@Nullable String skipToken) {
+        public Builder skipToken(@Nullable String skipToken) {
             this.skipToken = skipToken;
             return this;
         }

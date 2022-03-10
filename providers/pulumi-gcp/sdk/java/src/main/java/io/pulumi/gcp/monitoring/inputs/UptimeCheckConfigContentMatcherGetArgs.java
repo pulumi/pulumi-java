@@ -72,22 +72,22 @@ public final class UptimeCheckConfigContentMatcherGetArgs extends io.pulumi.reso
     	      this.matcher = defaults.matcher;
         }
 
-        public Builder setContent(Input<String> content) {
+        public Builder content(Input<String> content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
-        public Builder setContent(String content) {
+        public Builder content(String content) {
             this.content = Input.of(Objects.requireNonNull(content));
             return this;
         }
 
-        public Builder setMatcher(@Nullable Input<String> matcher) {
+        public Builder matcher(@Nullable Input<String> matcher) {
             this.matcher = matcher;
             return this;
         }
 
-        public Builder setMatcher(@Nullable String matcher) {
+        public Builder matcher(@Nullable String matcher) {
             this.matcher = Input.ofNullable(matcher);
             return this;
         }

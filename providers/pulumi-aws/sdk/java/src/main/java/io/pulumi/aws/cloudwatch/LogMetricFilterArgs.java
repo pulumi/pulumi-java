@@ -104,42 +104,42 @@ public final class LogMetricFilterArgs extends io.pulumi.resources.ResourceArgs 
     	      this.pattern = defaults.pattern;
         }
 
-        public Builder setLogGroupName(Input<String> logGroupName) {
+        public Builder logGroupName(Input<String> logGroupName) {
             this.logGroupName = Objects.requireNonNull(logGroupName);
             return this;
         }
 
-        public Builder setLogGroupName(String logGroupName) {
+        public Builder logGroupName(String logGroupName) {
             this.logGroupName = Input.of(Objects.requireNonNull(logGroupName));
             return this;
         }
 
-        public Builder setMetricTransformation(Input<LogMetricFilterMetricTransformationArgs> metricTransformation) {
+        public Builder metricTransformation(Input<LogMetricFilterMetricTransformationArgs> metricTransformation) {
             this.metricTransformation = Objects.requireNonNull(metricTransformation);
             return this;
         }
 
-        public Builder setMetricTransformation(LogMetricFilterMetricTransformationArgs metricTransformation) {
+        public Builder metricTransformation(LogMetricFilterMetricTransformationArgs metricTransformation) {
             this.metricTransformation = Input.of(Objects.requireNonNull(metricTransformation));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPattern(Input<String> pattern) {
+        public Builder pattern(Input<String> pattern) {
             this.pattern = Objects.requireNonNull(pattern);
             return this;
         }
 
-        public Builder setPattern(String pattern) {
+        public Builder pattern(String pattern) {
             this.pattern = Input.of(Objects.requireNonNull(pattern));
             return this;
         }

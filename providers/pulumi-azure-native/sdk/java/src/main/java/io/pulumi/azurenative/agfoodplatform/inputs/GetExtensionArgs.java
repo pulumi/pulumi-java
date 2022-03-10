@@ -84,17 +84,17 @@ public final class GetExtensionArgs extends io.pulumi.resources.InvokeArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setExtensionId(String extensionId) {
+        public Builder extensionId(String extensionId) {
             this.extensionId = Objects.requireNonNull(extensionId);
             return this;
         }
 
-        public Builder setFarmBeatsResourceName(String farmBeatsResourceName) {
+        public Builder farmBeatsResourceName(String farmBeatsResourceName) {
             this.farmBeatsResourceName = Objects.requireNonNull(farmBeatsResourceName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

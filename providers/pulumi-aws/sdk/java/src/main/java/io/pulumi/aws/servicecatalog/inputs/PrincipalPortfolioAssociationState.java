@@ -102,42 +102,42 @@ public final class PrincipalPortfolioAssociationState extends io.pulumi.resource
     	      this.principalType = defaults.principalType;
         }
 
-        public Builder setAcceptLanguage(@Nullable Input<String> acceptLanguage) {
+        public Builder acceptLanguage(@Nullable Input<String> acceptLanguage) {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
 
-        public Builder setAcceptLanguage(@Nullable String acceptLanguage) {
+        public Builder acceptLanguage(@Nullable String acceptLanguage) {
             this.acceptLanguage = Input.ofNullable(acceptLanguage);
             return this;
         }
 
-        public Builder setPortfolioId(@Nullable Input<String> portfolioId) {
+        public Builder portfolioId(@Nullable Input<String> portfolioId) {
             this.portfolioId = portfolioId;
             return this;
         }
 
-        public Builder setPortfolioId(@Nullable String portfolioId) {
+        public Builder portfolioId(@Nullable String portfolioId) {
             this.portfolioId = Input.ofNullable(portfolioId);
             return this;
         }
 
-        public Builder setPrincipalArn(@Nullable Input<String> principalArn) {
+        public Builder principalArn(@Nullable Input<String> principalArn) {
             this.principalArn = principalArn;
             return this;
         }
 
-        public Builder setPrincipalArn(@Nullable String principalArn) {
+        public Builder principalArn(@Nullable String principalArn) {
             this.principalArn = Input.ofNullable(principalArn);
             return this;
         }
 
-        public Builder setPrincipalType(@Nullable Input<String> principalType) {
+        public Builder principalType(@Nullable Input<String> principalType) {
             this.principalType = principalType;
             return this;
         }
 
-        public Builder setPrincipalType(@Nullable String principalType) {
+        public Builder principalType(@Nullable String principalType) {
             this.principalType = Input.ofNullable(principalType);
             return this;
         }

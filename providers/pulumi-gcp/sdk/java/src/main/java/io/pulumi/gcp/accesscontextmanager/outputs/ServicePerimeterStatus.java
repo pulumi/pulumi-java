@@ -187,32 +187,32 @@ public final class ServicePerimeterStatus {
     	      this.vpcAccessibleServices = defaults.vpcAccessibleServices;
         }
 
-        public Builder setAccessLevels(@Nullable List<String> accessLevels) {
+        public Builder accessLevels(@Nullable List<String> accessLevels) {
             this.accessLevels = accessLevels;
             return this;
         }
 
-        public Builder setEgressPolicies(@Nullable List<ServicePerimeterStatusEgressPolicy> egressPolicies) {
+        public Builder egressPolicies(@Nullable List<ServicePerimeterStatusEgressPolicy> egressPolicies) {
             this.egressPolicies = egressPolicies;
             return this;
         }
 
-        public Builder setIngressPolicies(@Nullable List<ServicePerimeterStatusIngressPolicy> ingressPolicies) {
+        public Builder ingressPolicies(@Nullable List<ServicePerimeterStatusIngressPolicy> ingressPolicies) {
             this.ingressPolicies = ingressPolicies;
             return this;
         }
 
-        public Builder setResources(@Nullable List<String> resources) {
+        public Builder resources(@Nullable List<String> resources) {
             this.resources = resources;
             return this;
         }
 
-        public Builder setRestrictedServices(@Nullable List<String> restrictedServices) {
+        public Builder restrictedServices(@Nullable List<String> restrictedServices) {
             this.restrictedServices = restrictedServices;
             return this;
         }
 
-        public Builder setVpcAccessibleServices(@Nullable ServicePerimeterStatusVpcAccessibleServices vpcAccessibleServices) {
+        public Builder vpcAccessibleServices(@Nullable ServicePerimeterStatusVpcAccessibleServices vpcAccessibleServices) {
             this.vpcAccessibleServices = vpcAccessibleServices;
             return this;
         }

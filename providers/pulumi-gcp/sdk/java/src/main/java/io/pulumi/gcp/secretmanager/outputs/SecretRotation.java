@@ -71,12 +71,12 @@ public final class SecretRotation {
     	      this.rotationPeriod = defaults.rotationPeriod;
         }
 
-        public Builder setNextRotationTime(@Nullable String nextRotationTime) {
+        public Builder nextRotationTime(@Nullable String nextRotationTime) {
             this.nextRotationTime = nextRotationTime;
             return this;
         }
 
-        public Builder setRotationPeriod(@Nullable String rotationPeriod) {
+        public Builder rotationPeriod(@Nullable String rotationPeriod) {
             this.rotationPeriod = rotationPeriod;
             return this;
         }

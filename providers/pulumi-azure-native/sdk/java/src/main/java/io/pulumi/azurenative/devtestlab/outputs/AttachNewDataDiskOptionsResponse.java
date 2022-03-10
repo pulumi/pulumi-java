@@ -84,17 +84,17 @@ public final class AttachNewDataDiskOptionsResponse {
     	      this.diskType = defaults.diskType;
         }
 
-        public Builder setDiskName(@Nullable String diskName) {
+        public Builder diskName(@Nullable String diskName) {
             this.diskName = diskName;
             return this;
         }
 
-        public Builder setDiskSizeGiB(@Nullable Integer diskSizeGiB) {
+        public Builder diskSizeGiB(@Nullable Integer diskSizeGiB) {
             this.diskSizeGiB = diskSizeGiB;
             return this;
         }
 
-        public Builder setDiskType(@Nullable String diskType) {
+        public Builder diskType(@Nullable String diskType) {
             this.diskType = diskType;
             return this;
         }

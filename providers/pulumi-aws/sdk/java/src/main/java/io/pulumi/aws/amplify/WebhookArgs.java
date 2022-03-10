@@ -86,32 +86,32 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     	      this.description = defaults.description;
         }
 
-        public Builder setAppId(Input<String> appId) {
+        public Builder appId(Input<String> appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
 
-        public Builder setAppId(String appId) {
+        public Builder appId(String appId) {
             this.appId = Input.of(Objects.requireNonNull(appId));
             return this;
         }
 
-        public Builder setBranchName(Input<String> branchName) {
+        public Builder branchName(Input<String> branchName) {
             this.branchName = Objects.requireNonNull(branchName);
             return this;
         }
 
-        public Builder setBranchName(String branchName) {
+        public Builder branchName(String branchName) {
             this.branchName = Input.of(Objects.requireNonNull(branchName));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }

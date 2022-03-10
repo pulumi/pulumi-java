@@ -91,32 +91,32 @@ public final class ApplicationInfoArgs extends io.pulumi.resources.ResourceArgs 
     	      this.uris = defaults.uris;
         }
 
-        public Builder setEmails(@Nullable Input<List<String>> emails) {
+        public Builder emails(@Nullable Input<List<String>> emails) {
             this.emails = emails;
             return this;
         }
 
-        public Builder setEmails(@Nullable List<String> emails) {
+        public Builder emails(@Nullable List<String> emails) {
             this.emails = Input.ofNullable(emails);
             return this;
         }
 
-        public Builder setInstruction(@Nullable Input<String> instruction) {
+        public Builder instruction(@Nullable Input<String> instruction) {
             this.instruction = instruction;
             return this;
         }
 
-        public Builder setInstruction(@Nullable String instruction) {
+        public Builder instruction(@Nullable String instruction) {
             this.instruction = Input.ofNullable(instruction);
             return this;
         }
 
-        public Builder setUris(@Nullable Input<List<String>> uris) {
+        public Builder uris(@Nullable Input<List<String>> uris) {
             this.uris = uris;
             return this;
         }
 
-        public Builder setUris(@Nullable List<String> uris) {
+        public Builder uris(@Nullable List<String> uris) {
             this.uris = Input.ofNullable(uris);
             return this;
         }

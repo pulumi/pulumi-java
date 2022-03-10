@@ -68,12 +68,12 @@ public final class GetMemberInvitationArgs extends io.pulumi.resources.InvokeArg
     	      this.memberId = defaults.memberId;
         }
 
-        public Builder setGraphArn(String graphArn) {
+        public Builder graphArn(String graphArn) {
             this.graphArn = Objects.requireNonNull(graphArn);
             return this;
         }
 
-        public Builder setMemberId(String memberId) {
+        public Builder memberId(String memberId) {
             this.memberId = Objects.requireNonNull(memberId);
             return this;
         }

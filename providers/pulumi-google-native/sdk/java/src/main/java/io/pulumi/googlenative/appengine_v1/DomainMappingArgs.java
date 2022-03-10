@@ -95,42 +95,42 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sslSettings = defaults.sslSettings;
         }
 
-        public Builder setAppId(Input<String> appId) {
+        public Builder appId(Input<String> appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
 
-        public Builder setAppId(String appId) {
+        public Builder appId(String appId) {
             this.appId = Input.of(Objects.requireNonNull(appId));
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setOverrideStrategy(@Nullable Input<String> overrideStrategy) {
+        public Builder overrideStrategy(@Nullable Input<String> overrideStrategy) {
             this.overrideStrategy = overrideStrategy;
             return this;
         }
 
-        public Builder setOverrideStrategy(@Nullable String overrideStrategy) {
+        public Builder overrideStrategy(@Nullable String overrideStrategy) {
             this.overrideStrategy = Input.ofNullable(overrideStrategy);
             return this;
         }
 
-        public Builder setSslSettings(@Nullable Input<SslSettingsArgs> sslSettings) {
+        public Builder sslSettings(@Nullable Input<SslSettingsArgs> sslSettings) {
             this.sslSettings = sslSettings;
             return this;
         }
 
-        public Builder setSslSettings(@Nullable SslSettingsArgs sslSettings) {
+        public Builder sslSettings(@Nullable SslSettingsArgs sslSettings) {
             this.sslSettings = Input.ofNullable(sslSettings);
             return this;
         }

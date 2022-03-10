@@ -57,12 +57,12 @@ public final class OSDiskImageEncryptionArgs extends io.pulumi.resources.Resourc
     	      this.diskEncryptionSetId = defaults.diskEncryptionSetId;
         }
 
-        public Builder setDiskEncryptionSetId(@Nullable Input<String> diskEncryptionSetId) {
+        public Builder diskEncryptionSetId(@Nullable Input<String> diskEncryptionSetId) {
             this.diskEncryptionSetId = diskEncryptionSetId;
             return this;
         }
 
-        public Builder setDiskEncryptionSetId(@Nullable String diskEncryptionSetId) {
+        public Builder diskEncryptionSetId(@Nullable String diskEncryptionSetId) {
             this.diskEncryptionSetId = Input.ofNullable(diskEncryptionSetId);
             return this;
         }

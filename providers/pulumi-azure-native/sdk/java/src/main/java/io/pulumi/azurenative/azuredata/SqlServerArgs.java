@@ -167,82 +167,82 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setCores(@Nullable Input<Integer> cores) {
+        public Builder cores(@Nullable Input<Integer> cores) {
             this.cores = cores;
             return this;
         }
 
-        public Builder setCores(@Nullable Integer cores) {
+        public Builder cores(@Nullable Integer cores) {
             this.cores = Input.ofNullable(cores);
             return this;
         }
 
-        public Builder setEdition(@Nullable Input<String> edition) {
+        public Builder edition(@Nullable Input<String> edition) {
             this.edition = edition;
             return this;
         }
 
-        public Builder setEdition(@Nullable String edition) {
+        public Builder edition(@Nullable String edition) {
             this.edition = Input.ofNullable(edition);
             return this;
         }
 
-        public Builder setPropertyBag(@Nullable Input<String> propertyBag) {
+        public Builder propertyBag(@Nullable Input<String> propertyBag) {
             this.propertyBag = propertyBag;
             return this;
         }
 
-        public Builder setPropertyBag(@Nullable String propertyBag) {
+        public Builder propertyBag(@Nullable String propertyBag) {
             this.propertyBag = Input.ofNullable(propertyBag);
             return this;
         }
 
-        public Builder setRegistrationID(@Nullable Input<String> registrationID) {
+        public Builder registrationID(@Nullable Input<String> registrationID) {
             this.registrationID = registrationID;
             return this;
         }
 
-        public Builder setRegistrationID(@Nullable String registrationID) {
+        public Builder registrationID(@Nullable String registrationID) {
             this.registrationID = Input.ofNullable(registrationID);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSqlServerName(@Nullable Input<String> sqlServerName) {
+        public Builder sqlServerName(@Nullable Input<String> sqlServerName) {
             this.sqlServerName = sqlServerName;
             return this;
         }
 
-        public Builder setSqlServerName(@Nullable String sqlServerName) {
+        public Builder sqlServerName(@Nullable String sqlServerName) {
             this.sqlServerName = Input.ofNullable(sqlServerName);
             return this;
         }
 
-        public Builder setSqlServerRegistrationName(Input<String> sqlServerRegistrationName) {
+        public Builder sqlServerRegistrationName(Input<String> sqlServerRegistrationName) {
             this.sqlServerRegistrationName = Objects.requireNonNull(sqlServerRegistrationName);
             return this;
         }
 
-        public Builder setSqlServerRegistrationName(String sqlServerRegistrationName) {
+        public Builder sqlServerRegistrationName(String sqlServerRegistrationName) {
             this.sqlServerRegistrationName = Input.of(Objects.requireNonNull(sqlServerRegistrationName));
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

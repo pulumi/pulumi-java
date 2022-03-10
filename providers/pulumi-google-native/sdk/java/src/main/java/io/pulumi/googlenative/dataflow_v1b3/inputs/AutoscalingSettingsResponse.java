@@ -73,12 +73,12 @@ public final class AutoscalingSettingsResponse extends io.pulumi.resources.Invok
     	      this.maxNumWorkers = defaults.maxNumWorkers;
         }
 
-        public Builder setAlgorithm(String algorithm) {
+        public Builder algorithm(String algorithm) {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
 
-        public Builder setMaxNumWorkers(Integer maxNumWorkers) {
+        public Builder maxNumWorkers(Integer maxNumWorkers) {
             this.maxNumWorkers = Objects.requireNonNull(maxNumWorkers);
             return this;
         }

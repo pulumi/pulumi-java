@@ -52,12 +52,12 @@ public final class FlexibleAppVersionEntrypointGetArgs extends io.pulumi.resourc
     	      this.shell = defaults.shell;
         }
 
-        public Builder setShell(Input<String> shell) {
+        public Builder shell(Input<String> shell) {
             this.shell = Objects.requireNonNull(shell);
             return this;
         }
 
-        public Builder setShell(String shell) {
+        public Builder shell(String shell) {
             this.shell = Input.of(Objects.requireNonNull(shell));
             return this;
         }

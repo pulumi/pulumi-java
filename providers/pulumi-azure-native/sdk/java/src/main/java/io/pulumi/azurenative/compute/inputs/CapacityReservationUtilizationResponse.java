@@ -56,7 +56,7 @@ public final class CapacityReservationUtilizationResponse extends io.pulumi.reso
     	      this.virtualMachinesAllocated = defaults.virtualMachinesAllocated;
         }
 
-        public Builder setVirtualMachinesAllocated(List<SubResourceReadOnlyResponse> virtualMachinesAllocated) {
+        public Builder virtualMachinesAllocated(List<SubResourceReadOnlyResponse> virtualMachinesAllocated) {
             this.virtualMachinesAllocated = Objects.requireNonNull(virtualMachinesAllocated);
             return this;
         }

@@ -66,12 +66,12 @@ public final class SchedulePolicyResponse {
     	      this.skipOsAdaptation = defaults.skipOsAdaptation;
         }
 
-        public Builder setIdleDuration(String idleDuration) {
+        public Builder idleDuration(String idleDuration) {
             this.idleDuration = Objects.requireNonNull(idleDuration);
             return this;
         }
 
-        public Builder setSkipOsAdaptation(Boolean skipOsAdaptation) {
+        public Builder skipOsAdaptation(Boolean skipOsAdaptation) {
             this.skipOsAdaptation = Objects.requireNonNull(skipOsAdaptation);
             return this;
         }

@@ -62,22 +62,22 @@ public final class ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs exte
     	      this.registry = defaults.registry;
         }
 
-        public Builder setFile(@Nullable Input<String> file) {
+        public Builder file(@Nullable Input<String> file) {
             this.file = file;
             return this;
         }
 
-        public Builder setFile(@Nullable String file) {
+        public Builder file(@Nullable String file) {
             this.file = Input.ofNullable(file);
             return this;
         }
 
-        public Builder setRegistry(@Nullable Input<String> registry) {
+        public Builder registry(@Nullable Input<String> registry) {
             this.registry = registry;
             return this;
         }
 
-        public Builder setRegistry(@Nullable String registry) {
+        public Builder registry(@Nullable String registry) {
             this.registry = Input.ofNullable(registry);
             return this;
         }

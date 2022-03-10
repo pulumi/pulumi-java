@@ -168,82 +168,82 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
     	      this.targetDatabase = defaults.targetDatabase;
         }
 
-        public Builder setDistributedAvailabilityGroupName(@Nullable Input<String> distributedAvailabilityGroupName) {
+        public Builder distributedAvailabilityGroupName(@Nullable Input<String> distributedAvailabilityGroupName) {
             this.distributedAvailabilityGroupName = distributedAvailabilityGroupName;
             return this;
         }
 
-        public Builder setDistributedAvailabilityGroupName(@Nullable String distributedAvailabilityGroupName) {
+        public Builder distributedAvailabilityGroupName(@Nullable String distributedAvailabilityGroupName) {
             this.distributedAvailabilityGroupName = Input.ofNullable(distributedAvailabilityGroupName);
             return this;
         }
 
-        public Builder setManagedInstanceName(Input<String> managedInstanceName) {
+        public Builder managedInstanceName(Input<String> managedInstanceName) {
             this.managedInstanceName = Objects.requireNonNull(managedInstanceName);
             return this;
         }
 
-        public Builder setManagedInstanceName(String managedInstanceName) {
+        public Builder managedInstanceName(String managedInstanceName) {
             this.managedInstanceName = Input.of(Objects.requireNonNull(managedInstanceName));
             return this;
         }
 
-        public Builder setPrimaryAvailabilityGroupName(@Nullable Input<String> primaryAvailabilityGroupName) {
+        public Builder primaryAvailabilityGroupName(@Nullable Input<String> primaryAvailabilityGroupName) {
             this.primaryAvailabilityGroupName = primaryAvailabilityGroupName;
             return this;
         }
 
-        public Builder setPrimaryAvailabilityGroupName(@Nullable String primaryAvailabilityGroupName) {
+        public Builder primaryAvailabilityGroupName(@Nullable String primaryAvailabilityGroupName) {
             this.primaryAvailabilityGroupName = Input.ofNullable(primaryAvailabilityGroupName);
             return this;
         }
 
-        public Builder setReplicationMode(@Nullable Input<Either<String,ReplicationMode>> replicationMode) {
+        public Builder replicationMode(@Nullable Input<Either<String,ReplicationMode>> replicationMode) {
             this.replicationMode = replicationMode;
             return this;
         }
 
-        public Builder setReplicationMode(@Nullable Either<String,ReplicationMode> replicationMode) {
+        public Builder replicationMode(@Nullable Either<String,ReplicationMode> replicationMode) {
             this.replicationMode = Input.ofNullable(replicationMode);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSecondaryAvailabilityGroupName(@Nullable Input<String> secondaryAvailabilityGroupName) {
+        public Builder secondaryAvailabilityGroupName(@Nullable Input<String> secondaryAvailabilityGroupName) {
             this.secondaryAvailabilityGroupName = secondaryAvailabilityGroupName;
             return this;
         }
 
-        public Builder setSecondaryAvailabilityGroupName(@Nullable String secondaryAvailabilityGroupName) {
+        public Builder secondaryAvailabilityGroupName(@Nullable String secondaryAvailabilityGroupName) {
             this.secondaryAvailabilityGroupName = Input.ofNullable(secondaryAvailabilityGroupName);
             return this;
         }
 
-        public Builder setSourceEndpoint(@Nullable Input<String> sourceEndpoint) {
+        public Builder sourceEndpoint(@Nullable Input<String> sourceEndpoint) {
             this.sourceEndpoint = sourceEndpoint;
             return this;
         }
 
-        public Builder setSourceEndpoint(@Nullable String sourceEndpoint) {
+        public Builder sourceEndpoint(@Nullable String sourceEndpoint) {
             this.sourceEndpoint = Input.ofNullable(sourceEndpoint);
             return this;
         }
 
-        public Builder setTargetDatabase(@Nullable Input<String> targetDatabase) {
+        public Builder targetDatabase(@Nullable Input<String> targetDatabase) {
             this.targetDatabase = targetDatabase;
             return this;
         }
 
-        public Builder setTargetDatabase(@Nullable String targetDatabase) {
+        public Builder targetDatabase(@Nullable String targetDatabase) {
             this.targetDatabase = Input.ofNullable(targetDatabase);
             return this;
         }

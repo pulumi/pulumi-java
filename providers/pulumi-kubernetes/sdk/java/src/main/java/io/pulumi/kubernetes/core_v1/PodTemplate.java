@@ -125,8 +125,8 @@ public class PodTemplate extends io.pulumi.resources.CustomResource {
     private static PodTemplateArgs makeArgs(@Nullable PodTemplateArgs args) {
         var builder = args == null ? PodTemplateArgs.builder() : PodTemplateArgs.builder(args);
         return builder
-            .setApiVersion("v1")
-            .setKind("PodTemplate")
+            .apiVersion("v1")
+            .kind("PodTemplate")
             .build();
     }
 

@@ -123,27 +123,27 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
     	      this.sendingMetrics = defaults.sendingMetrics;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setReasonForLogsStatus(@Nullable String reasonForLogsStatus) {
+        public Builder reasonForLogsStatus(@Nullable String reasonForLogsStatus) {
             this.reasonForLogsStatus = reasonForLogsStatus;
             return this;
         }
 
-        public Builder setReasonForMetricsStatus(@Nullable String reasonForMetricsStatus) {
+        public Builder reasonForMetricsStatus(@Nullable String reasonForMetricsStatus) {
             this.reasonForMetricsStatus = reasonForMetricsStatus;
             return this;
         }
 
-        public Builder setSendingLogs(@Nullable Boolean sendingLogs) {
+        public Builder sendingLogs(@Nullable Boolean sendingLogs) {
             this.sendingLogs = sendingLogs;
             return this;
         }
 
-        public Builder setSendingMetrics(@Nullable Boolean sendingMetrics) {
+        public Builder sendingMetrics(@Nullable Boolean sendingMetrics) {
             this.sendingMetrics = sendingMetrics;
             return this;
         }

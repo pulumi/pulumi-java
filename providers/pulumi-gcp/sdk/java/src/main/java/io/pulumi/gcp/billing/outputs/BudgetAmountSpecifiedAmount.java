@@ -98,17 +98,17 @@ public final class BudgetAmountSpecifiedAmount {
     	      this.units = defaults.units;
         }
 
-        public Builder setCurrencyCode(@Nullable String currencyCode) {
+        public Builder currencyCode(@Nullable String currencyCode) {
             this.currencyCode = currencyCode;
             return this;
         }
 
-        public Builder setNanos(@Nullable Integer nanos) {
+        public Builder nanos(@Nullable Integer nanos) {
             this.nanos = nanos;
             return this;
         }
 
-        public Builder setUnits(@Nullable String units) {
+        public Builder units(@Nullable String units) {
             this.units = units;
             return this;
         }

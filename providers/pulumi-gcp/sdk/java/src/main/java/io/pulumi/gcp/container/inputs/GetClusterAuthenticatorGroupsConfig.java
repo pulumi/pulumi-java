@@ -47,7 +47,7 @@ public final class GetClusterAuthenticatorGroupsConfig extends io.pulumi.resourc
     	      this.securityGroup = defaults.securityGroup;
         }
 
-        public Builder setSecurityGroup(String securityGroup) {
+        public Builder securityGroup(String securityGroup) {
             this.securityGroup = Objects.requireNonNull(securityGroup);
             return this;
         }

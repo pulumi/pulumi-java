@@ -146,62 +146,62 @@ public final class AzureVmWorkloadProtectionPolicyArgs extends io.pulumi.resourc
     	      this.workLoadType = defaults.workLoadType;
         }
 
-        public Builder setBackupManagementType(Input<String> backupManagementType) {
+        public Builder backupManagementType(Input<String> backupManagementType) {
             this.backupManagementType = Objects.requireNonNull(backupManagementType);
             return this;
         }
 
-        public Builder setBackupManagementType(String backupManagementType) {
+        public Builder backupManagementType(String backupManagementType) {
             this.backupManagementType = Input.of(Objects.requireNonNull(backupManagementType));
             return this;
         }
 
-        public Builder setMakePolicyConsistent(@Nullable Input<Boolean> makePolicyConsistent) {
+        public Builder makePolicyConsistent(@Nullable Input<Boolean> makePolicyConsistent) {
             this.makePolicyConsistent = makePolicyConsistent;
             return this;
         }
 
-        public Builder setMakePolicyConsistent(@Nullable Boolean makePolicyConsistent) {
+        public Builder makePolicyConsistent(@Nullable Boolean makePolicyConsistent) {
             this.makePolicyConsistent = Input.ofNullable(makePolicyConsistent);
             return this;
         }
 
-        public Builder setProtectedItemsCount(@Nullable Input<Integer> protectedItemsCount) {
+        public Builder protectedItemsCount(@Nullable Input<Integer> protectedItemsCount) {
             this.protectedItemsCount = protectedItemsCount;
             return this;
         }
 
-        public Builder setProtectedItemsCount(@Nullable Integer protectedItemsCount) {
+        public Builder protectedItemsCount(@Nullable Integer protectedItemsCount) {
             this.protectedItemsCount = Input.ofNullable(protectedItemsCount);
             return this;
         }
 
-        public Builder setSettings(@Nullable Input<SettingsArgs> settings) {
+        public Builder settings(@Nullable Input<SettingsArgs> settings) {
             this.settings = settings;
             return this;
         }
 
-        public Builder setSettings(@Nullable SettingsArgs settings) {
+        public Builder settings(@Nullable SettingsArgs settings) {
             this.settings = Input.ofNullable(settings);
             return this;
         }
 
-        public Builder setSubProtectionPolicy(@Nullable Input<List<SubProtectionPolicyArgs>> subProtectionPolicy) {
+        public Builder subProtectionPolicy(@Nullable Input<List<SubProtectionPolicyArgs>> subProtectionPolicy) {
             this.subProtectionPolicy = subProtectionPolicy;
             return this;
         }
 
-        public Builder setSubProtectionPolicy(@Nullable List<SubProtectionPolicyArgs> subProtectionPolicy) {
+        public Builder subProtectionPolicy(@Nullable List<SubProtectionPolicyArgs> subProtectionPolicy) {
             this.subProtectionPolicy = Input.ofNullable(subProtectionPolicy);
             return this;
         }
 
-        public Builder setWorkLoadType(@Nullable Input<Either<String,WorkloadType>> workLoadType) {
+        public Builder workLoadType(@Nullable Input<Either<String,WorkloadType>> workLoadType) {
             this.workLoadType = workLoadType;
             return this;
         }
 
-        public Builder setWorkLoadType(@Nullable Either<String,WorkloadType> workLoadType) {
+        public Builder workLoadType(@Nullable Either<String,WorkloadType> workLoadType) {
             this.workLoadType = Input.ofNullable(workLoadType);
             return this;
         }

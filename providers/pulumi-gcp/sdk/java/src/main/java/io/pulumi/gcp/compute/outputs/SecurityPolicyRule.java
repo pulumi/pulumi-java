@@ -151,32 +151,32 @@ public final class SecurityPolicyRule {
     	      this.rateLimitOptions = defaults.rateLimitOptions;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setMatch(SecurityPolicyRuleMatch match) {
+        public Builder match(SecurityPolicyRuleMatch match) {
             this.match = Objects.requireNonNull(match);
             return this;
         }
 
-        public Builder setPreview(@Nullable Boolean preview) {
+        public Builder preview(@Nullable Boolean preview) {
             this.preview = preview;
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setRateLimitOptions(@Nullable SecurityPolicyRuleRateLimitOptions rateLimitOptions) {
+        public Builder rateLimitOptions(@Nullable SecurityPolicyRuleRateLimitOptions rateLimitOptions) {
             this.rateLimitOptions = rateLimitOptions;
             return this;
         }

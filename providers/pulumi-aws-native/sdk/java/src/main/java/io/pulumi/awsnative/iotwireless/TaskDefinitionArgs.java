@@ -140,62 +140,62 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.update = defaults.update;
         }
 
-        public Builder setAutoCreateTasks(Input<Boolean> autoCreateTasks) {
+        public Builder autoCreateTasks(Input<Boolean> autoCreateTasks) {
             this.autoCreateTasks = Objects.requireNonNull(autoCreateTasks);
             return this;
         }
 
-        public Builder setAutoCreateTasks(Boolean autoCreateTasks) {
+        public Builder autoCreateTasks(Boolean autoCreateTasks) {
             this.autoCreateTasks = Input.of(Objects.requireNonNull(autoCreateTasks));
             return this;
         }
 
-        public Builder setLoRaWANUpdateGatewayTaskEntry(@Nullable Input<TaskDefinitionLoRaWANUpdateGatewayTaskEntryArgs> loRaWANUpdateGatewayTaskEntry) {
+        public Builder loRaWANUpdateGatewayTaskEntry(@Nullable Input<TaskDefinitionLoRaWANUpdateGatewayTaskEntryArgs> loRaWANUpdateGatewayTaskEntry) {
             this.loRaWANUpdateGatewayTaskEntry = loRaWANUpdateGatewayTaskEntry;
             return this;
         }
 
-        public Builder setLoRaWANUpdateGatewayTaskEntry(@Nullable TaskDefinitionLoRaWANUpdateGatewayTaskEntryArgs loRaWANUpdateGatewayTaskEntry) {
+        public Builder loRaWANUpdateGatewayTaskEntry(@Nullable TaskDefinitionLoRaWANUpdateGatewayTaskEntryArgs loRaWANUpdateGatewayTaskEntry) {
             this.loRaWANUpdateGatewayTaskEntry = Input.ofNullable(loRaWANUpdateGatewayTaskEntry);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<TaskDefinitionTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<TaskDefinitionTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<TaskDefinitionTagArgs> tags) {
+        public Builder tags(@Nullable List<TaskDefinitionTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTaskDefinitionType(@Nullable Input<TaskDefinitionType> taskDefinitionType) {
+        public Builder taskDefinitionType(@Nullable Input<TaskDefinitionType> taskDefinitionType) {
             this.taskDefinitionType = taskDefinitionType;
             return this;
         }
 
-        public Builder setTaskDefinitionType(@Nullable TaskDefinitionType taskDefinitionType) {
+        public Builder taskDefinitionType(@Nullable TaskDefinitionType taskDefinitionType) {
             this.taskDefinitionType = Input.ofNullable(taskDefinitionType);
             return this;
         }
 
-        public Builder setUpdate(@Nullable Input<TaskDefinitionUpdateWirelessGatewayTaskCreateArgs> update) {
+        public Builder update(@Nullable Input<TaskDefinitionUpdateWirelessGatewayTaskCreateArgs> update) {
             this.update = update;
             return this;
         }
 
-        public Builder setUpdate(@Nullable TaskDefinitionUpdateWirelessGatewayTaskCreateArgs update) {
+        public Builder update(@Nullable TaskDefinitionUpdateWirelessGatewayTaskCreateArgs update) {
             this.update = Input.ofNullable(update);
             return this;
         }

@@ -107,42 +107,42 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs exte
     	      this.userDefined = defaults.userDefined;
         }
 
-        public Builder setAlias(@Nullable Input<String> alias) {
+        public Builder alias(@Nullable Input<String> alias) {
             this.alias = alias;
             return this;
         }
 
-        public Builder setAlias(@Nullable String alias) {
+        public Builder alias(@Nullable String alias) {
             this.alias = Input.ofNullable(alias);
             return this;
         }
 
-        public Builder setEntityType(@Nullable Input<String> entityType) {
+        public Builder entityType(@Nullable Input<String> entityType) {
             this.entityType = entityType;
             return this;
         }
 
-        public Builder setEntityType(@Nullable String entityType) {
+        public Builder entityType(@Nullable String entityType) {
             this.entityType = Input.ofNullable(entityType);
             return this;
         }
 
-        public Builder setText(Input<String> text) {
+        public Builder text(Input<String> text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }
 
-        public Builder setText(String text) {
+        public Builder text(String text) {
             this.text = Input.of(Objects.requireNonNull(text));
             return this;
         }
 
-        public Builder setUserDefined(@Nullable Input<Boolean> userDefined) {
+        public Builder userDefined(@Nullable Input<Boolean> userDefined) {
             this.userDefined = userDefined;
             return this;
         }
 
-        public Builder setUserDefined(@Nullable Boolean userDefined) {
+        public Builder userDefined(@Nullable Boolean userDefined) {
             this.userDefined = Input.ofNullable(userDefined);
             return this;
         }

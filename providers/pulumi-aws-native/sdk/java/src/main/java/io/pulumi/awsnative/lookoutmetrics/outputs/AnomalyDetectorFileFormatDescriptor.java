@@ -52,12 +52,12 @@ public final class AnomalyDetectorFileFormatDescriptor {
     	      this.jsonFormatDescriptor = defaults.jsonFormatDescriptor;
         }
 
-        public Builder setCsvFormatDescriptor(@Nullable AnomalyDetectorCsvFormatDescriptor csvFormatDescriptor) {
+        public Builder csvFormatDescriptor(@Nullable AnomalyDetectorCsvFormatDescriptor csvFormatDescriptor) {
             this.csvFormatDescriptor = csvFormatDescriptor;
             return this;
         }
 
-        public Builder setJsonFormatDescriptor(@Nullable AnomalyDetectorJsonFormatDescriptor jsonFormatDescriptor) {
+        public Builder jsonFormatDescriptor(@Nullable AnomalyDetectorJsonFormatDescriptor jsonFormatDescriptor) {
             this.jsonFormatDescriptor = jsonFormatDescriptor;
             return this;
         }

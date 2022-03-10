@@ -190,92 +190,92 @@ public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs 
     	      this.type = defaults.type;
         }
 
-        public Builder setArguments(@Nullable Input<List<ArgumentArgs>> arguments) {
+        public Builder arguments(@Nullable Input<List<ArgumentArgs>> arguments) {
             this.arguments = arguments;
             return this;
         }
 
-        public Builder setArguments(@Nullable List<ArgumentArgs> arguments) {
+        public Builder arguments(@Nullable List<ArgumentArgs> arguments) {
             this.arguments = Input.ofNullable(arguments);
             return this;
         }
 
-        public Builder setContextAccessToken(@Nullable Input<String> contextAccessToken) {
+        public Builder contextAccessToken(@Nullable Input<String> contextAccessToken) {
             this.contextAccessToken = contextAccessToken;
             return this;
         }
 
-        public Builder setContextAccessToken(@Nullable String contextAccessToken) {
+        public Builder contextAccessToken(@Nullable String contextAccessToken) {
             this.contextAccessToken = Input.ofNullable(contextAccessToken);
             return this;
         }
 
-        public Builder setContextPath(@Nullable Input<String> contextPath) {
+        public Builder contextPath(@Nullable Input<String> contextPath) {
             this.contextPath = contextPath;
             return this;
         }
 
-        public Builder setContextPath(@Nullable String contextPath) {
+        public Builder contextPath(@Nullable String contextPath) {
             this.contextPath = Input.ofNullable(contextPath);
             return this;
         }
 
-        public Builder setDockerFilePath(Input<String> dockerFilePath) {
+        public Builder dockerFilePath(Input<String> dockerFilePath) {
             this.dockerFilePath = Objects.requireNonNull(dockerFilePath);
             return this;
         }
 
-        public Builder setDockerFilePath(String dockerFilePath) {
+        public Builder dockerFilePath(String dockerFilePath) {
             this.dockerFilePath = Input.of(Objects.requireNonNull(dockerFilePath));
             return this;
         }
 
-        public Builder setImageNames(@Nullable Input<List<String>> imageNames) {
+        public Builder imageNames(@Nullable Input<List<String>> imageNames) {
             this.imageNames = imageNames;
             return this;
         }
 
-        public Builder setImageNames(@Nullable List<String> imageNames) {
+        public Builder imageNames(@Nullable List<String> imageNames) {
             this.imageNames = Input.ofNullable(imageNames);
             return this;
         }
 
-        public Builder setIsPushEnabled(@Nullable Input<Boolean> isPushEnabled) {
+        public Builder isPushEnabled(@Nullable Input<Boolean> isPushEnabled) {
             this.isPushEnabled = isPushEnabled;
             return this;
         }
 
-        public Builder setIsPushEnabled(@Nullable Boolean isPushEnabled) {
+        public Builder isPushEnabled(@Nullable Boolean isPushEnabled) {
             this.isPushEnabled = Input.ofNullable(isPushEnabled);
             return this;
         }
 
-        public Builder setNoCache(@Nullable Input<Boolean> noCache) {
+        public Builder noCache(@Nullable Input<Boolean> noCache) {
             this.noCache = noCache;
             return this;
         }
 
-        public Builder setNoCache(@Nullable Boolean noCache) {
+        public Builder noCache(@Nullable Boolean noCache) {
             this.noCache = Input.ofNullable(noCache);
             return this;
         }
 
-        public Builder setTarget(@Nullable Input<String> target) {
+        public Builder target(@Nullable Input<String> target) {
             this.target = target;
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = Input.ofNullable(target);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

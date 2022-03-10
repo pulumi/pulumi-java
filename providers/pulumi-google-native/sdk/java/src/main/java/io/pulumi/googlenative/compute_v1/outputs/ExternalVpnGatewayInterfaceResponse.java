@@ -48,7 +48,7 @@ public final class ExternalVpnGatewayInterfaceResponse {
     	      this.ipAddress = defaults.ipAddress;
         }
 
-        public Builder setIpAddress(String ipAddress) {
+        public Builder ipAddress(String ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }

@@ -89,32 +89,32 @@ public final class FirewallRuleGroupArgs extends io.pulumi.resources.ResourceArg
     	      this.tags = defaults.tags;
         }
 
-        public Builder setFirewallRules(@Nullable Input<List<FirewallRuleGroupFirewallRuleArgs>> firewallRules) {
+        public Builder firewallRules(@Nullable Input<List<FirewallRuleGroupFirewallRuleArgs>> firewallRules) {
             this.firewallRules = firewallRules;
             return this;
         }
 
-        public Builder setFirewallRules(@Nullable List<FirewallRuleGroupFirewallRuleArgs> firewallRules) {
+        public Builder firewallRules(@Nullable List<FirewallRuleGroupFirewallRuleArgs> firewallRules) {
             this.firewallRules = Input.ofNullable(firewallRules);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<FirewallRuleGroupTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<FirewallRuleGroupTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<FirewallRuleGroupTagArgs> tags) {
+        public Builder tags(@Nullable List<FirewallRuleGroupTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

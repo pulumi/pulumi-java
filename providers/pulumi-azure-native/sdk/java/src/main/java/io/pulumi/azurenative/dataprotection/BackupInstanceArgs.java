@@ -102,42 +102,42 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vaultName = defaults.vaultName;
         }
 
-        public Builder setBackupInstanceName(@Nullable Input<String> backupInstanceName) {
+        public Builder backupInstanceName(@Nullable Input<String> backupInstanceName) {
             this.backupInstanceName = backupInstanceName;
             return this;
         }
 
-        public Builder setBackupInstanceName(@Nullable String backupInstanceName) {
+        public Builder backupInstanceName(@Nullable String backupInstanceName) {
             this.backupInstanceName = Input.ofNullable(backupInstanceName);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<io.pulumi.azurenative.dataprotection.inputs.BackupInstanceArgs> properties) {
+        public Builder properties(@Nullable Input<io.pulumi.azurenative.dataprotection.inputs.BackupInstanceArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable io.pulumi.azurenative.dataprotection.inputs.BackupInstanceArgs properties) {
+        public Builder properties(@Nullable io.pulumi.azurenative.dataprotection.inputs.BackupInstanceArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setVaultName(Input<String> vaultName) {
+        public Builder vaultName(Input<String> vaultName) {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
         }
 
-        public Builder setVaultName(String vaultName) {
+        public Builder vaultName(String vaultName) {
             this.vaultName = Input.of(Objects.requireNonNull(vaultName));
             return this;
         }

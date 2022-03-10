@@ -41,7 +41,7 @@ public final class FilterFindingCriteria {
     	      this.criterions = defaults.criterions;
         }
 
-        public Builder setCriterions(List<FilterFindingCriteriaCriterion> criterions) {
+        public Builder criterions(List<FilterFindingCriteriaCriterion> criterions) {
             this.criterions = Objects.requireNonNull(criterions);
             return this;
         }

@@ -67,12 +67,12 @@ public final class GetDeploymentResult {
     	      this.description = defaults.description;
         }
 
-        public Builder setDeploymentId(@Nullable String deploymentId) {
+        public Builder deploymentId(@Nullable String deploymentId) {
             this.deploymentId = deploymentId;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }

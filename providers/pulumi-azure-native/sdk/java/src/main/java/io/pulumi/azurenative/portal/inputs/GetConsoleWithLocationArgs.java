@@ -68,12 +68,12 @@ public final class GetConsoleWithLocationArgs extends io.pulumi.resources.Invoke
     	      this.location = defaults.location;
         }
 
-        public Builder setConsoleName(String consoleName) {
+        public Builder consoleName(String consoleName) {
             this.consoleName = Objects.requireNonNull(consoleName);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }

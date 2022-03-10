@@ -70,22 +70,22 @@ public final class ImageBuilderDomainJoinInfoGetArgs extends io.pulumi.resources
     	      this.organizationalUnitDistinguishedName = defaults.organizationalUnitDistinguishedName;
         }
 
-        public Builder setDirectoryName(@Nullable Input<String> directoryName) {
+        public Builder directoryName(@Nullable Input<String> directoryName) {
             this.directoryName = directoryName;
             return this;
         }
 
-        public Builder setDirectoryName(@Nullable String directoryName) {
+        public Builder directoryName(@Nullable String directoryName) {
             this.directoryName = Input.ofNullable(directoryName);
             return this;
         }
 
-        public Builder setOrganizationalUnitDistinguishedName(@Nullable Input<String> organizationalUnitDistinguishedName) {
+        public Builder organizationalUnitDistinguishedName(@Nullable Input<String> organizationalUnitDistinguishedName) {
             this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
             return this;
         }
 
-        public Builder setOrganizationalUnitDistinguishedName(@Nullable String organizationalUnitDistinguishedName) {
+        public Builder organizationalUnitDistinguishedName(@Nullable String organizationalUnitDistinguishedName) {
             this.organizationalUnitDistinguishedName = Input.ofNullable(organizationalUnitDistinguishedName);
             return this;
         }

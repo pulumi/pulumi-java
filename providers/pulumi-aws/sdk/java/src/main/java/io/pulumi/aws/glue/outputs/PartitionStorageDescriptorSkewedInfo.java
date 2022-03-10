@@ -84,17 +84,17 @@ public final class PartitionStorageDescriptorSkewedInfo {
     	      this.skewedColumnValues = defaults.skewedColumnValues;
         }
 
-        public Builder setSkewedColumnNames(@Nullable List<String> skewedColumnNames) {
+        public Builder skewedColumnNames(@Nullable List<String> skewedColumnNames) {
             this.skewedColumnNames = skewedColumnNames;
             return this;
         }
 
-        public Builder setSkewedColumnValueLocationMaps(@Nullable Map<String,String> skewedColumnValueLocationMaps) {
+        public Builder skewedColumnValueLocationMaps(@Nullable Map<String,String> skewedColumnValueLocationMaps) {
             this.skewedColumnValueLocationMaps = skewedColumnValueLocationMaps;
             return this;
         }
 
-        public Builder setSkewedColumnValues(@Nullable List<String> skewedColumnValues) {
+        public Builder skewedColumnValues(@Nullable List<String> skewedColumnValues) {
             this.skewedColumnValues = skewedColumnValues;
             return this;
         }

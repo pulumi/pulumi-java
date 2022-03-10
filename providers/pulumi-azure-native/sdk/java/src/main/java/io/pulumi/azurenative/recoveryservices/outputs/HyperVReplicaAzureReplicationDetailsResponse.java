@@ -476,137 +476,137 @@ public final class HyperVReplicaAzureReplicationDetailsResponse {
     	      this.vmProtectionStateDescription = defaults.vmProtectionStateDescription;
         }
 
-        public Builder setAzureVmDiskDetails(@Nullable List<AzureVmDiskDetailsResponse> azureVmDiskDetails) {
+        public Builder azureVmDiskDetails(@Nullable List<AzureVmDiskDetailsResponse> azureVmDiskDetails) {
             this.azureVmDiskDetails = azureVmDiskDetails;
             return this;
         }
 
-        public Builder setEnableRdpOnTargetOption(@Nullable String enableRdpOnTargetOption) {
+        public Builder enableRdpOnTargetOption(@Nullable String enableRdpOnTargetOption) {
             this.enableRdpOnTargetOption = enableRdpOnTargetOption;
             return this;
         }
 
-        public Builder setEncryption(@Nullable String encryption) {
+        public Builder encryption(@Nullable String encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setInitialReplicationDetails(@Nullable InitialReplicationDetailsResponse initialReplicationDetails) {
+        public Builder initialReplicationDetails(@Nullable InitialReplicationDetailsResponse initialReplicationDetails) {
             this.initialReplicationDetails = initialReplicationDetails;
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setLastReplicatedTime(@Nullable String lastReplicatedTime) {
+        public Builder lastReplicatedTime(@Nullable String lastReplicatedTime) {
             this.lastReplicatedTime = lastReplicatedTime;
             return this;
         }
 
-        public Builder setLastRpoCalculatedTime(@Nullable String lastRpoCalculatedTime) {
+        public Builder lastRpoCalculatedTime(@Nullable String lastRpoCalculatedTime) {
             this.lastRpoCalculatedTime = lastRpoCalculatedTime;
             return this;
         }
 
-        public Builder setLicenseType(@Nullable String licenseType) {
+        public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = licenseType;
             return this;
         }
 
-        public Builder setOSDetails(@Nullable OSDetailsResponse oSDetails) {
+        public Builder oSDetails(@Nullable OSDetailsResponse oSDetails) {
             this.oSDetails = oSDetails;
             return this;
         }
 
-        public Builder setRecoveryAvailabilitySetId(@Nullable String recoveryAvailabilitySetId) {
+        public Builder recoveryAvailabilitySetId(@Nullable String recoveryAvailabilitySetId) {
             this.recoveryAvailabilitySetId = recoveryAvailabilitySetId;
             return this;
         }
 
-        public Builder setRecoveryAzureLogStorageAccountId(@Nullable String recoveryAzureLogStorageAccountId) {
+        public Builder recoveryAzureLogStorageAccountId(@Nullable String recoveryAzureLogStorageAccountId) {
             this.recoveryAzureLogStorageAccountId = recoveryAzureLogStorageAccountId;
             return this;
         }
 
-        public Builder setRecoveryAzureResourceGroupId(@Nullable String recoveryAzureResourceGroupId) {
+        public Builder recoveryAzureResourceGroupId(@Nullable String recoveryAzureResourceGroupId) {
             this.recoveryAzureResourceGroupId = recoveryAzureResourceGroupId;
             return this;
         }
 
-        public Builder setRecoveryAzureStorageAccount(@Nullable String recoveryAzureStorageAccount) {
+        public Builder recoveryAzureStorageAccount(@Nullable String recoveryAzureStorageAccount) {
             this.recoveryAzureStorageAccount = recoveryAzureStorageAccount;
             return this;
         }
 
-        public Builder setRecoveryAzureVMSize(@Nullable String recoveryAzureVMSize) {
+        public Builder recoveryAzureVMSize(@Nullable String recoveryAzureVMSize) {
             this.recoveryAzureVMSize = recoveryAzureVMSize;
             return this;
         }
 
-        public Builder setRecoveryAzureVmName(@Nullable String recoveryAzureVmName) {
+        public Builder recoveryAzureVmName(@Nullable String recoveryAzureVmName) {
             this.recoveryAzureVmName = recoveryAzureVmName;
             return this;
         }
 
-        public Builder setRpoInSeconds(@Nullable Double rpoInSeconds) {
+        public Builder rpoInSeconds(@Nullable Double rpoInSeconds) {
             this.rpoInSeconds = rpoInSeconds;
             return this;
         }
 
-        public Builder setSelectedRecoveryAzureNetworkId(@Nullable String selectedRecoveryAzureNetworkId) {
+        public Builder selectedRecoveryAzureNetworkId(@Nullable String selectedRecoveryAzureNetworkId) {
             this.selectedRecoveryAzureNetworkId = selectedRecoveryAzureNetworkId;
             return this;
         }
 
-        public Builder setSelectedSourceNicId(@Nullable String selectedSourceNicId) {
+        public Builder selectedSourceNicId(@Nullable String selectedSourceNicId) {
             this.selectedSourceNicId = selectedSourceNicId;
             return this;
         }
 
-        public Builder setSourceVmCpuCount(@Nullable Integer sourceVmCpuCount) {
+        public Builder sourceVmCpuCount(@Nullable Integer sourceVmCpuCount) {
             this.sourceVmCpuCount = sourceVmCpuCount;
             return this;
         }
 
-        public Builder setSourceVmRamSizeInMB(@Nullable Integer sourceVmRamSizeInMB) {
+        public Builder sourceVmRamSizeInMB(@Nullable Integer sourceVmRamSizeInMB) {
             this.sourceVmRamSizeInMB = sourceVmRamSizeInMB;
             return this;
         }
 
-        public Builder setTargetAvailabilityZone(@Nullable String targetAvailabilityZone) {
+        public Builder targetAvailabilityZone(@Nullable String targetAvailabilityZone) {
             this.targetAvailabilityZone = targetAvailabilityZone;
             return this;
         }
 
-        public Builder setTargetProximityPlacementGroupId(@Nullable String targetProximityPlacementGroupId) {
+        public Builder targetProximityPlacementGroupId(@Nullable String targetProximityPlacementGroupId) {
             this.targetProximityPlacementGroupId = targetProximityPlacementGroupId;
             return this;
         }
 
-        public Builder setUseManagedDisks(@Nullable String useManagedDisks) {
+        public Builder useManagedDisks(@Nullable String useManagedDisks) {
             this.useManagedDisks = useManagedDisks;
             return this;
         }
 
-        public Builder setVmId(@Nullable String vmId) {
+        public Builder vmId(@Nullable String vmId) {
             this.vmId = vmId;
             return this;
         }
 
-        public Builder setVmNics(@Nullable List<VMNicDetailsResponse> vmNics) {
+        public Builder vmNics(@Nullable List<VMNicDetailsResponse> vmNics) {
             this.vmNics = vmNics;
             return this;
         }
 
-        public Builder setVmProtectionState(@Nullable String vmProtectionState) {
+        public Builder vmProtectionState(@Nullable String vmProtectionState) {
             this.vmProtectionState = vmProtectionState;
             return this;
         }
 
-        public Builder setVmProtectionStateDescription(@Nullable String vmProtectionStateDescription) {
+        public Builder vmProtectionStateDescription(@Nullable String vmProtectionStateDescription) {
             this.vmProtectionStateDescription = vmProtectionStateDescription;
             return this;
         }

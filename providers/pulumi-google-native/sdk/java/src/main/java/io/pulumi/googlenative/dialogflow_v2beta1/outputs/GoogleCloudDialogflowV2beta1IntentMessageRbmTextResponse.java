@@ -67,12 +67,12 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse {
     	      this.text = defaults.text;
         }
 
-        public Builder setRbmSuggestion(List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> rbmSuggestion) {
+        public Builder rbmSuggestion(List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> rbmSuggestion) {
             this.rbmSuggestion = Objects.requireNonNull(rbmSuggestion);
             return this;
         }
 
-        public Builder setText(String text) {
+        public Builder text(String text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }

@@ -76,12 +76,12 @@ public final class MitigationActionAddThingsToThingGroupParams extends io.pulumi
     	      this.thingGroupNames = defaults.thingGroupNames;
         }
 
-        public Builder setOverrideDynamicGroups(@Nullable Boolean overrideDynamicGroups) {
+        public Builder overrideDynamicGroups(@Nullable Boolean overrideDynamicGroups) {
             this.overrideDynamicGroups = overrideDynamicGroups;
             return this;
         }
 
-        public Builder setThingGroupNames(List<String> thingGroupNames) {
+        public Builder thingGroupNames(List<String> thingGroupNames) {
             this.thingGroupNames = Objects.requireNonNull(thingGroupNames);
             return this;
         }

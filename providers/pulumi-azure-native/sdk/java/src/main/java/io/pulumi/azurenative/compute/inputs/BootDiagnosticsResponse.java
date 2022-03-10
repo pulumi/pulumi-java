@@ -75,12 +75,12 @@ public final class BootDiagnosticsResponse extends io.pulumi.resources.InvokeArg
     	      this.storageUri = defaults.storageUri;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setStorageUri(@Nullable String storageUri) {
+        public Builder storageUri(@Nullable String storageUri) {
             this.storageUri = storageUri;
             return this;
         }

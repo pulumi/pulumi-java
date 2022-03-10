@@ -92,32 +92,32 @@ public final class HttpSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.routes = defaults.routes;
         }
 
-        public Builder setForwardProxy(@Nullable Input<ForwardProxyArgs> forwardProxy) {
+        public Builder forwardProxy(@Nullable Input<ForwardProxyArgs> forwardProxy) {
             this.forwardProxy = forwardProxy;
             return this;
         }
 
-        public Builder setForwardProxy(@Nullable ForwardProxyArgs forwardProxy) {
+        public Builder forwardProxy(@Nullable ForwardProxyArgs forwardProxy) {
             this.forwardProxy = Input.ofNullable(forwardProxy);
             return this;
         }
 
-        public Builder setRequireHttps(@Nullable Input<Boolean> requireHttps) {
+        public Builder requireHttps(@Nullable Input<Boolean> requireHttps) {
             this.requireHttps = requireHttps;
             return this;
         }
 
-        public Builder setRequireHttps(@Nullable Boolean requireHttps) {
+        public Builder requireHttps(@Nullable Boolean requireHttps) {
             this.requireHttps = Input.ofNullable(requireHttps);
             return this;
         }
 
-        public Builder setRoutes(@Nullable Input<HttpSettingsRoutesArgs> routes) {
+        public Builder routes(@Nullable Input<HttpSettingsRoutesArgs> routes) {
             this.routes = routes;
             return this;
         }
 
-        public Builder setRoutes(@Nullable HttpSettingsRoutesArgs routes) {
+        public Builder routes(@Nullable HttpSettingsRoutesArgs routes) {
             this.routes = Input.ofNullable(routes);
             return this;
         }

@@ -89,17 +89,17 @@ public final class ResourcePolicyDailyCycleResponse extends io.pulumi.resources.
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setDaysInCycle(Integer daysInCycle) {
+        public Builder daysInCycle(Integer daysInCycle) {
             this.daysInCycle = Objects.requireNonNull(daysInCycle);
             return this;
         }
 
-        public Builder setDuration(String duration) {
+        public Builder duration(String duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }

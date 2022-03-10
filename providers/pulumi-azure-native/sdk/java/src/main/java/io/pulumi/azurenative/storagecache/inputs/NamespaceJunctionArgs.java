@@ -106,42 +106,42 @@ public final class NamespaceJunctionArgs extends io.pulumi.resources.ResourceArg
     	      this.targetPath = defaults.targetPath;
         }
 
-        public Builder setNamespacePath(@Nullable Input<String> namespacePath) {
+        public Builder namespacePath(@Nullable Input<String> namespacePath) {
             this.namespacePath = namespacePath;
             return this;
         }
 
-        public Builder setNamespacePath(@Nullable String namespacePath) {
+        public Builder namespacePath(@Nullable String namespacePath) {
             this.namespacePath = Input.ofNullable(namespacePath);
             return this;
         }
 
-        public Builder setNfsAccessPolicy(@Nullable Input<String> nfsAccessPolicy) {
+        public Builder nfsAccessPolicy(@Nullable Input<String> nfsAccessPolicy) {
             this.nfsAccessPolicy = nfsAccessPolicy;
             return this;
         }
 
-        public Builder setNfsAccessPolicy(@Nullable String nfsAccessPolicy) {
+        public Builder nfsAccessPolicy(@Nullable String nfsAccessPolicy) {
             this.nfsAccessPolicy = Input.ofNullable(nfsAccessPolicy);
             return this;
         }
 
-        public Builder setNfsExport(@Nullable Input<String> nfsExport) {
+        public Builder nfsExport(@Nullable Input<String> nfsExport) {
             this.nfsExport = nfsExport;
             return this;
         }
 
-        public Builder setNfsExport(@Nullable String nfsExport) {
+        public Builder nfsExport(@Nullable String nfsExport) {
             this.nfsExport = Input.ofNullable(nfsExport);
             return this;
         }
 
-        public Builder setTargetPath(@Nullable Input<String> targetPath) {
+        public Builder targetPath(@Nullable Input<String> targetPath) {
             this.targetPath = targetPath;
             return this;
         }
 
-        public Builder setTargetPath(@Nullable String targetPath) {
+        public Builder targetPath(@Nullable String targetPath) {
             this.targetPath = Input.ofNullable(targetPath);
             return this;
         }

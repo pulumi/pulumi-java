@@ -120,62 +120,62 @@ public final class ImportJobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.protectionLevel = defaults.protectionLevel;
         }
 
-        public Builder setImportJobId(Input<String> importJobId) {
+        public Builder importJobId(Input<String> importJobId) {
             this.importJobId = Objects.requireNonNull(importJobId);
             return this;
         }
 
-        public Builder setImportJobId(String importJobId) {
+        public Builder importJobId(String importJobId) {
             this.importJobId = Input.of(Objects.requireNonNull(importJobId));
             return this;
         }
 
-        public Builder setImportMethod(Input<ImportJobImportMethod> importMethod) {
+        public Builder importMethod(Input<ImportJobImportMethod> importMethod) {
             this.importMethod = Objects.requireNonNull(importMethod);
             return this;
         }
 
-        public Builder setImportMethod(ImportJobImportMethod importMethod) {
+        public Builder importMethod(ImportJobImportMethod importMethod) {
             this.importMethod = Input.of(Objects.requireNonNull(importMethod));
             return this;
         }
 
-        public Builder setKeyRingId(Input<String> keyRingId) {
+        public Builder keyRingId(Input<String> keyRingId) {
             this.keyRingId = Objects.requireNonNull(keyRingId);
             return this;
         }
 
-        public Builder setKeyRingId(String keyRingId) {
+        public Builder keyRingId(String keyRingId) {
             this.keyRingId = Input.of(Objects.requireNonNull(keyRingId));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setProtectionLevel(Input<ImportJobProtectionLevel> protectionLevel) {
+        public Builder protectionLevel(Input<ImportJobProtectionLevel> protectionLevel) {
             this.protectionLevel = Objects.requireNonNull(protectionLevel);
             return this;
         }
 
-        public Builder setProtectionLevel(ImportJobProtectionLevel protectionLevel) {
+        public Builder protectionLevel(ImportJobProtectionLevel protectionLevel) {
             this.protectionLevel = Input.of(Objects.requireNonNull(protectionLevel));
             return this;
         }

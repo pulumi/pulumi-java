@@ -206,52 +206,52 @@ public final class ServerEndpointCloudTieringStatusResponse extends io.pulumi.re
     	      this.volumeFreeSpacePolicyStatus = defaults.volumeFreeSpacePolicyStatus;
         }
 
-        public Builder setCachePerformance(CloudTieringCachePerformanceResponse cachePerformance) {
+        public Builder cachePerformance(CloudTieringCachePerformanceResponse cachePerformance) {
             this.cachePerformance = Objects.requireNonNull(cachePerformance);
             return this;
         }
 
-        public Builder setDatePolicyStatus(CloudTieringDatePolicyStatusResponse datePolicyStatus) {
+        public Builder datePolicyStatus(CloudTieringDatePolicyStatusResponse datePolicyStatus) {
             this.datePolicyStatus = Objects.requireNonNull(datePolicyStatus);
             return this;
         }
 
-        public Builder setFilesNotTiering(CloudTieringFilesNotTieringResponse filesNotTiering) {
+        public Builder filesNotTiering(CloudTieringFilesNotTieringResponse filesNotTiering) {
             this.filesNotTiering = Objects.requireNonNull(filesNotTiering);
             return this;
         }
 
-        public Builder setHealth(String health) {
+        public Builder health(String health) {
             this.health = Objects.requireNonNull(health);
             return this;
         }
 
-        public Builder setHealthLastUpdatedTimestamp(String healthLastUpdatedTimestamp) {
+        public Builder healthLastUpdatedTimestamp(String healthLastUpdatedTimestamp) {
             this.healthLastUpdatedTimestamp = Objects.requireNonNull(healthLastUpdatedTimestamp);
             return this;
         }
 
-        public Builder setLastCloudTieringResult(Integer lastCloudTieringResult) {
+        public Builder lastCloudTieringResult(Integer lastCloudTieringResult) {
             this.lastCloudTieringResult = Objects.requireNonNull(lastCloudTieringResult);
             return this;
         }
 
-        public Builder setLastSuccessTimestamp(String lastSuccessTimestamp) {
+        public Builder lastSuccessTimestamp(String lastSuccessTimestamp) {
             this.lastSuccessTimestamp = Objects.requireNonNull(lastSuccessTimestamp);
             return this;
         }
 
-        public Builder setLastUpdatedTimestamp(String lastUpdatedTimestamp) {
+        public Builder lastUpdatedTimestamp(String lastUpdatedTimestamp) {
             this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp);
             return this;
         }
 
-        public Builder setSpaceSavings(CloudTieringSpaceSavingsResponse spaceSavings) {
+        public Builder spaceSavings(CloudTieringSpaceSavingsResponse spaceSavings) {
             this.spaceSavings = Objects.requireNonNull(spaceSavings);
             return this;
         }
 
-        public Builder setVolumeFreeSpacePolicyStatus(CloudTieringVolumeFreeSpacePolicyStatusResponse volumeFreeSpacePolicyStatus) {
+        public Builder volumeFreeSpacePolicyStatus(CloudTieringVolumeFreeSpacePolicyStatusResponse volumeFreeSpacePolicyStatus) {
             this.volumeFreeSpacePolicyStatus = Objects.requireNonNull(volumeFreeSpacePolicyStatus);
             return this;
         }

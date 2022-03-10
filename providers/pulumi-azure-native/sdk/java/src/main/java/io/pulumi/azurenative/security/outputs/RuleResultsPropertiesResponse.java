@@ -50,7 +50,7 @@ public final class RuleResultsPropertiesResponse {
     	      this.results = defaults.results;
         }
 
-        public Builder setResults(@Nullable List<List<String>> results) {
+        public Builder results(@Nullable List<List<String>> results) {
             this.results = results;
             return this;
         }

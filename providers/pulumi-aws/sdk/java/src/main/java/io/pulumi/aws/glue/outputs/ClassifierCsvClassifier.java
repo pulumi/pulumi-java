@@ -133,32 +133,32 @@ public final class ClassifierCsvClassifier {
     	      this.quoteSymbol = defaults.quoteSymbol;
         }
 
-        public Builder setAllowSingleColumn(@Nullable Boolean allowSingleColumn) {
+        public Builder allowSingleColumn(@Nullable Boolean allowSingleColumn) {
             this.allowSingleColumn = allowSingleColumn;
             return this;
         }
 
-        public Builder setContainsHeader(@Nullable String containsHeader) {
+        public Builder containsHeader(@Nullable String containsHeader) {
             this.containsHeader = containsHeader;
             return this;
         }
 
-        public Builder setDelimiter(@Nullable String delimiter) {
+        public Builder delimiter(@Nullable String delimiter) {
             this.delimiter = delimiter;
             return this;
         }
 
-        public Builder setDisableValueTrimming(@Nullable Boolean disableValueTrimming) {
+        public Builder disableValueTrimming(@Nullable Boolean disableValueTrimming) {
             this.disableValueTrimming = disableValueTrimming;
             return this;
         }
 
-        public Builder setHeaders(@Nullable List<String> headers) {
+        public Builder headers(@Nullable List<String> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setQuoteSymbol(@Nullable String quoteSymbol) {
+        public Builder quoteSymbol(@Nullable String quoteSymbol) {
             this.quoteSymbol = quoteSymbol;
             return this;
         }

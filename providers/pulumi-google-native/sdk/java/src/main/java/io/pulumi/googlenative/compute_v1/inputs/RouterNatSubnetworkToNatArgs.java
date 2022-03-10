@@ -92,32 +92,32 @@ public final class RouterNatSubnetworkToNatArgs extends io.pulumi.resources.Reso
     	      this.sourceIpRangesToNat = defaults.sourceIpRangesToNat;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSecondaryIpRangeNames(@Nullable Input<List<String>> secondaryIpRangeNames) {
+        public Builder secondaryIpRangeNames(@Nullable Input<List<String>> secondaryIpRangeNames) {
             this.secondaryIpRangeNames = secondaryIpRangeNames;
             return this;
         }
 
-        public Builder setSecondaryIpRangeNames(@Nullable List<String> secondaryIpRangeNames) {
+        public Builder secondaryIpRangeNames(@Nullable List<String> secondaryIpRangeNames) {
             this.secondaryIpRangeNames = Input.ofNullable(secondaryIpRangeNames);
             return this;
         }
 
-        public Builder setSourceIpRangesToNat(@Nullable Input<List<RouterNatSubnetworkToNatSourceIpRangesToNatItem>> sourceIpRangesToNat) {
+        public Builder sourceIpRangesToNat(@Nullable Input<List<RouterNatSubnetworkToNatSourceIpRangesToNatItem>> sourceIpRangesToNat) {
             this.sourceIpRangesToNat = sourceIpRangesToNat;
             return this;
         }
 
-        public Builder setSourceIpRangesToNat(@Nullable List<RouterNatSubnetworkToNatSourceIpRangesToNatItem> sourceIpRangesToNat) {
+        public Builder sourceIpRangesToNat(@Nullable List<RouterNatSubnetworkToNatSourceIpRangesToNatItem> sourceIpRangesToNat) {
             this.sourceIpRangesToNat = Input.ofNullable(sourceIpRangesToNat);
             return this;
         }

@@ -99,22 +99,22 @@ public final class ScriptReferenceResponse {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setScriptArguments(@Nullable String scriptArguments) {
+        public Builder scriptArguments(@Nullable String scriptArguments) {
             this.scriptArguments = scriptArguments;
             return this;
         }
 
-        public Builder setScriptData(@Nullable String scriptData) {
+        public Builder scriptData(@Nullable String scriptData) {
             this.scriptData = scriptData;
             return this;
         }
 
-        public Builder setScriptSource(@Nullable String scriptSource) {
+        public Builder scriptSource(@Nullable String scriptSource) {
             this.scriptSource = scriptSource;
             return this;
         }
 
-        public Builder setTimeout(@Nullable String timeout) {
+        public Builder timeout(@Nullable String timeout) {
             this.timeout = timeout;
             return this;
         }

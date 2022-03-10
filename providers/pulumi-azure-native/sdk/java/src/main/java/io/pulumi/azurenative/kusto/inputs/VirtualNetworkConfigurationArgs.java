@@ -89,32 +89,32 @@ public final class VirtualNetworkConfigurationArgs extends io.pulumi.resources.R
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setDataManagementPublicIpId(Input<String> dataManagementPublicIpId) {
+        public Builder dataManagementPublicIpId(Input<String> dataManagementPublicIpId) {
             this.dataManagementPublicIpId = Objects.requireNonNull(dataManagementPublicIpId);
             return this;
         }
 
-        public Builder setDataManagementPublicIpId(String dataManagementPublicIpId) {
+        public Builder dataManagementPublicIpId(String dataManagementPublicIpId) {
             this.dataManagementPublicIpId = Input.of(Objects.requireNonNull(dataManagementPublicIpId));
             return this;
         }
 
-        public Builder setEnginePublicIpId(Input<String> enginePublicIpId) {
+        public Builder enginePublicIpId(Input<String> enginePublicIpId) {
             this.enginePublicIpId = Objects.requireNonNull(enginePublicIpId);
             return this;
         }
 
-        public Builder setEnginePublicIpId(String enginePublicIpId) {
+        public Builder enginePublicIpId(String enginePublicIpId) {
             this.enginePublicIpId = Input.of(Objects.requireNonNull(enginePublicIpId));
             return this;
         }
 
-        public Builder setSubnetId(Input<String> subnetId) {
+        public Builder subnetId(Input<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
-        public Builder setSubnetId(String subnetId) {
+        public Builder subnetId(String subnetId) {
             this.subnetId = Input.of(Objects.requireNonNull(subnetId));
             return this;
         }

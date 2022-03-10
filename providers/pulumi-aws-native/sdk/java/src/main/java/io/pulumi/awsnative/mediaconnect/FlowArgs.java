@@ -104,42 +104,42 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sourceFailoverConfig = defaults.sourceFailoverConfig;
         }
 
-        public Builder setAvailabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Input.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSource(Input<FlowSourceArgs> source) {
+        public Builder source(Input<FlowSourceArgs> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setSource(FlowSourceArgs source) {
+        public Builder source(FlowSourceArgs source) {
             this.source = Input.of(Objects.requireNonNull(source));
             return this;
         }
 
-        public Builder setSourceFailoverConfig(@Nullable Input<FlowFailoverConfigArgs> sourceFailoverConfig) {
+        public Builder sourceFailoverConfig(@Nullable Input<FlowFailoverConfigArgs> sourceFailoverConfig) {
             this.sourceFailoverConfig = sourceFailoverConfig;
             return this;
         }
 
-        public Builder setSourceFailoverConfig(@Nullable FlowFailoverConfigArgs sourceFailoverConfig) {
+        public Builder sourceFailoverConfig(@Nullable FlowFailoverConfigArgs sourceFailoverConfig) {
             this.sourceFailoverConfig = Input.ofNullable(sourceFailoverConfig);
             return this;
         }

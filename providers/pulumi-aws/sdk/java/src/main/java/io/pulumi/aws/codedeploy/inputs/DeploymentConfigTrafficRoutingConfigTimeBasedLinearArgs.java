@@ -70,22 +70,22 @@ public final class DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs exten
     	      this.percentage = defaults.percentage;
         }
 
-        public Builder setInterval(@Nullable Input<Integer> interval) {
+        public Builder interval(@Nullable Input<Integer> interval) {
             this.interval = interval;
             return this;
         }
 
-        public Builder setInterval(@Nullable Integer interval) {
+        public Builder interval(@Nullable Integer interval) {
             this.interval = Input.ofNullable(interval);
             return this;
         }
 
-        public Builder setPercentage(@Nullable Input<Integer> percentage) {
+        public Builder percentage(@Nullable Input<Integer> percentage) {
             this.percentage = percentage;
             return this;
         }
 
-        public Builder setPercentage(@Nullable Integer percentage) {
+        public Builder percentage(@Nullable Integer percentage) {
             this.percentage = Input.ofNullable(percentage);
             return this;
         }

@@ -89,17 +89,17 @@ public final class EdgeCacheOriginTimeout {
     	      this.responseTimeout = defaults.responseTimeout;
         }
 
-        public Builder setConnectTimeout(@Nullable String connectTimeout) {
+        public Builder connectTimeout(@Nullable String connectTimeout) {
             this.connectTimeout = connectTimeout;
             return this;
         }
 
-        public Builder setMaxAttemptsTimeout(@Nullable String maxAttemptsTimeout) {
+        public Builder maxAttemptsTimeout(@Nullable String maxAttemptsTimeout) {
             this.maxAttemptsTimeout = maxAttemptsTimeout;
             return this;
         }
 
-        public Builder setResponseTimeout(@Nullable String responseTimeout) {
+        public Builder responseTimeout(@Nullable String responseTimeout) {
             this.responseTimeout = responseTimeout;
             return this;
         }

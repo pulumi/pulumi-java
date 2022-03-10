@@ -82,17 +82,17 @@ public final class TpuConfigResponse {
     	      this.useServiceNetworking = defaults.useServiceNetworking;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setIpv4CidrBlock(String ipv4CidrBlock) {
+        public Builder ipv4CidrBlock(String ipv4CidrBlock) {
             this.ipv4CidrBlock = Objects.requireNonNull(ipv4CidrBlock);
             return this;
         }
 
-        public Builder setUseServiceNetworking(Boolean useServiceNetworking) {
+        public Builder useServiceNetworking(Boolean useServiceNetworking) {
             this.useServiceNetworking = Objects.requireNonNull(useServiceNetworking);
             return this;
         }

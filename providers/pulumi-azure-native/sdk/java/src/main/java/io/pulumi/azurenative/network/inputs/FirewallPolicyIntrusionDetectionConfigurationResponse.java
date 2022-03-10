@@ -76,12 +76,12 @@ public final class FirewallPolicyIntrusionDetectionConfigurationResponse extends
     	      this.signatureOverrides = defaults.signatureOverrides;
         }
 
-        public Builder setBypassTrafficSettings(@Nullable List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse> bypassTrafficSettings) {
+        public Builder bypassTrafficSettings(@Nullable List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse> bypassTrafficSettings) {
             this.bypassTrafficSettings = bypassTrafficSettings;
             return this;
         }
 
-        public Builder setSignatureOverrides(@Nullable List<FirewallPolicyIntrusionDetectionSignatureSpecificationResponse> signatureOverrides) {
+        public Builder signatureOverrides(@Nullable List<FirewallPolicyIntrusionDetectionSignatureSpecificationResponse> signatureOverrides) {
             this.signatureOverrides = signatureOverrides;
             return this;
         }

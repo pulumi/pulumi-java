@@ -76,22 +76,22 @@ public final class MonitoringScheduleMonitoringOutputConfigArgs extends io.pulum
     	      this.monitoringOutputs = defaults.monitoringOutputs;
         }
 
-        public Builder setKmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Input.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder setMonitoringOutputs(Input<List<MonitoringScheduleMonitoringOutputArgs>> monitoringOutputs) {
+        public Builder monitoringOutputs(Input<List<MonitoringScheduleMonitoringOutputArgs>> monitoringOutputs) {
             this.monitoringOutputs = Objects.requireNonNull(monitoringOutputs);
             return this;
         }
 
-        public Builder setMonitoringOutputs(List<MonitoringScheduleMonitoringOutputArgs> monitoringOutputs) {
+        public Builder monitoringOutputs(List<MonitoringScheduleMonitoringOutputArgs> monitoringOutputs) {
             this.monitoringOutputs = Input.of(Objects.requireNonNull(monitoringOutputs));
             return this;
         }

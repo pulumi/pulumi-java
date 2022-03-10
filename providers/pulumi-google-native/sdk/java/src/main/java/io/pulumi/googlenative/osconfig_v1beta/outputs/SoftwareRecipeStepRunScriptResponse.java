@@ -83,17 +83,17 @@ public final class SoftwareRecipeStepRunScriptResponse {
     	      this.script = defaults.script;
         }
 
-        public Builder setAllowedExitCodes(List<Integer> allowedExitCodes) {
+        public Builder allowedExitCodes(List<Integer> allowedExitCodes) {
             this.allowedExitCodes = Objects.requireNonNull(allowedExitCodes);
             return this;
         }
 
-        public Builder setInterpreter(String interpreter) {
+        public Builder interpreter(String interpreter) {
             this.interpreter = Objects.requireNonNull(interpreter);
             return this;
         }
 
-        public Builder setScript(String script) {
+        public Builder script(String script) {
             this.script = Objects.requireNonNull(script);
             return this;
         }

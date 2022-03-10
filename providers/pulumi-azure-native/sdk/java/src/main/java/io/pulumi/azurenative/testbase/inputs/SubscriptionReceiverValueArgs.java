@@ -90,32 +90,32 @@ public final class SubscriptionReceiverValueArgs extends io.pulumi.resources.Res
     	      this.subscriptionName = defaults.subscriptionName;
         }
 
-        public Builder setRole(@Nullable Input<String> role) {
+        public Builder role(@Nullable Input<String> role) {
             this.role = role;
             return this;
         }
 
-        public Builder setRole(@Nullable String role) {
+        public Builder role(@Nullable String role) {
             this.role = Input.ofNullable(role);
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable Input<String> subscriptionId) {
+        public Builder subscriptionId(@Nullable Input<String> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable String subscriptionId) {
+        public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = Input.ofNullable(subscriptionId);
             return this;
         }
 
-        public Builder setSubscriptionName(@Nullable Input<String> subscriptionName) {
+        public Builder subscriptionName(@Nullable Input<String> subscriptionName) {
             this.subscriptionName = subscriptionName;
             return this;
         }
 
-        public Builder setSubscriptionName(@Nullable String subscriptionName) {
+        public Builder subscriptionName(@Nullable String subscriptionName) {
             this.subscriptionName = Input.ofNullable(subscriptionName);
             return this;
         }

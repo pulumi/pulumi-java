@@ -52,12 +52,12 @@ public final class StreamKinesisConfiguration {
     	      this.streamArn = defaults.streamArn;
         }
 
-        public Builder setAggregationEnabled(@Nullable Boolean aggregationEnabled) {
+        public Builder aggregationEnabled(@Nullable Boolean aggregationEnabled) {
             this.aggregationEnabled = aggregationEnabled;
             return this;
         }
 
-        public Builder setStreamArn(@Nullable String streamArn) {
+        public Builder streamArn(@Nullable String streamArn) {
             this.streamArn = streamArn;
             return this;
         }

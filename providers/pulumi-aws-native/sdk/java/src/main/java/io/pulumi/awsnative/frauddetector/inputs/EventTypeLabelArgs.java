@@ -141,72 +141,72 @@ public final class EventTypeLabelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable Input<String> createdTime) {
+        public Builder createdTime(@Nullable Input<String> createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = Input.ofNullable(createdTime);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setInline(@Nullable Input<Boolean> inline) {
+        public Builder inline(@Nullable Input<Boolean> inline) {
             this.inline = inline;
             return this;
         }
 
-        public Builder setInline(@Nullable Boolean inline) {
+        public Builder inline(@Nullable Boolean inline) {
             this.inline = Input.ofNullable(inline);
             return this;
         }
 
-        public Builder setLastUpdatedTime(@Nullable Input<String> lastUpdatedTime) {
+        public Builder lastUpdatedTime(@Nullable Input<String> lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
 
-        public Builder setLastUpdatedTime(@Nullable String lastUpdatedTime) {
+        public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = Input.ofNullable(lastUpdatedTime);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<EventTypeTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<EventTypeTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<EventTypeTagArgs> tags) {
+        public Builder tags(@Nullable List<EventTypeTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

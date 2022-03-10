@@ -56,7 +56,7 @@ public final class SystemParametersResponse extends io.pulumi.resources.InvokeAr
     	      this.rules = defaults.rules;
         }
 
-        public Builder setRules(List<SystemParameterRuleResponse> rules) {
+        public Builder rules(List<SystemParameterRuleResponse> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }

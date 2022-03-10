@@ -103,22 +103,22 @@ public final class GetProfilingGroupResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAgentPermissions(@Nullable AgentPermissionsProperties agentPermissions) {
+        public Builder agentPermissions(@Nullable AgentPermissionsProperties agentPermissions) {
             this.agentPermissions = agentPermissions;
             return this;
         }
 
-        public Builder setAnomalyDetectionNotificationConfiguration(@Nullable List<ProfilingGroupChannel> anomalyDetectionNotificationConfiguration) {
+        public Builder anomalyDetectionNotificationConfiguration(@Nullable List<ProfilingGroupChannel> anomalyDetectionNotificationConfiguration) {
             this.anomalyDetectionNotificationConfiguration = anomalyDetectionNotificationConfiguration;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ProfilingGroupTag> tags) {
+        public Builder tags(@Nullable List<ProfilingGroupTag> tags) {
             this.tags = tags;
             return this;
         }

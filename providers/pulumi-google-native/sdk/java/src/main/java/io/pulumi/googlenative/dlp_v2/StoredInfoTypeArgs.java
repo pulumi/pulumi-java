@@ -95,42 +95,42 @@ public final class StoredInfoTypeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.storedInfoTypeId = defaults.storedInfoTypeId;
         }
 
-        public Builder setConfig(Input<GooglePrivacyDlpV2StoredInfoTypeConfigArgs> config) {
+        public Builder config(Input<GooglePrivacyDlpV2StoredInfoTypeConfigArgs> config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
-        public Builder setConfig(GooglePrivacyDlpV2StoredInfoTypeConfigArgs config) {
+        public Builder config(GooglePrivacyDlpV2StoredInfoTypeConfigArgs config) {
             this.config = Input.of(Objects.requireNonNull(config));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setStoredInfoTypeId(@Nullable Input<String> storedInfoTypeId) {
+        public Builder storedInfoTypeId(@Nullable Input<String> storedInfoTypeId) {
             this.storedInfoTypeId = storedInfoTypeId;
             return this;
         }
 
-        public Builder setStoredInfoTypeId(@Nullable String storedInfoTypeId) {
+        public Builder storedInfoTypeId(@Nullable String storedInfoTypeId) {
             this.storedInfoTypeId = Input.ofNullable(storedInfoTypeId);
             return this;
         }

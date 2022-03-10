@@ -259,72 +259,72 @@ public final class GetRegionTargetHttpsProxyResult {
     	      this.urlMap = defaults.urlMap;
         }
 
-        public Builder setAuthorizationPolicy(String authorizationPolicy) {
+        public Builder authorizationPolicy(String authorizationPolicy) {
             this.authorizationPolicy = Objects.requireNonNull(authorizationPolicy);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setFingerprint(String fingerprint) {
+        public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProxyBind(Boolean proxyBind) {
+        public Builder proxyBind(Boolean proxyBind) {
             this.proxyBind = Objects.requireNonNull(proxyBind);
             return this;
         }
 
-        public Builder setQuicOverride(String quicOverride) {
+        public Builder quicOverride(String quicOverride) {
             this.quicOverride = Objects.requireNonNull(quicOverride);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setServerTlsPolicy(String serverTlsPolicy) {
+        public Builder serverTlsPolicy(String serverTlsPolicy) {
             this.serverTlsPolicy = Objects.requireNonNull(serverTlsPolicy);
             return this;
         }
 
-        public Builder setSslCertificates(List<String> sslCertificates) {
+        public Builder sslCertificates(List<String> sslCertificates) {
             this.sslCertificates = Objects.requireNonNull(sslCertificates);
             return this;
         }
 
-        public Builder setSslPolicy(String sslPolicy) {
+        public Builder sslPolicy(String sslPolicy) {
             this.sslPolicy = Objects.requireNonNull(sslPolicy);
             return this;
         }
 
-        public Builder setUrlMap(String urlMap) {
+        public Builder urlMap(String urlMap) {
             this.urlMap = Objects.requireNonNull(urlMap);
             return this;
         }

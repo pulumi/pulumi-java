@@ -106,52 +106,52 @@ public final class CIFSMountConfigurationArgs extends io.pulumi.resources.Resour
     	      this.username = defaults.username;
         }
 
-        public Builder setMountOptions(@Nullable Input<String> mountOptions) {
+        public Builder mountOptions(@Nullable Input<String> mountOptions) {
             this.mountOptions = mountOptions;
             return this;
         }
 
-        public Builder setMountOptions(@Nullable String mountOptions) {
+        public Builder mountOptions(@Nullable String mountOptions) {
             this.mountOptions = Input.ofNullable(mountOptions);
             return this;
         }
 
-        public Builder setPassword(Input<String> password) {
+        public Builder password(Input<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Input.of(Objects.requireNonNull(password));
             return this;
         }
 
-        public Builder setRelativeMountPath(Input<String> relativeMountPath) {
+        public Builder relativeMountPath(Input<String> relativeMountPath) {
             this.relativeMountPath = Objects.requireNonNull(relativeMountPath);
             return this;
         }
 
-        public Builder setRelativeMountPath(String relativeMountPath) {
+        public Builder relativeMountPath(String relativeMountPath) {
             this.relativeMountPath = Input.of(Objects.requireNonNull(relativeMountPath));
             return this;
         }
 
-        public Builder setSource(Input<String> source) {
+        public Builder source(Input<String> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Input.of(Objects.requireNonNull(source));
             return this;
         }
 
-        public Builder setUsername(Input<String> username) {
+        public Builder username(Input<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Input.of(Objects.requireNonNull(username));
             return this;
         }

@@ -66,12 +66,12 @@ public final class DistributionCutResponse {
     	      this.range = defaults.range;
         }
 
-        public Builder setDistributionFilter(String distributionFilter) {
+        public Builder distributionFilter(String distributionFilter) {
             this.distributionFilter = Objects.requireNonNull(distributionFilter);
             return this;
         }
 
-        public Builder setRange(GoogleMonitoringV3RangeResponse range) {
+        public Builder range(GoogleMonitoringV3RangeResponse range) {
             this.range = Objects.requireNonNull(range);
             return this;
         }

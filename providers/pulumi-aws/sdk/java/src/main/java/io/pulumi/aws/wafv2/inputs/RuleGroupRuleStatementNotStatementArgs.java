@@ -53,12 +53,12 @@ public final class RuleGroupRuleStatementNotStatementArgs extends io.pulumi.reso
     	      this.statements = defaults.statements;
         }
 
-        public Builder setStatements(Input<List<RuleGroupRuleStatementNotStatementStatementArgs>> statements) {
+        public Builder statements(Input<List<RuleGroupRuleStatementNotStatementStatementArgs>> statements) {
             this.statements = Objects.requireNonNull(statements);
             return this;
         }
 
-        public Builder setStatements(List<RuleGroupRuleStatementNotStatementStatementArgs> statements) {
+        public Builder statements(List<RuleGroupRuleStatementNotStatementStatementArgs> statements) {
             this.statements = Input.of(Objects.requireNonNull(statements));
             return this;
         }

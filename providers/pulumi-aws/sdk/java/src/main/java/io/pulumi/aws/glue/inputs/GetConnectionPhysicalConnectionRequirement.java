@@ -73,17 +73,17 @@ public final class GetConnectionPhysicalConnectionRequirement extends io.pulumi.
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setAvailabilityZone(String availabilityZone) {
+        public Builder availabilityZone(String availabilityZone) {
             this.availabilityZone = Objects.requireNonNull(availabilityZone);
             return this;
         }
 
-        public Builder setSecurityGroupIdLists(List<String> securityGroupIdLists) {
+        public Builder securityGroupIdLists(List<String> securityGroupIdLists) {
             this.securityGroupIdLists = Objects.requireNonNull(securityGroupIdLists);
             return this;
         }
 
-        public Builder setSubnetId(String subnetId) {
+        public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }

@@ -58,12 +58,12 @@ public final class DisallowedArgs extends io.pulumi.resources.ResourceArgs {
     	      this.diskTypes = defaults.diskTypes;
         }
 
-        public Builder setDiskTypes(@Nullable Input<List<String>> diskTypes) {
+        public Builder diskTypes(@Nullable Input<List<String>> diskTypes) {
             this.diskTypes = diskTypes;
             return this;
         }
 
-        public Builder setDiskTypes(@Nullable List<String> diskTypes) {
+        public Builder diskTypes(@Nullable List<String> diskTypes) {
             this.diskTypes = Input.ofNullable(diskTypes);
             return this;
         }

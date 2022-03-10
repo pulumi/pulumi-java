@@ -57,12 +57,12 @@ public final class EventSourceMappingOnFailureArgs extends io.pulumi.resources.R
     	      this.destination = defaults.destination;
         }
 
-        public Builder setDestination(@Nullable Input<String> destination) {
+        public Builder destination(@Nullable Input<String> destination) {
             this.destination = destination;
             return this;
         }
 
-        public Builder setDestination(@Nullable String destination) {
+        public Builder destination(@Nullable String destination) {
             this.destination = Input.ofNullable(destination);
             return this;
         }

@@ -83,17 +83,17 @@ public final class FeatureMembershipConfigmanagementHierarchyController {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setEnableHierarchicalResourceQuota(@Nullable Boolean enableHierarchicalResourceQuota) {
+        public Builder enableHierarchicalResourceQuota(@Nullable Boolean enableHierarchicalResourceQuota) {
             this.enableHierarchicalResourceQuota = enableHierarchicalResourceQuota;
             return this;
         }
 
-        public Builder setEnablePodTreeLabels(@Nullable Boolean enablePodTreeLabels) {
+        public Builder enablePodTreeLabels(@Nullable Boolean enablePodTreeLabels) {
             this.enablePodTreeLabels = enablePodTreeLabels;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }

@@ -82,17 +82,17 @@ public final class QueueReservationPlanSettings {
     	      this.reservedSlots = defaults.reservedSlots;
         }
 
-        public Builder setCommitment(String commitment) {
+        public Builder commitment(String commitment) {
             this.commitment = Objects.requireNonNull(commitment);
             return this;
         }
 
-        public Builder setRenewalType(String renewalType) {
+        public Builder renewalType(String renewalType) {
             this.renewalType = Objects.requireNonNull(renewalType);
             return this;
         }
 
-        public Builder setReservedSlots(Integer reservedSlots) {
+        public Builder reservedSlots(Integer reservedSlots) {
             this.reservedSlots = Objects.requireNonNull(reservedSlots);
             return this;
         }

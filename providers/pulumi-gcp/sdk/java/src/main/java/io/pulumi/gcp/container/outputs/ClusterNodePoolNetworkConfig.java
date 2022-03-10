@@ -84,17 +84,17 @@ public final class ClusterNodePoolNetworkConfig {
     	      this.podRange = defaults.podRange;
         }
 
-        public Builder setCreatePodRange(@Nullable Boolean createPodRange) {
+        public Builder createPodRange(@Nullable Boolean createPodRange) {
             this.createPodRange = createPodRange;
             return this;
         }
 
-        public Builder setPodIpv4CidrBlock(@Nullable String podIpv4CidrBlock) {
+        public Builder podIpv4CidrBlock(@Nullable String podIpv4CidrBlock) {
             this.podIpv4CidrBlock = podIpv4CidrBlock;
             return this;
         }
 
-        public Builder setPodRange(String podRange) {
+        public Builder podRange(String podRange) {
             this.podRange = Objects.requireNonNull(podRange);
             return this;
         }

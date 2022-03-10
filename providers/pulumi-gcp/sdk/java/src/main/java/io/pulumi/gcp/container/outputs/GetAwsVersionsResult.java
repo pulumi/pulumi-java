@@ -100,27 +100,27 @@ public final class GetAwsVersionsResult {
     	      this.validVersions = defaults.validVersions;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setSupportedRegions(List<String> supportedRegions) {
+        public Builder supportedRegions(List<String> supportedRegions) {
             this.supportedRegions = Objects.requireNonNull(supportedRegions);
             return this;
         }
 
-        public Builder setValidVersions(List<String> validVersions) {
+        public Builder validVersions(List<String> validVersions) {
             this.validVersions = Objects.requireNonNull(validVersions);
             return this;
         }

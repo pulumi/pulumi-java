@@ -74,12 +74,12 @@ public final class JobInputsResponse {
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setInputs(@Nullable List<Object> inputs) {
+        public Builder inputs(@Nullable List<Object> inputs) {
             this.inputs = inputs;
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }

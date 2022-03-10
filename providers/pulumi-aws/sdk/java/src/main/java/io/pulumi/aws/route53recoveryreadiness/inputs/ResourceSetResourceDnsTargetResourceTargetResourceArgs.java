@@ -71,22 +71,22 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceArgs extend
     	      this.r53Resource = defaults.r53Resource;
         }
 
-        public Builder setNlbResource(@Nullable Input<ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceArgs> nlbResource) {
+        public Builder nlbResource(@Nullable Input<ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceArgs> nlbResource) {
             this.nlbResource = nlbResource;
             return this;
         }
 
-        public Builder setNlbResource(@Nullable ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceArgs nlbResource) {
+        public Builder nlbResource(@Nullable ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceArgs nlbResource) {
             this.nlbResource = Input.ofNullable(nlbResource);
             return this;
         }
 
-        public Builder setR53Resource(@Nullable Input<ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceArgs> r53Resource) {
+        public Builder r53Resource(@Nullable Input<ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceArgs> r53Resource) {
             this.r53Resource = r53Resource;
             return this;
         }
 
-        public Builder setR53Resource(@Nullable ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceArgs r53Resource) {
+        public Builder r53Resource(@Nullable ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceArgs r53Resource) {
             this.r53Resource = Input.ofNullable(r53Resource);
             return this;
         }

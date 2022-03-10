@@ -100,52 +100,52 @@ public final class AnalyzerFilterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.property = defaults.property;
         }
 
-        public Builder setContains(@Nullable Input<List<String>> contains) {
+        public Builder contains(@Nullable Input<List<String>> contains) {
             this.contains = contains;
             return this;
         }
 
-        public Builder setContains(@Nullable List<String> contains) {
+        public Builder contains(@Nullable List<String> contains) {
             this.contains = Input.ofNullable(contains);
             return this;
         }
 
-        public Builder setEq(@Nullable Input<List<String>> eq) {
+        public Builder eq(@Nullable Input<List<String>> eq) {
             this.eq = eq;
             return this;
         }
 
-        public Builder setEq(@Nullable List<String> eq) {
+        public Builder eq(@Nullable List<String> eq) {
             this.eq = Input.ofNullable(eq);
             return this;
         }
 
-        public Builder setExists(@Nullable Input<Boolean> exists) {
+        public Builder exists(@Nullable Input<Boolean> exists) {
             this.exists = exists;
             return this;
         }
 
-        public Builder setExists(@Nullable Boolean exists) {
+        public Builder exists(@Nullable Boolean exists) {
             this.exists = Input.ofNullable(exists);
             return this;
         }
 
-        public Builder setNeq(@Nullable Input<List<String>> neq) {
+        public Builder neq(@Nullable Input<List<String>> neq) {
             this.neq = neq;
             return this;
         }
 
-        public Builder setNeq(@Nullable List<String> neq) {
+        public Builder neq(@Nullable List<String> neq) {
             this.neq = Input.ofNullable(neq);
             return this;
         }
 
-        public Builder setProperty(Input<String> property) {
+        public Builder property(Input<String> property) {
             this.property = Objects.requireNonNull(property);
             return this;
         }
 
-        public Builder setProperty(String property) {
+        public Builder property(String property) {
             this.property = Input.of(Objects.requireNonNull(property));
             return this;
         }

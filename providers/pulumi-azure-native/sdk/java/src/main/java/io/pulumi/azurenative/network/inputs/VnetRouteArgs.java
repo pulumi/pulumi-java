@@ -58,12 +58,12 @@ public final class VnetRouteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.staticRoutes = defaults.staticRoutes;
         }
 
-        public Builder setStaticRoutes(@Nullable Input<List<StaticRouteArgs>> staticRoutes) {
+        public Builder staticRoutes(@Nullable Input<List<StaticRouteArgs>> staticRoutes) {
             this.staticRoutes = staticRoutes;
             return this;
         }
 
-        public Builder setStaticRoutes(@Nullable List<StaticRouteArgs> staticRoutes) {
+        public Builder staticRoutes(@Nullable List<StaticRouteArgs> staticRoutes) {
             this.staticRoutes = Input.ofNullable(staticRoutes);
             return this;
         }

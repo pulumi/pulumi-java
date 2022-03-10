@@ -660,382 +660,382 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     	      this.vpcSecurityGroupIds = defaults.vpcSecurityGroupIds;
         }
 
-        public Builder setAllowVersionUpgrade(@Nullable Input<Boolean> allowVersionUpgrade) {
+        public Builder allowVersionUpgrade(@Nullable Input<Boolean> allowVersionUpgrade) {
             this.allowVersionUpgrade = allowVersionUpgrade;
             return this;
         }
 
-        public Builder setAllowVersionUpgrade(@Nullable Boolean allowVersionUpgrade) {
+        public Builder allowVersionUpgrade(@Nullable Boolean allowVersionUpgrade) {
             this.allowVersionUpgrade = Input.ofNullable(allowVersionUpgrade);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAutomatedSnapshotRetentionPeriod(@Nullable Input<Integer> automatedSnapshotRetentionPeriod) {
+        public Builder automatedSnapshotRetentionPeriod(@Nullable Input<Integer> automatedSnapshotRetentionPeriod) {
             this.automatedSnapshotRetentionPeriod = automatedSnapshotRetentionPeriod;
             return this;
         }
 
-        public Builder setAutomatedSnapshotRetentionPeriod(@Nullable Integer automatedSnapshotRetentionPeriod) {
+        public Builder automatedSnapshotRetentionPeriod(@Nullable Integer automatedSnapshotRetentionPeriod) {
             this.automatedSnapshotRetentionPeriod = Input.ofNullable(automatedSnapshotRetentionPeriod);
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Input.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder setClusterIdentifier(@Nullable Input<String> clusterIdentifier) {
+        public Builder clusterIdentifier(@Nullable Input<String> clusterIdentifier) {
             this.clusterIdentifier = clusterIdentifier;
             return this;
         }
 
-        public Builder setClusterIdentifier(@Nullable String clusterIdentifier) {
+        public Builder clusterIdentifier(@Nullable String clusterIdentifier) {
             this.clusterIdentifier = Input.ofNullable(clusterIdentifier);
             return this;
         }
 
-        public Builder setClusterNodes(@Nullable Input<List<ClusterClusterNodeGetArgs>> clusterNodes) {
+        public Builder clusterNodes(@Nullable Input<List<ClusterClusterNodeGetArgs>> clusterNodes) {
             this.clusterNodes = clusterNodes;
             return this;
         }
 
-        public Builder setClusterNodes(@Nullable List<ClusterClusterNodeGetArgs> clusterNodes) {
+        public Builder clusterNodes(@Nullable List<ClusterClusterNodeGetArgs> clusterNodes) {
             this.clusterNodes = Input.ofNullable(clusterNodes);
             return this;
         }
 
-        public Builder setClusterParameterGroupName(@Nullable Input<String> clusterParameterGroupName) {
+        public Builder clusterParameterGroupName(@Nullable Input<String> clusterParameterGroupName) {
             this.clusterParameterGroupName = clusterParameterGroupName;
             return this;
         }
 
-        public Builder setClusterParameterGroupName(@Nullable String clusterParameterGroupName) {
+        public Builder clusterParameterGroupName(@Nullable String clusterParameterGroupName) {
             this.clusterParameterGroupName = Input.ofNullable(clusterParameterGroupName);
             return this;
         }
 
-        public Builder setClusterPublicKey(@Nullable Input<String> clusterPublicKey) {
+        public Builder clusterPublicKey(@Nullable Input<String> clusterPublicKey) {
             this.clusterPublicKey = clusterPublicKey;
             return this;
         }
 
-        public Builder setClusterPublicKey(@Nullable String clusterPublicKey) {
+        public Builder clusterPublicKey(@Nullable String clusterPublicKey) {
             this.clusterPublicKey = Input.ofNullable(clusterPublicKey);
             return this;
         }
 
-        public Builder setClusterRevisionNumber(@Nullable Input<String> clusterRevisionNumber) {
+        public Builder clusterRevisionNumber(@Nullable Input<String> clusterRevisionNumber) {
             this.clusterRevisionNumber = clusterRevisionNumber;
             return this;
         }
 
-        public Builder setClusterRevisionNumber(@Nullable String clusterRevisionNumber) {
+        public Builder clusterRevisionNumber(@Nullable String clusterRevisionNumber) {
             this.clusterRevisionNumber = Input.ofNullable(clusterRevisionNumber);
             return this;
         }
 
-        public Builder setClusterSecurityGroups(@Nullable Input<List<String>> clusterSecurityGroups) {
+        public Builder clusterSecurityGroups(@Nullable Input<List<String>> clusterSecurityGroups) {
             this.clusterSecurityGroups = clusterSecurityGroups;
             return this;
         }
 
-        public Builder setClusterSecurityGroups(@Nullable List<String> clusterSecurityGroups) {
+        public Builder clusterSecurityGroups(@Nullable List<String> clusterSecurityGroups) {
             this.clusterSecurityGroups = Input.ofNullable(clusterSecurityGroups);
             return this;
         }
 
-        public Builder setClusterSubnetGroupName(@Nullable Input<String> clusterSubnetGroupName) {
+        public Builder clusterSubnetGroupName(@Nullable Input<String> clusterSubnetGroupName) {
             this.clusterSubnetGroupName = clusterSubnetGroupName;
             return this;
         }
 
-        public Builder setClusterSubnetGroupName(@Nullable String clusterSubnetGroupName) {
+        public Builder clusterSubnetGroupName(@Nullable String clusterSubnetGroupName) {
             this.clusterSubnetGroupName = Input.ofNullable(clusterSubnetGroupName);
             return this;
         }
 
-        public Builder setClusterType(@Nullable Input<String> clusterType) {
+        public Builder clusterType(@Nullable Input<String> clusterType) {
             this.clusterType = clusterType;
             return this;
         }
 
-        public Builder setClusterType(@Nullable String clusterType) {
+        public Builder clusterType(@Nullable String clusterType) {
             this.clusterType = Input.ofNullable(clusterType);
             return this;
         }
 
-        public Builder setClusterVersion(@Nullable Input<String> clusterVersion) {
+        public Builder clusterVersion(@Nullable Input<String> clusterVersion) {
             this.clusterVersion = clusterVersion;
             return this;
         }
 
-        public Builder setClusterVersion(@Nullable String clusterVersion) {
+        public Builder clusterVersion(@Nullable String clusterVersion) {
             this.clusterVersion = Input.ofNullable(clusterVersion);
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable Input<String> databaseName) {
+        public Builder databaseName(@Nullable Input<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable String databaseName) {
+        public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = Input.ofNullable(databaseName);
             return this;
         }
 
-        public Builder setDnsName(@Nullable Input<String> dnsName) {
+        public Builder dnsName(@Nullable Input<String> dnsName) {
             this.dnsName = dnsName;
             return this;
         }
 
-        public Builder setDnsName(@Nullable String dnsName) {
+        public Builder dnsName(@Nullable String dnsName) {
             this.dnsName = Input.ofNullable(dnsName);
             return this;
         }
 
-        public Builder setElasticIp(@Nullable Input<String> elasticIp) {
+        public Builder elasticIp(@Nullable Input<String> elasticIp) {
             this.elasticIp = elasticIp;
             return this;
         }
 
-        public Builder setElasticIp(@Nullable String elasticIp) {
+        public Builder elasticIp(@Nullable String elasticIp) {
             this.elasticIp = Input.ofNullable(elasticIp);
             return this;
         }
 
-        public Builder setEncrypted(@Nullable Input<Boolean> encrypted) {
+        public Builder encrypted(@Nullable Input<Boolean> encrypted) {
             this.encrypted = encrypted;
             return this;
         }
 
-        public Builder setEncrypted(@Nullable Boolean encrypted) {
+        public Builder encrypted(@Nullable Boolean encrypted) {
             this.encrypted = Input.ofNullable(encrypted);
             return this;
         }
 
-        public Builder setEndpoint(@Nullable Input<String> endpoint) {
+        public Builder endpoint(@Nullable Input<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setEndpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = Input.ofNullable(endpoint);
             return this;
         }
 
-        public Builder setEnhancedVpcRouting(@Nullable Input<Boolean> enhancedVpcRouting) {
+        public Builder enhancedVpcRouting(@Nullable Input<Boolean> enhancedVpcRouting) {
             this.enhancedVpcRouting = enhancedVpcRouting;
             return this;
         }
 
-        public Builder setEnhancedVpcRouting(@Nullable Boolean enhancedVpcRouting) {
+        public Builder enhancedVpcRouting(@Nullable Boolean enhancedVpcRouting) {
             this.enhancedVpcRouting = Input.ofNullable(enhancedVpcRouting);
             return this;
         }
 
-        public Builder setFinalSnapshotIdentifier(@Nullable Input<String> finalSnapshotIdentifier) {
+        public Builder finalSnapshotIdentifier(@Nullable Input<String> finalSnapshotIdentifier) {
             this.finalSnapshotIdentifier = finalSnapshotIdentifier;
             return this;
         }
 
-        public Builder setFinalSnapshotIdentifier(@Nullable String finalSnapshotIdentifier) {
+        public Builder finalSnapshotIdentifier(@Nullable String finalSnapshotIdentifier) {
             this.finalSnapshotIdentifier = Input.ofNullable(finalSnapshotIdentifier);
             return this;
         }
 
-        public Builder setIamRoles(@Nullable Input<List<String>> iamRoles) {
+        public Builder iamRoles(@Nullable Input<List<String>> iamRoles) {
             this.iamRoles = iamRoles;
             return this;
         }
 
-        public Builder setIamRoles(@Nullable List<String> iamRoles) {
+        public Builder iamRoles(@Nullable List<String> iamRoles) {
             this.iamRoles = Input.ofNullable(iamRoles);
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Input.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder setLogging(@Nullable Input<ClusterLoggingGetArgs> logging) {
+        public Builder logging(@Nullable Input<ClusterLoggingGetArgs> logging) {
             this.logging = logging;
             return this;
         }
 
-        public Builder setLogging(@Nullable ClusterLoggingGetArgs logging) {
+        public Builder logging(@Nullable ClusterLoggingGetArgs logging) {
             this.logging = Input.ofNullable(logging);
             return this;
         }
 
-        public Builder setMasterPassword(@Nullable Input<String> masterPassword) {
+        public Builder masterPassword(@Nullable Input<String> masterPassword) {
             this.masterPassword = masterPassword;
             return this;
         }
 
-        public Builder setMasterPassword(@Nullable String masterPassword) {
+        public Builder masterPassword(@Nullable String masterPassword) {
             this.masterPassword = Input.ofNullable(masterPassword);
             return this;
         }
 
-        public Builder setMasterUsername(@Nullable Input<String> masterUsername) {
+        public Builder masterUsername(@Nullable Input<String> masterUsername) {
             this.masterUsername = masterUsername;
             return this;
         }
 
-        public Builder setMasterUsername(@Nullable String masterUsername) {
+        public Builder masterUsername(@Nullable String masterUsername) {
             this.masterUsername = Input.ofNullable(masterUsername);
             return this;
         }
 
-        public Builder setNodeType(@Nullable Input<String> nodeType) {
+        public Builder nodeType(@Nullable Input<String> nodeType) {
             this.nodeType = nodeType;
             return this;
         }
 
-        public Builder setNodeType(@Nullable String nodeType) {
+        public Builder nodeType(@Nullable String nodeType) {
             this.nodeType = Input.ofNullable(nodeType);
             return this;
         }
 
-        public Builder setNumberOfNodes(@Nullable Input<Integer> numberOfNodes) {
+        public Builder numberOfNodes(@Nullable Input<Integer> numberOfNodes) {
             this.numberOfNodes = numberOfNodes;
             return this;
         }
 
-        public Builder setNumberOfNodes(@Nullable Integer numberOfNodes) {
+        public Builder numberOfNodes(@Nullable Integer numberOfNodes) {
             this.numberOfNodes = Input.ofNullable(numberOfNodes);
             return this;
         }
 
-        public Builder setOwnerAccount(@Nullable Input<String> ownerAccount) {
+        public Builder ownerAccount(@Nullable Input<String> ownerAccount) {
             this.ownerAccount = ownerAccount;
             return this;
         }
 
-        public Builder setOwnerAccount(@Nullable String ownerAccount) {
+        public Builder ownerAccount(@Nullable String ownerAccount) {
             this.ownerAccount = Input.ofNullable(ownerAccount);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Input<Integer> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setPreferredMaintenanceWindow(@Nullable Input<String> preferredMaintenanceWindow) {
+        public Builder preferredMaintenanceWindow(@Nullable Input<String> preferredMaintenanceWindow) {
             this.preferredMaintenanceWindow = preferredMaintenanceWindow;
             return this;
         }
 
-        public Builder setPreferredMaintenanceWindow(@Nullable String preferredMaintenanceWindow) {
+        public Builder preferredMaintenanceWindow(@Nullable String preferredMaintenanceWindow) {
             this.preferredMaintenanceWindow = Input.ofNullable(preferredMaintenanceWindow);
             return this;
         }
 
-        public Builder setPubliclyAccessible(@Nullable Input<Boolean> publiclyAccessible) {
+        public Builder publiclyAccessible(@Nullable Input<Boolean> publiclyAccessible) {
             this.publiclyAccessible = publiclyAccessible;
             return this;
         }
 
-        public Builder setPubliclyAccessible(@Nullable Boolean publiclyAccessible) {
+        public Builder publiclyAccessible(@Nullable Boolean publiclyAccessible) {
             this.publiclyAccessible = Input.ofNullable(publiclyAccessible);
             return this;
         }
 
-        public Builder setSkipFinalSnapshot(@Nullable Input<Boolean> skipFinalSnapshot) {
+        public Builder skipFinalSnapshot(@Nullable Input<Boolean> skipFinalSnapshot) {
             this.skipFinalSnapshot = skipFinalSnapshot;
             return this;
         }
 
-        public Builder setSkipFinalSnapshot(@Nullable Boolean skipFinalSnapshot) {
+        public Builder skipFinalSnapshot(@Nullable Boolean skipFinalSnapshot) {
             this.skipFinalSnapshot = Input.ofNullable(skipFinalSnapshot);
             return this;
         }
 
-        public Builder setSnapshotClusterIdentifier(@Nullable Input<String> snapshotClusterIdentifier) {
+        public Builder snapshotClusterIdentifier(@Nullable Input<String> snapshotClusterIdentifier) {
             this.snapshotClusterIdentifier = snapshotClusterIdentifier;
             return this;
         }
 
-        public Builder setSnapshotClusterIdentifier(@Nullable String snapshotClusterIdentifier) {
+        public Builder snapshotClusterIdentifier(@Nullable String snapshotClusterIdentifier) {
             this.snapshotClusterIdentifier = Input.ofNullable(snapshotClusterIdentifier);
             return this;
         }
 
-        public Builder setSnapshotCopy(@Nullable Input<ClusterSnapshotCopyGetArgs> snapshotCopy) {
+        public Builder snapshotCopy(@Nullable Input<ClusterSnapshotCopyGetArgs> snapshotCopy) {
             this.snapshotCopy = snapshotCopy;
             return this;
         }
 
-        public Builder setSnapshotCopy(@Nullable ClusterSnapshotCopyGetArgs snapshotCopy) {
+        public Builder snapshotCopy(@Nullable ClusterSnapshotCopyGetArgs snapshotCopy) {
             this.snapshotCopy = Input.ofNullable(snapshotCopy);
             return this;
         }
 
-        public Builder setSnapshotIdentifier(@Nullable Input<String> snapshotIdentifier) {
+        public Builder snapshotIdentifier(@Nullable Input<String> snapshotIdentifier) {
             this.snapshotIdentifier = snapshotIdentifier;
             return this;
         }
 
-        public Builder setSnapshotIdentifier(@Nullable String snapshotIdentifier) {
+        public Builder snapshotIdentifier(@Nullable String snapshotIdentifier) {
             this.snapshotIdentifier = Input.ofNullable(snapshotIdentifier);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setVpcSecurityGroupIds(@Nullable Input<List<String>> vpcSecurityGroupIds) {
+        public Builder vpcSecurityGroupIds(@Nullable Input<List<String>> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
 
-        public Builder setVpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
+        public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = Input.ofNullable(vpcSecurityGroupIds);
             return this;
         }

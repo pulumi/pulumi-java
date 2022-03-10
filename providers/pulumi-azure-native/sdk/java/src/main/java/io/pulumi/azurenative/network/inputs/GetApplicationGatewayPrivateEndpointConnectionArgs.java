@@ -84,17 +84,17 @@ public final class GetApplicationGatewayPrivateEndpointConnectionArgs extends io
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setApplicationGatewayName(String applicationGatewayName) {
+        public Builder applicationGatewayName(String applicationGatewayName) {
             this.applicationGatewayName = Objects.requireNonNull(applicationGatewayName);
             return this;
         }
 
-        public Builder setConnectionName(String connectionName) {
+        public Builder connectionName(String connectionName) {
             this.connectionName = Objects.requireNonNull(connectionName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

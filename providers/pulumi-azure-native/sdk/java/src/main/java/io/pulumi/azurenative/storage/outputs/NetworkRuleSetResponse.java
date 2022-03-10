@@ -119,27 +119,27 @@ public final class NetworkRuleSetResponse {
     	      this.virtualNetworkRules = defaults.virtualNetworkRules;
         }
 
-        public Builder setBypass(@Nullable String bypass) {
+        public Builder bypass(@Nullable String bypass) {
             this.bypass = bypass;
             return this;
         }
 
-        public Builder setDefaultAction(String defaultAction) {
+        public Builder defaultAction(String defaultAction) {
             this.defaultAction = Objects.requireNonNull(defaultAction);
             return this;
         }
 
-        public Builder setIpRules(@Nullable List<IPRuleResponse> ipRules) {
+        public Builder ipRules(@Nullable List<IPRuleResponse> ipRules) {
             this.ipRules = ipRules;
             return this;
         }
 
-        public Builder setResourceAccessRules(@Nullable List<ResourceAccessRuleResponse> resourceAccessRules) {
+        public Builder resourceAccessRules(@Nullable List<ResourceAccessRuleResponse> resourceAccessRules) {
             this.resourceAccessRules = resourceAccessRules;
             return this;
         }
 
-        public Builder setVirtualNetworkRules(@Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules) {
+        public Builder virtualNetworkRules(@Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules) {
             this.virtualNetworkRules = virtualNetworkRules;
             return this;
         }

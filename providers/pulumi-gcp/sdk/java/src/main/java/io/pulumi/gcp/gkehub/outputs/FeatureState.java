@@ -42,7 +42,7 @@ public final class FeatureState {
     	      this.states = defaults.states;
         }
 
-        public Builder setStates(@Nullable List<FeatureStateState> states) {
+        public Builder states(@Nullable List<FeatureStateState> states) {
             this.states = states;
             return this;
         }

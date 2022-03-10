@@ -150,37 +150,37 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends io.pu
     	      this.synchronizationId = defaults.synchronizationId;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setFilter(@Nullable String filter) {
+        public Builder filter(@Nullable String filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setOrderby(@Nullable String orderby) {
+        public Builder orderby(@Nullable String orderby) {
             this.orderby = orderby;
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setShareSubscriptionName(String shareSubscriptionName) {
+        public Builder shareSubscriptionName(String shareSubscriptionName) {
             this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName);
             return this;
         }
 
-        public Builder setSkipToken(@Nullable String skipToken) {
+        public Builder skipToken(@Nullable String skipToken) {
             this.skipToken = skipToken;
             return this;
         }
 
-        public Builder setSynchronizationId(String synchronizationId) {
+        public Builder synchronizationId(String synchronizationId) {
             this.synchronizationId = Objects.requireNonNull(synchronizationId);
             return this;
         }

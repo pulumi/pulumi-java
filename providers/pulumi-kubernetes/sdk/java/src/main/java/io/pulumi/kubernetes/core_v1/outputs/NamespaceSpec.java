@@ -50,7 +50,7 @@ public final class NamespaceSpec {
     	      this.finalizers = defaults.finalizers;
         }
 
-        public Builder setFinalizers(@Nullable List<String> finalizers) {
+        public Builder finalizers(@Nullable List<String> finalizers) {
             this.finalizers = finalizers;
             return this;
         }

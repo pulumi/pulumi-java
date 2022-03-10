@@ -197,52 +197,52 @@ public final class GetModelResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setActiveOperations(List<OperationResponse> activeOperations) {
+        public Builder activeOperations(List<OperationResponse> activeOperations) {
             this.activeOperations = Objects.requireNonNull(activeOperations);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setModelHash(String modelHash) {
+        public Builder modelHash(String modelHash) {
             this.modelHash = Objects.requireNonNull(modelHash);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setState(ModelStateResponse state) {
+        public Builder state(ModelStateResponse state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTags(List<String> tags) {
+        public Builder tags(List<String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setTfliteModel(TfLiteModelResponse tfliteModel) {
+        public Builder tfliteModel(TfLiteModelResponse tfliteModel) {
             this.tfliteModel = Objects.requireNonNull(tfliteModel);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

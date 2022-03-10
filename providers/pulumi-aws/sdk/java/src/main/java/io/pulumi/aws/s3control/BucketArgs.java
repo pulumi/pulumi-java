@@ -87,32 +87,32 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setBucket(Input<String> bucket) {
+        public Builder bucket(Input<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Input.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder setOutpostId(Input<String> outpostId) {
+        public Builder outpostId(Input<String> outpostId) {
             this.outpostId = Objects.requireNonNull(outpostId);
             return this;
         }
 
-        public Builder setOutpostId(String outpostId) {
+        public Builder outpostId(String outpostId) {
             this.outpostId = Input.of(Objects.requireNonNull(outpostId));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

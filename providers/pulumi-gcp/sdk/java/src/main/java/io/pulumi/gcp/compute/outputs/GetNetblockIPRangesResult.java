@@ -108,27 +108,27 @@ public final class GetNetblockIPRangesResult {
     	      this.rangeType = defaults.rangeType;
         }
 
-        public Builder setCidrBlocks(List<String> cidrBlocks) {
+        public Builder cidrBlocks(List<String> cidrBlocks) {
             this.cidrBlocks = Objects.requireNonNull(cidrBlocks);
             return this;
         }
 
-        public Builder setCidrBlocksIpv4s(List<String> cidrBlocksIpv4s) {
+        public Builder cidrBlocksIpv4s(List<String> cidrBlocksIpv4s) {
             this.cidrBlocksIpv4s = Objects.requireNonNull(cidrBlocksIpv4s);
             return this;
         }
 
-        public Builder setCidrBlocksIpv6s(List<String> cidrBlocksIpv6s) {
+        public Builder cidrBlocksIpv6s(List<String> cidrBlocksIpv6s) {
             this.cidrBlocksIpv6s = Objects.requireNonNull(cidrBlocksIpv6s);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setRangeType(@Nullable String rangeType) {
+        public Builder rangeType(@Nullable String rangeType) {
             this.rangeType = rangeType;
             return this;
         }

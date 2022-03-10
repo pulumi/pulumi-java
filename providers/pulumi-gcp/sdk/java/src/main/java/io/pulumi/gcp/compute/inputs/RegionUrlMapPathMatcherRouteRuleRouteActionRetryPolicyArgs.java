@@ -110,32 +110,32 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyArgs ex
     	      this.retryConditions = defaults.retryConditions;
         }
 
-        public Builder setNumRetries(Input<Integer> numRetries) {
+        public Builder numRetries(Input<Integer> numRetries) {
             this.numRetries = Objects.requireNonNull(numRetries);
             return this;
         }
 
-        public Builder setNumRetries(Integer numRetries) {
+        public Builder numRetries(Integer numRetries) {
             this.numRetries = Input.of(Objects.requireNonNull(numRetries));
             return this;
         }
 
-        public Builder setPerTryTimeout(@Nullable Input<RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeoutArgs> perTryTimeout) {
+        public Builder perTryTimeout(@Nullable Input<RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeoutArgs> perTryTimeout) {
             this.perTryTimeout = perTryTimeout;
             return this;
         }
 
-        public Builder setPerTryTimeout(@Nullable RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeoutArgs perTryTimeout) {
+        public Builder perTryTimeout(@Nullable RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeoutArgs perTryTimeout) {
             this.perTryTimeout = Input.ofNullable(perTryTimeout);
             return this;
         }
 
-        public Builder setRetryConditions(@Nullable Input<List<String>> retryConditions) {
+        public Builder retryConditions(@Nullable Input<List<String>> retryConditions) {
             this.retryConditions = retryConditions;
             return this;
         }
 
-        public Builder setRetryConditions(@Nullable List<String> retryConditions) {
+        public Builder retryConditions(@Nullable List<String> retryConditions) {
             this.retryConditions = Input.ofNullable(retryConditions);
             return this;
         }

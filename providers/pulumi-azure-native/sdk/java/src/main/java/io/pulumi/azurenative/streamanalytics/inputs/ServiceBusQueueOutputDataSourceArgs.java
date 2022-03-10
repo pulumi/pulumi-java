@@ -140,62 +140,62 @@ public final class ServiceBusQueueOutputDataSourceArgs extends io.pulumi.resourc
     	      this.type = defaults.type;
         }
 
-        public Builder setPropertyColumns(@Nullable Input<List<String>> propertyColumns) {
+        public Builder propertyColumns(@Nullable Input<List<String>> propertyColumns) {
             this.propertyColumns = propertyColumns;
             return this;
         }
 
-        public Builder setPropertyColumns(@Nullable List<String> propertyColumns) {
+        public Builder propertyColumns(@Nullable List<String> propertyColumns) {
             this.propertyColumns = Input.ofNullable(propertyColumns);
             return this;
         }
 
-        public Builder setQueueName(@Nullable Input<String> queueName) {
+        public Builder queueName(@Nullable Input<String> queueName) {
             this.queueName = queueName;
             return this;
         }
 
-        public Builder setQueueName(@Nullable String queueName) {
+        public Builder queueName(@Nullable String queueName) {
             this.queueName = Input.ofNullable(queueName);
             return this;
         }
 
-        public Builder setServiceBusNamespace(@Nullable Input<String> serviceBusNamespace) {
+        public Builder serviceBusNamespace(@Nullable Input<String> serviceBusNamespace) {
             this.serviceBusNamespace = serviceBusNamespace;
             return this;
         }
 
-        public Builder setServiceBusNamespace(@Nullable String serviceBusNamespace) {
+        public Builder serviceBusNamespace(@Nullable String serviceBusNamespace) {
             this.serviceBusNamespace = Input.ofNullable(serviceBusNamespace);
             return this;
         }
 
-        public Builder setSharedAccessPolicyKey(@Nullable Input<String> sharedAccessPolicyKey) {
+        public Builder sharedAccessPolicyKey(@Nullable Input<String> sharedAccessPolicyKey) {
             this.sharedAccessPolicyKey = sharedAccessPolicyKey;
             return this;
         }
 
-        public Builder setSharedAccessPolicyKey(@Nullable String sharedAccessPolicyKey) {
+        public Builder sharedAccessPolicyKey(@Nullable String sharedAccessPolicyKey) {
             this.sharedAccessPolicyKey = Input.ofNullable(sharedAccessPolicyKey);
             return this;
         }
 
-        public Builder setSharedAccessPolicyName(@Nullable Input<String> sharedAccessPolicyName) {
+        public Builder sharedAccessPolicyName(@Nullable Input<String> sharedAccessPolicyName) {
             this.sharedAccessPolicyName = sharedAccessPolicyName;
             return this;
         }
 
-        public Builder setSharedAccessPolicyName(@Nullable String sharedAccessPolicyName) {
+        public Builder sharedAccessPolicyName(@Nullable String sharedAccessPolicyName) {
             this.sharedAccessPolicyName = Input.ofNullable(sharedAccessPolicyName);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

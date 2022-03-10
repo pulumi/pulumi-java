@@ -67,12 +67,12 @@ public final class WorkGroupEncryptionConfiguration extends io.pulumi.resources.
     	      this.kmsKey = defaults.kmsKey;
         }
 
-        public Builder setEncryptionOption(WorkGroupEncryptionOption encryptionOption) {
+        public Builder encryptionOption(WorkGroupEncryptionOption encryptionOption) {
             this.encryptionOption = Objects.requireNonNull(encryptionOption);
             return this;
         }
 
-        public Builder setKmsKey(@Nullable String kmsKey) {
+        public Builder kmsKey(@Nullable String kmsKey) {
             this.kmsKey = kmsKey;
             return this;
         }

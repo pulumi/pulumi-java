@@ -108,42 +108,42 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
     	      this.stop = defaults.stop;
         }
 
-        public Builder setDays(Input<List<DayOfWeek>> days) {
+        public Builder days(Input<List<DayOfWeek>> days) {
             this.days = Objects.requireNonNull(days);
             return this;
         }
 
-        public Builder setDays(List<DayOfWeek> days) {
+        public Builder days(List<DayOfWeek> days) {
             this.days = Input.of(Objects.requireNonNull(days));
             return this;
         }
 
-        public Builder setRateInMbps(Input<Integer> rateInMbps) {
+        public Builder rateInMbps(Input<Integer> rateInMbps) {
             this.rateInMbps = Objects.requireNonNull(rateInMbps);
             return this;
         }
 
-        public Builder setRateInMbps(Integer rateInMbps) {
+        public Builder rateInMbps(Integer rateInMbps) {
             this.rateInMbps = Input.of(Objects.requireNonNull(rateInMbps));
             return this;
         }
 
-        public Builder setStart(Input<TimeArgs> start) {
+        public Builder start(Input<TimeArgs> start) {
             this.start = Objects.requireNonNull(start);
             return this;
         }
 
-        public Builder setStart(TimeArgs start) {
+        public Builder start(TimeArgs start) {
             this.start = Input.of(Objects.requireNonNull(start));
             return this;
         }
 
-        public Builder setStop(Input<TimeArgs> stop) {
+        public Builder stop(Input<TimeArgs> stop) {
             this.stop = Objects.requireNonNull(stop);
             return this;
         }
 
-        public Builder setStop(TimeArgs stop) {
+        public Builder stop(TimeArgs stop) {
             this.stop = Input.of(Objects.requireNonNull(stop));
             return this;
         }

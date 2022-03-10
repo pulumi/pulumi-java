@@ -678,192 +678,192 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
     	      this.zones = defaults.zones;
         }
 
-        public Builder setAuthenticationCertificates(@Nullable List<ApplicationGatewayAuthenticationCertificateResponse> authenticationCertificates) {
+        public Builder authenticationCertificates(@Nullable List<ApplicationGatewayAuthenticationCertificateResponse> authenticationCertificates) {
             this.authenticationCertificates = authenticationCertificates;
             return this;
         }
 
-        public Builder setAutoscaleConfiguration(@Nullable ApplicationGatewayAutoscaleConfigurationResponse autoscaleConfiguration) {
+        public Builder autoscaleConfiguration(@Nullable ApplicationGatewayAutoscaleConfigurationResponse autoscaleConfiguration) {
             this.autoscaleConfiguration = autoscaleConfiguration;
             return this;
         }
 
-        public Builder setBackendAddressPools(@Nullable List<ApplicationGatewayBackendAddressPoolResponse> backendAddressPools) {
+        public Builder backendAddressPools(@Nullable List<ApplicationGatewayBackendAddressPoolResponse> backendAddressPools) {
             this.backendAddressPools = backendAddressPools;
             return this;
         }
 
-        public Builder setBackendHttpSettingsCollection(@Nullable List<ApplicationGatewayBackendHttpSettingsResponse> backendHttpSettingsCollection) {
+        public Builder backendHttpSettingsCollection(@Nullable List<ApplicationGatewayBackendHttpSettingsResponse> backendHttpSettingsCollection) {
             this.backendHttpSettingsCollection = backendHttpSettingsCollection;
             return this;
         }
 
-        public Builder setCustomErrorConfigurations(@Nullable List<ApplicationGatewayCustomErrorResponse> customErrorConfigurations) {
+        public Builder customErrorConfigurations(@Nullable List<ApplicationGatewayCustomErrorResponse> customErrorConfigurations) {
             this.customErrorConfigurations = customErrorConfigurations;
             return this;
         }
 
-        public Builder setEnableFips(@Nullable Boolean enableFips) {
+        public Builder enableFips(@Nullable Boolean enableFips) {
             this.enableFips = enableFips;
             return this;
         }
 
-        public Builder setEnableHttp2(@Nullable Boolean enableHttp2) {
+        public Builder enableHttp2(@Nullable Boolean enableHttp2) {
             this.enableHttp2 = enableHttp2;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setFirewallPolicy(@Nullable SubResourceResponse firewallPolicy) {
+        public Builder firewallPolicy(@Nullable SubResourceResponse firewallPolicy) {
             this.firewallPolicy = firewallPolicy;
             return this;
         }
 
-        public Builder setForceFirewallPolicyAssociation(@Nullable Boolean forceFirewallPolicyAssociation) {
+        public Builder forceFirewallPolicyAssociation(@Nullable Boolean forceFirewallPolicyAssociation) {
             this.forceFirewallPolicyAssociation = forceFirewallPolicyAssociation;
             return this;
         }
 
-        public Builder setFrontendIPConfigurations(@Nullable List<ApplicationGatewayFrontendIPConfigurationResponse> frontendIPConfigurations) {
+        public Builder frontendIPConfigurations(@Nullable List<ApplicationGatewayFrontendIPConfigurationResponse> frontendIPConfigurations) {
             this.frontendIPConfigurations = frontendIPConfigurations;
             return this;
         }
 
-        public Builder setFrontendPorts(@Nullable List<ApplicationGatewayFrontendPortResponse> frontendPorts) {
+        public Builder frontendPorts(@Nullable List<ApplicationGatewayFrontendPortResponse> frontendPorts) {
             this.frontendPorts = frontendPorts;
             return this;
         }
 
-        public Builder setGatewayIPConfigurations(@Nullable List<ApplicationGatewayIPConfigurationResponse> gatewayIPConfigurations) {
+        public Builder gatewayIPConfigurations(@Nullable List<ApplicationGatewayIPConfigurationResponse> gatewayIPConfigurations) {
             this.gatewayIPConfigurations = gatewayIPConfigurations;
             return this;
         }
 
-        public Builder setHttpListeners(@Nullable List<ApplicationGatewayHttpListenerResponse> httpListeners) {
+        public Builder httpListeners(@Nullable List<ApplicationGatewayHttpListenerResponse> httpListeners) {
             this.httpListeners = httpListeners;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIdentity(@Nullable ManagedServiceIdentityResponse identity) {
+        public Builder identity(@Nullable ManagedServiceIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOperationalState(String operationalState) {
+        public Builder operationalState(String operationalState) {
             this.operationalState = Objects.requireNonNull(operationalState);
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(List<ApplicationGatewayPrivateEndpointConnectionResponse> privateEndpointConnections) {
+        public Builder privateEndpointConnections(List<ApplicationGatewayPrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
 
-        public Builder setPrivateLinkConfigurations(@Nullable List<ApplicationGatewayPrivateLinkConfigurationResponse> privateLinkConfigurations) {
+        public Builder privateLinkConfigurations(@Nullable List<ApplicationGatewayPrivateLinkConfigurationResponse> privateLinkConfigurations) {
             this.privateLinkConfigurations = privateLinkConfigurations;
             return this;
         }
 
-        public Builder setProbes(@Nullable List<ApplicationGatewayProbeResponse> probes) {
+        public Builder probes(@Nullable List<ApplicationGatewayProbeResponse> probes) {
             this.probes = probes;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRedirectConfigurations(@Nullable List<ApplicationGatewayRedirectConfigurationResponse> redirectConfigurations) {
+        public Builder redirectConfigurations(@Nullable List<ApplicationGatewayRedirectConfigurationResponse> redirectConfigurations) {
             this.redirectConfigurations = redirectConfigurations;
             return this;
         }
 
-        public Builder setRequestRoutingRules(@Nullable List<ApplicationGatewayRequestRoutingRuleResponse> requestRoutingRules) {
+        public Builder requestRoutingRules(@Nullable List<ApplicationGatewayRequestRoutingRuleResponse> requestRoutingRules) {
             this.requestRoutingRules = requestRoutingRules;
             return this;
         }
 
-        public Builder setResourceGuid(String resourceGuid) {
+        public Builder resourceGuid(String resourceGuid) {
             this.resourceGuid = Objects.requireNonNull(resourceGuid);
             return this;
         }
 
-        public Builder setRewriteRuleSets(@Nullable List<ApplicationGatewayRewriteRuleSetResponse> rewriteRuleSets) {
+        public Builder rewriteRuleSets(@Nullable List<ApplicationGatewayRewriteRuleSetResponse> rewriteRuleSets) {
             this.rewriteRuleSets = rewriteRuleSets;
             return this;
         }
 
-        public Builder setSku(@Nullable ApplicationGatewaySkuResponse sku) {
+        public Builder sku(@Nullable ApplicationGatewaySkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSslCertificates(@Nullable List<ApplicationGatewaySslCertificateResponse> sslCertificates) {
+        public Builder sslCertificates(@Nullable List<ApplicationGatewaySslCertificateResponse> sslCertificates) {
             this.sslCertificates = sslCertificates;
             return this;
         }
 
-        public Builder setSslPolicy(@Nullable ApplicationGatewaySslPolicyResponse sslPolicy) {
+        public Builder sslPolicy(@Nullable ApplicationGatewaySslPolicyResponse sslPolicy) {
             this.sslPolicy = sslPolicy;
             return this;
         }
 
-        public Builder setSslProfiles(@Nullable List<ApplicationGatewaySslProfileResponse> sslProfiles) {
+        public Builder sslProfiles(@Nullable List<ApplicationGatewaySslProfileResponse> sslProfiles) {
             this.sslProfiles = sslProfiles;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTrustedClientCertificates(@Nullable List<ApplicationGatewayTrustedClientCertificateResponse> trustedClientCertificates) {
+        public Builder trustedClientCertificates(@Nullable List<ApplicationGatewayTrustedClientCertificateResponse> trustedClientCertificates) {
             this.trustedClientCertificates = trustedClientCertificates;
             return this;
         }
 
-        public Builder setTrustedRootCertificates(@Nullable List<ApplicationGatewayTrustedRootCertificateResponse> trustedRootCertificates) {
+        public Builder trustedRootCertificates(@Nullable List<ApplicationGatewayTrustedRootCertificateResponse> trustedRootCertificates) {
             this.trustedRootCertificates = trustedRootCertificates;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUrlPathMaps(@Nullable List<ApplicationGatewayUrlPathMapResponse> urlPathMaps) {
+        public Builder urlPathMaps(@Nullable List<ApplicationGatewayUrlPathMapResponse> urlPathMaps) {
             this.urlPathMaps = urlPathMaps;
             return this;
         }
 
-        public Builder setWebApplicationFirewallConfiguration(@Nullable ApplicationGatewayWebApplicationFirewallConfigurationResponse webApplicationFirewallConfiguration) {
+        public Builder webApplicationFirewallConfiguration(@Nullable ApplicationGatewayWebApplicationFirewallConfigurationResponse webApplicationFirewallConfiguration) {
             this.webApplicationFirewallConfiguration = webApplicationFirewallConfiguration;
             return this;
         }
 
-        public Builder setZones(@Nullable List<String> zones) {
+        public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }

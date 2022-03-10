@@ -91,17 +91,17 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
     	      this.notifyGlobalAdmins = defaults.notifyGlobalAdmins;
         }
 
-        public Builder setAdditionalRecipients(@Nullable List<String> additionalRecipients) {
+        public Builder additionalRecipients(@Nullable List<String> additionalRecipients) {
             this.additionalRecipients = additionalRecipients;
             return this;
         }
 
-        public Builder setNotifyDcAdmins(@Nullable String notifyDcAdmins) {
+        public Builder notifyDcAdmins(@Nullable String notifyDcAdmins) {
             this.notifyDcAdmins = notifyDcAdmins;
             return this;
         }
 
-        public Builder setNotifyGlobalAdmins(@Nullable String notifyGlobalAdmins) {
+        public Builder notifyGlobalAdmins(@Nullable String notifyGlobalAdmins) {
             this.notifyGlobalAdmins = notifyGlobalAdmins;
             return this;
         }

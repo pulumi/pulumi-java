@@ -182,47 +182,47 @@ public final class StatefulSetStatus {
     	      this.updatedReplicas = defaults.updatedReplicas;
         }
 
-        public Builder setCollisionCount(@Nullable Integer collisionCount) {
+        public Builder collisionCount(@Nullable Integer collisionCount) {
             this.collisionCount = collisionCount;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<StatefulSetCondition> conditions) {
+        public Builder conditions(@Nullable List<StatefulSetCondition> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setCurrentReplicas(@Nullable Integer currentReplicas) {
+        public Builder currentReplicas(@Nullable Integer currentReplicas) {
             this.currentReplicas = currentReplicas;
             return this;
         }
 
-        public Builder setCurrentRevision(@Nullable String currentRevision) {
+        public Builder currentRevision(@Nullable String currentRevision) {
             this.currentRevision = currentRevision;
             return this;
         }
 
-        public Builder setObservedGeneration(@Nullable Integer observedGeneration) {
+        public Builder observedGeneration(@Nullable Integer observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
 
-        public Builder setReadyReplicas(@Nullable Integer readyReplicas) {
+        public Builder readyReplicas(@Nullable Integer readyReplicas) {
             this.readyReplicas = readyReplicas;
             return this;
         }
 
-        public Builder setReplicas(Integer replicas) {
+        public Builder replicas(Integer replicas) {
             this.replicas = Objects.requireNonNull(replicas);
             return this;
         }
 
-        public Builder setUpdateRevision(@Nullable String updateRevision) {
+        public Builder updateRevision(@Nullable String updateRevision) {
             this.updateRevision = updateRevision;
             return this;
         }
 
-        public Builder setUpdatedReplicas(@Nullable Integer updatedReplicas) {
+        public Builder updatedReplicas(@Nullable Integer updatedReplicas) {
             this.updatedReplicas = updatedReplicas;
             return this;
         }

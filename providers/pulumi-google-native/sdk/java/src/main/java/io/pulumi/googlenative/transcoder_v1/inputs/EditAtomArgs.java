@@ -107,42 +107,42 @@ public final class EditAtomArgs extends io.pulumi.resources.ResourceArgs {
     	      this.startTimeOffset = defaults.startTimeOffset;
         }
 
-        public Builder setEndTimeOffset(@Nullable Input<String> endTimeOffset) {
+        public Builder endTimeOffset(@Nullable Input<String> endTimeOffset) {
             this.endTimeOffset = endTimeOffset;
             return this;
         }
 
-        public Builder setEndTimeOffset(@Nullable String endTimeOffset) {
+        public Builder endTimeOffset(@Nullable String endTimeOffset) {
             this.endTimeOffset = Input.ofNullable(endTimeOffset);
             return this;
         }
 
-        public Builder setInputs(@Nullable Input<List<String>> inputs) {
+        public Builder inputs(@Nullable Input<List<String>> inputs) {
             this.inputs = inputs;
             return this;
         }
 
-        public Builder setInputs(@Nullable List<String> inputs) {
+        public Builder inputs(@Nullable List<String> inputs) {
             this.inputs = Input.ofNullable(inputs);
             return this;
         }
 
-        public Builder setKey(@Nullable Input<String> key) {
+        public Builder key(@Nullable Input<String> key) {
             this.key = key;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = Input.ofNullable(key);
             return this;
         }
 
-        public Builder setStartTimeOffset(@Nullable Input<String> startTimeOffset) {
+        public Builder startTimeOffset(@Nullable Input<String> startTimeOffset) {
             this.startTimeOffset = startTimeOffset;
             return this;
         }
 
-        public Builder setStartTimeOffset(@Nullable String startTimeOffset) {
+        public Builder startTimeOffset(@Nullable String startTimeOffset) {
             this.startTimeOffset = Input.ofNullable(startTimeOffset);
             return this;
         }

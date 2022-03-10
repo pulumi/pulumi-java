@@ -105,42 +105,42 @@ public final class LoggingConfigurationArgs extends io.pulumi.resources.Resource
     	      this.resourceArn = defaults.resourceArn;
         }
 
-        public Builder setLogDestinationConfigs(Input<List<String>> logDestinationConfigs) {
+        public Builder logDestinationConfigs(Input<List<String>> logDestinationConfigs) {
             this.logDestinationConfigs = Objects.requireNonNull(logDestinationConfigs);
             return this;
         }
 
-        public Builder setLogDestinationConfigs(List<String> logDestinationConfigs) {
+        public Builder logDestinationConfigs(List<String> logDestinationConfigs) {
             this.logDestinationConfigs = Input.of(Objects.requireNonNull(logDestinationConfigs));
             return this;
         }
 
-        public Builder setLoggingFilter(@Nullable Input<LoggingFilterPropertiesArgs> loggingFilter) {
+        public Builder loggingFilter(@Nullable Input<LoggingFilterPropertiesArgs> loggingFilter) {
             this.loggingFilter = loggingFilter;
             return this;
         }
 
-        public Builder setLoggingFilter(@Nullable LoggingFilterPropertiesArgs loggingFilter) {
+        public Builder loggingFilter(@Nullable LoggingFilterPropertiesArgs loggingFilter) {
             this.loggingFilter = Input.ofNullable(loggingFilter);
             return this;
         }
 
-        public Builder setRedactedFields(@Nullable Input<List<LoggingConfigurationFieldToMatchArgs>> redactedFields) {
+        public Builder redactedFields(@Nullable Input<List<LoggingConfigurationFieldToMatchArgs>> redactedFields) {
             this.redactedFields = redactedFields;
             return this;
         }
 
-        public Builder setRedactedFields(@Nullable List<LoggingConfigurationFieldToMatchArgs> redactedFields) {
+        public Builder redactedFields(@Nullable List<LoggingConfigurationFieldToMatchArgs> redactedFields) {
             this.redactedFields = Input.ofNullable(redactedFields);
             return this;
         }
 
-        public Builder setResourceArn(Input<String> resourceArn) {
+        public Builder resourceArn(Input<String> resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
 
-        public Builder setResourceArn(String resourceArn) {
+        public Builder resourceArn(String resourceArn) {
             this.resourceArn = Input.of(Objects.requireNonNull(resourceArn));
             return this;
         }

@@ -104,42 +104,42 @@ public final class InstancePublicPortsPortInfoArgs extends io.pulumi.resources.R
     	      this.toPort = defaults.toPort;
         }
 
-        public Builder setCidrs(@Nullable Input<List<String>> cidrs) {
+        public Builder cidrs(@Nullable Input<List<String>> cidrs) {
             this.cidrs = cidrs;
             return this;
         }
 
-        public Builder setCidrs(@Nullable List<String> cidrs) {
+        public Builder cidrs(@Nullable List<String> cidrs) {
             this.cidrs = Input.ofNullable(cidrs);
             return this;
         }
 
-        public Builder setFromPort(Input<Integer> fromPort) {
+        public Builder fromPort(Input<Integer> fromPort) {
             this.fromPort = Objects.requireNonNull(fromPort);
             return this;
         }
 
-        public Builder setFromPort(Integer fromPort) {
+        public Builder fromPort(Integer fromPort) {
             this.fromPort = Input.of(Objects.requireNonNull(fromPort));
             return this;
         }
 
-        public Builder setProtocol(Input<String> protocol) {
+        public Builder protocol(Input<String> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Input.of(Objects.requireNonNull(protocol));
             return this;
         }
 
-        public Builder setToPort(Input<Integer> toPort) {
+        public Builder toPort(Input<Integer> toPort) {
             this.toPort = Objects.requireNonNull(toPort);
             return this;
         }
 
-        public Builder setToPort(Integer toPort) {
+        public Builder toPort(Integer toPort) {
             this.toPort = Input.of(Objects.requireNonNull(toPort));
             return this;
         }

@@ -84,17 +84,17 @@ public final class ServerEndpointRecallStatusResponse {
     	      this.totalRecallErrorsCount = defaults.totalRecallErrorsCount;
         }
 
-        public Builder setLastUpdatedTimestamp(String lastUpdatedTimestamp) {
+        public Builder lastUpdatedTimestamp(String lastUpdatedTimestamp) {
             this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp);
             return this;
         }
 
-        public Builder setRecallErrors(List<ServerEndpointRecallErrorResponse> recallErrors) {
+        public Builder recallErrors(List<ServerEndpointRecallErrorResponse> recallErrors) {
             this.recallErrors = Objects.requireNonNull(recallErrors);
             return this;
         }
 
-        public Builder setTotalRecallErrorsCount(Double totalRecallErrorsCount) {
+        public Builder totalRecallErrorsCount(Double totalRecallErrorsCount) {
             this.totalRecallErrorsCount = Objects.requireNonNull(totalRecallErrorsCount);
             return this;
         }

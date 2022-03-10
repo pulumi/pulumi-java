@@ -105,42 +105,42 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDatasources(@Nullable Input<DetectorDatasourcesArgs> datasources) {
+        public Builder datasources(@Nullable Input<DetectorDatasourcesArgs> datasources) {
             this.datasources = datasources;
             return this;
         }
 
-        public Builder setDatasources(@Nullable DetectorDatasourcesArgs datasources) {
+        public Builder datasources(@Nullable DetectorDatasourcesArgs datasources) {
             this.datasources = Input.ofNullable(datasources);
             return this;
         }
 
-        public Builder setEnable(@Nullable Input<Boolean> enable) {
+        public Builder enable(@Nullable Input<Boolean> enable) {
             this.enable = enable;
             return this;
         }
 
-        public Builder setEnable(@Nullable Boolean enable) {
+        public Builder enable(@Nullable Boolean enable) {
             this.enable = Input.ofNullable(enable);
             return this;
         }
 
-        public Builder setFindingPublishingFrequency(@Nullable Input<String> findingPublishingFrequency) {
+        public Builder findingPublishingFrequency(@Nullable Input<String> findingPublishingFrequency) {
             this.findingPublishingFrequency = findingPublishingFrequency;
             return this;
         }
 
-        public Builder setFindingPublishingFrequency(@Nullable String findingPublishingFrequency) {
+        public Builder findingPublishingFrequency(@Nullable String findingPublishingFrequency) {
             this.findingPublishingFrequency = Input.ofNullable(findingPublishingFrequency);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

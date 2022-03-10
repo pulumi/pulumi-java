@@ -91,32 +91,32 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subpages = defaults.subpages;
         }
 
-        public Builder setContent(@Nullable Input<String> content) {
+        public Builder content(@Nullable Input<String> content) {
             this.content = content;
             return this;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = Input.ofNullable(content);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSubpages(@Nullable Input<List<PageArgs>> subpages) {
+        public Builder subpages(@Nullable Input<List<PageArgs>> subpages) {
             this.subpages = subpages;
             return this;
         }
 
-        public Builder setSubpages(@Nullable List<PageArgs> subpages) {
+        public Builder subpages(@Nullable List<PageArgs> subpages) {
             this.subpages = Input.ofNullable(subpages);
             return this;
         }

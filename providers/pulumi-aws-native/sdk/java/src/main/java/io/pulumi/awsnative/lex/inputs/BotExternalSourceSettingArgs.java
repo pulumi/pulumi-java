@@ -53,12 +53,12 @@ public final class BotExternalSourceSettingArgs extends io.pulumi.resources.Reso
     	      this.grammarSlotTypeSetting = defaults.grammarSlotTypeSetting;
         }
 
-        public Builder setGrammarSlotTypeSetting(@Nullable Input<BotGrammarSlotTypeSettingArgs> grammarSlotTypeSetting) {
+        public Builder grammarSlotTypeSetting(@Nullable Input<BotGrammarSlotTypeSettingArgs> grammarSlotTypeSetting) {
             this.grammarSlotTypeSetting = grammarSlotTypeSetting;
             return this;
         }
 
-        public Builder setGrammarSlotTypeSetting(@Nullable BotGrammarSlotTypeSettingArgs grammarSlotTypeSetting) {
+        public Builder grammarSlotTypeSetting(@Nullable BotGrammarSlotTypeSettingArgs grammarSlotTypeSetting) {
             this.grammarSlotTypeSetting = Input.ofNullable(grammarSlotTypeSetting);
             return this;
         }

@@ -204,102 +204,102 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.templateId = defaults.templateId;
         }
 
-        public Builder setAllowProfileCreation(@Nullable Input<Boolean> allowProfileCreation) {
+        public Builder allowProfileCreation(@Nullable Input<Boolean> allowProfileCreation) {
             this.allowProfileCreation = allowProfileCreation;
             return this;
         }
 
-        public Builder setAllowProfileCreation(@Nullable Boolean allowProfileCreation) {
+        public Builder allowProfileCreation(@Nullable Boolean allowProfileCreation) {
             this.allowProfileCreation = Input.ofNullable(allowProfileCreation);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDomainName(Input<String> domainName) {
+        public Builder domainName(Input<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
-        public Builder setDomainName(String domainName) {
+        public Builder domainName(String domainName) {
             this.domainName = Input.of(Objects.requireNonNull(domainName));
             return this;
         }
 
-        public Builder setEncryptionKey(@Nullable Input<String> encryptionKey) {
+        public Builder encryptionKey(@Nullable Input<String> encryptionKey) {
             this.encryptionKey = encryptionKey;
             return this;
         }
 
-        public Builder setEncryptionKey(@Nullable String encryptionKey) {
+        public Builder encryptionKey(@Nullable String encryptionKey) {
             this.encryptionKey = Input.ofNullable(encryptionKey);
             return this;
         }
 
-        public Builder setExpirationDays(@Nullable Input<Integer> expirationDays) {
+        public Builder expirationDays(@Nullable Input<Integer> expirationDays) {
             this.expirationDays = expirationDays;
             return this;
         }
 
-        public Builder setExpirationDays(@Nullable Integer expirationDays) {
+        public Builder expirationDays(@Nullable Integer expirationDays) {
             this.expirationDays = Input.ofNullable(expirationDays);
             return this;
         }
 
-        public Builder setFields(@Nullable Input<List<ObjectTypeFieldMapArgs>> fields) {
+        public Builder fields(@Nullable Input<List<ObjectTypeFieldMapArgs>> fields) {
             this.fields = fields;
             return this;
         }
 
-        public Builder setFields(@Nullable List<ObjectTypeFieldMapArgs> fields) {
+        public Builder fields(@Nullable List<ObjectTypeFieldMapArgs> fields) {
             this.fields = Input.ofNullable(fields);
             return this;
         }
 
-        public Builder setKeys(@Nullable Input<List<ObjectTypeKeyMapArgs>> keys) {
+        public Builder keys(@Nullable Input<List<ObjectTypeKeyMapArgs>> keys) {
             this.keys = keys;
             return this;
         }
 
-        public Builder setKeys(@Nullable List<ObjectTypeKeyMapArgs> keys) {
+        public Builder keys(@Nullable List<ObjectTypeKeyMapArgs> keys) {
             this.keys = Input.ofNullable(keys);
             return this;
         }
 
-        public Builder setObjectTypeName(@Nullable Input<String> objectTypeName) {
+        public Builder objectTypeName(@Nullable Input<String> objectTypeName) {
             this.objectTypeName = objectTypeName;
             return this;
         }
 
-        public Builder setObjectTypeName(@Nullable String objectTypeName) {
+        public Builder objectTypeName(@Nullable String objectTypeName) {
             this.objectTypeName = Input.ofNullable(objectTypeName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<ObjectTypeTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<ObjectTypeTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ObjectTypeTagArgs> tags) {
+        public Builder tags(@Nullable List<ObjectTypeTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTemplateId(@Nullable Input<String> templateId) {
+        public Builder templateId(@Nullable Input<String> templateId) {
             this.templateId = templateId;
             return this;
         }
 
-        public Builder setTemplateId(@Nullable String templateId) {
+        public Builder templateId(@Nullable String templateId) {
             this.templateId = Input.ofNullable(templateId);
             return this;
         }

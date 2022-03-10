@@ -67,12 +67,12 @@ public final class DataFlowResponse {
     	      this.streams = defaults.streams;
         }
 
-        public Builder setDestinations(@Nullable List<String> destinations) {
+        public Builder destinations(@Nullable List<String> destinations) {
             this.destinations = destinations;
             return this;
         }
 
-        public Builder setStreams(@Nullable List<String> streams) {
+        public Builder streams(@Nullable List<String> streams) {
             this.streams = streams;
             return this;
         }

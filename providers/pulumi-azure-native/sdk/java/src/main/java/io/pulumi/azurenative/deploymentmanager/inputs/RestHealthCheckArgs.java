@@ -92,32 +92,32 @@ public final class RestHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
     	      this.response = defaults.response;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setRequest(Input<RestRequestArgs> request) {
+        public Builder request(Input<RestRequestArgs> request) {
             this.request = Objects.requireNonNull(request);
             return this;
         }
 
-        public Builder setRequest(RestRequestArgs request) {
+        public Builder request(RestRequestArgs request) {
             this.request = Input.of(Objects.requireNonNull(request));
             return this;
         }
 
-        public Builder setResponse(@Nullable Input<RestResponseArgs> response) {
+        public Builder response(@Nullable Input<RestResponseArgs> response) {
             this.response = response;
             return this;
         }
 
-        public Builder setResponse(@Nullable RestResponseArgs response) {
+        public Builder response(@Nullable RestResponseArgs response) {
             this.response = Input.ofNullable(response);
             return this;
         }

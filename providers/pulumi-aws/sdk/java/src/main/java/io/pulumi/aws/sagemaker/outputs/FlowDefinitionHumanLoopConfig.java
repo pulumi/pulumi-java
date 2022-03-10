@@ -182,47 +182,47 @@ public final class FlowDefinitionHumanLoopConfig {
     	      this.workteamArn = defaults.workteamArn;
         }
 
-        public Builder setHumanTaskUiArn(String humanTaskUiArn) {
+        public Builder humanTaskUiArn(String humanTaskUiArn) {
             this.humanTaskUiArn = Objects.requireNonNull(humanTaskUiArn);
             return this;
         }
 
-        public Builder setPublicWorkforceTaskPrice(@Nullable FlowDefinitionHumanLoopConfigPublicWorkforceTaskPrice publicWorkforceTaskPrice) {
+        public Builder publicWorkforceTaskPrice(@Nullable FlowDefinitionHumanLoopConfigPublicWorkforceTaskPrice publicWorkforceTaskPrice) {
             this.publicWorkforceTaskPrice = publicWorkforceTaskPrice;
             return this;
         }
 
-        public Builder setTaskAvailabilityLifetimeInSeconds(@Nullable Integer taskAvailabilityLifetimeInSeconds) {
+        public Builder taskAvailabilityLifetimeInSeconds(@Nullable Integer taskAvailabilityLifetimeInSeconds) {
             this.taskAvailabilityLifetimeInSeconds = taskAvailabilityLifetimeInSeconds;
             return this;
         }
 
-        public Builder setTaskCount(Integer taskCount) {
+        public Builder taskCount(Integer taskCount) {
             this.taskCount = Objects.requireNonNull(taskCount);
             return this;
         }
 
-        public Builder setTaskDescription(String taskDescription) {
+        public Builder taskDescription(String taskDescription) {
             this.taskDescription = Objects.requireNonNull(taskDescription);
             return this;
         }
 
-        public Builder setTaskKeywords(@Nullable List<String> taskKeywords) {
+        public Builder taskKeywords(@Nullable List<String> taskKeywords) {
             this.taskKeywords = taskKeywords;
             return this;
         }
 
-        public Builder setTaskTimeLimitInSeconds(@Nullable Integer taskTimeLimitInSeconds) {
+        public Builder taskTimeLimitInSeconds(@Nullable Integer taskTimeLimitInSeconds) {
             this.taskTimeLimitInSeconds = taskTimeLimitInSeconds;
             return this;
         }
 
-        public Builder setTaskTitle(String taskTitle) {
+        public Builder taskTitle(String taskTitle) {
             this.taskTitle = Objects.requireNonNull(taskTitle);
             return this;
         }
 
-        public Builder setWorkteamArn(String workteamArn) {
+        public Builder workteamArn(String workteamArn) {
             this.workteamArn = Objects.requireNonNull(workteamArn);
             return this;
         }

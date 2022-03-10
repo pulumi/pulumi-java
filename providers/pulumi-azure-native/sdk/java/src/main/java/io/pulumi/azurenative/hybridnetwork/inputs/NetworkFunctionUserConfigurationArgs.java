@@ -110,42 +110,42 @@ public final class NetworkFunctionUserConfigurationArgs extends io.pulumi.resour
     	      this.userDataParameters = defaults.userDataParameters;
         }
 
-        public Builder setNetworkInterfaces(@Nullable Input<List<NetworkInterfaceArgs>> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable Input<List<NetworkInterfaceArgs>> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
 
-        public Builder setNetworkInterfaces(@Nullable List<NetworkInterfaceArgs> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable List<NetworkInterfaceArgs> networkInterfaces) {
             this.networkInterfaces = Input.ofNullable(networkInterfaces);
             return this;
         }
 
-        public Builder setOsProfile(@Nullable Input<NetworkFunctionUserConfigurationOsProfileArgs> osProfile) {
+        public Builder osProfile(@Nullable Input<NetworkFunctionUserConfigurationOsProfileArgs> osProfile) {
             this.osProfile = osProfile;
             return this;
         }
 
-        public Builder setOsProfile(@Nullable NetworkFunctionUserConfigurationOsProfileArgs osProfile) {
+        public Builder osProfile(@Nullable NetworkFunctionUserConfigurationOsProfileArgs osProfile) {
             this.osProfile = Input.ofNullable(osProfile);
             return this;
         }
 
-        public Builder setRoleName(@Nullable Input<String> roleName) {
+        public Builder roleName(@Nullable Input<String> roleName) {
             this.roleName = roleName;
             return this;
         }
 
-        public Builder setRoleName(@Nullable String roleName) {
+        public Builder roleName(@Nullable String roleName) {
             this.roleName = Input.ofNullable(roleName);
             return this;
         }
 
-        public Builder setUserDataParameters(@Nullable Input<Object> userDataParameters) {
+        public Builder userDataParameters(@Nullable Input<Object> userDataParameters) {
             this.userDataParameters = userDataParameters;
             return this;
         }
 
-        public Builder setUserDataParameters(@Nullable Object userDataParameters) {
+        public Builder userDataParameters(@Nullable Object userDataParameters) {
             this.userDataParameters = Input.ofNullable(userDataParameters);
             return this;
         }

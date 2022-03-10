@@ -248,67 +248,67 @@ public final class GetVirtualNetworkResult {
     	      this.uniqueIdentifier = defaults.uniqueIdentifier;
         }
 
-        public Builder setAllowedSubnets(@Nullable List<SubnetResponse> allowedSubnets) {
+        public Builder allowedSubnets(@Nullable List<SubnetResponse> allowedSubnets) {
             this.allowedSubnets = allowedSubnets;
             return this;
         }
 
-        public Builder setCreatedDate(String createdDate) {
+        public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setExternalProviderResourceId(@Nullable String externalProviderResourceId) {
+        public Builder externalProviderResourceId(@Nullable String externalProviderResourceId) {
             this.externalProviderResourceId = externalProviderResourceId;
             return this;
         }
 
-        public Builder setExternalSubnets(List<ExternalSubnetResponse> externalSubnets) {
+        public Builder externalSubnets(List<ExternalSubnetResponse> externalSubnets) {
             this.externalSubnets = Objects.requireNonNull(externalSubnets);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSubnetOverrides(@Nullable List<SubnetOverrideResponse> subnetOverrides) {
+        public Builder subnetOverrides(@Nullable List<SubnetOverrideResponse> subnetOverrides) {
             this.subnetOverrides = subnetOverrides;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUniqueIdentifier(String uniqueIdentifier) {
+        public Builder uniqueIdentifier(String uniqueIdentifier) {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
         }

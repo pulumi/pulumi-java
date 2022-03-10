@@ -91,32 +91,32 @@ public final class SoftwareRecipeStepExtractArchiveArgs extends io.pulumi.resour
     	      this.type = defaults.type;
         }
 
-        public Builder setArtifactId(Input<String> artifactId) {
+        public Builder artifactId(Input<String> artifactId) {
             this.artifactId = Objects.requireNonNull(artifactId);
             return this;
         }
 
-        public Builder setArtifactId(String artifactId) {
+        public Builder artifactId(String artifactId) {
             this.artifactId = Input.of(Objects.requireNonNull(artifactId));
             return this;
         }
 
-        public Builder setDestination(@Nullable Input<String> destination) {
+        public Builder destination(@Nullable Input<String> destination) {
             this.destination = destination;
             return this;
         }
 
-        public Builder setDestination(@Nullable String destination) {
+        public Builder destination(@Nullable String destination) {
             this.destination = Input.ofNullable(destination);
             return this;
         }
 
-        public Builder setType(Input<SoftwareRecipeStepExtractArchiveType> type) {
+        public Builder type(Input<SoftwareRecipeStepExtractArchiveType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(SoftwareRecipeStepExtractArchiveType type) {
+        public Builder type(SoftwareRecipeStepExtractArchiveType type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

@@ -50,7 +50,7 @@ public final class TransferConfigurationResponseTransferFilterDetails {
     	      this.include = defaults.include;
         }
 
-        public Builder setInclude(@Nullable TransferFilterDetailsResponse include) {
+        public Builder include(@Nullable TransferFilterDetailsResponse include) {
             this.include = include;
             return this;
         }

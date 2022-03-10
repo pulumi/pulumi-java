@@ -310,82 +310,82 @@ public final class GetSqlPoolResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCollation(@Nullable String collation) {
+        public Builder collation(@Nullable String collation) {
             this.collation = collation;
             return this;
         }
 
-        public Builder setCreateMode(@Nullable String createMode) {
+        public Builder createMode(@Nullable String createMode) {
             this.createMode = createMode;
             return this;
         }
 
-        public Builder setCreationDate(@Nullable String creationDate) {
+        public Builder creationDate(@Nullable String creationDate) {
             this.creationDate = creationDate;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMaxSizeBytes(@Nullable Double maxSizeBytes) {
+        public Builder maxSizeBytes(@Nullable Double maxSizeBytes) {
             this.maxSizeBytes = maxSizeBytes;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setRecoverableDatabaseId(@Nullable String recoverableDatabaseId) {
+        public Builder recoverableDatabaseId(@Nullable String recoverableDatabaseId) {
             this.recoverableDatabaseId = recoverableDatabaseId;
             return this;
         }
 
-        public Builder setRestorePointInTime(@Nullable String restorePointInTime) {
+        public Builder restorePointInTime(@Nullable String restorePointInTime) {
             this.restorePointInTime = restorePointInTime;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuResponse sku) {
+        public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSourceDatabaseId(@Nullable String sourceDatabaseId) {
+        public Builder sourceDatabaseId(@Nullable String sourceDatabaseId) {
             this.sourceDatabaseId = sourceDatabaseId;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStorageAccountType(@Nullable String storageAccountType) {
+        public Builder storageAccountType(@Nullable String storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

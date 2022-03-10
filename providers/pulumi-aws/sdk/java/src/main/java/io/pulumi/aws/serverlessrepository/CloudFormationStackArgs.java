@@ -136,62 +136,62 @@ public final class CloudFormationStackArgs extends io.pulumi.resources.ResourceA
     	      this.tags = defaults.tags;
         }
 
-        public Builder setApplicationId(Input<String> applicationId) {
+        public Builder applicationId(Input<String> applicationId) {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
 
-        public Builder setApplicationId(String applicationId) {
+        public Builder applicationId(String applicationId) {
             this.applicationId = Input.of(Objects.requireNonNull(applicationId));
             return this;
         }
 
-        public Builder setCapabilities(Input<List<String>> capabilities) {
+        public Builder capabilities(Input<List<String>> capabilities) {
             this.capabilities = Objects.requireNonNull(capabilities);
             return this;
         }
 
-        public Builder setCapabilities(List<String> capabilities) {
+        public Builder capabilities(List<String> capabilities) {
             this.capabilities = Input.of(Objects.requireNonNull(capabilities));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,String>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,String> parameters) {
+        public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setSemanticVersion(@Nullable Input<String> semanticVersion) {
+        public Builder semanticVersion(@Nullable Input<String> semanticVersion) {
             this.semanticVersion = semanticVersion;
             return this;
         }
 
-        public Builder setSemanticVersion(@Nullable String semanticVersion) {
+        public Builder semanticVersion(@Nullable String semanticVersion) {
             this.semanticVersion = Input.ofNullable(semanticVersion);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

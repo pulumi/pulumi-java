@@ -117,62 +117,62 @@ public final class BotSlotArgs extends io.pulumi.resources.ResourceArgs {
     	      this.valueElicitationSetting = defaults.valueElicitationSetting;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setMultipleValuesSetting(@Nullable Input<BotMultipleValuesSettingArgs> multipleValuesSetting) {
+        public Builder multipleValuesSetting(@Nullable Input<BotMultipleValuesSettingArgs> multipleValuesSetting) {
             this.multipleValuesSetting = multipleValuesSetting;
             return this;
         }
 
-        public Builder setMultipleValuesSetting(@Nullable BotMultipleValuesSettingArgs multipleValuesSetting) {
+        public Builder multipleValuesSetting(@Nullable BotMultipleValuesSettingArgs multipleValuesSetting) {
             this.multipleValuesSetting = Input.ofNullable(multipleValuesSetting);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setObfuscationSetting(@Nullable Input<BotObfuscationSettingArgs> obfuscationSetting) {
+        public Builder obfuscationSetting(@Nullable Input<BotObfuscationSettingArgs> obfuscationSetting) {
             this.obfuscationSetting = obfuscationSetting;
             return this;
         }
 
-        public Builder setObfuscationSetting(@Nullable BotObfuscationSettingArgs obfuscationSetting) {
+        public Builder obfuscationSetting(@Nullable BotObfuscationSettingArgs obfuscationSetting) {
             this.obfuscationSetting = Input.ofNullable(obfuscationSetting);
             return this;
         }
 
-        public Builder setSlotTypeName(Input<String> slotTypeName) {
+        public Builder slotTypeName(Input<String> slotTypeName) {
             this.slotTypeName = Objects.requireNonNull(slotTypeName);
             return this;
         }
 
-        public Builder setSlotTypeName(String slotTypeName) {
+        public Builder slotTypeName(String slotTypeName) {
             this.slotTypeName = Input.of(Objects.requireNonNull(slotTypeName));
             return this;
         }
 
-        public Builder setValueElicitationSetting(Input<BotSlotValueElicitationSettingArgs> valueElicitationSetting) {
+        public Builder valueElicitationSetting(Input<BotSlotValueElicitationSettingArgs> valueElicitationSetting) {
             this.valueElicitationSetting = Objects.requireNonNull(valueElicitationSetting);
             return this;
         }
 
-        public Builder setValueElicitationSetting(BotSlotValueElicitationSettingArgs valueElicitationSetting) {
+        public Builder valueElicitationSetting(BotSlotValueElicitationSettingArgs valueElicitationSetting) {
             this.valueElicitationSetting = Input.of(Objects.requireNonNull(valueElicitationSetting));
             return this;
         }

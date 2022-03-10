@@ -89,27 +89,27 @@ public final class GetLocalDiskResult {
     	      this.id = defaults.id;
         }
 
-        public Builder setDiskId(String diskId) {
+        public Builder diskId(String diskId) {
             this.diskId = Objects.requireNonNull(diskId);
             return this;
         }
 
-        public Builder setDiskNode(String diskNode) {
+        public Builder diskNode(String diskNode) {
             this.diskNode = Objects.requireNonNull(diskNode);
             return this;
         }
 
-        public Builder setDiskPath(String diskPath) {
+        public Builder diskPath(String diskPath) {
             this.diskPath = Objects.requireNonNull(diskPath);
             return this;
         }
 
-        public Builder setGatewayArn(String gatewayArn) {
+        public Builder gatewayArn(String gatewayArn) {
             this.gatewayArn = Objects.requireNonNull(gatewayArn);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }

@@ -42,7 +42,7 @@ public final class StateMachineCloudWatchLogsLogGroup {
     	      this.logGroupArn = defaults.logGroupArn;
         }
 
-        public Builder setLogGroupArn(@Nullable String logGroupArn) {
+        public Builder logGroupArn(@Nullable String logGroupArn) {
             this.logGroupArn = logGroupArn;
             return this;
         }

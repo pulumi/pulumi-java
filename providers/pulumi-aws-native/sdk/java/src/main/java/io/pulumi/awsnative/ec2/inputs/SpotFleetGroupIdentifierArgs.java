@@ -48,12 +48,12 @@ public final class SpotFleetGroupIdentifierArgs extends io.pulumi.resources.Reso
     	      this.groupId = defaults.groupId;
         }
 
-        public Builder setGroupId(Input<String> groupId) {
+        public Builder groupId(Input<String> groupId) {
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
 
-        public Builder setGroupId(String groupId) {
+        public Builder groupId(String groupId) {
             this.groupId = Input.of(Objects.requireNonNull(groupId));
             return this;
         }

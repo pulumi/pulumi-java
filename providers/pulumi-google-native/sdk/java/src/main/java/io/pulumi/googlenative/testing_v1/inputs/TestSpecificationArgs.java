@@ -210,102 +210,102 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
     	      this.testTimeout = defaults.testTimeout;
         }
 
-        public Builder setAndroidInstrumentationTest(@Nullable Input<AndroidInstrumentationTestArgs> androidInstrumentationTest) {
+        public Builder androidInstrumentationTest(@Nullable Input<AndroidInstrumentationTestArgs> androidInstrumentationTest) {
             this.androidInstrumentationTest = androidInstrumentationTest;
             return this;
         }
 
-        public Builder setAndroidInstrumentationTest(@Nullable AndroidInstrumentationTestArgs androidInstrumentationTest) {
+        public Builder androidInstrumentationTest(@Nullable AndroidInstrumentationTestArgs androidInstrumentationTest) {
             this.androidInstrumentationTest = Input.ofNullable(androidInstrumentationTest);
             return this;
         }
 
-        public Builder setAndroidRoboTest(@Nullable Input<AndroidRoboTestArgs> androidRoboTest) {
+        public Builder androidRoboTest(@Nullable Input<AndroidRoboTestArgs> androidRoboTest) {
             this.androidRoboTest = androidRoboTest;
             return this;
         }
 
-        public Builder setAndroidRoboTest(@Nullable AndroidRoboTestArgs androidRoboTest) {
+        public Builder androidRoboTest(@Nullable AndroidRoboTestArgs androidRoboTest) {
             this.androidRoboTest = Input.ofNullable(androidRoboTest);
             return this;
         }
 
-        public Builder setAndroidTestLoop(@Nullable Input<AndroidTestLoopArgs> androidTestLoop) {
+        public Builder androidTestLoop(@Nullable Input<AndroidTestLoopArgs> androidTestLoop) {
             this.androidTestLoop = androidTestLoop;
             return this;
         }
 
-        public Builder setAndroidTestLoop(@Nullable AndroidTestLoopArgs androidTestLoop) {
+        public Builder androidTestLoop(@Nullable AndroidTestLoopArgs androidTestLoop) {
             this.androidTestLoop = Input.ofNullable(androidTestLoop);
             return this;
         }
 
-        public Builder setDisablePerformanceMetrics(@Nullable Input<Boolean> disablePerformanceMetrics) {
+        public Builder disablePerformanceMetrics(@Nullable Input<Boolean> disablePerformanceMetrics) {
             this.disablePerformanceMetrics = disablePerformanceMetrics;
             return this;
         }
 
-        public Builder setDisablePerformanceMetrics(@Nullable Boolean disablePerformanceMetrics) {
+        public Builder disablePerformanceMetrics(@Nullable Boolean disablePerformanceMetrics) {
             this.disablePerformanceMetrics = Input.ofNullable(disablePerformanceMetrics);
             return this;
         }
 
-        public Builder setDisableVideoRecording(@Nullable Input<Boolean> disableVideoRecording) {
+        public Builder disableVideoRecording(@Nullable Input<Boolean> disableVideoRecording) {
             this.disableVideoRecording = disableVideoRecording;
             return this;
         }
 
-        public Builder setDisableVideoRecording(@Nullable Boolean disableVideoRecording) {
+        public Builder disableVideoRecording(@Nullable Boolean disableVideoRecording) {
             this.disableVideoRecording = Input.ofNullable(disableVideoRecording);
             return this;
         }
 
-        public Builder setIosTestLoop(@Nullable Input<IosTestLoopArgs> iosTestLoop) {
+        public Builder iosTestLoop(@Nullable Input<IosTestLoopArgs> iosTestLoop) {
             this.iosTestLoop = iosTestLoop;
             return this;
         }
 
-        public Builder setIosTestLoop(@Nullable IosTestLoopArgs iosTestLoop) {
+        public Builder iosTestLoop(@Nullable IosTestLoopArgs iosTestLoop) {
             this.iosTestLoop = Input.ofNullable(iosTestLoop);
             return this;
         }
 
-        public Builder setIosTestSetup(@Nullable Input<IosTestSetupArgs> iosTestSetup) {
+        public Builder iosTestSetup(@Nullable Input<IosTestSetupArgs> iosTestSetup) {
             this.iosTestSetup = iosTestSetup;
             return this;
         }
 
-        public Builder setIosTestSetup(@Nullable IosTestSetupArgs iosTestSetup) {
+        public Builder iosTestSetup(@Nullable IosTestSetupArgs iosTestSetup) {
             this.iosTestSetup = Input.ofNullable(iosTestSetup);
             return this;
         }
 
-        public Builder setIosXcTest(@Nullable Input<IosXcTestArgs> iosXcTest) {
+        public Builder iosXcTest(@Nullable Input<IosXcTestArgs> iosXcTest) {
             this.iosXcTest = iosXcTest;
             return this;
         }
 
-        public Builder setIosXcTest(@Nullable IosXcTestArgs iosXcTest) {
+        public Builder iosXcTest(@Nullable IosXcTestArgs iosXcTest) {
             this.iosXcTest = Input.ofNullable(iosXcTest);
             return this;
         }
 
-        public Builder setTestSetup(@Nullable Input<TestSetupArgs> testSetup) {
+        public Builder testSetup(@Nullable Input<TestSetupArgs> testSetup) {
             this.testSetup = testSetup;
             return this;
         }
 
-        public Builder setTestSetup(@Nullable TestSetupArgs testSetup) {
+        public Builder testSetup(@Nullable TestSetupArgs testSetup) {
             this.testSetup = Input.ofNullable(testSetup);
             return this;
         }
 
-        public Builder setTestTimeout(@Nullable Input<String> testTimeout) {
+        public Builder testTimeout(@Nullable Input<String> testTimeout) {
             this.testTimeout = testTimeout;
             return this;
         }
 
-        public Builder setTestTimeout(@Nullable String testTimeout) {
+        public Builder testTimeout(@Nullable String testTimeout) {
             this.testTimeout = Input.ofNullable(testTimeout);
             return this;
         }

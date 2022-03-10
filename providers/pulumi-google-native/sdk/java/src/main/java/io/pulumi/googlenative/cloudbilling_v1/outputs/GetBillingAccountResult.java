@@ -98,22 +98,22 @@ public final class GetBillingAccountResult {
     	      this.open = defaults.open;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setMasterBillingAccount(String masterBillingAccount) {
+        public Builder masterBillingAccount(String masterBillingAccount) {
             this.masterBillingAccount = Objects.requireNonNull(masterBillingAccount);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOpen(Boolean open) {
+        public Builder open(Boolean open) {
             this.open = Objects.requireNonNull(open);
             return this;
         }

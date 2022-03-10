@@ -238,67 +238,67 @@ public final class GetMultipleActivationKeyResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAgreementNumber(@Nullable String agreementNumber) {
+        public Builder agreementNumber(@Nullable String agreementNumber) {
             this.agreementNumber = agreementNumber;
             return this;
         }
 
-        public Builder setExpirationDate(String expirationDate) {
+        public Builder expirationDate(String expirationDate) {
             this.expirationDate = Objects.requireNonNull(expirationDate);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstalledServerNumber(@Nullable Integer installedServerNumber) {
+        public Builder installedServerNumber(@Nullable Integer installedServerNumber) {
             this.installedServerNumber = installedServerNumber;
             return this;
         }
 
-        public Builder setIsEligible(@Nullable Boolean isEligible) {
+        public Builder isEligible(@Nullable Boolean isEligible) {
             this.isEligible = isEligible;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMultipleActivationKey(String multipleActivationKey) {
+        public Builder multipleActivationKey(String multipleActivationKey) {
             this.multipleActivationKey = Objects.requireNonNull(multipleActivationKey);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOsType(@Nullable String osType) {
+        public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSupportType(@Nullable String supportType) {
+        public Builder supportType(@Nullable String supportType) {
             this.supportType = supportType;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

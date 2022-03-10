@@ -69,12 +69,12 @@ public final class LabelSelector {
     	      this.matchLabels = defaults.matchLabels;
         }
 
-        public Builder setMatchExpressions(@Nullable List<LabelSelectorRequirement> matchExpressions) {
+        public Builder matchExpressions(@Nullable List<LabelSelectorRequirement> matchExpressions) {
             this.matchExpressions = matchExpressions;
             return this;
         }
 
-        public Builder setMatchLabels(@Nullable Map<String,String> matchLabels) {
+        public Builder matchLabels(@Nullable Map<String,String> matchLabels) {
             this.matchLabels = matchLabels;
             return this;
         }

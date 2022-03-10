@@ -52,12 +52,12 @@ public final class LaunchTemplateElasticGpuSpecificationGetArgs extends io.pulum
     	      this.type = defaults.type;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

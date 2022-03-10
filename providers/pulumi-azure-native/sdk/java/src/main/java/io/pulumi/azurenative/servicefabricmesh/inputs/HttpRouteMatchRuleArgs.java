@@ -76,22 +76,22 @@ public final class HttpRouteMatchRuleArgs extends io.pulumi.resources.ResourceAr
     	      this.path = defaults.path;
         }
 
-        public Builder setHeaders(@Nullable Input<List<HttpRouteMatchHeaderArgs>> headers) {
+        public Builder headers(@Nullable Input<List<HttpRouteMatchHeaderArgs>> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setHeaders(@Nullable List<HttpRouteMatchHeaderArgs> headers) {
+        public Builder headers(@Nullable List<HttpRouteMatchHeaderArgs> headers) {
             this.headers = Input.ofNullable(headers);
             return this;
         }
 
-        public Builder setPath(Input<HttpRouteMatchPathArgs> path) {
+        public Builder path(Input<HttpRouteMatchPathArgs> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setPath(HttpRouteMatchPathArgs path) {
+        public Builder path(HttpRouteMatchPathArgs path) {
             this.path = Input.of(Objects.requireNonNull(path));
             return this;
         }

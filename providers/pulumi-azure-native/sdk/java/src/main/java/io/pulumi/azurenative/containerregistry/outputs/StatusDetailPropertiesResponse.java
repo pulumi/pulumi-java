@@ -113,27 +113,27 @@ public final class StatusDetailPropertiesResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setCode(String code) {
+        public Builder code(String code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
 
-        public Builder setCorrelationId(String correlationId) {
+        public Builder correlationId(String correlationId) {
             this.correlationId = Objects.requireNonNull(correlationId);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setTimestamp(String timestamp) {
+        public Builder timestamp(String timestamp) {
             this.timestamp = Objects.requireNonNull(timestamp);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

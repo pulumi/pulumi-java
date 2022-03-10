@@ -107,47 +107,47 @@ public final class GetTargetGroupHealthCheck {
     	      this.unhealthyThreshold = defaults.unhealthyThreshold;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setHealthyThreshold(Integer healthyThreshold) {
+        public Builder healthyThreshold(Integer healthyThreshold) {
             this.healthyThreshold = Objects.requireNonNull(healthyThreshold);
             return this;
         }
 
-        public Builder setInterval(Integer interval) {
+        public Builder interval(Integer interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
 
-        public Builder setMatcher(String matcher) {
+        public Builder matcher(String matcher) {
             this.matcher = Objects.requireNonNull(matcher);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setPort(String port) {
+        public Builder port(String port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setTimeout(Integer timeout) {
+        public Builder timeout(Integer timeout) {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
 
-        public Builder setUnhealthyThreshold(Integer unhealthyThreshold) {
+        public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             this.unhealthyThreshold = Objects.requireNonNull(unhealthyThreshold);
             return this;
         }

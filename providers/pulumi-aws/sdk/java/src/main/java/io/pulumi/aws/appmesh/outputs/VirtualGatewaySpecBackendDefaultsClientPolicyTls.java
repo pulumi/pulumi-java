@@ -103,22 +103,22 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTls {
     	      this.validation = defaults.validation;
         }
 
-        public Builder setCertificate(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificate certificate) {
+        public Builder certificate(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificate certificate) {
             this.certificate = certificate;
             return this;
         }
 
-        public Builder setEnforce(@Nullable Boolean enforce) {
+        public Builder enforce(@Nullable Boolean enforce) {
             this.enforce = enforce;
             return this;
         }
 
-        public Builder setPorts(@Nullable List<Integer> ports) {
+        public Builder ports(@Nullable List<Integer> ports) {
             this.ports = ports;
             return this;
         }
 
-        public Builder setValidation(VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidation validation) {
+        public Builder validation(VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidation validation) {
             this.validation = Objects.requireNonNull(validation);
             return this;
         }

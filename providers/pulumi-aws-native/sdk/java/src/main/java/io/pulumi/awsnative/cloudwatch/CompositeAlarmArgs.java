@@ -152,72 +152,72 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
     	      this.oKActions = defaults.oKActions;
         }
 
-        public Builder setActionsEnabled(@Nullable Input<Boolean> actionsEnabled) {
+        public Builder actionsEnabled(@Nullable Input<Boolean> actionsEnabled) {
             this.actionsEnabled = actionsEnabled;
             return this;
         }
 
-        public Builder setActionsEnabled(@Nullable Boolean actionsEnabled) {
+        public Builder actionsEnabled(@Nullable Boolean actionsEnabled) {
             this.actionsEnabled = Input.ofNullable(actionsEnabled);
             return this;
         }
 
-        public Builder setAlarmActions(@Nullable Input<List<String>> alarmActions) {
+        public Builder alarmActions(@Nullable Input<List<String>> alarmActions) {
             this.alarmActions = alarmActions;
             return this;
         }
 
-        public Builder setAlarmActions(@Nullable List<String> alarmActions) {
+        public Builder alarmActions(@Nullable List<String> alarmActions) {
             this.alarmActions = Input.ofNullable(alarmActions);
             return this;
         }
 
-        public Builder setAlarmDescription(@Nullable Input<String> alarmDescription) {
+        public Builder alarmDescription(@Nullable Input<String> alarmDescription) {
             this.alarmDescription = alarmDescription;
             return this;
         }
 
-        public Builder setAlarmDescription(@Nullable String alarmDescription) {
+        public Builder alarmDescription(@Nullable String alarmDescription) {
             this.alarmDescription = Input.ofNullable(alarmDescription);
             return this;
         }
 
-        public Builder setAlarmName(Input<String> alarmName) {
+        public Builder alarmName(Input<String> alarmName) {
             this.alarmName = Objects.requireNonNull(alarmName);
             return this;
         }
 
-        public Builder setAlarmName(String alarmName) {
+        public Builder alarmName(String alarmName) {
             this.alarmName = Input.of(Objects.requireNonNull(alarmName));
             return this;
         }
 
-        public Builder setAlarmRule(Input<String> alarmRule) {
+        public Builder alarmRule(Input<String> alarmRule) {
             this.alarmRule = Objects.requireNonNull(alarmRule);
             return this;
         }
 
-        public Builder setAlarmRule(String alarmRule) {
+        public Builder alarmRule(String alarmRule) {
             this.alarmRule = Input.of(Objects.requireNonNull(alarmRule));
             return this;
         }
 
-        public Builder setInsufficientDataActions(@Nullable Input<List<String>> insufficientDataActions) {
+        public Builder insufficientDataActions(@Nullable Input<List<String>> insufficientDataActions) {
             this.insufficientDataActions = insufficientDataActions;
             return this;
         }
 
-        public Builder setInsufficientDataActions(@Nullable List<String> insufficientDataActions) {
+        public Builder insufficientDataActions(@Nullable List<String> insufficientDataActions) {
             this.insufficientDataActions = Input.ofNullable(insufficientDataActions);
             return this;
         }
 
-        public Builder setOKActions(@Nullable Input<List<String>> oKActions) {
+        public Builder oKActions(@Nullable Input<List<String>> oKActions) {
             this.oKActions = oKActions;
             return this;
         }
 
-        public Builder setOKActions(@Nullable List<String> oKActions) {
+        public Builder oKActions(@Nullable List<String> oKActions) {
             this.oKActions = Input.ofNullable(oKActions);
             return this;
         }

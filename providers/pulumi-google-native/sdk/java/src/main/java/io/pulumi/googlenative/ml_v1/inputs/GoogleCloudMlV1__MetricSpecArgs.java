@@ -75,22 +75,22 @@ public final class GoogleCloudMlV1__MetricSpecArgs extends io.pulumi.resources.R
     	      this.target = defaults.target;
         }
 
-        public Builder setName(@Nullable Input<GoogleCloudMlV1__MetricSpecName> name) {
+        public Builder name(@Nullable Input<GoogleCloudMlV1__MetricSpecName> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable GoogleCloudMlV1__MetricSpecName name) {
+        public Builder name(@Nullable GoogleCloudMlV1__MetricSpecName name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTarget(@Nullable Input<Integer> target) {
+        public Builder target(@Nullable Input<Integer> target) {
             this.target = target;
             return this;
         }
 
-        public Builder setTarget(@Nullable Integer target) {
+        public Builder target(@Nullable Integer target) {
             this.target = Input.ofNullable(target);
             return this;
         }

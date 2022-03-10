@@ -116,27 +116,27 @@ public final class LogAnalyticsResponse {
     	      this.workspaceResourceId = defaults.workspaceResourceId;
         }
 
-        public Builder setLogType(@Nullable String logType) {
+        public Builder logType(@Nullable String logType) {
             this.logType = logType;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setWorkspaceId(String workspaceId) {
+        public Builder workspaceId(String workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
 
-        public Builder setWorkspaceKey(String workspaceKey) {
+        public Builder workspaceKey(String workspaceKey) {
             this.workspaceKey = Objects.requireNonNull(workspaceKey);
             return this;
         }
 
-        public Builder setWorkspaceResourceId(@Nullable Map<String,String> workspaceResourceId) {
+        public Builder workspaceResourceId(@Nullable Map<String,String> workspaceResourceId) {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }

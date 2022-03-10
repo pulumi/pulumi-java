@@ -58,12 +58,12 @@ public final class DSSEAttestationOccurrenceResponse {
     	      this.statement = defaults.statement;
         }
 
-        public Builder setEnvelope(EnvelopeResponse envelope) {
+        public Builder envelope(EnvelopeResponse envelope) {
             this.envelope = Objects.requireNonNull(envelope);
             return this;
         }
 
-        public Builder setStatement(InTotoStatementResponse statement) {
+        public Builder statement(InTotoStatementResponse statement) {
             this.statement = Objects.requireNonNull(statement);
             return this;
         }

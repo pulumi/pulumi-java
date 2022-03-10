@@ -107,42 +107,42 @@ public final class ClientCertificateArgs extends io.pulumi.resources.ResourceArg
     	      this.thumbprint = defaults.thumbprint;
         }
 
-        public Builder setCommonName(@Nullable Input<String> commonName) {
+        public Builder commonName(@Nullable Input<String> commonName) {
             this.commonName = commonName;
             return this;
         }
 
-        public Builder setCommonName(@Nullable String commonName) {
+        public Builder commonName(@Nullable String commonName) {
             this.commonName = Input.ofNullable(commonName);
             return this;
         }
 
-        public Builder setIsAdmin(Input<Boolean> isAdmin) {
+        public Builder isAdmin(Input<Boolean> isAdmin) {
             this.isAdmin = Objects.requireNonNull(isAdmin);
             return this;
         }
 
-        public Builder setIsAdmin(Boolean isAdmin) {
+        public Builder isAdmin(Boolean isAdmin) {
             this.isAdmin = Input.of(Objects.requireNonNull(isAdmin));
             return this;
         }
 
-        public Builder setIssuerThumbprint(@Nullable Input<String> issuerThumbprint) {
+        public Builder issuerThumbprint(@Nullable Input<String> issuerThumbprint) {
             this.issuerThumbprint = issuerThumbprint;
             return this;
         }
 
-        public Builder setIssuerThumbprint(@Nullable String issuerThumbprint) {
+        public Builder issuerThumbprint(@Nullable String issuerThumbprint) {
             this.issuerThumbprint = Input.ofNullable(issuerThumbprint);
             return this;
         }
 
-        public Builder setThumbprint(@Nullable Input<String> thumbprint) {
+        public Builder thumbprint(@Nullable Input<String> thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }
 
-        public Builder setThumbprint(@Nullable String thumbprint) {
+        public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = Input.ofNullable(thumbprint);
             return this;
         }

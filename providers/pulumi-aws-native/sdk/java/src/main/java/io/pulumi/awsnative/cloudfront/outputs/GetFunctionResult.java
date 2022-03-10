@@ -77,27 +77,27 @@ public final class GetFunctionResult {
     	      this.stage = defaults.stage;
         }
 
-        public Builder setFunctionARN(@Nullable String functionARN) {
+        public Builder functionARN(@Nullable String functionARN) {
             this.functionARN = functionARN;
             return this;
         }
 
-        public Builder setFunctionConfig(@Nullable FunctionConfig functionConfig) {
+        public Builder functionConfig(@Nullable FunctionConfig functionConfig) {
             this.functionConfig = functionConfig;
             return this;
         }
 
-        public Builder setFunctionMetadata(@Nullable FunctionMetadata functionMetadata) {
+        public Builder functionMetadata(@Nullable FunctionMetadata functionMetadata) {
             this.functionMetadata = functionMetadata;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setStage(@Nullable String stage) {
+        public Builder stage(@Nullable String stage) {
             this.stage = stage;
             return this;
         }

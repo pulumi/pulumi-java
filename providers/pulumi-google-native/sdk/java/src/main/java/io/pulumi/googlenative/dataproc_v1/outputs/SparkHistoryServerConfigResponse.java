@@ -48,7 +48,7 @@ public final class SparkHistoryServerConfigResponse {
     	      this.dataprocCluster = defaults.dataprocCluster;
         }
 
-        public Builder setDataprocCluster(String dataprocCluster) {
+        public Builder dataprocCluster(String dataprocCluster) {
             this.dataprocCluster = Objects.requireNonNull(dataprocCluster);
             return this;
         }

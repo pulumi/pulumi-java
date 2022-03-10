@@ -107,22 +107,22 @@ public final class OSPolicyResponse extends io.pulumi.resources.InvokeArgs {
     	      this.resourceGroups = defaults.resourceGroups;
         }
 
-        public Builder setAllowNoResourceGroupMatch(Boolean allowNoResourceGroupMatch) {
+        public Builder allowNoResourceGroupMatch(Boolean allowNoResourceGroupMatch) {
             this.allowNoResourceGroupMatch = Objects.requireNonNull(allowNoResourceGroupMatch);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setMode(String mode) {
+        public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
-        public Builder setResourceGroups(List<OSPolicyResourceGroupResponse> resourceGroups) {
+        public Builder resourceGroups(List<OSPolicyResourceGroupResponse> resourceGroups) {
             this.resourceGroups = Objects.requireNonNull(resourceGroups);
             return this;
         }

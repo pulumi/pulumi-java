@@ -59,12 +59,12 @@ public final class ExpressionEvaluationOptionsArgs extends io.pulumi.resources.R
     	      this.scope = defaults.scope;
         }
 
-        public Builder setScope(@Nullable Input<Either<String,ExpressionEvaluationOptionsScopeType>> scope) {
+        public Builder scope(@Nullable Input<Either<String,ExpressionEvaluationOptionsScopeType>> scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setScope(@Nullable Either<String,ExpressionEvaluationOptionsScopeType> scope) {
+        public Builder scope(@Nullable Either<String,ExpressionEvaluationOptionsScopeType> scope) {
             this.scope = Input.ofNullable(scope);
             return this;
         }

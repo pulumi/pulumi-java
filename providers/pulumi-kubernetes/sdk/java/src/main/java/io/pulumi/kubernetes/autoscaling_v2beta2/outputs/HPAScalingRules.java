@@ -86,17 +86,17 @@ public final class HPAScalingRules {
     	      this.stabilizationWindowSeconds = defaults.stabilizationWindowSeconds;
         }
 
-        public Builder setPolicies(@Nullable List<HPAScalingPolicy> policies) {
+        public Builder policies(@Nullable List<HPAScalingPolicy> policies) {
             this.policies = policies;
             return this;
         }
 
-        public Builder setSelectPolicy(@Nullable String selectPolicy) {
+        public Builder selectPolicy(@Nullable String selectPolicy) {
             this.selectPolicy = selectPolicy;
             return this;
         }
 
-        public Builder setStabilizationWindowSeconds(@Nullable Integer stabilizationWindowSeconds) {
+        public Builder stabilizationWindowSeconds(@Nullable Integer stabilizationWindowSeconds) {
             this.stabilizationWindowSeconds = stabilizationWindowSeconds;
             return this;
         }

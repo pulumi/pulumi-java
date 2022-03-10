@@ -185,92 +185,92 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
     	      this.sendEmailsToSubscriptionOwners = defaults.sendEmailsToSubscriptionOwners;
         }
 
-        public Builder setConfigurationId(@Nullable Input<String> configurationId) {
+        public Builder configurationId(@Nullable Input<String> configurationId) {
             this.configurationId = configurationId;
             return this;
         }
 
-        public Builder setConfigurationId(@Nullable String configurationId) {
+        public Builder configurationId(@Nullable String configurationId) {
             this.configurationId = Input.ofNullable(configurationId);
             return this;
         }
 
-        public Builder setCustomEmails(@Nullable Input<List<String>> customEmails) {
+        public Builder customEmails(@Nullable Input<List<String>> customEmails) {
             this.customEmails = customEmails;
             return this;
         }
 
-        public Builder setCustomEmails(@Nullable List<String> customEmails) {
+        public Builder customEmails(@Nullable List<String> customEmails) {
             this.customEmails = Input.ofNullable(customEmails);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setLastUpdatedTime(@Nullable Input<String> lastUpdatedTime) {
+        public Builder lastUpdatedTime(@Nullable Input<String> lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
 
-        public Builder setLastUpdatedTime(@Nullable String lastUpdatedTime) {
+        public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = Input.ofNullable(lastUpdatedTime);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceName(Input<String> resourceName) {
+        public Builder resourceName(Input<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
-        public Builder setResourceName(String resourceName) {
+        public Builder resourceName(String resourceName) {
             this.resourceName = Input.of(Objects.requireNonNull(resourceName));
             return this;
         }
 
-        public Builder setRuleDefinitions(@Nullable Input<ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs> ruleDefinitions) {
+        public Builder ruleDefinitions(@Nullable Input<ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs> ruleDefinitions) {
             this.ruleDefinitions = ruleDefinitions;
             return this;
         }
 
-        public Builder setRuleDefinitions(@Nullable ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs ruleDefinitions) {
+        public Builder ruleDefinitions(@Nullable ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs ruleDefinitions) {
             this.ruleDefinitions = Input.ofNullable(ruleDefinitions);
             return this;
         }
 
-        public Builder setSendEmailsToSubscriptionOwners(@Nullable Input<Boolean> sendEmailsToSubscriptionOwners) {
+        public Builder sendEmailsToSubscriptionOwners(@Nullable Input<Boolean> sendEmailsToSubscriptionOwners) {
             this.sendEmailsToSubscriptionOwners = sendEmailsToSubscriptionOwners;
             return this;
         }
 
-        public Builder setSendEmailsToSubscriptionOwners(@Nullable Boolean sendEmailsToSubscriptionOwners) {
+        public Builder sendEmailsToSubscriptionOwners(@Nullable Boolean sendEmailsToSubscriptionOwners) {
             this.sendEmailsToSubscriptionOwners = Input.ofNullable(sendEmailsToSubscriptionOwners);
             return this;
         }

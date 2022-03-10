@@ -84,17 +84,17 @@ public final class GetWebAppDomainOwnershipIdentifierArgs extends io.pulumi.reso
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setDomainOwnershipIdentifierName(String domainOwnershipIdentifierName) {
+        public Builder domainOwnershipIdentifierName(String domainOwnershipIdentifierName) {
             this.domainOwnershipIdentifierName = Objects.requireNonNull(domainOwnershipIdentifierName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

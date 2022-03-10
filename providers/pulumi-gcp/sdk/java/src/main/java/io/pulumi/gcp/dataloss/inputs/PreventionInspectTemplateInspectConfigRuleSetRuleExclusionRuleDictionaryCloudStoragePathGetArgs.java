@@ -52,12 +52,12 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
     	      this.path = defaults.path;
         }
 
-        public Builder setPath(Input<String> path) {
+        public Builder path(Input<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Input.of(Objects.requireNonNull(path));
             return this;
         }

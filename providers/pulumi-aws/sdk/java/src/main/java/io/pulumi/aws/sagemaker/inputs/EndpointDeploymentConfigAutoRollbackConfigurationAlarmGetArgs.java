@@ -52,12 +52,12 @@ public final class EndpointDeploymentConfigAutoRollbackConfigurationAlarmGetArgs
     	      this.alarmName = defaults.alarmName;
         }
 
-        public Builder setAlarmName(Input<String> alarmName) {
+        public Builder alarmName(Input<String> alarmName) {
             this.alarmName = Objects.requireNonNull(alarmName);
             return this;
         }
 
-        public Builder setAlarmName(String alarmName) {
+        public Builder alarmName(String alarmName) {
             this.alarmName = Input.of(Objects.requireNonNull(alarmName));
             return this;
         }

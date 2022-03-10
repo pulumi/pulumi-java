@@ -81,17 +81,17 @@ public final class ComponentTransformResponse {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOriginalTransform(String originalTransform) {
+        public Builder originalTransform(String originalTransform) {
             this.originalTransform = Objects.requireNonNull(originalTransform);
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }

@@ -117,52 +117,52 @@ public final class SecretRotationState extends io.pulumi.resources.ResourceArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder setRotationEnabled(@Nullable Input<Boolean> rotationEnabled) {
+        public Builder rotationEnabled(@Nullable Input<Boolean> rotationEnabled) {
             this.rotationEnabled = rotationEnabled;
             return this;
         }
 
-        public Builder setRotationEnabled(@Nullable Boolean rotationEnabled) {
+        public Builder rotationEnabled(@Nullable Boolean rotationEnabled) {
             this.rotationEnabled = Input.ofNullable(rotationEnabled);
             return this;
         }
 
-        public Builder setRotationLambdaArn(@Nullable Input<String> rotationLambdaArn) {
+        public Builder rotationLambdaArn(@Nullable Input<String> rotationLambdaArn) {
             this.rotationLambdaArn = rotationLambdaArn;
             return this;
         }
 
-        public Builder setRotationLambdaArn(@Nullable String rotationLambdaArn) {
+        public Builder rotationLambdaArn(@Nullable String rotationLambdaArn) {
             this.rotationLambdaArn = Input.ofNullable(rotationLambdaArn);
             return this;
         }
 
-        public Builder setRotationRules(@Nullable Input<SecretRotationRotationRulesGetArgs> rotationRules) {
+        public Builder rotationRules(@Nullable Input<SecretRotationRotationRulesGetArgs> rotationRules) {
             this.rotationRules = rotationRules;
             return this;
         }
 
-        public Builder setRotationRules(@Nullable SecretRotationRotationRulesGetArgs rotationRules) {
+        public Builder rotationRules(@Nullable SecretRotationRotationRulesGetArgs rotationRules) {
             this.rotationRules = Input.ofNullable(rotationRules);
             return this;
         }
 
-        public Builder setSecretId(@Nullable Input<String> secretId) {
+        public Builder secretId(@Nullable Input<String> secretId) {
             this.secretId = secretId;
             return this;
         }
 
-        public Builder setSecretId(@Nullable String secretId) {
+        public Builder secretId(@Nullable String secretId) {
             this.secretId = Input.ofNullable(secretId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

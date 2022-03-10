@@ -183,47 +183,47 @@ public final class TemplateVersion {
     	      this.versionNumber = defaults.versionNumber;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setDataSetConfigurations(@Nullable List<TemplateDataSetConfiguration> dataSetConfigurations) {
+        public Builder dataSetConfigurations(@Nullable List<TemplateDataSetConfiguration> dataSetConfigurations) {
             this.dataSetConfigurations = dataSetConfigurations;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setErrors(@Nullable List<TemplateError> errors) {
+        public Builder errors(@Nullable List<TemplateError> errors) {
             this.errors = errors;
             return this;
         }
 
-        public Builder setSheets(@Nullable List<TemplateSheet> sheets) {
+        public Builder sheets(@Nullable List<TemplateSheet> sheets) {
             this.sheets = sheets;
             return this;
         }
 
-        public Builder setSourceEntityArn(@Nullable String sourceEntityArn) {
+        public Builder sourceEntityArn(@Nullable String sourceEntityArn) {
             this.sourceEntityArn = sourceEntityArn;
             return this;
         }
 
-        public Builder setStatus(@Nullable TemplateResourceStatus status) {
+        public Builder status(@Nullable TemplateResourceStatus status) {
             this.status = status;
             return this;
         }
 
-        public Builder setThemeArn(@Nullable String themeArn) {
+        public Builder themeArn(@Nullable String themeArn) {
             this.themeArn = themeArn;
             return this;
         }
 
-        public Builder setVersionNumber(@Nullable Double versionNumber) {
+        public Builder versionNumber(@Nullable Double versionNumber) {
             this.versionNumber = versionNumber;
             return this;
         }

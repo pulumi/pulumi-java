@@ -197,52 +197,52 @@ public final class GetTrialResult {
     	      this.trialInfeasible = defaults.trialInfeasible;
         }
 
-        public Builder setClientId(String clientId) {
+        public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setFinalMeasurement(GoogleCloudMlV1__MeasurementResponse finalMeasurement) {
+        public Builder finalMeasurement(GoogleCloudMlV1__MeasurementResponse finalMeasurement) {
             this.finalMeasurement = Objects.requireNonNull(finalMeasurement);
             return this;
         }
 
-        public Builder setInfeasibleReason(String infeasibleReason) {
+        public Builder infeasibleReason(String infeasibleReason) {
             this.infeasibleReason = Objects.requireNonNull(infeasibleReason);
             return this;
         }
 
-        public Builder setMeasurements(List<GoogleCloudMlV1__MeasurementResponse> measurements) {
+        public Builder measurements(List<GoogleCloudMlV1__MeasurementResponse> measurements) {
             this.measurements = Objects.requireNonNull(measurements);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(List<GoogleCloudMlV1_Trial_ParameterResponse> parameters) {
+        public Builder parameters(List<GoogleCloudMlV1_Trial_ParameterResponse> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTrialInfeasible(Boolean trialInfeasible) {
+        public Builder trialInfeasible(Boolean trialInfeasible) {
             this.trialInfeasible = Objects.requireNonNull(trialInfeasible);
             return this;
         }

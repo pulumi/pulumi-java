@@ -99,22 +99,22 @@ public final class PublisherInfoResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setBinaryName(@Nullable String binaryName) {
+        public Builder binaryName(@Nullable String binaryName) {
             this.binaryName = binaryName;
             return this;
         }
 
-        public Builder setProductName(@Nullable String productName) {
+        public Builder productName(@Nullable String productName) {
             this.productName = productName;
             return this;
         }
 
-        public Builder setPublisherName(@Nullable String publisherName) {
+        public Builder publisherName(@Nullable String publisherName) {
             this.publisherName = publisherName;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

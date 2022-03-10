@@ -73,12 +73,12 @@ public final class HttpFaultDelayResponse extends io.pulumi.resources.InvokeArgs
     	      this.percentage = defaults.percentage;
         }
 
-        public Builder setFixedDelay(DurationResponse fixedDelay) {
+        public Builder fixedDelay(DurationResponse fixedDelay) {
             this.fixedDelay = Objects.requireNonNull(fixedDelay);
             return this;
         }
 
-        public Builder setPercentage(Double percentage) {
+        public Builder percentage(Double percentage) {
             this.percentage = Objects.requireNonNull(percentage);
             return this;
         }

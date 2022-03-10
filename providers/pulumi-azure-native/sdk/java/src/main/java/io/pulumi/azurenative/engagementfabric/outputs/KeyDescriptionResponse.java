@@ -81,17 +81,17 @@ public final class KeyDescriptionResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRank(String rank) {
+        public Builder rank(String rank) {
             this.rank = Objects.requireNonNull(rank);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

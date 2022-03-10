@@ -93,42 +93,42 @@ public final class RuleGroupSizeConstraintStatementArgs extends io.pulumi.resour
     	      this.textTransformations = defaults.textTransformations;
         }
 
-        public Builder setComparisonOperator(Input<RuleGroupSizeConstraintStatementComparisonOperator> comparisonOperator) {
+        public Builder comparisonOperator(Input<RuleGroupSizeConstraintStatementComparisonOperator> comparisonOperator) {
             this.comparisonOperator = Objects.requireNonNull(comparisonOperator);
             return this;
         }
 
-        public Builder setComparisonOperator(RuleGroupSizeConstraintStatementComparisonOperator comparisonOperator) {
+        public Builder comparisonOperator(RuleGroupSizeConstraintStatementComparisonOperator comparisonOperator) {
             this.comparisonOperator = Input.of(Objects.requireNonNull(comparisonOperator));
             return this;
         }
 
-        public Builder setFieldToMatch(Input<RuleGroupFieldToMatchArgs> fieldToMatch) {
+        public Builder fieldToMatch(Input<RuleGroupFieldToMatchArgs> fieldToMatch) {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
 
-        public Builder setFieldToMatch(RuleGroupFieldToMatchArgs fieldToMatch) {
+        public Builder fieldToMatch(RuleGroupFieldToMatchArgs fieldToMatch) {
             this.fieldToMatch = Input.of(Objects.requireNonNull(fieldToMatch));
             return this;
         }
 
-        public Builder setSize(Input<Double> size) {
+        public Builder size(Input<Double> size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
 
-        public Builder setSize(Double size) {
+        public Builder size(Double size) {
             this.size = Input.of(Objects.requireNonNull(size));
             return this;
         }
 
-        public Builder setTextTransformations(Input<List<RuleGroupTextTransformationArgs>> textTransformations) {
+        public Builder textTransformations(Input<List<RuleGroupTextTransformationArgs>> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
 
-        public Builder setTextTransformations(List<RuleGroupTextTransformationArgs> textTransformations) {
+        public Builder textTransformations(List<RuleGroupTextTransformationArgs> textTransformations) {
             this.textTransformations = Input.of(Objects.requireNonNull(textTransformations));
             return this;
         }

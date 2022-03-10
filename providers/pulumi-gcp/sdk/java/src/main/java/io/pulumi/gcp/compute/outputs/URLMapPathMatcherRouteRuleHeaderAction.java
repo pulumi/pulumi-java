@@ -109,22 +109,22 @@ public final class URLMapPathMatcherRouteRuleHeaderAction {
     	      this.responseHeadersToRemoves = defaults.responseHeadersToRemoves;
         }
 
-        public Builder setRequestHeadersToAdds(@Nullable List<URLMapPathMatcherRouteRuleHeaderActionRequestHeadersToAdd> requestHeadersToAdds) {
+        public Builder requestHeadersToAdds(@Nullable List<URLMapPathMatcherRouteRuleHeaderActionRequestHeadersToAdd> requestHeadersToAdds) {
             this.requestHeadersToAdds = requestHeadersToAdds;
             return this;
         }
 
-        public Builder setRequestHeadersToRemoves(@Nullable List<String> requestHeadersToRemoves) {
+        public Builder requestHeadersToRemoves(@Nullable List<String> requestHeadersToRemoves) {
             this.requestHeadersToRemoves = requestHeadersToRemoves;
             return this;
         }
 
-        public Builder setResponseHeadersToAdds(@Nullable List<URLMapPathMatcherRouteRuleHeaderActionResponseHeadersToAdd> responseHeadersToAdds) {
+        public Builder responseHeadersToAdds(@Nullable List<URLMapPathMatcherRouteRuleHeaderActionResponseHeadersToAdd> responseHeadersToAdds) {
             this.responseHeadersToAdds = responseHeadersToAdds;
             return this;
         }
 
-        public Builder setResponseHeadersToRemoves(@Nullable List<String> responseHeadersToRemoves) {
+        public Builder responseHeadersToRemoves(@Nullable List<String> responseHeadersToRemoves) {
             this.responseHeadersToRemoves = responseHeadersToRemoves;
             return this;
         }

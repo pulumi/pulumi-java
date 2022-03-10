@@ -88,32 +88,32 @@ public final class IntentSlotValueElicitationPromptMessageArgs extends io.pulumi
     	      this.groupNumber = defaults.groupNumber;
         }
 
-        public Builder setContent(Input<String> content) {
+        public Builder content(Input<String> content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
-        public Builder setContent(String content) {
+        public Builder content(String content) {
             this.content = Input.of(Objects.requireNonNull(content));
             return this;
         }
 
-        public Builder setContentType(Input<String> contentType) {
+        public Builder contentType(Input<String> contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
-        public Builder setContentType(String contentType) {
+        public Builder contentType(String contentType) {
             this.contentType = Input.of(Objects.requireNonNull(contentType));
             return this;
         }
 
-        public Builder setGroupNumber(@Nullable Input<Integer> groupNumber) {
+        public Builder groupNumber(@Nullable Input<Integer> groupNumber) {
             this.groupNumber = groupNumber;
             return this;
         }
 
-        public Builder setGroupNumber(@Nullable Integer groupNumber) {
+        public Builder groupNumber(@Nullable Integer groupNumber) {
             this.groupNumber = Input.ofNullable(groupNumber);
             return this;
         }

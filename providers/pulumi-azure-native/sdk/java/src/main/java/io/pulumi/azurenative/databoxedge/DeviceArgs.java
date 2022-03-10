@@ -155,72 +155,72 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDataBoxEdgeDeviceStatus(@Nullable Input<Either<String,DataBoxEdgeDeviceStatus>> dataBoxEdgeDeviceStatus) {
+        public Builder dataBoxEdgeDeviceStatus(@Nullable Input<Either<String,DataBoxEdgeDeviceStatus>> dataBoxEdgeDeviceStatus) {
             this.dataBoxEdgeDeviceStatus = dataBoxEdgeDeviceStatus;
             return this;
         }
 
-        public Builder setDataBoxEdgeDeviceStatus(@Nullable Either<String,DataBoxEdgeDeviceStatus> dataBoxEdgeDeviceStatus) {
+        public Builder dataBoxEdgeDeviceStatus(@Nullable Either<String,DataBoxEdgeDeviceStatus> dataBoxEdgeDeviceStatus) {
             this.dataBoxEdgeDeviceStatus = Input.ofNullable(dataBoxEdgeDeviceStatus);
             return this;
         }
 
-        public Builder setDeviceName(@Nullable Input<String> deviceName) {
+        public Builder deviceName(@Nullable Input<String> deviceName) {
             this.deviceName = deviceName;
             return this;
         }
 
-        public Builder setDeviceName(@Nullable String deviceName) {
+        public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = Input.ofNullable(deviceName);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<ResourceIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<ResourceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable ResourceIdentityArgs identity) {
+        public Builder identity(@Nullable ResourceIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Input<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuArgs sku) {
+        public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

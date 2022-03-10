@@ -280,77 +280,77 @@ public final class GetHanaInstanceResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setHanaInstanceId(String hanaInstanceId) {
+        public Builder hanaInstanceId(String hanaInstanceId) {
             this.hanaInstanceId = Objects.requireNonNull(hanaInstanceId);
             return this;
         }
 
-        public Builder setHardwareProfile(@Nullable HardwareProfileResponse hardwareProfile) {
+        public Builder hardwareProfile(@Nullable HardwareProfileResponse hardwareProfile) {
             this.hardwareProfile = hardwareProfile;
             return this;
         }
 
-        public Builder setHwRevision(String hwRevision) {
+        public Builder hwRevision(String hwRevision) {
             this.hwRevision = Objects.requireNonNull(hwRevision);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetworkProfile(@Nullable NetworkProfileResponse networkProfile) {
+        public Builder networkProfile(@Nullable NetworkProfileResponse networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
 
-        public Builder setOsProfile(@Nullable OSProfileResponse osProfile) {
+        public Builder osProfile(@Nullable OSProfileResponse osProfile) {
             this.osProfile = osProfile;
             return this;
         }
 
-        public Builder setPartnerNodeId(@Nullable String partnerNodeId) {
+        public Builder partnerNodeId(@Nullable String partnerNodeId) {
             this.partnerNodeId = partnerNodeId;
             return this;
         }
 
-        public Builder setPowerState(String powerState) {
+        public Builder powerState(String powerState) {
             this.powerState = Objects.requireNonNull(powerState);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setProximityPlacementGroup(String proximityPlacementGroup) {
+        public Builder proximityPlacementGroup(String proximityPlacementGroup) {
             this.proximityPlacementGroup = Objects.requireNonNull(proximityPlacementGroup);
             return this;
         }
 
-        public Builder setStorageProfile(@Nullable StorageProfileResponse storageProfile) {
+        public Builder storageProfile(@Nullable StorageProfileResponse storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -58,7 +58,7 @@ public final class ExperimentsResponse extends io.pulumi.resources.InvokeArgs {
     	      this.rampUpRules = defaults.rampUpRules;
         }
 
-        public Builder setRampUpRules(@Nullable List<RampUpRuleResponse> rampUpRules) {
+        public Builder rampUpRules(@Nullable List<RampUpRuleResponse> rampUpRules) {
             this.rampUpRules = rampUpRules;
             return this;
         }

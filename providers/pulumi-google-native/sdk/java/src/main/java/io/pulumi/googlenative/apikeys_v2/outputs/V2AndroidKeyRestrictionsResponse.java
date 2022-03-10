@@ -49,7 +49,7 @@ public final class V2AndroidKeyRestrictionsResponse {
     	      this.allowedApplications = defaults.allowedApplications;
         }
 
-        public Builder setAllowedApplications(List<V2AndroidApplicationResponse> allowedApplications) {
+        public Builder allowedApplications(List<V2AndroidApplicationResponse> allowedApplications) {
             this.allowedApplications = Objects.requireNonNull(allowedApplications);
             return this;
         }

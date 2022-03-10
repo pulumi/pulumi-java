@@ -116,27 +116,27 @@ public final class GetDirectorySelfServicePermission extends io.pulumi.resources
     	      this.switchRunningMode = defaults.switchRunningMode;
         }
 
-        public Builder setChangeComputeType(Boolean changeComputeType) {
+        public Builder changeComputeType(Boolean changeComputeType) {
             this.changeComputeType = Objects.requireNonNull(changeComputeType);
             return this;
         }
 
-        public Builder setIncreaseVolumeSize(Boolean increaseVolumeSize) {
+        public Builder increaseVolumeSize(Boolean increaseVolumeSize) {
             this.increaseVolumeSize = Objects.requireNonNull(increaseVolumeSize);
             return this;
         }
 
-        public Builder setRebuildWorkspace(Boolean rebuildWorkspace) {
+        public Builder rebuildWorkspace(Boolean rebuildWorkspace) {
             this.rebuildWorkspace = Objects.requireNonNull(rebuildWorkspace);
             return this;
         }
 
-        public Builder setRestartWorkspace(Boolean restartWorkspace) {
+        public Builder restartWorkspace(Boolean restartWorkspace) {
             this.restartWorkspace = Objects.requireNonNull(restartWorkspace);
             return this;
         }
 
-        public Builder setSwitchRunningMode(Boolean switchRunningMode) {
+        public Builder switchRunningMode(Boolean switchRunningMode) {
             this.switchRunningMode = Objects.requireNonNull(switchRunningMode);
             return this;
         }

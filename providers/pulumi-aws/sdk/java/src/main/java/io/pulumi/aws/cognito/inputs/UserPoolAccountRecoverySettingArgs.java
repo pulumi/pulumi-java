@@ -53,12 +53,12 @@ public final class UserPoolAccountRecoverySettingArgs extends io.pulumi.resource
     	      this.recoveryMechanisms = defaults.recoveryMechanisms;
         }
 
-        public Builder setRecoveryMechanisms(Input<List<UserPoolAccountRecoverySettingRecoveryMechanismArgs>> recoveryMechanisms) {
+        public Builder recoveryMechanisms(Input<List<UserPoolAccountRecoverySettingRecoveryMechanismArgs>> recoveryMechanisms) {
             this.recoveryMechanisms = Objects.requireNonNull(recoveryMechanisms);
             return this;
         }
 
-        public Builder setRecoveryMechanisms(List<UserPoolAccountRecoverySettingRecoveryMechanismArgs> recoveryMechanisms) {
+        public Builder recoveryMechanisms(List<UserPoolAccountRecoverySettingRecoveryMechanismArgs> recoveryMechanisms) {
             this.recoveryMechanisms = Input.of(Objects.requireNonNull(recoveryMechanisms));
             return this;
         }

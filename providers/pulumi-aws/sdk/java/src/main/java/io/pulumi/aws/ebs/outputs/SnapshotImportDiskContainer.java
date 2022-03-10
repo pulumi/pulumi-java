@@ -100,22 +100,22 @@ public final class SnapshotImportDiskContainer {
     	      this.userBucket = defaults.userBucket;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setFormat(String format) {
+        public Builder format(String format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }
 
-        public Builder setUserBucket(@Nullable SnapshotImportDiskContainerUserBucket userBucket) {
+        public Builder userBucket(@Nullable SnapshotImportDiskContainerUserBucket userBucket) {
             this.userBucket = userBucket;
             return this;
         }

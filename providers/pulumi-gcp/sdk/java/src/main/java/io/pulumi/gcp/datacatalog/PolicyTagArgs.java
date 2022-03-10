@@ -109,42 +109,42 @@ public final class PolicyTagArgs extends io.pulumi.resources.ResourceArgs {
     	      this.taxonomy = defaults.taxonomy;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setParentPolicyTag(@Nullable Input<String> parentPolicyTag) {
+        public Builder parentPolicyTag(@Nullable Input<String> parentPolicyTag) {
             this.parentPolicyTag = parentPolicyTag;
             return this;
         }
 
-        public Builder setParentPolicyTag(@Nullable String parentPolicyTag) {
+        public Builder parentPolicyTag(@Nullable String parentPolicyTag) {
             this.parentPolicyTag = Input.ofNullable(parentPolicyTag);
             return this;
         }
 
-        public Builder setTaxonomy(Input<String> taxonomy) {
+        public Builder taxonomy(Input<String> taxonomy) {
             this.taxonomy = Objects.requireNonNull(taxonomy);
             return this;
         }
 
-        public Builder setTaxonomy(String taxonomy) {
+        public Builder taxonomy(String taxonomy) {
             this.taxonomy = Input.of(Objects.requireNonNull(taxonomy));
             return this;
         }

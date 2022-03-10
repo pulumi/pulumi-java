@@ -74,12 +74,12 @@ public final class PartnerRegionInfoResponse extends io.pulumi.resources.InvokeA
     	      this.replicationRole = defaults.replicationRole;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setReplicationRole(String replicationRole) {
+        public Builder replicationRole(String replicationRole) {
             this.replicationRole = Objects.requireNonNull(replicationRole);
             return this;
         }

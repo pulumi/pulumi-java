@@ -87,32 +87,32 @@ public final class IntegrationFlowDefinition {
     	      this.triggerConfig = defaults.triggerConfig;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setFlowName(String flowName) {
+        public Builder flowName(String flowName) {
             this.flowName = Objects.requireNonNull(flowName);
             return this;
         }
 
-        public Builder setKmsArn(String kmsArn) {
+        public Builder kmsArn(String kmsArn) {
             this.kmsArn = Objects.requireNonNull(kmsArn);
             return this;
         }
 
-        public Builder setSourceFlowConfig(IntegrationSourceFlowConfig sourceFlowConfig) {
+        public Builder sourceFlowConfig(IntegrationSourceFlowConfig sourceFlowConfig) {
             this.sourceFlowConfig = Objects.requireNonNull(sourceFlowConfig);
             return this;
         }
 
-        public Builder setTasks(List<IntegrationTask> tasks) {
+        public Builder tasks(List<IntegrationTask> tasks) {
             this.tasks = Objects.requireNonNull(tasks);
             return this;
         }
 
-        public Builder setTriggerConfig(IntegrationTriggerConfig triggerConfig) {
+        public Builder triggerConfig(IntegrationTriggerConfig triggerConfig) {
             this.triggerConfig = Objects.requireNonNull(triggerConfig);
             return this;
         }

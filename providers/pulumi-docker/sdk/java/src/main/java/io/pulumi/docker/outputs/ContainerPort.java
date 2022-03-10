@@ -68,22 +68,22 @@ public final class ContainerPort {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setExternal(@Nullable Integer external) {
+        public Builder external(@Nullable Integer external) {
             this.external = external;
             return this;
         }
 
-        public Builder setInternal(Integer internal) {
+        public Builder internal(Integer internal) {
             this.internal = Objects.requireNonNull(internal);
             return this;
         }
 
-        public Builder setIp(@Nullable String ip) {
+        public Builder ip(@Nullable String ip) {
             this.ip = ip;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }

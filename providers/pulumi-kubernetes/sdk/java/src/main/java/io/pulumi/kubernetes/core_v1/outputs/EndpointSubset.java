@@ -84,17 +84,17 @@ public final class EndpointSubset {
     	      this.ports = defaults.ports;
         }
 
-        public Builder setAddresses(@Nullable List<EndpointAddress> addresses) {
+        public Builder addresses(@Nullable List<EndpointAddress> addresses) {
             this.addresses = addresses;
             return this;
         }
 
-        public Builder setNotReadyAddresses(@Nullable List<EndpointAddress> notReadyAddresses) {
+        public Builder notReadyAddresses(@Nullable List<EndpointAddress> notReadyAddresses) {
             this.notReadyAddresses = notReadyAddresses;
             return this;
         }
 
-        public Builder setPorts(@Nullable List<EndpointPort> ports) {
+        public Builder ports(@Nullable List<EndpointPort> ports) {
             this.ports = ports;
             return this;
         }

@@ -78,17 +78,17 @@ public final class BotFulfillmentUpdateResponseSpecification {
     	      this.messageGroups = defaults.messageGroups;
         }
 
-        public Builder setAllowInterrupt(@Nullable Boolean allowInterrupt) {
+        public Builder allowInterrupt(@Nullable Boolean allowInterrupt) {
             this.allowInterrupt = allowInterrupt;
             return this;
         }
 
-        public Builder setFrequencyInSeconds(Integer frequencyInSeconds) {
+        public Builder frequencyInSeconds(Integer frequencyInSeconds) {
             this.frequencyInSeconds = Objects.requireNonNull(frequencyInSeconds);
             return this;
         }
 
-        public Builder setMessageGroups(List<BotMessageGroup> messageGroups) {
+        public Builder messageGroups(List<BotMessageGroup> messageGroups) {
             this.messageGroups = Objects.requireNonNull(messageGroups);
             return this;
         }

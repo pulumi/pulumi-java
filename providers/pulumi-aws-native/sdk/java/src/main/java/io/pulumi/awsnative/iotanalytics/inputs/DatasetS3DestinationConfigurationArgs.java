@@ -87,42 +87,42 @@ public final class DatasetS3DestinationConfigurationArgs extends io.pulumi.resou
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setBucket(Input<String> bucket) {
+        public Builder bucket(Input<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Input.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder setGlueConfiguration(@Nullable Input<DatasetGlueConfigurationArgs> glueConfiguration) {
+        public Builder glueConfiguration(@Nullable Input<DatasetGlueConfigurationArgs> glueConfiguration) {
             this.glueConfiguration = glueConfiguration;
             return this;
         }
 
-        public Builder setGlueConfiguration(@Nullable DatasetGlueConfigurationArgs glueConfiguration) {
+        public Builder glueConfiguration(@Nullable DatasetGlueConfigurationArgs glueConfiguration) {
             this.glueConfiguration = Input.ofNullable(glueConfiguration);
             return this;
         }
 
-        public Builder setKey(Input<String> key) {
+        public Builder key(Input<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Input.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }

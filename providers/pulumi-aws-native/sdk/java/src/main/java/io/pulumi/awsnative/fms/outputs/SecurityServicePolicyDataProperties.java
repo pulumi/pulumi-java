@@ -52,12 +52,12 @@ public final class SecurityServicePolicyDataProperties {
     	      this.type = defaults.type;
         }
 
-        public Builder setManagedServiceData(@Nullable String managedServiceData) {
+        public Builder managedServiceData(@Nullable String managedServiceData) {
             this.managedServiceData = managedServiceData;
             return this;
         }
 
-        public Builder setType(PolicySecurityServicePolicyDataPropertiesType type) {
+        public Builder type(PolicySecurityServicePolicyDataPropertiesType type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

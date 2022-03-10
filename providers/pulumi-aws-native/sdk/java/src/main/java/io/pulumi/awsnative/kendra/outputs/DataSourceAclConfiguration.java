@@ -40,7 +40,7 @@ public final class DataSourceAclConfiguration {
     	      this.allowedGroupsColumnName = defaults.allowedGroupsColumnName;
         }
 
-        public Builder setAllowedGroupsColumnName(String allowedGroupsColumnName) {
+        public Builder allowedGroupsColumnName(String allowedGroupsColumnName) {
             this.allowedGroupsColumnName = Objects.requireNonNull(allowedGroupsColumnName);
             return this;
         }

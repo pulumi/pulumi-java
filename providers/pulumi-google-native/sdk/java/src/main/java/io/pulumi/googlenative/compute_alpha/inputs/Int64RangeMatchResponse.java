@@ -72,12 +72,12 @@ public final class Int64RangeMatchResponse extends io.pulumi.resources.InvokeArg
     	      this.rangeStart = defaults.rangeStart;
         }
 
-        public Builder setRangeEnd(String rangeEnd) {
+        public Builder rangeEnd(String rangeEnd) {
             this.rangeEnd = Objects.requireNonNull(rangeEnd);
             return this;
         }
 
-        public Builder setRangeStart(String rangeStart) {
+        public Builder rangeStart(String rangeStart) {
             this.rangeStart = Objects.requireNonNull(rangeStart);
             return this;
         }

@@ -47,7 +47,7 @@ public final class GetOrganizationPolicyBooleanPolicy extends io.pulumi.resource
     	      this.enforced = defaults.enforced;
         }
 
-        public Builder setEnforced(Boolean enforced) {
+        public Builder enforced(Boolean enforced) {
             this.enforced = Objects.requireNonNull(enforced);
             return this;
         }

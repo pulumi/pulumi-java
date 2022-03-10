@@ -70,17 +70,17 @@ public final class QueuePolicyState extends io.pulumi.resources.ResourceArgs {
     	      this.queueUrl = defaults.queueUrl;
         }
 
-        public Builder setPolicy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Input<String> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setQueueUrl(@Nullable Input<String> queueUrl) {
+        public Builder queueUrl(@Nullable Input<String> queueUrl) {
             this.queueUrl = queueUrl;
             return this;
         }
 
-        public Builder setQueueUrl(@Nullable String queueUrl) {
+        public Builder queueUrl(@Nullable String queueUrl) {
             this.queueUrl = Input.ofNullable(queueUrl);
             return this;
         }

@@ -258,132 +258,132 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
     	      this.restoreFromBackupId = defaults.restoreFromBackupId;
         }
 
-        public Builder setAuthenticationMethod(@Nullable Input<Either<String,AuthenticationMethod>> authenticationMethod) {
+        public Builder authenticationMethod(@Nullable Input<Either<String,AuthenticationMethod>> authenticationMethod) {
             this.authenticationMethod = authenticationMethod;
             return this;
         }
 
-        public Builder setAuthenticationMethod(@Nullable Either<String,AuthenticationMethod> authenticationMethod) {
+        public Builder authenticationMethod(@Nullable Either<String,AuthenticationMethod> authenticationMethod) {
             this.authenticationMethod = Input.ofNullable(authenticationMethod);
             return this;
         }
 
-        public Builder setCassandraVersion(@Nullable Input<String> cassandraVersion) {
+        public Builder cassandraVersion(@Nullable Input<String> cassandraVersion) {
             this.cassandraVersion = cassandraVersion;
             return this;
         }
 
-        public Builder setCassandraVersion(@Nullable String cassandraVersion) {
+        public Builder cassandraVersion(@Nullable String cassandraVersion) {
             this.cassandraVersion = Input.ofNullable(cassandraVersion);
             return this;
         }
 
-        public Builder setClientCertificates(@Nullable Input<List<CertificateArgs>> clientCertificates) {
+        public Builder clientCertificates(@Nullable Input<List<CertificateArgs>> clientCertificates) {
             this.clientCertificates = clientCertificates;
             return this;
         }
 
-        public Builder setClientCertificates(@Nullable List<CertificateArgs> clientCertificates) {
+        public Builder clientCertificates(@Nullable List<CertificateArgs> clientCertificates) {
             this.clientCertificates = Input.ofNullable(clientCertificates);
             return this;
         }
 
-        public Builder setClusterNameOverride(@Nullable Input<String> clusterNameOverride) {
+        public Builder clusterNameOverride(@Nullable Input<String> clusterNameOverride) {
             this.clusterNameOverride = clusterNameOverride;
             return this;
         }
 
-        public Builder setClusterNameOverride(@Nullable String clusterNameOverride) {
+        public Builder clusterNameOverride(@Nullable String clusterNameOverride) {
             this.clusterNameOverride = Input.ofNullable(clusterNameOverride);
             return this;
         }
 
-        public Builder setDelegatedManagementSubnetId(@Nullable Input<String> delegatedManagementSubnetId) {
+        public Builder delegatedManagementSubnetId(@Nullable Input<String> delegatedManagementSubnetId) {
             this.delegatedManagementSubnetId = delegatedManagementSubnetId;
             return this;
         }
 
-        public Builder setDelegatedManagementSubnetId(@Nullable String delegatedManagementSubnetId) {
+        public Builder delegatedManagementSubnetId(@Nullable String delegatedManagementSubnetId) {
             this.delegatedManagementSubnetId = Input.ofNullable(delegatedManagementSubnetId);
             return this;
         }
 
-        public Builder setExternalGossipCertificates(@Nullable Input<List<CertificateArgs>> externalGossipCertificates) {
+        public Builder externalGossipCertificates(@Nullable Input<List<CertificateArgs>> externalGossipCertificates) {
             this.externalGossipCertificates = externalGossipCertificates;
             return this;
         }
 
-        public Builder setExternalGossipCertificates(@Nullable List<CertificateArgs> externalGossipCertificates) {
+        public Builder externalGossipCertificates(@Nullable List<CertificateArgs> externalGossipCertificates) {
             this.externalGossipCertificates = Input.ofNullable(externalGossipCertificates);
             return this;
         }
 
-        public Builder setExternalSeedNodes(@Nullable Input<List<SeedNodeArgs>> externalSeedNodes) {
+        public Builder externalSeedNodes(@Nullable Input<List<SeedNodeArgs>> externalSeedNodes) {
             this.externalSeedNodes = externalSeedNodes;
             return this;
         }
 
-        public Builder setExternalSeedNodes(@Nullable List<SeedNodeArgs> externalSeedNodes) {
+        public Builder externalSeedNodes(@Nullable List<SeedNodeArgs> externalSeedNodes) {
             this.externalSeedNodes = Input.ofNullable(externalSeedNodes);
             return this;
         }
 
-        public Builder setHoursBetweenBackups(@Nullable Input<Integer> hoursBetweenBackups) {
+        public Builder hoursBetweenBackups(@Nullable Input<Integer> hoursBetweenBackups) {
             this.hoursBetweenBackups = hoursBetweenBackups;
             return this;
         }
 
-        public Builder setHoursBetweenBackups(@Nullable Integer hoursBetweenBackups) {
+        public Builder hoursBetweenBackups(@Nullable Integer hoursBetweenBackups) {
             this.hoursBetweenBackups = Input.ofNullable(hoursBetweenBackups);
             return this;
         }
 
-        public Builder setInitialCassandraAdminPassword(@Nullable Input<String> initialCassandraAdminPassword) {
+        public Builder initialCassandraAdminPassword(@Nullable Input<String> initialCassandraAdminPassword) {
             this.initialCassandraAdminPassword = initialCassandraAdminPassword;
             return this;
         }
 
-        public Builder setInitialCassandraAdminPassword(@Nullable String initialCassandraAdminPassword) {
+        public Builder initialCassandraAdminPassword(@Nullable String initialCassandraAdminPassword) {
             this.initialCassandraAdminPassword = Input.ofNullable(initialCassandraAdminPassword);
             return this;
         }
 
-        public Builder setPrometheusEndpoint(@Nullable Input<SeedNodeArgs> prometheusEndpoint) {
+        public Builder prometheusEndpoint(@Nullable Input<SeedNodeArgs> prometheusEndpoint) {
             this.prometheusEndpoint = prometheusEndpoint;
             return this;
         }
 
-        public Builder setPrometheusEndpoint(@Nullable SeedNodeArgs prometheusEndpoint) {
+        public Builder prometheusEndpoint(@Nullable SeedNodeArgs prometheusEndpoint) {
             this.prometheusEndpoint = Input.ofNullable(prometheusEndpoint);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Input<Either<String,ManagedCassandraProvisioningState>> provisioningState) {
+        public Builder provisioningState(@Nullable Input<Either<String,ManagedCassandraProvisioningState>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Either<String,ManagedCassandraProvisioningState> provisioningState) {
+        public Builder provisioningState(@Nullable Either<String,ManagedCassandraProvisioningState> provisioningState) {
             this.provisioningState = Input.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder setRepairEnabled(@Nullable Input<Boolean> repairEnabled) {
+        public Builder repairEnabled(@Nullable Input<Boolean> repairEnabled) {
             this.repairEnabled = repairEnabled;
             return this;
         }
 
-        public Builder setRepairEnabled(@Nullable Boolean repairEnabled) {
+        public Builder repairEnabled(@Nullable Boolean repairEnabled) {
             this.repairEnabled = Input.ofNullable(repairEnabled);
             return this;
         }
 
-        public Builder setRestoreFromBackupId(@Nullable Input<String> restoreFromBackupId) {
+        public Builder restoreFromBackupId(@Nullable Input<String> restoreFromBackupId) {
             this.restoreFromBackupId = restoreFromBackupId;
             return this;
         }
 
-        public Builder setRestoreFromBackupId(@Nullable String restoreFromBackupId) {
+        public Builder restoreFromBackupId(@Nullable String restoreFromBackupId) {
             this.restoreFromBackupId = Input.ofNullable(restoreFromBackupId);
             return this;
         }

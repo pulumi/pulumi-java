@@ -90,32 +90,32 @@ public final class UserAccountCredentialsArgs extends io.pulumi.resources.Resour
     	      this.adminUserSshPublicKey = defaults.adminUserSshPublicKey;
         }
 
-        public Builder setAdminUserName(Input<String> adminUserName) {
+        public Builder adminUserName(Input<String> adminUserName) {
             this.adminUserName = Objects.requireNonNull(adminUserName);
             return this;
         }
 
-        public Builder setAdminUserName(String adminUserName) {
+        public Builder adminUserName(String adminUserName) {
             this.adminUserName = Input.of(Objects.requireNonNull(adminUserName));
             return this;
         }
 
-        public Builder setAdminUserPassword(@Nullable Input<String> adminUserPassword) {
+        public Builder adminUserPassword(@Nullable Input<String> adminUserPassword) {
             this.adminUserPassword = adminUserPassword;
             return this;
         }
 
-        public Builder setAdminUserPassword(@Nullable String adminUserPassword) {
+        public Builder adminUserPassword(@Nullable String adminUserPassword) {
             this.adminUserPassword = Input.ofNullable(adminUserPassword);
             return this;
         }
 
-        public Builder setAdminUserSshPublicKey(@Nullable Input<String> adminUserSshPublicKey) {
+        public Builder adminUserSshPublicKey(@Nullable Input<String> adminUserSshPublicKey) {
             this.adminUserSshPublicKey = adminUserSshPublicKey;
             return this;
         }
 
-        public Builder setAdminUserSshPublicKey(@Nullable String adminUserSshPublicKey) {
+        public Builder adminUserSshPublicKey(@Nullable String adminUserSshPublicKey) {
             this.adminUserSshPublicKey = Input.ofNullable(adminUserSshPublicKey);
             return this;
         }

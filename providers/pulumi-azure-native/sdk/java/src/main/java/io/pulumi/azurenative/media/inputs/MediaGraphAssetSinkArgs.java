@@ -107,42 +107,42 @@ public final class MediaGraphAssetSinkArgs extends io.pulumi.resources.ResourceA
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setAssetName(Input<String> assetName) {
+        public Builder assetName(Input<String> assetName) {
             this.assetName = Objects.requireNonNull(assetName);
             return this;
         }
 
-        public Builder setAssetName(String assetName) {
+        public Builder assetName(String assetName) {
             this.assetName = Input.of(Objects.requireNonNull(assetName));
             return this;
         }
 
-        public Builder setInputs(Input<List<String>> inputs) {
+        public Builder inputs(Input<List<String>> inputs) {
             this.inputs = Objects.requireNonNull(inputs);
             return this;
         }
 
-        public Builder setInputs(List<String> inputs) {
+        public Builder inputs(List<String> inputs) {
             this.inputs = Input.of(Objects.requireNonNull(inputs));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }

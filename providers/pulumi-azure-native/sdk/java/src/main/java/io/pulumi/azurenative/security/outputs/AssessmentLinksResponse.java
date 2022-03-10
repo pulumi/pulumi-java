@@ -48,7 +48,7 @@ public final class AssessmentLinksResponse {
     	      this.azurePortalUri = defaults.azurePortalUri;
         }
 
-        public Builder setAzurePortalUri(String azurePortalUri) {
+        public Builder azurePortalUri(String azurePortalUri) {
             this.azurePortalUri = Objects.requireNonNull(azurePortalUri);
             return this;
         }

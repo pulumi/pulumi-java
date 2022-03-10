@@ -67,12 +67,12 @@ public final class DatasetCompressionResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setLevel(@Nullable Object level) {
+        public Builder level(@Nullable Object level) {
             this.level = level;
             return this;
         }
 
-        public Builder setType(Object type) {
+        public Builder type(Object type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

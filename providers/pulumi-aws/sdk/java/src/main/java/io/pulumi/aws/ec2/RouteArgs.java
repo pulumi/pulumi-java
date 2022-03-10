@@ -262,142 +262,142 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcPeeringConnectionId = defaults.vpcPeeringConnectionId;
         }
 
-        public Builder setCarrierGatewayId(@Nullable Input<String> carrierGatewayId) {
+        public Builder carrierGatewayId(@Nullable Input<String> carrierGatewayId) {
             this.carrierGatewayId = carrierGatewayId;
             return this;
         }
 
-        public Builder setCarrierGatewayId(@Nullable String carrierGatewayId) {
+        public Builder carrierGatewayId(@Nullable String carrierGatewayId) {
             this.carrierGatewayId = Input.ofNullable(carrierGatewayId);
             return this;
         }
 
-        public Builder setDestinationCidrBlock(@Nullable Input<String> destinationCidrBlock) {
+        public Builder destinationCidrBlock(@Nullable Input<String> destinationCidrBlock) {
             this.destinationCidrBlock = destinationCidrBlock;
             return this;
         }
 
-        public Builder setDestinationCidrBlock(@Nullable String destinationCidrBlock) {
+        public Builder destinationCidrBlock(@Nullable String destinationCidrBlock) {
             this.destinationCidrBlock = Input.ofNullable(destinationCidrBlock);
             return this;
         }
 
-        public Builder setDestinationIpv6CidrBlock(@Nullable Input<String> destinationIpv6CidrBlock) {
+        public Builder destinationIpv6CidrBlock(@Nullable Input<String> destinationIpv6CidrBlock) {
             this.destinationIpv6CidrBlock = destinationIpv6CidrBlock;
             return this;
         }
 
-        public Builder setDestinationIpv6CidrBlock(@Nullable String destinationIpv6CidrBlock) {
+        public Builder destinationIpv6CidrBlock(@Nullable String destinationIpv6CidrBlock) {
             this.destinationIpv6CidrBlock = Input.ofNullable(destinationIpv6CidrBlock);
             return this;
         }
 
-        public Builder setDestinationPrefixListId(@Nullable Input<String> destinationPrefixListId) {
+        public Builder destinationPrefixListId(@Nullable Input<String> destinationPrefixListId) {
             this.destinationPrefixListId = destinationPrefixListId;
             return this;
         }
 
-        public Builder setDestinationPrefixListId(@Nullable String destinationPrefixListId) {
+        public Builder destinationPrefixListId(@Nullable String destinationPrefixListId) {
             this.destinationPrefixListId = Input.ofNullable(destinationPrefixListId);
             return this;
         }
 
-        public Builder setEgressOnlyGatewayId(@Nullable Input<String> egressOnlyGatewayId) {
+        public Builder egressOnlyGatewayId(@Nullable Input<String> egressOnlyGatewayId) {
             this.egressOnlyGatewayId = egressOnlyGatewayId;
             return this;
         }
 
-        public Builder setEgressOnlyGatewayId(@Nullable String egressOnlyGatewayId) {
+        public Builder egressOnlyGatewayId(@Nullable String egressOnlyGatewayId) {
             this.egressOnlyGatewayId = Input.ofNullable(egressOnlyGatewayId);
             return this;
         }
 
-        public Builder setGatewayId(@Nullable Input<String> gatewayId) {
+        public Builder gatewayId(@Nullable Input<String> gatewayId) {
             this.gatewayId = gatewayId;
             return this;
         }
 
-        public Builder setGatewayId(@Nullable String gatewayId) {
+        public Builder gatewayId(@Nullable String gatewayId) {
             this.gatewayId = Input.ofNullable(gatewayId);
             return this;
         }
 
-        public Builder setInstanceId(@Nullable Input<String> instanceId) {
+        public Builder instanceId(@Nullable Input<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
 
-        public Builder setInstanceId(@Nullable String instanceId) {
+        public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = Input.ofNullable(instanceId);
             return this;
         }
 
-        public Builder setLocalGatewayId(@Nullable Input<String> localGatewayId) {
+        public Builder localGatewayId(@Nullable Input<String> localGatewayId) {
             this.localGatewayId = localGatewayId;
             return this;
         }
 
-        public Builder setLocalGatewayId(@Nullable String localGatewayId) {
+        public Builder localGatewayId(@Nullable String localGatewayId) {
             this.localGatewayId = Input.ofNullable(localGatewayId);
             return this;
         }
 
-        public Builder setNatGatewayId(@Nullable Input<String> natGatewayId) {
+        public Builder natGatewayId(@Nullable Input<String> natGatewayId) {
             this.natGatewayId = natGatewayId;
             return this;
         }
 
-        public Builder setNatGatewayId(@Nullable String natGatewayId) {
+        public Builder natGatewayId(@Nullable String natGatewayId) {
             this.natGatewayId = Input.ofNullable(natGatewayId);
             return this;
         }
 
-        public Builder setNetworkInterfaceId(@Nullable Input<String> networkInterfaceId) {
+        public Builder networkInterfaceId(@Nullable Input<String> networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
-        public Builder setNetworkInterfaceId(@Nullable String networkInterfaceId) {
+        public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
             this.networkInterfaceId = Input.ofNullable(networkInterfaceId);
             return this;
         }
 
-        public Builder setRouteTableId(Input<String> routeTableId) {
+        public Builder routeTableId(Input<String> routeTableId) {
             this.routeTableId = Objects.requireNonNull(routeTableId);
             return this;
         }
 
-        public Builder setRouteTableId(String routeTableId) {
+        public Builder routeTableId(String routeTableId) {
             this.routeTableId = Input.of(Objects.requireNonNull(routeTableId));
             return this;
         }
 
-        public Builder setTransitGatewayId(@Nullable Input<String> transitGatewayId) {
+        public Builder transitGatewayId(@Nullable Input<String> transitGatewayId) {
             this.transitGatewayId = transitGatewayId;
             return this;
         }
 
-        public Builder setTransitGatewayId(@Nullable String transitGatewayId) {
+        public Builder transitGatewayId(@Nullable String transitGatewayId) {
             this.transitGatewayId = Input.ofNullable(transitGatewayId);
             return this;
         }
 
-        public Builder setVpcEndpointId(@Nullable Input<String> vpcEndpointId) {
+        public Builder vpcEndpointId(@Nullable Input<String> vpcEndpointId) {
             this.vpcEndpointId = vpcEndpointId;
             return this;
         }
 
-        public Builder setVpcEndpointId(@Nullable String vpcEndpointId) {
+        public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
             this.vpcEndpointId = Input.ofNullable(vpcEndpointId);
             return this;
         }
 
-        public Builder setVpcPeeringConnectionId(@Nullable Input<String> vpcPeeringConnectionId) {
+        public Builder vpcPeeringConnectionId(@Nullable Input<String> vpcPeeringConnectionId) {
             this.vpcPeeringConnectionId = vpcPeeringConnectionId;
             return this;
         }
 
-        public Builder setVpcPeeringConnectionId(@Nullable String vpcPeeringConnectionId) {
+        public Builder vpcPeeringConnectionId(@Nullable String vpcPeeringConnectionId) {
             this.vpcPeeringConnectionId = Input.ofNullable(vpcPeeringConnectionId);
             return this;
         }

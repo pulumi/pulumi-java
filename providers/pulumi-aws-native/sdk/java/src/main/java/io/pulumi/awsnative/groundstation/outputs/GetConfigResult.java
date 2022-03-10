@@ -86,32 +86,32 @@ public final class GetConfigResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setConfigData(@Nullable ConfigData configData) {
+        public Builder configData(@Nullable ConfigData configData) {
             this.configData = configData;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ConfigTag> tags) {
+        public Builder tags(@Nullable List<ConfigTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

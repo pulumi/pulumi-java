@@ -56,7 +56,7 @@ public final class ManagedZoneServiceDirectoryConfigNamespace {
     	      this.namespaceUrl = defaults.namespaceUrl;
         }
 
-        public Builder setNamespaceUrl(String namespaceUrl) {
+        public Builder namespaceUrl(String namespaceUrl) {
             this.namespaceUrl = Objects.requireNonNull(namespaceUrl);
             return this;
         }

@@ -63,22 +63,22 @@ public final class IamAuditConfigAuditLogConfigGetArgs extends io.pulumi.resourc
     	      this.logType = defaults.logType;
         }
 
-        public Builder setExemptedMembers(@Nullable Input<List<String>> exemptedMembers) {
+        public Builder exemptedMembers(@Nullable Input<List<String>> exemptedMembers) {
             this.exemptedMembers = exemptedMembers;
             return this;
         }
 
-        public Builder setExemptedMembers(@Nullable List<String> exemptedMembers) {
+        public Builder exemptedMembers(@Nullable List<String> exemptedMembers) {
             this.exemptedMembers = Input.ofNullable(exemptedMembers);
             return this;
         }
 
-        public Builder setLogType(Input<String> logType) {
+        public Builder logType(Input<String> logType) {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }
 
-        public Builder setLogType(String logType) {
+        public Builder logType(String logType) {
             this.logType = Input.of(Objects.requireNonNull(logType));
             return this;
         }

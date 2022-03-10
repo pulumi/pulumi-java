@@ -81,17 +81,17 @@ public final class RetentionTagResponse {
     	      this.tagName = defaults.tagName;
         }
 
-        public Builder setETag(String eTag) {
+        public Builder eTag(String eTag) {
             this.eTag = Objects.requireNonNull(eTag);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setTagName(String tagName) {
+        public Builder tagName(String tagName) {
             this.tagName = Objects.requireNonNull(tagName);
             return this;
         }

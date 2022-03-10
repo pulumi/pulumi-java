@@ -123,52 +123,52 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs extends io.p
     	      this.targetSetting = defaults.targetSetting;
         }
 
-        public Builder setMigrationSetting(@Nullable Input<Map<String,String>> migrationSetting) {
+        public Builder migrationSetting(@Nullable Input<Map<String,String>> migrationSetting) {
             this.migrationSetting = migrationSetting;
             return this;
         }
 
-        public Builder setMigrationSetting(@Nullable Map<String,String> migrationSetting) {
+        public Builder migrationSetting(@Nullable Map<String,String> migrationSetting) {
             this.migrationSetting = Input.ofNullable(migrationSetting);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSourceSetting(@Nullable Input<Map<String,String>> sourceSetting) {
+        public Builder sourceSetting(@Nullable Input<Map<String,String>> sourceSetting) {
             this.sourceSetting = sourceSetting;
             return this;
         }
 
-        public Builder setSourceSetting(@Nullable Map<String,String> sourceSetting) {
+        public Builder sourceSetting(@Nullable Map<String,String> sourceSetting) {
             this.sourceSetting = Input.ofNullable(sourceSetting);
             return this;
         }
 
-        public Builder setTargetDatabaseName(@Nullable Input<String> targetDatabaseName) {
+        public Builder targetDatabaseName(@Nullable Input<String> targetDatabaseName) {
             this.targetDatabaseName = targetDatabaseName;
             return this;
         }
 
-        public Builder setTargetDatabaseName(@Nullable String targetDatabaseName) {
+        public Builder targetDatabaseName(@Nullable String targetDatabaseName) {
             this.targetDatabaseName = Input.ofNullable(targetDatabaseName);
             return this;
         }
 
-        public Builder setTargetSetting(@Nullable Input<Map<String,String>> targetSetting) {
+        public Builder targetSetting(@Nullable Input<Map<String,String>> targetSetting) {
             this.targetSetting = targetSetting;
             return this;
         }
 
-        public Builder setTargetSetting(@Nullable Map<String,String> targetSetting) {
+        public Builder targetSetting(@Nullable Map<String,String> targetSetting) {
             this.targetSetting = Input.ofNullable(targetSetting);
             return this;
         }

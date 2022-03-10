@@ -135,37 +135,37 @@ public final class GetResiliencyPolicyResult {
     	      this.tier = defaults.tier;
         }
 
-        public Builder setDataLocationConstraint(@Nullable ResiliencyPolicyDataLocationConstraint dataLocationConstraint) {
+        public Builder dataLocationConstraint(@Nullable ResiliencyPolicyDataLocationConstraint dataLocationConstraint) {
             this.dataLocationConstraint = dataLocationConstraint;
             return this;
         }
 
-        public Builder setPolicy(@Nullable ResiliencyPolicyPolicyMap policy) {
+        public Builder policy(@Nullable ResiliencyPolicyPolicyMap policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPolicyArn(@Nullable String policyArn) {
+        public Builder policyArn(@Nullable String policyArn) {
             this.policyArn = policyArn;
             return this;
         }
 
-        public Builder setPolicyDescription(@Nullable String policyDescription) {
+        public Builder policyDescription(@Nullable String policyDescription) {
             this.policyDescription = policyDescription;
             return this;
         }
 
-        public Builder setPolicyName(@Nullable String policyName) {
+        public Builder policyName(@Nullable String policyName) {
             this.policyName = policyName;
             return this;
         }
 
-        public Builder setTags(@Nullable ResiliencyPolicyTagMap tags) {
+        public Builder tags(@Nullable ResiliencyPolicyTagMap tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTier(@Nullable ResiliencyPolicyTier tier) {
+        public Builder tier(@Nullable ResiliencyPolicyTier tier) {
             this.tier = tier;
             return this;
         }

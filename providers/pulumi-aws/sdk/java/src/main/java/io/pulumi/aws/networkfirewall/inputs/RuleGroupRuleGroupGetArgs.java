@@ -88,32 +88,32 @@ public final class RuleGroupRuleGroupGetArgs extends io.pulumi.resources.Resourc
     	      this.statefulRuleOptions = defaults.statefulRuleOptions;
         }
 
-        public Builder setRuleVariables(@Nullable Input<RuleGroupRuleGroupRuleVariablesGetArgs> ruleVariables) {
+        public Builder ruleVariables(@Nullable Input<RuleGroupRuleGroupRuleVariablesGetArgs> ruleVariables) {
             this.ruleVariables = ruleVariables;
             return this;
         }
 
-        public Builder setRuleVariables(@Nullable RuleGroupRuleGroupRuleVariablesGetArgs ruleVariables) {
+        public Builder ruleVariables(@Nullable RuleGroupRuleGroupRuleVariablesGetArgs ruleVariables) {
             this.ruleVariables = Input.ofNullable(ruleVariables);
             return this;
         }
 
-        public Builder setRulesSource(Input<RuleGroupRuleGroupRulesSourceGetArgs> rulesSource) {
+        public Builder rulesSource(Input<RuleGroupRuleGroupRulesSourceGetArgs> rulesSource) {
             this.rulesSource = Objects.requireNonNull(rulesSource);
             return this;
         }
 
-        public Builder setRulesSource(RuleGroupRuleGroupRulesSourceGetArgs rulesSource) {
+        public Builder rulesSource(RuleGroupRuleGroupRulesSourceGetArgs rulesSource) {
             this.rulesSource = Input.of(Objects.requireNonNull(rulesSource));
             return this;
         }
 
-        public Builder setStatefulRuleOptions(@Nullable Input<RuleGroupRuleGroupStatefulRuleOptionsGetArgs> statefulRuleOptions) {
+        public Builder statefulRuleOptions(@Nullable Input<RuleGroupRuleGroupStatefulRuleOptionsGetArgs> statefulRuleOptions) {
             this.statefulRuleOptions = statefulRuleOptions;
             return this;
         }
 
-        public Builder setStatefulRuleOptions(@Nullable RuleGroupRuleGroupStatefulRuleOptionsGetArgs statefulRuleOptions) {
+        public Builder statefulRuleOptions(@Nullable RuleGroupRuleGroupStatefulRuleOptionsGetArgs statefulRuleOptions) {
             this.statefulRuleOptions = Input.ofNullable(statefulRuleOptions);
             return this;
         }

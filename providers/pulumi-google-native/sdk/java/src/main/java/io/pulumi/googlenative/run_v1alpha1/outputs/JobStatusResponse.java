@@ -181,47 +181,47 @@ public final class JobStatusResponse {
     	      this.succeeded = defaults.succeeded;
         }
 
-        public Builder setActive(Integer active) {
+        public Builder active(Integer active) {
             this.active = Objects.requireNonNull(active);
             return this;
         }
 
-        public Builder setCompletionTime(String completionTime) {
+        public Builder completionTime(String completionTime) {
             this.completionTime = Objects.requireNonNull(completionTime);
             return this;
         }
 
-        public Builder setConditions(List<JobConditionResponse> conditions) {
+        public Builder conditions(List<JobConditionResponse> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
 
-        public Builder setFailed(Integer failed) {
+        public Builder failed(Integer failed) {
             this.failed = Objects.requireNonNull(failed);
             return this;
         }
 
-        public Builder setImageDigest(String imageDigest) {
+        public Builder imageDigest(String imageDigest) {
             this.imageDigest = Objects.requireNonNull(imageDigest);
             return this;
         }
 
-        public Builder setInstances(List<InstanceStatusResponse> instances) {
+        public Builder instances(List<InstanceStatusResponse> instances) {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
 
-        public Builder setObservedGeneration(Integer observedGeneration) {
+        public Builder observedGeneration(Integer observedGeneration) {
             this.observedGeneration = Objects.requireNonNull(observedGeneration);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setSucceeded(Integer succeeded) {
+        public Builder succeeded(Integer succeeded) {
             this.succeeded = Objects.requireNonNull(succeeded);
             return this;
         }

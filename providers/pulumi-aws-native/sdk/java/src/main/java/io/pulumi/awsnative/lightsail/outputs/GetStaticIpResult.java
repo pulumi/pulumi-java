@@ -92,22 +92,22 @@ public final class GetStaticIpResult {
     	      this.staticIpArn = defaults.staticIpArn;
         }
 
-        public Builder setAttachedTo(@Nullable String attachedTo) {
+        public Builder attachedTo(@Nullable String attachedTo) {
             this.attachedTo = attachedTo;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setIsAttached(@Nullable Boolean isAttached) {
+        public Builder isAttached(@Nullable Boolean isAttached) {
             this.isAttached = isAttached;
             return this;
         }
 
-        public Builder setStaticIpArn(@Nullable String staticIpArn) {
+        public Builder staticIpArn(@Nullable String staticIpArn) {
             this.staticIpArn = staticIpArn;
             return this;
         }

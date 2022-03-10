@@ -116,27 +116,27 @@ public final class InMageRcmPolicyDetailsResponse {
     	      this.recoveryPointHistoryInMinutes = defaults.recoveryPointHistoryInMinutes;
         }
 
-        public Builder setAppConsistentFrequencyInMinutes(Integer appConsistentFrequencyInMinutes) {
+        public Builder appConsistentFrequencyInMinutes(Integer appConsistentFrequencyInMinutes) {
             this.appConsistentFrequencyInMinutes = Objects.requireNonNull(appConsistentFrequencyInMinutes);
             return this;
         }
 
-        public Builder setCrashConsistentFrequencyInMinutes(Integer crashConsistentFrequencyInMinutes) {
+        public Builder crashConsistentFrequencyInMinutes(Integer crashConsistentFrequencyInMinutes) {
             this.crashConsistentFrequencyInMinutes = Objects.requireNonNull(crashConsistentFrequencyInMinutes);
             return this;
         }
 
-        public Builder setEnableMultiVmSync(String enableMultiVmSync) {
+        public Builder enableMultiVmSync(String enableMultiVmSync) {
             this.enableMultiVmSync = Objects.requireNonNull(enableMultiVmSync);
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setRecoveryPointHistoryInMinutes(Integer recoveryPointHistoryInMinutes) {
+        public Builder recoveryPointHistoryInMinutes(Integer recoveryPointHistoryInMinutes) {
             this.recoveryPointHistoryInMinutes = Objects.requireNonNull(recoveryPointHistoryInMinutes);
             return this;
         }

@@ -349,192 +349,192 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     	      this.workerType = defaults.workerType;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setCommand(@Nullable Input<JobCommandGetArgs> command) {
+        public Builder command(@Nullable Input<JobCommandGetArgs> command) {
             this.command = command;
             return this;
         }
 
-        public Builder setCommand(@Nullable JobCommandGetArgs command) {
+        public Builder command(@Nullable JobCommandGetArgs command) {
             this.command = Input.ofNullable(command);
             return this;
         }
 
-        public Builder setConnections(@Nullable Input<List<String>> connections) {
+        public Builder connections(@Nullable Input<List<String>> connections) {
             this.connections = connections;
             return this;
         }
 
-        public Builder setConnections(@Nullable List<String> connections) {
+        public Builder connections(@Nullable List<String> connections) {
             this.connections = Input.ofNullable(connections);
             return this;
         }
 
-        public Builder setDefaultArguments(@Nullable Input<Map<String,String>> defaultArguments) {
+        public Builder defaultArguments(@Nullable Input<Map<String,String>> defaultArguments) {
             this.defaultArguments = defaultArguments;
             return this;
         }
 
-        public Builder setDefaultArguments(@Nullable Map<String,String> defaultArguments) {
+        public Builder defaultArguments(@Nullable Map<String,String> defaultArguments) {
             this.defaultArguments = Input.ofNullable(defaultArguments);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setExecutionProperty(@Nullable Input<JobExecutionPropertyGetArgs> executionProperty) {
+        public Builder executionProperty(@Nullable Input<JobExecutionPropertyGetArgs> executionProperty) {
             this.executionProperty = executionProperty;
             return this;
         }
 
-        public Builder setExecutionProperty(@Nullable JobExecutionPropertyGetArgs executionProperty) {
+        public Builder executionProperty(@Nullable JobExecutionPropertyGetArgs executionProperty) {
             this.executionProperty = Input.ofNullable(executionProperty);
             return this;
         }
 
-        public Builder setGlueVersion(@Nullable Input<String> glueVersion) {
+        public Builder glueVersion(@Nullable Input<String> glueVersion) {
             this.glueVersion = glueVersion;
             return this;
         }
 
-        public Builder setGlueVersion(@Nullable String glueVersion) {
+        public Builder glueVersion(@Nullable String glueVersion) {
             this.glueVersion = Input.ofNullable(glueVersion);
             return this;
         }
 
-        public Builder setMaxCapacity(@Nullable Input<Double> maxCapacity) {
+        public Builder maxCapacity(@Nullable Input<Double> maxCapacity) {
             this.maxCapacity = maxCapacity;
             return this;
         }
 
-        public Builder setMaxCapacity(@Nullable Double maxCapacity) {
+        public Builder maxCapacity(@Nullable Double maxCapacity) {
             this.maxCapacity = Input.ofNullable(maxCapacity);
             return this;
         }
 
-        public Builder setMaxRetries(@Nullable Input<Integer> maxRetries) {
+        public Builder maxRetries(@Nullable Input<Integer> maxRetries) {
             this.maxRetries = maxRetries;
             return this;
         }
 
-        public Builder setMaxRetries(@Nullable Integer maxRetries) {
+        public Builder maxRetries(@Nullable Integer maxRetries) {
             this.maxRetries = Input.ofNullable(maxRetries);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNonOverridableArguments(@Nullable Input<Map<String,String>> nonOverridableArguments) {
+        public Builder nonOverridableArguments(@Nullable Input<Map<String,String>> nonOverridableArguments) {
             this.nonOverridableArguments = nonOverridableArguments;
             return this;
         }
 
-        public Builder setNonOverridableArguments(@Nullable Map<String,String> nonOverridableArguments) {
+        public Builder nonOverridableArguments(@Nullable Map<String,String> nonOverridableArguments) {
             this.nonOverridableArguments = Input.ofNullable(nonOverridableArguments);
             return this;
         }
 
-        public Builder setNotificationProperty(@Nullable Input<JobNotificationPropertyGetArgs> notificationProperty) {
+        public Builder notificationProperty(@Nullable Input<JobNotificationPropertyGetArgs> notificationProperty) {
             this.notificationProperty = notificationProperty;
             return this;
         }
 
-        public Builder setNotificationProperty(@Nullable JobNotificationPropertyGetArgs notificationProperty) {
+        public Builder notificationProperty(@Nullable JobNotificationPropertyGetArgs notificationProperty) {
             this.notificationProperty = Input.ofNullable(notificationProperty);
             return this;
         }
 
-        public Builder setNumberOfWorkers(@Nullable Input<Integer> numberOfWorkers) {
+        public Builder numberOfWorkers(@Nullable Input<Integer> numberOfWorkers) {
             this.numberOfWorkers = numberOfWorkers;
             return this;
         }
 
-        public Builder setNumberOfWorkers(@Nullable Integer numberOfWorkers) {
+        public Builder numberOfWorkers(@Nullable Integer numberOfWorkers) {
             this.numberOfWorkers = Input.ofNullable(numberOfWorkers);
             return this;
         }
 
-        public Builder setRoleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Input<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Input.ofNullable(roleArn);
             return this;
         }
 
-        public Builder setSecurityConfiguration(@Nullable Input<String> securityConfiguration) {
+        public Builder securityConfiguration(@Nullable Input<String> securityConfiguration) {
             this.securityConfiguration = securityConfiguration;
             return this;
         }
 
-        public Builder setSecurityConfiguration(@Nullable String securityConfiguration) {
+        public Builder securityConfiguration(@Nullable String securityConfiguration) {
             this.securityConfiguration = Input.ofNullable(securityConfiguration);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<Integer> timeout) {
+        public Builder timeout(@Nullable Input<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable Integer timeout) {
+        public Builder timeout(@Nullable Integer timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }
 
-        public Builder setWorkerType(@Nullable Input<String> workerType) {
+        public Builder workerType(@Nullable Input<String> workerType) {
             this.workerType = workerType;
             return this;
         }
 
-        public Builder setWorkerType(@Nullable String workerType) {
+        public Builder workerType(@Nullable String workerType) {
             this.workerType = Input.ofNullable(workerType);
             return this;
         }

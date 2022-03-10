@@ -102,52 +102,52 @@ public final class IntegrationConnectorOperatorArgs extends io.pulumi.resources.
     	      this.zendesk = defaults.zendesk;
         }
 
-        public Builder setMarketo(@Nullable Input<IntegrationMarketoConnectorOperator> marketo) {
+        public Builder marketo(@Nullable Input<IntegrationMarketoConnectorOperator> marketo) {
             this.marketo = marketo;
             return this;
         }
 
-        public Builder setMarketo(@Nullable IntegrationMarketoConnectorOperator marketo) {
+        public Builder marketo(@Nullable IntegrationMarketoConnectorOperator marketo) {
             this.marketo = Input.ofNullable(marketo);
             return this;
         }
 
-        public Builder setS3(@Nullable Input<IntegrationS3ConnectorOperator> s3) {
+        public Builder s3(@Nullable Input<IntegrationS3ConnectorOperator> s3) {
             this.s3 = s3;
             return this;
         }
 
-        public Builder setS3(@Nullable IntegrationS3ConnectorOperator s3) {
+        public Builder s3(@Nullable IntegrationS3ConnectorOperator s3) {
             this.s3 = Input.ofNullable(s3);
             return this;
         }
 
-        public Builder setSalesforce(@Nullable Input<IntegrationSalesforceConnectorOperator> salesforce) {
+        public Builder salesforce(@Nullable Input<IntegrationSalesforceConnectorOperator> salesforce) {
             this.salesforce = salesforce;
             return this;
         }
 
-        public Builder setSalesforce(@Nullable IntegrationSalesforceConnectorOperator salesforce) {
+        public Builder salesforce(@Nullable IntegrationSalesforceConnectorOperator salesforce) {
             this.salesforce = Input.ofNullable(salesforce);
             return this;
         }
 
-        public Builder setServiceNow(@Nullable Input<IntegrationServiceNowConnectorOperator> serviceNow) {
+        public Builder serviceNow(@Nullable Input<IntegrationServiceNowConnectorOperator> serviceNow) {
             this.serviceNow = serviceNow;
             return this;
         }
 
-        public Builder setServiceNow(@Nullable IntegrationServiceNowConnectorOperator serviceNow) {
+        public Builder serviceNow(@Nullable IntegrationServiceNowConnectorOperator serviceNow) {
             this.serviceNow = Input.ofNullable(serviceNow);
             return this;
         }
 
-        public Builder setZendesk(@Nullable Input<IntegrationZendeskConnectorOperator> zendesk) {
+        public Builder zendesk(@Nullable Input<IntegrationZendeskConnectorOperator> zendesk) {
             this.zendesk = zendesk;
             return this;
         }
 
-        public Builder setZendesk(@Nullable IntegrationZendeskConnectorOperator zendesk) {
+        public Builder zendesk(@Nullable IntegrationZendeskConnectorOperator zendesk) {
             this.zendesk = Input.ofNullable(zendesk);
             return this;
         }

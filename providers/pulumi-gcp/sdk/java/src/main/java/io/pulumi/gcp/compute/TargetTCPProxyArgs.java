@@ -146,62 +146,62 @@ public final class TargetTCPProxyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.proxyHeader = defaults.proxyHeader;
         }
 
-        public Builder setBackendService(Input<String> backendService) {
+        public Builder backendService(Input<String> backendService) {
             this.backendService = Objects.requireNonNull(backendService);
             return this;
         }
 
-        public Builder setBackendService(String backendService) {
+        public Builder backendService(String backendService) {
             this.backendService = Input.of(Objects.requireNonNull(backendService));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setProxyBind(@Nullable Input<Boolean> proxyBind) {
+        public Builder proxyBind(@Nullable Input<Boolean> proxyBind) {
             this.proxyBind = proxyBind;
             return this;
         }
 
-        public Builder setProxyBind(@Nullable Boolean proxyBind) {
+        public Builder proxyBind(@Nullable Boolean proxyBind) {
             this.proxyBind = Input.ofNullable(proxyBind);
             return this;
         }
 
-        public Builder setProxyHeader(@Nullable Input<String> proxyHeader) {
+        public Builder proxyHeader(@Nullable Input<String> proxyHeader) {
             this.proxyHeader = proxyHeader;
             return this;
         }
 
-        public Builder setProxyHeader(@Nullable String proxyHeader) {
+        public Builder proxyHeader(@Nullable String proxyHeader) {
             this.proxyHeader = Input.ofNullable(proxyHeader);
             return this;
         }

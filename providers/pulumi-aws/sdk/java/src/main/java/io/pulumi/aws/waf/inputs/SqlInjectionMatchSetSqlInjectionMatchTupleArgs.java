@@ -74,22 +74,22 @@ public final class SqlInjectionMatchSetSqlInjectionMatchTupleArgs extends io.pul
     	      this.textTransformation = defaults.textTransformation;
         }
 
-        public Builder setFieldToMatch(Input<SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchArgs> fieldToMatch) {
+        public Builder fieldToMatch(Input<SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchArgs> fieldToMatch) {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
 
-        public Builder setFieldToMatch(SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchArgs fieldToMatch) {
+        public Builder fieldToMatch(SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchArgs fieldToMatch) {
             this.fieldToMatch = Input.of(Objects.requireNonNull(fieldToMatch));
             return this;
         }
 
-        public Builder setTextTransformation(Input<String> textTransformation) {
+        public Builder textTransformation(Input<String> textTransformation) {
             this.textTransformation = Objects.requireNonNull(textTransformation);
             return this;
         }
 
-        public Builder setTextTransformation(String textTransformation) {
+        public Builder textTransformation(String textTransformation) {
             this.textTransformation = Input.of(Objects.requireNonNull(textTransformation));
             return this;
         }

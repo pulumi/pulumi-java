@@ -86,42 +86,42 @@ public final class InstanceFromTemplateNetworkInterfaceIpv6AccessConfigGetArgs e
     	      this.publicPtrDomainName = defaults.publicPtrDomainName;
         }
 
-        public Builder setExternalIpv6(@Nullable Input<String> externalIpv6) {
+        public Builder externalIpv6(@Nullable Input<String> externalIpv6) {
             this.externalIpv6 = externalIpv6;
             return this;
         }
 
-        public Builder setExternalIpv6(@Nullable String externalIpv6) {
+        public Builder externalIpv6(@Nullable String externalIpv6) {
             this.externalIpv6 = Input.ofNullable(externalIpv6);
             return this;
         }
 
-        public Builder setExternalIpv6PrefixLength(@Nullable Input<String> externalIpv6PrefixLength) {
+        public Builder externalIpv6PrefixLength(@Nullable Input<String> externalIpv6PrefixLength) {
             this.externalIpv6PrefixLength = externalIpv6PrefixLength;
             return this;
         }
 
-        public Builder setExternalIpv6PrefixLength(@Nullable String externalIpv6PrefixLength) {
+        public Builder externalIpv6PrefixLength(@Nullable String externalIpv6PrefixLength) {
             this.externalIpv6PrefixLength = Input.ofNullable(externalIpv6PrefixLength);
             return this;
         }
 
-        public Builder setNetworkTier(Input<String> networkTier) {
+        public Builder networkTier(Input<String> networkTier) {
             this.networkTier = Objects.requireNonNull(networkTier);
             return this;
         }
 
-        public Builder setNetworkTier(String networkTier) {
+        public Builder networkTier(String networkTier) {
             this.networkTier = Input.of(Objects.requireNonNull(networkTier));
             return this;
         }
 
-        public Builder setPublicPtrDomainName(@Nullable Input<String> publicPtrDomainName) {
+        public Builder publicPtrDomainName(@Nullable Input<String> publicPtrDomainName) {
             this.publicPtrDomainName = publicPtrDomainName;
             return this;
         }
 
-        public Builder setPublicPtrDomainName(@Nullable String publicPtrDomainName) {
+        public Builder publicPtrDomainName(@Nullable String publicPtrDomainName) {
             this.publicPtrDomainName = Input.ofNullable(publicPtrDomainName);
             return this;
         }

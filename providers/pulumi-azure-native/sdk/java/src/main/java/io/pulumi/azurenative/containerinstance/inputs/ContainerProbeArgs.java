@@ -156,72 +156,72 @@ public final class ContainerProbeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeoutSeconds = defaults.timeoutSeconds;
         }
 
-        public Builder setExec(@Nullable Input<ContainerExecArgs> exec) {
+        public Builder exec(@Nullable Input<ContainerExecArgs> exec) {
             this.exec = exec;
             return this;
         }
 
-        public Builder setExec(@Nullable ContainerExecArgs exec) {
+        public Builder exec(@Nullable ContainerExecArgs exec) {
             this.exec = Input.ofNullable(exec);
             return this;
         }
 
-        public Builder setFailureThreshold(@Nullable Input<Integer> failureThreshold) {
+        public Builder failureThreshold(@Nullable Input<Integer> failureThreshold) {
             this.failureThreshold = failureThreshold;
             return this;
         }
 
-        public Builder setFailureThreshold(@Nullable Integer failureThreshold) {
+        public Builder failureThreshold(@Nullable Integer failureThreshold) {
             this.failureThreshold = Input.ofNullable(failureThreshold);
             return this;
         }
 
-        public Builder setHttpGet(@Nullable Input<ContainerHttpGetArgs> httpGet) {
+        public Builder httpGet(@Nullable Input<ContainerHttpGetArgs> httpGet) {
             this.httpGet = httpGet;
             return this;
         }
 
-        public Builder setHttpGet(@Nullable ContainerHttpGetArgs httpGet) {
+        public Builder httpGet(@Nullable ContainerHttpGetArgs httpGet) {
             this.httpGet = Input.ofNullable(httpGet);
             return this;
         }
 
-        public Builder setInitialDelaySeconds(@Nullable Input<Integer> initialDelaySeconds) {
+        public Builder initialDelaySeconds(@Nullable Input<Integer> initialDelaySeconds) {
             this.initialDelaySeconds = initialDelaySeconds;
             return this;
         }
 
-        public Builder setInitialDelaySeconds(@Nullable Integer initialDelaySeconds) {
+        public Builder initialDelaySeconds(@Nullable Integer initialDelaySeconds) {
             this.initialDelaySeconds = Input.ofNullable(initialDelaySeconds);
             return this;
         }
 
-        public Builder setPeriodSeconds(@Nullable Input<Integer> periodSeconds) {
+        public Builder periodSeconds(@Nullable Input<Integer> periodSeconds) {
             this.periodSeconds = periodSeconds;
             return this;
         }
 
-        public Builder setPeriodSeconds(@Nullable Integer periodSeconds) {
+        public Builder periodSeconds(@Nullable Integer periodSeconds) {
             this.periodSeconds = Input.ofNullable(periodSeconds);
             return this;
         }
 
-        public Builder setSuccessThreshold(@Nullable Input<Integer> successThreshold) {
+        public Builder successThreshold(@Nullable Input<Integer> successThreshold) {
             this.successThreshold = successThreshold;
             return this;
         }
 
-        public Builder setSuccessThreshold(@Nullable Integer successThreshold) {
+        public Builder successThreshold(@Nullable Integer successThreshold) {
             this.successThreshold = Input.ofNullable(successThreshold);
             return this;
         }
 
-        public Builder setTimeoutSeconds(@Nullable Input<Integer> timeoutSeconds) {
+        public Builder timeoutSeconds(@Nullable Input<Integer> timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
 
-        public Builder setTimeoutSeconds(@Nullable Integer timeoutSeconds) {
+        public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
             this.timeoutSeconds = Input.ofNullable(timeoutSeconds);
             return this;
         }

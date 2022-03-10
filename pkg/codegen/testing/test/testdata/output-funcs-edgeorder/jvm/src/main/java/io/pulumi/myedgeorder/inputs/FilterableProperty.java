@@ -75,12 +75,12 @@ public final class FilterableProperty extends io.pulumi.resources.InvokeArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setSupportedValues(List<String> supportedValues) {
+        public Builder supportedValues(List<String> supportedValues) {
             this.supportedValues = Objects.requireNonNull(supportedValues);
             return this;
         }
 
-        public Builder setType(Either<String,SupportedFilterTypes> type) {
+        public Builder type(Either<String,SupportedFilterTypes> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

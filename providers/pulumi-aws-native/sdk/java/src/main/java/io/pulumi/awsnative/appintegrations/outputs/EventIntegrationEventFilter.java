@@ -48,7 +48,7 @@ public final class EventIntegrationEventFilter {
     	      this.source = defaults.source;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }

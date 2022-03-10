@@ -107,52 +107,52 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.restrictions = defaults.restrictions;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setKeyId(@Nullable Input<String> keyId) {
+        public Builder keyId(@Nullable Input<String> keyId) {
             this.keyId = keyId;
             return this;
         }
 
-        public Builder setKeyId(@Nullable String keyId) {
+        public Builder keyId(@Nullable String keyId) {
             this.keyId = Input.ofNullable(keyId);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRestrictions(@Nullable Input<V2RestrictionsArgs> restrictions) {
+        public Builder restrictions(@Nullable Input<V2RestrictionsArgs> restrictions) {
             this.restrictions = restrictions;
             return this;
         }
 
-        public Builder setRestrictions(@Nullable V2RestrictionsArgs restrictions) {
+        public Builder restrictions(@Nullable V2RestrictionsArgs restrictions) {
             this.restrictions = Input.ofNullable(restrictions);
             return this;
         }

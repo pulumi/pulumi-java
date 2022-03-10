@@ -40,7 +40,7 @@ public final class GameServerGroupTargetTrackingConfiguration {
     	      this.targetValue = defaults.targetValue;
         }
 
-        public Builder setTargetValue(Double targetValue) {
+        public Builder targetValue(Double targetValue) {
             this.targetValue = Objects.requireNonNull(targetValue);
             return this;
         }

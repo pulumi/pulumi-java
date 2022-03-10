@@ -87,17 +87,17 @@ public final class JobCollectionQuotaResponse extends io.pulumi.resources.Invoke
     	      this.maxRecurrence = defaults.maxRecurrence;
         }
 
-        public Builder setMaxJobCount(@Nullable Integer maxJobCount) {
+        public Builder maxJobCount(@Nullable Integer maxJobCount) {
             this.maxJobCount = maxJobCount;
             return this;
         }
 
-        public Builder setMaxJobOccurrence(@Nullable Integer maxJobOccurrence) {
+        public Builder maxJobOccurrence(@Nullable Integer maxJobOccurrence) {
             this.maxJobOccurrence = maxJobOccurrence;
             return this;
         }
 
-        public Builder setMaxRecurrence(@Nullable JobMaxRecurrenceResponse maxRecurrence) {
+        public Builder maxRecurrence(@Nullable JobMaxRecurrenceResponse maxRecurrence) {
             this.maxRecurrence = maxRecurrence;
             return this;
         }

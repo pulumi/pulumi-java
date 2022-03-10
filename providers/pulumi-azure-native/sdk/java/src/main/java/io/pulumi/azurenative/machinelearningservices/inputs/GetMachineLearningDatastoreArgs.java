@@ -84,17 +84,17 @@ public final class GetMachineLearningDatastoreArgs extends io.pulumi.resources.I
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setDatastoreName(String datastoreName) {
+        public Builder datastoreName(String datastoreName) {
             this.datastoreName = Objects.requireNonNull(datastoreName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }

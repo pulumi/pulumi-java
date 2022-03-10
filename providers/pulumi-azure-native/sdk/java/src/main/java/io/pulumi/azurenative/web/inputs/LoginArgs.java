@@ -146,62 +146,62 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tokenStore = defaults.tokenStore;
         }
 
-        public Builder setAllowedExternalRedirectUrls(@Nullable Input<List<String>> allowedExternalRedirectUrls) {
+        public Builder allowedExternalRedirectUrls(@Nullable Input<List<String>> allowedExternalRedirectUrls) {
             this.allowedExternalRedirectUrls = allowedExternalRedirectUrls;
             return this;
         }
 
-        public Builder setAllowedExternalRedirectUrls(@Nullable List<String> allowedExternalRedirectUrls) {
+        public Builder allowedExternalRedirectUrls(@Nullable List<String> allowedExternalRedirectUrls) {
             this.allowedExternalRedirectUrls = Input.ofNullable(allowedExternalRedirectUrls);
             return this;
         }
 
-        public Builder setCookieExpiration(@Nullable Input<CookieExpirationArgs> cookieExpiration) {
+        public Builder cookieExpiration(@Nullable Input<CookieExpirationArgs> cookieExpiration) {
             this.cookieExpiration = cookieExpiration;
             return this;
         }
 
-        public Builder setCookieExpiration(@Nullable CookieExpirationArgs cookieExpiration) {
+        public Builder cookieExpiration(@Nullable CookieExpirationArgs cookieExpiration) {
             this.cookieExpiration = Input.ofNullable(cookieExpiration);
             return this;
         }
 
-        public Builder setNonce(@Nullable Input<NonceArgs> nonce) {
+        public Builder nonce(@Nullable Input<NonceArgs> nonce) {
             this.nonce = nonce;
             return this;
         }
 
-        public Builder setNonce(@Nullable NonceArgs nonce) {
+        public Builder nonce(@Nullable NonceArgs nonce) {
             this.nonce = Input.ofNullable(nonce);
             return this;
         }
 
-        public Builder setPreserveUrlFragmentsForLogins(@Nullable Input<Boolean> preserveUrlFragmentsForLogins) {
+        public Builder preserveUrlFragmentsForLogins(@Nullable Input<Boolean> preserveUrlFragmentsForLogins) {
             this.preserveUrlFragmentsForLogins = preserveUrlFragmentsForLogins;
             return this;
         }
 
-        public Builder setPreserveUrlFragmentsForLogins(@Nullable Boolean preserveUrlFragmentsForLogins) {
+        public Builder preserveUrlFragmentsForLogins(@Nullable Boolean preserveUrlFragmentsForLogins) {
             this.preserveUrlFragmentsForLogins = Input.ofNullable(preserveUrlFragmentsForLogins);
             return this;
         }
 
-        public Builder setRoutes(@Nullable Input<LoginRoutesArgs> routes) {
+        public Builder routes(@Nullable Input<LoginRoutesArgs> routes) {
             this.routes = routes;
             return this;
         }
 
-        public Builder setRoutes(@Nullable LoginRoutesArgs routes) {
+        public Builder routes(@Nullable LoginRoutesArgs routes) {
             this.routes = Input.ofNullable(routes);
             return this;
         }
 
-        public Builder setTokenStore(@Nullable Input<TokenStoreArgs> tokenStore) {
+        public Builder tokenStore(@Nullable Input<TokenStoreArgs> tokenStore) {
             this.tokenStore = tokenStore;
             return this;
         }
 
-        public Builder setTokenStore(@Nullable TokenStoreArgs tokenStore) {
+        public Builder tokenStore(@Nullable TokenStoreArgs tokenStore) {
             this.tokenStore = Input.ofNullable(tokenStore);
             return this;
         }

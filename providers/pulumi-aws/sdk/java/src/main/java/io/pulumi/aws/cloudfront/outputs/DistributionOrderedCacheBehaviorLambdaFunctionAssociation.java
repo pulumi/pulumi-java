@@ -86,17 +86,17 @@ public final class DistributionOrderedCacheBehaviorLambdaFunctionAssociation {
     	      this.lambdaArn = defaults.lambdaArn;
         }
 
-        public Builder setEventType(String eventType) {
+        public Builder eventType(String eventType) {
             this.eventType = Objects.requireNonNull(eventType);
             return this;
         }
 
-        public Builder setIncludeBody(@Nullable Boolean includeBody) {
+        public Builder includeBody(@Nullable Boolean includeBody) {
             this.includeBody = includeBody;
             return this;
         }
 
-        public Builder setLambdaArn(String lambdaArn) {
+        public Builder lambdaArn(String lambdaArn) {
             this.lambdaArn = Objects.requireNonNull(lambdaArn);
             return this;
         }

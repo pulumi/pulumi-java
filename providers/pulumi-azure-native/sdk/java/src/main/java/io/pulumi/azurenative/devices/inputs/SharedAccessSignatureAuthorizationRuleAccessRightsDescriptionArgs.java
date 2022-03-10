@@ -108,42 +108,42 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
     	      this.secondaryKey = defaults.secondaryKey;
         }
 
-        public Builder setKeyName(Input<String> keyName) {
+        public Builder keyName(Input<String> keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
 
-        public Builder setKeyName(String keyName) {
+        public Builder keyName(String keyName) {
             this.keyName = Input.of(Objects.requireNonNull(keyName));
             return this;
         }
 
-        public Builder setPrimaryKey(@Nullable Input<String> primaryKey) {
+        public Builder primaryKey(@Nullable Input<String> primaryKey) {
             this.primaryKey = primaryKey;
             return this;
         }
 
-        public Builder setPrimaryKey(@Nullable String primaryKey) {
+        public Builder primaryKey(@Nullable String primaryKey) {
             this.primaryKey = Input.ofNullable(primaryKey);
             return this;
         }
 
-        public Builder setRights(Input<Either<String,AccessRightsDescription>> rights) {
+        public Builder rights(Input<Either<String,AccessRightsDescription>> rights) {
             this.rights = Objects.requireNonNull(rights);
             return this;
         }
 
-        public Builder setRights(Either<String,AccessRightsDescription> rights) {
+        public Builder rights(Either<String,AccessRightsDescription> rights) {
             this.rights = Input.of(Objects.requireNonNull(rights));
             return this;
         }
 
-        public Builder setSecondaryKey(@Nullable Input<String> secondaryKey) {
+        public Builder secondaryKey(@Nullable Input<String> secondaryKey) {
             this.secondaryKey = secondaryKey;
             return this;
         }
 
-        public Builder setSecondaryKey(@Nullable String secondaryKey) {
+        public Builder secondaryKey(@Nullable String secondaryKey) {
             this.secondaryKey = Input.ofNullable(secondaryKey);
             return this;
         }

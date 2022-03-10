@@ -89,32 +89,32 @@ public final class RandomIdArgs extends io.pulumi.resources.ResourceArgs {
     	      this.prefix = defaults.prefix;
         }
 
-        public Builder setByteLength(Input<Integer> byteLength) {
+        public Builder byteLength(Input<Integer> byteLength) {
             this.byteLength = Objects.requireNonNull(byteLength);
             return this;
         }
 
-        public Builder setByteLength(Integer byteLength) {
+        public Builder byteLength(Integer byteLength) {
             this.byteLength = Input.of(Objects.requireNonNull(byteLength));
             return this;
         }
 
-        public Builder setKeepers(@Nullable Input<Map<String,Object>> keepers) {
+        public Builder keepers(@Nullable Input<Map<String,Object>> keepers) {
             this.keepers = keepers;
             return this;
         }
 
-        public Builder setKeepers(@Nullable Map<String,Object> keepers) {
+        public Builder keepers(@Nullable Map<String,Object> keepers) {
             this.keepers = Input.ofNullable(keepers);
             return this;
         }
 
-        public Builder setPrefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Input<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = Input.ofNullable(prefix);
             return this;
         }

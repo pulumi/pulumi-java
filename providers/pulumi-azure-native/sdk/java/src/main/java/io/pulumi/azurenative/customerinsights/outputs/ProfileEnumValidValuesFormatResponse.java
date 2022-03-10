@@ -69,12 +69,12 @@ public final class ProfileEnumValidValuesFormatResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setLocalizedValueNames(@Nullable Map<String,String> localizedValueNames) {
+        public Builder localizedValueNames(@Nullable Map<String,String> localizedValueNames) {
             this.localizedValueNames = localizedValueNames;
             return this;
         }
 
-        public Builder setValue(@Nullable Integer value) {
+        public Builder value(@Nullable Integer value) {
             this.value = value;
             return this;
         }

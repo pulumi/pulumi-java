@@ -51,12 +51,12 @@ public final class DistributionGeoRestriction {
     	      this.restrictionType = defaults.restrictionType;
         }
 
-        public Builder setLocations(@Nullable List<String> locations) {
+        public Builder locations(@Nullable List<String> locations) {
             this.locations = locations;
             return this;
         }
 
-        public Builder setRestrictionType(String restrictionType) {
+        public Builder restrictionType(String restrictionType) {
             this.restrictionType = Objects.requireNonNull(restrictionType);
             return this;
         }

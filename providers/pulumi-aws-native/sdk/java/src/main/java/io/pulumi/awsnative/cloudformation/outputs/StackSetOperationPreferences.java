@@ -86,32 +86,32 @@ public final class StackSetOperationPreferences {
     	      this.regionOrder = defaults.regionOrder;
         }
 
-        public Builder setFailureToleranceCount(@Nullable Integer failureToleranceCount) {
+        public Builder failureToleranceCount(@Nullable Integer failureToleranceCount) {
             this.failureToleranceCount = failureToleranceCount;
             return this;
         }
 
-        public Builder setFailureTolerancePercentage(@Nullable Integer failureTolerancePercentage) {
+        public Builder failureTolerancePercentage(@Nullable Integer failureTolerancePercentage) {
             this.failureTolerancePercentage = failureTolerancePercentage;
             return this;
         }
 
-        public Builder setMaxConcurrentCount(@Nullable Integer maxConcurrentCount) {
+        public Builder maxConcurrentCount(@Nullable Integer maxConcurrentCount) {
             this.maxConcurrentCount = maxConcurrentCount;
             return this;
         }
 
-        public Builder setMaxConcurrentPercentage(@Nullable Integer maxConcurrentPercentage) {
+        public Builder maxConcurrentPercentage(@Nullable Integer maxConcurrentPercentage) {
             this.maxConcurrentPercentage = maxConcurrentPercentage;
             return this;
         }
 
-        public Builder setRegionConcurrencyType(@Nullable StackSetRegionConcurrencyType regionConcurrencyType) {
+        public Builder regionConcurrencyType(@Nullable StackSetRegionConcurrencyType regionConcurrencyType) {
             this.regionConcurrencyType = regionConcurrencyType;
             return this;
         }
 
-        public Builder setRegionOrder(@Nullable List<String> regionOrder) {
+        public Builder regionOrder(@Nullable List<String> regionOrder) {
             this.regionOrder = regionOrder;
             return this;
         }

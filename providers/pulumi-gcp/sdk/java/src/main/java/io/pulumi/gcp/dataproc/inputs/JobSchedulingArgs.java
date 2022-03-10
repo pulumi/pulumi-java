@@ -61,22 +61,22 @@ public final class JobSchedulingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.maxFailuresTotal = defaults.maxFailuresTotal;
         }
 
-        public Builder setMaxFailuresPerHour(Input<Integer> maxFailuresPerHour) {
+        public Builder maxFailuresPerHour(Input<Integer> maxFailuresPerHour) {
             this.maxFailuresPerHour = Objects.requireNonNull(maxFailuresPerHour);
             return this;
         }
 
-        public Builder setMaxFailuresPerHour(Integer maxFailuresPerHour) {
+        public Builder maxFailuresPerHour(Integer maxFailuresPerHour) {
             this.maxFailuresPerHour = Input.of(Objects.requireNonNull(maxFailuresPerHour));
             return this;
         }
 
-        public Builder setMaxFailuresTotal(Input<Integer> maxFailuresTotal) {
+        public Builder maxFailuresTotal(Input<Integer> maxFailuresTotal) {
             this.maxFailuresTotal = Objects.requireNonNull(maxFailuresTotal);
             return this;
         }
 
-        public Builder setMaxFailuresTotal(Integer maxFailuresTotal) {
+        public Builder maxFailuresTotal(Integer maxFailuresTotal) {
             this.maxFailuresTotal = Input.of(Objects.requireNonNull(maxFailuresTotal));
             return this;
         }

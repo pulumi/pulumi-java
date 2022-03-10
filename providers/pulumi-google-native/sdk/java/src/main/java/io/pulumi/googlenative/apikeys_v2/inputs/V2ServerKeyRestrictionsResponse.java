@@ -56,7 +56,7 @@ public final class V2ServerKeyRestrictionsResponse extends io.pulumi.resources.I
     	      this.allowedIps = defaults.allowedIps;
         }
 
-        public Builder setAllowedIps(List<String> allowedIps) {
+        public Builder allowedIps(List<String> allowedIps) {
             this.allowedIps = Objects.requireNonNull(allowedIps);
             return this;
         }

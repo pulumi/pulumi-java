@@ -214,92 +214,92 @@ public final class CxPageState extends io.pulumi.resources.ResourceArgs {
     	      this.transitionRoutes = defaults.transitionRoutes;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setEntryFulfillment(@Nullable Input<CxPageEntryFulfillmentGetArgs> entryFulfillment) {
+        public Builder entryFulfillment(@Nullable Input<CxPageEntryFulfillmentGetArgs> entryFulfillment) {
             this.entryFulfillment = entryFulfillment;
             return this;
         }
 
-        public Builder setEntryFulfillment(@Nullable CxPageEntryFulfillmentGetArgs entryFulfillment) {
+        public Builder entryFulfillment(@Nullable CxPageEntryFulfillmentGetArgs entryFulfillment) {
             this.entryFulfillment = Input.ofNullable(entryFulfillment);
             return this;
         }
 
-        public Builder setEventHandlers(@Nullable Input<List<CxPageEventHandlerGetArgs>> eventHandlers) {
+        public Builder eventHandlers(@Nullable Input<List<CxPageEventHandlerGetArgs>> eventHandlers) {
             this.eventHandlers = eventHandlers;
             return this;
         }
 
-        public Builder setEventHandlers(@Nullable List<CxPageEventHandlerGetArgs> eventHandlers) {
+        public Builder eventHandlers(@Nullable List<CxPageEventHandlerGetArgs> eventHandlers) {
             this.eventHandlers = Input.ofNullable(eventHandlers);
             return this;
         }
 
-        public Builder setForm(@Nullable Input<CxPageFormGetArgs> form) {
+        public Builder form(@Nullable Input<CxPageFormGetArgs> form) {
             this.form = form;
             return this;
         }
 
-        public Builder setForm(@Nullable CxPageFormGetArgs form) {
+        public Builder form(@Nullable CxPageFormGetArgs form) {
             this.form = Input.ofNullable(form);
             return this;
         }
 
-        public Builder setLanguageCode(@Nullable Input<String> languageCode) {
+        public Builder languageCode(@Nullable Input<String> languageCode) {
             this.languageCode = languageCode;
             return this;
         }
 
-        public Builder setLanguageCode(@Nullable String languageCode) {
+        public Builder languageCode(@Nullable String languageCode) {
             this.languageCode = Input.ofNullable(languageCode);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Input<String> parent) {
             this.parent = parent;
             return this;
         }
 
-        public Builder setParent(@Nullable String parent) {
+        public Builder parent(@Nullable String parent) {
             this.parent = Input.ofNullable(parent);
             return this;
         }
 
-        public Builder setTransitionRouteGroups(@Nullable Input<List<String>> transitionRouteGroups) {
+        public Builder transitionRouteGroups(@Nullable Input<List<String>> transitionRouteGroups) {
             this.transitionRouteGroups = transitionRouteGroups;
             return this;
         }
 
-        public Builder setTransitionRouteGroups(@Nullable List<String> transitionRouteGroups) {
+        public Builder transitionRouteGroups(@Nullable List<String> transitionRouteGroups) {
             this.transitionRouteGroups = Input.ofNullable(transitionRouteGroups);
             return this;
         }
 
-        public Builder setTransitionRoutes(@Nullable Input<List<CxPageTransitionRouteGetArgs>> transitionRoutes) {
+        public Builder transitionRoutes(@Nullable Input<List<CxPageTransitionRouteGetArgs>> transitionRoutes) {
             this.transitionRoutes = transitionRoutes;
             return this;
         }
 
-        public Builder setTransitionRoutes(@Nullable List<CxPageTransitionRouteGetArgs> transitionRoutes) {
+        public Builder transitionRoutes(@Nullable List<CxPageTransitionRouteGetArgs> transitionRoutes) {
             this.transitionRoutes = Input.ofNullable(transitionRoutes);
             return this;
         }

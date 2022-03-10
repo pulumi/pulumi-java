@@ -69,22 +69,22 @@ public final class LogServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.logGroupName = defaults.logGroupName;
         }
 
-        public Builder setDirectoryId(Input<String> directoryId) {
+        public Builder directoryId(Input<String> directoryId) {
             this.directoryId = Objects.requireNonNull(directoryId);
             return this;
         }
 
-        public Builder setDirectoryId(String directoryId) {
+        public Builder directoryId(String directoryId) {
             this.directoryId = Input.of(Objects.requireNonNull(directoryId));
             return this;
         }
 
-        public Builder setLogGroupName(Input<String> logGroupName) {
+        public Builder logGroupName(Input<String> logGroupName) {
             this.logGroupName = Objects.requireNonNull(logGroupName);
             return this;
         }
 
-        public Builder setLogGroupName(String logGroupName) {
+        public Builder logGroupName(String logGroupName) {
             this.logGroupName = Input.of(Objects.requireNonNull(logGroupName));
             return this;
         }

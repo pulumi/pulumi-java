@@ -67,12 +67,12 @@ public final class ConnectionMonitorEndpointFilterItemResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAddress(@Nullable String address) {
+        public Builder address(@Nullable String address) {
             this.address = address;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

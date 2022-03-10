@@ -356,192 +356,192 @@ public final class PrestoLinkedServiceArgs extends io.pulumi.resources.ResourceA
     	      this.username = defaults.username;
         }
 
-        public Builder setAllowHostNameCNMismatch(@Nullable Input<Object> allowHostNameCNMismatch) {
+        public Builder allowHostNameCNMismatch(@Nullable Input<Object> allowHostNameCNMismatch) {
             this.allowHostNameCNMismatch = allowHostNameCNMismatch;
             return this;
         }
 
-        public Builder setAllowHostNameCNMismatch(@Nullable Object allowHostNameCNMismatch) {
+        public Builder allowHostNameCNMismatch(@Nullable Object allowHostNameCNMismatch) {
             this.allowHostNameCNMismatch = Input.ofNullable(allowHostNameCNMismatch);
             return this;
         }
 
-        public Builder setAllowSelfSignedServerCert(@Nullable Input<Object> allowSelfSignedServerCert) {
+        public Builder allowSelfSignedServerCert(@Nullable Input<Object> allowSelfSignedServerCert) {
             this.allowSelfSignedServerCert = allowSelfSignedServerCert;
             return this;
         }
 
-        public Builder setAllowSelfSignedServerCert(@Nullable Object allowSelfSignedServerCert) {
+        public Builder allowSelfSignedServerCert(@Nullable Object allowSelfSignedServerCert) {
             this.allowSelfSignedServerCert = Input.ofNullable(allowSelfSignedServerCert);
             return this;
         }
 
-        public Builder setAnnotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Input<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setAuthenticationType(Input<Either<String,PrestoAuthenticationType>> authenticationType) {
+        public Builder authenticationType(Input<Either<String,PrestoAuthenticationType>> authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
 
-        public Builder setAuthenticationType(Either<String,PrestoAuthenticationType> authenticationType) {
+        public Builder authenticationType(Either<String,PrestoAuthenticationType> authenticationType) {
             this.authenticationType = Input.of(Objects.requireNonNull(authenticationType));
             return this;
         }
 
-        public Builder setCatalog(Input<Object> catalog) {
+        public Builder catalog(Input<Object> catalog) {
             this.catalog = Objects.requireNonNull(catalog);
             return this;
         }
 
-        public Builder setCatalog(Object catalog) {
+        public Builder catalog(Object catalog) {
             this.catalog = Input.of(Objects.requireNonNull(catalog));
             return this;
         }
 
-        public Builder setConnectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
+        public Builder connectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setConnectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
+        public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Input.ofNullable(connectVia);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEnableSsl(@Nullable Input<Object> enableSsl) {
+        public Builder enableSsl(@Nullable Input<Object> enableSsl) {
             this.enableSsl = enableSsl;
             return this;
         }
 
-        public Builder setEnableSsl(@Nullable Object enableSsl) {
+        public Builder enableSsl(@Nullable Object enableSsl) {
             this.enableSsl = Input.ofNullable(enableSsl);
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Input<Object> encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Input<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Object encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = Input.ofNullable(encryptedCredential);
             return this;
         }
 
-        public Builder setHost(Input<Object> host) {
+        public Builder host(Input<Object> host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
-        public Builder setHost(Object host) {
+        public Builder host(Object host) {
             this.host = Input.of(Objects.requireNonNull(host));
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
+        public Builder password(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
+        public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Object> port) {
+        public Builder port(@Nullable Input<Object> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Object port) {
+        public Builder port(@Nullable Object port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setServerVersion(Input<Object> serverVersion) {
+        public Builder serverVersion(Input<Object> serverVersion) {
             this.serverVersion = Objects.requireNonNull(serverVersion);
             return this;
         }
 
-        public Builder setServerVersion(Object serverVersion) {
+        public Builder serverVersion(Object serverVersion) {
             this.serverVersion = Input.of(Objects.requireNonNull(serverVersion));
             return this;
         }
 
-        public Builder setTimeZoneID(@Nullable Input<Object> timeZoneID) {
+        public Builder timeZoneID(@Nullable Input<Object> timeZoneID) {
             this.timeZoneID = timeZoneID;
             return this;
         }
 
-        public Builder setTimeZoneID(@Nullable Object timeZoneID) {
+        public Builder timeZoneID(@Nullable Object timeZoneID) {
             this.timeZoneID = Input.ofNullable(timeZoneID);
             return this;
         }
 
-        public Builder setTrustedCertPath(@Nullable Input<Object> trustedCertPath) {
+        public Builder trustedCertPath(@Nullable Input<Object> trustedCertPath) {
             this.trustedCertPath = trustedCertPath;
             return this;
         }
 
-        public Builder setTrustedCertPath(@Nullable Object trustedCertPath) {
+        public Builder trustedCertPath(@Nullable Object trustedCertPath) {
             this.trustedCertPath = Input.ofNullable(trustedCertPath);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setUseSystemTrustStore(@Nullable Input<Object> useSystemTrustStore) {
+        public Builder useSystemTrustStore(@Nullable Input<Object> useSystemTrustStore) {
             this.useSystemTrustStore = useSystemTrustStore;
             return this;
         }
 
-        public Builder setUseSystemTrustStore(@Nullable Object useSystemTrustStore) {
+        public Builder useSystemTrustStore(@Nullable Object useSystemTrustStore) {
             this.useSystemTrustStore = Input.ofNullable(useSystemTrustStore);
             return this;
         }
 
-        public Builder setUsername(@Nullable Input<Object> username) {
+        public Builder username(@Nullable Input<Object> username) {
             this.username = username;
             return this;
         }
 
-        public Builder setUsername(@Nullable Object username) {
+        public Builder username(@Nullable Object username) {
             this.username = Input.ofNullable(username);
             return this;
         }

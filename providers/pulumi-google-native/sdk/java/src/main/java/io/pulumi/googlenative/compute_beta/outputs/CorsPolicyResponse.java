@@ -164,42 +164,42 @@ public final class CorsPolicyResponse {
     	      this.maxAge = defaults.maxAge;
         }
 
-        public Builder setAllowCredentials(Boolean allowCredentials) {
+        public Builder allowCredentials(Boolean allowCredentials) {
             this.allowCredentials = Objects.requireNonNull(allowCredentials);
             return this;
         }
 
-        public Builder setAllowHeaders(List<String> allowHeaders) {
+        public Builder allowHeaders(List<String> allowHeaders) {
             this.allowHeaders = Objects.requireNonNull(allowHeaders);
             return this;
         }
 
-        public Builder setAllowMethods(List<String> allowMethods) {
+        public Builder allowMethods(List<String> allowMethods) {
             this.allowMethods = Objects.requireNonNull(allowMethods);
             return this;
         }
 
-        public Builder setAllowOriginRegexes(List<String> allowOriginRegexes) {
+        public Builder allowOriginRegexes(List<String> allowOriginRegexes) {
             this.allowOriginRegexes = Objects.requireNonNull(allowOriginRegexes);
             return this;
         }
 
-        public Builder setAllowOrigins(List<String> allowOrigins) {
+        public Builder allowOrigins(List<String> allowOrigins) {
             this.allowOrigins = Objects.requireNonNull(allowOrigins);
             return this;
         }
 
-        public Builder setDisabled(Boolean disabled) {
+        public Builder disabled(Boolean disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
 
-        public Builder setExposeHeaders(List<String> exposeHeaders) {
+        public Builder exposeHeaders(List<String> exposeHeaders) {
             this.exposeHeaders = Objects.requireNonNull(exposeHeaders);
             return this;
         }
 
-        public Builder setMaxAge(Integer maxAge) {
+        public Builder maxAge(Integer maxAge) {
             this.maxAge = Objects.requireNonNull(maxAge);
             return this;
         }

@@ -56,12 +56,12 @@ public final class NodeInputArgs extends io.pulumi.resources.ResourceArgs {
     	      this.nodeName = defaults.nodeName;
         }
 
-        public Builder setNodeName(Input<String> nodeName) {
+        public Builder nodeName(Input<String> nodeName) {
             this.nodeName = Objects.requireNonNull(nodeName);
             return this;
         }
 
-        public Builder setNodeName(String nodeName) {
+        public Builder nodeName(String nodeName) {
             this.nodeName = Input.of(Objects.requireNonNull(nodeName));
             return this;
         }

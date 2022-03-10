@@ -69,22 +69,22 @@ public final class PatchGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.patchGroup = defaults.patchGroup;
         }
 
-        public Builder setBaselineId(Input<String> baselineId) {
+        public Builder baselineId(Input<String> baselineId) {
             this.baselineId = Objects.requireNonNull(baselineId);
             return this;
         }
 
-        public Builder setBaselineId(String baselineId) {
+        public Builder baselineId(String baselineId) {
             this.baselineId = Input.of(Objects.requireNonNull(baselineId));
             return this;
         }
 
-        public Builder setPatchGroup(Input<String> patchGroup) {
+        public Builder patchGroup(Input<String> patchGroup) {
             this.patchGroup = Objects.requireNonNull(patchGroup);
             return this;
         }
 
-        public Builder setPatchGroup(String patchGroup) {
+        public Builder patchGroup(String patchGroup) {
             this.patchGroup = Input.of(Objects.requireNonNull(patchGroup));
             return this;
         }

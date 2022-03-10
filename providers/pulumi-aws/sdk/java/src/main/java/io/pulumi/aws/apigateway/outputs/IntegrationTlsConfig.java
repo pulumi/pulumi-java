@@ -50,7 +50,7 @@ public final class IntegrationTlsConfig {
     	      this.insecureSkipVerification = defaults.insecureSkipVerification;
         }
 
-        public Builder setInsecureSkipVerification(@Nullable Boolean insecureSkipVerification) {
+        public Builder insecureSkipVerification(@Nullable Boolean insecureSkipVerification) {
             this.insecureSkipVerification = insecureSkipVerification;
             return this;
         }

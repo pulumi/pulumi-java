@@ -68,12 +68,12 @@ public final class GetIntegrationRuntimeStatusResult {
     	      this.properties = defaults.properties;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProperties(Either<ManagedIntegrationRuntimeStatusResponse,SelfHostedIntegrationRuntimeStatusResponse> properties) {
+        public Builder properties(Either<ManagedIntegrationRuntimeStatusResponse,SelfHostedIntegrationRuntimeStatusResponse> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }

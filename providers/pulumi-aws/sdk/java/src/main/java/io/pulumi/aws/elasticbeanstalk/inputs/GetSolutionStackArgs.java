@@ -74,12 +74,12 @@ public final class GetSolutionStackArgs extends io.pulumi.resources.InvokeArgs {
     	      this.nameRegex = defaults.nameRegex;
         }
 
-        public Builder setMostRecent(@Nullable Boolean mostRecent) {
+        public Builder mostRecent(@Nullable Boolean mostRecent) {
             this.mostRecent = mostRecent;
             return this;
         }
 
-        public Builder setNameRegex(String nameRegex) {
+        public Builder nameRegex(String nameRegex) {
             this.nameRegex = Objects.requireNonNull(nameRegex);
             return this;
         }

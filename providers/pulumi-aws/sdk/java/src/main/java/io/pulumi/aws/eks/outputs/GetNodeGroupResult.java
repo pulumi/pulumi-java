@@ -295,87 +295,87 @@ public final class GetNodeGroupResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setAmiType(String amiType) {
+        public Builder amiType(String amiType) {
             this.amiType = Objects.requireNonNull(amiType);
             return this;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setDiskSize(Integer diskSize) {
+        public Builder diskSize(Integer diskSize) {
             this.diskSize = Objects.requireNonNull(diskSize);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstanceTypes(List<String> instanceTypes) {
+        public Builder instanceTypes(List<String> instanceTypes) {
             this.instanceTypes = Objects.requireNonNull(instanceTypes);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setNodeGroupName(String nodeGroupName) {
+        public Builder nodeGroupName(String nodeGroupName) {
             this.nodeGroupName = Objects.requireNonNull(nodeGroupName);
             return this;
         }
 
-        public Builder setNodeRoleArn(String nodeRoleArn) {
+        public Builder nodeRoleArn(String nodeRoleArn) {
             this.nodeRoleArn = Objects.requireNonNull(nodeRoleArn);
             return this;
         }
 
-        public Builder setReleaseVersion(String releaseVersion) {
+        public Builder releaseVersion(String releaseVersion) {
             this.releaseVersion = Objects.requireNonNull(releaseVersion);
             return this;
         }
 
-        public Builder setRemoteAccesses(List<GetNodeGroupRemoteAccess> remoteAccesses) {
+        public Builder remoteAccesses(List<GetNodeGroupRemoteAccess> remoteAccesses) {
             this.remoteAccesses = Objects.requireNonNull(remoteAccesses);
             return this;
         }
 
-        public Builder setResources(List<GetNodeGroupResource> resources) {
+        public Builder resources(List<GetNodeGroupResource> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
 
-        public Builder setScalingConfigs(List<GetNodeGroupScalingConfig> scalingConfigs) {
+        public Builder scalingConfigs(List<GetNodeGroupScalingConfig> scalingConfigs) {
             this.scalingConfigs = Objects.requireNonNull(scalingConfigs);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setSubnetIds(List<String> subnetIds) {
+        public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

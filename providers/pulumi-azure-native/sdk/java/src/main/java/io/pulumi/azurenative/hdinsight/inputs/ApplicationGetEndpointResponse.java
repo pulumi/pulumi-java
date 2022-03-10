@@ -107,22 +107,22 @@ public final class ApplicationGetEndpointResponse extends io.pulumi.resources.In
     	      this.publicPort = defaults.publicPort;
         }
 
-        public Builder setDestinationPort(@Nullable Integer destinationPort) {
+        public Builder destinationPort(@Nullable Integer destinationPort) {
             this.destinationPort = destinationPort;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setPrivateIPAddress(@Nullable String privateIPAddress) {
+        public Builder privateIPAddress(@Nullable String privateIPAddress) {
             this.privateIPAddress = privateIPAddress;
             return this;
         }
 
-        public Builder setPublicPort(@Nullable Integer publicPort) {
+        public Builder publicPort(@Nullable Integer publicPort) {
             this.publicPort = publicPort;
             return this;
         }

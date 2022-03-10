@@ -50,7 +50,7 @@ public final class EncryptionIdentityResponse {
     	      this.encryptionUserAssignedIdentity = defaults.encryptionUserAssignedIdentity;
         }
 
-        public Builder setEncryptionUserAssignedIdentity(@Nullable String encryptionUserAssignedIdentity) {
+        public Builder encryptionUserAssignedIdentity(@Nullable String encryptionUserAssignedIdentity) {
             this.encryptionUserAssignedIdentity = encryptionUserAssignedIdentity;
             return this;
         }

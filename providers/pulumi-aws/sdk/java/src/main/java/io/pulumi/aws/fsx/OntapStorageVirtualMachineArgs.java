@@ -132,62 +132,62 @@ public final class OntapStorageVirtualMachineArgs extends io.pulumi.resources.Re
     	      this.tags = defaults.tags;
         }
 
-        public Builder setActiveDirectoryConfiguration(@Nullable Input<OntapStorageVirtualMachineActiveDirectoryConfigurationArgs> activeDirectoryConfiguration) {
+        public Builder activeDirectoryConfiguration(@Nullable Input<OntapStorageVirtualMachineActiveDirectoryConfigurationArgs> activeDirectoryConfiguration) {
             this.activeDirectoryConfiguration = activeDirectoryConfiguration;
             return this;
         }
 
-        public Builder setActiveDirectoryConfiguration(@Nullable OntapStorageVirtualMachineActiveDirectoryConfigurationArgs activeDirectoryConfiguration) {
+        public Builder activeDirectoryConfiguration(@Nullable OntapStorageVirtualMachineActiveDirectoryConfigurationArgs activeDirectoryConfiguration) {
             this.activeDirectoryConfiguration = Input.ofNullable(activeDirectoryConfiguration);
             return this;
         }
 
-        public Builder setFileSystemId(Input<String> fileSystemId) {
+        public Builder fileSystemId(Input<String> fileSystemId) {
             this.fileSystemId = Objects.requireNonNull(fileSystemId);
             return this;
         }
 
-        public Builder setFileSystemId(String fileSystemId) {
+        public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = Input.of(Objects.requireNonNull(fileSystemId));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRootVolumeSecurityStyle(@Nullable Input<String> rootVolumeSecurityStyle) {
+        public Builder rootVolumeSecurityStyle(@Nullable Input<String> rootVolumeSecurityStyle) {
             this.rootVolumeSecurityStyle = rootVolumeSecurityStyle;
             return this;
         }
 
-        public Builder setRootVolumeSecurityStyle(@Nullable String rootVolumeSecurityStyle) {
+        public Builder rootVolumeSecurityStyle(@Nullable String rootVolumeSecurityStyle) {
             this.rootVolumeSecurityStyle = Input.ofNullable(rootVolumeSecurityStyle);
             return this;
         }
 
-        public Builder setSvmAdminPassword(@Nullable Input<String> svmAdminPassword) {
+        public Builder svmAdminPassword(@Nullable Input<String> svmAdminPassword) {
             this.svmAdminPassword = svmAdminPassword;
             return this;
         }
 
-        public Builder setSvmAdminPassword(@Nullable String svmAdminPassword) {
+        public Builder svmAdminPassword(@Nullable String svmAdminPassword) {
             this.svmAdminPassword = Input.ofNullable(svmAdminPassword);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

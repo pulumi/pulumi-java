@@ -126,37 +126,37 @@ public final class GetKeyPairResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetKeyPairFilter> filters) {
+        public Builder filters(@Nullable List<GetKeyPairFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setFingerprint(String fingerprint) {
+        public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKeyName(@Nullable String keyName) {
+        public Builder keyName(@Nullable String keyName) {
             this.keyName = keyName;
             return this;
         }
 
-        public Builder setKeyPairId(@Nullable String keyPairId) {
+        public Builder keyPairId(@Nullable String keyPairId) {
             this.keyPairId = keyPairId;
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

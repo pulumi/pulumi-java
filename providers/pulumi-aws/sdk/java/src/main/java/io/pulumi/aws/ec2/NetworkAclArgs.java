@@ -122,52 +122,52 @@ public final class NetworkAclArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setEgress(@Nullable Input<List<NetworkAclEgressArgs>> egress) {
+        public Builder egress(@Nullable Input<List<NetworkAclEgressArgs>> egress) {
             this.egress = egress;
             return this;
         }
 
-        public Builder setEgress(@Nullable List<NetworkAclEgressArgs> egress) {
+        public Builder egress(@Nullable List<NetworkAclEgressArgs> egress) {
             this.egress = Input.ofNullable(egress);
             return this;
         }
 
-        public Builder setIngress(@Nullable Input<List<NetworkAclIngressArgs>> ingress) {
+        public Builder ingress(@Nullable Input<List<NetworkAclIngressArgs>> ingress) {
             this.ingress = ingress;
             return this;
         }
 
-        public Builder setIngress(@Nullable List<NetworkAclIngressArgs> ingress) {
+        public Builder ingress(@Nullable List<NetworkAclIngressArgs> ingress) {
             this.ingress = Input.ofNullable(ingress);
             return this;
         }
 
-        public Builder setSubnetIds(@Nullable Input<List<String>> subnetIds) {
+        public Builder subnetIds(@Nullable Input<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
 
-        public Builder setSubnetIds(@Nullable List<String> subnetIds) {
+        public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = Input.ofNullable(subnetIds);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVpcId(Input<String> vpcId) {
+        public Builder vpcId(Input<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Input.of(Objects.requireNonNull(vpcId));
             return this;
         }

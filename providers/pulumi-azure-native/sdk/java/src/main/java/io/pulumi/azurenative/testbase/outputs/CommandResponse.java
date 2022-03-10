@@ -197,52 +197,52 @@ public final class CommandResponse {
     	      this.runElevated = defaults.runElevated;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setAlwaysRun(@Nullable Boolean alwaysRun) {
+        public Builder alwaysRun(@Nullable Boolean alwaysRun) {
             this.alwaysRun = alwaysRun;
             return this;
         }
 
-        public Builder setApplyUpdateBefore(@Nullable Boolean applyUpdateBefore) {
+        public Builder applyUpdateBefore(@Nullable Boolean applyUpdateBefore) {
             this.applyUpdateBefore = applyUpdateBefore;
             return this;
         }
 
-        public Builder setContent(String content) {
+        public Builder content(String content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
-        public Builder setContentType(String contentType) {
+        public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
-        public Builder setMaxRunTime(@Nullable Integer maxRunTime) {
+        public Builder maxRunTime(@Nullable Integer maxRunTime) {
             this.maxRunTime = maxRunTime;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRestartAfter(@Nullable Boolean restartAfter) {
+        public Builder restartAfter(@Nullable Boolean restartAfter) {
             this.restartAfter = restartAfter;
             return this;
         }
 
-        public Builder setRunAsInteractive(@Nullable Boolean runAsInteractive) {
+        public Builder runAsInteractive(@Nullable Boolean runAsInteractive) {
             this.runAsInteractive = runAsInteractive;
             return this;
         }
 
-        public Builder setRunElevated(@Nullable Boolean runElevated) {
+        public Builder runElevated(@Nullable Boolean runElevated) {
             this.runElevated = runElevated;
             return this;
         }

@@ -148,37 +148,37 @@ public final class SqlTriggerGetPropertiesResponseResource {
     	      this.ts = defaults.ts;
         }
 
-        public Builder setBody(@Nullable String body) {
+        public Builder body(@Nullable String body) {
             this.body = body;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setRid(String rid) {
+        public Builder rid(String rid) {
             this.rid = Objects.requireNonNull(rid);
             return this;
         }
 
-        public Builder setTriggerOperation(@Nullable String triggerOperation) {
+        public Builder triggerOperation(@Nullable String triggerOperation) {
             this.triggerOperation = triggerOperation;
             return this;
         }
 
-        public Builder setTriggerType(@Nullable String triggerType) {
+        public Builder triggerType(@Nullable String triggerType) {
             this.triggerType = triggerType;
             return this;
         }
 
-        public Builder setTs(Double ts) {
+        public Builder ts(Double ts) {
             this.ts = Objects.requireNonNull(ts);
             return this;
         }

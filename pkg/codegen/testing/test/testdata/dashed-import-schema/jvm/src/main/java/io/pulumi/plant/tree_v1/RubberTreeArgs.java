@@ -104,52 +104,52 @@ public final class RubberTreeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setContainer(@Nullable Input<ContainerArgs> container) {
+        public Builder container(@Nullable Input<ContainerArgs> container) {
             this.container = container;
             return this;
         }
 
-        public Builder setContainer(@Nullable ContainerArgs container) {
+        public Builder container(@Nullable ContainerArgs container) {
             this.container = Input.ofNullable(container);
             return this;
         }
 
-        public Builder setDiameter(Input<Diameter> diameter) {
+        public Builder diameter(Input<Diameter> diameter) {
             this.diameter = Objects.requireNonNull(diameter);
             return this;
         }
 
-        public Builder setDiameter(Diameter diameter) {
+        public Builder diameter(Diameter diameter) {
             this.diameter = Input.of(Objects.requireNonNull(diameter));
             return this;
         }
 
-        public Builder setFarm(@Nullable Input<Either<Farm,String>> farm) {
+        public Builder farm(@Nullable Input<Either<Farm,String>> farm) {
             this.farm = farm;
             return this;
         }
 
-        public Builder setFarm(@Nullable Either<Farm,String> farm) {
+        public Builder farm(@Nullable Either<Farm,String> farm) {
             this.farm = Input.ofNullable(farm);
             return this;
         }
 
-        public Builder setSize(@Nullable Input<TreeSize> size) {
+        public Builder size(@Nullable Input<TreeSize> size) {
             this.size = size;
             return this;
         }
 
-        public Builder setSize(@Nullable TreeSize size) {
+        public Builder size(@Nullable TreeSize size) {
             this.size = Input.ofNullable(size);
             return this;
         }
 
-        public Builder setType(Input<RubberTreeVariety> type) {
+        public Builder type(Input<RubberTreeVariety> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(RubberTreeVariety type) {
+        public Builder type(RubberTreeVariety type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

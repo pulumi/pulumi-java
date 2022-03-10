@@ -87,32 +87,32 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyGetArgs extends 
     	      this.trafficRoutingConfiguration = defaults.trafficRoutingConfiguration;
         }
 
-        public Builder setMaximumExecutionTimeoutInSeconds(@Nullable Input<Integer> maximumExecutionTimeoutInSeconds) {
+        public Builder maximumExecutionTimeoutInSeconds(@Nullable Input<Integer> maximumExecutionTimeoutInSeconds) {
             this.maximumExecutionTimeoutInSeconds = maximumExecutionTimeoutInSeconds;
             return this;
         }
 
-        public Builder setMaximumExecutionTimeoutInSeconds(@Nullable Integer maximumExecutionTimeoutInSeconds) {
+        public Builder maximumExecutionTimeoutInSeconds(@Nullable Integer maximumExecutionTimeoutInSeconds) {
             this.maximumExecutionTimeoutInSeconds = Input.ofNullable(maximumExecutionTimeoutInSeconds);
             return this;
         }
 
-        public Builder setTerminationWaitInSeconds(@Nullable Input<Integer> terminationWaitInSeconds) {
+        public Builder terminationWaitInSeconds(@Nullable Input<Integer> terminationWaitInSeconds) {
             this.terminationWaitInSeconds = terminationWaitInSeconds;
             return this;
         }
 
-        public Builder setTerminationWaitInSeconds(@Nullable Integer terminationWaitInSeconds) {
+        public Builder terminationWaitInSeconds(@Nullable Integer terminationWaitInSeconds) {
             this.terminationWaitInSeconds = Input.ofNullable(terminationWaitInSeconds);
             return this;
         }
 
-        public Builder setTrafficRoutingConfiguration(Input<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationGetArgs> trafficRoutingConfiguration) {
+        public Builder trafficRoutingConfiguration(Input<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationGetArgs> trafficRoutingConfiguration) {
             this.trafficRoutingConfiguration = Objects.requireNonNull(trafficRoutingConfiguration);
             return this;
         }
 
-        public Builder setTrafficRoutingConfiguration(EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationGetArgs trafficRoutingConfiguration) {
+        public Builder trafficRoutingConfiguration(EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationGetArgs trafficRoutingConfiguration) {
             this.trafficRoutingConfiguration = Input.of(Objects.requireNonNull(trafficRoutingConfiguration));
             return this;
         }

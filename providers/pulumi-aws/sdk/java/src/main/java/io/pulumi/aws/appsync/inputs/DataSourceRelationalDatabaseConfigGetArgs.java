@@ -71,22 +71,22 @@ public final class DataSourceRelationalDatabaseConfigGetArgs extends io.pulumi.r
     	      this.sourceType = defaults.sourceType;
         }
 
-        public Builder setHttpEndpointConfig(@Nullable Input<DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs> httpEndpointConfig) {
+        public Builder httpEndpointConfig(@Nullable Input<DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs> httpEndpointConfig) {
             this.httpEndpointConfig = httpEndpointConfig;
             return this;
         }
 
-        public Builder setHttpEndpointConfig(@Nullable DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs httpEndpointConfig) {
+        public Builder httpEndpointConfig(@Nullable DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs httpEndpointConfig) {
             this.httpEndpointConfig = Input.ofNullable(httpEndpointConfig);
             return this;
         }
 
-        public Builder setSourceType(@Nullable Input<String> sourceType) {
+        public Builder sourceType(@Nullable Input<String> sourceType) {
             this.sourceType = sourceType;
             return this;
         }
 
-        public Builder setSourceType(@Nullable String sourceType) {
+        public Builder sourceType(@Nullable String sourceType) {
             this.sourceType = Input.ofNullable(sourceType);
             return this;
         }

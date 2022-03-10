@@ -155,72 +155,72 @@ public final class EnterpriseKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.webSettings = defaults.webSettings;
         }
 
-        public Builder setAndroidSettings(@Nullable Input<EnterpriseKeyAndroidSettingsArgs> androidSettings) {
+        public Builder androidSettings(@Nullable Input<EnterpriseKeyAndroidSettingsArgs> androidSettings) {
             this.androidSettings = androidSettings;
             return this;
         }
 
-        public Builder setAndroidSettings(@Nullable EnterpriseKeyAndroidSettingsArgs androidSettings) {
+        public Builder androidSettings(@Nullable EnterpriseKeyAndroidSettingsArgs androidSettings) {
             this.androidSettings = Input.ofNullable(androidSettings);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setIosSettings(@Nullable Input<EnterpriseKeyIosSettingsArgs> iosSettings) {
+        public Builder iosSettings(@Nullable Input<EnterpriseKeyIosSettingsArgs> iosSettings) {
             this.iosSettings = iosSettings;
             return this;
         }
 
-        public Builder setIosSettings(@Nullable EnterpriseKeyIosSettingsArgs iosSettings) {
+        public Builder iosSettings(@Nullable EnterpriseKeyIosSettingsArgs iosSettings) {
             this.iosSettings = Input.ofNullable(iosSettings);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setTestingOptions(@Nullable Input<EnterpriseKeyTestingOptionsArgs> testingOptions) {
+        public Builder testingOptions(@Nullable Input<EnterpriseKeyTestingOptionsArgs> testingOptions) {
             this.testingOptions = testingOptions;
             return this;
         }
 
-        public Builder setTestingOptions(@Nullable EnterpriseKeyTestingOptionsArgs testingOptions) {
+        public Builder testingOptions(@Nullable EnterpriseKeyTestingOptionsArgs testingOptions) {
             this.testingOptions = Input.ofNullable(testingOptions);
             return this;
         }
 
-        public Builder setWebSettings(@Nullable Input<EnterpriseKeyWebSettingsArgs> webSettings) {
+        public Builder webSettings(@Nullable Input<EnterpriseKeyWebSettingsArgs> webSettings) {
             this.webSettings = webSettings;
             return this;
         }
 
-        public Builder setWebSettings(@Nullable EnterpriseKeyWebSettingsArgs webSettings) {
+        public Builder webSettings(@Nullable EnterpriseKeyWebSettingsArgs webSettings) {
             this.webSettings = Input.ofNullable(webSettings);
             return this;
         }

@@ -86,32 +86,32 @@ public final class NetworkInterfaceAttachmentArgs extends io.pulumi.resources.Re
     	      this.networkInterfaceId = defaults.networkInterfaceId;
         }
 
-        public Builder setDeviceIndex(Input<Integer> deviceIndex) {
+        public Builder deviceIndex(Input<Integer> deviceIndex) {
             this.deviceIndex = Objects.requireNonNull(deviceIndex);
             return this;
         }
 
-        public Builder setDeviceIndex(Integer deviceIndex) {
+        public Builder deviceIndex(Integer deviceIndex) {
             this.deviceIndex = Input.of(Objects.requireNonNull(deviceIndex));
             return this;
         }
 
-        public Builder setInstanceId(Input<String> instanceId) {
+        public Builder instanceId(Input<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Input.of(Objects.requireNonNull(instanceId));
             return this;
         }
 
-        public Builder setNetworkInterfaceId(Input<String> networkInterfaceId) {
+        public Builder networkInterfaceId(Input<String> networkInterfaceId) {
             this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
             return this;
         }
 
-        public Builder setNetworkInterfaceId(String networkInterfaceId) {
+        public Builder networkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = Input.of(Objects.requireNonNull(networkInterfaceId));
             return this;
         }

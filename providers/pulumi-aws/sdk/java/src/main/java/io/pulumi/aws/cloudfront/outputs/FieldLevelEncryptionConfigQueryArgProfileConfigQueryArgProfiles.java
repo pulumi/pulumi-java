@@ -42,7 +42,7 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfil
     	      this.items = defaults.items;
         }
 
-        public Builder setItems(@Nullable List<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItem> items) {
+        public Builder items(@Nullable List<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItem> items) {
             this.items = items;
             return this;
         }

@@ -65,22 +65,22 @@ public final class ResourceTypeExtensionOptionsResourceCreationBeginArgs extends
     	      this.response = defaults.response;
         }
 
-        public Builder setRequest(@Nullable Input<List<Either<String,ExtensionOptionType>>> request) {
+        public Builder request(@Nullable Input<List<Either<String,ExtensionOptionType>>> request) {
             this.request = request;
             return this;
         }
 
-        public Builder setRequest(@Nullable List<Either<String,ExtensionOptionType>> request) {
+        public Builder request(@Nullable List<Either<String,ExtensionOptionType>> request) {
             this.request = Input.ofNullable(request);
             return this;
         }
 
-        public Builder setResponse(@Nullable Input<List<Either<String,ExtensionOptionType>>> response) {
+        public Builder response(@Nullable Input<List<Either<String,ExtensionOptionType>>> response) {
             this.response = response;
             return this;
         }
 
-        public Builder setResponse(@Nullable List<Either<String,ExtensionOptionType>> response) {
+        public Builder response(@Nullable List<Either<String,ExtensionOptionType>> response) {
             this.response = Input.ofNullable(response);
             return this;
         }

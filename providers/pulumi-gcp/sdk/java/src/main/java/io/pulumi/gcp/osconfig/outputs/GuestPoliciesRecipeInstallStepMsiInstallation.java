@@ -84,17 +84,17 @@ public final class GuestPoliciesRecipeInstallStepMsiInstallation {
     	      this.flags = defaults.flags;
         }
 
-        public Builder setAllowedExitCodes(@Nullable List<Integer> allowedExitCodes) {
+        public Builder allowedExitCodes(@Nullable List<Integer> allowedExitCodes) {
             this.allowedExitCodes = allowedExitCodes;
             return this;
         }
 
-        public Builder setArtifactId(String artifactId) {
+        public Builder artifactId(String artifactId) {
             this.artifactId = Objects.requireNonNull(artifactId);
             return this;
         }
 
-        public Builder setFlags(@Nullable List<String> flags) {
+        public Builder flags(@Nullable List<String> flags) {
             this.flags = flags;
             return this;
         }

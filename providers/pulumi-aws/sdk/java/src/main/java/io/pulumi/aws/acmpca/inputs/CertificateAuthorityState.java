@@ -283,152 +283,152 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
     	      this.type = defaults.type;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setCertificate(@Nullable Input<String> certificate) {
+        public Builder certificate(@Nullable Input<String> certificate) {
             this.certificate = certificate;
             return this;
         }
 
-        public Builder setCertificate(@Nullable String certificate) {
+        public Builder certificate(@Nullable String certificate) {
             this.certificate = Input.ofNullable(certificate);
             return this;
         }
 
-        public Builder setCertificateAuthorityConfiguration(@Nullable Input<CertificateAuthorityCertificateAuthorityConfigurationGetArgs> certificateAuthorityConfiguration) {
+        public Builder certificateAuthorityConfiguration(@Nullable Input<CertificateAuthorityCertificateAuthorityConfigurationGetArgs> certificateAuthorityConfiguration) {
             this.certificateAuthorityConfiguration = certificateAuthorityConfiguration;
             return this;
         }
 
-        public Builder setCertificateAuthorityConfiguration(@Nullable CertificateAuthorityCertificateAuthorityConfigurationGetArgs certificateAuthorityConfiguration) {
+        public Builder certificateAuthorityConfiguration(@Nullable CertificateAuthorityCertificateAuthorityConfigurationGetArgs certificateAuthorityConfiguration) {
             this.certificateAuthorityConfiguration = Input.ofNullable(certificateAuthorityConfiguration);
             return this;
         }
 
-        public Builder setCertificateChain(@Nullable Input<String> certificateChain) {
+        public Builder certificateChain(@Nullable Input<String> certificateChain) {
             this.certificateChain = certificateChain;
             return this;
         }
 
-        public Builder setCertificateChain(@Nullable String certificateChain) {
+        public Builder certificateChain(@Nullable String certificateChain) {
             this.certificateChain = Input.ofNullable(certificateChain);
             return this;
         }
 
-        public Builder setCertificateSigningRequest(@Nullable Input<String> certificateSigningRequest) {
+        public Builder certificateSigningRequest(@Nullable Input<String> certificateSigningRequest) {
             this.certificateSigningRequest = certificateSigningRequest;
             return this;
         }
 
-        public Builder setCertificateSigningRequest(@Nullable String certificateSigningRequest) {
+        public Builder certificateSigningRequest(@Nullable String certificateSigningRequest) {
             this.certificateSigningRequest = Input.ofNullable(certificateSigningRequest);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setNotAfter(@Nullable Input<String> notAfter) {
+        public Builder notAfter(@Nullable Input<String> notAfter) {
             this.notAfter = notAfter;
             return this;
         }
 
-        public Builder setNotAfter(@Nullable String notAfter) {
+        public Builder notAfter(@Nullable String notAfter) {
             this.notAfter = Input.ofNullable(notAfter);
             return this;
         }
 
-        public Builder setNotBefore(@Nullable Input<String> notBefore) {
+        public Builder notBefore(@Nullable Input<String> notBefore) {
             this.notBefore = notBefore;
             return this;
         }
 
-        public Builder setNotBefore(@Nullable String notBefore) {
+        public Builder notBefore(@Nullable String notBefore) {
             this.notBefore = Input.ofNullable(notBefore);
             return this;
         }
 
-        public Builder setPermanentDeletionTimeInDays(@Nullable Input<Integer> permanentDeletionTimeInDays) {
+        public Builder permanentDeletionTimeInDays(@Nullable Input<Integer> permanentDeletionTimeInDays) {
             this.permanentDeletionTimeInDays = permanentDeletionTimeInDays;
             return this;
         }
 
-        public Builder setPermanentDeletionTimeInDays(@Nullable Integer permanentDeletionTimeInDays) {
+        public Builder permanentDeletionTimeInDays(@Nullable Integer permanentDeletionTimeInDays) {
             this.permanentDeletionTimeInDays = Input.ofNullable(permanentDeletionTimeInDays);
             return this;
         }
 
-        public Builder setRevocationConfiguration(@Nullable Input<CertificateAuthorityRevocationConfigurationGetArgs> revocationConfiguration) {
+        public Builder revocationConfiguration(@Nullable Input<CertificateAuthorityRevocationConfigurationGetArgs> revocationConfiguration) {
             this.revocationConfiguration = revocationConfiguration;
             return this;
         }
 
-        public Builder setRevocationConfiguration(@Nullable CertificateAuthorityRevocationConfigurationGetArgs revocationConfiguration) {
+        public Builder revocationConfiguration(@Nullable CertificateAuthorityRevocationConfigurationGetArgs revocationConfiguration) {
             this.revocationConfiguration = Input.ofNullable(revocationConfiguration);
             return this;
         }
 
-        public Builder setSerial(@Nullable Input<String> serial) {
+        public Builder serial(@Nullable Input<String> serial) {
             this.serial = serial;
             return this;
         }
 
-        public Builder setSerial(@Nullable String serial) {
+        public Builder serial(@Nullable String serial) {
             this.serial = Input.ofNullable(serial);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

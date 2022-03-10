@@ -58,12 +58,12 @@ public final class InstallationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.location = defaults.location;
         }
 
-        public Builder setLocation(@Nullable Input<List<LocationArgs>> location) {
+        public Builder location(@Nullable Input<List<LocationArgs>> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable List<LocationArgs> location) {
+        public Builder location(@Nullable List<LocationArgs> location) {
             this.location = Input.ofNullable(location);
             return this;
         }

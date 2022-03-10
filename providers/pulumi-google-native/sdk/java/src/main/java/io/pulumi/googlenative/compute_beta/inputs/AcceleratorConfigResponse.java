@@ -73,12 +73,12 @@ public final class AcceleratorConfigResponse extends io.pulumi.resources.InvokeA
     	      this.acceleratorType = defaults.acceleratorType;
         }
 
-        public Builder setAcceleratorCount(Integer acceleratorCount) {
+        public Builder acceleratorCount(Integer acceleratorCount) {
             this.acceleratorCount = Objects.requireNonNull(acceleratorCount);
             return this;
         }
 
-        public Builder setAcceleratorType(String acceleratorType) {
+        public Builder acceleratorType(String acceleratorType) {
             this.acceleratorType = Objects.requireNonNull(acceleratorType);
             return this;
         }

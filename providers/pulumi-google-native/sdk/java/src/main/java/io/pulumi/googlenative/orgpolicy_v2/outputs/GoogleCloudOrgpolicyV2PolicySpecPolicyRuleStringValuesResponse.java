@@ -66,12 +66,12 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesRespons
     	      this.deniedValues = defaults.deniedValues;
         }
 
-        public Builder setAllowedValues(List<String> allowedValues) {
+        public Builder allowedValues(List<String> allowedValues) {
             this.allowedValues = Objects.requireNonNull(allowedValues);
             return this;
         }
 
-        public Builder setDeniedValues(List<String> deniedValues) {
+        public Builder deniedValues(List<String> deniedValues) {
             this.deniedValues = Objects.requireNonNull(deniedValues);
             return this;
         }

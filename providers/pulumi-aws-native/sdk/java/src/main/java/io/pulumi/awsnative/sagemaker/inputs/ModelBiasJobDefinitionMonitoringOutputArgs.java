@@ -52,12 +52,12 @@ public final class ModelBiasJobDefinitionMonitoringOutputArgs extends io.pulumi.
     	      this.s3Output = defaults.s3Output;
         }
 
-        public Builder setS3Output(Input<ModelBiasJobDefinitionS3OutputArgs> s3Output) {
+        public Builder s3Output(Input<ModelBiasJobDefinitionS3OutputArgs> s3Output) {
             this.s3Output = Objects.requireNonNull(s3Output);
             return this;
         }
 
-        public Builder setS3Output(ModelBiasJobDefinitionS3OutputArgs s3Output) {
+        public Builder s3Output(ModelBiasJobDefinitionS3OutputArgs s3Output) {
             this.s3Output = Input.of(Objects.requireNonNull(s3Output));
             return this;
         }

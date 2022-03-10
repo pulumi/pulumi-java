@@ -87,32 +87,32 @@ public final class InstanceAttachmentState extends io.pulumi.resources.ResourceA
     	      this.name = defaults.name;
         }
 
-        public Builder setEnvironment(@Nullable Input<String> environment) {
+        public Builder environment(@Nullable Input<String> environment) {
             this.environment = environment;
             return this;
         }
 
-        public Builder setEnvironment(@Nullable String environment) {
+        public Builder environment(@Nullable String environment) {
             this.environment = Input.ofNullable(environment);
             return this;
         }
 
-        public Builder setInstanceId(@Nullable Input<String> instanceId) {
+        public Builder instanceId(@Nullable Input<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
 
-        public Builder setInstanceId(@Nullable String instanceId) {
+        public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = Input.ofNullable(instanceId);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

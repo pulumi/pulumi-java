@@ -139,62 +139,62 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
     	      this.win32Status = defaults.win32Status;
         }
 
-        public Builder setCount(@Nullable Input<Integer> count) {
+        public Builder count(@Nullable Input<Integer> count) {
             this.count = count;
             return this;
         }
 
-        public Builder setCount(@Nullable Integer count) {
+        public Builder count(@Nullable Integer count) {
             this.count = Input.ofNullable(count);
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<Integer> status) {
+        public Builder status(@Nullable Input<Integer> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable Integer status) {
+        public Builder status(@Nullable Integer status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setSubStatus(@Nullable Input<Integer> subStatus) {
+        public Builder subStatus(@Nullable Input<Integer> subStatus) {
             this.subStatus = subStatus;
             return this;
         }
 
-        public Builder setSubStatus(@Nullable Integer subStatus) {
+        public Builder subStatus(@Nullable Integer subStatus) {
             this.subStatus = Input.ofNullable(subStatus);
             return this;
         }
 
-        public Builder setTimeInterval(@Nullable Input<String> timeInterval) {
+        public Builder timeInterval(@Nullable Input<String> timeInterval) {
             this.timeInterval = timeInterval;
             return this;
         }
 
-        public Builder setTimeInterval(@Nullable String timeInterval) {
+        public Builder timeInterval(@Nullable String timeInterval) {
             this.timeInterval = Input.ofNullable(timeInterval);
             return this;
         }
 
-        public Builder setWin32Status(@Nullable Input<Integer> win32Status) {
+        public Builder win32Status(@Nullable Input<Integer> win32Status) {
             this.win32Status = win32Status;
             return this;
         }
 
-        public Builder setWin32Status(@Nullable Integer win32Status) {
+        public Builder win32Status(@Nullable Integer win32Status) {
             this.win32Status = Input.ofNullable(win32Status);
             return this;
         }

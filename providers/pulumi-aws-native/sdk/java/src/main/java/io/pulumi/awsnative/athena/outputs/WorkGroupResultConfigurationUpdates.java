@@ -69,22 +69,22 @@ public final class WorkGroupResultConfigurationUpdates {
     	      this.removeOutputLocation = defaults.removeOutputLocation;
         }
 
-        public Builder setEncryptionConfiguration(@Nullable WorkGroupEncryptionConfiguration encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable WorkGroupEncryptionConfiguration encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
 
-        public Builder setOutputLocation(@Nullable String outputLocation) {
+        public Builder outputLocation(@Nullable String outputLocation) {
             this.outputLocation = outputLocation;
             return this;
         }
 
-        public Builder setRemoveEncryptionConfiguration(@Nullable Boolean removeEncryptionConfiguration) {
+        public Builder removeEncryptionConfiguration(@Nullable Boolean removeEncryptionConfiguration) {
             this.removeEncryptionConfiguration = removeEncryptionConfiguration;
             return this;
         }
 
-        public Builder setRemoveOutputLocation(@Nullable Boolean removeOutputLocation) {
+        public Builder removeOutputLocation(@Nullable Boolean removeOutputLocation) {
             this.removeOutputLocation = removeOutputLocation;
             return this;
         }

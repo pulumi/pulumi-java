@@ -229,102 +229,102 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
     	      this.windowsBasedSli = defaults.windowsBasedSli;
         }
 
-        public Builder setBasicSli(@Nullable Input<SloBasicSliArgs> basicSli) {
+        public Builder basicSli(@Nullable Input<SloBasicSliArgs> basicSli) {
             this.basicSli = basicSli;
             return this;
         }
 
-        public Builder setBasicSli(@Nullable SloBasicSliArgs basicSli) {
+        public Builder basicSli(@Nullable SloBasicSliArgs basicSli) {
             this.basicSli = Input.ofNullable(basicSli);
             return this;
         }
 
-        public Builder setCalendarPeriod(@Nullable Input<String> calendarPeriod) {
+        public Builder calendarPeriod(@Nullable Input<String> calendarPeriod) {
             this.calendarPeriod = calendarPeriod;
             return this;
         }
 
-        public Builder setCalendarPeriod(@Nullable String calendarPeriod) {
+        public Builder calendarPeriod(@Nullable String calendarPeriod) {
             this.calendarPeriod = Input.ofNullable(calendarPeriod);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setGoal(Input<Double> goal) {
+        public Builder goal(Input<Double> goal) {
             this.goal = Objects.requireNonNull(goal);
             return this;
         }
 
-        public Builder setGoal(Double goal) {
+        public Builder goal(Double goal) {
             this.goal = Input.of(Objects.requireNonNull(goal));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRequestBasedSli(@Nullable Input<SloRequestBasedSliArgs> requestBasedSli) {
+        public Builder requestBasedSli(@Nullable Input<SloRequestBasedSliArgs> requestBasedSli) {
             this.requestBasedSli = requestBasedSli;
             return this;
         }
 
-        public Builder setRequestBasedSli(@Nullable SloRequestBasedSliArgs requestBasedSli) {
+        public Builder requestBasedSli(@Nullable SloRequestBasedSliArgs requestBasedSli) {
             this.requestBasedSli = Input.ofNullable(requestBasedSli);
             return this;
         }
 
-        public Builder setRollingPeriodDays(@Nullable Input<Integer> rollingPeriodDays) {
+        public Builder rollingPeriodDays(@Nullable Input<Integer> rollingPeriodDays) {
             this.rollingPeriodDays = rollingPeriodDays;
             return this;
         }
 
-        public Builder setRollingPeriodDays(@Nullable Integer rollingPeriodDays) {
+        public Builder rollingPeriodDays(@Nullable Integer rollingPeriodDays) {
             this.rollingPeriodDays = Input.ofNullable(rollingPeriodDays);
             return this;
         }
 
-        public Builder setService(Input<String> service) {
+        public Builder service(Input<String> service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
 
-        public Builder setService(String service) {
+        public Builder service(String service) {
             this.service = Input.of(Objects.requireNonNull(service));
             return this;
         }
 
-        public Builder setSloId(@Nullable Input<String> sloId) {
+        public Builder sloId(@Nullable Input<String> sloId) {
             this.sloId = sloId;
             return this;
         }
 
-        public Builder setSloId(@Nullable String sloId) {
+        public Builder sloId(@Nullable String sloId) {
             this.sloId = Input.ofNullable(sloId);
             return this;
         }
 
-        public Builder setWindowsBasedSli(@Nullable Input<SloWindowsBasedSliArgs> windowsBasedSli) {
+        public Builder windowsBasedSli(@Nullable Input<SloWindowsBasedSliArgs> windowsBasedSli) {
             this.windowsBasedSli = windowsBasedSli;
             return this;
         }
 
-        public Builder setWindowsBasedSli(@Nullable SloWindowsBasedSliArgs windowsBasedSli) {
+        public Builder windowsBasedSli(@Nullable SloWindowsBasedSliArgs windowsBasedSli) {
             this.windowsBasedSli = Input.ofNullable(windowsBasedSli);
             return this;
         }

@@ -101,22 +101,22 @@ public final class MLTransformParametersFindMatchesParameters {
     	      this.primaryKeyColumnName = defaults.primaryKeyColumnName;
         }
 
-        public Builder setAccuracyCostTradeOff(@Nullable Double accuracyCostTradeOff) {
+        public Builder accuracyCostTradeOff(@Nullable Double accuracyCostTradeOff) {
             this.accuracyCostTradeOff = accuracyCostTradeOff;
             return this;
         }
 
-        public Builder setEnforceProvidedLabels(@Nullable Boolean enforceProvidedLabels) {
+        public Builder enforceProvidedLabels(@Nullable Boolean enforceProvidedLabels) {
             this.enforceProvidedLabels = enforceProvidedLabels;
             return this;
         }
 
-        public Builder setPrecisionRecallTradeOff(@Nullable Double precisionRecallTradeOff) {
+        public Builder precisionRecallTradeOff(@Nullable Double precisionRecallTradeOff) {
             this.precisionRecallTradeOff = precisionRecallTradeOff;
             return this;
         }
 
-        public Builder setPrimaryKeyColumnName(@Nullable String primaryKeyColumnName) {
+        public Builder primaryKeyColumnName(@Nullable String primaryKeyColumnName) {
             this.primaryKeyColumnName = primaryKeyColumnName;
             return this;
         }

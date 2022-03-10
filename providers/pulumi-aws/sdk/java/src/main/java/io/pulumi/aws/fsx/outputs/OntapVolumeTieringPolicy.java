@@ -60,12 +60,12 @@ public final class OntapVolumeTieringPolicy {
     	      this.name = defaults.name;
         }
 
-        public Builder setCoolingPeriod(@Nullable Integer coolingPeriod) {
+        public Builder coolingPeriod(@Nullable Integer coolingPeriod) {
             this.coolingPeriod = coolingPeriod;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

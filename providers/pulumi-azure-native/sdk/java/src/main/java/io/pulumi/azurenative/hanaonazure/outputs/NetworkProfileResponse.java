@@ -68,12 +68,12 @@ public final class NetworkProfileResponse {
     	      this.networkInterfaces = defaults.networkInterfaces;
         }
 
-        public Builder setCircuitId(String circuitId) {
+        public Builder circuitId(String circuitId) {
             this.circuitId = Objects.requireNonNull(circuitId);
             return this;
         }
 
-        public Builder setNetworkInterfaces(@Nullable List<IpAddressResponse> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable List<IpAddressResponse> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }

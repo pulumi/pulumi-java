@@ -89,32 +89,32 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setPlatformId(Input<SigningProfilePlatformId> platformId) {
+        public Builder platformId(Input<SigningProfilePlatformId> platformId) {
             this.platformId = Objects.requireNonNull(platformId);
             return this;
         }
 
-        public Builder setPlatformId(SigningProfilePlatformId platformId) {
+        public Builder platformId(SigningProfilePlatformId platformId) {
             this.platformId = Input.of(Objects.requireNonNull(platformId));
             return this;
         }
 
-        public Builder setSignatureValidityPeriod(@Nullable Input<SigningProfileSignatureValidityPeriodArgs> signatureValidityPeriod) {
+        public Builder signatureValidityPeriod(@Nullable Input<SigningProfileSignatureValidityPeriodArgs> signatureValidityPeriod) {
             this.signatureValidityPeriod = signatureValidityPeriod;
             return this;
         }
 
-        public Builder setSignatureValidityPeriod(@Nullable SigningProfileSignatureValidityPeriodArgs signatureValidityPeriod) {
+        public Builder signatureValidityPeriod(@Nullable SigningProfileSignatureValidityPeriodArgs signatureValidityPeriod) {
             this.signatureValidityPeriod = Input.ofNullable(signatureValidityPeriod);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<SigningProfileTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<SigningProfileTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<SigningProfileTagArgs> tags) {
+        public Builder tags(@Nullable List<SigningProfileTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

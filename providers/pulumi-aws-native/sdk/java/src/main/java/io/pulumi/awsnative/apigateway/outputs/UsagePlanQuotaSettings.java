@@ -84,17 +84,17 @@ public final class UsagePlanQuotaSettings {
     	      this.period = defaults.period;
         }
 
-        public Builder setLimit(@Nullable Integer limit) {
+        public Builder limit(@Nullable Integer limit) {
             this.limit = limit;
             return this;
         }
 
-        public Builder setOffset(@Nullable Integer offset) {
+        public Builder offset(@Nullable Integer offset) {
             this.offset = offset;
             return this;
         }
 
-        public Builder setPeriod(@Nullable String period) {
+        public Builder period(@Nullable String period) {
             this.period = period;
             return this;
         }

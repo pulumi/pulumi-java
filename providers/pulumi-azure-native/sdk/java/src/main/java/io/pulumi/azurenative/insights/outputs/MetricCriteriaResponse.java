@@ -185,47 +185,47 @@ public final class MetricCriteriaResponse {
     	      this.timeAggregation = defaults.timeAggregation;
         }
 
-        public Builder setCriterionType(String criterionType) {
+        public Builder criterionType(String criterionType) {
             this.criterionType = Objects.requireNonNull(criterionType);
             return this;
         }
 
-        public Builder setDimensions(@Nullable List<MetricDimensionResponse> dimensions) {
+        public Builder dimensions(@Nullable List<MetricDimensionResponse> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
-        public Builder setMetricNamespace(@Nullable String metricNamespace) {
+        public Builder metricNamespace(@Nullable String metricNamespace) {
             this.metricNamespace = metricNamespace;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOperator(String operator) {
+        public Builder operator(String operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
 
-        public Builder setSkipMetricValidation(@Nullable Boolean skipMetricValidation) {
+        public Builder skipMetricValidation(@Nullable Boolean skipMetricValidation) {
             this.skipMetricValidation = skipMetricValidation;
             return this;
         }
 
-        public Builder setThreshold(Double threshold) {
+        public Builder threshold(Double threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
 
-        public Builder setTimeAggregation(String timeAggregation) {
+        public Builder timeAggregation(String timeAggregation) {
             this.timeAggregation = Objects.requireNonNull(timeAggregation);
             return this;
         }

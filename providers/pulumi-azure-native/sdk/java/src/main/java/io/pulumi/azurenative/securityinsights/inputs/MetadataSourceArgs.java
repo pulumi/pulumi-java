@@ -92,32 +92,32 @@ public final class MetadataSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sourceId = defaults.sourceId;
         }
 
-        public Builder setKind(Input<Either<String,SourceKind>> kind) {
+        public Builder kind(Input<Either<String,SourceKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(Either<String,SourceKind> kind) {
+        public Builder kind(Either<String,SourceKind> kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSourceId(@Nullable Input<String> sourceId) {
+        public Builder sourceId(@Nullable Input<String> sourceId) {
             this.sourceId = sourceId;
             return this;
         }
 
-        public Builder setSourceId(@Nullable String sourceId) {
+        public Builder sourceId(@Nullable String sourceId) {
             this.sourceId = Input.ofNullable(sourceId);
             return this;
         }

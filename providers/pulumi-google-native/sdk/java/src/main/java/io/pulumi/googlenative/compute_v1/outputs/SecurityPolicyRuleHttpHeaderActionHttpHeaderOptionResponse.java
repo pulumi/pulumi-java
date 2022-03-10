@@ -65,12 +65,12 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse {
     	      this.headerValue = defaults.headerValue;
         }
 
-        public Builder setHeaderName(String headerName) {
+        public Builder headerName(String headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
-        public Builder setHeaderValue(String headerValue) {
+        public Builder headerValue(String headerValue) {
             this.headerValue = Objects.requireNonNull(headerValue);
             return this;
         }

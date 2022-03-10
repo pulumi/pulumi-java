@@ -65,12 +65,12 @@ public final class DockerExecutorResponse {
     	      this.imageName = defaults.imageName;
         }
 
-        public Builder setCmd(String cmd) {
+        public Builder cmd(String cmd) {
             this.cmd = Objects.requireNonNull(cmd);
             return this;
         }
 
-        public Builder setImageName(String imageName) {
+        public Builder imageName(String imageName) {
             this.imageName = Objects.requireNonNull(imageName);
             return this;
         }

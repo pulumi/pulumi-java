@@ -141,62 +141,62 @@ public final class MonitoredResourceDescriptorArgs extends io.pulumi.resources.R
     	      this.type = defaults.type;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setLabels(Input<List<LabelDescriptorArgs>> labels) {
+        public Builder labels(Input<List<LabelDescriptorArgs>> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLabels(List<LabelDescriptorArgs> labels) {
+        public Builder labels(List<LabelDescriptorArgs> labels) {
             this.labels = Input.of(Objects.requireNonNull(labels));
             return this;
         }
 
-        public Builder setLaunchStage(@Nullable Input<MonitoredResourceDescriptorLaunchStage> launchStage) {
+        public Builder launchStage(@Nullable Input<MonitoredResourceDescriptorLaunchStage> launchStage) {
             this.launchStage = launchStage;
             return this;
         }
 
-        public Builder setLaunchStage(@Nullable MonitoredResourceDescriptorLaunchStage launchStage) {
+        public Builder launchStage(@Nullable MonitoredResourceDescriptorLaunchStage launchStage) {
             this.launchStage = Input.ofNullable(launchStage);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

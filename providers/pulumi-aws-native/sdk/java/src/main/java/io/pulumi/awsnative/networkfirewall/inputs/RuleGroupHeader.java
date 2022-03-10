@@ -110,32 +110,32 @@ public final class RuleGroupHeader extends io.pulumi.resources.InvokeArgs {
     	      this.sourcePort = defaults.sourcePort;
         }
 
-        public Builder setDestination(String destination) {
+        public Builder destination(String destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setDestinationPort(String destinationPort) {
+        public Builder destinationPort(String destinationPort) {
             this.destinationPort = Objects.requireNonNull(destinationPort);
             return this;
         }
 
-        public Builder setDirection(RuleGroupHeaderDirection direction) {
+        public Builder direction(RuleGroupHeaderDirection direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
-        public Builder setProtocol(RuleGroupHeaderProtocol protocol) {
+        public Builder protocol(RuleGroupHeaderProtocol protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setSourcePort(String sourcePort) {
+        public Builder sourcePort(String sourcePort) {
             this.sourcePort = Objects.requireNonNull(sourcePort);
             return this;
         }

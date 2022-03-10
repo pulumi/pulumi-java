@@ -50,7 +50,7 @@ public final class ApiVersionConstraintResponse {
     	      this.minApiVersion = defaults.minApiVersion;
         }
 
-        public Builder setMinApiVersion(@Nullable String minApiVersion) {
+        public Builder minApiVersion(@Nullable String minApiVersion) {
             this.minApiVersion = minApiVersion;
             return this;
         }

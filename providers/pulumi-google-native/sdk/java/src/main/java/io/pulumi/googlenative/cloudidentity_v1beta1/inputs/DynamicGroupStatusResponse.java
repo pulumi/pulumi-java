@@ -72,12 +72,12 @@ public final class DynamicGroupStatusResponse extends io.pulumi.resources.Invoke
     	      this.statusTime = defaults.statusTime;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatusTime(String statusTime) {
+        public Builder statusTime(String statusTime) {
             this.statusTime = Objects.requireNonNull(statusTime);
             return this;
         }

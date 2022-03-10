@@ -74,12 +74,12 @@ public final class DataLakeStorageAccountDetailsResponse extends io.pulumi.resou
     	      this.filesystem = defaults.filesystem;
         }
 
-        public Builder setAccountUrl(@Nullable String accountUrl) {
+        public Builder accountUrl(@Nullable String accountUrl) {
             this.accountUrl = accountUrl;
             return this;
         }
 
-        public Builder setFilesystem(@Nullable String filesystem) {
+        public Builder filesystem(@Nullable String filesystem) {
             this.filesystem = filesystem;
             return this;
         }

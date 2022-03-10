@@ -101,22 +101,22 @@ public final class GetUserTablesSqlSyncTaskOutputResponse {
     	      this.validationErrors = defaults.validationErrors;
         }
 
-        public Builder setDatabasesToSourceTables(Map<String,List<DatabaseTableResponse>> databasesToSourceTables) {
+        public Builder databasesToSourceTables(Map<String,List<DatabaseTableResponse>> databasesToSourceTables) {
             this.databasesToSourceTables = Objects.requireNonNull(databasesToSourceTables);
             return this;
         }
 
-        public Builder setDatabasesToTargetTables(Map<String,List<DatabaseTableResponse>> databasesToTargetTables) {
+        public Builder databasesToTargetTables(Map<String,List<DatabaseTableResponse>> databasesToTargetTables) {
             this.databasesToTargetTables = Objects.requireNonNull(databasesToTargetTables);
             return this;
         }
 
-        public Builder setTableValidationErrors(Map<String,List<String>> tableValidationErrors) {
+        public Builder tableValidationErrors(Map<String,List<String>> tableValidationErrors) {
             this.tableValidationErrors = Objects.requireNonNull(tableValidationErrors);
             return this;
         }
 
-        public Builder setValidationErrors(List<ReportableExceptionResponse> validationErrors) {
+        public Builder validationErrors(List<ReportableExceptionResponse> validationErrors) {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }

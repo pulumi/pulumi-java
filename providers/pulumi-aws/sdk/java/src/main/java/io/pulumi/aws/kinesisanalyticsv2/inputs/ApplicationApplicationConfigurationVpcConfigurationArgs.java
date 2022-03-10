@@ -95,42 +95,42 @@ public final class ApplicationApplicationConfigurationVpcConfigurationArgs exten
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setSecurityGroupIds(Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(Input<List<String>> securityGroupIds) {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
 
-        public Builder setSecurityGroupIds(List<String> securityGroupIds) {
+        public Builder securityGroupIds(List<String> securityGroupIds) {
             this.securityGroupIds = Input.of(Objects.requireNonNull(securityGroupIds));
             return this;
         }
 
-        public Builder setSubnetIds(Input<List<String>> subnetIds) {
+        public Builder subnetIds(Input<List<String>> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
-        public Builder setSubnetIds(List<String> subnetIds) {
+        public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Input.of(Objects.requireNonNull(subnetIds));
             return this;
         }
 
-        public Builder setVpcConfigurationId(@Nullable Input<String> vpcConfigurationId) {
+        public Builder vpcConfigurationId(@Nullable Input<String> vpcConfigurationId) {
             this.vpcConfigurationId = vpcConfigurationId;
             return this;
         }
 
-        public Builder setVpcConfigurationId(@Nullable String vpcConfigurationId) {
+        public Builder vpcConfigurationId(@Nullable String vpcConfigurationId) {
             this.vpcConfigurationId = Input.ofNullable(vpcConfigurationId);
             return this;
         }
 
-        public Builder setVpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Input<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Input.ofNullable(vpcId);
             return this;
         }

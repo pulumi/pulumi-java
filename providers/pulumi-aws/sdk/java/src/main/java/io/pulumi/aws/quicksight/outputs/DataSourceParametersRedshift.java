@@ -100,22 +100,22 @@ public final class DataSourceParametersRedshift {
     	      this.port = defaults.port;
         }
 
-        public Builder setClusterId(@Nullable String clusterId) {
+        public Builder clusterId(@Nullable String clusterId) {
             this.clusterId = clusterId;
             return this;
         }
 
-        public Builder setDatabase(String database) {
+        public Builder database(String database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
 
-        public Builder setHost(@Nullable String host) {
+        public Builder host(@Nullable String host) {
             this.host = host;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }

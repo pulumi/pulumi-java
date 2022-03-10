@@ -50,7 +50,7 @@ public final class JobDefinitionTimeout {
     	      this.attemptDurationSeconds = defaults.attemptDurationSeconds;
         }
 
-        public Builder setAttemptDurationSeconds(@Nullable Integer attemptDurationSeconds) {
+        public Builder attemptDurationSeconds(@Nullable Integer attemptDurationSeconds) {
             this.attemptDurationSeconds = attemptDurationSeconds;
             return this;
         }

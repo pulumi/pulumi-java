@@ -64,12 +64,12 @@ public final class ObjectTypeKeyMap extends io.pulumi.resources.InvokeArgs {
     	      this.objectTypeKeyList = defaults.objectTypeKeyList;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setObjectTypeKeyList(@Nullable List<ObjectTypeKey> objectTypeKeyList) {
+        public Builder objectTypeKeyList(@Nullable List<ObjectTypeKey> objectTypeKeyList) {
             this.objectTypeKeyList = objectTypeKeyList;
             return this;
         }

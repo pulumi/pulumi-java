@@ -77,32 +77,32 @@ public final class TopicRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topicRulePayload = defaults.topicRulePayload;
         }
 
-        public Builder setRuleName(@Nullable Input<String> ruleName) {
+        public Builder ruleName(@Nullable Input<String> ruleName) {
             this.ruleName = ruleName;
             return this;
         }
 
-        public Builder setRuleName(@Nullable String ruleName) {
+        public Builder ruleName(@Nullable String ruleName) {
             this.ruleName = Input.ofNullable(ruleName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<TopicRuleTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<TopicRuleTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<TopicRuleTagArgs> tags) {
+        public Builder tags(@Nullable List<TopicRuleTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTopicRulePayload(Input<TopicRulePayloadArgs> topicRulePayload) {
+        public Builder topicRulePayload(Input<TopicRulePayloadArgs> topicRulePayload) {
             this.topicRulePayload = Objects.requireNonNull(topicRulePayload);
             return this;
         }
 
-        public Builder setTopicRulePayload(TopicRulePayloadArgs topicRulePayload) {
+        public Builder topicRulePayload(TopicRulePayloadArgs topicRulePayload) {
             this.topicRulePayload = Input.of(Objects.requireNonNull(topicRulePayload));
             return this;
         }

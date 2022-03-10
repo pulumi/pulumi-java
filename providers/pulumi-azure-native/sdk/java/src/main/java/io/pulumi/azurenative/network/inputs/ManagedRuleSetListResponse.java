@@ -58,7 +58,7 @@ public final class ManagedRuleSetListResponse extends io.pulumi.resources.Invoke
     	      this.managedRuleSets = defaults.managedRuleSets;
         }
 
-        public Builder setManagedRuleSets(@Nullable List<FrontDoorManagedRuleSetResponse> managedRuleSets) {
+        public Builder managedRuleSets(@Nullable List<FrontDoorManagedRuleSetResponse> managedRuleSets) {
             this.managedRuleSets = managedRuleSets;
             return this;
         }

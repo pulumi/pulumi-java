@@ -49,12 +49,12 @@ public final class RuleGroupActionDefinitionArgs extends io.pulumi.resources.Res
     	      this.publishMetricAction = defaults.publishMetricAction;
         }
 
-        public Builder setPublishMetricAction(@Nullable Input<RuleGroupPublishMetricActionArgs> publishMetricAction) {
+        public Builder publishMetricAction(@Nullable Input<RuleGroupPublishMetricActionArgs> publishMetricAction) {
             this.publishMetricAction = publishMetricAction;
             return this;
         }
 
-        public Builder setPublishMetricAction(@Nullable RuleGroupPublishMetricActionArgs publishMetricAction) {
+        public Builder publishMetricAction(@Nullable RuleGroupPublishMetricActionArgs publishMetricAction) {
             this.publishMetricAction = Input.ofNullable(publishMetricAction);
             return this;
         }

@@ -130,32 +130,32 @@ public final class GetArchiveDeploymentResult {
     	      this.updatedAt = defaults.updatedAt;
         }
 
-        public Builder setCreatedAt(String createdAt) {
+        public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
 
-        public Builder setGcsUri(String gcsUri) {
+        public Builder gcsUri(String gcsUri) {
             this.gcsUri = Objects.requireNonNull(gcsUri);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOperation(String operation) {
+        public Builder operation(String operation) {
             this.operation = Objects.requireNonNull(operation);
             return this;
         }
 
-        public Builder setUpdatedAt(String updatedAt) {
+        public Builder updatedAt(String updatedAt) {
             this.updatedAt = Objects.requireNonNull(updatedAt);
             return this;
         }

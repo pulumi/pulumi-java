@@ -166,42 +166,42 @@ public final class WorkflowTemplateJobPysparkJob {
     	      this.pythonFileUris = defaults.pythonFileUris;
         }
 
-        public Builder setArchiveUris(@Nullable List<String> archiveUris) {
+        public Builder archiveUris(@Nullable List<String> archiveUris) {
             this.archiveUris = archiveUris;
             return this;
         }
 
-        public Builder setArgs(@Nullable List<String> args) {
+        public Builder args(@Nullable List<String> args) {
             this.args = args;
             return this;
         }
 
-        public Builder setFileUris(@Nullable List<String> fileUris) {
+        public Builder fileUris(@Nullable List<String> fileUris) {
             this.fileUris = fileUris;
             return this;
         }
 
-        public Builder setJarFileUris(@Nullable List<String> jarFileUris) {
+        public Builder jarFileUris(@Nullable List<String> jarFileUris) {
             this.jarFileUris = jarFileUris;
             return this;
         }
 
-        public Builder setLoggingConfig(@Nullable WorkflowTemplateJobPysparkJobLoggingConfig loggingConfig) {
+        public Builder loggingConfig(@Nullable WorkflowTemplateJobPysparkJobLoggingConfig loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
 
-        public Builder setMainPythonFileUri(String mainPythonFileUri) {
+        public Builder mainPythonFileUri(String mainPythonFileUri) {
             this.mainPythonFileUri = Objects.requireNonNull(mainPythonFileUri);
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setPythonFileUris(@Nullable List<String> pythonFileUris) {
+        public Builder pythonFileUris(@Nullable List<String> pythonFileUris) {
             this.pythonFileUris = pythonFileUris;
             return this;
         }

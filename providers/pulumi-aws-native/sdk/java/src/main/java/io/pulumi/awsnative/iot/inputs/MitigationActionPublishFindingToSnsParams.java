@@ -55,7 +55,7 @@ public final class MitigationActionPublishFindingToSnsParams extends io.pulumi.r
     	      this.topicArn = defaults.topicArn;
         }
 
-        public Builder setTopicArn(String topicArn) {
+        public Builder topicArn(String topicArn) {
             this.topicArn = Objects.requireNonNull(topicArn);
             return this;
         }

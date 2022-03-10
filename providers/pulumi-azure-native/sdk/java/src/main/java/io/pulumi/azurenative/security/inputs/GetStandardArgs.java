@@ -68,12 +68,12 @@ public final class GetStandardArgs extends io.pulumi.resources.InvokeArgs {
     	      this.standardId = defaults.standardId;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setStandardId(String standardId) {
+        public Builder standardId(String standardId) {
             this.standardId = Objects.requireNonNull(standardId);
             return this;
         }

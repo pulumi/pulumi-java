@@ -103,42 +103,42 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setInputDefinition(Input<InputDefinitionArgs> inputDefinition) {
+        public Builder inputDefinition(Input<InputDefinitionArgs> inputDefinition) {
             this.inputDefinition = Objects.requireNonNull(inputDefinition);
             return this;
         }
 
-        public Builder setInputDefinition(InputDefinitionArgs inputDefinition) {
+        public Builder inputDefinition(InputDefinitionArgs inputDefinition) {
             this.inputDefinition = Input.of(Objects.requireNonNull(inputDefinition));
             return this;
         }
 
-        public Builder setInputDescription(@Nullable Input<String> inputDescription) {
+        public Builder inputDescription(@Nullable Input<String> inputDescription) {
             this.inputDescription = inputDescription;
             return this;
         }
 
-        public Builder setInputDescription(@Nullable String inputDescription) {
+        public Builder inputDescription(@Nullable String inputDescription) {
             this.inputDescription = Input.ofNullable(inputDescription);
             return this;
         }
 
-        public Builder setInputName(@Nullable Input<String> inputName) {
+        public Builder inputName(@Nullable Input<String> inputName) {
             this.inputName = inputName;
             return this;
         }
 
-        public Builder setInputName(@Nullable String inputName) {
+        public Builder inputName(@Nullable String inputName) {
             this.inputName = Input.ofNullable(inputName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<InputTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<InputTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<InputTagArgs> tags) {
+        public Builder tags(@Nullable List<InputTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

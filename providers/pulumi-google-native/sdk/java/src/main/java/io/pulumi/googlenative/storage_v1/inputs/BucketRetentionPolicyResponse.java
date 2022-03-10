@@ -89,17 +89,17 @@ public final class BucketRetentionPolicyResponse extends io.pulumi.resources.Inv
     	      this.retentionPeriod = defaults.retentionPeriod;
         }
 
-        public Builder setEffectiveTime(String effectiveTime) {
+        public Builder effectiveTime(String effectiveTime) {
             this.effectiveTime = Objects.requireNonNull(effectiveTime);
             return this;
         }
 
-        public Builder setIsLocked(Boolean isLocked) {
+        public Builder isLocked(Boolean isLocked) {
             this.isLocked = Objects.requireNonNull(isLocked);
             return this;
         }
 
-        public Builder setRetentionPeriod(String retentionPeriod) {
+        public Builder retentionPeriod(String retentionPeriod) {
             this.retentionPeriod = Objects.requireNonNull(retentionPeriod);
             return this;
         }

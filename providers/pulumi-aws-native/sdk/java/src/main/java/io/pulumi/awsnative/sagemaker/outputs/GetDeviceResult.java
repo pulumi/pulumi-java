@@ -69,12 +69,12 @@ public final class GetDeviceResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDevice(@Nullable Device device) {
+        public Builder device(@Nullable Device device) {
             this.device = device;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DeviceTag> tags) {
+        public Builder tags(@Nullable List<DeviceTag> tags) {
             this.tags = tags;
             return this;
         }

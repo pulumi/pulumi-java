@@ -136,82 +136,82 @@ public final class ResourceDataSyncArgs extends io.pulumi.resources.ResourceArgs
     	      this.syncType = defaults.syncType;
         }
 
-        public Builder setBucketName(@Nullable Input<String> bucketName) {
+        public Builder bucketName(@Nullable Input<String> bucketName) {
             this.bucketName = bucketName;
             return this;
         }
 
-        public Builder setBucketName(@Nullable String bucketName) {
+        public Builder bucketName(@Nullable String bucketName) {
             this.bucketName = Input.ofNullable(bucketName);
             return this;
         }
 
-        public Builder setBucketPrefix(@Nullable Input<String> bucketPrefix) {
+        public Builder bucketPrefix(@Nullable Input<String> bucketPrefix) {
             this.bucketPrefix = bucketPrefix;
             return this;
         }
 
-        public Builder setBucketPrefix(@Nullable String bucketPrefix) {
+        public Builder bucketPrefix(@Nullable String bucketPrefix) {
             this.bucketPrefix = Input.ofNullable(bucketPrefix);
             return this;
         }
 
-        public Builder setBucketRegion(@Nullable Input<String> bucketRegion) {
+        public Builder bucketRegion(@Nullable Input<String> bucketRegion) {
             this.bucketRegion = bucketRegion;
             return this;
         }
 
-        public Builder setBucketRegion(@Nullable String bucketRegion) {
+        public Builder bucketRegion(@Nullable String bucketRegion) {
             this.bucketRegion = Input.ofNullable(bucketRegion);
             return this;
         }
 
-        public Builder setKMSKeyArn(@Nullable Input<String> kMSKeyArn) {
+        public Builder kMSKeyArn(@Nullable Input<String> kMSKeyArn) {
             this.kMSKeyArn = kMSKeyArn;
             return this;
         }
 
-        public Builder setKMSKeyArn(@Nullable String kMSKeyArn) {
+        public Builder kMSKeyArn(@Nullable String kMSKeyArn) {
             this.kMSKeyArn = Input.ofNullable(kMSKeyArn);
             return this;
         }
 
-        public Builder setS3Destination(@Nullable Input<ResourceDataSyncS3DestinationArgs> s3Destination) {
+        public Builder s3Destination(@Nullable Input<ResourceDataSyncS3DestinationArgs> s3Destination) {
             this.s3Destination = s3Destination;
             return this;
         }
 
-        public Builder setS3Destination(@Nullable ResourceDataSyncS3DestinationArgs s3Destination) {
+        public Builder s3Destination(@Nullable ResourceDataSyncS3DestinationArgs s3Destination) {
             this.s3Destination = Input.ofNullable(s3Destination);
             return this;
         }
 
-        public Builder setSyncFormat(@Nullable Input<String> syncFormat) {
+        public Builder syncFormat(@Nullable Input<String> syncFormat) {
             this.syncFormat = syncFormat;
             return this;
         }
 
-        public Builder setSyncFormat(@Nullable String syncFormat) {
+        public Builder syncFormat(@Nullable String syncFormat) {
             this.syncFormat = Input.ofNullable(syncFormat);
             return this;
         }
 
-        public Builder setSyncSource(@Nullable Input<ResourceDataSyncSyncSourceArgs> syncSource) {
+        public Builder syncSource(@Nullable Input<ResourceDataSyncSyncSourceArgs> syncSource) {
             this.syncSource = syncSource;
             return this;
         }
 
-        public Builder setSyncSource(@Nullable ResourceDataSyncSyncSourceArgs syncSource) {
+        public Builder syncSource(@Nullable ResourceDataSyncSyncSourceArgs syncSource) {
             this.syncSource = Input.ofNullable(syncSource);
             return this;
         }
 
-        public Builder setSyncType(@Nullable Input<String> syncType) {
+        public Builder syncType(@Nullable Input<String> syncType) {
             this.syncType = syncType;
             return this;
         }
 
-        public Builder setSyncType(@Nullable String syncType) {
+        public Builder syncType(@Nullable String syncType) {
             this.syncType = Input.ofNullable(syncType);
             return this;
         }

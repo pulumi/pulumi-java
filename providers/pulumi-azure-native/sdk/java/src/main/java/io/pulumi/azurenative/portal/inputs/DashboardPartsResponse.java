@@ -75,12 +75,12 @@ public final class DashboardPartsResponse extends io.pulumi.resources.InvokeArgs
     	      this.position = defaults.position;
         }
 
-        public Builder setMetadata(@Nullable MarkdownPartMetadataResponse metadata) {
+        public Builder metadata(@Nullable MarkdownPartMetadataResponse metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setPosition(DashboardPartsResponsePosition position) {
+        public Builder position(DashboardPartsResponsePosition position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }

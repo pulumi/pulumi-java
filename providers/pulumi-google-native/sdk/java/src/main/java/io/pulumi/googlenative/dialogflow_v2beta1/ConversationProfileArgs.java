@@ -260,142 +260,142 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setAutomatedAgentConfig(@Nullable Input<GoogleCloudDialogflowV2beta1AutomatedAgentConfigArgs> automatedAgentConfig) {
+        public Builder automatedAgentConfig(@Nullable Input<GoogleCloudDialogflowV2beta1AutomatedAgentConfigArgs> automatedAgentConfig) {
             this.automatedAgentConfig = automatedAgentConfig;
             return this;
         }
 
-        public Builder setAutomatedAgentConfig(@Nullable GoogleCloudDialogflowV2beta1AutomatedAgentConfigArgs automatedAgentConfig) {
+        public Builder automatedAgentConfig(@Nullable GoogleCloudDialogflowV2beta1AutomatedAgentConfigArgs automatedAgentConfig) {
             this.automatedAgentConfig = Input.ofNullable(automatedAgentConfig);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setHumanAgentAssistantConfig(@Nullable Input<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs> humanAgentAssistantConfig) {
+        public Builder humanAgentAssistantConfig(@Nullable Input<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs> humanAgentAssistantConfig) {
             this.humanAgentAssistantConfig = humanAgentAssistantConfig;
             return this;
         }
 
-        public Builder setHumanAgentAssistantConfig(@Nullable GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs humanAgentAssistantConfig) {
+        public Builder humanAgentAssistantConfig(@Nullable GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs humanAgentAssistantConfig) {
             this.humanAgentAssistantConfig = Input.ofNullable(humanAgentAssistantConfig);
             return this;
         }
 
-        public Builder setHumanAgentHandoffConfig(@Nullable Input<GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigArgs> humanAgentHandoffConfig) {
+        public Builder humanAgentHandoffConfig(@Nullable Input<GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigArgs> humanAgentHandoffConfig) {
             this.humanAgentHandoffConfig = humanAgentHandoffConfig;
             return this;
         }
 
-        public Builder setHumanAgentHandoffConfig(@Nullable GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigArgs humanAgentHandoffConfig) {
+        public Builder humanAgentHandoffConfig(@Nullable GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigArgs humanAgentHandoffConfig) {
             this.humanAgentHandoffConfig = Input.ofNullable(humanAgentHandoffConfig);
             return this;
         }
 
-        public Builder setLanguageCode(@Nullable Input<String> languageCode) {
+        public Builder languageCode(@Nullable Input<String> languageCode) {
             this.languageCode = languageCode;
             return this;
         }
 
-        public Builder setLanguageCode(@Nullable String languageCode) {
+        public Builder languageCode(@Nullable String languageCode) {
             this.languageCode = Input.ofNullable(languageCode);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setLoggingConfig(@Nullable Input<GoogleCloudDialogflowV2beta1LoggingConfigArgs> loggingConfig) {
+        public Builder loggingConfig(@Nullable Input<GoogleCloudDialogflowV2beta1LoggingConfigArgs> loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
 
-        public Builder setLoggingConfig(@Nullable GoogleCloudDialogflowV2beta1LoggingConfigArgs loggingConfig) {
+        public Builder loggingConfig(@Nullable GoogleCloudDialogflowV2beta1LoggingConfigArgs loggingConfig) {
             this.loggingConfig = Input.ofNullable(loggingConfig);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNewMessageEventNotificationConfig(@Nullable Input<GoogleCloudDialogflowV2beta1NotificationConfigArgs> newMessageEventNotificationConfig) {
+        public Builder newMessageEventNotificationConfig(@Nullable Input<GoogleCloudDialogflowV2beta1NotificationConfigArgs> newMessageEventNotificationConfig) {
             this.newMessageEventNotificationConfig = newMessageEventNotificationConfig;
             return this;
         }
 
-        public Builder setNewMessageEventNotificationConfig(@Nullable GoogleCloudDialogflowV2beta1NotificationConfigArgs newMessageEventNotificationConfig) {
+        public Builder newMessageEventNotificationConfig(@Nullable GoogleCloudDialogflowV2beta1NotificationConfigArgs newMessageEventNotificationConfig) {
             this.newMessageEventNotificationConfig = Input.ofNullable(newMessageEventNotificationConfig);
             return this;
         }
 
-        public Builder setNotificationConfig(@Nullable Input<GoogleCloudDialogflowV2beta1NotificationConfigArgs> notificationConfig) {
+        public Builder notificationConfig(@Nullable Input<GoogleCloudDialogflowV2beta1NotificationConfigArgs> notificationConfig) {
             this.notificationConfig = notificationConfig;
             return this;
         }
 
-        public Builder setNotificationConfig(@Nullable GoogleCloudDialogflowV2beta1NotificationConfigArgs notificationConfig) {
+        public Builder notificationConfig(@Nullable GoogleCloudDialogflowV2beta1NotificationConfigArgs notificationConfig) {
             this.notificationConfig = Input.ofNullable(notificationConfig);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSecuritySettings(@Nullable Input<String> securitySettings) {
+        public Builder securitySettings(@Nullable Input<String> securitySettings) {
             this.securitySettings = securitySettings;
             return this;
         }
 
-        public Builder setSecuritySettings(@Nullable String securitySettings) {
+        public Builder securitySettings(@Nullable String securitySettings) {
             this.securitySettings = Input.ofNullable(securitySettings);
             return this;
         }
 
-        public Builder setSttConfig(@Nullable Input<GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs> sttConfig) {
+        public Builder sttConfig(@Nullable Input<GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs> sttConfig) {
             this.sttConfig = sttConfig;
             return this;
         }
 
-        public Builder setSttConfig(@Nullable GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs sttConfig) {
+        public Builder sttConfig(@Nullable GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs sttConfig) {
             this.sttConfig = Input.ofNullable(sttConfig);
             return this;
         }
 
-        public Builder setTimeZone(@Nullable Input<String> timeZone) {
+        public Builder timeZone(@Nullable Input<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Input.ofNullable(timeZone);
             return this;
         }

@@ -70,12 +70,12 @@ public final class GetIAMPolicyAuditConfig extends io.pulumi.resources.InvokeArg
     	      this.service = defaults.service;
         }
 
-        public Builder setAuditLogConfigs(List<GetIAMPolicyAuditConfigAuditLogConfig> auditLogConfigs) {
+        public Builder auditLogConfigs(List<GetIAMPolicyAuditConfigAuditLogConfig> auditLogConfigs) {
             this.auditLogConfigs = Objects.requireNonNull(auditLogConfigs);
             return this;
         }
 
-        public Builder setService(String service) {
+        public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }

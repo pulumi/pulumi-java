@@ -57,12 +57,12 @@ public final class PartnerContentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.b2b = defaults.b2b;
         }
 
-        public Builder setB2b(@Nullable Input<B2BPartnerContentArgs> b2b) {
+        public Builder b2b(@Nullable Input<B2BPartnerContentArgs> b2b) {
             this.b2b = b2b;
             return this;
         }
 
-        public Builder setB2b(@Nullable B2BPartnerContentArgs b2b) {
+        public Builder b2b(@Nullable B2BPartnerContentArgs b2b) {
             this.b2b = Input.ofNullable(b2b);
             return this;
         }

@@ -69,12 +69,12 @@ public final class VaultSecretGroupResponse {
     	      this.vaultCertificates = defaults.vaultCertificates;
         }
 
-        public Builder setSourceVault(@Nullable SubResourceResponse sourceVault) {
+        public Builder sourceVault(@Nullable SubResourceResponse sourceVault) {
             this.sourceVault = sourceVault;
             return this;
         }
 
-        public Builder setVaultCertificates(@Nullable List<VaultCertificateResponse> vaultCertificates) {
+        public Builder vaultCertificates(@Nullable List<VaultCertificateResponse> vaultCertificates) {
             this.vaultCertificates = vaultCertificates;
             return this;
         }

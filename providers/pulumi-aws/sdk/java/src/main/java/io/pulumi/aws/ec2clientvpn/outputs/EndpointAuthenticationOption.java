@@ -115,27 +115,27 @@ public final class EndpointAuthenticationOption {
     	      this.type = defaults.type;
         }
 
-        public Builder setActiveDirectoryId(@Nullable String activeDirectoryId) {
+        public Builder activeDirectoryId(@Nullable String activeDirectoryId) {
             this.activeDirectoryId = activeDirectoryId;
             return this;
         }
 
-        public Builder setRootCertificateChainArn(@Nullable String rootCertificateChainArn) {
+        public Builder rootCertificateChainArn(@Nullable String rootCertificateChainArn) {
             this.rootCertificateChainArn = rootCertificateChainArn;
             return this;
         }
 
-        public Builder setSamlProviderArn(@Nullable String samlProviderArn) {
+        public Builder samlProviderArn(@Nullable String samlProviderArn) {
             this.samlProviderArn = samlProviderArn;
             return this;
         }
 
-        public Builder setSelfServiceSamlProviderArn(@Nullable String selfServiceSamlProviderArn) {
+        public Builder selfServiceSamlProviderArn(@Nullable String selfServiceSamlProviderArn) {
             this.selfServiceSamlProviderArn = selfServiceSamlProviderArn;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

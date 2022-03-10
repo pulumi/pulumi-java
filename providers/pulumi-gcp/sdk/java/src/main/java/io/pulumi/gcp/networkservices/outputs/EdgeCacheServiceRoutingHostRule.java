@@ -90,17 +90,17 @@ public final class EdgeCacheServiceRoutingHostRule {
     	      this.pathMatcher = defaults.pathMatcher;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setHosts(List<String> hosts) {
+        public Builder hosts(List<String> hosts) {
             this.hosts = Objects.requireNonNull(hosts);
             return this;
         }
 
-        public Builder setPathMatcher(String pathMatcher) {
+        public Builder pathMatcher(String pathMatcher) {
             this.pathMatcher = Objects.requireNonNull(pathMatcher);
             return this;
         }

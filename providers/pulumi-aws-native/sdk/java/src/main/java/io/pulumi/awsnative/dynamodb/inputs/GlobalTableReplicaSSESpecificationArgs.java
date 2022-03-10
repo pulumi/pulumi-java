@@ -48,12 +48,12 @@ public final class GlobalTableReplicaSSESpecificationArgs extends io.pulumi.reso
     	      this.kMSMasterKeyId = defaults.kMSMasterKeyId;
         }
 
-        public Builder setKMSMasterKeyId(Input<String> kMSMasterKeyId) {
+        public Builder kMSMasterKeyId(Input<String> kMSMasterKeyId) {
             this.kMSMasterKeyId = Objects.requireNonNull(kMSMasterKeyId);
             return this;
         }
 
-        public Builder setKMSMasterKeyId(String kMSMasterKeyId) {
+        public Builder kMSMasterKeyId(String kMSMasterKeyId) {
             this.kMSMasterKeyId = Input.of(Objects.requireNonNull(kMSMasterKeyId));
             return this;
         }

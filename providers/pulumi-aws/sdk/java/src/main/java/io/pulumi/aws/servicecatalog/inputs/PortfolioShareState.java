@@ -151,72 +151,72 @@ public final class PortfolioShareState extends io.pulumi.resources.ResourceArgs 
     	      this.waitForAcceptance = defaults.waitForAcceptance;
         }
 
-        public Builder setAcceptLanguage(@Nullable Input<String> acceptLanguage) {
+        public Builder acceptLanguage(@Nullable Input<String> acceptLanguage) {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
 
-        public Builder setAcceptLanguage(@Nullable String acceptLanguage) {
+        public Builder acceptLanguage(@Nullable String acceptLanguage) {
             this.acceptLanguage = Input.ofNullable(acceptLanguage);
             return this;
         }
 
-        public Builder setAccepted(@Nullable Input<Boolean> accepted) {
+        public Builder accepted(@Nullable Input<Boolean> accepted) {
             this.accepted = accepted;
             return this;
         }
 
-        public Builder setAccepted(@Nullable Boolean accepted) {
+        public Builder accepted(@Nullable Boolean accepted) {
             this.accepted = Input.ofNullable(accepted);
             return this;
         }
 
-        public Builder setPortfolioId(@Nullable Input<String> portfolioId) {
+        public Builder portfolioId(@Nullable Input<String> portfolioId) {
             this.portfolioId = portfolioId;
             return this;
         }
 
-        public Builder setPortfolioId(@Nullable String portfolioId) {
+        public Builder portfolioId(@Nullable String portfolioId) {
             this.portfolioId = Input.ofNullable(portfolioId);
             return this;
         }
 
-        public Builder setPrincipalId(@Nullable Input<String> principalId) {
+        public Builder principalId(@Nullable Input<String> principalId) {
             this.principalId = principalId;
             return this;
         }
 
-        public Builder setPrincipalId(@Nullable String principalId) {
+        public Builder principalId(@Nullable String principalId) {
             this.principalId = Input.ofNullable(principalId);
             return this;
         }
 
-        public Builder setShareTagOptions(@Nullable Input<Boolean> shareTagOptions) {
+        public Builder shareTagOptions(@Nullable Input<Boolean> shareTagOptions) {
             this.shareTagOptions = shareTagOptions;
             return this;
         }
 
-        public Builder setShareTagOptions(@Nullable Boolean shareTagOptions) {
+        public Builder shareTagOptions(@Nullable Boolean shareTagOptions) {
             this.shareTagOptions = Input.ofNullable(shareTagOptions);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setWaitForAcceptance(@Nullable Input<Boolean> waitForAcceptance) {
+        public Builder waitForAcceptance(@Nullable Input<Boolean> waitForAcceptance) {
             this.waitForAcceptance = waitForAcceptance;
             return this;
         }
 
-        public Builder setWaitForAcceptance(@Nullable Boolean waitForAcceptance) {
+        public Builder waitForAcceptance(@Nullable Boolean waitForAcceptance) {
             this.waitForAcceptance = Input.ofNullable(waitForAcceptance);
             return this;
         }

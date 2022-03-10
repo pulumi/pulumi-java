@@ -86,32 +86,32 @@ public final class VpcAssociationAuthorizationState extends io.pulumi.resources.
     	      this.zoneId = defaults.zoneId;
         }
 
-        public Builder setVpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Input<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Input.ofNullable(vpcId);
             return this;
         }
 
-        public Builder setVpcRegion(@Nullable Input<String> vpcRegion) {
+        public Builder vpcRegion(@Nullable Input<String> vpcRegion) {
             this.vpcRegion = vpcRegion;
             return this;
         }
 
-        public Builder setVpcRegion(@Nullable String vpcRegion) {
+        public Builder vpcRegion(@Nullable String vpcRegion) {
             this.vpcRegion = Input.ofNullable(vpcRegion);
             return this;
         }
 
-        public Builder setZoneId(@Nullable Input<String> zoneId) {
+        public Builder zoneId(@Nullable Input<String> zoneId) {
             this.zoneId = zoneId;
             return this;
         }
 
-        public Builder setZoneId(@Nullable String zoneId) {
+        public Builder zoneId(@Nullable String zoneId) {
             this.zoneId = Input.ofNullable(zoneId);
             return this;
         }

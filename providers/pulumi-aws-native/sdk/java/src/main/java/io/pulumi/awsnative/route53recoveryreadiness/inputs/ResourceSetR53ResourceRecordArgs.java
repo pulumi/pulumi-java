@@ -74,22 +74,22 @@ public final class ResourceSetR53ResourceRecordArgs extends io.pulumi.resources.
     	      this.recordSetId = defaults.recordSetId;
         }
 
-        public Builder setDomainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Input<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
-        public Builder setDomainName(@Nullable String domainName) {
+        public Builder domainName(@Nullable String domainName) {
             this.domainName = Input.ofNullable(domainName);
             return this;
         }
 
-        public Builder setRecordSetId(@Nullable Input<String> recordSetId) {
+        public Builder recordSetId(@Nullable Input<String> recordSetId) {
             this.recordSetId = recordSetId;
             return this;
         }
 
-        public Builder setRecordSetId(@Nullable String recordSetId) {
+        public Builder recordSetId(@Nullable String recordSetId) {
             this.recordSetId = Input.ofNullable(recordSetId);
             return this;
         }

@@ -68,12 +68,12 @@ public final class GetDiskPoolArgs extends io.pulumi.resources.InvokeArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setDiskPoolName(String diskPoolName) {
+        public Builder diskPoolName(String diskPoolName) {
             this.diskPoolName = Objects.requireNonNull(diskPoolName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

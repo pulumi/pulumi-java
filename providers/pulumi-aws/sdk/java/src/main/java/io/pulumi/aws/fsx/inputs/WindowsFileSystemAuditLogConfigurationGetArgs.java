@@ -86,32 +86,32 @@ public final class WindowsFileSystemAuditLogConfigurationGetArgs extends io.pulu
     	      this.fileShareAccessAuditLogLevel = defaults.fileShareAccessAuditLogLevel;
         }
 
-        public Builder setAuditLogDestination(@Nullable Input<String> auditLogDestination) {
+        public Builder auditLogDestination(@Nullable Input<String> auditLogDestination) {
             this.auditLogDestination = auditLogDestination;
             return this;
         }
 
-        public Builder setAuditLogDestination(@Nullable String auditLogDestination) {
+        public Builder auditLogDestination(@Nullable String auditLogDestination) {
             this.auditLogDestination = Input.ofNullable(auditLogDestination);
             return this;
         }
 
-        public Builder setFileAccessAuditLogLevel(@Nullable Input<String> fileAccessAuditLogLevel) {
+        public Builder fileAccessAuditLogLevel(@Nullable Input<String> fileAccessAuditLogLevel) {
             this.fileAccessAuditLogLevel = fileAccessAuditLogLevel;
             return this;
         }
 
-        public Builder setFileAccessAuditLogLevel(@Nullable String fileAccessAuditLogLevel) {
+        public Builder fileAccessAuditLogLevel(@Nullable String fileAccessAuditLogLevel) {
             this.fileAccessAuditLogLevel = Input.ofNullable(fileAccessAuditLogLevel);
             return this;
         }
 
-        public Builder setFileShareAccessAuditLogLevel(@Nullable Input<String> fileShareAccessAuditLogLevel) {
+        public Builder fileShareAccessAuditLogLevel(@Nullable Input<String> fileShareAccessAuditLogLevel) {
             this.fileShareAccessAuditLogLevel = fileShareAccessAuditLogLevel;
             return this;
         }
 
-        public Builder setFileShareAccessAuditLogLevel(@Nullable String fileShareAccessAuditLogLevel) {
+        public Builder fileShareAccessAuditLogLevel(@Nullable String fileShareAccessAuditLogLevel) {
             this.fileShareAccessAuditLogLevel = Input.ofNullable(fileShareAccessAuditLogLevel);
             return this;
         }

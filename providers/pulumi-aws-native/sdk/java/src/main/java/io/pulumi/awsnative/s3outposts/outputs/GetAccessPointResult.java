@@ -68,12 +68,12 @@ public final class GetAccessPointResult {
     	      this.policy = defaults.policy;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setPolicy(@Nullable Object policy) {
+        public Builder policy(@Nullable Object policy) {
             this.policy = policy;
             return this;
         }

@@ -74,22 +74,22 @@ public final class GitSourceContextArgs extends io.pulumi.resources.ResourceArgs
     	      this.url = defaults.url;
         }
 
-        public Builder setRevisionId(@Nullable Input<String> revisionId) {
+        public Builder revisionId(@Nullable Input<String> revisionId) {
             this.revisionId = revisionId;
             return this;
         }
 
-        public Builder setRevisionId(@Nullable String revisionId) {
+        public Builder revisionId(@Nullable String revisionId) {
             this.revisionId = Input.ofNullable(revisionId);
             return this;
         }
 
-        public Builder setUrl(@Nullable Input<String> url) {
+        public Builder url(@Nullable Input<String> url) {
             this.url = url;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = Input.ofNullable(url);
             return this;
         }

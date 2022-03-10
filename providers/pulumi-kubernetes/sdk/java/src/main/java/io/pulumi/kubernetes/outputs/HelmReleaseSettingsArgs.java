@@ -115,27 +115,27 @@ public final class HelmReleaseSettingsArgs {
     	      this.repositoryConfigPath = defaults.repositoryConfigPath;
         }
 
-        public Builder setDriver(@Nullable Input<String> driver) {
+        public Builder driver(@Nullable Input<String> driver) {
             this.driver = driver;
             return this;
         }
 
-        public Builder setPluginsPath(@Nullable Input<String> pluginsPath) {
+        public Builder pluginsPath(@Nullable Input<String> pluginsPath) {
             this.pluginsPath = pluginsPath;
             return this;
         }
 
-        public Builder setRegistryConfigPath(@Nullable Input<String> registryConfigPath) {
+        public Builder registryConfigPath(@Nullable Input<String> registryConfigPath) {
             this.registryConfigPath = registryConfigPath;
             return this;
         }
 
-        public Builder setRepositoryCache(@Nullable Input<String> repositoryCache) {
+        public Builder repositoryCache(@Nullable Input<String> repositoryCache) {
             this.repositoryCache = repositoryCache;
             return this;
         }
 
-        public Builder setRepositoryConfigPath(@Nullable Input<String> repositoryConfigPath) {
+        public Builder repositoryConfigPath(@Nullable Input<String> repositoryConfigPath) {
             this.repositoryConfigPath = repositoryConfigPath;
             return this;
         }

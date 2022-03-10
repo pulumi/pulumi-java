@@ -167,82 +167,82 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.trainingOutput = defaults.trainingOutput;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setJobId(Input<String> jobId) {
+        public Builder jobId(Input<String> jobId) {
             this.jobId = Objects.requireNonNull(jobId);
             return this;
         }
 
-        public Builder setJobId(String jobId) {
+        public Builder jobId(String jobId) {
             this.jobId = Input.of(Objects.requireNonNull(jobId));
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setPredictionInput(@Nullable Input<GoogleCloudMlV1__PredictionInputArgs> predictionInput) {
+        public Builder predictionInput(@Nullable Input<GoogleCloudMlV1__PredictionInputArgs> predictionInput) {
             this.predictionInput = predictionInput;
             return this;
         }
 
-        public Builder setPredictionInput(@Nullable GoogleCloudMlV1__PredictionInputArgs predictionInput) {
+        public Builder predictionInput(@Nullable GoogleCloudMlV1__PredictionInputArgs predictionInput) {
             this.predictionInput = Input.ofNullable(predictionInput);
             return this;
         }
 
-        public Builder setPredictionOutput(@Nullable Input<GoogleCloudMlV1__PredictionOutputArgs> predictionOutput) {
+        public Builder predictionOutput(@Nullable Input<GoogleCloudMlV1__PredictionOutputArgs> predictionOutput) {
             this.predictionOutput = predictionOutput;
             return this;
         }
 
-        public Builder setPredictionOutput(@Nullable GoogleCloudMlV1__PredictionOutputArgs predictionOutput) {
+        public Builder predictionOutput(@Nullable GoogleCloudMlV1__PredictionOutputArgs predictionOutput) {
             this.predictionOutput = Input.ofNullable(predictionOutput);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setTrainingInput(@Nullable Input<GoogleCloudMlV1__TrainingInputArgs> trainingInput) {
+        public Builder trainingInput(@Nullable Input<GoogleCloudMlV1__TrainingInputArgs> trainingInput) {
             this.trainingInput = trainingInput;
             return this;
         }
 
-        public Builder setTrainingInput(@Nullable GoogleCloudMlV1__TrainingInputArgs trainingInput) {
+        public Builder trainingInput(@Nullable GoogleCloudMlV1__TrainingInputArgs trainingInput) {
             this.trainingInput = Input.ofNullable(trainingInput);
             return this;
         }
 
-        public Builder setTrainingOutput(@Nullable Input<GoogleCloudMlV1__TrainingOutputArgs> trainingOutput) {
+        public Builder trainingOutput(@Nullable Input<GoogleCloudMlV1__TrainingOutputArgs> trainingOutput) {
             this.trainingOutput = trainingOutput;
             return this;
         }
 
-        public Builder setTrainingOutput(@Nullable GoogleCloudMlV1__TrainingOutputArgs trainingOutput) {
+        public Builder trainingOutput(@Nullable GoogleCloudMlV1__TrainingOutputArgs trainingOutput) {
             this.trainingOutput = Input.ofNullable(trainingOutput);
             return this;
         }

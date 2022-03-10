@@ -84,17 +84,17 @@ public final class CertificateTemplateIdentityConstraints {
     	      this.celExpression = defaults.celExpression;
         }
 
-        public Builder setAllowSubjectAltNamesPassthrough(Boolean allowSubjectAltNamesPassthrough) {
+        public Builder allowSubjectAltNamesPassthrough(Boolean allowSubjectAltNamesPassthrough) {
             this.allowSubjectAltNamesPassthrough = Objects.requireNonNull(allowSubjectAltNamesPassthrough);
             return this;
         }
 
-        public Builder setAllowSubjectPassthrough(Boolean allowSubjectPassthrough) {
+        public Builder allowSubjectPassthrough(Boolean allowSubjectPassthrough) {
             this.allowSubjectPassthrough = Objects.requireNonNull(allowSubjectPassthrough);
             return this;
         }
 
-        public Builder setCelExpression(@Nullable CertificateTemplateIdentityConstraintsCelExpression celExpression) {
+        public Builder celExpression(@Nullable CertificateTemplateIdentityConstraintsCelExpression celExpression) {
             this.celExpression = celExpression;
             return this;
         }

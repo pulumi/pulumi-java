@@ -118,27 +118,27 @@ public final class RouteSpecGrpcRouteMatchMetadataMatch {
     	      this.suffix = defaults.suffix;
         }
 
-        public Builder setExact(@Nullable String exact) {
+        public Builder exact(@Nullable String exact) {
             this.exact = exact;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setRange(@Nullable RouteSpecGrpcRouteMatchMetadataMatchRange range) {
+        public Builder range(@Nullable RouteSpecGrpcRouteMatchMetadataMatchRange range) {
             this.range = range;
             return this;
         }
 
-        public Builder setRegex(@Nullable String regex) {
+        public Builder regex(@Nullable String regex) {
             this.regex = regex;
             return this;
         }
 
-        public Builder setSuffix(@Nullable String suffix) {
+        public Builder suffix(@Nullable String suffix) {
             this.suffix = suffix;
             return this;
         }

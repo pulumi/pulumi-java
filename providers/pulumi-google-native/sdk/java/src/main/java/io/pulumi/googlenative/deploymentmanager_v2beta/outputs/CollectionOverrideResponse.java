@@ -66,12 +66,12 @@ public final class CollectionOverrideResponse {
     	      this.options = defaults.options;
         }
 
-        public Builder setCollection(String collection) {
+        public Builder collection(String collection) {
             this.collection = Objects.requireNonNull(collection);
             return this;
         }
 
-        public Builder setOptions(OptionsResponse options) {
+        public Builder options(OptionsResponse options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }

@@ -388,112 +388,112 @@ public final class GetReportResult {
     	      this.topk = defaults.topk;
         }
 
-        public Builder setChartType(String chartType) {
+        public Builder chartType(String chartType) {
             this.chartType = Objects.requireNonNull(chartType);
             return this;
         }
 
-        public Builder setComments(List<String> comments) {
+        public Builder comments(List<String> comments) {
             this.comments = Objects.requireNonNull(comments);
             return this;
         }
 
-        public Builder setCreatedAt(String createdAt) {
+        public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
 
-        public Builder setDimensions(List<String> dimensions) {
+        public Builder dimensions(List<String> dimensions) {
             this.dimensions = Objects.requireNonNull(dimensions);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setEnvironment(String environment) {
+        public Builder environment(String environment) {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setFromTime(String fromTime) {
+        public Builder fromTime(String fromTime) {
             this.fromTime = Objects.requireNonNull(fromTime);
             return this;
         }
 
-        public Builder setLastModifiedAt(String lastModifiedAt) {
+        public Builder lastModifiedAt(String lastModifiedAt) {
             this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
             return this;
         }
 
-        public Builder setLastViewedAt(String lastViewedAt) {
+        public Builder lastViewedAt(String lastViewedAt) {
             this.lastViewedAt = Objects.requireNonNull(lastViewedAt);
             return this;
         }
 
-        public Builder setLimit(String limit) {
+        public Builder limit(String limit) {
             this.limit = Objects.requireNonNull(limit);
             return this;
         }
 
-        public Builder setMetrics(List<GoogleCloudApigeeV1CustomReportMetricResponse> metrics) {
+        public Builder metrics(List<GoogleCloudApigeeV1CustomReportMetricResponse> metrics) {
             this.metrics = Objects.requireNonNull(metrics);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOffset(String offset) {
+        public Builder offset(String offset) {
             this.offset = Objects.requireNonNull(offset);
             return this;
         }
 
-        public Builder setOrganization(String organization) {
+        public Builder organization(String organization) {
             this.organization = Objects.requireNonNull(organization);
             return this;
         }
 
-        public Builder setProperties(List<GoogleCloudApigeeV1ReportPropertyResponse> properties) {
+        public Builder properties(List<GoogleCloudApigeeV1ReportPropertyResponse> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
-        public Builder setSortByCols(List<String> sortByCols) {
+        public Builder sortByCols(List<String> sortByCols) {
             this.sortByCols = Objects.requireNonNull(sortByCols);
             return this;
         }
 
-        public Builder setSortOrder(String sortOrder) {
+        public Builder sortOrder(String sortOrder) {
             this.sortOrder = Objects.requireNonNull(sortOrder);
             return this;
         }
 
-        public Builder setTags(List<String> tags) {
+        public Builder tags(List<String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setTimeUnit(String timeUnit) {
+        public Builder timeUnit(String timeUnit) {
             this.timeUnit = Objects.requireNonNull(timeUnit);
             return this;
         }
 
-        public Builder setToTime(String toTime) {
+        public Builder toTime(String toTime) {
             this.toTime = Objects.requireNonNull(toTime);
             return this;
         }
 
-        public Builder setTopk(String topk) {
+        public Builder topk(String topk) {
             this.topk = Objects.requireNonNull(topk);
             return this;
         }

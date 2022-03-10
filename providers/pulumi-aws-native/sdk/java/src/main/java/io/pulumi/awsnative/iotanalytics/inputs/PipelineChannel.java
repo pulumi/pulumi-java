@@ -74,17 +74,17 @@ public final class PipelineChannel extends io.pulumi.resources.InvokeArgs {
     	      this.next = defaults.next;
         }
 
-        public Builder setChannelName(String channelName) {
+        public Builder channelName(String channelName) {
             this.channelName = Objects.requireNonNull(channelName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNext(@Nullable String next) {
+        public Builder next(@Nullable String next) {
             this.next = next;
             return this;
         }

@@ -128,52 +128,52 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setEnableFuzzyExtraction(@Nullable Input<Boolean> enableFuzzyExtraction) {
+        public Builder enableFuzzyExtraction(@Nullable Input<Boolean> enableFuzzyExtraction) {
             this.enableFuzzyExtraction = enableFuzzyExtraction;
             return this;
         }
 
-        public Builder setEnableFuzzyExtraction(@Nullable Boolean enableFuzzyExtraction) {
+        public Builder enableFuzzyExtraction(@Nullable Boolean enableFuzzyExtraction) {
             this.enableFuzzyExtraction = Input.ofNullable(enableFuzzyExtraction);
             return this;
         }
 
-        public Builder setEntities(@Nullable Input<List<EntityTypeEntityArgs>> entities) {
+        public Builder entities(@Nullable Input<List<EntityTypeEntityArgs>> entities) {
             this.entities = entities;
             return this;
         }
 
-        public Builder setEntities(@Nullable List<EntityTypeEntityArgs> entities) {
+        public Builder entities(@Nullable List<EntityTypeEntityArgs> entities) {
             this.entities = Input.ofNullable(entities);
             return this;
         }
 
-        public Builder setKind(Input<String> kind) {
+        public Builder kind(Input<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

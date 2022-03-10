@@ -62,17 +62,17 @@ public final class EntryBigqueryTableSpec {
     	      this.viewSpecs = defaults.viewSpecs;
         }
 
-        public Builder setTableSourceType(@Nullable String tableSourceType) {
+        public Builder tableSourceType(@Nullable String tableSourceType) {
             this.tableSourceType = tableSourceType;
             return this;
         }
 
-        public Builder setTableSpecs(@Nullable List<EntryBigqueryTableSpecTableSpec> tableSpecs) {
+        public Builder tableSpecs(@Nullable List<EntryBigqueryTableSpecTableSpec> tableSpecs) {
             this.tableSpecs = tableSpecs;
             return this;
         }
 
-        public Builder setViewSpecs(@Nullable List<EntryBigqueryTableSpecViewSpec> viewSpecs) {
+        public Builder viewSpecs(@Nullable List<EntryBigqueryTableSpecViewSpec> viewSpecs) {
             this.viewSpecs = viewSpecs;
             return this;
         }

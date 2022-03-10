@@ -58,12 +58,12 @@ public final class ExperimentsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rampUpRules = defaults.rampUpRules;
         }
 
-        public Builder setRampUpRules(@Nullable Input<List<RampUpRuleArgs>> rampUpRules) {
+        public Builder rampUpRules(@Nullable Input<List<RampUpRuleArgs>> rampUpRules) {
             this.rampUpRules = rampUpRules;
             return this;
         }
 
-        public Builder setRampUpRules(@Nullable List<RampUpRuleArgs> rampUpRules) {
+        public Builder rampUpRules(@Nullable List<RampUpRuleArgs> rampUpRules) {
             this.rampUpRules = Input.ofNullable(rampUpRules);
             return this;
         }

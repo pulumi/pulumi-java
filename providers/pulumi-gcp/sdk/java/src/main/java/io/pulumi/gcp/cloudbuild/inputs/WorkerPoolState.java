@@ -234,122 +234,122 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
     	      this.workerConfig = defaults.workerConfig;
         }
 
-        public Builder setAnnotations(@Nullable Input<Map<String,String>> annotations) {
+        public Builder annotations(@Nullable Input<Map<String,String>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable Map<String,String> annotations) {
+        public Builder annotations(@Nullable Map<String,String> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setDeleteTime(@Nullable Input<String> deleteTime) {
+        public Builder deleteTime(@Nullable Input<String> deleteTime) {
             this.deleteTime = deleteTime;
             return this;
         }
 
-        public Builder setDeleteTime(@Nullable String deleteTime) {
+        public Builder deleteTime(@Nullable String deleteTime) {
             this.deleteTime = Input.ofNullable(deleteTime);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetworkConfig(@Nullable Input<WorkerPoolNetworkConfigGetArgs> networkConfig) {
+        public Builder networkConfig(@Nullable Input<WorkerPoolNetworkConfigGetArgs> networkConfig) {
             this.networkConfig = networkConfig;
             return this;
         }
 
-        public Builder setNetworkConfig(@Nullable WorkerPoolNetworkConfigGetArgs networkConfig) {
+        public Builder networkConfig(@Nullable WorkerPoolNetworkConfigGetArgs networkConfig) {
             this.networkConfig = Input.ofNullable(networkConfig);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setState(@Nullable Input<String> state) {
+        public Builder state(@Nullable Input<String> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setUid(@Nullable Input<String> uid) {
+        public Builder uid(@Nullable Input<String> uid) {
             this.uid = uid;
             return this;
         }
 
-        public Builder setUid(@Nullable String uid) {
+        public Builder uid(@Nullable String uid) {
             this.uid = Input.ofNullable(uid);
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Input<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable String updateTime) {
+        public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Input.ofNullable(updateTime);
             return this;
         }
 
-        public Builder setWorkerConfig(@Nullable Input<WorkerPoolWorkerConfigGetArgs> workerConfig) {
+        public Builder workerConfig(@Nullable Input<WorkerPoolWorkerConfigGetArgs> workerConfig) {
             this.workerConfig = workerConfig;
             return this;
         }
 
-        public Builder setWorkerConfig(@Nullable WorkerPoolWorkerConfigGetArgs workerConfig) {
+        public Builder workerConfig(@Nullable WorkerPoolWorkerConfigGetArgs workerConfig) {
             this.workerConfig = Input.ofNullable(workerConfig);
             return this;
         }

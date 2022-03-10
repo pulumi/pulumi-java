@@ -92,32 +92,32 @@ public final class BucketIamConfigurationArgs extends io.pulumi.resources.Resour
     	      this.uniformBucketLevelAccess = defaults.uniformBucketLevelAccess;
         }
 
-        public Builder setBucketPolicyOnly(@Nullable Input<BucketIamConfigurationBucketPolicyOnlyArgs> bucketPolicyOnly) {
+        public Builder bucketPolicyOnly(@Nullable Input<BucketIamConfigurationBucketPolicyOnlyArgs> bucketPolicyOnly) {
             this.bucketPolicyOnly = bucketPolicyOnly;
             return this;
         }
 
-        public Builder setBucketPolicyOnly(@Nullable BucketIamConfigurationBucketPolicyOnlyArgs bucketPolicyOnly) {
+        public Builder bucketPolicyOnly(@Nullable BucketIamConfigurationBucketPolicyOnlyArgs bucketPolicyOnly) {
             this.bucketPolicyOnly = Input.ofNullable(bucketPolicyOnly);
             return this;
         }
 
-        public Builder setPublicAccessPrevention(@Nullable Input<String> publicAccessPrevention) {
+        public Builder publicAccessPrevention(@Nullable Input<String> publicAccessPrevention) {
             this.publicAccessPrevention = publicAccessPrevention;
             return this;
         }
 
-        public Builder setPublicAccessPrevention(@Nullable String publicAccessPrevention) {
+        public Builder publicAccessPrevention(@Nullable String publicAccessPrevention) {
             this.publicAccessPrevention = Input.ofNullable(publicAccessPrevention);
             return this;
         }
 
-        public Builder setUniformBucketLevelAccess(@Nullable Input<BucketIamConfigurationUniformBucketLevelAccessArgs> uniformBucketLevelAccess) {
+        public Builder uniformBucketLevelAccess(@Nullable Input<BucketIamConfigurationUniformBucketLevelAccessArgs> uniformBucketLevelAccess) {
             this.uniformBucketLevelAccess = uniformBucketLevelAccess;
             return this;
         }
 
-        public Builder setUniformBucketLevelAccess(@Nullable BucketIamConfigurationUniformBucketLevelAccessArgs uniformBucketLevelAccess) {
+        public Builder uniformBucketLevelAccess(@Nullable BucketIamConfigurationUniformBucketLevelAccessArgs uniformBucketLevelAccess) {
             this.uniformBucketLevelAccess = Input.ofNullable(uniformBucketLevelAccess);
             return this;
         }

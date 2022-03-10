@@ -137,32 +137,32 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputResponse {
     	      this.targetConnectionInfo = defaults.targetConnectionInfo;
         }
 
-        public Builder setAzureApp(AzureActiveDirectoryAppResponse azureApp) {
+        public Builder azureApp(AzureActiveDirectoryAppResponse azureApp) {
             this.azureApp = Objects.requireNonNull(azureApp);
             return this;
         }
 
-        public Builder setBackupFileShare(@Nullable FileShareResponse backupFileShare) {
+        public Builder backupFileShare(@Nullable FileShareResponse backupFileShare) {
             this.backupFileShare = backupFileShare;
             return this;
         }
 
-        public Builder setSelectedDatabases(List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases) {
+        public Builder selectedDatabases(List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases) {
             this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
             return this;
         }
 
-        public Builder setSourceConnectionInfo(SqlConnectionInfoResponse sourceConnectionInfo) {
+        public Builder sourceConnectionInfo(SqlConnectionInfoResponse sourceConnectionInfo) {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
 
-        public Builder setStorageResourceId(String storageResourceId) {
+        public Builder storageResourceId(String storageResourceId) {
             this.storageResourceId = Objects.requireNonNull(storageResourceId);
             return this;
         }
 
-        public Builder setTargetConnectionInfo(MiSqlConnectionInfoResponse targetConnectionInfo) {
+        public Builder targetConnectionInfo(MiSqlConnectionInfoResponse targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }

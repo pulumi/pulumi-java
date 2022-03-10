@@ -146,62 +146,62 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     	      this.rateLimitOptions = defaults.rateLimitOptions;
         }
 
-        public Builder setAction(Input<String> action) {
+        public Builder action(Input<String> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Input.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setMatch(Input<SecurityPolicyRuleMatchArgs> match) {
+        public Builder match(Input<SecurityPolicyRuleMatchArgs> match) {
             this.match = Objects.requireNonNull(match);
             return this;
         }
 
-        public Builder setMatch(SecurityPolicyRuleMatchArgs match) {
+        public Builder match(SecurityPolicyRuleMatchArgs match) {
             this.match = Input.of(Objects.requireNonNull(match));
             return this;
         }
 
-        public Builder setPreview(@Nullable Input<Boolean> preview) {
+        public Builder preview(@Nullable Input<Boolean> preview) {
             this.preview = preview;
             return this;
         }
 
-        public Builder setPreview(@Nullable Boolean preview) {
+        public Builder preview(@Nullable Boolean preview) {
             this.preview = Input.ofNullable(preview);
             return this;
         }
 
-        public Builder setPriority(Input<Integer> priority) {
+        public Builder priority(Input<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Input.of(Objects.requireNonNull(priority));
             return this;
         }
 
-        public Builder setRateLimitOptions(@Nullable Input<SecurityPolicyRuleRateLimitOptionsArgs> rateLimitOptions) {
+        public Builder rateLimitOptions(@Nullable Input<SecurityPolicyRuleRateLimitOptionsArgs> rateLimitOptions) {
             this.rateLimitOptions = rateLimitOptions;
             return this;
         }
 
-        public Builder setRateLimitOptions(@Nullable SecurityPolicyRuleRateLimitOptionsArgs rateLimitOptions) {
+        public Builder rateLimitOptions(@Nullable SecurityPolicyRuleRateLimitOptionsArgs rateLimitOptions) {
             this.rateLimitOptions = Input.ofNullable(rateLimitOptions);
             return this;
         }

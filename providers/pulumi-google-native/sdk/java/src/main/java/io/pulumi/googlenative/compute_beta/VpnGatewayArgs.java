@@ -174,92 +174,92 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpnInterfaces = defaults.vpnInterfaces;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetwork(@Nullable Input<String> network) {
+        public Builder network(@Nullable Input<String> network) {
             this.network = network;
             return this;
         }
 
-        public Builder setNetwork(@Nullable String network) {
+        public Builder network(@Nullable String network) {
             this.network = Input.ofNullable(network);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(Input<String> region) {
+        public Builder region(Input<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Input.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setStackType(@Nullable Input<VpnGatewayStackType> stackType) {
+        public Builder stackType(@Nullable Input<VpnGatewayStackType> stackType) {
             this.stackType = stackType;
             return this;
         }
 
-        public Builder setStackType(@Nullable VpnGatewayStackType stackType) {
+        public Builder stackType(@Nullable VpnGatewayStackType stackType) {
             this.stackType = Input.ofNullable(stackType);
             return this;
         }
 
-        public Builder setVpnInterfaces(@Nullable Input<List<VpnGatewayVpnGatewayInterfaceArgs>> vpnInterfaces) {
+        public Builder vpnInterfaces(@Nullable Input<List<VpnGatewayVpnGatewayInterfaceArgs>> vpnInterfaces) {
             this.vpnInterfaces = vpnInterfaces;
             return this;
         }
 
-        public Builder setVpnInterfaces(@Nullable List<VpnGatewayVpnGatewayInterfaceArgs> vpnInterfaces) {
+        public Builder vpnInterfaces(@Nullable List<VpnGatewayVpnGatewayInterfaceArgs> vpnInterfaces) {
             this.vpnInterfaces = Input.ofNullable(vpnInterfaces);
             return this;
         }

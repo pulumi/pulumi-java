@@ -99,22 +99,22 @@ public final class GetTagTemplateResult {
     	      this.name = defaults.name;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setFields(Map<String,String> fields) {
+        public Builder fields(Map<String,String> fields) {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
 
-        public Builder setIsPubliclyReadable(Boolean isPubliclyReadable) {
+        public Builder isPubliclyReadable(Boolean isPubliclyReadable) {
             this.isPubliclyReadable = Objects.requireNonNull(isPubliclyReadable);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

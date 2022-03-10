@@ -74,22 +74,22 @@ public final class RecommendedMachineConfigurationArgs extends io.pulumi.resourc
     	      this.vCPUs = defaults.vCPUs;
         }
 
-        public Builder setMemory(@Nullable Input<ResourceRangeArgs> memory) {
+        public Builder memory(@Nullable Input<ResourceRangeArgs> memory) {
             this.memory = memory;
             return this;
         }
 
-        public Builder setMemory(@Nullable ResourceRangeArgs memory) {
+        public Builder memory(@Nullable ResourceRangeArgs memory) {
             this.memory = Input.ofNullable(memory);
             return this;
         }
 
-        public Builder setVCPUs(@Nullable Input<ResourceRangeArgs> vCPUs) {
+        public Builder vCPUs(@Nullable Input<ResourceRangeArgs> vCPUs) {
             this.vCPUs = vCPUs;
             return this;
         }
 
-        public Builder setVCPUs(@Nullable ResourceRangeArgs vCPUs) {
+        public Builder vCPUs(@Nullable ResourceRangeArgs vCPUs) {
             this.vCPUs = Input.ofNullable(vCPUs);
             return this;
         }

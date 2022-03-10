@@ -56,12 +56,12 @@ public final class ClusterNodePoolNodeConfigWorkloadMetadataConfigGetArgs extend
     	      this.mode = defaults.mode;
         }
 
-        public Builder setMode(Input<String> mode) {
+        public Builder mode(Input<String> mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
-        public Builder setMode(String mode) {
+        public Builder mode(String mode) {
             this.mode = Input.of(Objects.requireNonNull(mode));
             return this;
         }

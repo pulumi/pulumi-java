@@ -184,92 +184,92 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setAuthType(@Nullable Input<String> authType) {
+        public Builder authType(@Nullable Input<String> authType) {
             this.authType = authType;
             return this;
         }
 
-        public Builder setAuthType(@Nullable String authType) {
+        public Builder authType(@Nullable String authType) {
             this.authType = Input.ofNullable(authType);
             return this;
         }
 
-        public Builder setCategory(@Nullable Input<String> category) {
+        public Builder category(@Nullable Input<String> category) {
             this.category = category;
             return this;
         }
 
-        public Builder setCategory(@Nullable String category) {
+        public Builder category(@Nullable String category) {
             this.category = Input.ofNullable(category);
             return this;
         }
 
-        public Builder setConnectionName(@Nullable Input<String> connectionName) {
+        public Builder connectionName(@Nullable Input<String> connectionName) {
             this.connectionName = connectionName;
             return this;
         }
 
-        public Builder setConnectionName(@Nullable String connectionName) {
+        public Builder connectionName(@Nullable String connectionName) {
             this.connectionName = Input.ofNullable(connectionName);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTarget(@Nullable Input<String> target) {
+        public Builder target(@Nullable Input<String> target) {
             this.target = target;
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = Input.ofNullable(target);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }
 
-        public Builder setValueFormat(@Nullable Input<Either<String,ValueFormat>> valueFormat) {
+        public Builder valueFormat(@Nullable Input<Either<String,ValueFormat>> valueFormat) {
             this.valueFormat = valueFormat;
             return this;
         }
 
-        public Builder setValueFormat(@Nullable Either<String,ValueFormat> valueFormat) {
+        public Builder valueFormat(@Nullable Either<String,ValueFormat> valueFormat) {
             this.valueFormat = Input.ofNullable(valueFormat);
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

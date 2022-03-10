@@ -72,12 +72,12 @@ public final class GoogleCloudRecaptchaenterpriseV1WafSettingsResponse extends i
     	      this.wafService = defaults.wafService;
         }
 
-        public Builder setWafFeature(String wafFeature) {
+        public Builder wafFeature(String wafFeature) {
             this.wafFeature = Objects.requireNonNull(wafFeature);
             return this;
         }
 
-        public Builder setWafService(String wafService) {
+        public Builder wafService(String wafService) {
             this.wafService = Objects.requireNonNull(wafService);
             return this;
         }

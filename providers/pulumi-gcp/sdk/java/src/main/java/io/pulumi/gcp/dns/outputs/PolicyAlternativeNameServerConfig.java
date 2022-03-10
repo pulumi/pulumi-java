@@ -55,7 +55,7 @@ public final class PolicyAlternativeNameServerConfig {
     	      this.targetNameServers = defaults.targetNameServers;
         }
 
-        public Builder setTargetNameServers(List<PolicyAlternativeNameServerConfigTargetNameServer> targetNameServers) {
+        public Builder targetNameServers(List<PolicyAlternativeNameServerConfigTargetNameServer> targetNameServers) {
             this.targetNameServers = Objects.requireNonNull(targetNameServers);
             return this;
         }

@@ -74,32 +74,32 @@ public final class SparkMavenPackageArgs extends io.pulumi.resources.ResourceArg
     	      this.version = defaults.version;
         }
 
-        public Builder setArtifact(@Nullable Input<String> artifact) {
+        public Builder artifact(@Nullable Input<String> artifact) {
             this.artifact = artifact;
             return this;
         }
 
-        public Builder setArtifact(@Nullable String artifact) {
+        public Builder artifact(@Nullable String artifact) {
             this.artifact = Input.ofNullable(artifact);
             return this;
         }
 
-        public Builder setGroup(@Nullable Input<String> group) {
+        public Builder group(@Nullable Input<String> group) {
             this.group = group;
             return this;
         }
 
-        public Builder setGroup(@Nullable String group) {
+        public Builder group(@Nullable String group) {
             this.group = Input.ofNullable(group);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

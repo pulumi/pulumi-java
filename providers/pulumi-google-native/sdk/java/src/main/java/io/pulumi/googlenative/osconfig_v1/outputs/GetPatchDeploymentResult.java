@@ -230,62 +230,62 @@ public final class GetPatchDeploymentResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDuration(String duration) {
+        public Builder duration(String duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
-        public Builder setInstanceFilter(PatchInstanceFilterResponse instanceFilter) {
+        public Builder instanceFilter(PatchInstanceFilterResponse instanceFilter) {
             this.instanceFilter = Objects.requireNonNull(instanceFilter);
             return this;
         }
 
-        public Builder setLastExecuteTime(String lastExecuteTime) {
+        public Builder lastExecuteTime(String lastExecuteTime) {
             this.lastExecuteTime = Objects.requireNonNull(lastExecuteTime);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOneTimeSchedule(OneTimeScheduleResponse oneTimeSchedule) {
+        public Builder oneTimeSchedule(OneTimeScheduleResponse oneTimeSchedule) {
             this.oneTimeSchedule = Objects.requireNonNull(oneTimeSchedule);
             return this;
         }
 
-        public Builder setPatchConfig(PatchConfigResponse patchConfig) {
+        public Builder patchConfig(PatchConfigResponse patchConfig) {
             this.patchConfig = Objects.requireNonNull(patchConfig);
             return this;
         }
 
-        public Builder setRecurringSchedule(RecurringScheduleResponse recurringSchedule) {
+        public Builder recurringSchedule(RecurringScheduleResponse recurringSchedule) {
             this.recurringSchedule = Objects.requireNonNull(recurringSchedule);
             return this;
         }
 
-        public Builder setRollout(PatchRolloutResponse rollout) {
+        public Builder rollout(PatchRolloutResponse rollout) {
             this.rollout = Objects.requireNonNull(rollout);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

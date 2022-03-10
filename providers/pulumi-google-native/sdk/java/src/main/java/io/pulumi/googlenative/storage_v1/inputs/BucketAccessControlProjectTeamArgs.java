@@ -74,22 +74,22 @@ public final class BucketAccessControlProjectTeamArgs extends io.pulumi.resource
     	      this.team = defaults.team;
         }
 
-        public Builder setProjectNumber(@Nullable Input<String> projectNumber) {
+        public Builder projectNumber(@Nullable Input<String> projectNumber) {
             this.projectNumber = projectNumber;
             return this;
         }
 
-        public Builder setProjectNumber(@Nullable String projectNumber) {
+        public Builder projectNumber(@Nullable String projectNumber) {
             this.projectNumber = Input.ofNullable(projectNumber);
             return this;
         }
 
-        public Builder setTeam(@Nullable Input<String> team) {
+        public Builder team(@Nullable Input<String> team) {
             this.team = team;
             return this;
         }
 
-        public Builder setTeam(@Nullable String team) {
+        public Builder team(@Nullable String team) {
             this.team = Input.ofNullable(team);
             return this;
         }

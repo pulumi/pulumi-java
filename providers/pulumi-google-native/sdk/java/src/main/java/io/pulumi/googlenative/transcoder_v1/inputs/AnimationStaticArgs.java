@@ -75,22 +75,22 @@ public final class AnimationStaticArgs extends io.pulumi.resources.ResourceArgs 
     	      this.xy = defaults.xy;
         }
 
-        public Builder setStartTimeOffset(@Nullable Input<String> startTimeOffset) {
+        public Builder startTimeOffset(@Nullable Input<String> startTimeOffset) {
             this.startTimeOffset = startTimeOffset;
             return this;
         }
 
-        public Builder setStartTimeOffset(@Nullable String startTimeOffset) {
+        public Builder startTimeOffset(@Nullable String startTimeOffset) {
             this.startTimeOffset = Input.ofNullable(startTimeOffset);
             return this;
         }
 
-        public Builder setXy(@Nullable Input<NormalizedCoordinateArgs> xy) {
+        public Builder xy(@Nullable Input<NormalizedCoordinateArgs> xy) {
             this.xy = xy;
             return this;
         }
 
-        public Builder setXy(@Nullable NormalizedCoordinateArgs xy) {
+        public Builder xy(@Nullable NormalizedCoordinateArgs xy) {
             this.xy = Input.ofNullable(xy);
             return this;
         }

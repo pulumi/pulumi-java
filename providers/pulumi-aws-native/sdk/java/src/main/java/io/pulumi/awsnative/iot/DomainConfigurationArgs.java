@@ -139,82 +139,82 @@ public final class DomainConfigurationArgs extends io.pulumi.resources.ResourceA
     	      this.validationCertificateArn = defaults.validationCertificateArn;
         }
 
-        public Builder setAuthorizerConfig(@Nullable Input<DomainConfigurationAuthorizerConfigArgs> authorizerConfig) {
+        public Builder authorizerConfig(@Nullable Input<DomainConfigurationAuthorizerConfigArgs> authorizerConfig) {
             this.authorizerConfig = authorizerConfig;
             return this;
         }
 
-        public Builder setAuthorizerConfig(@Nullable DomainConfigurationAuthorizerConfigArgs authorizerConfig) {
+        public Builder authorizerConfig(@Nullable DomainConfigurationAuthorizerConfigArgs authorizerConfig) {
             this.authorizerConfig = Input.ofNullable(authorizerConfig);
             return this;
         }
 
-        public Builder setDomainConfigurationName(@Nullable Input<String> domainConfigurationName) {
+        public Builder domainConfigurationName(@Nullable Input<String> domainConfigurationName) {
             this.domainConfigurationName = domainConfigurationName;
             return this;
         }
 
-        public Builder setDomainConfigurationName(@Nullable String domainConfigurationName) {
+        public Builder domainConfigurationName(@Nullable String domainConfigurationName) {
             this.domainConfigurationName = Input.ofNullable(domainConfigurationName);
             return this;
         }
 
-        public Builder setDomainConfigurationStatus(@Nullable Input<DomainConfigurationStatus> domainConfigurationStatus) {
+        public Builder domainConfigurationStatus(@Nullable Input<DomainConfigurationStatus> domainConfigurationStatus) {
             this.domainConfigurationStatus = domainConfigurationStatus;
             return this;
         }
 
-        public Builder setDomainConfigurationStatus(@Nullable DomainConfigurationStatus domainConfigurationStatus) {
+        public Builder domainConfigurationStatus(@Nullable DomainConfigurationStatus domainConfigurationStatus) {
             this.domainConfigurationStatus = Input.ofNullable(domainConfigurationStatus);
             return this;
         }
 
-        public Builder setDomainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Input<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
-        public Builder setDomainName(@Nullable String domainName) {
+        public Builder domainName(@Nullable String domainName) {
             this.domainName = Input.ofNullable(domainName);
             return this;
         }
 
-        public Builder setServerCertificateArns(@Nullable Input<List<String>> serverCertificateArns) {
+        public Builder serverCertificateArns(@Nullable Input<List<String>> serverCertificateArns) {
             this.serverCertificateArns = serverCertificateArns;
             return this;
         }
 
-        public Builder setServerCertificateArns(@Nullable List<String> serverCertificateArns) {
+        public Builder serverCertificateArns(@Nullable List<String> serverCertificateArns) {
             this.serverCertificateArns = Input.ofNullable(serverCertificateArns);
             return this;
         }
 
-        public Builder setServiceType(@Nullable Input<DomainConfigurationServiceType> serviceType) {
+        public Builder serviceType(@Nullable Input<DomainConfigurationServiceType> serviceType) {
             this.serviceType = serviceType;
             return this;
         }
 
-        public Builder setServiceType(@Nullable DomainConfigurationServiceType serviceType) {
+        public Builder serviceType(@Nullable DomainConfigurationServiceType serviceType) {
             this.serviceType = Input.ofNullable(serviceType);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<DomainConfigurationTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<DomainConfigurationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DomainConfigurationTagArgs> tags) {
+        public Builder tags(@Nullable List<DomainConfigurationTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setValidationCertificateArn(@Nullable Input<String> validationCertificateArn) {
+        public Builder validationCertificateArn(@Nullable Input<String> validationCertificateArn) {
             this.validationCertificateArn = validationCertificateArn;
             return this;
         }
 
-        public Builder setValidationCertificateArn(@Nullable String validationCertificateArn) {
+        public Builder validationCertificateArn(@Nullable String validationCertificateArn) {
             this.validationCertificateArn = Input.ofNullable(validationCertificateArn);
             return this;
         }

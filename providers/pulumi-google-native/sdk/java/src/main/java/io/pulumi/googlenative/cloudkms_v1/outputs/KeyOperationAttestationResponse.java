@@ -82,17 +82,17 @@ public final class KeyOperationAttestationResponse {
     	      this.format = defaults.format;
         }
 
-        public Builder setCertChains(CertificateChainsResponse certChains) {
+        public Builder certChains(CertificateChainsResponse certChains) {
             this.certChains = Objects.requireNonNull(certChains);
             return this;
         }
 
-        public Builder setContent(String content) {
+        public Builder content(String content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
-        public Builder setFormat(String format) {
+        public Builder format(String format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }

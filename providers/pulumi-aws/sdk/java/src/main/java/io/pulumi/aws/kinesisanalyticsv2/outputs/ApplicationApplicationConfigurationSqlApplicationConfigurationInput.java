@@ -172,47 +172,47 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     	      this.namePrefix = defaults.namePrefix;
         }
 
-        public Builder setInAppStreamNames(@Nullable List<String> inAppStreamNames) {
+        public Builder inAppStreamNames(@Nullable List<String> inAppStreamNames) {
             this.inAppStreamNames = inAppStreamNames;
             return this;
         }
 
-        public Builder setInputId(@Nullable String inputId) {
+        public Builder inputId(@Nullable String inputId) {
             this.inputId = inputId;
             return this;
         }
 
-        public Builder setInputParallelism(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelism inputParallelism) {
+        public Builder inputParallelism(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelism inputParallelism) {
             this.inputParallelism = inputParallelism;
             return this;
         }
 
-        public Builder setInputProcessingConfiguration(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfiguration inputProcessingConfiguration) {
+        public Builder inputProcessingConfiguration(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfiguration inputProcessingConfiguration) {
             this.inputProcessingConfiguration = inputProcessingConfiguration;
             return this;
         }
 
-        public Builder setInputSchema(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchema inputSchema) {
+        public Builder inputSchema(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchema inputSchema) {
             this.inputSchema = Objects.requireNonNull(inputSchema);
             return this;
         }
 
-        public Builder setInputStartingPositionConfigurations(@Nullable List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfiguration> inputStartingPositionConfigurations) {
+        public Builder inputStartingPositionConfigurations(@Nullable List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfiguration> inputStartingPositionConfigurations) {
             this.inputStartingPositionConfigurations = inputStartingPositionConfigurations;
             return this;
         }
 
-        public Builder setKinesisFirehoseInput(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInput kinesisFirehoseInput) {
+        public Builder kinesisFirehoseInput(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInput kinesisFirehoseInput) {
             this.kinesisFirehoseInput = kinesisFirehoseInput;
             return this;
         }
 
-        public Builder setKinesisStreamsInput(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInput kinesisStreamsInput) {
+        public Builder kinesisStreamsInput(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInput kinesisStreamsInput) {
             this.kinesisStreamsInput = kinesisStreamsInput;
             return this;
         }
 
-        public Builder setNamePrefix(String namePrefix) {
+        public Builder namePrefix(String namePrefix) {
             this.namePrefix = Objects.requireNonNull(namePrefix);
             return this;
         }

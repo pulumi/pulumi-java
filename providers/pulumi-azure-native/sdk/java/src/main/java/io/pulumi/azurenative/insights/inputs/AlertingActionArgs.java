@@ -128,52 +128,52 @@ public final class AlertingActionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.trigger = defaults.trigger;
         }
 
-        public Builder setAznsAction(@Nullable Input<AzNsActionGroupArgs> aznsAction) {
+        public Builder aznsAction(@Nullable Input<AzNsActionGroupArgs> aznsAction) {
             this.aznsAction = aznsAction;
             return this;
         }
 
-        public Builder setAznsAction(@Nullable AzNsActionGroupArgs aznsAction) {
+        public Builder aznsAction(@Nullable AzNsActionGroupArgs aznsAction) {
             this.aznsAction = Input.ofNullable(aznsAction);
             return this;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder setSeverity(Input<Either<String,AlertSeverity>> severity) {
+        public Builder severity(Input<Either<String,AlertSeverity>> severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
 
-        public Builder setSeverity(Either<String,AlertSeverity> severity) {
+        public Builder severity(Either<String,AlertSeverity> severity) {
             this.severity = Input.of(Objects.requireNonNull(severity));
             return this;
         }
 
-        public Builder setThrottlingInMin(@Nullable Input<Integer> throttlingInMin) {
+        public Builder throttlingInMin(@Nullable Input<Integer> throttlingInMin) {
             this.throttlingInMin = throttlingInMin;
             return this;
         }
 
-        public Builder setThrottlingInMin(@Nullable Integer throttlingInMin) {
+        public Builder throttlingInMin(@Nullable Integer throttlingInMin) {
             this.throttlingInMin = Input.ofNullable(throttlingInMin);
             return this;
         }
 
-        public Builder setTrigger(Input<TriggerConditionArgs> trigger) {
+        public Builder trigger(Input<TriggerConditionArgs> trigger) {
             this.trigger = Objects.requireNonNull(trigger);
             return this;
         }
 
-        public Builder setTrigger(TriggerConditionArgs trigger) {
+        public Builder trigger(TriggerConditionArgs trigger) {
             this.trigger = Input.of(Objects.requireNonNull(trigger));
             return this;
         }

@@ -100,22 +100,22 @@ public final class MulticastGroupLoRaWAN {
     	      this.rfRegion = defaults.rfRegion;
         }
 
-        public Builder setDlClass(String dlClass) {
+        public Builder dlClass(String dlClass) {
             this.dlClass = Objects.requireNonNull(dlClass);
             return this;
         }
 
-        public Builder setNumberOfDevicesInGroup(@Nullable Integer numberOfDevicesInGroup) {
+        public Builder numberOfDevicesInGroup(@Nullable Integer numberOfDevicesInGroup) {
             this.numberOfDevicesInGroup = numberOfDevicesInGroup;
             return this;
         }
 
-        public Builder setNumberOfDevicesRequested(@Nullable Integer numberOfDevicesRequested) {
+        public Builder numberOfDevicesRequested(@Nullable Integer numberOfDevicesRequested) {
             this.numberOfDevicesRequested = numberOfDevicesRequested;
             return this;
         }
 
-        public Builder setRfRegion(String rfRegion) {
+        public Builder rfRegion(String rfRegion) {
             this.rfRegion = Objects.requireNonNull(rfRegion);
             return this;
         }

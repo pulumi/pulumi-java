@@ -84,17 +84,17 @@ public final class ServiceHealthCheckConfig {
     	      this.type = defaults.type;
         }
 
-        public Builder setFailureThreshold(@Nullable Integer failureThreshold) {
+        public Builder failureThreshold(@Nullable Integer failureThreshold) {
             this.failureThreshold = failureThreshold;
             return this;
         }
 
-        public Builder setResourcePath(@Nullable String resourcePath) {
+        public Builder resourcePath(@Nullable String resourcePath) {
             this.resourcePath = resourcePath;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

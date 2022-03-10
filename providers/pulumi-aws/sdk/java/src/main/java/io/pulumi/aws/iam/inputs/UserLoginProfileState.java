@@ -136,62 +136,62 @@ public final class UserLoginProfileState extends io.pulumi.resources.ResourceArg
     	      this.user = defaults.user;
         }
 
-        public Builder setEncryptedPassword(@Nullable Input<String> encryptedPassword) {
+        public Builder encryptedPassword(@Nullable Input<String> encryptedPassword) {
             this.encryptedPassword = encryptedPassword;
             return this;
         }
 
-        public Builder setEncryptedPassword(@Nullable String encryptedPassword) {
+        public Builder encryptedPassword(@Nullable String encryptedPassword) {
             this.encryptedPassword = Input.ofNullable(encryptedPassword);
             return this;
         }
 
-        public Builder setKeyFingerprint(@Nullable Input<String> keyFingerprint) {
+        public Builder keyFingerprint(@Nullable Input<String> keyFingerprint) {
             this.keyFingerprint = keyFingerprint;
             return this;
         }
 
-        public Builder setKeyFingerprint(@Nullable String keyFingerprint) {
+        public Builder keyFingerprint(@Nullable String keyFingerprint) {
             this.keyFingerprint = Input.ofNullable(keyFingerprint);
             return this;
         }
 
-        public Builder setPasswordLength(@Nullable Input<Integer> passwordLength) {
+        public Builder passwordLength(@Nullable Input<Integer> passwordLength) {
             this.passwordLength = passwordLength;
             return this;
         }
 
-        public Builder setPasswordLength(@Nullable Integer passwordLength) {
+        public Builder passwordLength(@Nullable Integer passwordLength) {
             this.passwordLength = Input.ofNullable(passwordLength);
             return this;
         }
 
-        public Builder setPasswordResetRequired(@Nullable Input<Boolean> passwordResetRequired) {
+        public Builder passwordResetRequired(@Nullable Input<Boolean> passwordResetRequired) {
             this.passwordResetRequired = passwordResetRequired;
             return this;
         }
 
-        public Builder setPasswordResetRequired(@Nullable Boolean passwordResetRequired) {
+        public Builder passwordResetRequired(@Nullable Boolean passwordResetRequired) {
             this.passwordResetRequired = Input.ofNullable(passwordResetRequired);
             return this;
         }
 
-        public Builder setPgpKey(@Nullable Input<String> pgpKey) {
+        public Builder pgpKey(@Nullable Input<String> pgpKey) {
             this.pgpKey = pgpKey;
             return this;
         }
 
-        public Builder setPgpKey(@Nullable String pgpKey) {
+        public Builder pgpKey(@Nullable String pgpKey) {
             this.pgpKey = Input.ofNullable(pgpKey);
             return this;
         }
 
-        public Builder setUser(@Nullable Input<String> user) {
+        public Builder user(@Nullable Input<String> user) {
             this.user = user;
             return this;
         }
 
-        public Builder setUser(@Nullable String user) {
+        public Builder user(@Nullable String user) {
             this.user = Input.ofNullable(user);
             return this;
         }

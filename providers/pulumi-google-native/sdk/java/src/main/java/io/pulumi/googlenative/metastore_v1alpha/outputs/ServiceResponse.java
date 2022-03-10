@@ -361,102 +361,102 @@ public final class ServiceResponse {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setArtifactGcsUri(String artifactGcsUri) {
+        public Builder artifactGcsUri(String artifactGcsUri) {
             this.artifactGcsUri = Objects.requireNonNull(artifactGcsUri);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDatabaseType(String databaseType) {
+        public Builder databaseType(String databaseType) {
             this.databaseType = Objects.requireNonNull(databaseType);
             return this;
         }
 
-        public Builder setEncryptionConfig(EncryptionConfigResponse encryptionConfig) {
+        public Builder encryptionConfig(EncryptionConfigResponse encryptionConfig) {
             this.encryptionConfig = Objects.requireNonNull(encryptionConfig);
             return this;
         }
 
-        public Builder setEndpointUri(String endpointUri) {
+        public Builder endpointUri(String endpointUri) {
             this.endpointUri = Objects.requireNonNull(endpointUri);
             return this;
         }
 
-        public Builder setHiveMetastoreConfig(HiveMetastoreConfigResponse hiveMetastoreConfig) {
+        public Builder hiveMetastoreConfig(HiveMetastoreConfigResponse hiveMetastoreConfig) {
             this.hiveMetastoreConfig = Objects.requireNonNull(hiveMetastoreConfig);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setMaintenanceWindow(MaintenanceWindowResponse maintenanceWindow) {
+        public Builder maintenanceWindow(MaintenanceWindowResponse maintenanceWindow) {
             this.maintenanceWindow = Objects.requireNonNull(maintenanceWindow);
             return this;
         }
 
-        public Builder setMetadataIntegration(MetadataIntegrationResponse metadataIntegration) {
+        public Builder metadataIntegration(MetadataIntegrationResponse metadataIntegration) {
             this.metadataIntegration = Objects.requireNonNull(metadataIntegration);
             return this;
         }
 
-        public Builder setMetadataManagementActivity(MetadataManagementActivityResponse metadataManagementActivity) {
+        public Builder metadataManagementActivity(MetadataManagementActivityResponse metadataManagementActivity) {
             this.metadataManagementActivity = Objects.requireNonNull(metadataManagementActivity);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setNetworkConfig(NetworkConfigResponse networkConfig) {
+        public Builder networkConfig(NetworkConfigResponse networkConfig) {
             this.networkConfig = Objects.requireNonNull(networkConfig);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setReleaseChannel(String releaseChannel) {
+        public Builder releaseChannel(String releaseChannel) {
             this.releaseChannel = Objects.requireNonNull(releaseChannel);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStateMessage(String stateMessage) {
+        public Builder stateMessage(String stateMessage) {
             this.stateMessage = Objects.requireNonNull(stateMessage);
             return this;
         }
 
-        public Builder setTier(String tier) {
+        public Builder tier(String tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
 
-        public Builder setUid(String uid) {
+        public Builder uid(String uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

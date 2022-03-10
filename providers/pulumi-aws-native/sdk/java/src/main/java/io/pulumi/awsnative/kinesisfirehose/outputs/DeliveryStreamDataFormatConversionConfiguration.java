@@ -70,22 +70,22 @@ public final class DeliveryStreamDataFormatConversionConfiguration {
     	      this.schemaConfiguration = defaults.schemaConfiguration;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setInputFormatConfiguration(@Nullable DeliveryStreamInputFormatConfiguration inputFormatConfiguration) {
+        public Builder inputFormatConfiguration(@Nullable DeliveryStreamInputFormatConfiguration inputFormatConfiguration) {
             this.inputFormatConfiguration = inputFormatConfiguration;
             return this;
         }
 
-        public Builder setOutputFormatConfiguration(@Nullable DeliveryStreamOutputFormatConfiguration outputFormatConfiguration) {
+        public Builder outputFormatConfiguration(@Nullable DeliveryStreamOutputFormatConfiguration outputFormatConfiguration) {
             this.outputFormatConfiguration = outputFormatConfiguration;
             return this;
         }
 
-        public Builder setSchemaConfiguration(@Nullable DeliveryStreamSchemaConfiguration schemaConfiguration) {
+        public Builder schemaConfiguration(@Nullable DeliveryStreamSchemaConfiguration schemaConfiguration) {
             this.schemaConfiguration = schemaConfiguration;
             return this;
         }

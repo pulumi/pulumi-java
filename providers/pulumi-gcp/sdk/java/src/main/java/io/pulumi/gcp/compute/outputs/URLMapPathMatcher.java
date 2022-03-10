@@ -219,42 +219,42 @@ public final class URLMapPathMatcher {
     	      this.routeRules = defaults.routeRules;
         }
 
-        public Builder setDefaultRouteAction(@Nullable URLMapPathMatcherDefaultRouteAction defaultRouteAction) {
+        public Builder defaultRouteAction(@Nullable URLMapPathMatcherDefaultRouteAction defaultRouteAction) {
             this.defaultRouteAction = defaultRouteAction;
             return this;
         }
 
-        public Builder setDefaultService(@Nullable String defaultService) {
+        public Builder defaultService(@Nullable String defaultService) {
             this.defaultService = defaultService;
             return this;
         }
 
-        public Builder setDefaultUrlRedirect(@Nullable URLMapPathMatcherDefaultUrlRedirect defaultUrlRedirect) {
+        public Builder defaultUrlRedirect(@Nullable URLMapPathMatcherDefaultUrlRedirect defaultUrlRedirect) {
             this.defaultUrlRedirect = defaultUrlRedirect;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setHeaderAction(@Nullable URLMapPathMatcherHeaderAction headerAction) {
+        public Builder headerAction(@Nullable URLMapPathMatcherHeaderAction headerAction) {
             this.headerAction = headerAction;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPathRules(@Nullable List<URLMapPathMatcherPathRule> pathRules) {
+        public Builder pathRules(@Nullable List<URLMapPathMatcherPathRule> pathRules) {
             this.pathRules = pathRules;
             return this;
         }
 
-        public Builder setRouteRules(@Nullable List<URLMapPathMatcherRouteRule> routeRules) {
+        public Builder routeRules(@Nullable List<URLMapPathMatcherRouteRule> routeRules) {
             this.routeRules = routeRules;
             return this;
         }

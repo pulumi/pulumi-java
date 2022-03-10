@@ -200,52 +200,52 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
     	      this.ruleSetVersion = defaults.ruleSetVersion;
         }
 
-        public Builder setDisabledRuleGroups(@Nullable List<ApplicationGatewayFirewallDisabledRuleGroupResponse> disabledRuleGroups) {
+        public Builder disabledRuleGroups(@Nullable List<ApplicationGatewayFirewallDisabledRuleGroupResponse> disabledRuleGroups) {
             this.disabledRuleGroups = disabledRuleGroups;
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setExclusions(@Nullable List<ApplicationGatewayFirewallExclusionResponse> exclusions) {
+        public Builder exclusions(@Nullable List<ApplicationGatewayFirewallExclusionResponse> exclusions) {
             this.exclusions = exclusions;
             return this;
         }
 
-        public Builder setFileUploadLimitInMb(@Nullable Integer fileUploadLimitInMb) {
+        public Builder fileUploadLimitInMb(@Nullable Integer fileUploadLimitInMb) {
             this.fileUploadLimitInMb = fileUploadLimitInMb;
             return this;
         }
 
-        public Builder setFirewallMode(String firewallMode) {
+        public Builder firewallMode(String firewallMode) {
             this.firewallMode = Objects.requireNonNull(firewallMode);
             return this;
         }
 
-        public Builder setMaxRequestBodySize(@Nullable Integer maxRequestBodySize) {
+        public Builder maxRequestBodySize(@Nullable Integer maxRequestBodySize) {
             this.maxRequestBodySize = maxRequestBodySize;
             return this;
         }
 
-        public Builder setMaxRequestBodySizeInKb(@Nullable Integer maxRequestBodySizeInKb) {
+        public Builder maxRequestBodySizeInKb(@Nullable Integer maxRequestBodySizeInKb) {
             this.maxRequestBodySizeInKb = maxRequestBodySizeInKb;
             return this;
         }
 
-        public Builder setRequestBodyCheck(@Nullable Boolean requestBodyCheck) {
+        public Builder requestBodyCheck(@Nullable Boolean requestBodyCheck) {
             this.requestBodyCheck = requestBodyCheck;
             return this;
         }
 
-        public Builder setRuleSetType(String ruleSetType) {
+        public Builder ruleSetType(String ruleSetType) {
             this.ruleSetType = Objects.requireNonNull(ruleSetType);
             return this;
         }
 
-        public Builder setRuleSetVersion(String ruleSetVersion) {
+        public Builder ruleSetVersion(String ruleSetVersion) {
             this.ruleSetVersion = Objects.requireNonNull(ruleSetVersion);
             return this;
         }

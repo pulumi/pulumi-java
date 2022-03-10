@@ -262,72 +262,72 @@ public final class GetStreamingLocatorResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAlternativeMediaId(@Nullable String alternativeMediaId) {
+        public Builder alternativeMediaId(@Nullable String alternativeMediaId) {
             this.alternativeMediaId = alternativeMediaId;
             return this;
         }
 
-        public Builder setAssetName(String assetName) {
+        public Builder assetName(String assetName) {
             this.assetName = Objects.requireNonNull(assetName);
             return this;
         }
 
-        public Builder setContentKeys(@Nullable List<StreamingLocatorContentKeyResponse> contentKeys) {
+        public Builder contentKeys(@Nullable List<StreamingLocatorContentKeyResponse> contentKeys) {
             this.contentKeys = contentKeys;
             return this;
         }
 
-        public Builder setCreated(String created) {
+        public Builder created(String created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
 
-        public Builder setDefaultContentKeyPolicyName(@Nullable String defaultContentKeyPolicyName) {
+        public Builder defaultContentKeyPolicyName(@Nullable String defaultContentKeyPolicyName) {
             this.defaultContentKeyPolicyName = defaultContentKeyPolicyName;
             return this;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setFilters(@Nullable List<String> filters) {
+        public Builder filters(@Nullable List<String> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStreamingLocatorId(@Nullable String streamingLocatorId) {
+        public Builder streamingLocatorId(@Nullable String streamingLocatorId) {
             this.streamingLocatorId = streamingLocatorId;
             return this;
         }
 
-        public Builder setStreamingPolicyName(String streamingPolicyName) {
+        public Builder streamingPolicyName(String streamingPolicyName) {
             this.streamingPolicyName = Objects.requireNonNull(streamingPolicyName);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -119,52 +119,52 @@ public final class GatewayRouteConfigArgs extends io.pulumi.resources.ResourceAr
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setGatewayName(Input<String> gatewayName) {
+        public Builder gatewayName(Input<String> gatewayName) {
             this.gatewayName = Objects.requireNonNull(gatewayName);
             return this;
         }
 
-        public Builder setGatewayName(String gatewayName) {
+        public Builder gatewayName(String gatewayName) {
             this.gatewayName = Input.of(Objects.requireNonNull(gatewayName));
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<GatewayRouteConfigPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<GatewayRouteConfigPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable GatewayRouteConfigPropertiesArgs properties) {
+        public Builder properties(@Nullable GatewayRouteConfigPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRouteConfigName(@Nullable Input<String> routeConfigName) {
+        public Builder routeConfigName(@Nullable Input<String> routeConfigName) {
             this.routeConfigName = routeConfigName;
             return this;
         }
 
-        public Builder setRouteConfigName(@Nullable String routeConfigName) {
+        public Builder routeConfigName(@Nullable String routeConfigName) {
             this.routeConfigName = Input.ofNullable(routeConfigName);
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }

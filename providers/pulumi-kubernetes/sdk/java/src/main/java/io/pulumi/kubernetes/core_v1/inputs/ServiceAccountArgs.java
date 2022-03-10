@@ -143,62 +143,62 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.secrets = defaults.secrets;
         }
 
-        public Builder setApiVersion(@Nullable Input<String> apiVersion) {
+        public Builder apiVersion(@Nullable Input<String> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Input.ofNullable(apiVersion);
             return this;
         }
 
-        public Builder setAutomountServiceAccountToken(@Nullable Input<Boolean> automountServiceAccountToken) {
+        public Builder automountServiceAccountToken(@Nullable Input<Boolean> automountServiceAccountToken) {
             this.automountServiceAccountToken = automountServiceAccountToken;
             return this;
         }
 
-        public Builder setAutomountServiceAccountToken(@Nullable Boolean automountServiceAccountToken) {
+        public Builder automountServiceAccountToken(@Nullable Boolean automountServiceAccountToken) {
             this.automountServiceAccountToken = Input.ofNullable(automountServiceAccountToken);
             return this;
         }
 
-        public Builder setImagePullSecrets(@Nullable Input<List<LocalObjectReferenceArgs>> imagePullSecrets) {
+        public Builder imagePullSecrets(@Nullable Input<List<LocalObjectReferenceArgs>> imagePullSecrets) {
             this.imagePullSecrets = imagePullSecrets;
             return this;
         }
 
-        public Builder setImagePullSecrets(@Nullable List<LocalObjectReferenceArgs> imagePullSecrets) {
+        public Builder imagePullSecrets(@Nullable List<LocalObjectReferenceArgs> imagePullSecrets) {
             this.imagePullSecrets = Input.ofNullable(imagePullSecrets);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<ObjectMetaArgs> metadata) {
+        public Builder metadata(@Nullable Input<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable ObjectMetaArgs metadata) {
+        public Builder metadata(@Nullable ObjectMetaArgs metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setSecrets(@Nullable Input<List<ObjectReferenceArgs>> secrets) {
+        public Builder secrets(@Nullable Input<List<ObjectReferenceArgs>> secrets) {
             this.secrets = secrets;
             return this;
         }
 
-        public Builder setSecrets(@Nullable List<ObjectReferenceArgs> secrets) {
+        public Builder secrets(@Nullable List<ObjectReferenceArgs> secrets) {
             this.secrets = Input.ofNullable(secrets);
             return this;
         }

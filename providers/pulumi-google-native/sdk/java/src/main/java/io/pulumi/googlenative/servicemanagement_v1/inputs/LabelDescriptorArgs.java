@@ -91,32 +91,32 @@ public final class LabelDescriptorArgs extends io.pulumi.resources.ResourceArgs 
     	      this.valueType = defaults.valueType;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setKey(@Nullable Input<String> key) {
+        public Builder key(@Nullable Input<String> key) {
             this.key = key;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = Input.ofNullable(key);
             return this;
         }
 
-        public Builder setValueType(@Nullable Input<LabelDescriptorValueType> valueType) {
+        public Builder valueType(@Nullable Input<LabelDescriptorValueType> valueType) {
             this.valueType = valueType;
             return this;
         }
 
-        public Builder setValueType(@Nullable LabelDescriptorValueType valueType) {
+        public Builder valueType(@Nullable LabelDescriptorValueType valueType) {
             this.valueType = Input.ofNullable(valueType);
             return this;
         }

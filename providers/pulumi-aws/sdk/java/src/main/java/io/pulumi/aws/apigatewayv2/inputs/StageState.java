@@ -289,152 +289,152 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setAccessLogSettings(@Nullable Input<StageAccessLogSettingsGetArgs> accessLogSettings) {
+        public Builder accessLogSettings(@Nullable Input<StageAccessLogSettingsGetArgs> accessLogSettings) {
             this.accessLogSettings = accessLogSettings;
             return this;
         }
 
-        public Builder setAccessLogSettings(@Nullable StageAccessLogSettingsGetArgs accessLogSettings) {
+        public Builder accessLogSettings(@Nullable StageAccessLogSettingsGetArgs accessLogSettings) {
             this.accessLogSettings = Input.ofNullable(accessLogSettings);
             return this;
         }
 
-        public Builder setApiId(@Nullable Input<String> apiId) {
+        public Builder apiId(@Nullable Input<String> apiId) {
             this.apiId = apiId;
             return this;
         }
 
-        public Builder setApiId(@Nullable String apiId) {
+        public Builder apiId(@Nullable String apiId) {
             this.apiId = Input.ofNullable(apiId);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAutoDeploy(@Nullable Input<Boolean> autoDeploy) {
+        public Builder autoDeploy(@Nullable Input<Boolean> autoDeploy) {
             this.autoDeploy = autoDeploy;
             return this;
         }
 
-        public Builder setAutoDeploy(@Nullable Boolean autoDeploy) {
+        public Builder autoDeploy(@Nullable Boolean autoDeploy) {
             this.autoDeploy = Input.ofNullable(autoDeploy);
             return this;
         }
 
-        public Builder setClientCertificateId(@Nullable Input<String> clientCertificateId) {
+        public Builder clientCertificateId(@Nullable Input<String> clientCertificateId) {
             this.clientCertificateId = clientCertificateId;
             return this;
         }
 
-        public Builder setClientCertificateId(@Nullable String clientCertificateId) {
+        public Builder clientCertificateId(@Nullable String clientCertificateId) {
             this.clientCertificateId = Input.ofNullable(clientCertificateId);
             return this;
         }
 
-        public Builder setDefaultRouteSettings(@Nullable Input<StageDefaultRouteSettingsGetArgs> defaultRouteSettings) {
+        public Builder defaultRouteSettings(@Nullable Input<StageDefaultRouteSettingsGetArgs> defaultRouteSettings) {
             this.defaultRouteSettings = defaultRouteSettings;
             return this;
         }
 
-        public Builder setDefaultRouteSettings(@Nullable StageDefaultRouteSettingsGetArgs defaultRouteSettings) {
+        public Builder defaultRouteSettings(@Nullable StageDefaultRouteSettingsGetArgs defaultRouteSettings) {
             this.defaultRouteSettings = Input.ofNullable(defaultRouteSettings);
             return this;
         }
 
-        public Builder setDeploymentId(@Nullable Input<String> deploymentId) {
+        public Builder deploymentId(@Nullable Input<String> deploymentId) {
             this.deploymentId = deploymentId;
             return this;
         }
 
-        public Builder setDeploymentId(@Nullable String deploymentId) {
+        public Builder deploymentId(@Nullable String deploymentId) {
             this.deploymentId = Input.ofNullable(deploymentId);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setExecutionArn(@Nullable Input<String> executionArn) {
+        public Builder executionArn(@Nullable Input<String> executionArn) {
             this.executionArn = executionArn;
             return this;
         }
 
-        public Builder setExecutionArn(@Nullable String executionArn) {
+        public Builder executionArn(@Nullable String executionArn) {
             this.executionArn = Input.ofNullable(executionArn);
             return this;
         }
 
-        public Builder setInvokeUrl(@Nullable Input<String> invokeUrl) {
+        public Builder invokeUrl(@Nullable Input<String> invokeUrl) {
             this.invokeUrl = invokeUrl;
             return this;
         }
 
-        public Builder setInvokeUrl(@Nullable String invokeUrl) {
+        public Builder invokeUrl(@Nullable String invokeUrl) {
             this.invokeUrl = Input.ofNullable(invokeUrl);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRouteSettings(@Nullable Input<List<StageRouteSettingGetArgs>> routeSettings) {
+        public Builder routeSettings(@Nullable Input<List<StageRouteSettingGetArgs>> routeSettings) {
             this.routeSettings = routeSettings;
             return this;
         }
 
-        public Builder setRouteSettings(@Nullable List<StageRouteSettingGetArgs> routeSettings) {
+        public Builder routeSettings(@Nullable List<StageRouteSettingGetArgs> routeSettings) {
             this.routeSettings = Input.ofNullable(routeSettings);
             return this;
         }
 
-        public Builder setStageVariables(@Nullable Input<Map<String,String>> stageVariables) {
+        public Builder stageVariables(@Nullable Input<Map<String,String>> stageVariables) {
             this.stageVariables = stageVariables;
             return this;
         }
 
-        public Builder setStageVariables(@Nullable Map<String,String> stageVariables) {
+        public Builder stageVariables(@Nullable Map<String,String> stageVariables) {
             this.stageVariables = Input.ofNullable(stageVariables);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

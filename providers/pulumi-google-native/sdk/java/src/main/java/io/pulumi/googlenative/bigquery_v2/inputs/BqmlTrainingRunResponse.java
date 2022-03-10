@@ -103,22 +103,22 @@ public final class BqmlTrainingRunResponse extends io.pulumi.resources.InvokeArg
     	      this.trainingOptions = defaults.trainingOptions;
         }
 
-        public Builder setIterationResults(List<BqmlIterationResultResponse> iterationResults) {
+        public Builder iterationResults(List<BqmlIterationResultResponse> iterationResults) {
             this.iterationResults = Objects.requireNonNull(iterationResults);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTrainingOptions(BqmlTrainingRunTrainingOptionsResponse trainingOptions) {
+        public Builder trainingOptions(BqmlTrainingRunTrainingOptionsResponse trainingOptions) {
             this.trainingOptions = Objects.requireNonNull(trainingOptions);
             return this;
         }

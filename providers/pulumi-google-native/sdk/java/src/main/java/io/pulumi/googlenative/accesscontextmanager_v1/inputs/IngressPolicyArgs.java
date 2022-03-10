@@ -75,22 +75,22 @@ public final class IngressPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ingressTo = defaults.ingressTo;
         }
 
-        public Builder setIngressFrom(@Nullable Input<IngressFromArgs> ingressFrom) {
+        public Builder ingressFrom(@Nullable Input<IngressFromArgs> ingressFrom) {
             this.ingressFrom = ingressFrom;
             return this;
         }
 
-        public Builder setIngressFrom(@Nullable IngressFromArgs ingressFrom) {
+        public Builder ingressFrom(@Nullable IngressFromArgs ingressFrom) {
             this.ingressFrom = Input.ofNullable(ingressFrom);
             return this;
         }
 
-        public Builder setIngressTo(@Nullable Input<IngressToArgs> ingressTo) {
+        public Builder ingressTo(@Nullable Input<IngressToArgs> ingressTo) {
             this.ingressTo = ingressTo;
             return this;
         }
 
-        public Builder setIngressTo(@Nullable IngressToArgs ingressTo) {
+        public Builder ingressTo(@Nullable IngressToArgs ingressTo) {
             this.ingressTo = Input.ofNullable(ingressTo);
             return this;
         }

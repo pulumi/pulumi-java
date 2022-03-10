@@ -172,42 +172,42 @@ public final class EndpointsResponse extends io.pulumi.resources.InvokeArgs {
     	      this.web = defaults.web;
         }
 
-        public Builder setBlob(String blob) {
+        public Builder blob(String blob) {
             this.blob = Objects.requireNonNull(blob);
             return this;
         }
 
-        public Builder setDfs(String dfs) {
+        public Builder dfs(String dfs) {
             this.dfs = Objects.requireNonNull(dfs);
             return this;
         }
 
-        public Builder setFile(String file) {
+        public Builder file(String file) {
             this.file = Objects.requireNonNull(file);
             return this;
         }
 
-        public Builder setInternetEndpoints(@Nullable StorageAccountInternetEndpointsResponse internetEndpoints) {
+        public Builder internetEndpoints(@Nullable StorageAccountInternetEndpointsResponse internetEndpoints) {
             this.internetEndpoints = internetEndpoints;
             return this;
         }
 
-        public Builder setMicrosoftEndpoints(@Nullable StorageAccountMicrosoftEndpointsResponse microsoftEndpoints) {
+        public Builder microsoftEndpoints(@Nullable StorageAccountMicrosoftEndpointsResponse microsoftEndpoints) {
             this.microsoftEndpoints = microsoftEndpoints;
             return this;
         }
 
-        public Builder setQueue(String queue) {
+        public Builder queue(String queue) {
             this.queue = Objects.requireNonNull(queue);
             return this;
         }
 
-        public Builder setTable(String table) {
+        public Builder table(String table) {
             this.table = Objects.requireNonNull(table);
             return this;
         }
 
-        public Builder setWeb(String web) {
+        public Builder web(String web) {
             this.web = Objects.requireNonNull(web);
             return this;
         }

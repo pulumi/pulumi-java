@@ -60,12 +60,12 @@ public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
     	      this.serviceArn = defaults.serviceArn;
         }
 
-        public Builder setCluster(String cluster) {
+        public Builder cluster(String cluster) {
             this.cluster = Objects.requireNonNull(cluster);
             return this;
         }
 
-        public Builder setServiceArn(String serviceArn) {
+        public Builder serviceArn(String serviceArn) {
             this.serviceArn = Objects.requireNonNull(serviceArn);
             return this;
         }

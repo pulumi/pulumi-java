@@ -131,32 +131,32 @@ public final class JobSpecResponse {
     	      this.ttlSecondsAfterFinished = defaults.ttlSecondsAfterFinished;
         }
 
-        public Builder setActiveDeadlineSeconds(String activeDeadlineSeconds) {
+        public Builder activeDeadlineSeconds(String activeDeadlineSeconds) {
             this.activeDeadlineSeconds = Objects.requireNonNull(activeDeadlineSeconds);
             return this;
         }
 
-        public Builder setBackoffLimit(Integer backoffLimit) {
+        public Builder backoffLimit(Integer backoffLimit) {
             this.backoffLimit = Objects.requireNonNull(backoffLimit);
             return this;
         }
 
-        public Builder setCompletions(Integer completions) {
+        public Builder completions(Integer completions) {
             this.completions = Objects.requireNonNull(completions);
             return this;
         }
 
-        public Builder setParallelism(Integer parallelism) {
+        public Builder parallelism(Integer parallelism) {
             this.parallelism = Objects.requireNonNull(parallelism);
             return this;
         }
 
-        public Builder setTemplate(InstanceTemplateSpecResponse template) {
+        public Builder template(InstanceTemplateSpecResponse template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }
 
-        public Builder setTtlSecondsAfterFinished(Integer ttlSecondsAfterFinished) {
+        public Builder ttlSecondsAfterFinished(Integer ttlSecondsAfterFinished) {
             this.ttlSecondsAfterFinished = Objects.requireNonNull(ttlSecondsAfterFinished);
             return this;
         }

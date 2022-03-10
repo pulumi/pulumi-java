@@ -123,27 +123,27 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
     	      this.webhookUrl = defaults.webhookUrl;
         }
 
-        public Builder setEmailRecipient(@Nullable String emailRecipient) {
+        public Builder emailRecipient(@Nullable String emailRecipient) {
             this.emailRecipient = emailRecipient;
             return this;
         }
 
-        public Builder setNotificationLocale(@Nullable String notificationLocale) {
+        public Builder notificationLocale(@Nullable String notificationLocale) {
             this.notificationLocale = notificationLocale;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setTimeInMinutes(@Nullable Integer timeInMinutes) {
+        public Builder timeInMinutes(@Nullable Integer timeInMinutes) {
             this.timeInMinutes = timeInMinutes;
             return this;
         }
 
-        public Builder setWebhookUrl(@Nullable String webhookUrl) {
+        public Builder webhookUrl(@Nullable String webhookUrl) {
             this.webhookUrl = webhookUrl;
             return this;
         }

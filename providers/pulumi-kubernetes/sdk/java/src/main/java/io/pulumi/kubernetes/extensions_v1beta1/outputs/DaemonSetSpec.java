@@ -134,32 +134,32 @@ public final class DaemonSetSpec {
     	      this.updateStrategy = defaults.updateStrategy;
         }
 
-        public Builder setMinReadySeconds(@Nullable Integer minReadySeconds) {
+        public Builder minReadySeconds(@Nullable Integer minReadySeconds) {
             this.minReadySeconds = minReadySeconds;
             return this;
         }
 
-        public Builder setRevisionHistoryLimit(@Nullable Integer revisionHistoryLimit) {
+        public Builder revisionHistoryLimit(@Nullable Integer revisionHistoryLimit) {
             this.revisionHistoryLimit = revisionHistoryLimit;
             return this;
         }
 
-        public Builder setSelector(@Nullable LabelSelector selector) {
+        public Builder selector(@Nullable LabelSelector selector) {
             this.selector = selector;
             return this;
         }
 
-        public Builder setTemplate(PodTemplateSpec template) {
+        public Builder template(PodTemplateSpec template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }
 
-        public Builder setTemplateGeneration(@Nullable Integer templateGeneration) {
+        public Builder templateGeneration(@Nullable Integer templateGeneration) {
             this.templateGeneration = templateGeneration;
             return this;
         }
 
-        public Builder setUpdateStrategy(@Nullable DaemonSetUpdateStrategy updateStrategy) {
+        public Builder updateStrategy(@Nullable DaemonSetUpdateStrategy updateStrategy) {
             this.updateStrategy = updateStrategy;
             return this;
         }

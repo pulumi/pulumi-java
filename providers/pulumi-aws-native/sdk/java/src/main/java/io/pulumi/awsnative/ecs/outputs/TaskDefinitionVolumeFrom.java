@@ -52,12 +52,12 @@ public final class TaskDefinitionVolumeFrom {
     	      this.sourceContainer = defaults.sourceContainer;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setSourceContainer(@Nullable String sourceContainer) {
+        public Builder sourceContainer(@Nullable String sourceContainer) {
             this.sourceContainer = sourceContainer;
             return this;
         }

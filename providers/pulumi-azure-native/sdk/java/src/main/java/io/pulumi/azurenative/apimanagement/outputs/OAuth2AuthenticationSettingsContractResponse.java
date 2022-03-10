@@ -67,12 +67,12 @@ public final class OAuth2AuthenticationSettingsContractResponse {
     	      this.scope = defaults.scope;
         }
 
-        public Builder setAuthorizationServerId(@Nullable String authorizationServerId) {
+        public Builder authorizationServerId(@Nullable String authorizationServerId) {
             this.authorizationServerId = authorizationServerId;
             return this;
         }
 
-        public Builder setScope(@Nullable String scope) {
+        public Builder scope(@Nullable String scope) {
             this.scope = scope;
             return this;
         }

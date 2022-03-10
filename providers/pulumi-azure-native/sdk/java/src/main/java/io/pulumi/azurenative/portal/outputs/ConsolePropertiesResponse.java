@@ -81,17 +81,17 @@ public final class ConsolePropertiesResponse {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setOsType(String osType) {
+        public Builder osType(String osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

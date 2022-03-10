@@ -51,7 +51,7 @@ public final class GetReadinessCheckArgs extends io.pulumi.resources.InvokeArgs 
     	      this.readinessCheckName = defaults.readinessCheckName;
         }
 
-        public Builder setReadinessCheckName(String readinessCheckName) {
+        public Builder readinessCheckName(String readinessCheckName) {
             this.readinessCheckName = Objects.requireNonNull(readinessCheckName);
             return this;
         }

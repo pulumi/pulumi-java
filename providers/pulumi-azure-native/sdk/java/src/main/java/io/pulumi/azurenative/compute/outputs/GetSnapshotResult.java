@@ -429,122 +429,122 @@ public final class GetSnapshotResult {
     	      this.uniqueId = defaults.uniqueId;
         }
 
-        public Builder setCreationData(CreationDataResponse creationData) {
+        public Builder creationData(CreationDataResponse creationData) {
             this.creationData = Objects.requireNonNull(creationData);
             return this;
         }
 
-        public Builder setDiskAccessId(@Nullable String diskAccessId) {
+        public Builder diskAccessId(@Nullable String diskAccessId) {
             this.diskAccessId = diskAccessId;
             return this;
         }
 
-        public Builder setDiskSizeBytes(Double diskSizeBytes) {
+        public Builder diskSizeBytes(Double diskSizeBytes) {
             this.diskSizeBytes = Objects.requireNonNull(diskSizeBytes);
             return this;
         }
 
-        public Builder setDiskSizeGB(@Nullable Integer diskSizeGB) {
+        public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
 
-        public Builder setDiskState(String diskState) {
+        public Builder diskState(String diskState) {
             this.diskState = Objects.requireNonNull(diskState);
             return this;
         }
 
-        public Builder setEncryption(@Nullable EncryptionResponse encryption) {
+        public Builder encryption(@Nullable EncryptionResponse encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setEncryptionSettingsCollection(@Nullable EncryptionSettingsCollectionResponse encryptionSettingsCollection) {
+        public Builder encryptionSettingsCollection(@Nullable EncryptionSettingsCollectionResponse encryptionSettingsCollection) {
             this.encryptionSettingsCollection = encryptionSettingsCollection;
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
+        public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
-        public Builder setHyperVGeneration(@Nullable String hyperVGeneration) {
+        public Builder hyperVGeneration(@Nullable String hyperVGeneration) {
             this.hyperVGeneration = hyperVGeneration;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIncremental(@Nullable Boolean incremental) {
+        public Builder incremental(@Nullable Boolean incremental) {
             this.incremental = incremental;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setManagedBy(String managedBy) {
+        public Builder managedBy(String managedBy) {
             this.managedBy = Objects.requireNonNull(managedBy);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetworkAccessPolicy(@Nullable String networkAccessPolicy) {
+        public Builder networkAccessPolicy(@Nullable String networkAccessPolicy) {
             this.networkAccessPolicy = networkAccessPolicy;
             return this;
         }
 
-        public Builder setOsType(@Nullable String osType) {
+        public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPurchasePlan(@Nullable PurchasePlanResponse purchasePlan) {
+        public Builder purchasePlan(@Nullable PurchasePlanResponse purchasePlan) {
             this.purchasePlan = purchasePlan;
             return this;
         }
 
-        public Builder setSku(@Nullable SnapshotSkuResponse sku) {
+        public Builder sku(@Nullable SnapshotSkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSupportsHibernation(@Nullable Boolean supportsHibernation) {
+        public Builder supportsHibernation(@Nullable Boolean supportsHibernation) {
             this.supportsHibernation = supportsHibernation;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTimeCreated(String timeCreated) {
+        public Builder timeCreated(String timeCreated) {
             this.timeCreated = Objects.requireNonNull(timeCreated);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUniqueId(String uniqueId) {
+        public Builder uniqueId(String uniqueId) {
             this.uniqueId = Objects.requireNonNull(uniqueId);
             return this;
         }

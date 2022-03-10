@@ -61,17 +61,17 @@ public final class TaskDefinitionTmpfs {
     	      this.size = defaults.size;
         }
 
-        public Builder setContainerPath(@Nullable String containerPath) {
+        public Builder containerPath(@Nullable String containerPath) {
             this.containerPath = containerPath;
             return this;
         }
 
-        public Builder setMountOptions(@Nullable List<String> mountOptions) {
+        public Builder mountOptions(@Nullable List<String> mountOptions) {
             this.mountOptions = mountOptions;
             return this;
         }
 
-        public Builder setSize(Integer size) {
+        public Builder size(Integer size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }

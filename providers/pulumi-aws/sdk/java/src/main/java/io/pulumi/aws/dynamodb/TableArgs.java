@@ -374,202 +374,202 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     	      this.writeCapacity = defaults.writeCapacity;
         }
 
-        public Builder setAttributes(@Nullable Input<List<TableAttributeArgs>> attributes) {
+        public Builder attributes(@Nullable Input<List<TableAttributeArgs>> attributes) {
             this.attributes = attributes;
             return this;
         }
 
-        public Builder setAttributes(@Nullable List<TableAttributeArgs> attributes) {
+        public Builder attributes(@Nullable List<TableAttributeArgs> attributes) {
             this.attributes = Input.ofNullable(attributes);
             return this;
         }
 
-        public Builder setBillingMode(@Nullable Input<String> billingMode) {
+        public Builder billingMode(@Nullable Input<String> billingMode) {
             this.billingMode = billingMode;
             return this;
         }
 
-        public Builder setBillingMode(@Nullable String billingMode) {
+        public Builder billingMode(@Nullable String billingMode) {
             this.billingMode = Input.ofNullable(billingMode);
             return this;
         }
 
-        public Builder setGlobalSecondaryIndexes(@Nullable Input<List<TableGlobalSecondaryIndexArgs>> globalSecondaryIndexes) {
+        public Builder globalSecondaryIndexes(@Nullable Input<List<TableGlobalSecondaryIndexArgs>> globalSecondaryIndexes) {
             this.globalSecondaryIndexes = globalSecondaryIndexes;
             return this;
         }
 
-        public Builder setGlobalSecondaryIndexes(@Nullable List<TableGlobalSecondaryIndexArgs> globalSecondaryIndexes) {
+        public Builder globalSecondaryIndexes(@Nullable List<TableGlobalSecondaryIndexArgs> globalSecondaryIndexes) {
             this.globalSecondaryIndexes = Input.ofNullable(globalSecondaryIndexes);
             return this;
         }
 
-        public Builder setHashKey(@Nullable Input<String> hashKey) {
+        public Builder hashKey(@Nullable Input<String> hashKey) {
             this.hashKey = hashKey;
             return this;
         }
 
-        public Builder setHashKey(@Nullable String hashKey) {
+        public Builder hashKey(@Nullable String hashKey) {
             this.hashKey = Input.ofNullable(hashKey);
             return this;
         }
 
-        public Builder setLocalSecondaryIndexes(@Nullable Input<List<TableLocalSecondaryIndexArgs>> localSecondaryIndexes) {
+        public Builder localSecondaryIndexes(@Nullable Input<List<TableLocalSecondaryIndexArgs>> localSecondaryIndexes) {
             this.localSecondaryIndexes = localSecondaryIndexes;
             return this;
         }
 
-        public Builder setLocalSecondaryIndexes(@Nullable List<TableLocalSecondaryIndexArgs> localSecondaryIndexes) {
+        public Builder localSecondaryIndexes(@Nullable List<TableLocalSecondaryIndexArgs> localSecondaryIndexes) {
             this.localSecondaryIndexes = Input.ofNullable(localSecondaryIndexes);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPointInTimeRecovery(@Nullable Input<TablePointInTimeRecoveryArgs> pointInTimeRecovery) {
+        public Builder pointInTimeRecovery(@Nullable Input<TablePointInTimeRecoveryArgs> pointInTimeRecovery) {
             this.pointInTimeRecovery = pointInTimeRecovery;
             return this;
         }
 
-        public Builder setPointInTimeRecovery(@Nullable TablePointInTimeRecoveryArgs pointInTimeRecovery) {
+        public Builder pointInTimeRecovery(@Nullable TablePointInTimeRecoveryArgs pointInTimeRecovery) {
             this.pointInTimeRecovery = Input.ofNullable(pointInTimeRecovery);
             return this;
         }
 
-        public Builder setRangeKey(@Nullable Input<String> rangeKey) {
+        public Builder rangeKey(@Nullable Input<String> rangeKey) {
             this.rangeKey = rangeKey;
             return this;
         }
 
-        public Builder setRangeKey(@Nullable String rangeKey) {
+        public Builder rangeKey(@Nullable String rangeKey) {
             this.rangeKey = Input.ofNullable(rangeKey);
             return this;
         }
 
-        public Builder setReadCapacity(@Nullable Input<Integer> readCapacity) {
+        public Builder readCapacity(@Nullable Input<Integer> readCapacity) {
             this.readCapacity = readCapacity;
             return this;
         }
 
-        public Builder setReadCapacity(@Nullable Integer readCapacity) {
+        public Builder readCapacity(@Nullable Integer readCapacity) {
             this.readCapacity = Input.ofNullable(readCapacity);
             return this;
         }
 
-        public Builder setReplicas(@Nullable Input<List<TableReplicaArgs>> replicas) {
+        public Builder replicas(@Nullable Input<List<TableReplicaArgs>> replicas) {
             this.replicas = replicas;
             return this;
         }
 
-        public Builder setReplicas(@Nullable List<TableReplicaArgs> replicas) {
+        public Builder replicas(@Nullable List<TableReplicaArgs> replicas) {
             this.replicas = Input.ofNullable(replicas);
             return this;
         }
 
-        public Builder setRestoreDateTime(@Nullable Input<String> restoreDateTime) {
+        public Builder restoreDateTime(@Nullable Input<String> restoreDateTime) {
             this.restoreDateTime = restoreDateTime;
             return this;
         }
 
-        public Builder setRestoreDateTime(@Nullable String restoreDateTime) {
+        public Builder restoreDateTime(@Nullable String restoreDateTime) {
             this.restoreDateTime = Input.ofNullable(restoreDateTime);
             return this;
         }
 
-        public Builder setRestoreSourceName(@Nullable Input<String> restoreSourceName) {
+        public Builder restoreSourceName(@Nullable Input<String> restoreSourceName) {
             this.restoreSourceName = restoreSourceName;
             return this;
         }
 
-        public Builder setRestoreSourceName(@Nullable String restoreSourceName) {
+        public Builder restoreSourceName(@Nullable String restoreSourceName) {
             this.restoreSourceName = Input.ofNullable(restoreSourceName);
             return this;
         }
 
-        public Builder setRestoreToLatestTime(@Nullable Input<Boolean> restoreToLatestTime) {
+        public Builder restoreToLatestTime(@Nullable Input<Boolean> restoreToLatestTime) {
             this.restoreToLatestTime = restoreToLatestTime;
             return this;
         }
 
-        public Builder setRestoreToLatestTime(@Nullable Boolean restoreToLatestTime) {
+        public Builder restoreToLatestTime(@Nullable Boolean restoreToLatestTime) {
             this.restoreToLatestTime = Input.ofNullable(restoreToLatestTime);
             return this;
         }
 
-        public Builder setServerSideEncryption(@Nullable Input<TableServerSideEncryptionArgs> serverSideEncryption) {
+        public Builder serverSideEncryption(@Nullable Input<TableServerSideEncryptionArgs> serverSideEncryption) {
             this.serverSideEncryption = serverSideEncryption;
             return this;
         }
 
-        public Builder setServerSideEncryption(@Nullable TableServerSideEncryptionArgs serverSideEncryption) {
+        public Builder serverSideEncryption(@Nullable TableServerSideEncryptionArgs serverSideEncryption) {
             this.serverSideEncryption = Input.ofNullable(serverSideEncryption);
             return this;
         }
 
-        public Builder setStreamEnabled(@Nullable Input<Boolean> streamEnabled) {
+        public Builder streamEnabled(@Nullable Input<Boolean> streamEnabled) {
             this.streamEnabled = streamEnabled;
             return this;
         }
 
-        public Builder setStreamEnabled(@Nullable Boolean streamEnabled) {
+        public Builder streamEnabled(@Nullable Boolean streamEnabled) {
             this.streamEnabled = Input.ofNullable(streamEnabled);
             return this;
         }
 
-        public Builder setStreamViewType(@Nullable Input<String> streamViewType) {
+        public Builder streamViewType(@Nullable Input<String> streamViewType) {
             this.streamViewType = streamViewType;
             return this;
         }
 
-        public Builder setStreamViewType(@Nullable String streamViewType) {
+        public Builder streamViewType(@Nullable String streamViewType) {
             this.streamViewType = Input.ofNullable(streamViewType);
             return this;
         }
 
-        public Builder setTableClass(@Nullable Input<String> tableClass) {
+        public Builder tableClass(@Nullable Input<String> tableClass) {
             this.tableClass = tableClass;
             return this;
         }
 
-        public Builder setTableClass(@Nullable String tableClass) {
+        public Builder tableClass(@Nullable String tableClass) {
             this.tableClass = Input.ofNullable(tableClass);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTtl(@Nullable Input<TableTtlArgs> ttl) {
+        public Builder ttl(@Nullable Input<TableTtlArgs> ttl) {
             this.ttl = ttl;
             return this;
         }
 
-        public Builder setTtl(@Nullable TableTtlArgs ttl) {
+        public Builder ttl(@Nullable TableTtlArgs ttl) {
             this.ttl = Input.ofNullable(ttl);
             return this;
         }
 
-        public Builder setWriteCapacity(@Nullable Input<Integer> writeCapacity) {
+        public Builder writeCapacity(@Nullable Input<Integer> writeCapacity) {
             this.writeCapacity = writeCapacity;
             return this;
         }
 
-        public Builder setWriteCapacity(@Nullable Integer writeCapacity) {
+        public Builder writeCapacity(@Nullable Integer writeCapacity) {
             this.writeCapacity = Input.ofNullable(writeCapacity);
             return this;
         }

@@ -60,12 +60,12 @@ public final class GetRolloutArgs extends io.pulumi.resources.InvokeArgs {
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setRolloutId(String rolloutId) {
+        public Builder rolloutId(String rolloutId) {
             this.rolloutId = Objects.requireNonNull(rolloutId);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }

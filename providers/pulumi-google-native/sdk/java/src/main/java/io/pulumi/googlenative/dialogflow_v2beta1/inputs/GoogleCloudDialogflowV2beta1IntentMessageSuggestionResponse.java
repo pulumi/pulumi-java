@@ -55,7 +55,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse e
     	      this.title = defaults.title;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

@@ -173,82 +173,82 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
     	      this.secondaryConnectionString = defaults.secondaryConnectionString;
         }
 
-        public Builder setAuthenticationType(@Nullable Input<Either<String,AuthenticationType>> authenticationType) {
+        public Builder authenticationType(@Nullable Input<Either<String,AuthenticationType>> authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
 
-        public Builder setAuthenticationType(@Nullable Either<String,AuthenticationType> authenticationType) {
+        public Builder authenticationType(@Nullable Either<String,AuthenticationType> authenticationType) {
             this.authenticationType = Input.ofNullable(authenticationType);
             return this;
         }
 
-        public Builder setDeadLetterSecret(@Nullable Input<String> deadLetterSecret) {
+        public Builder deadLetterSecret(@Nullable Input<String> deadLetterSecret) {
             this.deadLetterSecret = deadLetterSecret;
             return this;
         }
 
-        public Builder setDeadLetterSecret(@Nullable String deadLetterSecret) {
+        public Builder deadLetterSecret(@Nullable String deadLetterSecret) {
             this.deadLetterSecret = Input.ofNullable(deadLetterSecret);
             return this;
         }
 
-        public Builder setDeadLetterUri(@Nullable Input<String> deadLetterUri) {
+        public Builder deadLetterUri(@Nullable Input<String> deadLetterUri) {
             this.deadLetterUri = deadLetterUri;
             return this;
         }
 
-        public Builder setDeadLetterUri(@Nullable String deadLetterUri) {
+        public Builder deadLetterUri(@Nullable String deadLetterUri) {
             this.deadLetterUri = Input.ofNullable(deadLetterUri);
             return this;
         }
 
-        public Builder setEndpointType(Input<String> endpointType) {
+        public Builder endpointType(Input<String> endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
 
-        public Builder setEndpointType(String endpointType) {
+        public Builder endpointType(String endpointType) {
             this.endpointType = Input.of(Objects.requireNonNull(endpointType));
             return this;
         }
 
-        public Builder setEndpointUri(@Nullable Input<String> endpointUri) {
+        public Builder endpointUri(@Nullable Input<String> endpointUri) {
             this.endpointUri = endpointUri;
             return this;
         }
 
-        public Builder setEndpointUri(@Nullable String endpointUri) {
+        public Builder endpointUri(@Nullable String endpointUri) {
             this.endpointUri = Input.ofNullable(endpointUri);
             return this;
         }
 
-        public Builder setEntityPath(@Nullable Input<String> entityPath) {
+        public Builder entityPath(@Nullable Input<String> entityPath) {
             this.entityPath = entityPath;
             return this;
         }
 
-        public Builder setEntityPath(@Nullable String entityPath) {
+        public Builder entityPath(@Nullable String entityPath) {
             this.entityPath = Input.ofNullable(entityPath);
             return this;
         }
 
-        public Builder setPrimaryConnectionString(@Nullable Input<String> primaryConnectionString) {
+        public Builder primaryConnectionString(@Nullable Input<String> primaryConnectionString) {
             this.primaryConnectionString = primaryConnectionString;
             return this;
         }
 
-        public Builder setPrimaryConnectionString(@Nullable String primaryConnectionString) {
+        public Builder primaryConnectionString(@Nullable String primaryConnectionString) {
             this.primaryConnectionString = Input.ofNullable(primaryConnectionString);
             return this;
         }
 
-        public Builder setSecondaryConnectionString(@Nullable Input<String> secondaryConnectionString) {
+        public Builder secondaryConnectionString(@Nullable Input<String> secondaryConnectionString) {
             this.secondaryConnectionString = secondaryConnectionString;
             return this;
         }
 
-        public Builder setSecondaryConnectionString(@Nullable String secondaryConnectionString) {
+        public Builder secondaryConnectionString(@Nullable String secondaryConnectionString) {
             this.secondaryConnectionString = Input.ofNullable(secondaryConnectionString);
             return this;
         }

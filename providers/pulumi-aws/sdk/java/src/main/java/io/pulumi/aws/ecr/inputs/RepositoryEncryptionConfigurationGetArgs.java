@@ -70,22 +70,22 @@ public final class RepositoryEncryptionConfigurationGetArgs extends io.pulumi.re
     	      this.kmsKey = defaults.kmsKey;
         }
 
-        public Builder setEncryptionType(@Nullable Input<String> encryptionType) {
+        public Builder encryptionType(@Nullable Input<String> encryptionType) {
             this.encryptionType = encryptionType;
             return this;
         }
 
-        public Builder setEncryptionType(@Nullable String encryptionType) {
+        public Builder encryptionType(@Nullable String encryptionType) {
             this.encryptionType = Input.ofNullable(encryptionType);
             return this;
         }
 
-        public Builder setKmsKey(@Nullable Input<String> kmsKey) {
+        public Builder kmsKey(@Nullable Input<String> kmsKey) {
             this.kmsKey = kmsKey;
             return this;
         }
 
-        public Builder setKmsKey(@Nullable String kmsKey) {
+        public Builder kmsKey(@Nullable String kmsKey) {
             this.kmsKey = Input.ofNullable(kmsKey);
             return this;
         }

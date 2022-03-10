@@ -49,7 +49,7 @@ public final class GoogleCloudDatacatalogV1ContactsResponse {
     	      this.people = defaults.people;
         }
 
-        public Builder setPeople(List<GoogleCloudDatacatalogV1ContactsPersonResponse> people) {
+        public Builder people(List<GoogleCloudDatacatalogV1ContactsPersonResponse> people) {
             this.people = Objects.requireNonNull(people);
             return this;
         }

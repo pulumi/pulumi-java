@@ -94,37 +94,37 @@ public final class GetInstanceProfileResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setExcludeAppPackagesFromCleanup(@Nullable List<String> excludeAppPackagesFromCleanup) {
+        public Builder excludeAppPackagesFromCleanup(@Nullable List<String> excludeAppPackagesFromCleanup) {
             this.excludeAppPackagesFromCleanup = excludeAppPackagesFromCleanup;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPackageCleanup(@Nullable Boolean packageCleanup) {
+        public Builder packageCleanup(@Nullable Boolean packageCleanup) {
             this.packageCleanup = packageCleanup;
             return this;
         }
 
-        public Builder setRebootAfterUse(@Nullable Boolean rebootAfterUse) {
+        public Builder rebootAfterUse(@Nullable Boolean rebootAfterUse) {
             this.rebootAfterUse = rebootAfterUse;
             return this;
         }
 
-        public Builder setTags(@Nullable List<InstanceProfileTag> tags) {
+        public Builder tags(@Nullable List<InstanceProfileTag> tags) {
             this.tags = tags;
             return this;
         }

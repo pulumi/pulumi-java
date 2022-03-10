@@ -102,22 +102,22 @@ public final class AzureFunctionEventSubscriptionDestinationResponse {
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder setEndpointType(String endpointType) {
+        public Builder endpointType(String endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
 
-        public Builder setMaxEventsPerBatch(@Nullable Integer maxEventsPerBatch) {
+        public Builder maxEventsPerBatch(@Nullable Integer maxEventsPerBatch) {
             this.maxEventsPerBatch = maxEventsPerBatch;
             return this;
         }
 
-        public Builder setPreferredBatchSizeInKilobytes(@Nullable Integer preferredBatchSizeInKilobytes) {
+        public Builder preferredBatchSizeInKilobytes(@Nullable Integer preferredBatchSizeInKilobytes) {
             this.preferredBatchSizeInKilobytes = preferredBatchSizeInKilobytes;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }

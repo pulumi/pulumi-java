@@ -57,12 +57,12 @@ public final class GoogleCloudDatalabelingV1beta1PdfInstructionArgs extends io.p
     	      this.gcsFileUri = defaults.gcsFileUri;
         }
 
-        public Builder setGcsFileUri(@Nullable Input<String> gcsFileUri) {
+        public Builder gcsFileUri(@Nullable Input<String> gcsFileUri) {
             this.gcsFileUri = gcsFileUri;
             return this;
         }
 
-        public Builder setGcsFileUri(@Nullable String gcsFileUri) {
+        public Builder gcsFileUri(@Nullable String gcsFileUri) {
             this.gcsFileUri = Input.ofNullable(gcsFileUri);
             return this;
         }

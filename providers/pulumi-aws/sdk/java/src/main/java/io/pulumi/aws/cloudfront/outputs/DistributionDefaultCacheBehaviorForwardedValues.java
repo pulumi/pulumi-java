@@ -115,22 +115,22 @@ public final class DistributionDefaultCacheBehaviorForwardedValues {
     	      this.queryStringCacheKeys = defaults.queryStringCacheKeys;
         }
 
-        public Builder setCookies(DistributionDefaultCacheBehaviorForwardedValuesCookies cookies) {
+        public Builder cookies(DistributionDefaultCacheBehaviorForwardedValuesCookies cookies) {
             this.cookies = Objects.requireNonNull(cookies);
             return this;
         }
 
-        public Builder setHeaders(@Nullable List<String> headers) {
+        public Builder headers(@Nullable List<String> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setQueryString(Boolean queryString) {
+        public Builder queryString(Boolean queryString) {
             this.queryString = Objects.requireNonNull(queryString);
             return this;
         }
 
-        public Builder setQueryStringCacheKeys(@Nullable List<String> queryStringCacheKeys) {
+        public Builder queryStringCacheKeys(@Nullable List<String> queryStringCacheKeys) {
             this.queryStringCacheKeys = queryStringCacheKeys;
             return this;
         }

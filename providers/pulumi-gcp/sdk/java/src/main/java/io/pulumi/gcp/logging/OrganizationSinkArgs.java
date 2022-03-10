@@ -191,92 +191,92 @@ public final class OrganizationSinkArgs extends io.pulumi.resources.ResourceArgs
     	      this.orgId = defaults.orgId;
         }
 
-        public Builder setBigqueryOptions(@Nullable Input<OrganizationSinkBigqueryOptionsArgs> bigqueryOptions) {
+        public Builder bigqueryOptions(@Nullable Input<OrganizationSinkBigqueryOptionsArgs> bigqueryOptions) {
             this.bigqueryOptions = bigqueryOptions;
             return this;
         }
 
-        public Builder setBigqueryOptions(@Nullable OrganizationSinkBigqueryOptionsArgs bigqueryOptions) {
+        public Builder bigqueryOptions(@Nullable OrganizationSinkBigqueryOptionsArgs bigqueryOptions) {
             this.bigqueryOptions = Input.ofNullable(bigqueryOptions);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDestination(Input<String> destination) {
+        public Builder destination(Input<String> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setDestination(String destination) {
+        public Builder destination(String destination) {
             this.destination = Input.of(Objects.requireNonNull(destination));
             return this;
         }
 
-        public Builder setDisabled(@Nullable Input<Boolean> disabled) {
+        public Builder disabled(@Nullable Input<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
 
-        public Builder setDisabled(@Nullable Boolean disabled) {
+        public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Input.ofNullable(disabled);
             return this;
         }
 
-        public Builder setExclusions(@Nullable Input<List<OrganizationSinkExclusionArgs>> exclusions) {
+        public Builder exclusions(@Nullable Input<List<OrganizationSinkExclusionArgs>> exclusions) {
             this.exclusions = exclusions;
             return this;
         }
 
-        public Builder setExclusions(@Nullable List<OrganizationSinkExclusionArgs> exclusions) {
+        public Builder exclusions(@Nullable List<OrganizationSinkExclusionArgs> exclusions) {
             this.exclusions = Input.ofNullable(exclusions);
             return this;
         }
 
-        public Builder setFilter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Input<String> filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFilter(@Nullable String filter) {
+        public Builder filter(@Nullable String filter) {
             this.filter = Input.ofNullable(filter);
             return this;
         }
 
-        public Builder setIncludeChildren(@Nullable Input<Boolean> includeChildren) {
+        public Builder includeChildren(@Nullable Input<Boolean> includeChildren) {
             this.includeChildren = includeChildren;
             return this;
         }
 
-        public Builder setIncludeChildren(@Nullable Boolean includeChildren) {
+        public Builder includeChildren(@Nullable Boolean includeChildren) {
             this.includeChildren = Input.ofNullable(includeChildren);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOrgId(Input<String> orgId) {
+        public Builder orgId(Input<String> orgId) {
             this.orgId = Objects.requireNonNull(orgId);
             return this;
         }
 
-        public Builder setOrgId(String orgId) {
+        public Builder orgId(String orgId) {
             this.orgId = Input.of(Objects.requireNonNull(orgId));
             return this;
         }

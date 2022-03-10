@@ -234,122 +234,122 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
     	      this.versionArn = defaults.versionArn;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Input<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable String namePrefix) {
+        public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Input.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder setPlatformDisplayName(@Nullable Input<String> platformDisplayName) {
+        public Builder platformDisplayName(@Nullable Input<String> platformDisplayName) {
             this.platformDisplayName = platformDisplayName;
             return this;
         }
 
-        public Builder setPlatformDisplayName(@Nullable String platformDisplayName) {
+        public Builder platformDisplayName(@Nullable String platformDisplayName) {
             this.platformDisplayName = Input.ofNullable(platformDisplayName);
             return this;
         }
 
-        public Builder setPlatformId(@Nullable Input<String> platformId) {
+        public Builder platformId(@Nullable Input<String> platformId) {
             this.platformId = platformId;
             return this;
         }
 
-        public Builder setPlatformId(@Nullable String platformId) {
+        public Builder platformId(@Nullable String platformId) {
             this.platformId = Input.ofNullable(platformId);
             return this;
         }
 
-        public Builder setRevocationRecords(@Nullable Input<List<SigningProfileRevocationRecordGetArgs>> revocationRecords) {
+        public Builder revocationRecords(@Nullable Input<List<SigningProfileRevocationRecordGetArgs>> revocationRecords) {
             this.revocationRecords = revocationRecords;
             return this;
         }
 
-        public Builder setRevocationRecords(@Nullable List<SigningProfileRevocationRecordGetArgs> revocationRecords) {
+        public Builder revocationRecords(@Nullable List<SigningProfileRevocationRecordGetArgs> revocationRecords) {
             this.revocationRecords = Input.ofNullable(revocationRecords);
             return this;
         }
 
-        public Builder setSignatureValidityPeriod(@Nullable Input<SigningProfileSignatureValidityPeriodGetArgs> signatureValidityPeriod) {
+        public Builder signatureValidityPeriod(@Nullable Input<SigningProfileSignatureValidityPeriodGetArgs> signatureValidityPeriod) {
             this.signatureValidityPeriod = signatureValidityPeriod;
             return this;
         }
 
-        public Builder setSignatureValidityPeriod(@Nullable SigningProfileSignatureValidityPeriodGetArgs signatureValidityPeriod) {
+        public Builder signatureValidityPeriod(@Nullable SigningProfileSignatureValidityPeriodGetArgs signatureValidityPeriod) {
             this.signatureValidityPeriod = Input.ofNullable(signatureValidityPeriod);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }
 
-        public Builder setVersionArn(@Nullable Input<String> versionArn) {
+        public Builder versionArn(@Nullable Input<String> versionArn) {
             this.versionArn = versionArn;
             return this;
         }
 
-        public Builder setVersionArn(@Nullable String versionArn) {
+        public Builder versionArn(@Nullable String versionArn) {
             this.versionArn = Input.ofNullable(versionArn);
             return this;
         }

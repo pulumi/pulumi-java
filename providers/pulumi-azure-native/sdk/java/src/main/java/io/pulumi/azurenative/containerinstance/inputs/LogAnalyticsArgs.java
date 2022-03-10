@@ -125,52 +125,52 @@ public final class LogAnalyticsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceResourceId = defaults.workspaceResourceId;
         }
 
-        public Builder setLogType(@Nullable Input<Either<String,LogAnalyticsLogType>> logType) {
+        public Builder logType(@Nullable Input<Either<String,LogAnalyticsLogType>> logType) {
             this.logType = logType;
             return this;
         }
 
-        public Builder setLogType(@Nullable Either<String,LogAnalyticsLogType> logType) {
+        public Builder logType(@Nullable Either<String,LogAnalyticsLogType> logType) {
             this.logType = Input.ofNullable(logType);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setWorkspaceId(Input<String> workspaceId) {
+        public Builder workspaceId(Input<String> workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
 
-        public Builder setWorkspaceId(String workspaceId) {
+        public Builder workspaceId(String workspaceId) {
             this.workspaceId = Input.of(Objects.requireNonNull(workspaceId));
             return this;
         }
 
-        public Builder setWorkspaceKey(Input<String> workspaceKey) {
+        public Builder workspaceKey(Input<String> workspaceKey) {
             this.workspaceKey = Objects.requireNonNull(workspaceKey);
             return this;
         }
 
-        public Builder setWorkspaceKey(String workspaceKey) {
+        public Builder workspaceKey(String workspaceKey) {
             this.workspaceKey = Input.of(Objects.requireNonNull(workspaceKey));
             return this;
         }
 
-        public Builder setWorkspaceResourceId(@Nullable Input<Map<String,String>> workspaceResourceId) {
+        public Builder workspaceResourceId(@Nullable Input<Map<String,String>> workspaceResourceId) {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }
 
-        public Builder setWorkspaceResourceId(@Nullable Map<String,String> workspaceResourceId) {
+        public Builder workspaceResourceId(@Nullable Map<String,String> workspaceResourceId) {
             this.workspaceResourceId = Input.ofNullable(workspaceResourceId);
             return this;
         }

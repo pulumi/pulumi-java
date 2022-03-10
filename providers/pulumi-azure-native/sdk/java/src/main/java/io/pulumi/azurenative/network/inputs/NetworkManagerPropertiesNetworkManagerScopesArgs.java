@@ -75,22 +75,22 @@ public final class NetworkManagerPropertiesNetworkManagerScopesArgs extends io.p
     	      this.subscriptions = defaults.subscriptions;
         }
 
-        public Builder setManagementGroups(@Nullable Input<List<String>> managementGroups) {
+        public Builder managementGroups(@Nullable Input<List<String>> managementGroups) {
             this.managementGroups = managementGroups;
             return this;
         }
 
-        public Builder setManagementGroups(@Nullable List<String> managementGroups) {
+        public Builder managementGroups(@Nullable List<String> managementGroups) {
             this.managementGroups = Input.ofNullable(managementGroups);
             return this;
         }
 
-        public Builder setSubscriptions(@Nullable Input<List<String>> subscriptions) {
+        public Builder subscriptions(@Nullable Input<List<String>> subscriptions) {
             this.subscriptions = subscriptions;
             return this;
         }
 
-        public Builder setSubscriptions(@Nullable List<String> subscriptions) {
+        public Builder subscriptions(@Nullable List<String> subscriptions) {
             this.subscriptions = Input.ofNullable(subscriptions);
             return this;
         }

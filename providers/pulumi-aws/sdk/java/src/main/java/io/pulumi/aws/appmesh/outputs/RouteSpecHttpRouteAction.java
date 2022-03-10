@@ -51,7 +51,7 @@ public final class RouteSpecHttpRouteAction {
     	      this.weightedTargets = defaults.weightedTargets;
         }
 
-        public Builder setWeightedTargets(List<RouteSpecHttpRouteActionWeightedTarget> weightedTargets) {
+        public Builder weightedTargets(List<RouteSpecHttpRouteActionWeightedTarget> weightedTargets) {
             this.weightedTargets = Objects.requireNonNull(weightedTargets);
             return this;
         }

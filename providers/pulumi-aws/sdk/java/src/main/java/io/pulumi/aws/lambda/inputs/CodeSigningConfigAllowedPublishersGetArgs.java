@@ -53,12 +53,12 @@ public final class CodeSigningConfigAllowedPublishersGetArgs extends io.pulumi.r
     	      this.signingProfileVersionArns = defaults.signingProfileVersionArns;
         }
 
-        public Builder setSigningProfileVersionArns(Input<List<String>> signingProfileVersionArns) {
+        public Builder signingProfileVersionArns(Input<List<String>> signingProfileVersionArns) {
             this.signingProfileVersionArns = Objects.requireNonNull(signingProfileVersionArns);
             return this;
         }
 
-        public Builder setSigningProfileVersionArns(List<String> signingProfileVersionArns) {
+        public Builder signingProfileVersionArns(List<String> signingProfileVersionArns) {
             this.signingProfileVersionArns = Input.of(Objects.requireNonNull(signingProfileVersionArns));
             return this;
         }

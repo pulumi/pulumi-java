@@ -50,7 +50,7 @@ public final class SubnetSharedPublicIpAddressConfigurationResponse {
     	      this.allowedPorts = defaults.allowedPorts;
         }
 
-        public Builder setAllowedPorts(@Nullable List<PortResponse> allowedPorts) {
+        public Builder allowedPorts(@Nullable List<PortResponse> allowedPorts) {
             this.allowedPorts = allowedPorts;
             return this;
         }

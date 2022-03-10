@@ -124,32 +124,32 @@ public final class GetChangeResult {
     	      this.status = defaults.status;
         }
 
-        public Builder setAdditions(List<ResourceRecordSetResponse> additions) {
+        public Builder additions(List<ResourceRecordSetResponse> additions) {
             this.additions = Objects.requireNonNull(additions);
             return this;
         }
 
-        public Builder setDeletions(List<ResourceRecordSetResponse> deletions) {
+        public Builder deletions(List<ResourceRecordSetResponse> deletions) {
             this.deletions = Objects.requireNonNull(deletions);
             return this;
         }
 
-        public Builder setIsServing(Boolean isServing) {
+        public Builder isServing(Boolean isServing) {
             this.isServing = Objects.requireNonNull(isServing);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

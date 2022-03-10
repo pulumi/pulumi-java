@@ -48,7 +48,7 @@ public final class GoogleCloudHealthcareV1beta1DicomStreamConfigResponse {
     	      this.bigqueryDestination = defaults.bigqueryDestination;
         }
 
-        public Builder setBigqueryDestination(GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse bigqueryDestination) {
+        public Builder bigqueryDestination(GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse bigqueryDestination) {
             this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination);
             return this;
         }

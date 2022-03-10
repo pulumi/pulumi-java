@@ -66,12 +66,12 @@ public final class FluidRelayEndpointsResponse {
     	      this.storageEndpoints = defaults.storageEndpoints;
         }
 
-        public Builder setOrdererEndpoints(List<String> ordererEndpoints) {
+        public Builder ordererEndpoints(List<String> ordererEndpoints) {
             this.ordererEndpoints = Objects.requireNonNull(ordererEndpoints);
             return this;
         }
 
-        public Builder setStorageEndpoints(List<String> storageEndpoints) {
+        public Builder storageEndpoints(List<String> storageEndpoints) {
             this.storageEndpoints = Objects.requireNonNull(storageEndpoints);
             return this;
         }

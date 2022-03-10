@@ -137,62 +137,62 @@ public final class WorkgroupConfigurationGetArgs extends io.pulumi.resources.Res
     	      this.resultConfiguration = defaults.resultConfiguration;
         }
 
-        public Builder setBytesScannedCutoffPerQuery(@Nullable Input<Integer> bytesScannedCutoffPerQuery) {
+        public Builder bytesScannedCutoffPerQuery(@Nullable Input<Integer> bytesScannedCutoffPerQuery) {
             this.bytesScannedCutoffPerQuery = bytesScannedCutoffPerQuery;
             return this;
         }
 
-        public Builder setBytesScannedCutoffPerQuery(@Nullable Integer bytesScannedCutoffPerQuery) {
+        public Builder bytesScannedCutoffPerQuery(@Nullable Integer bytesScannedCutoffPerQuery) {
             this.bytesScannedCutoffPerQuery = Input.ofNullable(bytesScannedCutoffPerQuery);
             return this;
         }
 
-        public Builder setEnforceWorkgroupConfiguration(@Nullable Input<Boolean> enforceWorkgroupConfiguration) {
+        public Builder enforceWorkgroupConfiguration(@Nullable Input<Boolean> enforceWorkgroupConfiguration) {
             this.enforceWorkgroupConfiguration = enforceWorkgroupConfiguration;
             return this;
         }
 
-        public Builder setEnforceWorkgroupConfiguration(@Nullable Boolean enforceWorkgroupConfiguration) {
+        public Builder enforceWorkgroupConfiguration(@Nullable Boolean enforceWorkgroupConfiguration) {
             this.enforceWorkgroupConfiguration = Input.ofNullable(enforceWorkgroupConfiguration);
             return this;
         }
 
-        public Builder setEngineVersion(@Nullable Input<WorkgroupConfigurationEngineVersionGetArgs> engineVersion) {
+        public Builder engineVersion(@Nullable Input<WorkgroupConfigurationEngineVersionGetArgs> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
 
-        public Builder setEngineVersion(@Nullable WorkgroupConfigurationEngineVersionGetArgs engineVersion) {
+        public Builder engineVersion(@Nullable WorkgroupConfigurationEngineVersionGetArgs engineVersion) {
             this.engineVersion = Input.ofNullable(engineVersion);
             return this;
         }
 
-        public Builder setPublishCloudwatchMetricsEnabled(@Nullable Input<Boolean> publishCloudwatchMetricsEnabled) {
+        public Builder publishCloudwatchMetricsEnabled(@Nullable Input<Boolean> publishCloudwatchMetricsEnabled) {
             this.publishCloudwatchMetricsEnabled = publishCloudwatchMetricsEnabled;
             return this;
         }
 
-        public Builder setPublishCloudwatchMetricsEnabled(@Nullable Boolean publishCloudwatchMetricsEnabled) {
+        public Builder publishCloudwatchMetricsEnabled(@Nullable Boolean publishCloudwatchMetricsEnabled) {
             this.publishCloudwatchMetricsEnabled = Input.ofNullable(publishCloudwatchMetricsEnabled);
             return this;
         }
 
-        public Builder setRequesterPaysEnabled(@Nullable Input<Boolean> requesterPaysEnabled) {
+        public Builder requesterPaysEnabled(@Nullable Input<Boolean> requesterPaysEnabled) {
             this.requesterPaysEnabled = requesterPaysEnabled;
             return this;
         }
 
-        public Builder setRequesterPaysEnabled(@Nullable Boolean requesterPaysEnabled) {
+        public Builder requesterPaysEnabled(@Nullable Boolean requesterPaysEnabled) {
             this.requesterPaysEnabled = Input.ofNullable(requesterPaysEnabled);
             return this;
         }
 
-        public Builder setResultConfiguration(@Nullable Input<WorkgroupConfigurationResultConfigurationGetArgs> resultConfiguration) {
+        public Builder resultConfiguration(@Nullable Input<WorkgroupConfigurationResultConfigurationGetArgs> resultConfiguration) {
             this.resultConfiguration = resultConfiguration;
             return this;
         }
 
-        public Builder setResultConfiguration(@Nullable WorkgroupConfigurationResultConfigurationGetArgs resultConfiguration) {
+        public Builder resultConfiguration(@Nullable WorkgroupConfigurationResultConfigurationGetArgs resultConfiguration) {
             this.resultConfiguration = Input.ofNullable(resultConfiguration);
             return this;
         }

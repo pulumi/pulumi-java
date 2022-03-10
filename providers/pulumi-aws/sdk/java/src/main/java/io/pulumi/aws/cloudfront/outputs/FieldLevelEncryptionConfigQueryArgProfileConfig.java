@@ -68,12 +68,12 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfig {
     	      this.queryArgProfiles = defaults.queryArgProfiles;
         }
 
-        public Builder setForwardWhenQueryArgProfileIsUnknown(Boolean forwardWhenQueryArgProfileIsUnknown) {
+        public Builder forwardWhenQueryArgProfileIsUnknown(Boolean forwardWhenQueryArgProfileIsUnknown) {
             this.forwardWhenQueryArgProfileIsUnknown = Objects.requireNonNull(forwardWhenQueryArgProfileIsUnknown);
             return this;
         }
 
-        public Builder setQueryArgProfiles(@Nullable FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfiles queryArgProfiles) {
+        public Builder queryArgProfiles(@Nullable FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfiles queryArgProfiles) {
             this.queryArgProfiles = queryArgProfiles;
             return this;
         }

@@ -50,7 +50,7 @@ public final class ConfigurationSetDeliveryOptions {
     	      this.tlsPolicy = defaults.tlsPolicy;
         }
 
-        public Builder setTlsPolicy(@Nullable String tlsPolicy) {
+        public Builder tlsPolicy(@Nullable String tlsPolicy) {
             this.tlsPolicy = tlsPolicy;
             return this;
         }

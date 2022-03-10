@@ -48,7 +48,7 @@ public final class FeedOutputConfigResponse {
     	      this.pubsubDestination = defaults.pubsubDestination;
         }
 
-        public Builder setPubsubDestination(PubsubDestinationResponse pubsubDestination) {
+        public Builder pubsubDestination(PubsubDestinationResponse pubsubDestination) {
             this.pubsubDestination = Objects.requireNonNull(pubsubDestination);
             return this;
         }

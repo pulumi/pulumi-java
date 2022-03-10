@@ -63,22 +63,22 @@ public final class IntegrationTriggerConfigArgs extends io.pulumi.resources.Reso
     	      this.triggerType = defaults.triggerType;
         }
 
-        public Builder setTriggerProperties(@Nullable Input<IntegrationTriggerPropertiesArgs> triggerProperties) {
+        public Builder triggerProperties(@Nullable Input<IntegrationTriggerPropertiesArgs> triggerProperties) {
             this.triggerProperties = triggerProperties;
             return this;
         }
 
-        public Builder setTriggerProperties(@Nullable IntegrationTriggerPropertiesArgs triggerProperties) {
+        public Builder triggerProperties(@Nullable IntegrationTriggerPropertiesArgs triggerProperties) {
             this.triggerProperties = Input.ofNullable(triggerProperties);
             return this;
         }
 
-        public Builder setTriggerType(Input<IntegrationTriggerType> triggerType) {
+        public Builder triggerType(Input<IntegrationTriggerType> triggerType) {
             this.triggerType = Objects.requireNonNull(triggerType);
             return this;
         }
 
-        public Builder setTriggerType(IntegrationTriggerType triggerType) {
+        public Builder triggerType(IntegrationTriggerType triggerType) {
             this.triggerType = Input.of(Objects.requireNonNull(triggerType));
             return this;
         }

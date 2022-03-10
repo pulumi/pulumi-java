@@ -137,62 +137,62 @@ public final class InTotoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.threshold = defaults.threshold;
         }
 
-        public Builder setExpectedCommand(@Nullable Input<List<String>> expectedCommand) {
+        public Builder expectedCommand(@Nullable Input<List<String>> expectedCommand) {
             this.expectedCommand = expectedCommand;
             return this;
         }
 
-        public Builder setExpectedCommand(@Nullable List<String> expectedCommand) {
+        public Builder expectedCommand(@Nullable List<String> expectedCommand) {
             this.expectedCommand = Input.ofNullable(expectedCommand);
             return this;
         }
 
-        public Builder setExpectedMaterials(@Nullable Input<List<ArtifactRuleArgs>> expectedMaterials) {
+        public Builder expectedMaterials(@Nullable Input<List<ArtifactRuleArgs>> expectedMaterials) {
             this.expectedMaterials = expectedMaterials;
             return this;
         }
 
-        public Builder setExpectedMaterials(@Nullable List<ArtifactRuleArgs> expectedMaterials) {
+        public Builder expectedMaterials(@Nullable List<ArtifactRuleArgs> expectedMaterials) {
             this.expectedMaterials = Input.ofNullable(expectedMaterials);
             return this;
         }
 
-        public Builder setExpectedProducts(@Nullable Input<List<ArtifactRuleArgs>> expectedProducts) {
+        public Builder expectedProducts(@Nullable Input<List<ArtifactRuleArgs>> expectedProducts) {
             this.expectedProducts = expectedProducts;
             return this;
         }
 
-        public Builder setExpectedProducts(@Nullable List<ArtifactRuleArgs> expectedProducts) {
+        public Builder expectedProducts(@Nullable List<ArtifactRuleArgs> expectedProducts) {
             this.expectedProducts = Input.ofNullable(expectedProducts);
             return this;
         }
 
-        public Builder setSigningKeys(@Nullable Input<List<SigningKeyArgs>> signingKeys) {
+        public Builder signingKeys(@Nullable Input<List<SigningKeyArgs>> signingKeys) {
             this.signingKeys = signingKeys;
             return this;
         }
 
-        public Builder setSigningKeys(@Nullable List<SigningKeyArgs> signingKeys) {
+        public Builder signingKeys(@Nullable List<SigningKeyArgs> signingKeys) {
             this.signingKeys = Input.ofNullable(signingKeys);
             return this;
         }
 
-        public Builder setStepName(@Nullable Input<String> stepName) {
+        public Builder stepName(@Nullable Input<String> stepName) {
             this.stepName = stepName;
             return this;
         }
 
-        public Builder setStepName(@Nullable String stepName) {
+        public Builder stepName(@Nullable String stepName) {
             this.stepName = Input.ofNullable(stepName);
             return this;
         }
 
-        public Builder setThreshold(@Nullable Input<String> threshold) {
+        public Builder threshold(@Nullable Input<String> threshold) {
             this.threshold = threshold;
             return this;
         }
 
-        public Builder setThreshold(@Nullable String threshold) {
+        public Builder threshold(@Nullable String threshold) {
             this.threshold = Input.ofNullable(threshold);
             return this;
         }

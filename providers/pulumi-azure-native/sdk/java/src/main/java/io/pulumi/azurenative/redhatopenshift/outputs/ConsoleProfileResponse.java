@@ -50,7 +50,7 @@ public final class ConsoleProfileResponse {
     	      this.url = defaults.url;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }

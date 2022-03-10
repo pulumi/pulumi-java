@@ -68,12 +68,12 @@ public final class PortResponse {
     	      this.transportProtocol = defaults.transportProtocol;
         }
 
-        public Builder setBackendPort(@Nullable Integer backendPort) {
+        public Builder backendPort(@Nullable Integer backendPort) {
             this.backendPort = backendPort;
             return this;
         }
 
-        public Builder setTransportProtocol(@Nullable String transportProtocol) {
+        public Builder transportProtocol(@Nullable String transportProtocol) {
             this.transportProtocol = transportProtocol;
             return this;
         }

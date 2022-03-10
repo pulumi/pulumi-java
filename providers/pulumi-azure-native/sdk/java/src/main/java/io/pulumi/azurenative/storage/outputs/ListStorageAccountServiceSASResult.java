@@ -48,7 +48,7 @@ public final class ListStorageAccountServiceSASResult {
     	      this.serviceSasToken = defaults.serviceSasToken;
         }
 
-        public Builder setServiceSasToken(String serviceSasToken) {
+        public Builder serviceSasToken(String serviceSasToken) {
             this.serviceSasToken = Objects.requireNonNull(serviceSasToken);
             return this;
         }

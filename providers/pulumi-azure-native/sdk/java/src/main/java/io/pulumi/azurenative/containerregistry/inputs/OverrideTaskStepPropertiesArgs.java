@@ -138,62 +138,62 @@ public final class OverrideTaskStepPropertiesArgs extends io.pulumi.resources.Re
     	      this.values = defaults.values;
         }
 
-        public Builder setArguments(@Nullable Input<List<ArgumentArgs>> arguments) {
+        public Builder arguments(@Nullable Input<List<ArgumentArgs>> arguments) {
             this.arguments = arguments;
             return this;
         }
 
-        public Builder setArguments(@Nullable List<ArgumentArgs> arguments) {
+        public Builder arguments(@Nullable List<ArgumentArgs> arguments) {
             this.arguments = Input.ofNullable(arguments);
             return this;
         }
 
-        public Builder setContextPath(@Nullable Input<String> contextPath) {
+        public Builder contextPath(@Nullable Input<String> contextPath) {
             this.contextPath = contextPath;
             return this;
         }
 
-        public Builder setContextPath(@Nullable String contextPath) {
+        public Builder contextPath(@Nullable String contextPath) {
             this.contextPath = Input.ofNullable(contextPath);
             return this;
         }
 
-        public Builder setFile(@Nullable Input<String> file) {
+        public Builder file(@Nullable Input<String> file) {
             this.file = file;
             return this;
         }
 
-        public Builder setFile(@Nullable String file) {
+        public Builder file(@Nullable String file) {
             this.file = Input.ofNullable(file);
             return this;
         }
 
-        public Builder setTarget(@Nullable Input<String> target) {
+        public Builder target(@Nullable Input<String> target) {
             this.target = target;
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = Input.ofNullable(target);
             return this;
         }
 
-        public Builder setUpdateTriggerToken(@Nullable Input<String> updateTriggerToken) {
+        public Builder updateTriggerToken(@Nullable Input<String> updateTriggerToken) {
             this.updateTriggerToken = updateTriggerToken;
             return this;
         }
 
-        public Builder setUpdateTriggerToken(@Nullable String updateTriggerToken) {
+        public Builder updateTriggerToken(@Nullable String updateTriggerToken) {
             this.updateTriggerToken = Input.ofNullable(updateTriggerToken);
             return this;
         }
 
-        public Builder setValues(@Nullable Input<List<SetValueArgs>> values) {
+        public Builder values(@Nullable Input<List<SetValueArgs>> values) {
             this.values = values;
             return this;
         }
 
-        public Builder setValues(@Nullable List<SetValueArgs> values) {
+        public Builder values(@Nullable List<SetValueArgs> values) {
             this.values = Input.ofNullable(values);
             return this;
         }

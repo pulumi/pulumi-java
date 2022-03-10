@@ -101,42 +101,42 @@ public final class BotFulfillmentUpdatesSpecificationArgs extends io.pulumi.reso
     	      this.updateResponse = defaults.updateResponse;
         }
 
-        public Builder setActive(Input<Boolean> active) {
+        public Builder active(Input<Boolean> active) {
             this.active = Objects.requireNonNull(active);
             return this;
         }
 
-        public Builder setActive(Boolean active) {
+        public Builder active(Boolean active) {
             this.active = Input.of(Objects.requireNonNull(active));
             return this;
         }
 
-        public Builder setStartResponse(@Nullable Input<BotFulfillmentStartResponseSpecificationArgs> startResponse) {
+        public Builder startResponse(@Nullable Input<BotFulfillmentStartResponseSpecificationArgs> startResponse) {
             this.startResponse = startResponse;
             return this;
         }
 
-        public Builder setStartResponse(@Nullable BotFulfillmentStartResponseSpecificationArgs startResponse) {
+        public Builder startResponse(@Nullable BotFulfillmentStartResponseSpecificationArgs startResponse) {
             this.startResponse = Input.ofNullable(startResponse);
             return this;
         }
 
-        public Builder setTimeoutInSeconds(@Nullable Input<Integer> timeoutInSeconds) {
+        public Builder timeoutInSeconds(@Nullable Input<Integer> timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
 
-        public Builder setTimeoutInSeconds(@Nullable Integer timeoutInSeconds) {
+        public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
             this.timeoutInSeconds = Input.ofNullable(timeoutInSeconds);
             return this;
         }
 
-        public Builder setUpdateResponse(@Nullable Input<BotFulfillmentUpdateResponseSpecificationArgs> updateResponse) {
+        public Builder updateResponse(@Nullable Input<BotFulfillmentUpdateResponseSpecificationArgs> updateResponse) {
             this.updateResponse = updateResponse;
             return this;
         }
 
-        public Builder setUpdateResponse(@Nullable BotFulfillmentUpdateResponseSpecificationArgs updateResponse) {
+        public Builder updateResponse(@Nullable BotFulfillmentUpdateResponseSpecificationArgs updateResponse) {
             this.updateResponse = Input.ofNullable(updateResponse);
             return this;
         }

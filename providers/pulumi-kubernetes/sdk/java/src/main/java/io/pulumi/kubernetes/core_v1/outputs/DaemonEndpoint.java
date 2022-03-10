@@ -48,7 +48,7 @@ public final class DaemonEndpoint {
     	      this.Port = defaults.Port;
         }
 
-        public Builder setPort(Integer Port) {
+        public Builder port(Integer Port) {
             this.Port = Objects.requireNonNull(Port);
             return this;
         }

@@ -61,12 +61,12 @@ public final class GetListenerDefaultActionForwardStickiness extends io.pulumi.r
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setDuration(Integer duration) {
+        public Builder duration(Integer duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }

@@ -75,22 +75,22 @@ public final class StatefulSetUpdateStrategyArgs extends io.pulumi.resources.Res
     	      this.type = defaults.type;
         }
 
-        public Builder setRollingUpdate(@Nullable Input<RollingUpdateStatefulSetStrategyArgs> rollingUpdate) {
+        public Builder rollingUpdate(@Nullable Input<RollingUpdateStatefulSetStrategyArgs> rollingUpdate) {
             this.rollingUpdate = rollingUpdate;
             return this;
         }
 
-        public Builder setRollingUpdate(@Nullable RollingUpdateStatefulSetStrategyArgs rollingUpdate) {
+        public Builder rollingUpdate(@Nullable RollingUpdateStatefulSetStrategyArgs rollingUpdate) {
             this.rollingUpdate = Input.ofNullable(rollingUpdate);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

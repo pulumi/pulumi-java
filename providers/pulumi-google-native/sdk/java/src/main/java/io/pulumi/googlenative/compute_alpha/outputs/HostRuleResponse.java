@@ -82,17 +82,17 @@ public final class HostRuleResponse {
     	      this.pathMatcher = defaults.pathMatcher;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setHosts(List<String> hosts) {
+        public Builder hosts(List<String> hosts) {
             this.hosts = Objects.requireNonNull(hosts);
             return this;
         }
 
-        public Builder setPathMatcher(String pathMatcher) {
+        public Builder pathMatcher(String pathMatcher) {
             this.pathMatcher = Objects.requireNonNull(pathMatcher);
             return this;
         }

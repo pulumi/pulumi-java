@@ -143,62 +143,62 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
     	      this.unit = defaults.unit;
         }
 
-        public Builder setAmount(@Nullable Input<MoneyArgs> amount) {
+        public Builder amount(@Nullable Input<MoneyArgs> amount) {
             this.amount = amount;
             return this;
         }
 
-        public Builder setAmount(@Nullable MoneyArgs amount) {
+        public Builder amount(@Nullable MoneyArgs amount) {
             this.amount = Input.ofNullable(amount);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setExpectedUnitsPerYear(@Nullable Input<Double> expectedUnitsPerYear) {
+        public Builder expectedUnitsPerYear(@Nullable Input<Double> expectedUnitsPerYear) {
             this.expectedUnitsPerYear = expectedUnitsPerYear;
             return this;
         }
 
-        public Builder setExpectedUnitsPerYear(@Nullable Double expectedUnitsPerYear) {
+        public Builder expectedUnitsPerYear(@Nullable Double expectedUnitsPerYear) {
             this.expectedUnitsPerYear = Input.ofNullable(expectedUnitsPerYear);
             return this;
         }
 
-        public Builder setRange(@Nullable Input<CompensationRangeArgs> range) {
+        public Builder range(@Nullable Input<CompensationRangeArgs> range) {
             this.range = range;
             return this;
         }
 
-        public Builder setRange(@Nullable CompensationRangeArgs range) {
+        public Builder range(@Nullable CompensationRangeArgs range) {
             this.range = Input.ofNullable(range);
             return this;
         }
 
-        public Builder setType(@Nullable Input<CompensationEntryType> type) {
+        public Builder type(@Nullable Input<CompensationEntryType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable CompensationEntryType type) {
+        public Builder type(@Nullable CompensationEntryType type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setUnit(@Nullable Input<CompensationEntryUnit> unit) {
+        public Builder unit(@Nullable Input<CompensationEntryUnit> unit) {
             this.unit = unit;
             return this;
         }
 
-        public Builder setUnit(@Nullable CompensationEntryUnit unit) {
+        public Builder unit(@Nullable CompensationEntryUnit unit) {
             this.unit = Input.ofNullable(unit);
             return this;
         }

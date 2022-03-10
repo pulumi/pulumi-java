@@ -120,27 +120,27 @@ public final class CircuitBreakersResponse extends io.pulumi.resources.InvokeArg
     	      this.maxRetries = defaults.maxRetries;
         }
 
-        public Builder setMaxConnections(Integer maxConnections) {
+        public Builder maxConnections(Integer maxConnections) {
             this.maxConnections = Objects.requireNonNull(maxConnections);
             return this;
         }
 
-        public Builder setMaxPendingRequests(Integer maxPendingRequests) {
+        public Builder maxPendingRequests(Integer maxPendingRequests) {
             this.maxPendingRequests = Objects.requireNonNull(maxPendingRequests);
             return this;
         }
 
-        public Builder setMaxRequests(Integer maxRequests) {
+        public Builder maxRequests(Integer maxRequests) {
             this.maxRequests = Objects.requireNonNull(maxRequests);
             return this;
         }
 
-        public Builder setMaxRequestsPerConnection(Integer maxRequestsPerConnection) {
+        public Builder maxRequestsPerConnection(Integer maxRequestsPerConnection) {
             this.maxRequestsPerConnection = Objects.requireNonNull(maxRequestsPerConnection);
             return this;
         }
 
-        public Builder setMaxRetries(Integer maxRetries) {
+        public Builder maxRetries(Integer maxRetries) {
             this.maxRetries = Objects.requireNonNull(maxRetries);
             return this;
         }

@@ -135,62 +135,62 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setAllowUpdates(@Nullable Input<Boolean> allowUpdates) {
+        public Builder allowUpdates(@Nullable Input<Boolean> allowUpdates) {
             this.allowUpdates = allowUpdates;
             return this;
         }
 
-        public Builder setAllowUpdates(@Nullable Boolean allowUpdates) {
+        public Builder allowUpdates(@Nullable Boolean allowUpdates) {
             this.allowUpdates = Input.ofNullable(allowUpdates);
             return this;
         }
 
-        public Builder setApplicationName(@Nullable Input<String> applicationName) {
+        public Builder applicationName(@Nullable Input<String> applicationName) {
             this.applicationName = applicationName;
             return this;
         }
 
-        public Builder setApplicationName(@Nullable String applicationName) {
+        public Builder applicationName(@Nullable String applicationName) {
             this.applicationName = Input.ofNullable(applicationName);
             return this;
         }
 
-        public Builder setDefaultVersion(@Nullable Input<String> defaultVersion) {
+        public Builder defaultVersion(@Nullable Input<String> defaultVersion) {
             this.defaultVersion = defaultVersion;
             return this;
         }
 
-        public Builder setDefaultVersion(@Nullable String defaultVersion) {
+        public Builder defaultVersion(@Nullable String defaultVersion) {
             this.defaultVersion = Input.ofNullable(defaultVersion);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

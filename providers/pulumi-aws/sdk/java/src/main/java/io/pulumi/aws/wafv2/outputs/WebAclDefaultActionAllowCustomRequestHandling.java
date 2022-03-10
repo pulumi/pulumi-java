@@ -49,7 +49,7 @@ public final class WebAclDefaultActionAllowCustomRequestHandling {
     	      this.insertHeaders = defaults.insertHeaders;
         }
 
-        public Builder setInsertHeaders(List<WebAclDefaultActionAllowCustomRequestHandlingInsertHeader> insertHeaders) {
+        public Builder insertHeaders(List<WebAclDefaultActionAllowCustomRequestHandlingInsertHeader> insertHeaders) {
             this.insertHeaders = Objects.requireNonNull(insertHeaders);
             return this;
         }

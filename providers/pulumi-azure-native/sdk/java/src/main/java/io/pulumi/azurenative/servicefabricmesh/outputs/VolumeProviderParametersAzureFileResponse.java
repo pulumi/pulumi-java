@@ -83,17 +83,17 @@ public final class VolumeProviderParametersAzureFileResponse {
     	      this.shareName = defaults.shareName;
         }
 
-        public Builder setAccountKey(@Nullable String accountKey) {
+        public Builder accountKey(@Nullable String accountKey) {
             this.accountKey = accountKey;
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setShareName(String shareName) {
+        public Builder shareName(String shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }

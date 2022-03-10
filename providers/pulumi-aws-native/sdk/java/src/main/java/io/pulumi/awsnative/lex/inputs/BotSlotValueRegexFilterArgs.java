@@ -56,12 +56,12 @@ public final class BotSlotValueRegexFilterArgs extends io.pulumi.resources.Resou
     	      this.pattern = defaults.pattern;
         }
 
-        public Builder setPattern(Input<String> pattern) {
+        public Builder pattern(Input<String> pattern) {
             this.pattern = Objects.requireNonNull(pattern);
             return this;
         }
 
-        public Builder setPattern(String pattern) {
+        public Builder pattern(String pattern) {
             this.pattern = Input.of(Objects.requireNonNull(pattern));
             return this;
         }

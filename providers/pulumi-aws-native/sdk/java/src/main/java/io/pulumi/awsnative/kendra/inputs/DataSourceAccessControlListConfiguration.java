@@ -49,7 +49,7 @@ public final class DataSourceAccessControlListConfiguration extends io.pulumi.re
     	      this.keyPath = defaults.keyPath;
         }
 
-        public Builder setKeyPath(@Nullable String keyPath) {
+        public Builder keyPath(@Nullable String keyPath) {
             this.keyPath = keyPath;
             return this;
         }

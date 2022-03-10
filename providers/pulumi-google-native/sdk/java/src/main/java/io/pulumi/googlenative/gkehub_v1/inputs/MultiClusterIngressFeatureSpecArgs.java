@@ -57,12 +57,12 @@ public final class MultiClusterIngressFeatureSpecArgs extends io.pulumi.resource
     	      this.configMembership = defaults.configMembership;
         }
 
-        public Builder setConfigMembership(@Nullable Input<String> configMembership) {
+        public Builder configMembership(@Nullable Input<String> configMembership) {
             this.configMembership = configMembership;
             return this;
         }
 
-        public Builder setConfigMembership(@Nullable String configMembership) {
+        public Builder configMembership(@Nullable String configMembership) {
             this.configMembership = Input.ofNullable(configMembership);
             return this;
         }

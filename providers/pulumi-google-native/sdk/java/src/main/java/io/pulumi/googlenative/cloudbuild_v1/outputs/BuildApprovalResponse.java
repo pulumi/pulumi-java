@@ -83,17 +83,17 @@ public final class BuildApprovalResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setConfig(ApprovalConfigResponse config) {
+        public Builder config(ApprovalConfigResponse config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
-        public Builder setResult(ApprovalResultResponse result) {
+        public Builder result(ApprovalResultResponse result) {
             this.result = Objects.requireNonNull(result);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

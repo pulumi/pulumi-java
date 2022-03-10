@@ -48,7 +48,7 @@ public final class BucketReplicationConfigurationRuleSourceSelectionCriteriaSseK
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }

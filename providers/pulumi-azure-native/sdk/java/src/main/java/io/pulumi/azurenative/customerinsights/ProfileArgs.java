@@ -332,182 +332,182 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.typeName = defaults.typeName;
         }
 
-        public Builder setApiEntitySetName(@Nullable Input<String> apiEntitySetName) {
+        public Builder apiEntitySetName(@Nullable Input<String> apiEntitySetName) {
             this.apiEntitySetName = apiEntitySetName;
             return this;
         }
 
-        public Builder setApiEntitySetName(@Nullable String apiEntitySetName) {
+        public Builder apiEntitySetName(@Nullable String apiEntitySetName) {
             this.apiEntitySetName = Input.ofNullable(apiEntitySetName);
             return this;
         }
 
-        public Builder setAttributes(@Nullable Input<Map<String,List<String>>> attributes) {
+        public Builder attributes(@Nullable Input<Map<String,List<String>>> attributes) {
             this.attributes = attributes;
             return this;
         }
 
-        public Builder setAttributes(@Nullable Map<String,List<String>> attributes) {
+        public Builder attributes(@Nullable Map<String,List<String>> attributes) {
             this.attributes = Input.ofNullable(attributes);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<Map<String,String>> description) {
+        public Builder description(@Nullable Input<Map<String,String>> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable Map<String,String> description) {
+        public Builder description(@Nullable Map<String,String> description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<Map<String,String>> displayName) {
+        public Builder displayName(@Nullable Input<Map<String,String>> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Map<String,String> displayName) {
+        public Builder displayName(@Nullable Map<String,String> displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setEntityType(@Nullable Input<EntityTypes> entityType) {
+        public Builder entityType(@Nullable Input<EntityTypes> entityType) {
             this.entityType = entityType;
             return this;
         }
 
-        public Builder setEntityType(@Nullable EntityTypes entityType) {
+        public Builder entityType(@Nullable EntityTypes entityType) {
             this.entityType = Input.ofNullable(entityType);
             return this;
         }
 
-        public Builder setFields(@Nullable Input<List<PropertyDefinitionArgs>> fields) {
+        public Builder fields(@Nullable Input<List<PropertyDefinitionArgs>> fields) {
             this.fields = fields;
             return this;
         }
 
-        public Builder setFields(@Nullable List<PropertyDefinitionArgs> fields) {
+        public Builder fields(@Nullable List<PropertyDefinitionArgs> fields) {
             this.fields = Input.ofNullable(fields);
             return this;
         }
 
-        public Builder setHubName(Input<String> hubName) {
+        public Builder hubName(Input<String> hubName) {
             this.hubName = Objects.requireNonNull(hubName);
             return this;
         }
 
-        public Builder setHubName(String hubName) {
+        public Builder hubName(String hubName) {
             this.hubName = Input.of(Objects.requireNonNull(hubName));
             return this;
         }
 
-        public Builder setInstancesCount(@Nullable Input<Integer> instancesCount) {
+        public Builder instancesCount(@Nullable Input<Integer> instancesCount) {
             this.instancesCount = instancesCount;
             return this;
         }
 
-        public Builder setInstancesCount(@Nullable Integer instancesCount) {
+        public Builder instancesCount(@Nullable Integer instancesCount) {
             this.instancesCount = Input.ofNullable(instancesCount);
             return this;
         }
 
-        public Builder setLargeImage(@Nullable Input<String> largeImage) {
+        public Builder largeImage(@Nullable Input<String> largeImage) {
             this.largeImage = largeImage;
             return this;
         }
 
-        public Builder setLargeImage(@Nullable String largeImage) {
+        public Builder largeImage(@Nullable String largeImage) {
             this.largeImage = Input.ofNullable(largeImage);
             return this;
         }
 
-        public Builder setLocalizedAttributes(@Nullable Input<Map<String,Map<String,String>>> localizedAttributes) {
+        public Builder localizedAttributes(@Nullable Input<Map<String,Map<String,String>>> localizedAttributes) {
             this.localizedAttributes = localizedAttributes;
             return this;
         }
 
-        public Builder setLocalizedAttributes(@Nullable Map<String,Map<String,String>> localizedAttributes) {
+        public Builder localizedAttributes(@Nullable Map<String,Map<String,String>> localizedAttributes) {
             this.localizedAttributes = Input.ofNullable(localizedAttributes);
             return this;
         }
 
-        public Builder setMediumImage(@Nullable Input<String> mediumImage) {
+        public Builder mediumImage(@Nullable Input<String> mediumImage) {
             this.mediumImage = mediumImage;
             return this;
         }
 
-        public Builder setMediumImage(@Nullable String mediumImage) {
+        public Builder mediumImage(@Nullable String mediumImage) {
             this.mediumImage = Input.ofNullable(mediumImage);
             return this;
         }
 
-        public Builder setProfileName(@Nullable Input<String> profileName) {
+        public Builder profileName(@Nullable Input<String> profileName) {
             this.profileName = profileName;
             return this;
         }
 
-        public Builder setProfileName(@Nullable String profileName) {
+        public Builder profileName(@Nullable String profileName) {
             this.profileName = Input.ofNullable(profileName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSchemaItemTypeLink(@Nullable Input<String> schemaItemTypeLink) {
+        public Builder schemaItemTypeLink(@Nullable Input<String> schemaItemTypeLink) {
             this.schemaItemTypeLink = schemaItemTypeLink;
             return this;
         }
 
-        public Builder setSchemaItemTypeLink(@Nullable String schemaItemTypeLink) {
+        public Builder schemaItemTypeLink(@Nullable String schemaItemTypeLink) {
             this.schemaItemTypeLink = Input.ofNullable(schemaItemTypeLink);
             return this;
         }
 
-        public Builder setSmallImage(@Nullable Input<String> smallImage) {
+        public Builder smallImage(@Nullable Input<String> smallImage) {
             this.smallImage = smallImage;
             return this;
         }
 
-        public Builder setSmallImage(@Nullable String smallImage) {
+        public Builder smallImage(@Nullable String smallImage) {
             this.smallImage = Input.ofNullable(smallImage);
             return this;
         }
 
-        public Builder setStrongIds(@Nullable Input<List<StrongIdArgs>> strongIds) {
+        public Builder strongIds(@Nullable Input<List<StrongIdArgs>> strongIds) {
             this.strongIds = strongIds;
             return this;
         }
 
-        public Builder setStrongIds(@Nullable List<StrongIdArgs> strongIds) {
+        public Builder strongIds(@Nullable List<StrongIdArgs> strongIds) {
             this.strongIds = Input.ofNullable(strongIds);
             return this;
         }
 
-        public Builder setTimestampFieldName(@Nullable Input<String> timestampFieldName) {
+        public Builder timestampFieldName(@Nullable Input<String> timestampFieldName) {
             this.timestampFieldName = timestampFieldName;
             return this;
         }
 
-        public Builder setTimestampFieldName(@Nullable String timestampFieldName) {
+        public Builder timestampFieldName(@Nullable String timestampFieldName) {
             this.timestampFieldName = Input.ofNullable(timestampFieldName);
             return this;
         }
 
-        public Builder setTypeName(@Nullable Input<String> typeName) {
+        public Builder typeName(@Nullable Input<String> typeName) {
             this.typeName = typeName;
             return this;
         }
 
-        public Builder setTypeName(@Nullable String typeName) {
+        public Builder typeName(@Nullable String typeName) {
             this.typeName = Input.ofNullable(typeName);
             return this;
         }

@@ -107,42 +107,42 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     	      this.service = defaults.service;
         }
 
-        public Builder setDisableDependentServices(@Nullable Input<Boolean> disableDependentServices) {
+        public Builder disableDependentServices(@Nullable Input<Boolean> disableDependentServices) {
             this.disableDependentServices = disableDependentServices;
             return this;
         }
 
-        public Builder setDisableDependentServices(@Nullable Boolean disableDependentServices) {
+        public Builder disableDependentServices(@Nullable Boolean disableDependentServices) {
             this.disableDependentServices = Input.ofNullable(disableDependentServices);
             return this;
         }
 
-        public Builder setDisableOnDestroy(@Nullable Input<Boolean> disableOnDestroy) {
+        public Builder disableOnDestroy(@Nullable Input<Boolean> disableOnDestroy) {
             this.disableOnDestroy = disableOnDestroy;
             return this;
         }
 
-        public Builder setDisableOnDestroy(@Nullable Boolean disableOnDestroy) {
+        public Builder disableOnDestroy(@Nullable Boolean disableOnDestroy) {
             this.disableOnDestroy = Input.ofNullable(disableOnDestroy);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setService(@Nullable Input<String> service) {
+        public Builder service(@Nullable Input<String> service) {
             this.service = service;
             return this;
         }
 
-        public Builder setService(@Nullable String service) {
+        public Builder service(@Nullable String service) {
             this.service = Input.ofNullable(service);
             return this;
         }

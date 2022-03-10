@@ -132,32 +132,32 @@ public final class ReportConfigFilterResponse {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAnd(@Nullable List<ReportConfigFilterResponse> and) {
+        public Builder and(@Nullable List<ReportConfigFilterResponse> and) {
             this.and = and;
             return this;
         }
 
-        public Builder setDimensions(@Nullable ReportConfigComparisonExpressionResponse dimensions) {
+        public Builder dimensions(@Nullable ReportConfigComparisonExpressionResponse dimensions) {
             this.dimensions = dimensions;
             return this;
         }
 
-        public Builder setOr(@Nullable List<ReportConfigFilterResponse> or) {
+        public Builder or(@Nullable List<ReportConfigFilterResponse> or) {
             this.or = or;
             return this;
         }
 
-        public Builder setTagKey(@Nullable ReportConfigComparisonExpressionResponse tagKey) {
+        public Builder tagKey(@Nullable ReportConfigComparisonExpressionResponse tagKey) {
             this.tagKey = tagKey;
             return this;
         }
 
-        public Builder setTagValue(@Nullable ReportConfigComparisonExpressionResponse tagValue) {
+        public Builder tagValue(@Nullable ReportConfigComparisonExpressionResponse tagValue) {
             this.tagValue = tagValue;
             return this;
         }
 
-        public Builder setTags(@Nullable ReportConfigComparisonExpressionResponse tags) {
+        public Builder tags(@Nullable ReportConfigComparisonExpressionResponse tags) {
             this.tags = tags;
             return this;
         }

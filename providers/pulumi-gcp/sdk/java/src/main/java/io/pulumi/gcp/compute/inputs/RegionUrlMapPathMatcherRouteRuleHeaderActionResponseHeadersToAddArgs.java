@@ -88,32 +88,32 @@ public final class RegionUrlMapPathMatcherRouteRuleHeaderActionResponseHeadersTo
     	      this.replace = defaults.replace;
         }
 
-        public Builder setHeaderName(Input<String> headerName) {
+        public Builder headerName(Input<String> headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
-        public Builder setHeaderName(String headerName) {
+        public Builder headerName(String headerName) {
             this.headerName = Input.of(Objects.requireNonNull(headerName));
             return this;
         }
 
-        public Builder setHeaderValue(Input<String> headerValue) {
+        public Builder headerValue(Input<String> headerValue) {
             this.headerValue = Objects.requireNonNull(headerValue);
             return this;
         }
 
-        public Builder setHeaderValue(String headerValue) {
+        public Builder headerValue(String headerValue) {
             this.headerValue = Input.of(Objects.requireNonNull(headerValue));
             return this;
         }
 
-        public Builder setReplace(Input<Boolean> replace) {
+        public Builder replace(Input<Boolean> replace) {
             this.replace = Objects.requireNonNull(replace);
             return this;
         }
 
-        public Builder setReplace(Boolean replace) {
+        public Builder replace(Boolean replace) {
             this.replace = Input.of(Objects.requireNonNull(replace));
             return this;
         }

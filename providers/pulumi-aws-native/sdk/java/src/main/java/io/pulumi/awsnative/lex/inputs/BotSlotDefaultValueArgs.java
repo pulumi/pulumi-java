@@ -56,12 +56,12 @@ public final class BotSlotDefaultValueArgs extends io.pulumi.resources.ResourceA
     	      this.defaultValue = defaults.defaultValue;
         }
 
-        public Builder setDefaultValue(Input<String> defaultValue) {
+        public Builder defaultValue(Input<String> defaultValue) {
             this.defaultValue = Objects.requireNonNull(defaultValue);
             return this;
         }
 
-        public Builder setDefaultValue(String defaultValue) {
+        public Builder defaultValue(String defaultValue) {
             this.defaultValue = Input.of(Objects.requireNonNull(defaultValue));
             return this;
         }

@@ -73,12 +73,12 @@ public final class PngFormatResponse extends io.pulumi.resources.InvokeArgs {
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setFilenamePattern(String filenamePattern) {
+        public Builder filenamePattern(String filenamePattern) {
             this.filenamePattern = Objects.requireNonNull(filenamePattern);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }

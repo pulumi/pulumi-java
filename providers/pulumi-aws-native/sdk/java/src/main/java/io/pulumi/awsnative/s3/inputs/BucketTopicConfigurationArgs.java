@@ -91,32 +91,32 @@ public final class BucketTopicConfigurationArgs extends io.pulumi.resources.Reso
     	      this.topic = defaults.topic;
         }
 
-        public Builder setEvent(Input<String> event) {
+        public Builder event(Input<String> event) {
             this.event = Objects.requireNonNull(event);
             return this;
         }
 
-        public Builder setEvent(String event) {
+        public Builder event(String event) {
             this.event = Input.of(Objects.requireNonNull(event));
             return this;
         }
 
-        public Builder setFilter(@Nullable Input<BucketNotificationFilterArgs> filter) {
+        public Builder filter(@Nullable Input<BucketNotificationFilterArgs> filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFilter(@Nullable BucketNotificationFilterArgs filter) {
+        public Builder filter(@Nullable BucketNotificationFilterArgs filter) {
             this.filter = Input.ofNullable(filter);
             return this;
         }
 
-        public Builder setTopic(Input<String> topic) {
+        public Builder topic(Input<String> topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
 
-        public Builder setTopic(String topic) {
+        public Builder topic(String topic) {
             this.topic = Input.of(Objects.requireNonNull(topic));
             return this;
         }

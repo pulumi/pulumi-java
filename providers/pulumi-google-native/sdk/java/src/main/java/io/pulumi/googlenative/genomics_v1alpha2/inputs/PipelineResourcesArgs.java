@@ -191,92 +191,92 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
     	      this.zones = defaults.zones;
         }
 
-        public Builder setAcceleratorCount(@Nullable Input<String> acceleratorCount) {
+        public Builder acceleratorCount(@Nullable Input<String> acceleratorCount) {
             this.acceleratorCount = acceleratorCount;
             return this;
         }
 
-        public Builder setAcceleratorCount(@Nullable String acceleratorCount) {
+        public Builder acceleratorCount(@Nullable String acceleratorCount) {
             this.acceleratorCount = Input.ofNullable(acceleratorCount);
             return this;
         }
 
-        public Builder setAcceleratorType(@Nullable Input<String> acceleratorType) {
+        public Builder acceleratorType(@Nullable Input<String> acceleratorType) {
             this.acceleratorType = acceleratorType;
             return this;
         }
 
-        public Builder setAcceleratorType(@Nullable String acceleratorType) {
+        public Builder acceleratorType(@Nullable String acceleratorType) {
             this.acceleratorType = Input.ofNullable(acceleratorType);
             return this;
         }
 
-        public Builder setBootDiskSizeGb(@Nullable Input<Integer> bootDiskSizeGb) {
+        public Builder bootDiskSizeGb(@Nullable Input<Integer> bootDiskSizeGb) {
             this.bootDiskSizeGb = bootDiskSizeGb;
             return this;
         }
 
-        public Builder setBootDiskSizeGb(@Nullable Integer bootDiskSizeGb) {
+        public Builder bootDiskSizeGb(@Nullable Integer bootDiskSizeGb) {
             this.bootDiskSizeGb = Input.ofNullable(bootDiskSizeGb);
             return this;
         }
 
-        public Builder setDisks(@Nullable Input<List<DiskArgs>> disks) {
+        public Builder disks(@Nullable Input<List<DiskArgs>> disks) {
             this.disks = disks;
             return this;
         }
 
-        public Builder setDisks(@Nullable List<DiskArgs> disks) {
+        public Builder disks(@Nullable List<DiskArgs> disks) {
             this.disks = Input.ofNullable(disks);
             return this;
         }
 
-        public Builder setMinimumCpuCores(@Nullable Input<Integer> minimumCpuCores) {
+        public Builder minimumCpuCores(@Nullable Input<Integer> minimumCpuCores) {
             this.minimumCpuCores = minimumCpuCores;
             return this;
         }
 
-        public Builder setMinimumCpuCores(@Nullable Integer minimumCpuCores) {
+        public Builder minimumCpuCores(@Nullable Integer minimumCpuCores) {
             this.minimumCpuCores = Input.ofNullable(minimumCpuCores);
             return this;
         }
 
-        public Builder setMinimumRamGb(@Nullable Input<Double> minimumRamGb) {
+        public Builder minimumRamGb(@Nullable Input<Double> minimumRamGb) {
             this.minimumRamGb = minimumRamGb;
             return this;
         }
 
-        public Builder setMinimumRamGb(@Nullable Double minimumRamGb) {
+        public Builder minimumRamGb(@Nullable Double minimumRamGb) {
             this.minimumRamGb = Input.ofNullable(minimumRamGb);
             return this;
         }
 
-        public Builder setNoAddress(@Nullable Input<Boolean> noAddress) {
+        public Builder noAddress(@Nullable Input<Boolean> noAddress) {
             this.noAddress = noAddress;
             return this;
         }
 
-        public Builder setNoAddress(@Nullable Boolean noAddress) {
+        public Builder noAddress(@Nullable Boolean noAddress) {
             this.noAddress = Input.ofNullable(noAddress);
             return this;
         }
 
-        public Builder setPreemptible(@Nullable Input<Boolean> preemptible) {
+        public Builder preemptible(@Nullable Input<Boolean> preemptible) {
             this.preemptible = preemptible;
             return this;
         }
 
-        public Builder setPreemptible(@Nullable Boolean preemptible) {
+        public Builder preemptible(@Nullable Boolean preemptible) {
             this.preemptible = Input.ofNullable(preemptible);
             return this;
         }
 
-        public Builder setZones(@Nullable Input<List<String>> zones) {
+        public Builder zones(@Nullable Input<List<String>> zones) {
             this.zones = zones;
             return this;
         }
 
-        public Builder setZones(@Nullable List<String> zones) {
+        public Builder zones(@Nullable List<String> zones) {
             this.zones = Input.ofNullable(zones);
             return this;
         }

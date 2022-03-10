@@ -127,8 +127,8 @@ public class NetworkPolicy extends io.pulumi.resources.CustomResource {
     private static NetworkPolicyArgs makeArgs(@Nullable NetworkPolicyArgs args) {
         var builder = args == null ? NetworkPolicyArgs.builder() : NetworkPolicyArgs.builder(args);
         return builder
-            .setApiVersion("extensions/v1beta1")
-            .setKind("NetworkPolicy")
+            .apiVersion("extensions/v1beta1")
+            .kind("NetworkPolicy")
             .build();
     }
 

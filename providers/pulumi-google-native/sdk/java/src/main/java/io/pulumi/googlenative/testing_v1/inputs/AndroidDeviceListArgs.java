@@ -57,12 +57,12 @@ public final class AndroidDeviceListArgs extends io.pulumi.resources.ResourceArg
     	      this.androidDevices = defaults.androidDevices;
         }
 
-        public Builder setAndroidDevices(Input<List<AndroidDeviceArgs>> androidDevices) {
+        public Builder androidDevices(Input<List<AndroidDeviceArgs>> androidDevices) {
             this.androidDevices = Objects.requireNonNull(androidDevices);
             return this;
         }
 
-        public Builder setAndroidDevices(List<AndroidDeviceArgs> androidDevices) {
+        public Builder androidDevices(List<AndroidDeviceArgs> androidDevices) {
             this.androidDevices = Input.of(Objects.requireNonNull(androidDevices));
             return this;
         }

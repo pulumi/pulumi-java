@@ -50,7 +50,7 @@ public final class ChannelHlsIngest {
     	      this.ingestEndpoints = defaults.ingestEndpoints;
         }
 
-        public Builder setIngestEndpoints(@Nullable List<ChannelHlsIngestIngestEndpoint> ingestEndpoints) {
+        public Builder ingestEndpoints(@Nullable List<ChannelHlsIngestIngestEndpoint> ingestEndpoints) {
             this.ingestEndpoints = ingestEndpoints;
             return this;
         }

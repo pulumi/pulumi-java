@@ -74,22 +74,22 @@ public final class PatchDeploymentRecurringScheduleMonthlyArgs extends io.pulumi
     	      this.weekDayOfMonth = defaults.weekDayOfMonth;
         }
 
-        public Builder setMonthDay(@Nullable Input<Integer> monthDay) {
+        public Builder monthDay(@Nullable Input<Integer> monthDay) {
             this.monthDay = monthDay;
             return this;
         }
 
-        public Builder setMonthDay(@Nullable Integer monthDay) {
+        public Builder monthDay(@Nullable Integer monthDay) {
             this.monthDay = Input.ofNullable(monthDay);
             return this;
         }
 
-        public Builder setWeekDayOfMonth(@Nullable Input<PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs> weekDayOfMonth) {
+        public Builder weekDayOfMonth(@Nullable Input<PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs> weekDayOfMonth) {
             this.weekDayOfMonth = weekDayOfMonth;
             return this;
         }
 
-        public Builder setWeekDayOfMonth(@Nullable PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs weekDayOfMonth) {
+        public Builder weekDayOfMonth(@Nullable PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs weekDayOfMonth) {
             this.weekDayOfMonth = Input.ofNullable(weekDayOfMonth);
             return this;
         }

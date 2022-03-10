@@ -66,12 +66,12 @@ public final class PatchRolloutResponse {
     	      this.mode = defaults.mode;
         }
 
-        public Builder setDisruptionBudget(FixedOrPercentResponse disruptionBudget) {
+        public Builder disruptionBudget(FixedOrPercentResponse disruptionBudget) {
             this.disruptionBudget = Objects.requireNonNull(disruptionBudget);
             return this;
         }
 
-        public Builder setMode(String mode) {
+        public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }

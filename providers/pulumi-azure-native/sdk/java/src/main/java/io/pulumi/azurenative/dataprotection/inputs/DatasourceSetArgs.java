@@ -154,72 +154,72 @@ public final class DatasourceSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceUri = defaults.resourceUri;
         }
 
-        public Builder setDatasourceType(@Nullable Input<String> datasourceType) {
+        public Builder datasourceType(@Nullable Input<String> datasourceType) {
             this.datasourceType = datasourceType;
             return this;
         }
 
-        public Builder setDatasourceType(@Nullable String datasourceType) {
+        public Builder datasourceType(@Nullable String datasourceType) {
             this.datasourceType = Input.ofNullable(datasourceType);
             return this;
         }
 
-        public Builder setObjectType(@Nullable Input<String> objectType) {
+        public Builder objectType(@Nullable Input<String> objectType) {
             this.objectType = objectType;
             return this;
         }
 
-        public Builder setObjectType(@Nullable String objectType) {
+        public Builder objectType(@Nullable String objectType) {
             this.objectType = Input.ofNullable(objectType);
             return this;
         }
 
-        public Builder setResourceID(Input<String> resourceID) {
+        public Builder resourceID(Input<String> resourceID) {
             this.resourceID = Objects.requireNonNull(resourceID);
             return this;
         }
 
-        public Builder setResourceID(String resourceID) {
+        public Builder resourceID(String resourceID) {
             this.resourceID = Input.of(Objects.requireNonNull(resourceID));
             return this;
         }
 
-        public Builder setResourceLocation(@Nullable Input<String> resourceLocation) {
+        public Builder resourceLocation(@Nullable Input<String> resourceLocation) {
             this.resourceLocation = resourceLocation;
             return this;
         }
 
-        public Builder setResourceLocation(@Nullable String resourceLocation) {
+        public Builder resourceLocation(@Nullable String resourceLocation) {
             this.resourceLocation = Input.ofNullable(resourceLocation);
             return this;
         }
 
-        public Builder setResourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Input<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
-        public Builder setResourceName(@Nullable String resourceName) {
+        public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Input.ofNullable(resourceName);
             return this;
         }
 
-        public Builder setResourceType(@Nullable Input<String> resourceType) {
+        public Builder resourceType(@Nullable Input<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
-        public Builder setResourceType(@Nullable String resourceType) {
+        public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = Input.ofNullable(resourceType);
             return this;
         }
 
-        public Builder setResourceUri(@Nullable Input<String> resourceUri) {
+        public Builder resourceUri(@Nullable Input<String> resourceUri) {
             this.resourceUri = resourceUri;
             return this;
         }
 
-        public Builder setResourceUri(@Nullable String resourceUri) {
+        public Builder resourceUri(@Nullable String resourceUri) {
             this.resourceUri = Input.ofNullable(resourceUri);
             return this;
         }

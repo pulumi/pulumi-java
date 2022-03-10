@@ -122,27 +122,27 @@ public final class StageDefaultRouteSettings {
     	      this.throttlingRateLimit = defaults.throttlingRateLimit;
         }
 
-        public Builder setDataTraceEnabled(@Nullable Boolean dataTraceEnabled) {
+        public Builder dataTraceEnabled(@Nullable Boolean dataTraceEnabled) {
             this.dataTraceEnabled = dataTraceEnabled;
             return this;
         }
 
-        public Builder setDetailedMetricsEnabled(@Nullable Boolean detailedMetricsEnabled) {
+        public Builder detailedMetricsEnabled(@Nullable Boolean detailedMetricsEnabled) {
             this.detailedMetricsEnabled = detailedMetricsEnabled;
             return this;
         }
 
-        public Builder setLoggingLevel(@Nullable String loggingLevel) {
+        public Builder loggingLevel(@Nullable String loggingLevel) {
             this.loggingLevel = loggingLevel;
             return this;
         }
 
-        public Builder setThrottlingBurstLimit(@Nullable Integer throttlingBurstLimit) {
+        public Builder throttlingBurstLimit(@Nullable Integer throttlingBurstLimit) {
             this.throttlingBurstLimit = throttlingBurstLimit;
             return this;
         }
 
-        public Builder setThrottlingRateLimit(@Nullable Double throttlingRateLimit) {
+        public Builder throttlingRateLimit(@Nullable Double throttlingRateLimit) {
             this.throttlingRateLimit = throttlingRateLimit;
             return this;
         }

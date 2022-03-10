@@ -57,12 +57,12 @@ public final class SavedDiskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sourceDisk = defaults.sourceDisk;
         }
 
-        public Builder setSourceDisk(@Nullable Input<String> sourceDisk) {
+        public Builder sourceDisk(@Nullable Input<String> sourceDisk) {
             this.sourceDisk = sourceDisk;
             return this;
         }
 
-        public Builder setSourceDisk(@Nullable String sourceDisk) {
+        public Builder sourceDisk(@Nullable String sourceDisk) {
             this.sourceDisk = Input.ofNullable(sourceDisk);
             return this;
         }

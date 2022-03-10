@@ -100,22 +100,22 @@ public final class VolumeBackupPropertiesResponse {
     	      this.vaultId = defaults.vaultId;
         }
 
-        public Builder setBackupEnabled(@Nullable Boolean backupEnabled) {
+        public Builder backupEnabled(@Nullable Boolean backupEnabled) {
             this.backupEnabled = backupEnabled;
             return this;
         }
 
-        public Builder setBackupPolicyId(@Nullable String backupPolicyId) {
+        public Builder backupPolicyId(@Nullable String backupPolicyId) {
             this.backupPolicyId = backupPolicyId;
             return this;
         }
 
-        public Builder setPolicyEnforced(@Nullable Boolean policyEnforced) {
+        public Builder policyEnforced(@Nullable Boolean policyEnforced) {
             this.policyEnforced = policyEnforced;
             return this;
         }
 
-        public Builder setVaultId(@Nullable String vaultId) {
+        public Builder vaultId(@Nullable String vaultId) {
             this.vaultId = vaultId;
             return this;
         }

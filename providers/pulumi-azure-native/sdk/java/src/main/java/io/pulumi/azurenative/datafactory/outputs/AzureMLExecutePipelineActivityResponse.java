@@ -283,77 +283,77 @@ public final class AzureMLExecutePipelineActivityResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setContinueOnStepFailure(@Nullable Object continueOnStepFailure) {
+        public Builder continueOnStepFailure(@Nullable Object continueOnStepFailure) {
             this.continueOnStepFailure = continueOnStepFailure;
             return this;
         }
 
-        public Builder setDataPathAssignments(@Nullable Object dataPathAssignments) {
+        public Builder dataPathAssignments(@Nullable Object dataPathAssignments) {
             this.dataPathAssignments = dataPathAssignments;
             return this;
         }
 
-        public Builder setDependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
+        public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setExperimentName(@Nullable Object experimentName) {
+        public Builder experimentName(@Nullable Object experimentName) {
             this.experimentName = experimentName;
             return this;
         }
 
-        public Builder setLinkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
+        public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
 
-        public Builder setMlParentRunId(@Nullable Object mlParentRunId) {
+        public Builder mlParentRunId(@Nullable Object mlParentRunId) {
             this.mlParentRunId = mlParentRunId;
             return this;
         }
 
-        public Builder setMlPipelineEndpointId(@Nullable Object mlPipelineEndpointId) {
+        public Builder mlPipelineEndpointId(@Nullable Object mlPipelineEndpointId) {
             this.mlPipelineEndpointId = mlPipelineEndpointId;
             return this;
         }
 
-        public Builder setMlPipelineId(@Nullable Object mlPipelineId) {
+        public Builder mlPipelineId(@Nullable Object mlPipelineId) {
             this.mlPipelineId = mlPipelineId;
             return this;
         }
 
-        public Builder setMlPipelineParameters(@Nullable Object mlPipelineParameters) {
+        public Builder mlPipelineParameters(@Nullable Object mlPipelineParameters) {
             this.mlPipelineParameters = mlPipelineParameters;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPolicy(@Nullable ActivityPolicyResponse policy) {
+        public Builder policy(@Nullable ActivityPolicyResponse policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserProperties(@Nullable List<UserPropertyResponse> userProperties) {
+        public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
 
-        public Builder setVersion(@Nullable Object version) {
+        public Builder version(@Nullable Object version) {
             this.version = version;
             return this;
         }

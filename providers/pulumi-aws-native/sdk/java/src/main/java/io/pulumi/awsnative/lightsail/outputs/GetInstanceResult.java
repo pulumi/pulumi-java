@@ -259,82 +259,82 @@ public final class GetInstanceResult {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setAddOns(@Nullable List<InstanceAddOn> addOns) {
+        public Builder addOns(@Nullable List<InstanceAddOn> addOns) {
             this.addOns = addOns;
             return this;
         }
 
-        public Builder setHardware(@Nullable InstanceHardware hardware) {
+        public Builder hardware(@Nullable InstanceHardware hardware) {
             this.hardware = hardware;
             return this;
         }
 
-        public Builder setInstanceArn(@Nullable String instanceArn) {
+        public Builder instanceArn(@Nullable String instanceArn) {
             this.instanceArn = instanceArn;
             return this;
         }
 
-        public Builder setIsStaticIp(@Nullable Boolean isStaticIp) {
+        public Builder isStaticIp(@Nullable Boolean isStaticIp) {
             this.isStaticIp = isStaticIp;
             return this;
         }
 
-        public Builder setKeyPairName(@Nullable String keyPairName) {
+        public Builder keyPairName(@Nullable String keyPairName) {
             this.keyPairName = keyPairName;
             return this;
         }
 
-        public Builder setLocation(@Nullable InstanceLocation location) {
+        public Builder location(@Nullable InstanceLocation location) {
             this.location = location;
             return this;
         }
 
-        public Builder setNetworking(@Nullable InstanceNetworking networking) {
+        public Builder networking(@Nullable InstanceNetworking networking) {
             this.networking = networking;
             return this;
         }
 
-        public Builder setPrivateIpAddress(@Nullable String privateIpAddress) {
+        public Builder privateIpAddress(@Nullable String privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
 
-        public Builder setPublicIpAddress(@Nullable String publicIpAddress) {
+        public Builder publicIpAddress(@Nullable String publicIpAddress) {
             this.publicIpAddress = publicIpAddress;
             return this;
         }
 
-        public Builder setResourceType(@Nullable String resourceType) {
+        public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
-        public Builder setSshKeyName(@Nullable String sshKeyName) {
+        public Builder sshKeyName(@Nullable String sshKeyName) {
             this.sshKeyName = sshKeyName;
             return this;
         }
 
-        public Builder setState(@Nullable InstanceState state) {
+        public Builder state(@Nullable InstanceState state) {
             this.state = state;
             return this;
         }
 
-        public Builder setSupportCode(@Nullable String supportCode) {
+        public Builder supportCode(@Nullable String supportCode) {
             this.supportCode = supportCode;
             return this;
         }
 
-        public Builder setTags(@Nullable List<InstanceTag> tags) {
+        public Builder tags(@Nullable List<InstanceTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setUserData(@Nullable String userData) {
+        public Builder userData(@Nullable String userData) {
             this.userData = userData;
             return this;
         }
 
-        public Builder setUserName(@Nullable String userName) {
+        public Builder userName(@Nullable String userName) {
             this.userName = userName;
             return this;
         }

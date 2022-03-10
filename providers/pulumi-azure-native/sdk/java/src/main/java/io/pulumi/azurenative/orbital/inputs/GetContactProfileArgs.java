@@ -68,12 +68,12 @@ public final class GetContactProfileArgs extends io.pulumi.resources.InvokeArgs 
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setContactProfileName(String contactProfileName) {
+        public Builder contactProfileName(String contactProfileName) {
             this.contactProfileName = Objects.requireNonNull(contactProfileName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

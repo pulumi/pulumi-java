@@ -53,12 +53,12 @@ public final class DistributionPolicyZoneConfigurationArgs extends io.pulumi.res
     	      this.zone = defaults.zone;
         }
 
-        public Builder setZone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Input<String> zone) {
             this.zone = zone;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = Input.ofNullable(zone);
             return this;
         }

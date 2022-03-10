@@ -183,92 +183,92 @@ public final class DomainIndexFieldArgs extends io.pulumi.resources.ResourceArgs
     	      this.type = defaults.type;
         }
 
-        public Builder setAnalysisScheme(@Nullable Input<String> analysisScheme) {
+        public Builder analysisScheme(@Nullable Input<String> analysisScheme) {
             this.analysisScheme = analysisScheme;
             return this;
         }
 
-        public Builder setAnalysisScheme(@Nullable String analysisScheme) {
+        public Builder analysisScheme(@Nullable String analysisScheme) {
             this.analysisScheme = Input.ofNullable(analysisScheme);
             return this;
         }
 
-        public Builder setDefaultValue(@Nullable Input<String> defaultValue) {
+        public Builder defaultValue(@Nullable Input<String> defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
 
-        public Builder setDefaultValue(@Nullable String defaultValue) {
+        public Builder defaultValue(@Nullable String defaultValue) {
             this.defaultValue = Input.ofNullable(defaultValue);
             return this;
         }
 
-        public Builder setFacet(@Nullable Input<Boolean> facet) {
+        public Builder facet(@Nullable Input<Boolean> facet) {
             this.facet = facet;
             return this;
         }
 
-        public Builder setFacet(@Nullable Boolean facet) {
+        public Builder facet(@Nullable Boolean facet) {
             this.facet = Input.ofNullable(facet);
             return this;
         }
 
-        public Builder setHighlight(@Nullable Input<Boolean> highlight) {
+        public Builder highlight(@Nullable Input<Boolean> highlight) {
             this.highlight = highlight;
             return this;
         }
 
-        public Builder setHighlight(@Nullable Boolean highlight) {
+        public Builder highlight(@Nullable Boolean highlight) {
             this.highlight = Input.ofNullable(highlight);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder set$return(@Nullable Input<Boolean> $return) {
+        public Builder $return(@Nullable Input<Boolean> $return) {
             this.$return = $return;
             return this;
         }
 
-        public Builder set$return(@Nullable Boolean $return) {
+        public Builder $return(@Nullable Boolean $return) {
             this.$return = Input.ofNullable($return);
             return this;
         }
 
-        public Builder setSearch(@Nullable Input<Boolean> search) {
+        public Builder search(@Nullable Input<Boolean> search) {
             this.search = search;
             return this;
         }
 
-        public Builder setSearch(@Nullable Boolean search) {
+        public Builder search(@Nullable Boolean search) {
             this.search = Input.ofNullable(search);
             return this;
         }
 
-        public Builder setSort(@Nullable Input<Boolean> sort) {
+        public Builder sort(@Nullable Input<Boolean> sort) {
             this.sort = sort;
             return this;
         }
 
-        public Builder setSort(@Nullable Boolean sort) {
+        public Builder sort(@Nullable Boolean sort) {
             this.sort = Input.ofNullable(sort);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

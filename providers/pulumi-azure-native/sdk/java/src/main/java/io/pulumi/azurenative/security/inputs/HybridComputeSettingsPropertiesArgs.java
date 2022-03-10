@@ -126,52 +126,52 @@ public final class HybridComputeSettingsPropertiesArgs extends io.pulumi.resourc
     	      this.servicePrincipal = defaults.servicePrincipal;
         }
 
-        public Builder setAutoProvision(Input<Either<String,AutoProvision>> autoProvision) {
+        public Builder autoProvision(Input<Either<String,AutoProvision>> autoProvision) {
             this.autoProvision = Objects.requireNonNull(autoProvision);
             return this;
         }
 
-        public Builder setAutoProvision(Either<String,AutoProvision> autoProvision) {
+        public Builder autoProvision(Either<String,AutoProvision> autoProvision) {
             this.autoProvision = Input.of(Objects.requireNonNull(autoProvision));
             return this;
         }
 
-        public Builder setProxyServer(@Nullable Input<ProxyServerPropertiesArgs> proxyServer) {
+        public Builder proxyServer(@Nullable Input<ProxyServerPropertiesArgs> proxyServer) {
             this.proxyServer = proxyServer;
             return this;
         }
 
-        public Builder setProxyServer(@Nullable ProxyServerPropertiesArgs proxyServer) {
+        public Builder proxyServer(@Nullable ProxyServerPropertiesArgs proxyServer) {
             this.proxyServer = Input.ofNullable(proxyServer);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setResourceGroupName(@Nullable Input<String> resourceGroupName) {
+        public Builder resourceGroupName(@Nullable Input<String> resourceGroupName) {
             this.resourceGroupName = resourceGroupName;
             return this;
         }
 
-        public Builder setResourceGroupName(@Nullable String resourceGroupName) {
+        public Builder resourceGroupName(@Nullable String resourceGroupName) {
             this.resourceGroupName = Input.ofNullable(resourceGroupName);
             return this;
         }
 
-        public Builder setServicePrincipal(@Nullable Input<ServicePrincipalPropertiesArgs> servicePrincipal) {
+        public Builder servicePrincipal(@Nullable Input<ServicePrincipalPropertiesArgs> servicePrincipal) {
             this.servicePrincipal = servicePrincipal;
             return this;
         }
 
-        public Builder setServicePrincipal(@Nullable ServicePrincipalPropertiesArgs servicePrincipal) {
+        public Builder servicePrincipal(@Nullable ServicePrincipalPropertiesArgs servicePrincipal) {
             this.servicePrincipal = Input.ofNullable(servicePrincipal);
             return this;
         }

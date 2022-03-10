@@ -91,32 +91,32 @@ public final class ApiOAuthSettingsParameterArgs extends io.pulumi.resources.Res
     	      this.value = defaults.value;
         }
 
-        public Builder setOptions(@Nullable Input<Object> options) {
+        public Builder options(@Nullable Input<Object> options) {
             this.options = options;
             return this;
         }
 
-        public Builder setOptions(@Nullable Object options) {
+        public Builder options(@Nullable Object options) {
             this.options = Input.ofNullable(options);
             return this;
         }
 
-        public Builder setUiDefinition(@Nullable Input<Object> uiDefinition) {
+        public Builder uiDefinition(@Nullable Input<Object> uiDefinition) {
             this.uiDefinition = uiDefinition;
             return this;
         }
 
-        public Builder setUiDefinition(@Nullable Object uiDefinition) {
+        public Builder uiDefinition(@Nullable Object uiDefinition) {
             this.uiDefinition = Input.ofNullable(uiDefinition);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }

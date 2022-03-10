@@ -103,22 +103,22 @@ public final class SubjectRulesReviewStatus {
     	      this.resourceRules = defaults.resourceRules;
         }
 
-        public Builder setEvaluationError(@Nullable String evaluationError) {
+        public Builder evaluationError(@Nullable String evaluationError) {
             this.evaluationError = evaluationError;
             return this;
         }
 
-        public Builder setIncomplete(Boolean incomplete) {
+        public Builder incomplete(Boolean incomplete) {
             this.incomplete = Objects.requireNonNull(incomplete);
             return this;
         }
 
-        public Builder setNonResourceRules(List<NonResourceRule> nonResourceRules) {
+        public Builder nonResourceRules(List<NonResourceRule> nonResourceRules) {
             this.nonResourceRules = Objects.requireNonNull(nonResourceRules);
             return this;
         }
 
-        public Builder setResourceRules(List<ResourceRule> resourceRules) {
+        public Builder resourceRules(List<ResourceRule> resourceRules) {
             this.resourceRules = Objects.requireNonNull(resourceRules);
             return this;
         }

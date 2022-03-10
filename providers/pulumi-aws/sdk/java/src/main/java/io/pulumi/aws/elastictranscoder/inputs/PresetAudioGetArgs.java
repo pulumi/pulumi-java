@@ -118,52 +118,52 @@ public final class PresetAudioGetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sampleRate = defaults.sampleRate;
         }
 
-        public Builder setAudioPackingMode(@Nullable Input<String> audioPackingMode) {
+        public Builder audioPackingMode(@Nullable Input<String> audioPackingMode) {
             this.audioPackingMode = audioPackingMode;
             return this;
         }
 
-        public Builder setAudioPackingMode(@Nullable String audioPackingMode) {
+        public Builder audioPackingMode(@Nullable String audioPackingMode) {
             this.audioPackingMode = Input.ofNullable(audioPackingMode);
             return this;
         }
 
-        public Builder setBitRate(@Nullable Input<String> bitRate) {
+        public Builder bitRate(@Nullable Input<String> bitRate) {
             this.bitRate = bitRate;
             return this;
         }
 
-        public Builder setBitRate(@Nullable String bitRate) {
+        public Builder bitRate(@Nullable String bitRate) {
             this.bitRate = Input.ofNullable(bitRate);
             return this;
         }
 
-        public Builder setChannels(@Nullable Input<String> channels) {
+        public Builder channels(@Nullable Input<String> channels) {
             this.channels = channels;
             return this;
         }
 
-        public Builder setChannels(@Nullable String channels) {
+        public Builder channels(@Nullable String channels) {
             this.channels = Input.ofNullable(channels);
             return this;
         }
 
-        public Builder setCodec(@Nullable Input<String> codec) {
+        public Builder codec(@Nullable Input<String> codec) {
             this.codec = codec;
             return this;
         }
 
-        public Builder setCodec(@Nullable String codec) {
+        public Builder codec(@Nullable String codec) {
             this.codec = Input.ofNullable(codec);
             return this;
         }
 
-        public Builder setSampleRate(@Nullable Input<String> sampleRate) {
+        public Builder sampleRate(@Nullable Input<String> sampleRate) {
             this.sampleRate = sampleRate;
             return this;
         }
 
-        public Builder setSampleRate(@Nullable String sampleRate) {
+        public Builder sampleRate(@Nullable String sampleRate) {
             this.sampleRate = Input.ofNullable(sampleRate);
             return this;
         }

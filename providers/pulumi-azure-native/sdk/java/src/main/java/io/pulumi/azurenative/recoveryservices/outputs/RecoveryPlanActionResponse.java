@@ -102,22 +102,22 @@ public final class RecoveryPlanActionResponse {
     	      this.failoverTypes = defaults.failoverTypes;
         }
 
-        public Builder setActionName(String actionName) {
+        public Builder actionName(String actionName) {
             this.actionName = Objects.requireNonNull(actionName);
             return this;
         }
 
-        public Builder setCustomDetails(Object customDetails) {
+        public Builder customDetails(Object customDetails) {
             this.customDetails = Objects.requireNonNull(customDetails);
             return this;
         }
 
-        public Builder setFailoverDirections(List<String> failoverDirections) {
+        public Builder failoverDirections(List<String> failoverDirections) {
             this.failoverDirections = Objects.requireNonNull(failoverDirections);
             return this;
         }
 
-        public Builder setFailoverTypes(List<String> failoverTypes) {
+        public Builder failoverTypes(List<String> failoverTypes) {
             this.failoverTypes = Objects.requireNonNull(failoverTypes);
             return this;
         }

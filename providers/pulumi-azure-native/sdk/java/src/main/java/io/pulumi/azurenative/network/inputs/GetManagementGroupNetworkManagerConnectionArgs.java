@@ -68,12 +68,12 @@ public final class GetManagementGroupNetworkManagerConnectionArgs extends io.pul
     	      this.networkManagerConnectionName = defaults.networkManagerConnectionName;
         }
 
-        public Builder setManagementGroupId(String managementGroupId) {
+        public Builder managementGroupId(String managementGroupId) {
             this.managementGroupId = Objects.requireNonNull(managementGroupId);
             return this;
         }
 
-        public Builder setNetworkManagerConnectionName(String networkManagerConnectionName) {
+        public Builder networkManagerConnectionName(String networkManagerConnectionName) {
             this.networkManagerConnectionName = Objects.requireNonNull(networkManagerConnectionName);
             return this;
         }

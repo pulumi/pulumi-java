@@ -71,12 +71,12 @@ public final class TerminateNotificationProfileResponse extends io.pulumi.resour
     	      this.notBeforeTimeout = defaults.notBeforeTimeout;
         }
 
-        public Builder setEnable(@Nullable Boolean enable) {
+        public Builder enable(@Nullable Boolean enable) {
             this.enable = enable;
             return this;
         }
 
-        public Builder setNotBeforeTimeout(@Nullable String notBeforeTimeout) {
+        public Builder notBeforeTimeout(@Nullable String notBeforeTimeout) {
             this.notBeforeTimeout = notBeforeTimeout;
             return this;
         }

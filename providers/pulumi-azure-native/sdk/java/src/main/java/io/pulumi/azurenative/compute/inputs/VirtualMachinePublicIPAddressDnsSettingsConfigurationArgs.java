@@ -56,12 +56,12 @@ public final class VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs ext
     	      this.domainNameLabel = defaults.domainNameLabel;
         }
 
-        public Builder setDomainNameLabel(Input<String> domainNameLabel) {
+        public Builder domainNameLabel(Input<String> domainNameLabel) {
             this.domainNameLabel = Objects.requireNonNull(domainNameLabel);
             return this;
         }
 
-        public Builder setDomainNameLabel(String domainNameLabel) {
+        public Builder domainNameLabel(String domainNameLabel) {
             this.domainNameLabel = Input.of(Objects.requireNonNull(domainNameLabel));
             return this;
         }

@@ -121,27 +121,27 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
     	      this.maxSteps = defaults.maxSteps;
         }
 
-        public Builder setAppInitialActivity(String appInitialActivity) {
+        public Builder appInitialActivity(String appInitialActivity) {
             this.appInitialActivity = Objects.requireNonNull(appInitialActivity);
             return this;
         }
 
-        public Builder setBootstrapPackageId(String bootstrapPackageId) {
+        public Builder bootstrapPackageId(String bootstrapPackageId) {
             this.bootstrapPackageId = Objects.requireNonNull(bootstrapPackageId);
             return this;
         }
 
-        public Builder setBootstrapRunnerClass(String bootstrapRunnerClass) {
+        public Builder bootstrapRunnerClass(String bootstrapRunnerClass) {
             this.bootstrapRunnerClass = Objects.requireNonNull(bootstrapRunnerClass);
             return this;
         }
 
-        public Builder setMaxDepth(Integer maxDepth) {
+        public Builder maxDepth(Integer maxDepth) {
             this.maxDepth = Objects.requireNonNull(maxDepth);
             return this;
         }
 
-        public Builder setMaxSteps(Integer maxSteps) {
+        public Builder maxSteps(Integer maxSteps) {
             this.maxSteps = Objects.requireNonNull(maxSteps);
             return this;
         }

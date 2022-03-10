@@ -366,142 +366,142 @@ public final class GetBackendServiceResult {
     	      this.timeoutSec = defaults.timeoutSec;
         }
 
-        public Builder setAffinityCookieTtlSec(Integer affinityCookieTtlSec) {
+        public Builder affinityCookieTtlSec(Integer affinityCookieTtlSec) {
             this.affinityCookieTtlSec = Objects.requireNonNull(affinityCookieTtlSec);
             return this;
         }
 
-        public Builder setBackends(List<GetBackendServiceBackend> backends) {
+        public Builder backends(List<GetBackendServiceBackend> backends) {
             this.backends = Objects.requireNonNull(backends);
             return this;
         }
 
-        public Builder setCdnPolicies(List<GetBackendServiceCdnPolicy> cdnPolicies) {
+        public Builder cdnPolicies(List<GetBackendServiceCdnPolicy> cdnPolicies) {
             this.cdnPolicies = Objects.requireNonNull(cdnPolicies);
             return this;
         }
 
-        public Builder setCircuitBreakers(List<GetBackendServiceCircuitBreaker> circuitBreakers) {
+        public Builder circuitBreakers(List<GetBackendServiceCircuitBreaker> circuitBreakers) {
             this.circuitBreakers = Objects.requireNonNull(circuitBreakers);
             return this;
         }
 
-        public Builder setConnectionDrainingTimeoutSec(Integer connectionDrainingTimeoutSec) {
+        public Builder connectionDrainingTimeoutSec(Integer connectionDrainingTimeoutSec) {
             this.connectionDrainingTimeoutSec = Objects.requireNonNull(connectionDrainingTimeoutSec);
             return this;
         }
 
-        public Builder setConsistentHash(List<GetBackendServiceConsistentHash> consistentHash) {
+        public Builder consistentHash(List<GetBackendServiceConsistentHash> consistentHash) {
             this.consistentHash = Objects.requireNonNull(consistentHash);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setCustomRequestHeaders(List<String> customRequestHeaders) {
+        public Builder customRequestHeaders(List<String> customRequestHeaders) {
             this.customRequestHeaders = Objects.requireNonNull(customRequestHeaders);
             return this;
         }
 
-        public Builder setCustomResponseHeaders(List<String> customResponseHeaders) {
+        public Builder customResponseHeaders(List<String> customResponseHeaders) {
             this.customResponseHeaders = Objects.requireNonNull(customResponseHeaders);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEnableCdn(Boolean enableCdn) {
+        public Builder enableCdn(Boolean enableCdn) {
             this.enableCdn = Objects.requireNonNull(enableCdn);
             return this;
         }
 
-        public Builder setFingerprint(String fingerprint) {
+        public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
 
-        public Builder setHealthChecks(List<String> healthChecks) {
+        public Builder healthChecks(List<String> healthChecks) {
             this.healthChecks = Objects.requireNonNull(healthChecks);
             return this;
         }
 
-        public Builder setIaps(List<GetBackendServiceIap> iaps) {
+        public Builder iaps(List<GetBackendServiceIap> iaps) {
             this.iaps = Objects.requireNonNull(iaps);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLoadBalancingScheme(String loadBalancingScheme) {
+        public Builder loadBalancingScheme(String loadBalancingScheme) {
             this.loadBalancingScheme = Objects.requireNonNull(loadBalancingScheme);
             return this;
         }
 
-        public Builder setLocalityLbPolicy(String localityLbPolicy) {
+        public Builder localityLbPolicy(String localityLbPolicy) {
             this.localityLbPolicy = Objects.requireNonNull(localityLbPolicy);
             return this;
         }
 
-        public Builder setLogConfigs(List<GetBackendServiceLogConfig> logConfigs) {
+        public Builder logConfigs(List<GetBackendServiceLogConfig> logConfigs) {
             this.logConfigs = Objects.requireNonNull(logConfigs);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOutlierDetections(List<GetBackendServiceOutlierDetection> outlierDetections) {
+        public Builder outlierDetections(List<GetBackendServiceOutlierDetection> outlierDetections) {
             this.outlierDetections = Objects.requireNonNull(outlierDetections);
             return this;
         }
 
-        public Builder setPortName(String portName) {
+        public Builder portName(String portName) {
             this.portName = Objects.requireNonNull(portName);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setSecurityPolicy(String securityPolicy) {
+        public Builder securityPolicy(String securityPolicy) {
             this.securityPolicy = Objects.requireNonNull(securityPolicy);
             return this;
         }
 
-        public Builder setSecuritySettings(List<GetBackendServiceSecuritySetting> securitySettings) {
+        public Builder securitySettings(List<GetBackendServiceSecuritySetting> securitySettings) {
             this.securitySettings = Objects.requireNonNull(securitySettings);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSessionAffinity(String sessionAffinity) {
+        public Builder sessionAffinity(String sessionAffinity) {
             this.sessionAffinity = Objects.requireNonNull(sessionAffinity);
             return this;
         }
 
-        public Builder setTimeoutSec(Integer timeoutSec) {
+        public Builder timeoutSec(Integer timeoutSec) {
             this.timeoutSec = Objects.requireNonNull(timeoutSec);
             return this;
         }

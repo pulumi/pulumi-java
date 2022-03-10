@@ -55,7 +55,7 @@ public final class I18nConfigResponse extends io.pulumi.resources.InvokeArgs {
     	      this.root = defaults.root;
         }
 
-        public Builder setRoot(String root) {
+        public Builder root(String root) {
             this.root = Objects.requireNonNull(root);
             return this;
         }

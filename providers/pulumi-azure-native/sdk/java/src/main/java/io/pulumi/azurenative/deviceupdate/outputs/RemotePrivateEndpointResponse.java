@@ -135,32 +135,32 @@ public final class RemotePrivateEndpointResponse {
     	      this.vnetTrafficTag = defaults.vnetTrafficTag;
         }
 
-        public Builder setConnectionDetails(@Nullable List<ConnectionDetailsResponse> connectionDetails) {
+        public Builder connectionDetails(@Nullable List<ConnectionDetailsResponse> connectionDetails) {
             this.connectionDetails = connectionDetails;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setManualPrivateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections) {
+        public Builder manualPrivateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections) {
             this.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
             return this;
         }
 
-        public Builder setPrivateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections) {
+        public Builder privateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections) {
             this.privateLinkServiceConnections = privateLinkServiceConnections;
             return this;
         }
 
-        public Builder setPrivateLinkServiceProxies(@Nullable List<PrivateLinkServiceProxyResponse> privateLinkServiceProxies) {
+        public Builder privateLinkServiceProxies(@Nullable List<PrivateLinkServiceProxyResponse> privateLinkServiceProxies) {
             this.privateLinkServiceProxies = privateLinkServiceProxies;
             return this;
         }
 
-        public Builder setVnetTrafficTag(String vnetTrafficTag) {
+        public Builder vnetTrafficTag(String vnetTrafficTag) {
             this.vnetTrafficTag = Objects.requireNonNull(vnetTrafficTag);
             return this;
         }

@@ -70,12 +70,12 @@ public final class CxEntityTypeEntity {
     	      this.value = defaults.value;
         }
 
-        public Builder setSynonyms(@Nullable List<String> synonyms) {
+        public Builder synonyms(@Nullable List<String> synonyms) {
             this.synonyms = synonyms;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

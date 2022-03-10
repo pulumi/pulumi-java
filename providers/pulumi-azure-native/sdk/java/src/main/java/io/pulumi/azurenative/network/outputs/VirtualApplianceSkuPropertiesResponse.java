@@ -83,17 +83,17 @@ public final class VirtualApplianceSkuPropertiesResponse {
     	      this.vendor = defaults.vendor;
         }
 
-        public Builder setBundledScaleUnit(@Nullable String bundledScaleUnit) {
+        public Builder bundledScaleUnit(@Nullable String bundledScaleUnit) {
             this.bundledScaleUnit = bundledScaleUnit;
             return this;
         }
 
-        public Builder setMarketPlaceVersion(@Nullable String marketPlaceVersion) {
+        public Builder marketPlaceVersion(@Nullable String marketPlaceVersion) {
             this.marketPlaceVersion = marketPlaceVersion;
             return this;
         }
 
-        public Builder setVendor(@Nullable String vendor) {
+        public Builder vendor(@Nullable String vendor) {
             this.vendor = vendor;
             return this;
         }

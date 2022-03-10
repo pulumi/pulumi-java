@@ -78,27 +78,27 @@ public final class WebACLManagedRuleGroupStatement {
     	      this.version = defaults.version;
         }
 
-        public Builder setExcludedRules(@Nullable List<WebACLExcludedRule> excludedRules) {
+        public Builder excludedRules(@Nullable List<WebACLExcludedRule> excludedRules) {
             this.excludedRules = excludedRules;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setScopeDownStatement(@Nullable WebACLStatement scopeDownStatement) {
+        public Builder scopeDownStatement(@Nullable WebACLStatement scopeDownStatement) {
             this.scopeDownStatement = scopeDownStatement;
             return this;
         }
 
-        public Builder setVendorName(String vendorName) {
+        public Builder vendorName(String vendorName) {
             this.vendorName = Objects.requireNonNull(vendorName);
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

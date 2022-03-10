@@ -107,42 +107,42 @@ public final class SSISChildPackageArgs extends io.pulumi.resources.ResourceArgs
     	      this.packagePath = defaults.packagePath;
         }
 
-        public Builder setPackageContent(Input<Object> packageContent) {
+        public Builder packageContent(Input<Object> packageContent) {
             this.packageContent = Objects.requireNonNull(packageContent);
             return this;
         }
 
-        public Builder setPackageContent(Object packageContent) {
+        public Builder packageContent(Object packageContent) {
             this.packageContent = Input.of(Objects.requireNonNull(packageContent));
             return this;
         }
 
-        public Builder setPackageLastModifiedDate(@Nullable Input<String> packageLastModifiedDate) {
+        public Builder packageLastModifiedDate(@Nullable Input<String> packageLastModifiedDate) {
             this.packageLastModifiedDate = packageLastModifiedDate;
             return this;
         }
 
-        public Builder setPackageLastModifiedDate(@Nullable String packageLastModifiedDate) {
+        public Builder packageLastModifiedDate(@Nullable String packageLastModifiedDate) {
             this.packageLastModifiedDate = Input.ofNullable(packageLastModifiedDate);
             return this;
         }
 
-        public Builder setPackageName(@Nullable Input<String> packageName) {
+        public Builder packageName(@Nullable Input<String> packageName) {
             this.packageName = packageName;
             return this;
         }
 
-        public Builder setPackageName(@Nullable String packageName) {
+        public Builder packageName(@Nullable String packageName) {
             this.packageName = Input.ofNullable(packageName);
             return this;
         }
 
-        public Builder setPackagePath(Input<Object> packagePath) {
+        public Builder packagePath(Input<Object> packagePath) {
             this.packagePath = Objects.requireNonNull(packagePath);
             return this;
         }
 
-        public Builder setPackagePath(Object packagePath) {
+        public Builder packagePath(Object packagePath) {
             this.packagePath = Input.of(Objects.requireNonNull(packagePath));
             return this;
         }

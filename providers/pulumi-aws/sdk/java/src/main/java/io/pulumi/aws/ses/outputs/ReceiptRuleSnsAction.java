@@ -84,17 +84,17 @@ public final class ReceiptRuleSnsAction {
     	      this.topicArn = defaults.topicArn;
         }
 
-        public Builder setEncoding(@Nullable String encoding) {
+        public Builder encoding(@Nullable String encoding) {
             this.encoding = encoding;
             return this;
         }
 
-        public Builder setPosition(Integer position) {
+        public Builder position(Integer position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }
 
-        public Builder setTopicArn(String topicArn) {
+        public Builder topicArn(String topicArn) {
             this.topicArn = Objects.requireNonNull(topicArn);
             return this;
         }

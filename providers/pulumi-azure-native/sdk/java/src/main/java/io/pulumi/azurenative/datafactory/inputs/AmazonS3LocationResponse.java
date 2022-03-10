@@ -124,27 +124,27 @@ public final class AmazonS3LocationResponse extends io.pulumi.resources.InvokeAr
     	      this.version = defaults.version;
         }
 
-        public Builder setBucketName(@Nullable Object bucketName) {
+        public Builder bucketName(@Nullable Object bucketName) {
             this.bucketName = bucketName;
             return this;
         }
 
-        public Builder setFileName(@Nullable Object fileName) {
+        public Builder fileName(@Nullable Object fileName) {
             this.fileName = fileName;
             return this;
         }
 
-        public Builder setFolderPath(@Nullable Object folderPath) {
+        public Builder folderPath(@Nullable Object folderPath) {
             this.folderPath = folderPath;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVersion(@Nullable Object version) {
+        public Builder version(@Nullable Object version) {
             this.version = version;
             return this;
         }

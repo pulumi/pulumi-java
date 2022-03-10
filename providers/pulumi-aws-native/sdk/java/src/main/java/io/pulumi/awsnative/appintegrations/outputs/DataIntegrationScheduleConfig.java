@@ -81,17 +81,17 @@ public final class DataIntegrationScheduleConfig {
     	      this.scheduleExpression = defaults.scheduleExpression;
         }
 
-        public Builder setFirstExecutionFrom(String firstExecutionFrom) {
+        public Builder firstExecutionFrom(String firstExecutionFrom) {
             this.firstExecutionFrom = Objects.requireNonNull(firstExecutionFrom);
             return this;
         }
 
-        public Builder setObject(String object) {
+        public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }
 
-        public Builder setScheduleExpression(String scheduleExpression) {
+        public Builder scheduleExpression(String scheduleExpression) {
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
         }

@@ -77,22 +77,22 @@ public final class ServiceCatalogProvisioningDetailsProperties {
     	      this.provisioningParameters = defaults.provisioningParameters;
         }
 
-        public Builder setPathId(@Nullable String pathId) {
+        public Builder pathId(@Nullable String pathId) {
             this.pathId = pathId;
             return this;
         }
 
-        public Builder setProductId(String productId) {
+        public Builder productId(String productId) {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
 
-        public Builder setProvisioningArtifactId(@Nullable String provisioningArtifactId) {
+        public Builder provisioningArtifactId(@Nullable String provisioningArtifactId) {
             this.provisioningArtifactId = provisioningArtifactId;
             return this;
         }
 
-        public Builder setProvisioningParameters(@Nullable List<ProjectProvisioningParameter> provisioningParameters) {
+        public Builder provisioningParameters(@Nullable List<ProjectProvisioningParameter> provisioningParameters) {
             this.provisioningParameters = provisioningParameters;
             return this;
         }

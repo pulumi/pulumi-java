@@ -111,42 +111,42 @@ public final class RegionPerInstanceConfigPreservedStateDiskArgs extends io.pulu
     	      this.source = defaults.source;
         }
 
-        public Builder setDeleteRule(@Nullable Input<String> deleteRule) {
+        public Builder deleteRule(@Nullable Input<String> deleteRule) {
             this.deleteRule = deleteRule;
             return this;
         }
 
-        public Builder setDeleteRule(@Nullable String deleteRule) {
+        public Builder deleteRule(@Nullable String deleteRule) {
             this.deleteRule = Input.ofNullable(deleteRule);
             return this;
         }
 
-        public Builder setDeviceName(Input<String> deviceName) {
+        public Builder deviceName(Input<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Input.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder setMode(@Nullable Input<String> mode) {
+        public Builder mode(@Nullable Input<String> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }
 
-        public Builder setSource(Input<String> source) {
+        public Builder source(Input<String> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Input.of(Objects.requireNonNull(source));
             return this;
         }

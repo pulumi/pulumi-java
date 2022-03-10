@@ -90,17 +90,17 @@ public final class InquiryInfoResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setErrorDetail(@Nullable ErrorDetailResponse errorDetail) {
+        public Builder errorDetail(@Nullable ErrorDetailResponse errorDetail) {
             this.errorDetail = errorDetail;
             return this;
         }
 
-        public Builder setInquiryDetails(@Nullable List<WorkloadInquiryDetailsResponse> inquiryDetails) {
+        public Builder inquiryDetails(@Nullable List<WorkloadInquiryDetailsResponse> inquiryDetails) {
             this.inquiryDetails = inquiryDetails;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

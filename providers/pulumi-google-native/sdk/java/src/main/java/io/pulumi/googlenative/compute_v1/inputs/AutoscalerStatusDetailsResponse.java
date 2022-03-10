@@ -68,12 +68,12 @@ public final class AutoscalerStatusDetailsResponse extends io.pulumi.resources.I
     	      this.type = defaults.type;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -48,7 +48,7 @@ public final class FHIRDatastorePreloadDataConfig {
     	      this.preloadDataType = defaults.preloadDataType;
         }
 
-        public Builder setPreloadDataType(FHIRDatastorePreloadDataConfigPreloadDataType preloadDataType) {
+        public Builder preloadDataType(FHIRDatastorePreloadDataConfigPreloadDataType preloadDataType) {
             this.preloadDataType = Objects.requireNonNull(preloadDataType);
             return this;
         }

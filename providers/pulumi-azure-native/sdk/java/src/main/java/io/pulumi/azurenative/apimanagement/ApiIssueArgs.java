@@ -184,92 +184,92 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userId = defaults.userId;
         }
 
-        public Builder setApiId(Input<String> apiId) {
+        public Builder apiId(Input<String> apiId) {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
 
-        public Builder setApiId(String apiId) {
+        public Builder apiId(String apiId) {
             this.apiId = Input.of(Objects.requireNonNull(apiId));
             return this;
         }
 
-        public Builder setCreatedDate(@Nullable Input<String> createdDate) {
+        public Builder createdDate(@Nullable Input<String> createdDate) {
             this.createdDate = createdDate;
             return this;
         }
 
-        public Builder setCreatedDate(@Nullable String createdDate) {
+        public Builder createdDate(@Nullable String createdDate) {
             this.createdDate = Input.ofNullable(createdDate);
             return this;
         }
 
-        public Builder setDescription(Input<String> description) {
+        public Builder description(Input<String> description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Input.of(Objects.requireNonNull(description));
             return this;
         }
 
-        public Builder setIssueId(@Nullable Input<String> issueId) {
+        public Builder issueId(@Nullable Input<String> issueId) {
             this.issueId = issueId;
             return this;
         }
 
-        public Builder setIssueId(@Nullable String issueId) {
+        public Builder issueId(@Nullable String issueId) {
             this.issueId = Input.ofNullable(issueId);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder setState(@Nullable Input<Either<String,State>> state) {
+        public Builder state(@Nullable Input<Either<String,State>> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable Either<String,State> state) {
+        public Builder state(@Nullable Either<String,State> state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setTitle(Input<String> title) {
+        public Builder title(Input<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Input.of(Objects.requireNonNull(title));
             return this;
         }
 
-        public Builder setUserId(Input<String> userId) {
+        public Builder userId(Input<String> userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
 
-        public Builder setUserId(String userId) {
+        public Builder userId(String userId) {
             this.userId = Input.of(Objects.requireNonNull(userId));
             return this;
         }

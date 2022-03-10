@@ -153,72 +153,72 @@ public final class HmacKeyState extends io.pulumi.resources.ResourceArgs {
     	      this.updated = defaults.updated;
         }
 
-        public Builder setAccessId(@Nullable Input<String> accessId) {
+        public Builder accessId(@Nullable Input<String> accessId) {
             this.accessId = accessId;
             return this;
         }
 
-        public Builder setAccessId(@Nullable String accessId) {
+        public Builder accessId(@Nullable String accessId) {
             this.accessId = Input.ofNullable(accessId);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSecret(@Nullable Input<String> secret) {
+        public Builder secret(@Nullable Input<String> secret) {
             this.secret = secret;
             return this;
         }
 
-        public Builder setSecret(@Nullable String secret) {
+        public Builder secret(@Nullable String secret) {
             this.secret = Input.ofNullable(secret);
             return this;
         }
 
-        public Builder setServiceAccountEmail(@Nullable Input<String> serviceAccountEmail) {
+        public Builder serviceAccountEmail(@Nullable Input<String> serviceAccountEmail) {
             this.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
 
-        public Builder setServiceAccountEmail(@Nullable String serviceAccountEmail) {
+        public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
             this.serviceAccountEmail = Input.ofNullable(serviceAccountEmail);
             return this;
         }
 
-        public Builder setState(@Nullable Input<String> state) {
+        public Builder state(@Nullable Input<String> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setTimeCreated(@Nullable Input<String> timeCreated) {
+        public Builder timeCreated(@Nullable Input<String> timeCreated) {
             this.timeCreated = timeCreated;
             return this;
         }
 
-        public Builder setTimeCreated(@Nullable String timeCreated) {
+        public Builder timeCreated(@Nullable String timeCreated) {
             this.timeCreated = Input.ofNullable(timeCreated);
             return this;
         }
 
-        public Builder setUpdated(@Nullable Input<String> updated) {
+        public Builder updated(@Nullable Input<String> updated) {
             this.updated = updated;
             return this;
         }
 
-        public Builder setUpdated(@Nullable String updated) {
+        public Builder updated(@Nullable String updated) {
             this.updated = Input.ofNullable(updated);
             return this;
         }

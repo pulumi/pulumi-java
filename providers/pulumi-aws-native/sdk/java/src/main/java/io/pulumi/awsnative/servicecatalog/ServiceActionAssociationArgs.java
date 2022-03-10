@@ -73,32 +73,32 @@ public final class ServiceActionAssociationArgs extends io.pulumi.resources.Reso
     	      this.serviceActionId = defaults.serviceActionId;
         }
 
-        public Builder setProductId(Input<String> productId) {
+        public Builder productId(Input<String> productId) {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
 
-        public Builder setProductId(String productId) {
+        public Builder productId(String productId) {
             this.productId = Input.of(Objects.requireNonNull(productId));
             return this;
         }
 
-        public Builder setProvisioningArtifactId(Input<String> provisioningArtifactId) {
+        public Builder provisioningArtifactId(Input<String> provisioningArtifactId) {
             this.provisioningArtifactId = Objects.requireNonNull(provisioningArtifactId);
             return this;
         }
 
-        public Builder setProvisioningArtifactId(String provisioningArtifactId) {
+        public Builder provisioningArtifactId(String provisioningArtifactId) {
             this.provisioningArtifactId = Input.of(Objects.requireNonNull(provisioningArtifactId));
             return this;
         }
 
-        public Builder setServiceActionId(Input<String> serviceActionId) {
+        public Builder serviceActionId(Input<String> serviceActionId) {
             this.serviceActionId = Objects.requireNonNull(serviceActionId);
             return this;
         }
 
-        public Builder setServiceActionId(String serviceActionId) {
+        public Builder serviceActionId(String serviceActionId) {
             this.serviceActionId = Input.of(Objects.requireNonNull(serviceActionId));
             return this;
         }

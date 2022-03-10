@@ -89,32 +89,32 @@ public final class IdentityPoolRoleAttachmentState extends io.pulumi.resources.R
     	      this.roles = defaults.roles;
         }
 
-        public Builder setIdentityPoolId(@Nullable Input<String> identityPoolId) {
+        public Builder identityPoolId(@Nullable Input<String> identityPoolId) {
             this.identityPoolId = identityPoolId;
             return this;
         }
 
-        public Builder setIdentityPoolId(@Nullable String identityPoolId) {
+        public Builder identityPoolId(@Nullable String identityPoolId) {
             this.identityPoolId = Input.ofNullable(identityPoolId);
             return this;
         }
 
-        public Builder setRoleMappings(@Nullable Input<List<IdentityPoolRoleAttachmentRoleMappingGetArgs>> roleMappings) {
+        public Builder roleMappings(@Nullable Input<List<IdentityPoolRoleAttachmentRoleMappingGetArgs>> roleMappings) {
             this.roleMappings = roleMappings;
             return this;
         }
 
-        public Builder setRoleMappings(@Nullable List<IdentityPoolRoleAttachmentRoleMappingGetArgs> roleMappings) {
+        public Builder roleMappings(@Nullable List<IdentityPoolRoleAttachmentRoleMappingGetArgs> roleMappings) {
             this.roleMappings = Input.ofNullable(roleMappings);
             return this;
         }
 
-        public Builder setRoles(@Nullable Input<Map<String,String>> roles) {
+        public Builder roles(@Nullable Input<Map<String,String>> roles) {
             this.roles = roles;
             return this;
         }
 
-        public Builder setRoles(@Nullable Map<String,String> roles) {
+        public Builder roles(@Nullable Map<String,String> roles) {
             this.roles = Input.ofNullable(roles);
             return this;
         }

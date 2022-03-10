@@ -137,62 +137,62 @@ public final class DHCPOptionsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDomainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Input<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
-        public Builder setDomainName(@Nullable String domainName) {
+        public Builder domainName(@Nullable String domainName) {
             this.domainName = Input.ofNullable(domainName);
             return this;
         }
 
-        public Builder setDomainNameServers(@Nullable Input<List<String>> domainNameServers) {
+        public Builder domainNameServers(@Nullable Input<List<String>> domainNameServers) {
             this.domainNameServers = domainNameServers;
             return this;
         }
 
-        public Builder setDomainNameServers(@Nullable List<String> domainNameServers) {
+        public Builder domainNameServers(@Nullable List<String> domainNameServers) {
             this.domainNameServers = Input.ofNullable(domainNameServers);
             return this;
         }
 
-        public Builder setNetbiosNameServers(@Nullable Input<List<String>> netbiosNameServers) {
+        public Builder netbiosNameServers(@Nullable Input<List<String>> netbiosNameServers) {
             this.netbiosNameServers = netbiosNameServers;
             return this;
         }
 
-        public Builder setNetbiosNameServers(@Nullable List<String> netbiosNameServers) {
+        public Builder netbiosNameServers(@Nullable List<String> netbiosNameServers) {
             this.netbiosNameServers = Input.ofNullable(netbiosNameServers);
             return this;
         }
 
-        public Builder setNetbiosNodeType(@Nullable Input<Integer> netbiosNodeType) {
+        public Builder netbiosNodeType(@Nullable Input<Integer> netbiosNodeType) {
             this.netbiosNodeType = netbiosNodeType;
             return this;
         }
 
-        public Builder setNetbiosNodeType(@Nullable Integer netbiosNodeType) {
+        public Builder netbiosNodeType(@Nullable Integer netbiosNodeType) {
             this.netbiosNodeType = Input.ofNullable(netbiosNodeType);
             return this;
         }
 
-        public Builder setNtpServers(@Nullable Input<List<String>> ntpServers) {
+        public Builder ntpServers(@Nullable Input<List<String>> ntpServers) {
             this.ntpServers = ntpServers;
             return this;
         }
 
-        public Builder setNtpServers(@Nullable List<String> ntpServers) {
+        public Builder ntpServers(@Nullable List<String> ntpServers) {
             this.ntpServers = Input.ofNullable(ntpServers);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<DHCPOptionsTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<DHCPOptionsTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DHCPOptionsTagArgs> tags) {
+        public Builder tags(@Nullable List<DHCPOptionsTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

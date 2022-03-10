@@ -145,62 +145,62 @@ public final class AcsClusterPropertiesArgs extends io.pulumi.resources.Resource
     	      this.systemServices = defaults.systemServices;
         }
 
-        public Builder setAgentCount(@Nullable Input<Integer> agentCount) {
+        public Builder agentCount(@Nullable Input<Integer> agentCount) {
             this.agentCount = agentCount;
             return this;
         }
 
-        public Builder setAgentCount(@Nullable Integer agentCount) {
+        public Builder agentCount(@Nullable Integer agentCount) {
             this.agentCount = Input.ofNullable(agentCount);
             return this;
         }
 
-        public Builder setAgentVmSize(@Nullable Input<Either<String,AgentVMSizeTypes>> agentVmSize) {
+        public Builder agentVmSize(@Nullable Input<Either<String,AgentVMSizeTypes>> agentVmSize) {
             this.agentVmSize = agentVmSize;
             return this;
         }
 
-        public Builder setAgentVmSize(@Nullable Either<String,AgentVMSizeTypes> agentVmSize) {
+        public Builder agentVmSize(@Nullable Either<String,AgentVMSizeTypes> agentVmSize) {
             this.agentVmSize = Input.ofNullable(agentVmSize);
             return this;
         }
 
-        public Builder setMasterCount(@Nullable Input<Integer> masterCount) {
+        public Builder masterCount(@Nullable Input<Integer> masterCount) {
             this.masterCount = masterCount;
             return this;
         }
 
-        public Builder setMasterCount(@Nullable Integer masterCount) {
+        public Builder masterCount(@Nullable Integer masterCount) {
             this.masterCount = Input.ofNullable(masterCount);
             return this;
         }
 
-        public Builder setOrchestratorProperties(@Nullable Input<KubernetesClusterPropertiesArgs> orchestratorProperties) {
+        public Builder orchestratorProperties(@Nullable Input<KubernetesClusterPropertiesArgs> orchestratorProperties) {
             this.orchestratorProperties = orchestratorProperties;
             return this;
         }
 
-        public Builder setOrchestratorProperties(@Nullable KubernetesClusterPropertiesArgs orchestratorProperties) {
+        public Builder orchestratorProperties(@Nullable KubernetesClusterPropertiesArgs orchestratorProperties) {
             this.orchestratorProperties = Input.ofNullable(orchestratorProperties);
             return this;
         }
 
-        public Builder setOrchestratorType(Input<Either<String,OrchestratorType>> orchestratorType) {
+        public Builder orchestratorType(Input<Either<String,OrchestratorType>> orchestratorType) {
             this.orchestratorType = Objects.requireNonNull(orchestratorType);
             return this;
         }
 
-        public Builder setOrchestratorType(Either<String,OrchestratorType> orchestratorType) {
+        public Builder orchestratorType(Either<String,OrchestratorType> orchestratorType) {
             this.orchestratorType = Input.of(Objects.requireNonNull(orchestratorType));
             return this;
         }
 
-        public Builder setSystemServices(@Nullable Input<List<SystemServiceArgs>> systemServices) {
+        public Builder systemServices(@Nullable Input<List<SystemServiceArgs>> systemServices) {
             this.systemServices = systemServices;
             return this;
         }
 
-        public Builder setSystemServices(@Nullable List<SystemServiceArgs> systemServices) {
+        public Builder systemServices(@Nullable List<SystemServiceArgs> systemServices) {
             this.systemServices = Input.ofNullable(systemServices);
             return this;
         }

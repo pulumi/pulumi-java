@@ -75,22 +75,22 @@ public final class RouterNatLogConfigArgs extends io.pulumi.resources.ResourceAr
     	      this.filter = defaults.filter;
         }
 
-        public Builder setEnable(@Nullable Input<Boolean> enable) {
+        public Builder enable(@Nullable Input<Boolean> enable) {
             this.enable = enable;
             return this;
         }
 
-        public Builder setEnable(@Nullable Boolean enable) {
+        public Builder enable(@Nullable Boolean enable) {
             this.enable = Input.ofNullable(enable);
             return this;
         }
 
-        public Builder setFilter(@Nullable Input<RouterNatLogConfigFilter> filter) {
+        public Builder filter(@Nullable Input<RouterNatLogConfigFilter> filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFilter(@Nullable RouterNatLogConfigFilter filter) {
+        public Builder filter(@Nullable RouterNatLogConfigFilter filter) {
             this.filter = Input.ofNullable(filter);
             return this;
         }

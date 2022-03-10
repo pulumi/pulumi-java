@@ -137,62 +137,62 @@ public final class CustomDomainAssociationState extends io.pulumi.resources.Reso
     	      this.status = defaults.status;
         }
 
-        public Builder setCertificateValidationRecords(@Nullable Input<List<CustomDomainAssociationCertificateValidationRecordGetArgs>> certificateValidationRecords) {
+        public Builder certificateValidationRecords(@Nullable Input<List<CustomDomainAssociationCertificateValidationRecordGetArgs>> certificateValidationRecords) {
             this.certificateValidationRecords = certificateValidationRecords;
             return this;
         }
 
-        public Builder setCertificateValidationRecords(@Nullable List<CustomDomainAssociationCertificateValidationRecordGetArgs> certificateValidationRecords) {
+        public Builder certificateValidationRecords(@Nullable List<CustomDomainAssociationCertificateValidationRecordGetArgs> certificateValidationRecords) {
             this.certificateValidationRecords = Input.ofNullable(certificateValidationRecords);
             return this;
         }
 
-        public Builder setDnsTarget(@Nullable Input<String> dnsTarget) {
+        public Builder dnsTarget(@Nullable Input<String> dnsTarget) {
             this.dnsTarget = dnsTarget;
             return this;
         }
 
-        public Builder setDnsTarget(@Nullable String dnsTarget) {
+        public Builder dnsTarget(@Nullable String dnsTarget) {
             this.dnsTarget = Input.ofNullable(dnsTarget);
             return this;
         }
 
-        public Builder setDomainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Input<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
-        public Builder setDomainName(@Nullable String domainName) {
+        public Builder domainName(@Nullable String domainName) {
             this.domainName = Input.ofNullable(domainName);
             return this;
         }
 
-        public Builder setEnableWwwSubdomain(@Nullable Input<Boolean> enableWwwSubdomain) {
+        public Builder enableWwwSubdomain(@Nullable Input<Boolean> enableWwwSubdomain) {
             this.enableWwwSubdomain = enableWwwSubdomain;
             return this;
         }
 
-        public Builder setEnableWwwSubdomain(@Nullable Boolean enableWwwSubdomain) {
+        public Builder enableWwwSubdomain(@Nullable Boolean enableWwwSubdomain) {
             this.enableWwwSubdomain = Input.ofNullable(enableWwwSubdomain);
             return this;
         }
 
-        public Builder setServiceArn(@Nullable Input<String> serviceArn) {
+        public Builder serviceArn(@Nullable Input<String> serviceArn) {
             this.serviceArn = serviceArn;
             return this;
         }
 
-        public Builder setServiceArn(@Nullable String serviceArn) {
+        public Builder serviceArn(@Nullable String serviceArn) {
             this.serviceArn = Input.ofNullable(serviceArn);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }

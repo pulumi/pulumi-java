@@ -299,162 +299,162 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
     	      this.vpcSettings = defaults.vpcSettings;
         }
 
-        public Builder setAccessUrl(@Nullable Input<String> accessUrl) {
+        public Builder accessUrl(@Nullable Input<String> accessUrl) {
             this.accessUrl = accessUrl;
             return this;
         }
 
-        public Builder setAccessUrl(@Nullable String accessUrl) {
+        public Builder accessUrl(@Nullable String accessUrl) {
             this.accessUrl = Input.ofNullable(accessUrl);
             return this;
         }
 
-        public Builder setAlias(@Nullable Input<String> alias) {
+        public Builder alias(@Nullable Input<String> alias) {
             this.alias = alias;
             return this;
         }
 
-        public Builder setAlias(@Nullable String alias) {
+        public Builder alias(@Nullable String alias) {
             this.alias = Input.ofNullable(alias);
             return this;
         }
 
-        public Builder setConnectSettings(@Nullable Input<DirectoryConnectSettingsGetArgs> connectSettings) {
+        public Builder connectSettings(@Nullable Input<DirectoryConnectSettingsGetArgs> connectSettings) {
             this.connectSettings = connectSettings;
             return this;
         }
 
-        public Builder setConnectSettings(@Nullable DirectoryConnectSettingsGetArgs connectSettings) {
+        public Builder connectSettings(@Nullable DirectoryConnectSettingsGetArgs connectSettings) {
             this.connectSettings = Input.ofNullable(connectSettings);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDnsIpAddresses(@Nullable Input<List<String>> dnsIpAddresses) {
+        public Builder dnsIpAddresses(@Nullable Input<List<String>> dnsIpAddresses) {
             this.dnsIpAddresses = dnsIpAddresses;
             return this;
         }
 
-        public Builder setDnsIpAddresses(@Nullable List<String> dnsIpAddresses) {
+        public Builder dnsIpAddresses(@Nullable List<String> dnsIpAddresses) {
             this.dnsIpAddresses = Input.ofNullable(dnsIpAddresses);
             return this;
         }
 
-        public Builder setEdition(@Nullable Input<String> edition) {
+        public Builder edition(@Nullable Input<String> edition) {
             this.edition = edition;
             return this;
         }
 
-        public Builder setEdition(@Nullable String edition) {
+        public Builder edition(@Nullable String edition) {
             this.edition = Input.ofNullable(edition);
             return this;
         }
 
-        public Builder setEnableSso(@Nullable Input<Boolean> enableSso) {
+        public Builder enableSso(@Nullable Input<Boolean> enableSso) {
             this.enableSso = enableSso;
             return this;
         }
 
-        public Builder setEnableSso(@Nullable Boolean enableSso) {
+        public Builder enableSso(@Nullable Boolean enableSso) {
             this.enableSso = Input.ofNullable(enableSso);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<String> password) {
+        public Builder password(@Nullable Input<String> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setSecurityGroupId(@Nullable Input<String> securityGroupId) {
+        public Builder securityGroupId(@Nullable Input<String> securityGroupId) {
             this.securityGroupId = securityGroupId;
             return this;
         }
 
-        public Builder setSecurityGroupId(@Nullable String securityGroupId) {
+        public Builder securityGroupId(@Nullable String securityGroupId) {
             this.securityGroupId = Input.ofNullable(securityGroupId);
             return this;
         }
 
-        public Builder setShortName(@Nullable Input<String> shortName) {
+        public Builder shortName(@Nullable Input<String> shortName) {
             this.shortName = shortName;
             return this;
         }
 
-        public Builder setShortName(@Nullable String shortName) {
+        public Builder shortName(@Nullable String shortName) {
             this.shortName = Input.ofNullable(shortName);
             return this;
         }
 
-        public Builder setSize(@Nullable Input<String> size) {
+        public Builder size(@Nullable Input<String> size) {
             this.size = size;
             return this;
         }
 
-        public Builder setSize(@Nullable String size) {
+        public Builder size(@Nullable String size) {
             this.size = Input.ofNullable(size);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setVpcSettings(@Nullable Input<DirectoryVpcSettingsGetArgs> vpcSettings) {
+        public Builder vpcSettings(@Nullable Input<DirectoryVpcSettingsGetArgs> vpcSettings) {
             this.vpcSettings = vpcSettings;
             return this;
         }
 
-        public Builder setVpcSettings(@Nullable DirectoryVpcSettingsGetArgs vpcSettings) {
+        public Builder vpcSettings(@Nullable DirectoryVpcSettingsGetArgs vpcSettings) {
             this.vpcSettings = Input.ofNullable(vpcSettings);
             return this;
         }

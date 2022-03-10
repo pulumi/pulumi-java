@@ -130,32 +130,32 @@ public final class OwnerReferenceResponse {
     	      this.uid = defaults.uid;
         }
 
-        public Builder setApiVersion(String apiVersion) {
+        public Builder apiVersion(String apiVersion) {
             this.apiVersion = Objects.requireNonNull(apiVersion);
             return this;
         }
 
-        public Builder setBlockOwnerDeletion(Boolean blockOwnerDeletion) {
+        public Builder blockOwnerDeletion(Boolean blockOwnerDeletion) {
             this.blockOwnerDeletion = Objects.requireNonNull(blockOwnerDeletion);
             return this;
         }
 
-        public Builder setController(Boolean controller) {
+        public Builder controller(Boolean controller) {
             this.controller = Objects.requireNonNull(controller);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setUid(String uid) {
+        public Builder uid(String uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }

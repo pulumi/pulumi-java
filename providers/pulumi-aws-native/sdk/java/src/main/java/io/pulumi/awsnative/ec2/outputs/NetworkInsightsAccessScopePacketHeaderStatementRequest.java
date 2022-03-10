@@ -92,37 +92,37 @@ public final class NetworkInsightsAccessScopePacketHeaderStatementRequest {
     	      this.sourcePrefixLists = defaults.sourcePrefixLists;
         }
 
-        public Builder setDestinationAddresses(@Nullable List<String> destinationAddresses) {
+        public Builder destinationAddresses(@Nullable List<String> destinationAddresses) {
             this.destinationAddresses = destinationAddresses;
             return this;
         }
 
-        public Builder setDestinationPorts(@Nullable List<String> destinationPorts) {
+        public Builder destinationPorts(@Nullable List<String> destinationPorts) {
             this.destinationPorts = destinationPorts;
             return this;
         }
 
-        public Builder setDestinationPrefixLists(@Nullable List<String> destinationPrefixLists) {
+        public Builder destinationPrefixLists(@Nullable List<String> destinationPrefixLists) {
             this.destinationPrefixLists = destinationPrefixLists;
             return this;
         }
 
-        public Builder setProtocols(@Nullable List<NetworkInsightsAccessScopeProtocol> protocols) {
+        public Builder protocols(@Nullable List<NetworkInsightsAccessScopeProtocol> protocols) {
             this.protocols = protocols;
             return this;
         }
 
-        public Builder setSourceAddresses(@Nullable List<String> sourceAddresses) {
+        public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
             this.sourceAddresses = sourceAddresses;
             return this;
         }
 
-        public Builder setSourcePorts(@Nullable List<String> sourcePorts) {
+        public Builder sourcePorts(@Nullable List<String> sourcePorts) {
             this.sourcePorts = sourcePorts;
             return this;
         }
 
-        public Builder setSourcePrefixLists(@Nullable List<String> sourcePrefixLists) {
+        public Builder sourcePrefixLists(@Nullable List<String> sourcePrefixLists) {
             this.sourcePrefixLists = sourcePrefixLists;
             return this;
         }

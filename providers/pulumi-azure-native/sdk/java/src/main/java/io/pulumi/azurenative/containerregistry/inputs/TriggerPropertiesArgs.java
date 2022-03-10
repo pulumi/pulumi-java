@@ -93,32 +93,32 @@ public final class TriggerPropertiesArgs extends io.pulumi.resources.ResourceArg
     	      this.timerTriggers = defaults.timerTriggers;
         }
 
-        public Builder setBaseImageTrigger(@Nullable Input<BaseImageTriggerArgs> baseImageTrigger) {
+        public Builder baseImageTrigger(@Nullable Input<BaseImageTriggerArgs> baseImageTrigger) {
             this.baseImageTrigger = baseImageTrigger;
             return this;
         }
 
-        public Builder setBaseImageTrigger(@Nullable BaseImageTriggerArgs baseImageTrigger) {
+        public Builder baseImageTrigger(@Nullable BaseImageTriggerArgs baseImageTrigger) {
             this.baseImageTrigger = Input.ofNullable(baseImageTrigger);
             return this;
         }
 
-        public Builder setSourceTriggers(@Nullable Input<List<SourceTriggerArgs>> sourceTriggers) {
+        public Builder sourceTriggers(@Nullable Input<List<SourceTriggerArgs>> sourceTriggers) {
             this.sourceTriggers = sourceTriggers;
             return this;
         }
 
-        public Builder setSourceTriggers(@Nullable List<SourceTriggerArgs> sourceTriggers) {
+        public Builder sourceTriggers(@Nullable List<SourceTriggerArgs> sourceTriggers) {
             this.sourceTriggers = Input.ofNullable(sourceTriggers);
             return this;
         }
 
-        public Builder setTimerTriggers(@Nullable Input<List<TimerTriggerArgs>> timerTriggers) {
+        public Builder timerTriggers(@Nullable Input<List<TimerTriggerArgs>> timerTriggers) {
             this.timerTriggers = timerTriggers;
             return this;
         }
 
-        public Builder setTimerTriggers(@Nullable List<TimerTriggerArgs> timerTriggers) {
+        public Builder timerTriggers(@Nullable List<TimerTriggerArgs> timerTriggers) {
             this.timerTriggers = Input.ofNullable(timerTriggers);
             return this;
         }

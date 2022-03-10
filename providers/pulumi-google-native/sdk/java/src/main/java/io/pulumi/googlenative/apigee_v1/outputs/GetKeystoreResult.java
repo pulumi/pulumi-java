@@ -66,12 +66,12 @@ public final class GetKeystoreResult {
     	      this.name = defaults.name;
         }
 
-        public Builder setAliases(List<String> aliases) {
+        public Builder aliases(List<String> aliases) {
             this.aliases = Objects.requireNonNull(aliases);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

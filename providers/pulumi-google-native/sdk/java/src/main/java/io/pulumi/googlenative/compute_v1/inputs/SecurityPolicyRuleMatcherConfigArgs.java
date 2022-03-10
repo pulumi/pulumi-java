@@ -54,12 +54,12 @@ public final class SecurityPolicyRuleMatcherConfigArgs extends io.pulumi.resourc
     	      this.srcIpRanges = defaults.srcIpRanges;
         }
 
-        public Builder setSrcIpRanges(@Nullable Input<List<String>> srcIpRanges) {
+        public Builder srcIpRanges(@Nullable Input<List<String>> srcIpRanges) {
             this.srcIpRanges = srcIpRanges;
             return this;
         }
 
-        public Builder setSrcIpRanges(@Nullable List<String> srcIpRanges) {
+        public Builder srcIpRanges(@Nullable List<String> srcIpRanges) {
             this.srcIpRanges = Input.ofNullable(srcIpRanges);
             return this;
         }

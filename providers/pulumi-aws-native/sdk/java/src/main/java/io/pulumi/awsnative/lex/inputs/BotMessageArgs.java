@@ -93,42 +93,42 @@ public final class BotMessageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sSMLMessage = defaults.sSMLMessage;
         }
 
-        public Builder setCustomPayload(@Nullable Input<BotCustomPayloadArgs> customPayload) {
+        public Builder customPayload(@Nullable Input<BotCustomPayloadArgs> customPayload) {
             this.customPayload = customPayload;
             return this;
         }
 
-        public Builder setCustomPayload(@Nullable BotCustomPayloadArgs customPayload) {
+        public Builder customPayload(@Nullable BotCustomPayloadArgs customPayload) {
             this.customPayload = Input.ofNullable(customPayload);
             return this;
         }
 
-        public Builder setImageResponseCard(@Nullable Input<BotImageResponseCardArgs> imageResponseCard) {
+        public Builder imageResponseCard(@Nullable Input<BotImageResponseCardArgs> imageResponseCard) {
             this.imageResponseCard = imageResponseCard;
             return this;
         }
 
-        public Builder setImageResponseCard(@Nullable BotImageResponseCardArgs imageResponseCard) {
+        public Builder imageResponseCard(@Nullable BotImageResponseCardArgs imageResponseCard) {
             this.imageResponseCard = Input.ofNullable(imageResponseCard);
             return this;
         }
 
-        public Builder setPlainTextMessage(@Nullable Input<BotPlainTextMessageArgs> plainTextMessage) {
+        public Builder plainTextMessage(@Nullable Input<BotPlainTextMessageArgs> plainTextMessage) {
             this.plainTextMessage = plainTextMessage;
             return this;
         }
 
-        public Builder setPlainTextMessage(@Nullable BotPlainTextMessageArgs plainTextMessage) {
+        public Builder plainTextMessage(@Nullable BotPlainTextMessageArgs plainTextMessage) {
             this.plainTextMessage = Input.ofNullable(plainTextMessage);
             return this;
         }
 
-        public Builder setSSMLMessage(@Nullable Input<BotSSMLMessageArgs> sSMLMessage) {
+        public Builder sSMLMessage(@Nullable Input<BotSSMLMessageArgs> sSMLMessage) {
             this.sSMLMessage = sSMLMessage;
             return this;
         }
 
-        public Builder setSSMLMessage(@Nullable BotSSMLMessageArgs sSMLMessage) {
+        public Builder sSMLMessage(@Nullable BotSSMLMessageArgs sSMLMessage) {
             this.sSMLMessage = Input.ofNullable(sSMLMessage);
             return this;
         }

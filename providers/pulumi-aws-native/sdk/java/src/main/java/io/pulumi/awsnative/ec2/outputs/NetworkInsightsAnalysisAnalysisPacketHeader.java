@@ -77,27 +77,27 @@ public final class NetworkInsightsAnalysisAnalysisPacketHeader {
     	      this.sourcePortRanges = defaults.sourcePortRanges;
         }
 
-        public Builder setDestinationAddresses(@Nullable List<String> destinationAddresses) {
+        public Builder destinationAddresses(@Nullable List<String> destinationAddresses) {
             this.destinationAddresses = destinationAddresses;
             return this;
         }
 
-        public Builder setDestinationPortRanges(@Nullable List<NetworkInsightsAnalysisPortRange> destinationPortRanges) {
+        public Builder destinationPortRanges(@Nullable List<NetworkInsightsAnalysisPortRange> destinationPortRanges) {
             this.destinationPortRanges = destinationPortRanges;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setSourceAddresses(@Nullable List<String> sourceAddresses) {
+        public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
             this.sourceAddresses = sourceAddresses;
             return this;
         }
 
-        public Builder setSourcePortRanges(@Nullable List<NetworkInsightsAnalysisPortRange> sourcePortRanges) {
+        public Builder sourcePortRanges(@Nullable List<NetworkInsightsAnalysisPortRange> sourcePortRanges) {
             this.sourcePortRanges = sourcePortRanges;
             return this;
         }

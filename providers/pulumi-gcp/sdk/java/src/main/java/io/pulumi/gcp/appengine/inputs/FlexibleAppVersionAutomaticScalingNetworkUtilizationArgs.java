@@ -102,42 +102,42 @@ public final class FlexibleAppVersionAutomaticScalingNetworkUtilizationArgs exte
     	      this.targetSentPacketsPerSecond = defaults.targetSentPacketsPerSecond;
         }
 
-        public Builder setTargetReceivedBytesPerSecond(@Nullable Input<Integer> targetReceivedBytesPerSecond) {
+        public Builder targetReceivedBytesPerSecond(@Nullable Input<Integer> targetReceivedBytesPerSecond) {
             this.targetReceivedBytesPerSecond = targetReceivedBytesPerSecond;
             return this;
         }
 
-        public Builder setTargetReceivedBytesPerSecond(@Nullable Integer targetReceivedBytesPerSecond) {
+        public Builder targetReceivedBytesPerSecond(@Nullable Integer targetReceivedBytesPerSecond) {
             this.targetReceivedBytesPerSecond = Input.ofNullable(targetReceivedBytesPerSecond);
             return this;
         }
 
-        public Builder setTargetReceivedPacketsPerSecond(@Nullable Input<Integer> targetReceivedPacketsPerSecond) {
+        public Builder targetReceivedPacketsPerSecond(@Nullable Input<Integer> targetReceivedPacketsPerSecond) {
             this.targetReceivedPacketsPerSecond = targetReceivedPacketsPerSecond;
             return this;
         }
 
-        public Builder setTargetReceivedPacketsPerSecond(@Nullable Integer targetReceivedPacketsPerSecond) {
+        public Builder targetReceivedPacketsPerSecond(@Nullable Integer targetReceivedPacketsPerSecond) {
             this.targetReceivedPacketsPerSecond = Input.ofNullable(targetReceivedPacketsPerSecond);
             return this;
         }
 
-        public Builder setTargetSentBytesPerSecond(@Nullable Input<Integer> targetSentBytesPerSecond) {
+        public Builder targetSentBytesPerSecond(@Nullable Input<Integer> targetSentBytesPerSecond) {
             this.targetSentBytesPerSecond = targetSentBytesPerSecond;
             return this;
         }
 
-        public Builder setTargetSentBytesPerSecond(@Nullable Integer targetSentBytesPerSecond) {
+        public Builder targetSentBytesPerSecond(@Nullable Integer targetSentBytesPerSecond) {
             this.targetSentBytesPerSecond = Input.ofNullable(targetSentBytesPerSecond);
             return this;
         }
 
-        public Builder setTargetSentPacketsPerSecond(@Nullable Input<Integer> targetSentPacketsPerSecond) {
+        public Builder targetSentPacketsPerSecond(@Nullable Input<Integer> targetSentPacketsPerSecond) {
             this.targetSentPacketsPerSecond = targetSentPacketsPerSecond;
             return this;
         }
 
-        public Builder setTargetSentPacketsPerSecond(@Nullable Integer targetSentPacketsPerSecond) {
+        public Builder targetSentPacketsPerSecond(@Nullable Integer targetSentPacketsPerSecond) {
             this.targetSentPacketsPerSecond = Input.ofNullable(targetSentPacketsPerSecond);
             return this;
         }

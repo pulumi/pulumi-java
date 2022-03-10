@@ -107,42 +107,42 @@ public final class InputMappingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setFieldName(@Nullable Input<String> fieldName) {
+        public Builder fieldName(@Nullable Input<String> fieldName) {
             this.fieldName = fieldName;
             return this;
         }
 
-        public Builder setFieldName(@Nullable String fieldName) {
+        public Builder fieldName(@Nullable String fieldName) {
             this.fieldName = Input.ofNullable(fieldName);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<InputMappingLocation> location) {
+        public Builder location(@Nullable Input<InputMappingLocation> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable InputMappingLocation location) {
+        public Builder location(@Nullable InputMappingLocation location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMethodMatch(@Nullable Input<String> methodMatch) {
+        public Builder methodMatch(@Nullable Input<String> methodMatch) {
             this.methodMatch = methodMatch;
             return this;
         }
 
-        public Builder setMethodMatch(@Nullable String methodMatch) {
+        public Builder methodMatch(@Nullable String methodMatch) {
             this.methodMatch = Input.ofNullable(methodMatch);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }

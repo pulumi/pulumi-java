@@ -67,12 +67,12 @@ public final class ListClusterStreamingJobsResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setNextLink(String nextLink) {
+        public Builder nextLink(String nextLink) {
             this.nextLink = Objects.requireNonNull(nextLink);
             return this;
         }
 
-        public Builder setValue(List<ClusterJobResponse> value) {
+        public Builder value(List<ClusterJobResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

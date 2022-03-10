@@ -120,27 +120,27 @@ public final class MachineExtensionInstanceViewResponseStatus extends io.pulumi.
     	      this.time = defaults.time;
         }
 
-        public Builder setCode(String code) {
+        public Builder code(String code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
 
-        public Builder setDisplayStatus(String displayStatus) {
+        public Builder displayStatus(String displayStatus) {
             this.displayStatus = Objects.requireNonNull(displayStatus);
             return this;
         }
 
-        public Builder setLevel(String level) {
+        public Builder level(String level) {
             this.level = Objects.requireNonNull(level);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setTime(String time) {
+        public Builder time(String time) {
             this.time = Objects.requireNonNull(time);
             return this;
         }

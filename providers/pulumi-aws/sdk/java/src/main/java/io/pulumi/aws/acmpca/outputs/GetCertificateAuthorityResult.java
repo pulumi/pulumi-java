@@ -232,62 +232,62 @@ public final class GetCertificateAuthorityResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setCertificate(String certificate) {
+        public Builder certificate(String certificate) {
             this.certificate = Objects.requireNonNull(certificate);
             return this;
         }
 
-        public Builder setCertificateChain(String certificateChain) {
+        public Builder certificateChain(String certificateChain) {
             this.certificateChain = Objects.requireNonNull(certificateChain);
             return this;
         }
 
-        public Builder setCertificateSigningRequest(String certificateSigningRequest) {
+        public Builder certificateSigningRequest(String certificateSigningRequest) {
             this.certificateSigningRequest = Objects.requireNonNull(certificateSigningRequest);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setNotAfter(String notAfter) {
+        public Builder notAfter(String notAfter) {
             this.notAfter = Objects.requireNonNull(notAfter);
             return this;
         }
 
-        public Builder setNotBefore(String notBefore) {
+        public Builder notBefore(String notBefore) {
             this.notBefore = Objects.requireNonNull(notBefore);
             return this;
         }
 
-        public Builder setRevocationConfigurations(List<GetCertificateAuthorityRevocationConfiguration> revocationConfigurations) {
+        public Builder revocationConfigurations(List<GetCertificateAuthorityRevocationConfiguration> revocationConfigurations) {
             this.revocationConfigurations = Objects.requireNonNull(revocationConfigurations);
             return this;
         }
 
-        public Builder setSerial(String serial) {
+        public Builder serial(String serial) {
             this.serial = Objects.requireNonNull(serial);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

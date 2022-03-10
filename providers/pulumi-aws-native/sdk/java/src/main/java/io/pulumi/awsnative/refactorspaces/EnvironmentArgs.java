@@ -93,42 +93,42 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetworkFabricType(@Nullable Input<EnvironmentNetworkFabricType> networkFabricType) {
+        public Builder networkFabricType(@Nullable Input<EnvironmentNetworkFabricType> networkFabricType) {
             this.networkFabricType = networkFabricType;
             return this;
         }
 
-        public Builder setNetworkFabricType(@Nullable EnvironmentNetworkFabricType networkFabricType) {
+        public Builder networkFabricType(@Nullable EnvironmentNetworkFabricType networkFabricType) {
             this.networkFabricType = Input.ofNullable(networkFabricType);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<EnvironmentTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<EnvironmentTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<EnvironmentTagArgs> tags) {
+        public Builder tags(@Nullable List<EnvironmentTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

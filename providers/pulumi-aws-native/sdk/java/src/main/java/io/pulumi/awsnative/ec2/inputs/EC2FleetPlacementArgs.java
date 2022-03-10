@@ -135,82 +135,82 @@ public final class EC2FleetPlacementArgs extends io.pulumi.resources.ResourceArg
     	      this.tenancy = defaults.tenancy;
         }
 
-        public Builder setAffinity(@Nullable Input<String> affinity) {
+        public Builder affinity(@Nullable Input<String> affinity) {
             this.affinity = affinity;
             return this;
         }
 
-        public Builder setAffinity(@Nullable String affinity) {
+        public Builder affinity(@Nullable String affinity) {
             this.affinity = Input.ofNullable(affinity);
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Input.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder setGroupName(@Nullable Input<String> groupName) {
+        public Builder groupName(@Nullable Input<String> groupName) {
             this.groupName = groupName;
             return this;
         }
 
-        public Builder setGroupName(@Nullable String groupName) {
+        public Builder groupName(@Nullable String groupName) {
             this.groupName = Input.ofNullable(groupName);
             return this;
         }
 
-        public Builder setHostId(@Nullable Input<String> hostId) {
+        public Builder hostId(@Nullable Input<String> hostId) {
             this.hostId = hostId;
             return this;
         }
 
-        public Builder setHostId(@Nullable String hostId) {
+        public Builder hostId(@Nullable String hostId) {
             this.hostId = Input.ofNullable(hostId);
             return this;
         }
 
-        public Builder setHostResourceGroupArn(@Nullable Input<String> hostResourceGroupArn) {
+        public Builder hostResourceGroupArn(@Nullable Input<String> hostResourceGroupArn) {
             this.hostResourceGroupArn = hostResourceGroupArn;
             return this;
         }
 
-        public Builder setHostResourceGroupArn(@Nullable String hostResourceGroupArn) {
+        public Builder hostResourceGroupArn(@Nullable String hostResourceGroupArn) {
             this.hostResourceGroupArn = Input.ofNullable(hostResourceGroupArn);
             return this;
         }
 
-        public Builder setPartitionNumber(@Nullable Input<Integer> partitionNumber) {
+        public Builder partitionNumber(@Nullable Input<Integer> partitionNumber) {
             this.partitionNumber = partitionNumber;
             return this;
         }
 
-        public Builder setPartitionNumber(@Nullable Integer partitionNumber) {
+        public Builder partitionNumber(@Nullable Integer partitionNumber) {
             this.partitionNumber = Input.ofNullable(partitionNumber);
             return this;
         }
 
-        public Builder setSpreadDomain(@Nullable Input<String> spreadDomain) {
+        public Builder spreadDomain(@Nullable Input<String> spreadDomain) {
             this.spreadDomain = spreadDomain;
             return this;
         }
 
-        public Builder setSpreadDomain(@Nullable String spreadDomain) {
+        public Builder spreadDomain(@Nullable String spreadDomain) {
             this.spreadDomain = Input.ofNullable(spreadDomain);
             return this;
         }
 
-        public Builder setTenancy(@Nullable Input<String> tenancy) {
+        public Builder tenancy(@Nullable Input<String> tenancy) {
             this.tenancy = tenancy;
             return this;
         }
 
-        public Builder setTenancy(@Nullable String tenancy) {
+        public Builder tenancy(@Nullable String tenancy) {
             this.tenancy = Input.ofNullable(tenancy);
             return this;
         }

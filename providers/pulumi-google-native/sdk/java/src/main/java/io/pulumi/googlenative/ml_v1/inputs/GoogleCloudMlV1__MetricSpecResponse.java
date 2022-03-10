@@ -73,12 +73,12 @@ public final class GoogleCloudMlV1__MetricSpecResponse extends io.pulumi.resourc
     	      this.target = defaults.target;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTarget(Integer target) {
+        public Builder target(Integer target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }

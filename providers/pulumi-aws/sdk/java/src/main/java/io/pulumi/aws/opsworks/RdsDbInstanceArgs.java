@@ -101,42 +101,42 @@ public final class RdsDbInstanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.stackId = defaults.stackId;
         }
 
-        public Builder setDbPassword(Input<String> dbPassword) {
+        public Builder dbPassword(Input<String> dbPassword) {
             this.dbPassword = Objects.requireNonNull(dbPassword);
             return this;
         }
 
-        public Builder setDbPassword(String dbPassword) {
+        public Builder dbPassword(String dbPassword) {
             this.dbPassword = Input.of(Objects.requireNonNull(dbPassword));
             return this;
         }
 
-        public Builder setDbUser(Input<String> dbUser) {
+        public Builder dbUser(Input<String> dbUser) {
             this.dbUser = Objects.requireNonNull(dbUser);
             return this;
         }
 
-        public Builder setDbUser(String dbUser) {
+        public Builder dbUser(String dbUser) {
             this.dbUser = Input.of(Objects.requireNonNull(dbUser));
             return this;
         }
 
-        public Builder setRdsDbInstanceArn(Input<String> rdsDbInstanceArn) {
+        public Builder rdsDbInstanceArn(Input<String> rdsDbInstanceArn) {
             this.rdsDbInstanceArn = Objects.requireNonNull(rdsDbInstanceArn);
             return this;
         }
 
-        public Builder setRdsDbInstanceArn(String rdsDbInstanceArn) {
+        public Builder rdsDbInstanceArn(String rdsDbInstanceArn) {
             this.rdsDbInstanceArn = Input.of(Objects.requireNonNull(rdsDbInstanceArn));
             return this;
         }
 
-        public Builder setStackId(Input<String> stackId) {
+        public Builder stackId(Input<String> stackId) {
             this.stackId = Objects.requireNonNull(stackId);
             return this;
         }
 
-        public Builder setStackId(String stackId) {
+        public Builder stackId(String stackId) {
             this.stackId = Input.of(Objects.requireNonNull(stackId));
             return this;
         }

@@ -213,57 +213,57 @@ public final class GetBillingAccountSinkResult {
     	      this.writerIdentity = defaults.writerIdentity;
         }
 
-        public Builder setBigqueryOptions(BigQueryOptionsResponse bigqueryOptions) {
+        public Builder bigqueryOptions(BigQueryOptionsResponse bigqueryOptions) {
             this.bigqueryOptions = Objects.requireNonNull(bigqueryOptions);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDestination(String destination) {
+        public Builder destination(String destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setDisabled(Boolean disabled) {
+        public Builder disabled(Boolean disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
 
-        public Builder setExclusions(List<LogExclusionResponse> exclusions) {
+        public Builder exclusions(List<LogExclusionResponse> exclusions) {
             this.exclusions = Objects.requireNonNull(exclusions);
             return this;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setIncludeChildren(Boolean includeChildren) {
+        public Builder includeChildren(Boolean includeChildren) {
             this.includeChildren = Objects.requireNonNull(includeChildren);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
 
-        public Builder setWriterIdentity(String writerIdentity) {
+        public Builder writerIdentity(String writerIdentity) {
             this.writerIdentity = Objects.requireNonNull(writerIdentity);
             return this;
         }

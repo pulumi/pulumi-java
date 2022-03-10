@@ -68,12 +68,12 @@ public final class WorkflowTemplatePlacement {
     	      this.managedCluster = defaults.managedCluster;
         }
 
-        public Builder setClusterSelector(@Nullable WorkflowTemplatePlacementClusterSelector clusterSelector) {
+        public Builder clusterSelector(@Nullable WorkflowTemplatePlacementClusterSelector clusterSelector) {
             this.clusterSelector = clusterSelector;
             return this;
         }
 
-        public Builder setManagedCluster(@Nullable WorkflowTemplatePlacementManagedCluster managedCluster) {
+        public Builder managedCluster(@Nullable WorkflowTemplatePlacementManagedCluster managedCluster) {
             this.managedCluster = managedCluster;
             return this;
         }

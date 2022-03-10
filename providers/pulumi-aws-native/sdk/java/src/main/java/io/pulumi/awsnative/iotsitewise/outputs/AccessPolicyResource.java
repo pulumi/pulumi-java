@@ -52,12 +52,12 @@ public final class AccessPolicyResource {
     	      this.project = defaults.project;
         }
 
-        public Builder setPortal(@Nullable AccessPolicyPortal portal) {
+        public Builder portal(@Nullable AccessPolicyPortal portal) {
             this.portal = portal;
             return this;
         }
 
-        public Builder setProject(@Nullable AccessPolicyProject project) {
+        public Builder project(@Nullable AccessPolicyProject project) {
             this.project = project;
             return this;
         }

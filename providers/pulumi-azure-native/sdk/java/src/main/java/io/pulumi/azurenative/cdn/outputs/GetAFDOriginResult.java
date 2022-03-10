@@ -271,77 +271,77 @@ public final class GetAFDOriginResult {
     	      this.weight = defaults.weight;
         }
 
-        public Builder setAzureOrigin(@Nullable ResourceReferenceResponse azureOrigin) {
+        public Builder azureOrigin(@Nullable ResourceReferenceResponse azureOrigin) {
             this.azureOrigin = azureOrigin;
             return this;
         }
 
-        public Builder setDeploymentStatus(String deploymentStatus) {
+        public Builder deploymentStatus(String deploymentStatus) {
             this.deploymentStatus = Objects.requireNonNull(deploymentStatus);
             return this;
         }
 
-        public Builder setEnabledState(@Nullable String enabledState) {
+        public Builder enabledState(@Nullable String enabledState) {
             this.enabledState = enabledState;
             return this;
         }
 
-        public Builder setHostName(String hostName) {
+        public Builder hostName(String hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
 
-        public Builder setHttpPort(@Nullable Integer httpPort) {
+        public Builder httpPort(@Nullable Integer httpPort) {
             this.httpPort = httpPort;
             return this;
         }
 
-        public Builder setHttpsPort(@Nullable Integer httpsPort) {
+        public Builder httpsPort(@Nullable Integer httpsPort) {
             this.httpsPort = httpsPort;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOriginHostHeader(@Nullable String originHostHeader) {
+        public Builder originHostHeader(@Nullable String originHostHeader) {
             this.originHostHeader = originHostHeader;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSharedPrivateLinkResource(@Nullable SharedPrivateLinkResourcePropertiesResponse sharedPrivateLinkResource) {
+        public Builder sharedPrivateLinkResource(@Nullable SharedPrivateLinkResourcePropertiesResponse sharedPrivateLinkResource) {
             this.sharedPrivateLinkResource = sharedPrivateLinkResource;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWeight(@Nullable Integer weight) {
+        public Builder weight(@Nullable Integer weight) {
             this.weight = weight;
             return this;
         }

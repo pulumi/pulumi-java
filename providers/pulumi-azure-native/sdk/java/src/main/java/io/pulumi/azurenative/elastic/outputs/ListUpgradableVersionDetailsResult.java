@@ -68,12 +68,12 @@ public final class ListUpgradableVersionDetailsResult {
     	      this.upgradableVersions = defaults.upgradableVersions;
         }
 
-        public Builder setCurrentVersion(@Nullable String currentVersion) {
+        public Builder currentVersion(@Nullable String currentVersion) {
             this.currentVersion = currentVersion;
             return this;
         }
 
-        public Builder setUpgradableVersions(@Nullable List<String> upgradableVersions) {
+        public Builder upgradableVersions(@Nullable List<String> upgradableVersions) {
             this.upgradableVersions = upgradableVersions;
             return this;
         }

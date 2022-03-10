@@ -71,22 +71,22 @@ public final class RouteSpecTcpRouteGetArgs extends io.pulumi.resources.Resource
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setAction(Input<RouteSpecTcpRouteActionGetArgs> action) {
+        public Builder action(Input<RouteSpecTcpRouteActionGetArgs> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setAction(RouteSpecTcpRouteActionGetArgs action) {
+        public Builder action(RouteSpecTcpRouteActionGetArgs action) {
             this.action = Input.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<RouteSpecTcpRouteTimeoutGetArgs> timeout) {
+        public Builder timeout(@Nullable Input<RouteSpecTcpRouteTimeoutGetArgs> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable RouteSpecTcpRouteTimeoutGetArgs timeout) {
+        public Builder timeout(@Nullable RouteSpecTcpRouteTimeoutGetArgs timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }

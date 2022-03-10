@@ -120,52 +120,52 @@ public final class TaskDefinitionVolumeDockerVolumeConfigurationArgs extends io.
     	      this.scope = defaults.scope;
         }
 
-        public Builder setAutoprovision(@Nullable Input<Boolean> autoprovision) {
+        public Builder autoprovision(@Nullable Input<Boolean> autoprovision) {
             this.autoprovision = autoprovision;
             return this;
         }
 
-        public Builder setAutoprovision(@Nullable Boolean autoprovision) {
+        public Builder autoprovision(@Nullable Boolean autoprovision) {
             this.autoprovision = Input.ofNullable(autoprovision);
             return this;
         }
 
-        public Builder setDriver(@Nullable Input<String> driver) {
+        public Builder driver(@Nullable Input<String> driver) {
             this.driver = driver;
             return this;
         }
 
-        public Builder setDriver(@Nullable String driver) {
+        public Builder driver(@Nullable String driver) {
             this.driver = Input.ofNullable(driver);
             return this;
         }
 
-        public Builder setDriverOpts(@Nullable Input<Map<String,String>> driverOpts) {
+        public Builder driverOpts(@Nullable Input<Map<String,String>> driverOpts) {
             this.driverOpts = driverOpts;
             return this;
         }
 
-        public Builder setDriverOpts(@Nullable Map<String,String> driverOpts) {
+        public Builder driverOpts(@Nullable Map<String,String> driverOpts) {
             this.driverOpts = Input.ofNullable(driverOpts);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setScope(@Nullable Input<String> scope) {
+        public Builder scope(@Nullable Input<String> scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setScope(@Nullable String scope) {
+        public Builder scope(@Nullable String scope) {
             this.scope = Input.ofNullable(scope);
             return this;
         }

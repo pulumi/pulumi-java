@@ -48,7 +48,7 @@ public final class OAuthRequirementsResponse {
     	      this.canonicalScopes = defaults.canonicalScopes;
         }
 
-        public Builder setCanonicalScopes(String canonicalScopes) {
+        public Builder canonicalScopes(String canonicalScopes) {
             this.canonicalScopes = Objects.requireNonNull(canonicalScopes);
             return this;
         }

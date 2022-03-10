@@ -93,32 +93,32 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
     	      this.sizeDisk = defaults.sizeDisk;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setKind(Input<String> kind) {
+        public Builder kind(Input<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setSizeDisk(Input<Either<String,SizeTypes>> sizeDisk) {
+        public Builder sizeDisk(Input<Either<String,SizeTypes>> sizeDisk) {
             this.sizeDisk = Objects.requireNonNull(sizeDisk);
             return this;
         }
 
-        public Builder setSizeDisk(Either<String,SizeTypes> sizeDisk) {
+        public Builder sizeDisk(Either<String,SizeTypes> sizeDisk) {
             this.sizeDisk = Input.of(Objects.requireNonNull(sizeDisk));
             return this;
         }

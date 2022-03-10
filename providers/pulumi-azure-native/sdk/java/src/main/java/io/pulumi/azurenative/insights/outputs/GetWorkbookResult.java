@@ -293,82 +293,82 @@ public final class GetWorkbookResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setCategory(String category) {
+        public Builder category(String category) {
             this.category = Objects.requireNonNull(category);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setEtag(@Nullable Map<String,String> etag) {
+        public Builder etag(@Nullable Map<String,String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIdentity(@Nullable WorkbookManagedIdentityResponse identity) {
+        public Builder identity(@Nullable WorkbookManagedIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setSerializedData(String serializedData) {
+        public Builder serializedData(String serializedData) {
             this.serializedData = Objects.requireNonNull(serializedData);
             return this;
         }
 
-        public Builder setSourceId(@Nullable String sourceId) {
+        public Builder sourceId(@Nullable String sourceId) {
             this.sourceId = sourceId;
             return this;
         }
 
-        public Builder setStorageUri(@Nullable String storageUri) {
+        public Builder storageUri(@Nullable String storageUri) {
             this.storageUri = storageUri;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTimeModified(String timeModified) {
+        public Builder timeModified(String timeModified) {
             this.timeModified = Objects.requireNonNull(timeModified);
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setUserId(String userId) {
+        public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

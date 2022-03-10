@@ -67,12 +67,12 @@ public final class MysqlTableResponse {
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder setMysqlColumns(List<MysqlColumnResponse> mysqlColumns) {
+        public Builder mysqlColumns(List<MysqlColumnResponse> mysqlColumns) {
             this.mysqlColumns = Objects.requireNonNull(mysqlColumns);
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }

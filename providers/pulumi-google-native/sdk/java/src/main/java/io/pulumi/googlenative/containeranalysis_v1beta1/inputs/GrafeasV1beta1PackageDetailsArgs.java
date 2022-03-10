@@ -56,12 +56,12 @@ public final class GrafeasV1beta1PackageDetailsArgs extends io.pulumi.resources.
     	      this.installation = defaults.installation;
         }
 
-        public Builder setInstallation(Input<InstallationArgs> installation) {
+        public Builder installation(Input<InstallationArgs> installation) {
             this.installation = Objects.requireNonNull(installation);
             return this;
         }
 
-        public Builder setInstallation(InstallationArgs installation) {
+        public Builder installation(InstallationArgs installation) {
             this.installation = Input.of(Objects.requireNonNull(installation));
             return this;
         }

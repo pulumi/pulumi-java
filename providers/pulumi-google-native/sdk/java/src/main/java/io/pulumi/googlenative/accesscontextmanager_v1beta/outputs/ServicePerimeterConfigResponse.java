@@ -99,22 +99,22 @@ public final class ServicePerimeterConfigResponse {
     	      this.vpcAccessibleServices = defaults.vpcAccessibleServices;
         }
 
-        public Builder setAccessLevels(List<String> accessLevels) {
+        public Builder accessLevels(List<String> accessLevels) {
             this.accessLevels = Objects.requireNonNull(accessLevels);
             return this;
         }
 
-        public Builder setResources(List<String> resources) {
+        public Builder resources(List<String> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
 
-        public Builder setRestrictedServices(List<String> restrictedServices) {
+        public Builder restrictedServices(List<String> restrictedServices) {
             this.restrictedServices = Objects.requireNonNull(restrictedServices);
             return this;
         }
 
-        public Builder setVpcAccessibleServices(VpcAccessibleServicesResponse vpcAccessibleServices) {
+        public Builder vpcAccessibleServices(VpcAccessibleServicesResponse vpcAccessibleServices) {
             this.vpcAccessibleServices = Objects.requireNonNull(vpcAccessibleServices);
             return this;
         }

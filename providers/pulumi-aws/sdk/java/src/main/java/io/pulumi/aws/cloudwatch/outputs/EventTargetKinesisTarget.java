@@ -50,7 +50,7 @@ public final class EventTargetKinesisTarget {
     	      this.partitionKeyPath = defaults.partitionKeyPath;
         }
 
-        public Builder setPartitionKeyPath(@Nullable String partitionKeyPath) {
+        public Builder partitionKeyPath(@Nullable String partitionKeyPath) {
             this.partitionKeyPath = partitionKeyPath;
             return this;
         }

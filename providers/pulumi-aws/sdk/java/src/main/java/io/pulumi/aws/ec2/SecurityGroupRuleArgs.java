@@ -220,112 +220,112 @@ public final class SecurityGroupRuleArgs extends io.pulumi.resources.ResourceArg
     	      this.type = defaults.type;
         }
 
-        public Builder setCidrBlocks(@Nullable Input<List<String>> cidrBlocks) {
+        public Builder cidrBlocks(@Nullable Input<List<String>> cidrBlocks) {
             this.cidrBlocks = cidrBlocks;
             return this;
         }
 
-        public Builder setCidrBlocks(@Nullable List<String> cidrBlocks) {
+        public Builder cidrBlocks(@Nullable List<String> cidrBlocks) {
             this.cidrBlocks = Input.ofNullable(cidrBlocks);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFromPort(Input<Integer> fromPort) {
+        public Builder fromPort(Input<Integer> fromPort) {
             this.fromPort = Objects.requireNonNull(fromPort);
             return this;
         }
 
-        public Builder setFromPort(Integer fromPort) {
+        public Builder fromPort(Integer fromPort) {
             this.fromPort = Input.of(Objects.requireNonNull(fromPort));
             return this;
         }
 
-        public Builder setIpv6CidrBlocks(@Nullable Input<List<String>> ipv6CidrBlocks) {
+        public Builder ipv6CidrBlocks(@Nullable Input<List<String>> ipv6CidrBlocks) {
             this.ipv6CidrBlocks = ipv6CidrBlocks;
             return this;
         }
 
-        public Builder setIpv6CidrBlocks(@Nullable List<String> ipv6CidrBlocks) {
+        public Builder ipv6CidrBlocks(@Nullable List<String> ipv6CidrBlocks) {
             this.ipv6CidrBlocks = Input.ofNullable(ipv6CidrBlocks);
             return this;
         }
 
-        public Builder setPrefixListIds(@Nullable Input<List<String>> prefixListIds) {
+        public Builder prefixListIds(@Nullable Input<List<String>> prefixListIds) {
             this.prefixListIds = prefixListIds;
             return this;
         }
 
-        public Builder setPrefixListIds(@Nullable List<String> prefixListIds) {
+        public Builder prefixListIds(@Nullable List<String> prefixListIds) {
             this.prefixListIds = Input.ofNullable(prefixListIds);
             return this;
         }
 
-        public Builder setProtocol(Input<Either<String,ProtocolType>> protocol) {
+        public Builder protocol(Input<Either<String,ProtocolType>> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setProtocol(Either<String,ProtocolType> protocol) {
+        public Builder protocol(Either<String,ProtocolType> protocol) {
             this.protocol = Input.of(Objects.requireNonNull(protocol));
             return this;
         }
 
-        public Builder setSecurityGroupId(Input<String> securityGroupId) {
+        public Builder securityGroupId(Input<String> securityGroupId) {
             this.securityGroupId = Objects.requireNonNull(securityGroupId);
             return this;
         }
 
-        public Builder setSecurityGroupId(String securityGroupId) {
+        public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = Input.of(Objects.requireNonNull(securityGroupId));
             return this;
         }
 
-        public Builder setSelf(@Nullable Input<Boolean> self) {
+        public Builder self(@Nullable Input<Boolean> self) {
             this.self = self;
             return this;
         }
 
-        public Builder setSelf(@Nullable Boolean self) {
+        public Builder self(@Nullable Boolean self) {
             this.self = Input.ofNullable(self);
             return this;
         }
 
-        public Builder setSourceSecurityGroupId(@Nullable Input<String> sourceSecurityGroupId) {
+        public Builder sourceSecurityGroupId(@Nullable Input<String> sourceSecurityGroupId) {
             this.sourceSecurityGroupId = sourceSecurityGroupId;
             return this;
         }
 
-        public Builder setSourceSecurityGroupId(@Nullable String sourceSecurityGroupId) {
+        public Builder sourceSecurityGroupId(@Nullable String sourceSecurityGroupId) {
             this.sourceSecurityGroupId = Input.ofNullable(sourceSecurityGroupId);
             return this;
         }
 
-        public Builder setToPort(Input<Integer> toPort) {
+        public Builder toPort(Input<Integer> toPort) {
             this.toPort = Objects.requireNonNull(toPort);
             return this;
         }
 
-        public Builder setToPort(Integer toPort) {
+        public Builder toPort(Integer toPort) {
             this.toPort = Input.of(Objects.requireNonNull(toPort));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

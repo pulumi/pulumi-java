@@ -75,22 +75,22 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesArgs ext
     	      this.title = defaults.title;
         }
 
-        public Builder setQuickReplies(@Nullable Input<List<String>> quickReplies) {
+        public Builder quickReplies(@Nullable Input<List<String>> quickReplies) {
             this.quickReplies = quickReplies;
             return this;
         }
 
-        public Builder setQuickReplies(@Nullable List<String> quickReplies) {
+        public Builder quickReplies(@Nullable List<String> quickReplies) {
             this.quickReplies = Input.ofNullable(quickReplies);
             return this;
         }
 
-        public Builder setTitle(@Nullable Input<String> title) {
+        public Builder title(@Nullable Input<String> title) {
             this.title = title;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = Input.ofNullable(title);
             return this;
         }

@@ -205,52 +205,52 @@ public final class OracleSourceResponse extends io.pulumi.resources.InvokeArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setAdditionalColumns(@Nullable Object additionalColumns) {
+        public Builder additionalColumns(@Nullable Object additionalColumns) {
             this.additionalColumns = additionalColumns;
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Object disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
-        public Builder setOracleReaderQuery(@Nullable Object oracleReaderQuery) {
+        public Builder oracleReaderQuery(@Nullable Object oracleReaderQuery) {
             this.oracleReaderQuery = oracleReaderQuery;
             return this;
         }
 
-        public Builder setPartitionOption(@Nullable Object partitionOption) {
+        public Builder partitionOption(@Nullable Object partitionOption) {
             this.partitionOption = partitionOption;
             return this;
         }
 
-        public Builder setPartitionSettings(@Nullable OraclePartitionSettingsResponse partitionSettings) {
+        public Builder partitionSettings(@Nullable OraclePartitionSettingsResponse partitionSettings) {
             this.partitionSettings = partitionSettings;
             return this;
         }
 
-        public Builder setQueryTimeout(@Nullable Object queryTimeout) {
+        public Builder queryTimeout(@Nullable Object queryTimeout) {
             this.queryTimeout = queryTimeout;
             return this;
         }
 
-        public Builder setSourceRetryCount(@Nullable Object sourceRetryCount) {
+        public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
             this.sourceRetryCount = sourceRetryCount;
             return this;
         }
 
-        public Builder setSourceRetryWait(@Nullable Object sourceRetryWait) {
+        public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
             this.sourceRetryWait = sourceRetryWait;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

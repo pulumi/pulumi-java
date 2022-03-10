@@ -51,12 +51,12 @@ public final class GetLaunchTemplateInstanceMarketOption {
     	      this.spotOptions = defaults.spotOptions;
         }
 
-        public Builder setMarketType(String marketType) {
+        public Builder marketType(String marketType) {
             this.marketType = Objects.requireNonNull(marketType);
             return this;
         }
 
-        public Builder setSpotOptions(List<GetLaunchTemplateInstanceMarketOptionSpotOption> spotOptions) {
+        public Builder spotOptions(List<GetLaunchTemplateInstanceMarketOptionSpotOption> spotOptions) {
             this.spotOptions = Objects.requireNonNull(spotOptions);
             return this;
         }

@@ -48,7 +48,7 @@ public final class ResourceStatusSchedulingResponse {
     	      this.availabilityDomain = defaults.availabilityDomain;
         }
 
-        public Builder setAvailabilityDomain(Integer availabilityDomain) {
+        public Builder availabilityDomain(Integer availabilityDomain) {
             this.availabilityDomain = Objects.requireNonNull(availabilityDomain);
             return this;
         }

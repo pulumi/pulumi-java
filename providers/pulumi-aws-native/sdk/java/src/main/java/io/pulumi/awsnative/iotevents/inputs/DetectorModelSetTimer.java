@@ -91,17 +91,17 @@ public final class DetectorModelSetTimer extends io.pulumi.resources.InvokeArgs 
     	      this.timerName = defaults.timerName;
         }
 
-        public Builder setDurationExpression(@Nullable String durationExpression) {
+        public Builder durationExpression(@Nullable String durationExpression) {
             this.durationExpression = durationExpression;
             return this;
         }
 
-        public Builder setSeconds(@Nullable Integer seconds) {
+        public Builder seconds(@Nullable Integer seconds) {
             this.seconds = seconds;
             return this;
         }
 
-        public Builder setTimerName(String timerName) {
+        public Builder timerName(String timerName) {
             this.timerName = Objects.requireNonNull(timerName);
             return this;
         }

@@ -84,17 +84,17 @@ public final class GetPipelineDefinitionPipelineObjectField extends io.pulumi.re
     	      this.stringValue = defaults.stringValue;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setRefValue(String refValue) {
+        public Builder refValue(String refValue) {
             this.refValue = Objects.requireNonNull(refValue);
             return this;
         }
 
-        public Builder setStringValue(String stringValue) {
+        public Builder stringValue(String stringValue) {
             this.stringValue = Objects.requireNonNull(stringValue);
             return this;
         }

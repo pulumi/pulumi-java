@@ -314,162 +314,162 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setCreationTimestamp(@Nullable Input<String> creationTimestamp) {
+        public Builder creationTimestamp(@Nullable Input<String> creationTimestamp) {
             this.creationTimestamp = creationTimestamp;
             return this;
         }
 
-        public Builder setCreationTimestamp(@Nullable String creationTimestamp) {
+        public Builder creationTimestamp(@Nullable String creationTimestamp) {
             this.creationTimestamp = Input.ofNullable(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDiskSizeGb(@Nullable Input<Integer> diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Input<Integer> diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
 
-        public Builder setDiskSizeGb(@Nullable Integer diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
             this.diskSizeGb = Input.ofNullable(diskSizeGb);
             return this;
         }
 
-        public Builder setLabelFingerprint(@Nullable Input<String> labelFingerprint) {
+        public Builder labelFingerprint(@Nullable Input<String> labelFingerprint) {
             this.labelFingerprint = labelFingerprint;
             return this;
         }
 
-        public Builder setLabelFingerprint(@Nullable String labelFingerprint) {
+        public Builder labelFingerprint(@Nullable String labelFingerprint) {
             this.labelFingerprint = Input.ofNullable(labelFingerprint);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLicenses(@Nullable Input<List<String>> licenses) {
+        public Builder licenses(@Nullable Input<List<String>> licenses) {
             this.licenses = licenses;
             return this;
         }
 
-        public Builder setLicenses(@Nullable List<String> licenses) {
+        public Builder licenses(@Nullable List<String> licenses) {
             this.licenses = Input.ofNullable(licenses);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSelfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Input<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
-        public Builder setSelfLink(@Nullable String selfLink) {
+        public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Input.ofNullable(selfLink);
             return this;
         }
 
-        public Builder setSnapshotEncryptionKey(@Nullable Input<SnapshotSnapshotEncryptionKeyGetArgs> snapshotEncryptionKey) {
+        public Builder snapshotEncryptionKey(@Nullable Input<SnapshotSnapshotEncryptionKeyGetArgs> snapshotEncryptionKey) {
             this.snapshotEncryptionKey = snapshotEncryptionKey;
             return this;
         }
 
-        public Builder setSnapshotEncryptionKey(@Nullable SnapshotSnapshotEncryptionKeyGetArgs snapshotEncryptionKey) {
+        public Builder snapshotEncryptionKey(@Nullable SnapshotSnapshotEncryptionKeyGetArgs snapshotEncryptionKey) {
             this.snapshotEncryptionKey = Input.ofNullable(snapshotEncryptionKey);
             return this;
         }
 
-        public Builder setSnapshotId(@Nullable Input<Integer> snapshotId) {
+        public Builder snapshotId(@Nullable Input<Integer> snapshotId) {
             this.snapshotId = snapshotId;
             return this;
         }
 
-        public Builder setSnapshotId(@Nullable Integer snapshotId) {
+        public Builder snapshotId(@Nullable Integer snapshotId) {
             this.snapshotId = Input.ofNullable(snapshotId);
             return this;
         }
 
-        public Builder setSourceDisk(@Nullable Input<String> sourceDisk) {
+        public Builder sourceDisk(@Nullable Input<String> sourceDisk) {
             this.sourceDisk = sourceDisk;
             return this;
         }
 
-        public Builder setSourceDisk(@Nullable String sourceDisk) {
+        public Builder sourceDisk(@Nullable String sourceDisk) {
             this.sourceDisk = Input.ofNullable(sourceDisk);
             return this;
         }
 
-        public Builder setSourceDiskEncryptionKey(@Nullable Input<SnapshotSourceDiskEncryptionKeyGetArgs> sourceDiskEncryptionKey) {
+        public Builder sourceDiskEncryptionKey(@Nullable Input<SnapshotSourceDiskEncryptionKeyGetArgs> sourceDiskEncryptionKey) {
             this.sourceDiskEncryptionKey = sourceDiskEncryptionKey;
             return this;
         }
 
-        public Builder setSourceDiskEncryptionKey(@Nullable SnapshotSourceDiskEncryptionKeyGetArgs sourceDiskEncryptionKey) {
+        public Builder sourceDiskEncryptionKey(@Nullable SnapshotSourceDiskEncryptionKeyGetArgs sourceDiskEncryptionKey) {
             this.sourceDiskEncryptionKey = Input.ofNullable(sourceDiskEncryptionKey);
             return this;
         }
 
-        public Builder setStorageBytes(@Nullable Input<Integer> storageBytes) {
+        public Builder storageBytes(@Nullable Input<Integer> storageBytes) {
             this.storageBytes = storageBytes;
             return this;
         }
 
-        public Builder setStorageBytes(@Nullable Integer storageBytes) {
+        public Builder storageBytes(@Nullable Integer storageBytes) {
             this.storageBytes = Input.ofNullable(storageBytes);
             return this;
         }
 
-        public Builder setStorageLocations(@Nullable Input<List<String>> storageLocations) {
+        public Builder storageLocations(@Nullable Input<List<String>> storageLocations) {
             this.storageLocations = storageLocations;
             return this;
         }
 
-        public Builder setStorageLocations(@Nullable List<String> storageLocations) {
+        public Builder storageLocations(@Nullable List<String> storageLocations) {
             this.storageLocations = Input.ofNullable(storageLocations);
             return this;
         }
 
-        public Builder setZone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Input<String> zone) {
             this.zone = zone;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = Input.ofNullable(zone);
             return this;
         }

@@ -71,12 +71,12 @@ public final class GetFolderArgs extends io.pulumi.resources.InvokeArgs {
     	      this.lookupOrganization = defaults.lookupOrganization;
         }
 
-        public Builder setFolder(String folder) {
+        public Builder folder(String folder) {
             this.folder = Objects.requireNonNull(folder);
             return this;
         }
 
-        public Builder setLookupOrganization(@Nullable Boolean lookupOrganization) {
+        public Builder lookupOrganization(@Nullable Boolean lookupOrganization) {
             this.lookupOrganization = lookupOrganization;
             return this;
         }

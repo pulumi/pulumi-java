@@ -84,17 +84,17 @@ public final class GetInventoryItemArgs extends io.pulumi.resources.InvokeArgs {
     	      this.vcenterName = defaults.vcenterName;
         }
 
-        public Builder setInventoryItemName(String inventoryItemName) {
+        public Builder inventoryItemName(String inventoryItemName) {
             this.inventoryItemName = Objects.requireNonNull(inventoryItemName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setVcenterName(String vcenterName) {
+        public Builder vcenterName(String vcenterName) {
             this.vcenterName = Objects.requireNonNull(vcenterName);
             return this;
         }

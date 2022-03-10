@@ -55,7 +55,7 @@ public final class AutomaticResponse extends io.pulumi.resources.InvokeArgs {
     	      this.customerManagedEncryption = defaults.customerManagedEncryption;
         }
 
-        public Builder setCustomerManagedEncryption(CustomerManagedEncryptionResponse customerManagedEncryption) {
+        public Builder customerManagedEncryption(CustomerManagedEncryptionResponse customerManagedEncryption) {
             this.customerManagedEncryption = Objects.requireNonNull(customerManagedEncryption);
             return this;
         }

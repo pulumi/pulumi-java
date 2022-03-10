@@ -232,62 +232,62 @@ public final class GetContactProfileResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAutoTrackingConfiguration(@Nullable String autoTrackingConfiguration) {
+        public Builder autoTrackingConfiguration(@Nullable String autoTrackingConfiguration) {
             this.autoTrackingConfiguration = autoTrackingConfiguration;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setEventHubUri(@Nullable String eventHubUri) {
+        public Builder eventHubUri(@Nullable String eventHubUri) {
             this.eventHubUri = eventHubUri;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLinks(List<ContactProfileLinkResponse> links) {
+        public Builder links(List<ContactProfileLinkResponse> links) {
             this.links = Objects.requireNonNull(links);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMinimumElevationDegrees(@Nullable Double minimumElevationDegrees) {
+        public Builder minimumElevationDegrees(@Nullable Double minimumElevationDegrees) {
             this.minimumElevationDegrees = minimumElevationDegrees;
             return this;
         }
 
-        public Builder setMinimumViableContactDuration(@Nullable String minimumViableContactDuration) {
+        public Builder minimumViableContactDuration(@Nullable String minimumViableContactDuration) {
             this.minimumViableContactDuration = minimumViableContactDuration;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

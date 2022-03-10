@@ -74,22 +74,22 @@ public final class GitHubActionCodeConfigurationArgs extends io.pulumi.resources
     	      this.runtimeVersion = defaults.runtimeVersion;
         }
 
-        public Builder setRuntimeStack(@Nullable Input<String> runtimeStack) {
+        public Builder runtimeStack(@Nullable Input<String> runtimeStack) {
             this.runtimeStack = runtimeStack;
             return this;
         }
 
-        public Builder setRuntimeStack(@Nullable String runtimeStack) {
+        public Builder runtimeStack(@Nullable String runtimeStack) {
             this.runtimeStack = Input.ofNullable(runtimeStack);
             return this;
         }
 
-        public Builder setRuntimeVersion(@Nullable Input<String> runtimeVersion) {
+        public Builder runtimeVersion(@Nullable Input<String> runtimeVersion) {
             this.runtimeVersion = runtimeVersion;
             return this;
         }
 
-        public Builder setRuntimeVersion(@Nullable String runtimeVersion) {
+        public Builder runtimeVersion(@Nullable String runtimeVersion) {
             this.runtimeVersion = Input.ofNullable(runtimeVersion);
             return this;
         }

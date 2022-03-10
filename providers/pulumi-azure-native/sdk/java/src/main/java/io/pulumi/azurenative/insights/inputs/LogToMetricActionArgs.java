@@ -76,22 +76,22 @@ public final class LogToMetricActionArgs extends io.pulumi.resources.ResourceArg
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setCriteria(Input<List<CriteriaArgs>> criteria) {
+        public Builder criteria(Input<List<CriteriaArgs>> criteria) {
             this.criteria = Objects.requireNonNull(criteria);
             return this;
         }
 
-        public Builder setCriteria(List<CriteriaArgs> criteria) {
+        public Builder criteria(List<CriteriaArgs> criteria) {
             this.criteria = Input.of(Objects.requireNonNull(criteria));
             return this;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }

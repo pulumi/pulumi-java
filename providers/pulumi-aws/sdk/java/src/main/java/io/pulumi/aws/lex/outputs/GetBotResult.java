@@ -310,87 +310,87 @@ public final class GetBotResult {
     	      this.voiceId = defaults.voiceId;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setChecksum(String checksum) {
+        public Builder checksum(String checksum) {
             this.checksum = Objects.requireNonNull(checksum);
             return this;
         }
 
-        public Builder setChildDirected(Boolean childDirected) {
+        public Builder childDirected(Boolean childDirected) {
             this.childDirected = Objects.requireNonNull(childDirected);
             return this;
         }
 
-        public Builder setCreatedDate(String createdDate) {
+        public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDetectSentiment(Boolean detectSentiment) {
+        public Builder detectSentiment(Boolean detectSentiment) {
             this.detectSentiment = Objects.requireNonNull(detectSentiment);
             return this;
         }
 
-        public Builder setEnableModelImprovements(Boolean enableModelImprovements) {
+        public Builder enableModelImprovements(Boolean enableModelImprovements) {
             this.enableModelImprovements = Objects.requireNonNull(enableModelImprovements);
             return this;
         }
 
-        public Builder setFailureReason(String failureReason) {
+        public Builder failureReason(String failureReason) {
             this.failureReason = Objects.requireNonNull(failureReason);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdleSessionTtlInSeconds(Integer idleSessionTtlInSeconds) {
+        public Builder idleSessionTtlInSeconds(Integer idleSessionTtlInSeconds) {
             this.idleSessionTtlInSeconds = Objects.requireNonNull(idleSessionTtlInSeconds);
             return this;
         }
 
-        public Builder setLastUpdatedDate(String lastUpdatedDate) {
+        public Builder lastUpdatedDate(String lastUpdatedDate) {
             this.lastUpdatedDate = Objects.requireNonNull(lastUpdatedDate);
             return this;
         }
 
-        public Builder setLocale(String locale) {
+        public Builder locale(String locale) {
             this.locale = Objects.requireNonNull(locale);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNluIntentConfidenceThreshold(Double nluIntentConfidenceThreshold) {
+        public Builder nluIntentConfidenceThreshold(Double nluIntentConfidenceThreshold) {
             this.nluIntentConfidenceThreshold = Objects.requireNonNull(nluIntentConfidenceThreshold);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVoiceId(String voiceId) {
+        public Builder voiceId(String voiceId) {
             this.voiceId = Objects.requireNonNull(voiceId);
             return this;
         }

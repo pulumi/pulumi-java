@@ -56,12 +56,12 @@ public final class WaitStepAttributesArgs extends io.pulumi.resources.ResourceAr
     	      this.duration = defaults.duration;
         }
 
-        public Builder setDuration(Input<String> duration) {
+        public Builder duration(Input<String> duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
-        public Builder setDuration(String duration) {
+        public Builder duration(String duration) {
             this.duration = Input.of(Objects.requireNonNull(duration));
             return this;
         }

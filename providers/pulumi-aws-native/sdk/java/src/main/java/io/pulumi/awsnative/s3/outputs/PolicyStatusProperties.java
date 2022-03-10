@@ -48,7 +48,7 @@ public final class PolicyStatusProperties {
     	      this.isPublic = defaults.isPublic;
         }
 
-        public Builder setIsPublic(MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic isPublic) {
+        public Builder isPublic(MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic isPublic) {
             this.isPublic = Objects.requireNonNull(isPublic);
             return this;
         }

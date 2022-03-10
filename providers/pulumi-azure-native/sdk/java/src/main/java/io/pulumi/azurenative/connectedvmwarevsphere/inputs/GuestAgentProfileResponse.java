@@ -122,27 +122,27 @@ public final class GuestAgentProfileResponse extends io.pulumi.resources.InvokeA
     	      this.vmUuid = defaults.vmUuid;
         }
 
-        public Builder setAgentVersion(String agentVersion) {
+        public Builder agentVersion(String agentVersion) {
             this.agentVersion = Objects.requireNonNull(agentVersion);
             return this;
         }
 
-        public Builder setErrorDetails(List<ErrorDetailResponse> errorDetails) {
+        public Builder errorDetails(List<ErrorDetailResponse> errorDetails) {
             this.errorDetails = Objects.requireNonNull(errorDetails);
             return this;
         }
 
-        public Builder setLastStatusChange(String lastStatusChange) {
+        public Builder lastStatusChange(String lastStatusChange) {
             this.lastStatusChange = Objects.requireNonNull(lastStatusChange);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setVmUuid(String vmUuid) {
+        public Builder vmUuid(String vmUuid) {
             this.vmUuid = Objects.requireNonNull(vmUuid);
             return this;
         }

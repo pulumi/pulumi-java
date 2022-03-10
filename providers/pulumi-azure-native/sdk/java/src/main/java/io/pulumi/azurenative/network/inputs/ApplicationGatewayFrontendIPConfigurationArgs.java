@@ -157,72 +157,72 @@ public final class ApplicationGatewayFrontendIPConfigurationArgs extends io.pulu
     	      this.subnet = defaults.subnet;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPrivateIPAddress(@Nullable Input<String> privateIPAddress) {
+        public Builder privateIPAddress(@Nullable Input<String> privateIPAddress) {
             this.privateIPAddress = privateIPAddress;
             return this;
         }
 
-        public Builder setPrivateIPAddress(@Nullable String privateIPAddress) {
+        public Builder privateIPAddress(@Nullable String privateIPAddress) {
             this.privateIPAddress = Input.ofNullable(privateIPAddress);
             return this;
         }
 
-        public Builder setPrivateIPAllocationMethod(@Nullable Input<Either<String,IPAllocationMethod>> privateIPAllocationMethod) {
+        public Builder privateIPAllocationMethod(@Nullable Input<Either<String,IPAllocationMethod>> privateIPAllocationMethod) {
             this.privateIPAllocationMethod = privateIPAllocationMethod;
             return this;
         }
 
-        public Builder setPrivateIPAllocationMethod(@Nullable Either<String,IPAllocationMethod> privateIPAllocationMethod) {
+        public Builder privateIPAllocationMethod(@Nullable Either<String,IPAllocationMethod> privateIPAllocationMethod) {
             this.privateIPAllocationMethod = Input.ofNullable(privateIPAllocationMethod);
             return this;
         }
 
-        public Builder setPrivateLinkConfiguration(@Nullable Input<SubResourceArgs> privateLinkConfiguration) {
+        public Builder privateLinkConfiguration(@Nullable Input<SubResourceArgs> privateLinkConfiguration) {
             this.privateLinkConfiguration = privateLinkConfiguration;
             return this;
         }
 
-        public Builder setPrivateLinkConfiguration(@Nullable SubResourceArgs privateLinkConfiguration) {
+        public Builder privateLinkConfiguration(@Nullable SubResourceArgs privateLinkConfiguration) {
             this.privateLinkConfiguration = Input.ofNullable(privateLinkConfiguration);
             return this;
         }
 
-        public Builder setPublicIPAddress(@Nullable Input<SubResourceArgs> publicIPAddress) {
+        public Builder publicIPAddress(@Nullable Input<SubResourceArgs> publicIPAddress) {
             this.publicIPAddress = publicIPAddress;
             return this;
         }
 
-        public Builder setPublicIPAddress(@Nullable SubResourceArgs publicIPAddress) {
+        public Builder publicIPAddress(@Nullable SubResourceArgs publicIPAddress) {
             this.publicIPAddress = Input.ofNullable(publicIPAddress);
             return this;
         }
 
-        public Builder setSubnet(@Nullable Input<SubResourceArgs> subnet) {
+        public Builder subnet(@Nullable Input<SubResourceArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
 
-        public Builder setSubnet(@Nullable SubResourceArgs subnet) {
+        public Builder subnet(@Nullable SubResourceArgs subnet) {
             this.subnet = Input.ofNullable(subnet);
             return this;
         }

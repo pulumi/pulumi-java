@@ -122,52 +122,52 @@ public final class GatewayApiMetadataPropertiesArgs extends io.pulumi.resources.
     	      this.version = defaults.version;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDocumentation(@Nullable Input<String> documentation) {
+        public Builder documentation(@Nullable Input<String> documentation) {
             this.documentation = documentation;
             return this;
         }
 
-        public Builder setDocumentation(@Nullable String documentation) {
+        public Builder documentation(@Nullable String documentation) {
             this.documentation = Input.ofNullable(documentation);
             return this;
         }
 
-        public Builder setServerUrl(@Nullable Input<String> serverUrl) {
+        public Builder serverUrl(@Nullable Input<String> serverUrl) {
             this.serverUrl = serverUrl;
             return this;
         }
 
-        public Builder setServerUrl(@Nullable String serverUrl) {
+        public Builder serverUrl(@Nullable String serverUrl) {
             this.serverUrl = Input.ofNullable(serverUrl);
             return this;
         }
 
-        public Builder setTitle(@Nullable Input<String> title) {
+        public Builder title(@Nullable Input<String> title) {
             this.title = title;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = Input.ofNullable(title);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

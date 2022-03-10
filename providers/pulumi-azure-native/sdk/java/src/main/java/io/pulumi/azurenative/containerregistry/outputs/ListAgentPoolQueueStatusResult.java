@@ -50,7 +50,7 @@ public final class ListAgentPoolQueueStatusResult {
     	      this.count = defaults.count;
         }
 
-        public Builder setCount(@Nullable Integer count) {
+        public Builder count(@Nullable Integer count) {
             this.count = count;
             return this;
         }

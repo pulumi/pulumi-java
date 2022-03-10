@@ -75,12 +75,12 @@ public final class SimulationApplicationRobotSoftwareSuite extends io.pulumi.res
     	      this.version = defaults.version;
         }
 
-        public Builder setName(SimulationApplicationRobotSoftwareSuiteName name) {
+        public Builder name(SimulationApplicationRobotSoftwareSuiteName name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setVersion(@Nullable SimulationApplicationRobotSoftwareSuiteVersion version) {
+        public Builder version(@Nullable SimulationApplicationRobotSoftwareSuiteVersion version) {
             this.version = version;
             return this;
         }

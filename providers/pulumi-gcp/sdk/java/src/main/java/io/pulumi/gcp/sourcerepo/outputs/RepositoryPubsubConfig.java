@@ -95,17 +95,17 @@ public final class RepositoryPubsubConfig {
     	      this.topic = defaults.topic;
         }
 
-        public Builder setMessageFormat(String messageFormat) {
+        public Builder messageFormat(String messageFormat) {
             this.messageFormat = Objects.requireNonNull(messageFormat);
             return this;
         }
 
-        public Builder setServiceAccountEmail(@Nullable String serviceAccountEmail) {
+        public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
             this.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
 
-        public Builder setTopic(String topic) {
+        public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }

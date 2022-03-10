@@ -100,22 +100,22 @@ public final class GetGatewayRouteConfigArgs extends io.pulumi.resources.InvokeA
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setGatewayName(String gatewayName) {
+        public Builder gatewayName(String gatewayName) {
             this.gatewayName = Objects.requireNonNull(gatewayName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setRouteConfigName(String routeConfigName) {
+        public Builder routeConfigName(String routeConfigName) {
             this.routeConfigName = Objects.requireNonNull(routeConfigName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }

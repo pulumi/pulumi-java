@@ -125,27 +125,27 @@ public final class CommonExportPropertiesResponse extends io.pulumi.resources.In
     	      this.runHistory = defaults.runHistory;
         }
 
-        public Builder setDefinition(ExportDefinitionResponse definition) {
+        public Builder definition(ExportDefinitionResponse definition) {
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
 
-        public Builder setDeliveryInfo(ExportDeliveryInfoResponse deliveryInfo) {
+        public Builder deliveryInfo(ExportDeliveryInfoResponse deliveryInfo) {
             this.deliveryInfo = Objects.requireNonNull(deliveryInfo);
             return this;
         }
 
-        public Builder setFormat(@Nullable String format) {
+        public Builder format(@Nullable String format) {
             this.format = format;
             return this;
         }
 
-        public Builder setNextRunTimeEstimate(String nextRunTimeEstimate) {
+        public Builder nextRunTimeEstimate(String nextRunTimeEstimate) {
             this.nextRunTimeEstimate = Objects.requireNonNull(nextRunTimeEstimate);
             return this;
         }
 
-        public Builder setRunHistory(@Nullable ExportExecutionListResultResponse runHistory) {
+        public Builder runHistory(@Nullable ExportExecutionListResultResponse runHistory) {
             this.runHistory = runHistory;
             return this;
         }

@@ -74,17 +74,17 @@ public final class GetWorkflowArgs extends io.pulumi.resources.InvokeArgs {
     	      this.workflowId = defaults.workflowId;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setWorkflowId(String workflowId) {
+        public Builder workflowId(String workflowId) {
             this.workflowId = Objects.requireNonNull(workflowId);
             return this;
         }

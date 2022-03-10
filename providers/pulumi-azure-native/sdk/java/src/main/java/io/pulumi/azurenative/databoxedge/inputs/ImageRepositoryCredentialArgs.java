@@ -91,32 +91,32 @@ public final class ImageRepositoryCredentialArgs extends io.pulumi.resources.Res
     	      this.userName = defaults.userName;
         }
 
-        public Builder setImageRepositoryUrl(Input<String> imageRepositoryUrl) {
+        public Builder imageRepositoryUrl(Input<String> imageRepositoryUrl) {
             this.imageRepositoryUrl = Objects.requireNonNull(imageRepositoryUrl);
             return this;
         }
 
-        public Builder setImageRepositoryUrl(String imageRepositoryUrl) {
+        public Builder imageRepositoryUrl(String imageRepositoryUrl) {
             this.imageRepositoryUrl = Input.of(Objects.requireNonNull(imageRepositoryUrl));
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<AsymmetricEncryptedSecretArgs> password) {
+        public Builder password(@Nullable Input<AsymmetricEncryptedSecretArgs> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable AsymmetricEncryptedSecretArgs password) {
+        public Builder password(@Nullable AsymmetricEncryptedSecretArgs password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setUserName(Input<String> userName) {
+        public Builder userName(Input<String> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Input.of(Objects.requireNonNull(userName));
             return this;
         }

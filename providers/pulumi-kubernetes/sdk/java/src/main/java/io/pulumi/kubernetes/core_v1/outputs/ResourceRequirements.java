@@ -67,12 +67,12 @@ public final class ResourceRequirements {
     	      this.requests = defaults.requests;
         }
 
-        public Builder setLimits(@Nullable Map<String,String> limits) {
+        public Builder limits(@Nullable Map<String,String> limits) {
             this.limits = limits;
             return this;
         }
 
-        public Builder setRequests(@Nullable Map<String,String> requests) {
+        public Builder requests(@Nullable Map<String,String> requests) {
             this.requests = requests;
             return this;
         }

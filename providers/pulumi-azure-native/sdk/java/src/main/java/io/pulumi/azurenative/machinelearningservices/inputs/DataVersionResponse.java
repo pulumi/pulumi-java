@@ -156,37 +156,37 @@ public final class DataVersionResponse extends io.pulumi.resources.InvokeArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDatasetType(@Nullable String datasetType) {
+        public Builder datasetType(@Nullable String datasetType) {
             this.datasetType = datasetType;
             return this;
         }
 
-        public Builder setDatastoreId(@Nullable String datastoreId) {
+        public Builder datastoreId(@Nullable String datastoreId) {
             this.datastoreId = datastoreId;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setIsAnonymous(@Nullable Boolean isAnonymous) {
+        public Builder isAnonymous(@Nullable Boolean isAnonymous) {
             this.isAnonymous = isAnonymous;
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }

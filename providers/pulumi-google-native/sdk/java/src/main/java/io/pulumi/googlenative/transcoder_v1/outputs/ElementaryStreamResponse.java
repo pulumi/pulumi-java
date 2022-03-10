@@ -100,22 +100,22 @@ public final class ElementaryStreamResponse {
     	      this.videoStream = defaults.videoStream;
         }
 
-        public Builder setAudioStream(AudioStreamResponse audioStream) {
+        public Builder audioStream(AudioStreamResponse audioStream) {
             this.audioStream = Objects.requireNonNull(audioStream);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setTextStream(TextStreamResponse textStream) {
+        public Builder textStream(TextStreamResponse textStream) {
             this.textStream = Objects.requireNonNull(textStream);
             return this;
         }
 
-        public Builder setVideoStream(VideoStreamResponse videoStream) {
+        public Builder videoStream(VideoStreamResponse videoStream) {
             this.videoStream = Objects.requireNonNull(videoStream);
             return this;
         }

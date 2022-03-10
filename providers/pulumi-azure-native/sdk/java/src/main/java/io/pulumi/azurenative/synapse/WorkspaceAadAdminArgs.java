@@ -134,62 +134,62 @@ public final class WorkspaceAadAdminArgs extends io.pulumi.resources.ResourceArg
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setAdministratorType(@Nullable Input<String> administratorType) {
+        public Builder administratorType(@Nullable Input<String> administratorType) {
             this.administratorType = administratorType;
             return this;
         }
 
-        public Builder setAdministratorType(@Nullable String administratorType) {
+        public Builder administratorType(@Nullable String administratorType) {
             this.administratorType = Input.ofNullable(administratorType);
             return this;
         }
 
-        public Builder setLogin(@Nullable Input<String> login) {
+        public Builder login(@Nullable Input<String> login) {
             this.login = login;
             return this;
         }
 
-        public Builder setLogin(@Nullable String login) {
+        public Builder login(@Nullable String login) {
             this.login = Input.ofNullable(login);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSid(@Nullable Input<String> sid) {
+        public Builder sid(@Nullable Input<String> sid) {
             this.sid = sid;
             return this;
         }
 
-        public Builder setSid(@Nullable String sid) {
+        public Builder sid(@Nullable String sid) {
             this.sid = Input.ofNullable(sid);
             return this;
         }
 
-        public Builder setTenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Input<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Input.ofNullable(tenantId);
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

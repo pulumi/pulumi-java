@@ -93,32 +93,32 @@ public final class ServerTlsSettingsArgs extends io.pulumi.resources.ResourceArg
     	      this.tlsMode = defaults.tlsMode;
         }
 
-        public Builder setProxyTlsContext(@Nullable Input<TlsContextArgs> proxyTlsContext) {
+        public Builder proxyTlsContext(@Nullable Input<TlsContextArgs> proxyTlsContext) {
             this.proxyTlsContext = proxyTlsContext;
             return this;
         }
 
-        public Builder setProxyTlsContext(@Nullable TlsContextArgs proxyTlsContext) {
+        public Builder proxyTlsContext(@Nullable TlsContextArgs proxyTlsContext) {
             this.proxyTlsContext = Input.ofNullable(proxyTlsContext);
             return this;
         }
 
-        public Builder setSubjectAltNames(@Nullable Input<List<String>> subjectAltNames) {
+        public Builder subjectAltNames(@Nullable Input<List<String>> subjectAltNames) {
             this.subjectAltNames = subjectAltNames;
             return this;
         }
 
-        public Builder setSubjectAltNames(@Nullable List<String> subjectAltNames) {
+        public Builder subjectAltNames(@Nullable List<String> subjectAltNames) {
             this.subjectAltNames = Input.ofNullable(subjectAltNames);
             return this;
         }
 
-        public Builder setTlsMode(@Nullable Input<ServerTlsSettingsTlsMode> tlsMode) {
+        public Builder tlsMode(@Nullable Input<ServerTlsSettingsTlsMode> tlsMode) {
             this.tlsMode = tlsMode;
             return this;
         }
 
-        public Builder setTlsMode(@Nullable ServerTlsSettingsTlsMode tlsMode) {
+        public Builder tlsMode(@Nullable ServerTlsSettingsTlsMode tlsMode) {
             this.tlsMode = Input.ofNullable(tlsMode);
             return this;
         }

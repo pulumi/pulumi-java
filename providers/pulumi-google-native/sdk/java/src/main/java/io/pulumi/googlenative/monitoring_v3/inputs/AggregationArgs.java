@@ -109,42 +109,42 @@ public final class AggregationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.perSeriesAligner = defaults.perSeriesAligner;
         }
 
-        public Builder setAlignmentPeriod(@Nullable Input<String> alignmentPeriod) {
+        public Builder alignmentPeriod(@Nullable Input<String> alignmentPeriod) {
             this.alignmentPeriod = alignmentPeriod;
             return this;
         }
 
-        public Builder setAlignmentPeriod(@Nullable String alignmentPeriod) {
+        public Builder alignmentPeriod(@Nullable String alignmentPeriod) {
             this.alignmentPeriod = Input.ofNullable(alignmentPeriod);
             return this;
         }
 
-        public Builder setCrossSeriesReducer(@Nullable Input<AggregationCrossSeriesReducer> crossSeriesReducer) {
+        public Builder crossSeriesReducer(@Nullable Input<AggregationCrossSeriesReducer> crossSeriesReducer) {
             this.crossSeriesReducer = crossSeriesReducer;
             return this;
         }
 
-        public Builder setCrossSeriesReducer(@Nullable AggregationCrossSeriesReducer crossSeriesReducer) {
+        public Builder crossSeriesReducer(@Nullable AggregationCrossSeriesReducer crossSeriesReducer) {
             this.crossSeriesReducer = Input.ofNullable(crossSeriesReducer);
             return this;
         }
 
-        public Builder setGroupByFields(@Nullable Input<List<String>> groupByFields) {
+        public Builder groupByFields(@Nullable Input<List<String>> groupByFields) {
             this.groupByFields = groupByFields;
             return this;
         }
 
-        public Builder setGroupByFields(@Nullable List<String> groupByFields) {
+        public Builder groupByFields(@Nullable List<String> groupByFields) {
             this.groupByFields = Input.ofNullable(groupByFields);
             return this;
         }
 
-        public Builder setPerSeriesAligner(@Nullable Input<AggregationPerSeriesAligner> perSeriesAligner) {
+        public Builder perSeriesAligner(@Nullable Input<AggregationPerSeriesAligner> perSeriesAligner) {
             this.perSeriesAligner = perSeriesAligner;
             return this;
         }
 
-        public Builder setPerSeriesAligner(@Nullable AggregationPerSeriesAligner perSeriesAligner) {
+        public Builder perSeriesAligner(@Nullable AggregationPerSeriesAligner perSeriesAligner) {
             this.perSeriesAligner = Input.ofNullable(perSeriesAligner);
             return this;
         }

@@ -84,17 +84,17 @@ public final class GetPhraseSetResult {
     	      this.phrases = defaults.phrases;
         }
 
-        public Builder setBoost(Double boost) {
+        public Builder boost(Double boost) {
             this.boost = Objects.requireNonNull(boost);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPhrases(List<PhraseResponse> phrases) {
+        public Builder phrases(List<PhraseResponse> phrases) {
             this.phrases = Objects.requireNonNull(phrases);
             return this;
         }

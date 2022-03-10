@@ -50,7 +50,7 @@ public final class VirtualGatewaySpecLogging {
     	      this.accessLog = defaults.accessLog;
         }
 
-        public Builder setAccessLog(@Nullable VirtualGatewaySpecLoggingAccessLog accessLog) {
+        public Builder accessLog(@Nullable VirtualGatewaySpecLoggingAccessLog accessLog) {
             this.accessLog = accessLog;
             return this;
         }

@@ -88,32 +88,32 @@ public final class TransferJobScheduleGetArgs extends io.pulumi.resources.Resour
     	      this.startTimeOfDay = defaults.startTimeOfDay;
         }
 
-        public Builder setScheduleEndDate(@Nullable Input<TransferJobScheduleScheduleEndDateGetArgs> scheduleEndDate) {
+        public Builder scheduleEndDate(@Nullable Input<TransferJobScheduleScheduleEndDateGetArgs> scheduleEndDate) {
             this.scheduleEndDate = scheduleEndDate;
             return this;
         }
 
-        public Builder setScheduleEndDate(@Nullable TransferJobScheduleScheduleEndDateGetArgs scheduleEndDate) {
+        public Builder scheduleEndDate(@Nullable TransferJobScheduleScheduleEndDateGetArgs scheduleEndDate) {
             this.scheduleEndDate = Input.ofNullable(scheduleEndDate);
             return this;
         }
 
-        public Builder setScheduleStartDate(Input<TransferJobScheduleScheduleStartDateGetArgs> scheduleStartDate) {
+        public Builder scheduleStartDate(Input<TransferJobScheduleScheduleStartDateGetArgs> scheduleStartDate) {
             this.scheduleStartDate = Objects.requireNonNull(scheduleStartDate);
             return this;
         }
 
-        public Builder setScheduleStartDate(TransferJobScheduleScheduleStartDateGetArgs scheduleStartDate) {
+        public Builder scheduleStartDate(TransferJobScheduleScheduleStartDateGetArgs scheduleStartDate) {
             this.scheduleStartDate = Input.of(Objects.requireNonNull(scheduleStartDate));
             return this;
         }
 
-        public Builder setStartTimeOfDay(@Nullable Input<TransferJobScheduleStartTimeOfDayGetArgs> startTimeOfDay) {
+        public Builder startTimeOfDay(@Nullable Input<TransferJobScheduleStartTimeOfDayGetArgs> startTimeOfDay) {
             this.startTimeOfDay = startTimeOfDay;
             return this;
         }
 
-        public Builder setStartTimeOfDay(@Nullable TransferJobScheduleStartTimeOfDayGetArgs startTimeOfDay) {
+        public Builder startTimeOfDay(@Nullable TransferJobScheduleStartTimeOfDayGetArgs startTimeOfDay) {
             this.startTimeOfDay = Input.ofNullable(startTimeOfDay);
             return this;
         }

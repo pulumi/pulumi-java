@@ -86,17 +86,17 @@ public final class GetVirtualMachineArgs extends io.pulumi.resources.InvokeArgs 
     	      this.vmName = defaults.vmName;
         }
 
-        public Builder setExpand(@Nullable String expand) {
+        public Builder expand(@Nullable String expand) {
             this.expand = expand;
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setVmName(String vmName) {
+        public Builder vmName(String vmName) {
             this.vmName = Objects.requireNonNull(vmName);
             return this;
         }

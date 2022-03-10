@@ -52,12 +52,12 @@ public final class InstanceFromTemplateReservationAffinity {
     	      this.type = defaults.type;
         }
 
-        public Builder setSpecificReservation(@Nullable InstanceFromTemplateReservationAffinitySpecificReservation specificReservation) {
+        public Builder specificReservation(@Nullable InstanceFromTemplateReservationAffinitySpecificReservation specificReservation) {
             this.specificReservation = specificReservation;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

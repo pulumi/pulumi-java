@@ -382,107 +382,107 @@ public final class GetJobResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCancellationReason(String cancellationReason) {
+        public Builder cancellationReason(String cancellationReason) {
             this.cancellationReason = Objects.requireNonNull(cancellationReason);
             return this;
         }
 
-        public Builder setDeliveryInfo(@Nullable JobDeliveryInfoResponse deliveryInfo) {
+        public Builder deliveryInfo(@Nullable JobDeliveryInfoResponse deliveryInfo) {
             this.deliveryInfo = deliveryInfo;
             return this;
         }
 
-        public Builder setDeliveryType(@Nullable String deliveryType) {
+        public Builder deliveryType(@Nullable String deliveryType) {
             this.deliveryType = deliveryType;
             return this;
         }
 
-        public Builder setDetails(@Nullable Object details) {
+        public Builder details(@Nullable Object details) {
             this.details = details;
             return this;
         }
 
-        public Builder setError(CloudErrorResponse error) {
+        public Builder error(CloudErrorResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable ResourceIdentityResponse identity) {
+        public Builder identity(@Nullable ResourceIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIsCancellable(Boolean isCancellable) {
+        public Builder isCancellable(Boolean isCancellable) {
             this.isCancellable = Objects.requireNonNull(isCancellable);
             return this;
         }
 
-        public Builder setIsCancellableWithoutFee(Boolean isCancellableWithoutFee) {
+        public Builder isCancellableWithoutFee(Boolean isCancellableWithoutFee) {
             this.isCancellableWithoutFee = Objects.requireNonNull(isCancellableWithoutFee);
             return this;
         }
 
-        public Builder setIsDeletable(Boolean isDeletable) {
+        public Builder isDeletable(Boolean isDeletable) {
             this.isDeletable = Objects.requireNonNull(isDeletable);
             return this;
         }
 
-        public Builder setIsPrepareToShipEnabled(Boolean isPrepareToShipEnabled) {
+        public Builder isPrepareToShipEnabled(Boolean isPrepareToShipEnabled) {
             this.isPrepareToShipEnabled = Objects.requireNonNull(isPrepareToShipEnabled);
             return this;
         }
 
-        public Builder setIsShippingAddressEditable(Boolean isShippingAddressEditable) {
+        public Builder isShippingAddressEditable(Boolean isShippingAddressEditable) {
             this.isShippingAddressEditable = Objects.requireNonNull(isShippingAddressEditable);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSku(SkuResponse sku) {
+        public Builder sku(SkuResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTransferType(String transferType) {
+        public Builder transferType(String transferType) {
             this.transferType = Objects.requireNonNull(transferType);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

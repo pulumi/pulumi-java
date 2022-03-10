@@ -73,22 +73,22 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
     	      this.wordList = defaults.wordList;
         }
 
-        public Builder setCloudStoragePath(@Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathGetArgs> cloudStoragePath) {
+        public Builder cloudStoragePath(@Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathGetArgs> cloudStoragePath) {
             this.cloudStoragePath = cloudStoragePath;
             return this;
         }
 
-        public Builder setCloudStoragePath(@Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathGetArgs cloudStoragePath) {
+        public Builder cloudStoragePath(@Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathGetArgs cloudStoragePath) {
             this.cloudStoragePath = Input.ofNullable(cloudStoragePath);
             return this;
         }
 
-        public Builder setWordList(@Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListGetArgs> wordList) {
+        public Builder wordList(@Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListGetArgs> wordList) {
             this.wordList = wordList;
             return this;
         }
 
-        public Builder setWordList(@Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListGetArgs wordList) {
+        public Builder wordList(@Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListGetArgs wordList) {
             this.wordList = Input.ofNullable(wordList);
             return this;
         }

@@ -91,32 +91,32 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleGetArgs extends i
     	      this.weeklySchedule = defaults.weeklySchedule;
         }
 
-        public Builder setDailySchedule(@Nullable Input<ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleGetArgs> dailySchedule) {
+        public Builder dailySchedule(@Nullable Input<ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleGetArgs> dailySchedule) {
             this.dailySchedule = dailySchedule;
             return this;
         }
 
-        public Builder setDailySchedule(@Nullable ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleGetArgs dailySchedule) {
+        public Builder dailySchedule(@Nullable ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleGetArgs dailySchedule) {
             this.dailySchedule = Input.ofNullable(dailySchedule);
             return this;
         }
 
-        public Builder setHourlySchedule(@Nullable Input<ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleGetArgs> hourlySchedule) {
+        public Builder hourlySchedule(@Nullable Input<ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleGetArgs> hourlySchedule) {
             this.hourlySchedule = hourlySchedule;
             return this;
         }
 
-        public Builder setHourlySchedule(@Nullable ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleGetArgs hourlySchedule) {
+        public Builder hourlySchedule(@Nullable ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleGetArgs hourlySchedule) {
             this.hourlySchedule = Input.ofNullable(hourlySchedule);
             return this;
         }
 
-        public Builder setWeeklySchedule(@Nullable Input<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGetArgs> weeklySchedule) {
+        public Builder weeklySchedule(@Nullable Input<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGetArgs> weeklySchedule) {
             this.weeklySchedule = weeklySchedule;
             return this;
         }
 
-        public Builder setWeeklySchedule(@Nullable ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGetArgs weeklySchedule) {
+        public Builder weeklySchedule(@Nullable ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGetArgs weeklySchedule) {
             this.weeklySchedule = Input.ofNullable(weeklySchedule);
             return this;
         }

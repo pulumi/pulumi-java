@@ -60,12 +60,12 @@ public final class GetTopicSchemaSetting extends io.pulumi.resources.InvokeArgs 
     	      this.schema = defaults.schema;
         }
 
-        public Builder setEncoding(String encoding) {
+        public Builder encoding(String encoding) {
             this.encoding = Objects.requireNonNull(encoding);
             return this;
         }
 
-        public Builder setSchema(String schema) {
+        public Builder schema(String schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }

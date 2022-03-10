@@ -105,42 +105,42 @@ public final class RandomIntegerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.seed = defaults.seed;
         }
 
-        public Builder setKeepers(@Nullable Input<Map<String,Object>> keepers) {
+        public Builder keepers(@Nullable Input<Map<String,Object>> keepers) {
             this.keepers = keepers;
             return this;
         }
 
-        public Builder setKeepers(@Nullable Map<String,Object> keepers) {
+        public Builder keepers(@Nullable Map<String,Object> keepers) {
             this.keepers = Input.ofNullable(keepers);
             return this;
         }
 
-        public Builder setMax(Input<Integer> max) {
+        public Builder max(Input<Integer> max) {
             this.max = Objects.requireNonNull(max);
             return this;
         }
 
-        public Builder setMax(Integer max) {
+        public Builder max(Integer max) {
             this.max = Input.of(Objects.requireNonNull(max));
             return this;
         }
 
-        public Builder setMin(Input<Integer> min) {
+        public Builder min(Input<Integer> min) {
             this.min = Objects.requireNonNull(min);
             return this;
         }
 
-        public Builder setMin(Integer min) {
+        public Builder min(Integer min) {
             this.min = Input.of(Objects.requireNonNull(min));
             return this;
         }
 
-        public Builder setSeed(@Nullable Input<String> seed) {
+        public Builder seed(@Nullable Input<String> seed) {
             this.seed = seed;
             return this;
         }
 
-        public Builder setSeed(@Nullable String seed) {
+        public Builder seed(@Nullable String seed) {
             this.seed = Input.ofNullable(seed);
             return this;
         }

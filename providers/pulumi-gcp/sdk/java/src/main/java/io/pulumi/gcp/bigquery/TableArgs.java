@@ -332,162 +332,162 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     	      this.view = defaults.view;
         }
 
-        public Builder setClusterings(@Nullable Input<List<String>> clusterings) {
+        public Builder clusterings(@Nullable Input<List<String>> clusterings) {
             this.clusterings = clusterings;
             return this;
         }
 
-        public Builder setClusterings(@Nullable List<String> clusterings) {
+        public Builder clusterings(@Nullable List<String> clusterings) {
             this.clusterings = Input.ofNullable(clusterings);
             return this;
         }
 
-        public Builder setDatasetId(Input<String> datasetId) {
+        public Builder datasetId(Input<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
-        public Builder setDatasetId(String datasetId) {
+        public Builder datasetId(String datasetId) {
             this.datasetId = Input.of(Objects.requireNonNull(datasetId));
             return this;
         }
 
-        public Builder setDeletionProtection(@Nullable Input<Boolean> deletionProtection) {
+        public Builder deletionProtection(@Nullable Input<Boolean> deletionProtection) {
             this.deletionProtection = deletionProtection;
             return this;
         }
 
-        public Builder setDeletionProtection(@Nullable Boolean deletionProtection) {
+        public Builder deletionProtection(@Nullable Boolean deletionProtection) {
             this.deletionProtection = Input.ofNullable(deletionProtection);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEncryptionConfiguration(@Nullable Input<TableEncryptionConfigurationArgs> encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable Input<TableEncryptionConfigurationArgs> encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
 
-        public Builder setEncryptionConfiguration(@Nullable TableEncryptionConfigurationArgs encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable TableEncryptionConfigurationArgs encryptionConfiguration) {
             this.encryptionConfiguration = Input.ofNullable(encryptionConfiguration);
             return this;
         }
 
-        public Builder setExpirationTime(@Nullable Input<Integer> expirationTime) {
+        public Builder expirationTime(@Nullable Input<Integer> expirationTime) {
             this.expirationTime = expirationTime;
             return this;
         }
 
-        public Builder setExpirationTime(@Nullable Integer expirationTime) {
+        public Builder expirationTime(@Nullable Integer expirationTime) {
             this.expirationTime = Input.ofNullable(expirationTime);
             return this;
         }
 
-        public Builder setExternalDataConfiguration(@Nullable Input<TableExternalDataConfigurationArgs> externalDataConfiguration) {
+        public Builder externalDataConfiguration(@Nullable Input<TableExternalDataConfigurationArgs> externalDataConfiguration) {
             this.externalDataConfiguration = externalDataConfiguration;
             return this;
         }
 
-        public Builder setExternalDataConfiguration(@Nullable TableExternalDataConfigurationArgs externalDataConfiguration) {
+        public Builder externalDataConfiguration(@Nullable TableExternalDataConfigurationArgs externalDataConfiguration) {
             this.externalDataConfiguration = Input.ofNullable(externalDataConfiguration);
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Input<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Input.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setMaterializedView(@Nullable Input<TableMaterializedViewArgs> materializedView) {
+        public Builder materializedView(@Nullable Input<TableMaterializedViewArgs> materializedView) {
             this.materializedView = materializedView;
             return this;
         }
 
-        public Builder setMaterializedView(@Nullable TableMaterializedViewArgs materializedView) {
+        public Builder materializedView(@Nullable TableMaterializedViewArgs materializedView) {
             this.materializedView = Input.ofNullable(materializedView);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRangePartitioning(@Nullable Input<TableRangePartitioningArgs> rangePartitioning) {
+        public Builder rangePartitioning(@Nullable Input<TableRangePartitioningArgs> rangePartitioning) {
             this.rangePartitioning = rangePartitioning;
             return this;
         }
 
-        public Builder setRangePartitioning(@Nullable TableRangePartitioningArgs rangePartitioning) {
+        public Builder rangePartitioning(@Nullable TableRangePartitioningArgs rangePartitioning) {
             this.rangePartitioning = Input.ofNullable(rangePartitioning);
             return this;
         }
 
-        public Builder setSchema(@Nullable Input<String> schema) {
+        public Builder schema(@Nullable Input<String> schema) {
             this.schema = schema;
             return this;
         }
 
-        public Builder setSchema(@Nullable String schema) {
+        public Builder schema(@Nullable String schema) {
             this.schema = Input.ofNullable(schema);
             return this;
         }
 
-        public Builder setTableId(Input<String> tableId) {
+        public Builder tableId(Input<String> tableId) {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }
 
-        public Builder setTableId(String tableId) {
+        public Builder tableId(String tableId) {
             this.tableId = Input.of(Objects.requireNonNull(tableId));
             return this;
         }
 
-        public Builder setTimePartitioning(@Nullable Input<TableTimePartitioningArgs> timePartitioning) {
+        public Builder timePartitioning(@Nullable Input<TableTimePartitioningArgs> timePartitioning) {
             this.timePartitioning = timePartitioning;
             return this;
         }
 
-        public Builder setTimePartitioning(@Nullable TableTimePartitioningArgs timePartitioning) {
+        public Builder timePartitioning(@Nullable TableTimePartitioningArgs timePartitioning) {
             this.timePartitioning = Input.ofNullable(timePartitioning);
             return this;
         }
 
-        public Builder setView(@Nullable Input<TableViewArgs> view) {
+        public Builder view(@Nullable Input<TableViewArgs> view) {
             this.view = view;
             return this;
         }
 
-        public Builder setView(@Nullable TableViewArgs view) {
+        public Builder view(@Nullable TableViewArgs view) {
             this.view = Input.ofNullable(view);
             return this;
         }

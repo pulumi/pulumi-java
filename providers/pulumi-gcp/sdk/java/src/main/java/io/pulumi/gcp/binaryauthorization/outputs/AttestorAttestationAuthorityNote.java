@@ -129,17 +129,17 @@ public final class AttestorAttestationAuthorityNote {
     	      this.publicKeys = defaults.publicKeys;
         }
 
-        public Builder setDelegationServiceAccountEmail(@Nullable String delegationServiceAccountEmail) {
+        public Builder delegationServiceAccountEmail(@Nullable String delegationServiceAccountEmail) {
             this.delegationServiceAccountEmail = delegationServiceAccountEmail;
             return this;
         }
 
-        public Builder setNoteReference(String noteReference) {
+        public Builder noteReference(String noteReference) {
             this.noteReference = Objects.requireNonNull(noteReference);
             return this;
         }
 
-        public Builder setPublicKeys(@Nullable List<AttestorAttestationAuthorityNotePublicKey> publicKeys) {
+        public Builder publicKeys(@Nullable List<AttestorAttestationAuthorityNotePublicKey> publicKeys) {
             this.publicKeys = publicKeys;
             return this;
         }

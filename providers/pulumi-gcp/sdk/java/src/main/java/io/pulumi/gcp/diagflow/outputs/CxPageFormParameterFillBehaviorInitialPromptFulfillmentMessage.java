@@ -50,7 +50,7 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessag
     	      this.text = defaults.text;
         }
 
-        public Builder setText(@Nullable CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageText text) {
+        public Builder text(@Nullable CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageText text) {
             this.text = text;
             return this;
         }

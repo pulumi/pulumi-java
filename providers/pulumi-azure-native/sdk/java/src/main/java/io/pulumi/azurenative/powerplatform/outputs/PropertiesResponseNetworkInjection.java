@@ -50,7 +50,7 @@ public final class PropertiesResponseNetworkInjection {
     	      this.virtualNetworks = defaults.virtualNetworks;
         }
 
-        public Builder setVirtualNetworks(@Nullable VirtualNetworkPropertiesListResponse virtualNetworks) {
+        public Builder virtualNetworks(@Nullable VirtualNetworkPropertiesListResponse virtualNetworks) {
             this.virtualNetworks = virtualNetworks;
             return this;
         }

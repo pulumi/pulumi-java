@@ -78,22 +78,22 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
     	      this.userAssignedIdentities = defaults.userAssignedIdentities;
         }
 
-        public Builder setType(@Nullable Input<Either<String,IdentityType>> type) {
+        public Builder type(@Nullable Input<Either<String,IdentityType>> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable Either<String,IdentityType> type) {
+        public Builder type(@Nullable Either<String,IdentityType> type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setUserAssignedIdentities(@Nullable Input<Map<String,Object>> userAssignedIdentities) {
+        public Builder userAssignedIdentities(@Nullable Input<Map<String,Object>> userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
 
-        public Builder setUserAssignedIdentities(@Nullable Map<String,Object> userAssignedIdentities) {
+        public Builder userAssignedIdentities(@Nullable Map<String,Object> userAssignedIdentities) {
             this.userAssignedIdentities = Input.ofNullable(userAssignedIdentities);
             return this;
         }

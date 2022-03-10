@@ -171,82 +171,82 @@ public final class SecurityGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEgress(@Nullable Input<List<SecurityGroupEgressArgs>> egress) {
+        public Builder egress(@Nullable Input<List<SecurityGroupEgressArgs>> egress) {
             this.egress = egress;
             return this;
         }
 
-        public Builder setEgress(@Nullable List<SecurityGroupEgressArgs> egress) {
+        public Builder egress(@Nullable List<SecurityGroupEgressArgs> egress) {
             this.egress = Input.ofNullable(egress);
             return this;
         }
 
-        public Builder setIngress(@Nullable Input<List<SecurityGroupIngressArgs>> ingress) {
+        public Builder ingress(@Nullable Input<List<SecurityGroupIngressArgs>> ingress) {
             this.ingress = ingress;
             return this;
         }
 
-        public Builder setIngress(@Nullable List<SecurityGroupIngressArgs> ingress) {
+        public Builder ingress(@Nullable List<SecurityGroupIngressArgs> ingress) {
             this.ingress = Input.ofNullable(ingress);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Input<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable String namePrefix) {
+        public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Input.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder setRevokeRulesOnDelete(@Nullable Input<Boolean> revokeRulesOnDelete) {
+        public Builder revokeRulesOnDelete(@Nullable Input<Boolean> revokeRulesOnDelete) {
             this.revokeRulesOnDelete = revokeRulesOnDelete;
             return this;
         }
 
-        public Builder setRevokeRulesOnDelete(@Nullable Boolean revokeRulesOnDelete) {
+        public Builder revokeRulesOnDelete(@Nullable Boolean revokeRulesOnDelete) {
             this.revokeRulesOnDelete = Input.ofNullable(revokeRulesOnDelete);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Input<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Input.ofNullable(vpcId);
             return this;
         }

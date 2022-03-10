@@ -181,82 +181,82 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
     	      this.ruleSets = defaults.ruleSets;
         }
 
-        public Builder setContentOptions(@Nullable Input<List<String>> contentOptions) {
+        public Builder contentOptions(@Nullable Input<List<String>> contentOptions) {
             this.contentOptions = contentOptions;
             return this;
         }
 
-        public Builder setContentOptions(@Nullable List<String> contentOptions) {
+        public Builder contentOptions(@Nullable List<String> contentOptions) {
             this.contentOptions = Input.ofNullable(contentOptions);
             return this;
         }
 
-        public Builder setCustomInfoTypes(@Nullable Input<List<PreventionInspectTemplateInspectConfigCustomInfoTypeArgs>> customInfoTypes) {
+        public Builder customInfoTypes(@Nullable Input<List<PreventionInspectTemplateInspectConfigCustomInfoTypeArgs>> customInfoTypes) {
             this.customInfoTypes = customInfoTypes;
             return this;
         }
 
-        public Builder setCustomInfoTypes(@Nullable List<PreventionInspectTemplateInspectConfigCustomInfoTypeArgs> customInfoTypes) {
+        public Builder customInfoTypes(@Nullable List<PreventionInspectTemplateInspectConfigCustomInfoTypeArgs> customInfoTypes) {
             this.customInfoTypes = Input.ofNullable(customInfoTypes);
             return this;
         }
 
-        public Builder setExcludeInfoTypes(@Nullable Input<Boolean> excludeInfoTypes) {
+        public Builder excludeInfoTypes(@Nullable Input<Boolean> excludeInfoTypes) {
             this.excludeInfoTypes = excludeInfoTypes;
             return this;
         }
 
-        public Builder setExcludeInfoTypes(@Nullable Boolean excludeInfoTypes) {
+        public Builder excludeInfoTypes(@Nullable Boolean excludeInfoTypes) {
             this.excludeInfoTypes = Input.ofNullable(excludeInfoTypes);
             return this;
         }
 
-        public Builder setIncludeQuote(@Nullable Input<Boolean> includeQuote) {
+        public Builder includeQuote(@Nullable Input<Boolean> includeQuote) {
             this.includeQuote = includeQuote;
             return this;
         }
 
-        public Builder setIncludeQuote(@Nullable Boolean includeQuote) {
+        public Builder includeQuote(@Nullable Boolean includeQuote) {
             this.includeQuote = Input.ofNullable(includeQuote);
             return this;
         }
 
-        public Builder setInfoTypes(@Nullable Input<List<PreventionInspectTemplateInspectConfigInfoTypeArgs>> infoTypes) {
+        public Builder infoTypes(@Nullable Input<List<PreventionInspectTemplateInspectConfigInfoTypeArgs>> infoTypes) {
             this.infoTypes = infoTypes;
             return this;
         }
 
-        public Builder setInfoTypes(@Nullable List<PreventionInspectTemplateInspectConfigInfoTypeArgs> infoTypes) {
+        public Builder infoTypes(@Nullable List<PreventionInspectTemplateInspectConfigInfoTypeArgs> infoTypes) {
             this.infoTypes = Input.ofNullable(infoTypes);
             return this;
         }
 
-        public Builder setLimits(@Nullable Input<PreventionInspectTemplateInspectConfigLimitsArgs> limits) {
+        public Builder limits(@Nullable Input<PreventionInspectTemplateInspectConfigLimitsArgs> limits) {
             this.limits = limits;
             return this;
         }
 
-        public Builder setLimits(@Nullable PreventionInspectTemplateInspectConfigLimitsArgs limits) {
+        public Builder limits(@Nullable PreventionInspectTemplateInspectConfigLimitsArgs limits) {
             this.limits = Input.ofNullable(limits);
             return this;
         }
 
-        public Builder setMinLikelihood(@Nullable Input<String> minLikelihood) {
+        public Builder minLikelihood(@Nullable Input<String> minLikelihood) {
             this.minLikelihood = minLikelihood;
             return this;
         }
 
-        public Builder setMinLikelihood(@Nullable String minLikelihood) {
+        public Builder minLikelihood(@Nullable String minLikelihood) {
             this.minLikelihood = Input.ofNullable(minLikelihood);
             return this;
         }
 
-        public Builder setRuleSets(@Nullable Input<List<PreventionInspectTemplateInspectConfigRuleSetArgs>> ruleSets) {
+        public Builder ruleSets(@Nullable Input<List<PreventionInspectTemplateInspectConfigRuleSetArgs>> ruleSets) {
             this.ruleSets = ruleSets;
             return this;
         }
 
-        public Builder setRuleSets(@Nullable List<PreventionInspectTemplateInspectConfigRuleSetArgs> ruleSets) {
+        public Builder ruleSets(@Nullable List<PreventionInspectTemplateInspectConfigRuleSetArgs> ruleSets) {
             this.ruleSets = Input.ofNullable(ruleSets);
             return this;
         }

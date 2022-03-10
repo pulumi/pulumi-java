@@ -58,17 +58,17 @@ public final class BotOutputContext {
     	      this.turnsToLive = defaults.turnsToLive;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTimeToLiveInSeconds(Integer timeToLiveInSeconds) {
+        public Builder timeToLiveInSeconds(Integer timeToLiveInSeconds) {
             this.timeToLiveInSeconds = Objects.requireNonNull(timeToLiveInSeconds);
             return this;
         }
 
-        public Builder setTurnsToLive(Integer turnsToLive) {
+        public Builder turnsToLive(Integer turnsToLive) {
             this.turnsToLive = Objects.requireNonNull(turnsToLive);
             return this;
         }

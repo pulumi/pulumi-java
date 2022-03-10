@@ -50,7 +50,7 @@ public final class FunctionEnvironment {
     	      this.variables = defaults.variables;
         }
 
-        public Builder setVariables(@Nullable Object variables) {
+        public Builder variables(@Nullable Object variables) {
             this.variables = variables;
             return this;
         }

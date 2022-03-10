@@ -48,7 +48,7 @@ public final class InterconnectAttachmentPrivateInfoResponse {
     	      this.tag8021q = defaults.tag8021q;
         }
 
-        public Builder setTag8021q(Integer tag8021q) {
+        public Builder tag8021q(Integer tag8021q) {
             this.tag8021q = Objects.requireNonNull(tag8021q);
             return this;
         }

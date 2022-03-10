@@ -198,52 +198,52 @@ public final class ApiResourceMetadataResponse {
     	      this.wsdlService = defaults.wsdlService;
         }
 
-        public Builder setApiType(@Nullable String apiType) {
+        public Builder apiType(@Nullable String apiType) {
             this.apiType = apiType;
             return this;
         }
 
-        public Builder setBrandColor(@Nullable String brandColor) {
+        public Builder brandColor(@Nullable String brandColor) {
             this.brandColor = brandColor;
             return this;
         }
 
-        public Builder setConnectionType(@Nullable String connectionType) {
+        public Builder connectionType(@Nullable String connectionType) {
             this.connectionType = connectionType;
             return this;
         }
 
-        public Builder setDeploymentParameters(@Nullable ApiDeploymentParameterMetadataSetResponse deploymentParameters) {
+        public Builder deploymentParameters(@Nullable ApiDeploymentParameterMetadataSetResponse deploymentParameters) {
             this.deploymentParameters = deploymentParameters;
             return this;
         }
 
-        public Builder setHideKey(@Nullable String hideKey) {
+        public Builder hideKey(@Nullable String hideKey) {
             this.hideKey = hideKey;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setSource(@Nullable String source) {
+        public Builder source(@Nullable String source) {
             this.source = source;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setWsdlImportMethod(@Nullable String wsdlImportMethod) {
+        public Builder wsdlImportMethod(@Nullable String wsdlImportMethod) {
             this.wsdlImportMethod = wsdlImportMethod;
             return this;
         }
 
-        public Builder setWsdlService(@Nullable WsdlServiceResponse wsdlService) {
+        public Builder wsdlService(@Nullable WsdlServiceResponse wsdlService) {
             this.wsdlService = wsdlService;
             return this;
         }

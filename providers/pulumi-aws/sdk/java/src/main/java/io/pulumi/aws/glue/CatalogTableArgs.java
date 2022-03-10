@@ -269,142 +269,142 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
     	      this.viewOriginalText = defaults.viewOriginalText;
         }
 
-        public Builder setCatalogId(@Nullable Input<String> catalogId) {
+        public Builder catalogId(@Nullable Input<String> catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
-        public Builder setCatalogId(@Nullable String catalogId) {
+        public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = Input.ofNullable(catalogId);
             return this;
         }
 
-        public Builder setDatabaseName(Input<String> databaseName) {
+        public Builder databaseName(Input<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Input.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOwner(@Nullable Input<String> owner) {
+        public Builder owner(@Nullable Input<String> owner) {
             this.owner = owner;
             return this;
         }
 
-        public Builder setOwner(@Nullable String owner) {
+        public Builder owner(@Nullable String owner) {
             this.owner = Input.ofNullable(owner);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,String>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,String> parameters) {
+        public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setPartitionIndices(@Nullable Input<List<CatalogTablePartitionIndexArgs>> partitionIndices) {
+        public Builder partitionIndices(@Nullable Input<List<CatalogTablePartitionIndexArgs>> partitionIndices) {
             this.partitionIndices = partitionIndices;
             return this;
         }
 
-        public Builder setPartitionIndices(@Nullable List<CatalogTablePartitionIndexArgs> partitionIndices) {
+        public Builder partitionIndices(@Nullable List<CatalogTablePartitionIndexArgs> partitionIndices) {
             this.partitionIndices = Input.ofNullable(partitionIndices);
             return this;
         }
 
-        public Builder setPartitionKeys(@Nullable Input<List<CatalogTablePartitionKeyArgs>> partitionKeys) {
+        public Builder partitionKeys(@Nullable Input<List<CatalogTablePartitionKeyArgs>> partitionKeys) {
             this.partitionKeys = partitionKeys;
             return this;
         }
 
-        public Builder setPartitionKeys(@Nullable List<CatalogTablePartitionKeyArgs> partitionKeys) {
+        public Builder partitionKeys(@Nullable List<CatalogTablePartitionKeyArgs> partitionKeys) {
             this.partitionKeys = Input.ofNullable(partitionKeys);
             return this;
         }
 
-        public Builder setRetention(@Nullable Input<Integer> retention) {
+        public Builder retention(@Nullable Input<Integer> retention) {
             this.retention = retention;
             return this;
         }
 
-        public Builder setRetention(@Nullable Integer retention) {
+        public Builder retention(@Nullable Integer retention) {
             this.retention = Input.ofNullable(retention);
             return this;
         }
 
-        public Builder setStorageDescriptor(@Nullable Input<CatalogTableStorageDescriptorArgs> storageDescriptor) {
+        public Builder storageDescriptor(@Nullable Input<CatalogTableStorageDescriptorArgs> storageDescriptor) {
             this.storageDescriptor = storageDescriptor;
             return this;
         }
 
-        public Builder setStorageDescriptor(@Nullable CatalogTableStorageDescriptorArgs storageDescriptor) {
+        public Builder storageDescriptor(@Nullable CatalogTableStorageDescriptorArgs storageDescriptor) {
             this.storageDescriptor = Input.ofNullable(storageDescriptor);
             return this;
         }
 
-        public Builder setTableType(@Nullable Input<String> tableType) {
+        public Builder tableType(@Nullable Input<String> tableType) {
             this.tableType = tableType;
             return this;
         }
 
-        public Builder setTableType(@Nullable String tableType) {
+        public Builder tableType(@Nullable String tableType) {
             this.tableType = Input.ofNullable(tableType);
             return this;
         }
 
-        public Builder setTargetTable(@Nullable Input<CatalogTableTargetTableArgs> targetTable) {
+        public Builder targetTable(@Nullable Input<CatalogTableTargetTableArgs> targetTable) {
             this.targetTable = targetTable;
             return this;
         }
 
-        public Builder setTargetTable(@Nullable CatalogTableTargetTableArgs targetTable) {
+        public Builder targetTable(@Nullable CatalogTableTargetTableArgs targetTable) {
             this.targetTable = Input.ofNullable(targetTable);
             return this;
         }
 
-        public Builder setViewExpandedText(@Nullable Input<String> viewExpandedText) {
+        public Builder viewExpandedText(@Nullable Input<String> viewExpandedText) {
             this.viewExpandedText = viewExpandedText;
             return this;
         }
 
-        public Builder setViewExpandedText(@Nullable String viewExpandedText) {
+        public Builder viewExpandedText(@Nullable String viewExpandedText) {
             this.viewExpandedText = Input.ofNullable(viewExpandedText);
             return this;
         }
 
-        public Builder setViewOriginalText(@Nullable Input<String> viewOriginalText) {
+        public Builder viewOriginalText(@Nullable Input<String> viewOriginalText) {
             this.viewOriginalText = viewOriginalText;
             return this;
         }
 
-        public Builder setViewOriginalText(@Nullable String viewOriginalText) {
+        public Builder viewOriginalText(@Nullable String viewOriginalText) {
             this.viewOriginalText = Input.ofNullable(viewOriginalText);
             return this;
         }

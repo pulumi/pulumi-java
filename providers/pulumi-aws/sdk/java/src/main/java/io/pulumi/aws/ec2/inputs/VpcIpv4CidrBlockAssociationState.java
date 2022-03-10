@@ -103,42 +103,42 @@ public final class VpcIpv4CidrBlockAssociationState extends io.pulumi.resources.
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setCidrBlock(@Nullable Input<String> cidrBlock) {
+        public Builder cidrBlock(@Nullable Input<String> cidrBlock) {
             this.cidrBlock = cidrBlock;
             return this;
         }
 
-        public Builder setCidrBlock(@Nullable String cidrBlock) {
+        public Builder cidrBlock(@Nullable String cidrBlock) {
             this.cidrBlock = Input.ofNullable(cidrBlock);
             return this;
         }
 
-        public Builder setIpv4IpamPoolId(@Nullable Input<String> ipv4IpamPoolId) {
+        public Builder ipv4IpamPoolId(@Nullable Input<String> ipv4IpamPoolId) {
             this.ipv4IpamPoolId = ipv4IpamPoolId;
             return this;
         }
 
-        public Builder setIpv4IpamPoolId(@Nullable String ipv4IpamPoolId) {
+        public Builder ipv4IpamPoolId(@Nullable String ipv4IpamPoolId) {
             this.ipv4IpamPoolId = Input.ofNullable(ipv4IpamPoolId);
             return this;
         }
 
-        public Builder setIpv4NetmaskLength(@Nullable Input<Integer> ipv4NetmaskLength) {
+        public Builder ipv4NetmaskLength(@Nullable Input<Integer> ipv4NetmaskLength) {
             this.ipv4NetmaskLength = ipv4NetmaskLength;
             return this;
         }
 
-        public Builder setIpv4NetmaskLength(@Nullable Integer ipv4NetmaskLength) {
+        public Builder ipv4NetmaskLength(@Nullable Integer ipv4NetmaskLength) {
             this.ipv4NetmaskLength = Input.ofNullable(ipv4NetmaskLength);
             return this;
         }
 
-        public Builder setVpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Input<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Input.ofNullable(vpcId);
             return this;
         }

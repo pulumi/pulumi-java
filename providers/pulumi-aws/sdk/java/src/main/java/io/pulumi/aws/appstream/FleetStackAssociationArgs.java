@@ -69,22 +69,22 @@ public final class FleetStackAssociationArgs extends io.pulumi.resources.Resourc
     	      this.stackName = defaults.stackName;
         }
 
-        public Builder setFleetName(Input<String> fleetName) {
+        public Builder fleetName(Input<String> fleetName) {
             this.fleetName = Objects.requireNonNull(fleetName);
             return this;
         }
 
-        public Builder setFleetName(String fleetName) {
+        public Builder fleetName(String fleetName) {
             this.fleetName = Input.of(Objects.requireNonNull(fleetName));
             return this;
         }
 
-        public Builder setStackName(Input<String> stackName) {
+        public Builder stackName(Input<String> stackName) {
             this.stackName = Objects.requireNonNull(stackName);
             return this;
         }
 
-        public Builder setStackName(String stackName) {
+        public Builder stackName(String stackName) {
             this.stackName = Input.of(Objects.requireNonNull(stackName));
             return this;
         }

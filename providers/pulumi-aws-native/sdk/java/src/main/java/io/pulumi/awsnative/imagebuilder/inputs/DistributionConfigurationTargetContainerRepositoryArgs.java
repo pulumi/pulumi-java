@@ -75,22 +75,22 @@ public final class DistributionConfigurationTargetContainerRepositoryArgs extend
     	      this.service = defaults.service;
         }
 
-        public Builder setRepositoryName(@Nullable Input<String> repositoryName) {
+        public Builder repositoryName(@Nullable Input<String> repositoryName) {
             this.repositoryName = repositoryName;
             return this;
         }
 
-        public Builder setRepositoryName(@Nullable String repositoryName) {
+        public Builder repositoryName(@Nullable String repositoryName) {
             this.repositoryName = Input.ofNullable(repositoryName);
             return this;
         }
 
-        public Builder setService(@Nullable Input<DistributionConfigurationTargetContainerRepositoryService> service) {
+        public Builder service(@Nullable Input<DistributionConfigurationTargetContainerRepositoryService> service) {
             this.service = service;
             return this;
         }
 
-        public Builder setService(@Nullable DistributionConfigurationTargetContainerRepositoryService service) {
+        public Builder service(@Nullable DistributionConfigurationTargetContainerRepositoryService service) {
             this.service = Input.ofNullable(service);
             return this;
         }

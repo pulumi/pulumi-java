@@ -89,17 +89,17 @@ public final class GeoFilterResponse extends io.pulumi.resources.InvokeArgs {
     	      this.relativePath = defaults.relativePath;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setCountryCodes(List<String> countryCodes) {
+        public Builder countryCodes(List<String> countryCodes) {
             this.countryCodes = Objects.requireNonNull(countryCodes);
             return this;
         }
 
-        public Builder setRelativePath(String relativePath) {
+        public Builder relativePath(String relativePath) {
             this.relativePath = Objects.requireNonNull(relativePath);
             return this;
         }

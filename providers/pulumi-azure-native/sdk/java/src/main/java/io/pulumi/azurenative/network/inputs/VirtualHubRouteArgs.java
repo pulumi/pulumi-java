@@ -75,22 +75,22 @@ public final class VirtualHubRouteArgs extends io.pulumi.resources.ResourceArgs 
     	      this.nextHopIpAddress = defaults.nextHopIpAddress;
         }
 
-        public Builder setAddressPrefixes(@Nullable Input<List<String>> addressPrefixes) {
+        public Builder addressPrefixes(@Nullable Input<List<String>> addressPrefixes) {
             this.addressPrefixes = addressPrefixes;
             return this;
         }
 
-        public Builder setAddressPrefixes(@Nullable List<String> addressPrefixes) {
+        public Builder addressPrefixes(@Nullable List<String> addressPrefixes) {
             this.addressPrefixes = Input.ofNullable(addressPrefixes);
             return this;
         }
 
-        public Builder setNextHopIpAddress(@Nullable Input<String> nextHopIpAddress) {
+        public Builder nextHopIpAddress(@Nullable Input<String> nextHopIpAddress) {
             this.nextHopIpAddress = nextHopIpAddress;
             return this;
         }
 
-        public Builder setNextHopIpAddress(@Nullable String nextHopIpAddress) {
+        public Builder nextHopIpAddress(@Nullable String nextHopIpAddress) {
             this.nextHopIpAddress = Input.ofNullable(nextHopIpAddress);
             return this;
         }

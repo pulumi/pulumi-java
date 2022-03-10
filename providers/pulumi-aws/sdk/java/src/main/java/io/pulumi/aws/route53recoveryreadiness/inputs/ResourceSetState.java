@@ -137,62 +137,62 @@ public final class ResourceSetState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setResourceSetName(@Nullable Input<String> resourceSetName) {
+        public Builder resourceSetName(@Nullable Input<String> resourceSetName) {
             this.resourceSetName = resourceSetName;
             return this;
         }
 
-        public Builder setResourceSetName(@Nullable String resourceSetName) {
+        public Builder resourceSetName(@Nullable String resourceSetName) {
             this.resourceSetName = Input.ofNullable(resourceSetName);
             return this;
         }
 
-        public Builder setResourceSetType(@Nullable Input<String> resourceSetType) {
+        public Builder resourceSetType(@Nullable Input<String> resourceSetType) {
             this.resourceSetType = resourceSetType;
             return this;
         }
 
-        public Builder setResourceSetType(@Nullable String resourceSetType) {
+        public Builder resourceSetType(@Nullable String resourceSetType) {
             this.resourceSetType = Input.ofNullable(resourceSetType);
             return this;
         }
 
-        public Builder setResources(@Nullable Input<List<ResourceSetResourceGetArgs>> resources) {
+        public Builder resources(@Nullable Input<List<ResourceSetResourceGetArgs>> resources) {
             this.resources = resources;
             return this;
         }
 
-        public Builder setResources(@Nullable List<ResourceSetResourceGetArgs> resources) {
+        public Builder resources(@Nullable List<ResourceSetResourceGetArgs> resources) {
             this.resources = Input.ofNullable(resources);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

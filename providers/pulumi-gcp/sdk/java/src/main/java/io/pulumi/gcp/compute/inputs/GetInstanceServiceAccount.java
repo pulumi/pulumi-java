@@ -69,12 +69,12 @@ public final class GetInstanceServiceAccount extends io.pulumi.resources.InvokeA
     	      this.scopes = defaults.scopes;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
-        public Builder setScopes(List<String> scopes) {
+        public Builder scopes(List<String> scopes) {
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }

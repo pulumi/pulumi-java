@@ -103,42 +103,42 @@ public final class EventTargetBatchTargetGetArgs extends io.pulumi.resources.Res
     	      this.jobName = defaults.jobName;
         }
 
-        public Builder setArraySize(@Nullable Input<Integer> arraySize) {
+        public Builder arraySize(@Nullable Input<Integer> arraySize) {
             this.arraySize = arraySize;
             return this;
         }
 
-        public Builder setArraySize(@Nullable Integer arraySize) {
+        public Builder arraySize(@Nullable Integer arraySize) {
             this.arraySize = Input.ofNullable(arraySize);
             return this;
         }
 
-        public Builder setJobAttempts(@Nullable Input<Integer> jobAttempts) {
+        public Builder jobAttempts(@Nullable Input<Integer> jobAttempts) {
             this.jobAttempts = jobAttempts;
             return this;
         }
 
-        public Builder setJobAttempts(@Nullable Integer jobAttempts) {
+        public Builder jobAttempts(@Nullable Integer jobAttempts) {
             this.jobAttempts = Input.ofNullable(jobAttempts);
             return this;
         }
 
-        public Builder setJobDefinition(Input<String> jobDefinition) {
+        public Builder jobDefinition(Input<String> jobDefinition) {
             this.jobDefinition = Objects.requireNonNull(jobDefinition);
             return this;
         }
 
-        public Builder setJobDefinition(String jobDefinition) {
+        public Builder jobDefinition(String jobDefinition) {
             this.jobDefinition = Input.of(Objects.requireNonNull(jobDefinition));
             return this;
         }
 
-        public Builder setJobName(Input<String> jobName) {
+        public Builder jobName(Input<String> jobName) {
             this.jobName = Objects.requireNonNull(jobName);
             return this;
         }
 
-        public Builder setJobName(String jobName) {
+        public Builder jobName(String jobName) {
             this.jobName = Input.of(Objects.requireNonNull(jobName));
             return this;
         }

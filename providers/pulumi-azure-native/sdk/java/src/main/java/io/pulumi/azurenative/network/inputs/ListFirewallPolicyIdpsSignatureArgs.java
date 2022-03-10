@@ -154,37 +154,37 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends io.pulumi.resourc
     	      this.skip = defaults.skip;
         }
 
-        public Builder setFilters(@Nullable List<FilterItems> filters) {
+        public Builder filters(@Nullable List<FilterItems> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setFirewallPolicyName(String firewallPolicyName) {
+        public Builder firewallPolicyName(String firewallPolicyName) {
             this.firewallPolicyName = Objects.requireNonNull(firewallPolicyName);
             return this;
         }
 
-        public Builder setOrderBy(@Nullable OrderBy orderBy) {
+        public Builder orderBy(@Nullable OrderBy orderBy) {
             this.orderBy = orderBy;
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResultsPerPage(@Nullable Integer resultsPerPage) {
+        public Builder resultsPerPage(@Nullable Integer resultsPerPage) {
             this.resultsPerPage = resultsPerPage;
             return this;
         }
 
-        public Builder setSearch(@Nullable String search) {
+        public Builder search(@Nullable String search) {
             this.search = search;
             return this;
         }
 
-        public Builder setSkip(@Nullable Integer skip) {
+        public Builder skip(@Nullable Integer skip) {
             this.skip = skip;
             return this;
         }

@@ -149,72 +149,72 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     	      this.validationState = defaults.validationState;
         }
 
-        public Builder setEmail(Input<String> email) {
+        public Builder email(Input<String> email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Input.of(Objects.requireNonNull(email));
             return this;
         }
 
-        public Builder setLanguageTag(@Nullable Input<String> languageTag) {
+        public Builder languageTag(@Nullable Input<String> languageTag) {
             this.languageTag = languageTag;
             return this;
         }
 
-        public Builder setLanguageTag(@Nullable String languageTag) {
+        public Builder languageTag(@Nullable String languageTag) {
             this.languageTag = Input.ofNullable(languageTag);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNotificationCategorySubscriptions(@Nullable Input<List<ContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions) {
+        public Builder notificationCategorySubscriptions(@Nullable Input<List<ContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions) {
             this.notificationCategorySubscriptions = notificationCategorySubscriptions;
             return this;
         }
 
-        public Builder setNotificationCategorySubscriptions(@Nullable List<ContactNotificationCategorySubscriptionsItem> notificationCategorySubscriptions) {
+        public Builder notificationCategorySubscriptions(@Nullable List<ContactNotificationCategorySubscriptionsItem> notificationCategorySubscriptions) {
             this.notificationCategorySubscriptions = Input.ofNullable(notificationCategorySubscriptions);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setValidateTime(@Nullable Input<String> validateTime) {
+        public Builder validateTime(@Nullable Input<String> validateTime) {
             this.validateTime = validateTime;
             return this;
         }
 
-        public Builder setValidateTime(@Nullable String validateTime) {
+        public Builder validateTime(@Nullable String validateTime) {
             this.validateTime = Input.ofNullable(validateTime);
             return this;
         }
 
-        public Builder setValidationState(@Nullable Input<ContactValidationState> validationState) {
+        public Builder validationState(@Nullable Input<ContactValidationState> validationState) {
             this.validationState = validationState;
             return this;
         }
 
-        public Builder setValidationState(@Nullable ContactValidationState validationState) {
+        public Builder validationState(@Nullable ContactValidationState validationState) {
             this.validationState = Input.ofNullable(validationState);
             return this;
         }

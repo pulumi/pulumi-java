@@ -48,7 +48,7 @@ public final class ApiEndpointHandlerResponse {
     	      this.scriptPath = defaults.scriptPath;
         }
 
-        public Builder setScriptPath(String scriptPath) {
+        public Builder scriptPath(String scriptPath) {
             this.scriptPath = Objects.requireNonNull(scriptPath);
             return this;
         }

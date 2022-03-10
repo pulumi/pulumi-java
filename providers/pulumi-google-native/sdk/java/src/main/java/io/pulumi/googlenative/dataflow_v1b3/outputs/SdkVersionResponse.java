@@ -81,17 +81,17 @@ public final class SdkVersionResponse {
     	      this.versionDisplayName = defaults.versionDisplayName;
         }
 
-        public Builder setSdkSupportStatus(String sdkSupportStatus) {
+        public Builder sdkSupportStatus(String sdkSupportStatus) {
             this.sdkSupportStatus = Objects.requireNonNull(sdkSupportStatus);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
-        public Builder setVersionDisplayName(String versionDisplayName) {
+        public Builder versionDisplayName(String versionDisplayName) {
             this.versionDisplayName = Objects.requireNonNull(versionDisplayName);
             return this;
         }

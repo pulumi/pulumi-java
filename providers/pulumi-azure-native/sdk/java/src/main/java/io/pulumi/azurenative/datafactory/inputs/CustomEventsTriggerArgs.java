@@ -174,82 +174,82 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
     	      this.type = defaults.type;
         }
 
-        public Builder setAnnotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Input<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEvents(Input<List<Object>> events) {
+        public Builder events(Input<List<Object>> events) {
             this.events = Objects.requireNonNull(events);
             return this;
         }
 
-        public Builder setEvents(List<Object> events) {
+        public Builder events(List<Object> events) {
             this.events = Input.of(Objects.requireNonNull(events));
             return this;
         }
 
-        public Builder setPipelines(@Nullable Input<List<TriggerPipelineReferenceArgs>> pipelines) {
+        public Builder pipelines(@Nullable Input<List<TriggerPipelineReferenceArgs>> pipelines) {
             this.pipelines = pipelines;
             return this;
         }
 
-        public Builder setPipelines(@Nullable List<TriggerPipelineReferenceArgs> pipelines) {
+        public Builder pipelines(@Nullable List<TriggerPipelineReferenceArgs> pipelines) {
             this.pipelines = Input.ofNullable(pipelines);
             return this;
         }
 
-        public Builder setScope(Input<String> scope) {
+        public Builder scope(Input<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Input.of(Objects.requireNonNull(scope));
             return this;
         }
 
-        public Builder setSubjectBeginsWith(@Nullable Input<String> subjectBeginsWith) {
+        public Builder subjectBeginsWith(@Nullable Input<String> subjectBeginsWith) {
             this.subjectBeginsWith = subjectBeginsWith;
             return this;
         }
 
-        public Builder setSubjectBeginsWith(@Nullable String subjectBeginsWith) {
+        public Builder subjectBeginsWith(@Nullable String subjectBeginsWith) {
             this.subjectBeginsWith = Input.ofNullable(subjectBeginsWith);
             return this;
         }
 
-        public Builder setSubjectEndsWith(@Nullable Input<String> subjectEndsWith) {
+        public Builder subjectEndsWith(@Nullable Input<String> subjectEndsWith) {
             this.subjectEndsWith = subjectEndsWith;
             return this;
         }
 
-        public Builder setSubjectEndsWith(@Nullable String subjectEndsWith) {
+        public Builder subjectEndsWith(@Nullable String subjectEndsWith) {
             this.subjectEndsWith = Input.ofNullable(subjectEndsWith);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

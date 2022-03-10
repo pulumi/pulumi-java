@@ -49,12 +49,12 @@ public final class FilterFindingCriteriaArgs extends io.pulumi.resources.Resourc
     	      this.criterions = defaults.criterions;
         }
 
-        public Builder setCriterions(Input<List<FilterFindingCriteriaCriterionArgs>> criterions) {
+        public Builder criterions(Input<List<FilterFindingCriteriaCriterionArgs>> criterions) {
             this.criterions = Objects.requireNonNull(criterions);
             return this;
         }
 
-        public Builder setCriterions(List<FilterFindingCriteriaCriterionArgs> criterions) {
+        public Builder criterions(List<FilterFindingCriteriaCriterionArgs> criterions) {
             this.criterions = Input.of(Objects.requireNonNull(criterions));
             return this;
         }

@@ -162,42 +162,42 @@ public final class EndpointInfoResponse {
     	      this.sourcePort = defaults.sourcePort;
         }
 
-        public Builder setDestinationIp(String destinationIp) {
+        public Builder destinationIp(String destinationIp) {
             this.destinationIp = Objects.requireNonNull(destinationIp);
             return this;
         }
 
-        public Builder setDestinationNetworkUri(String destinationNetworkUri) {
+        public Builder destinationNetworkUri(String destinationNetworkUri) {
             this.destinationNetworkUri = Objects.requireNonNull(destinationNetworkUri);
             return this;
         }
 
-        public Builder setDestinationPort(Integer destinationPort) {
+        public Builder destinationPort(Integer destinationPort) {
             this.destinationPort = Objects.requireNonNull(destinationPort);
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setSourceAgentUri(String sourceAgentUri) {
+        public Builder sourceAgentUri(String sourceAgentUri) {
             this.sourceAgentUri = Objects.requireNonNull(sourceAgentUri);
             return this;
         }
 
-        public Builder setSourceIp(String sourceIp) {
+        public Builder sourceIp(String sourceIp) {
             this.sourceIp = Objects.requireNonNull(sourceIp);
             return this;
         }
 
-        public Builder setSourceNetworkUri(String sourceNetworkUri) {
+        public Builder sourceNetworkUri(String sourceNetworkUri) {
             this.sourceNetworkUri = Objects.requireNonNull(sourceNetworkUri);
             return this;
         }
 
-        public Builder setSourcePort(Integer sourcePort) {
+        public Builder sourcePort(Integer sourcePort) {
             this.sourcePort = Objects.requireNonNull(sourcePort);
             return this;
         }

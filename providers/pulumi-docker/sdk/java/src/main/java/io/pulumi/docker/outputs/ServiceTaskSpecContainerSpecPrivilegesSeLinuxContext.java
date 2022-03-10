@@ -76,27 +76,27 @@ public final class ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext {
     	      this.user = defaults.user;
         }
 
-        public Builder setDisable(@Nullable Boolean disable) {
+        public Builder disable(@Nullable Boolean disable) {
             this.disable = disable;
             return this;
         }
 
-        public Builder setLevel(@Nullable String level) {
+        public Builder level(@Nullable String level) {
             this.level = level;
             return this;
         }
 
-        public Builder setRole(@Nullable String role) {
+        public Builder role(@Nullable String role) {
             this.role = role;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setUser(@Nullable String user) {
+        public Builder user(@Nullable String user) {
             this.user = user;
             return this;
         }

@@ -53,12 +53,12 @@ public final class VirtualRouterSpecArgs extends io.pulumi.resources.ResourceArg
     	      this.listener = defaults.listener;
         }
 
-        public Builder setListener(Input<VirtualRouterSpecListenerArgs> listener) {
+        public Builder listener(Input<VirtualRouterSpecListenerArgs> listener) {
             this.listener = Objects.requireNonNull(listener);
             return this;
         }
 
-        public Builder setListener(VirtualRouterSpecListenerArgs listener) {
+        public Builder listener(VirtualRouterSpecListenerArgs listener) {
             this.listener = Input.of(Objects.requireNonNull(listener));
             return this;
         }

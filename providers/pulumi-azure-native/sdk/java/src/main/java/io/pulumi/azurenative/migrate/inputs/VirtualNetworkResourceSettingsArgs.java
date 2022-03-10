@@ -144,62 +144,62 @@ public final class VirtualNetworkResourceSettingsArgs extends io.pulumi.resource
     	      this.targetResourceName = defaults.targetResourceName;
         }
 
-        public Builder setAddressSpace(@Nullable Input<List<String>> addressSpace) {
+        public Builder addressSpace(@Nullable Input<List<String>> addressSpace) {
             this.addressSpace = addressSpace;
             return this;
         }
 
-        public Builder setAddressSpace(@Nullable List<String> addressSpace) {
+        public Builder addressSpace(@Nullable List<String> addressSpace) {
             this.addressSpace = Input.ofNullable(addressSpace);
             return this;
         }
 
-        public Builder setDnsServers(@Nullable Input<List<String>> dnsServers) {
+        public Builder dnsServers(@Nullable Input<List<String>> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
 
-        public Builder setDnsServers(@Nullable List<String> dnsServers) {
+        public Builder dnsServers(@Nullable List<String> dnsServers) {
             this.dnsServers = Input.ofNullable(dnsServers);
             return this;
         }
 
-        public Builder setEnableDdosProtection(@Nullable Input<Boolean> enableDdosProtection) {
+        public Builder enableDdosProtection(@Nullable Input<Boolean> enableDdosProtection) {
             this.enableDdosProtection = enableDdosProtection;
             return this;
         }
 
-        public Builder setEnableDdosProtection(@Nullable Boolean enableDdosProtection) {
+        public Builder enableDdosProtection(@Nullable Boolean enableDdosProtection) {
             this.enableDdosProtection = Input.ofNullable(enableDdosProtection);
             return this;
         }
 
-        public Builder setResourceType(Input<String> resourceType) {
+        public Builder resourceType(Input<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Input.of(Objects.requireNonNull(resourceType));
             return this;
         }
 
-        public Builder setSubnets(@Nullable Input<List<SubnetResourceSettingsArgs>> subnets) {
+        public Builder subnets(@Nullable Input<List<SubnetResourceSettingsArgs>> subnets) {
             this.subnets = subnets;
             return this;
         }
 
-        public Builder setSubnets(@Nullable List<SubnetResourceSettingsArgs> subnets) {
+        public Builder subnets(@Nullable List<SubnetResourceSettingsArgs> subnets) {
             this.subnets = Input.ofNullable(subnets);
             return this;
         }
 
-        public Builder setTargetResourceName(Input<String> targetResourceName) {
+        public Builder targetResourceName(Input<String> targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
 
-        public Builder setTargetResourceName(String targetResourceName) {
+        public Builder targetResourceName(String targetResourceName) {
             this.targetResourceName = Input.of(Objects.requireNonNull(targetResourceName));
             return this;
         }

@@ -67,12 +67,12 @@ public final class ServiceAuthenticationConfiguration {
     	      this.connectionArn = defaults.connectionArn;
         }
 
-        public Builder setAccessRoleArn(@Nullable String accessRoleArn) {
+        public Builder accessRoleArn(@Nullable String accessRoleArn) {
             this.accessRoleArn = accessRoleArn;
             return this;
         }
 
-        public Builder setConnectionArn(@Nullable String connectionArn) {
+        public Builder connectionArn(@Nullable String connectionArn) {
             this.connectionArn = connectionArn;
             return this;
         }

@@ -50,7 +50,7 @@ public final class WebPubSubTlsSettingsResponse {
     	      this.clientCertEnabled = defaults.clientCertEnabled;
         }
 
-        public Builder setClientCertEnabled(@Nullable Boolean clientCertEnabled) {
+        public Builder clientCertEnabled(@Nullable Boolean clientCertEnabled) {
             this.clientCertEnabled = clientCertEnabled;
             return this;
         }

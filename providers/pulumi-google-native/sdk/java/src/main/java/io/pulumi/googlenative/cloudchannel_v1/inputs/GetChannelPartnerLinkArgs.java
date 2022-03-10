@@ -74,17 +74,17 @@ public final class GetChannelPartnerLinkArgs extends io.pulumi.resources.InvokeA
     	      this.view = defaults.view;
         }
 
-        public Builder setAccountId(String accountId) {
+        public Builder accountId(String accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
 
-        public Builder setChannelPartnerLinkId(String channelPartnerLinkId) {
+        public Builder channelPartnerLinkId(String channelPartnerLinkId) {
             this.channelPartnerLinkId = Objects.requireNonNull(channelPartnerLinkId);
             return this;
         }
 
-        public Builder setView(@Nullable String view) {
+        public Builder view(@Nullable String view) {
             this.view = view;
             return this;
         }

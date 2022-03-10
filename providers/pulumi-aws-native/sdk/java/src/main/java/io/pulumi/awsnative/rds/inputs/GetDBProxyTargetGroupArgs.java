@@ -51,7 +51,7 @@ public final class GetDBProxyTargetGroupArgs extends io.pulumi.resources.InvokeA
     	      this.targetGroupArn = defaults.targetGroupArn;
         }
 
-        public Builder setTargetGroupArn(String targetGroupArn) {
+        public Builder targetGroupArn(String targetGroupArn) {
             this.targetGroupArn = Objects.requireNonNull(targetGroupArn);
             return this;
         }

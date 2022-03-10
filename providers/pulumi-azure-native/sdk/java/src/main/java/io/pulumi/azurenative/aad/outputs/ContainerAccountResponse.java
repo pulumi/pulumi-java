@@ -83,17 +83,17 @@ public final class ContainerAccountResponse {
     	      this.spn = defaults.spn;
         }
 
-        public Builder setAccountName(@Nullable String accountName) {
+        public Builder accountName(@Nullable String accountName) {
             this.accountName = accountName;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setSpn(@Nullable String spn) {
+        public Builder spn(@Nullable String spn) {
             this.spn = spn;
             return this;
         }

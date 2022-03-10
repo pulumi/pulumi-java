@@ -53,12 +53,12 @@ public final class GroupConfigurationItem {
     	      this.type = defaults.type;
         }
 
-        public Builder setParameters(@Nullable List<GroupConfigurationParameter> parameters) {
+        public Builder parameters(@Nullable List<GroupConfigurationParameter> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

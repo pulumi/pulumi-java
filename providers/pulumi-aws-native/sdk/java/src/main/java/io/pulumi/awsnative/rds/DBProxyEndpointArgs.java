@@ -137,62 +137,62 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
     	      this.vpcSubnetIds = defaults.vpcSubnetIds;
         }
 
-        public Builder setDBProxyEndpointName(@Nullable Input<String> dBProxyEndpointName) {
+        public Builder dBProxyEndpointName(@Nullable Input<String> dBProxyEndpointName) {
             this.dBProxyEndpointName = dBProxyEndpointName;
             return this;
         }
 
-        public Builder setDBProxyEndpointName(@Nullable String dBProxyEndpointName) {
+        public Builder dBProxyEndpointName(@Nullable String dBProxyEndpointName) {
             this.dBProxyEndpointName = Input.ofNullable(dBProxyEndpointName);
             return this;
         }
 
-        public Builder setDBProxyName(Input<String> dBProxyName) {
+        public Builder dBProxyName(Input<String> dBProxyName) {
             this.dBProxyName = Objects.requireNonNull(dBProxyName);
             return this;
         }
 
-        public Builder setDBProxyName(String dBProxyName) {
+        public Builder dBProxyName(String dBProxyName) {
             this.dBProxyName = Input.of(Objects.requireNonNull(dBProxyName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<DBProxyEndpointTagFormatArgs>> tags) {
+        public Builder tags(@Nullable Input<List<DBProxyEndpointTagFormatArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DBProxyEndpointTagFormatArgs> tags) {
+        public Builder tags(@Nullable List<DBProxyEndpointTagFormatArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTargetRole(@Nullable Input<DBProxyEndpointTargetRole> targetRole) {
+        public Builder targetRole(@Nullable Input<DBProxyEndpointTargetRole> targetRole) {
             this.targetRole = targetRole;
             return this;
         }
 
-        public Builder setTargetRole(@Nullable DBProxyEndpointTargetRole targetRole) {
+        public Builder targetRole(@Nullable DBProxyEndpointTargetRole targetRole) {
             this.targetRole = Input.ofNullable(targetRole);
             return this;
         }
 
-        public Builder setVpcSecurityGroupIds(@Nullable Input<List<String>> vpcSecurityGroupIds) {
+        public Builder vpcSecurityGroupIds(@Nullable Input<List<String>> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
 
-        public Builder setVpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
+        public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = Input.ofNullable(vpcSecurityGroupIds);
             return this;
         }
 
-        public Builder setVpcSubnetIds(Input<List<String>> vpcSubnetIds) {
+        public Builder vpcSubnetIds(Input<List<String>> vpcSubnetIds) {
             this.vpcSubnetIds = Objects.requireNonNull(vpcSubnetIds);
             return this;
         }
 
-        public Builder setVpcSubnetIds(List<String> vpcSubnetIds) {
+        public Builder vpcSubnetIds(List<String> vpcSubnetIds) {
             this.vpcSubnetIds = Input.of(Objects.requireNonNull(vpcSubnetIds));
             return this;
         }

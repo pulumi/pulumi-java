@@ -169,92 +169,92 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.trafficLogs = defaults.trafficLogs;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEndpointId(Input<String> endpointId) {
+        public Builder endpointId(Input<String> endpointId) {
             this.endpointId = Objects.requireNonNull(endpointId);
             return this;
         }
 
-        public Builder setEndpointId(String endpointId) {
+        public Builder endpointId(String endpointId) {
             this.endpointId = Input.of(Objects.requireNonNull(endpointId));
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setNetwork(Input<String> network) {
+        public Builder network(Input<String> network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Input.of(Objects.requireNonNull(network));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setSeverity(Input<EndpointSeverity> severity) {
+        public Builder severity(Input<EndpointSeverity> severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
 
-        public Builder setSeverity(EndpointSeverity severity) {
+        public Builder severity(EndpointSeverity severity) {
             this.severity = Input.of(Objects.requireNonNull(severity));
             return this;
         }
 
-        public Builder setTrafficLogs(@Nullable Input<Boolean> trafficLogs) {
+        public Builder trafficLogs(@Nullable Input<Boolean> trafficLogs) {
             this.trafficLogs = trafficLogs;
             return this;
         }
 
-        public Builder setTrafficLogs(@Nullable Boolean trafficLogs) {
+        public Builder trafficLogs(@Nullable Boolean trafficLogs) {
             this.trafficLogs = Input.ofNullable(trafficLogs);
             return this;
         }

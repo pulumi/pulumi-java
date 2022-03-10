@@ -89,17 +89,17 @@ public final class ClientCertificateCommonNameResponse extends io.pulumi.resourc
     	      this.isAdmin = defaults.isAdmin;
         }
 
-        public Builder setCertificateCommonName(String certificateCommonName) {
+        public Builder certificateCommonName(String certificateCommonName) {
             this.certificateCommonName = Objects.requireNonNull(certificateCommonName);
             return this;
         }
 
-        public Builder setCertificateIssuerThumbprint(String certificateIssuerThumbprint) {
+        public Builder certificateIssuerThumbprint(String certificateIssuerThumbprint) {
             this.certificateIssuerThumbprint = Objects.requireNonNull(certificateIssuerThumbprint);
             return this;
         }
 
-        public Builder setIsAdmin(Boolean isAdmin) {
+        public Builder isAdmin(Boolean isAdmin) {
             this.isAdmin = Objects.requireNonNull(isAdmin);
             return this;
         }

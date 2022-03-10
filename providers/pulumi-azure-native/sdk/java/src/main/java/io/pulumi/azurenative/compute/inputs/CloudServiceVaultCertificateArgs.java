@@ -57,12 +57,12 @@ public final class CloudServiceVaultCertificateArgs extends io.pulumi.resources.
     	      this.certificateUrl = defaults.certificateUrl;
         }
 
-        public Builder setCertificateUrl(@Nullable Input<String> certificateUrl) {
+        public Builder certificateUrl(@Nullable Input<String> certificateUrl) {
             this.certificateUrl = certificateUrl;
             return this;
         }
 
-        public Builder setCertificateUrl(@Nullable String certificateUrl) {
+        public Builder certificateUrl(@Nullable String certificateUrl) {
             this.certificateUrl = Input.ofNullable(certificateUrl);
             return this;
         }

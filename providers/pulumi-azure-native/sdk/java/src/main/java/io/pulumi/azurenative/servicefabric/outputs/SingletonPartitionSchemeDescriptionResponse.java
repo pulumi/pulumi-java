@@ -50,7 +50,7 @@ public final class SingletonPartitionSchemeDescriptionResponse {
     	      this.partitionScheme = defaults.partitionScheme;
         }
 
-        public Builder setPartitionScheme(String partitionScheme) {
+        public Builder partitionScheme(String partitionScheme) {
             this.partitionScheme = Objects.requireNonNull(partitionScheme);
             return this;
         }

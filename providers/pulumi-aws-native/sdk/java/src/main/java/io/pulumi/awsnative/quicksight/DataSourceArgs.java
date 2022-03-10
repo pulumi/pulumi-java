@@ -215,122 +215,122 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcConnectionProperties = defaults.vpcConnectionProperties;
         }
 
-        public Builder setAlternateDataSourceParameters(@Nullable Input<List<DataSourceParametersArgs>> alternateDataSourceParameters) {
+        public Builder alternateDataSourceParameters(@Nullable Input<List<DataSourceParametersArgs>> alternateDataSourceParameters) {
             this.alternateDataSourceParameters = alternateDataSourceParameters;
             return this;
         }
 
-        public Builder setAlternateDataSourceParameters(@Nullable List<DataSourceParametersArgs> alternateDataSourceParameters) {
+        public Builder alternateDataSourceParameters(@Nullable List<DataSourceParametersArgs> alternateDataSourceParameters) {
             this.alternateDataSourceParameters = Input.ofNullable(alternateDataSourceParameters);
             return this;
         }
 
-        public Builder setAwsAccountId(@Nullable Input<String> awsAccountId) {
+        public Builder awsAccountId(@Nullable Input<String> awsAccountId) {
             this.awsAccountId = awsAccountId;
             return this;
         }
 
-        public Builder setAwsAccountId(@Nullable String awsAccountId) {
+        public Builder awsAccountId(@Nullable String awsAccountId) {
             this.awsAccountId = Input.ofNullable(awsAccountId);
             return this;
         }
 
-        public Builder setCredentials(@Nullable Input<DataSourceCredentialsArgs> credentials) {
+        public Builder credentials(@Nullable Input<DataSourceCredentialsArgs> credentials) {
             this.credentials = credentials;
             return this;
         }
 
-        public Builder setCredentials(@Nullable DataSourceCredentialsArgs credentials) {
+        public Builder credentials(@Nullable DataSourceCredentialsArgs credentials) {
             this.credentials = Input.ofNullable(credentials);
             return this;
         }
 
-        public Builder setDataSourceId(@Nullable Input<String> dataSourceId) {
+        public Builder dataSourceId(@Nullable Input<String> dataSourceId) {
             this.dataSourceId = dataSourceId;
             return this;
         }
 
-        public Builder setDataSourceId(@Nullable String dataSourceId) {
+        public Builder dataSourceId(@Nullable String dataSourceId) {
             this.dataSourceId = Input.ofNullable(dataSourceId);
             return this;
         }
 
-        public Builder setDataSourceParameters(@Nullable Input<DataSourceParametersArgs> dataSourceParameters) {
+        public Builder dataSourceParameters(@Nullable Input<DataSourceParametersArgs> dataSourceParameters) {
             this.dataSourceParameters = dataSourceParameters;
             return this;
         }
 
-        public Builder setDataSourceParameters(@Nullable DataSourceParametersArgs dataSourceParameters) {
+        public Builder dataSourceParameters(@Nullable DataSourceParametersArgs dataSourceParameters) {
             this.dataSourceParameters = Input.ofNullable(dataSourceParameters);
             return this;
         }
 
-        public Builder setErrorInfo(@Nullable Input<DataSourceErrorInfoArgs> errorInfo) {
+        public Builder errorInfo(@Nullable Input<DataSourceErrorInfoArgs> errorInfo) {
             this.errorInfo = errorInfo;
             return this;
         }
 
-        public Builder setErrorInfo(@Nullable DataSourceErrorInfoArgs errorInfo) {
+        public Builder errorInfo(@Nullable DataSourceErrorInfoArgs errorInfo) {
             this.errorInfo = Input.ofNullable(errorInfo);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPermissions(@Nullable Input<List<DataSourceResourcePermissionArgs>> permissions) {
+        public Builder permissions(@Nullable Input<List<DataSourceResourcePermissionArgs>> permissions) {
             this.permissions = permissions;
             return this;
         }
 
-        public Builder setPermissions(@Nullable List<DataSourceResourcePermissionArgs> permissions) {
+        public Builder permissions(@Nullable List<DataSourceResourcePermissionArgs> permissions) {
             this.permissions = Input.ofNullable(permissions);
             return this;
         }
 
-        public Builder setSslProperties(@Nullable Input<DataSourceSslPropertiesArgs> sslProperties) {
+        public Builder sslProperties(@Nullable Input<DataSourceSslPropertiesArgs> sslProperties) {
             this.sslProperties = sslProperties;
             return this;
         }
 
-        public Builder setSslProperties(@Nullable DataSourceSslPropertiesArgs sslProperties) {
+        public Builder sslProperties(@Nullable DataSourceSslPropertiesArgs sslProperties) {
             this.sslProperties = Input.ofNullable(sslProperties);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<DataSourceTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<DataSourceTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DataSourceTagArgs> tags) {
+        public Builder tags(@Nullable List<DataSourceTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setType(@Nullable Input<DataSourceType> type) {
+        public Builder type(@Nullable Input<DataSourceType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable DataSourceType type) {
+        public Builder type(@Nullable DataSourceType type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setVpcConnectionProperties(@Nullable Input<DataSourceVpcConnectionPropertiesArgs> vpcConnectionProperties) {
+        public Builder vpcConnectionProperties(@Nullable Input<DataSourceVpcConnectionPropertiesArgs> vpcConnectionProperties) {
             this.vpcConnectionProperties = vpcConnectionProperties;
             return this;
         }
 
-        public Builder setVpcConnectionProperties(@Nullable DataSourceVpcConnectionPropertiesArgs vpcConnectionProperties) {
+        public Builder vpcConnectionProperties(@Nullable DataSourceVpcConnectionPropertiesArgs vpcConnectionProperties) {
             this.vpcConnectionProperties = Input.ofNullable(vpcConnectionProperties);
             return this;
         }

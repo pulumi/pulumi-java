@@ -129,62 +129,62 @@ public final class PhraseSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setBoost(@Nullable Input<Double> boost) {
+        public Builder boost(@Nullable Input<Double> boost) {
             this.boost = boost;
             return this;
         }
 
-        public Builder setBoost(@Nullable Double boost) {
+        public Builder boost(@Nullable Double boost) {
             this.boost = Input.ofNullable(boost);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPhraseSetId(Input<String> phraseSetId) {
+        public Builder phraseSetId(Input<String> phraseSetId) {
             this.phraseSetId = Objects.requireNonNull(phraseSetId);
             return this;
         }
 
-        public Builder setPhraseSetId(String phraseSetId) {
+        public Builder phraseSetId(String phraseSetId) {
             this.phraseSetId = Input.of(Objects.requireNonNull(phraseSetId));
             return this;
         }
 
-        public Builder setPhrases(@Nullable Input<List<PhraseArgs>> phrases) {
+        public Builder phrases(@Nullable Input<List<PhraseArgs>> phrases) {
             this.phrases = phrases;
             return this;
         }
 
-        public Builder setPhrases(@Nullable List<PhraseArgs> phrases) {
+        public Builder phrases(@Nullable List<PhraseArgs> phrases) {
             this.phrases = Input.ofNullable(phrases);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

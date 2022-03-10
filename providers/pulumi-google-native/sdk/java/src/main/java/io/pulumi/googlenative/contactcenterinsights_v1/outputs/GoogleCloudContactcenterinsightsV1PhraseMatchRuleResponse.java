@@ -83,17 +83,17 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse {
     	      this.query = defaults.query;
         }
 
-        public Builder setConfig(GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse config) {
+        public Builder config(GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
-        public Builder setNegated(Boolean negated) {
+        public Builder negated(Boolean negated) {
             this.negated = Objects.requireNonNull(negated);
             return this;
         }
 
-        public Builder setQuery(String query) {
+        public Builder query(String query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }

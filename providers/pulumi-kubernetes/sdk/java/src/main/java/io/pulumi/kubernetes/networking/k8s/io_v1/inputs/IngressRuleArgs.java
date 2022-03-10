@@ -78,22 +78,22 @@ public final class IngressRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.http = defaults.http;
         }
 
-        public Builder setHost(@Nullable Input<String> host) {
+        public Builder host(@Nullable Input<String> host) {
             this.host = host;
             return this;
         }
 
-        public Builder setHost(@Nullable String host) {
+        public Builder host(@Nullable String host) {
             this.host = Input.ofNullable(host);
             return this;
         }
 
-        public Builder setHttp(@Nullable Input<HTTPIngressRuleValueArgs> http) {
+        public Builder http(@Nullable Input<HTTPIngressRuleValueArgs> http) {
             this.http = http;
             return this;
         }
 
-        public Builder setHttp(@Nullable HTTPIngressRuleValueArgs http) {
+        public Builder http(@Nullable HTTPIngressRuleValueArgs http) {
             this.http = Input.ofNullable(http);
             return this;
         }

@@ -136,62 +136,62 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
     	      this.userPoolId = defaults.userPoolId;
         }
 
-        public Builder setAttributeMapping(@Nullable Input<Map<String,String>> attributeMapping) {
+        public Builder attributeMapping(@Nullable Input<Map<String,String>> attributeMapping) {
             this.attributeMapping = attributeMapping;
             return this;
         }
 
-        public Builder setAttributeMapping(@Nullable Map<String,String> attributeMapping) {
+        public Builder attributeMapping(@Nullable Map<String,String> attributeMapping) {
             this.attributeMapping = Input.ofNullable(attributeMapping);
             return this;
         }
 
-        public Builder setIdpIdentifiers(@Nullable Input<List<String>> idpIdentifiers) {
+        public Builder idpIdentifiers(@Nullable Input<List<String>> idpIdentifiers) {
             this.idpIdentifiers = idpIdentifiers;
             return this;
         }
 
-        public Builder setIdpIdentifiers(@Nullable List<String> idpIdentifiers) {
+        public Builder idpIdentifiers(@Nullable List<String> idpIdentifiers) {
             this.idpIdentifiers = Input.ofNullable(idpIdentifiers);
             return this;
         }
 
-        public Builder setProviderDetails(Input<Map<String,String>> providerDetails) {
+        public Builder providerDetails(Input<Map<String,String>> providerDetails) {
             this.providerDetails = Objects.requireNonNull(providerDetails);
             return this;
         }
 
-        public Builder setProviderDetails(Map<String,String> providerDetails) {
+        public Builder providerDetails(Map<String,String> providerDetails) {
             this.providerDetails = Input.of(Objects.requireNonNull(providerDetails));
             return this;
         }
 
-        public Builder setProviderName(Input<String> providerName) {
+        public Builder providerName(Input<String> providerName) {
             this.providerName = Objects.requireNonNull(providerName);
             return this;
         }
 
-        public Builder setProviderName(String providerName) {
+        public Builder providerName(String providerName) {
             this.providerName = Input.of(Objects.requireNonNull(providerName));
             return this;
         }
 
-        public Builder setProviderType(Input<String> providerType) {
+        public Builder providerType(Input<String> providerType) {
             this.providerType = Objects.requireNonNull(providerType);
             return this;
         }
 
-        public Builder setProviderType(String providerType) {
+        public Builder providerType(String providerType) {
             this.providerType = Input.of(Objects.requireNonNull(providerType));
             return this;
         }
 
-        public Builder setUserPoolId(Input<String> userPoolId) {
+        public Builder userPoolId(Input<String> userPoolId) {
             this.userPoolId = Objects.requireNonNull(userPoolId);
             return this;
         }
 
-        public Builder setUserPoolId(String userPoolId) {
+        public Builder userPoolId(String userPoolId) {
             this.userPoolId = Input.of(Objects.requireNonNull(userPoolId));
             return this;
         }

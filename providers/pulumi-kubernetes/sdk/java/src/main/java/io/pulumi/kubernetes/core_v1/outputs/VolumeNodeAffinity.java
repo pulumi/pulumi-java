@@ -50,7 +50,7 @@ public final class VolumeNodeAffinity {
     	      this.required = defaults.required;
         }
 
-        public Builder setRequired(@Nullable NodeSelector required) {
+        public Builder required(@Nullable NodeSelector required) {
             this.required = required;
             return this;
         }

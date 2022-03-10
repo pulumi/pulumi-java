@@ -338,182 +338,182 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     	      this.username = defaults.username;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Input.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder setBlueprintId(@Nullable Input<String> blueprintId) {
+        public Builder blueprintId(@Nullable Input<String> blueprintId) {
             this.blueprintId = blueprintId;
             return this;
         }
 
-        public Builder setBlueprintId(@Nullable String blueprintId) {
+        public Builder blueprintId(@Nullable String blueprintId) {
             this.blueprintId = Input.ofNullable(blueprintId);
             return this;
         }
 
-        public Builder setBundleId(@Nullable Input<String> bundleId) {
+        public Builder bundleId(@Nullable Input<String> bundleId) {
             this.bundleId = bundleId;
             return this;
         }
 
-        public Builder setBundleId(@Nullable String bundleId) {
+        public Builder bundleId(@Nullable String bundleId) {
             this.bundleId = Input.ofNullable(bundleId);
             return this;
         }
 
-        public Builder setCpuCount(@Nullable Input<Integer> cpuCount) {
+        public Builder cpuCount(@Nullable Input<Integer> cpuCount) {
             this.cpuCount = cpuCount;
             return this;
         }
 
-        public Builder setCpuCount(@Nullable Integer cpuCount) {
+        public Builder cpuCount(@Nullable Integer cpuCount) {
             this.cpuCount = Input.ofNullable(cpuCount);
             return this;
         }
 
-        public Builder setCreatedAt(@Nullable Input<String> createdAt) {
+        public Builder createdAt(@Nullable Input<String> createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-        public Builder setCreatedAt(@Nullable String createdAt) {
+        public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = Input.ofNullable(createdAt);
             return this;
         }
 
-        public Builder setIpv6Address(@Nullable Input<String> ipv6Address) {
+        public Builder ipv6Address(@Nullable Input<String> ipv6Address) {
             this.ipv6Address = ipv6Address;
             return this;
         }
 
-        public Builder setIpv6Address(@Nullable String ipv6Address) {
+        public Builder ipv6Address(@Nullable String ipv6Address) {
             this.ipv6Address = Input.ofNullable(ipv6Address);
             return this;
         }
 
-        public Builder setIpv6Addresses(@Nullable Input<List<String>> ipv6Addresses) {
+        public Builder ipv6Addresses(@Nullable Input<List<String>> ipv6Addresses) {
             this.ipv6Addresses = ipv6Addresses;
             return this;
         }
 
-        public Builder setIpv6Addresses(@Nullable List<String> ipv6Addresses) {
+        public Builder ipv6Addresses(@Nullable List<String> ipv6Addresses) {
             this.ipv6Addresses = Input.ofNullable(ipv6Addresses);
             return this;
         }
 
-        public Builder setIsStaticIp(@Nullable Input<Boolean> isStaticIp) {
+        public Builder isStaticIp(@Nullable Input<Boolean> isStaticIp) {
             this.isStaticIp = isStaticIp;
             return this;
         }
 
-        public Builder setIsStaticIp(@Nullable Boolean isStaticIp) {
+        public Builder isStaticIp(@Nullable Boolean isStaticIp) {
             this.isStaticIp = Input.ofNullable(isStaticIp);
             return this;
         }
 
-        public Builder setKeyPairName(@Nullable Input<String> keyPairName) {
+        public Builder keyPairName(@Nullable Input<String> keyPairName) {
             this.keyPairName = keyPairName;
             return this;
         }
 
-        public Builder setKeyPairName(@Nullable String keyPairName) {
+        public Builder keyPairName(@Nullable String keyPairName) {
             this.keyPairName = Input.ofNullable(keyPairName);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPrivateIpAddress(@Nullable Input<String> privateIpAddress) {
+        public Builder privateIpAddress(@Nullable Input<String> privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
 
-        public Builder setPrivateIpAddress(@Nullable String privateIpAddress) {
+        public Builder privateIpAddress(@Nullable String privateIpAddress) {
             this.privateIpAddress = Input.ofNullable(privateIpAddress);
             return this;
         }
 
-        public Builder setPublicIpAddress(@Nullable Input<String> publicIpAddress) {
+        public Builder publicIpAddress(@Nullable Input<String> publicIpAddress) {
             this.publicIpAddress = publicIpAddress;
             return this;
         }
 
-        public Builder setPublicIpAddress(@Nullable String publicIpAddress) {
+        public Builder publicIpAddress(@Nullable String publicIpAddress) {
             this.publicIpAddress = Input.ofNullable(publicIpAddress);
             return this;
         }
 
-        public Builder setRamSize(@Nullable Input<Double> ramSize) {
+        public Builder ramSize(@Nullable Input<Double> ramSize) {
             this.ramSize = ramSize;
             return this;
         }
 
-        public Builder setRamSize(@Nullable Double ramSize) {
+        public Builder ramSize(@Nullable Double ramSize) {
             this.ramSize = Input.ofNullable(ramSize);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setUserData(@Nullable Input<String> userData) {
+        public Builder userData(@Nullable Input<String> userData) {
             this.userData = userData;
             return this;
         }
 
-        public Builder setUserData(@Nullable String userData) {
+        public Builder userData(@Nullable String userData) {
             this.userData = Input.ofNullable(userData);
             return this;
         }
 
-        public Builder setUsername(@Nullable Input<String> username) {
+        public Builder username(@Nullable Input<String> username) {
             this.username = username;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = Input.ofNullable(username);
             return this;
         }

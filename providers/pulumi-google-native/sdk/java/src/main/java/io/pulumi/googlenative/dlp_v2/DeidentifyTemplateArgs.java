@@ -127,62 +127,62 @@ public final class DeidentifyTemplateArgs extends io.pulumi.resources.ResourceAr
     	      this.templateId = defaults.templateId;
         }
 
-        public Builder setDeidentifyConfig(@Nullable Input<GooglePrivacyDlpV2DeidentifyConfigArgs> deidentifyConfig) {
+        public Builder deidentifyConfig(@Nullable Input<GooglePrivacyDlpV2DeidentifyConfigArgs> deidentifyConfig) {
             this.deidentifyConfig = deidentifyConfig;
             return this;
         }
 
-        public Builder setDeidentifyConfig(@Nullable GooglePrivacyDlpV2DeidentifyConfigArgs deidentifyConfig) {
+        public Builder deidentifyConfig(@Nullable GooglePrivacyDlpV2DeidentifyConfigArgs deidentifyConfig) {
             this.deidentifyConfig = Input.ofNullable(deidentifyConfig);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setTemplateId(@Nullable Input<String> templateId) {
+        public Builder templateId(@Nullable Input<String> templateId) {
             this.templateId = templateId;
             return this;
         }
 
-        public Builder setTemplateId(@Nullable String templateId) {
+        public Builder templateId(@Nullable String templateId) {
             this.templateId = Input.ofNullable(templateId);
             return this;
         }

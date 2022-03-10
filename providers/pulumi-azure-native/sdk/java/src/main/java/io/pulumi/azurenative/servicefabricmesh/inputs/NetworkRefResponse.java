@@ -76,12 +76,12 @@ public final class NetworkRefResponse extends io.pulumi.resources.InvokeArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setEndpointRefs(@Nullable List<EndpointRefResponse> endpointRefs) {
+        public Builder endpointRefs(@Nullable List<EndpointRefResponse> endpointRefs) {
             this.endpointRefs = endpointRefs;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

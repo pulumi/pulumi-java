@@ -236,122 +236,122 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
     	      this.virtualHub = defaults.virtualHub;
         }
 
-        public Builder setBootStrapConfigurationBlobs(@Nullable Input<List<String>> bootStrapConfigurationBlobs) {
+        public Builder bootStrapConfigurationBlobs(@Nullable Input<List<String>> bootStrapConfigurationBlobs) {
             this.bootStrapConfigurationBlobs = bootStrapConfigurationBlobs;
             return this;
         }
 
-        public Builder setBootStrapConfigurationBlobs(@Nullable List<String> bootStrapConfigurationBlobs) {
+        public Builder bootStrapConfigurationBlobs(@Nullable List<String> bootStrapConfigurationBlobs) {
             this.bootStrapConfigurationBlobs = Input.ofNullable(bootStrapConfigurationBlobs);
             return this;
         }
 
-        public Builder setCloudInitConfiguration(@Nullable Input<String> cloudInitConfiguration) {
+        public Builder cloudInitConfiguration(@Nullable Input<String> cloudInitConfiguration) {
             this.cloudInitConfiguration = cloudInitConfiguration;
             return this;
         }
 
-        public Builder setCloudInitConfiguration(@Nullable String cloudInitConfiguration) {
+        public Builder cloudInitConfiguration(@Nullable String cloudInitConfiguration) {
             this.cloudInitConfiguration = Input.ofNullable(cloudInitConfiguration);
             return this;
         }
 
-        public Builder setCloudInitConfigurationBlobs(@Nullable Input<List<String>> cloudInitConfigurationBlobs) {
+        public Builder cloudInitConfigurationBlobs(@Nullable Input<List<String>> cloudInitConfigurationBlobs) {
             this.cloudInitConfigurationBlobs = cloudInitConfigurationBlobs;
             return this;
         }
 
-        public Builder setCloudInitConfigurationBlobs(@Nullable List<String> cloudInitConfigurationBlobs) {
+        public Builder cloudInitConfigurationBlobs(@Nullable List<String> cloudInitConfigurationBlobs) {
             this.cloudInitConfigurationBlobs = Input.ofNullable(cloudInitConfigurationBlobs);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<ManagedServiceIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<ManagedServiceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable ManagedServiceIdentityArgs identity) {
+        public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setNetworkVirtualApplianceName(@Nullable Input<String> networkVirtualApplianceName) {
+        public Builder networkVirtualApplianceName(@Nullable Input<String> networkVirtualApplianceName) {
             this.networkVirtualApplianceName = networkVirtualApplianceName;
             return this;
         }
 
-        public Builder setNetworkVirtualApplianceName(@Nullable String networkVirtualApplianceName) {
+        public Builder networkVirtualApplianceName(@Nullable String networkVirtualApplianceName) {
             this.networkVirtualApplianceName = Input.ofNullable(networkVirtualApplianceName);
             return this;
         }
 
-        public Builder setNvaSku(@Nullable Input<VirtualApplianceSkuPropertiesArgs> nvaSku) {
+        public Builder nvaSku(@Nullable Input<VirtualApplianceSkuPropertiesArgs> nvaSku) {
             this.nvaSku = nvaSku;
             return this;
         }
 
-        public Builder setNvaSku(@Nullable VirtualApplianceSkuPropertiesArgs nvaSku) {
+        public Builder nvaSku(@Nullable VirtualApplianceSkuPropertiesArgs nvaSku) {
             this.nvaSku = Input.ofNullable(nvaSku);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVirtualApplianceAsn(@Nullable Input<Double> virtualApplianceAsn) {
+        public Builder virtualApplianceAsn(@Nullable Input<Double> virtualApplianceAsn) {
             this.virtualApplianceAsn = virtualApplianceAsn;
             return this;
         }
 
-        public Builder setVirtualApplianceAsn(@Nullable Double virtualApplianceAsn) {
+        public Builder virtualApplianceAsn(@Nullable Double virtualApplianceAsn) {
             this.virtualApplianceAsn = Input.ofNullable(virtualApplianceAsn);
             return this;
         }
 
-        public Builder setVirtualHub(@Nullable Input<SubResourceArgs> virtualHub) {
+        public Builder virtualHub(@Nullable Input<SubResourceArgs> virtualHub) {
             this.virtualHub = virtualHub;
             return this;
         }
 
-        public Builder setVirtualHub(@Nullable SubResourceArgs virtualHub) {
+        public Builder virtualHub(@Nullable SubResourceArgs virtualHub) {
             this.virtualHub = Input.ofNullable(virtualHub);
             return this;
         }

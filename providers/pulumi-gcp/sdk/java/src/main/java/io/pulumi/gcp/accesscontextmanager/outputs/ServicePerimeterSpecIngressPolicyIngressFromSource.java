@@ -91,12 +91,12 @@ public final class ServicePerimeterSpecIngressPolicyIngressFromSource {
     	      this.resource = defaults.resource;
         }
 
-        public Builder setAccessLevel(@Nullable String accessLevel) {
+        public Builder accessLevel(@Nullable String accessLevel) {
             this.accessLevel = accessLevel;
             return this;
         }
 
-        public Builder setResource(@Nullable String resource) {
+        public Builder resource(@Nullable String resource) {
             this.resource = resource;
             return this;
         }

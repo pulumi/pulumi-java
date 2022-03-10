@@ -118,52 +118,52 @@ public final class DirectorySelfServicePermissionsArgs extends io.pulumi.resourc
     	      this.switchRunningMode = defaults.switchRunningMode;
         }
 
-        public Builder setChangeComputeType(@Nullable Input<Boolean> changeComputeType) {
+        public Builder changeComputeType(@Nullable Input<Boolean> changeComputeType) {
             this.changeComputeType = changeComputeType;
             return this;
         }
 
-        public Builder setChangeComputeType(@Nullable Boolean changeComputeType) {
+        public Builder changeComputeType(@Nullable Boolean changeComputeType) {
             this.changeComputeType = Input.ofNullable(changeComputeType);
             return this;
         }
 
-        public Builder setIncreaseVolumeSize(@Nullable Input<Boolean> increaseVolumeSize) {
+        public Builder increaseVolumeSize(@Nullable Input<Boolean> increaseVolumeSize) {
             this.increaseVolumeSize = increaseVolumeSize;
             return this;
         }
 
-        public Builder setIncreaseVolumeSize(@Nullable Boolean increaseVolumeSize) {
+        public Builder increaseVolumeSize(@Nullable Boolean increaseVolumeSize) {
             this.increaseVolumeSize = Input.ofNullable(increaseVolumeSize);
             return this;
         }
 
-        public Builder setRebuildWorkspace(@Nullable Input<Boolean> rebuildWorkspace) {
+        public Builder rebuildWorkspace(@Nullable Input<Boolean> rebuildWorkspace) {
             this.rebuildWorkspace = rebuildWorkspace;
             return this;
         }
 
-        public Builder setRebuildWorkspace(@Nullable Boolean rebuildWorkspace) {
+        public Builder rebuildWorkspace(@Nullable Boolean rebuildWorkspace) {
             this.rebuildWorkspace = Input.ofNullable(rebuildWorkspace);
             return this;
         }
 
-        public Builder setRestartWorkspace(@Nullable Input<Boolean> restartWorkspace) {
+        public Builder restartWorkspace(@Nullable Input<Boolean> restartWorkspace) {
             this.restartWorkspace = restartWorkspace;
             return this;
         }
 
-        public Builder setRestartWorkspace(@Nullable Boolean restartWorkspace) {
+        public Builder restartWorkspace(@Nullable Boolean restartWorkspace) {
             this.restartWorkspace = Input.ofNullable(restartWorkspace);
             return this;
         }
 
-        public Builder setSwitchRunningMode(@Nullable Input<Boolean> switchRunningMode) {
+        public Builder switchRunningMode(@Nullable Input<Boolean> switchRunningMode) {
             this.switchRunningMode = switchRunningMode;
             return this;
         }
 
-        public Builder setSwitchRunningMode(@Nullable Boolean switchRunningMode) {
+        public Builder switchRunningMode(@Nullable Boolean switchRunningMode) {
             this.switchRunningMode = Input.ofNullable(switchRunningMode);
             return this;
         }

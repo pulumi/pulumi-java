@@ -66,12 +66,12 @@ public final class GrafeasV1beta1IntotoDetailsResponse extends io.pulumi.resourc
     	      this.signed = defaults.signed;
         }
 
-        public Builder setSignatures(List<GrafeasV1beta1IntotoSignatureResponse> signatures) {
+        public Builder signatures(List<GrafeasV1beta1IntotoSignatureResponse> signatures) {
             this.signatures = Objects.requireNonNull(signatures);
             return this;
         }
 
-        public Builder setSigned(LinkResponse signed) {
+        public Builder signed(LinkResponse signed) {
             this.signed = Objects.requireNonNull(signed);
             return this;
         }

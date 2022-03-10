@@ -76,27 +76,27 @@ public final class FlowVeevaSourceProperties {
     	      this.object = defaults.object;
         }
 
-        public Builder setDocumentType(@Nullable String documentType) {
+        public Builder documentType(@Nullable String documentType) {
             this.documentType = documentType;
             return this;
         }
 
-        public Builder setIncludeAllVersions(@Nullable Boolean includeAllVersions) {
+        public Builder includeAllVersions(@Nullable Boolean includeAllVersions) {
             this.includeAllVersions = includeAllVersions;
             return this;
         }
 
-        public Builder setIncludeRenditions(@Nullable Boolean includeRenditions) {
+        public Builder includeRenditions(@Nullable Boolean includeRenditions) {
             this.includeRenditions = includeRenditions;
             return this;
         }
 
-        public Builder setIncludeSourceFiles(@Nullable Boolean includeSourceFiles) {
+        public Builder includeSourceFiles(@Nullable Boolean includeSourceFiles) {
             this.includeSourceFiles = includeSourceFiles;
             return this;
         }
 
-        public Builder setObject(String object) {
+        public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }

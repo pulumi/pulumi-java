@@ -48,7 +48,7 @@ public final class DestinationResponse {
     	      this.cloudRunService = defaults.cloudRunService;
         }
 
-        public Builder setCloudRunService(CloudRunServiceResponse cloudRunService) {
+        public Builder cloudRunService(CloudRunServiceResponse cloudRunService) {
             this.cloudRunService = Objects.requireNonNull(cloudRunService);
             return this;
         }

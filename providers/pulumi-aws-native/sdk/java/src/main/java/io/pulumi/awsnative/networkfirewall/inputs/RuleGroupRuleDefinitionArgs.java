@@ -63,22 +63,22 @@ public final class RuleGroupRuleDefinitionArgs extends io.pulumi.resources.Resou
     	      this.matchAttributes = defaults.matchAttributes;
         }
 
-        public Builder setActions(Input<List<String>> actions) {
+        public Builder actions(Input<List<String>> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
-        public Builder setActions(List<String> actions) {
+        public Builder actions(List<String> actions) {
             this.actions = Input.of(Objects.requireNonNull(actions));
             return this;
         }
 
-        public Builder setMatchAttributes(Input<RuleGroupMatchAttributesArgs> matchAttributes) {
+        public Builder matchAttributes(Input<RuleGroupMatchAttributesArgs> matchAttributes) {
             this.matchAttributes = Objects.requireNonNull(matchAttributes);
             return this;
         }
 
-        public Builder setMatchAttributes(RuleGroupMatchAttributesArgs matchAttributes) {
+        public Builder matchAttributes(RuleGroupMatchAttributesArgs matchAttributes) {
             this.matchAttributes = Input.of(Objects.requireNonNull(matchAttributes));
             return this;
         }

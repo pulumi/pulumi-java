@@ -274,152 +274,152 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setAdvancedSettings(@Nullable Input<GoogleCloudDialogflowCxV3beta1AdvancedSettingsArgs> advancedSettings) {
+        public Builder advancedSettings(@Nullable Input<GoogleCloudDialogflowCxV3beta1AdvancedSettingsArgs> advancedSettings) {
             this.advancedSettings = advancedSettings;
             return this;
         }
 
-        public Builder setAdvancedSettings(@Nullable GoogleCloudDialogflowCxV3beta1AdvancedSettingsArgs advancedSettings) {
+        public Builder advancedSettings(@Nullable GoogleCloudDialogflowCxV3beta1AdvancedSettingsArgs advancedSettings) {
             this.advancedSettings = Input.ofNullable(advancedSettings);
             return this;
         }
 
-        public Builder setAvatarUri(@Nullable Input<String> avatarUri) {
+        public Builder avatarUri(@Nullable Input<String> avatarUri) {
             this.avatarUri = avatarUri;
             return this;
         }
 
-        public Builder setAvatarUri(@Nullable String avatarUri) {
+        public Builder avatarUri(@Nullable String avatarUri) {
             this.avatarUri = Input.ofNullable(avatarUri);
             return this;
         }
 
-        public Builder setDefaultLanguageCode(Input<String> defaultLanguageCode) {
+        public Builder defaultLanguageCode(Input<String> defaultLanguageCode) {
             this.defaultLanguageCode = Objects.requireNonNull(defaultLanguageCode);
             return this;
         }
 
-        public Builder setDefaultLanguageCode(String defaultLanguageCode) {
+        public Builder defaultLanguageCode(String defaultLanguageCode) {
             this.defaultLanguageCode = Input.of(Objects.requireNonNull(defaultLanguageCode));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setEnableSpellCorrection(@Nullable Input<Boolean> enableSpellCorrection) {
+        public Builder enableSpellCorrection(@Nullable Input<Boolean> enableSpellCorrection) {
             this.enableSpellCorrection = enableSpellCorrection;
             return this;
         }
 
-        public Builder setEnableSpellCorrection(@Nullable Boolean enableSpellCorrection) {
+        public Builder enableSpellCorrection(@Nullable Boolean enableSpellCorrection) {
             this.enableSpellCorrection = Input.ofNullable(enableSpellCorrection);
             return this;
         }
 
-        public Builder setEnableStackdriverLogging(@Nullable Input<Boolean> enableStackdriverLogging) {
+        public Builder enableStackdriverLogging(@Nullable Input<Boolean> enableStackdriverLogging) {
             this.enableStackdriverLogging = enableStackdriverLogging;
             return this;
         }
 
-        public Builder setEnableStackdriverLogging(@Nullable Boolean enableStackdriverLogging) {
+        public Builder enableStackdriverLogging(@Nullable Boolean enableStackdriverLogging) {
             this.enableStackdriverLogging = Input.ofNullable(enableStackdriverLogging);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSecuritySettings(@Nullable Input<String> securitySettings) {
+        public Builder securitySettings(@Nullable Input<String> securitySettings) {
             this.securitySettings = securitySettings;
             return this;
         }
 
-        public Builder setSecuritySettings(@Nullable String securitySettings) {
+        public Builder securitySettings(@Nullable String securitySettings) {
             this.securitySettings = Input.ofNullable(securitySettings);
             return this;
         }
 
-        public Builder setSpeechToTextSettings(@Nullable Input<GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsArgs> speechToTextSettings) {
+        public Builder speechToTextSettings(@Nullable Input<GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsArgs> speechToTextSettings) {
             this.speechToTextSettings = speechToTextSettings;
             return this;
         }
 
-        public Builder setSpeechToTextSettings(@Nullable GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsArgs speechToTextSettings) {
+        public Builder speechToTextSettings(@Nullable GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsArgs speechToTextSettings) {
             this.speechToTextSettings = Input.ofNullable(speechToTextSettings);
             return this;
         }
 
-        public Builder setStartFlow(@Nullable Input<String> startFlow) {
+        public Builder startFlow(@Nullable Input<String> startFlow) {
             this.startFlow = startFlow;
             return this;
         }
 
-        public Builder setStartFlow(@Nullable String startFlow) {
+        public Builder startFlow(@Nullable String startFlow) {
             this.startFlow = Input.ofNullable(startFlow);
             return this;
         }
 
-        public Builder setSupportedLanguageCodes(@Nullable Input<List<String>> supportedLanguageCodes) {
+        public Builder supportedLanguageCodes(@Nullable Input<List<String>> supportedLanguageCodes) {
             this.supportedLanguageCodes = supportedLanguageCodes;
             return this;
         }
 
-        public Builder setSupportedLanguageCodes(@Nullable List<String> supportedLanguageCodes) {
+        public Builder supportedLanguageCodes(@Nullable List<String> supportedLanguageCodes) {
             this.supportedLanguageCodes = Input.ofNullable(supportedLanguageCodes);
             return this;
         }
 
-        public Builder setTimeZone(Input<String> timeZone) {
+        public Builder timeZone(Input<String> timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
 
-        public Builder setTimeZone(String timeZone) {
+        public Builder timeZone(String timeZone) {
             this.timeZone = Input.of(Objects.requireNonNull(timeZone));
             return this;
         }

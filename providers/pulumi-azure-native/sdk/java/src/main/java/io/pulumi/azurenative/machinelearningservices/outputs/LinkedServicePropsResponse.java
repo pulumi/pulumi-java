@@ -99,22 +99,22 @@ public final class LinkedServicePropsResponse {
     	      this.modifiedTime = defaults.modifiedTime;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setLinkType(@Nullable String linkType) {
+        public Builder linkType(@Nullable String linkType) {
             this.linkType = linkType;
             return this;
         }
 
-        public Builder setLinkedServiceResourceId(String linkedServiceResourceId) {
+        public Builder linkedServiceResourceId(String linkedServiceResourceId) {
             this.linkedServiceResourceId = Objects.requireNonNull(linkedServiceResourceId);
             return this;
         }
 
-        public Builder setModifiedTime(@Nullable String modifiedTime) {
+        public Builder modifiedTime(@Nullable String modifiedTime) {
             this.modifiedTime = modifiedTime;
             return this;
         }

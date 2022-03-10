@@ -54,12 +54,12 @@ public final class DataRepositoryAssociationS3AutoImportPolicyGetArgs extends io
     	      this.events = defaults.events;
         }
 
-        public Builder setEvents(@Nullable Input<List<String>> events) {
+        public Builder events(@Nullable Input<List<String>> events) {
             this.events = events;
             return this;
         }
 
-        public Builder setEvents(@Nullable List<String> events) {
+        public Builder events(@Nullable List<String> events) {
             this.events = Input.ofNullable(events);
             return this;
         }

@@ -57,7 +57,7 @@ public final class WindowsOsInfoResponse extends io.pulumi.resources.InvokeArgs 
     	      this.windowsOsState = defaults.windowsOsState;
         }
 
-        public Builder setWindowsOsState(@Nullable String windowsOsState) {
+        public Builder windowsOsState(@Nullable String windowsOsState) {
             this.windowsOsState = windowsOsState;
             return this;
         }

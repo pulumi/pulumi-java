@@ -69,12 +69,12 @@ public final class Scheduling {
     	      this.tolerations = defaults.tolerations;
         }
 
-        public Builder setNodeSelector(@Nullable Map<String,String> nodeSelector) {
+        public Builder nodeSelector(@Nullable Map<String,String> nodeSelector) {
             this.nodeSelector = nodeSelector;
             return this;
         }
 
-        public Builder setTolerations(@Nullable List<Toleration> tolerations) {
+        public Builder tolerations(@Nullable List<Toleration> tolerations) {
             this.tolerations = tolerations;
             return this;
         }

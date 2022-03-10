@@ -82,17 +82,17 @@ public final class InputResponse {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setPreprocessingConfig(PreprocessingConfigResponse preprocessingConfig) {
+        public Builder preprocessingConfig(PreprocessingConfigResponse preprocessingConfig) {
             this.preprocessingConfig = Objects.requireNonNull(preprocessingConfig);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

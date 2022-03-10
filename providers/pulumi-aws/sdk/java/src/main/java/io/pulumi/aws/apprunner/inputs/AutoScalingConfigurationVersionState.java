@@ -201,102 +201,102 @@ public final class AutoScalingConfigurationVersionState extends io.pulumi.resour
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAutoScalingConfigurationName(@Nullable Input<String> autoScalingConfigurationName) {
+        public Builder autoScalingConfigurationName(@Nullable Input<String> autoScalingConfigurationName) {
             this.autoScalingConfigurationName = autoScalingConfigurationName;
             return this;
         }
 
-        public Builder setAutoScalingConfigurationName(@Nullable String autoScalingConfigurationName) {
+        public Builder autoScalingConfigurationName(@Nullable String autoScalingConfigurationName) {
             this.autoScalingConfigurationName = Input.ofNullable(autoScalingConfigurationName);
             return this;
         }
 
-        public Builder setAutoScalingConfigurationRevision(@Nullable Input<Integer> autoScalingConfigurationRevision) {
+        public Builder autoScalingConfigurationRevision(@Nullable Input<Integer> autoScalingConfigurationRevision) {
             this.autoScalingConfigurationRevision = autoScalingConfigurationRevision;
             return this;
         }
 
-        public Builder setAutoScalingConfigurationRevision(@Nullable Integer autoScalingConfigurationRevision) {
+        public Builder autoScalingConfigurationRevision(@Nullable Integer autoScalingConfigurationRevision) {
             this.autoScalingConfigurationRevision = Input.ofNullable(autoScalingConfigurationRevision);
             return this;
         }
 
-        public Builder setLatest(@Nullable Input<Boolean> latest) {
+        public Builder latest(@Nullable Input<Boolean> latest) {
             this.latest = latest;
             return this;
         }
 
-        public Builder setLatest(@Nullable Boolean latest) {
+        public Builder latest(@Nullable Boolean latest) {
             this.latest = Input.ofNullable(latest);
             return this;
         }
 
-        public Builder setMaxConcurrency(@Nullable Input<Integer> maxConcurrency) {
+        public Builder maxConcurrency(@Nullable Input<Integer> maxConcurrency) {
             this.maxConcurrency = maxConcurrency;
             return this;
         }
 
-        public Builder setMaxConcurrency(@Nullable Integer maxConcurrency) {
+        public Builder maxConcurrency(@Nullable Integer maxConcurrency) {
             this.maxConcurrency = Input.ofNullable(maxConcurrency);
             return this;
         }
 
-        public Builder setMaxSize(@Nullable Input<Integer> maxSize) {
+        public Builder maxSize(@Nullable Input<Integer> maxSize) {
             this.maxSize = maxSize;
             return this;
         }
 
-        public Builder setMaxSize(@Nullable Integer maxSize) {
+        public Builder maxSize(@Nullable Integer maxSize) {
             this.maxSize = Input.ofNullable(maxSize);
             return this;
         }
 
-        public Builder setMinSize(@Nullable Input<Integer> minSize) {
+        public Builder minSize(@Nullable Input<Integer> minSize) {
             this.minSize = minSize;
             return this;
         }
 
-        public Builder setMinSize(@Nullable Integer minSize) {
+        public Builder minSize(@Nullable Integer minSize) {
             this.minSize = Input.ofNullable(minSize);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

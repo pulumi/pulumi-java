@@ -48,7 +48,7 @@ public final class AdvancedMachineFeaturesResponse {
     	      this.threadsPerCore = defaults.threadsPerCore;
         }
 
-        public Builder setThreadsPerCore(String threadsPerCore) {
+        public Builder threadsPerCore(String threadsPerCore) {
             this.threadsPerCore = Objects.requireNonNull(threadsPerCore);
             return this;
         }

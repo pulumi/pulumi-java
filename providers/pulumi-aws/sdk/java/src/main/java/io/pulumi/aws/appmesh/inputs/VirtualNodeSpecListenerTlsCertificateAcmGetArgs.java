@@ -52,12 +52,12 @@ public final class VirtualNodeSpecListenerTlsCertificateAcmGetArgs extends io.pu
     	      this.certificateArn = defaults.certificateArn;
         }
 
-        public Builder setCertificateArn(Input<String> certificateArn) {
+        public Builder certificateArn(Input<String> certificateArn) {
             this.certificateArn = Objects.requireNonNull(certificateArn);
             return this;
         }
 
-        public Builder setCertificateArn(String certificateArn) {
+        public Builder certificateArn(String certificateArn) {
             this.certificateArn = Input.of(Objects.requireNonNull(certificateArn));
             return this;
         }

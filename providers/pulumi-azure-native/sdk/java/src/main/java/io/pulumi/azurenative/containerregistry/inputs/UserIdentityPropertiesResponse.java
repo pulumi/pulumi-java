@@ -70,12 +70,12 @@ public final class UserIdentityPropertiesResponse extends io.pulumi.resources.In
     	      this.principalId = defaults.principalId;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setPrincipalId(@Nullable String principalId) {
+        public Builder principalId(@Nullable String principalId) {
             this.principalId = principalId;
             return this;
         }

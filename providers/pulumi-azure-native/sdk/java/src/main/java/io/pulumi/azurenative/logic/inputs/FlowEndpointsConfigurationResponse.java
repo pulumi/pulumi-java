@@ -74,12 +74,12 @@ public final class FlowEndpointsConfigurationResponse extends io.pulumi.resource
     	      this.workflow = defaults.workflow;
         }
 
-        public Builder setConnector(@Nullable FlowEndpointsResponse connector) {
+        public Builder connector(@Nullable FlowEndpointsResponse connector) {
             this.connector = connector;
             return this;
         }
 
-        public Builder setWorkflow(@Nullable FlowEndpointsResponse workflow) {
+        public Builder workflow(@Nullable FlowEndpointsResponse workflow) {
             this.workflow = workflow;
             return this;
         }

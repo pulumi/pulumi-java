@@ -136,62 +136,62 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSchemaId(@Nullable Input<String> schemaId) {
+        public Builder schemaId(@Nullable Input<String> schemaId) {
             this.schemaId = schemaId;
             return this;
         }
 
-        public Builder setSchemaId(@Nullable String schemaId) {
+        public Builder schemaId(@Nullable String schemaId) {
             this.schemaId = Input.ofNullable(schemaId);
             return this;
         }
 
-        public Builder setSchemaType(Input<Either<String,SchemaType>> schemaType) {
+        public Builder schemaType(Input<Either<String,SchemaType>> schemaType) {
             this.schemaType = Objects.requireNonNull(schemaType);
             return this;
         }
 
-        public Builder setSchemaType(Either<String,SchemaType> schemaType) {
+        public Builder schemaType(Either<String,SchemaType> schemaType) {
             this.schemaType = Input.of(Objects.requireNonNull(schemaType));
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }

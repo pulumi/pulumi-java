@@ -83,17 +83,17 @@ public final class EncryptionKeyDetailsResponse {
     	      this.kekVaultResourceID = defaults.kekVaultResourceID;
         }
 
-        public Builder setKekType(@Nullable String kekType) {
+        public Builder kekType(@Nullable String kekType) {
             this.kekType = kekType;
             return this;
         }
 
-        public Builder setKekUrl(@Nullable String kekUrl) {
+        public Builder kekUrl(@Nullable String kekUrl) {
             this.kekUrl = kekUrl;
             return this;
         }
 
-        public Builder setKekVaultResourceID(@Nullable String kekVaultResourceID) {
+        public Builder kekVaultResourceID(@Nullable String kekVaultResourceID) {
             this.kekVaultResourceID = kekVaultResourceID;
             return this;
         }

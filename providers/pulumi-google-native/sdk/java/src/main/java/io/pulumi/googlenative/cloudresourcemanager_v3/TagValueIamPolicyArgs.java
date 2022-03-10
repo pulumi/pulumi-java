@@ -134,62 +134,62 @@ public final class TagValueIamPolicyArgs extends io.pulumi.resources.ResourceArg
     	      this.version = defaults.version;
         }
 
-        public Builder setAuditConfigs(@Nullable Input<List<AuditConfigArgs>> auditConfigs) {
+        public Builder auditConfigs(@Nullable Input<List<AuditConfigArgs>> auditConfigs) {
             this.auditConfigs = auditConfigs;
             return this;
         }
 
-        public Builder setAuditConfigs(@Nullable List<AuditConfigArgs> auditConfigs) {
+        public Builder auditConfigs(@Nullable List<AuditConfigArgs> auditConfigs) {
             this.auditConfigs = Input.ofNullable(auditConfigs);
             return this;
         }
 
-        public Builder setBindings(@Nullable Input<List<BindingArgs>> bindings) {
+        public Builder bindings(@Nullable Input<List<BindingArgs>> bindings) {
             this.bindings = bindings;
             return this;
         }
 
-        public Builder setBindings(@Nullable List<BindingArgs> bindings) {
+        public Builder bindings(@Nullable List<BindingArgs> bindings) {
             this.bindings = Input.ofNullable(bindings);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setTagValueId(Input<String> tagValueId) {
+        public Builder tagValueId(Input<String> tagValueId) {
             this.tagValueId = Objects.requireNonNull(tagValueId);
             return this;
         }
 
-        public Builder setTagValueId(String tagValueId) {
+        public Builder tagValueId(String tagValueId) {
             this.tagValueId = Input.of(Objects.requireNonNull(tagValueId));
             return this;
         }
 
-        public Builder setUpdateMask(@Nullable Input<String> updateMask) {
+        public Builder updateMask(@Nullable Input<String> updateMask) {
             this.updateMask = updateMask;
             return this;
         }
 
-        public Builder setUpdateMask(@Nullable String updateMask) {
+        public Builder updateMask(@Nullable String updateMask) {
             this.updateMask = Input.ofNullable(updateMask);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Input<Integer> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable Integer version) {
+        public Builder version(@Nullable Integer version) {
             this.version = Input.ofNullable(version);
             return this;
         }

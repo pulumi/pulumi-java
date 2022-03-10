@@ -104,42 +104,42 @@ public final class GRPCHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
     	      this.portSpecification = defaults.portSpecification;
         }
 
-        public Builder setGrpcServiceName(@Nullable Input<String> grpcServiceName) {
+        public Builder grpcServiceName(@Nullable Input<String> grpcServiceName) {
             this.grpcServiceName = grpcServiceName;
             return this;
         }
 
-        public Builder setGrpcServiceName(@Nullable String grpcServiceName) {
+        public Builder grpcServiceName(@Nullable String grpcServiceName) {
             this.grpcServiceName = Input.ofNullable(grpcServiceName);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Input<Integer> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setPortName(@Nullable Input<String> portName) {
+        public Builder portName(@Nullable Input<String> portName) {
             this.portName = portName;
             return this;
         }
 
-        public Builder setPortName(@Nullable String portName) {
+        public Builder portName(@Nullable String portName) {
             this.portName = Input.ofNullable(portName);
             return this;
         }
 
-        public Builder setPortSpecification(@Nullable Input<GRPCHealthCheckPortSpecification> portSpecification) {
+        public Builder portSpecification(@Nullable Input<GRPCHealthCheckPortSpecification> portSpecification) {
             this.portSpecification = portSpecification;
             return this;
         }
 
-        public Builder setPortSpecification(@Nullable GRPCHealthCheckPortSpecification portSpecification) {
+        public Builder portSpecification(@Nullable GRPCHealthCheckPortSpecification portSpecification) {
             this.portSpecification = Input.ofNullable(portSpecification);
             return this;
         }

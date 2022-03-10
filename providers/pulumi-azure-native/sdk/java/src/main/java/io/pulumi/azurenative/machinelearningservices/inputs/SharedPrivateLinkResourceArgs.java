@@ -120,52 +120,52 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
     	      this.status = defaults.status;
         }
 
-        public Builder setGroupId(@Nullable Input<String> groupId) {
+        public Builder groupId(@Nullable Input<String> groupId) {
             this.groupId = groupId;
             return this;
         }
 
-        public Builder setGroupId(@Nullable String groupId) {
+        public Builder groupId(@Nullable String groupId) {
             this.groupId = Input.ofNullable(groupId);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPrivateLinkResourceId(@Nullable Input<String> privateLinkResourceId) {
+        public Builder privateLinkResourceId(@Nullable Input<String> privateLinkResourceId) {
             this.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
 
-        public Builder setPrivateLinkResourceId(@Nullable String privateLinkResourceId) {
+        public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
             this.privateLinkResourceId = Input.ofNullable(privateLinkResourceId);
             return this;
         }
 
-        public Builder setRequestMessage(@Nullable Input<String> requestMessage) {
+        public Builder requestMessage(@Nullable Input<String> requestMessage) {
             this.requestMessage = requestMessage;
             return this;
         }
 
-        public Builder setRequestMessage(@Nullable String requestMessage) {
+        public Builder requestMessage(@Nullable String requestMessage) {
             this.requestMessage = Input.ofNullable(requestMessage);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<Either<String,PrivateEndpointServiceConnectionStatus>> status) {
+        public Builder status(@Nullable Input<Either<String,PrivateEndpointServiceConnectionStatus>> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable Either<String,PrivateEndpointServiceConnectionStatus> status) {
+        public Builder status(@Nullable Either<String,PrivateEndpointServiceConnectionStatus> status) {
             this.status = Input.ofNullable(status);
             return this;
         }

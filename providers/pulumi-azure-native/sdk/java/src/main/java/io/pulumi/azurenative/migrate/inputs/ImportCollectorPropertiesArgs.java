@@ -49,12 +49,12 @@ public final class ImportCollectorPropertiesArgs extends io.pulumi.resources.Res
     	      this.discoverySiteId = defaults.discoverySiteId;
         }
 
-        public Builder setDiscoverySiteId(@Nullable Input<String> discoverySiteId) {
+        public Builder discoverySiteId(@Nullable Input<String> discoverySiteId) {
             this.discoverySiteId = discoverySiteId;
             return this;
         }
 
-        public Builder setDiscoverySiteId(@Nullable String discoverySiteId) {
+        public Builder discoverySiteId(@Nullable String discoverySiteId) {
             this.discoverySiteId = Input.ofNullable(discoverySiteId);
             return this;
         }

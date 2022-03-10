@@ -73,22 +73,22 @@ public final class BusinessIdentityArgs extends io.pulumi.resources.ResourceArgs
     	      this.value = defaults.value;
         }
 
-        public Builder setQualifier(Input<String> qualifier) {
+        public Builder qualifier(Input<String> qualifier) {
             this.qualifier = Objects.requireNonNull(qualifier);
             return this;
         }
 
-        public Builder setQualifier(String qualifier) {
+        public Builder qualifier(String qualifier) {
             this.qualifier = Input.of(Objects.requireNonNull(qualifier));
             return this;
         }
 
-        public Builder setValue(Input<String> value) {
+        public Builder value(Input<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }

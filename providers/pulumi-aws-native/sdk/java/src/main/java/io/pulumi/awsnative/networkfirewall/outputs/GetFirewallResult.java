@@ -119,52 +119,52 @@ public final class GetFirewallResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDeleteProtection(@Nullable Boolean deleteProtection) {
+        public Builder deleteProtection(@Nullable Boolean deleteProtection) {
             this.deleteProtection = deleteProtection;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEndpointIds(@Nullable List<String> endpointIds) {
+        public Builder endpointIds(@Nullable List<String> endpointIds) {
             this.endpointIds = endpointIds;
             return this;
         }
 
-        public Builder setFirewallArn(@Nullable String firewallArn) {
+        public Builder firewallArn(@Nullable String firewallArn) {
             this.firewallArn = firewallArn;
             return this;
         }
 
-        public Builder setFirewallId(@Nullable String firewallId) {
+        public Builder firewallId(@Nullable String firewallId) {
             this.firewallId = firewallId;
             return this;
         }
 
-        public Builder setFirewallPolicyArn(@Nullable String firewallPolicyArn) {
+        public Builder firewallPolicyArn(@Nullable String firewallPolicyArn) {
             this.firewallPolicyArn = firewallPolicyArn;
             return this;
         }
 
-        public Builder setFirewallPolicyChangeProtection(@Nullable Boolean firewallPolicyChangeProtection) {
+        public Builder firewallPolicyChangeProtection(@Nullable Boolean firewallPolicyChangeProtection) {
             this.firewallPolicyChangeProtection = firewallPolicyChangeProtection;
             return this;
         }
 
-        public Builder setSubnetChangeProtection(@Nullable Boolean subnetChangeProtection) {
+        public Builder subnetChangeProtection(@Nullable Boolean subnetChangeProtection) {
             this.subnetChangeProtection = subnetChangeProtection;
             return this;
         }
 
-        public Builder setSubnetMappings(@Nullable List<FirewallSubnetMapping> subnetMappings) {
+        public Builder subnetMappings(@Nullable List<FirewallSubnetMapping> subnetMappings) {
             this.subnetMappings = subnetMappings;
             return this;
         }
 
-        public Builder setTags(@Nullable List<FirewallTag> tags) {
+        public Builder tags(@Nullable List<FirewallTag> tags) {
             this.tags = tags;
             return this;
         }

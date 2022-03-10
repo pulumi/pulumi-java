@@ -152,72 +152,72 @@ public final class ServerAzureADAdministratorArgs extends io.pulumi.resources.Re
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setAdministratorName(@Nullable Input<String> administratorName) {
+        public Builder administratorName(@Nullable Input<String> administratorName) {
             this.administratorName = administratorName;
             return this;
         }
 
-        public Builder setAdministratorName(@Nullable String administratorName) {
+        public Builder administratorName(@Nullable String administratorName) {
             this.administratorName = Input.ofNullable(administratorName);
             return this;
         }
 
-        public Builder setAdministratorType(Input<Either<String,AdministratorType>> administratorType) {
+        public Builder administratorType(Input<Either<String,AdministratorType>> administratorType) {
             this.administratorType = Objects.requireNonNull(administratorType);
             return this;
         }
 
-        public Builder setAdministratorType(Either<String,AdministratorType> administratorType) {
+        public Builder administratorType(Either<String,AdministratorType> administratorType) {
             this.administratorType = Input.of(Objects.requireNonNull(administratorType));
             return this;
         }
 
-        public Builder setLogin(Input<String> login) {
+        public Builder login(Input<String> login) {
             this.login = Objects.requireNonNull(login);
             return this;
         }
 
-        public Builder setLogin(String login) {
+        public Builder login(String login) {
             this.login = Input.of(Objects.requireNonNull(login));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServerName(Input<String> serverName) {
+        public Builder serverName(Input<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
-        public Builder setServerName(String serverName) {
+        public Builder serverName(String serverName) {
             this.serverName = Input.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder setSid(Input<String> sid) {
+        public Builder sid(Input<String> sid) {
             this.sid = Objects.requireNonNull(sid);
             return this;
         }
 
-        public Builder setSid(String sid) {
+        public Builder sid(String sid) {
             this.sid = Input.of(Objects.requireNonNull(sid));
             return this;
         }
 
-        public Builder setTenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Input<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Input.ofNullable(tenantId);
             return this;
         }

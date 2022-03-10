@@ -66,12 +66,12 @@ public final class RecurrenceResponse {
     	      this.schedule = defaults.schedule;
         }
 
-        public Builder setFrequency(String frequency) {
+        public Builder frequency(String frequency) {
             this.frequency = Objects.requireNonNull(frequency);
             return this;
         }
 
-        public Builder setSchedule(RecurrentScheduleResponse schedule) {
+        public Builder schedule(RecurrentScheduleResponse schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }

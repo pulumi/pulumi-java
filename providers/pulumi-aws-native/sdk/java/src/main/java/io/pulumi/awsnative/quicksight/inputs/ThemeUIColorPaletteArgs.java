@@ -312,162 +312,162 @@ public final class ThemeUIColorPaletteArgs extends io.pulumi.resources.ResourceA
     	      this.warningForeground = defaults.warningForeground;
         }
 
-        public Builder setAccent(@Nullable Input<String> accent) {
+        public Builder accent(@Nullable Input<String> accent) {
             this.accent = accent;
             return this;
         }
 
-        public Builder setAccent(@Nullable String accent) {
+        public Builder accent(@Nullable String accent) {
             this.accent = Input.ofNullable(accent);
             return this;
         }
 
-        public Builder setAccentForeground(@Nullable Input<String> accentForeground) {
+        public Builder accentForeground(@Nullable Input<String> accentForeground) {
             this.accentForeground = accentForeground;
             return this;
         }
 
-        public Builder setAccentForeground(@Nullable String accentForeground) {
+        public Builder accentForeground(@Nullable String accentForeground) {
             this.accentForeground = Input.ofNullable(accentForeground);
             return this;
         }
 
-        public Builder setDanger(@Nullable Input<String> danger) {
+        public Builder danger(@Nullable Input<String> danger) {
             this.danger = danger;
             return this;
         }
 
-        public Builder setDanger(@Nullable String danger) {
+        public Builder danger(@Nullable String danger) {
             this.danger = Input.ofNullable(danger);
             return this;
         }
 
-        public Builder setDangerForeground(@Nullable Input<String> dangerForeground) {
+        public Builder dangerForeground(@Nullable Input<String> dangerForeground) {
             this.dangerForeground = dangerForeground;
             return this;
         }
 
-        public Builder setDangerForeground(@Nullable String dangerForeground) {
+        public Builder dangerForeground(@Nullable String dangerForeground) {
             this.dangerForeground = Input.ofNullable(dangerForeground);
             return this;
         }
 
-        public Builder setDimension(@Nullable Input<String> dimension) {
+        public Builder dimension(@Nullable Input<String> dimension) {
             this.dimension = dimension;
             return this;
         }
 
-        public Builder setDimension(@Nullable String dimension) {
+        public Builder dimension(@Nullable String dimension) {
             this.dimension = Input.ofNullable(dimension);
             return this;
         }
 
-        public Builder setDimensionForeground(@Nullable Input<String> dimensionForeground) {
+        public Builder dimensionForeground(@Nullable Input<String> dimensionForeground) {
             this.dimensionForeground = dimensionForeground;
             return this;
         }
 
-        public Builder setDimensionForeground(@Nullable String dimensionForeground) {
+        public Builder dimensionForeground(@Nullable String dimensionForeground) {
             this.dimensionForeground = Input.ofNullable(dimensionForeground);
             return this;
         }
 
-        public Builder setMeasure(@Nullable Input<String> measure) {
+        public Builder measure(@Nullable Input<String> measure) {
             this.measure = measure;
             return this;
         }
 
-        public Builder setMeasure(@Nullable String measure) {
+        public Builder measure(@Nullable String measure) {
             this.measure = Input.ofNullable(measure);
             return this;
         }
 
-        public Builder setMeasureForeground(@Nullable Input<String> measureForeground) {
+        public Builder measureForeground(@Nullable Input<String> measureForeground) {
             this.measureForeground = measureForeground;
             return this;
         }
 
-        public Builder setMeasureForeground(@Nullable String measureForeground) {
+        public Builder measureForeground(@Nullable String measureForeground) {
             this.measureForeground = Input.ofNullable(measureForeground);
             return this;
         }
 
-        public Builder setPrimaryBackground(@Nullable Input<String> primaryBackground) {
+        public Builder primaryBackground(@Nullable Input<String> primaryBackground) {
             this.primaryBackground = primaryBackground;
             return this;
         }
 
-        public Builder setPrimaryBackground(@Nullable String primaryBackground) {
+        public Builder primaryBackground(@Nullable String primaryBackground) {
             this.primaryBackground = Input.ofNullable(primaryBackground);
             return this;
         }
 
-        public Builder setPrimaryForeground(@Nullable Input<String> primaryForeground) {
+        public Builder primaryForeground(@Nullable Input<String> primaryForeground) {
             this.primaryForeground = primaryForeground;
             return this;
         }
 
-        public Builder setPrimaryForeground(@Nullable String primaryForeground) {
+        public Builder primaryForeground(@Nullable String primaryForeground) {
             this.primaryForeground = Input.ofNullable(primaryForeground);
             return this;
         }
 
-        public Builder setSecondaryBackground(@Nullable Input<String> secondaryBackground) {
+        public Builder secondaryBackground(@Nullable Input<String> secondaryBackground) {
             this.secondaryBackground = secondaryBackground;
             return this;
         }
 
-        public Builder setSecondaryBackground(@Nullable String secondaryBackground) {
+        public Builder secondaryBackground(@Nullable String secondaryBackground) {
             this.secondaryBackground = Input.ofNullable(secondaryBackground);
             return this;
         }
 
-        public Builder setSecondaryForeground(@Nullable Input<String> secondaryForeground) {
+        public Builder secondaryForeground(@Nullable Input<String> secondaryForeground) {
             this.secondaryForeground = secondaryForeground;
             return this;
         }
 
-        public Builder setSecondaryForeground(@Nullable String secondaryForeground) {
+        public Builder secondaryForeground(@Nullable String secondaryForeground) {
             this.secondaryForeground = Input.ofNullable(secondaryForeground);
             return this;
         }
 
-        public Builder setSuccess(@Nullable Input<String> success) {
+        public Builder success(@Nullable Input<String> success) {
             this.success = success;
             return this;
         }
 
-        public Builder setSuccess(@Nullable String success) {
+        public Builder success(@Nullable String success) {
             this.success = Input.ofNullable(success);
             return this;
         }
 
-        public Builder setSuccessForeground(@Nullable Input<String> successForeground) {
+        public Builder successForeground(@Nullable Input<String> successForeground) {
             this.successForeground = successForeground;
             return this;
         }
 
-        public Builder setSuccessForeground(@Nullable String successForeground) {
+        public Builder successForeground(@Nullable String successForeground) {
             this.successForeground = Input.ofNullable(successForeground);
             return this;
         }
 
-        public Builder setWarning(@Nullable Input<String> warning) {
+        public Builder warning(@Nullable Input<String> warning) {
             this.warning = warning;
             return this;
         }
 
-        public Builder setWarning(@Nullable String warning) {
+        public Builder warning(@Nullable String warning) {
             this.warning = Input.ofNullable(warning);
             return this;
         }
 
-        public Builder setWarningForeground(@Nullable Input<String> warningForeground) {
+        public Builder warningForeground(@Nullable Input<String> warningForeground) {
             this.warningForeground = warningForeground;
             return this;
         }
 
-        public Builder setWarningForeground(@Nullable String warningForeground) {
+        public Builder warningForeground(@Nullable String warningForeground) {
             this.warningForeground = Input.ofNullable(warningForeground);
             return this;
         }

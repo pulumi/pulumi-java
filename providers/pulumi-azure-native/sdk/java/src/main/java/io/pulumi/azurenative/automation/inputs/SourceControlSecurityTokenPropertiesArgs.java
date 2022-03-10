@@ -88,32 +88,32 @@ public final class SourceControlSecurityTokenPropertiesArgs extends io.pulumi.re
     	      this.tokenType = defaults.tokenType;
         }
 
-        public Builder setAccessToken(@Nullable Input<String> accessToken) {
+        public Builder accessToken(@Nullable Input<String> accessToken) {
             this.accessToken = accessToken;
             return this;
         }
 
-        public Builder setAccessToken(@Nullable String accessToken) {
+        public Builder accessToken(@Nullable String accessToken) {
             this.accessToken = Input.ofNullable(accessToken);
             return this;
         }
 
-        public Builder setRefreshToken(@Nullable Input<String> refreshToken) {
+        public Builder refreshToken(@Nullable Input<String> refreshToken) {
             this.refreshToken = refreshToken;
             return this;
         }
 
-        public Builder setRefreshToken(@Nullable String refreshToken) {
+        public Builder refreshToken(@Nullable String refreshToken) {
             this.refreshToken = Input.ofNullable(refreshToken);
             return this;
         }
 
-        public Builder setTokenType(@Nullable Input<Either<String,TokenType>> tokenType) {
+        public Builder tokenType(@Nullable Input<Either<String,TokenType>> tokenType) {
             this.tokenType = tokenType;
             return this;
         }
 
-        public Builder setTokenType(@Nullable Either<String,TokenType> tokenType) {
+        public Builder tokenType(@Nullable Either<String,TokenType> tokenType) {
             this.tokenType = Input.ofNullable(tokenType);
             return this;
         }

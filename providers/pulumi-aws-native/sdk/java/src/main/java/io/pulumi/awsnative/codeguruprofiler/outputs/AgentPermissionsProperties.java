@@ -49,7 +49,7 @@ public final class AgentPermissionsProperties {
     	      this.principals = defaults.principals;
         }
 
-        public Builder setPrincipals(List<String> principals) {
+        public Builder principals(List<String> principals) {
             this.principals = Objects.requireNonNull(principals);
             return this;
         }

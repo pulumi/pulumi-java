@@ -98,52 +98,52 @@ public final class CanaryCodeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.script = defaults.script;
         }
 
-        public Builder setHandler(Input<String> handler) {
+        public Builder handler(Input<String> handler) {
             this.handler = Objects.requireNonNull(handler);
             return this;
         }
 
-        public Builder setHandler(String handler) {
+        public Builder handler(String handler) {
             this.handler = Input.of(Objects.requireNonNull(handler));
             return this;
         }
 
-        public Builder setS3Bucket(@Nullable Input<String> s3Bucket) {
+        public Builder s3Bucket(@Nullable Input<String> s3Bucket) {
             this.s3Bucket = s3Bucket;
             return this;
         }
 
-        public Builder setS3Bucket(@Nullable String s3Bucket) {
+        public Builder s3Bucket(@Nullable String s3Bucket) {
             this.s3Bucket = Input.ofNullable(s3Bucket);
             return this;
         }
 
-        public Builder setS3Key(@Nullable Input<String> s3Key) {
+        public Builder s3Key(@Nullable Input<String> s3Key) {
             this.s3Key = s3Key;
             return this;
         }
 
-        public Builder setS3Key(@Nullable String s3Key) {
+        public Builder s3Key(@Nullable String s3Key) {
             this.s3Key = Input.ofNullable(s3Key);
             return this;
         }
 
-        public Builder setS3ObjectVersion(@Nullable Input<String> s3ObjectVersion) {
+        public Builder s3ObjectVersion(@Nullable Input<String> s3ObjectVersion) {
             this.s3ObjectVersion = s3ObjectVersion;
             return this;
         }
 
-        public Builder setS3ObjectVersion(@Nullable String s3ObjectVersion) {
+        public Builder s3ObjectVersion(@Nullable String s3ObjectVersion) {
             this.s3ObjectVersion = Input.ofNullable(s3ObjectVersion);
             return this;
         }
 
-        public Builder setScript(@Nullable Input<String> script) {
+        public Builder script(@Nullable Input<String> script) {
             this.script = script;
             return this;
         }
 
-        public Builder setScript(@Nullable String script) {
+        public Builder script(@Nullable String script) {
             this.script = Input.ofNullable(script);
             return this;
         }

@@ -68,12 +68,12 @@ public final class GetActionRuleByNameArgs extends io.pulumi.resources.InvokeArg
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setActionRuleName(String actionRuleName) {
+        public Builder actionRuleName(String actionRuleName) {
             this.actionRuleName = Objects.requireNonNull(actionRuleName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

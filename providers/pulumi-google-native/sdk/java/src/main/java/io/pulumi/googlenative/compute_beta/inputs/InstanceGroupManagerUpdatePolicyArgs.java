@@ -172,82 +172,82 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends io.pulumi.resour
     	      this.type = defaults.type;
         }
 
-        public Builder setInstanceRedistributionType(@Nullable Input<InstanceGroupManagerUpdatePolicyInstanceRedistributionType> instanceRedistributionType) {
+        public Builder instanceRedistributionType(@Nullable Input<InstanceGroupManagerUpdatePolicyInstanceRedistributionType> instanceRedistributionType) {
             this.instanceRedistributionType = instanceRedistributionType;
             return this;
         }
 
-        public Builder setInstanceRedistributionType(@Nullable InstanceGroupManagerUpdatePolicyInstanceRedistributionType instanceRedistributionType) {
+        public Builder instanceRedistributionType(@Nullable InstanceGroupManagerUpdatePolicyInstanceRedistributionType instanceRedistributionType) {
             this.instanceRedistributionType = Input.ofNullable(instanceRedistributionType);
             return this;
         }
 
-        public Builder setMaxSurge(@Nullable Input<FixedOrPercentArgs> maxSurge) {
+        public Builder maxSurge(@Nullable Input<FixedOrPercentArgs> maxSurge) {
             this.maxSurge = maxSurge;
             return this;
         }
 
-        public Builder setMaxSurge(@Nullable FixedOrPercentArgs maxSurge) {
+        public Builder maxSurge(@Nullable FixedOrPercentArgs maxSurge) {
             this.maxSurge = Input.ofNullable(maxSurge);
             return this;
         }
 
-        public Builder setMaxUnavailable(@Nullable Input<FixedOrPercentArgs> maxUnavailable) {
+        public Builder maxUnavailable(@Nullable Input<FixedOrPercentArgs> maxUnavailable) {
             this.maxUnavailable = maxUnavailable;
             return this;
         }
 
-        public Builder setMaxUnavailable(@Nullable FixedOrPercentArgs maxUnavailable) {
+        public Builder maxUnavailable(@Nullable FixedOrPercentArgs maxUnavailable) {
             this.maxUnavailable = Input.ofNullable(maxUnavailable);
             return this;
         }
 
-        public Builder setMinReadySec(@Nullable Input<Integer> minReadySec) {
+        public Builder minReadySec(@Nullable Input<Integer> minReadySec) {
             this.minReadySec = minReadySec;
             return this;
         }
 
-        public Builder setMinReadySec(@Nullable Integer minReadySec) {
+        public Builder minReadySec(@Nullable Integer minReadySec) {
             this.minReadySec = Input.ofNullable(minReadySec);
             return this;
         }
 
-        public Builder setMinimalAction(@Nullable Input<InstanceGroupManagerUpdatePolicyMinimalAction> minimalAction) {
+        public Builder minimalAction(@Nullable Input<InstanceGroupManagerUpdatePolicyMinimalAction> minimalAction) {
             this.minimalAction = minimalAction;
             return this;
         }
 
-        public Builder setMinimalAction(@Nullable InstanceGroupManagerUpdatePolicyMinimalAction minimalAction) {
+        public Builder minimalAction(@Nullable InstanceGroupManagerUpdatePolicyMinimalAction minimalAction) {
             this.minimalAction = Input.ofNullable(minimalAction);
             return this;
         }
 
-        public Builder setMostDisruptiveAllowedAction(@Nullable Input<InstanceGroupManagerUpdatePolicyMostDisruptiveAllowedAction> mostDisruptiveAllowedAction) {
+        public Builder mostDisruptiveAllowedAction(@Nullable Input<InstanceGroupManagerUpdatePolicyMostDisruptiveAllowedAction> mostDisruptiveAllowedAction) {
             this.mostDisruptiveAllowedAction = mostDisruptiveAllowedAction;
             return this;
         }
 
-        public Builder setMostDisruptiveAllowedAction(@Nullable InstanceGroupManagerUpdatePolicyMostDisruptiveAllowedAction mostDisruptiveAllowedAction) {
+        public Builder mostDisruptiveAllowedAction(@Nullable InstanceGroupManagerUpdatePolicyMostDisruptiveAllowedAction mostDisruptiveAllowedAction) {
             this.mostDisruptiveAllowedAction = Input.ofNullable(mostDisruptiveAllowedAction);
             return this;
         }
 
-        public Builder setReplacementMethod(@Nullable Input<InstanceGroupManagerUpdatePolicyReplacementMethod> replacementMethod) {
+        public Builder replacementMethod(@Nullable Input<InstanceGroupManagerUpdatePolicyReplacementMethod> replacementMethod) {
             this.replacementMethod = replacementMethod;
             return this;
         }
 
-        public Builder setReplacementMethod(@Nullable InstanceGroupManagerUpdatePolicyReplacementMethod replacementMethod) {
+        public Builder replacementMethod(@Nullable InstanceGroupManagerUpdatePolicyReplacementMethod replacementMethod) {
             this.replacementMethod = Input.ofNullable(replacementMethod);
             return this;
         }
 
-        public Builder setType(@Nullable Input<InstanceGroupManagerUpdatePolicyType> type) {
+        public Builder type(@Nullable Input<InstanceGroupManagerUpdatePolicyType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable InstanceGroupManagerUpdatePolicyType type) {
+        public Builder type(@Nullable InstanceGroupManagerUpdatePolicyType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

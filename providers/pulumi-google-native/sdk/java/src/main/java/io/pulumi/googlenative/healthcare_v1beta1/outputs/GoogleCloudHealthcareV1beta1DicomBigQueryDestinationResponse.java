@@ -82,17 +82,17 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse 
     	      this.writeDisposition = defaults.writeDisposition;
         }
 
-        public Builder setForce(Boolean force) {
+        public Builder force(Boolean force) {
             this.force = Objects.requireNonNull(force);
             return this;
         }
 
-        public Builder setTableUri(String tableUri) {
+        public Builder tableUri(String tableUri) {
             this.tableUri = Objects.requireNonNull(tableUri);
             return this;
         }
 
-        public Builder setWriteDisposition(String writeDisposition) {
+        public Builder writeDisposition(String writeDisposition) {
             this.writeDisposition = Objects.requireNonNull(writeDisposition);
             return this;
         }

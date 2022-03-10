@@ -264,72 +264,72 @@ public final class GetRouterResult {
     	      this.selfLinkWithId = defaults.selfLinkWithId;
         }
 
-        public Builder setBgp(RouterBgpResponse bgp) {
+        public Builder bgp(RouterBgpResponse bgp) {
             this.bgp = Objects.requireNonNull(bgp);
             return this;
         }
 
-        public Builder setBgpPeers(List<RouterBgpPeerResponse> bgpPeers) {
+        public Builder bgpPeers(List<RouterBgpPeerResponse> bgpPeers) {
             this.bgpPeers = Objects.requireNonNull(bgpPeers);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEncryptedInterconnectRouter(Boolean encryptedInterconnectRouter) {
+        public Builder encryptedInterconnectRouter(Boolean encryptedInterconnectRouter) {
             this.encryptedInterconnectRouter = Objects.requireNonNull(encryptedInterconnectRouter);
             return this;
         }
 
-        public Builder setInterfaces(List<RouterInterfaceResponse> interfaces) {
+        public Builder interfaces(List<RouterInterfaceResponse> interfaces) {
             this.interfaces = Objects.requireNonNull(interfaces);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setMd5AuthenticationKeys(List<RouterMd5AuthenticationKeyResponse> md5AuthenticationKeys) {
+        public Builder md5AuthenticationKeys(List<RouterMd5AuthenticationKeyResponse> md5AuthenticationKeys) {
             this.md5AuthenticationKeys = Objects.requireNonNull(md5AuthenticationKeys);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNats(List<RouterNatResponse> nats) {
+        public Builder nats(List<RouterNatResponse> nats) {
             this.nats = Objects.requireNonNull(nats);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSelfLinkWithId(String selfLinkWithId) {
+        public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }

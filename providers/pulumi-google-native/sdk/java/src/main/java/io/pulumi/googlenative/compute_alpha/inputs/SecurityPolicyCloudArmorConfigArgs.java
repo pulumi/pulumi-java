@@ -57,12 +57,12 @@ public final class SecurityPolicyCloudArmorConfigArgs extends io.pulumi.resource
     	      this.enableMl = defaults.enableMl;
         }
 
-        public Builder setEnableMl(@Nullable Input<Boolean> enableMl) {
+        public Builder enableMl(@Nullable Input<Boolean> enableMl) {
             this.enableMl = enableMl;
             return this;
         }
 
-        public Builder setEnableMl(@Nullable Boolean enableMl) {
+        public Builder enableMl(@Nullable Boolean enableMl) {
             this.enableMl = Input.ofNullable(enableMl);
             return this;
         }

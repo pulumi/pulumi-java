@@ -131,62 +131,62 @@ public final class BigtableColumnArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setEncoding(@Nullable Input<String> encoding) {
+        public Builder encoding(@Nullable Input<String> encoding) {
             this.encoding = encoding;
             return this;
         }
 
-        public Builder setEncoding(@Nullable String encoding) {
+        public Builder encoding(@Nullable String encoding) {
             this.encoding = Input.ofNullable(encoding);
             return this;
         }
 
-        public Builder setFieldName(@Nullable Input<String> fieldName) {
+        public Builder fieldName(@Nullable Input<String> fieldName) {
             this.fieldName = fieldName;
             return this;
         }
 
-        public Builder setFieldName(@Nullable String fieldName) {
+        public Builder fieldName(@Nullable String fieldName) {
             this.fieldName = Input.ofNullable(fieldName);
             return this;
         }
 
-        public Builder setOnlyReadLatest(@Nullable Input<Boolean> onlyReadLatest) {
+        public Builder onlyReadLatest(@Nullable Input<Boolean> onlyReadLatest) {
             this.onlyReadLatest = onlyReadLatest;
             return this;
         }
 
-        public Builder setOnlyReadLatest(@Nullable Boolean onlyReadLatest) {
+        public Builder onlyReadLatest(@Nullable Boolean onlyReadLatest) {
             this.onlyReadLatest = Input.ofNullable(onlyReadLatest);
             return this;
         }
 
-        public Builder setQualifierEncoded(@Nullable Input<String> qualifierEncoded) {
+        public Builder qualifierEncoded(@Nullable Input<String> qualifierEncoded) {
             this.qualifierEncoded = qualifierEncoded;
             return this;
         }
 
-        public Builder setQualifierEncoded(@Nullable String qualifierEncoded) {
+        public Builder qualifierEncoded(@Nullable String qualifierEncoded) {
             this.qualifierEncoded = Input.ofNullable(qualifierEncoded);
             return this;
         }
 
-        public Builder setQualifierString(@Nullable Input<String> qualifierString) {
+        public Builder qualifierString(@Nullable Input<String> qualifierString) {
             this.qualifierString = qualifierString;
             return this;
         }
 
-        public Builder setQualifierString(@Nullable String qualifierString) {
+        public Builder qualifierString(@Nullable String qualifierString) {
             this.qualifierString = Input.ofNullable(qualifierString);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

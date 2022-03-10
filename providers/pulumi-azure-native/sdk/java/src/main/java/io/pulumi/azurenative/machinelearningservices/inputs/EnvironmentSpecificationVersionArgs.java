@@ -162,72 +162,72 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCondaFile(@Nullable Input<String> condaFile) {
+        public Builder condaFile(@Nullable Input<String> condaFile) {
             this.condaFile = condaFile;
             return this;
         }
 
-        public Builder setCondaFile(@Nullable String condaFile) {
+        public Builder condaFile(@Nullable String condaFile) {
             this.condaFile = Input.ofNullable(condaFile);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDocker(@Nullable Input<Either<DockerBuildArgs,DockerImageArgs>> docker) {
+        public Builder docker(@Nullable Input<Either<DockerBuildArgs,DockerImageArgs>> docker) {
             this.docker = docker;
             return this;
         }
 
-        public Builder setDocker(@Nullable Either<DockerBuildArgs,DockerImageArgs> docker) {
+        public Builder docker(@Nullable Either<DockerBuildArgs,DockerImageArgs> docker) {
             this.docker = Input.ofNullable(docker);
             return this;
         }
 
-        public Builder setInferenceContainerProperties(@Nullable Input<InferenceContainerPropertiesArgs> inferenceContainerProperties) {
+        public Builder inferenceContainerProperties(@Nullable Input<InferenceContainerPropertiesArgs> inferenceContainerProperties) {
             this.inferenceContainerProperties = inferenceContainerProperties;
             return this;
         }
 
-        public Builder setInferenceContainerProperties(@Nullable InferenceContainerPropertiesArgs inferenceContainerProperties) {
+        public Builder inferenceContainerProperties(@Nullable InferenceContainerPropertiesArgs inferenceContainerProperties) {
             this.inferenceContainerProperties = Input.ofNullable(inferenceContainerProperties);
             return this;
         }
 
-        public Builder setIsAnonymous(@Nullable Input<Boolean> isAnonymous) {
+        public Builder isAnonymous(@Nullable Input<Boolean> isAnonymous) {
             this.isAnonymous = isAnonymous;
             return this;
         }
 
-        public Builder setIsAnonymous(@Nullable Boolean isAnonymous) {
+        public Builder isAnonymous(@Nullable Boolean isAnonymous) {
             this.isAnonymous = Input.ofNullable(isAnonymous);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Input<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

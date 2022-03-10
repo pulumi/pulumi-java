@@ -127,52 +127,52 @@ public final class VPCArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCidrBlock(Input<String> cidrBlock) {
+        public Builder cidrBlock(Input<String> cidrBlock) {
             this.cidrBlock = Objects.requireNonNull(cidrBlock);
             return this;
         }
 
-        public Builder setCidrBlock(String cidrBlock) {
+        public Builder cidrBlock(String cidrBlock) {
             this.cidrBlock = Input.of(Objects.requireNonNull(cidrBlock));
             return this;
         }
 
-        public Builder setEnableDnsHostnames(@Nullable Input<Boolean> enableDnsHostnames) {
+        public Builder enableDnsHostnames(@Nullable Input<Boolean> enableDnsHostnames) {
             this.enableDnsHostnames = enableDnsHostnames;
             return this;
         }
 
-        public Builder setEnableDnsHostnames(@Nullable Boolean enableDnsHostnames) {
+        public Builder enableDnsHostnames(@Nullable Boolean enableDnsHostnames) {
             this.enableDnsHostnames = Input.ofNullable(enableDnsHostnames);
             return this;
         }
 
-        public Builder setEnableDnsSupport(@Nullable Input<Boolean> enableDnsSupport) {
+        public Builder enableDnsSupport(@Nullable Input<Boolean> enableDnsSupport) {
             this.enableDnsSupport = enableDnsSupport;
             return this;
         }
 
-        public Builder setEnableDnsSupport(@Nullable Boolean enableDnsSupport) {
+        public Builder enableDnsSupport(@Nullable Boolean enableDnsSupport) {
             this.enableDnsSupport = Input.ofNullable(enableDnsSupport);
             return this;
         }
 
-        public Builder setInstanceTenancy(@Nullable Input<String> instanceTenancy) {
+        public Builder instanceTenancy(@Nullable Input<String> instanceTenancy) {
             this.instanceTenancy = instanceTenancy;
             return this;
         }
 
-        public Builder setInstanceTenancy(@Nullable String instanceTenancy) {
+        public Builder instanceTenancy(@Nullable String instanceTenancy) {
             this.instanceTenancy = Input.ofNullable(instanceTenancy);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<VPCTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<VPCTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<VPCTagArgs> tags) {
+        public Builder tags(@Nullable List<VPCTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

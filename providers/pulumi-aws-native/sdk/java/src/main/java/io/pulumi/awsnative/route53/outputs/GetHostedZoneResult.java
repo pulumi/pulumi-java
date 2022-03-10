@@ -108,32 +108,32 @@ public final class GetHostedZoneResult {
     	      this.vPCs = defaults.vPCs;
         }
 
-        public Builder setHostedZoneConfig(@Nullable HostedZoneConfig hostedZoneConfig) {
+        public Builder hostedZoneConfig(@Nullable HostedZoneConfig hostedZoneConfig) {
             this.hostedZoneConfig = hostedZoneConfig;
             return this;
         }
 
-        public Builder setHostedZoneTags(@Nullable List<HostedZoneTag> hostedZoneTags) {
+        public Builder hostedZoneTags(@Nullable List<HostedZoneTag> hostedZoneTags) {
             this.hostedZoneTags = hostedZoneTags;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setNameServers(@Nullable List<String> nameServers) {
+        public Builder nameServers(@Nullable List<String> nameServers) {
             this.nameServers = nameServers;
             return this;
         }
 
-        public Builder setQueryLoggingConfig(@Nullable HostedZoneQueryLoggingConfig queryLoggingConfig) {
+        public Builder queryLoggingConfig(@Nullable HostedZoneQueryLoggingConfig queryLoggingConfig) {
             this.queryLoggingConfig = queryLoggingConfig;
             return this;
         }
 
-        public Builder setVPCs(@Nullable List<HostedZoneVPC> vPCs) {
+        public Builder vPCs(@Nullable List<HostedZoneVPC> vPCs) {
             this.vPCs = vPCs;
             return this;
         }

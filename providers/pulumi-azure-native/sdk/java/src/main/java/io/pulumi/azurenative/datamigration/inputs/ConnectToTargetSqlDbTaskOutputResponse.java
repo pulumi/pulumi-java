@@ -105,22 +105,22 @@ public final class ConnectToTargetSqlDbTaskOutputResponse extends io.pulumi.reso
     	      this.targetServerVersion = defaults.targetServerVersion;
         }
 
-        public Builder setDatabases(Map<String,String> databases) {
+        public Builder databases(Map<String,String> databases) {
             this.databases = Objects.requireNonNull(databases);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setTargetServerBrandVersion(String targetServerBrandVersion) {
+        public Builder targetServerBrandVersion(String targetServerBrandVersion) {
             this.targetServerBrandVersion = Objects.requireNonNull(targetServerBrandVersion);
             return this;
         }
 
-        public Builder setTargetServerVersion(String targetServerVersion) {
+        public Builder targetServerVersion(String targetServerVersion) {
             this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
             return this;
         }

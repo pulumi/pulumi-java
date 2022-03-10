@@ -65,12 +65,12 @@ public final class ReportAggregationResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setFunction(String function) {
+        public Builder function(String function) {
             this.function = Objects.requireNonNull(function);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

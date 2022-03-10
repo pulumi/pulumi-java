@@ -234,122 +234,122 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
     	      this.type = defaults.type;
         }
 
-        public Builder setAuthProviderX509CertUrl(Input<String> authProviderX509CertUrl) {
+        public Builder authProviderX509CertUrl(Input<String> authProviderX509CertUrl) {
             this.authProviderX509CertUrl = Objects.requireNonNull(authProviderX509CertUrl);
             return this;
         }
 
-        public Builder setAuthProviderX509CertUrl(String authProviderX509CertUrl) {
+        public Builder authProviderX509CertUrl(String authProviderX509CertUrl) {
             this.authProviderX509CertUrl = Input.of(Objects.requireNonNull(authProviderX509CertUrl));
             return this;
         }
 
-        public Builder setAuthUri(Input<String> authUri) {
+        public Builder authUri(Input<String> authUri) {
             this.authUri = Objects.requireNonNull(authUri);
             return this;
         }
 
-        public Builder setAuthUri(String authUri) {
+        public Builder authUri(String authUri) {
             this.authUri = Input.of(Objects.requireNonNull(authUri));
             return this;
         }
 
-        public Builder setAuthenticationType(Input<String> authenticationType) {
+        public Builder authenticationType(Input<String> authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
 
-        public Builder setAuthenticationType(String authenticationType) {
+        public Builder authenticationType(String authenticationType) {
             this.authenticationType = Input.of(Objects.requireNonNull(authenticationType));
             return this;
         }
 
-        public Builder setClientEmail(Input<String> clientEmail) {
+        public Builder clientEmail(Input<String> clientEmail) {
             this.clientEmail = Objects.requireNonNull(clientEmail);
             return this;
         }
 
-        public Builder setClientEmail(String clientEmail) {
+        public Builder clientEmail(String clientEmail) {
             this.clientEmail = Input.of(Objects.requireNonNull(clientEmail));
             return this;
         }
 
-        public Builder setClientId(Input<String> clientId) {
+        public Builder clientId(Input<String> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
-        public Builder setClientId(String clientId) {
+        public Builder clientId(String clientId) {
             this.clientId = Input.of(Objects.requireNonNull(clientId));
             return this;
         }
 
-        public Builder setClientX509CertUrl(Input<String> clientX509CertUrl) {
+        public Builder clientX509CertUrl(Input<String> clientX509CertUrl) {
             this.clientX509CertUrl = Objects.requireNonNull(clientX509CertUrl);
             return this;
         }
 
-        public Builder setClientX509CertUrl(String clientX509CertUrl) {
+        public Builder clientX509CertUrl(String clientX509CertUrl) {
             this.clientX509CertUrl = Input.of(Objects.requireNonNull(clientX509CertUrl));
             return this;
         }
 
-        public Builder setOrganizationId(Input<String> organizationId) {
+        public Builder organizationId(Input<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Input.of(Objects.requireNonNull(organizationId));
             return this;
         }
 
-        public Builder setPrivateKey(Input<String> privateKey) {
+        public Builder privateKey(Input<String> privateKey) {
             this.privateKey = Objects.requireNonNull(privateKey);
             return this;
         }
 
-        public Builder setPrivateKey(String privateKey) {
+        public Builder privateKey(String privateKey) {
             this.privateKey = Input.of(Objects.requireNonNull(privateKey));
             return this;
         }
 
-        public Builder setPrivateKeyId(Input<String> privateKeyId) {
+        public Builder privateKeyId(Input<String> privateKeyId) {
             this.privateKeyId = Objects.requireNonNull(privateKeyId);
             return this;
         }
 
-        public Builder setPrivateKeyId(String privateKeyId) {
+        public Builder privateKeyId(String privateKeyId) {
             this.privateKeyId = Input.of(Objects.requireNonNull(privateKeyId));
             return this;
         }
 
-        public Builder setProjectId(Input<String> projectId) {
+        public Builder projectId(Input<String> projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
 
-        public Builder setProjectId(String projectId) {
+        public Builder projectId(String projectId) {
             this.projectId = Input.of(Objects.requireNonNull(projectId));
             return this;
         }
 
-        public Builder setTokenUri(Input<String> tokenUri) {
+        public Builder tokenUri(Input<String> tokenUri) {
             this.tokenUri = Objects.requireNonNull(tokenUri);
             return this;
         }
 
-        public Builder setTokenUri(String tokenUri) {
+        public Builder tokenUri(String tokenUri) {
             this.tokenUri = Input.of(Objects.requireNonNull(tokenUri));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

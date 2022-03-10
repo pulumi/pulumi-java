@@ -64,22 +64,22 @@ public final class ExperimentOnlineAbConfigObjectArgs extends io.pulumi.resource
     	      this.treatmentWeights = defaults.treatmentWeights;
         }
 
-        public Builder setControlTreatmentName(@Nullable Input<String> controlTreatmentName) {
+        public Builder controlTreatmentName(@Nullable Input<String> controlTreatmentName) {
             this.controlTreatmentName = controlTreatmentName;
             return this;
         }
 
-        public Builder setControlTreatmentName(@Nullable String controlTreatmentName) {
+        public Builder controlTreatmentName(@Nullable String controlTreatmentName) {
             this.controlTreatmentName = Input.ofNullable(controlTreatmentName);
             return this;
         }
 
-        public Builder setTreatmentWeights(@Nullable Input<List<ExperimentTreatmentToWeightArgs>> treatmentWeights) {
+        public Builder treatmentWeights(@Nullable Input<List<ExperimentTreatmentToWeightArgs>> treatmentWeights) {
             this.treatmentWeights = treatmentWeights;
             return this;
         }
 
-        public Builder setTreatmentWeights(@Nullable List<ExperimentTreatmentToWeightArgs> treatmentWeights) {
+        public Builder treatmentWeights(@Nullable List<ExperimentTreatmentToWeightArgs> treatmentWeights) {
             this.treatmentWeights = Input.ofNullable(treatmentWeights);
             return this;
         }

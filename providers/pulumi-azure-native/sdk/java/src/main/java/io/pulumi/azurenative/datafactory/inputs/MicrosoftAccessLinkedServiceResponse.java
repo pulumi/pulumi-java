@@ -227,57 +227,57 @@ public final class MicrosoftAccessLinkedServiceResponse extends io.pulumi.resour
     	      this.userName = defaults.userName;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAuthenticationType(@Nullable Object authenticationType) {
+        public Builder authenticationType(@Nullable Object authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
 
-        public Builder setConnectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
+        public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setConnectionString(Object connectionString) {
+        public Builder connectionString(Object connectionString) {
             this.connectionString = Objects.requireNonNull(connectionString);
             return this;
         }
 
-        public Builder setCredential(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> credential) {
+        public Builder credential(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> credential) {
             this.credential = credential;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Object encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setPassword(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
+        public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserName(@Nullable Object userName) {
+        public Builder userName(@Nullable Object userName) {
             this.userName = userName;
             return this;
         }

@@ -142,72 +142,72 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
     	      this.treatment = defaults.treatment;
         }
 
-        public Builder setControl(Input<String> control) {
+        public Builder control(Input<String> control) {
             this.control = Objects.requireNonNull(control);
             return this;
         }
 
-        public Builder setControl(String control) {
+        public Builder control(String control) {
             this.control = Input.of(Objects.requireNonNull(control));
             return this;
         }
 
-        public Builder setEndTime(Input<String> endTime) {
+        public Builder endTime(Input<String> endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Input.of(Objects.requireNonNull(endTime));
             return this;
         }
 
-        public Builder setInstanceId(Input<String> instanceId) {
+        public Builder instanceId(Input<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Input.of(Objects.requireNonNull(instanceId));
             return this;
         }
 
-        public Builder setMetricLabels(Input<GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs> metricLabels) {
+        public Builder metricLabels(Input<GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs> metricLabels) {
             this.metricLabels = Objects.requireNonNull(metricLabels);
             return this;
         }
 
-        public Builder setMetricLabels(GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs metricLabels) {
+        public Builder metricLabels(GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs metricLabels) {
             this.metricLabels = Input.of(Objects.requireNonNull(metricLabels));
             return this;
         }
 
-        public Builder setOrganizationId(Input<String> organizationId) {
+        public Builder organizationId(Input<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Input.of(Objects.requireNonNull(organizationId));
             return this;
         }
 
-        public Builder setStartTime(Input<String> startTime) {
+        public Builder startTime(Input<String> startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Input.of(Objects.requireNonNull(startTime));
             return this;
         }
 
-        public Builder setTreatment(Input<String> treatment) {
+        public Builder treatment(Input<String> treatment) {
             this.treatment = Objects.requireNonNull(treatment);
             return this;
         }
 
-        public Builder setTreatment(String treatment) {
+        public Builder treatment(String treatment) {
             this.treatment = Input.of(Objects.requireNonNull(treatment));
             return this;
         }

@@ -72,12 +72,12 @@ public final class MutationRecordResponse extends io.pulumi.resources.InvokeArgs
     	      this.mutatedBy = defaults.mutatedBy;
         }
 
-        public Builder setMutateTime(String mutateTime) {
+        public Builder mutateTime(String mutateTime) {
             this.mutateTime = Objects.requireNonNull(mutateTime);
             return this;
         }
 
-        public Builder setMutatedBy(String mutatedBy) {
+        public Builder mutatedBy(String mutatedBy) {
             this.mutatedBy = Objects.requireNonNull(mutatedBy);
             return this;
         }

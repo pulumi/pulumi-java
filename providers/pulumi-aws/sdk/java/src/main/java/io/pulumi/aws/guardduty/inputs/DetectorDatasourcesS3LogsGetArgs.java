@@ -52,12 +52,12 @@ public final class DetectorDatasourcesS3LogsGetArgs extends io.pulumi.resources.
     	      this.enable = defaults.enable;
         }
 
-        public Builder setEnable(Input<Boolean> enable) {
+        public Builder enable(Input<Boolean> enable) {
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
 
-        public Builder setEnable(Boolean enable) {
+        public Builder enable(Boolean enable) {
             this.enable = Input.of(Objects.requireNonNull(enable));
             return this;
         }

@@ -263,72 +263,72 @@ public final class GetNamespaceResult {
     	      this.updatedAt = defaults.updatedAt;
         }
 
-        public Builder setCreatedAt(String createdAt) {
+        public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsAutoInflateEnabled(@Nullable Boolean isAutoInflateEnabled) {
+        public Builder isAutoInflateEnabled(@Nullable Boolean isAutoInflateEnabled) {
             this.isAutoInflateEnabled = isAutoInflateEnabled;
             return this;
         }
 
-        public Builder setKafkaEnabled(@Nullable Boolean kafkaEnabled) {
+        public Builder kafkaEnabled(@Nullable Boolean kafkaEnabled) {
             this.kafkaEnabled = kafkaEnabled;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setMaximumThroughputUnits(@Nullable Integer maximumThroughputUnits) {
+        public Builder maximumThroughputUnits(@Nullable Integer maximumThroughputUnits) {
             this.maximumThroughputUnits = maximumThroughputUnits;
             return this;
         }
 
-        public Builder setMetricId(String metricId) {
+        public Builder metricId(String metricId) {
             this.metricId = Objects.requireNonNull(metricId);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setServiceBusEndpoint(String serviceBusEndpoint) {
+        public Builder serviceBusEndpoint(String serviceBusEndpoint) {
             this.serviceBusEndpoint = Objects.requireNonNull(serviceBusEndpoint);
             return this;
         }
 
-        public Builder setSku(@Nullable SkuResponse sku) {
+        public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUpdatedAt(String updatedAt) {
+        public Builder updatedAt(String updatedAt) {
             this.updatedAt = Objects.requireNonNull(updatedAt);
             return this;
         }

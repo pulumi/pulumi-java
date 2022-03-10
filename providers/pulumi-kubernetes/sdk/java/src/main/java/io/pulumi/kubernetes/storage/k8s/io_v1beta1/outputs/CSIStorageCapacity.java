@@ -165,37 +165,37 @@ public final class CSIStorageCapacity {
     	      this.storageClassName = defaults.storageClassName;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setCapacity(@Nullable String capacity) {
+        public Builder capacity(@Nullable String capacity) {
             this.capacity = capacity;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setMaximumVolumeSize(@Nullable String maximumVolumeSize) {
+        public Builder maximumVolumeSize(@Nullable String maximumVolumeSize) {
             this.maximumVolumeSize = maximumVolumeSize;
             return this;
         }
 
-        public Builder setMetadata(@Nullable ObjectMeta metadata) {
+        public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setNodeTopology(@Nullable LabelSelector nodeTopology) {
+        public Builder nodeTopology(@Nullable LabelSelector nodeTopology) {
             this.nodeTopology = nodeTopology;
             return this;
         }
 
-        public Builder setStorageClassName(String storageClassName) {
+        public Builder storageClassName(String storageClassName) {
             this.storageClassName = Objects.requireNonNull(storageClassName);
             return this;
         }

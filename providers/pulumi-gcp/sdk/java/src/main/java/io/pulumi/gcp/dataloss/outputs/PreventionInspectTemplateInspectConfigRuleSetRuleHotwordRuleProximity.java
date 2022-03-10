@@ -67,12 +67,12 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleP
     	      this.windowBefore = defaults.windowBefore;
         }
 
-        public Builder setWindowAfter(@Nullable Integer windowAfter) {
+        public Builder windowAfter(@Nullable Integer windowAfter) {
             this.windowAfter = windowAfter;
             return this;
         }
 
-        public Builder setWindowBefore(@Nullable Integer windowBefore) {
+        public Builder windowBefore(@Nullable Integer windowBefore) {
             this.windowBefore = windowBefore;
             return this;
         }

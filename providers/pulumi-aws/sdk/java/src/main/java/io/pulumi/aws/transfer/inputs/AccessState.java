@@ -165,82 +165,82 @@ public final class AccessState extends io.pulumi.resources.ResourceArgs {
     	      this.serverId = defaults.serverId;
         }
 
-        public Builder setExternalId(@Nullable Input<String> externalId) {
+        public Builder externalId(@Nullable Input<String> externalId) {
             this.externalId = externalId;
             return this;
         }
 
-        public Builder setExternalId(@Nullable String externalId) {
+        public Builder externalId(@Nullable String externalId) {
             this.externalId = Input.ofNullable(externalId);
             return this;
         }
 
-        public Builder setHomeDirectory(@Nullable Input<String> homeDirectory) {
+        public Builder homeDirectory(@Nullable Input<String> homeDirectory) {
             this.homeDirectory = homeDirectory;
             return this;
         }
 
-        public Builder setHomeDirectory(@Nullable String homeDirectory) {
+        public Builder homeDirectory(@Nullable String homeDirectory) {
             this.homeDirectory = Input.ofNullable(homeDirectory);
             return this;
         }
 
-        public Builder setHomeDirectoryMappings(@Nullable Input<List<AccessHomeDirectoryMappingGetArgs>> homeDirectoryMappings) {
+        public Builder homeDirectoryMappings(@Nullable Input<List<AccessHomeDirectoryMappingGetArgs>> homeDirectoryMappings) {
             this.homeDirectoryMappings = homeDirectoryMappings;
             return this;
         }
 
-        public Builder setHomeDirectoryMappings(@Nullable List<AccessHomeDirectoryMappingGetArgs> homeDirectoryMappings) {
+        public Builder homeDirectoryMappings(@Nullable List<AccessHomeDirectoryMappingGetArgs> homeDirectoryMappings) {
             this.homeDirectoryMappings = Input.ofNullable(homeDirectoryMappings);
             return this;
         }
 
-        public Builder setHomeDirectoryType(@Nullable Input<String> homeDirectoryType) {
+        public Builder homeDirectoryType(@Nullable Input<String> homeDirectoryType) {
             this.homeDirectoryType = homeDirectoryType;
             return this;
         }
 
-        public Builder setHomeDirectoryType(@Nullable String homeDirectoryType) {
+        public Builder homeDirectoryType(@Nullable String homeDirectoryType) {
             this.homeDirectoryType = Input.ofNullable(homeDirectoryType);
             return this;
         }
 
-        public Builder setPolicy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Input<String> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPolicy(@Nullable String policy) {
+        public Builder policy(@Nullable String policy) {
             this.policy = Input.ofNullable(policy);
             return this;
         }
 
-        public Builder setPosixProfile(@Nullable Input<AccessPosixProfileGetArgs> posixProfile) {
+        public Builder posixProfile(@Nullable Input<AccessPosixProfileGetArgs> posixProfile) {
             this.posixProfile = posixProfile;
             return this;
         }
 
-        public Builder setPosixProfile(@Nullable AccessPosixProfileGetArgs posixProfile) {
+        public Builder posixProfile(@Nullable AccessPosixProfileGetArgs posixProfile) {
             this.posixProfile = Input.ofNullable(posixProfile);
             return this;
         }
 
-        public Builder setRole(@Nullable Input<String> role) {
+        public Builder role(@Nullable Input<String> role) {
             this.role = role;
             return this;
         }
 
-        public Builder setRole(@Nullable String role) {
+        public Builder role(@Nullable String role) {
             this.role = Input.ofNullable(role);
             return this;
         }
 
-        public Builder setServerId(@Nullable Input<String> serverId) {
+        public Builder serverId(@Nullable Input<String> serverId) {
             this.serverId = serverId;
             return this;
         }
 
-        public Builder setServerId(@Nullable String serverId) {
+        public Builder serverId(@Nullable String serverId) {
             this.serverId = Input.ofNullable(serverId);
             return this;
         }

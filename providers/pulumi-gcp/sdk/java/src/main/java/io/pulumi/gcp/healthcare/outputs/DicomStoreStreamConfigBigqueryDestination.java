@@ -48,7 +48,7 @@ public final class DicomStoreStreamConfigBigqueryDestination {
     	      this.tableUri = defaults.tableUri;
         }
 
-        public Builder setTableUri(String tableUri) {
+        public Builder tableUri(String tableUri) {
             this.tableUri = Objects.requireNonNull(tableUri);
             return this;
         }

@@ -132,32 +132,32 @@ public final class AzureDiskVolumeSource {
     	      this.readOnly = defaults.readOnly;
         }
 
-        public Builder setCachingMode(@Nullable String cachingMode) {
+        public Builder cachingMode(@Nullable String cachingMode) {
             this.cachingMode = cachingMode;
             return this;
         }
 
-        public Builder setDiskName(String diskName) {
+        public Builder diskName(String diskName) {
             this.diskName = Objects.requireNonNull(diskName);
             return this;
         }
 
-        public Builder setDiskURI(String diskURI) {
+        public Builder diskURI(String diskURI) {
             this.diskURI = Objects.requireNonNull(diskURI);
             return this;
         }
 
-        public Builder setFsType(@Nullable String fsType) {
+        public Builder fsType(@Nullable String fsType) {
             this.fsType = fsType;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }

@@ -67,12 +67,12 @@ public final class ProxyServerPropertiesResponse {
     	      this.port = defaults.port;
         }
 
-        public Builder setIp(@Nullable String ip) {
+        public Builder ip(@Nullable String ip) {
             this.ip = ip;
             return this;
         }
 
-        public Builder setPort(@Nullable String port) {
+        public Builder port(@Nullable String port) {
             this.port = port;
             return this;
         }

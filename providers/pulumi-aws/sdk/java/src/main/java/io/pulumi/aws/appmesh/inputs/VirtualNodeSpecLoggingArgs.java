@@ -53,12 +53,12 @@ public final class VirtualNodeSpecLoggingArgs extends io.pulumi.resources.Resour
     	      this.accessLog = defaults.accessLog;
         }
 
-        public Builder setAccessLog(@Nullable Input<VirtualNodeSpecLoggingAccessLogArgs> accessLog) {
+        public Builder accessLog(@Nullable Input<VirtualNodeSpecLoggingAccessLogArgs> accessLog) {
             this.accessLog = accessLog;
             return this;
         }
 
-        public Builder setAccessLog(@Nullable VirtualNodeSpecLoggingAccessLogArgs accessLog) {
+        public Builder accessLog(@Nullable VirtualNodeSpecLoggingAccessLogArgs accessLog) {
             this.accessLog = Input.ofNullable(accessLog);
             return this;
         }

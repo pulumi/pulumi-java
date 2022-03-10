@@ -67,22 +67,22 @@ public final class TableEncryptionSpecificationArgs extends io.pulumi.resources.
     	      this.kmsKeyIdentifier = defaults.kmsKeyIdentifier;
         }
 
-        public Builder setEncryptionType(Input<TableEncryptionType> encryptionType) {
+        public Builder encryptionType(Input<TableEncryptionType> encryptionType) {
             this.encryptionType = Objects.requireNonNull(encryptionType);
             return this;
         }
 
-        public Builder setEncryptionType(TableEncryptionType encryptionType) {
+        public Builder encryptionType(TableEncryptionType encryptionType) {
             this.encryptionType = Input.of(Objects.requireNonNull(encryptionType));
             return this;
         }
 
-        public Builder setKmsKeyIdentifier(@Nullable Input<String> kmsKeyIdentifier) {
+        public Builder kmsKeyIdentifier(@Nullable Input<String> kmsKeyIdentifier) {
             this.kmsKeyIdentifier = kmsKeyIdentifier;
             return this;
         }
 
-        public Builder setKmsKeyIdentifier(@Nullable String kmsKeyIdentifier) {
+        public Builder kmsKeyIdentifier(@Nullable String kmsKeyIdentifier) {
             this.kmsKeyIdentifier = Input.ofNullable(kmsKeyIdentifier);
             return this;
         }

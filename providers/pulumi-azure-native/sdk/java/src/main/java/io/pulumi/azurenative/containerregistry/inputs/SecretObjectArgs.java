@@ -79,22 +79,22 @@ public final class SecretObjectArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setType(@Nullable Input<Either<String,SecretObjectType>> type) {
+        public Builder type(@Nullable Input<Either<String,SecretObjectType>> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable Either<String,SecretObjectType> type) {
+        public Builder type(@Nullable Either<String,SecretObjectType> type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }

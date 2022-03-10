@@ -42,7 +42,7 @@ public final class OutputOnlyObjectType {
     	      this.foo = defaults.foo;
         }
 
-        public Builder setFoo(@Nullable String foo) {
+        public Builder foo(@Nullable String foo) {
             this.foo = foo;
             return this;
         }

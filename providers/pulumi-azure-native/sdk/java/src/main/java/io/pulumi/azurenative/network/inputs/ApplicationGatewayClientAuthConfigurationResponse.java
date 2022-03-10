@@ -57,7 +57,7 @@ public final class ApplicationGatewayClientAuthConfigurationResponse extends io.
     	      this.verifyClientCertIssuerDN = defaults.verifyClientCertIssuerDN;
         }
 
-        public Builder setVerifyClientCertIssuerDN(@Nullable Boolean verifyClientCertIssuerDN) {
+        public Builder verifyClientCertIssuerDN(@Nullable Boolean verifyClientCertIssuerDN) {
             this.verifyClientCertIssuerDN = verifyClientCertIssuerDN;
             return this;
         }

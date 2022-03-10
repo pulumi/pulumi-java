@@ -84,17 +84,17 @@ public final class GetHyperVCollectorArgs extends io.pulumi.resources.InvokeArgs
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setHyperVCollectorName(String hyperVCollectorName) {
+        public Builder hyperVCollectorName(String hyperVCollectorName) {
             this.hyperVCollectorName = Objects.requireNonNull(hyperVCollectorName);
             return this;
         }
 
-        public Builder setProjectName(String projectName) {
+        public Builder projectName(String projectName) {
             this.projectName = Objects.requireNonNull(projectName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

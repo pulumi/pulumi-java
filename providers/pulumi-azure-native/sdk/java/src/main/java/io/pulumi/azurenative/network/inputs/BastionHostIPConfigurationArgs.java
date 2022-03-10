@@ -125,52 +125,52 @@ public final class BastionHostIPConfigurationArgs extends io.pulumi.resources.Re
     	      this.subnet = defaults.subnet;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPrivateIPAllocationMethod(@Nullable Input<Either<String,IPAllocationMethod>> privateIPAllocationMethod) {
+        public Builder privateIPAllocationMethod(@Nullable Input<Either<String,IPAllocationMethod>> privateIPAllocationMethod) {
             this.privateIPAllocationMethod = privateIPAllocationMethod;
             return this;
         }
 
-        public Builder setPrivateIPAllocationMethod(@Nullable Either<String,IPAllocationMethod> privateIPAllocationMethod) {
+        public Builder privateIPAllocationMethod(@Nullable Either<String,IPAllocationMethod> privateIPAllocationMethod) {
             this.privateIPAllocationMethod = Input.ofNullable(privateIPAllocationMethod);
             return this;
         }
 
-        public Builder setPublicIPAddress(Input<SubResourceArgs> publicIPAddress) {
+        public Builder publicIPAddress(Input<SubResourceArgs> publicIPAddress) {
             this.publicIPAddress = Objects.requireNonNull(publicIPAddress);
             return this;
         }
 
-        public Builder setPublicIPAddress(SubResourceArgs publicIPAddress) {
+        public Builder publicIPAddress(SubResourceArgs publicIPAddress) {
             this.publicIPAddress = Input.of(Objects.requireNonNull(publicIPAddress));
             return this;
         }
 
-        public Builder setSubnet(Input<SubResourceArgs> subnet) {
+        public Builder subnet(Input<SubResourceArgs> subnet) {
             this.subnet = Objects.requireNonNull(subnet);
             return this;
         }
 
-        public Builder setSubnet(SubResourceArgs subnet) {
+        public Builder subnet(SubResourceArgs subnet) {
             this.subnet = Input.of(Objects.requireNonNull(subnet));
             return this;
         }

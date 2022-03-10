@@ -115,42 +115,42 @@ public final class TopologySpreadConstraintArgs extends io.pulumi.resources.Reso
     	      this.whenUnsatisfiable = defaults.whenUnsatisfiable;
         }
 
-        public Builder setLabelSelector(@Nullable Input<LabelSelectorArgs> labelSelector) {
+        public Builder labelSelector(@Nullable Input<LabelSelectorArgs> labelSelector) {
             this.labelSelector = labelSelector;
             return this;
         }
 
-        public Builder setLabelSelector(@Nullable LabelSelectorArgs labelSelector) {
+        public Builder labelSelector(@Nullable LabelSelectorArgs labelSelector) {
             this.labelSelector = Input.ofNullable(labelSelector);
             return this;
         }
 
-        public Builder setMaxSkew(Input<Integer> maxSkew) {
+        public Builder maxSkew(Input<Integer> maxSkew) {
             this.maxSkew = Objects.requireNonNull(maxSkew);
             return this;
         }
 
-        public Builder setMaxSkew(Integer maxSkew) {
+        public Builder maxSkew(Integer maxSkew) {
             this.maxSkew = Input.of(Objects.requireNonNull(maxSkew));
             return this;
         }
 
-        public Builder setTopologyKey(Input<String> topologyKey) {
+        public Builder topologyKey(Input<String> topologyKey) {
             this.topologyKey = Objects.requireNonNull(topologyKey);
             return this;
         }
 
-        public Builder setTopologyKey(String topologyKey) {
+        public Builder topologyKey(String topologyKey) {
             this.topologyKey = Input.of(Objects.requireNonNull(topologyKey));
             return this;
         }
 
-        public Builder setWhenUnsatisfiable(Input<String> whenUnsatisfiable) {
+        public Builder whenUnsatisfiable(Input<String> whenUnsatisfiable) {
             this.whenUnsatisfiable = Objects.requireNonNull(whenUnsatisfiable);
             return this;
         }
 
-        public Builder setWhenUnsatisfiable(String whenUnsatisfiable) {
+        public Builder whenUnsatisfiable(String whenUnsatisfiable) {
             this.whenUnsatisfiable = Input.of(Objects.requireNonNull(whenUnsatisfiable));
             return this;
         }

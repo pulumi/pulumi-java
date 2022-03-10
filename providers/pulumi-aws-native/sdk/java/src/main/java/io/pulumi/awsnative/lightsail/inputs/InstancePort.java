@@ -192,52 +192,52 @@ public final class InstancePort extends io.pulumi.resources.InvokeArgs {
     	      this.toPort = defaults.toPort;
         }
 
-        public Builder setAccessDirection(@Nullable String accessDirection) {
+        public Builder accessDirection(@Nullable String accessDirection) {
             this.accessDirection = accessDirection;
             return this;
         }
 
-        public Builder setAccessFrom(@Nullable String accessFrom) {
+        public Builder accessFrom(@Nullable String accessFrom) {
             this.accessFrom = accessFrom;
             return this;
         }
 
-        public Builder setAccessType(@Nullable String accessType) {
+        public Builder accessType(@Nullable String accessType) {
             this.accessType = accessType;
             return this;
         }
 
-        public Builder setCidrListAliases(@Nullable List<String> cidrListAliases) {
+        public Builder cidrListAliases(@Nullable List<String> cidrListAliases) {
             this.cidrListAliases = cidrListAliases;
             return this;
         }
 
-        public Builder setCidrs(@Nullable List<String> cidrs) {
+        public Builder cidrs(@Nullable List<String> cidrs) {
             this.cidrs = cidrs;
             return this;
         }
 
-        public Builder setCommonName(@Nullable String commonName) {
+        public Builder commonName(@Nullable String commonName) {
             this.commonName = commonName;
             return this;
         }
 
-        public Builder setFromPort(@Nullable Integer fromPort) {
+        public Builder fromPort(@Nullable Integer fromPort) {
             this.fromPort = fromPort;
             return this;
         }
 
-        public Builder setIpv6Cidrs(@Nullable List<String> ipv6Cidrs) {
+        public Builder ipv6Cidrs(@Nullable List<String> ipv6Cidrs) {
             this.ipv6Cidrs = ipv6Cidrs;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setToPort(@Nullable Integer toPort) {
+        public Builder toPort(@Nullable Integer toPort) {
             this.toPort = toPort;
             return this;
         }

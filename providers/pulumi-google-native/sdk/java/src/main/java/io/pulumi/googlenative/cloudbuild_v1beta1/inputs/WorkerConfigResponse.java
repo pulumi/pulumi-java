@@ -89,17 +89,17 @@ public final class WorkerConfigResponse extends io.pulumi.resources.InvokeArgs {
     	      this.noExternalIp = defaults.noExternalIp;
         }
 
-        public Builder setDiskSizeGb(String diskSizeGb) {
+        public Builder diskSizeGb(String diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
 
-        public Builder setNoExternalIp(Boolean noExternalIp) {
+        public Builder noExternalIp(Boolean noExternalIp) {
             this.noExternalIp = Objects.requireNonNull(noExternalIp);
             return this;
         }

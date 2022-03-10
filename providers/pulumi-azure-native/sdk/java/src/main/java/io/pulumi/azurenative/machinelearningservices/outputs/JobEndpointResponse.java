@@ -101,22 +101,22 @@ public final class JobEndpointResponse {
     	      this.properties = defaults.properties;
         }
 
-        public Builder setEndpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setJobEndpointType(@Nullable String jobEndpointType) {
+        public Builder jobEndpointType(@Nullable String jobEndpointType) {
             this.jobEndpointType = jobEndpointType;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }

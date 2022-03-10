@@ -69,22 +69,22 @@ public final class VpcEndpointConnectionAccepterArgs extends io.pulumi.resources
     	      this.vpcEndpointServiceId = defaults.vpcEndpointServiceId;
         }
 
-        public Builder setVpcEndpointId(Input<String> vpcEndpointId) {
+        public Builder vpcEndpointId(Input<String> vpcEndpointId) {
             this.vpcEndpointId = Objects.requireNonNull(vpcEndpointId);
             return this;
         }
 
-        public Builder setVpcEndpointId(String vpcEndpointId) {
+        public Builder vpcEndpointId(String vpcEndpointId) {
             this.vpcEndpointId = Input.of(Objects.requireNonNull(vpcEndpointId));
             return this;
         }
 
-        public Builder setVpcEndpointServiceId(Input<String> vpcEndpointServiceId) {
+        public Builder vpcEndpointServiceId(Input<String> vpcEndpointServiceId) {
             this.vpcEndpointServiceId = Objects.requireNonNull(vpcEndpointServiceId);
             return this;
         }
 
-        public Builder setVpcEndpointServiceId(String vpcEndpointServiceId) {
+        public Builder vpcEndpointServiceId(String vpcEndpointServiceId) {
             this.vpcEndpointServiceId = Input.of(Objects.requireNonNull(vpcEndpointServiceId));
             return this;
         }

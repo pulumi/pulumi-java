@@ -68,17 +68,17 @@ public final class PolicyInfoResponse {
     	      this.policyVersion = defaults.policyVersion;
         }
 
-        public Builder setPolicyId(String policyId) {
+        public Builder policyId(String policyId) {
             this.policyId = Objects.requireNonNull(policyId);
             return this;
         }
 
-        public Builder setPolicyParameters(@Nullable PolicyParametersResponse policyParameters) {
+        public Builder policyParameters(@Nullable PolicyParametersResponse policyParameters) {
             this.policyParameters = policyParameters;
             return this;
         }
 
-        public Builder setPolicyVersion(String policyVersion) {
+        public Builder policyVersion(String policyVersion) {
             this.policyVersion = Objects.requireNonNull(policyVersion);
             return this;
         }

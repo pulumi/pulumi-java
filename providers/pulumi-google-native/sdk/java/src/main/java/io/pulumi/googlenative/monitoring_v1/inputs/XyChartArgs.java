@@ -159,72 +159,72 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
     	      this.yAxis = defaults.yAxis;
         }
 
-        public Builder setChartOptions(@Nullable Input<ChartOptionsArgs> chartOptions) {
+        public Builder chartOptions(@Nullable Input<ChartOptionsArgs> chartOptions) {
             this.chartOptions = chartOptions;
             return this;
         }
 
-        public Builder setChartOptions(@Nullable ChartOptionsArgs chartOptions) {
+        public Builder chartOptions(@Nullable ChartOptionsArgs chartOptions) {
             this.chartOptions = Input.ofNullable(chartOptions);
             return this;
         }
 
-        public Builder setDataSets(Input<List<DataSetArgs>> dataSets) {
+        public Builder dataSets(Input<List<DataSetArgs>> dataSets) {
             this.dataSets = Objects.requireNonNull(dataSets);
             return this;
         }
 
-        public Builder setDataSets(List<DataSetArgs> dataSets) {
+        public Builder dataSets(List<DataSetArgs> dataSets) {
             this.dataSets = Input.of(Objects.requireNonNull(dataSets));
             return this;
         }
 
-        public Builder setThresholds(@Nullable Input<List<ThresholdArgs>> thresholds) {
+        public Builder thresholds(@Nullable Input<List<ThresholdArgs>> thresholds) {
             this.thresholds = thresholds;
             return this;
         }
 
-        public Builder setThresholds(@Nullable List<ThresholdArgs> thresholds) {
+        public Builder thresholds(@Nullable List<ThresholdArgs> thresholds) {
             this.thresholds = Input.ofNullable(thresholds);
             return this;
         }
 
-        public Builder setTimeshiftDuration(@Nullable Input<String> timeshiftDuration) {
+        public Builder timeshiftDuration(@Nullable Input<String> timeshiftDuration) {
             this.timeshiftDuration = timeshiftDuration;
             return this;
         }
 
-        public Builder setTimeshiftDuration(@Nullable String timeshiftDuration) {
+        public Builder timeshiftDuration(@Nullable String timeshiftDuration) {
             this.timeshiftDuration = Input.ofNullable(timeshiftDuration);
             return this;
         }
 
-        public Builder setXAxis(@Nullable Input<AxisArgs> xAxis) {
+        public Builder xAxis(@Nullable Input<AxisArgs> xAxis) {
             this.xAxis = xAxis;
             return this;
         }
 
-        public Builder setXAxis(@Nullable AxisArgs xAxis) {
+        public Builder xAxis(@Nullable AxisArgs xAxis) {
             this.xAxis = Input.ofNullable(xAxis);
             return this;
         }
 
-        public Builder setY2Axis(@Nullable Input<AxisArgs> y2Axis) {
+        public Builder y2Axis(@Nullable Input<AxisArgs> y2Axis) {
             this.y2Axis = y2Axis;
             return this;
         }
 
-        public Builder setY2Axis(@Nullable AxisArgs y2Axis) {
+        public Builder y2Axis(@Nullable AxisArgs y2Axis) {
             this.y2Axis = Input.ofNullable(y2Axis);
             return this;
         }
 
-        public Builder setYAxis(@Nullable Input<AxisArgs> yAxis) {
+        public Builder yAxis(@Nullable Input<AxisArgs> yAxis) {
             this.yAxis = yAxis;
             return this;
         }
 
-        public Builder setYAxis(@Nullable AxisArgs yAxis) {
+        public Builder yAxis(@Nullable AxisArgs yAxis) {
             this.yAxis = Input.ofNullable(yAxis);
             return this;
         }

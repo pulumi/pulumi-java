@@ -60,12 +60,12 @@ public final class IndexCapacityUnitsConfiguration extends io.pulumi.resources.I
     	      this.storageCapacityUnits = defaults.storageCapacityUnits;
         }
 
-        public Builder setQueryCapacityUnits(Integer queryCapacityUnits) {
+        public Builder queryCapacityUnits(Integer queryCapacityUnits) {
             this.queryCapacityUnits = Objects.requireNonNull(queryCapacityUnits);
             return this;
         }
 
-        public Builder setStorageCapacityUnits(Integer storageCapacityUnits) {
+        public Builder storageCapacityUnits(Integer storageCapacityUnits) {
             this.storageCapacityUnits = Objects.requireNonNull(storageCapacityUnits);
             return this;
         }

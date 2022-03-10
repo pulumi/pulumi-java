@@ -50,7 +50,7 @@ public final class ListDatabaseAccountConnectionStringsResult {
     	      this.connectionStrings = defaults.connectionStrings;
         }
 
-        public Builder setConnectionStrings(@Nullable List<DatabaseAccountConnectionStringResponse> connectionStrings) {
+        public Builder connectionStrings(@Nullable List<DatabaseAccountConnectionStringResponse> connectionStrings) {
             this.connectionStrings = connectionStrings;
             return this;
         }

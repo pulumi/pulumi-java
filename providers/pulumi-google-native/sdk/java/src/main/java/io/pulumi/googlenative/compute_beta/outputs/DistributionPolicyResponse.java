@@ -67,12 +67,12 @@ public final class DistributionPolicyResponse {
     	      this.zones = defaults.zones;
         }
 
-        public Builder setTargetShape(String targetShape) {
+        public Builder targetShape(String targetShape) {
             this.targetShape = Objects.requireNonNull(targetShape);
             return this;
         }
 
-        public Builder setZones(List<DistributionPolicyZoneConfigurationResponse> zones) {
+        public Builder zones(List<DistributionPolicyZoneConfigurationResponse> zones) {
             this.zones = Objects.requireNonNull(zones);
             return this;
         }

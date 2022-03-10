@@ -288,152 +288,152 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
     	      this.wnsCredential = defaults.wnsCredential;
         }
 
-        public Builder setAdmCredential(@Nullable Input<AdmCredentialArgs> admCredential) {
+        public Builder admCredential(@Nullable Input<AdmCredentialArgs> admCredential) {
             this.admCredential = admCredential;
             return this;
         }
 
-        public Builder setAdmCredential(@Nullable AdmCredentialArgs admCredential) {
+        public Builder admCredential(@Nullable AdmCredentialArgs admCredential) {
             this.admCredential = Input.ofNullable(admCredential);
             return this;
         }
 
-        public Builder setApnsCredential(@Nullable Input<ApnsCredentialArgs> apnsCredential) {
+        public Builder apnsCredential(@Nullable Input<ApnsCredentialArgs> apnsCredential) {
             this.apnsCredential = apnsCredential;
             return this;
         }
 
-        public Builder setApnsCredential(@Nullable ApnsCredentialArgs apnsCredential) {
+        public Builder apnsCredential(@Nullable ApnsCredentialArgs apnsCredential) {
             this.apnsCredential = Input.ofNullable(apnsCredential);
             return this;
         }
 
-        public Builder setAuthorizationRules(@Nullable Input<List<SharedAccessAuthorizationRulePropertiesArgs>> authorizationRules) {
+        public Builder authorizationRules(@Nullable Input<List<SharedAccessAuthorizationRulePropertiesArgs>> authorizationRules) {
             this.authorizationRules = authorizationRules;
             return this;
         }
 
-        public Builder setAuthorizationRules(@Nullable List<SharedAccessAuthorizationRulePropertiesArgs> authorizationRules) {
+        public Builder authorizationRules(@Nullable List<SharedAccessAuthorizationRulePropertiesArgs> authorizationRules) {
             this.authorizationRules = Input.ofNullable(authorizationRules);
             return this;
         }
 
-        public Builder setBaiduCredential(@Nullable Input<BaiduCredentialArgs> baiduCredential) {
+        public Builder baiduCredential(@Nullable Input<BaiduCredentialArgs> baiduCredential) {
             this.baiduCredential = baiduCredential;
             return this;
         }
 
-        public Builder setBaiduCredential(@Nullable BaiduCredentialArgs baiduCredential) {
+        public Builder baiduCredential(@Nullable BaiduCredentialArgs baiduCredential) {
             this.baiduCredential = Input.ofNullable(baiduCredential);
             return this;
         }
 
-        public Builder setGcmCredential(@Nullable Input<GcmCredentialArgs> gcmCredential) {
+        public Builder gcmCredential(@Nullable Input<GcmCredentialArgs> gcmCredential) {
             this.gcmCredential = gcmCredential;
             return this;
         }
 
-        public Builder setGcmCredential(@Nullable GcmCredentialArgs gcmCredential) {
+        public Builder gcmCredential(@Nullable GcmCredentialArgs gcmCredential) {
             this.gcmCredential = Input.ofNullable(gcmCredential);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMpnsCredential(@Nullable Input<MpnsCredentialArgs> mpnsCredential) {
+        public Builder mpnsCredential(@Nullable Input<MpnsCredentialArgs> mpnsCredential) {
             this.mpnsCredential = mpnsCredential;
             return this;
         }
 
-        public Builder setMpnsCredential(@Nullable MpnsCredentialArgs mpnsCredential) {
+        public Builder mpnsCredential(@Nullable MpnsCredentialArgs mpnsCredential) {
             this.mpnsCredential = Input.ofNullable(mpnsCredential);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamespaceName(Input<String> namespaceName) {
+        public Builder namespaceName(Input<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
 
-        public Builder setNamespaceName(String namespaceName) {
+        public Builder namespaceName(String namespaceName) {
             this.namespaceName = Input.of(Objects.requireNonNull(namespaceName));
             return this;
         }
 
-        public Builder setNotificationHubName(@Nullable Input<String> notificationHubName) {
+        public Builder notificationHubName(@Nullable Input<String> notificationHubName) {
             this.notificationHubName = notificationHubName;
             return this;
         }
 
-        public Builder setNotificationHubName(@Nullable String notificationHubName) {
+        public Builder notificationHubName(@Nullable String notificationHubName) {
             this.notificationHubName = Input.ofNullable(notificationHubName);
             return this;
         }
 
-        public Builder setRegistrationTtl(@Nullable Input<String> registrationTtl) {
+        public Builder registrationTtl(@Nullable Input<String> registrationTtl) {
             this.registrationTtl = registrationTtl;
             return this;
         }
 
-        public Builder setRegistrationTtl(@Nullable String registrationTtl) {
+        public Builder registrationTtl(@Nullable String registrationTtl) {
             this.registrationTtl = Input.ofNullable(registrationTtl);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Input<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuArgs sku) {
+        public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setWnsCredential(@Nullable Input<WnsCredentialArgs> wnsCredential) {
+        public Builder wnsCredential(@Nullable Input<WnsCredentialArgs> wnsCredential) {
             this.wnsCredential = wnsCredential;
             return this;
         }
 
-        public Builder setWnsCredential(@Nullable WnsCredentialArgs wnsCredential) {
+        public Builder wnsCredential(@Nullable WnsCredentialArgs wnsCredential) {
             this.wnsCredential = Input.ofNullable(wnsCredential);
             return this;
         }

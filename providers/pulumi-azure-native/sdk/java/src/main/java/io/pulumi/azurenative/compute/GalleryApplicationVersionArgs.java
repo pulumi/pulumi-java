@@ -152,72 +152,72 @@ public final class GalleryApplicationVersionArgs extends io.pulumi.resources.Res
     	      this.tags = defaults.tags;
         }
 
-        public Builder setGalleryApplicationName(Input<String> galleryApplicationName) {
+        public Builder galleryApplicationName(Input<String> galleryApplicationName) {
             this.galleryApplicationName = Objects.requireNonNull(galleryApplicationName);
             return this;
         }
 
-        public Builder setGalleryApplicationName(String galleryApplicationName) {
+        public Builder galleryApplicationName(String galleryApplicationName) {
             this.galleryApplicationName = Input.of(Objects.requireNonNull(galleryApplicationName));
             return this;
         }
 
-        public Builder setGalleryApplicationVersionName(@Nullable Input<String> galleryApplicationVersionName) {
+        public Builder galleryApplicationVersionName(@Nullable Input<String> galleryApplicationVersionName) {
             this.galleryApplicationVersionName = galleryApplicationVersionName;
             return this;
         }
 
-        public Builder setGalleryApplicationVersionName(@Nullable String galleryApplicationVersionName) {
+        public Builder galleryApplicationVersionName(@Nullable String galleryApplicationVersionName) {
             this.galleryApplicationVersionName = Input.ofNullable(galleryApplicationVersionName);
             return this;
         }
 
-        public Builder setGalleryName(Input<String> galleryName) {
+        public Builder galleryName(Input<String> galleryName) {
             this.galleryName = Objects.requireNonNull(galleryName);
             return this;
         }
 
-        public Builder setGalleryName(String galleryName) {
+        public Builder galleryName(String galleryName) {
             this.galleryName = Input.of(Objects.requireNonNull(galleryName));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPublishingProfile(Input<GalleryApplicationVersionPublishingProfileArgs> publishingProfile) {
+        public Builder publishingProfile(Input<GalleryApplicationVersionPublishingProfileArgs> publishingProfile) {
             this.publishingProfile = Objects.requireNonNull(publishingProfile);
             return this;
         }
 
-        public Builder setPublishingProfile(GalleryApplicationVersionPublishingProfileArgs publishingProfile) {
+        public Builder publishingProfile(GalleryApplicationVersionPublishingProfileArgs publishingProfile) {
             this.publishingProfile = Input.of(Objects.requireNonNull(publishingProfile));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

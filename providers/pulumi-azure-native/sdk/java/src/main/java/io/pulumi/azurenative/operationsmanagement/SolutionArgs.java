@@ -137,62 +137,62 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPlan(@Nullable Input<SolutionPlanArgs> plan) {
+        public Builder plan(@Nullable Input<SolutionPlanArgs> plan) {
             this.plan = plan;
             return this;
         }
 
-        public Builder setPlan(@Nullable SolutionPlanArgs plan) {
+        public Builder plan(@Nullable SolutionPlanArgs plan) {
             this.plan = Input.ofNullable(plan);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<SolutionPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<SolutionPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable SolutionPropertiesArgs properties) {
+        public Builder properties(@Nullable SolutionPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSolutionName(@Nullable Input<String> solutionName) {
+        public Builder solutionName(@Nullable Input<String> solutionName) {
             this.solutionName = solutionName;
             return this;
         }
 
-        public Builder setSolutionName(@Nullable String solutionName) {
+        public Builder solutionName(@Nullable String solutionName) {
             this.solutionName = Input.ofNullable(solutionName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

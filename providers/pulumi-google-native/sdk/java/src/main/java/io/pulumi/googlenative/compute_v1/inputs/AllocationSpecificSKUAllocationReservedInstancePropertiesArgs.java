@@ -125,52 +125,52 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
     	      this.minCpuPlatform = defaults.minCpuPlatform;
         }
 
-        public Builder setGuestAccelerators(@Nullable Input<List<AcceleratorConfigArgs>> guestAccelerators) {
+        public Builder guestAccelerators(@Nullable Input<List<AcceleratorConfigArgs>> guestAccelerators) {
             this.guestAccelerators = guestAccelerators;
             return this;
         }
 
-        public Builder setGuestAccelerators(@Nullable List<AcceleratorConfigArgs> guestAccelerators) {
+        public Builder guestAccelerators(@Nullable List<AcceleratorConfigArgs> guestAccelerators) {
             this.guestAccelerators = Input.ofNullable(guestAccelerators);
             return this;
         }
 
-        public Builder setLocalSsds(@Nullable Input<List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs>> localSsds) {
+        public Builder localSsds(@Nullable Input<List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs>> localSsds) {
             this.localSsds = localSsds;
             return this;
         }
 
-        public Builder setLocalSsds(@Nullable List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs> localSsds) {
+        public Builder localSsds(@Nullable List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs> localSsds) {
             this.localSsds = Input.ofNullable(localSsds);
             return this;
         }
 
-        public Builder setLocationHint(@Nullable Input<String> locationHint) {
+        public Builder locationHint(@Nullable Input<String> locationHint) {
             this.locationHint = locationHint;
             return this;
         }
 
-        public Builder setLocationHint(@Nullable String locationHint) {
+        public Builder locationHint(@Nullable String locationHint) {
             this.locationHint = Input.ofNullable(locationHint);
             return this;
         }
 
-        public Builder setMachineType(@Nullable Input<String> machineType) {
+        public Builder machineType(@Nullable Input<String> machineType) {
             this.machineType = machineType;
             return this;
         }
 
-        public Builder setMachineType(@Nullable String machineType) {
+        public Builder machineType(@Nullable String machineType) {
             this.machineType = Input.ofNullable(machineType);
             return this;
         }
 
-        public Builder setMinCpuPlatform(@Nullable Input<String> minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable Input<String> minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
-        public Builder setMinCpuPlatform(@Nullable String minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
             this.minCpuPlatform = Input.ofNullable(minCpuPlatform);
             return this;
         }

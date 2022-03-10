@@ -72,12 +72,12 @@ public final class ShareAccessRightResponse extends io.pulumi.resources.InvokeAr
     	      this.shareId = defaults.shareId;
         }
 
-        public Builder setAccessType(String accessType) {
+        public Builder accessType(String accessType) {
             this.accessType = Objects.requireNonNull(accessType);
             return this;
         }
 
-        public Builder setShareId(String shareId) {
+        public Builder shareId(String shareId) {
             this.shareId = Objects.requireNonNull(shareId);
             return this;
         }

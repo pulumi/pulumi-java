@@ -70,22 +70,22 @@ public final class VaultNotificationGetArgs extends io.pulumi.resources.Resource
     	      this.snsTopic = defaults.snsTopic;
         }
 
-        public Builder setEvents(Input<List<String>> events) {
+        public Builder events(Input<List<String>> events) {
             this.events = Objects.requireNonNull(events);
             return this;
         }
 
-        public Builder setEvents(List<String> events) {
+        public Builder events(List<String> events) {
             this.events = Input.of(Objects.requireNonNull(events));
             return this;
         }
 
-        public Builder setSnsTopic(Input<String> snsTopic) {
+        public Builder snsTopic(Input<String> snsTopic) {
             this.snsTopic = Objects.requireNonNull(snsTopic);
             return this;
         }
 
-        public Builder setSnsTopic(String snsTopic) {
+        public Builder snsTopic(String snsTopic) {
             this.snsTopic = Input.of(Objects.requireNonNull(snsTopic));
             return this;
         }

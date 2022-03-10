@@ -50,7 +50,7 @@ public final class ManagedClusterPodIdentityResponseProvisioningInfo {
     	      this.error = defaults.error;
         }
 
-        public Builder setError(@Nullable CloudErrorResponse error) {
+        public Builder error(@Nullable CloudErrorResponse error) {
             this.error = error;
             return this;
         }

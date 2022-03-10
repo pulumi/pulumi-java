@@ -86,42 +86,42 @@ public final class LaunchGroupObjectArgs extends io.pulumi.resources.ResourceArg
     	      this.variation = defaults.variation;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFeature(Input<String> feature) {
+        public Builder feature(Input<String> feature) {
             this.feature = Objects.requireNonNull(feature);
             return this;
         }
 
-        public Builder setFeature(String feature) {
+        public Builder feature(String feature) {
             this.feature = Input.of(Objects.requireNonNull(feature));
             return this;
         }
 
-        public Builder setGroupName(Input<String> groupName) {
+        public Builder groupName(Input<String> groupName) {
             this.groupName = Objects.requireNonNull(groupName);
             return this;
         }
 
-        public Builder setGroupName(String groupName) {
+        public Builder groupName(String groupName) {
             this.groupName = Input.of(Objects.requireNonNull(groupName));
             return this;
         }
 
-        public Builder setVariation(Input<String> variation) {
+        public Builder variation(Input<String> variation) {
             this.variation = Objects.requireNonNull(variation);
             return this;
         }
 
-        public Builder setVariation(String variation) {
+        public Builder variation(String variation) {
             this.variation = Input.of(Objects.requireNonNull(variation));
             return this;
         }

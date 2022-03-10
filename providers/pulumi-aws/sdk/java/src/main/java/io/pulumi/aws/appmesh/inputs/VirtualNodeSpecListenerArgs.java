@@ -139,62 +139,62 @@ public final class VirtualNodeSpecListenerArgs extends io.pulumi.resources.Resou
     	      this.tls = defaults.tls;
         }
 
-        public Builder setConnectionPool(@Nullable Input<VirtualNodeSpecListenerConnectionPoolArgs> connectionPool) {
+        public Builder connectionPool(@Nullable Input<VirtualNodeSpecListenerConnectionPoolArgs> connectionPool) {
             this.connectionPool = connectionPool;
             return this;
         }
 
-        public Builder setConnectionPool(@Nullable VirtualNodeSpecListenerConnectionPoolArgs connectionPool) {
+        public Builder connectionPool(@Nullable VirtualNodeSpecListenerConnectionPoolArgs connectionPool) {
             this.connectionPool = Input.ofNullable(connectionPool);
             return this;
         }
 
-        public Builder setHealthCheck(@Nullable Input<VirtualNodeSpecListenerHealthCheckArgs> healthCheck) {
+        public Builder healthCheck(@Nullable Input<VirtualNodeSpecListenerHealthCheckArgs> healthCheck) {
             this.healthCheck = healthCheck;
             return this;
         }
 
-        public Builder setHealthCheck(@Nullable VirtualNodeSpecListenerHealthCheckArgs healthCheck) {
+        public Builder healthCheck(@Nullable VirtualNodeSpecListenerHealthCheckArgs healthCheck) {
             this.healthCheck = Input.ofNullable(healthCheck);
             return this;
         }
 
-        public Builder setOutlierDetection(@Nullable Input<VirtualNodeSpecListenerOutlierDetectionArgs> outlierDetection) {
+        public Builder outlierDetection(@Nullable Input<VirtualNodeSpecListenerOutlierDetectionArgs> outlierDetection) {
             this.outlierDetection = outlierDetection;
             return this;
         }
 
-        public Builder setOutlierDetection(@Nullable VirtualNodeSpecListenerOutlierDetectionArgs outlierDetection) {
+        public Builder outlierDetection(@Nullable VirtualNodeSpecListenerOutlierDetectionArgs outlierDetection) {
             this.outlierDetection = Input.ofNullable(outlierDetection);
             return this;
         }
 
-        public Builder setPortMapping(Input<VirtualNodeSpecListenerPortMappingArgs> portMapping) {
+        public Builder portMapping(Input<VirtualNodeSpecListenerPortMappingArgs> portMapping) {
             this.portMapping = Objects.requireNonNull(portMapping);
             return this;
         }
 
-        public Builder setPortMapping(VirtualNodeSpecListenerPortMappingArgs portMapping) {
+        public Builder portMapping(VirtualNodeSpecListenerPortMappingArgs portMapping) {
             this.portMapping = Input.of(Objects.requireNonNull(portMapping));
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<VirtualNodeSpecListenerTimeoutArgs> timeout) {
+        public Builder timeout(@Nullable Input<VirtualNodeSpecListenerTimeoutArgs> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable VirtualNodeSpecListenerTimeoutArgs timeout) {
+        public Builder timeout(@Nullable VirtualNodeSpecListenerTimeoutArgs timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }
 
-        public Builder setTls(@Nullable Input<VirtualNodeSpecListenerTlsArgs> tls) {
+        public Builder tls(@Nullable Input<VirtualNodeSpecListenerTlsArgs> tls) {
             this.tls = tls;
             return this;
         }
 
-        public Builder setTls(@Nullable VirtualNodeSpecListenerTlsArgs tls) {
+        public Builder tls(@Nullable VirtualNodeSpecListenerTlsArgs tls) {
             this.tls = Input.ofNullable(tls);
             return this;
         }

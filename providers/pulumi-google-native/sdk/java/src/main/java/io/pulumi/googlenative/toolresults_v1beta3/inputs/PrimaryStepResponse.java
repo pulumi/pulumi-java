@@ -74,12 +74,12 @@ public final class PrimaryStepResponse extends io.pulumi.resources.InvokeArgs {
     	      this.rollUp = defaults.rollUp;
         }
 
-        public Builder setIndividualOutcome(List<IndividualOutcomeResponse> individualOutcome) {
+        public Builder individualOutcome(List<IndividualOutcomeResponse> individualOutcome) {
             this.individualOutcome = Objects.requireNonNull(individualOutcome);
             return this;
         }
 
-        public Builder setRollUp(String rollUp) {
+        public Builder rollUp(String rollUp) {
             this.rollUp = Objects.requireNonNull(rollUp);
             return this;
         }

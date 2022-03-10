@@ -227,112 +227,112 @@ public final class AmazonS3LinkedServiceArgs extends io.pulumi.resources.Resourc
     	      this.type = defaults.type;
         }
 
-        public Builder setAccessKeyId(@Nullable Input<Object> accessKeyId) {
+        public Builder accessKeyId(@Nullable Input<Object> accessKeyId) {
             this.accessKeyId = accessKeyId;
             return this;
         }
 
-        public Builder setAccessKeyId(@Nullable Object accessKeyId) {
+        public Builder accessKeyId(@Nullable Object accessKeyId) {
             this.accessKeyId = Input.ofNullable(accessKeyId);
             return this;
         }
 
-        public Builder setAnnotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Input<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setAuthenticationType(@Nullable Input<Object> authenticationType) {
+        public Builder authenticationType(@Nullable Input<Object> authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
 
-        public Builder setAuthenticationType(@Nullable Object authenticationType) {
+        public Builder authenticationType(@Nullable Object authenticationType) {
             this.authenticationType = Input.ofNullable(authenticationType);
             return this;
         }
 
-        public Builder setConnectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
+        public Builder connectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setConnectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
+        public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Input.ofNullable(connectVia);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Input<Object> encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Input<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Object encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = Input.ofNullable(encryptedCredential);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setSecretAccessKey(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> secretAccessKey) {
+        public Builder secretAccessKey(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> secretAccessKey) {
             this.secretAccessKey = secretAccessKey;
             return this;
         }
 
-        public Builder setSecretAccessKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> secretAccessKey) {
+        public Builder secretAccessKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> secretAccessKey) {
             this.secretAccessKey = Input.ofNullable(secretAccessKey);
             return this;
         }
 
-        public Builder setServiceUrl(@Nullable Input<Object> serviceUrl) {
+        public Builder serviceUrl(@Nullable Input<Object> serviceUrl) {
             this.serviceUrl = serviceUrl;
             return this;
         }
 
-        public Builder setServiceUrl(@Nullable Object serviceUrl) {
+        public Builder serviceUrl(@Nullable Object serviceUrl) {
             this.serviceUrl = Input.ofNullable(serviceUrl);
             return this;
         }
 
-        public Builder setSessionToken(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> sessionToken) {
+        public Builder sessionToken(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> sessionToken) {
             this.sessionToken = sessionToken;
             return this;
         }
 
-        public Builder setSessionToken(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> sessionToken) {
+        public Builder sessionToken(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> sessionToken) {
             this.sessionToken = Input.ofNullable(sessionToken);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

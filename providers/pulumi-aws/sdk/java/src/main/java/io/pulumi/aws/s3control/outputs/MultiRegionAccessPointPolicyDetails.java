@@ -65,12 +65,12 @@ public final class MultiRegionAccessPointPolicyDetails {
     	      this.policy = defaults.policy;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPolicy(String policy) {
+        public Builder policy(String policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }

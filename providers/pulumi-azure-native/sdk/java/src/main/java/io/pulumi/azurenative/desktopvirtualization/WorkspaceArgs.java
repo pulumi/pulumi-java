@@ -223,122 +223,122 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setApplicationGroupReferences(@Nullable Input<List<String>> applicationGroupReferences) {
+        public Builder applicationGroupReferences(@Nullable Input<List<String>> applicationGroupReferences) {
             this.applicationGroupReferences = applicationGroupReferences;
             return this;
         }
 
-        public Builder setApplicationGroupReferences(@Nullable List<String> applicationGroupReferences) {
+        public Builder applicationGroupReferences(@Nullable List<String> applicationGroupReferences) {
             this.applicationGroupReferences = Input.ofNullable(applicationGroupReferences);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Input<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Input.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<ResourceModelWithAllowedPropertySetIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<ResourceModelWithAllowedPropertySetIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable ResourceModelWithAllowedPropertySetIdentityArgs identity) {
+        public Builder identity(@Nullable ResourceModelWithAllowedPropertySetIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setManagedBy(@Nullable Input<String> managedBy) {
+        public Builder managedBy(@Nullable Input<String> managedBy) {
             this.managedBy = managedBy;
             return this;
         }
 
-        public Builder setManagedBy(@Nullable String managedBy) {
+        public Builder managedBy(@Nullable String managedBy) {
             this.managedBy = Input.ofNullable(managedBy);
             return this;
         }
 
-        public Builder setPlan(@Nullable Input<ResourceModelWithAllowedPropertySetPlanArgs> plan) {
+        public Builder plan(@Nullable Input<ResourceModelWithAllowedPropertySetPlanArgs> plan) {
             this.plan = plan;
             return this;
         }
 
-        public Builder setPlan(@Nullable ResourceModelWithAllowedPropertySetPlanArgs plan) {
+        public Builder plan(@Nullable ResourceModelWithAllowedPropertySetPlanArgs plan) {
             this.plan = Input.ofNullable(plan);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(@Nullable Input<ResourceModelWithAllowedPropertySetSkuArgs> sku) {
+        public Builder sku(@Nullable Input<ResourceModelWithAllowedPropertySetSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable ResourceModelWithAllowedPropertySetSkuArgs sku) {
+        public Builder sku(@Nullable ResourceModelWithAllowedPropertySetSkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setWorkspaceName(@Nullable Input<String> workspaceName) {
+        public Builder workspaceName(@Nullable Input<String> workspaceName) {
             this.workspaceName = workspaceName;
             return this;
         }
 
-        public Builder setWorkspaceName(@Nullable String workspaceName) {
+        public Builder workspaceName(@Nullable String workspaceName) {
             this.workspaceName = Input.ofNullable(workspaceName);
             return this;
         }

@@ -228,62 +228,62 @@ public final class EdifactDelimiterOverrideResponse {
     	      this.targetNamespace = defaults.targetNamespace;
         }
 
-        public Builder setComponentSeparator(Integer componentSeparator) {
+        public Builder componentSeparator(Integer componentSeparator) {
             this.componentSeparator = Objects.requireNonNull(componentSeparator);
             return this;
         }
 
-        public Builder setDataElementSeparator(Integer dataElementSeparator) {
+        public Builder dataElementSeparator(Integer dataElementSeparator) {
             this.dataElementSeparator = Objects.requireNonNull(dataElementSeparator);
             return this;
         }
 
-        public Builder setDecimalPointIndicator(String decimalPointIndicator) {
+        public Builder decimalPointIndicator(String decimalPointIndicator) {
             this.decimalPointIndicator = Objects.requireNonNull(decimalPointIndicator);
             return this;
         }
 
-        public Builder setMessageAssociationAssignedCode(@Nullable String messageAssociationAssignedCode) {
+        public Builder messageAssociationAssignedCode(@Nullable String messageAssociationAssignedCode) {
             this.messageAssociationAssignedCode = messageAssociationAssignedCode;
             return this;
         }
 
-        public Builder setMessageId(@Nullable String messageId) {
+        public Builder messageId(@Nullable String messageId) {
             this.messageId = messageId;
             return this;
         }
 
-        public Builder setMessageRelease(@Nullable String messageRelease) {
+        public Builder messageRelease(@Nullable String messageRelease) {
             this.messageRelease = messageRelease;
             return this;
         }
 
-        public Builder setMessageVersion(@Nullable String messageVersion) {
+        public Builder messageVersion(@Nullable String messageVersion) {
             this.messageVersion = messageVersion;
             return this;
         }
 
-        public Builder setReleaseIndicator(Integer releaseIndicator) {
+        public Builder releaseIndicator(Integer releaseIndicator) {
             this.releaseIndicator = Objects.requireNonNull(releaseIndicator);
             return this;
         }
 
-        public Builder setRepetitionSeparator(Integer repetitionSeparator) {
+        public Builder repetitionSeparator(Integer repetitionSeparator) {
             this.repetitionSeparator = Objects.requireNonNull(repetitionSeparator);
             return this;
         }
 
-        public Builder setSegmentTerminator(Integer segmentTerminator) {
+        public Builder segmentTerminator(Integer segmentTerminator) {
             this.segmentTerminator = Objects.requireNonNull(segmentTerminator);
             return this;
         }
 
-        public Builder setSegmentTerminatorSuffix(String segmentTerminatorSuffix) {
+        public Builder segmentTerminatorSuffix(String segmentTerminatorSuffix) {
             this.segmentTerminatorSuffix = Objects.requireNonNull(segmentTerminatorSuffix);
             return this;
         }
 
-        public Builder setTargetNamespace(@Nullable String targetNamespace) {
+        public Builder targetNamespace(@Nullable String targetNamespace) {
             this.targetNamespace = targetNamespace;
             return this;
         }

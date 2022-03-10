@@ -74,22 +74,22 @@ public final class ClientCertificateThumbprintArgs extends io.pulumi.resources.R
     	      this.isAdmin = defaults.isAdmin;
         }
 
-        public Builder setCertificateThumbprint(Input<String> certificateThumbprint) {
+        public Builder certificateThumbprint(Input<String> certificateThumbprint) {
             this.certificateThumbprint = Objects.requireNonNull(certificateThumbprint);
             return this;
         }
 
-        public Builder setCertificateThumbprint(String certificateThumbprint) {
+        public Builder certificateThumbprint(String certificateThumbprint) {
             this.certificateThumbprint = Input.of(Objects.requireNonNull(certificateThumbprint));
             return this;
         }
 
-        public Builder setIsAdmin(Input<Boolean> isAdmin) {
+        public Builder isAdmin(Input<Boolean> isAdmin) {
             this.isAdmin = Objects.requireNonNull(isAdmin);
             return this;
         }
 
-        public Builder setIsAdmin(Boolean isAdmin) {
+        public Builder isAdmin(Boolean isAdmin) {
             this.isAdmin = Input.of(Objects.requireNonNull(isAdmin));
             return this;
         }

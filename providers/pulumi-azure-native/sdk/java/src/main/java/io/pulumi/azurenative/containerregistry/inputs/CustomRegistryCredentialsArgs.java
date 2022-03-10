@@ -96,32 +96,32 @@ public final class CustomRegistryCredentialsArgs extends io.pulumi.resources.Res
     	      this.userName = defaults.userName;
         }
 
-        public Builder setIdentity(@Nullable Input<String> identity) {
+        public Builder identity(@Nullable Input<String> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable String identity) {
+        public Builder identity(@Nullable String identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<SecretObjectArgs> password) {
+        public Builder password(@Nullable Input<SecretObjectArgs> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable SecretObjectArgs password) {
+        public Builder password(@Nullable SecretObjectArgs password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setUserName(@Nullable Input<SecretObjectArgs> userName) {
+        public Builder userName(@Nullable Input<SecretObjectArgs> userName) {
             this.userName = userName;
             return this;
         }
 
-        public Builder setUserName(@Nullable SecretObjectArgs userName) {
+        public Builder userName(@Nullable SecretObjectArgs userName) {
             this.userName = Input.ofNullable(userName);
             return this;
         }

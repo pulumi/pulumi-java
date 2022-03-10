@@ -118,27 +118,27 @@ public final class AvroWriteSettingsResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setFileNamePrefix(@Nullable Object fileNamePrefix) {
+        public Builder fileNamePrefix(@Nullable Object fileNamePrefix) {
             this.fileNamePrefix = fileNamePrefix;
             return this;
         }
 
-        public Builder setMaxRowsPerFile(@Nullable Object maxRowsPerFile) {
+        public Builder maxRowsPerFile(@Nullable Object maxRowsPerFile) {
             this.maxRowsPerFile = maxRowsPerFile;
             return this;
         }
 
-        public Builder setRecordName(@Nullable String recordName) {
+        public Builder recordName(@Nullable String recordName) {
             this.recordName = recordName;
             return this;
         }
 
-        public Builder setRecordNamespace(@Nullable String recordNamespace) {
+        public Builder recordNamespace(@Nullable String recordNamespace) {
             this.recordNamespace = recordNamespace;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

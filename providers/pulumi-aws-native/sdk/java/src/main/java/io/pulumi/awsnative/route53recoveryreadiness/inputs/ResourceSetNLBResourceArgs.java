@@ -57,12 +57,12 @@ public final class ResourceSetNLBResourceArgs extends io.pulumi.resources.Resour
     	      this.arn = defaults.arn;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }

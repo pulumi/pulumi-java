@@ -48,7 +48,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
     	      this.nodeGroup = defaults.nodeGroup;
         }
 
-        public Builder setNodeGroup(String nodeGroup) {
+        public Builder nodeGroup(String nodeGroup) {
             this.nodeGroup = Objects.requireNonNull(nodeGroup);
             return this;
         }

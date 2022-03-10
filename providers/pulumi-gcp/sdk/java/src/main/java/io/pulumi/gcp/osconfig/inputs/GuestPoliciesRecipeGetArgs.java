@@ -152,62 +152,62 @@ public final class GuestPoliciesRecipeGetArgs extends io.pulumi.resources.Resour
     	      this.version = defaults.version;
         }
 
-        public Builder setArtifacts(@Nullable Input<List<GuestPoliciesRecipeArtifactGetArgs>> artifacts) {
+        public Builder artifacts(@Nullable Input<List<GuestPoliciesRecipeArtifactGetArgs>> artifacts) {
             this.artifacts = artifacts;
             return this;
         }
 
-        public Builder setArtifacts(@Nullable List<GuestPoliciesRecipeArtifactGetArgs> artifacts) {
+        public Builder artifacts(@Nullable List<GuestPoliciesRecipeArtifactGetArgs> artifacts) {
             this.artifacts = Input.ofNullable(artifacts);
             return this;
         }
 
-        public Builder setDesiredState(@Nullable Input<String> desiredState) {
+        public Builder desiredState(@Nullable Input<String> desiredState) {
             this.desiredState = desiredState;
             return this;
         }
 
-        public Builder setDesiredState(@Nullable String desiredState) {
+        public Builder desiredState(@Nullable String desiredState) {
             this.desiredState = Input.ofNullable(desiredState);
             return this;
         }
 
-        public Builder setInstallSteps(@Nullable Input<List<GuestPoliciesRecipeInstallStepGetArgs>> installSteps) {
+        public Builder installSteps(@Nullable Input<List<GuestPoliciesRecipeInstallStepGetArgs>> installSteps) {
             this.installSteps = installSteps;
             return this;
         }
 
-        public Builder setInstallSteps(@Nullable List<GuestPoliciesRecipeInstallStepGetArgs> installSteps) {
+        public Builder installSteps(@Nullable List<GuestPoliciesRecipeInstallStepGetArgs> installSteps) {
             this.installSteps = Input.ofNullable(installSteps);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setUpdateSteps(@Nullable Input<List<GuestPoliciesRecipeUpdateStepGetArgs>> updateSteps) {
+        public Builder updateSteps(@Nullable Input<List<GuestPoliciesRecipeUpdateStepGetArgs>> updateSteps) {
             this.updateSteps = updateSteps;
             return this;
         }
 
-        public Builder setUpdateSteps(@Nullable List<GuestPoliciesRecipeUpdateStepGetArgs> updateSteps) {
+        public Builder updateSteps(@Nullable List<GuestPoliciesRecipeUpdateStepGetArgs> updateSteps) {
             this.updateSteps = Input.ofNullable(updateSteps);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

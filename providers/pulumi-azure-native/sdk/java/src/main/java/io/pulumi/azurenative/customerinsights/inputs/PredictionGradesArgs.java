@@ -91,32 +91,32 @@ public final class PredictionGradesArgs extends io.pulumi.resources.ResourceArgs
     	      this.minScoreThreshold = defaults.minScoreThreshold;
         }
 
-        public Builder setGradeName(@Nullable Input<String> gradeName) {
+        public Builder gradeName(@Nullable Input<String> gradeName) {
             this.gradeName = gradeName;
             return this;
         }
 
-        public Builder setGradeName(@Nullable String gradeName) {
+        public Builder gradeName(@Nullable String gradeName) {
             this.gradeName = Input.ofNullable(gradeName);
             return this;
         }
 
-        public Builder setMaxScoreThreshold(@Nullable Input<Integer> maxScoreThreshold) {
+        public Builder maxScoreThreshold(@Nullable Input<Integer> maxScoreThreshold) {
             this.maxScoreThreshold = maxScoreThreshold;
             return this;
         }
 
-        public Builder setMaxScoreThreshold(@Nullable Integer maxScoreThreshold) {
+        public Builder maxScoreThreshold(@Nullable Integer maxScoreThreshold) {
             this.maxScoreThreshold = Input.ofNullable(maxScoreThreshold);
             return this;
         }
 
-        public Builder setMinScoreThreshold(@Nullable Input<Integer> minScoreThreshold) {
+        public Builder minScoreThreshold(@Nullable Input<Integer> minScoreThreshold) {
             this.minScoreThreshold = minScoreThreshold;
             return this;
         }
 
-        public Builder setMinScoreThreshold(@Nullable Integer minScoreThreshold) {
+        public Builder minScoreThreshold(@Nullable Integer minScoreThreshold) {
             this.minScoreThreshold = Input.ofNullable(minScoreThreshold);
             return this;
         }

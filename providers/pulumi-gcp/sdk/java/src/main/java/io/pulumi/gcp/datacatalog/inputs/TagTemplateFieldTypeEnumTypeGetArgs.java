@@ -58,12 +58,12 @@ public final class TagTemplateFieldTypeEnumTypeGetArgs extends io.pulumi.resourc
     	      this.allowedValues = defaults.allowedValues;
         }
 
-        public Builder setAllowedValues(Input<List<TagTemplateFieldTypeEnumTypeAllowedValueGetArgs>> allowedValues) {
+        public Builder allowedValues(Input<List<TagTemplateFieldTypeEnumTypeAllowedValueGetArgs>> allowedValues) {
             this.allowedValues = Objects.requireNonNull(allowedValues);
             return this;
         }
 
-        public Builder setAllowedValues(List<TagTemplateFieldTypeEnumTypeAllowedValueGetArgs> allowedValues) {
+        public Builder allowedValues(List<TagTemplateFieldTypeEnumTypeAllowedValueGetArgs> allowedValues) {
             this.allowedValues = Input.of(Objects.requireNonNull(allowedValues));
             return this;
         }

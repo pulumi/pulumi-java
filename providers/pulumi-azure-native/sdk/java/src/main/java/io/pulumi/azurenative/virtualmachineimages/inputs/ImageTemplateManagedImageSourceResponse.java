@@ -73,12 +73,12 @@ public final class ImageTemplateManagedImageSourceResponse extends io.pulumi.res
     	      this.type = defaults.type;
         }
 
-        public Builder setImageId(String imageId) {
+        public Builder imageId(String imageId) {
             this.imageId = Objects.requireNonNull(imageId);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

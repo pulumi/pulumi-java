@@ -101,42 +101,42 @@ public final class NetworkSecurityGroupRuleArgs extends io.pulumi.resources.Reso
     	      this.sourcePortRanges = defaults.sourcePortRanges;
         }
 
-        public Builder setAccess(Input<NetworkSecurityGroupRuleAccess> access) {
+        public Builder access(Input<NetworkSecurityGroupRuleAccess> access) {
             this.access = Objects.requireNonNull(access);
             return this;
         }
 
-        public Builder setAccess(NetworkSecurityGroupRuleAccess access) {
+        public Builder access(NetworkSecurityGroupRuleAccess access) {
             this.access = Input.of(Objects.requireNonNull(access));
             return this;
         }
 
-        public Builder setPriority(Input<Integer> priority) {
+        public Builder priority(Input<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Input.of(Objects.requireNonNull(priority));
             return this;
         }
 
-        public Builder setSourceAddressPrefix(Input<String> sourceAddressPrefix) {
+        public Builder sourceAddressPrefix(Input<String> sourceAddressPrefix) {
             this.sourceAddressPrefix = Objects.requireNonNull(sourceAddressPrefix);
             return this;
         }
 
-        public Builder setSourceAddressPrefix(String sourceAddressPrefix) {
+        public Builder sourceAddressPrefix(String sourceAddressPrefix) {
             this.sourceAddressPrefix = Input.of(Objects.requireNonNull(sourceAddressPrefix));
             return this;
         }
 
-        public Builder setSourcePortRanges(@Nullable Input<List<String>> sourcePortRanges) {
+        public Builder sourcePortRanges(@Nullable Input<List<String>> sourcePortRanges) {
             this.sourcePortRanges = sourcePortRanges;
             return this;
         }
 
-        public Builder setSourcePortRanges(@Nullable List<String> sourcePortRanges) {
+        public Builder sourcePortRanges(@Nullable List<String> sourcePortRanges) {
             this.sourcePortRanges = Input.ofNullable(sourcePortRanges);
             return this;
         }

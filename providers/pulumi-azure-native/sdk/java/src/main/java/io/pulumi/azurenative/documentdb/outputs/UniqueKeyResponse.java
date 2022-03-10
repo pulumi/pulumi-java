@@ -50,7 +50,7 @@ public final class UniqueKeyResponse {
     	      this.paths = defaults.paths;
         }
 
-        public Builder setPaths(@Nullable List<String> paths) {
+        public Builder paths(@Nullable List<String> paths) {
             this.paths = paths;
             return this;
         }

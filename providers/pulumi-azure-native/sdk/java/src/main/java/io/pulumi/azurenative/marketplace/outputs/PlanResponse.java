@@ -131,32 +131,32 @@ public final class PlanResponse {
     	      this.stackType = defaults.stackType;
         }
 
-        public Builder setAccessibility(@Nullable String accessibility) {
+        public Builder accessibility(@Nullable String accessibility) {
             this.accessibility = accessibility;
             return this;
         }
 
-        public Builder setAltStackReference(String altStackReference) {
+        public Builder altStackReference(String altStackReference) {
             this.altStackReference = Objects.requireNonNull(altStackReference);
             return this;
         }
 
-        public Builder setPlanDisplayName(String planDisplayName) {
+        public Builder planDisplayName(String planDisplayName) {
             this.planDisplayName = Objects.requireNonNull(planDisplayName);
             return this;
         }
 
-        public Builder setPlanId(String planId) {
+        public Builder planId(String planId) {
             this.planId = Objects.requireNonNull(planId);
             return this;
         }
 
-        public Builder setSkuId(String skuId) {
+        public Builder skuId(String skuId) {
             this.skuId = Objects.requireNonNull(skuId);
             return this;
         }
 
-        public Builder setStackType(String stackType) {
+        public Builder stackType(String stackType) {
             this.stackType = Objects.requireNonNull(stackType);
             return this;
         }

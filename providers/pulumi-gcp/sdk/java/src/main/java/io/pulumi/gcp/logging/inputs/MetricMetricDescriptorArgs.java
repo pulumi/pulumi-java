@@ -133,52 +133,52 @@ public final class MetricMetricDescriptorArgs extends io.pulumi.resources.Resour
     	      this.valueType = defaults.valueType;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<List<MetricMetricDescriptorLabelArgs>> labels) {
+        public Builder labels(@Nullable Input<List<MetricMetricDescriptorLabelArgs>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable List<MetricMetricDescriptorLabelArgs> labels) {
+        public Builder labels(@Nullable List<MetricMetricDescriptorLabelArgs> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setMetricKind(Input<String> metricKind) {
+        public Builder metricKind(Input<String> metricKind) {
             this.metricKind = Objects.requireNonNull(metricKind);
             return this;
         }
 
-        public Builder setMetricKind(String metricKind) {
+        public Builder metricKind(String metricKind) {
             this.metricKind = Input.of(Objects.requireNonNull(metricKind));
             return this;
         }
 
-        public Builder setUnit(@Nullable Input<String> unit) {
+        public Builder unit(@Nullable Input<String> unit) {
             this.unit = unit;
             return this;
         }
 
-        public Builder setUnit(@Nullable String unit) {
+        public Builder unit(@Nullable String unit) {
             this.unit = Input.ofNullable(unit);
             return this;
         }
 
-        public Builder setValueType(Input<String> valueType) {
+        public Builder valueType(Input<String> valueType) {
             this.valueType = Objects.requireNonNull(valueType);
             return this;
         }
 
-        public Builder setValueType(String valueType) {
+        public Builder valueType(String valueType) {
             this.valueType = Input.of(Objects.requireNonNull(valueType));
             return this;
         }

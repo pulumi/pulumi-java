@@ -281,142 +281,142 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
     	      this.storageEndpoints = defaults.storageEndpoints;
         }
 
-        public Builder setAuthorizationPolicies(@Nullable Input<List<SharedAccessSignatureAuthorizationRuleArgs>> authorizationPolicies) {
+        public Builder authorizationPolicies(@Nullable Input<List<SharedAccessSignatureAuthorizationRuleArgs>> authorizationPolicies) {
             this.authorizationPolicies = authorizationPolicies;
             return this;
         }
 
-        public Builder setAuthorizationPolicies(@Nullable List<SharedAccessSignatureAuthorizationRuleArgs> authorizationPolicies) {
+        public Builder authorizationPolicies(@Nullable List<SharedAccessSignatureAuthorizationRuleArgs> authorizationPolicies) {
             this.authorizationPolicies = Input.ofNullable(authorizationPolicies);
             return this;
         }
 
-        public Builder setCloudToDevice(@Nullable Input<CloudToDevicePropertiesArgs> cloudToDevice) {
+        public Builder cloudToDevice(@Nullable Input<CloudToDevicePropertiesArgs> cloudToDevice) {
             this.cloudToDevice = cloudToDevice;
             return this;
         }
 
-        public Builder setCloudToDevice(@Nullable CloudToDevicePropertiesArgs cloudToDevice) {
+        public Builder cloudToDevice(@Nullable CloudToDevicePropertiesArgs cloudToDevice) {
             this.cloudToDevice = Input.ofNullable(cloudToDevice);
             return this;
         }
 
-        public Builder setComments(@Nullable Input<String> comments) {
+        public Builder comments(@Nullable Input<String> comments) {
             this.comments = comments;
             return this;
         }
 
-        public Builder setComments(@Nullable String comments) {
+        public Builder comments(@Nullable String comments) {
             this.comments = Input.ofNullable(comments);
             return this;
         }
 
-        public Builder setEnableFileUploadNotifications(@Nullable Input<Boolean> enableFileUploadNotifications) {
+        public Builder enableFileUploadNotifications(@Nullable Input<Boolean> enableFileUploadNotifications) {
             this.enableFileUploadNotifications = enableFileUploadNotifications;
             return this;
         }
 
-        public Builder setEnableFileUploadNotifications(@Nullable Boolean enableFileUploadNotifications) {
+        public Builder enableFileUploadNotifications(@Nullable Boolean enableFileUploadNotifications) {
             this.enableFileUploadNotifications = Input.ofNullable(enableFileUploadNotifications);
             return this;
         }
 
-        public Builder setEventHubEndpoints(@Nullable Input<Map<String,EventHubPropertiesArgs>> eventHubEndpoints) {
+        public Builder eventHubEndpoints(@Nullable Input<Map<String,EventHubPropertiesArgs>> eventHubEndpoints) {
             this.eventHubEndpoints = eventHubEndpoints;
             return this;
         }
 
-        public Builder setEventHubEndpoints(@Nullable Map<String,EventHubPropertiesArgs> eventHubEndpoints) {
+        public Builder eventHubEndpoints(@Nullable Map<String,EventHubPropertiesArgs> eventHubEndpoints) {
             this.eventHubEndpoints = Input.ofNullable(eventHubEndpoints);
             return this;
         }
 
-        public Builder setFeatures(@Nullable Input<Either<String,Capabilities>> features) {
+        public Builder features(@Nullable Input<Either<String,Capabilities>> features) {
             this.features = features;
             return this;
         }
 
-        public Builder setFeatures(@Nullable Either<String,Capabilities> features) {
+        public Builder features(@Nullable Either<String,Capabilities> features) {
             this.features = Input.ofNullable(features);
             return this;
         }
 
-        public Builder setIpFilterRules(@Nullable Input<List<IpFilterRuleArgs>> ipFilterRules) {
+        public Builder ipFilterRules(@Nullable Input<List<IpFilterRuleArgs>> ipFilterRules) {
             this.ipFilterRules = ipFilterRules;
             return this;
         }
 
-        public Builder setIpFilterRules(@Nullable List<IpFilterRuleArgs> ipFilterRules) {
+        public Builder ipFilterRules(@Nullable List<IpFilterRuleArgs> ipFilterRules) {
             this.ipFilterRules = Input.ofNullable(ipFilterRules);
             return this;
         }
 
-        public Builder setMessagingEndpoints(@Nullable Input<Map<String,MessagingEndpointPropertiesArgs>> messagingEndpoints) {
+        public Builder messagingEndpoints(@Nullable Input<Map<String,MessagingEndpointPropertiesArgs>> messagingEndpoints) {
             this.messagingEndpoints = messagingEndpoints;
             return this;
         }
 
-        public Builder setMessagingEndpoints(@Nullable Map<String,MessagingEndpointPropertiesArgs> messagingEndpoints) {
+        public Builder messagingEndpoints(@Nullable Map<String,MessagingEndpointPropertiesArgs> messagingEndpoints) {
             this.messagingEndpoints = Input.ofNullable(messagingEndpoints);
             return this;
         }
 
-        public Builder setMinTlsVersion(@Nullable Input<String> minTlsVersion) {
+        public Builder minTlsVersion(@Nullable Input<String> minTlsVersion) {
             this.minTlsVersion = minTlsVersion;
             return this;
         }
 
-        public Builder setMinTlsVersion(@Nullable String minTlsVersion) {
+        public Builder minTlsVersion(@Nullable String minTlsVersion) {
             this.minTlsVersion = Input.ofNullable(minTlsVersion);
             return this;
         }
 
-        public Builder setNetworkRuleSets(@Nullable Input<NetworkRuleSetPropertiesArgs> networkRuleSets) {
+        public Builder networkRuleSets(@Nullable Input<NetworkRuleSetPropertiesArgs> networkRuleSets) {
             this.networkRuleSets = networkRuleSets;
             return this;
         }
 
-        public Builder setNetworkRuleSets(@Nullable NetworkRuleSetPropertiesArgs networkRuleSets) {
+        public Builder networkRuleSets(@Nullable NetworkRuleSetPropertiesArgs networkRuleSets) {
             this.networkRuleSets = Input.ofNullable(networkRuleSets);
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(@Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections) {
+        public Builder privateEndpointConnections(@Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections) {
             this.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(@Nullable List<PrivateEndpointConnectionArgs> privateEndpointConnections) {
+        public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionArgs> privateEndpointConnections) {
             this.privateEndpointConnections = Input.ofNullable(privateEndpointConnections);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
             this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
             return this;
         }
 
-        public Builder setRouting(@Nullable Input<RoutingPropertiesArgs> routing) {
+        public Builder routing(@Nullable Input<RoutingPropertiesArgs> routing) {
             this.routing = routing;
             return this;
         }
 
-        public Builder setRouting(@Nullable RoutingPropertiesArgs routing) {
+        public Builder routing(@Nullable RoutingPropertiesArgs routing) {
             this.routing = Input.ofNullable(routing);
             return this;
         }
 
-        public Builder setStorageEndpoints(@Nullable Input<Map<String,StorageEndpointPropertiesArgs>> storageEndpoints) {
+        public Builder storageEndpoints(@Nullable Input<Map<String,StorageEndpointPropertiesArgs>> storageEndpoints) {
             this.storageEndpoints = storageEndpoints;
             return this;
         }
 
-        public Builder setStorageEndpoints(@Nullable Map<String,StorageEndpointPropertiesArgs> storageEndpoints) {
+        public Builder storageEndpoints(@Nullable Map<String,StorageEndpointPropertiesArgs> storageEndpoints) {
             this.storageEndpoints = Input.ofNullable(storageEndpoints);
             return this;
         }

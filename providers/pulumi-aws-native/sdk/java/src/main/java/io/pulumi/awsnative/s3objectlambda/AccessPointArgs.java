@@ -71,22 +71,22 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.objectLambdaConfiguration = defaults.objectLambdaConfiguration;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setObjectLambdaConfiguration(Input<AccessPointObjectLambdaConfigurationArgs> objectLambdaConfiguration) {
+        public Builder objectLambdaConfiguration(Input<AccessPointObjectLambdaConfigurationArgs> objectLambdaConfiguration) {
             this.objectLambdaConfiguration = Objects.requireNonNull(objectLambdaConfiguration);
             return this;
         }
 
-        public Builder setObjectLambdaConfiguration(AccessPointObjectLambdaConfigurationArgs objectLambdaConfiguration) {
+        public Builder objectLambdaConfiguration(AccessPointObjectLambdaConfigurationArgs objectLambdaConfiguration) {
             this.objectLambdaConfiguration = Input.of(Objects.requireNonNull(objectLambdaConfiguration));
             return this;
         }

@@ -48,7 +48,7 @@ public final class EndpointConfigurationDataCaptureConfigCaptureOption {
     	      this.captureMode = defaults.captureMode;
         }
 
-        public Builder setCaptureMode(String captureMode) {
+        public Builder captureMode(String captureMode) {
             this.captureMode = Objects.requireNonNull(captureMode);
             return this;
         }

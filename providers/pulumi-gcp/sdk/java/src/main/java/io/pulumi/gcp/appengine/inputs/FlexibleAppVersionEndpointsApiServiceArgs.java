@@ -110,42 +110,42 @@ public final class FlexibleAppVersionEndpointsApiServiceArgs extends io.pulumi.r
     	      this.rolloutStrategy = defaults.rolloutStrategy;
         }
 
-        public Builder setConfigId(@Nullable Input<String> configId) {
+        public Builder configId(@Nullable Input<String> configId) {
             this.configId = configId;
             return this;
         }
 
-        public Builder setConfigId(@Nullable String configId) {
+        public Builder configId(@Nullable String configId) {
             this.configId = Input.ofNullable(configId);
             return this;
         }
 
-        public Builder setDisableTraceSampling(@Nullable Input<Boolean> disableTraceSampling) {
+        public Builder disableTraceSampling(@Nullable Input<Boolean> disableTraceSampling) {
             this.disableTraceSampling = disableTraceSampling;
             return this;
         }
 
-        public Builder setDisableTraceSampling(@Nullable Boolean disableTraceSampling) {
+        public Builder disableTraceSampling(@Nullable Boolean disableTraceSampling) {
             this.disableTraceSampling = Input.ofNullable(disableTraceSampling);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setRolloutStrategy(@Nullable Input<String> rolloutStrategy) {
+        public Builder rolloutStrategy(@Nullable Input<String> rolloutStrategy) {
             this.rolloutStrategy = rolloutStrategy;
             return this;
         }
 
-        public Builder setRolloutStrategy(@Nullable String rolloutStrategy) {
+        public Builder rolloutStrategy(@Nullable String rolloutStrategy) {
             this.rolloutStrategy = Input.ofNullable(rolloutStrategy);
             return this;
         }

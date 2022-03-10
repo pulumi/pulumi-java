@@ -189,47 +189,47 @@ public final class ImageOSDiskResponse extends io.pulumi.resources.InvokeArgs {
     	      this.storageAccountType = defaults.storageAccountType;
         }
 
-        public Builder setBlobUri(@Nullable String blobUri) {
+        public Builder blobUri(@Nullable String blobUri) {
             this.blobUri = blobUri;
             return this;
         }
 
-        public Builder setCaching(@Nullable String caching) {
+        public Builder caching(@Nullable String caching) {
             this.caching = caching;
             return this;
         }
 
-        public Builder setDiskEncryptionSet(@Nullable DiskEncryptionSetParametersResponse diskEncryptionSet) {
+        public Builder diskEncryptionSet(@Nullable DiskEncryptionSetParametersResponse diskEncryptionSet) {
             this.diskEncryptionSet = diskEncryptionSet;
             return this;
         }
 
-        public Builder setDiskSizeGB(@Nullable Integer diskSizeGB) {
+        public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
 
-        public Builder setManagedDisk(@Nullable SubResourceResponse managedDisk) {
+        public Builder managedDisk(@Nullable SubResourceResponse managedDisk) {
             this.managedDisk = managedDisk;
             return this;
         }
 
-        public Builder setOsState(String osState) {
+        public Builder osState(String osState) {
             this.osState = Objects.requireNonNull(osState);
             return this;
         }
 
-        public Builder setOsType(String osType) {
+        public Builder osType(String osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
 
-        public Builder setSnapshot(@Nullable SubResourceResponse snapshot) {
+        public Builder snapshot(@Nullable SubResourceResponse snapshot) {
             this.snapshot = snapshot;
             return this;
         }
 
-        public Builder setStorageAccountType(@Nullable String storageAccountType) {
+        public Builder storageAccountType(@Nullable String storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
         }

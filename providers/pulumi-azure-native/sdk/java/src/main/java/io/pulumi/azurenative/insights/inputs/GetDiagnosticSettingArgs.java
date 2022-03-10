@@ -68,12 +68,12 @@ public final class GetDiagnosticSettingArgs extends io.pulumi.resources.InvokeAr
     	      this.resourceUri = defaults.resourceUri;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResourceUri(String resourceUri) {
+        public Builder resourceUri(String resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }

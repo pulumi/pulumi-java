@@ -260,142 +260,142 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceSecurityGroupId = defaults.workspaceSecurityGroupId;
         }
 
-        public Builder setAuthMode(Input<String> authMode) {
+        public Builder authMode(Input<String> authMode) {
             this.authMode = Objects.requireNonNull(authMode);
             return this;
         }
 
-        public Builder setAuthMode(String authMode) {
+        public Builder authMode(String authMode) {
             this.authMode = Input.of(Objects.requireNonNull(authMode));
             return this;
         }
 
-        public Builder setDefaultS3Location(Input<String> defaultS3Location) {
+        public Builder defaultS3Location(Input<String> defaultS3Location) {
             this.defaultS3Location = Objects.requireNonNull(defaultS3Location);
             return this;
         }
 
-        public Builder setDefaultS3Location(String defaultS3Location) {
+        public Builder defaultS3Location(String defaultS3Location) {
             this.defaultS3Location = Input.of(Objects.requireNonNull(defaultS3Location));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEngineSecurityGroupId(Input<String> engineSecurityGroupId) {
+        public Builder engineSecurityGroupId(Input<String> engineSecurityGroupId) {
             this.engineSecurityGroupId = Objects.requireNonNull(engineSecurityGroupId);
             return this;
         }
 
-        public Builder setEngineSecurityGroupId(String engineSecurityGroupId) {
+        public Builder engineSecurityGroupId(String engineSecurityGroupId) {
             this.engineSecurityGroupId = Input.of(Objects.requireNonNull(engineSecurityGroupId));
             return this;
         }
 
-        public Builder setIdpAuthUrl(@Nullable Input<String> idpAuthUrl) {
+        public Builder idpAuthUrl(@Nullable Input<String> idpAuthUrl) {
             this.idpAuthUrl = idpAuthUrl;
             return this;
         }
 
-        public Builder setIdpAuthUrl(@Nullable String idpAuthUrl) {
+        public Builder idpAuthUrl(@Nullable String idpAuthUrl) {
             this.idpAuthUrl = Input.ofNullable(idpAuthUrl);
             return this;
         }
 
-        public Builder setIdpRelayStateParameterName(@Nullable Input<String> idpRelayStateParameterName) {
+        public Builder idpRelayStateParameterName(@Nullable Input<String> idpRelayStateParameterName) {
             this.idpRelayStateParameterName = idpRelayStateParameterName;
             return this;
         }
 
-        public Builder setIdpRelayStateParameterName(@Nullable String idpRelayStateParameterName) {
+        public Builder idpRelayStateParameterName(@Nullable String idpRelayStateParameterName) {
             this.idpRelayStateParameterName = Input.ofNullable(idpRelayStateParameterName);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setServiceRole(Input<String> serviceRole) {
+        public Builder serviceRole(Input<String> serviceRole) {
             this.serviceRole = Objects.requireNonNull(serviceRole);
             return this;
         }
 
-        public Builder setServiceRole(String serviceRole) {
+        public Builder serviceRole(String serviceRole) {
             this.serviceRole = Input.of(Objects.requireNonNull(serviceRole));
             return this;
         }
 
-        public Builder setSubnetIds(Input<List<String>> subnetIds) {
+        public Builder subnetIds(Input<List<String>> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
-        public Builder setSubnetIds(List<String> subnetIds) {
+        public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Input.of(Objects.requireNonNull(subnetIds));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setUserRole(@Nullable Input<String> userRole) {
+        public Builder userRole(@Nullable Input<String> userRole) {
             this.userRole = userRole;
             return this;
         }
 
-        public Builder setUserRole(@Nullable String userRole) {
+        public Builder userRole(@Nullable String userRole) {
             this.userRole = Input.ofNullable(userRole);
             return this;
         }
 
-        public Builder setVpcId(Input<String> vpcId) {
+        public Builder vpcId(Input<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Input.of(Objects.requireNonNull(vpcId));
             return this;
         }
 
-        public Builder setWorkspaceSecurityGroupId(Input<String> workspaceSecurityGroupId) {
+        public Builder workspaceSecurityGroupId(Input<String> workspaceSecurityGroupId) {
             this.workspaceSecurityGroupId = Objects.requireNonNull(workspaceSecurityGroupId);
             return this;
         }
 
-        public Builder setWorkspaceSecurityGroupId(String workspaceSecurityGroupId) {
+        public Builder workspaceSecurityGroupId(String workspaceSecurityGroupId) {
             this.workspaceSecurityGroupId = Input.of(Objects.requireNonNull(workspaceSecurityGroupId));
             return this;
         }

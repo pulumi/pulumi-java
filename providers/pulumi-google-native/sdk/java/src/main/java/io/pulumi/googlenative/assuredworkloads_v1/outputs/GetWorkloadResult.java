@@ -264,72 +264,72 @@ public final class GetWorkloadResult {
     	      this.saaEnrollmentResponse = defaults.saaEnrollmentResponse;
         }
 
-        public Builder setBillingAccount(String billingAccount) {
+        public Builder billingAccount(String billingAccount) {
             this.billingAccount = Objects.requireNonNull(billingAccount);
             return this;
         }
 
-        public Builder setComplianceRegime(String complianceRegime) {
+        public Builder complianceRegime(String complianceRegime) {
             this.complianceRegime = Objects.requireNonNull(complianceRegime);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setEnableSovereignControls(Boolean enableSovereignControls) {
+        public Builder enableSovereignControls(Boolean enableSovereignControls) {
             this.enableSovereignControls = Objects.requireNonNull(enableSovereignControls);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setKajEnrollmentState(String kajEnrollmentState) {
+        public Builder kajEnrollmentState(String kajEnrollmentState) {
             this.kajEnrollmentState = Objects.requireNonNull(kajEnrollmentState);
             return this;
         }
 
-        public Builder setKmsSettings(GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse kmsSettings) {
+        public Builder kmsSettings(GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse kmsSettings) {
             this.kmsSettings = Objects.requireNonNull(kmsSettings);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisionedResourcesParent(String provisionedResourcesParent) {
+        public Builder provisionedResourcesParent(String provisionedResourcesParent) {
             this.provisionedResourcesParent = Objects.requireNonNull(provisionedResourcesParent);
             return this;
         }
 
-        public Builder setResourceSettings(List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse> resourceSettings) {
+        public Builder resourceSettings(List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse> resourceSettings) {
             this.resourceSettings = Objects.requireNonNull(resourceSettings);
             return this;
         }
 
-        public Builder setResources(List<GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse> resources) {
+        public Builder resources(List<GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
 
-        public Builder setSaaEnrollmentResponse(GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse saaEnrollmentResponse) {
+        public Builder saaEnrollmentResponse(GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse saaEnrollmentResponse) {
             this.saaEnrollmentResponse = Objects.requireNonNull(saaEnrollmentResponse);
             return this;
         }

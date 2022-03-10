@@ -92,32 +92,32 @@ public final class AuditConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.service = defaults.service;
         }
 
-        public Builder setAuditLogConfigs(@Nullable Input<List<AuditLogConfigArgs>> auditLogConfigs) {
+        public Builder auditLogConfigs(@Nullable Input<List<AuditLogConfigArgs>> auditLogConfigs) {
             this.auditLogConfigs = auditLogConfigs;
             return this;
         }
 
-        public Builder setAuditLogConfigs(@Nullable List<AuditLogConfigArgs> auditLogConfigs) {
+        public Builder auditLogConfigs(@Nullable List<AuditLogConfigArgs> auditLogConfigs) {
             this.auditLogConfigs = Input.ofNullable(auditLogConfigs);
             return this;
         }
 
-        public Builder setExemptedMembers(@Nullable Input<List<String>> exemptedMembers) {
+        public Builder exemptedMembers(@Nullable Input<List<String>> exemptedMembers) {
             this.exemptedMembers = exemptedMembers;
             return this;
         }
 
-        public Builder setExemptedMembers(@Nullable List<String> exemptedMembers) {
+        public Builder exemptedMembers(@Nullable List<String> exemptedMembers) {
             this.exemptedMembers = Input.ofNullable(exemptedMembers);
             return this;
         }
 
-        public Builder setService(@Nullable Input<String> service) {
+        public Builder service(@Nullable Input<String> service) {
             this.service = service;
             return this;
         }
 
-        public Builder setService(@Nullable String service) {
+        public Builder service(@Nullable String service) {
             this.service = Input.ofNullable(service);
             return this;
         }

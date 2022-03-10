@@ -146,8 +146,8 @@ public class ReplicaSet extends io.pulumi.resources.CustomResource {
     private static ReplicaSetArgs makeArgs(@Nullable ReplicaSetArgs args) {
         var builder = args == null ? ReplicaSetArgs.builder() : ReplicaSetArgs.builder(args);
         return builder
-            .setApiVersion("extensions/v1beta1")
-            .setKind("ReplicaSet")
+            .apiVersion("extensions/v1beta1")
+            .kind("ReplicaSet")
             .build();
     }
 

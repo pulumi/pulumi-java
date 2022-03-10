@@ -107,42 +107,42 @@ public final class AwsS3DataArgs extends io.pulumi.resources.ResourceArgs {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setAwsAccessKey(@Nullable Input<AwsAccessKeyArgs> awsAccessKey) {
+        public Builder awsAccessKey(@Nullable Input<AwsAccessKeyArgs> awsAccessKey) {
             this.awsAccessKey = awsAccessKey;
             return this;
         }
 
-        public Builder setAwsAccessKey(@Nullable AwsAccessKeyArgs awsAccessKey) {
+        public Builder awsAccessKey(@Nullable AwsAccessKeyArgs awsAccessKey) {
             this.awsAccessKey = Input.ofNullable(awsAccessKey);
             return this;
         }
 
-        public Builder setBucketName(Input<String> bucketName) {
+        public Builder bucketName(Input<String> bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Input.of(Objects.requireNonNull(bucketName));
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }
 
-        public Builder setRoleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Input<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Input.ofNullable(roleArn);
             return this;
         }

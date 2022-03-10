@@ -97,22 +97,22 @@ public final class SavedDiskResponse {
     	      this.storageBytesStatus = defaults.storageBytesStatus;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setSourceDisk(String sourceDisk) {
+        public Builder sourceDisk(String sourceDisk) {
             this.sourceDisk = Objects.requireNonNull(sourceDisk);
             return this;
         }
 
-        public Builder setStorageBytes(String storageBytes) {
+        public Builder storageBytes(String storageBytes) {
             this.storageBytes = Objects.requireNonNull(storageBytes);
             return this;
         }
 
-        public Builder setStorageBytesStatus(String storageBytesStatus) {
+        public Builder storageBytesStatus(String storageBytesStatus) {
             this.storageBytesStatus = Objects.requireNonNull(storageBytesStatus);
             return this;
         }

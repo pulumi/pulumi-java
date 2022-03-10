@@ -118,52 +118,52 @@ public final class MigrationConfigArgs extends io.pulumi.resources.ResourceArgs 
     	      this.targetNamespace = defaults.targetNamespace;
         }
 
-        public Builder setConfigName(@Nullable Input<String> configName) {
+        public Builder configName(@Nullable Input<String> configName) {
             this.configName = configName;
             return this;
         }
 
-        public Builder setConfigName(@Nullable String configName) {
+        public Builder configName(@Nullable String configName) {
             this.configName = Input.ofNullable(configName);
             return this;
         }
 
-        public Builder setNamespaceName(Input<String> namespaceName) {
+        public Builder namespaceName(Input<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
 
-        public Builder setNamespaceName(String namespaceName) {
+        public Builder namespaceName(String namespaceName) {
             this.namespaceName = Input.of(Objects.requireNonNull(namespaceName));
             return this;
         }
 
-        public Builder setPostMigrationName(Input<String> postMigrationName) {
+        public Builder postMigrationName(Input<String> postMigrationName) {
             this.postMigrationName = Objects.requireNonNull(postMigrationName);
             return this;
         }
 
-        public Builder setPostMigrationName(String postMigrationName) {
+        public Builder postMigrationName(String postMigrationName) {
             this.postMigrationName = Input.of(Objects.requireNonNull(postMigrationName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTargetNamespace(Input<String> targetNamespace) {
+        public Builder targetNamespace(Input<String> targetNamespace) {
             this.targetNamespace = Objects.requireNonNull(targetNamespace);
             return this;
         }
 
-        public Builder setTargetNamespace(String targetNamespace) {
+        public Builder targetNamespace(String targetNamespace) {
             this.targetNamespace = Input.of(Objects.requireNonNull(targetNamespace));
             return this;
         }

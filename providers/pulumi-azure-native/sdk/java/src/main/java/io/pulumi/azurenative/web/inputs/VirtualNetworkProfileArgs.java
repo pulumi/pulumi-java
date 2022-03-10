@@ -74,22 +74,22 @@ public final class VirtualNetworkProfileArgs extends io.pulumi.resources.Resourc
     	      this.subnet = defaults.subnet;
         }
 
-        public Builder setId(Input<String> id) {
+        public Builder id(Input<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder setSubnet(@Nullable Input<String> subnet) {
+        public Builder subnet(@Nullable Input<String> subnet) {
             this.subnet = subnet;
             return this;
         }
 
-        public Builder setSubnet(@Nullable String subnet) {
+        public Builder subnet(@Nullable String subnet) {
             this.subnet = Input.ofNullable(subnet);
             return this;
         }

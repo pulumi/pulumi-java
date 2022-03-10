@@ -126,52 +126,52 @@ public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArg
     	      this.recoveryPointThresholdInMinutes = defaults.recoveryPointThresholdInMinutes;
         }
 
-        public Builder setAppConsistentFrequencyInMinutes(@Nullable Input<Integer> appConsistentFrequencyInMinutes) {
+        public Builder appConsistentFrequencyInMinutes(@Nullable Input<Integer> appConsistentFrequencyInMinutes) {
             this.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
             return this;
         }
 
-        public Builder setAppConsistentFrequencyInMinutes(@Nullable Integer appConsistentFrequencyInMinutes) {
+        public Builder appConsistentFrequencyInMinutes(@Nullable Integer appConsistentFrequencyInMinutes) {
             this.appConsistentFrequencyInMinutes = Input.ofNullable(appConsistentFrequencyInMinutes);
             return this;
         }
 
-        public Builder setInstanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Input<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Input.ofNullable(instanceType);
             return this;
         }
 
-        public Builder setMultiVmSyncStatus(Input<Either<String,SetMultiVmSyncStatus>> multiVmSyncStatus) {
+        public Builder multiVmSyncStatus(Input<Either<String,SetMultiVmSyncStatus>> multiVmSyncStatus) {
             this.multiVmSyncStatus = Objects.requireNonNull(multiVmSyncStatus);
             return this;
         }
 
-        public Builder setMultiVmSyncStatus(Either<String,SetMultiVmSyncStatus> multiVmSyncStatus) {
+        public Builder multiVmSyncStatus(Either<String,SetMultiVmSyncStatus> multiVmSyncStatus) {
             this.multiVmSyncStatus = Input.of(Objects.requireNonNull(multiVmSyncStatus));
             return this;
         }
 
-        public Builder setRecoveryPointHistory(@Nullable Input<Integer> recoveryPointHistory) {
+        public Builder recoveryPointHistory(@Nullable Input<Integer> recoveryPointHistory) {
             this.recoveryPointHistory = recoveryPointHistory;
             return this;
         }
 
-        public Builder setRecoveryPointHistory(@Nullable Integer recoveryPointHistory) {
+        public Builder recoveryPointHistory(@Nullable Integer recoveryPointHistory) {
             this.recoveryPointHistory = Input.ofNullable(recoveryPointHistory);
             return this;
         }
 
-        public Builder setRecoveryPointThresholdInMinutes(@Nullable Input<Integer> recoveryPointThresholdInMinutes) {
+        public Builder recoveryPointThresholdInMinutes(@Nullable Input<Integer> recoveryPointThresholdInMinutes) {
             this.recoveryPointThresholdInMinutes = recoveryPointThresholdInMinutes;
             return this;
         }
 
-        public Builder setRecoveryPointThresholdInMinutes(@Nullable Integer recoveryPointThresholdInMinutes) {
+        public Builder recoveryPointThresholdInMinutes(@Nullable Integer recoveryPointThresholdInMinutes) {
             this.recoveryPointThresholdInMinutes = Input.ofNullable(recoveryPointThresholdInMinutes);
             return this;
         }

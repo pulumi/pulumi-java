@@ -56,7 +56,7 @@ public final class NetworkProfileResponseOutboundIPs extends io.pulumi.resources
     	      this.publicIPs = defaults.publicIPs;
         }
 
-        public Builder setPublicIPs(List<String> publicIPs) {
+        public Builder publicIPs(List<String> publicIPs) {
             this.publicIPs = Objects.requireNonNull(publicIPs);
             return this;
         }

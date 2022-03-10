@@ -165,42 +165,42 @@ public final class GetTestCaseResult {
     	      this.testConfig = defaults.testConfig;
         }
 
-        public Builder setCreationTime(String creationTime) {
+        public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setLastTestResult(GoogleCloudDialogflowCxV3TestCaseResultResponse lastTestResult) {
+        public Builder lastTestResult(GoogleCloudDialogflowCxV3TestCaseResultResponse lastTestResult) {
             this.lastTestResult = Objects.requireNonNull(lastTestResult);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNotes(String notes) {
+        public Builder notes(String notes) {
             this.notes = Objects.requireNonNull(notes);
             return this;
         }
 
-        public Builder setTags(List<String> tags) {
+        public Builder tags(List<String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setTestCaseConversationTurns(List<GoogleCloudDialogflowCxV3ConversationTurnResponse> testCaseConversationTurns) {
+        public Builder testCaseConversationTurns(List<GoogleCloudDialogflowCxV3ConversationTurnResponse> testCaseConversationTurns) {
             this.testCaseConversationTurns = Objects.requireNonNull(testCaseConversationTurns);
             return this;
         }
 
-        public Builder setTestConfig(GoogleCloudDialogflowCxV3TestConfigResponse testConfig) {
+        public Builder testConfig(GoogleCloudDialogflowCxV3TestConfigResponse testConfig) {
             this.testConfig = Objects.requireNonNull(testConfig);
             return this;
         }

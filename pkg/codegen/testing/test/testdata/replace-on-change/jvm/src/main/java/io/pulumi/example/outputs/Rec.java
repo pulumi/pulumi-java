@@ -41,7 +41,7 @@ public final class Rec {
     	      this.rec1 = defaults.rec1;
         }
 
-        public Builder setRec1(@Nullable Rec rec1) {
+        public Builder rec1(@Nullable Rec rec1) {
             this.rec1 = rec1;
             return this;
         }

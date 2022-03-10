@@ -65,12 +65,12 @@ public final class GoogleCloudDialogflowCxV3DtmfInputResponse {
     	      this.finishDigit = defaults.finishDigit;
         }
 
-        public Builder setDigits(String digits) {
+        public Builder digits(String digits) {
             this.digits = Objects.requireNonNull(digits);
             return this;
         }
 
-        public Builder setFinishDigit(String finishDigit) {
+        public Builder finishDigit(String finishDigit) {
             this.finishDigit = Objects.requireNonNull(finishDigit);
             return this;
         }

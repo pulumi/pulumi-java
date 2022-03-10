@@ -152,37 +152,37 @@ public final class FailureDetailResponse extends io.pulumi.resources.InvokeArgs 
     	      this.unableToCrawl = defaults.unableToCrawl;
         }
 
-        public Builder setCrashed(Boolean crashed) {
+        public Builder crashed(Boolean crashed) {
             this.crashed = Objects.requireNonNull(crashed);
             return this;
         }
 
-        public Builder setDeviceOutOfMemory(Boolean deviceOutOfMemory) {
+        public Builder deviceOutOfMemory(Boolean deviceOutOfMemory) {
             this.deviceOutOfMemory = Objects.requireNonNull(deviceOutOfMemory);
             return this;
         }
 
-        public Builder setFailedRoboscript(Boolean failedRoboscript) {
+        public Builder failedRoboscript(Boolean failedRoboscript) {
             this.failedRoboscript = Objects.requireNonNull(failedRoboscript);
             return this;
         }
 
-        public Builder setNotInstalled(Boolean notInstalled) {
+        public Builder notInstalled(Boolean notInstalled) {
             this.notInstalled = Objects.requireNonNull(notInstalled);
             return this;
         }
 
-        public Builder setOtherNativeCrash(Boolean otherNativeCrash) {
+        public Builder otherNativeCrash(Boolean otherNativeCrash) {
             this.otherNativeCrash = Objects.requireNonNull(otherNativeCrash);
             return this;
         }
 
-        public Builder setTimedOut(Boolean timedOut) {
+        public Builder timedOut(Boolean timedOut) {
             this.timedOut = Objects.requireNonNull(timedOut);
             return this;
         }
 
-        public Builder setUnableToCrawl(Boolean unableToCrawl) {
+        public Builder unableToCrawl(Boolean unableToCrawl) {
             this.unableToCrawl = Objects.requireNonNull(unableToCrawl);
             return this;
         }

@@ -42,10 +42,10 @@ class InputTests {
     @Test
     void testContainerArgs_simpleValues() {
         var args = ContainerArgs.builder()
-                .setBrightness(ContainerBrightness.ZeroPointOne)
-                .setColor(Input.of(Either.ofLeft(ContainerColor.Red)))
-                .setMaterial("glass")
-                .setSize(ContainerSize.FourInch)
+                .brightness(ContainerBrightness.ZeroPointOne)
+                .color(Input.of(Either.ofLeft(ContainerColor.Red)))
+                .material("glass")
+                .size(ContainerSize.FourInch)
                 .build();
 
         var map = Internal.from(args).toOptionalMapAsync(mock(Log.class)).join();

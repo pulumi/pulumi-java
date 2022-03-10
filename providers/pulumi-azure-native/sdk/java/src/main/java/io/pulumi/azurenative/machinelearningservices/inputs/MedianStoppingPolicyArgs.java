@@ -91,32 +91,32 @@ public final class MedianStoppingPolicyArgs extends io.pulumi.resources.Resource
     	      this.policyType = defaults.policyType;
         }
 
-        public Builder setDelayEvaluation(@Nullable Input<Integer> delayEvaluation) {
+        public Builder delayEvaluation(@Nullable Input<Integer> delayEvaluation) {
             this.delayEvaluation = delayEvaluation;
             return this;
         }
 
-        public Builder setDelayEvaluation(@Nullable Integer delayEvaluation) {
+        public Builder delayEvaluation(@Nullable Integer delayEvaluation) {
             this.delayEvaluation = Input.ofNullable(delayEvaluation);
             return this;
         }
 
-        public Builder setEvaluationInterval(@Nullable Input<Integer> evaluationInterval) {
+        public Builder evaluationInterval(@Nullable Input<Integer> evaluationInterval) {
             this.evaluationInterval = evaluationInterval;
             return this;
         }
 
-        public Builder setEvaluationInterval(@Nullable Integer evaluationInterval) {
+        public Builder evaluationInterval(@Nullable Integer evaluationInterval) {
             this.evaluationInterval = Input.ofNullable(evaluationInterval);
             return this;
         }
 
-        public Builder setPolicyType(Input<String> policyType) {
+        public Builder policyType(Input<String> policyType) {
             this.policyType = Objects.requireNonNull(policyType);
             return this;
         }
 
-        public Builder setPolicyType(String policyType) {
+        public Builder policyType(String policyType) {
             this.policyType = Input.of(Objects.requireNonNull(policyType));
             return this;
         }

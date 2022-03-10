@@ -57,12 +57,12 @@ public final class Ipv6CircuitConnectionConfigArgs extends io.pulumi.resources.R
     	      this.addressPrefix = defaults.addressPrefix;
         }
 
-        public Builder setAddressPrefix(@Nullable Input<String> addressPrefix) {
+        public Builder addressPrefix(@Nullable Input<String> addressPrefix) {
             this.addressPrefix = addressPrefix;
             return this;
         }
 
-        public Builder setAddressPrefix(@Nullable String addressPrefix) {
+        public Builder addressPrefix(@Nullable String addressPrefix) {
             this.addressPrefix = Input.ofNullable(addressPrefix);
             return this;
         }

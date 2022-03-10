@@ -67,12 +67,12 @@ public final class GetPreparedStatementResult {
     	      this.queryStatement = defaults.queryStatement;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setQueryStatement(@Nullable String queryStatement) {
+        public Builder queryStatement(@Nullable String queryStatement) {
             this.queryStatement = queryStatement;
             return this;
         }

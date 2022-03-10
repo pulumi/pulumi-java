@@ -84,17 +84,17 @@ public final class GetPrivateEndpointConnectionProxyArgs extends io.pulumi.resou
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setPrivateEndpointConnectionProxyId(String privateEndpointConnectionProxyId) {
+        public Builder privateEndpointConnectionProxyId(String privateEndpointConnectionProxyId) {
             this.privateEndpointConnectionProxyId = Objects.requireNonNull(privateEndpointConnectionProxyId);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

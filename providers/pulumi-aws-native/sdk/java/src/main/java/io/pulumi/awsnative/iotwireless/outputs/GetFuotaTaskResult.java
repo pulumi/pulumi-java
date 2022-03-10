@@ -246,67 +246,67 @@ public final class GetFuotaTaskResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setAssociateMulticastGroup(@Nullable String associateMulticastGroup) {
+        public Builder associateMulticastGroup(@Nullable String associateMulticastGroup) {
             this.associateMulticastGroup = associateMulticastGroup;
             return this;
         }
 
-        public Builder setAssociateWirelessDevice(@Nullable String associateWirelessDevice) {
+        public Builder associateWirelessDevice(@Nullable String associateWirelessDevice) {
             this.associateWirelessDevice = associateWirelessDevice;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisassociateMulticastGroup(@Nullable String disassociateMulticastGroup) {
+        public Builder disassociateMulticastGroup(@Nullable String disassociateMulticastGroup) {
             this.disassociateMulticastGroup = disassociateMulticastGroup;
             return this;
         }
 
-        public Builder setDisassociateWirelessDevice(@Nullable String disassociateWirelessDevice) {
+        public Builder disassociateWirelessDevice(@Nullable String disassociateWirelessDevice) {
             this.disassociateWirelessDevice = disassociateWirelessDevice;
             return this;
         }
 
-        public Builder setFirmwareUpdateImage(@Nullable String firmwareUpdateImage) {
+        public Builder firmwareUpdateImage(@Nullable String firmwareUpdateImage) {
             this.firmwareUpdateImage = firmwareUpdateImage;
             return this;
         }
 
-        public Builder setFirmwareUpdateRole(@Nullable String firmwareUpdateRole) {
+        public Builder firmwareUpdateRole(@Nullable String firmwareUpdateRole) {
             this.firmwareUpdateRole = firmwareUpdateRole;
             return this;
         }
 
-        public Builder setFuotaTaskStatus(@Nullable String fuotaTaskStatus) {
+        public Builder fuotaTaskStatus(@Nullable String fuotaTaskStatus) {
             this.fuotaTaskStatus = fuotaTaskStatus;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLoRaWAN(@Nullable FuotaTaskLoRaWAN loRaWAN) {
+        public Builder loRaWAN(@Nullable FuotaTaskLoRaWAN loRaWAN) {
             this.loRaWAN = loRaWAN;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTags(@Nullable List<FuotaTaskTag> tags) {
+        public Builder tags(@Nullable List<FuotaTaskTag> tags) {
             this.tags = tags;
             return this;
         }

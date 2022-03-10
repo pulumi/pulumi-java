@@ -49,7 +49,7 @@ public final class GetVirtualServiceSpec {
     	      this.providers = defaults.providers;
         }
 
-        public Builder setProviders(List<GetVirtualServiceSpecProvider> providers) {
+        public Builder providers(List<GetVirtualServiceSpecProvider> providers) {
             this.providers = Objects.requireNonNull(providers);
             return this;
         }

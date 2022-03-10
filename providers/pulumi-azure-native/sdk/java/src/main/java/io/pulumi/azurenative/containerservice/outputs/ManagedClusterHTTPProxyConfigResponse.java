@@ -100,22 +100,22 @@ public final class ManagedClusterHTTPProxyConfigResponse {
     	      this.trustedCa = defaults.trustedCa;
         }
 
-        public Builder setHttpProxy(@Nullable String httpProxy) {
+        public Builder httpProxy(@Nullable String httpProxy) {
             this.httpProxy = httpProxy;
             return this;
         }
 
-        public Builder setHttpsProxy(@Nullable String httpsProxy) {
+        public Builder httpsProxy(@Nullable String httpsProxy) {
             this.httpsProxy = httpsProxy;
             return this;
         }
 
-        public Builder setNoProxy(@Nullable List<String> noProxy) {
+        public Builder noProxy(@Nullable List<String> noProxy) {
             this.noProxy = noProxy;
             return this;
         }
 
-        public Builder setTrustedCa(@Nullable String trustedCa) {
+        public Builder trustedCa(@Nullable String trustedCa) {
             this.trustedCa = trustedCa;
             return this;
         }

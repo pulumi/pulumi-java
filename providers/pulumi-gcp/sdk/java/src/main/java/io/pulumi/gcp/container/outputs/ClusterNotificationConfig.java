@@ -48,7 +48,7 @@ public final class ClusterNotificationConfig {
     	      this.pubsub = defaults.pubsub;
         }
 
-        public Builder setPubsub(ClusterNotificationConfigPubsub pubsub) {
+        public Builder pubsub(ClusterNotificationConfigPubsub pubsub) {
             this.pubsub = Objects.requireNonNull(pubsub);
             return this;
         }

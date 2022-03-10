@@ -172,42 +172,42 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder setAccountName(@Nullable String accountName) {
+        public Builder accountName(@Nullable String accountName) {
             this.accountName = accountName;
             return this;
         }
 
-        public Builder setAutoKeyConfigUrl(@Nullable String autoKeyConfigUrl) {
+        public Builder autoKeyConfigUrl(@Nullable String autoKeyConfigUrl) {
             this.autoKeyConfigUrl = autoKeyConfigUrl;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setFluentdConfigUrl(@Nullable Object fluentdConfigUrl) {
+        public Builder fluentdConfigUrl(@Nullable Object fluentdConfigUrl) {
             this.fluentdConfigUrl = fluentdConfigUrl;
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setMaConfigUrl(@Nullable String maConfigUrl) {
+        public Builder maConfigUrl(@Nullable String maConfigUrl) {
             this.maConfigUrl = maConfigUrl;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }

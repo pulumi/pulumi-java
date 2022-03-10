@@ -106,22 +106,22 @@ public final class WebtestLocationAvailabilityCriteriaResponse extends io.pulumi
     	      this.webTestId = defaults.webTestId;
         }
 
-        public Builder setComponentId(String componentId) {
+        public Builder componentId(String componentId) {
             this.componentId = Objects.requireNonNull(componentId);
             return this;
         }
 
-        public Builder setFailedLocationCount(Double failedLocationCount) {
+        public Builder failedLocationCount(Double failedLocationCount) {
             this.failedLocationCount = Objects.requireNonNull(failedLocationCount);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setWebTestId(String webTestId) {
+        public Builder webTestId(String webTestId) {
             this.webTestId = Objects.requireNonNull(webTestId);
             return this;
         }

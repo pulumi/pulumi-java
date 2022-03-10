@@ -83,17 +83,17 @@ public final class ListenerDefaultActionFixedResponse {
     	      this.statusCode = defaults.statusCode;
         }
 
-        public Builder setContentType(String contentType) {
+        public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
-        public Builder setMessageBody(@Nullable String messageBody) {
+        public Builder messageBody(@Nullable String messageBody) {
             this.messageBody = messageBody;
             return this;
         }
 
-        public Builder setStatusCode(@Nullable String statusCode) {
+        public Builder statusCode(@Nullable String statusCode) {
             this.statusCode = statusCode;
             return this;
         }

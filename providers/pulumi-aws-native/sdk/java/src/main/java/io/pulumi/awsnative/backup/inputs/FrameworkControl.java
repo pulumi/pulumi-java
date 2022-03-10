@@ -89,17 +89,17 @@ public final class FrameworkControl extends io.pulumi.resources.InvokeArgs {
     	      this.controlScope = defaults.controlScope;
         }
 
-        public Builder setControlInputParameters(@Nullable List<FrameworkControlInputParameter> controlInputParameters) {
+        public Builder controlInputParameters(@Nullable List<FrameworkControlInputParameter> controlInputParameters) {
             this.controlInputParameters = controlInputParameters;
             return this;
         }
 
-        public Builder setControlName(String controlName) {
+        public Builder controlName(String controlName) {
             this.controlName = Objects.requireNonNull(controlName);
             return this;
         }
 
-        public Builder setControlScope(@Nullable FrameworkControlControlScopeProperties controlScope) {
+        public Builder controlScope(@Nullable FrameworkControlControlScopeProperties controlScope) {
             this.controlScope = controlScope;
             return this;
         }

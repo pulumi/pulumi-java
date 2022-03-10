@@ -41,7 +41,7 @@ public final class ResponseHeadersPolicyCustomHeadersConfig {
     	      this.items = defaults.items;
         }
 
-        public Builder setItems(List<ResponseHeadersPolicyCustomHeader> items) {
+        public Builder items(List<ResponseHeadersPolicyCustomHeader> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }

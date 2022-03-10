@@ -87,32 +87,32 @@ public final class ServiceSourceConfigurationImageRepositoryImageConfigurationAr
     	      this.startCommand = defaults.startCommand;
         }
 
-        public Builder setPort(@Nullable Input<String> port) {
+        public Builder port(@Nullable Input<String> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable String port) {
+        public Builder port(@Nullable String port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setRuntimeEnvironmentVariables(@Nullable Input<Map<String,String>> runtimeEnvironmentVariables) {
+        public Builder runtimeEnvironmentVariables(@Nullable Input<Map<String,String>> runtimeEnvironmentVariables) {
             this.runtimeEnvironmentVariables = runtimeEnvironmentVariables;
             return this;
         }
 
-        public Builder setRuntimeEnvironmentVariables(@Nullable Map<String,String> runtimeEnvironmentVariables) {
+        public Builder runtimeEnvironmentVariables(@Nullable Map<String,String> runtimeEnvironmentVariables) {
             this.runtimeEnvironmentVariables = Input.ofNullable(runtimeEnvironmentVariables);
             return this;
         }
 
-        public Builder setStartCommand(@Nullable Input<String> startCommand) {
+        public Builder startCommand(@Nullable Input<String> startCommand) {
             this.startCommand = startCommand;
             return this;
         }
 
-        public Builder setStartCommand(@Nullable String startCommand) {
+        public Builder startCommand(@Nullable String startCommand) {
             this.startCommand = Input.ofNullable(startCommand);
             return this;
         }

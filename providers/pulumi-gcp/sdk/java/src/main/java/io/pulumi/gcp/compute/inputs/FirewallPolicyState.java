@@ -199,102 +199,102 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
     	      this.shortName = defaults.shortName;
         }
 
-        public Builder setCreationTimestamp(@Nullable Input<String> creationTimestamp) {
+        public Builder creationTimestamp(@Nullable Input<String> creationTimestamp) {
             this.creationTimestamp = creationTimestamp;
             return this;
         }
 
-        public Builder setCreationTimestamp(@Nullable String creationTimestamp) {
+        public Builder creationTimestamp(@Nullable String creationTimestamp) {
             this.creationTimestamp = Input.ofNullable(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFingerprint(@Nullable Input<String> fingerprint) {
+        public Builder fingerprint(@Nullable Input<String> fingerprint) {
             this.fingerprint = fingerprint;
             return this;
         }
 
-        public Builder setFingerprint(@Nullable String fingerprint) {
+        public Builder fingerprint(@Nullable String fingerprint) {
             this.fingerprint = Input.ofNullable(fingerprint);
             return this;
         }
 
-        public Builder setFirewallPolicyId(@Nullable Input<String> firewallPolicyId) {
+        public Builder firewallPolicyId(@Nullable Input<String> firewallPolicyId) {
             this.firewallPolicyId = firewallPolicyId;
             return this;
         }
 
-        public Builder setFirewallPolicyId(@Nullable String firewallPolicyId) {
+        public Builder firewallPolicyId(@Nullable String firewallPolicyId) {
             this.firewallPolicyId = Input.ofNullable(firewallPolicyId);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Input<String> parent) {
             this.parent = parent;
             return this;
         }
 
-        public Builder setParent(@Nullable String parent) {
+        public Builder parent(@Nullable String parent) {
             this.parent = Input.ofNullable(parent);
             return this;
         }
 
-        public Builder setRuleTupleCount(@Nullable Input<Integer> ruleTupleCount) {
+        public Builder ruleTupleCount(@Nullable Input<Integer> ruleTupleCount) {
             this.ruleTupleCount = ruleTupleCount;
             return this;
         }
 
-        public Builder setRuleTupleCount(@Nullable Integer ruleTupleCount) {
+        public Builder ruleTupleCount(@Nullable Integer ruleTupleCount) {
             this.ruleTupleCount = Input.ofNullable(ruleTupleCount);
             return this;
         }
 
-        public Builder setSelfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Input<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
-        public Builder setSelfLink(@Nullable String selfLink) {
+        public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Input.ofNullable(selfLink);
             return this;
         }
 
-        public Builder setSelfLinkWithId(@Nullable Input<String> selfLinkWithId) {
+        public Builder selfLinkWithId(@Nullable Input<String> selfLinkWithId) {
             this.selfLinkWithId = selfLinkWithId;
             return this;
         }
 
-        public Builder setSelfLinkWithId(@Nullable String selfLinkWithId) {
+        public Builder selfLinkWithId(@Nullable String selfLinkWithId) {
             this.selfLinkWithId = Input.ofNullable(selfLinkWithId);
             return this;
         }
 
-        public Builder setShortName(@Nullable Input<String> shortName) {
+        public Builder shortName(@Nullable Input<String> shortName) {
             this.shortName = shortName;
             return this;
         }
 
-        public Builder setShortName(@Nullable String shortName) {
+        public Builder shortName(@Nullable String shortName) {
             this.shortName = Input.ofNullable(shortName);
             return this;
         }

@@ -207,102 +207,102 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
     	      this.subscriptionType = defaults.subscriptionType;
         }
 
-        public Builder setAnalyticsRegion(@Nullable Input<String> analyticsRegion) {
+        public Builder analyticsRegion(@Nullable Input<String> analyticsRegion) {
             this.analyticsRegion = analyticsRegion;
             return this;
         }
 
-        public Builder setAnalyticsRegion(@Nullable String analyticsRegion) {
+        public Builder analyticsRegion(@Nullable String analyticsRegion) {
             this.analyticsRegion = Input.ofNullable(analyticsRegion);
             return this;
         }
 
-        public Builder setAuthorizedNetwork(@Nullable Input<String> authorizedNetwork) {
+        public Builder authorizedNetwork(@Nullable Input<String> authorizedNetwork) {
             this.authorizedNetwork = authorizedNetwork;
             return this;
         }
 
-        public Builder setAuthorizedNetwork(@Nullable String authorizedNetwork) {
+        public Builder authorizedNetwork(@Nullable String authorizedNetwork) {
             this.authorizedNetwork = Input.ofNullable(authorizedNetwork);
             return this;
         }
 
-        public Builder setCaCertificate(@Nullable Input<String> caCertificate) {
+        public Builder caCertificate(@Nullable Input<String> caCertificate) {
             this.caCertificate = caCertificate;
             return this;
         }
 
-        public Builder setCaCertificate(@Nullable String caCertificate) {
+        public Builder caCertificate(@Nullable String caCertificate) {
             this.caCertificate = Input.ofNullable(caCertificate);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProjectId(@Nullable Input<String> projectId) {
+        public Builder projectId(@Nullable Input<String> projectId) {
             this.projectId = projectId;
             return this;
         }
 
-        public Builder setProjectId(@Nullable String projectId) {
+        public Builder projectId(@Nullable String projectId) {
             this.projectId = Input.ofNullable(projectId);
             return this;
         }
 
-        public Builder setRuntimeDatabaseEncryptionKeyName(@Nullable Input<String> runtimeDatabaseEncryptionKeyName) {
+        public Builder runtimeDatabaseEncryptionKeyName(@Nullable Input<String> runtimeDatabaseEncryptionKeyName) {
             this.runtimeDatabaseEncryptionKeyName = runtimeDatabaseEncryptionKeyName;
             return this;
         }
 
-        public Builder setRuntimeDatabaseEncryptionKeyName(@Nullable String runtimeDatabaseEncryptionKeyName) {
+        public Builder runtimeDatabaseEncryptionKeyName(@Nullable String runtimeDatabaseEncryptionKeyName) {
             this.runtimeDatabaseEncryptionKeyName = Input.ofNullable(runtimeDatabaseEncryptionKeyName);
             return this;
         }
 
-        public Builder setRuntimeType(@Nullable Input<String> runtimeType) {
+        public Builder runtimeType(@Nullable Input<String> runtimeType) {
             this.runtimeType = runtimeType;
             return this;
         }
 
-        public Builder setRuntimeType(@Nullable String runtimeType) {
+        public Builder runtimeType(@Nullable String runtimeType) {
             this.runtimeType = Input.ofNullable(runtimeType);
             return this;
         }
 
-        public Builder setSubscriptionType(@Nullable Input<String> subscriptionType) {
+        public Builder subscriptionType(@Nullable Input<String> subscriptionType) {
             this.subscriptionType = subscriptionType;
             return this;
         }
 
-        public Builder setSubscriptionType(@Nullable String subscriptionType) {
+        public Builder subscriptionType(@Nullable String subscriptionType) {
             this.subscriptionType = Input.ofNullable(subscriptionType);
             return this;
         }

@@ -162,72 +162,72 @@ public final class DomainSecuritySettingsArgs extends io.pulumi.resources.Resour
     	      this.tlsV1 = defaults.tlsV1;
         }
 
-        public Builder setKerberosArmoring(@Nullable Input<Either<String,KerberosArmoring>> kerberosArmoring) {
+        public Builder kerberosArmoring(@Nullable Input<Either<String,KerberosArmoring>> kerberosArmoring) {
             this.kerberosArmoring = kerberosArmoring;
             return this;
         }
 
-        public Builder setKerberosArmoring(@Nullable Either<String,KerberosArmoring> kerberosArmoring) {
+        public Builder kerberosArmoring(@Nullable Either<String,KerberosArmoring> kerberosArmoring) {
             this.kerberosArmoring = Input.ofNullable(kerberosArmoring);
             return this;
         }
 
-        public Builder setKerberosRc4Encryption(@Nullable Input<Either<String,KerberosRc4Encryption>> kerberosRc4Encryption) {
+        public Builder kerberosRc4Encryption(@Nullable Input<Either<String,KerberosRc4Encryption>> kerberosRc4Encryption) {
             this.kerberosRc4Encryption = kerberosRc4Encryption;
             return this;
         }
 
-        public Builder setKerberosRc4Encryption(@Nullable Either<String,KerberosRc4Encryption> kerberosRc4Encryption) {
+        public Builder kerberosRc4Encryption(@Nullable Either<String,KerberosRc4Encryption> kerberosRc4Encryption) {
             this.kerberosRc4Encryption = Input.ofNullable(kerberosRc4Encryption);
             return this;
         }
 
-        public Builder setNtlmV1(@Nullable Input<Either<String,NtlmV1>> ntlmV1) {
+        public Builder ntlmV1(@Nullable Input<Either<String,NtlmV1>> ntlmV1) {
             this.ntlmV1 = ntlmV1;
             return this;
         }
 
-        public Builder setNtlmV1(@Nullable Either<String,NtlmV1> ntlmV1) {
+        public Builder ntlmV1(@Nullable Either<String,NtlmV1> ntlmV1) {
             this.ntlmV1 = Input.ofNullable(ntlmV1);
             return this;
         }
 
-        public Builder setSyncKerberosPasswords(@Nullable Input<Either<String,SyncKerberosPasswords>> syncKerberosPasswords) {
+        public Builder syncKerberosPasswords(@Nullable Input<Either<String,SyncKerberosPasswords>> syncKerberosPasswords) {
             this.syncKerberosPasswords = syncKerberosPasswords;
             return this;
         }
 
-        public Builder setSyncKerberosPasswords(@Nullable Either<String,SyncKerberosPasswords> syncKerberosPasswords) {
+        public Builder syncKerberosPasswords(@Nullable Either<String,SyncKerberosPasswords> syncKerberosPasswords) {
             this.syncKerberosPasswords = Input.ofNullable(syncKerberosPasswords);
             return this;
         }
 
-        public Builder setSyncNtlmPasswords(@Nullable Input<Either<String,SyncNtlmPasswords>> syncNtlmPasswords) {
+        public Builder syncNtlmPasswords(@Nullable Input<Either<String,SyncNtlmPasswords>> syncNtlmPasswords) {
             this.syncNtlmPasswords = syncNtlmPasswords;
             return this;
         }
 
-        public Builder setSyncNtlmPasswords(@Nullable Either<String,SyncNtlmPasswords> syncNtlmPasswords) {
+        public Builder syncNtlmPasswords(@Nullable Either<String,SyncNtlmPasswords> syncNtlmPasswords) {
             this.syncNtlmPasswords = Input.ofNullable(syncNtlmPasswords);
             return this;
         }
 
-        public Builder setSyncOnPremPasswords(@Nullable Input<Either<String,SyncOnPremPasswords>> syncOnPremPasswords) {
+        public Builder syncOnPremPasswords(@Nullable Input<Either<String,SyncOnPremPasswords>> syncOnPremPasswords) {
             this.syncOnPremPasswords = syncOnPremPasswords;
             return this;
         }
 
-        public Builder setSyncOnPremPasswords(@Nullable Either<String,SyncOnPremPasswords> syncOnPremPasswords) {
+        public Builder syncOnPremPasswords(@Nullable Either<String,SyncOnPremPasswords> syncOnPremPasswords) {
             this.syncOnPremPasswords = Input.ofNullable(syncOnPremPasswords);
             return this;
         }
 
-        public Builder setTlsV1(@Nullable Input<Either<String,TlsV1>> tlsV1) {
+        public Builder tlsV1(@Nullable Input<Either<String,TlsV1>> tlsV1) {
             this.tlsV1 = tlsV1;
             return this;
         }
 
-        public Builder setTlsV1(@Nullable Either<String,TlsV1> tlsV1) {
+        public Builder tlsV1(@Nullable Either<String,TlsV1> tlsV1) {
             this.tlsV1 = Input.ofNullable(tlsV1);
             return this;
         }

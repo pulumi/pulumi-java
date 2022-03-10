@@ -52,7 +52,7 @@ public final class FeatureSpec {
     	      this.multiclusteringress = defaults.multiclusteringress;
         }
 
-        public Builder setMulticlusteringress(@Nullable FeatureSpecMulticlusteringress multiclusteringress) {
+        public Builder multiclusteringress(@Nullable FeatureSpecMulticlusteringress multiclusteringress) {
             this.multiclusteringress = multiclusteringress;
             return this;
         }

@@ -167,7 +167,7 @@ public class SynapseWorkspaceSqlPoolTableDataSet extends io.pulumi.resources.Cus
     private static SynapseWorkspaceSqlPoolTableDataSetArgs makeArgs(SynapseWorkspaceSqlPoolTableDataSetArgs args) {
         var builder = args == null ? SynapseWorkspaceSqlPoolTableDataSetArgs.builder() : SynapseWorkspaceSqlPoolTableDataSetArgs.builder(args);
         return builder
-            .setKind("SynapseWorkspaceSqlPoolTable")
+            .kind("SynapseWorkspaceSqlPoolTable")
             .build();
     }
 

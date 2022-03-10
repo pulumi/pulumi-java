@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeStatsResponse {
     	      this.largeCustomDictionary = defaults.largeCustomDictionary;
         }
 
-        public Builder setLargeCustomDictionary(GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse largeCustomDictionary) {
+        public Builder largeCustomDictionary(GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse largeCustomDictionary) {
             this.largeCustomDictionary = Objects.requireNonNull(largeCustomDictionary);
             return this;
         }

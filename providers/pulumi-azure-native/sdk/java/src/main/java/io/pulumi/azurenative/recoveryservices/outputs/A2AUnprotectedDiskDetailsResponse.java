@@ -50,7 +50,7 @@ public final class A2AUnprotectedDiskDetailsResponse {
     	      this.diskLunId = defaults.diskLunId;
         }
 
-        public Builder setDiskLunId(@Nullable Integer diskLunId) {
+        public Builder diskLunId(@Nullable Integer diskLunId) {
             this.diskLunId = diskLunId;
             return this;
         }

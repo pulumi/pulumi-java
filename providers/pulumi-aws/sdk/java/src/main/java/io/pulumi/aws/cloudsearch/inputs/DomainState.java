@@ -187,92 +187,92 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     	      this.searchServiceEndpoint = defaults.searchServiceEndpoint;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDocumentServiceEndpoint(@Nullable Input<String> documentServiceEndpoint) {
+        public Builder documentServiceEndpoint(@Nullable Input<String> documentServiceEndpoint) {
             this.documentServiceEndpoint = documentServiceEndpoint;
             return this;
         }
 
-        public Builder setDocumentServiceEndpoint(@Nullable String documentServiceEndpoint) {
+        public Builder documentServiceEndpoint(@Nullable String documentServiceEndpoint) {
             this.documentServiceEndpoint = Input.ofNullable(documentServiceEndpoint);
             return this;
         }
 
-        public Builder setDomainId(@Nullable Input<String> domainId) {
+        public Builder domainId(@Nullable Input<String> domainId) {
             this.domainId = domainId;
             return this;
         }
 
-        public Builder setDomainId(@Nullable String domainId) {
+        public Builder domainId(@Nullable String domainId) {
             this.domainId = Input.ofNullable(domainId);
             return this;
         }
 
-        public Builder setEndpointOptions(@Nullable Input<DomainEndpointOptionsGetArgs> endpointOptions) {
+        public Builder endpointOptions(@Nullable Input<DomainEndpointOptionsGetArgs> endpointOptions) {
             this.endpointOptions = endpointOptions;
             return this;
         }
 
-        public Builder setEndpointOptions(@Nullable DomainEndpointOptionsGetArgs endpointOptions) {
+        public Builder endpointOptions(@Nullable DomainEndpointOptionsGetArgs endpointOptions) {
             this.endpointOptions = Input.ofNullable(endpointOptions);
             return this;
         }
 
-        public Builder setIndexFields(@Nullable Input<List<DomainIndexFieldGetArgs>> indexFields) {
+        public Builder indexFields(@Nullable Input<List<DomainIndexFieldGetArgs>> indexFields) {
             this.indexFields = indexFields;
             return this;
         }
 
-        public Builder setIndexFields(@Nullable List<DomainIndexFieldGetArgs> indexFields) {
+        public Builder indexFields(@Nullable List<DomainIndexFieldGetArgs> indexFields) {
             this.indexFields = Input.ofNullable(indexFields);
             return this;
         }
 
-        public Builder setMultiAz(@Nullable Input<Boolean> multiAz) {
+        public Builder multiAz(@Nullable Input<Boolean> multiAz) {
             this.multiAz = multiAz;
             return this;
         }
 
-        public Builder setMultiAz(@Nullable Boolean multiAz) {
+        public Builder multiAz(@Nullable Boolean multiAz) {
             this.multiAz = Input.ofNullable(multiAz);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setScalingParameters(@Nullable Input<DomainScalingParametersGetArgs> scalingParameters) {
+        public Builder scalingParameters(@Nullable Input<DomainScalingParametersGetArgs> scalingParameters) {
             this.scalingParameters = scalingParameters;
             return this;
         }
 
-        public Builder setScalingParameters(@Nullable DomainScalingParametersGetArgs scalingParameters) {
+        public Builder scalingParameters(@Nullable DomainScalingParametersGetArgs scalingParameters) {
             this.scalingParameters = Input.ofNullable(scalingParameters);
             return this;
         }
 
-        public Builder setSearchServiceEndpoint(@Nullable Input<String> searchServiceEndpoint) {
+        public Builder searchServiceEndpoint(@Nullable Input<String> searchServiceEndpoint) {
             this.searchServiceEndpoint = searchServiceEndpoint;
             return this;
         }
 
-        public Builder setSearchServiceEndpoint(@Nullable String searchServiceEndpoint) {
+        public Builder searchServiceEndpoint(@Nullable String searchServiceEndpoint) {
             this.searchServiceEndpoint = Input.ofNullable(searchServiceEndpoint);
             return this;
         }

@@ -91,32 +91,32 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutStateArgs extends io.pul
     	      this.stepIndex = defaults.stepIndex;
         }
 
-        public Builder setStartTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Input<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
 
-        public Builder setStep(@Nullable Input<String> step) {
+        public Builder step(@Nullable Input<String> step) {
             this.step = step;
             return this;
         }
 
-        public Builder setStep(@Nullable String step) {
+        public Builder step(@Nullable String step) {
             this.step = Input.ofNullable(step);
             return this;
         }
 
-        public Builder setStepIndex(@Nullable Input<Integer> stepIndex) {
+        public Builder stepIndex(@Nullable Input<Integer> stepIndex) {
             this.stepIndex = stepIndex;
             return this;
         }
 
-        public Builder setStepIndex(@Nullable Integer stepIndex) {
+        public Builder stepIndex(@Nullable Integer stepIndex) {
             this.stepIndex = Input.ofNullable(stepIndex);
             return this;
         }

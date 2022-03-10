@@ -90,32 +90,32 @@ public final class InboundSamlConfigSpConfigArgs extends io.pulumi.resources.Res
     	      this.spEntityId = defaults.spEntityId;
         }
 
-        public Builder setCallbackUri(@Nullable Input<String> callbackUri) {
+        public Builder callbackUri(@Nullable Input<String> callbackUri) {
             this.callbackUri = callbackUri;
             return this;
         }
 
-        public Builder setCallbackUri(@Nullable String callbackUri) {
+        public Builder callbackUri(@Nullable String callbackUri) {
             this.callbackUri = Input.ofNullable(callbackUri);
             return this;
         }
 
-        public Builder setSpCertificates(@Nullable Input<List<InboundSamlConfigSpConfigSpCertificateArgs>> spCertificates) {
+        public Builder spCertificates(@Nullable Input<List<InboundSamlConfigSpConfigSpCertificateArgs>> spCertificates) {
             this.spCertificates = spCertificates;
             return this;
         }
 
-        public Builder setSpCertificates(@Nullable List<InboundSamlConfigSpConfigSpCertificateArgs> spCertificates) {
+        public Builder spCertificates(@Nullable List<InboundSamlConfigSpConfigSpCertificateArgs> spCertificates) {
             this.spCertificates = Input.ofNullable(spCertificates);
             return this;
         }
 
-        public Builder setSpEntityId(@Nullable Input<String> spEntityId) {
+        public Builder spEntityId(@Nullable Input<String> spEntityId) {
             this.spEntityId = spEntityId;
             return this;
         }
 
-        public Builder setSpEntityId(@Nullable String spEntityId) {
+        public Builder spEntityId(@Nullable String spEntityId) {
             this.spEntityId = Input.ofNullable(spEntityId);
             return this;
         }

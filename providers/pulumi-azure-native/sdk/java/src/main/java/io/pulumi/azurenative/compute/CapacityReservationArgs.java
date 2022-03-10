@@ -153,72 +153,72 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
     	      this.zones = defaults.zones;
         }
 
-        public Builder setCapacityReservationGroupName(Input<String> capacityReservationGroupName) {
+        public Builder capacityReservationGroupName(Input<String> capacityReservationGroupName) {
             this.capacityReservationGroupName = Objects.requireNonNull(capacityReservationGroupName);
             return this;
         }
 
-        public Builder setCapacityReservationGroupName(String capacityReservationGroupName) {
+        public Builder capacityReservationGroupName(String capacityReservationGroupName) {
             this.capacityReservationGroupName = Input.of(Objects.requireNonNull(capacityReservationGroupName));
             return this;
         }
 
-        public Builder setCapacityReservationName(@Nullable Input<String> capacityReservationName) {
+        public Builder capacityReservationName(@Nullable Input<String> capacityReservationName) {
             this.capacityReservationName = capacityReservationName;
             return this;
         }
 
-        public Builder setCapacityReservationName(@Nullable String capacityReservationName) {
+        public Builder capacityReservationName(@Nullable String capacityReservationName) {
             this.capacityReservationName = Input.ofNullable(capacityReservationName);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(Input<SkuArgs> sku) {
+        public Builder sku(Input<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setSku(SkuArgs sku) {
+        public Builder sku(SkuArgs sku) {
             this.sku = Input.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setZones(@Nullable Input<List<String>> zones) {
+        public Builder zones(@Nullable Input<List<String>> zones) {
             this.zones = zones;
             return this;
         }
 
-        public Builder setZones(@Nullable List<String> zones) {
+        public Builder zones(@Nullable List<String> zones) {
             this.zones = Input.ofNullable(zones);
             return this;
         }

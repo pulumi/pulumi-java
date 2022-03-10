@@ -117,27 +117,27 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforce {
     	      this.script = defaults.script;
         }
 
-        public Builder setArgs(@Nullable List<String> args) {
+        public Builder args(@Nullable List<String> args) {
             this.args = args;
             return this;
         }
 
-        public Builder setFile(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFile file) {
+        public Builder file(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFile file) {
             this.file = file;
             return this;
         }
 
-        public Builder setInterpreter(String interpreter) {
+        public Builder interpreter(String interpreter) {
             this.interpreter = Objects.requireNonNull(interpreter);
             return this;
         }
 
-        public Builder setOutputFilePath(@Nullable String outputFilePath) {
+        public Builder outputFilePath(@Nullable String outputFilePath) {
             this.outputFilePath = outputFilePath;
             return this;
         }
 
-        public Builder setScript(@Nullable String script) {
+        public Builder script(@Nullable String script) {
             this.script = script;
             return this;
         }

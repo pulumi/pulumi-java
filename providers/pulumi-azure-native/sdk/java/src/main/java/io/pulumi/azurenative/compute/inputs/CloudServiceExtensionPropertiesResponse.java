@@ -205,52 +205,52 @@ public final class CloudServiceExtensionPropertiesResponse extends io.pulumi.res
     	      this.typeHandlerVersion = defaults.typeHandlerVersion;
         }
 
-        public Builder setAutoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
+        public Builder autoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
             this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
             return this;
         }
 
-        public Builder setForceUpdateTag(@Nullable String forceUpdateTag) {
+        public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
             this.forceUpdateTag = forceUpdateTag;
             return this;
         }
 
-        public Builder setProtectedSettings(@Nullable String protectedSettings) {
+        public Builder protectedSettings(@Nullable String protectedSettings) {
             this.protectedSettings = protectedSettings;
             return this;
         }
 
-        public Builder setProtectedSettingsFromKeyVault(@Nullable CloudServiceVaultAndSecretReferenceResponse protectedSettingsFromKeyVault) {
+        public Builder protectedSettingsFromKeyVault(@Nullable CloudServiceVaultAndSecretReferenceResponse protectedSettingsFromKeyVault) {
             this.protectedSettingsFromKeyVault = protectedSettingsFromKeyVault;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublisher(@Nullable String publisher) {
+        public Builder publisher(@Nullable String publisher) {
             this.publisher = publisher;
             return this;
         }
 
-        public Builder setRolesAppliedTo(@Nullable List<String> rolesAppliedTo) {
+        public Builder rolesAppliedTo(@Nullable List<String> rolesAppliedTo) {
             this.rolesAppliedTo = rolesAppliedTo;
             return this;
         }
 
-        public Builder setSettings(@Nullable String settings) {
+        public Builder settings(@Nullable String settings) {
             this.settings = settings;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setTypeHandlerVersion(@Nullable String typeHandlerVersion) {
+        public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
         }

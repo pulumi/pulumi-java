@@ -115,27 +115,27 @@ public final class SAPSystemIDResponse {
     	      this.username = defaults.username;
         }
 
-        public Builder setGid(@Nullable String gid) {
+        public Builder gid(@Nullable String gid) {
             this.gid = gid;
             return this;
         }
 
-        public Builder setMemoryAllocation(String memoryAllocation) {
+        public Builder memoryAllocation(String memoryAllocation) {
             this.memoryAllocation = Objects.requireNonNull(memoryAllocation);
             return this;
         }
 
-        public Builder setSid(@Nullable String sid) {
+        public Builder sid(@Nullable String sid) {
             this.sid = sid;
             return this;
         }
 
-        public Builder setUid(@Nullable String uid) {
+        public Builder uid(@Nullable String uid) {
             this.uid = uid;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = username;
             return this;
         }

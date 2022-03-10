@@ -71,12 +71,12 @@ public final class PerInstanceConfigPreservedState {
     	      this.metadata = defaults.metadata;
         }
 
-        public Builder setDisks(@Nullable List<PerInstanceConfigPreservedStateDisk> disks) {
+        public Builder disks(@Nullable List<PerInstanceConfigPreservedStateDisk> disks) {
             this.disks = disks;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = metadata;
             return this;
         }

@@ -73,12 +73,12 @@ public final class CardinalityResponse extends io.pulumi.resources.InvokeArgs {
     	      this.path = defaults.path;
         }
 
-        public Builder setNumber(Integer number) {
+        public Builder number(Integer number) {
             this.number = Objects.requireNonNull(number);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }

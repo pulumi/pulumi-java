@@ -50,7 +50,7 @@ public final class QuarantinePolicyResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

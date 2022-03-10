@@ -243,122 +243,122 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
     	      this.username = defaults.username;
         }
 
-        public Builder setAnnotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Input<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setApiVersion(@Nullable Input<Object> apiVersion) {
+        public Builder apiVersion(@Nullable Input<Object> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setApiVersion(@Nullable Object apiVersion) {
+        public Builder apiVersion(@Nullable Object apiVersion) {
             this.apiVersion = Input.ofNullable(apiVersion);
             return this;
         }
 
-        public Builder setConnectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
+        public Builder connectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setConnectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
+        public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Input.ofNullable(connectVia);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Input<Object> encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Input<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Object encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = Input.ofNullable(encryptedCredential);
             return this;
         }
 
-        public Builder setEnvironmentUrl(@Nullable Input<Object> environmentUrl) {
+        public Builder environmentUrl(@Nullable Input<Object> environmentUrl) {
             this.environmentUrl = environmentUrl;
             return this;
         }
 
-        public Builder setEnvironmentUrl(@Nullable Object environmentUrl) {
+        public Builder environmentUrl(@Nullable Object environmentUrl) {
             this.environmentUrl = Input.ofNullable(environmentUrl);
             return this;
         }
 
-        public Builder setExtendedProperties(@Nullable Input<Object> extendedProperties) {
+        public Builder extendedProperties(@Nullable Input<Object> extendedProperties) {
             this.extendedProperties = extendedProperties;
             return this;
         }
 
-        public Builder setExtendedProperties(@Nullable Object extendedProperties) {
+        public Builder extendedProperties(@Nullable Object extendedProperties) {
             this.extendedProperties = Input.ofNullable(extendedProperties);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
+        public Builder password(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
+        public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setSecurityToken(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> securityToken) {
+        public Builder securityToken(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> securityToken) {
             this.securityToken = securityToken;
             return this;
         }
 
-        public Builder setSecurityToken(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> securityToken) {
+        public Builder securityToken(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> securityToken) {
             this.securityToken = Input.ofNullable(securityToken);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setUsername(@Nullable Input<Object> username) {
+        public Builder username(@Nullable Input<Object> username) {
             this.username = username;
             return this;
         }
 
-        public Builder setUsername(@Nullable Object username) {
+        public Builder username(@Nullable Object username) {
             this.username = Input.ofNullable(username);
             return this;
         }

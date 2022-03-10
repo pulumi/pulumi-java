@@ -90,17 +90,17 @@ public final class GoogleCloudChannelV1ParameterResponse extends io.pulumi.resou
     	      this.value = defaults.value;
         }
 
-        public Builder setEditable(Boolean editable) {
+        public Builder editable(Boolean editable) {
             this.editable = Objects.requireNonNull(editable);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setValue(GoogleCloudChannelV1ValueResponse value) {
+        public Builder value(GoogleCloudChannelV1ValueResponse value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

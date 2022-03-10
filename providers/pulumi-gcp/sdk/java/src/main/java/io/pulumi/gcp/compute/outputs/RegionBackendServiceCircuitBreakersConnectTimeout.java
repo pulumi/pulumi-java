@@ -73,12 +73,12 @@ public final class RegionBackendServiceCircuitBreakersConnectTimeout {
     	      this.seconds = defaults.seconds;
         }
 
-        public Builder setNanos(@Nullable Integer nanos) {
+        public Builder nanos(@Nullable Integer nanos) {
             this.nanos = nanos;
             return this;
         }
 
-        public Builder setSeconds(Integer seconds) {
+        public Builder seconds(Integer seconds) {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }

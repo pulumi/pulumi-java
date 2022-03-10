@@ -52,12 +52,12 @@ public final class GroupResourceQuery {
     	      this.type = defaults.type;
         }
 
-        public Builder setQuery(@Nullable GroupQuery query) {
+        public Builder query(@Nullable GroupQuery query) {
             this.query = query;
             return this;
         }
 
-        public Builder setType(@Nullable GroupResourceQueryType type) {
+        public Builder type(@Nullable GroupResourceQueryType type) {
             this.type = type;
             return this;
         }

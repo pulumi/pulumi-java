@@ -62,22 +62,22 @@ public final class ThingGroupMetadataRootToParentGroupArgs extends io.pulumi.res
     	      this.groupName = defaults.groupName;
         }
 
-        public Builder setGroupArn(@Nullable Input<String> groupArn) {
+        public Builder groupArn(@Nullable Input<String> groupArn) {
             this.groupArn = groupArn;
             return this;
         }
 
-        public Builder setGroupArn(@Nullable String groupArn) {
+        public Builder groupArn(@Nullable String groupArn) {
             this.groupArn = Input.ofNullable(groupArn);
             return this;
         }
 
-        public Builder setGroupName(@Nullable Input<String> groupName) {
+        public Builder groupName(@Nullable Input<String> groupName) {
             this.groupName = groupName;
             return this;
         }
 
-        public Builder setGroupName(@Nullable String groupName) {
+        public Builder groupName(@Nullable String groupName) {
             this.groupName = Input.ofNullable(groupName);
             return this;
         }

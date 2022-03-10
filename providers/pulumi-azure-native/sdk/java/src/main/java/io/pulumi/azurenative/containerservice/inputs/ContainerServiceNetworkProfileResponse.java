@@ -203,52 +203,52 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
     	      this.serviceCidr = defaults.serviceCidr;
         }
 
-        public Builder setDnsServiceIP(@Nullable String dnsServiceIP) {
+        public Builder dnsServiceIP(@Nullable String dnsServiceIP) {
             this.dnsServiceIP = dnsServiceIP;
             return this;
         }
 
-        public Builder setDockerBridgeCidr(@Nullable String dockerBridgeCidr) {
+        public Builder dockerBridgeCidr(@Nullable String dockerBridgeCidr) {
             this.dockerBridgeCidr = dockerBridgeCidr;
             return this;
         }
 
-        public Builder setLoadBalancerProfile(@Nullable ManagedClusterLoadBalancerProfileResponse loadBalancerProfile) {
+        public Builder loadBalancerProfile(@Nullable ManagedClusterLoadBalancerProfileResponse loadBalancerProfile) {
             this.loadBalancerProfile = loadBalancerProfile;
             return this;
         }
 
-        public Builder setLoadBalancerSku(@Nullable String loadBalancerSku) {
+        public Builder loadBalancerSku(@Nullable String loadBalancerSku) {
             this.loadBalancerSku = loadBalancerSku;
             return this;
         }
 
-        public Builder setNetworkMode(@Nullable String networkMode) {
+        public Builder networkMode(@Nullable String networkMode) {
             this.networkMode = networkMode;
             return this;
         }
 
-        public Builder setNetworkPlugin(@Nullable String networkPlugin) {
+        public Builder networkPlugin(@Nullable String networkPlugin) {
             this.networkPlugin = networkPlugin;
             return this;
         }
 
-        public Builder setNetworkPolicy(@Nullable String networkPolicy) {
+        public Builder networkPolicy(@Nullable String networkPolicy) {
             this.networkPolicy = networkPolicy;
             return this;
         }
 
-        public Builder setOutboundType(@Nullable String outboundType) {
+        public Builder outboundType(@Nullable String outboundType) {
             this.outboundType = outboundType;
             return this;
         }
 
-        public Builder setPodCidr(@Nullable String podCidr) {
+        public Builder podCidr(@Nullable String podCidr) {
             this.podCidr = podCidr;
             return this;
         }
 
-        public Builder setServiceCidr(@Nullable String serviceCidr) {
+        public Builder serviceCidr(@Nullable String serviceCidr) {
             this.serviceCidr = serviceCidr;
             return this;
         }

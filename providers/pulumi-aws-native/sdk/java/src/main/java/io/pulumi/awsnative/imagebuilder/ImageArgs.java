@@ -153,72 +153,72 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setContainerRecipeArn(@Nullable Input<String> containerRecipeArn) {
+        public Builder containerRecipeArn(@Nullable Input<String> containerRecipeArn) {
             this.containerRecipeArn = containerRecipeArn;
             return this;
         }
 
-        public Builder setContainerRecipeArn(@Nullable String containerRecipeArn) {
+        public Builder containerRecipeArn(@Nullable String containerRecipeArn) {
             this.containerRecipeArn = Input.ofNullable(containerRecipeArn);
             return this;
         }
 
-        public Builder setDistributionConfigurationArn(@Nullable Input<String> distributionConfigurationArn) {
+        public Builder distributionConfigurationArn(@Nullable Input<String> distributionConfigurationArn) {
             this.distributionConfigurationArn = distributionConfigurationArn;
             return this;
         }
 
-        public Builder setDistributionConfigurationArn(@Nullable String distributionConfigurationArn) {
+        public Builder distributionConfigurationArn(@Nullable String distributionConfigurationArn) {
             this.distributionConfigurationArn = Input.ofNullable(distributionConfigurationArn);
             return this;
         }
 
-        public Builder setEnhancedImageMetadataEnabled(@Nullable Input<Boolean> enhancedImageMetadataEnabled) {
+        public Builder enhancedImageMetadataEnabled(@Nullable Input<Boolean> enhancedImageMetadataEnabled) {
             this.enhancedImageMetadataEnabled = enhancedImageMetadataEnabled;
             return this;
         }
 
-        public Builder setEnhancedImageMetadataEnabled(@Nullable Boolean enhancedImageMetadataEnabled) {
+        public Builder enhancedImageMetadataEnabled(@Nullable Boolean enhancedImageMetadataEnabled) {
             this.enhancedImageMetadataEnabled = Input.ofNullable(enhancedImageMetadataEnabled);
             return this;
         }
 
-        public Builder setImageRecipeArn(@Nullable Input<String> imageRecipeArn) {
+        public Builder imageRecipeArn(@Nullable Input<String> imageRecipeArn) {
             this.imageRecipeArn = imageRecipeArn;
             return this;
         }
 
-        public Builder setImageRecipeArn(@Nullable String imageRecipeArn) {
+        public Builder imageRecipeArn(@Nullable String imageRecipeArn) {
             this.imageRecipeArn = Input.ofNullable(imageRecipeArn);
             return this;
         }
 
-        public Builder setImageTestsConfiguration(@Nullable Input<ImageTestsConfigurationArgs> imageTestsConfiguration) {
+        public Builder imageTestsConfiguration(@Nullable Input<ImageTestsConfigurationArgs> imageTestsConfiguration) {
             this.imageTestsConfiguration = imageTestsConfiguration;
             return this;
         }
 
-        public Builder setImageTestsConfiguration(@Nullable ImageTestsConfigurationArgs imageTestsConfiguration) {
+        public Builder imageTestsConfiguration(@Nullable ImageTestsConfigurationArgs imageTestsConfiguration) {
             this.imageTestsConfiguration = Input.ofNullable(imageTestsConfiguration);
             return this;
         }
 
-        public Builder setInfrastructureConfigurationArn(@Nullable Input<String> infrastructureConfigurationArn) {
+        public Builder infrastructureConfigurationArn(@Nullable Input<String> infrastructureConfigurationArn) {
             this.infrastructureConfigurationArn = infrastructureConfigurationArn;
             return this;
         }
 
-        public Builder setInfrastructureConfigurationArn(@Nullable String infrastructureConfigurationArn) {
+        public Builder infrastructureConfigurationArn(@Nullable String infrastructureConfigurationArn) {
             this.infrastructureConfigurationArn = Input.ofNullable(infrastructureConfigurationArn);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Object> tags) {
+        public Builder tags(@Nullable Input<Object> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Object tags) {
+        public Builder tags(@Nullable Object tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -201,102 +201,102 @@ public final class DeploymentStrategyState extends io.pulumi.resources.ResourceA
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDeploymentDurationInMinutes(@Nullable Input<Integer> deploymentDurationInMinutes) {
+        public Builder deploymentDurationInMinutes(@Nullable Input<Integer> deploymentDurationInMinutes) {
             this.deploymentDurationInMinutes = deploymentDurationInMinutes;
             return this;
         }
 
-        public Builder setDeploymentDurationInMinutes(@Nullable Integer deploymentDurationInMinutes) {
+        public Builder deploymentDurationInMinutes(@Nullable Integer deploymentDurationInMinutes) {
             this.deploymentDurationInMinutes = Input.ofNullable(deploymentDurationInMinutes);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFinalBakeTimeInMinutes(@Nullable Input<Integer> finalBakeTimeInMinutes) {
+        public Builder finalBakeTimeInMinutes(@Nullable Input<Integer> finalBakeTimeInMinutes) {
             this.finalBakeTimeInMinutes = finalBakeTimeInMinutes;
             return this;
         }
 
-        public Builder setFinalBakeTimeInMinutes(@Nullable Integer finalBakeTimeInMinutes) {
+        public Builder finalBakeTimeInMinutes(@Nullable Integer finalBakeTimeInMinutes) {
             this.finalBakeTimeInMinutes = Input.ofNullable(finalBakeTimeInMinutes);
             return this;
         }
 
-        public Builder setGrowthFactor(@Nullable Input<Double> growthFactor) {
+        public Builder growthFactor(@Nullable Input<Double> growthFactor) {
             this.growthFactor = growthFactor;
             return this;
         }
 
-        public Builder setGrowthFactor(@Nullable Double growthFactor) {
+        public Builder growthFactor(@Nullable Double growthFactor) {
             this.growthFactor = Input.ofNullable(growthFactor);
             return this;
         }
 
-        public Builder setGrowthType(@Nullable Input<String> growthType) {
+        public Builder growthType(@Nullable Input<String> growthType) {
             this.growthType = growthType;
             return this;
         }
 
-        public Builder setGrowthType(@Nullable String growthType) {
+        public Builder growthType(@Nullable String growthType) {
             this.growthType = Input.ofNullable(growthType);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setReplicateTo(@Nullable Input<String> replicateTo) {
+        public Builder replicateTo(@Nullable Input<String> replicateTo) {
             this.replicateTo = replicateTo;
             return this;
         }
 
-        public Builder setReplicateTo(@Nullable String replicateTo) {
+        public Builder replicateTo(@Nullable String replicateTo) {
             this.replicateTo = Input.ofNullable(replicateTo);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

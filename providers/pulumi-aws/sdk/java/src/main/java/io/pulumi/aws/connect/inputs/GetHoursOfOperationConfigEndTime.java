@@ -68,12 +68,12 @@ public final class GetHoursOfOperationConfigEndTime extends io.pulumi.resources.
     	      this.minutes = defaults.minutes;
         }
 
-        public Builder setHours(Integer hours) {
+        public Builder hours(Integer hours) {
             this.hours = Objects.requireNonNull(hours);
             return this;
         }
 
-        public Builder setMinutes(Integer minutes) {
+        public Builder minutes(Integer minutes) {
             this.minutes = Objects.requireNonNull(minutes);
             return this;
         }

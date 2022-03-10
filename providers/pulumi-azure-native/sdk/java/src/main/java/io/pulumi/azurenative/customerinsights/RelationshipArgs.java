@@ -219,112 +219,112 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setCardinality(@Nullable Input<CardinalityTypes> cardinality) {
+        public Builder cardinality(@Nullable Input<CardinalityTypes> cardinality) {
             this.cardinality = cardinality;
             return this;
         }
 
-        public Builder setCardinality(@Nullable CardinalityTypes cardinality) {
+        public Builder cardinality(@Nullable CardinalityTypes cardinality) {
             this.cardinality = Input.ofNullable(cardinality);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<Map<String,String>> description) {
+        public Builder description(@Nullable Input<Map<String,String>> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable Map<String,String> description) {
+        public Builder description(@Nullable Map<String,String> description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<Map<String,String>> displayName) {
+        public Builder displayName(@Nullable Input<Map<String,String>> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Map<String,String> displayName) {
+        public Builder displayName(@Nullable Map<String,String> displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setExpiryDateTimeUtc(@Nullable Input<String> expiryDateTimeUtc) {
+        public Builder expiryDateTimeUtc(@Nullable Input<String> expiryDateTimeUtc) {
             this.expiryDateTimeUtc = expiryDateTimeUtc;
             return this;
         }
 
-        public Builder setExpiryDateTimeUtc(@Nullable String expiryDateTimeUtc) {
+        public Builder expiryDateTimeUtc(@Nullable String expiryDateTimeUtc) {
             this.expiryDateTimeUtc = Input.ofNullable(expiryDateTimeUtc);
             return this;
         }
 
-        public Builder setFields(@Nullable Input<List<PropertyDefinitionArgs>> fields) {
+        public Builder fields(@Nullable Input<List<PropertyDefinitionArgs>> fields) {
             this.fields = fields;
             return this;
         }
 
-        public Builder setFields(@Nullable List<PropertyDefinitionArgs> fields) {
+        public Builder fields(@Nullable List<PropertyDefinitionArgs> fields) {
             this.fields = Input.ofNullable(fields);
             return this;
         }
 
-        public Builder setHubName(Input<String> hubName) {
+        public Builder hubName(Input<String> hubName) {
             this.hubName = Objects.requireNonNull(hubName);
             return this;
         }
 
-        public Builder setHubName(String hubName) {
+        public Builder hubName(String hubName) {
             this.hubName = Input.of(Objects.requireNonNull(hubName));
             return this;
         }
 
-        public Builder setLookupMappings(@Nullable Input<List<RelationshipTypeMappingArgs>> lookupMappings) {
+        public Builder lookupMappings(@Nullable Input<List<RelationshipTypeMappingArgs>> lookupMappings) {
             this.lookupMappings = lookupMappings;
             return this;
         }
 
-        public Builder setLookupMappings(@Nullable List<RelationshipTypeMappingArgs> lookupMappings) {
+        public Builder lookupMappings(@Nullable List<RelationshipTypeMappingArgs> lookupMappings) {
             this.lookupMappings = Input.ofNullable(lookupMappings);
             return this;
         }
 
-        public Builder setProfileType(Input<String> profileType) {
+        public Builder profileType(Input<String> profileType) {
             this.profileType = Objects.requireNonNull(profileType);
             return this;
         }
 
-        public Builder setProfileType(String profileType) {
+        public Builder profileType(String profileType) {
             this.profileType = Input.of(Objects.requireNonNull(profileType));
             return this;
         }
 
-        public Builder setRelatedProfileType(Input<String> relatedProfileType) {
+        public Builder relatedProfileType(Input<String> relatedProfileType) {
             this.relatedProfileType = Objects.requireNonNull(relatedProfileType);
             return this;
         }
 
-        public Builder setRelatedProfileType(String relatedProfileType) {
+        public Builder relatedProfileType(String relatedProfileType) {
             this.relatedProfileType = Input.of(Objects.requireNonNull(relatedProfileType));
             return this;
         }
 
-        public Builder setRelationshipName(@Nullable Input<String> relationshipName) {
+        public Builder relationshipName(@Nullable Input<String> relationshipName) {
             this.relationshipName = relationshipName;
             return this;
         }
 
-        public Builder setRelationshipName(@Nullable String relationshipName) {
+        public Builder relationshipName(@Nullable String relationshipName) {
             this.relationshipName = Input.ofNullable(relationshipName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

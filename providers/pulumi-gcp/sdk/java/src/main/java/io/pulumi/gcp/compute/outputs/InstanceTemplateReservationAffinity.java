@@ -70,12 +70,12 @@ public final class InstanceTemplateReservationAffinity {
     	      this.type = defaults.type;
         }
 
-        public Builder setSpecificReservation(@Nullable InstanceTemplateReservationAffinitySpecificReservation specificReservation) {
+        public Builder specificReservation(@Nullable InstanceTemplateReservationAffinitySpecificReservation specificReservation) {
             this.specificReservation = specificReservation;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

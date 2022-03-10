@@ -99,22 +99,22 @@ public final class CollectorPropertiesResponse extends io.pulumi.resources.Invok
     	      this.updatedTimestamp = defaults.updatedTimestamp;
         }
 
-        public Builder setAgentProperties(@Nullable CollectorAgentPropertiesResponse agentProperties) {
+        public Builder agentProperties(@Nullable CollectorAgentPropertiesResponse agentProperties) {
             this.agentProperties = agentProperties;
             return this;
         }
 
-        public Builder setCreatedTimestamp(String createdTimestamp) {
+        public Builder createdTimestamp(String createdTimestamp) {
             this.createdTimestamp = Objects.requireNonNull(createdTimestamp);
             return this;
         }
 
-        public Builder setDiscoverySiteId(@Nullable String discoverySiteId) {
+        public Builder discoverySiteId(@Nullable String discoverySiteId) {
             this.discoverySiteId = discoverySiteId;
             return this;
         }
 
-        public Builder setUpdatedTimestamp(String updatedTimestamp) {
+        public Builder updatedTimestamp(String updatedTimestamp) {
             this.updatedTimestamp = Objects.requireNonNull(updatedTimestamp);
             return this;
         }

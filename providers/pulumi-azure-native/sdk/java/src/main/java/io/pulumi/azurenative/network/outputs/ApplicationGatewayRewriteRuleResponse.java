@@ -103,22 +103,22 @@ public final class ApplicationGatewayRewriteRuleResponse {
     	      this.ruleSequence = defaults.ruleSequence;
         }
 
-        public Builder setActionSet(@Nullable ApplicationGatewayRewriteRuleActionSetResponse actionSet) {
+        public Builder actionSet(@Nullable ApplicationGatewayRewriteRuleActionSetResponse actionSet) {
             this.actionSet = actionSet;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<ApplicationGatewayRewriteRuleConditionResponse> conditions) {
+        public Builder conditions(@Nullable List<ApplicationGatewayRewriteRuleConditionResponse> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setRuleSequence(@Nullable Integer ruleSequence) {
+        public Builder ruleSequence(@Nullable Integer ruleSequence) {
             this.ruleSequence = ruleSequence;
             return this;
         }

@@ -92,32 +92,32 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs e
     	      this.answerAggregationType = defaults.answerAggregationType;
         }
 
-        public Builder setAllowMultiLabel(@Nullable Input<Boolean> allowMultiLabel) {
+        public Builder allowMultiLabel(@Nullable Input<Boolean> allowMultiLabel) {
             this.allowMultiLabel = allowMultiLabel;
             return this;
         }
 
-        public Builder setAllowMultiLabel(@Nullable Boolean allowMultiLabel) {
+        public Builder allowMultiLabel(@Nullable Boolean allowMultiLabel) {
             this.allowMultiLabel = Input.ofNullable(allowMultiLabel);
             return this;
         }
 
-        public Builder setAnnotationSpecSet(Input<String> annotationSpecSet) {
+        public Builder annotationSpecSet(Input<String> annotationSpecSet) {
             this.annotationSpecSet = Objects.requireNonNull(annotationSpecSet);
             return this;
         }
 
-        public Builder setAnnotationSpecSet(String annotationSpecSet) {
+        public Builder annotationSpecSet(String annotationSpecSet) {
             this.annotationSpecSet = Input.of(Objects.requireNonNull(annotationSpecSet));
             return this;
         }
 
-        public Builder setAnswerAggregationType(@Nullable Input<GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType> answerAggregationType) {
+        public Builder answerAggregationType(@Nullable Input<GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType> answerAggregationType) {
             this.answerAggregationType = answerAggregationType;
             return this;
         }
 
-        public Builder setAnswerAggregationType(@Nullable GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType answerAggregationType) {
+        public Builder answerAggregationType(@Nullable GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType answerAggregationType) {
             this.answerAggregationType = Input.ofNullable(answerAggregationType);
             return this;
         }

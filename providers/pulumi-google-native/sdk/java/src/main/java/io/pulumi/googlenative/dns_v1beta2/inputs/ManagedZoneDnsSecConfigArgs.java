@@ -102,42 +102,42 @@ public final class ManagedZoneDnsSecConfigArgs extends io.pulumi.resources.Resou
     	      this.state = defaults.state;
         }
 
-        public Builder setDefaultKeySpecs(@Nullable Input<List<DnsKeySpecArgs>> defaultKeySpecs) {
+        public Builder defaultKeySpecs(@Nullable Input<List<DnsKeySpecArgs>> defaultKeySpecs) {
             this.defaultKeySpecs = defaultKeySpecs;
             return this;
         }
 
-        public Builder setDefaultKeySpecs(@Nullable List<DnsKeySpecArgs> defaultKeySpecs) {
+        public Builder defaultKeySpecs(@Nullable List<DnsKeySpecArgs> defaultKeySpecs) {
             this.defaultKeySpecs = Input.ofNullable(defaultKeySpecs);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setNonExistence(@Nullable Input<ManagedZoneDnsSecConfigNonExistence> nonExistence) {
+        public Builder nonExistence(@Nullable Input<ManagedZoneDnsSecConfigNonExistence> nonExistence) {
             this.nonExistence = nonExistence;
             return this;
         }
 
-        public Builder setNonExistence(@Nullable ManagedZoneDnsSecConfigNonExistence nonExistence) {
+        public Builder nonExistence(@Nullable ManagedZoneDnsSecConfigNonExistence nonExistence) {
             this.nonExistence = Input.ofNullable(nonExistence);
             return this;
         }
 
-        public Builder setState(@Nullable Input<ManagedZoneDnsSecConfigState> state) {
+        public Builder state(@Nullable Input<ManagedZoneDnsSecConfigState> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable ManagedZoneDnsSecConfigState state) {
+        public Builder state(@Nullable ManagedZoneDnsSecConfigState state) {
             this.state = Input.ofNullable(state);
             return this;
         }

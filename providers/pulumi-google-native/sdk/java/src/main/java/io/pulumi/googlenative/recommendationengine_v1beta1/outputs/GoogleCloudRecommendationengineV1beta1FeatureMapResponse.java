@@ -66,12 +66,12 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMapResponse {
     	      this.numericalFeatures = defaults.numericalFeatures;
         }
 
-        public Builder setCategoricalFeatures(Map<String,String> categoricalFeatures) {
+        public Builder categoricalFeatures(Map<String,String> categoricalFeatures) {
             this.categoricalFeatures = Objects.requireNonNull(categoricalFeatures);
             return this;
         }
 
-        public Builder setNumericalFeatures(Map<String,String> numericalFeatures) {
+        public Builder numericalFeatures(Map<String,String> numericalFeatures) {
             this.numericalFeatures = Objects.requireNonNull(numericalFeatures);
             return this;
         }

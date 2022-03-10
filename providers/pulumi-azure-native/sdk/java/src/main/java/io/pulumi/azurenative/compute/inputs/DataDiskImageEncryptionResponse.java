@@ -75,12 +75,12 @@ public final class DataDiskImageEncryptionResponse extends io.pulumi.resources.I
     	      this.lun = defaults.lun;
         }
 
-        public Builder setDiskEncryptionSetId(@Nullable String diskEncryptionSetId) {
+        public Builder diskEncryptionSetId(@Nullable String diskEncryptionSetId) {
             this.diskEncryptionSetId = diskEncryptionSetId;
             return this;
         }
 
-        public Builder setLun(Integer lun) {
+        public Builder lun(Integer lun) {
             this.lun = Objects.requireNonNull(lun);
             return this;
         }

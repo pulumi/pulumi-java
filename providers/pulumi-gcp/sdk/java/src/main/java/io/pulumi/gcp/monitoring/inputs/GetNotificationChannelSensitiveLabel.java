@@ -72,17 +72,17 @@ public final class GetNotificationChannelSensitiveLabel extends io.pulumi.resour
     	      this.serviceKey = defaults.serviceKey;
         }
 
-        public Builder setAuthToken(String authToken) {
+        public Builder authToken(String authToken) {
             this.authToken = Objects.requireNonNull(authToken);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setServiceKey(String serviceKey) {
+        public Builder serviceKey(String serviceKey) {
             this.serviceKey = Objects.requireNonNull(serviceKey);
             return this;
         }

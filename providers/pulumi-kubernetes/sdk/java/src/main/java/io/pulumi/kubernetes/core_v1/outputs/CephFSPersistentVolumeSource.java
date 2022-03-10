@@ -134,32 +134,32 @@ public final class CephFSPersistentVolumeSource {
     	      this.user = defaults.user;
         }
 
-        public Builder setMonitors(List<String> monitors) {
+        public Builder monitors(List<String> monitors) {
             this.monitors = Objects.requireNonNull(monitors);
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setSecretFile(@Nullable String secretFile) {
+        public Builder secretFile(@Nullable String secretFile) {
             this.secretFile = secretFile;
             return this;
         }
 
-        public Builder setSecretRef(@Nullable SecretReference secretRef) {
+        public Builder secretRef(@Nullable SecretReference secretRef) {
             this.secretRef = secretRef;
             return this;
         }
 
-        public Builder setUser(@Nullable String user) {
+        public Builder user(@Nullable String user) {
             this.user = user;
             return this;
         }

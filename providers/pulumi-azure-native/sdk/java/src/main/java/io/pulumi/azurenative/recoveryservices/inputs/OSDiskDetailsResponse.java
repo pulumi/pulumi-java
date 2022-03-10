@@ -90,17 +90,17 @@ public final class OSDiskDetailsResponse extends io.pulumi.resources.InvokeArgs 
     	      this.vhdName = defaults.vhdName;
         }
 
-        public Builder setOsType(@Nullable String osType) {
+        public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
 
-        public Builder setOsVhdId(@Nullable String osVhdId) {
+        public Builder osVhdId(@Nullable String osVhdId) {
             this.osVhdId = osVhdId;
             return this;
         }
 
-        public Builder setVhdName(@Nullable String vhdName) {
+        public Builder vhdName(@Nullable String vhdName) {
             this.vhdName = vhdName;
             return this;
         }

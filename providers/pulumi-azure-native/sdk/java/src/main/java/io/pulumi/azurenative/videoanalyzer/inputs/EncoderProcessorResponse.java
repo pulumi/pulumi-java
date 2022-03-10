@@ -110,22 +110,22 @@ public final class EncoderProcessorResponse extends io.pulumi.resources.InvokeAr
     	      this.type = defaults.type;
         }
 
-        public Builder setInputs(List<NodeInputResponse> inputs) {
+        public Builder inputs(List<NodeInputResponse> inputs) {
             this.inputs = Objects.requireNonNull(inputs);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPreset(Either<EncoderCustomPresetResponse,EncoderSystemPresetResponse> preset) {
+        public Builder preset(Either<EncoderCustomPresetResponse,EncoderSystemPresetResponse> preset) {
             this.preset = Objects.requireNonNull(preset);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

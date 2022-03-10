@@ -166,42 +166,42 @@ public final class GetWebAppDiagnosticLogsConfigurationResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setApplicationLogs(@Nullable ApplicationLogsConfigResponse applicationLogs) {
+        public Builder applicationLogs(@Nullable ApplicationLogsConfigResponse applicationLogs) {
             this.applicationLogs = applicationLogs;
             return this;
         }
 
-        public Builder setDetailedErrorMessages(@Nullable EnabledConfigResponse detailedErrorMessages) {
+        public Builder detailedErrorMessages(@Nullable EnabledConfigResponse detailedErrorMessages) {
             this.detailedErrorMessages = detailedErrorMessages;
             return this;
         }
 
-        public Builder setFailedRequestsTracing(@Nullable EnabledConfigResponse failedRequestsTracing) {
+        public Builder failedRequestsTracing(@Nullable EnabledConfigResponse failedRequestsTracing) {
             this.failedRequestsTracing = failedRequestsTracing;
             return this;
         }
 
-        public Builder setHttpLogs(@Nullable HttpLogsConfigResponse httpLogs) {
+        public Builder httpLogs(@Nullable HttpLogsConfigResponse httpLogs) {
             this.httpLogs = httpLogs;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

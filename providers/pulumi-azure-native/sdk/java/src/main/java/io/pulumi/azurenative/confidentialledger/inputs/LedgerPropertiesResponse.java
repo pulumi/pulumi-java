@@ -189,47 +189,47 @@ public final class LedgerPropertiesResponse extends io.pulumi.resources.InvokeAr
     	      this.provisioningState = defaults.provisioningState;
         }
 
-        public Builder setAadBasedSecurityPrincipals(@Nullable List<AADBasedSecurityPrincipalResponse> aadBasedSecurityPrincipals) {
+        public Builder aadBasedSecurityPrincipals(@Nullable List<AADBasedSecurityPrincipalResponse> aadBasedSecurityPrincipals) {
             this.aadBasedSecurityPrincipals = aadBasedSecurityPrincipals;
             return this;
         }
 
-        public Builder setCertBasedSecurityPrincipals(@Nullable List<CertBasedSecurityPrincipalResponse> certBasedSecurityPrincipals) {
+        public Builder certBasedSecurityPrincipals(@Nullable List<CertBasedSecurityPrincipalResponse> certBasedSecurityPrincipals) {
             this.certBasedSecurityPrincipals = certBasedSecurityPrincipals;
             return this;
         }
 
-        public Builder setIdentityServiceUri(String identityServiceUri) {
+        public Builder identityServiceUri(String identityServiceUri) {
             this.identityServiceUri = Objects.requireNonNull(identityServiceUri);
             return this;
         }
 
-        public Builder setLedgerInternalNamespace(String ledgerInternalNamespace) {
+        public Builder ledgerInternalNamespace(String ledgerInternalNamespace) {
             this.ledgerInternalNamespace = Objects.requireNonNull(ledgerInternalNamespace);
             return this;
         }
 
-        public Builder setLedgerName(String ledgerName) {
+        public Builder ledgerName(String ledgerName) {
             this.ledgerName = Objects.requireNonNull(ledgerName);
             return this;
         }
 
-        public Builder setLedgerStorageAccount(@Nullable String ledgerStorageAccount) {
+        public Builder ledgerStorageAccount(@Nullable String ledgerStorageAccount) {
             this.ledgerStorageAccount = ledgerStorageAccount;
             return this;
         }
 
-        public Builder setLedgerType(@Nullable String ledgerType) {
+        public Builder ledgerType(@Nullable String ledgerType) {
             this.ledgerType = ledgerType;
             return this;
         }
 
-        public Builder setLedgerUri(String ledgerUri) {
+        public Builder ledgerUri(String ledgerUri) {
             this.ledgerUri = Objects.requireNonNull(ledgerUri);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }

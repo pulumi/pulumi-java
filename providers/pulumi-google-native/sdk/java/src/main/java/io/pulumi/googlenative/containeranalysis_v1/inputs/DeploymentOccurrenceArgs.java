@@ -139,62 +139,62 @@ public final class DeploymentOccurrenceArgs extends io.pulumi.resources.Resource
     	      this.userEmail = defaults.userEmail;
         }
 
-        public Builder setAddress(@Nullable Input<String> address) {
+        public Builder address(@Nullable Input<String> address) {
             this.address = address;
             return this;
         }
 
-        public Builder setAddress(@Nullable String address) {
+        public Builder address(@Nullable String address) {
             this.address = Input.ofNullable(address);
             return this;
         }
 
-        public Builder setConfig(@Nullable Input<String> config) {
+        public Builder config(@Nullable Input<String> config) {
             this.config = config;
             return this;
         }
 
-        public Builder setConfig(@Nullable String config) {
+        public Builder config(@Nullable String config) {
             this.config = Input.ofNullable(config);
             return this;
         }
 
-        public Builder setDeployTime(Input<String> deployTime) {
+        public Builder deployTime(Input<String> deployTime) {
             this.deployTime = Objects.requireNonNull(deployTime);
             return this;
         }
 
-        public Builder setDeployTime(String deployTime) {
+        public Builder deployTime(String deployTime) {
             this.deployTime = Input.of(Objects.requireNonNull(deployTime));
             return this;
         }
 
-        public Builder setPlatform(@Nullable Input<DeploymentOccurrencePlatform> platform) {
+        public Builder platform(@Nullable Input<DeploymentOccurrencePlatform> platform) {
             this.platform = platform;
             return this;
         }
 
-        public Builder setPlatform(@Nullable DeploymentOccurrencePlatform platform) {
+        public Builder platform(@Nullable DeploymentOccurrencePlatform platform) {
             this.platform = Input.ofNullable(platform);
             return this;
         }
 
-        public Builder setUndeployTime(@Nullable Input<String> undeployTime) {
+        public Builder undeployTime(@Nullable Input<String> undeployTime) {
             this.undeployTime = undeployTime;
             return this;
         }
 
-        public Builder setUndeployTime(@Nullable String undeployTime) {
+        public Builder undeployTime(@Nullable String undeployTime) {
             this.undeployTime = Input.ofNullable(undeployTime);
             return this;
         }
 
-        public Builder setUserEmail(@Nullable Input<String> userEmail) {
+        public Builder userEmail(@Nullable Input<String> userEmail) {
             this.userEmail = userEmail;
             return this;
         }
 
-        public Builder setUserEmail(@Nullable String userEmail) {
+        public Builder userEmail(@Nullable String userEmail) {
             this.userEmail = Input.ofNullable(userEmail);
             return this;
         }

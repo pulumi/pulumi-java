@@ -204,52 +204,52 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
     	      this.suspendPlanOnOverage = defaults.suspendPlanOnOverage;
         }
 
-        public Builder setChargeForOverage(Boolean chargeForOverage) {
+        public Builder chargeForOverage(Boolean chargeForOverage) {
             this.chargeForOverage = Objects.requireNonNull(chargeForOverage);
             return this;
         }
 
-        public Builder setChargeForPlan(Boolean chargeForPlan) {
+        public Builder chargeForPlan(Boolean chargeForPlan) {
             this.chargeForPlan = Objects.requireNonNull(chargeForPlan);
             return this;
         }
 
-        public Builder setCreationDate(String creationDate) {
+        public Builder creationDate(String creationDate) {
             this.creationDate = Objects.requireNonNull(creationDate);
             return this;
         }
 
-        public Builder setIncludedQuantities(Map<String,PlanQuantityResponse> includedQuantities) {
+        public Builder includedQuantities(Map<String,PlanQuantityResponse> includedQuantities) {
             this.includedQuantities = Objects.requireNonNull(includedQuantities);
             return this;
         }
 
-        public Builder setMaxAssociationLimit(Integer maxAssociationLimit) {
+        public Builder maxAssociationLimit(Integer maxAssociationLimit) {
             this.maxAssociationLimit = Objects.requireNonNull(maxAssociationLimit);
             return this;
         }
 
-        public Builder setMaxCapacityLimit(Integer maxCapacityLimit) {
+        public Builder maxCapacityLimit(Integer maxCapacityLimit) {
             this.maxCapacityLimit = Objects.requireNonNull(maxCapacityLimit);
             return this;
         }
 
-        public Builder setMinCapacityLimit(Integer minCapacityLimit) {
+        public Builder minCapacityLimit(Integer minCapacityLimit) {
             this.minCapacityLimit = Objects.requireNonNull(minCapacityLimit);
             return this;
         }
 
-        public Builder setPlanMeter(String planMeter) {
+        public Builder planMeter(String planMeter) {
             this.planMeter = Objects.requireNonNull(planMeter);
             return this;
         }
 
-        public Builder setRefillFrequencyInDays(Integer refillFrequencyInDays) {
+        public Builder refillFrequencyInDays(Integer refillFrequencyInDays) {
             this.refillFrequencyInDays = Objects.requireNonNull(refillFrequencyInDays);
             return this;
         }
 
-        public Builder setSuspendPlanOnOverage(Boolean suspendPlanOnOverage) {
+        public Builder suspendPlanOnOverage(Boolean suspendPlanOnOverage) {
             this.suspendPlanOnOverage = Objects.requireNonNull(suspendPlanOnOverage);
             return this;
         }

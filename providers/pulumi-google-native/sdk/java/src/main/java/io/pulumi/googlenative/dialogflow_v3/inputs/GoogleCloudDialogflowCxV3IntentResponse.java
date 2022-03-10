@@ -174,42 +174,42 @@ public final class GoogleCloudDialogflowCxV3IntentResponse extends io.pulumi.res
     	      this.trainingPhrases = defaults.trainingPhrases;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setIsFallback(Boolean isFallback) {
+        public Builder isFallback(Boolean isFallback) {
             this.isFallback = Objects.requireNonNull(isFallback);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(List<GoogleCloudDialogflowCxV3IntentParameterResponse> parameters) {
+        public Builder parameters(List<GoogleCloudDialogflowCxV3IntentParameterResponse> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setTrainingPhrases(List<GoogleCloudDialogflowCxV3IntentTrainingPhraseResponse> trainingPhrases) {
+        public Builder trainingPhrases(List<GoogleCloudDialogflowCxV3IntentTrainingPhraseResponse> trainingPhrases) {
             this.trainingPhrases = Objects.requireNonNull(trainingPhrases);
             return this;
         }

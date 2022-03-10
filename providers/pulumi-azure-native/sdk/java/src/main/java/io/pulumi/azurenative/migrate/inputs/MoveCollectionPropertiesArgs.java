@@ -73,22 +73,22 @@ public final class MoveCollectionPropertiesArgs extends io.pulumi.resources.Reso
     	      this.targetRegion = defaults.targetRegion;
         }
 
-        public Builder setSourceRegion(Input<String> sourceRegion) {
+        public Builder sourceRegion(Input<String> sourceRegion) {
             this.sourceRegion = Objects.requireNonNull(sourceRegion);
             return this;
         }
 
-        public Builder setSourceRegion(String sourceRegion) {
+        public Builder sourceRegion(String sourceRegion) {
             this.sourceRegion = Input.of(Objects.requireNonNull(sourceRegion));
             return this;
         }
 
-        public Builder setTargetRegion(Input<String> targetRegion) {
+        public Builder targetRegion(Input<String> targetRegion) {
             this.targetRegion = Objects.requireNonNull(targetRegion);
             return this;
         }
 
-        public Builder setTargetRegion(String targetRegion) {
+        public Builder targetRegion(String targetRegion) {
             this.targetRegion = Input.of(Objects.requireNonNull(targetRegion));
             return this;
         }

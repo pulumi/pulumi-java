@@ -48,7 +48,7 @@ public final class ProjectFeedFeedOutputConfigPubsubDestination {
     	      this.topic = defaults.topic;
         }
 
-        public Builder setTopic(String topic) {
+        public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }

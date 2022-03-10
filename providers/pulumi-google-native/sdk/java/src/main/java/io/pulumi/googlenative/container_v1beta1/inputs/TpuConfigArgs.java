@@ -91,32 +91,32 @@ public final class TpuConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.useServiceNetworking = defaults.useServiceNetworking;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setIpv4CidrBlock(@Nullable Input<String> ipv4CidrBlock) {
+        public Builder ipv4CidrBlock(@Nullable Input<String> ipv4CidrBlock) {
             this.ipv4CidrBlock = ipv4CidrBlock;
             return this;
         }
 
-        public Builder setIpv4CidrBlock(@Nullable String ipv4CidrBlock) {
+        public Builder ipv4CidrBlock(@Nullable String ipv4CidrBlock) {
             this.ipv4CidrBlock = Input.ofNullable(ipv4CidrBlock);
             return this;
         }
 
-        public Builder setUseServiceNetworking(@Nullable Input<Boolean> useServiceNetworking) {
+        public Builder useServiceNetworking(@Nullable Input<Boolean> useServiceNetworking) {
             this.useServiceNetworking = useServiceNetworking;
             return this;
         }
 
-        public Builder setUseServiceNetworking(@Nullable Boolean useServiceNetworking) {
+        public Builder useServiceNetworking(@Nullable Boolean useServiceNetworking) {
             this.useServiceNetworking = Input.ofNullable(useServiceNetworking);
             return this;
         }

@@ -140,62 +140,62 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setCloudSql(Input<ConnectionCloudSqlArgs> cloudSql) {
+        public Builder cloudSql(Input<ConnectionCloudSqlArgs> cloudSql) {
             this.cloudSql = Objects.requireNonNull(cloudSql);
             return this;
         }
 
-        public Builder setCloudSql(ConnectionCloudSqlArgs cloudSql) {
+        public Builder cloudSql(ConnectionCloudSqlArgs cloudSql) {
             this.cloudSql = Input.of(Objects.requireNonNull(cloudSql));
             return this;
         }
 
-        public Builder setConnectionId(@Nullable Input<String> connectionId) {
+        public Builder connectionId(@Nullable Input<String> connectionId) {
             this.connectionId = connectionId;
             return this;
         }
 
-        public Builder setConnectionId(@Nullable String connectionId) {
+        public Builder connectionId(@Nullable String connectionId) {
             this.connectionId = Input.ofNullable(connectionId);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Input<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Input.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

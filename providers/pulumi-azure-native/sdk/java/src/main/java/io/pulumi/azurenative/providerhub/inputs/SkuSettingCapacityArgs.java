@@ -89,42 +89,42 @@ public final class SkuSettingCapacityArgs extends io.pulumi.resources.ResourceAr
     	      this.scaleType = defaults.scaleType;
         }
 
-        public Builder set$default(@Nullable Input<Integer> $default) {
+        public Builder $default(@Nullable Input<Integer> $default) {
             this.$default = $default;
             return this;
         }
 
-        public Builder set$default(@Nullable Integer $default) {
+        public Builder $default(@Nullable Integer $default) {
             this.$default = Input.ofNullable($default);
             return this;
         }
 
-        public Builder setMaximum(@Nullable Input<Integer> maximum) {
+        public Builder maximum(@Nullable Input<Integer> maximum) {
             this.maximum = maximum;
             return this;
         }
 
-        public Builder setMaximum(@Nullable Integer maximum) {
+        public Builder maximum(@Nullable Integer maximum) {
             this.maximum = Input.ofNullable(maximum);
             return this;
         }
 
-        public Builder setMinimum(Input<Integer> minimum) {
+        public Builder minimum(Input<Integer> minimum) {
             this.minimum = Objects.requireNonNull(minimum);
             return this;
         }
 
-        public Builder setMinimum(Integer minimum) {
+        public Builder minimum(Integer minimum) {
             this.minimum = Input.of(Objects.requireNonNull(minimum));
             return this;
         }
 
-        public Builder setScaleType(@Nullable Input<Either<String,SkuScaleType>> scaleType) {
+        public Builder scaleType(@Nullable Input<Either<String,SkuScaleType>> scaleType) {
             this.scaleType = scaleType;
             return this;
         }
 
-        public Builder setScaleType(@Nullable Either<String,SkuScaleType> scaleType) {
+        public Builder scaleType(@Nullable Either<String,SkuScaleType> scaleType) {
             this.scaleType = Input.ofNullable(scaleType);
             return this;
         }

@@ -48,7 +48,7 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
     	      this.s3BucketDestination = defaults.s3BucketDestination;
         }
 
-        public Builder setS3BucketDestination(AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestination s3BucketDestination) {
+        public Builder s3BucketDestination(AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestination s3BucketDestination) {
             this.s3BucketDestination = Objects.requireNonNull(s3BucketDestination);
             return this;
         }

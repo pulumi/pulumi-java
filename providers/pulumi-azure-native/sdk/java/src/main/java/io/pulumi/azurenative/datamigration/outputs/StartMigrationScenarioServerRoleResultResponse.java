@@ -83,17 +83,17 @@ public final class StartMigrationScenarioServerRoleResultResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setExceptionsAndWarnings(List<ReportableExceptionResponse> exceptionsAndWarnings) {
+        public Builder exceptionsAndWarnings(List<ReportableExceptionResponse> exceptionsAndWarnings) {
             this.exceptionsAndWarnings = Objects.requireNonNull(exceptionsAndWarnings);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

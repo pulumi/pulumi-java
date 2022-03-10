@@ -55,7 +55,7 @@ public final class GoogleCloudDialogflowCxV3EventInputResponse extends io.pulumi
     	      this.event = defaults.event;
         }
 
-        public Builder setEvent(String event) {
+        public Builder event(String event) {
             this.event = Objects.requireNonNull(event);
             return this;
         }

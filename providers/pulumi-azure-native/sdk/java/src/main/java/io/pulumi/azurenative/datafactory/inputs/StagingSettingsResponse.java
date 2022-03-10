@@ -91,17 +91,17 @@ public final class StagingSettingsResponse extends io.pulumi.resources.InvokeArg
     	      this.path = defaults.path;
         }
 
-        public Builder setEnableCompression(@Nullable Object enableCompression) {
+        public Builder enableCompression(@Nullable Object enableCompression) {
             this.enableCompression = enableCompression;
             return this;
         }
 
-        public Builder setLinkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
+        public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
 
-        public Builder setPath(@Nullable Object path) {
+        public Builder path(@Nullable Object path) {
             this.path = path;
             return this;
         }

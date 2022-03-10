@@ -76,22 +76,22 @@ public final class FirewallPolicyIntrusionDetectionSignatureSpecificationArgs ex
     	      this.mode = defaults.mode;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setMode(@Nullable Input<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode) {
+        public Builder mode(@Nullable Input<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable Either<String,FirewallPolicyIntrusionDetectionStateType> mode) {
+        public Builder mode(@Nullable Either<String,FirewallPolicyIntrusionDetectionStateType> mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }

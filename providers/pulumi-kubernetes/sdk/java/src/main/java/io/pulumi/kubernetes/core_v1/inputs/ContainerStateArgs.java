@@ -92,32 +92,32 @@ public final class ContainerStateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.waiting = defaults.waiting;
         }
 
-        public Builder setRunning(@Nullable Input<ContainerStateRunningArgs> running) {
+        public Builder running(@Nullable Input<ContainerStateRunningArgs> running) {
             this.running = running;
             return this;
         }
 
-        public Builder setRunning(@Nullable ContainerStateRunningArgs running) {
+        public Builder running(@Nullable ContainerStateRunningArgs running) {
             this.running = Input.ofNullable(running);
             return this;
         }
 
-        public Builder setTerminated(@Nullable Input<ContainerStateTerminatedArgs> terminated) {
+        public Builder terminated(@Nullable Input<ContainerStateTerminatedArgs> terminated) {
             this.terminated = terminated;
             return this;
         }
 
-        public Builder setTerminated(@Nullable ContainerStateTerminatedArgs terminated) {
+        public Builder terminated(@Nullable ContainerStateTerminatedArgs terminated) {
             this.terminated = Input.ofNullable(terminated);
             return this;
         }
 
-        public Builder setWaiting(@Nullable Input<ContainerStateWaitingArgs> waiting) {
+        public Builder waiting(@Nullable Input<ContainerStateWaitingArgs> waiting) {
             this.waiting = waiting;
             return this;
         }
 
-        public Builder setWaiting(@Nullable ContainerStateWaitingArgs waiting) {
+        public Builder waiting(@Nullable ContainerStateWaitingArgs waiting) {
             this.waiting = Input.ofNullable(waiting);
             return this;
         }

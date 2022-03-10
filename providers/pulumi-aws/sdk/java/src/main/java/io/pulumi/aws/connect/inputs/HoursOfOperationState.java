@@ -185,92 +185,92 @@ public final class HoursOfOperationState extends io.pulumi.resources.ResourceArg
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setConfigs(@Nullable Input<List<HoursOfOperationConfigGetArgs>> configs) {
+        public Builder configs(@Nullable Input<List<HoursOfOperationConfigGetArgs>> configs) {
             this.configs = configs;
             return this;
         }
 
-        public Builder setConfigs(@Nullable List<HoursOfOperationConfigGetArgs> configs) {
+        public Builder configs(@Nullable List<HoursOfOperationConfigGetArgs> configs) {
             this.configs = Input.ofNullable(configs);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setHoursOfOperationArn(@Nullable Input<String> hoursOfOperationArn) {
+        public Builder hoursOfOperationArn(@Nullable Input<String> hoursOfOperationArn) {
             this.hoursOfOperationArn = hoursOfOperationArn;
             return this;
         }
 
-        public Builder setHoursOfOperationArn(@Nullable String hoursOfOperationArn) {
+        public Builder hoursOfOperationArn(@Nullable String hoursOfOperationArn) {
             this.hoursOfOperationArn = Input.ofNullable(hoursOfOperationArn);
             return this;
         }
 
-        public Builder setHoursOfOperationId(@Nullable Input<String> hoursOfOperationId) {
+        public Builder hoursOfOperationId(@Nullable Input<String> hoursOfOperationId) {
             this.hoursOfOperationId = hoursOfOperationId;
             return this;
         }
 
-        public Builder setHoursOfOperationId(@Nullable String hoursOfOperationId) {
+        public Builder hoursOfOperationId(@Nullable String hoursOfOperationId) {
             this.hoursOfOperationId = Input.ofNullable(hoursOfOperationId);
             return this;
         }
 
-        public Builder setInstanceId(@Nullable Input<String> instanceId) {
+        public Builder instanceId(@Nullable Input<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
 
-        public Builder setInstanceId(@Nullable String instanceId) {
+        public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = Input.ofNullable(instanceId);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setTimeZone(@Nullable Input<String> timeZone) {
+        public Builder timeZone(@Nullable Input<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Input.ofNullable(timeZone);
             return this;
         }

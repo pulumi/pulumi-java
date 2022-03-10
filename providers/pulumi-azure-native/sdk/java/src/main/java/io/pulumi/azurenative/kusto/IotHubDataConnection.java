@@ -250,7 +250,7 @@ public class IotHubDataConnection extends io.pulumi.resources.CustomResource {
     private static IotHubDataConnectionArgs makeArgs(IotHubDataConnectionArgs args) {
         var builder = args == null ? IotHubDataConnectionArgs.builder() : IotHubDataConnectionArgs.builder(args);
         return builder
-            .setKind("IotHub")
+            .kind("IotHub")
             .build();
     }
 

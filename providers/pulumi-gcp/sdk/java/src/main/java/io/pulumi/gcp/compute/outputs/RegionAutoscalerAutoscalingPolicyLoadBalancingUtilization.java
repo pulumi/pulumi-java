@@ -52,7 +52,7 @@ public final class RegionAutoscalerAutoscalingPolicyLoadBalancingUtilization {
     	      this.target = defaults.target;
         }
 
-        public Builder setTarget(Double target) {
+        public Builder target(Double target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }

@@ -102,42 +102,42 @@ public final class RdsDbInstanceState extends io.pulumi.resources.ResourceArgs {
     	      this.stackId = defaults.stackId;
         }
 
-        public Builder setDbPassword(@Nullable Input<String> dbPassword) {
+        public Builder dbPassword(@Nullable Input<String> dbPassword) {
             this.dbPassword = dbPassword;
             return this;
         }
 
-        public Builder setDbPassword(@Nullable String dbPassword) {
+        public Builder dbPassword(@Nullable String dbPassword) {
             this.dbPassword = Input.ofNullable(dbPassword);
             return this;
         }
 
-        public Builder setDbUser(@Nullable Input<String> dbUser) {
+        public Builder dbUser(@Nullable Input<String> dbUser) {
             this.dbUser = dbUser;
             return this;
         }
 
-        public Builder setDbUser(@Nullable String dbUser) {
+        public Builder dbUser(@Nullable String dbUser) {
             this.dbUser = Input.ofNullable(dbUser);
             return this;
         }
 
-        public Builder setRdsDbInstanceArn(@Nullable Input<String> rdsDbInstanceArn) {
+        public Builder rdsDbInstanceArn(@Nullable Input<String> rdsDbInstanceArn) {
             this.rdsDbInstanceArn = rdsDbInstanceArn;
             return this;
         }
 
-        public Builder setRdsDbInstanceArn(@Nullable String rdsDbInstanceArn) {
+        public Builder rdsDbInstanceArn(@Nullable String rdsDbInstanceArn) {
             this.rdsDbInstanceArn = Input.ofNullable(rdsDbInstanceArn);
             return this;
         }
 
-        public Builder setStackId(@Nullable Input<String> stackId) {
+        public Builder stackId(@Nullable Input<String> stackId) {
             this.stackId = stackId;
             return this;
         }
 
-        public Builder setStackId(@Nullable String stackId) {
+        public Builder stackId(@Nullable String stackId) {
             this.stackId = Input.ofNullable(stackId);
             return this;
         }

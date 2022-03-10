@@ -42,7 +42,7 @@ public final class TaskDefinitionRepositoryCredentials {
     	      this.credentialsParameter = defaults.credentialsParameter;
         }
 
-        public Builder setCredentialsParameter(@Nullable String credentialsParameter) {
+        public Builder credentialsParameter(@Nullable String credentialsParameter) {
             this.credentialsParameter = credentialsParameter;
             return this;
         }

@@ -111,42 +111,42 @@ public final class TokenStoreArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tokenRefreshExtensionHours = defaults.tokenRefreshExtensionHours;
         }
 
-        public Builder setAzureBlobStorage(@Nullable Input<BlobStorageTokenStoreArgs> azureBlobStorage) {
+        public Builder azureBlobStorage(@Nullable Input<BlobStorageTokenStoreArgs> azureBlobStorage) {
             this.azureBlobStorage = azureBlobStorage;
             return this;
         }
 
-        public Builder setAzureBlobStorage(@Nullable BlobStorageTokenStoreArgs azureBlobStorage) {
+        public Builder azureBlobStorage(@Nullable BlobStorageTokenStoreArgs azureBlobStorage) {
             this.azureBlobStorage = Input.ofNullable(azureBlobStorage);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setFileSystem(@Nullable Input<FileSystemTokenStoreArgs> fileSystem) {
+        public Builder fileSystem(@Nullable Input<FileSystemTokenStoreArgs> fileSystem) {
             this.fileSystem = fileSystem;
             return this;
         }
 
-        public Builder setFileSystem(@Nullable FileSystemTokenStoreArgs fileSystem) {
+        public Builder fileSystem(@Nullable FileSystemTokenStoreArgs fileSystem) {
             this.fileSystem = Input.ofNullable(fileSystem);
             return this;
         }
 
-        public Builder setTokenRefreshExtensionHours(@Nullable Input<Double> tokenRefreshExtensionHours) {
+        public Builder tokenRefreshExtensionHours(@Nullable Input<Double> tokenRefreshExtensionHours) {
             this.tokenRefreshExtensionHours = tokenRefreshExtensionHours;
             return this;
         }
 
-        public Builder setTokenRefreshExtensionHours(@Nullable Double tokenRefreshExtensionHours) {
+        public Builder tokenRefreshExtensionHours(@Nullable Double tokenRefreshExtensionHours) {
             this.tokenRefreshExtensionHours = Input.ofNullable(tokenRefreshExtensionHours);
             return this;
         }

@@ -92,32 +92,32 @@ public final class LogSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.retentionPolicy = defaults.retentionPolicy;
         }
 
-        public Builder setCategory(@Nullable Input<String> category) {
+        public Builder category(@Nullable Input<String> category) {
             this.category = category;
             return this;
         }
 
-        public Builder setCategory(@Nullable String category) {
+        public Builder category(@Nullable String category) {
             this.category = Input.ofNullable(category);
             return this;
         }
 
-        public Builder setEnabled(Input<Boolean> enabled) {
+        public Builder enabled(Input<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Input.of(Objects.requireNonNull(enabled));
             return this;
         }
 
-        public Builder setRetentionPolicy(@Nullable Input<RetentionPolicyArgs> retentionPolicy) {
+        public Builder retentionPolicy(@Nullable Input<RetentionPolicyArgs> retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
 
-        public Builder setRetentionPolicy(@Nullable RetentionPolicyArgs retentionPolicy) {
+        public Builder retentionPolicy(@Nullable RetentionPolicyArgs retentionPolicy) {
             this.retentionPolicy = Input.ofNullable(retentionPolicy);
             return this;
         }

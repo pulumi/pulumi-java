@@ -52,12 +52,12 @@ public final class AssessmentRole {
     	      this.roleType = defaults.roleType;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRoleType(@Nullable AssessmentRoleType roleType) {
+        public Builder roleType(@Nullable AssessmentRoleType roleType) {
             this.roleType = roleType;
             return this;
         }

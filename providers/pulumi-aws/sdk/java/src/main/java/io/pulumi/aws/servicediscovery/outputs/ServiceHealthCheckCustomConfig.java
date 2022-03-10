@@ -50,7 +50,7 @@ public final class ServiceHealthCheckCustomConfig {
     	      this.failureThreshold = defaults.failureThreshold;
         }
 
-        public Builder setFailureThreshold(@Nullable Integer failureThreshold) {
+        public Builder failureThreshold(@Nullable Integer failureThreshold) {
             this.failureThreshold = failureThreshold;
             return this;
         }

@@ -81,17 +81,17 @@ public final class AccountPropertiesResponseManagedResources {
     	      this.storageAccount = defaults.storageAccount;
         }
 
-        public Builder setEventHubNamespace(String eventHubNamespace) {
+        public Builder eventHubNamespace(String eventHubNamespace) {
             this.eventHubNamespace = Objects.requireNonNull(eventHubNamespace);
             return this;
         }
 
-        public Builder setResourceGroup(String resourceGroup) {
+        public Builder resourceGroup(String resourceGroup) {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
         }
 
-        public Builder setStorageAccount(String storageAccount) {
+        public Builder storageAccount(String storageAccount) {
             this.storageAccount = Objects.requireNonNull(storageAccount);
             return this;
         }

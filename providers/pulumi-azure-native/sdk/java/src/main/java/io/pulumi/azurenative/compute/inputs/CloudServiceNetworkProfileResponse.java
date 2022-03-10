@@ -76,12 +76,12 @@ public final class CloudServiceNetworkProfileResponse extends io.pulumi.resource
     	      this.swappableCloudService = defaults.swappableCloudService;
         }
 
-        public Builder setLoadBalancerConfigurations(@Nullable List<LoadBalancerConfigurationResponse> loadBalancerConfigurations) {
+        public Builder loadBalancerConfigurations(@Nullable List<LoadBalancerConfigurationResponse> loadBalancerConfigurations) {
             this.loadBalancerConfigurations = loadBalancerConfigurations;
             return this;
         }
 
-        public Builder setSwappableCloudService(@Nullable SubResourceResponse swappableCloudService) {
+        public Builder swappableCloudService(@Nullable SubResourceResponse swappableCloudService) {
             this.swappableCloudService = swappableCloudService;
             return this;
         }

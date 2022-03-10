@@ -55,12 +55,12 @@ public final class ClusterMasterAuthorizedNetworksConfigArgs extends io.pulumi.r
     	      this.cidrBlocks = defaults.cidrBlocks;
         }
 
-        public Builder setCidrBlocks(@Nullable Input<List<ClusterMasterAuthorizedNetworksConfigCidrBlockArgs>> cidrBlocks) {
+        public Builder cidrBlocks(@Nullable Input<List<ClusterMasterAuthorizedNetworksConfigCidrBlockArgs>> cidrBlocks) {
             this.cidrBlocks = cidrBlocks;
             return this;
         }
 
-        public Builder setCidrBlocks(@Nullable List<ClusterMasterAuthorizedNetworksConfigCidrBlockArgs> cidrBlocks) {
+        public Builder cidrBlocks(@Nullable List<ClusterMasterAuthorizedNetworksConfigCidrBlockArgs> cidrBlocks) {
             this.cidrBlocks = Input.ofNullable(cidrBlocks);
             return this;
         }

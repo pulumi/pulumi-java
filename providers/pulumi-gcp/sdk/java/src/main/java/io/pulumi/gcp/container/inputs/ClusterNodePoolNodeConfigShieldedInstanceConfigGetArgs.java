@@ -70,22 +70,22 @@ public final class ClusterNodePoolNodeConfigShieldedInstanceConfigGetArgs extend
     	      this.enableSecureBoot = defaults.enableSecureBoot;
         }
 
-        public Builder setEnableIntegrityMonitoring(@Nullable Input<Boolean> enableIntegrityMonitoring) {
+        public Builder enableIntegrityMonitoring(@Nullable Input<Boolean> enableIntegrityMonitoring) {
             this.enableIntegrityMonitoring = enableIntegrityMonitoring;
             return this;
         }
 
-        public Builder setEnableIntegrityMonitoring(@Nullable Boolean enableIntegrityMonitoring) {
+        public Builder enableIntegrityMonitoring(@Nullable Boolean enableIntegrityMonitoring) {
             this.enableIntegrityMonitoring = Input.ofNullable(enableIntegrityMonitoring);
             return this;
         }
 
-        public Builder setEnableSecureBoot(@Nullable Input<Boolean> enableSecureBoot) {
+        public Builder enableSecureBoot(@Nullable Input<Boolean> enableSecureBoot) {
             this.enableSecureBoot = enableSecureBoot;
             return this;
         }
 
-        public Builder setEnableSecureBoot(@Nullable Boolean enableSecureBoot) {
+        public Builder enableSecureBoot(@Nullable Boolean enableSecureBoot) {
             this.enableSecureBoot = Input.ofNullable(enableSecureBoot);
             return this;
         }

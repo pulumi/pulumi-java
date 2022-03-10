@@ -84,17 +84,17 @@ public final class GetRunbookArgs extends io.pulumi.resources.InvokeArgs {
     	      this.runbookName = defaults.runbookName;
         }
 
-        public Builder setAutomationAccountName(String automationAccountName) {
+        public Builder automationAccountName(String automationAccountName) {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setRunbookName(String runbookName) {
+        public Builder runbookName(String runbookName) {
             this.runbookName = Objects.requireNonNull(runbookName);
             return this;
         }

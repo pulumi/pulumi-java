@@ -72,22 +72,22 @@ public final class AutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasA
     	      this.percent = defaults.percent;
         }
 
-        public Builder setFixed(@Nullable Input<Integer> fixed) {
+        public Builder fixed(@Nullable Input<Integer> fixed) {
             this.fixed = fixed;
             return this;
         }
 
-        public Builder setFixed(@Nullable Integer fixed) {
+        public Builder fixed(@Nullable Integer fixed) {
             this.fixed = Input.ofNullable(fixed);
             return this;
         }
 
-        public Builder setPercent(@Nullable Input<Integer> percent) {
+        public Builder percent(@Nullable Input<Integer> percent) {
             this.percent = percent;
             return this;
         }
 
-        public Builder setPercent(@Nullable Integer percent) {
+        public Builder percent(@Nullable Integer percent) {
             this.percent = Input.ofNullable(percent);
             return this;
         }

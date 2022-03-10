@@ -48,7 +48,7 @@ public final class AuthorizationLoggingOptionsResponse {
     	      this.permissionType = defaults.permissionType;
         }
 
-        public Builder setPermissionType(String permissionType) {
+        public Builder permissionType(String permissionType) {
             this.permissionType = Objects.requireNonNull(permissionType);
             return this;
         }

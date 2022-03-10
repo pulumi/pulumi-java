@@ -68,12 +68,12 @@ public final class JobExecutionsRolloutConfigProperties {
     	      this.maximumPerMinute = defaults.maximumPerMinute;
         }
 
-        public Builder setExponentialRolloutRate(@Nullable JobTemplateExponentialRolloutRate exponentialRolloutRate) {
+        public Builder exponentialRolloutRate(@Nullable JobTemplateExponentialRolloutRate exponentialRolloutRate) {
             this.exponentialRolloutRate = exponentialRolloutRate;
             return this;
         }
 
-        public Builder setMaximumPerMinute(@Nullable Integer maximumPerMinute) {
+        public Builder maximumPerMinute(@Nullable Integer maximumPerMinute) {
             this.maximumPerMinute = maximumPerMinute;
             return this;
         }

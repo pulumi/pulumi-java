@@ -86,32 +86,32 @@ public final class RuleGroupRuleGroupRulesSourceRulesSourceListArgs extends io.p
     	      this.targets = defaults.targets;
         }
 
-        public Builder setGeneratedRulesType(Input<String> generatedRulesType) {
+        public Builder generatedRulesType(Input<String> generatedRulesType) {
             this.generatedRulesType = Objects.requireNonNull(generatedRulesType);
             return this;
         }
 
-        public Builder setGeneratedRulesType(String generatedRulesType) {
+        public Builder generatedRulesType(String generatedRulesType) {
             this.generatedRulesType = Input.of(Objects.requireNonNull(generatedRulesType));
             return this;
         }
 
-        public Builder setTargetTypes(Input<List<String>> targetTypes) {
+        public Builder targetTypes(Input<List<String>> targetTypes) {
             this.targetTypes = Objects.requireNonNull(targetTypes);
             return this;
         }
 
-        public Builder setTargetTypes(List<String> targetTypes) {
+        public Builder targetTypes(List<String> targetTypes) {
             this.targetTypes = Input.of(Objects.requireNonNull(targetTypes));
             return this;
         }
 
-        public Builder setTargets(Input<List<String>> targets) {
+        public Builder targets(Input<List<String>> targets) {
             this.targets = Objects.requireNonNull(targets);
             return this;
         }
 
-        public Builder setTargets(List<String> targets) {
+        public Builder targets(List<String> targets) {
             this.targets = Input.of(Objects.requireNonNull(targets));
             return this;
         }

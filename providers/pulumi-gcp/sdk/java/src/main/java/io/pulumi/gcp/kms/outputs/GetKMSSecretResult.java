@@ -91,27 +91,27 @@ public final class GetKMSSecretResult {
     	      this.plaintext = defaults.plaintext;
         }
 
-        public Builder setAdditionalAuthenticatedData(@Nullable String additionalAuthenticatedData) {
+        public Builder additionalAuthenticatedData(@Nullable String additionalAuthenticatedData) {
             this.additionalAuthenticatedData = additionalAuthenticatedData;
             return this;
         }
 
-        public Builder setCiphertext(String ciphertext) {
+        public Builder ciphertext(String ciphertext) {
             this.ciphertext = Objects.requireNonNull(ciphertext);
             return this;
         }
 
-        public Builder setCryptoKey(String cryptoKey) {
+        public Builder cryptoKey(String cryptoKey) {
             this.cryptoKey = Objects.requireNonNull(cryptoKey);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setPlaintext(String plaintext) {
+        public Builder plaintext(String plaintext) {
             this.plaintext = Objects.requireNonNull(plaintext);
             return this;
         }

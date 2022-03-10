@@ -86,17 +86,17 @@ public final class HttpMessageDiagnosticResponse {
     	      this.headers = defaults.headers;
         }
 
-        public Builder setBody(@Nullable BodyDiagnosticSettingsResponse body) {
+        public Builder body(@Nullable BodyDiagnosticSettingsResponse body) {
             this.body = body;
             return this;
         }
 
-        public Builder setDataMasking(@Nullable DataMaskingResponse dataMasking) {
+        public Builder dataMasking(@Nullable DataMaskingResponse dataMasking) {
             this.dataMasking = dataMasking;
             return this;
         }
 
-        public Builder setHeaders(@Nullable List<String> headers) {
+        public Builder headers(@Nullable List<String> headers) {
             this.headers = headers;
             return this;
         }

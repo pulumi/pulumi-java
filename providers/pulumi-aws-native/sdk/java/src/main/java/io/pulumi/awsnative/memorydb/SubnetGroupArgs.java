@@ -104,42 +104,42 @@ public final class SubnetGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setSubnetGroupName(@Nullable Input<String> subnetGroupName) {
+        public Builder subnetGroupName(@Nullable Input<String> subnetGroupName) {
             this.subnetGroupName = subnetGroupName;
             return this;
         }
 
-        public Builder setSubnetGroupName(@Nullable String subnetGroupName) {
+        public Builder subnetGroupName(@Nullable String subnetGroupName) {
             this.subnetGroupName = Input.ofNullable(subnetGroupName);
             return this;
         }
 
-        public Builder setSubnetIds(Input<List<String>> subnetIds) {
+        public Builder subnetIds(Input<List<String>> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
-        public Builder setSubnetIds(List<String> subnetIds) {
+        public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Input.of(Objects.requireNonNull(subnetIds));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<SubnetGroupTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<SubnetGroupTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<SubnetGroupTagArgs> tags) {
+        public Builder tags(@Nullable List<SubnetGroupTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -173,52 +173,52 @@ public final class GetEngineVersionsResult {
     	      this.versionPrefix = defaults.versionPrefix;
         }
 
-        public Builder setDefaultClusterVersion(String defaultClusterVersion) {
+        public Builder defaultClusterVersion(String defaultClusterVersion) {
             this.defaultClusterVersion = Objects.requireNonNull(defaultClusterVersion);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLatestMasterVersion(String latestMasterVersion) {
+        public Builder latestMasterVersion(String latestMasterVersion) {
             this.latestMasterVersion = Objects.requireNonNull(latestMasterVersion);
             return this;
         }
 
-        public Builder setLatestNodeVersion(String latestNodeVersion) {
+        public Builder latestNodeVersion(String latestNodeVersion) {
             this.latestNodeVersion = Objects.requireNonNull(latestNodeVersion);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setReleaseChannelDefaultVersion(Map<String,String> releaseChannelDefaultVersion) {
+        public Builder releaseChannelDefaultVersion(Map<String,String> releaseChannelDefaultVersion) {
             this.releaseChannelDefaultVersion = Objects.requireNonNull(releaseChannelDefaultVersion);
             return this;
         }
 
-        public Builder setValidMasterVersions(List<String> validMasterVersions) {
+        public Builder validMasterVersions(List<String> validMasterVersions) {
             this.validMasterVersions = Objects.requireNonNull(validMasterVersions);
             return this;
         }
 
-        public Builder setValidNodeVersions(List<String> validNodeVersions) {
+        public Builder validNodeVersions(List<String> validNodeVersions) {
             this.validNodeVersions = Objects.requireNonNull(validNodeVersions);
             return this;
         }
 
-        public Builder setVersionPrefix(@Nullable String versionPrefix) {
+        public Builder versionPrefix(@Nullable String versionPrefix) {
             this.versionPrefix = versionPrefix;
             return this;
         }

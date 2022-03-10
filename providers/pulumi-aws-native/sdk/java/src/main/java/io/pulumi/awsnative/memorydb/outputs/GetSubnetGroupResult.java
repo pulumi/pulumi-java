@@ -101,22 +101,22 @@ public final class GetSubnetGroupResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setARN(@Nullable String aRN) {
+        public Builder aRN(@Nullable String aRN) {
             this.aRN = aRN;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setSubnetIds(@Nullable List<String> subnetIds) {
+        public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
 
-        public Builder setTags(@Nullable List<SubnetGroupTag> tags) {
+        public Builder tags(@Nullable List<SubnetGroupTag> tags) {
             this.tags = tags;
             return this;
         }

@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversa
     	      this.model = defaults.model;
         }
 
-        public Builder setModel(String model) {
+        public Builder model(String model) {
             this.model = Objects.requireNonNull(model);
             return this;
         }

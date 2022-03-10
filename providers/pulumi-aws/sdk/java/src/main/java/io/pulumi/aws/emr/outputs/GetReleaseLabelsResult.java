@@ -77,17 +77,17 @@ public final class GetReleaseLabelsResult {
     	      this.releaseLabels = defaults.releaseLabels;
         }
 
-        public Builder setFilters(@Nullable GetReleaseLabelsFilters filters) {
+        public Builder filters(@Nullable GetReleaseLabelsFilters filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setReleaseLabels(List<String> releaseLabels) {
+        public Builder releaseLabels(List<String> releaseLabels) {
             this.releaseLabels = Objects.requireNonNull(releaseLabels);
             return this;
         }

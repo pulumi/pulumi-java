@@ -55,7 +55,7 @@ public final class GoogleCloudDatalabelingV1beta1SentimentConfigResponse extends
     	      this.enableLabelSentimentSelection = defaults.enableLabelSentimentSelection;
         }
 
-        public Builder setEnableLabelSentimentSelection(Boolean enableLabelSentimentSelection) {
+        public Builder enableLabelSentimentSelection(Boolean enableLabelSentimentSelection) {
             this.enableLabelSentimentSelection = Objects.requireNonNull(enableLabelSentimentSelection);
             return this;
         }

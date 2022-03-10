@@ -55,7 +55,7 @@ public final class MonitoringConfigResponse extends io.pulumi.resources.InvokeAr
     	      this.componentConfig = defaults.componentConfig;
         }
 
-        public Builder setComponentConfig(MonitoringComponentConfigResponse componentConfig) {
+        public Builder componentConfig(MonitoringComponentConfigResponse componentConfig) {
             this.componentConfig = Objects.requireNonNull(componentConfig);
             return this;
         }

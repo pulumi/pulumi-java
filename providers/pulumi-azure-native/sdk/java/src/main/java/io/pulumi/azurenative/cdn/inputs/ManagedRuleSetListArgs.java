@@ -58,12 +58,12 @@ public final class ManagedRuleSetListArgs extends io.pulumi.resources.ResourceAr
     	      this.managedRuleSets = defaults.managedRuleSets;
         }
 
-        public Builder setManagedRuleSets(@Nullable Input<List<ManagedRuleSetArgs>> managedRuleSets) {
+        public Builder managedRuleSets(@Nullable Input<List<ManagedRuleSetArgs>> managedRuleSets) {
             this.managedRuleSets = managedRuleSets;
             return this;
         }
 
-        public Builder setManagedRuleSets(@Nullable List<ManagedRuleSetArgs> managedRuleSets) {
+        public Builder managedRuleSets(@Nullable List<ManagedRuleSetArgs> managedRuleSets) {
             this.managedRuleSets = Input.ofNullable(managedRuleSets);
             return this;
         }

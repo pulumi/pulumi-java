@@ -76,22 +76,22 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs extends 
     	      this.text = defaults.text;
         }
 
-        public Builder setRbmSuggestion(@Nullable Input<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> rbmSuggestion) {
+        public Builder rbmSuggestion(@Nullable Input<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> rbmSuggestion) {
             this.rbmSuggestion = rbmSuggestion;
             return this;
         }
 
-        public Builder setRbmSuggestion(@Nullable List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs> rbmSuggestion) {
+        public Builder rbmSuggestion(@Nullable List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs> rbmSuggestion) {
             this.rbmSuggestion = Input.ofNullable(rbmSuggestion);
             return this;
         }
 
-        public Builder setText(Input<String> text) {
+        public Builder text(Input<String> text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }
 
-        public Builder setText(String text) {
+        public Builder text(String text) {
             this.text = Input.of(Objects.requireNonNull(text));
             return this;
         }

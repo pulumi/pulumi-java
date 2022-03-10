@@ -70,22 +70,22 @@ public final class SnapshotScheduleAssociationState extends io.pulumi.resources.
     	      this.scheduleIdentifier = defaults.scheduleIdentifier;
         }
 
-        public Builder setClusterIdentifier(@Nullable Input<String> clusterIdentifier) {
+        public Builder clusterIdentifier(@Nullable Input<String> clusterIdentifier) {
             this.clusterIdentifier = clusterIdentifier;
             return this;
         }
 
-        public Builder setClusterIdentifier(@Nullable String clusterIdentifier) {
+        public Builder clusterIdentifier(@Nullable String clusterIdentifier) {
             this.clusterIdentifier = Input.ofNullable(clusterIdentifier);
             return this;
         }
 
-        public Builder setScheduleIdentifier(@Nullable Input<String> scheduleIdentifier) {
+        public Builder scheduleIdentifier(@Nullable Input<String> scheduleIdentifier) {
             this.scheduleIdentifier = scheduleIdentifier;
             return this;
         }
 
-        public Builder setScheduleIdentifier(@Nullable String scheduleIdentifier) {
+        public Builder scheduleIdentifier(@Nullable String scheduleIdentifier) {
             this.scheduleIdentifier = Input.ofNullable(scheduleIdentifier);
             return this;
         }

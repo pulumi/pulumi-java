@@ -280,77 +280,77 @@ public final class GetSubscriptionResult {
     	      this.topicMessageRetentionDuration = defaults.topicMessageRetentionDuration;
         }
 
-        public Builder setAckDeadlineSeconds(Integer ackDeadlineSeconds) {
+        public Builder ackDeadlineSeconds(Integer ackDeadlineSeconds) {
             this.ackDeadlineSeconds = Objects.requireNonNull(ackDeadlineSeconds);
             return this;
         }
 
-        public Builder setDeadLetterPolicy(DeadLetterPolicyResponse deadLetterPolicy) {
+        public Builder deadLetterPolicy(DeadLetterPolicyResponse deadLetterPolicy) {
             this.deadLetterPolicy = Objects.requireNonNull(deadLetterPolicy);
             return this;
         }
 
-        public Builder setDetached(Boolean detached) {
+        public Builder detached(Boolean detached) {
             this.detached = Objects.requireNonNull(detached);
             return this;
         }
 
-        public Builder setEnableMessageOrdering(Boolean enableMessageOrdering) {
+        public Builder enableMessageOrdering(Boolean enableMessageOrdering) {
             this.enableMessageOrdering = Objects.requireNonNull(enableMessageOrdering);
             return this;
         }
 
-        public Builder setExpirationPolicy(ExpirationPolicyResponse expirationPolicy) {
+        public Builder expirationPolicy(ExpirationPolicyResponse expirationPolicy) {
             this.expirationPolicy = Objects.requireNonNull(expirationPolicy);
             return this;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setMessageRetentionDuration(String messageRetentionDuration) {
+        public Builder messageRetentionDuration(String messageRetentionDuration) {
             this.messageRetentionDuration = Objects.requireNonNull(messageRetentionDuration);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPushConfig(PushConfigResponse pushConfig) {
+        public Builder pushConfig(PushConfigResponse pushConfig) {
             this.pushConfig = Objects.requireNonNull(pushConfig);
             return this;
         }
 
-        public Builder setRetainAckedMessages(Boolean retainAckedMessages) {
+        public Builder retainAckedMessages(Boolean retainAckedMessages) {
             this.retainAckedMessages = Objects.requireNonNull(retainAckedMessages);
             return this;
         }
 
-        public Builder setRetryPolicy(RetryPolicyResponse retryPolicy) {
+        public Builder retryPolicy(RetryPolicyResponse retryPolicy) {
             this.retryPolicy = Objects.requireNonNull(retryPolicy);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTopic(String topic) {
+        public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
 
-        public Builder setTopicMessageRetentionDuration(String topicMessageRetentionDuration) {
+        public Builder topicMessageRetentionDuration(String topicMessageRetentionDuration) {
             this.topicMessageRetentionDuration = Objects.requireNonNull(topicMessageRetentionDuration);
             return this;
         }

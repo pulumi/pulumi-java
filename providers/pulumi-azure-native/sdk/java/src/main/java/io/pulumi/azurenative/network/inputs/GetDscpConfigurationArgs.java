@@ -68,12 +68,12 @@ public final class GetDscpConfigurationArgs extends io.pulumi.resources.InvokeAr
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setDscpConfigurationName(String dscpConfigurationName) {
+        public Builder dscpConfigurationName(String dscpConfigurationName) {
             this.dscpConfigurationName = Objects.requireNonNull(dscpConfigurationName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

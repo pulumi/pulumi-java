@@ -50,7 +50,7 @@ public final class DFPInstanceAdministratorsResponse {
     	      this.members = defaults.members;
         }
 
-        public Builder setMembers(@Nullable List<String> members) {
+        public Builder members(@Nullable List<String> members) {
             this.members = members;
             return this;
         }

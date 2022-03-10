@@ -41,7 +41,7 @@ public final class InstanceAccessControlAttributeConfigurationAccessControlAttri
     	      this.source = defaults.source;
         }
 
-        public Builder setSource(List<String> source) {
+        public Builder source(List<String> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }

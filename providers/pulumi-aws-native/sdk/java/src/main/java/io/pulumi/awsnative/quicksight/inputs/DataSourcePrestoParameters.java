@@ -89,17 +89,17 @@ public final class DataSourcePrestoParameters extends io.pulumi.resources.Invoke
     	      this.port = defaults.port;
         }
 
-        public Builder setCatalog(String catalog) {
+        public Builder catalog(String catalog) {
             this.catalog = Objects.requireNonNull(catalog);
             return this;
         }
 
-        public Builder setHost(String host) {
+        public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
-        public Builder setPort(Double port) {
+        public Builder port(Double port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }

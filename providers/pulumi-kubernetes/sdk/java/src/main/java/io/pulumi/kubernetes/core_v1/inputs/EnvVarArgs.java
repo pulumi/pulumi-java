@@ -91,32 +91,32 @@ public final class EnvVarArgs extends io.pulumi.resources.ResourceArgs {
     	      this.valueFrom = defaults.valueFrom;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }
 
-        public Builder setValueFrom(@Nullable Input<EnvVarSourceArgs> valueFrom) {
+        public Builder valueFrom(@Nullable Input<EnvVarSourceArgs> valueFrom) {
             this.valueFrom = valueFrom;
             return this;
         }
 
-        public Builder setValueFrom(@Nullable EnvVarSourceArgs valueFrom) {
+        public Builder valueFrom(@Nullable EnvVarSourceArgs valueFrom) {
             this.valueFrom = Input.ofNullable(valueFrom);
             return this;
         }

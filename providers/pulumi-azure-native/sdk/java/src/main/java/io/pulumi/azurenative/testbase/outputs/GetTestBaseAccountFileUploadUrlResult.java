@@ -65,12 +65,12 @@ public final class GetTestBaseAccountFileUploadUrlResult {
     	      this.uploadUrl = defaults.uploadUrl;
         }
 
-        public Builder setBlobPath(String blobPath) {
+        public Builder blobPath(String blobPath) {
             this.blobPath = Objects.requireNonNull(blobPath);
             return this;
         }
 
-        public Builder setUploadUrl(String uploadUrl) {
+        public Builder uploadUrl(String uploadUrl) {
             this.uploadUrl = Objects.requireNonNull(uploadUrl);
             return this;
         }

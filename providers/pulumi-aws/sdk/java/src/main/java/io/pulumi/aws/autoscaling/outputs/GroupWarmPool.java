@@ -84,17 +84,17 @@ public final class GroupWarmPool {
     	      this.poolState = defaults.poolState;
         }
 
-        public Builder setMaxGroupPreparedCapacity(@Nullable Integer maxGroupPreparedCapacity) {
+        public Builder maxGroupPreparedCapacity(@Nullable Integer maxGroupPreparedCapacity) {
             this.maxGroupPreparedCapacity = maxGroupPreparedCapacity;
             return this;
         }
 
-        public Builder setMinSize(@Nullable Integer minSize) {
+        public Builder minSize(@Nullable Integer minSize) {
             this.minSize = minSize;
             return this;
         }
 
-        public Builder setPoolState(@Nullable String poolState) {
+        public Builder poolState(@Nullable String poolState) {
             this.poolState = poolState;
             return this;
         }

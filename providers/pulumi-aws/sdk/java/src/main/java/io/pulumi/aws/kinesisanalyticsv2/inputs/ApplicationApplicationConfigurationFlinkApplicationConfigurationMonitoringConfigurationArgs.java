@@ -86,32 +86,32 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
     	      this.metricsLevel = defaults.metricsLevel;
         }
 
-        public Builder setConfigurationType(Input<String> configurationType) {
+        public Builder configurationType(Input<String> configurationType) {
             this.configurationType = Objects.requireNonNull(configurationType);
             return this;
         }
 
-        public Builder setConfigurationType(String configurationType) {
+        public Builder configurationType(String configurationType) {
             this.configurationType = Input.of(Objects.requireNonNull(configurationType));
             return this;
         }
 
-        public Builder setLogLevel(@Nullable Input<String> logLevel) {
+        public Builder logLevel(@Nullable Input<String> logLevel) {
             this.logLevel = logLevel;
             return this;
         }
 
-        public Builder setLogLevel(@Nullable String logLevel) {
+        public Builder logLevel(@Nullable String logLevel) {
             this.logLevel = Input.ofNullable(logLevel);
             return this;
         }
 
-        public Builder setMetricsLevel(@Nullable Input<String> metricsLevel) {
+        public Builder metricsLevel(@Nullable Input<String> metricsLevel) {
             this.metricsLevel = metricsLevel;
             return this;
         }
 
-        public Builder setMetricsLevel(@Nullable String metricsLevel) {
+        public Builder metricsLevel(@Nullable String metricsLevel) {
             this.metricsLevel = Input.ofNullable(metricsLevel);
             return this;
         }

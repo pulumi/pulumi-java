@@ -74,12 +74,12 @@ public final class NonComplianceMessageResponse extends io.pulumi.resources.Invo
     	      this.policyDefinitionReferenceId = defaults.policyDefinitionReferenceId;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setPolicyDefinitionReferenceId(@Nullable String policyDefinitionReferenceId) {
+        public Builder policyDefinitionReferenceId(@Nullable String policyDefinitionReferenceId) {
             this.policyDefinitionReferenceId = policyDefinitionReferenceId;
             return this;
         }

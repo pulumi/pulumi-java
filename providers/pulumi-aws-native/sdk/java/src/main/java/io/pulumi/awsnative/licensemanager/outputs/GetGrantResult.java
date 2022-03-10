@@ -123,32 +123,32 @@ public final class GetGrantResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setGrantArn(@Nullable String grantArn) {
+        public Builder grantArn(@Nullable String grantArn) {
             this.grantArn = grantArn;
             return this;
         }
 
-        public Builder setGrantName(@Nullable String grantName) {
+        public Builder grantName(@Nullable String grantName) {
             this.grantName = grantName;
             return this;
         }
 
-        public Builder setHomeRegion(@Nullable String homeRegion) {
+        public Builder homeRegion(@Nullable String homeRegion) {
             this.homeRegion = homeRegion;
             return this;
         }
 
-        public Builder setLicenseArn(@Nullable String licenseArn) {
+        public Builder licenseArn(@Nullable String licenseArn) {
             this.licenseArn = licenseArn;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

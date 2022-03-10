@@ -68,12 +68,12 @@ public final class GetSensorArgs extends io.pulumi.resources.InvokeArgs {
     	      this.sensorName = defaults.sensorName;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setSensorName(String sensorName) {
+        public Builder sensorName(String sensorName) {
             this.sensorName = Objects.requireNonNull(sensorName);
             return this;
         }

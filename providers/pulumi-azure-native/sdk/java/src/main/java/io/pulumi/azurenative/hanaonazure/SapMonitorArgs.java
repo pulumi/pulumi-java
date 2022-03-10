@@ -184,92 +184,92 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setEnableCustomerAnalytics(@Nullable Input<Boolean> enableCustomerAnalytics) {
+        public Builder enableCustomerAnalytics(@Nullable Input<Boolean> enableCustomerAnalytics) {
             this.enableCustomerAnalytics = enableCustomerAnalytics;
             return this;
         }
 
-        public Builder setEnableCustomerAnalytics(@Nullable Boolean enableCustomerAnalytics) {
+        public Builder enableCustomerAnalytics(@Nullable Boolean enableCustomerAnalytics) {
             this.enableCustomerAnalytics = Input.ofNullable(enableCustomerAnalytics);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setLogAnalyticsWorkspaceArmId(@Nullable Input<String> logAnalyticsWorkspaceArmId) {
+        public Builder logAnalyticsWorkspaceArmId(@Nullable Input<String> logAnalyticsWorkspaceArmId) {
             this.logAnalyticsWorkspaceArmId = logAnalyticsWorkspaceArmId;
             return this;
         }
 
-        public Builder setLogAnalyticsWorkspaceArmId(@Nullable String logAnalyticsWorkspaceArmId) {
+        public Builder logAnalyticsWorkspaceArmId(@Nullable String logAnalyticsWorkspaceArmId) {
             this.logAnalyticsWorkspaceArmId = Input.ofNullable(logAnalyticsWorkspaceArmId);
             return this;
         }
 
-        public Builder setLogAnalyticsWorkspaceId(@Nullable Input<String> logAnalyticsWorkspaceId) {
+        public Builder logAnalyticsWorkspaceId(@Nullable Input<String> logAnalyticsWorkspaceId) {
             this.logAnalyticsWorkspaceId = logAnalyticsWorkspaceId;
             return this;
         }
 
-        public Builder setLogAnalyticsWorkspaceId(@Nullable String logAnalyticsWorkspaceId) {
+        public Builder logAnalyticsWorkspaceId(@Nullable String logAnalyticsWorkspaceId) {
             this.logAnalyticsWorkspaceId = Input.ofNullable(logAnalyticsWorkspaceId);
             return this;
         }
 
-        public Builder setLogAnalyticsWorkspaceSharedKey(@Nullable Input<String> logAnalyticsWorkspaceSharedKey) {
+        public Builder logAnalyticsWorkspaceSharedKey(@Nullable Input<String> logAnalyticsWorkspaceSharedKey) {
             this.logAnalyticsWorkspaceSharedKey = logAnalyticsWorkspaceSharedKey;
             return this;
         }
 
-        public Builder setLogAnalyticsWorkspaceSharedKey(@Nullable String logAnalyticsWorkspaceSharedKey) {
+        public Builder logAnalyticsWorkspaceSharedKey(@Nullable String logAnalyticsWorkspaceSharedKey) {
             this.logAnalyticsWorkspaceSharedKey = Input.ofNullable(logAnalyticsWorkspaceSharedKey);
             return this;
         }
 
-        public Builder setMonitorSubnet(@Nullable Input<String> monitorSubnet) {
+        public Builder monitorSubnet(@Nullable Input<String> monitorSubnet) {
             this.monitorSubnet = monitorSubnet;
             return this;
         }
 
-        public Builder setMonitorSubnet(@Nullable String monitorSubnet) {
+        public Builder monitorSubnet(@Nullable String monitorSubnet) {
             this.monitorSubnet = Input.ofNullable(monitorSubnet);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSapMonitorName(@Nullable Input<String> sapMonitorName) {
+        public Builder sapMonitorName(@Nullable Input<String> sapMonitorName) {
             this.sapMonitorName = sapMonitorName;
             return this;
         }
 
-        public Builder setSapMonitorName(@Nullable String sapMonitorName) {
+        public Builder sapMonitorName(@Nullable String sapMonitorName) {
             this.sapMonitorName = Input.ofNullable(sapMonitorName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

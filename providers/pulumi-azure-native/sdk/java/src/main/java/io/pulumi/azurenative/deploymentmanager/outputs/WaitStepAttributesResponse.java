@@ -48,7 +48,7 @@ public final class WaitStepAttributesResponse {
     	      this.duration = defaults.duration;
         }
 
-        public Builder setDuration(String duration) {
+        public Builder duration(String duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }

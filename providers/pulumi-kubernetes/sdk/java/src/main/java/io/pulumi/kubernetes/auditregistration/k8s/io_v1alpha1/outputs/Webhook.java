@@ -68,12 +68,12 @@ public final class Webhook {
     	      this.throttle = defaults.throttle;
         }
 
-        public Builder setClientConfig(WebhookClientConfig clientConfig) {
+        public Builder clientConfig(WebhookClientConfig clientConfig) {
             this.clientConfig = Objects.requireNonNull(clientConfig);
             return this;
         }
 
-        public Builder setThrottle(@Nullable WebhookThrottleConfig throttle) {
+        public Builder throttle(@Nullable WebhookThrottleConfig throttle) {
             this.throttle = throttle;
             return this;
         }

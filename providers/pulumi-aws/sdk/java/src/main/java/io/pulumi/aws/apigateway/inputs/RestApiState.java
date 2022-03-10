@@ -301,162 +301,162 @@ public final class RestApiState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setApiKeySource(@Nullable Input<String> apiKeySource) {
+        public Builder apiKeySource(@Nullable Input<String> apiKeySource) {
             this.apiKeySource = apiKeySource;
             return this;
         }
 
-        public Builder setApiKeySource(@Nullable String apiKeySource) {
+        public Builder apiKeySource(@Nullable String apiKeySource) {
             this.apiKeySource = Input.ofNullable(apiKeySource);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setBinaryMediaTypes(@Nullable Input<List<String>> binaryMediaTypes) {
+        public Builder binaryMediaTypes(@Nullable Input<List<String>> binaryMediaTypes) {
             this.binaryMediaTypes = binaryMediaTypes;
             return this;
         }
 
-        public Builder setBinaryMediaTypes(@Nullable List<String> binaryMediaTypes) {
+        public Builder binaryMediaTypes(@Nullable List<String> binaryMediaTypes) {
             this.binaryMediaTypes = Input.ofNullable(binaryMediaTypes);
             return this;
         }
 
-        public Builder setBody(@Nullable Input<String> body) {
+        public Builder body(@Nullable Input<String> body) {
             this.body = body;
             return this;
         }
 
-        public Builder setBody(@Nullable String body) {
+        public Builder body(@Nullable String body) {
             this.body = Input.ofNullable(body);
             return this;
         }
 
-        public Builder setCreatedDate(@Nullable Input<String> createdDate) {
+        public Builder createdDate(@Nullable Input<String> createdDate) {
             this.createdDate = createdDate;
             return this;
         }
 
-        public Builder setCreatedDate(@Nullable String createdDate) {
+        public Builder createdDate(@Nullable String createdDate) {
             this.createdDate = Input.ofNullable(createdDate);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisableExecuteApiEndpoint(@Nullable Input<Boolean> disableExecuteApiEndpoint) {
+        public Builder disableExecuteApiEndpoint(@Nullable Input<Boolean> disableExecuteApiEndpoint) {
             this.disableExecuteApiEndpoint = disableExecuteApiEndpoint;
             return this;
         }
 
-        public Builder setDisableExecuteApiEndpoint(@Nullable Boolean disableExecuteApiEndpoint) {
+        public Builder disableExecuteApiEndpoint(@Nullable Boolean disableExecuteApiEndpoint) {
             this.disableExecuteApiEndpoint = Input.ofNullable(disableExecuteApiEndpoint);
             return this;
         }
 
-        public Builder setEndpointConfiguration(@Nullable Input<RestApiEndpointConfigurationGetArgs> endpointConfiguration) {
+        public Builder endpointConfiguration(@Nullable Input<RestApiEndpointConfigurationGetArgs> endpointConfiguration) {
             this.endpointConfiguration = endpointConfiguration;
             return this;
         }
 
-        public Builder setEndpointConfiguration(@Nullable RestApiEndpointConfigurationGetArgs endpointConfiguration) {
+        public Builder endpointConfiguration(@Nullable RestApiEndpointConfigurationGetArgs endpointConfiguration) {
             this.endpointConfiguration = Input.ofNullable(endpointConfiguration);
             return this;
         }
 
-        public Builder setExecutionArn(@Nullable Input<String> executionArn) {
+        public Builder executionArn(@Nullable Input<String> executionArn) {
             this.executionArn = executionArn;
             return this;
         }
 
-        public Builder setExecutionArn(@Nullable String executionArn) {
+        public Builder executionArn(@Nullable String executionArn) {
             this.executionArn = Input.ofNullable(executionArn);
             return this;
         }
 
-        public Builder setMinimumCompressionSize(@Nullable Input<Integer> minimumCompressionSize) {
+        public Builder minimumCompressionSize(@Nullable Input<Integer> minimumCompressionSize) {
             this.minimumCompressionSize = minimumCompressionSize;
             return this;
         }
 
-        public Builder setMinimumCompressionSize(@Nullable Integer minimumCompressionSize) {
+        public Builder minimumCompressionSize(@Nullable Integer minimumCompressionSize) {
             this.minimumCompressionSize = Input.ofNullable(minimumCompressionSize);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,String>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,String> parameters) {
+        public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setPolicy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Input<String> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPolicy(@Nullable String policy) {
+        public Builder policy(@Nullable String policy) {
             this.policy = Input.ofNullable(policy);
             return this;
         }
 
-        public Builder setRootResourceId(@Nullable Input<String> rootResourceId) {
+        public Builder rootResourceId(@Nullable Input<String> rootResourceId) {
             this.rootResourceId = rootResourceId;
             return this;
         }
 
-        public Builder setRootResourceId(@Nullable String rootResourceId) {
+        public Builder rootResourceId(@Nullable String rootResourceId) {
             this.rootResourceId = Input.ofNullable(rootResourceId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

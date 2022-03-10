@@ -203,102 +203,102 @@ public final class RemediationConfigurationArgs extends io.pulumi.resources.Reso
     	      this.targetVersion = defaults.targetVersion;
         }
 
-        public Builder setAutomatic(@Nullable Input<Boolean> automatic) {
+        public Builder automatic(@Nullable Input<Boolean> automatic) {
             this.automatic = automatic;
             return this;
         }
 
-        public Builder setAutomatic(@Nullable Boolean automatic) {
+        public Builder automatic(@Nullable Boolean automatic) {
             this.automatic = Input.ofNullable(automatic);
             return this;
         }
 
-        public Builder setConfigRuleName(Input<String> configRuleName) {
+        public Builder configRuleName(Input<String> configRuleName) {
             this.configRuleName = Objects.requireNonNull(configRuleName);
             return this;
         }
 
-        public Builder setConfigRuleName(String configRuleName) {
+        public Builder configRuleName(String configRuleName) {
             this.configRuleName = Input.of(Objects.requireNonNull(configRuleName));
             return this;
         }
 
-        public Builder setExecutionControls(@Nullable Input<RemediationConfigurationExecutionControlsArgs> executionControls) {
+        public Builder executionControls(@Nullable Input<RemediationConfigurationExecutionControlsArgs> executionControls) {
             this.executionControls = executionControls;
             return this;
         }
 
-        public Builder setExecutionControls(@Nullable RemediationConfigurationExecutionControlsArgs executionControls) {
+        public Builder executionControls(@Nullable RemediationConfigurationExecutionControlsArgs executionControls) {
             this.executionControls = Input.ofNullable(executionControls);
             return this;
         }
 
-        public Builder setMaximumAutomaticAttempts(@Nullable Input<Integer> maximumAutomaticAttempts) {
+        public Builder maximumAutomaticAttempts(@Nullable Input<Integer> maximumAutomaticAttempts) {
             this.maximumAutomaticAttempts = maximumAutomaticAttempts;
             return this;
         }
 
-        public Builder setMaximumAutomaticAttempts(@Nullable Integer maximumAutomaticAttempts) {
+        public Builder maximumAutomaticAttempts(@Nullable Integer maximumAutomaticAttempts) {
             this.maximumAutomaticAttempts = Input.ofNullable(maximumAutomaticAttempts);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<List<RemediationConfigurationParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Input<List<RemediationConfigurationParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<RemediationConfigurationParameterArgs> parameters) {
+        public Builder parameters(@Nullable List<RemediationConfigurationParameterArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setResourceType(@Nullable Input<String> resourceType) {
+        public Builder resourceType(@Nullable Input<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
-        public Builder setResourceType(@Nullable String resourceType) {
+        public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = Input.ofNullable(resourceType);
             return this;
         }
 
-        public Builder setRetryAttemptSeconds(@Nullable Input<Integer> retryAttemptSeconds) {
+        public Builder retryAttemptSeconds(@Nullable Input<Integer> retryAttemptSeconds) {
             this.retryAttemptSeconds = retryAttemptSeconds;
             return this;
         }
 
-        public Builder setRetryAttemptSeconds(@Nullable Integer retryAttemptSeconds) {
+        public Builder retryAttemptSeconds(@Nullable Integer retryAttemptSeconds) {
             this.retryAttemptSeconds = Input.ofNullable(retryAttemptSeconds);
             return this;
         }
 
-        public Builder setTargetId(Input<String> targetId) {
+        public Builder targetId(Input<String> targetId) {
             this.targetId = Objects.requireNonNull(targetId);
             return this;
         }
 
-        public Builder setTargetId(String targetId) {
+        public Builder targetId(String targetId) {
             this.targetId = Input.of(Objects.requireNonNull(targetId));
             return this;
         }
 
-        public Builder setTargetType(Input<String> targetType) {
+        public Builder targetType(Input<String> targetType) {
             this.targetType = Objects.requireNonNull(targetType);
             return this;
         }
 
-        public Builder setTargetType(String targetType) {
+        public Builder targetType(String targetType) {
             this.targetType = Input.of(Objects.requireNonNull(targetType));
             return this;
         }
 
-        public Builder setTargetVersion(@Nullable Input<String> targetVersion) {
+        public Builder targetVersion(@Nullable Input<String> targetVersion) {
             this.targetVersion = targetVersion;
             return this;
         }
 
-        public Builder setTargetVersion(@Nullable String targetVersion) {
+        public Builder targetVersion(@Nullable String targetVersion) {
             this.targetVersion = Input.ofNullable(targetVersion);
             return this;
         }

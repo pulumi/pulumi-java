@@ -99,22 +99,22 @@ public final class EncryptionServicesResponse {
     	      this.table = defaults.table;
         }
 
-        public Builder setBlob(@Nullable EncryptionServiceResponse blob) {
+        public Builder blob(@Nullable EncryptionServiceResponse blob) {
             this.blob = blob;
             return this;
         }
 
-        public Builder setFile(@Nullable EncryptionServiceResponse file) {
+        public Builder file(@Nullable EncryptionServiceResponse file) {
             this.file = file;
             return this;
         }
 
-        public Builder setQueue(@Nullable EncryptionServiceResponse queue) {
+        public Builder queue(@Nullable EncryptionServiceResponse queue) {
             this.queue = queue;
             return this;
         }
 
-        public Builder setTable(@Nullable EncryptionServiceResponse table) {
+        public Builder table(@Nullable EncryptionServiceResponse table) {
             this.table = table;
             return this;
         }

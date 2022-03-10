@@ -50,7 +50,7 @@ public final class JobExecutionProperty {
     	      this.maxConcurrentRuns = defaults.maxConcurrentRuns;
         }
 
-        public Builder setMaxConcurrentRuns(@Nullable Integer maxConcurrentRuns) {
+        public Builder maxConcurrentRuns(@Nullable Integer maxConcurrentRuns) {
             this.maxConcurrentRuns = maxConcurrentRuns;
             return this;
         }

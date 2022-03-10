@@ -83,32 +83,32 @@ public final class EnvironmentLoggingConfigurationTaskLogsGetArgs extends io.pul
     	      this.logLevel = defaults.logLevel;
         }
 
-        public Builder setCloudWatchLogGroupArn(@Nullable Input<String> cloudWatchLogGroupArn) {
+        public Builder cloudWatchLogGroupArn(@Nullable Input<String> cloudWatchLogGroupArn) {
             this.cloudWatchLogGroupArn = cloudWatchLogGroupArn;
             return this;
         }
 
-        public Builder setCloudWatchLogGroupArn(@Nullable String cloudWatchLogGroupArn) {
+        public Builder cloudWatchLogGroupArn(@Nullable String cloudWatchLogGroupArn) {
             this.cloudWatchLogGroupArn = Input.ofNullable(cloudWatchLogGroupArn);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setLogLevel(@Nullable Input<String> logLevel) {
+        public Builder logLevel(@Nullable Input<String> logLevel) {
             this.logLevel = logLevel;
             return this;
         }
 
-        public Builder setLogLevel(@Nullable String logLevel) {
+        public Builder logLevel(@Nullable String logLevel) {
             this.logLevel = Input.ofNullable(logLevel);
             return this;
         }

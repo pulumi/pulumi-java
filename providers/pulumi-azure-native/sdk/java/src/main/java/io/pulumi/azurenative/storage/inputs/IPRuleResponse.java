@@ -74,12 +74,12 @@ public final class IPRuleResponse extends io.pulumi.resources.InvokeArgs {
     	      this.iPAddressOrRange = defaults.iPAddressOrRange;
         }
 
-        public Builder setAction(@Nullable String action) {
+        public Builder action(@Nullable String action) {
             this.action = action;
             return this;
         }
 
-        public Builder setIPAddressOrRange(String iPAddressOrRange) {
+        public Builder iPAddressOrRange(String iPAddressOrRange) {
             this.iPAddressOrRange = Objects.requireNonNull(iPAddressOrRange);
             return this;
         }

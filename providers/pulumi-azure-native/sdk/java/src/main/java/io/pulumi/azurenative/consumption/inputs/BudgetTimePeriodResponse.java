@@ -74,12 +74,12 @@ public final class BudgetTimePeriodResponse extends io.pulumi.resources.InvokeAr
     	      this.startDate = defaults.startDate;
         }
 
-        public Builder setEndDate(@Nullable String endDate) {
+        public Builder endDate(@Nullable String endDate) {
             this.endDate = endDate;
             return this;
         }
 
-        public Builder setStartDate(String startDate) {
+        public Builder startDate(String startDate) {
             this.startDate = Objects.requireNonNull(startDate);
             return this;
         }

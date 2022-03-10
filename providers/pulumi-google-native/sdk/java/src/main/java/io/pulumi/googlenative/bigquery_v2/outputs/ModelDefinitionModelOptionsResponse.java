@@ -58,17 +58,17 @@ public final class ModelDefinitionModelOptionsResponse {
     	      this.modelType = defaults.modelType;
         }
 
-        public Builder setLabels(List<String> labels) {
+        public Builder labels(List<String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLossType(String lossType) {
+        public Builder lossType(String lossType) {
             this.lossType = Objects.requireNonNull(lossType);
             return this;
         }
 
-        public Builder setModelType(String modelType) {
+        public Builder modelType(String modelType) {
             this.modelType = Objects.requireNonNull(modelType);
             return this;
         }

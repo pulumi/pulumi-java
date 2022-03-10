@@ -187,92 +187,92 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tier = defaults.tier;
         }
 
-        public Builder setAdditionalCapabilities(@Nullable Input<List<String>> additionalCapabilities) {
+        public Builder additionalCapabilities(@Nullable Input<List<String>> additionalCapabilities) {
             this.additionalCapabilities = additionalCapabilities;
             return this;
         }
 
-        public Builder setAdditionalCapabilities(@Nullable List<String> additionalCapabilities) {
+        public Builder additionalCapabilities(@Nullable List<String> additionalCapabilities) {
             this.additionalCapabilities = Input.ofNullable(additionalCapabilities);
             return this;
         }
 
-        public Builder setAvailabilityZones(Input<List<String>> availabilityZones) {
+        public Builder availabilityZones(Input<List<String>> availabilityZones) {
             this.availabilityZones = Objects.requireNonNull(availabilityZones);
             return this;
         }
 
-        public Builder setAvailabilityZones(List<String> availabilityZones) {
+        public Builder availabilityZones(List<String> availabilityZones) {
             this.availabilityZones = Input.of(Objects.requireNonNull(availabilityZones));
             return this;
         }
 
-        public Builder setDiskPoolName(@Nullable Input<String> diskPoolName) {
+        public Builder diskPoolName(@Nullable Input<String> diskPoolName) {
             this.diskPoolName = diskPoolName;
             return this;
         }
 
-        public Builder setDiskPoolName(@Nullable String diskPoolName) {
+        public Builder diskPoolName(@Nullable String diskPoolName) {
             this.diskPoolName = Input.ofNullable(diskPoolName);
             return this;
         }
 
-        public Builder setDisks(@Nullable Input<List<DiskArgs>> disks) {
+        public Builder disks(@Nullable Input<List<DiskArgs>> disks) {
             this.disks = disks;
             return this;
         }
 
-        public Builder setDisks(@Nullable List<DiskArgs> disks) {
+        public Builder disks(@Nullable List<DiskArgs> disks) {
             this.disks = Input.ofNullable(disks);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSubnetId(Input<String> subnetId) {
+        public Builder subnetId(Input<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
-        public Builder setSubnetId(String subnetId) {
+        public Builder subnetId(String subnetId) {
             this.subnetId = Input.of(Objects.requireNonNull(subnetId));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTier(Input<Either<String,DiskPoolTier>> tier) {
+        public Builder tier(Input<Either<String,DiskPoolTier>> tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
 
-        public Builder setTier(Either<String,DiskPoolTier> tier) {
+        public Builder tier(Either<String,DiskPoolTier> tier) {
             this.tier = Input.of(Objects.requireNonNull(tier));
             return this;
         }

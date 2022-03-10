@@ -208,72 +208,72 @@ public final class DeviceProfileLoRaWANDeviceProfile extends io.pulumi.resources
     	      this.supportsJoin = defaults.supportsJoin;
         }
 
-        public Builder setClassBTimeout(@Nullable Integer classBTimeout) {
+        public Builder classBTimeout(@Nullable Integer classBTimeout) {
             this.classBTimeout = classBTimeout;
             return this;
         }
 
-        public Builder setClassCTimeout(@Nullable Integer classCTimeout) {
+        public Builder classCTimeout(@Nullable Integer classCTimeout) {
             this.classCTimeout = classCTimeout;
             return this;
         }
 
-        public Builder setMacVersion(@Nullable String macVersion) {
+        public Builder macVersion(@Nullable String macVersion) {
             this.macVersion = macVersion;
             return this;
         }
 
-        public Builder setMaxDutyCycle(@Nullable Integer maxDutyCycle) {
+        public Builder maxDutyCycle(@Nullable Integer maxDutyCycle) {
             this.maxDutyCycle = maxDutyCycle;
             return this;
         }
 
-        public Builder setMaxEirp(@Nullable Integer maxEirp) {
+        public Builder maxEirp(@Nullable Integer maxEirp) {
             this.maxEirp = maxEirp;
             return this;
         }
 
-        public Builder setPingSlotDr(@Nullable Integer pingSlotDr) {
+        public Builder pingSlotDr(@Nullable Integer pingSlotDr) {
             this.pingSlotDr = pingSlotDr;
             return this;
         }
 
-        public Builder setPingSlotFreq(@Nullable Integer pingSlotFreq) {
+        public Builder pingSlotFreq(@Nullable Integer pingSlotFreq) {
             this.pingSlotFreq = pingSlotFreq;
             return this;
         }
 
-        public Builder setPingSlotPeriod(@Nullable Integer pingSlotPeriod) {
+        public Builder pingSlotPeriod(@Nullable Integer pingSlotPeriod) {
             this.pingSlotPeriod = pingSlotPeriod;
             return this;
         }
 
-        public Builder setRegParamsRevision(@Nullable String regParamsRevision) {
+        public Builder regParamsRevision(@Nullable String regParamsRevision) {
             this.regParamsRevision = regParamsRevision;
             return this;
         }
 
-        public Builder setRfRegion(@Nullable String rfRegion) {
+        public Builder rfRegion(@Nullable String rfRegion) {
             this.rfRegion = rfRegion;
             return this;
         }
 
-        public Builder setSupports32BitFCnt(@Nullable Boolean supports32BitFCnt) {
+        public Builder supports32BitFCnt(@Nullable Boolean supports32BitFCnt) {
             this.supports32BitFCnt = supports32BitFCnt;
             return this;
         }
 
-        public Builder setSupportsClassB(@Nullable Boolean supportsClassB) {
+        public Builder supportsClassB(@Nullable Boolean supportsClassB) {
             this.supportsClassB = supportsClassB;
             return this;
         }
 
-        public Builder setSupportsClassC(@Nullable Boolean supportsClassC) {
+        public Builder supportsClassC(@Nullable Boolean supportsClassC) {
             this.supportsClassC = supportsClassC;
             return this;
         }
 
-        public Builder setSupportsJoin(@Nullable Boolean supportsJoin) {
+        public Builder supportsJoin(@Nullable Boolean supportsJoin) {
             this.supportsJoin = supportsJoin;
             return this;
         }

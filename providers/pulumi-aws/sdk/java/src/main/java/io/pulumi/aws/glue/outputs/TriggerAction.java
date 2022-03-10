@@ -134,32 +134,32 @@ public final class TriggerAction {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setArguments(@Nullable Map<String,String> arguments) {
+        public Builder arguments(@Nullable Map<String,String> arguments) {
             this.arguments = arguments;
             return this;
         }
 
-        public Builder setCrawlerName(@Nullable String crawlerName) {
+        public Builder crawlerName(@Nullable String crawlerName) {
             this.crawlerName = crawlerName;
             return this;
         }
 
-        public Builder setJobName(@Nullable String jobName) {
+        public Builder jobName(@Nullable String jobName) {
             this.jobName = jobName;
             return this;
         }
 
-        public Builder setNotificationProperty(@Nullable TriggerActionNotificationProperty notificationProperty) {
+        public Builder notificationProperty(@Nullable TriggerActionNotificationProperty notificationProperty) {
             this.notificationProperty = notificationProperty;
             return this;
         }
 
-        public Builder setSecurityConfiguration(@Nullable String securityConfiguration) {
+        public Builder securityConfiguration(@Nullable String securityConfiguration) {
             this.securityConfiguration = securityConfiguration;
             return this;
         }
 
-        public Builder setTimeout(@Nullable Integer timeout) {
+        public Builder timeout(@Nullable Integer timeout) {
             this.timeout = timeout;
             return this;
         }

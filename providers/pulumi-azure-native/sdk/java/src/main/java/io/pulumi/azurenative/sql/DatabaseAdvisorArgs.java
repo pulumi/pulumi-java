@@ -119,52 +119,52 @@ public final class DatabaseAdvisorArgs extends io.pulumi.resources.ResourceArgs 
     	      this.serverName = defaults.serverName;
         }
 
-        public Builder setAdvisorName(@Nullable Input<String> advisorName) {
+        public Builder advisorName(@Nullable Input<String> advisorName) {
             this.advisorName = advisorName;
             return this;
         }
 
-        public Builder setAdvisorName(@Nullable String advisorName) {
+        public Builder advisorName(@Nullable String advisorName) {
             this.advisorName = Input.ofNullable(advisorName);
             return this;
         }
 
-        public Builder setAutoExecuteStatus(Input<AutoExecuteStatus> autoExecuteStatus) {
+        public Builder autoExecuteStatus(Input<AutoExecuteStatus> autoExecuteStatus) {
             this.autoExecuteStatus = Objects.requireNonNull(autoExecuteStatus);
             return this;
         }
 
-        public Builder setAutoExecuteStatus(AutoExecuteStatus autoExecuteStatus) {
+        public Builder autoExecuteStatus(AutoExecuteStatus autoExecuteStatus) {
             this.autoExecuteStatus = Input.of(Objects.requireNonNull(autoExecuteStatus));
             return this;
         }
 
-        public Builder setDatabaseName(Input<String> databaseName) {
+        public Builder databaseName(Input<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Input.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServerName(Input<String> serverName) {
+        public Builder serverName(Input<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
-        public Builder setServerName(String serverName) {
+        public Builder serverName(String serverName) {
             this.serverName = Input.of(Objects.requireNonNull(serverName));
             return this;
         }

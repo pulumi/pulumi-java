@@ -114,62 +114,62 @@ public final class ComponentVersionLambdaFunctionRecipeSourceArgs extends io.pul
     	      this.lambdaArn = defaults.lambdaArn;
         }
 
-        public Builder setComponentDependencies(@Nullable Input<Object> componentDependencies) {
+        public Builder componentDependencies(@Nullable Input<Object> componentDependencies) {
             this.componentDependencies = componentDependencies;
             return this;
         }
 
-        public Builder setComponentDependencies(@Nullable Object componentDependencies) {
+        public Builder componentDependencies(@Nullable Object componentDependencies) {
             this.componentDependencies = Input.ofNullable(componentDependencies);
             return this;
         }
 
-        public Builder setComponentLambdaParameters(@Nullable Input<ComponentVersionLambdaExecutionParametersArgs> componentLambdaParameters) {
+        public Builder componentLambdaParameters(@Nullable Input<ComponentVersionLambdaExecutionParametersArgs> componentLambdaParameters) {
             this.componentLambdaParameters = componentLambdaParameters;
             return this;
         }
 
-        public Builder setComponentLambdaParameters(@Nullable ComponentVersionLambdaExecutionParametersArgs componentLambdaParameters) {
+        public Builder componentLambdaParameters(@Nullable ComponentVersionLambdaExecutionParametersArgs componentLambdaParameters) {
             this.componentLambdaParameters = Input.ofNullable(componentLambdaParameters);
             return this;
         }
 
-        public Builder setComponentName(@Nullable Input<String> componentName) {
+        public Builder componentName(@Nullable Input<String> componentName) {
             this.componentName = componentName;
             return this;
         }
 
-        public Builder setComponentName(@Nullable String componentName) {
+        public Builder componentName(@Nullable String componentName) {
             this.componentName = Input.ofNullable(componentName);
             return this;
         }
 
-        public Builder setComponentPlatforms(@Nullable Input<List<ComponentVersionComponentPlatformArgs>> componentPlatforms) {
+        public Builder componentPlatforms(@Nullable Input<List<ComponentVersionComponentPlatformArgs>> componentPlatforms) {
             this.componentPlatforms = componentPlatforms;
             return this;
         }
 
-        public Builder setComponentPlatforms(@Nullable List<ComponentVersionComponentPlatformArgs> componentPlatforms) {
+        public Builder componentPlatforms(@Nullable List<ComponentVersionComponentPlatformArgs> componentPlatforms) {
             this.componentPlatforms = Input.ofNullable(componentPlatforms);
             return this;
         }
 
-        public Builder setComponentVersion(@Nullable Input<String> componentVersion) {
+        public Builder componentVersion(@Nullable Input<String> componentVersion) {
             this.componentVersion = componentVersion;
             return this;
         }
 
-        public Builder setComponentVersion(@Nullable String componentVersion) {
+        public Builder componentVersion(@Nullable String componentVersion) {
             this.componentVersion = Input.ofNullable(componentVersion);
             return this;
         }
 
-        public Builder setLambdaArn(@Nullable Input<String> lambdaArn) {
+        public Builder lambdaArn(@Nullable Input<String> lambdaArn) {
             this.lambdaArn = lambdaArn;
             return this;
         }
 
-        public Builder setLambdaArn(@Nullable String lambdaArn) {
+        public Builder lambdaArn(@Nullable String lambdaArn) {
             this.lambdaArn = Input.ofNullable(lambdaArn);
             return this;
         }

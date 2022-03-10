@@ -183,47 +183,47 @@ public final class GetWorkflowTemplateResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDagTimeout(String dagTimeout) {
+        public Builder dagTimeout(String dagTimeout) {
             this.dagTimeout = Objects.requireNonNull(dagTimeout);
             return this;
         }
 
-        public Builder setJobs(List<OrderedJobResponse> jobs) {
+        public Builder jobs(List<OrderedJobResponse> jobs) {
             this.jobs = Objects.requireNonNull(jobs);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(List<TemplateParameterResponse> parameters) {
+        public Builder parameters(List<TemplateParameterResponse> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setPlacement(WorkflowTemplatePlacementResponse placement) {
+        public Builder placement(WorkflowTemplatePlacementResponse placement) {
             this.placement = Objects.requireNonNull(placement);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
 
-        public Builder setVersion(Integer version) {
+        public Builder version(Integer version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

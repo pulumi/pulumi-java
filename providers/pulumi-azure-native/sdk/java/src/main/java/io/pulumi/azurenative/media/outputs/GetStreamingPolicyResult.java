@@ -200,52 +200,52 @@ public final class GetStreamingPolicyResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCommonEncryptionCbcs(@Nullable CommonEncryptionCbcsResponse commonEncryptionCbcs) {
+        public Builder commonEncryptionCbcs(@Nullable CommonEncryptionCbcsResponse commonEncryptionCbcs) {
             this.commonEncryptionCbcs = commonEncryptionCbcs;
             return this;
         }
 
-        public Builder setCommonEncryptionCenc(@Nullable CommonEncryptionCencResponse commonEncryptionCenc) {
+        public Builder commonEncryptionCenc(@Nullable CommonEncryptionCencResponse commonEncryptionCenc) {
             this.commonEncryptionCenc = commonEncryptionCenc;
             return this;
         }
 
-        public Builder setCreated(String created) {
+        public Builder created(String created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
 
-        public Builder setDefaultContentKeyPolicyName(@Nullable String defaultContentKeyPolicyName) {
+        public Builder defaultContentKeyPolicyName(@Nullable String defaultContentKeyPolicyName) {
             this.defaultContentKeyPolicyName = defaultContentKeyPolicyName;
             return this;
         }
 
-        public Builder setEnvelopeEncryption(@Nullable EnvelopeEncryptionResponse envelopeEncryption) {
+        public Builder envelopeEncryption(@Nullable EnvelopeEncryptionResponse envelopeEncryption) {
             this.envelopeEncryption = envelopeEncryption;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNoEncryption(@Nullable NoEncryptionResponse noEncryption) {
+        public Builder noEncryption(@Nullable NoEncryptionResponse noEncryption) {
             this.noEncryption = noEncryption;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

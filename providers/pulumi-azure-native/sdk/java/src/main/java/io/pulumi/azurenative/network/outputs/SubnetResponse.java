@@ -416,117 +416,117 @@ public final class SubnetResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAddressPrefix(@Nullable String addressPrefix) {
+        public Builder addressPrefix(@Nullable String addressPrefix) {
             this.addressPrefix = addressPrefix;
             return this;
         }
 
-        public Builder setAddressPrefixes(@Nullable List<String> addressPrefixes) {
+        public Builder addressPrefixes(@Nullable List<String> addressPrefixes) {
             this.addressPrefixes = addressPrefixes;
             return this;
         }
 
-        public Builder setApplicationGatewayIpConfigurations(@Nullable List<ApplicationGatewayIPConfigurationResponse> applicationGatewayIpConfigurations) {
+        public Builder applicationGatewayIpConfigurations(@Nullable List<ApplicationGatewayIPConfigurationResponse> applicationGatewayIpConfigurations) {
             this.applicationGatewayIpConfigurations = applicationGatewayIpConfigurations;
             return this;
         }
 
-        public Builder setDelegations(@Nullable List<DelegationResponse> delegations) {
+        public Builder delegations(@Nullable List<DelegationResponse> delegations) {
             this.delegations = delegations;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIpAllocations(@Nullable List<SubResourceResponse> ipAllocations) {
+        public Builder ipAllocations(@Nullable List<SubResourceResponse> ipAllocations) {
             this.ipAllocations = ipAllocations;
             return this;
         }
 
-        public Builder setIpConfigurationProfiles(List<IPConfigurationProfileResponse> ipConfigurationProfiles) {
+        public Builder ipConfigurationProfiles(List<IPConfigurationProfileResponse> ipConfigurationProfiles) {
             this.ipConfigurationProfiles = Objects.requireNonNull(ipConfigurationProfiles);
             return this;
         }
 
-        public Builder setIpConfigurations(List<IPConfigurationResponse> ipConfigurations) {
+        public Builder ipConfigurations(List<IPConfigurationResponse> ipConfigurations) {
             this.ipConfigurations = Objects.requireNonNull(ipConfigurations);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNatGateway(@Nullable SubResourceResponse natGateway) {
+        public Builder natGateway(@Nullable SubResourceResponse natGateway) {
             this.natGateway = natGateway;
             return this;
         }
 
-        public Builder setNetworkSecurityGroup(@Nullable NetworkSecurityGroupResponse networkSecurityGroup) {
+        public Builder networkSecurityGroup(@Nullable NetworkSecurityGroupResponse networkSecurityGroup) {
             this.networkSecurityGroup = networkSecurityGroup;
             return this;
         }
 
-        public Builder setPrivateEndpointNetworkPolicies(@Nullable String privateEndpointNetworkPolicies) {
+        public Builder privateEndpointNetworkPolicies(@Nullable String privateEndpointNetworkPolicies) {
             this.privateEndpointNetworkPolicies = privateEndpointNetworkPolicies;
             return this;
         }
 
-        public Builder setPrivateEndpoints(List<PrivateEndpointResponse> privateEndpoints) {
+        public Builder privateEndpoints(List<PrivateEndpointResponse> privateEndpoints) {
             this.privateEndpoints = Objects.requireNonNull(privateEndpoints);
             return this;
         }
 
-        public Builder setPrivateLinkServiceNetworkPolicies(@Nullable String privateLinkServiceNetworkPolicies) {
+        public Builder privateLinkServiceNetworkPolicies(@Nullable String privateLinkServiceNetworkPolicies) {
             this.privateLinkServiceNetworkPolicies = privateLinkServiceNetworkPolicies;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPurpose(String purpose) {
+        public Builder purpose(String purpose) {
             this.purpose = Objects.requireNonNull(purpose);
             return this;
         }
 
-        public Builder setResourceNavigationLinks(List<ResourceNavigationLinkResponse> resourceNavigationLinks) {
+        public Builder resourceNavigationLinks(List<ResourceNavigationLinkResponse> resourceNavigationLinks) {
             this.resourceNavigationLinks = Objects.requireNonNull(resourceNavigationLinks);
             return this;
         }
 
-        public Builder setRouteTable(@Nullable RouteTableResponse routeTable) {
+        public Builder routeTable(@Nullable RouteTableResponse routeTable) {
             this.routeTable = routeTable;
             return this;
         }
 
-        public Builder setServiceAssociationLinks(List<ServiceAssociationLinkResponse> serviceAssociationLinks) {
+        public Builder serviceAssociationLinks(List<ServiceAssociationLinkResponse> serviceAssociationLinks) {
             this.serviceAssociationLinks = Objects.requireNonNull(serviceAssociationLinks);
             return this;
         }
 
-        public Builder setServiceEndpointPolicies(@Nullable List<ServiceEndpointPolicyResponse> serviceEndpointPolicies) {
+        public Builder serviceEndpointPolicies(@Nullable List<ServiceEndpointPolicyResponse> serviceEndpointPolicies) {
             this.serviceEndpointPolicies = serviceEndpointPolicies;
             return this;
         }
 
-        public Builder setServiceEndpoints(@Nullable List<ServiceEndpointPropertiesFormatResponse> serviceEndpoints) {
+        public Builder serviceEndpoints(@Nullable List<ServiceEndpointPropertiesFormatResponse> serviceEndpoints) {
             this.serviceEndpoints = serviceEndpoints;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

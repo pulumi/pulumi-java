@@ -412,232 +412,232 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
     	      this.weeklyMaintenanceStartTime = defaults.weeklyMaintenanceStartTime;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAutomaticBackupRetentionDays(@Nullable Input<Integer> automaticBackupRetentionDays) {
+        public Builder automaticBackupRetentionDays(@Nullable Input<Integer> automaticBackupRetentionDays) {
             this.automaticBackupRetentionDays = automaticBackupRetentionDays;
             return this;
         }
 
-        public Builder setAutomaticBackupRetentionDays(@Nullable Integer automaticBackupRetentionDays) {
+        public Builder automaticBackupRetentionDays(@Nullable Integer automaticBackupRetentionDays) {
             this.automaticBackupRetentionDays = Input.ofNullable(automaticBackupRetentionDays);
             return this;
         }
 
-        public Builder setBackupId(@Nullable Input<String> backupId) {
+        public Builder backupId(@Nullable Input<String> backupId) {
             this.backupId = backupId;
             return this;
         }
 
-        public Builder setBackupId(@Nullable String backupId) {
+        public Builder backupId(@Nullable String backupId) {
             this.backupId = Input.ofNullable(backupId);
             return this;
         }
 
-        public Builder setCopyTagsToBackups(@Nullable Input<Boolean> copyTagsToBackups) {
+        public Builder copyTagsToBackups(@Nullable Input<Boolean> copyTagsToBackups) {
             this.copyTagsToBackups = copyTagsToBackups;
             return this;
         }
 
-        public Builder setCopyTagsToBackups(@Nullable Boolean copyTagsToBackups) {
+        public Builder copyTagsToBackups(@Nullable Boolean copyTagsToBackups) {
             this.copyTagsToBackups = Input.ofNullable(copyTagsToBackups);
             return this;
         }
 
-        public Builder setCopyTagsToVolumes(@Nullable Input<Boolean> copyTagsToVolumes) {
+        public Builder copyTagsToVolumes(@Nullable Input<Boolean> copyTagsToVolumes) {
             this.copyTagsToVolumes = copyTagsToVolumes;
             return this;
         }
 
-        public Builder setCopyTagsToVolumes(@Nullable Boolean copyTagsToVolumes) {
+        public Builder copyTagsToVolumes(@Nullable Boolean copyTagsToVolumes) {
             this.copyTagsToVolumes = Input.ofNullable(copyTagsToVolumes);
             return this;
         }
 
-        public Builder setDailyAutomaticBackupStartTime(@Nullable Input<String> dailyAutomaticBackupStartTime) {
+        public Builder dailyAutomaticBackupStartTime(@Nullable Input<String> dailyAutomaticBackupStartTime) {
             this.dailyAutomaticBackupStartTime = dailyAutomaticBackupStartTime;
             return this;
         }
 
-        public Builder setDailyAutomaticBackupStartTime(@Nullable String dailyAutomaticBackupStartTime) {
+        public Builder dailyAutomaticBackupStartTime(@Nullable String dailyAutomaticBackupStartTime) {
             this.dailyAutomaticBackupStartTime = Input.ofNullable(dailyAutomaticBackupStartTime);
             return this;
         }
 
-        public Builder setDeploymentType(@Nullable Input<String> deploymentType) {
+        public Builder deploymentType(@Nullable Input<String> deploymentType) {
             this.deploymentType = deploymentType;
             return this;
         }
 
-        public Builder setDeploymentType(@Nullable String deploymentType) {
+        public Builder deploymentType(@Nullable String deploymentType) {
             this.deploymentType = Input.ofNullable(deploymentType);
             return this;
         }
 
-        public Builder setDiskIopsConfiguration(@Nullable Input<OpenZfsFileSystemDiskIopsConfigurationGetArgs> diskIopsConfiguration) {
+        public Builder diskIopsConfiguration(@Nullable Input<OpenZfsFileSystemDiskIopsConfigurationGetArgs> diskIopsConfiguration) {
             this.diskIopsConfiguration = diskIopsConfiguration;
             return this;
         }
 
-        public Builder setDiskIopsConfiguration(@Nullable OpenZfsFileSystemDiskIopsConfigurationGetArgs diskIopsConfiguration) {
+        public Builder diskIopsConfiguration(@Nullable OpenZfsFileSystemDiskIopsConfigurationGetArgs diskIopsConfiguration) {
             this.diskIopsConfiguration = Input.ofNullable(diskIopsConfiguration);
             return this;
         }
 
-        public Builder setDnsName(@Nullable Input<String> dnsName) {
+        public Builder dnsName(@Nullable Input<String> dnsName) {
             this.dnsName = dnsName;
             return this;
         }
 
-        public Builder setDnsName(@Nullable String dnsName) {
+        public Builder dnsName(@Nullable String dnsName) {
             this.dnsName = Input.ofNullable(dnsName);
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Input.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder setNetworkInterfaceIds(@Nullable Input<List<String>> networkInterfaceIds) {
+        public Builder networkInterfaceIds(@Nullable Input<List<String>> networkInterfaceIds) {
             this.networkInterfaceIds = networkInterfaceIds;
             return this;
         }
 
-        public Builder setNetworkInterfaceIds(@Nullable List<String> networkInterfaceIds) {
+        public Builder networkInterfaceIds(@Nullable List<String> networkInterfaceIds) {
             this.networkInterfaceIds = Input.ofNullable(networkInterfaceIds);
             return this;
         }
 
-        public Builder setOwnerId(@Nullable Input<String> ownerId) {
+        public Builder ownerId(@Nullable Input<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
-        public Builder setOwnerId(@Nullable String ownerId) {
+        public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = Input.ofNullable(ownerId);
             return this;
         }
 
-        public Builder setRootVolumeConfiguration(@Nullable Input<OpenZfsFileSystemRootVolumeConfigurationGetArgs> rootVolumeConfiguration) {
+        public Builder rootVolumeConfiguration(@Nullable Input<OpenZfsFileSystemRootVolumeConfigurationGetArgs> rootVolumeConfiguration) {
             this.rootVolumeConfiguration = rootVolumeConfiguration;
             return this;
         }
 
-        public Builder setRootVolumeConfiguration(@Nullable OpenZfsFileSystemRootVolumeConfigurationGetArgs rootVolumeConfiguration) {
+        public Builder rootVolumeConfiguration(@Nullable OpenZfsFileSystemRootVolumeConfigurationGetArgs rootVolumeConfiguration) {
             this.rootVolumeConfiguration = Input.ofNullable(rootVolumeConfiguration);
             return this;
         }
 
-        public Builder setRootVolumeId(@Nullable Input<String> rootVolumeId) {
+        public Builder rootVolumeId(@Nullable Input<String> rootVolumeId) {
             this.rootVolumeId = rootVolumeId;
             return this;
         }
 
-        public Builder setRootVolumeId(@Nullable String rootVolumeId) {
+        public Builder rootVolumeId(@Nullable String rootVolumeId) {
             this.rootVolumeId = Input.ofNullable(rootVolumeId);
             return this;
         }
 
-        public Builder setSecurityGroupIds(@Nullable Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable Input<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
 
-        public Builder setSecurityGroupIds(@Nullable List<String> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = Input.ofNullable(securityGroupIds);
             return this;
         }
 
-        public Builder setStorageCapacity(@Nullable Input<Integer> storageCapacity) {
+        public Builder storageCapacity(@Nullable Input<Integer> storageCapacity) {
             this.storageCapacity = storageCapacity;
             return this;
         }
 
-        public Builder setStorageCapacity(@Nullable Integer storageCapacity) {
+        public Builder storageCapacity(@Nullable Integer storageCapacity) {
             this.storageCapacity = Input.ofNullable(storageCapacity);
             return this;
         }
 
-        public Builder setStorageType(@Nullable Input<String> storageType) {
+        public Builder storageType(@Nullable Input<String> storageType) {
             this.storageType = storageType;
             return this;
         }
 
-        public Builder setStorageType(@Nullable String storageType) {
+        public Builder storageType(@Nullable String storageType) {
             this.storageType = Input.ofNullable(storageType);
             return this;
         }
 
-        public Builder setSubnetIds(@Nullable Input<String> subnetIds) {
+        public Builder subnetIds(@Nullable Input<String> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
 
-        public Builder setSubnetIds(@Nullable String subnetIds) {
+        public Builder subnetIds(@Nullable String subnetIds) {
             this.subnetIds = Input.ofNullable(subnetIds);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setThroughputCapacity(@Nullable Input<Integer> throughputCapacity) {
+        public Builder throughputCapacity(@Nullable Input<Integer> throughputCapacity) {
             this.throughputCapacity = throughputCapacity;
             return this;
         }
 
-        public Builder setThroughputCapacity(@Nullable Integer throughputCapacity) {
+        public Builder throughputCapacity(@Nullable Integer throughputCapacity) {
             this.throughputCapacity = Input.ofNullable(throughputCapacity);
             return this;
         }
 
-        public Builder setVpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Input<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Input.ofNullable(vpcId);
             return this;
         }
 
-        public Builder setWeeklyMaintenanceStartTime(@Nullable Input<String> weeklyMaintenanceStartTime) {
+        public Builder weeklyMaintenanceStartTime(@Nullable Input<String> weeklyMaintenanceStartTime) {
             this.weeklyMaintenanceStartTime = weeklyMaintenanceStartTime;
             return this;
         }
 
-        public Builder setWeeklyMaintenanceStartTime(@Nullable String weeklyMaintenanceStartTime) {
+        public Builder weeklyMaintenanceStartTime(@Nullable String weeklyMaintenanceStartTime) {
             this.weeklyMaintenanceStartTime = Input.ofNullable(weeklyMaintenanceStartTime);
             return this;
         }

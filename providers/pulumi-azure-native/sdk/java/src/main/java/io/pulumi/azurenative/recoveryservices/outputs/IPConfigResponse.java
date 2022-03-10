@@ -84,17 +84,17 @@ public final class IPConfigResponse {
     	      this.staticIPAddress = defaults.staticIPAddress;
         }
 
-        public Builder setLBBackendAddressPoolIds(@Nullable List<String> lBBackendAddressPoolIds) {
+        public Builder lBBackendAddressPoolIds(@Nullable List<String> lBBackendAddressPoolIds) {
             this.lBBackendAddressPoolIds = lBBackendAddressPoolIds;
             return this;
         }
 
-        public Builder setPublicIpAddressId(@Nullable String publicIpAddressId) {
+        public Builder publicIpAddressId(@Nullable String publicIpAddressId) {
             this.publicIpAddressId = publicIpAddressId;
             return this;
         }
 
-        public Builder setStaticIPAddress(@Nullable String staticIPAddress) {
+        public Builder staticIPAddress(@Nullable String staticIPAddress) {
             this.staticIPAddress = staticIPAddress;
             return this;
         }

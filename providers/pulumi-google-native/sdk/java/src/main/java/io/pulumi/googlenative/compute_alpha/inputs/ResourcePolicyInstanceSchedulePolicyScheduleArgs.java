@@ -57,12 +57,12 @@ public final class ResourcePolicyInstanceSchedulePolicyScheduleArgs extends io.p
     	      this.schedule = defaults.schedule;
         }
 
-        public Builder setSchedule(@Nullable Input<String> schedule) {
+        public Builder schedule(@Nullable Input<String> schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setSchedule(@Nullable String schedule) {
+        public Builder schedule(@Nullable String schedule) {
             this.schedule = Input.ofNullable(schedule);
             return this;
         }

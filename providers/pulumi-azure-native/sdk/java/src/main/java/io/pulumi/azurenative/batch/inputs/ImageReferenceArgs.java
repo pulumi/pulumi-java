@@ -118,52 +118,52 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setOffer(@Nullable Input<String> offer) {
+        public Builder offer(@Nullable Input<String> offer) {
             this.offer = offer;
             return this;
         }
 
-        public Builder setOffer(@Nullable String offer) {
+        public Builder offer(@Nullable String offer) {
             this.offer = Input.ofNullable(offer);
             return this;
         }
 
-        public Builder setPublisher(@Nullable Input<String> publisher) {
+        public Builder publisher(@Nullable Input<String> publisher) {
             this.publisher = publisher;
             return this;
         }
 
-        public Builder setPublisher(@Nullable String publisher) {
+        public Builder publisher(@Nullable String publisher) {
             this.publisher = Input.ofNullable(publisher);
             return this;
         }
 
-        public Builder setSku(@Nullable Input<String> sku) {
+        public Builder sku(@Nullable Input<String> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable String sku) {
+        public Builder sku(@Nullable String sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

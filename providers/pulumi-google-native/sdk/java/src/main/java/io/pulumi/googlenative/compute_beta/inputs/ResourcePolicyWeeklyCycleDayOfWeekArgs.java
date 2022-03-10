@@ -71,22 +71,22 @@ public final class ResourcePolicyWeeklyCycleDayOfWeekArgs extends io.pulumi.reso
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setDay(@Nullable Input<ResourcePolicyWeeklyCycleDayOfWeekDay> day) {
+        public Builder day(@Nullable Input<ResourcePolicyWeeklyCycleDayOfWeekDay> day) {
             this.day = day;
             return this;
         }
 
-        public Builder setDay(@Nullable ResourcePolicyWeeklyCycleDayOfWeekDay day) {
+        public Builder day(@Nullable ResourcePolicyWeeklyCycleDayOfWeekDay day) {
             this.day = Input.ofNullable(day);
             return this;
         }
 
-        public Builder setStartTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Input<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }

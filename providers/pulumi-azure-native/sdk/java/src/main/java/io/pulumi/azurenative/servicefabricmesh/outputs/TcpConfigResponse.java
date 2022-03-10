@@ -83,17 +83,17 @@ public final class TcpConfigResponse {
     	      this.port = defaults.port;
         }
 
-        public Builder setDestination(GatewayDestinationResponse destination) {
+        public Builder destination(GatewayDestinationResponse destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }

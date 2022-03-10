@@ -83,17 +83,17 @@ public final class GetCustomClassResult {
     	      this.name = defaults.name;
         }
 
-        public Builder setCustomClassId(String customClassId) {
+        public Builder customClassId(String customClassId) {
             this.customClassId = Objects.requireNonNull(customClassId);
             return this;
         }
 
-        public Builder setItems(List<ClassItemResponse> items) {
+        public Builder items(List<ClassItemResponse> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

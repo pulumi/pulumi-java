@@ -66,12 +66,12 @@ public final class MaintenancePolicyResponse {
     	      this.window = defaults.window;
         }
 
-        public Builder setResourceVersion(String resourceVersion) {
+        public Builder resourceVersion(String resourceVersion) {
             this.resourceVersion = Objects.requireNonNull(resourceVersion);
             return this;
         }
 
-        public Builder setWindow(MaintenanceWindowResponse window) {
+        public Builder window(MaintenanceWindowResponse window) {
             this.window = Objects.requireNonNull(window);
             return this;
         }

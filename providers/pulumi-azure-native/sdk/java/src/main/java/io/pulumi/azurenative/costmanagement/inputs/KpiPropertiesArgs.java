@@ -93,32 +93,32 @@ public final class KpiPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setType(@Nullable Input<Either<String,KpiTypeType>> type) {
+        public Builder type(@Nullable Input<Either<String,KpiTypeType>> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable Either<String,KpiTypeType> type) {
+        public Builder type(@Nullable Either<String,KpiTypeType> type) {
             this.type = Input.ofNullable(type);
             return this;
         }

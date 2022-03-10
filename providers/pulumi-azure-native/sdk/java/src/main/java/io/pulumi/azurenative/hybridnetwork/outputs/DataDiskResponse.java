@@ -84,17 +84,17 @@ public final class DataDiskResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setCreateOption(@Nullable String createOption) {
+        public Builder createOption(@Nullable String createOption) {
             this.createOption = createOption;
             return this;
         }
 
-        public Builder setDiskSizeGB(@Nullable Integer diskSizeGB) {
+        public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

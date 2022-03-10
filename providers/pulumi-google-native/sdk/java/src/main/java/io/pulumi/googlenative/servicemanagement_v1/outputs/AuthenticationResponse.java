@@ -67,12 +67,12 @@ public final class AuthenticationResponse {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setProviders(List<AuthProviderResponse> providers) {
+        public Builder providers(List<AuthProviderResponse> providers) {
             this.providers = Objects.requireNonNull(providers);
             return this;
         }
 
-        public Builder setRules(List<AuthenticationRuleResponse> rules) {
+        public Builder rules(List<AuthenticationRuleResponse> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }

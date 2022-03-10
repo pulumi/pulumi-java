@@ -50,12 +50,12 @@ public final class EnvironmentConfigWebServerNetworkAccessControlArgs extends io
     	      this.allowedIpRanges = defaults.allowedIpRanges;
         }
 
-        public Builder setAllowedIpRanges(@Nullable Input<List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeArgs>> allowedIpRanges) {
+        public Builder allowedIpRanges(@Nullable Input<List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeArgs>> allowedIpRanges) {
             this.allowedIpRanges = allowedIpRanges;
             return this;
         }
 
-        public Builder setAllowedIpRanges(@Nullable List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeArgs> allowedIpRanges) {
+        public Builder allowedIpRanges(@Nullable List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeArgs> allowedIpRanges) {
             this.allowedIpRanges = Input.ofNullable(allowedIpRanges);
             return this;
         }

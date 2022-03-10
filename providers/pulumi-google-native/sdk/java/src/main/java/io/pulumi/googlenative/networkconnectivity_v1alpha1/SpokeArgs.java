@@ -233,132 +233,132 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setHub(@Nullable Input<String> hub) {
+        public Builder hub(@Nullable Input<String> hub) {
             this.hub = hub;
             return this;
         }
 
-        public Builder setHub(@Nullable String hub) {
+        public Builder hub(@Nullable String hub) {
             this.hub = Input.ofNullable(hub);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLinkedInterconnectAttachments(@Nullable Input<List<String>> linkedInterconnectAttachments) {
+        public Builder linkedInterconnectAttachments(@Nullable Input<List<String>> linkedInterconnectAttachments) {
             this.linkedInterconnectAttachments = linkedInterconnectAttachments;
             return this;
         }
 
-        public Builder setLinkedInterconnectAttachments(@Nullable List<String> linkedInterconnectAttachments) {
+        public Builder linkedInterconnectAttachments(@Nullable List<String> linkedInterconnectAttachments) {
             this.linkedInterconnectAttachments = Input.ofNullable(linkedInterconnectAttachments);
             return this;
         }
 
-        public Builder setLinkedRouterApplianceInstances(@Nullable Input<List<RouterApplianceInstanceArgs>> linkedRouterApplianceInstances) {
+        public Builder linkedRouterApplianceInstances(@Nullable Input<List<RouterApplianceInstanceArgs>> linkedRouterApplianceInstances) {
             this.linkedRouterApplianceInstances = linkedRouterApplianceInstances;
             return this;
         }
 
-        public Builder setLinkedRouterApplianceInstances(@Nullable List<RouterApplianceInstanceArgs> linkedRouterApplianceInstances) {
+        public Builder linkedRouterApplianceInstances(@Nullable List<RouterApplianceInstanceArgs> linkedRouterApplianceInstances) {
             this.linkedRouterApplianceInstances = Input.ofNullable(linkedRouterApplianceInstances);
             return this;
         }
 
-        public Builder setLinkedVpnTunnels(@Nullable Input<List<String>> linkedVpnTunnels) {
+        public Builder linkedVpnTunnels(@Nullable Input<List<String>> linkedVpnTunnels) {
             this.linkedVpnTunnels = linkedVpnTunnels;
             return this;
         }
 
-        public Builder setLinkedVpnTunnels(@Nullable List<String> linkedVpnTunnels) {
+        public Builder linkedVpnTunnels(@Nullable List<String> linkedVpnTunnels) {
             this.linkedVpnTunnels = Input.ofNullable(linkedVpnTunnels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setSpokeId(@Nullable Input<String> spokeId) {
+        public Builder spokeId(@Nullable Input<String> spokeId) {
             this.spokeId = spokeId;
             return this;
         }
 
-        public Builder setSpokeId(@Nullable String spokeId) {
+        public Builder spokeId(@Nullable String spokeId) {
             this.spokeId = Input.ofNullable(spokeId);
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Input<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable String updateTime) {
+        public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Input.ofNullable(updateTime);
             return this;
         }

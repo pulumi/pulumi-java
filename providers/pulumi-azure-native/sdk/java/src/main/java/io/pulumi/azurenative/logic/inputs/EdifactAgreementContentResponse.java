@@ -72,12 +72,12 @@ public final class EdifactAgreementContentResponse extends io.pulumi.resources.I
     	      this.sendAgreement = defaults.sendAgreement;
         }
 
-        public Builder setReceiveAgreement(EdifactOneWayAgreementResponse receiveAgreement) {
+        public Builder receiveAgreement(EdifactOneWayAgreementResponse receiveAgreement) {
             this.receiveAgreement = Objects.requireNonNull(receiveAgreement);
             return this;
         }
 
-        public Builder setSendAgreement(EdifactOneWayAgreementResponse sendAgreement) {
+        public Builder sendAgreement(EdifactOneWayAgreementResponse sendAgreement) {
             this.sendAgreement = Objects.requireNonNull(sendAgreement);
             return this;
         }

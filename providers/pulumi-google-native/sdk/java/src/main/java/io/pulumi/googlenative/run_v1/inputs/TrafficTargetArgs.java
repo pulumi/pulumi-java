@@ -124,52 +124,52 @@ public final class TrafficTargetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tag = defaults.tag;
         }
 
-        public Builder setConfigurationName(@Nullable Input<String> configurationName) {
+        public Builder configurationName(@Nullable Input<String> configurationName) {
             this.configurationName = configurationName;
             return this;
         }
 
-        public Builder setConfigurationName(@Nullable String configurationName) {
+        public Builder configurationName(@Nullable String configurationName) {
             this.configurationName = Input.ofNullable(configurationName);
             return this;
         }
 
-        public Builder setLatestRevision(@Nullable Input<Boolean> latestRevision) {
+        public Builder latestRevision(@Nullable Input<Boolean> latestRevision) {
             this.latestRevision = latestRevision;
             return this;
         }
 
-        public Builder setLatestRevision(@Nullable Boolean latestRevision) {
+        public Builder latestRevision(@Nullable Boolean latestRevision) {
             this.latestRevision = Input.ofNullable(latestRevision);
             return this;
         }
 
-        public Builder setPercent(@Nullable Input<Integer> percent) {
+        public Builder percent(@Nullable Input<Integer> percent) {
             this.percent = percent;
             return this;
         }
 
-        public Builder setPercent(@Nullable Integer percent) {
+        public Builder percent(@Nullable Integer percent) {
             this.percent = Input.ofNullable(percent);
             return this;
         }
 
-        public Builder setRevisionName(@Nullable Input<String> revisionName) {
+        public Builder revisionName(@Nullable Input<String> revisionName) {
             this.revisionName = revisionName;
             return this;
         }
 
-        public Builder setRevisionName(@Nullable String revisionName) {
+        public Builder revisionName(@Nullable String revisionName) {
             this.revisionName = Input.ofNullable(revisionName);
             return this;
         }
 
-        public Builder setTag(@Nullable Input<String> tag) {
+        public Builder tag(@Nullable Input<String> tag) {
             this.tag = tag;
             return this;
         }
 
-        public Builder setTag(@Nullable String tag) {
+        public Builder tag(@Nullable String tag) {
             this.tag = Input.ofNullable(tag);
             return this;
         }

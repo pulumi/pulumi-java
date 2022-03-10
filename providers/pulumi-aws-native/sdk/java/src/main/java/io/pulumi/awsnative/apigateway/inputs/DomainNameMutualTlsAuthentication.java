@@ -62,12 +62,12 @@ public final class DomainNameMutualTlsAuthentication extends io.pulumi.resources
     	      this.truststoreVersion = defaults.truststoreVersion;
         }
 
-        public Builder setTruststoreUri(@Nullable String truststoreUri) {
+        public Builder truststoreUri(@Nullable String truststoreUri) {
             this.truststoreUri = truststoreUri;
             return this;
         }
 
-        public Builder setTruststoreVersion(@Nullable String truststoreVersion) {
+        public Builder truststoreVersion(@Nullable String truststoreVersion) {
             this.truststoreVersion = truststoreVersion;
             return this;
         }

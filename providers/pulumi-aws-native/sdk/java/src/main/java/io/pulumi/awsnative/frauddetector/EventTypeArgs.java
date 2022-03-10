@@ -127,62 +127,62 @@ public final class EventTypeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEntityTypes(Input<List<EventTypeEntityTypeArgs>> entityTypes) {
+        public Builder entityTypes(Input<List<EventTypeEntityTypeArgs>> entityTypes) {
             this.entityTypes = Objects.requireNonNull(entityTypes);
             return this;
         }
 
-        public Builder setEntityTypes(List<EventTypeEntityTypeArgs> entityTypes) {
+        public Builder entityTypes(List<EventTypeEntityTypeArgs> entityTypes) {
             this.entityTypes = Input.of(Objects.requireNonNull(entityTypes));
             return this;
         }
 
-        public Builder setEventVariables(Input<List<EventTypeEventVariableArgs>> eventVariables) {
+        public Builder eventVariables(Input<List<EventTypeEventVariableArgs>> eventVariables) {
             this.eventVariables = Objects.requireNonNull(eventVariables);
             return this;
         }
 
-        public Builder setEventVariables(List<EventTypeEventVariableArgs> eventVariables) {
+        public Builder eventVariables(List<EventTypeEventVariableArgs> eventVariables) {
             this.eventVariables = Input.of(Objects.requireNonNull(eventVariables));
             return this;
         }
 
-        public Builder setLabels(Input<List<EventTypeLabelArgs>> labels) {
+        public Builder labels(Input<List<EventTypeLabelArgs>> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLabels(List<EventTypeLabelArgs> labels) {
+        public Builder labels(List<EventTypeLabelArgs> labels) {
             this.labels = Input.of(Objects.requireNonNull(labels));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<EventTypeTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<EventTypeTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<EventTypeTagArgs> tags) {
+        public Builder tags(@Nullable List<EventTypeTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

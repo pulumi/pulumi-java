@@ -113,42 +113,42 @@ public final class GetExperimentResult {
     	      this.treatments = defaults.treatments;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setMetricGoals(@Nullable List<ExperimentMetricGoalObject> metricGoals) {
+        public Builder metricGoals(@Nullable List<ExperimentMetricGoalObject> metricGoals) {
             this.metricGoals = metricGoals;
             return this;
         }
 
-        public Builder setOnlineAbConfig(@Nullable ExperimentOnlineAbConfigObject onlineAbConfig) {
+        public Builder onlineAbConfig(@Nullable ExperimentOnlineAbConfigObject onlineAbConfig) {
             this.onlineAbConfig = onlineAbConfig;
             return this;
         }
 
-        public Builder setRandomizationSalt(@Nullable String randomizationSalt) {
+        public Builder randomizationSalt(@Nullable String randomizationSalt) {
             this.randomizationSalt = randomizationSalt;
             return this;
         }
 
-        public Builder setSamplingRate(@Nullable Integer samplingRate) {
+        public Builder samplingRate(@Nullable Integer samplingRate) {
             this.samplingRate = samplingRate;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ExperimentTag> tags) {
+        public Builder tags(@Nullable List<ExperimentTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTreatments(@Nullable List<ExperimentTreatmentObject> treatments) {
+        public Builder treatments(@Nullable List<ExperimentTreatmentObject> treatments) {
             this.treatments = treatments;
             return this;
         }

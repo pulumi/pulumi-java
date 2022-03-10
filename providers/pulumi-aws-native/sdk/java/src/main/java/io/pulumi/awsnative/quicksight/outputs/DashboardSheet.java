@@ -69,12 +69,12 @@ public final class DashboardSheet {
     	      this.sheetId = defaults.sheetId;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setSheetId(@Nullable String sheetId) {
+        public Builder sheetId(@Nullable String sheetId) {
             this.sheetId = sheetId;
             return this;
         }

@@ -68,12 +68,12 @@ public final class WebhookNotificationResponse {
     	      this.serviceUri = defaults.serviceUri;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setServiceUri(@Nullable String serviceUri) {
+        public Builder serviceUri(@Nullable String serviceUri) {
             this.serviceUri = serviceUri;
             return this;
         }

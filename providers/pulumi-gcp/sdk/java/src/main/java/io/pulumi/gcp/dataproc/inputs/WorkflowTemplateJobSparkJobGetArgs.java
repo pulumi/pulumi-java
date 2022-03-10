@@ -169,82 +169,82 @@ public final class WorkflowTemplateJobSparkJobGetArgs extends io.pulumi.resource
     	      this.properties = defaults.properties;
         }
 
-        public Builder setArchiveUris(@Nullable Input<List<String>> archiveUris) {
+        public Builder archiveUris(@Nullable Input<List<String>> archiveUris) {
             this.archiveUris = archiveUris;
             return this;
         }
 
-        public Builder setArchiveUris(@Nullable List<String> archiveUris) {
+        public Builder archiveUris(@Nullable List<String> archiveUris) {
             this.archiveUris = Input.ofNullable(archiveUris);
             return this;
         }
 
-        public Builder setArgs(@Nullable Input<List<String>> args) {
+        public Builder args(@Nullable Input<List<String>> args) {
             this.args = args;
             return this;
         }
 
-        public Builder setArgs(@Nullable List<String> args) {
+        public Builder args(@Nullable List<String> args) {
             this.args = Input.ofNullable(args);
             return this;
         }
 
-        public Builder setFileUris(@Nullable Input<List<String>> fileUris) {
+        public Builder fileUris(@Nullable Input<List<String>> fileUris) {
             this.fileUris = fileUris;
             return this;
         }
 
-        public Builder setFileUris(@Nullable List<String> fileUris) {
+        public Builder fileUris(@Nullable List<String> fileUris) {
             this.fileUris = Input.ofNullable(fileUris);
             return this;
         }
 
-        public Builder setJarFileUris(@Nullable Input<List<String>> jarFileUris) {
+        public Builder jarFileUris(@Nullable Input<List<String>> jarFileUris) {
             this.jarFileUris = jarFileUris;
             return this;
         }
 
-        public Builder setJarFileUris(@Nullable List<String> jarFileUris) {
+        public Builder jarFileUris(@Nullable List<String> jarFileUris) {
             this.jarFileUris = Input.ofNullable(jarFileUris);
             return this;
         }
 
-        public Builder setLoggingConfig(@Nullable Input<WorkflowTemplateJobSparkJobLoggingConfigGetArgs> loggingConfig) {
+        public Builder loggingConfig(@Nullable Input<WorkflowTemplateJobSparkJobLoggingConfigGetArgs> loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
 
-        public Builder setLoggingConfig(@Nullable WorkflowTemplateJobSparkJobLoggingConfigGetArgs loggingConfig) {
+        public Builder loggingConfig(@Nullable WorkflowTemplateJobSparkJobLoggingConfigGetArgs loggingConfig) {
             this.loggingConfig = Input.ofNullable(loggingConfig);
             return this;
         }
 
-        public Builder setMainClass(@Nullable Input<String> mainClass) {
+        public Builder mainClass(@Nullable Input<String> mainClass) {
             this.mainClass = mainClass;
             return this;
         }
 
-        public Builder setMainClass(@Nullable String mainClass) {
+        public Builder mainClass(@Nullable String mainClass) {
             this.mainClass = Input.ofNullable(mainClass);
             return this;
         }
 
-        public Builder setMainJarFileUri(@Nullable Input<String> mainJarFileUri) {
+        public Builder mainJarFileUri(@Nullable Input<String> mainJarFileUri) {
             this.mainJarFileUri = mainJarFileUri;
             return this;
         }
 
-        public Builder setMainJarFileUri(@Nullable String mainJarFileUri) {
+        public Builder mainJarFileUri(@Nullable String mainJarFileUri) {
             this.mainJarFileUri = Input.ofNullable(mainJarFileUri);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Input<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }

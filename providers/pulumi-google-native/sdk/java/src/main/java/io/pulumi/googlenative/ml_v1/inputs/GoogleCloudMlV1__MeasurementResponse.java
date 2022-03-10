@@ -90,17 +90,17 @@ public final class GoogleCloudMlV1__MeasurementResponse extends io.pulumi.resour
     	      this.stepCount = defaults.stepCount;
         }
 
-        public Builder setElapsedTime(String elapsedTime) {
+        public Builder elapsedTime(String elapsedTime) {
             this.elapsedTime = Objects.requireNonNull(elapsedTime);
             return this;
         }
 
-        public Builder setMetrics(List<GoogleCloudMlV1_Measurement_MetricResponse> metrics) {
+        public Builder metrics(List<GoogleCloudMlV1_Measurement_MetricResponse> metrics) {
             this.metrics = Objects.requireNonNull(metrics);
             return this;
         }
 
-        public Builder setStepCount(String stepCount) {
+        public Builder stepCount(String stepCount) {
             this.stepCount = Objects.requireNonNull(stepCount);
             return this;
         }

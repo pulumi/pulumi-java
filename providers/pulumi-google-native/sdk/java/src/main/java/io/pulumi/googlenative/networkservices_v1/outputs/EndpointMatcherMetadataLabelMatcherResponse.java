@@ -67,12 +67,12 @@ public final class EndpointMatcherMetadataLabelMatcherResponse {
     	      this.metadataLabels = defaults.metadataLabels;
         }
 
-        public Builder setMetadataLabelMatchCriteria(String metadataLabelMatchCriteria) {
+        public Builder metadataLabelMatchCriteria(String metadataLabelMatchCriteria) {
             this.metadataLabelMatchCriteria = Objects.requireNonNull(metadataLabelMatchCriteria);
             return this;
         }
 
-        public Builder setMetadataLabels(List<EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse> metadataLabels) {
+        public Builder metadataLabels(List<EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse> metadataLabels) {
             this.metadataLabels = Objects.requireNonNull(metadataLabels);
             return this;
         }

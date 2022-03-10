@@ -49,12 +49,12 @@ public final class GetKeyMultiRegionConfigurationReplicaKey {
     	      this.region = defaults.region;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }

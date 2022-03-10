@@ -75,22 +75,22 @@ public final class RevisionTemplateArgs extends io.pulumi.resources.ResourceArgs
     	      this.spec = defaults.spec;
         }
 
-        public Builder setMetadata(@Nullable Input<ObjectMetaArgs> metadata) {
+        public Builder metadata(@Nullable Input<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable ObjectMetaArgs metadata) {
+        public Builder metadata(@Nullable ObjectMetaArgs metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setSpec(@Nullable Input<RevisionSpecArgs> spec) {
+        public Builder spec(@Nullable Input<RevisionSpecArgs> spec) {
             this.spec = spec;
             return this;
         }
 
-        public Builder setSpec(@Nullable RevisionSpecArgs spec) {
+        public Builder spec(@Nullable RevisionSpecArgs spec) {
             this.spec = Input.ofNullable(spec);
             return this;
         }

@@ -60,12 +60,12 @@ public final class GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRan
     	      this.value = defaults.value;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

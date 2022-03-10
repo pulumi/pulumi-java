@@ -48,7 +48,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     	      this.deserializer = defaults.deserializer;
         }
 
-        public Builder setDeserializer(FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializer deserializer) {
+        public Builder deserializer(FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializer deserializer) {
             this.deserializer = Objects.requireNonNull(deserializer);
             return this;
         }

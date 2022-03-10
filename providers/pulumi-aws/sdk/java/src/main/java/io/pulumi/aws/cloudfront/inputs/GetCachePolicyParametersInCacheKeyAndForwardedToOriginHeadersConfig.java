@@ -70,12 +70,12 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeaders
     	      this.headers = defaults.headers;
         }
 
-        public Builder setHeaderBehavior(String headerBehavior) {
+        public Builder headerBehavior(String headerBehavior) {
             this.headerBehavior = Objects.requireNonNull(headerBehavior);
             return this;
         }
 
-        public Builder setHeaders(List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader> headers) {
+        public Builder headers(List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader> headers) {
             this.headers = Objects.requireNonNull(headers);
             return this;
         }

@@ -151,37 +151,37 @@ public final class JsonInputSchemaMappingResponse {
     	      this.topic = defaults.topic;
         }
 
-        public Builder setDataVersion(@Nullable JsonFieldWithDefaultResponse dataVersion) {
+        public Builder dataVersion(@Nullable JsonFieldWithDefaultResponse dataVersion) {
             this.dataVersion = dataVersion;
             return this;
         }
 
-        public Builder setEventTime(@Nullable JsonFieldResponse eventTime) {
+        public Builder eventTime(@Nullable JsonFieldResponse eventTime) {
             this.eventTime = eventTime;
             return this;
         }
 
-        public Builder setEventType(@Nullable JsonFieldWithDefaultResponse eventType) {
+        public Builder eventType(@Nullable JsonFieldWithDefaultResponse eventType) {
             this.eventType = eventType;
             return this;
         }
 
-        public Builder setId(@Nullable JsonFieldResponse id) {
+        public Builder id(@Nullable JsonFieldResponse id) {
             this.id = id;
             return this;
         }
 
-        public Builder setInputSchemaMappingType(String inputSchemaMappingType) {
+        public Builder inputSchemaMappingType(String inputSchemaMappingType) {
             this.inputSchemaMappingType = Objects.requireNonNull(inputSchemaMappingType);
             return this;
         }
 
-        public Builder setSubject(@Nullable JsonFieldWithDefaultResponse subject) {
+        public Builder subject(@Nullable JsonFieldWithDefaultResponse subject) {
             this.subject = subject;
             return this;
         }
 
-        public Builder setTopic(@Nullable JsonFieldResponse topic) {
+        public Builder topic(@Nullable JsonFieldResponse topic) {
             this.topic = topic;
             return this;
         }

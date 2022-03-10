@@ -84,17 +84,17 @@ public final class LaunchConfigurationMetadataOptions {
     	      this.httpTokens = defaults.httpTokens;
         }
 
-        public Builder setHttpEndpoint(@Nullable String httpEndpoint) {
+        public Builder httpEndpoint(@Nullable String httpEndpoint) {
             this.httpEndpoint = httpEndpoint;
             return this;
         }
 
-        public Builder setHttpPutResponseHopLimit(@Nullable Integer httpPutResponseHopLimit) {
+        public Builder httpPutResponseHopLimit(@Nullable Integer httpPutResponseHopLimit) {
             this.httpPutResponseHopLimit = httpPutResponseHopLimit;
             return this;
         }
 
-        public Builder setHttpTokens(@Nullable String httpTokens) {
+        public Builder httpTokens(@Nullable String httpTokens) {
             this.httpTokens = httpTokens;
             return this;
         }

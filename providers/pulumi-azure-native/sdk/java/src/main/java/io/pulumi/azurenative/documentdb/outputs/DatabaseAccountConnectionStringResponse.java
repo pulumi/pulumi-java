@@ -65,12 +65,12 @@ public final class DatabaseAccountConnectionStringResponse {
     	      this.description = defaults.description;
         }
 
-        public Builder setConnectionString(String connectionString) {
+        public Builder connectionString(String connectionString) {
             this.connectionString = Objects.requireNonNull(connectionString);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }

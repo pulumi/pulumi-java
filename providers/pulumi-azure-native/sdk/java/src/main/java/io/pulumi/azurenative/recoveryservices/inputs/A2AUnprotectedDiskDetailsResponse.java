@@ -57,7 +57,7 @@ public final class A2AUnprotectedDiskDetailsResponse extends io.pulumi.resources
     	      this.diskLunId = defaults.diskLunId;
         }
 
-        public Builder setDiskLunId(@Nullable Integer diskLunId) {
+        public Builder diskLunId(@Nullable Integer diskLunId) {
             this.diskLunId = diskLunId;
             return this;
         }

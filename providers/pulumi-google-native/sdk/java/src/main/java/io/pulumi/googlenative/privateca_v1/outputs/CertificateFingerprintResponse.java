@@ -48,7 +48,7 @@ public final class CertificateFingerprintResponse {
     	      this.sha256Hash = defaults.sha256Hash;
         }
 
-        public Builder setSha256Hash(String sha256Hash) {
+        public Builder sha256Hash(String sha256Hash) {
             this.sha256Hash = Objects.requireNonNull(sha256Hash);
             return this;
         }

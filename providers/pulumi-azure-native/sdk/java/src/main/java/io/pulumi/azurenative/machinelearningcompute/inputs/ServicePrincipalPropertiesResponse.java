@@ -72,12 +72,12 @@ public final class ServicePrincipalPropertiesResponse extends io.pulumi.resource
     	      this.secret = defaults.secret;
         }
 
-        public Builder setClientId(String clientId) {
+        public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
-        public Builder setSecret(String secret) {
+        public Builder secret(String secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }

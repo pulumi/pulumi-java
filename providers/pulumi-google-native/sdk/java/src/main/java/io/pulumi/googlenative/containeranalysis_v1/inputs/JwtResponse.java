@@ -51,7 +51,7 @@ public final class JwtResponse extends io.pulumi.resources.InvokeArgs {
     	      this.compactJwt = defaults.compactJwt;
         }
 
-        public Builder setCompactJwt(String compactJwt) {
+        public Builder compactJwt(String compactJwt) {
             this.compactJwt = Objects.requireNonNull(compactJwt);
             return this;
         }

@@ -195,52 +195,52 @@ public final class GetBackupResult {
     	      this.versionTime = defaults.versionTime;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDatabase(String database) {
+        public Builder database(String database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
 
-        public Builder setDatabaseDialect(String databaseDialect) {
+        public Builder databaseDialect(String databaseDialect) {
             this.databaseDialect = Objects.requireNonNull(databaseDialect);
             return this;
         }
 
-        public Builder setEncryptionInfo(EncryptionInfoResponse encryptionInfo) {
+        public Builder encryptionInfo(EncryptionInfoResponse encryptionInfo) {
             this.encryptionInfo = Objects.requireNonNull(encryptionInfo);
             return this;
         }
 
-        public Builder setExpireTime(String expireTime) {
+        public Builder expireTime(String expireTime) {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setReferencingDatabases(List<String> referencingDatabases) {
+        public Builder referencingDatabases(List<String> referencingDatabases) {
             this.referencingDatabases = Objects.requireNonNull(referencingDatabases);
             return this;
         }
 
-        public Builder setSizeBytes(String sizeBytes) {
+        public Builder sizeBytes(String sizeBytes) {
             this.sizeBytes = Objects.requireNonNull(sizeBytes);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setVersionTime(String versionTime) {
+        public Builder versionTime(String versionTime) {
             this.versionTime = Objects.requireNonNull(versionTime);
             return this;
         }

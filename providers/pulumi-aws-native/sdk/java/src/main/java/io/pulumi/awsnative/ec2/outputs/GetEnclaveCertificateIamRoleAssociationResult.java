@@ -83,17 +83,17 @@ public final class GetEnclaveCertificateIamRoleAssociationResult {
     	      this.encryptionKmsKeyId = defaults.encryptionKmsKeyId;
         }
 
-        public Builder setCertificateS3BucketName(@Nullable String certificateS3BucketName) {
+        public Builder certificateS3BucketName(@Nullable String certificateS3BucketName) {
             this.certificateS3BucketName = certificateS3BucketName;
             return this;
         }
 
-        public Builder setCertificateS3ObjectKey(@Nullable String certificateS3ObjectKey) {
+        public Builder certificateS3ObjectKey(@Nullable String certificateS3ObjectKey) {
             this.certificateS3ObjectKey = certificateS3ObjectKey;
             return this;
         }
 
-        public Builder setEncryptionKmsKeyId(@Nullable String encryptionKmsKeyId) {
+        public Builder encryptionKmsKeyId(@Nullable String encryptionKmsKeyId) {
             this.encryptionKmsKeyId = encryptionKmsKeyId;
             return this;
         }

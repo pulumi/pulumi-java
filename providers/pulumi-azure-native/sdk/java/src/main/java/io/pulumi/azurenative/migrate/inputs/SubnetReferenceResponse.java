@@ -74,12 +74,12 @@ public final class SubnetReferenceResponse extends io.pulumi.resources.InvokeArg
     	      this.sourceArmResourceId = defaults.sourceArmResourceId;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setSourceArmResourceId(String sourceArmResourceId) {
+        public Builder sourceArmResourceId(String sourceArmResourceId) {
             this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
             return this;
         }

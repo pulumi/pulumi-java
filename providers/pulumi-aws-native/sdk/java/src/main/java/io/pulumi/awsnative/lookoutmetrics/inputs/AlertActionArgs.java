@@ -63,22 +63,22 @@ public final class AlertActionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sNSConfiguration = defaults.sNSConfiguration;
         }
 
-        public Builder setLambdaConfiguration(@Nullable Input<AlertLambdaConfigurationArgs> lambdaConfiguration) {
+        public Builder lambdaConfiguration(@Nullable Input<AlertLambdaConfigurationArgs> lambdaConfiguration) {
             this.lambdaConfiguration = lambdaConfiguration;
             return this;
         }
 
-        public Builder setLambdaConfiguration(@Nullable AlertLambdaConfigurationArgs lambdaConfiguration) {
+        public Builder lambdaConfiguration(@Nullable AlertLambdaConfigurationArgs lambdaConfiguration) {
             this.lambdaConfiguration = Input.ofNullable(lambdaConfiguration);
             return this;
         }
 
-        public Builder setSNSConfiguration(@Nullable Input<AlertSNSConfigurationArgs> sNSConfiguration) {
+        public Builder sNSConfiguration(@Nullable Input<AlertSNSConfigurationArgs> sNSConfiguration) {
             this.sNSConfiguration = sNSConfiguration;
             return this;
         }
 
-        public Builder setSNSConfiguration(@Nullable AlertSNSConfigurationArgs sNSConfiguration) {
+        public Builder sNSConfiguration(@Nullable AlertSNSConfigurationArgs sNSConfiguration) {
             this.sNSConfiguration = Input.ofNullable(sNSConfiguration);
             return this;
         }

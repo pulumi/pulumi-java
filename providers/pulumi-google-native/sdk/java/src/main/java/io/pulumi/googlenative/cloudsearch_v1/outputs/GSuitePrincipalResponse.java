@@ -82,17 +82,17 @@ public final class GSuitePrincipalResponse {
     	      this.gsuiteUserEmail = defaults.gsuiteUserEmail;
         }
 
-        public Builder setGsuiteDomain(Boolean gsuiteDomain) {
+        public Builder gsuiteDomain(Boolean gsuiteDomain) {
             this.gsuiteDomain = Objects.requireNonNull(gsuiteDomain);
             return this;
         }
 
-        public Builder setGsuiteGroupEmail(String gsuiteGroupEmail) {
+        public Builder gsuiteGroupEmail(String gsuiteGroupEmail) {
             this.gsuiteGroupEmail = Objects.requireNonNull(gsuiteGroupEmail);
             return this;
         }
 
-        public Builder setGsuiteUserEmail(String gsuiteUserEmail) {
+        public Builder gsuiteUserEmail(String gsuiteUserEmail) {
             this.gsuiteUserEmail = Objects.requireNonNull(gsuiteUserEmail);
             return this;
         }

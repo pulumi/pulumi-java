@@ -88,17 +88,17 @@ public final class InstanceAddOn extends io.pulumi.resources.InvokeArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder setAddOnType(String addOnType) {
+        public Builder addOnType(String addOnType) {
             this.addOnType = Objects.requireNonNull(addOnType);
             return this;
         }
 
-        public Builder setAutoSnapshotAddOnRequest(@Nullable InstanceAutoSnapshotAddOn autoSnapshotAddOnRequest) {
+        public Builder autoSnapshotAddOnRequest(@Nullable InstanceAutoSnapshotAddOn autoSnapshotAddOnRequest) {
             this.autoSnapshotAddOnRequest = autoSnapshotAddOnRequest;
             return this;
         }
 
-        public Builder setStatus(@Nullable InstanceAddOnStatus status) {
+        public Builder status(@Nullable InstanceAddOnStatus status) {
             this.status = status;
             return this;
         }

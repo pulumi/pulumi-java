@@ -146,72 +146,72 @@ public final class JobIamPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setAuditConfigs(@Nullable Input<List<GoogleIamV1__AuditConfigArgs>> auditConfigs) {
+        public Builder auditConfigs(@Nullable Input<List<GoogleIamV1__AuditConfigArgs>> auditConfigs) {
             this.auditConfigs = auditConfigs;
             return this;
         }
 
-        public Builder setAuditConfigs(@Nullable List<GoogleIamV1__AuditConfigArgs> auditConfigs) {
+        public Builder auditConfigs(@Nullable List<GoogleIamV1__AuditConfigArgs> auditConfigs) {
             this.auditConfigs = Input.ofNullable(auditConfigs);
             return this;
         }
 
-        public Builder setBindings(@Nullable Input<List<GoogleIamV1__BindingArgs>> bindings) {
+        public Builder bindings(@Nullable Input<List<GoogleIamV1__BindingArgs>> bindings) {
             this.bindings = bindings;
             return this;
         }
 
-        public Builder setBindings(@Nullable List<GoogleIamV1__BindingArgs> bindings) {
+        public Builder bindings(@Nullable List<GoogleIamV1__BindingArgs> bindings) {
             this.bindings = Input.ofNullable(bindings);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setJobId(Input<String> jobId) {
+        public Builder jobId(Input<String> jobId) {
             this.jobId = Objects.requireNonNull(jobId);
             return this;
         }
 
-        public Builder setJobId(String jobId) {
+        public Builder jobId(String jobId) {
             this.jobId = Input.of(Objects.requireNonNull(jobId));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setUpdateMask(@Nullable Input<String> updateMask) {
+        public Builder updateMask(@Nullable Input<String> updateMask) {
             this.updateMask = updateMask;
             return this;
         }
 
-        public Builder setUpdateMask(@Nullable String updateMask) {
+        public Builder updateMask(@Nullable String updateMask) {
             this.updateMask = Input.ofNullable(updateMask);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Input<Integer> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable Integer version) {
+        public Builder version(@Nullable Integer version) {
             this.version = Input.ofNullable(version);
             return this;
         }

@@ -237,7 +237,7 @@ public class FusionAlertRule extends io.pulumi.resources.CustomResource {
     private static FusionAlertRuleArgs makeArgs(FusionAlertRuleArgs args) {
         var builder = args == null ? FusionAlertRuleArgs.builder() : FusionAlertRuleArgs.builder(args);
         return builder
-            .setKind("Fusion")
+            .kind("Fusion")
             .build();
     }
 

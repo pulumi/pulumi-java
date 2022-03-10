@@ -70,22 +70,22 @@ public final class EventTargetRetryPolicyArgs extends io.pulumi.resources.Resour
     	      this.maximumRetryAttempts = defaults.maximumRetryAttempts;
         }
 
-        public Builder setMaximumEventAgeInSeconds(@Nullable Input<Integer> maximumEventAgeInSeconds) {
+        public Builder maximumEventAgeInSeconds(@Nullable Input<Integer> maximumEventAgeInSeconds) {
             this.maximumEventAgeInSeconds = maximumEventAgeInSeconds;
             return this;
         }
 
-        public Builder setMaximumEventAgeInSeconds(@Nullable Integer maximumEventAgeInSeconds) {
+        public Builder maximumEventAgeInSeconds(@Nullable Integer maximumEventAgeInSeconds) {
             this.maximumEventAgeInSeconds = Input.ofNullable(maximumEventAgeInSeconds);
             return this;
         }
 
-        public Builder setMaximumRetryAttempts(@Nullable Input<Integer> maximumRetryAttempts) {
+        public Builder maximumRetryAttempts(@Nullable Input<Integer> maximumRetryAttempts) {
             this.maximumRetryAttempts = maximumRetryAttempts;
             return this;
         }
 
-        public Builder setMaximumRetryAttempts(@Nullable Integer maximumRetryAttempts) {
+        public Builder maximumRetryAttempts(@Nullable Integer maximumRetryAttempts) {
             this.maximumRetryAttempts = Input.ofNullable(maximumRetryAttempts);
             return this;
         }

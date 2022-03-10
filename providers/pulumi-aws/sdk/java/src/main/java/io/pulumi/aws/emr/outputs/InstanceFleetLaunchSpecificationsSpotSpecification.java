@@ -100,22 +100,22 @@ public final class InstanceFleetLaunchSpecificationsSpotSpecification {
     	      this.timeoutDurationMinutes = defaults.timeoutDurationMinutes;
         }
 
-        public Builder setAllocationStrategy(String allocationStrategy) {
+        public Builder allocationStrategy(String allocationStrategy) {
             this.allocationStrategy = Objects.requireNonNull(allocationStrategy);
             return this;
         }
 
-        public Builder setBlockDurationMinutes(@Nullable Integer blockDurationMinutes) {
+        public Builder blockDurationMinutes(@Nullable Integer blockDurationMinutes) {
             this.blockDurationMinutes = blockDurationMinutes;
             return this;
         }
 
-        public Builder setTimeoutAction(String timeoutAction) {
+        public Builder timeoutAction(String timeoutAction) {
             this.timeoutAction = Objects.requireNonNull(timeoutAction);
             return this;
         }
 
-        public Builder setTimeoutDurationMinutes(Integer timeoutDurationMinutes) {
+        public Builder timeoutDurationMinutes(Integer timeoutDurationMinutes) {
             this.timeoutDurationMinutes = Objects.requireNonNull(timeoutDurationMinutes);
             return this;
         }

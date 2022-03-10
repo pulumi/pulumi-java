@@ -101,27 +101,27 @@ public final class DatasetVariable extends io.pulumi.resources.InvokeArgs {
     	      this.variableName = defaults.variableName;
         }
 
-        public Builder setDatasetContentVersionValue(@Nullable DatasetContentVersionValue datasetContentVersionValue) {
+        public Builder datasetContentVersionValue(@Nullable DatasetContentVersionValue datasetContentVersionValue) {
             this.datasetContentVersionValue = datasetContentVersionValue;
             return this;
         }
 
-        public Builder setDoubleValue(@Nullable Double doubleValue) {
+        public Builder doubleValue(@Nullable Double doubleValue) {
             this.doubleValue = doubleValue;
             return this;
         }
 
-        public Builder setOutputFileUriValue(@Nullable DatasetOutputFileUriValue outputFileUriValue) {
+        public Builder outputFileUriValue(@Nullable DatasetOutputFileUriValue outputFileUriValue) {
             this.outputFileUriValue = outputFileUriValue;
             return this;
         }
 
-        public Builder setStringValue(@Nullable String stringValue) {
+        public Builder stringValue(@Nullable String stringValue) {
             this.stringValue = stringValue;
             return this;
         }
 
-        public Builder setVariableName(String variableName) {
+        public Builder variableName(String variableName) {
             this.variableName = Objects.requireNonNull(variableName);
             return this;
         }

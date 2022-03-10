@@ -136,62 +136,62 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAction(@Nullable Input<Either<String,IPAction>> action) {
+        public Builder action(@Nullable Input<Either<String,IPAction>> action) {
             this.action = action;
             return this;
         }
 
-        public Builder setAction(@Nullable Either<String,IPAction> action) {
+        public Builder action(@Nullable Either<String,IPAction> action) {
             this.action = Input.ofNullable(action);
             return this;
         }
 
-        public Builder setFilterName(@Nullable Input<String> filterName) {
+        public Builder filterName(@Nullable Input<String> filterName) {
             this.filterName = filterName;
             return this;
         }
 
-        public Builder setFilterName(@Nullable String filterName) {
+        public Builder filterName(@Nullable String filterName) {
             this.filterName = Input.ofNullable(filterName);
             return this;
         }
 
-        public Builder setIpFilterRuleName(@Nullable Input<String> ipFilterRuleName) {
+        public Builder ipFilterRuleName(@Nullable Input<String> ipFilterRuleName) {
             this.ipFilterRuleName = ipFilterRuleName;
             return this;
         }
 
-        public Builder setIpFilterRuleName(@Nullable String ipFilterRuleName) {
+        public Builder ipFilterRuleName(@Nullable String ipFilterRuleName) {
             this.ipFilterRuleName = Input.ofNullable(ipFilterRuleName);
             return this;
         }
 
-        public Builder setIpMask(@Nullable Input<String> ipMask) {
+        public Builder ipMask(@Nullable Input<String> ipMask) {
             this.ipMask = ipMask;
             return this;
         }
 
-        public Builder setIpMask(@Nullable String ipMask) {
+        public Builder ipMask(@Nullable String ipMask) {
             this.ipMask = Input.ofNullable(ipMask);
             return this;
         }
 
-        public Builder setNamespaceName(Input<String> namespaceName) {
+        public Builder namespaceName(Input<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
 
-        public Builder setNamespaceName(String namespaceName) {
+        public Builder namespaceName(String namespaceName) {
             this.namespaceName = Input.of(Objects.requireNonNull(namespaceName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

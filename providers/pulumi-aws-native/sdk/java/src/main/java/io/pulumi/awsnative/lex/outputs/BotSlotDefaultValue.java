@@ -48,7 +48,7 @@ public final class BotSlotDefaultValue {
     	      this.defaultValue = defaults.defaultValue;
         }
 
-        public Builder setDefaultValue(String defaultValue) {
+        public Builder defaultValue(String defaultValue) {
             this.defaultValue = Objects.requireNonNull(defaultValue);
             return this;
         }

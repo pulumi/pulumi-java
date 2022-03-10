@@ -57,12 +57,12 @@ public final class SparkHistoryServerConfigArgs extends io.pulumi.resources.Reso
     	      this.dataprocCluster = defaults.dataprocCluster;
         }
 
-        public Builder setDataprocCluster(@Nullable Input<String> dataprocCluster) {
+        public Builder dataprocCluster(@Nullable Input<String> dataprocCluster) {
             this.dataprocCluster = dataprocCluster;
             return this;
         }
 
-        public Builder setDataprocCluster(@Nullable String dataprocCluster) {
+        public Builder dataprocCluster(@Nullable String dataprocCluster) {
             this.dataprocCluster = Input.ofNullable(dataprocCluster);
             return this;
         }

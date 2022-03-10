@@ -51,7 +51,7 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
     	      this.instanceName = defaults.instanceName;
         }
 
-        public Builder setInstanceName(String instanceName) {
+        public Builder instanceName(String instanceName) {
             this.instanceName = Objects.requireNonNull(instanceName);
             return this;
         }

@@ -75,22 +75,22 @@ public final class GoogleCloudRunOpV2BinaryAuthorizationArgs extends io.pulumi.r
     	      this.useDefault = defaults.useDefault;
         }
 
-        public Builder setBreakglassJustification(@Nullable Input<String> breakglassJustification) {
+        public Builder breakglassJustification(@Nullable Input<String> breakglassJustification) {
             this.breakglassJustification = breakglassJustification;
             return this;
         }
 
-        public Builder setBreakglassJustification(@Nullable String breakglassJustification) {
+        public Builder breakglassJustification(@Nullable String breakglassJustification) {
             this.breakglassJustification = Input.ofNullable(breakglassJustification);
             return this;
         }
 
-        public Builder setUseDefault(@Nullable Input<Boolean> useDefault) {
+        public Builder useDefault(@Nullable Input<Boolean> useDefault) {
             this.useDefault = useDefault;
             return this;
         }
 
-        public Builder setUseDefault(@Nullable Boolean useDefault) {
+        public Builder useDefault(@Nullable Boolean useDefault) {
             this.useDefault = Input.ofNullable(useDefault);
             return this;
         }

@@ -86,32 +86,32 @@ public final class ClusterDnsConfigGetArgs extends io.pulumi.resources.ResourceA
     	      this.clusterDnsScope = defaults.clusterDnsScope;
         }
 
-        public Builder setClusterDns(@Nullable Input<String> clusterDns) {
+        public Builder clusterDns(@Nullable Input<String> clusterDns) {
             this.clusterDns = clusterDns;
             return this;
         }
 
-        public Builder setClusterDns(@Nullable String clusterDns) {
+        public Builder clusterDns(@Nullable String clusterDns) {
             this.clusterDns = Input.ofNullable(clusterDns);
             return this;
         }
 
-        public Builder setClusterDnsDomain(@Nullable Input<String> clusterDnsDomain) {
+        public Builder clusterDnsDomain(@Nullable Input<String> clusterDnsDomain) {
             this.clusterDnsDomain = clusterDnsDomain;
             return this;
         }
 
-        public Builder setClusterDnsDomain(@Nullable String clusterDnsDomain) {
+        public Builder clusterDnsDomain(@Nullable String clusterDnsDomain) {
             this.clusterDnsDomain = Input.ofNullable(clusterDnsDomain);
             return this;
         }
 
-        public Builder setClusterDnsScope(@Nullable Input<String> clusterDnsScope) {
+        public Builder clusterDnsScope(@Nullable Input<String> clusterDnsScope) {
             this.clusterDnsScope = clusterDnsScope;
             return this;
         }
 
-        public Builder setClusterDnsScope(@Nullable String clusterDnsScope) {
+        public Builder clusterDnsScope(@Nullable String clusterDnsScope) {
             this.clusterDnsScope = Input.ofNullable(clusterDnsScope);
             return this;
         }

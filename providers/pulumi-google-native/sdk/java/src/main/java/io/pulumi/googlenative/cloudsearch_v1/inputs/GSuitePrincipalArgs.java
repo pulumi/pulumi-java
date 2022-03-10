@@ -87,32 +87,32 @@ public final class GSuitePrincipalArgs extends io.pulumi.resources.ResourceArgs 
     	      this.gsuiteUserEmail = defaults.gsuiteUserEmail;
         }
 
-        public Builder setGsuiteDomain(@Nullable Input<Boolean> gsuiteDomain) {
+        public Builder gsuiteDomain(@Nullable Input<Boolean> gsuiteDomain) {
             this.gsuiteDomain = gsuiteDomain;
             return this;
         }
 
-        public Builder setGsuiteDomain(@Nullable Boolean gsuiteDomain) {
+        public Builder gsuiteDomain(@Nullable Boolean gsuiteDomain) {
             this.gsuiteDomain = Input.ofNullable(gsuiteDomain);
             return this;
         }
 
-        public Builder setGsuiteGroupEmail(@Nullable Input<String> gsuiteGroupEmail) {
+        public Builder gsuiteGroupEmail(@Nullable Input<String> gsuiteGroupEmail) {
             this.gsuiteGroupEmail = gsuiteGroupEmail;
             return this;
         }
 
-        public Builder setGsuiteGroupEmail(@Nullable String gsuiteGroupEmail) {
+        public Builder gsuiteGroupEmail(@Nullable String gsuiteGroupEmail) {
             this.gsuiteGroupEmail = Input.ofNullable(gsuiteGroupEmail);
             return this;
         }
 
-        public Builder setGsuiteUserEmail(@Nullable Input<String> gsuiteUserEmail) {
+        public Builder gsuiteUserEmail(@Nullable Input<String> gsuiteUserEmail) {
             this.gsuiteUserEmail = gsuiteUserEmail;
             return this;
         }
 
-        public Builder setGsuiteUserEmail(@Nullable String gsuiteUserEmail) {
+        public Builder gsuiteUserEmail(@Nullable String gsuiteUserEmail) {
             this.gsuiteUserEmail = Input.ofNullable(gsuiteUserEmail);
             return this;
         }

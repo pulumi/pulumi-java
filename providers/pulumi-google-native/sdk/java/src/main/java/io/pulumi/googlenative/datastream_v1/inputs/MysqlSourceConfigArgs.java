@@ -74,22 +74,22 @@ public final class MysqlSourceConfigArgs extends io.pulumi.resources.ResourceArg
     	      this.includeObjects = defaults.includeObjects;
         }
 
-        public Builder setExcludeObjects(@Nullable Input<MysqlRdbmsArgs> excludeObjects) {
+        public Builder excludeObjects(@Nullable Input<MysqlRdbmsArgs> excludeObjects) {
             this.excludeObjects = excludeObjects;
             return this;
         }
 
-        public Builder setExcludeObjects(@Nullable MysqlRdbmsArgs excludeObjects) {
+        public Builder excludeObjects(@Nullable MysqlRdbmsArgs excludeObjects) {
             this.excludeObjects = Input.ofNullable(excludeObjects);
             return this;
         }
 
-        public Builder setIncludeObjects(@Nullable Input<MysqlRdbmsArgs> includeObjects) {
+        public Builder includeObjects(@Nullable Input<MysqlRdbmsArgs> includeObjects) {
             this.includeObjects = includeObjects;
             return this;
         }
 
-        public Builder setIncludeObjects(@Nullable MysqlRdbmsArgs includeObjects) {
+        public Builder includeObjects(@Nullable MysqlRdbmsArgs includeObjects) {
             this.includeObjects = Input.ofNullable(includeObjects);
             return this;
         }

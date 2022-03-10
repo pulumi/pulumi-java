@@ -96,42 +96,42 @@ public final class AccountAuditConfigurationArgs extends io.pulumi.resources.Res
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setAccountId(Input<String> accountId) {
+        public Builder accountId(Input<String> accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
 
-        public Builder setAccountId(String accountId) {
+        public Builder accountId(String accountId) {
             this.accountId = Input.of(Objects.requireNonNull(accountId));
             return this;
         }
 
-        public Builder setAuditCheckConfigurations(Input<AccountAuditConfigurationAuditCheckConfigurationsArgs> auditCheckConfigurations) {
+        public Builder auditCheckConfigurations(Input<AccountAuditConfigurationAuditCheckConfigurationsArgs> auditCheckConfigurations) {
             this.auditCheckConfigurations = Objects.requireNonNull(auditCheckConfigurations);
             return this;
         }
 
-        public Builder setAuditCheckConfigurations(AccountAuditConfigurationAuditCheckConfigurationsArgs auditCheckConfigurations) {
+        public Builder auditCheckConfigurations(AccountAuditConfigurationAuditCheckConfigurationsArgs auditCheckConfigurations) {
             this.auditCheckConfigurations = Input.of(Objects.requireNonNull(auditCheckConfigurations));
             return this;
         }
 
-        public Builder setAuditNotificationTargetConfigurations(@Nullable Input<AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs> auditNotificationTargetConfigurations) {
+        public Builder auditNotificationTargetConfigurations(@Nullable Input<AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs> auditNotificationTargetConfigurations) {
             this.auditNotificationTargetConfigurations = auditNotificationTargetConfigurations;
             return this;
         }
 
-        public Builder setAuditNotificationTargetConfigurations(@Nullable AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs auditNotificationTargetConfigurations) {
+        public Builder auditNotificationTargetConfigurations(@Nullable AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs auditNotificationTargetConfigurations) {
             this.auditNotificationTargetConfigurations = Input.ofNullable(auditNotificationTargetConfigurations);
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }

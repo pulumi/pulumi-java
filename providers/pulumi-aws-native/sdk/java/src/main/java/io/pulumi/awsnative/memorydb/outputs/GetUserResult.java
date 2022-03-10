@@ -85,17 +85,17 @@ public final class GetUserResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setTags(@Nullable List<UserTag> tags) {
+        public Builder tags(@Nullable List<UserTag> tags) {
             this.tags = tags;
             return this;
         }

@@ -49,12 +49,12 @@ public final class DeliveryStreamProcessorParameter {
     	      this.parameterValue = defaults.parameterValue;
         }
 
-        public Builder setParameterName(String parameterName) {
+        public Builder parameterName(String parameterName) {
             this.parameterName = Objects.requireNonNull(parameterName);
             return this;
         }
 
-        public Builder setParameterValue(String parameterValue) {
+        public Builder parameterValue(String parameterValue) {
             this.parameterValue = Objects.requireNonNull(parameterValue);
             return this;
         }

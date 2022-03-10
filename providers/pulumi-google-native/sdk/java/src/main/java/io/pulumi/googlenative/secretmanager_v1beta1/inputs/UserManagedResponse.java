@@ -56,7 +56,7 @@ public final class UserManagedResponse extends io.pulumi.resources.InvokeArgs {
     	      this.replicas = defaults.replicas;
         }
 
-        public Builder setReplicas(List<ReplicaResponse> replicas) {
+        public Builder replicas(List<ReplicaResponse> replicas) {
             this.replicas = Objects.requireNonNull(replicas);
             return this;
         }

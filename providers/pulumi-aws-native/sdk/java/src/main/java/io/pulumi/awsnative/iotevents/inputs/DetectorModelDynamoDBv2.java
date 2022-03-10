@@ -73,12 +73,12 @@ public final class DetectorModelDynamoDBv2 extends io.pulumi.resources.InvokeArg
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder setPayload(@Nullable DetectorModelPayload payload) {
+        public Builder payload(@Nullable DetectorModelPayload payload) {
             this.payload = payload;
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }

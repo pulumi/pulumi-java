@@ -171,102 +171,102 @@ public final class WebAppRelayServiceConnectionArgs extends io.pulumi.resources.
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder setBiztalkUri(@Nullable Input<String> biztalkUri) {
+        public Builder biztalkUri(@Nullable Input<String> biztalkUri) {
             this.biztalkUri = biztalkUri;
             return this;
         }
 
-        public Builder setBiztalkUri(@Nullable String biztalkUri) {
+        public Builder biztalkUri(@Nullable String biztalkUri) {
             this.biztalkUri = Input.ofNullable(biztalkUri);
             return this;
         }
 
-        public Builder setEntityConnectionString(@Nullable Input<String> entityConnectionString) {
+        public Builder entityConnectionString(@Nullable Input<String> entityConnectionString) {
             this.entityConnectionString = entityConnectionString;
             return this;
         }
 
-        public Builder setEntityConnectionString(@Nullable String entityConnectionString) {
+        public Builder entityConnectionString(@Nullable String entityConnectionString) {
             this.entityConnectionString = Input.ofNullable(entityConnectionString);
             return this;
         }
 
-        public Builder setEntityName(@Nullable Input<String> entityName) {
+        public Builder entityName(@Nullable Input<String> entityName) {
             this.entityName = entityName;
             return this;
         }
 
-        public Builder setEntityName(@Nullable String entityName) {
+        public Builder entityName(@Nullable String entityName) {
             this.entityName = Input.ofNullable(entityName);
             return this;
         }
 
-        public Builder setHostname(@Nullable Input<String> hostname) {
+        public Builder hostname(@Nullable Input<String> hostname) {
             this.hostname = hostname;
             return this;
         }
 
-        public Builder setHostname(@Nullable String hostname) {
+        public Builder hostname(@Nullable String hostname) {
             this.hostname = Input.ofNullable(hostname);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Input<Integer> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setResourceConnectionString(@Nullable Input<String> resourceConnectionString) {
+        public Builder resourceConnectionString(@Nullable Input<String> resourceConnectionString) {
             this.resourceConnectionString = resourceConnectionString;
             return this;
         }
 
-        public Builder setResourceConnectionString(@Nullable String resourceConnectionString) {
+        public Builder resourceConnectionString(@Nullable String resourceConnectionString) {
             this.resourceConnectionString = Input.ofNullable(resourceConnectionString);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceType(@Nullable Input<String> resourceType) {
+        public Builder resourceType(@Nullable Input<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
-        public Builder setResourceType(@Nullable String resourceType) {
+        public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = Input.ofNullable(resourceType);
             return this;
         }

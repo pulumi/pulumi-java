@@ -75,12 +75,12 @@ public final class AlertPolicyDocumentation {
     	      this.mimeType = defaults.mimeType;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = content;
             return this;
         }
 
-        public Builder setMimeType(@Nullable String mimeType) {
+        public Builder mimeType(@Nullable String mimeType) {
             this.mimeType = mimeType;
             return this;
         }

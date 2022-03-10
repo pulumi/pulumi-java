@@ -75,12 +75,12 @@ public final class WorkloadNetworkSegmentSubnetResponse extends io.pulumi.resour
     	      this.gatewayAddress = defaults.gatewayAddress;
         }
 
-        public Builder setDhcpRanges(@Nullable List<String> dhcpRanges) {
+        public Builder dhcpRanges(@Nullable List<String> dhcpRanges) {
             this.dhcpRanges = dhcpRanges;
             return this;
         }
 
-        public Builder setGatewayAddress(@Nullable String gatewayAddress) {
+        public Builder gatewayAddress(@Nullable String gatewayAddress) {
             this.gatewayAddress = gatewayAddress;
             return this;
         }

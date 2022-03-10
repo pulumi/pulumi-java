@@ -57,12 +57,12 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageTextArgs extends io.p
     	      this.text = defaults.text;
         }
 
-        public Builder setText(Input<List<String>> text) {
+        public Builder text(Input<List<String>> text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }
 
-        public Builder setText(List<String> text) {
+        public Builder text(List<String> text) {
             this.text = Input.of(Objects.requireNonNull(text));
             return this;
         }

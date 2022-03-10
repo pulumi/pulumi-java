@@ -56,12 +56,12 @@ public final class GoogleCloudDialogflowCxV3IntentInputArgs extends io.pulumi.re
     	      this.intent = defaults.intent;
         }
 
-        public Builder setIntent(Input<String> intent) {
+        public Builder intent(Input<String> intent) {
             this.intent = Objects.requireNonNull(intent);
             return this;
         }
 
-        public Builder setIntent(String intent) {
+        public Builder intent(String intent) {
             this.intent = Input.of(Objects.requireNonNull(intent));
             return this;
         }

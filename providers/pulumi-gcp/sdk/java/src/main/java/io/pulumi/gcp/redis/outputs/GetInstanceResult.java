@@ -299,157 +299,157 @@ public final class GetInstanceResult {
     	      this.transitEncryptionMode = defaults.transitEncryptionMode;
         }
 
-        public Builder setAlternativeLocationId(String alternativeLocationId) {
+        public Builder alternativeLocationId(String alternativeLocationId) {
             this.alternativeLocationId = Objects.requireNonNull(alternativeLocationId);
             return this;
         }
 
-        public Builder setAuthEnabled(Boolean authEnabled) {
+        public Builder authEnabled(Boolean authEnabled) {
             this.authEnabled = Objects.requireNonNull(authEnabled);
             return this;
         }
 
-        public Builder setAuthString(String authString) {
+        public Builder authString(String authString) {
             this.authString = Objects.requireNonNull(authString);
             return this;
         }
 
-        public Builder setAuthorizedNetwork(String authorizedNetwork) {
+        public Builder authorizedNetwork(String authorizedNetwork) {
             this.authorizedNetwork = Objects.requireNonNull(authorizedNetwork);
             return this;
         }
 
-        public Builder setConnectMode(String connectMode) {
+        public Builder connectMode(String connectMode) {
             this.connectMode = Objects.requireNonNull(connectMode);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setCurrentLocationId(String currentLocationId) {
+        public Builder currentLocationId(String currentLocationId) {
             this.currentLocationId = Objects.requireNonNull(currentLocationId);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setHost(String host) {
+        public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLocationId(String locationId) {
+        public Builder locationId(String locationId) {
             this.locationId = Objects.requireNonNull(locationId);
             return this;
         }
 
-        public Builder setMaintenancePolicies(List<GetInstanceMaintenancePolicy> maintenancePolicies) {
+        public Builder maintenancePolicies(List<GetInstanceMaintenancePolicy> maintenancePolicies) {
             this.maintenancePolicies = Objects.requireNonNull(maintenancePolicies);
             return this;
         }
 
-        public Builder setMaintenanceSchedules(List<GetInstanceMaintenanceSchedule> maintenanceSchedules) {
+        public Builder maintenanceSchedules(List<GetInstanceMaintenanceSchedule> maintenanceSchedules) {
             this.maintenanceSchedules = Objects.requireNonNull(maintenanceSchedules);
             return this;
         }
 
-        public Builder setMemorySizeGb(Integer memorySizeGb) {
+        public Builder memorySizeGb(Integer memorySizeGb) {
             this.memorySizeGb = Objects.requireNonNull(memorySizeGb);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNodes(List<GetInstanceNode> nodes) {
+        public Builder nodes(List<GetInstanceNode> nodes) {
             this.nodes = Objects.requireNonNull(nodes);
             return this;
         }
 
-        public Builder setPersistenceIamIdentity(String persistenceIamIdentity) {
+        public Builder persistenceIamIdentity(String persistenceIamIdentity) {
             this.persistenceIamIdentity = Objects.requireNonNull(persistenceIamIdentity);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setReadEndpoint(String readEndpoint) {
+        public Builder readEndpoint(String readEndpoint) {
             this.readEndpoint = Objects.requireNonNull(readEndpoint);
             return this;
         }
 
-        public Builder setReadEndpointPort(Integer readEndpointPort) {
+        public Builder readEndpointPort(Integer readEndpointPort) {
             this.readEndpointPort = Objects.requireNonNull(readEndpointPort);
             return this;
         }
 
-        public Builder setReadReplicasMode(String readReplicasMode) {
+        public Builder readReplicasMode(String readReplicasMode) {
             this.readReplicasMode = Objects.requireNonNull(readReplicasMode);
             return this;
         }
 
-        public Builder setRedisConfigs(Map<String,String> redisConfigs) {
+        public Builder redisConfigs(Map<String,String> redisConfigs) {
             this.redisConfigs = Objects.requireNonNull(redisConfigs);
             return this;
         }
 
-        public Builder setRedisVersion(String redisVersion) {
+        public Builder redisVersion(String redisVersion) {
             this.redisVersion = Objects.requireNonNull(redisVersion);
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
 
-        public Builder setReplicaCount(Integer replicaCount) {
+        public Builder replicaCount(Integer replicaCount) {
             this.replicaCount = Objects.requireNonNull(replicaCount);
             return this;
         }
 
-        public Builder setReservedIpRange(String reservedIpRange) {
+        public Builder reservedIpRange(String reservedIpRange) {
             this.reservedIpRange = Objects.requireNonNull(reservedIpRange);
             return this;
         }
 
-        public Builder setServerCaCerts(List<GetInstanceServerCaCert> serverCaCerts) {
+        public Builder serverCaCerts(List<GetInstanceServerCaCert> serverCaCerts) {
             this.serverCaCerts = Objects.requireNonNull(serverCaCerts);
             return this;
         }
 
-        public Builder setTier(String tier) {
+        public Builder tier(String tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
 
-        public Builder setTransitEncryptionMode(String transitEncryptionMode) {
+        public Builder transitEncryptionMode(String transitEncryptionMode) {
             this.transitEncryptionMode = Objects.requireNonNull(transitEncryptionMode);
             return this;
         }

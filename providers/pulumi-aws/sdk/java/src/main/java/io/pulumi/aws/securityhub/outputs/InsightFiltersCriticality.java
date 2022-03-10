@@ -83,17 +83,17 @@ public final class InsightFiltersCriticality {
     	      this.lte = defaults.lte;
         }
 
-        public Builder setEq(@Nullable String eq) {
+        public Builder eq(@Nullable String eq) {
             this.eq = eq;
             return this;
         }
 
-        public Builder setGte(@Nullable String gte) {
+        public Builder gte(@Nullable String gte) {
             this.gte = gte;
             return this;
         }
 
-        public Builder setLte(@Nullable String lte) {
+        public Builder lte(@Nullable String lte) {
             this.lte = lte;
             return this;
         }

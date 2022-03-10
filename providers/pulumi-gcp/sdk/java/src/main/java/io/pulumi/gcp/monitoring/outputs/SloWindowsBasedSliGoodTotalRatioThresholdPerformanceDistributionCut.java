@@ -84,12 +84,12 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistribut
     	      this.range = defaults.range;
         }
 
-        public Builder setDistributionFilter(String distributionFilter) {
+        public Builder distributionFilter(String distributionFilter) {
             this.distributionFilter = Objects.requireNonNull(distributionFilter);
             return this;
         }
 
-        public Builder setRange(SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange range) {
+        public Builder range(SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange range) {
             this.range = Objects.requireNonNull(range);
             return this;
         }

@@ -164,42 +164,42 @@ public final class GetDefenderSettingResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDeviceQuota(Integer deviceQuota) {
+        public Builder deviceQuota(Integer deviceQuota) {
             this.deviceQuota = Objects.requireNonNull(deviceQuota);
             return this;
         }
 
-        public Builder setEvaluationEndTime(String evaluationEndTime) {
+        public Builder evaluationEndTime(String evaluationEndTime) {
             this.evaluationEndTime = Objects.requireNonNull(evaluationEndTime);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setMdeIntegration(DefenderSettingsPropertiesResponseMdeIntegration mdeIntegration) {
+        public Builder mdeIntegration(DefenderSettingsPropertiesResponseMdeIntegration mdeIntegration) {
             this.mdeIntegration = Objects.requireNonNull(mdeIntegration);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOnboardingKind(String onboardingKind) {
+        public Builder onboardingKind(String onboardingKind) {
             this.onboardingKind = Objects.requireNonNull(onboardingKind);
             return this;
         }
 
-        public Builder setSentinelWorkspaceResourceIds(List<String> sentinelWorkspaceResourceIds) {
+        public Builder sentinelWorkspaceResourceIds(List<String> sentinelWorkspaceResourceIds) {
             this.sentinelWorkspaceResourceIds = Objects.requireNonNull(sentinelWorkspaceResourceIds);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

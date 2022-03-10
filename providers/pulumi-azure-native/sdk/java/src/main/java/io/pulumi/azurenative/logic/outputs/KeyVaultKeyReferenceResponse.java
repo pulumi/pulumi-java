@@ -84,17 +84,17 @@ public final class KeyVaultKeyReferenceResponse {
     	      this.keyVersion = defaults.keyVersion;
         }
 
-        public Builder setKeyName(String keyName) {
+        public Builder keyName(String keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
 
-        public Builder setKeyVault(KeyVaultKeyReferenceResponseKeyVault keyVault) {
+        public Builder keyVault(KeyVaultKeyReferenceResponseKeyVault keyVault) {
             this.keyVault = Objects.requireNonNull(keyVault);
             return this;
         }
 
-        public Builder setKeyVersion(@Nullable String keyVersion) {
+        public Builder keyVersion(@Nullable String keyVersion) {
             this.keyVersion = keyVersion;
             return this;
         }

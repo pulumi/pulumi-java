@@ -104,42 +104,42 @@ public final class GuestPoliciesRecipeUpdateStepFileExecArgs extends io.pulumi.r
     	      this.localPath = defaults.localPath;
         }
 
-        public Builder setAllowedExitCodes(@Nullable Input<List<Integer>> allowedExitCodes) {
+        public Builder allowedExitCodes(@Nullable Input<List<Integer>> allowedExitCodes) {
             this.allowedExitCodes = allowedExitCodes;
             return this;
         }
 
-        public Builder setAllowedExitCodes(@Nullable List<Integer> allowedExitCodes) {
+        public Builder allowedExitCodes(@Nullable List<Integer> allowedExitCodes) {
             this.allowedExitCodes = Input.ofNullable(allowedExitCodes);
             return this;
         }
 
-        public Builder setArgs(@Nullable Input<List<String>> args) {
+        public Builder args(@Nullable Input<List<String>> args) {
             this.args = args;
             return this;
         }
 
-        public Builder setArgs(@Nullable List<String> args) {
+        public Builder args(@Nullable List<String> args) {
             this.args = Input.ofNullable(args);
             return this;
         }
 
-        public Builder setArtifactId(@Nullable Input<String> artifactId) {
+        public Builder artifactId(@Nullable Input<String> artifactId) {
             this.artifactId = artifactId;
             return this;
         }
 
-        public Builder setArtifactId(@Nullable String artifactId) {
+        public Builder artifactId(@Nullable String artifactId) {
             this.artifactId = Input.ofNullable(artifactId);
             return this;
         }
 
-        public Builder setLocalPath(@Nullable Input<String> localPath) {
+        public Builder localPath(@Nullable Input<String> localPath) {
             this.localPath = localPath;
             return this;
         }
 
-        public Builder setLocalPath(@Nullable String localPath) {
+        public Builder localPath(@Nullable String localPath) {
             this.localPath = Input.ofNullable(localPath);
             return this;
         }

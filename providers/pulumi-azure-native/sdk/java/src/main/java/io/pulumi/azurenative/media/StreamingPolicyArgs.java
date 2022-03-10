@@ -170,82 +170,82 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
     	      this.streamingPolicyName = defaults.streamingPolicyName;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setCommonEncryptionCbcs(@Nullable Input<CommonEncryptionCbcsArgs> commonEncryptionCbcs) {
+        public Builder commonEncryptionCbcs(@Nullable Input<CommonEncryptionCbcsArgs> commonEncryptionCbcs) {
             this.commonEncryptionCbcs = commonEncryptionCbcs;
             return this;
         }
 
-        public Builder setCommonEncryptionCbcs(@Nullable CommonEncryptionCbcsArgs commonEncryptionCbcs) {
+        public Builder commonEncryptionCbcs(@Nullable CommonEncryptionCbcsArgs commonEncryptionCbcs) {
             this.commonEncryptionCbcs = Input.ofNullable(commonEncryptionCbcs);
             return this;
         }
 
-        public Builder setCommonEncryptionCenc(@Nullable Input<CommonEncryptionCencArgs> commonEncryptionCenc) {
+        public Builder commonEncryptionCenc(@Nullable Input<CommonEncryptionCencArgs> commonEncryptionCenc) {
             this.commonEncryptionCenc = commonEncryptionCenc;
             return this;
         }
 
-        public Builder setCommonEncryptionCenc(@Nullable CommonEncryptionCencArgs commonEncryptionCenc) {
+        public Builder commonEncryptionCenc(@Nullable CommonEncryptionCencArgs commonEncryptionCenc) {
             this.commonEncryptionCenc = Input.ofNullable(commonEncryptionCenc);
             return this;
         }
 
-        public Builder setDefaultContentKeyPolicyName(@Nullable Input<String> defaultContentKeyPolicyName) {
+        public Builder defaultContentKeyPolicyName(@Nullable Input<String> defaultContentKeyPolicyName) {
             this.defaultContentKeyPolicyName = defaultContentKeyPolicyName;
             return this;
         }
 
-        public Builder setDefaultContentKeyPolicyName(@Nullable String defaultContentKeyPolicyName) {
+        public Builder defaultContentKeyPolicyName(@Nullable String defaultContentKeyPolicyName) {
             this.defaultContentKeyPolicyName = Input.ofNullable(defaultContentKeyPolicyName);
             return this;
         }
 
-        public Builder setEnvelopeEncryption(@Nullable Input<EnvelopeEncryptionArgs> envelopeEncryption) {
+        public Builder envelopeEncryption(@Nullable Input<EnvelopeEncryptionArgs> envelopeEncryption) {
             this.envelopeEncryption = envelopeEncryption;
             return this;
         }
 
-        public Builder setEnvelopeEncryption(@Nullable EnvelopeEncryptionArgs envelopeEncryption) {
+        public Builder envelopeEncryption(@Nullable EnvelopeEncryptionArgs envelopeEncryption) {
             this.envelopeEncryption = Input.ofNullable(envelopeEncryption);
             return this;
         }
 
-        public Builder setNoEncryption(@Nullable Input<NoEncryptionArgs> noEncryption) {
+        public Builder noEncryption(@Nullable Input<NoEncryptionArgs> noEncryption) {
             this.noEncryption = noEncryption;
             return this;
         }
 
-        public Builder setNoEncryption(@Nullable NoEncryptionArgs noEncryption) {
+        public Builder noEncryption(@Nullable NoEncryptionArgs noEncryption) {
             this.noEncryption = Input.ofNullable(noEncryption);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setStreamingPolicyName(@Nullable Input<String> streamingPolicyName) {
+        public Builder streamingPolicyName(@Nullable Input<String> streamingPolicyName) {
             this.streamingPolicyName = streamingPolicyName;
             return this;
         }
 
-        public Builder setStreamingPolicyName(@Nullable String streamingPolicyName) {
+        public Builder streamingPolicyName(@Nullable String streamingPolicyName) {
             this.streamingPolicyName = Input.ofNullable(streamingPolicyName);
             return this;
         }

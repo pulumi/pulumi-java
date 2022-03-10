@@ -74,12 +74,12 @@ public final class DateAfterModificationResponse extends io.pulumi.resources.Inv
     	      this.daysAfterModificationGreaterThan = defaults.daysAfterModificationGreaterThan;
         }
 
-        public Builder setDaysAfterLastAccessTimeGreaterThan(@Nullable Double daysAfterLastAccessTimeGreaterThan) {
+        public Builder daysAfterLastAccessTimeGreaterThan(@Nullable Double daysAfterLastAccessTimeGreaterThan) {
             this.daysAfterLastAccessTimeGreaterThan = daysAfterLastAccessTimeGreaterThan;
             return this;
         }
 
-        public Builder setDaysAfterModificationGreaterThan(@Nullable Double daysAfterModificationGreaterThan) {
+        public Builder daysAfterModificationGreaterThan(@Nullable Double daysAfterModificationGreaterThan) {
             this.daysAfterModificationGreaterThan = daysAfterModificationGreaterThan;
             return this;
         }

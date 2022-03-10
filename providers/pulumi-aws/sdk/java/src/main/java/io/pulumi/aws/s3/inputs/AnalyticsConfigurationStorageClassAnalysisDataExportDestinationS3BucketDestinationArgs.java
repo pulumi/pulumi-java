@@ -102,42 +102,42 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
     	      this.prefix = defaults.prefix;
         }
 
-        public Builder setBucketAccountId(@Nullable Input<String> bucketAccountId) {
+        public Builder bucketAccountId(@Nullable Input<String> bucketAccountId) {
             this.bucketAccountId = bucketAccountId;
             return this;
         }
 
-        public Builder setBucketAccountId(@Nullable String bucketAccountId) {
+        public Builder bucketAccountId(@Nullable String bucketAccountId) {
             this.bucketAccountId = Input.ofNullable(bucketAccountId);
             return this;
         }
 
-        public Builder setBucketArn(Input<String> bucketArn) {
+        public Builder bucketArn(Input<String> bucketArn) {
             this.bucketArn = Objects.requireNonNull(bucketArn);
             return this;
         }
 
-        public Builder setBucketArn(String bucketArn) {
+        public Builder bucketArn(String bucketArn) {
             this.bucketArn = Input.of(Objects.requireNonNull(bucketArn));
             return this;
         }
 
-        public Builder setFormat(@Nullable Input<String> format) {
+        public Builder format(@Nullable Input<String> format) {
             this.format = format;
             return this;
         }
 
-        public Builder setFormat(@Nullable String format) {
+        public Builder format(@Nullable String format) {
             this.format = Input.ofNullable(format);
             return this;
         }
 
-        public Builder setPrefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Input<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = Input.ofNullable(prefix);
             return this;
         }

@@ -68,22 +68,22 @@ public final class SuiteDefinitionArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder setSuiteDefinitionConfiguration(Input<SuiteDefinitionConfigurationPropertiesArgs> suiteDefinitionConfiguration) {
+        public Builder suiteDefinitionConfiguration(Input<SuiteDefinitionConfigurationPropertiesArgs> suiteDefinitionConfiguration) {
             this.suiteDefinitionConfiguration = Objects.requireNonNull(suiteDefinitionConfiguration);
             return this;
         }
 
-        public Builder setSuiteDefinitionConfiguration(SuiteDefinitionConfigurationPropertiesArgs suiteDefinitionConfiguration) {
+        public Builder suiteDefinitionConfiguration(SuiteDefinitionConfigurationPropertiesArgs suiteDefinitionConfiguration) {
             this.suiteDefinitionConfiguration = Input.of(Objects.requireNonNull(suiteDefinitionConfiguration));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<SuiteDefinitionTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<SuiteDefinitionTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<SuiteDefinitionTagArgs> tags) {
+        public Builder tags(@Nullable List<SuiteDefinitionTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

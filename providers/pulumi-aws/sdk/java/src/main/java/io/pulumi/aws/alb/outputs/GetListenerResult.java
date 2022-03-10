@@ -125,52 +125,52 @@ public final class GetListenerResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAlpnPolicy(String alpnPolicy) {
+        public Builder alpnPolicy(String alpnPolicy) {
             this.alpnPolicy = Objects.requireNonNull(alpnPolicy);
             return this;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setCertificateArn(String certificateArn) {
+        public Builder certificateArn(String certificateArn) {
             this.certificateArn = Objects.requireNonNull(certificateArn);
             return this;
         }
 
-        public Builder setDefaultActions(List<GetListenerDefaultAction> defaultActions) {
+        public Builder defaultActions(List<GetListenerDefaultAction> defaultActions) {
             this.defaultActions = Objects.requireNonNull(defaultActions);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLoadBalancerArn(String loadBalancerArn) {
+        public Builder loadBalancerArn(String loadBalancerArn) {
             this.loadBalancerArn = Objects.requireNonNull(loadBalancerArn);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setSslPolicy(String sslPolicy) {
+        public Builder sslPolicy(String sslPolicy) {
             this.sslPolicy = Objects.requireNonNull(sslPolicy);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

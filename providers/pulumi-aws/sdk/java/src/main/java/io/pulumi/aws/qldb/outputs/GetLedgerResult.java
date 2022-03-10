@@ -82,27 +82,27 @@ public final class GetLedgerResult {
     	      this.permissionsMode = defaults.permissionsMode;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setDeletionProtection(Boolean deletionProtection) {
+        public Builder deletionProtection(Boolean deletionProtection) {
             this.deletionProtection = Objects.requireNonNull(deletionProtection);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPermissionsMode(String permissionsMode) {
+        public Builder permissionsMode(String permissionsMode) {
             this.permissionsMode = Objects.requireNonNull(permissionsMode);
             return this;
         }

@@ -65,12 +65,12 @@ public final class InterconnectMacsecPreSharedKeyResponse {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }

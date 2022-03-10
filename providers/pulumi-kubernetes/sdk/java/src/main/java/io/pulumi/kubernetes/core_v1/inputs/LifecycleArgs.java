@@ -74,22 +74,22 @@ public final class LifecycleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.preStop = defaults.preStop;
         }
 
-        public Builder setPostStart(@Nullable Input<LifecycleHandlerArgs> postStart) {
+        public Builder postStart(@Nullable Input<LifecycleHandlerArgs> postStart) {
             this.postStart = postStart;
             return this;
         }
 
-        public Builder setPostStart(@Nullable LifecycleHandlerArgs postStart) {
+        public Builder postStart(@Nullable LifecycleHandlerArgs postStart) {
             this.postStart = Input.ofNullable(postStart);
             return this;
         }
 
-        public Builder setPreStop(@Nullable Input<LifecycleHandlerArgs> preStop) {
+        public Builder preStop(@Nullable Input<LifecycleHandlerArgs> preStop) {
             this.preStop = preStop;
             return this;
         }
 
-        public Builder setPreStop(@Nullable LifecycleHandlerArgs preStop) {
+        public Builder preStop(@Nullable LifecycleHandlerArgs preStop) {
             this.preStop = Input.ofNullable(preStop);
             return this;
         }

@@ -75,12 +75,12 @@ public final class DeploymentScaleSettingsResponse extends io.pulumi.resources.I
     	      this.scaleType = defaults.scaleType;
         }
 
-        public Builder setCapacity(@Nullable Integer capacity) {
+        public Builder capacity(@Nullable Integer capacity) {
             this.capacity = capacity;
             return this;
         }
 
-        public Builder setScaleType(@Nullable String scaleType) {
+        public Builder scaleType(@Nullable String scaleType) {
             this.scaleType = scaleType;
             return this;
         }

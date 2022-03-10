@@ -116,62 +116,62 @@ public final class FlowScheduledTriggerPropertiesArgs extends io.pulumi.resource
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setDataPullMode(@Nullable Input<FlowScheduledTriggerPropertiesDataPullMode> dataPullMode) {
+        public Builder dataPullMode(@Nullable Input<FlowScheduledTriggerPropertiesDataPullMode> dataPullMode) {
             this.dataPullMode = dataPullMode;
             return this;
         }
 
-        public Builder setDataPullMode(@Nullable FlowScheduledTriggerPropertiesDataPullMode dataPullMode) {
+        public Builder dataPullMode(@Nullable FlowScheduledTriggerPropertiesDataPullMode dataPullMode) {
             this.dataPullMode = Input.ofNullable(dataPullMode);
             return this;
         }
 
-        public Builder setScheduleEndTime(@Nullable Input<Double> scheduleEndTime) {
+        public Builder scheduleEndTime(@Nullable Input<Double> scheduleEndTime) {
             this.scheduleEndTime = scheduleEndTime;
             return this;
         }
 
-        public Builder setScheduleEndTime(@Nullable Double scheduleEndTime) {
+        public Builder scheduleEndTime(@Nullable Double scheduleEndTime) {
             this.scheduleEndTime = Input.ofNullable(scheduleEndTime);
             return this;
         }
 
-        public Builder setScheduleExpression(Input<String> scheduleExpression) {
+        public Builder scheduleExpression(Input<String> scheduleExpression) {
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
         }
 
-        public Builder setScheduleExpression(String scheduleExpression) {
+        public Builder scheduleExpression(String scheduleExpression) {
             this.scheduleExpression = Input.of(Objects.requireNonNull(scheduleExpression));
             return this;
         }
 
-        public Builder setScheduleOffset(@Nullable Input<Double> scheduleOffset) {
+        public Builder scheduleOffset(@Nullable Input<Double> scheduleOffset) {
             this.scheduleOffset = scheduleOffset;
             return this;
         }
 
-        public Builder setScheduleOffset(@Nullable Double scheduleOffset) {
+        public Builder scheduleOffset(@Nullable Double scheduleOffset) {
             this.scheduleOffset = Input.ofNullable(scheduleOffset);
             return this;
         }
 
-        public Builder setScheduleStartTime(@Nullable Input<Double> scheduleStartTime) {
+        public Builder scheduleStartTime(@Nullable Input<Double> scheduleStartTime) {
             this.scheduleStartTime = scheduleStartTime;
             return this;
         }
 
-        public Builder setScheduleStartTime(@Nullable Double scheduleStartTime) {
+        public Builder scheduleStartTime(@Nullable Double scheduleStartTime) {
             this.scheduleStartTime = Input.ofNullable(scheduleStartTime);
             return this;
         }
 
-        public Builder setTimeZone(@Nullable Input<String> timeZone) {
+        public Builder timeZone(@Nullable Input<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Input.ofNullable(timeZone);
             return this;
         }

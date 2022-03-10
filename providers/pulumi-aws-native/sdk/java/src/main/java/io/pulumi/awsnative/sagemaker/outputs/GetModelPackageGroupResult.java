@@ -103,27 +103,27 @@ public final class GetModelPackageGroupResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCreationTime(@Nullable String creationTime) {
+        public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
-        public Builder setModelPackageGroupArn(@Nullable String modelPackageGroupArn) {
+        public Builder modelPackageGroupArn(@Nullable String modelPackageGroupArn) {
             this.modelPackageGroupArn = modelPackageGroupArn;
             return this;
         }
 
-        public Builder setModelPackageGroupPolicy(@Nullable Object modelPackageGroupPolicy) {
+        public Builder modelPackageGroupPolicy(@Nullable Object modelPackageGroupPolicy) {
             this.modelPackageGroupPolicy = modelPackageGroupPolicy;
             return this;
         }
 
-        public Builder setModelPackageGroupStatus(@Nullable ModelPackageGroupStatus modelPackageGroupStatus) {
+        public Builder modelPackageGroupStatus(@Nullable ModelPackageGroupStatus modelPackageGroupStatus) {
             this.modelPackageGroupStatus = modelPackageGroupStatus;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ModelPackageGroupTag> tags) {
+        public Builder tags(@Nullable List<ModelPackageGroupTag> tags) {
             this.tags = tags;
             return this;
         }

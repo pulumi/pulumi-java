@@ -299,162 +299,162 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
     	      this.type = defaults.type;
         }
 
-        public Builder setAllocationStrategy(@Nullable Input<String> allocationStrategy) {
+        public Builder allocationStrategy(@Nullable Input<String> allocationStrategy) {
             this.allocationStrategy = allocationStrategy;
             return this;
         }
 
-        public Builder setAllocationStrategy(@Nullable String allocationStrategy) {
+        public Builder allocationStrategy(@Nullable String allocationStrategy) {
             this.allocationStrategy = Input.ofNullable(allocationStrategy);
             return this;
         }
 
-        public Builder setBidPercentage(@Nullable Input<Integer> bidPercentage) {
+        public Builder bidPercentage(@Nullable Input<Integer> bidPercentage) {
             this.bidPercentage = bidPercentage;
             return this;
         }
 
-        public Builder setBidPercentage(@Nullable Integer bidPercentage) {
+        public Builder bidPercentage(@Nullable Integer bidPercentage) {
             this.bidPercentage = Input.ofNullable(bidPercentage);
             return this;
         }
 
-        public Builder setDesiredVcpus(@Nullable Input<Integer> desiredVcpus) {
+        public Builder desiredVcpus(@Nullable Input<Integer> desiredVcpus) {
             this.desiredVcpus = desiredVcpus;
             return this;
         }
 
-        public Builder setDesiredVcpus(@Nullable Integer desiredVcpus) {
+        public Builder desiredVcpus(@Nullable Integer desiredVcpus) {
             this.desiredVcpus = Input.ofNullable(desiredVcpus);
             return this;
         }
 
-        public Builder setEc2Configuration(@Nullable Input<ComputeEnvironmentComputeResourcesEc2ConfigurationGetArgs> ec2Configuration) {
+        public Builder ec2Configuration(@Nullable Input<ComputeEnvironmentComputeResourcesEc2ConfigurationGetArgs> ec2Configuration) {
             this.ec2Configuration = ec2Configuration;
             return this;
         }
 
-        public Builder setEc2Configuration(@Nullable ComputeEnvironmentComputeResourcesEc2ConfigurationGetArgs ec2Configuration) {
+        public Builder ec2Configuration(@Nullable ComputeEnvironmentComputeResourcesEc2ConfigurationGetArgs ec2Configuration) {
             this.ec2Configuration = Input.ofNullable(ec2Configuration);
             return this;
         }
 
-        public Builder setEc2KeyPair(@Nullable Input<String> ec2KeyPair) {
+        public Builder ec2KeyPair(@Nullable Input<String> ec2KeyPair) {
             this.ec2KeyPair = ec2KeyPair;
             return this;
         }
 
-        public Builder setEc2KeyPair(@Nullable String ec2KeyPair) {
+        public Builder ec2KeyPair(@Nullable String ec2KeyPair) {
             this.ec2KeyPair = Input.ofNullable(ec2KeyPair);
             return this;
         }
 
-        public Builder setImageId(@Nullable Input<String> imageId) {
+        public Builder imageId(@Nullable Input<String> imageId) {
             this.imageId = imageId;
             return this;
         }
 
-        public Builder setImageId(@Nullable String imageId) {
+        public Builder imageId(@Nullable String imageId) {
             this.imageId = Input.ofNullable(imageId);
             return this;
         }
 
-        public Builder setInstanceRole(@Nullable Input<String> instanceRole) {
+        public Builder instanceRole(@Nullable Input<String> instanceRole) {
             this.instanceRole = instanceRole;
             return this;
         }
 
-        public Builder setInstanceRole(@Nullable String instanceRole) {
+        public Builder instanceRole(@Nullable String instanceRole) {
             this.instanceRole = Input.ofNullable(instanceRole);
             return this;
         }
 
-        public Builder setInstanceTypes(@Nullable Input<List<String>> instanceTypes) {
+        public Builder instanceTypes(@Nullable Input<List<String>> instanceTypes) {
             this.instanceTypes = instanceTypes;
             return this;
         }
 
-        public Builder setInstanceTypes(@Nullable List<String> instanceTypes) {
+        public Builder instanceTypes(@Nullable List<String> instanceTypes) {
             this.instanceTypes = Input.ofNullable(instanceTypes);
             return this;
         }
 
-        public Builder setLaunchTemplate(@Nullable Input<ComputeEnvironmentComputeResourcesLaunchTemplateGetArgs> launchTemplate) {
+        public Builder launchTemplate(@Nullable Input<ComputeEnvironmentComputeResourcesLaunchTemplateGetArgs> launchTemplate) {
             this.launchTemplate = launchTemplate;
             return this;
         }
 
-        public Builder setLaunchTemplate(@Nullable ComputeEnvironmentComputeResourcesLaunchTemplateGetArgs launchTemplate) {
+        public Builder launchTemplate(@Nullable ComputeEnvironmentComputeResourcesLaunchTemplateGetArgs launchTemplate) {
             this.launchTemplate = Input.ofNullable(launchTemplate);
             return this;
         }
 
-        public Builder setMaxVcpus(Input<Integer> maxVcpus) {
+        public Builder maxVcpus(Input<Integer> maxVcpus) {
             this.maxVcpus = Objects.requireNonNull(maxVcpus);
             return this;
         }
 
-        public Builder setMaxVcpus(Integer maxVcpus) {
+        public Builder maxVcpus(Integer maxVcpus) {
             this.maxVcpus = Input.of(Objects.requireNonNull(maxVcpus));
             return this;
         }
 
-        public Builder setMinVcpus(@Nullable Input<Integer> minVcpus) {
+        public Builder minVcpus(@Nullable Input<Integer> minVcpus) {
             this.minVcpus = minVcpus;
             return this;
         }
 
-        public Builder setMinVcpus(@Nullable Integer minVcpus) {
+        public Builder minVcpus(@Nullable Integer minVcpus) {
             this.minVcpus = Input.ofNullable(minVcpus);
             return this;
         }
 
-        public Builder setSecurityGroupIds(Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(Input<List<String>> securityGroupIds) {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
 
-        public Builder setSecurityGroupIds(List<String> securityGroupIds) {
+        public Builder securityGroupIds(List<String> securityGroupIds) {
             this.securityGroupIds = Input.of(Objects.requireNonNull(securityGroupIds));
             return this;
         }
 
-        public Builder setSpotIamFleetRole(@Nullable Input<String> spotIamFleetRole) {
+        public Builder spotIamFleetRole(@Nullable Input<String> spotIamFleetRole) {
             this.spotIamFleetRole = spotIamFleetRole;
             return this;
         }
 
-        public Builder setSpotIamFleetRole(@Nullable String spotIamFleetRole) {
+        public Builder spotIamFleetRole(@Nullable String spotIamFleetRole) {
             this.spotIamFleetRole = Input.ofNullable(spotIamFleetRole);
             return this;
         }
 
-        public Builder setSubnets(Input<List<String>> subnets) {
+        public Builder subnets(Input<List<String>> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
 
-        public Builder setSubnets(List<String> subnets) {
+        public Builder subnets(List<String> subnets) {
             this.subnets = Input.of(Objects.requireNonNull(subnets));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

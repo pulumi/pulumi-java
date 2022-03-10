@@ -209,102 +209,102 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     	      this.port = defaults.port;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDiskEncryptionKeyName(@Nullable Input<String> diskEncryptionKeyName) {
+        public Builder diskEncryptionKeyName(@Nullable Input<String> diskEncryptionKeyName) {
             this.diskEncryptionKeyName = diskEncryptionKeyName;
             return this;
         }
 
-        public Builder setDiskEncryptionKeyName(@Nullable String diskEncryptionKeyName) {
+        public Builder diskEncryptionKeyName(@Nullable String diskEncryptionKeyName) {
             this.diskEncryptionKeyName = Input.ofNullable(diskEncryptionKeyName);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setHost(@Nullable Input<String> host) {
+        public Builder host(@Nullable Input<String> host) {
             this.host = host;
             return this;
         }
 
-        public Builder setHost(@Nullable String host) {
+        public Builder host(@Nullable String host) {
             this.host = Input.ofNullable(host);
             return this;
         }
 
-        public Builder setIpRange(@Nullable Input<String> ipRange) {
+        public Builder ipRange(@Nullable Input<String> ipRange) {
             this.ipRange = ipRange;
             return this;
         }
 
-        public Builder setIpRange(@Nullable String ipRange) {
+        public Builder ipRange(@Nullable String ipRange) {
             this.ipRange = Input.ofNullable(ipRange);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOrgId(@Nullable Input<String> orgId) {
+        public Builder orgId(@Nullable Input<String> orgId) {
             this.orgId = orgId;
             return this;
         }
 
-        public Builder setOrgId(@Nullable String orgId) {
+        public Builder orgId(@Nullable String orgId) {
             this.orgId = Input.ofNullable(orgId);
             return this;
         }
 
-        public Builder setPeeringCidrRange(@Nullable Input<String> peeringCidrRange) {
+        public Builder peeringCidrRange(@Nullable Input<String> peeringCidrRange) {
             this.peeringCidrRange = peeringCidrRange;
             return this;
         }
 
-        public Builder setPeeringCidrRange(@Nullable String peeringCidrRange) {
+        public Builder peeringCidrRange(@Nullable String peeringCidrRange) {
             this.peeringCidrRange = Input.ofNullable(peeringCidrRange);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<String> port) {
+        public Builder port(@Nullable Input<String> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable String port) {
+        public Builder port(@Nullable String port) {
             this.port = Input.ofNullable(port);
             return this;
         }

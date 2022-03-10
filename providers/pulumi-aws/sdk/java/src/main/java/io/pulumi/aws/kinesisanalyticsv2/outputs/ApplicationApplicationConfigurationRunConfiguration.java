@@ -68,12 +68,12 @@ public final class ApplicationApplicationConfigurationRunConfiguration {
     	      this.flinkRunConfiguration = defaults.flinkRunConfiguration;
         }
 
-        public Builder setApplicationRestoreConfiguration(@Nullable ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfiguration applicationRestoreConfiguration) {
+        public Builder applicationRestoreConfiguration(@Nullable ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfiguration applicationRestoreConfiguration) {
             this.applicationRestoreConfiguration = applicationRestoreConfiguration;
             return this;
         }
 
-        public Builder setFlinkRunConfiguration(@Nullable ApplicationApplicationConfigurationRunConfigurationFlinkRunConfiguration flinkRunConfiguration) {
+        public Builder flinkRunConfiguration(@Nullable ApplicationApplicationConfigurationRunConfigurationFlinkRunConfiguration flinkRunConfiguration) {
             this.flinkRunConfiguration = flinkRunConfiguration;
             return this;
         }

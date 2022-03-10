@@ -76,22 +76,22 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setProviders(@Nullable Input<List<AuthProviderArgs>> providers) {
+        public Builder providers(@Nullable Input<List<AuthProviderArgs>> providers) {
             this.providers = providers;
             return this;
         }
 
-        public Builder setProviders(@Nullable List<AuthProviderArgs> providers) {
+        public Builder providers(@Nullable List<AuthProviderArgs> providers) {
             this.providers = Input.ofNullable(providers);
             return this;
         }
 
-        public Builder setRules(@Nullable Input<List<AuthenticationRuleArgs>> rules) {
+        public Builder rules(@Nullable Input<List<AuthenticationRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setRules(@Nullable List<AuthenticationRuleArgs> rules) {
+        public Builder rules(@Nullable List<AuthenticationRuleArgs> rules) {
             this.rules = Input.ofNullable(rules);
             return this;
         }

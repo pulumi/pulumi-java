@@ -57,12 +57,12 @@ public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs 
     	      this.type = defaults.type;
         }
 
-        public Builder setType(@Nullable Input<PlacementPolicyType> type) {
+        public Builder type(@Nullable Input<PlacementPolicyType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable PlacementPolicyType type) {
+        public Builder type(@Nullable PlacementPolicyType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

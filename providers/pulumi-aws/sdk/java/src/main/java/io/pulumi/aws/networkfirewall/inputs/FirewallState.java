@@ -251,132 +251,132 @@ public final class FirewallState extends io.pulumi.resources.ResourceArgs {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDeleteProtection(@Nullable Input<Boolean> deleteProtection) {
+        public Builder deleteProtection(@Nullable Input<Boolean> deleteProtection) {
             this.deleteProtection = deleteProtection;
             return this;
         }
 
-        public Builder setDeleteProtection(@Nullable Boolean deleteProtection) {
+        public Builder deleteProtection(@Nullable Boolean deleteProtection) {
             this.deleteProtection = Input.ofNullable(deleteProtection);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFirewallPolicyArn(@Nullable Input<String> firewallPolicyArn) {
+        public Builder firewallPolicyArn(@Nullable Input<String> firewallPolicyArn) {
             this.firewallPolicyArn = firewallPolicyArn;
             return this;
         }
 
-        public Builder setFirewallPolicyArn(@Nullable String firewallPolicyArn) {
+        public Builder firewallPolicyArn(@Nullable String firewallPolicyArn) {
             this.firewallPolicyArn = Input.ofNullable(firewallPolicyArn);
             return this;
         }
 
-        public Builder setFirewallPolicyChangeProtection(@Nullable Input<Boolean> firewallPolicyChangeProtection) {
+        public Builder firewallPolicyChangeProtection(@Nullable Input<Boolean> firewallPolicyChangeProtection) {
             this.firewallPolicyChangeProtection = firewallPolicyChangeProtection;
             return this;
         }
 
-        public Builder setFirewallPolicyChangeProtection(@Nullable Boolean firewallPolicyChangeProtection) {
+        public Builder firewallPolicyChangeProtection(@Nullable Boolean firewallPolicyChangeProtection) {
             this.firewallPolicyChangeProtection = Input.ofNullable(firewallPolicyChangeProtection);
             return this;
         }
 
-        public Builder setFirewallStatuses(@Nullable Input<List<FirewallFirewallStatusGetArgs>> firewallStatuses) {
+        public Builder firewallStatuses(@Nullable Input<List<FirewallFirewallStatusGetArgs>> firewallStatuses) {
             this.firewallStatuses = firewallStatuses;
             return this;
         }
 
-        public Builder setFirewallStatuses(@Nullable List<FirewallFirewallStatusGetArgs> firewallStatuses) {
+        public Builder firewallStatuses(@Nullable List<FirewallFirewallStatusGetArgs> firewallStatuses) {
             this.firewallStatuses = Input.ofNullable(firewallStatuses);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSubnetChangeProtection(@Nullable Input<Boolean> subnetChangeProtection) {
+        public Builder subnetChangeProtection(@Nullable Input<Boolean> subnetChangeProtection) {
             this.subnetChangeProtection = subnetChangeProtection;
             return this;
         }
 
-        public Builder setSubnetChangeProtection(@Nullable Boolean subnetChangeProtection) {
+        public Builder subnetChangeProtection(@Nullable Boolean subnetChangeProtection) {
             this.subnetChangeProtection = Input.ofNullable(subnetChangeProtection);
             return this;
         }
 
-        public Builder setSubnetMappings(@Nullable Input<List<FirewallSubnetMappingGetArgs>> subnetMappings) {
+        public Builder subnetMappings(@Nullable Input<List<FirewallSubnetMappingGetArgs>> subnetMappings) {
             this.subnetMappings = subnetMappings;
             return this;
         }
 
-        public Builder setSubnetMappings(@Nullable List<FirewallSubnetMappingGetArgs> subnetMappings) {
+        public Builder subnetMappings(@Nullable List<FirewallSubnetMappingGetArgs> subnetMappings) {
             this.subnetMappings = Input.ofNullable(subnetMappings);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setUpdateToken(@Nullable Input<String> updateToken) {
+        public Builder updateToken(@Nullable Input<String> updateToken) {
             this.updateToken = updateToken;
             return this;
         }
 
-        public Builder setUpdateToken(@Nullable String updateToken) {
+        public Builder updateToken(@Nullable String updateToken) {
             this.updateToken = Input.ofNullable(updateToken);
             return this;
         }
 
-        public Builder setVpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Input<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Input.ofNullable(vpcId);
             return this;
         }

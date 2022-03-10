@@ -110,47 +110,47 @@ public final class RemoteImageBuild {
     	      this.target = defaults.target;
         }
 
-        public Builder setBuildArg(@Nullable Map<String,String> buildArg) {
+        public Builder buildArg(@Nullable Map<String,String> buildArg) {
             this.buildArg = buildArg;
             return this;
         }
 
-        public Builder setDockerfile(@Nullable String dockerfile) {
+        public Builder dockerfile(@Nullable String dockerfile) {
             this.dockerfile = dockerfile;
             return this;
         }
 
-        public Builder setForceRemove(@Nullable Boolean forceRemove) {
+        public Builder forceRemove(@Nullable Boolean forceRemove) {
             this.forceRemove = forceRemove;
             return this;
         }
 
-        public Builder setLabel(@Nullable Map<String,String> label) {
+        public Builder label(@Nullable Map<String,String> label) {
             this.label = label;
             return this;
         }
 
-        public Builder setNoCache(@Nullable Boolean noCache) {
+        public Builder noCache(@Nullable Boolean noCache) {
             this.noCache = noCache;
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setRemove(@Nullable Boolean remove) {
+        public Builder remove(@Nullable Boolean remove) {
             this.remove = remove;
             return this;
         }
 
-        public Builder setTags(@Nullable List<String> tags) {
+        public Builder tags(@Nullable List<String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = target;
             return this;
         }

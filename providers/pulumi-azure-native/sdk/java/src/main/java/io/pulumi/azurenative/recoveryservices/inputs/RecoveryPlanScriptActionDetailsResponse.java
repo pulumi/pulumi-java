@@ -107,22 +107,22 @@ public final class RecoveryPlanScriptActionDetailsResponse extends io.pulumi.res
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setFabricLocation(String fabricLocation) {
+        public Builder fabricLocation(String fabricLocation) {
             this.fabricLocation = Objects.requireNonNull(fabricLocation);
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setTimeout(@Nullable String timeout) {
+        public Builder timeout(@Nullable String timeout) {
             this.timeout = timeout;
             return this;
         }

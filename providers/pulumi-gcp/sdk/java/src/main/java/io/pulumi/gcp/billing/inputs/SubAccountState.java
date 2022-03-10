@@ -138,62 +138,62 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
     	      this.open = defaults.open;
         }
 
-        public Builder setBillingAccountId(@Nullable Input<String> billingAccountId) {
+        public Builder billingAccountId(@Nullable Input<String> billingAccountId) {
             this.billingAccountId = billingAccountId;
             return this;
         }
 
-        public Builder setBillingAccountId(@Nullable String billingAccountId) {
+        public Builder billingAccountId(@Nullable String billingAccountId) {
             this.billingAccountId = Input.ofNullable(billingAccountId);
             return this;
         }
 
-        public Builder setDeletionPolicy(@Nullable Input<String> deletionPolicy) {
+        public Builder deletionPolicy(@Nullable Input<String> deletionPolicy) {
             this.deletionPolicy = deletionPolicy;
             return this;
         }
 
-        public Builder setDeletionPolicy(@Nullable String deletionPolicy) {
+        public Builder deletionPolicy(@Nullable String deletionPolicy) {
             this.deletionPolicy = Input.ofNullable(deletionPolicy);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setMasterBillingAccount(@Nullable Input<String> masterBillingAccount) {
+        public Builder masterBillingAccount(@Nullable Input<String> masterBillingAccount) {
             this.masterBillingAccount = masterBillingAccount;
             return this;
         }
 
-        public Builder setMasterBillingAccount(@Nullable String masterBillingAccount) {
+        public Builder masterBillingAccount(@Nullable String masterBillingAccount) {
             this.masterBillingAccount = Input.ofNullable(masterBillingAccount);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOpen(@Nullable Input<Boolean> open) {
+        public Builder open(@Nullable Input<Boolean> open) {
             this.open = open;
             return this;
         }
 
-        public Builder setOpen(@Nullable Boolean open) {
+        public Builder open(@Nullable Boolean open) {
             this.open = Input.ofNullable(open);
             return this;
         }

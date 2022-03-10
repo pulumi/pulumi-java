@@ -48,7 +48,7 @@ public final class AutomaticResponse {
     	      this.customerManagedEncryption = defaults.customerManagedEncryption;
         }
 
-        public Builder setCustomerManagedEncryption(CustomerManagedEncryptionResponse customerManagedEncryption) {
+        public Builder customerManagedEncryption(CustomerManagedEncryptionResponse customerManagedEncryption) {
             this.customerManagedEncryption = Objects.requireNonNull(customerManagedEncryption);
             return this;
         }

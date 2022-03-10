@@ -121,52 +121,52 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userType = defaults.userType;
         }
 
-        public Builder setDeviceName(Input<String> deviceName) {
+        public Builder deviceName(Input<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Input.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder setEncryptedPassword(@Nullable Input<AsymmetricEncryptedSecretArgs> encryptedPassword) {
+        public Builder encryptedPassword(@Nullable Input<AsymmetricEncryptedSecretArgs> encryptedPassword) {
             this.encryptedPassword = encryptedPassword;
             return this;
         }
 
-        public Builder setEncryptedPassword(@Nullable AsymmetricEncryptedSecretArgs encryptedPassword) {
+        public Builder encryptedPassword(@Nullable AsymmetricEncryptedSecretArgs encryptedPassword) {
             this.encryptedPassword = Input.ofNullable(encryptedPassword);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setUserType(Input<Either<String,UserType>> userType) {
+        public Builder userType(Input<Either<String,UserType>> userType) {
             this.userType = Objects.requireNonNull(userType);
             return this;
         }
 
-        public Builder setUserType(Either<String,UserType> userType) {
+        public Builder userType(Either<String,UserType> userType) {
             this.userType = Input.of(Objects.requireNonNull(userType));
             return this;
         }

@@ -105,42 +105,42 @@ public final class BqmlTrainingRunArgs extends io.pulumi.resources.ResourceArgs 
     	      this.trainingOptions = defaults.trainingOptions;
         }
 
-        public Builder setIterationResults(@Nullable Input<List<BqmlIterationResultArgs>> iterationResults) {
+        public Builder iterationResults(@Nullable Input<List<BqmlIterationResultArgs>> iterationResults) {
             this.iterationResults = iterationResults;
             return this;
         }
 
-        public Builder setIterationResults(@Nullable List<BqmlIterationResultArgs> iterationResults) {
+        public Builder iterationResults(@Nullable List<BqmlIterationResultArgs> iterationResults) {
             this.iterationResults = Input.ofNullable(iterationResults);
             return this;
         }
 
-        public Builder setStartTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Input<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
 
-        public Builder setState(@Nullable Input<String> state) {
+        public Builder state(@Nullable Input<String> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setTrainingOptions(@Nullable Input<BqmlTrainingRunTrainingOptionsArgs> trainingOptions) {
+        public Builder trainingOptions(@Nullable Input<BqmlTrainingRunTrainingOptionsArgs> trainingOptions) {
             this.trainingOptions = trainingOptions;
             return this;
         }
 
-        public Builder setTrainingOptions(@Nullable BqmlTrainingRunTrainingOptionsArgs trainingOptions) {
+        public Builder trainingOptions(@Nullable BqmlTrainingRunTrainingOptionsArgs trainingOptions) {
             this.trainingOptions = Input.ofNullable(trainingOptions);
             return this;
         }

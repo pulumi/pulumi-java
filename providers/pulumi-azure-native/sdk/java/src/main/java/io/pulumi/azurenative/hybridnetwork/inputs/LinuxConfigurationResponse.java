@@ -57,7 +57,7 @@ public final class LinuxConfigurationResponse extends io.pulumi.resources.Invoke
     	      this.ssh = defaults.ssh;
         }
 
-        public Builder setSsh(@Nullable SshConfigurationResponse ssh) {
+        public Builder ssh(@Nullable SshConfigurationResponse ssh) {
             this.ssh = ssh;
             return this;
         }

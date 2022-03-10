@@ -62,22 +62,22 @@ public final class DistributionStatusCodesArgs extends io.pulumi.resources.Resou
     	      this.quantity = defaults.quantity;
         }
 
-        public Builder setItems(Input<List<Integer>> items) {
+        public Builder items(Input<List<Integer>> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
 
-        public Builder setItems(List<Integer> items) {
+        public Builder items(List<Integer> items) {
             this.items = Input.of(Objects.requireNonNull(items));
             return this;
         }
 
-        public Builder setQuantity(Input<Integer> quantity) {
+        public Builder quantity(Input<Integer> quantity) {
             this.quantity = Objects.requireNonNull(quantity);
             return this;
         }
 
-        public Builder setQuantity(Integer quantity) {
+        public Builder quantity(Integer quantity) {
             this.quantity = Input.of(Objects.requireNonNull(quantity));
             return this;
         }

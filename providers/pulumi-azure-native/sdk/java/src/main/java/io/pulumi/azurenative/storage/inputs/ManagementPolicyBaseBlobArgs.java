@@ -107,42 +107,42 @@ public final class ManagementPolicyBaseBlobArgs extends io.pulumi.resources.Reso
     	      this.tierToCool = defaults.tierToCool;
         }
 
-        public Builder setDelete(@Nullable Input<DateAfterModificationArgs> delete) {
+        public Builder delete(@Nullable Input<DateAfterModificationArgs> delete) {
             this.delete = delete;
             return this;
         }
 
-        public Builder setDelete(@Nullable DateAfterModificationArgs delete) {
+        public Builder delete(@Nullable DateAfterModificationArgs delete) {
             this.delete = Input.ofNullable(delete);
             return this;
         }
 
-        public Builder setEnableAutoTierToHotFromCool(@Nullable Input<Boolean> enableAutoTierToHotFromCool) {
+        public Builder enableAutoTierToHotFromCool(@Nullable Input<Boolean> enableAutoTierToHotFromCool) {
             this.enableAutoTierToHotFromCool = enableAutoTierToHotFromCool;
             return this;
         }
 
-        public Builder setEnableAutoTierToHotFromCool(@Nullable Boolean enableAutoTierToHotFromCool) {
+        public Builder enableAutoTierToHotFromCool(@Nullable Boolean enableAutoTierToHotFromCool) {
             this.enableAutoTierToHotFromCool = Input.ofNullable(enableAutoTierToHotFromCool);
             return this;
         }
 
-        public Builder setTierToArchive(@Nullable Input<DateAfterModificationArgs> tierToArchive) {
+        public Builder tierToArchive(@Nullable Input<DateAfterModificationArgs> tierToArchive) {
             this.tierToArchive = tierToArchive;
             return this;
         }
 
-        public Builder setTierToArchive(@Nullable DateAfterModificationArgs tierToArchive) {
+        public Builder tierToArchive(@Nullable DateAfterModificationArgs tierToArchive) {
             this.tierToArchive = Input.ofNullable(tierToArchive);
             return this;
         }
 
-        public Builder setTierToCool(@Nullable Input<DateAfterModificationArgs> tierToCool) {
+        public Builder tierToCool(@Nullable Input<DateAfterModificationArgs> tierToCool) {
             this.tierToCool = tierToCool;
             return this;
         }
 
-        public Builder setTierToCool(@Nullable DateAfterModificationArgs tierToCool) {
+        public Builder tierToCool(@Nullable DateAfterModificationArgs tierToCool) {
             this.tierToCool = Input.ofNullable(tierToCool);
             return this;
         }

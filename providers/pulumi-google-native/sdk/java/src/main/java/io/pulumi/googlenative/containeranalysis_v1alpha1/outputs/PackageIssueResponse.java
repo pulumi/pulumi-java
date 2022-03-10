@@ -106,27 +106,27 @@ public final class PackageIssueResponse {
     	      this.severityName = defaults.severityName;
         }
 
-        public Builder setAffectedLocation(VulnerabilityLocationResponse affectedLocation) {
+        public Builder affectedLocation(VulnerabilityLocationResponse affectedLocation) {
             this.affectedLocation = Objects.requireNonNull(affectedLocation);
             return this;
         }
 
-        public Builder setEffectiveSeverity(String effectiveSeverity) {
+        public Builder effectiveSeverity(String effectiveSeverity) {
             this.effectiveSeverity = Objects.requireNonNull(effectiveSeverity);
             return this;
         }
 
-        public Builder setFixedLocation(VulnerabilityLocationResponse fixedLocation) {
+        public Builder fixedLocation(VulnerabilityLocationResponse fixedLocation) {
             this.fixedLocation = Objects.requireNonNull(fixedLocation);
             return this;
         }
 
-        public Builder setPackageType(String packageType) {
+        public Builder packageType(String packageType) {
             this.packageType = Objects.requireNonNull(packageType);
             return this;
         }
 
-        public Builder setSeverityName(String severityName) {
+        public Builder severityName(String severityName) {
             this.severityName = Objects.requireNonNull(severityName);
             return this;
         }

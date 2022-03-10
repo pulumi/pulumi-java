@@ -98,22 +98,22 @@ public final class SpacecraftLinkResponse {
     	      this.polarization = defaults.polarization;
         }
 
-        public Builder setBandwidthMHz(Double bandwidthMHz) {
+        public Builder bandwidthMHz(Double bandwidthMHz) {
             this.bandwidthMHz = Objects.requireNonNull(bandwidthMHz);
             return this;
         }
 
-        public Builder setCenterFrequencyMHz(Double centerFrequencyMHz) {
+        public Builder centerFrequencyMHz(Double centerFrequencyMHz) {
             this.centerFrequencyMHz = Objects.requireNonNull(centerFrequencyMHz);
             return this;
         }
 
-        public Builder setDirection(String direction) {
+        public Builder direction(String direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
-        public Builder setPolarization(String polarization) {
+        public Builder polarization(String polarization) {
             this.polarization = Objects.requireNonNull(polarization);
             return this;
         }

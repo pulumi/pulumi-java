@@ -187,92 +187,92 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
     	      this.slot = defaults.slot;
         }
 
-        public Builder setGlobalValidation(@Nullable Input<GlobalValidationArgs> globalValidation) {
+        public Builder globalValidation(@Nullable Input<GlobalValidationArgs> globalValidation) {
             this.globalValidation = globalValidation;
             return this;
         }
 
-        public Builder setGlobalValidation(@Nullable GlobalValidationArgs globalValidation) {
+        public Builder globalValidation(@Nullable GlobalValidationArgs globalValidation) {
             this.globalValidation = Input.ofNullable(globalValidation);
             return this;
         }
 
-        public Builder setHttpSettings(@Nullable Input<HttpSettingsArgs> httpSettings) {
+        public Builder httpSettings(@Nullable Input<HttpSettingsArgs> httpSettings) {
             this.httpSettings = httpSettings;
             return this;
         }
 
-        public Builder setHttpSettings(@Nullable HttpSettingsArgs httpSettings) {
+        public Builder httpSettings(@Nullable HttpSettingsArgs httpSettings) {
             this.httpSettings = Input.ofNullable(httpSettings);
             return this;
         }
 
-        public Builder setIdentityProviders(@Nullable Input<IdentityProvidersArgs> identityProviders) {
+        public Builder identityProviders(@Nullable Input<IdentityProvidersArgs> identityProviders) {
             this.identityProviders = identityProviders;
             return this;
         }
 
-        public Builder setIdentityProviders(@Nullable IdentityProvidersArgs identityProviders) {
+        public Builder identityProviders(@Nullable IdentityProvidersArgs identityProviders) {
             this.identityProviders = Input.ofNullable(identityProviders);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setLogin(@Nullable Input<LoginArgs> login) {
+        public Builder login(@Nullable Input<LoginArgs> login) {
             this.login = login;
             return this;
         }
 
-        public Builder setLogin(@Nullable LoginArgs login) {
+        public Builder login(@Nullable LoginArgs login) {
             this.login = Input.ofNullable(login);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setPlatform(@Nullable Input<AuthPlatformArgs> platform) {
+        public Builder platform(@Nullable Input<AuthPlatformArgs> platform) {
             this.platform = platform;
             return this;
         }
 
-        public Builder setPlatform(@Nullable AuthPlatformArgs platform) {
+        public Builder platform(@Nullable AuthPlatformArgs platform) {
             this.platform = Input.ofNullable(platform);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSlot(Input<String> slot) {
+        public Builder slot(Input<String> slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
         }
 
-        public Builder setSlot(String slot) {
+        public Builder slot(String slot) {
             this.slot = Input.of(Objects.requireNonNull(slot));
             return this;
         }

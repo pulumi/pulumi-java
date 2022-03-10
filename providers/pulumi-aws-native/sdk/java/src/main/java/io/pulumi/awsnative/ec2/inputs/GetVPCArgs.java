@@ -51,7 +51,7 @@ public final class GetVPCArgs extends io.pulumi.resources.InvokeArgs {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }

@@ -94,32 +94,32 @@ public final class RulesEngineActionArgs extends io.pulumi.resources.ResourceArg
     	      this.routeConfigurationOverride = defaults.routeConfigurationOverride;
         }
 
-        public Builder setRequestHeaderActions(@Nullable Input<List<HeaderActionArgs>> requestHeaderActions) {
+        public Builder requestHeaderActions(@Nullable Input<List<HeaderActionArgs>> requestHeaderActions) {
             this.requestHeaderActions = requestHeaderActions;
             return this;
         }
 
-        public Builder setRequestHeaderActions(@Nullable List<HeaderActionArgs> requestHeaderActions) {
+        public Builder requestHeaderActions(@Nullable List<HeaderActionArgs> requestHeaderActions) {
             this.requestHeaderActions = Input.ofNullable(requestHeaderActions);
             return this;
         }
 
-        public Builder setResponseHeaderActions(@Nullable Input<List<HeaderActionArgs>> responseHeaderActions) {
+        public Builder responseHeaderActions(@Nullable Input<List<HeaderActionArgs>> responseHeaderActions) {
             this.responseHeaderActions = responseHeaderActions;
             return this;
         }
 
-        public Builder setResponseHeaderActions(@Nullable List<HeaderActionArgs> responseHeaderActions) {
+        public Builder responseHeaderActions(@Nullable List<HeaderActionArgs> responseHeaderActions) {
             this.responseHeaderActions = Input.ofNullable(responseHeaderActions);
             return this;
         }
 
-        public Builder setRouteConfigurationOverride(@Nullable Input<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfigurationOverride) {
+        public Builder routeConfigurationOverride(@Nullable Input<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfigurationOverride) {
             this.routeConfigurationOverride = routeConfigurationOverride;
             return this;
         }
 
-        public Builder setRouteConfigurationOverride(@Nullable Either<ForwardingConfigurationArgs,RedirectConfigurationArgs> routeConfigurationOverride) {
+        public Builder routeConfigurationOverride(@Nullable Either<ForwardingConfigurationArgs,RedirectConfigurationArgs> routeConfigurationOverride) {
             this.routeConfigurationOverride = Input.ofNullable(routeConfigurationOverride);
             return this;
         }

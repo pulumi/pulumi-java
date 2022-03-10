@@ -75,22 +75,22 @@ public final class AccessReviewScopeArgs extends io.pulumi.resources.ResourceArg
     	      this.inactiveDuration = defaults.inactiveDuration;
         }
 
-        public Builder setExpandNestedMemberships(@Nullable Input<Boolean> expandNestedMemberships) {
+        public Builder expandNestedMemberships(@Nullable Input<Boolean> expandNestedMemberships) {
             this.expandNestedMemberships = expandNestedMemberships;
             return this;
         }
 
-        public Builder setExpandNestedMemberships(@Nullable Boolean expandNestedMemberships) {
+        public Builder expandNestedMemberships(@Nullable Boolean expandNestedMemberships) {
             this.expandNestedMemberships = Input.ofNullable(expandNestedMemberships);
             return this;
         }
 
-        public Builder setInactiveDuration(@Nullable Input<String> inactiveDuration) {
+        public Builder inactiveDuration(@Nullable Input<String> inactiveDuration) {
             this.inactiveDuration = inactiveDuration;
             return this;
         }
 
-        public Builder setInactiveDuration(@Nullable String inactiveDuration) {
+        public Builder inactiveDuration(@Nullable String inactiveDuration) {
             this.inactiveDuration = Input.ofNullable(inactiveDuration);
             return this;
         }

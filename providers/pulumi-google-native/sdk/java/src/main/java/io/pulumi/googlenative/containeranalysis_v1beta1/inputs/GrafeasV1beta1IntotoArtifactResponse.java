@@ -61,12 +61,12 @@ public final class GrafeasV1beta1IntotoArtifactResponse extends io.pulumi.resour
     	      this.resourceUri = defaults.resourceUri;
         }
 
-        public Builder setHashes(ArtifactHashesResponse hashes) {
+        public Builder hashes(ArtifactHashesResponse hashes) {
             this.hashes = Objects.requireNonNull(hashes);
             return this;
         }
 
-        public Builder setResourceUri(String resourceUri) {
+        public Builder resourceUri(String resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }

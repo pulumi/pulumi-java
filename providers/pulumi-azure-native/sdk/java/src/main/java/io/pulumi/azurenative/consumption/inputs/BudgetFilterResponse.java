@@ -108,22 +108,22 @@ public final class BudgetFilterResponse extends io.pulumi.resources.InvokeArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAnd(@Nullable List<BudgetFilterPropertiesResponse> and) {
+        public Builder and(@Nullable List<BudgetFilterPropertiesResponse> and) {
             this.and = and;
             return this;
         }
 
-        public Builder setDimensions(@Nullable BudgetComparisonExpressionResponse dimensions) {
+        public Builder dimensions(@Nullable BudgetComparisonExpressionResponse dimensions) {
             this.dimensions = dimensions;
             return this;
         }
 
-        public Builder setNot(@Nullable BudgetFilterPropertiesResponse not) {
+        public Builder not(@Nullable BudgetFilterPropertiesResponse not) {
             this.not = not;
             return this;
         }
 
-        public Builder setTags(@Nullable BudgetComparisonExpressionResponse tags) {
+        public Builder tags(@Nullable BudgetComparisonExpressionResponse tags) {
             this.tags = tags;
             return this;
         }

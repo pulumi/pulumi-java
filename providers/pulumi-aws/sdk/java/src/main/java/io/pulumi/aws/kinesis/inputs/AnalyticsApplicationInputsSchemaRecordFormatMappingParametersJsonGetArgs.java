@@ -52,12 +52,12 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
     	      this.recordRowPath = defaults.recordRowPath;
         }
 
-        public Builder setRecordRowPath(Input<String> recordRowPath) {
+        public Builder recordRowPath(Input<String> recordRowPath) {
             this.recordRowPath = Objects.requireNonNull(recordRowPath);
             return this;
         }
 
-        public Builder setRecordRowPath(String recordRowPath) {
+        public Builder recordRowPath(String recordRowPath) {
             this.recordRowPath = Input.of(Objects.requireNonNull(recordRowPath));
             return this;
         }

@@ -168,82 +168,82 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setArmTemplateDisplayName(@Nullable Input<String> armTemplateDisplayName) {
+        public Builder armTemplateDisplayName(@Nullable Input<String> armTemplateDisplayName) {
             this.armTemplateDisplayName = armTemplateDisplayName;
             return this;
         }
 
-        public Builder setArmTemplateDisplayName(@Nullable String armTemplateDisplayName) {
+        public Builder armTemplateDisplayName(@Nullable String armTemplateDisplayName) {
             this.armTemplateDisplayName = Input.ofNullable(armTemplateDisplayName);
             return this;
         }
 
-        public Builder setDeploymentProperties(@Nullable Input<EnvironmentDeploymentPropertiesArgs> deploymentProperties) {
+        public Builder deploymentProperties(@Nullable Input<EnvironmentDeploymentPropertiesArgs> deploymentProperties) {
             this.deploymentProperties = deploymentProperties;
             return this;
         }
 
-        public Builder setDeploymentProperties(@Nullable EnvironmentDeploymentPropertiesArgs deploymentProperties) {
+        public Builder deploymentProperties(@Nullable EnvironmentDeploymentPropertiesArgs deploymentProperties) {
             this.deploymentProperties = Input.ofNullable(deploymentProperties);
             return this;
         }
 
-        public Builder setLabName(Input<String> labName) {
+        public Builder labName(Input<String> labName) {
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
 
-        public Builder setLabName(String labName) {
+        public Builder labName(String labName) {
             this.labName = Input.of(Objects.requireNonNull(labName));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUserName(Input<String> userName) {
+        public Builder userName(Input<String> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Input.of(Objects.requireNonNull(userName));
             return this;
         }

@@ -322,182 +322,182 @@ public final class PrivateVirtualInterfaceState extends io.pulumi.resources.Reso
     	      this.vpnGatewayId = defaults.vpnGatewayId;
         }
 
-        public Builder setAddressFamily(@Nullable Input<String> addressFamily) {
+        public Builder addressFamily(@Nullable Input<String> addressFamily) {
             this.addressFamily = addressFamily;
             return this;
         }
 
-        public Builder setAddressFamily(@Nullable String addressFamily) {
+        public Builder addressFamily(@Nullable String addressFamily) {
             this.addressFamily = Input.ofNullable(addressFamily);
             return this;
         }
 
-        public Builder setAmazonAddress(@Nullable Input<String> amazonAddress) {
+        public Builder amazonAddress(@Nullable Input<String> amazonAddress) {
             this.amazonAddress = amazonAddress;
             return this;
         }
 
-        public Builder setAmazonAddress(@Nullable String amazonAddress) {
+        public Builder amazonAddress(@Nullable String amazonAddress) {
             this.amazonAddress = Input.ofNullable(amazonAddress);
             return this;
         }
 
-        public Builder setAmazonSideAsn(@Nullable Input<String> amazonSideAsn) {
+        public Builder amazonSideAsn(@Nullable Input<String> amazonSideAsn) {
             this.amazonSideAsn = amazonSideAsn;
             return this;
         }
 
-        public Builder setAmazonSideAsn(@Nullable String amazonSideAsn) {
+        public Builder amazonSideAsn(@Nullable String amazonSideAsn) {
             this.amazonSideAsn = Input.ofNullable(amazonSideAsn);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAwsDevice(@Nullable Input<String> awsDevice) {
+        public Builder awsDevice(@Nullable Input<String> awsDevice) {
             this.awsDevice = awsDevice;
             return this;
         }
 
-        public Builder setAwsDevice(@Nullable String awsDevice) {
+        public Builder awsDevice(@Nullable String awsDevice) {
             this.awsDevice = Input.ofNullable(awsDevice);
             return this;
         }
 
-        public Builder setBgpAsn(@Nullable Input<Integer> bgpAsn) {
+        public Builder bgpAsn(@Nullable Input<Integer> bgpAsn) {
             this.bgpAsn = bgpAsn;
             return this;
         }
 
-        public Builder setBgpAsn(@Nullable Integer bgpAsn) {
+        public Builder bgpAsn(@Nullable Integer bgpAsn) {
             this.bgpAsn = Input.ofNullable(bgpAsn);
             return this;
         }
 
-        public Builder setBgpAuthKey(@Nullable Input<String> bgpAuthKey) {
+        public Builder bgpAuthKey(@Nullable Input<String> bgpAuthKey) {
             this.bgpAuthKey = bgpAuthKey;
             return this;
         }
 
-        public Builder setBgpAuthKey(@Nullable String bgpAuthKey) {
+        public Builder bgpAuthKey(@Nullable String bgpAuthKey) {
             this.bgpAuthKey = Input.ofNullable(bgpAuthKey);
             return this;
         }
 
-        public Builder setConnectionId(@Nullable Input<String> connectionId) {
+        public Builder connectionId(@Nullable Input<String> connectionId) {
             this.connectionId = connectionId;
             return this;
         }
 
-        public Builder setConnectionId(@Nullable String connectionId) {
+        public Builder connectionId(@Nullable String connectionId) {
             this.connectionId = Input.ofNullable(connectionId);
             return this;
         }
 
-        public Builder setCustomerAddress(@Nullable Input<String> customerAddress) {
+        public Builder customerAddress(@Nullable Input<String> customerAddress) {
             this.customerAddress = customerAddress;
             return this;
         }
 
-        public Builder setCustomerAddress(@Nullable String customerAddress) {
+        public Builder customerAddress(@Nullable String customerAddress) {
             this.customerAddress = Input.ofNullable(customerAddress);
             return this;
         }
 
-        public Builder setDxGatewayId(@Nullable Input<String> dxGatewayId) {
+        public Builder dxGatewayId(@Nullable Input<String> dxGatewayId) {
             this.dxGatewayId = dxGatewayId;
             return this;
         }
 
-        public Builder setDxGatewayId(@Nullable String dxGatewayId) {
+        public Builder dxGatewayId(@Nullable String dxGatewayId) {
             this.dxGatewayId = Input.ofNullable(dxGatewayId);
             return this;
         }
 
-        public Builder setJumboFrameCapable(@Nullable Input<Boolean> jumboFrameCapable) {
+        public Builder jumboFrameCapable(@Nullable Input<Boolean> jumboFrameCapable) {
             this.jumboFrameCapable = jumboFrameCapable;
             return this;
         }
 
-        public Builder setJumboFrameCapable(@Nullable Boolean jumboFrameCapable) {
+        public Builder jumboFrameCapable(@Nullable Boolean jumboFrameCapable) {
             this.jumboFrameCapable = Input.ofNullable(jumboFrameCapable);
             return this;
         }
 
-        public Builder setMtu(@Nullable Input<Integer> mtu) {
+        public Builder mtu(@Nullable Input<Integer> mtu) {
             this.mtu = mtu;
             return this;
         }
 
-        public Builder setMtu(@Nullable Integer mtu) {
+        public Builder mtu(@Nullable Integer mtu) {
             this.mtu = Input.ofNullable(mtu);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSitelinkEnabled(@Nullable Input<Boolean> sitelinkEnabled) {
+        public Builder sitelinkEnabled(@Nullable Input<Boolean> sitelinkEnabled) {
             this.sitelinkEnabled = sitelinkEnabled;
             return this;
         }
 
-        public Builder setSitelinkEnabled(@Nullable Boolean sitelinkEnabled) {
+        public Builder sitelinkEnabled(@Nullable Boolean sitelinkEnabled) {
             this.sitelinkEnabled = Input.ofNullable(sitelinkEnabled);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setVlan(@Nullable Input<Integer> vlan) {
+        public Builder vlan(@Nullable Input<Integer> vlan) {
             this.vlan = vlan;
             return this;
         }
 
-        public Builder setVlan(@Nullable Integer vlan) {
+        public Builder vlan(@Nullable Integer vlan) {
             this.vlan = Input.ofNullable(vlan);
             return this;
         }
 
-        public Builder setVpnGatewayId(@Nullable Input<String> vpnGatewayId) {
+        public Builder vpnGatewayId(@Nullable Input<String> vpnGatewayId) {
             this.vpnGatewayId = vpnGatewayId;
             return this;
         }
 
-        public Builder setVpnGatewayId(@Nullable String vpnGatewayId) {
+        public Builder vpnGatewayId(@Nullable String vpnGatewayId) {
             this.vpnGatewayId = Input.ofNullable(vpnGatewayId);
             return this;
         }

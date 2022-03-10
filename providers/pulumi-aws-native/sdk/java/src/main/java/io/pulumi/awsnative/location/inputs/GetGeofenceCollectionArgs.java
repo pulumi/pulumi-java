@@ -47,7 +47,7 @@ public final class GetGeofenceCollectionArgs extends io.pulumi.resources.InvokeA
     	      this.collectionName = defaults.collectionName;
         }
 
-        public Builder setCollectionName(String collectionName) {
+        public Builder collectionName(String collectionName) {
             this.collectionName = Objects.requireNonNull(collectionName);
             return this;
         }

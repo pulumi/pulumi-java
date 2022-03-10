@@ -76,22 +76,22 @@ public final class MaintenancePolicyArgs extends io.pulumi.resources.ResourceArg
     	      this.weeklyMaintenanceWindow = defaults.weeklyMaintenanceWindow;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setWeeklyMaintenanceWindow(@Nullable Input<List<WeeklyMaintenanceWindowArgs>> weeklyMaintenanceWindow) {
+        public Builder weeklyMaintenanceWindow(@Nullable Input<List<WeeklyMaintenanceWindowArgs>> weeklyMaintenanceWindow) {
             this.weeklyMaintenanceWindow = weeklyMaintenanceWindow;
             return this;
         }
 
-        public Builder setWeeklyMaintenanceWindow(@Nullable List<WeeklyMaintenanceWindowArgs> weeklyMaintenanceWindow) {
+        public Builder weeklyMaintenanceWindow(@Nullable List<WeeklyMaintenanceWindowArgs> weeklyMaintenanceWindow) {
             this.weeklyMaintenanceWindow = Input.ofNullable(weeklyMaintenanceWindow);
             return this;
         }

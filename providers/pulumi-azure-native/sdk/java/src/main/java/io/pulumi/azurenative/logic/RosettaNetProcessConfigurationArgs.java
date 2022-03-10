@@ -249,132 +249,132 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
     	      this.tags = defaults.tags;
         }
 
-        public Builder setActivitySettings(Input<RosettaNetPipActivitySettingsArgs> activitySettings) {
+        public Builder activitySettings(Input<RosettaNetPipActivitySettingsArgs> activitySettings) {
             this.activitySettings = Objects.requireNonNull(activitySettings);
             return this;
         }
 
-        public Builder setActivitySettings(RosettaNetPipActivitySettingsArgs activitySettings) {
+        public Builder activitySettings(RosettaNetPipActivitySettingsArgs activitySettings) {
             this.activitySettings = Input.of(Objects.requireNonNull(activitySettings));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setInitiatorRoleSettings(Input<RosettaNetPipRoleSettingsArgs> initiatorRoleSettings) {
+        public Builder initiatorRoleSettings(Input<RosettaNetPipRoleSettingsArgs> initiatorRoleSettings) {
             this.initiatorRoleSettings = Objects.requireNonNull(initiatorRoleSettings);
             return this;
         }
 
-        public Builder setInitiatorRoleSettings(RosettaNetPipRoleSettingsArgs initiatorRoleSettings) {
+        public Builder initiatorRoleSettings(RosettaNetPipRoleSettingsArgs initiatorRoleSettings) {
             this.initiatorRoleSettings = Input.of(Objects.requireNonNull(initiatorRoleSettings));
             return this;
         }
 
-        public Builder setIntegrationAccountName(Input<String> integrationAccountName) {
+        public Builder integrationAccountName(Input<String> integrationAccountName) {
             this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
             return this;
         }
 
-        public Builder setIntegrationAccountName(String integrationAccountName) {
+        public Builder integrationAccountName(String integrationAccountName) {
             this.integrationAccountName = Input.of(Objects.requireNonNull(integrationAccountName));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setProcessCode(Input<String> processCode) {
+        public Builder processCode(Input<String> processCode) {
             this.processCode = Objects.requireNonNull(processCode);
             return this;
         }
 
-        public Builder setProcessCode(String processCode) {
+        public Builder processCode(String processCode) {
             this.processCode = Input.of(Objects.requireNonNull(processCode));
             return this;
         }
 
-        public Builder setProcessName(Input<String> processName) {
+        public Builder processName(Input<String> processName) {
             this.processName = Objects.requireNonNull(processName);
             return this;
         }
 
-        public Builder setProcessName(String processName) {
+        public Builder processName(String processName) {
             this.processName = Input.of(Objects.requireNonNull(processName));
             return this;
         }
 
-        public Builder setProcessVersion(Input<String> processVersion) {
+        public Builder processVersion(Input<String> processVersion) {
             this.processVersion = Objects.requireNonNull(processVersion);
             return this;
         }
 
-        public Builder setProcessVersion(String processVersion) {
+        public Builder processVersion(String processVersion) {
             this.processVersion = Input.of(Objects.requireNonNull(processVersion));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResponderRoleSettings(Input<RosettaNetPipRoleSettingsArgs> responderRoleSettings) {
+        public Builder responderRoleSettings(Input<RosettaNetPipRoleSettingsArgs> responderRoleSettings) {
             this.responderRoleSettings = Objects.requireNonNull(responderRoleSettings);
             return this;
         }
 
-        public Builder setResponderRoleSettings(RosettaNetPipRoleSettingsArgs responderRoleSettings) {
+        public Builder responderRoleSettings(RosettaNetPipRoleSettingsArgs responderRoleSettings) {
             this.responderRoleSettings = Input.of(Objects.requireNonNull(responderRoleSettings));
             return this;
         }
 
-        public Builder setRosettaNetProcessConfigurationName(@Nullable Input<String> rosettaNetProcessConfigurationName) {
+        public Builder rosettaNetProcessConfigurationName(@Nullable Input<String> rosettaNetProcessConfigurationName) {
             this.rosettaNetProcessConfigurationName = rosettaNetProcessConfigurationName;
             return this;
         }
 
-        public Builder setRosettaNetProcessConfigurationName(@Nullable String rosettaNetProcessConfigurationName) {
+        public Builder rosettaNetProcessConfigurationName(@Nullable String rosettaNetProcessConfigurationName) {
             this.rosettaNetProcessConfigurationName = Input.ofNullable(rosettaNetProcessConfigurationName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

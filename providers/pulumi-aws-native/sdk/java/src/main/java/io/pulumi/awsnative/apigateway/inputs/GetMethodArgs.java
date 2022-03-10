@@ -84,17 +84,17 @@ public final class GetMethodArgs extends io.pulumi.resources.InvokeArgs {
     	      this.restApiId = defaults.restApiId;
         }
 
-        public Builder setHttpMethod(String httpMethod) {
+        public Builder httpMethod(String httpMethod) {
             this.httpMethod = Objects.requireNonNull(httpMethod);
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
-        public Builder setRestApiId(String restApiId) {
+        public Builder restApiId(String restApiId) {
             this.restApiId = Objects.requireNonNull(restApiId);
             return this;
         }

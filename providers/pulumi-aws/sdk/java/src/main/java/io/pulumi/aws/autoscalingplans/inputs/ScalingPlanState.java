@@ -106,42 +106,42 @@ public final class ScalingPlanState extends io.pulumi.resources.ResourceArgs {
     	      this.scalingPlanVersion = defaults.scalingPlanVersion;
         }
 
-        public Builder setApplicationSource(@Nullable Input<ScalingPlanApplicationSourceGetArgs> applicationSource) {
+        public Builder applicationSource(@Nullable Input<ScalingPlanApplicationSourceGetArgs> applicationSource) {
             this.applicationSource = applicationSource;
             return this;
         }
 
-        public Builder setApplicationSource(@Nullable ScalingPlanApplicationSourceGetArgs applicationSource) {
+        public Builder applicationSource(@Nullable ScalingPlanApplicationSourceGetArgs applicationSource) {
             this.applicationSource = Input.ofNullable(applicationSource);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setScalingInstructions(@Nullable Input<List<ScalingPlanScalingInstructionGetArgs>> scalingInstructions) {
+        public Builder scalingInstructions(@Nullable Input<List<ScalingPlanScalingInstructionGetArgs>> scalingInstructions) {
             this.scalingInstructions = scalingInstructions;
             return this;
         }
 
-        public Builder setScalingInstructions(@Nullable List<ScalingPlanScalingInstructionGetArgs> scalingInstructions) {
+        public Builder scalingInstructions(@Nullable List<ScalingPlanScalingInstructionGetArgs> scalingInstructions) {
             this.scalingInstructions = Input.ofNullable(scalingInstructions);
             return this;
         }
 
-        public Builder setScalingPlanVersion(@Nullable Input<Integer> scalingPlanVersion) {
+        public Builder scalingPlanVersion(@Nullable Input<Integer> scalingPlanVersion) {
             this.scalingPlanVersion = scalingPlanVersion;
             return this;
         }
 
-        public Builder setScalingPlanVersion(@Nullable Integer scalingPlanVersion) {
+        public Builder scalingPlanVersion(@Nullable Integer scalingPlanVersion) {
             this.scalingPlanVersion = Input.ofNullable(scalingPlanVersion);
             return this;
         }

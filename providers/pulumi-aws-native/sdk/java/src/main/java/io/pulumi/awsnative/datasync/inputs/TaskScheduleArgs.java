@@ -56,12 +56,12 @@ public final class TaskScheduleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scheduleExpression = defaults.scheduleExpression;
         }
 
-        public Builder setScheduleExpression(Input<String> scheduleExpression) {
+        public Builder scheduleExpression(Input<String> scheduleExpression) {
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
         }
 
-        public Builder setScheduleExpression(String scheduleExpression) {
+        public Builder scheduleExpression(String scheduleExpression) {
             this.scheduleExpression = Input.of(Objects.requireNonNull(scheduleExpression));
             return this;
         }

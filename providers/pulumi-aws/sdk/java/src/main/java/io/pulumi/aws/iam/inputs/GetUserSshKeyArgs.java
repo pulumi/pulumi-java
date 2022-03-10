@@ -84,17 +84,17 @@ public final class GetUserSshKeyArgs extends io.pulumi.resources.InvokeArgs {
     	      this.username = defaults.username;
         }
 
-        public Builder setEncoding(String encoding) {
+        public Builder encoding(String encoding) {
             this.encoding = Objects.requireNonNull(encoding);
             return this;
         }
 
-        public Builder setSshPublicKeyId(String sshPublicKeyId) {
+        public Builder sshPublicKeyId(String sshPublicKeyId) {
             this.sshPublicKeyId = Objects.requireNonNull(sshPublicKeyId);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

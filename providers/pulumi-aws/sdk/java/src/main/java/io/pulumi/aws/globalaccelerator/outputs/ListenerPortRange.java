@@ -67,12 +67,12 @@ public final class ListenerPortRange {
     	      this.toPort = defaults.toPort;
         }
 
-        public Builder setFromPort(@Nullable Integer fromPort) {
+        public Builder fromPort(@Nullable Integer fromPort) {
             this.fromPort = fromPort;
             return this;
         }
 
-        public Builder setToPort(@Nullable Integer toPort) {
+        public Builder toPort(@Nullable Integer toPort) {
             this.toPort = toPort;
             return this;
         }

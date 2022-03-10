@@ -184,47 +184,47 @@ public final class OSProfileResponse {
     	      this.windowsConfiguration = defaults.windowsConfiguration;
         }
 
-        public Builder setAdminPassword(@Nullable String adminPassword) {
+        public Builder adminPassword(@Nullable String adminPassword) {
             this.adminPassword = adminPassword;
             return this;
         }
 
-        public Builder setAdminUsername(@Nullable String adminUsername) {
+        public Builder adminUsername(@Nullable String adminUsername) {
             this.adminUsername = adminUsername;
             return this;
         }
 
-        public Builder setAllowExtensionOperations(@Nullable Boolean allowExtensionOperations) {
+        public Builder allowExtensionOperations(@Nullable Boolean allowExtensionOperations) {
             this.allowExtensionOperations = allowExtensionOperations;
             return this;
         }
 
-        public Builder setComputerName(@Nullable String computerName) {
+        public Builder computerName(@Nullable String computerName) {
             this.computerName = computerName;
             return this;
         }
 
-        public Builder setCustomData(@Nullable String customData) {
+        public Builder customData(@Nullable String customData) {
             this.customData = customData;
             return this;
         }
 
-        public Builder setLinuxConfiguration(@Nullable LinuxConfigurationResponse linuxConfiguration) {
+        public Builder linuxConfiguration(@Nullable LinuxConfigurationResponse linuxConfiguration) {
             this.linuxConfiguration = linuxConfiguration;
             return this;
         }
 
-        public Builder setRequireGuestProvisionSignal(@Nullable Boolean requireGuestProvisionSignal) {
+        public Builder requireGuestProvisionSignal(@Nullable Boolean requireGuestProvisionSignal) {
             this.requireGuestProvisionSignal = requireGuestProvisionSignal;
             return this;
         }
 
-        public Builder setSecrets(@Nullable List<VaultSecretGroupResponse> secrets) {
+        public Builder secrets(@Nullable List<VaultSecretGroupResponse> secrets) {
             this.secrets = secrets;
             return this;
         }
 
-        public Builder setWindowsConfiguration(@Nullable WindowsConfigurationResponse windowsConfiguration) {
+        public Builder windowsConfiguration(@Nullable WindowsConfigurationResponse windowsConfiguration) {
             this.windowsConfiguration = windowsConfiguration;
             return this;
         }

@@ -120,52 +120,52 @@ public final class AppAutoBranchCreationConfig {
     	      this.stage = defaults.stage;
         }
 
-        public Builder setAutoBranchCreationPatterns(@Nullable List<String> autoBranchCreationPatterns) {
+        public Builder autoBranchCreationPatterns(@Nullable List<String> autoBranchCreationPatterns) {
             this.autoBranchCreationPatterns = autoBranchCreationPatterns;
             return this;
         }
 
-        public Builder setBasicAuthConfig(@Nullable AppBasicAuthConfig basicAuthConfig) {
+        public Builder basicAuthConfig(@Nullable AppBasicAuthConfig basicAuthConfig) {
             this.basicAuthConfig = basicAuthConfig;
             return this;
         }
 
-        public Builder setBuildSpec(@Nullable String buildSpec) {
+        public Builder buildSpec(@Nullable String buildSpec) {
             this.buildSpec = buildSpec;
             return this;
         }
 
-        public Builder setEnableAutoBranchCreation(@Nullable Boolean enableAutoBranchCreation) {
+        public Builder enableAutoBranchCreation(@Nullable Boolean enableAutoBranchCreation) {
             this.enableAutoBranchCreation = enableAutoBranchCreation;
             return this;
         }
 
-        public Builder setEnableAutoBuild(@Nullable Boolean enableAutoBuild) {
+        public Builder enableAutoBuild(@Nullable Boolean enableAutoBuild) {
             this.enableAutoBuild = enableAutoBuild;
             return this;
         }
 
-        public Builder setEnablePerformanceMode(@Nullable Boolean enablePerformanceMode) {
+        public Builder enablePerformanceMode(@Nullable Boolean enablePerformanceMode) {
             this.enablePerformanceMode = enablePerformanceMode;
             return this;
         }
 
-        public Builder setEnablePullRequestPreview(@Nullable Boolean enablePullRequestPreview) {
+        public Builder enablePullRequestPreview(@Nullable Boolean enablePullRequestPreview) {
             this.enablePullRequestPreview = enablePullRequestPreview;
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable List<AppEnvironmentVariable> environmentVariables) {
+        public Builder environmentVariables(@Nullable List<AppEnvironmentVariable> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
-        public Builder setPullRequestEnvironmentName(@Nullable String pullRequestEnvironmentName) {
+        public Builder pullRequestEnvironmentName(@Nullable String pullRequestEnvironmentName) {
             this.pullRequestEnvironmentName = pullRequestEnvironmentName;
             return this;
         }
 
-        public Builder setStage(@Nullable AppAutoBranchCreationConfigStage stage) {
+        public Builder stage(@Nullable AppAutoBranchCreationConfigStage stage) {
             this.stage = stage;
             return this;
         }

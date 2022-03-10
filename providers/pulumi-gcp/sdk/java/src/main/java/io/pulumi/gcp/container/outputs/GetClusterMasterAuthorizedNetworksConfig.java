@@ -41,7 +41,7 @@ public final class GetClusterMasterAuthorizedNetworksConfig {
     	      this.cidrBlocks = defaults.cidrBlocks;
         }
 
-        public Builder setCidrBlocks(List<GetClusterMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks) {
+        public Builder cidrBlocks(List<GetClusterMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks) {
             this.cidrBlocks = Objects.requireNonNull(cidrBlocks);
             return this;
         }

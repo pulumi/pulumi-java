@@ -71,22 +71,22 @@ public final class CertificateExtensions {
     	      this.subjectAlternativeNames = defaults.subjectAlternativeNames;
         }
 
-        public Builder setCertificatePolicies(@Nullable List<CertificatePolicyInformation> certificatePolicies) {
+        public Builder certificatePolicies(@Nullable List<CertificatePolicyInformation> certificatePolicies) {
             this.certificatePolicies = certificatePolicies;
             return this;
         }
 
-        public Builder setExtendedKeyUsage(@Nullable List<CertificateExtendedKeyUsage> extendedKeyUsage) {
+        public Builder extendedKeyUsage(@Nullable List<CertificateExtendedKeyUsage> extendedKeyUsage) {
             this.extendedKeyUsage = extendedKeyUsage;
             return this;
         }
 
-        public Builder setKeyUsage(@Nullable CertificateKeyUsage keyUsage) {
+        public Builder keyUsage(@Nullable CertificateKeyUsage keyUsage) {
             this.keyUsage = keyUsage;
             return this;
         }
 
-        public Builder setSubjectAlternativeNames(@Nullable List<CertificateGeneralName> subjectAlternativeNames) {
+        public Builder subjectAlternativeNames(@Nullable List<CertificateGeneralName> subjectAlternativeNames) {
             this.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }

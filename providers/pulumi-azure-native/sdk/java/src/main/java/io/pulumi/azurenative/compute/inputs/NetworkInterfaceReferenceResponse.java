@@ -91,17 +91,17 @@ public final class NetworkInterfaceReferenceResponse extends io.pulumi.resources
     	      this.primary = defaults.primary;
         }
 
-        public Builder setDeleteOption(@Nullable String deleteOption) {
+        public Builder deleteOption(@Nullable String deleteOption) {
             this.deleteOption = deleteOption;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setPrimary(@Nullable Boolean primary) {
+        public Builder primary(@Nullable Boolean primary) {
             this.primary = primary;
             return this;
         }

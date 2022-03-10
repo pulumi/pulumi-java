@@ -149,72 +149,72 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.properties = defaults.properties;
         }
 
-        public Builder setApiProxyType(@Nullable Input<EnvironmentApiProxyType> apiProxyType) {
+        public Builder apiProxyType(@Nullable Input<EnvironmentApiProxyType> apiProxyType) {
             this.apiProxyType = apiProxyType;
             return this;
         }
 
-        public Builder setApiProxyType(@Nullable EnvironmentApiProxyType apiProxyType) {
+        public Builder apiProxyType(@Nullable EnvironmentApiProxyType apiProxyType) {
             this.apiProxyType = Input.ofNullable(apiProxyType);
             return this;
         }
 
-        public Builder setDeploymentType(@Nullable Input<EnvironmentDeploymentType> deploymentType) {
+        public Builder deploymentType(@Nullable Input<EnvironmentDeploymentType> deploymentType) {
             this.deploymentType = deploymentType;
             return this;
         }
 
-        public Builder setDeploymentType(@Nullable EnvironmentDeploymentType deploymentType) {
+        public Builder deploymentType(@Nullable EnvironmentDeploymentType deploymentType) {
             this.deploymentType = Input.ofNullable(deploymentType);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOrganizationId(Input<String> organizationId) {
+        public Builder organizationId(Input<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Input.of(Objects.requireNonNull(organizationId));
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<GoogleCloudApigeeV1PropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<GoogleCloudApigeeV1PropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable GoogleCloudApigeeV1PropertiesArgs properties) {
+        public Builder properties(@Nullable GoogleCloudApigeeV1PropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }

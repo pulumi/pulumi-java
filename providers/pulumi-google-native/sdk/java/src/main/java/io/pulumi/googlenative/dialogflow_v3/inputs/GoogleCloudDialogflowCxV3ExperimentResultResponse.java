@@ -74,12 +74,12 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultResponse extends io.
     	      this.versionMetrics = defaults.versionMetrics;
         }
 
-        public Builder setLastUpdateTime(String lastUpdateTime) {
+        public Builder lastUpdateTime(String lastUpdateTime) {
             this.lastUpdateTime = Objects.requireNonNull(lastUpdateTime);
             return this;
         }
 
-        public Builder setVersionMetrics(List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse> versionMetrics) {
+        public Builder versionMetrics(List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse> versionMetrics) {
             this.versionMetrics = Objects.requireNonNull(versionMetrics);
             return this;
         }

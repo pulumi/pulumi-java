@@ -87,32 +87,32 @@ public final class FunctionSyncConfigArgs extends io.pulumi.resources.ResourceAr
     	      this.lambdaConflictHandlerConfig = defaults.lambdaConflictHandlerConfig;
         }
 
-        public Builder setConflictDetection(@Nullable Input<String> conflictDetection) {
+        public Builder conflictDetection(@Nullable Input<String> conflictDetection) {
             this.conflictDetection = conflictDetection;
             return this;
         }
 
-        public Builder setConflictDetection(@Nullable String conflictDetection) {
+        public Builder conflictDetection(@Nullable String conflictDetection) {
             this.conflictDetection = Input.ofNullable(conflictDetection);
             return this;
         }
 
-        public Builder setConflictHandler(@Nullable Input<String> conflictHandler) {
+        public Builder conflictHandler(@Nullable Input<String> conflictHandler) {
             this.conflictHandler = conflictHandler;
             return this;
         }
 
-        public Builder setConflictHandler(@Nullable String conflictHandler) {
+        public Builder conflictHandler(@Nullable String conflictHandler) {
             this.conflictHandler = Input.ofNullable(conflictHandler);
             return this;
         }
 
-        public Builder setLambdaConflictHandlerConfig(@Nullable Input<FunctionSyncConfigLambdaConflictHandlerConfigArgs> lambdaConflictHandlerConfig) {
+        public Builder lambdaConflictHandlerConfig(@Nullable Input<FunctionSyncConfigLambdaConflictHandlerConfigArgs> lambdaConflictHandlerConfig) {
             this.lambdaConflictHandlerConfig = lambdaConflictHandlerConfig;
             return this;
         }
 
-        public Builder setLambdaConflictHandlerConfig(@Nullable FunctionSyncConfigLambdaConflictHandlerConfigArgs lambdaConflictHandlerConfig) {
+        public Builder lambdaConflictHandlerConfig(@Nullable FunctionSyncConfigLambdaConflictHandlerConfigArgs lambdaConflictHandlerConfig) {
             this.lambdaConflictHandlerConfig = Input.ofNullable(lambdaConflictHandlerConfig);
             return this;
         }

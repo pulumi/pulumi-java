@@ -240,122 +240,122 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
     	      this.sslProfile = defaults.sslProfile;
         }
 
-        public Builder setCustomErrorConfigurations(@Nullable Input<List<ApplicationGatewayCustomErrorArgs>> customErrorConfigurations) {
+        public Builder customErrorConfigurations(@Nullable Input<List<ApplicationGatewayCustomErrorArgs>> customErrorConfigurations) {
             this.customErrorConfigurations = customErrorConfigurations;
             return this;
         }
 
-        public Builder setCustomErrorConfigurations(@Nullable List<ApplicationGatewayCustomErrorArgs> customErrorConfigurations) {
+        public Builder customErrorConfigurations(@Nullable List<ApplicationGatewayCustomErrorArgs> customErrorConfigurations) {
             this.customErrorConfigurations = Input.ofNullable(customErrorConfigurations);
             return this;
         }
 
-        public Builder setFirewallPolicy(@Nullable Input<SubResourceArgs> firewallPolicy) {
+        public Builder firewallPolicy(@Nullable Input<SubResourceArgs> firewallPolicy) {
             this.firewallPolicy = firewallPolicy;
             return this;
         }
 
-        public Builder setFirewallPolicy(@Nullable SubResourceArgs firewallPolicy) {
+        public Builder firewallPolicy(@Nullable SubResourceArgs firewallPolicy) {
             this.firewallPolicy = Input.ofNullable(firewallPolicy);
             return this;
         }
 
-        public Builder setFrontendIPConfiguration(@Nullable Input<SubResourceArgs> frontendIPConfiguration) {
+        public Builder frontendIPConfiguration(@Nullable Input<SubResourceArgs> frontendIPConfiguration) {
             this.frontendIPConfiguration = frontendIPConfiguration;
             return this;
         }
 
-        public Builder setFrontendIPConfiguration(@Nullable SubResourceArgs frontendIPConfiguration) {
+        public Builder frontendIPConfiguration(@Nullable SubResourceArgs frontendIPConfiguration) {
             this.frontendIPConfiguration = Input.ofNullable(frontendIPConfiguration);
             return this;
         }
 
-        public Builder setFrontendPort(@Nullable Input<SubResourceArgs> frontendPort) {
+        public Builder frontendPort(@Nullable Input<SubResourceArgs> frontendPort) {
             this.frontendPort = frontendPort;
             return this;
         }
 
-        public Builder setFrontendPort(@Nullable SubResourceArgs frontendPort) {
+        public Builder frontendPort(@Nullable SubResourceArgs frontendPort) {
             this.frontendPort = Input.ofNullable(frontendPort);
             return this;
         }
 
-        public Builder setHostName(@Nullable Input<String> hostName) {
+        public Builder hostName(@Nullable Input<String> hostName) {
             this.hostName = hostName;
             return this;
         }
 
-        public Builder setHostName(@Nullable String hostName) {
+        public Builder hostName(@Nullable String hostName) {
             this.hostName = Input.ofNullable(hostName);
             return this;
         }
 
-        public Builder setHostNames(@Nullable Input<List<String>> hostNames) {
+        public Builder hostNames(@Nullable Input<List<String>> hostNames) {
             this.hostNames = hostNames;
             return this;
         }
 
-        public Builder setHostNames(@Nullable List<String> hostNames) {
+        public Builder hostNames(@Nullable List<String> hostNames) {
             this.hostNames = Input.ofNullable(hostNames);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProtocol(@Nullable Input<Either<String,ApplicationGatewayProtocol>> protocol) {
+        public Builder protocol(@Nullable Input<Either<String,ApplicationGatewayProtocol>> protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProtocol(@Nullable Either<String,ApplicationGatewayProtocol> protocol) {
+        public Builder protocol(@Nullable Either<String,ApplicationGatewayProtocol> protocol) {
             this.protocol = Input.ofNullable(protocol);
             return this;
         }
 
-        public Builder setRequireServerNameIndication(@Nullable Input<Boolean> requireServerNameIndication) {
+        public Builder requireServerNameIndication(@Nullable Input<Boolean> requireServerNameIndication) {
             this.requireServerNameIndication = requireServerNameIndication;
             return this;
         }
 
-        public Builder setRequireServerNameIndication(@Nullable Boolean requireServerNameIndication) {
+        public Builder requireServerNameIndication(@Nullable Boolean requireServerNameIndication) {
             this.requireServerNameIndication = Input.ofNullable(requireServerNameIndication);
             return this;
         }
 
-        public Builder setSslCertificate(@Nullable Input<SubResourceArgs> sslCertificate) {
+        public Builder sslCertificate(@Nullable Input<SubResourceArgs> sslCertificate) {
             this.sslCertificate = sslCertificate;
             return this;
         }
 
-        public Builder setSslCertificate(@Nullable SubResourceArgs sslCertificate) {
+        public Builder sslCertificate(@Nullable SubResourceArgs sslCertificate) {
             this.sslCertificate = Input.ofNullable(sslCertificate);
             return this;
         }
 
-        public Builder setSslProfile(@Nullable Input<SubResourceArgs> sslProfile) {
+        public Builder sslProfile(@Nullable Input<SubResourceArgs> sslProfile) {
             this.sslProfile = sslProfile;
             return this;
         }
 
-        public Builder setSslProfile(@Nullable SubResourceArgs sslProfile) {
+        public Builder sslProfile(@Nullable SubResourceArgs sslProfile) {
             this.sslProfile = Input.ofNullable(sslProfile);
             return this;
         }

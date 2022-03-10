@@ -87,32 +87,32 @@ public final class GcmChannelState extends io.pulumi.resources.ResourceArgs {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setApiKey(@Nullable Input<String> apiKey) {
+        public Builder apiKey(@Nullable Input<String> apiKey) {
             this.apiKey = apiKey;
             return this;
         }
 
-        public Builder setApiKey(@Nullable String apiKey) {
+        public Builder apiKey(@Nullable String apiKey) {
             this.apiKey = Input.ofNullable(apiKey);
             return this;
         }
 
-        public Builder setApplicationId(@Nullable Input<String> applicationId) {
+        public Builder applicationId(@Nullable Input<String> applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
-        public Builder setApplicationId(@Nullable String applicationId) {
+        public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = Input.ofNullable(applicationId);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }

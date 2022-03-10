@@ -52,12 +52,12 @@ public final class ConfigFrequency {
     	      this.value = defaults.value;
         }
 
-        public Builder setUnits(@Nullable ConfigFrequencyUnits units) {
+        public Builder units(@Nullable ConfigFrequencyUnits units) {
             this.units = units;
             return this;
         }
 
-        public Builder setValue(@Nullable Double value) {
+        public Builder value(@Nullable Double value) {
             this.value = value;
             return this;
         }

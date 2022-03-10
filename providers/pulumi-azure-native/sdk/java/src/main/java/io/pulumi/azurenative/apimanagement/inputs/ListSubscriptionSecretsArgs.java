@@ -84,17 +84,17 @@ public final class ListSubscriptionSecretsArgs extends io.pulumi.resources.Invok
     	      this.sid = defaults.sid;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setSid(String sid) {
+        public Builder sid(String sid) {
             this.sid = Objects.requireNonNull(sid);
             return this;
         }

@@ -68,12 +68,12 @@ public final class JobStatistics2ReservationUsageItemResponse extends io.pulumi.
     	      this.slotMs = defaults.slotMs;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSlotMs(String slotMs) {
+        public Builder slotMs(String slotMs) {
             this.slotMs = Objects.requireNonNull(slotMs);
             return this;
         }

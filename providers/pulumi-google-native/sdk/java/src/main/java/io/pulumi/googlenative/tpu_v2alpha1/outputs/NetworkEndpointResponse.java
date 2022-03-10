@@ -83,17 +83,17 @@ public final class NetworkEndpointResponse {
     	      this.port = defaults.port;
         }
 
-        public Builder setAccessConfig(AccessConfigResponse accessConfig) {
+        public Builder accessConfig(AccessConfigResponse accessConfig) {
             this.accessConfig = Objects.requireNonNull(accessConfig);
             return this;
         }
 
-        public Builder setIpAddress(String ipAddress) {
+        public Builder ipAddress(String ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }

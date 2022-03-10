@@ -53,12 +53,12 @@ public final class InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs 
     	      this.onHealthCheck = defaults.onHealthCheck;
         }
 
-        public Builder setOnHealthCheck(@Nullable Input<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheck> onHealthCheck) {
+        public Builder onHealthCheck(@Nullable Input<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheck> onHealthCheck) {
             this.onHealthCheck = onHealthCheck;
             return this;
         }
 
-        public Builder setOnHealthCheck(@Nullable InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheck onHealthCheck) {
+        public Builder onHealthCheck(@Nullable InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheck onHealthCheck) {
             this.onHealthCheck = Input.ofNullable(onHealthCheck);
             return this;
         }

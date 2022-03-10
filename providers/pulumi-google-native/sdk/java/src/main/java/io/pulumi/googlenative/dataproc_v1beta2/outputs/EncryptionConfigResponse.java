@@ -48,7 +48,7 @@ public final class EncryptionConfigResponse {
     	      this.gcePdKmsKeyName = defaults.gcePdKmsKeyName;
         }
 
-        public Builder setGcePdKmsKeyName(String gcePdKmsKeyName) {
+        public Builder gcePdKmsKeyName(String gcePdKmsKeyName) {
             this.gcePdKmsKeyName = Objects.requireNonNull(gcePdKmsKeyName);
             return this;
         }

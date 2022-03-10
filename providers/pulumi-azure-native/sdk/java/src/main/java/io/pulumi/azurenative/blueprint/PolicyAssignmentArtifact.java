@@ -210,7 +210,7 @@ public class PolicyAssignmentArtifact extends io.pulumi.resources.CustomResource
     private static PolicyAssignmentArtifactArgs makeArgs(PolicyAssignmentArtifactArgs args) {
         var builder = args == null ? PolicyAssignmentArtifactArgs.builder() : PolicyAssignmentArtifactArgs.builder(args);
         return builder
-            .setKind("policyAssignment")
+            .kind("policyAssignment")
             .build();
     }
 

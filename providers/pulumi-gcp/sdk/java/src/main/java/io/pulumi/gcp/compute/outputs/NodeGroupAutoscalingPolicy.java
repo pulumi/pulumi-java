@@ -100,17 +100,17 @@ public final class NodeGroupAutoscalingPolicy {
     	      this.mode = defaults.mode;
         }
 
-        public Builder setMaxNodes(@Nullable Integer maxNodes) {
+        public Builder maxNodes(@Nullable Integer maxNodes) {
             this.maxNodes = maxNodes;
             return this;
         }
 
-        public Builder setMinNodes(@Nullable Integer minNodes) {
+        public Builder minNodes(@Nullable Integer minNodes) {
             this.minNodes = minNodes;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }

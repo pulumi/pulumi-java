@@ -119,52 +119,52 @@ public final class OAuthAuthenticationArgs extends io.pulumi.resources.ResourceA
     	      this.type = defaults.type;
         }
 
-        public Builder setAudience(@Nullable Input<String> audience) {
+        public Builder audience(@Nullable Input<String> audience) {
             this.audience = audience;
             return this;
         }
 
-        public Builder setAudience(@Nullable String audience) {
+        public Builder audience(@Nullable String audience) {
             this.audience = Input.ofNullable(audience);
             return this;
         }
 
-        public Builder setClientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Input<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = Input.ofNullable(clientId);
             return this;
         }
 
-        public Builder setSecret(@Nullable Input<String> secret) {
+        public Builder secret(@Nullable Input<String> secret) {
             this.secret = secret;
             return this;
         }
 
-        public Builder setSecret(@Nullable String secret) {
+        public Builder secret(@Nullable String secret) {
             this.secret = Input.ofNullable(secret);
             return this;
         }
 
-        public Builder setTenant(@Nullable Input<String> tenant) {
+        public Builder tenant(@Nullable Input<String> tenant) {
             this.tenant = tenant;
             return this;
         }
 
-        public Builder setTenant(@Nullable String tenant) {
+        public Builder tenant(@Nullable String tenant) {
             this.tenant = Input.ofNullable(tenant);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

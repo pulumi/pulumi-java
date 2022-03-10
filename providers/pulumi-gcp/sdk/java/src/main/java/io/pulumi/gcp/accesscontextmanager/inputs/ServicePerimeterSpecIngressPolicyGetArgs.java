@@ -75,22 +75,22 @@ public final class ServicePerimeterSpecIngressPolicyGetArgs extends io.pulumi.re
     	      this.ingressTo = defaults.ingressTo;
         }
 
-        public Builder setIngressFrom(@Nullable Input<ServicePerimeterSpecIngressPolicyIngressFromGetArgs> ingressFrom) {
+        public Builder ingressFrom(@Nullable Input<ServicePerimeterSpecIngressPolicyIngressFromGetArgs> ingressFrom) {
             this.ingressFrom = ingressFrom;
             return this;
         }
 
-        public Builder setIngressFrom(@Nullable ServicePerimeterSpecIngressPolicyIngressFromGetArgs ingressFrom) {
+        public Builder ingressFrom(@Nullable ServicePerimeterSpecIngressPolicyIngressFromGetArgs ingressFrom) {
             this.ingressFrom = Input.ofNullable(ingressFrom);
             return this;
         }
 
-        public Builder setIngressTo(@Nullable Input<ServicePerimeterSpecIngressPolicyIngressToGetArgs> ingressTo) {
+        public Builder ingressTo(@Nullable Input<ServicePerimeterSpecIngressPolicyIngressToGetArgs> ingressTo) {
             this.ingressTo = ingressTo;
             return this;
         }
 
-        public Builder setIngressTo(@Nullable ServicePerimeterSpecIngressPolicyIngressToGetArgs ingressTo) {
+        public Builder ingressTo(@Nullable ServicePerimeterSpecIngressPolicyIngressToGetArgs ingressTo) {
             this.ingressTo = Input.ofNullable(ingressTo);
             return this;
         }

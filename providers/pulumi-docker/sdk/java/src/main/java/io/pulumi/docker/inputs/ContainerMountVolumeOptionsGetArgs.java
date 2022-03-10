@@ -90,42 +90,42 @@ public final class ContainerMountVolumeOptionsGetArgs extends io.pulumi.resource
     	      this.noCopy = defaults.noCopy;
         }
 
-        public Builder setDriverName(@Nullable Input<String> driverName) {
+        public Builder driverName(@Nullable Input<String> driverName) {
             this.driverName = driverName;
             return this;
         }
 
-        public Builder setDriverName(@Nullable String driverName) {
+        public Builder driverName(@Nullable String driverName) {
             this.driverName = Input.ofNullable(driverName);
             return this;
         }
 
-        public Builder setDriverOptions(@Nullable Input<Map<String,String>> driverOptions) {
+        public Builder driverOptions(@Nullable Input<Map<String,String>> driverOptions) {
             this.driverOptions = driverOptions;
             return this;
         }
 
-        public Builder setDriverOptions(@Nullable Map<String,String> driverOptions) {
+        public Builder driverOptions(@Nullable Map<String,String> driverOptions) {
             this.driverOptions = Input.ofNullable(driverOptions);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<List<ContainerMountVolumeOptionsLabelGetArgs>> labels) {
+        public Builder labels(@Nullable Input<List<ContainerMountVolumeOptionsLabelGetArgs>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable List<ContainerMountVolumeOptionsLabelGetArgs> labels) {
+        public Builder labels(@Nullable List<ContainerMountVolumeOptionsLabelGetArgs> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setNoCopy(@Nullable Input<Boolean> noCopy) {
+        public Builder noCopy(@Nullable Input<Boolean> noCopy) {
             this.noCopy = noCopy;
             return this;
         }
 
-        public Builder setNoCopy(@Nullable Boolean noCopy) {
+        public Builder noCopy(@Nullable Boolean noCopy) {
             this.noCopy = Input.ofNullable(noCopy);
             return this;
         }

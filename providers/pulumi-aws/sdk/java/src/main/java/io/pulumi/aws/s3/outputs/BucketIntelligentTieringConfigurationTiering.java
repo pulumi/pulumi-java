@@ -66,12 +66,12 @@ public final class BucketIntelligentTieringConfigurationTiering {
     	      this.days = defaults.days;
         }
 
-        public Builder setAccessTier(String accessTier) {
+        public Builder accessTier(String accessTier) {
             this.accessTier = Objects.requireNonNull(accessTier);
             return this;
         }
 
-        public Builder setDays(Integer days) {
+        public Builder days(Integer days) {
             this.days = Objects.requireNonNull(days);
             return this;
         }

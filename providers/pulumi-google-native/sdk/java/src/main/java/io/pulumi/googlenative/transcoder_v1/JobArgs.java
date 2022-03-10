@@ -160,82 +160,82 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ttlAfterCompletionDays = defaults.ttlAfterCompletionDays;
         }
 
-        public Builder setConfig(@Nullable Input<JobConfigArgs> config) {
+        public Builder config(@Nullable Input<JobConfigArgs> config) {
             this.config = config;
             return this;
         }
 
-        public Builder setConfig(@Nullable JobConfigArgs config) {
+        public Builder config(@Nullable JobConfigArgs config) {
             this.config = Input.ofNullable(config);
             return this;
         }
 
-        public Builder setInputUri(@Nullable Input<String> inputUri) {
+        public Builder inputUri(@Nullable Input<String> inputUri) {
             this.inputUri = inputUri;
             return this;
         }
 
-        public Builder setInputUri(@Nullable String inputUri) {
+        public Builder inputUri(@Nullable String inputUri) {
             this.inputUri = Input.ofNullable(inputUri);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOutputUri(@Nullable Input<String> outputUri) {
+        public Builder outputUri(@Nullable Input<String> outputUri) {
             this.outputUri = outputUri;
             return this;
         }
 
-        public Builder setOutputUri(@Nullable String outputUri) {
+        public Builder outputUri(@Nullable String outputUri) {
             this.outputUri = Input.ofNullable(outputUri);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setTemplateId(@Nullable Input<String> templateId) {
+        public Builder templateId(@Nullable Input<String> templateId) {
             this.templateId = templateId;
             return this;
         }
 
-        public Builder setTemplateId(@Nullable String templateId) {
+        public Builder templateId(@Nullable String templateId) {
             this.templateId = Input.ofNullable(templateId);
             return this;
         }
 
-        public Builder setTtlAfterCompletionDays(@Nullable Input<Integer> ttlAfterCompletionDays) {
+        public Builder ttlAfterCompletionDays(@Nullable Input<Integer> ttlAfterCompletionDays) {
             this.ttlAfterCompletionDays = ttlAfterCompletionDays;
             return this;
         }
 
-        public Builder setTtlAfterCompletionDays(@Nullable Integer ttlAfterCompletionDays) {
+        public Builder ttlAfterCompletionDays(@Nullable Integer ttlAfterCompletionDays) {
             this.ttlAfterCompletionDays = Input.ofNullable(ttlAfterCompletionDays);
             return this;
         }

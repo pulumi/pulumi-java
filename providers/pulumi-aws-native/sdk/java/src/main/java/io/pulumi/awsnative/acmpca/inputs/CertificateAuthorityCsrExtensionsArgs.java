@@ -68,22 +68,22 @@ public final class CertificateAuthorityCsrExtensionsArgs extends io.pulumi.resou
     	      this.subjectInformationAccess = defaults.subjectInformationAccess;
         }
 
-        public Builder setKeyUsage(@Nullable Input<CertificateAuthorityKeyUsageArgs> keyUsage) {
+        public Builder keyUsage(@Nullable Input<CertificateAuthorityKeyUsageArgs> keyUsage) {
             this.keyUsage = keyUsage;
             return this;
         }
 
-        public Builder setKeyUsage(@Nullable CertificateAuthorityKeyUsageArgs keyUsage) {
+        public Builder keyUsage(@Nullable CertificateAuthorityKeyUsageArgs keyUsage) {
             this.keyUsage = Input.ofNullable(keyUsage);
             return this;
         }
 
-        public Builder setSubjectInformationAccess(@Nullable Input<List<CertificateAuthorityAccessDescriptionArgs>> subjectInformationAccess) {
+        public Builder subjectInformationAccess(@Nullable Input<List<CertificateAuthorityAccessDescriptionArgs>> subjectInformationAccess) {
             this.subjectInformationAccess = subjectInformationAccess;
             return this;
         }
 
-        public Builder setSubjectInformationAccess(@Nullable List<CertificateAuthorityAccessDescriptionArgs> subjectInformationAccess) {
+        public Builder subjectInformationAccess(@Nullable List<CertificateAuthorityAccessDescriptionArgs> subjectInformationAccess) {
             this.subjectInformationAccess = Input.ofNullable(subjectInformationAccess);
             return this;
         }

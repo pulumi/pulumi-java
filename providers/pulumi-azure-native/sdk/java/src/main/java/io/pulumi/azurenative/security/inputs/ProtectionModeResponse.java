@@ -106,22 +106,22 @@ public final class ProtectionModeResponse extends io.pulumi.resources.InvokeArgs
     	      this.script = defaults.script;
         }
 
-        public Builder setExe(@Nullable String exe) {
+        public Builder exe(@Nullable String exe) {
             this.exe = exe;
             return this;
         }
 
-        public Builder setExecutable(@Nullable String executable) {
+        public Builder executable(@Nullable String executable) {
             this.executable = executable;
             return this;
         }
 
-        public Builder setMsi(@Nullable String msi) {
+        public Builder msi(@Nullable String msi) {
             this.msi = msi;
             return this;
         }
 
-        public Builder setScript(@Nullable String script) {
+        public Builder script(@Nullable String script) {
             this.script = script;
             return this;
         }

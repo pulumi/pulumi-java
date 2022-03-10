@@ -76,22 +76,22 @@ public final class NotificationPreferenceArgs extends io.pulumi.resources.Resour
     	      this.stageName = defaults.stageName;
         }
 
-        public Builder setSendNotification(Input<Boolean> sendNotification) {
+        public Builder sendNotification(Input<Boolean> sendNotification) {
             this.sendNotification = Objects.requireNonNull(sendNotification);
             return this;
         }
 
-        public Builder setSendNotification(Boolean sendNotification) {
+        public Builder sendNotification(Boolean sendNotification) {
             this.sendNotification = Input.of(Objects.requireNonNull(sendNotification));
             return this;
         }
 
-        public Builder setStageName(Input<Either<String,NotificationStageName>> stageName) {
+        public Builder stageName(Input<Either<String,NotificationStageName>> stageName) {
             this.stageName = Objects.requireNonNull(stageName);
             return this;
         }
 
-        public Builder setStageName(Either<String,NotificationStageName> stageName) {
+        public Builder stageName(Either<String,NotificationStageName> stageName) {
             this.stageName = Input.of(Objects.requireNonNull(stageName));
             return this;
         }

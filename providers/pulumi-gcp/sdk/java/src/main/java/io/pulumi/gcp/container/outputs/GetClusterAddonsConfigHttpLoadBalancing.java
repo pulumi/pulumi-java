@@ -40,7 +40,7 @@ public final class GetClusterAddonsConfigHttpLoadBalancing {
     	      this.disabled = defaults.disabled;
         }
 
-        public Builder setDisabled(Boolean disabled) {
+        public Builder disabled(Boolean disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }

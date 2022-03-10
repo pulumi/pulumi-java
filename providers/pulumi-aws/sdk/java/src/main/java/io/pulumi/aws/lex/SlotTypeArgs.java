@@ -128,52 +128,52 @@ public final class SlotTypeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.valueSelectionStrategy = defaults.valueSelectionStrategy;
         }
 
-        public Builder setCreateVersion(@Nullable Input<Boolean> createVersion) {
+        public Builder createVersion(@Nullable Input<Boolean> createVersion) {
             this.createVersion = createVersion;
             return this;
         }
 
-        public Builder setCreateVersion(@Nullable Boolean createVersion) {
+        public Builder createVersion(@Nullable Boolean createVersion) {
             this.createVersion = Input.ofNullable(createVersion);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEnumerationValues(Input<List<SlotTypeEnumerationValueArgs>> enumerationValues) {
+        public Builder enumerationValues(Input<List<SlotTypeEnumerationValueArgs>> enumerationValues) {
             this.enumerationValues = Objects.requireNonNull(enumerationValues);
             return this;
         }
 
-        public Builder setEnumerationValues(List<SlotTypeEnumerationValueArgs> enumerationValues) {
+        public Builder enumerationValues(List<SlotTypeEnumerationValueArgs> enumerationValues) {
             this.enumerationValues = Input.of(Objects.requireNonNull(enumerationValues));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setValueSelectionStrategy(@Nullable Input<String> valueSelectionStrategy) {
+        public Builder valueSelectionStrategy(@Nullable Input<String> valueSelectionStrategy) {
             this.valueSelectionStrategy = valueSelectionStrategy;
             return this;
         }
 
-        public Builder setValueSelectionStrategy(@Nullable String valueSelectionStrategy) {
+        public Builder valueSelectionStrategy(@Nullable String valueSelectionStrategy) {
             this.valueSelectionStrategy = Input.ofNullable(valueSelectionStrategy);
             return this;
         }

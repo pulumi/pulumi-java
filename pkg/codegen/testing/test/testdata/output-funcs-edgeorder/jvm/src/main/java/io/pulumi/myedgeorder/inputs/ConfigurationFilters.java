@@ -76,12 +76,12 @@ public final class ConfigurationFilters extends io.pulumi.resources.InvokeArgs {
     	      this.hierarchyInformation = defaults.hierarchyInformation;
         }
 
-        public Builder setFilterableProperty(@Nullable List<FilterableProperty> filterableProperty) {
+        public Builder filterableProperty(@Nullable List<FilterableProperty> filterableProperty) {
             this.filterableProperty = filterableProperty;
             return this;
         }
 
-        public Builder setHierarchyInformation(HierarchyInformation hierarchyInformation) {
+        public Builder hierarchyInformation(HierarchyInformation hierarchyInformation) {
             this.hierarchyInformation = Objects.requireNonNull(hierarchyInformation);
             return this;
         }

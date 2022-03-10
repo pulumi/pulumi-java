@@ -97,22 +97,22 @@ public final class EndPointResponse {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setEndPointName(String endPointName) {
+        public Builder endPointName(String endPointName) {
             this.endPointName = Objects.requireNonNull(endPointName);
             return this;
         }
 
-        public Builder setIpAddress(String ipAddress) {
+        public Builder ipAddress(String ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
 
-        public Builder setPort(String port) {
+        public Builder port(String port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }

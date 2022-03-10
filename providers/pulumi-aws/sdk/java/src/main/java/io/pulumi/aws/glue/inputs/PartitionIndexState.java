@@ -103,42 +103,42 @@ public final class PartitionIndexState extends io.pulumi.resources.ResourceArgs 
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder setCatalogId(@Nullable Input<String> catalogId) {
+        public Builder catalogId(@Nullable Input<String> catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
-        public Builder setCatalogId(@Nullable String catalogId) {
+        public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = Input.ofNullable(catalogId);
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable Input<String> databaseName) {
+        public Builder databaseName(@Nullable Input<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable String databaseName) {
+        public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = Input.ofNullable(databaseName);
             return this;
         }
 
-        public Builder setPartitionIndex(@Nullable Input<PartitionIndexPartitionIndexGetArgs> partitionIndex) {
+        public Builder partitionIndex(@Nullable Input<PartitionIndexPartitionIndexGetArgs> partitionIndex) {
             this.partitionIndex = partitionIndex;
             return this;
         }
 
-        public Builder setPartitionIndex(@Nullable PartitionIndexPartitionIndexGetArgs partitionIndex) {
+        public Builder partitionIndex(@Nullable PartitionIndexPartitionIndexGetArgs partitionIndex) {
             this.partitionIndex = Input.ofNullable(partitionIndex);
             return this;
         }
 
-        public Builder setTableName(@Nullable Input<String> tableName) {
+        public Builder tableName(@Nullable Input<String> tableName) {
             this.tableName = tableName;
             return this;
         }
 
-        public Builder setTableName(@Nullable String tableName) {
+        public Builder tableName(@Nullable String tableName) {
             this.tableName = Input.ofNullable(tableName);
             return this;
         }

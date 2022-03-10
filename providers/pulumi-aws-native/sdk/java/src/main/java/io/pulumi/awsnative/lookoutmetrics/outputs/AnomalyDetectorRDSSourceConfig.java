@@ -99,42 +99,42 @@ public final class AnomalyDetectorRDSSourceConfig {
     	      this.vpcConfiguration = defaults.vpcConfiguration;
         }
 
-        public Builder setDBInstanceIdentifier(String dBInstanceIdentifier) {
+        public Builder dBInstanceIdentifier(String dBInstanceIdentifier) {
             this.dBInstanceIdentifier = Objects.requireNonNull(dBInstanceIdentifier);
             return this;
         }
 
-        public Builder setDatabaseHost(String databaseHost) {
+        public Builder databaseHost(String databaseHost) {
             this.databaseHost = Objects.requireNonNull(databaseHost);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setDatabasePort(Integer databasePort) {
+        public Builder databasePort(Integer databasePort) {
             this.databasePort = Objects.requireNonNull(databasePort);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setSecretManagerArn(String secretManagerArn) {
+        public Builder secretManagerArn(String secretManagerArn) {
             this.secretManagerArn = Objects.requireNonNull(secretManagerArn);
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
-        public Builder setVpcConfiguration(AnomalyDetectorVpcConfiguration vpcConfiguration) {
+        public Builder vpcConfiguration(AnomalyDetectorVpcConfiguration vpcConfiguration) {
             this.vpcConfiguration = Objects.requireNonNull(vpcConfiguration);
             return this;
         }

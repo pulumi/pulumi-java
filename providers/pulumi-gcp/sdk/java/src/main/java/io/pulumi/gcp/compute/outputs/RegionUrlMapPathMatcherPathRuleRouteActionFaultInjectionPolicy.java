@@ -76,12 +76,12 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolic
     	      this.delay = defaults.delay;
         }
 
-        public Builder setAbort(@Nullable RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort abort) {
+        public Builder abort(@Nullable RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort abort) {
             this.abort = abort;
             return this;
         }
 
-        public Builder setDelay(@Nullable RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay delay) {
+        public Builder delay(@Nullable RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay delay) {
             this.delay = delay;
             return this;
         }

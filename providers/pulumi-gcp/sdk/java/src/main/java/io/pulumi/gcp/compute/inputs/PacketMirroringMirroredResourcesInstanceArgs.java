@@ -52,12 +52,12 @@ public final class PacketMirroringMirroredResourcesInstanceArgs extends io.pulum
     	      this.url = defaults.url;
         }
 
-        public Builder setUrl(Input<String> url) {
+        public Builder url(Input<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Input.of(Objects.requireNonNull(url));
             return this;
         }

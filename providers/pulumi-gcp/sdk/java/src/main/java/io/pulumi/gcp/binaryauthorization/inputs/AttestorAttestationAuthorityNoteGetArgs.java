@@ -110,32 +110,32 @@ public final class AttestorAttestationAuthorityNoteGetArgs extends io.pulumi.res
     	      this.publicKeys = defaults.publicKeys;
         }
 
-        public Builder setDelegationServiceAccountEmail(@Nullable Input<String> delegationServiceAccountEmail) {
+        public Builder delegationServiceAccountEmail(@Nullable Input<String> delegationServiceAccountEmail) {
             this.delegationServiceAccountEmail = delegationServiceAccountEmail;
             return this;
         }
 
-        public Builder setDelegationServiceAccountEmail(@Nullable String delegationServiceAccountEmail) {
+        public Builder delegationServiceAccountEmail(@Nullable String delegationServiceAccountEmail) {
             this.delegationServiceAccountEmail = Input.ofNullable(delegationServiceAccountEmail);
             return this;
         }
 
-        public Builder setNoteReference(Input<String> noteReference) {
+        public Builder noteReference(Input<String> noteReference) {
             this.noteReference = Objects.requireNonNull(noteReference);
             return this;
         }
 
-        public Builder setNoteReference(String noteReference) {
+        public Builder noteReference(String noteReference) {
             this.noteReference = Input.of(Objects.requireNonNull(noteReference));
             return this;
         }
 
-        public Builder setPublicKeys(@Nullable Input<List<AttestorAttestationAuthorityNotePublicKeyGetArgs>> publicKeys) {
+        public Builder publicKeys(@Nullable Input<List<AttestorAttestationAuthorityNotePublicKeyGetArgs>> publicKeys) {
             this.publicKeys = publicKeys;
             return this;
         }
 
-        public Builder setPublicKeys(@Nullable List<AttestorAttestationAuthorityNotePublicKeyGetArgs> publicKeys) {
+        public Builder publicKeys(@Nullable List<AttestorAttestationAuthorityNotePublicKeyGetArgs> publicKeys) {
             this.publicKeys = Input.ofNullable(publicKeys);
             return this;
         }

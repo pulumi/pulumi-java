@@ -51,7 +51,7 @@ public final class GetDeploymentAtSubscriptionScopeArgs extends io.pulumi.resour
     	      this.deploymentName = defaults.deploymentName;
         }
 
-        public Builder setDeploymentName(String deploymentName) {
+        public Builder deploymentName(String deploymentName) {
             this.deploymentName = Objects.requireNonNull(deploymentName);
             return this;
         }

@@ -77,32 +77,32 @@ public final class EntryBigqueryTableSpecGetArgs extends io.pulumi.resources.Res
     	      this.viewSpecs = defaults.viewSpecs;
         }
 
-        public Builder setTableSourceType(@Nullable Input<String> tableSourceType) {
+        public Builder tableSourceType(@Nullable Input<String> tableSourceType) {
             this.tableSourceType = tableSourceType;
             return this;
         }
 
-        public Builder setTableSourceType(@Nullable String tableSourceType) {
+        public Builder tableSourceType(@Nullable String tableSourceType) {
             this.tableSourceType = Input.ofNullable(tableSourceType);
             return this;
         }
 
-        public Builder setTableSpecs(@Nullable Input<List<EntryBigqueryTableSpecTableSpecGetArgs>> tableSpecs) {
+        public Builder tableSpecs(@Nullable Input<List<EntryBigqueryTableSpecTableSpecGetArgs>> tableSpecs) {
             this.tableSpecs = tableSpecs;
             return this;
         }
 
-        public Builder setTableSpecs(@Nullable List<EntryBigqueryTableSpecTableSpecGetArgs> tableSpecs) {
+        public Builder tableSpecs(@Nullable List<EntryBigqueryTableSpecTableSpecGetArgs> tableSpecs) {
             this.tableSpecs = Input.ofNullable(tableSpecs);
             return this;
         }
 
-        public Builder setViewSpecs(@Nullable Input<List<EntryBigqueryTableSpecViewSpecGetArgs>> viewSpecs) {
+        public Builder viewSpecs(@Nullable Input<List<EntryBigqueryTableSpecViewSpecGetArgs>> viewSpecs) {
             this.viewSpecs = viewSpecs;
             return this;
         }
 
-        public Builder setViewSpecs(@Nullable List<EntryBigqueryTableSpecViewSpecGetArgs> viewSpecs) {
+        public Builder viewSpecs(@Nullable List<EntryBigqueryTableSpecViewSpecGetArgs> viewSpecs) {
             this.viewSpecs = Input.ofNullable(viewSpecs);
             return this;
         }

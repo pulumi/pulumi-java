@@ -90,17 +90,17 @@ public final class LoadBalancingSettingsParametersResponse extends io.pulumi.res
     	      this.successfulSamplesRequired = defaults.successfulSamplesRequired;
         }
 
-        public Builder setAdditionalLatencyInMilliseconds(@Nullable Integer additionalLatencyInMilliseconds) {
+        public Builder additionalLatencyInMilliseconds(@Nullable Integer additionalLatencyInMilliseconds) {
             this.additionalLatencyInMilliseconds = additionalLatencyInMilliseconds;
             return this;
         }
 
-        public Builder setSampleSize(@Nullable Integer sampleSize) {
+        public Builder sampleSize(@Nullable Integer sampleSize) {
             this.sampleSize = sampleSize;
             return this;
         }
 
-        public Builder setSuccessfulSamplesRequired(@Nullable Integer successfulSamplesRequired) {
+        public Builder successfulSamplesRequired(@Nullable Integer successfulSamplesRequired) {
             this.successfulSamplesRequired = successfulSamplesRequired;
             return this;
         }

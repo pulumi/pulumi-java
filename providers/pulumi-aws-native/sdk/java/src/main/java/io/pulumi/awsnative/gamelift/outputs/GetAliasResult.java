@@ -100,22 +100,22 @@ public final class GetAliasResult {
     	      this.routingStrategy = defaults.routingStrategy;
         }
 
-        public Builder setAliasId(@Nullable String aliasId) {
+        public Builder aliasId(@Nullable String aliasId) {
             this.aliasId = aliasId;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setRoutingStrategy(@Nullable AliasRoutingStrategy routingStrategy) {
+        public Builder routingStrategy(@Nullable AliasRoutingStrategy routingStrategy) {
             this.routingStrategy = routingStrategy;
             return this;
         }

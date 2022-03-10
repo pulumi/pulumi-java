@@ -107,22 +107,22 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
     	      this.radiusMiles = defaults.radiusMiles;
         }
 
-        public Builder setLatLng(LatLngResponse latLng) {
+        public Builder latLng(LatLngResponse latLng) {
             this.latLng = Objects.requireNonNull(latLng);
             return this;
         }
 
-        public Builder setLocationType(String locationType) {
+        public Builder locationType(String locationType) {
             this.locationType = Objects.requireNonNull(locationType);
             return this;
         }
 
-        public Builder setPostalAddress(PostalAddressResponse postalAddress) {
+        public Builder postalAddress(PostalAddressResponse postalAddress) {
             this.postalAddress = Objects.requireNonNull(postalAddress);
             return this;
         }
 
-        public Builder setRadiusMiles(Double radiusMiles) {
+        public Builder radiusMiles(Double radiusMiles) {
             this.radiusMiles = Objects.requireNonNull(radiusMiles);
             return this;
         }

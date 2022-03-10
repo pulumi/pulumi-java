@@ -290,82 +290,82 @@ public final class VmUtilizationMetricsResponse {
     	      this.networkThroughputMaxKbps = defaults.networkThroughputMaxKbps;
         }
 
-        public Builder setCpuAverage(Integer cpuAverage) {
+        public Builder cpuAverage(Integer cpuAverage) {
             this.cpuAverage = Objects.requireNonNull(cpuAverage);
             return this;
         }
 
-        public Builder setCpuAveragePercent(Integer cpuAveragePercent) {
+        public Builder cpuAveragePercent(Integer cpuAveragePercent) {
             this.cpuAveragePercent = Objects.requireNonNull(cpuAveragePercent);
             return this;
         }
 
-        public Builder setCpuMax(Integer cpuMax) {
+        public Builder cpuMax(Integer cpuMax) {
             this.cpuMax = Objects.requireNonNull(cpuMax);
             return this;
         }
 
-        public Builder setCpuMaxPercent(Integer cpuMaxPercent) {
+        public Builder cpuMaxPercent(Integer cpuMaxPercent) {
             this.cpuMaxPercent = Objects.requireNonNull(cpuMaxPercent);
             return this;
         }
 
-        public Builder setDiskIoRateAverage(String diskIoRateAverage) {
+        public Builder diskIoRateAverage(String diskIoRateAverage) {
             this.diskIoRateAverage = Objects.requireNonNull(diskIoRateAverage);
             return this;
         }
 
-        public Builder setDiskIoRateAverageKbps(String diskIoRateAverageKbps) {
+        public Builder diskIoRateAverageKbps(String diskIoRateAverageKbps) {
             this.diskIoRateAverageKbps = Objects.requireNonNull(diskIoRateAverageKbps);
             return this;
         }
 
-        public Builder setDiskIoRateMax(String diskIoRateMax) {
+        public Builder diskIoRateMax(String diskIoRateMax) {
             this.diskIoRateMax = Objects.requireNonNull(diskIoRateMax);
             return this;
         }
 
-        public Builder setDiskIoRateMaxKbps(String diskIoRateMaxKbps) {
+        public Builder diskIoRateMaxKbps(String diskIoRateMaxKbps) {
             this.diskIoRateMaxKbps = Objects.requireNonNull(diskIoRateMaxKbps);
             return this;
         }
 
-        public Builder setMemoryAverage(Integer memoryAverage) {
+        public Builder memoryAverage(Integer memoryAverage) {
             this.memoryAverage = Objects.requireNonNull(memoryAverage);
             return this;
         }
 
-        public Builder setMemoryAveragePercent(Integer memoryAveragePercent) {
+        public Builder memoryAveragePercent(Integer memoryAveragePercent) {
             this.memoryAveragePercent = Objects.requireNonNull(memoryAveragePercent);
             return this;
         }
 
-        public Builder setMemoryMax(Integer memoryMax) {
+        public Builder memoryMax(Integer memoryMax) {
             this.memoryMax = Objects.requireNonNull(memoryMax);
             return this;
         }
 
-        public Builder setMemoryMaxPercent(Integer memoryMaxPercent) {
+        public Builder memoryMaxPercent(Integer memoryMaxPercent) {
             this.memoryMaxPercent = Objects.requireNonNull(memoryMaxPercent);
             return this;
         }
 
-        public Builder setNetworkThroughputAverage(String networkThroughputAverage) {
+        public Builder networkThroughputAverage(String networkThroughputAverage) {
             this.networkThroughputAverage = Objects.requireNonNull(networkThroughputAverage);
             return this;
         }
 
-        public Builder setNetworkThroughputAverageKbps(String networkThroughputAverageKbps) {
+        public Builder networkThroughputAverageKbps(String networkThroughputAverageKbps) {
             this.networkThroughputAverageKbps = Objects.requireNonNull(networkThroughputAverageKbps);
             return this;
         }
 
-        public Builder setNetworkThroughputMax(String networkThroughputMax) {
+        public Builder networkThroughputMax(String networkThroughputMax) {
             this.networkThroughputMax = Objects.requireNonNull(networkThroughputMax);
             return this;
         }
 
-        public Builder setNetworkThroughputMaxKbps(String networkThroughputMaxKbps) {
+        public Builder networkThroughputMaxKbps(String networkThroughputMaxKbps) {
             this.networkThroughputMaxKbps = Objects.requireNonNull(networkThroughputMaxKbps);
             return this;
         }

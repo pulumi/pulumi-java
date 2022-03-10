@@ -57,12 +57,12 @@ public final class BucketBillingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.requesterPays = defaults.requesterPays;
         }
 
-        public Builder setRequesterPays(@Nullable Input<Boolean> requesterPays) {
+        public Builder requesterPays(@Nullable Input<Boolean> requesterPays) {
             this.requesterPays = requesterPays;
             return this;
         }
 
-        public Builder setRequesterPays(@Nullable Boolean requesterPays) {
+        public Builder requesterPays(@Nullable Boolean requesterPays) {
             this.requesterPays = Input.ofNullable(requesterPays);
             return this;
         }

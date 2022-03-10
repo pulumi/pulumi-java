@@ -237,62 +237,62 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
     	      this.type = defaults.type;
         }
 
-        public Builder setBgpSettings(@Nullable BgpSettingsResponse bgpSettings) {
+        public Builder bgpSettings(@Nullable BgpSettingsResponse bgpSettings) {
             this.bgpSettings = bgpSettings;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setFqdn(@Nullable String fqdn) {
+        public Builder fqdn(@Nullable String fqdn) {
             this.fqdn = fqdn;
             return this;
         }
 
-        public Builder setGatewayIpAddress(@Nullable String gatewayIpAddress) {
+        public Builder gatewayIpAddress(@Nullable String gatewayIpAddress) {
             this.gatewayIpAddress = gatewayIpAddress;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLocalNetworkAddressSpace(@Nullable AddressSpaceResponse localNetworkAddressSpace) {
+        public Builder localNetworkAddressSpace(@Nullable AddressSpaceResponse localNetworkAddressSpace) {
             this.localNetworkAddressSpace = localNetworkAddressSpace;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setResourceGuid(String resourceGuid) {
+        public Builder resourceGuid(String resourceGuid) {
             this.resourceGuid = Objects.requireNonNull(resourceGuid);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -50,7 +50,7 @@ public final class ControllerConnectionDetailsResponse {
     	      this.orchestratorSpecificConnectionDetails = defaults.orchestratorSpecificConnectionDetails;
         }
 
-        public Builder setOrchestratorSpecificConnectionDetails(@Nullable KubernetesConnectionDetailsResponse orchestratorSpecificConnectionDetails) {
+        public Builder orchestratorSpecificConnectionDetails(@Nullable KubernetesConnectionDetailsResponse orchestratorSpecificConnectionDetails) {
             this.orchestratorSpecificConnectionDetails = orchestratorSpecificConnectionDetails;
             return this;
         }

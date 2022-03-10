@@ -301,162 +301,162 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setAdditionalColumns(@Nullable Input<Object> additionalColumns) {
+        public Builder additionalColumns(@Nullable Input<Object> additionalColumns) {
             this.additionalColumns = additionalColumns;
             return this;
         }
 
-        public Builder setAdditionalColumns(@Nullable Object additionalColumns) {
+        public Builder additionalColumns(@Nullable Object additionalColumns) {
             this.additionalColumns = Input.ofNullable(additionalColumns);
             return this;
         }
 
-        public Builder setBatchSize(@Nullable Input<Object> batchSize) {
+        public Builder batchSize(@Nullable Input<Object> batchSize) {
             this.batchSize = batchSize;
             return this;
         }
 
-        public Builder setBatchSize(@Nullable Object batchSize) {
+        public Builder batchSize(@Nullable Object batchSize) {
             this.batchSize = Input.ofNullable(batchSize);
             return this;
         }
 
-        public Builder setCustomRfcReadTableFunctionModule(@Nullable Input<Object> customRfcReadTableFunctionModule) {
+        public Builder customRfcReadTableFunctionModule(@Nullable Input<Object> customRfcReadTableFunctionModule) {
             this.customRfcReadTableFunctionModule = customRfcReadTableFunctionModule;
             return this;
         }
 
-        public Builder setCustomRfcReadTableFunctionModule(@Nullable Object customRfcReadTableFunctionModule) {
+        public Builder customRfcReadTableFunctionModule(@Nullable Object customRfcReadTableFunctionModule) {
             this.customRfcReadTableFunctionModule = Input.ofNullable(customRfcReadTableFunctionModule);
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Input<Object> disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Input<Object> disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Object disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = Input.ofNullable(disableMetricsCollection);
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Input<Object> maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Input<Object> maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = Input.ofNullable(maxConcurrentConnections);
             return this;
         }
 
-        public Builder setPartitionOption(@Nullable Input<Object> partitionOption) {
+        public Builder partitionOption(@Nullable Input<Object> partitionOption) {
             this.partitionOption = partitionOption;
             return this;
         }
 
-        public Builder setPartitionOption(@Nullable Object partitionOption) {
+        public Builder partitionOption(@Nullable Object partitionOption) {
             this.partitionOption = Input.ofNullable(partitionOption);
             return this;
         }
 
-        public Builder setPartitionSettings(@Nullable Input<SapTablePartitionSettingsArgs> partitionSettings) {
+        public Builder partitionSettings(@Nullable Input<SapTablePartitionSettingsArgs> partitionSettings) {
             this.partitionSettings = partitionSettings;
             return this;
         }
 
-        public Builder setPartitionSettings(@Nullable SapTablePartitionSettingsArgs partitionSettings) {
+        public Builder partitionSettings(@Nullable SapTablePartitionSettingsArgs partitionSettings) {
             this.partitionSettings = Input.ofNullable(partitionSettings);
             return this;
         }
 
-        public Builder setQueryTimeout(@Nullable Input<Object> queryTimeout) {
+        public Builder queryTimeout(@Nullable Input<Object> queryTimeout) {
             this.queryTimeout = queryTimeout;
             return this;
         }
 
-        public Builder setQueryTimeout(@Nullable Object queryTimeout) {
+        public Builder queryTimeout(@Nullable Object queryTimeout) {
             this.queryTimeout = Input.ofNullable(queryTimeout);
             return this;
         }
 
-        public Builder setRfcTableFields(@Nullable Input<Object> rfcTableFields) {
+        public Builder rfcTableFields(@Nullable Input<Object> rfcTableFields) {
             this.rfcTableFields = rfcTableFields;
             return this;
         }
 
-        public Builder setRfcTableFields(@Nullable Object rfcTableFields) {
+        public Builder rfcTableFields(@Nullable Object rfcTableFields) {
             this.rfcTableFields = Input.ofNullable(rfcTableFields);
             return this;
         }
 
-        public Builder setRfcTableOptions(@Nullable Input<Object> rfcTableOptions) {
+        public Builder rfcTableOptions(@Nullable Input<Object> rfcTableOptions) {
             this.rfcTableOptions = rfcTableOptions;
             return this;
         }
 
-        public Builder setRfcTableOptions(@Nullable Object rfcTableOptions) {
+        public Builder rfcTableOptions(@Nullable Object rfcTableOptions) {
             this.rfcTableOptions = Input.ofNullable(rfcTableOptions);
             return this;
         }
 
-        public Builder setRowCount(@Nullable Input<Object> rowCount) {
+        public Builder rowCount(@Nullable Input<Object> rowCount) {
             this.rowCount = rowCount;
             return this;
         }
 
-        public Builder setRowCount(@Nullable Object rowCount) {
+        public Builder rowCount(@Nullable Object rowCount) {
             this.rowCount = Input.ofNullable(rowCount);
             return this;
         }
 
-        public Builder setRowSkips(@Nullable Input<Object> rowSkips) {
+        public Builder rowSkips(@Nullable Input<Object> rowSkips) {
             this.rowSkips = rowSkips;
             return this;
         }
 
-        public Builder setRowSkips(@Nullable Object rowSkips) {
+        public Builder rowSkips(@Nullable Object rowSkips) {
             this.rowSkips = Input.ofNullable(rowSkips);
             return this;
         }
 
-        public Builder setSapDataColumnDelimiter(@Nullable Input<Object> sapDataColumnDelimiter) {
+        public Builder sapDataColumnDelimiter(@Nullable Input<Object> sapDataColumnDelimiter) {
             this.sapDataColumnDelimiter = sapDataColumnDelimiter;
             return this;
         }
 
-        public Builder setSapDataColumnDelimiter(@Nullable Object sapDataColumnDelimiter) {
+        public Builder sapDataColumnDelimiter(@Nullable Object sapDataColumnDelimiter) {
             this.sapDataColumnDelimiter = Input.ofNullable(sapDataColumnDelimiter);
             return this;
         }
 
-        public Builder setSourceRetryCount(@Nullable Input<Object> sourceRetryCount) {
+        public Builder sourceRetryCount(@Nullable Input<Object> sourceRetryCount) {
             this.sourceRetryCount = sourceRetryCount;
             return this;
         }
 
-        public Builder setSourceRetryCount(@Nullable Object sourceRetryCount) {
+        public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
             this.sourceRetryCount = Input.ofNullable(sourceRetryCount);
             return this;
         }
 
-        public Builder setSourceRetryWait(@Nullable Input<Object> sourceRetryWait) {
+        public Builder sourceRetryWait(@Nullable Input<Object> sourceRetryWait) {
             this.sourceRetryWait = sourceRetryWait;
             return this;
         }
 
-        public Builder setSourceRetryWait(@Nullable Object sourceRetryWait) {
+        public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
             this.sourceRetryWait = Input.ofNullable(sourceRetryWait);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

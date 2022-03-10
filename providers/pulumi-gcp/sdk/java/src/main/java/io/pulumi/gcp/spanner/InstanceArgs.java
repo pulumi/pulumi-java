@@ -182,82 +182,82 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setConfig(Input<String> config) {
+        public Builder config(Input<String> config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
-        public Builder setConfig(String config) {
+        public Builder config(String config) {
             this.config = Input.of(Objects.requireNonNull(config));
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setForceDestroy(@Nullable Input<Boolean> forceDestroy) {
+        public Builder forceDestroy(@Nullable Input<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
 
-        public Builder setForceDestroy(@Nullable Boolean forceDestroy) {
+        public Builder forceDestroy(@Nullable Boolean forceDestroy) {
             this.forceDestroy = Input.ofNullable(forceDestroy);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNumNodes(@Nullable Input<Integer> numNodes) {
+        public Builder numNodes(@Nullable Input<Integer> numNodes) {
             this.numNodes = numNodes;
             return this;
         }
 
-        public Builder setNumNodes(@Nullable Integer numNodes) {
+        public Builder numNodes(@Nullable Integer numNodes) {
             this.numNodes = Input.ofNullable(numNodes);
             return this;
         }
 
-        public Builder setProcessingUnits(@Nullable Input<Integer> processingUnits) {
+        public Builder processingUnits(@Nullable Input<Integer> processingUnits) {
             this.processingUnits = processingUnits;
             return this;
         }
 
-        public Builder setProcessingUnits(@Nullable Integer processingUnits) {
+        public Builder processingUnits(@Nullable Integer processingUnits) {
             this.processingUnits = Input.ofNullable(processingUnits);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

@@ -117,27 +117,27 @@ public final class EnterpriseKeyWebSettings {
     	      this.integrationType = defaults.integrationType;
         }
 
-        public Builder setAllowAllDomains(@Nullable Boolean allowAllDomains) {
+        public Builder allowAllDomains(@Nullable Boolean allowAllDomains) {
             this.allowAllDomains = allowAllDomains;
             return this;
         }
 
-        public Builder setAllowAmpTraffic(@Nullable Boolean allowAmpTraffic) {
+        public Builder allowAmpTraffic(@Nullable Boolean allowAmpTraffic) {
             this.allowAmpTraffic = allowAmpTraffic;
             return this;
         }
 
-        public Builder setAllowedDomains(@Nullable List<String> allowedDomains) {
+        public Builder allowedDomains(@Nullable List<String> allowedDomains) {
             this.allowedDomains = allowedDomains;
             return this;
         }
 
-        public Builder setChallengeSecurityPreference(@Nullable String challengeSecurityPreference) {
+        public Builder challengeSecurityPreference(@Nullable String challengeSecurityPreference) {
             this.challengeSecurityPreference = challengeSecurityPreference;
             return this;
         }
 
-        public Builder setIntegrationType(String integrationType) {
+        public Builder integrationType(String integrationType) {
             this.integrationType = Objects.requireNonNull(integrationType);
             return this;
         }

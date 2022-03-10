@@ -106,42 +106,42 @@ public final class OsPolicyAssignmentInstanceFilterArgs extends io.pulumi.resour
     	      this.inventories = defaults.inventories;
         }
 
-        public Builder setAll(@Nullable Input<Boolean> all) {
+        public Builder all(@Nullable Input<Boolean> all) {
             this.all = all;
             return this;
         }
 
-        public Builder setAll(@Nullable Boolean all) {
+        public Builder all(@Nullable Boolean all) {
             this.all = Input.ofNullable(all);
             return this;
         }
 
-        public Builder setExclusionLabels(@Nullable Input<List<OsPolicyAssignmentInstanceFilterExclusionLabelArgs>> exclusionLabels) {
+        public Builder exclusionLabels(@Nullable Input<List<OsPolicyAssignmentInstanceFilterExclusionLabelArgs>> exclusionLabels) {
             this.exclusionLabels = exclusionLabels;
             return this;
         }
 
-        public Builder setExclusionLabels(@Nullable List<OsPolicyAssignmentInstanceFilterExclusionLabelArgs> exclusionLabels) {
+        public Builder exclusionLabels(@Nullable List<OsPolicyAssignmentInstanceFilterExclusionLabelArgs> exclusionLabels) {
             this.exclusionLabels = Input.ofNullable(exclusionLabels);
             return this;
         }
 
-        public Builder setInclusionLabels(@Nullable Input<List<OsPolicyAssignmentInstanceFilterInclusionLabelArgs>> inclusionLabels) {
+        public Builder inclusionLabels(@Nullable Input<List<OsPolicyAssignmentInstanceFilterInclusionLabelArgs>> inclusionLabels) {
             this.inclusionLabels = inclusionLabels;
             return this;
         }
 
-        public Builder setInclusionLabels(@Nullable List<OsPolicyAssignmentInstanceFilterInclusionLabelArgs> inclusionLabels) {
+        public Builder inclusionLabels(@Nullable List<OsPolicyAssignmentInstanceFilterInclusionLabelArgs> inclusionLabels) {
             this.inclusionLabels = Input.ofNullable(inclusionLabels);
             return this;
         }
 
-        public Builder setInventories(@Nullable Input<List<OsPolicyAssignmentInstanceFilterInventoryArgs>> inventories) {
+        public Builder inventories(@Nullable Input<List<OsPolicyAssignmentInstanceFilterInventoryArgs>> inventories) {
             this.inventories = inventories;
             return this;
         }
 
-        public Builder setInventories(@Nullable List<OsPolicyAssignmentInstanceFilterInventoryArgs> inventories) {
+        public Builder inventories(@Nullable List<OsPolicyAssignmentInstanceFilterInventoryArgs> inventories) {
             this.inventories = Input.ofNullable(inventories);
             return this;
         }

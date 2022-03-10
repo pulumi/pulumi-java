@@ -68,12 +68,12 @@ public final class GetMoveCollectionArgs extends io.pulumi.resources.InvokeArgs 
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setMoveCollectionName(String moveCollectionName) {
+        public Builder moveCollectionName(String moveCollectionName) {
             this.moveCollectionName = Objects.requireNonNull(moveCollectionName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

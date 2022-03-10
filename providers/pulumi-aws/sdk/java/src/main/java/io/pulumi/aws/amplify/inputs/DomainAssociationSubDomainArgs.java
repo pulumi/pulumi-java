@@ -103,42 +103,42 @@ public final class DomainAssociationSubDomainArgs extends io.pulumi.resources.Re
     	      this.verified = defaults.verified;
         }
 
-        public Builder setBranchName(Input<String> branchName) {
+        public Builder branchName(Input<String> branchName) {
             this.branchName = Objects.requireNonNull(branchName);
             return this;
         }
 
-        public Builder setBranchName(String branchName) {
+        public Builder branchName(String branchName) {
             this.branchName = Input.of(Objects.requireNonNull(branchName));
             return this;
         }
 
-        public Builder setDnsRecord(@Nullable Input<String> dnsRecord) {
+        public Builder dnsRecord(@Nullable Input<String> dnsRecord) {
             this.dnsRecord = dnsRecord;
             return this;
         }
 
-        public Builder setDnsRecord(@Nullable String dnsRecord) {
+        public Builder dnsRecord(@Nullable String dnsRecord) {
             this.dnsRecord = Input.ofNullable(dnsRecord);
             return this;
         }
 
-        public Builder setPrefix(Input<String> prefix) {
+        public Builder prefix(Input<String> prefix) {
             this.prefix = Objects.requireNonNull(prefix);
             return this;
         }
 
-        public Builder setPrefix(String prefix) {
+        public Builder prefix(String prefix) {
             this.prefix = Input.of(Objects.requireNonNull(prefix));
             return this;
         }
 
-        public Builder setVerified(@Nullable Input<Boolean> verified) {
+        public Builder verified(@Nullable Input<Boolean> verified) {
             this.verified = verified;
             return this;
         }
 
-        public Builder setVerified(@Nullable Boolean verified) {
+        public Builder verified(@Nullable Boolean verified) {
             this.verified = Input.ofNullable(verified);
             return this;
         }

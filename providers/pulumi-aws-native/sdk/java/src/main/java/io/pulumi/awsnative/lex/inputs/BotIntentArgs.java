@@ -213,132 +213,132 @@ public final class BotIntentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.slots = defaults.slots;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDialogCodeHook(@Nullable Input<BotDialogCodeHookSettingArgs> dialogCodeHook) {
+        public Builder dialogCodeHook(@Nullable Input<BotDialogCodeHookSettingArgs> dialogCodeHook) {
             this.dialogCodeHook = dialogCodeHook;
             return this;
         }
 
-        public Builder setDialogCodeHook(@Nullable BotDialogCodeHookSettingArgs dialogCodeHook) {
+        public Builder dialogCodeHook(@Nullable BotDialogCodeHookSettingArgs dialogCodeHook) {
             this.dialogCodeHook = Input.ofNullable(dialogCodeHook);
             return this;
         }
 
-        public Builder setFulfillmentCodeHook(@Nullable Input<BotFulfillmentCodeHookSettingArgs> fulfillmentCodeHook) {
+        public Builder fulfillmentCodeHook(@Nullable Input<BotFulfillmentCodeHookSettingArgs> fulfillmentCodeHook) {
             this.fulfillmentCodeHook = fulfillmentCodeHook;
             return this;
         }
 
-        public Builder setFulfillmentCodeHook(@Nullable BotFulfillmentCodeHookSettingArgs fulfillmentCodeHook) {
+        public Builder fulfillmentCodeHook(@Nullable BotFulfillmentCodeHookSettingArgs fulfillmentCodeHook) {
             this.fulfillmentCodeHook = Input.ofNullable(fulfillmentCodeHook);
             return this;
         }
 
-        public Builder setInputContexts(@Nullable Input<List<BotInputContextArgs>> inputContexts) {
+        public Builder inputContexts(@Nullable Input<List<BotInputContextArgs>> inputContexts) {
             this.inputContexts = inputContexts;
             return this;
         }
 
-        public Builder setInputContexts(@Nullable List<BotInputContextArgs> inputContexts) {
+        public Builder inputContexts(@Nullable List<BotInputContextArgs> inputContexts) {
             this.inputContexts = Input.ofNullable(inputContexts);
             return this;
         }
 
-        public Builder setIntentClosingSetting(@Nullable Input<BotIntentClosingSettingArgs> intentClosingSetting) {
+        public Builder intentClosingSetting(@Nullable Input<BotIntentClosingSettingArgs> intentClosingSetting) {
             this.intentClosingSetting = intentClosingSetting;
             return this;
         }
 
-        public Builder setIntentClosingSetting(@Nullable BotIntentClosingSettingArgs intentClosingSetting) {
+        public Builder intentClosingSetting(@Nullable BotIntentClosingSettingArgs intentClosingSetting) {
             this.intentClosingSetting = Input.ofNullable(intentClosingSetting);
             return this;
         }
 
-        public Builder setIntentConfirmationSetting(@Nullable Input<BotIntentConfirmationSettingArgs> intentConfirmationSetting) {
+        public Builder intentConfirmationSetting(@Nullable Input<BotIntentConfirmationSettingArgs> intentConfirmationSetting) {
             this.intentConfirmationSetting = intentConfirmationSetting;
             return this;
         }
 
-        public Builder setIntentConfirmationSetting(@Nullable BotIntentConfirmationSettingArgs intentConfirmationSetting) {
+        public Builder intentConfirmationSetting(@Nullable BotIntentConfirmationSettingArgs intentConfirmationSetting) {
             this.intentConfirmationSetting = Input.ofNullable(intentConfirmationSetting);
             return this;
         }
 
-        public Builder setKendraConfiguration(@Nullable Input<BotKendraConfigurationArgs> kendraConfiguration) {
+        public Builder kendraConfiguration(@Nullable Input<BotKendraConfigurationArgs> kendraConfiguration) {
             this.kendraConfiguration = kendraConfiguration;
             return this;
         }
 
-        public Builder setKendraConfiguration(@Nullable BotKendraConfigurationArgs kendraConfiguration) {
+        public Builder kendraConfiguration(@Nullable BotKendraConfigurationArgs kendraConfiguration) {
             this.kendraConfiguration = Input.ofNullable(kendraConfiguration);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setOutputContexts(@Nullable Input<List<BotOutputContextArgs>> outputContexts) {
+        public Builder outputContexts(@Nullable Input<List<BotOutputContextArgs>> outputContexts) {
             this.outputContexts = outputContexts;
             return this;
         }
 
-        public Builder setOutputContexts(@Nullable List<BotOutputContextArgs> outputContexts) {
+        public Builder outputContexts(@Nullable List<BotOutputContextArgs> outputContexts) {
             this.outputContexts = Input.ofNullable(outputContexts);
             return this;
         }
 
-        public Builder setParentIntentSignature(@Nullable Input<String> parentIntentSignature) {
+        public Builder parentIntentSignature(@Nullable Input<String> parentIntentSignature) {
             this.parentIntentSignature = parentIntentSignature;
             return this;
         }
 
-        public Builder setParentIntentSignature(@Nullable String parentIntentSignature) {
+        public Builder parentIntentSignature(@Nullable String parentIntentSignature) {
             this.parentIntentSignature = Input.ofNullable(parentIntentSignature);
             return this;
         }
 
-        public Builder setSampleUtterances(@Nullable Input<List<BotSampleUtteranceArgs>> sampleUtterances) {
+        public Builder sampleUtterances(@Nullable Input<List<BotSampleUtteranceArgs>> sampleUtterances) {
             this.sampleUtterances = sampleUtterances;
             return this;
         }
 
-        public Builder setSampleUtterances(@Nullable List<BotSampleUtteranceArgs> sampleUtterances) {
+        public Builder sampleUtterances(@Nullable List<BotSampleUtteranceArgs> sampleUtterances) {
             this.sampleUtterances = Input.ofNullable(sampleUtterances);
             return this;
         }
 
-        public Builder setSlotPriorities(@Nullable Input<List<BotSlotPriorityArgs>> slotPriorities) {
+        public Builder slotPriorities(@Nullable Input<List<BotSlotPriorityArgs>> slotPriorities) {
             this.slotPriorities = slotPriorities;
             return this;
         }
 
-        public Builder setSlotPriorities(@Nullable List<BotSlotPriorityArgs> slotPriorities) {
+        public Builder slotPriorities(@Nullable List<BotSlotPriorityArgs> slotPriorities) {
             this.slotPriorities = Input.ofNullable(slotPriorities);
             return this;
         }
 
-        public Builder setSlots(@Nullable Input<List<BotSlotArgs>> slots) {
+        public Builder slots(@Nullable Input<List<BotSlotArgs>> slots) {
             this.slots = slots;
             return this;
         }
 
-        public Builder setSlots(@Nullable List<BotSlotArgs> slots) {
+        public Builder slots(@Nullable List<BotSlotArgs> slots) {
             this.slots = Input.ofNullable(slots);
             return this;
         }

@@ -156,72 +156,72 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
     	      this.selfLink = defaults.selfLink;
         }
 
-        public Builder setAdaptiveProtectionConfig(@Nullable Input<SecurityPolicyAdaptiveProtectionConfigGetArgs> adaptiveProtectionConfig) {
+        public Builder adaptiveProtectionConfig(@Nullable Input<SecurityPolicyAdaptiveProtectionConfigGetArgs> adaptiveProtectionConfig) {
             this.adaptiveProtectionConfig = adaptiveProtectionConfig;
             return this;
         }
 
-        public Builder setAdaptiveProtectionConfig(@Nullable SecurityPolicyAdaptiveProtectionConfigGetArgs adaptiveProtectionConfig) {
+        public Builder adaptiveProtectionConfig(@Nullable SecurityPolicyAdaptiveProtectionConfigGetArgs adaptiveProtectionConfig) {
             this.adaptiveProtectionConfig = Input.ofNullable(adaptiveProtectionConfig);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFingerprint(@Nullable Input<String> fingerprint) {
+        public Builder fingerprint(@Nullable Input<String> fingerprint) {
             this.fingerprint = fingerprint;
             return this;
         }
 
-        public Builder setFingerprint(@Nullable String fingerprint) {
+        public Builder fingerprint(@Nullable String fingerprint) {
             this.fingerprint = Input.ofNullable(fingerprint);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRules(@Nullable Input<List<SecurityPolicyRuleGetArgs>> rules) {
+        public Builder rules(@Nullable Input<List<SecurityPolicyRuleGetArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setRules(@Nullable List<SecurityPolicyRuleGetArgs> rules) {
+        public Builder rules(@Nullable List<SecurityPolicyRuleGetArgs> rules) {
             this.rules = Input.ofNullable(rules);
             return this;
         }
 
-        public Builder setSelfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Input<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
-        public Builder setSelfLink(@Nullable String selfLink) {
+        public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Input.ofNullable(selfLink);
             return this;
         }

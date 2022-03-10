@@ -75,12 +75,12 @@ public final class GetPublicKeyArgs extends io.pulumi.resources.InvokeArgs {
     	      this.keyId = defaults.keyId;
         }
 
-        public Builder setGrantTokens(@Nullable List<String> grantTokens) {
+        public Builder grantTokens(@Nullable List<String> grantTokens) {
             this.grantTokens = grantTokens;
             return this;
         }
 
-        public Builder setKeyId(String keyId) {
+        public Builder keyId(String keyId) {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }

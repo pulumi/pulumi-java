@@ -85,17 +85,17 @@ public final class VirtualNodeSpecListenerTls {
     	      this.validation = defaults.validation;
         }
 
-        public Builder setCertificate(VirtualNodeSpecListenerTlsCertificate certificate) {
+        public Builder certificate(VirtualNodeSpecListenerTlsCertificate certificate) {
             this.certificate = Objects.requireNonNull(certificate);
             return this;
         }
 
-        public Builder setMode(String mode) {
+        public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
-        public Builder setValidation(@Nullable VirtualNodeSpecListenerTlsValidation validation) {
+        public Builder validation(@Nullable VirtualNodeSpecListenerTlsValidation validation) {
             this.validation = validation;
             return this;
         }

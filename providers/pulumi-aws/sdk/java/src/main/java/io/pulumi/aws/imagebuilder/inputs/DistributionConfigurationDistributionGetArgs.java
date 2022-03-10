@@ -105,42 +105,42 @@ public final class DistributionConfigurationDistributionGetArgs extends io.pulum
     	      this.region = defaults.region;
         }
 
-        public Builder setAmiDistributionConfiguration(@Nullable Input<DistributionConfigurationDistributionAmiDistributionConfigurationGetArgs> amiDistributionConfiguration) {
+        public Builder amiDistributionConfiguration(@Nullable Input<DistributionConfigurationDistributionAmiDistributionConfigurationGetArgs> amiDistributionConfiguration) {
             this.amiDistributionConfiguration = amiDistributionConfiguration;
             return this;
         }
 
-        public Builder setAmiDistributionConfiguration(@Nullable DistributionConfigurationDistributionAmiDistributionConfigurationGetArgs amiDistributionConfiguration) {
+        public Builder amiDistributionConfiguration(@Nullable DistributionConfigurationDistributionAmiDistributionConfigurationGetArgs amiDistributionConfiguration) {
             this.amiDistributionConfiguration = Input.ofNullable(amiDistributionConfiguration);
             return this;
         }
 
-        public Builder setContainerDistributionConfiguration(@Nullable Input<DistributionConfigurationDistributionContainerDistributionConfigurationGetArgs> containerDistributionConfiguration) {
+        public Builder containerDistributionConfiguration(@Nullable Input<DistributionConfigurationDistributionContainerDistributionConfigurationGetArgs> containerDistributionConfiguration) {
             this.containerDistributionConfiguration = containerDistributionConfiguration;
             return this;
         }
 
-        public Builder setContainerDistributionConfiguration(@Nullable DistributionConfigurationDistributionContainerDistributionConfigurationGetArgs containerDistributionConfiguration) {
+        public Builder containerDistributionConfiguration(@Nullable DistributionConfigurationDistributionContainerDistributionConfigurationGetArgs containerDistributionConfiguration) {
             this.containerDistributionConfiguration = Input.ofNullable(containerDistributionConfiguration);
             return this;
         }
 
-        public Builder setLicenseConfigurationArns(@Nullable Input<List<String>> licenseConfigurationArns) {
+        public Builder licenseConfigurationArns(@Nullable Input<List<String>> licenseConfigurationArns) {
             this.licenseConfigurationArns = licenseConfigurationArns;
             return this;
         }
 
-        public Builder setLicenseConfigurationArns(@Nullable List<String> licenseConfigurationArns) {
+        public Builder licenseConfigurationArns(@Nullable List<String> licenseConfigurationArns) {
             this.licenseConfigurationArns = Input.ofNullable(licenseConfigurationArns);
             return this;
         }
 
-        public Builder setRegion(Input<String> region) {
+        public Builder region(Input<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Input.of(Objects.requireNonNull(region));
             return this;
         }

@@ -170,82 +170,82 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setDeviceMapping(@Nullable Input<IotMappingPropertiesArgs> deviceMapping) {
+        public Builder deviceMapping(@Nullable Input<IotMappingPropertiesArgs> deviceMapping) {
             this.deviceMapping = deviceMapping;
             return this;
         }
 
-        public Builder setDeviceMapping(@Nullable IotMappingPropertiesArgs deviceMapping) {
+        public Builder deviceMapping(@Nullable IotMappingPropertiesArgs deviceMapping) {
             this.deviceMapping = Input.ofNullable(deviceMapping);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<ServiceManagedIdentityIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<ServiceManagedIdentityIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable ServiceManagedIdentityIdentityArgs identity) {
+        public Builder identity(@Nullable ServiceManagedIdentityIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setIngestionEndpointConfiguration(@Nullable Input<IotEventHubIngestionEndpointConfigurationArgs> ingestionEndpointConfiguration) {
+        public Builder ingestionEndpointConfiguration(@Nullable Input<IotEventHubIngestionEndpointConfigurationArgs> ingestionEndpointConfiguration) {
             this.ingestionEndpointConfiguration = ingestionEndpointConfiguration;
             return this;
         }
 
-        public Builder setIngestionEndpointConfiguration(@Nullable IotEventHubIngestionEndpointConfigurationArgs ingestionEndpointConfiguration) {
+        public Builder ingestionEndpointConfiguration(@Nullable IotEventHubIngestionEndpointConfigurationArgs ingestionEndpointConfiguration) {
             this.ingestionEndpointConfiguration = Input.ofNullable(ingestionEndpointConfiguration);
             return this;
         }
 
-        public Builder setIotConnectorName(@Nullable Input<String> iotConnectorName) {
+        public Builder iotConnectorName(@Nullable Input<String> iotConnectorName) {
             this.iotConnectorName = iotConnectorName;
             return this;
         }
 
-        public Builder setIotConnectorName(@Nullable String iotConnectorName) {
+        public Builder iotConnectorName(@Nullable String iotConnectorName) {
             this.iotConnectorName = Input.ofNullable(iotConnectorName);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

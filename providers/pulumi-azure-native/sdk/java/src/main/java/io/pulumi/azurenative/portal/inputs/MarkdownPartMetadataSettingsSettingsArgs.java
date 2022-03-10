@@ -123,52 +123,52 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends io.pulumi.re
     	      this.title = defaults.title;
         }
 
-        public Builder setContent(@Nullable Input<String> content) {
+        public Builder content(@Nullable Input<String> content) {
             this.content = content;
             return this;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = Input.ofNullable(content);
             return this;
         }
 
-        public Builder setMarkdownSource(@Nullable Input<Integer> markdownSource) {
+        public Builder markdownSource(@Nullable Input<Integer> markdownSource) {
             this.markdownSource = markdownSource;
             return this;
         }
 
-        public Builder setMarkdownSource(@Nullable Integer markdownSource) {
+        public Builder markdownSource(@Nullable Integer markdownSource) {
             this.markdownSource = Input.ofNullable(markdownSource);
             return this;
         }
 
-        public Builder setMarkdownUri(@Nullable Input<String> markdownUri) {
+        public Builder markdownUri(@Nullable Input<String> markdownUri) {
             this.markdownUri = markdownUri;
             return this;
         }
 
-        public Builder setMarkdownUri(@Nullable String markdownUri) {
+        public Builder markdownUri(@Nullable String markdownUri) {
             this.markdownUri = Input.ofNullable(markdownUri);
             return this;
         }
 
-        public Builder setSubtitle(@Nullable Input<String> subtitle) {
+        public Builder subtitle(@Nullable Input<String> subtitle) {
             this.subtitle = subtitle;
             return this;
         }
 
-        public Builder setSubtitle(@Nullable String subtitle) {
+        public Builder subtitle(@Nullable String subtitle) {
             this.subtitle = Input.ofNullable(subtitle);
             return this;
         }
 
-        public Builder setTitle(@Nullable Input<String> title) {
+        public Builder title(@Nullable Input<String> title) {
             this.title = title;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = Input.ofNullable(title);
             return this;
         }

@@ -121,52 +121,52 @@ public final class GlobalNetworkEndpointState extends io.pulumi.resources.Resour
     	      this.project = defaults.project;
         }
 
-        public Builder setFqdn(@Nullable Input<String> fqdn) {
+        public Builder fqdn(@Nullable Input<String> fqdn) {
             this.fqdn = fqdn;
             return this;
         }
 
-        public Builder setFqdn(@Nullable String fqdn) {
+        public Builder fqdn(@Nullable String fqdn) {
             this.fqdn = Input.ofNullable(fqdn);
             return this;
         }
 
-        public Builder setGlobalNetworkEndpointGroup(@Nullable Input<String> globalNetworkEndpointGroup) {
+        public Builder globalNetworkEndpointGroup(@Nullable Input<String> globalNetworkEndpointGroup) {
             this.globalNetworkEndpointGroup = globalNetworkEndpointGroup;
             return this;
         }
 
-        public Builder setGlobalNetworkEndpointGroup(@Nullable String globalNetworkEndpointGroup) {
+        public Builder globalNetworkEndpointGroup(@Nullable String globalNetworkEndpointGroup) {
             this.globalNetworkEndpointGroup = Input.ofNullable(globalNetworkEndpointGroup);
             return this;
         }
 
-        public Builder setIpAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Input<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Input.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Input<Integer> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

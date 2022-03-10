@@ -107,42 +107,42 @@ public final class RecurrentScheduleArgs extends io.pulumi.resources.ResourceArg
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setDays(Input<List<String>> days) {
+        public Builder days(Input<List<String>> days) {
             this.days = Objects.requireNonNull(days);
             return this;
         }
 
-        public Builder setDays(List<String> days) {
+        public Builder days(List<String> days) {
             this.days = Input.of(Objects.requireNonNull(days));
             return this;
         }
 
-        public Builder setHours(Input<List<Integer>> hours) {
+        public Builder hours(Input<List<Integer>> hours) {
             this.hours = Objects.requireNonNull(hours);
             return this;
         }
 
-        public Builder setHours(List<Integer> hours) {
+        public Builder hours(List<Integer> hours) {
             this.hours = Input.of(Objects.requireNonNull(hours));
             return this;
         }
 
-        public Builder setMinutes(Input<List<Integer>> minutes) {
+        public Builder minutes(Input<List<Integer>> minutes) {
             this.minutes = Objects.requireNonNull(minutes);
             return this;
         }
 
-        public Builder setMinutes(List<Integer> minutes) {
+        public Builder minutes(List<Integer> minutes) {
             this.minutes = Input.of(Objects.requireNonNull(minutes));
             return this;
         }
 
-        public Builder setTimeZone(Input<String> timeZone) {
+        public Builder timeZone(Input<String> timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
 
-        public Builder setTimeZone(String timeZone) {
+        public Builder timeZone(String timeZone) {
             this.timeZone = Input.of(Objects.requireNonNull(timeZone));
             return this;
         }

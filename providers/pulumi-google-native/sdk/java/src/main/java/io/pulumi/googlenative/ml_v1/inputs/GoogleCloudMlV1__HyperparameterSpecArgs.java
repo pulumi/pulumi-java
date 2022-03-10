@@ -192,92 +192,92 @@ public final class GoogleCloudMlV1__HyperparameterSpecArgs extends io.pulumi.res
     	      this.resumePreviousJobId = defaults.resumePreviousJobId;
         }
 
-        public Builder setAlgorithm(@Nullable Input<GoogleCloudMlV1__HyperparameterSpecAlgorithm> algorithm) {
+        public Builder algorithm(@Nullable Input<GoogleCloudMlV1__HyperparameterSpecAlgorithm> algorithm) {
             this.algorithm = algorithm;
             return this;
         }
 
-        public Builder setAlgorithm(@Nullable GoogleCloudMlV1__HyperparameterSpecAlgorithm algorithm) {
+        public Builder algorithm(@Nullable GoogleCloudMlV1__HyperparameterSpecAlgorithm algorithm) {
             this.algorithm = Input.ofNullable(algorithm);
             return this;
         }
 
-        public Builder setEnableTrialEarlyStopping(@Nullable Input<Boolean> enableTrialEarlyStopping) {
+        public Builder enableTrialEarlyStopping(@Nullable Input<Boolean> enableTrialEarlyStopping) {
             this.enableTrialEarlyStopping = enableTrialEarlyStopping;
             return this;
         }
 
-        public Builder setEnableTrialEarlyStopping(@Nullable Boolean enableTrialEarlyStopping) {
+        public Builder enableTrialEarlyStopping(@Nullable Boolean enableTrialEarlyStopping) {
             this.enableTrialEarlyStopping = Input.ofNullable(enableTrialEarlyStopping);
             return this;
         }
 
-        public Builder setGoal(Input<GoogleCloudMlV1__HyperparameterSpecGoal> goal) {
+        public Builder goal(Input<GoogleCloudMlV1__HyperparameterSpecGoal> goal) {
             this.goal = Objects.requireNonNull(goal);
             return this;
         }
 
-        public Builder setGoal(GoogleCloudMlV1__HyperparameterSpecGoal goal) {
+        public Builder goal(GoogleCloudMlV1__HyperparameterSpecGoal goal) {
             this.goal = Input.of(Objects.requireNonNull(goal));
             return this;
         }
 
-        public Builder setHyperparameterMetricTag(@Nullable Input<String> hyperparameterMetricTag) {
+        public Builder hyperparameterMetricTag(@Nullable Input<String> hyperparameterMetricTag) {
             this.hyperparameterMetricTag = hyperparameterMetricTag;
             return this;
         }
 
-        public Builder setHyperparameterMetricTag(@Nullable String hyperparameterMetricTag) {
+        public Builder hyperparameterMetricTag(@Nullable String hyperparameterMetricTag) {
             this.hyperparameterMetricTag = Input.ofNullable(hyperparameterMetricTag);
             return this;
         }
 
-        public Builder setMaxFailedTrials(@Nullable Input<Integer> maxFailedTrials) {
+        public Builder maxFailedTrials(@Nullable Input<Integer> maxFailedTrials) {
             this.maxFailedTrials = maxFailedTrials;
             return this;
         }
 
-        public Builder setMaxFailedTrials(@Nullable Integer maxFailedTrials) {
+        public Builder maxFailedTrials(@Nullable Integer maxFailedTrials) {
             this.maxFailedTrials = Input.ofNullable(maxFailedTrials);
             return this;
         }
 
-        public Builder setMaxParallelTrials(@Nullable Input<Integer> maxParallelTrials) {
+        public Builder maxParallelTrials(@Nullable Input<Integer> maxParallelTrials) {
             this.maxParallelTrials = maxParallelTrials;
             return this;
         }
 
-        public Builder setMaxParallelTrials(@Nullable Integer maxParallelTrials) {
+        public Builder maxParallelTrials(@Nullable Integer maxParallelTrials) {
             this.maxParallelTrials = Input.ofNullable(maxParallelTrials);
             return this;
         }
 
-        public Builder setMaxTrials(@Nullable Input<Integer> maxTrials) {
+        public Builder maxTrials(@Nullable Input<Integer> maxTrials) {
             this.maxTrials = maxTrials;
             return this;
         }
 
-        public Builder setMaxTrials(@Nullable Integer maxTrials) {
+        public Builder maxTrials(@Nullable Integer maxTrials) {
             this.maxTrials = Input.ofNullable(maxTrials);
             return this;
         }
 
-        public Builder setParams(Input<List<GoogleCloudMlV1__ParameterSpecArgs>> params) {
+        public Builder params(Input<List<GoogleCloudMlV1__ParameterSpecArgs>> params) {
             this.params = Objects.requireNonNull(params);
             return this;
         }
 
-        public Builder setParams(List<GoogleCloudMlV1__ParameterSpecArgs> params) {
+        public Builder params(List<GoogleCloudMlV1__ParameterSpecArgs> params) {
             this.params = Input.of(Objects.requireNonNull(params));
             return this;
         }
 
-        public Builder setResumePreviousJobId(@Nullable Input<String> resumePreviousJobId) {
+        public Builder resumePreviousJobId(@Nullable Input<String> resumePreviousJobId) {
             this.resumePreviousJobId = resumePreviousJobId;
             return this;
         }
 
-        public Builder setResumePreviousJobId(@Nullable String resumePreviousJobId) {
+        public Builder resumePreviousJobId(@Nullable String resumePreviousJobId) {
             this.resumePreviousJobId = Input.ofNullable(resumePreviousJobId);
             return this;
         }

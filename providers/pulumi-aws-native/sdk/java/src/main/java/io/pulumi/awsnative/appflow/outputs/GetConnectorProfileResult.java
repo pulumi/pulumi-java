@@ -84,17 +84,17 @@ public final class GetConnectorProfileResult {
     	      this.credentialsArn = defaults.credentialsArn;
         }
 
-        public Builder setConnectionMode(@Nullable ConnectorProfileConnectionMode connectionMode) {
+        public Builder connectionMode(@Nullable ConnectorProfileConnectionMode connectionMode) {
             this.connectionMode = connectionMode;
             return this;
         }
 
-        public Builder setConnectorProfileArn(@Nullable String connectorProfileArn) {
+        public Builder connectorProfileArn(@Nullable String connectorProfileArn) {
             this.connectorProfileArn = connectorProfileArn;
             return this;
         }
 
-        public Builder setCredentialsArn(@Nullable String credentialsArn) {
+        public Builder credentialsArn(@Nullable String credentialsArn) {
             this.credentialsArn = credentialsArn;
             return this;
         }

@@ -125,8 +125,8 @@ public class LimitRange extends io.pulumi.resources.CustomResource {
     private static LimitRangeArgs makeArgs(@Nullable LimitRangeArgs args) {
         var builder = args == null ? LimitRangeArgs.builder() : LimitRangeArgs.builder(args);
         return builder
-            .setApiVersion("v1")
-            .setKind("LimitRange")
+            .apiVersion("v1")
+            .kind("LimitRange")
             .build();
     }
 

@@ -50,7 +50,7 @@ public final class MeshSpec {
     	      this.egressFilter = defaults.egressFilter;
         }
 
-        public Builder setEgressFilter(@Nullable MeshSpecEgressFilter egressFilter) {
+        public Builder egressFilter(@Nullable MeshSpecEgressFilter egressFilter) {
             this.egressFilter = egressFilter;
             return this;
         }

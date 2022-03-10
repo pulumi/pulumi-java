@@ -49,7 +49,7 @@ public final class ContextResponse {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setRules(List<ContextRuleResponse> rules) {
+        public Builder rules(List<ContextRuleResponse> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }

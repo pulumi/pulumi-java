@@ -126,8 +126,8 @@ public class HorizontalPodAutoscalerList extends io.pulumi.resources.CustomResou
     private static HorizontalPodAutoscalerListArgs makeArgs(HorizontalPodAutoscalerListArgs args) {
         var builder = args == null ? HorizontalPodAutoscalerListArgs.builder() : HorizontalPodAutoscalerListArgs.builder(args);
         return builder
-            .setApiVersion("autoscaling/v2")
-            .setKind("HorizontalPodAutoscalerList")
+            .apiVersion("autoscaling/v2")
+            .kind("HorizontalPodAutoscalerList")
             .build();
     }
 

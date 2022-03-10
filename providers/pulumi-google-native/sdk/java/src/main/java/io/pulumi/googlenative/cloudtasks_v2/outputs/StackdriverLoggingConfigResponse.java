@@ -48,7 +48,7 @@ public final class StackdriverLoggingConfigResponse {
     	      this.samplingRatio = defaults.samplingRatio;
         }
 
-        public Builder setSamplingRatio(Double samplingRatio) {
+        public Builder samplingRatio(Double samplingRatio) {
             this.samplingRatio = Objects.requireNonNull(samplingRatio);
             return this;
         }

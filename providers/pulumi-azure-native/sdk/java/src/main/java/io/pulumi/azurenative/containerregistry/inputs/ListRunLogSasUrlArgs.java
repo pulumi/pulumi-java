@@ -84,17 +84,17 @@ public final class ListRunLogSasUrlArgs extends io.pulumi.resources.InvokeArgs {
     	      this.runId = defaults.runId;
         }
 
-        public Builder setRegistryName(String registryName) {
+        public Builder registryName(String registryName) {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setRunId(String runId) {
+        public Builder runId(String runId) {
             this.runId = Objects.requireNonNull(runId);
             return this;
         }

@@ -205,102 +205,102 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
     	      this.tags = defaults.tags;
         }
 
-        public Builder setBandwidthInGbps(@Nullable Input<Integer> bandwidthInGbps) {
+        public Builder bandwidthInGbps(@Nullable Input<Integer> bandwidthInGbps) {
             this.bandwidthInGbps = bandwidthInGbps;
             return this;
         }
 
-        public Builder setBandwidthInGbps(@Nullable Integer bandwidthInGbps) {
+        public Builder bandwidthInGbps(@Nullable Integer bandwidthInGbps) {
             this.bandwidthInGbps = Input.ofNullable(bandwidthInGbps);
             return this;
         }
 
-        public Builder setEncapsulation(@Nullable Input<Either<String,ExpressRoutePortsEncapsulation>> encapsulation) {
+        public Builder encapsulation(@Nullable Input<Either<String,ExpressRoutePortsEncapsulation>> encapsulation) {
             this.encapsulation = encapsulation;
             return this;
         }
 
-        public Builder setEncapsulation(@Nullable Either<String,ExpressRoutePortsEncapsulation> encapsulation) {
+        public Builder encapsulation(@Nullable Either<String,ExpressRoutePortsEncapsulation> encapsulation) {
             this.encapsulation = Input.ofNullable(encapsulation);
             return this;
         }
 
-        public Builder setExpressRoutePortName(@Nullable Input<String> expressRoutePortName) {
+        public Builder expressRoutePortName(@Nullable Input<String> expressRoutePortName) {
             this.expressRoutePortName = expressRoutePortName;
             return this;
         }
 
-        public Builder setExpressRoutePortName(@Nullable String expressRoutePortName) {
+        public Builder expressRoutePortName(@Nullable String expressRoutePortName) {
             this.expressRoutePortName = Input.ofNullable(expressRoutePortName);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<ManagedServiceIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<ManagedServiceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable ManagedServiceIdentityArgs identity) {
+        public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setLinks(@Nullable Input<List<ExpressRouteLinkArgs>> links) {
+        public Builder links(@Nullable Input<List<ExpressRouteLinkArgs>> links) {
             this.links = links;
             return this;
         }
 
-        public Builder setLinks(@Nullable List<ExpressRouteLinkArgs> links) {
+        public Builder links(@Nullable List<ExpressRouteLinkArgs> links) {
             this.links = Input.ofNullable(links);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPeeringLocation(@Nullable Input<String> peeringLocation) {
+        public Builder peeringLocation(@Nullable Input<String> peeringLocation) {
             this.peeringLocation = peeringLocation;
             return this;
         }
 
-        public Builder setPeeringLocation(@Nullable String peeringLocation) {
+        public Builder peeringLocation(@Nullable String peeringLocation) {
             this.peeringLocation = Input.ofNullable(peeringLocation);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

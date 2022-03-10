@@ -100,22 +100,22 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettingsResponse {
     	      this.synthesizeSpeechConfigs = defaults.synthesizeSpeechConfigs;
         }
 
-        public Builder setEnableTextToSpeech(Boolean enableTextToSpeech) {
+        public Builder enableTextToSpeech(Boolean enableTextToSpeech) {
             this.enableTextToSpeech = Objects.requireNonNull(enableTextToSpeech);
             return this;
         }
 
-        public Builder setOutputAudioEncoding(String outputAudioEncoding) {
+        public Builder outputAudioEncoding(String outputAudioEncoding) {
             this.outputAudioEncoding = Objects.requireNonNull(outputAudioEncoding);
             return this;
         }
 
-        public Builder setSampleRateHertz(Integer sampleRateHertz) {
+        public Builder sampleRateHertz(Integer sampleRateHertz) {
             this.sampleRateHertz = Objects.requireNonNull(sampleRateHertz);
             return this;
         }
 
-        public Builder setSynthesizeSpeechConfigs(Map<String,String> synthesizeSpeechConfigs) {
+        public Builder synthesizeSpeechConfigs(Map<String,String> synthesizeSpeechConfigs) {
             this.synthesizeSpeechConfigs = Objects.requireNonNull(synthesizeSpeechConfigs);
             return this;
         }

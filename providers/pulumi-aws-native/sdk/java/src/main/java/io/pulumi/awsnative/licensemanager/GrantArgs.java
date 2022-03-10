@@ -123,62 +123,62 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder setAllowedOperations(@Nullable Input<List<String>> allowedOperations) {
+        public Builder allowedOperations(@Nullable Input<List<String>> allowedOperations) {
             this.allowedOperations = allowedOperations;
             return this;
         }
 
-        public Builder setAllowedOperations(@Nullable List<String> allowedOperations) {
+        public Builder allowedOperations(@Nullable List<String> allowedOperations) {
             this.allowedOperations = Input.ofNullable(allowedOperations);
             return this;
         }
 
-        public Builder setGrantName(@Nullable Input<String> grantName) {
+        public Builder grantName(@Nullable Input<String> grantName) {
             this.grantName = grantName;
             return this;
         }
 
-        public Builder setGrantName(@Nullable String grantName) {
+        public Builder grantName(@Nullable String grantName) {
             this.grantName = Input.ofNullable(grantName);
             return this;
         }
 
-        public Builder setHomeRegion(@Nullable Input<String> homeRegion) {
+        public Builder homeRegion(@Nullable Input<String> homeRegion) {
             this.homeRegion = homeRegion;
             return this;
         }
 
-        public Builder setHomeRegion(@Nullable String homeRegion) {
+        public Builder homeRegion(@Nullable String homeRegion) {
             this.homeRegion = Input.ofNullable(homeRegion);
             return this;
         }
 
-        public Builder setLicenseArn(@Nullable Input<String> licenseArn) {
+        public Builder licenseArn(@Nullable Input<String> licenseArn) {
             this.licenseArn = licenseArn;
             return this;
         }
 
-        public Builder setLicenseArn(@Nullable String licenseArn) {
+        public Builder licenseArn(@Nullable String licenseArn) {
             this.licenseArn = Input.ofNullable(licenseArn);
             return this;
         }
 
-        public Builder setPrincipals(@Nullable Input<List<String>> principals) {
+        public Builder principals(@Nullable Input<List<String>> principals) {
             this.principals = principals;
             return this;
         }
 
-        public Builder setPrincipals(@Nullable List<String> principals) {
+        public Builder principals(@Nullable List<String> principals) {
             this.principals = Input.ofNullable(principals);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }

@@ -65,12 +65,12 @@ public final class WorkloadMetadataConfigResponse {
     	      this.nodeMetadata = defaults.nodeMetadata;
         }
 
-        public Builder setMode(String mode) {
+        public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
-        public Builder setNodeMetadata(String nodeMetadata) {
+        public Builder nodeMetadata(String nodeMetadata) {
             this.nodeMetadata = Objects.requireNonNull(nodeMetadata);
             return this;
         }

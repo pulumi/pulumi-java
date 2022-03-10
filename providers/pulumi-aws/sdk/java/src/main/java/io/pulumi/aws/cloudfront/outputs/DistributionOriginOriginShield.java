@@ -66,12 +66,12 @@ public final class DistributionOriginOriginShield {
     	      this.originShieldRegion = defaults.originShieldRegion;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setOriginShieldRegion(String originShieldRegion) {
+        public Builder originShieldRegion(String originShieldRegion) {
             this.originShieldRegion = Objects.requireNonNull(originShieldRegion);
             return this;
         }

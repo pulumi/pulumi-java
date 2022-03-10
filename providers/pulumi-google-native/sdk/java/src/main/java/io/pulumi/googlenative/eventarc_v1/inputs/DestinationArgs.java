@@ -92,32 +92,32 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.gke = defaults.gke;
         }
 
-        public Builder setCloudFunction(@Nullable Input<String> cloudFunction) {
+        public Builder cloudFunction(@Nullable Input<String> cloudFunction) {
             this.cloudFunction = cloudFunction;
             return this;
         }
 
-        public Builder setCloudFunction(@Nullable String cloudFunction) {
+        public Builder cloudFunction(@Nullable String cloudFunction) {
             this.cloudFunction = Input.ofNullable(cloudFunction);
             return this;
         }
 
-        public Builder setCloudRun(@Nullable Input<CloudRunArgs> cloudRun) {
+        public Builder cloudRun(@Nullable Input<CloudRunArgs> cloudRun) {
             this.cloudRun = cloudRun;
             return this;
         }
 
-        public Builder setCloudRun(@Nullable CloudRunArgs cloudRun) {
+        public Builder cloudRun(@Nullable CloudRunArgs cloudRun) {
             this.cloudRun = Input.ofNullable(cloudRun);
             return this;
         }
 
-        public Builder setGke(@Nullable Input<GKEArgs> gke) {
+        public Builder gke(@Nullable Input<GKEArgs> gke) {
             this.gke = gke;
             return this;
         }
 
-        public Builder setGke(@Nullable GKEArgs gke) {
+        public Builder gke(@Nullable GKEArgs gke) {
             this.gke = Input.ofNullable(gke);
             return this;
         }

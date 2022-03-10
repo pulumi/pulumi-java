@@ -68,12 +68,12 @@ public final class VpnLinkBgpSettingsResponse {
     	      this.bgpPeeringAddress = defaults.bgpPeeringAddress;
         }
 
-        public Builder setAsn(@Nullable Double asn) {
+        public Builder asn(@Nullable Double asn) {
             this.asn = asn;
             return this;
         }
 
-        public Builder setBgpPeeringAddress(@Nullable String bgpPeeringAddress) {
+        public Builder bgpPeeringAddress(@Nullable String bgpPeeringAddress) {
             this.bgpPeeringAddress = bgpPeeringAddress;
             return this;
         }

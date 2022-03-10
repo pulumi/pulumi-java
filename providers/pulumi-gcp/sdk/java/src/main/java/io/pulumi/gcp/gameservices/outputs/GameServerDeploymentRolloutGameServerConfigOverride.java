@@ -70,12 +70,12 @@ public final class GameServerDeploymentRolloutGameServerConfigOverride {
     	      this.realmsSelector = defaults.realmsSelector;
         }
 
-        public Builder setConfigVersion(@Nullable String configVersion) {
+        public Builder configVersion(@Nullable String configVersion) {
             this.configVersion = configVersion;
             return this;
         }
 
-        public Builder setRealmsSelector(@Nullable GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector realmsSelector) {
+        public Builder realmsSelector(@Nullable GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector realmsSelector) {
             this.realmsSelector = realmsSelector;
             return this;
         }

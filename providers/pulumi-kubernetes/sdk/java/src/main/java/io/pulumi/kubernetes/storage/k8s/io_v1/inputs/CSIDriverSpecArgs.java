@@ -188,72 +188,72 @@ public final class CSIDriverSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumeLifecycleModes = defaults.volumeLifecycleModes;
         }
 
-        public Builder setAttachRequired(@Nullable Input<Boolean> attachRequired) {
+        public Builder attachRequired(@Nullable Input<Boolean> attachRequired) {
             this.attachRequired = attachRequired;
             return this;
         }
 
-        public Builder setAttachRequired(@Nullable Boolean attachRequired) {
+        public Builder attachRequired(@Nullable Boolean attachRequired) {
             this.attachRequired = Input.ofNullable(attachRequired);
             return this;
         }
 
-        public Builder setFsGroupPolicy(@Nullable Input<String> fsGroupPolicy) {
+        public Builder fsGroupPolicy(@Nullable Input<String> fsGroupPolicy) {
             this.fsGroupPolicy = fsGroupPolicy;
             return this;
         }
 
-        public Builder setFsGroupPolicy(@Nullable String fsGroupPolicy) {
+        public Builder fsGroupPolicy(@Nullable String fsGroupPolicy) {
             this.fsGroupPolicy = Input.ofNullable(fsGroupPolicy);
             return this;
         }
 
-        public Builder setPodInfoOnMount(@Nullable Input<Boolean> podInfoOnMount) {
+        public Builder podInfoOnMount(@Nullable Input<Boolean> podInfoOnMount) {
             this.podInfoOnMount = podInfoOnMount;
             return this;
         }
 
-        public Builder setPodInfoOnMount(@Nullable Boolean podInfoOnMount) {
+        public Builder podInfoOnMount(@Nullable Boolean podInfoOnMount) {
             this.podInfoOnMount = Input.ofNullable(podInfoOnMount);
             return this;
         }
 
-        public Builder setRequiresRepublish(@Nullable Input<Boolean> requiresRepublish) {
+        public Builder requiresRepublish(@Nullable Input<Boolean> requiresRepublish) {
             this.requiresRepublish = requiresRepublish;
             return this;
         }
 
-        public Builder setRequiresRepublish(@Nullable Boolean requiresRepublish) {
+        public Builder requiresRepublish(@Nullable Boolean requiresRepublish) {
             this.requiresRepublish = Input.ofNullable(requiresRepublish);
             return this;
         }
 
-        public Builder setStorageCapacity(@Nullable Input<Boolean> storageCapacity) {
+        public Builder storageCapacity(@Nullable Input<Boolean> storageCapacity) {
             this.storageCapacity = storageCapacity;
             return this;
         }
 
-        public Builder setStorageCapacity(@Nullable Boolean storageCapacity) {
+        public Builder storageCapacity(@Nullable Boolean storageCapacity) {
             this.storageCapacity = Input.ofNullable(storageCapacity);
             return this;
         }
 
-        public Builder setTokenRequests(@Nullable Input<List<TokenRequestArgs>> tokenRequests) {
+        public Builder tokenRequests(@Nullable Input<List<TokenRequestArgs>> tokenRequests) {
             this.tokenRequests = tokenRequests;
             return this;
         }
 
-        public Builder setTokenRequests(@Nullable List<TokenRequestArgs> tokenRequests) {
+        public Builder tokenRequests(@Nullable List<TokenRequestArgs> tokenRequests) {
             this.tokenRequests = Input.ofNullable(tokenRequests);
             return this;
         }
 
-        public Builder setVolumeLifecycleModes(@Nullable Input<List<String>> volumeLifecycleModes) {
+        public Builder volumeLifecycleModes(@Nullable Input<List<String>> volumeLifecycleModes) {
             this.volumeLifecycleModes = volumeLifecycleModes;
             return this;
         }
 
-        public Builder setVolumeLifecycleModes(@Nullable List<String> volumeLifecycleModes) {
+        public Builder volumeLifecycleModes(@Nullable List<String> volumeLifecycleModes) {
             this.volumeLifecycleModes = Input.ofNullable(volumeLifecycleModes);
             return this;
         }

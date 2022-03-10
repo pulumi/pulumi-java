@@ -554,292 +554,292 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setAdvancedMachineFeatures(@Nullable Input<InstanceAdvancedMachineFeaturesArgs> advancedMachineFeatures) {
+        public Builder advancedMachineFeatures(@Nullable Input<InstanceAdvancedMachineFeaturesArgs> advancedMachineFeatures) {
             this.advancedMachineFeatures = advancedMachineFeatures;
             return this;
         }
 
-        public Builder setAdvancedMachineFeatures(@Nullable InstanceAdvancedMachineFeaturesArgs advancedMachineFeatures) {
+        public Builder advancedMachineFeatures(@Nullable InstanceAdvancedMachineFeaturesArgs advancedMachineFeatures) {
             this.advancedMachineFeatures = Input.ofNullable(advancedMachineFeatures);
             return this;
         }
 
-        public Builder setAllowStoppingForUpdate(@Nullable Input<Boolean> allowStoppingForUpdate) {
+        public Builder allowStoppingForUpdate(@Nullable Input<Boolean> allowStoppingForUpdate) {
             this.allowStoppingForUpdate = allowStoppingForUpdate;
             return this;
         }
 
-        public Builder setAllowStoppingForUpdate(@Nullable Boolean allowStoppingForUpdate) {
+        public Builder allowStoppingForUpdate(@Nullable Boolean allowStoppingForUpdate) {
             this.allowStoppingForUpdate = Input.ofNullable(allowStoppingForUpdate);
             return this;
         }
 
-        public Builder setAttachedDisks(@Nullable Input<List<InstanceAttachedDiskArgs>> attachedDisks) {
+        public Builder attachedDisks(@Nullable Input<List<InstanceAttachedDiskArgs>> attachedDisks) {
             this.attachedDisks = attachedDisks;
             return this;
         }
 
-        public Builder setAttachedDisks(@Nullable List<InstanceAttachedDiskArgs> attachedDisks) {
+        public Builder attachedDisks(@Nullable List<InstanceAttachedDiskArgs> attachedDisks) {
             this.attachedDisks = Input.ofNullable(attachedDisks);
             return this;
         }
 
-        public Builder setBootDisk(Input<InstanceBootDiskArgs> bootDisk) {
+        public Builder bootDisk(Input<InstanceBootDiskArgs> bootDisk) {
             this.bootDisk = Objects.requireNonNull(bootDisk);
             return this;
         }
 
-        public Builder setBootDisk(InstanceBootDiskArgs bootDisk) {
+        public Builder bootDisk(InstanceBootDiskArgs bootDisk) {
             this.bootDisk = Input.of(Objects.requireNonNull(bootDisk));
             return this;
         }
 
-        public Builder setCanIpForward(@Nullable Input<Boolean> canIpForward) {
+        public Builder canIpForward(@Nullable Input<Boolean> canIpForward) {
             this.canIpForward = canIpForward;
             return this;
         }
 
-        public Builder setCanIpForward(@Nullable Boolean canIpForward) {
+        public Builder canIpForward(@Nullable Boolean canIpForward) {
             this.canIpForward = Input.ofNullable(canIpForward);
             return this;
         }
 
-        public Builder setConfidentialInstanceConfig(@Nullable Input<InstanceConfidentialInstanceConfigArgs> confidentialInstanceConfig) {
+        public Builder confidentialInstanceConfig(@Nullable Input<InstanceConfidentialInstanceConfigArgs> confidentialInstanceConfig) {
             this.confidentialInstanceConfig = confidentialInstanceConfig;
             return this;
         }
 
-        public Builder setConfidentialInstanceConfig(@Nullable InstanceConfidentialInstanceConfigArgs confidentialInstanceConfig) {
+        public Builder confidentialInstanceConfig(@Nullable InstanceConfidentialInstanceConfigArgs confidentialInstanceConfig) {
             this.confidentialInstanceConfig = Input.ofNullable(confidentialInstanceConfig);
             return this;
         }
 
-        public Builder setDeletionProtection(@Nullable Input<Boolean> deletionProtection) {
+        public Builder deletionProtection(@Nullable Input<Boolean> deletionProtection) {
             this.deletionProtection = deletionProtection;
             return this;
         }
 
-        public Builder setDeletionProtection(@Nullable Boolean deletionProtection) {
+        public Builder deletionProtection(@Nullable Boolean deletionProtection) {
             this.deletionProtection = Input.ofNullable(deletionProtection);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDesiredStatus(@Nullable Input<String> desiredStatus) {
+        public Builder desiredStatus(@Nullable Input<String> desiredStatus) {
             this.desiredStatus = desiredStatus;
             return this;
         }
 
-        public Builder setDesiredStatus(@Nullable String desiredStatus) {
+        public Builder desiredStatus(@Nullable String desiredStatus) {
             this.desiredStatus = Input.ofNullable(desiredStatus);
             return this;
         }
 
-        public Builder setEnableDisplay(@Nullable Input<Boolean> enableDisplay) {
+        public Builder enableDisplay(@Nullable Input<Boolean> enableDisplay) {
             this.enableDisplay = enableDisplay;
             return this;
         }
 
-        public Builder setEnableDisplay(@Nullable Boolean enableDisplay) {
+        public Builder enableDisplay(@Nullable Boolean enableDisplay) {
             this.enableDisplay = Input.ofNullable(enableDisplay);
             return this;
         }
 
-        public Builder setGuestAccelerators(@Nullable Input<List<InstanceGuestAcceleratorArgs>> guestAccelerators) {
+        public Builder guestAccelerators(@Nullable Input<List<InstanceGuestAcceleratorArgs>> guestAccelerators) {
             this.guestAccelerators = guestAccelerators;
             return this;
         }
 
-        public Builder setGuestAccelerators(@Nullable List<InstanceGuestAcceleratorArgs> guestAccelerators) {
+        public Builder guestAccelerators(@Nullable List<InstanceGuestAcceleratorArgs> guestAccelerators) {
             this.guestAccelerators = Input.ofNullable(guestAccelerators);
             return this;
         }
 
-        public Builder setHostname(@Nullable Input<String> hostname) {
+        public Builder hostname(@Nullable Input<String> hostname) {
             this.hostname = hostname;
             return this;
         }
 
-        public Builder setHostname(@Nullable String hostname) {
+        public Builder hostname(@Nullable String hostname) {
             this.hostname = Input.ofNullable(hostname);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setMachineType(Input<String> machineType) {
+        public Builder machineType(Input<String> machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Input.of(Objects.requireNonNull(machineType));
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setMetadataStartupScript(@Nullable Input<String> metadataStartupScript) {
+        public Builder metadataStartupScript(@Nullable Input<String> metadataStartupScript) {
             this.metadataStartupScript = metadataStartupScript;
             return this;
         }
 
-        public Builder setMetadataStartupScript(@Nullable String metadataStartupScript) {
+        public Builder metadataStartupScript(@Nullable String metadataStartupScript) {
             this.metadataStartupScript = Input.ofNullable(metadataStartupScript);
             return this;
         }
 
-        public Builder setMinCpuPlatform(@Nullable Input<String> minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable Input<String> minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
-        public Builder setMinCpuPlatform(@Nullable String minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
             this.minCpuPlatform = Input.ofNullable(minCpuPlatform);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetworkInterfaces(Input<List<InstanceNetworkInterfaceArgs>> networkInterfaces) {
+        public Builder networkInterfaces(Input<List<InstanceNetworkInterfaceArgs>> networkInterfaces) {
             this.networkInterfaces = Objects.requireNonNull(networkInterfaces);
             return this;
         }
 
-        public Builder setNetworkInterfaces(List<InstanceNetworkInterfaceArgs> networkInterfaces) {
+        public Builder networkInterfaces(List<InstanceNetworkInterfaceArgs> networkInterfaces) {
             this.networkInterfaces = Input.of(Objects.requireNonNull(networkInterfaces));
             return this;
         }
 
-        public Builder setNetworkPerformanceConfig(@Nullable Input<InstanceNetworkPerformanceConfigArgs> networkPerformanceConfig) {
+        public Builder networkPerformanceConfig(@Nullable Input<InstanceNetworkPerformanceConfigArgs> networkPerformanceConfig) {
             this.networkPerformanceConfig = networkPerformanceConfig;
             return this;
         }
 
-        public Builder setNetworkPerformanceConfig(@Nullable InstanceNetworkPerformanceConfigArgs networkPerformanceConfig) {
+        public Builder networkPerformanceConfig(@Nullable InstanceNetworkPerformanceConfigArgs networkPerformanceConfig) {
             this.networkPerformanceConfig = Input.ofNullable(networkPerformanceConfig);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setReservationAffinity(@Nullable Input<InstanceReservationAffinityArgs> reservationAffinity) {
+        public Builder reservationAffinity(@Nullable Input<InstanceReservationAffinityArgs> reservationAffinity) {
             this.reservationAffinity = reservationAffinity;
             return this;
         }
 
-        public Builder setReservationAffinity(@Nullable InstanceReservationAffinityArgs reservationAffinity) {
+        public Builder reservationAffinity(@Nullable InstanceReservationAffinityArgs reservationAffinity) {
             this.reservationAffinity = Input.ofNullable(reservationAffinity);
             return this;
         }
 
-        public Builder setResourcePolicies(@Nullable Input<String> resourcePolicies) {
+        public Builder resourcePolicies(@Nullable Input<String> resourcePolicies) {
             this.resourcePolicies = resourcePolicies;
             return this;
         }
 
-        public Builder setResourcePolicies(@Nullable String resourcePolicies) {
+        public Builder resourcePolicies(@Nullable String resourcePolicies) {
             this.resourcePolicies = Input.ofNullable(resourcePolicies);
             return this;
         }
 
-        public Builder setScheduling(@Nullable Input<InstanceSchedulingArgs> scheduling) {
+        public Builder scheduling(@Nullable Input<InstanceSchedulingArgs> scheduling) {
             this.scheduling = scheduling;
             return this;
         }
 
-        public Builder setScheduling(@Nullable InstanceSchedulingArgs scheduling) {
+        public Builder scheduling(@Nullable InstanceSchedulingArgs scheduling) {
             this.scheduling = Input.ofNullable(scheduling);
             return this;
         }
 
-        public Builder setScratchDisks(@Nullable Input<List<InstanceScratchDiskArgs>> scratchDisks) {
+        public Builder scratchDisks(@Nullable Input<List<InstanceScratchDiskArgs>> scratchDisks) {
             this.scratchDisks = scratchDisks;
             return this;
         }
 
-        public Builder setScratchDisks(@Nullable List<InstanceScratchDiskArgs> scratchDisks) {
+        public Builder scratchDisks(@Nullable List<InstanceScratchDiskArgs> scratchDisks) {
             this.scratchDisks = Input.ofNullable(scratchDisks);
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable Input<InstanceServiceAccountArgs> serviceAccount) {
+        public Builder serviceAccount(@Nullable Input<InstanceServiceAccountArgs> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable InstanceServiceAccountArgs serviceAccount) {
+        public Builder serviceAccount(@Nullable InstanceServiceAccountArgs serviceAccount) {
             this.serviceAccount = Input.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder setShieldedInstanceConfig(@Nullable Input<InstanceShieldedInstanceConfigArgs> shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(@Nullable Input<InstanceShieldedInstanceConfigArgs> shieldedInstanceConfig) {
             this.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
 
-        public Builder setShieldedInstanceConfig(@Nullable InstanceShieldedInstanceConfigArgs shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(@Nullable InstanceShieldedInstanceConfigArgs shieldedInstanceConfig) {
             this.shieldedInstanceConfig = Input.ofNullable(shieldedInstanceConfig);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Input<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<String> tags) {
+        public Builder tags(@Nullable List<String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setZone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Input<String> zone) {
             this.zone = zone;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = Input.ofNullable(zone);
             return this;
         }

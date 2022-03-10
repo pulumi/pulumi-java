@@ -86,17 +86,17 @@ public final class QueryParameterValueResponse extends io.pulumi.resources.Invok
     	      this.value = defaults.value;
         }
 
-        public Builder setArrayValues(List<QueryParameterValueResponse> arrayValues) {
+        public Builder arrayValues(List<QueryParameterValueResponse> arrayValues) {
             this.arrayValues = Objects.requireNonNull(arrayValues);
             return this;
         }
 
-        public Builder setStructValues(Map<String,String> structValues) {
+        public Builder structValues(Map<String,String> structValues) {
             this.structValues = Objects.requireNonNull(structValues);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

@@ -84,17 +84,17 @@ public final class GetVirtualRouterPeeringArgs extends io.pulumi.resources.Invok
     	      this.virtualRouterName = defaults.virtualRouterName;
         }
 
-        public Builder setPeeringName(String peeringName) {
+        public Builder peeringName(String peeringName) {
             this.peeringName = Objects.requireNonNull(peeringName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setVirtualRouterName(String virtualRouterName) {
+        public Builder virtualRouterName(String virtualRouterName) {
             this.virtualRouterName = Objects.requireNonNull(virtualRouterName);
             return this;
         }

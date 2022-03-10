@@ -52,12 +52,12 @@ public final class MonitoringScheduleMonitoringResourcesArgs extends io.pulumi.r
     	      this.clusterConfig = defaults.clusterConfig;
         }
 
-        public Builder setClusterConfig(Input<MonitoringScheduleClusterConfigArgs> clusterConfig) {
+        public Builder clusterConfig(Input<MonitoringScheduleClusterConfigArgs> clusterConfig) {
             this.clusterConfig = Objects.requireNonNull(clusterConfig);
             return this;
         }
 
-        public Builder setClusterConfig(MonitoringScheduleClusterConfigArgs clusterConfig) {
+        public Builder clusterConfig(MonitoringScheduleClusterConfigArgs clusterConfig) {
             this.clusterConfig = Input.of(Objects.requireNonNull(clusterConfig));
             return this;
         }

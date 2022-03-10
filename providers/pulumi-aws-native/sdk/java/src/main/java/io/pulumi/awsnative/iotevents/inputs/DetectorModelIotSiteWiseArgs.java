@@ -119,52 +119,52 @@ public final class DetectorModelIotSiteWiseArgs extends io.pulumi.resources.Reso
     	      this.propertyValue = defaults.propertyValue;
         }
 
-        public Builder setAssetId(@Nullable Input<String> assetId) {
+        public Builder assetId(@Nullable Input<String> assetId) {
             this.assetId = assetId;
             return this;
         }
 
-        public Builder setAssetId(@Nullable String assetId) {
+        public Builder assetId(@Nullable String assetId) {
             this.assetId = Input.ofNullable(assetId);
             return this;
         }
 
-        public Builder setEntryId(@Nullable Input<String> entryId) {
+        public Builder entryId(@Nullable Input<String> entryId) {
             this.entryId = entryId;
             return this;
         }
 
-        public Builder setEntryId(@Nullable String entryId) {
+        public Builder entryId(@Nullable String entryId) {
             this.entryId = Input.ofNullable(entryId);
             return this;
         }
 
-        public Builder setPropertyAlias(@Nullable Input<String> propertyAlias) {
+        public Builder propertyAlias(@Nullable Input<String> propertyAlias) {
             this.propertyAlias = propertyAlias;
             return this;
         }
 
-        public Builder setPropertyAlias(@Nullable String propertyAlias) {
+        public Builder propertyAlias(@Nullable String propertyAlias) {
             this.propertyAlias = Input.ofNullable(propertyAlias);
             return this;
         }
 
-        public Builder setPropertyId(@Nullable Input<String> propertyId) {
+        public Builder propertyId(@Nullable Input<String> propertyId) {
             this.propertyId = propertyId;
             return this;
         }
 
-        public Builder setPropertyId(@Nullable String propertyId) {
+        public Builder propertyId(@Nullable String propertyId) {
             this.propertyId = Input.ofNullable(propertyId);
             return this;
         }
 
-        public Builder setPropertyValue(Input<DetectorModelAssetPropertyValueArgs> propertyValue) {
+        public Builder propertyValue(Input<DetectorModelAssetPropertyValueArgs> propertyValue) {
             this.propertyValue = Objects.requireNonNull(propertyValue);
             return this;
         }
 
-        public Builder setPropertyValue(DetectorModelAssetPropertyValueArgs propertyValue) {
+        public Builder propertyValue(DetectorModelAssetPropertyValueArgs propertyValue) {
             this.propertyValue = Input.of(Objects.requireNonNull(propertyValue));
             return this;
         }

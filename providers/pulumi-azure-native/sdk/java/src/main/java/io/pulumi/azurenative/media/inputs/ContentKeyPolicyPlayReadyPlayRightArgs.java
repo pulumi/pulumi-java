@@ -255,132 +255,132 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
     	      this.uncompressedDigitalVideoOpl = defaults.uncompressedDigitalVideoOpl;
         }
 
-        public Builder setAgcAndColorStripeRestriction(@Nullable Input<Integer> agcAndColorStripeRestriction) {
+        public Builder agcAndColorStripeRestriction(@Nullable Input<Integer> agcAndColorStripeRestriction) {
             this.agcAndColorStripeRestriction = agcAndColorStripeRestriction;
             return this;
         }
 
-        public Builder setAgcAndColorStripeRestriction(@Nullable Integer agcAndColorStripeRestriction) {
+        public Builder agcAndColorStripeRestriction(@Nullable Integer agcAndColorStripeRestriction) {
             this.agcAndColorStripeRestriction = Input.ofNullable(agcAndColorStripeRestriction);
             return this;
         }
 
-        public Builder setAllowPassingVideoContentToUnknownOutput(Input<Either<String,ContentKeyPolicyPlayReadyUnknownOutputPassingOption>> allowPassingVideoContentToUnknownOutput) {
+        public Builder allowPassingVideoContentToUnknownOutput(Input<Either<String,ContentKeyPolicyPlayReadyUnknownOutputPassingOption>> allowPassingVideoContentToUnknownOutput) {
             this.allowPassingVideoContentToUnknownOutput = Objects.requireNonNull(allowPassingVideoContentToUnknownOutput);
             return this;
         }
 
-        public Builder setAllowPassingVideoContentToUnknownOutput(Either<String,ContentKeyPolicyPlayReadyUnknownOutputPassingOption> allowPassingVideoContentToUnknownOutput) {
+        public Builder allowPassingVideoContentToUnknownOutput(Either<String,ContentKeyPolicyPlayReadyUnknownOutputPassingOption> allowPassingVideoContentToUnknownOutput) {
             this.allowPassingVideoContentToUnknownOutput = Input.of(Objects.requireNonNull(allowPassingVideoContentToUnknownOutput));
             return this;
         }
 
-        public Builder setAnalogVideoOpl(@Nullable Input<Integer> analogVideoOpl) {
+        public Builder analogVideoOpl(@Nullable Input<Integer> analogVideoOpl) {
             this.analogVideoOpl = analogVideoOpl;
             return this;
         }
 
-        public Builder setAnalogVideoOpl(@Nullable Integer analogVideoOpl) {
+        public Builder analogVideoOpl(@Nullable Integer analogVideoOpl) {
             this.analogVideoOpl = Input.ofNullable(analogVideoOpl);
             return this;
         }
 
-        public Builder setCompressedDigitalAudioOpl(@Nullable Input<Integer> compressedDigitalAudioOpl) {
+        public Builder compressedDigitalAudioOpl(@Nullable Input<Integer> compressedDigitalAudioOpl) {
             this.compressedDigitalAudioOpl = compressedDigitalAudioOpl;
             return this;
         }
 
-        public Builder setCompressedDigitalAudioOpl(@Nullable Integer compressedDigitalAudioOpl) {
+        public Builder compressedDigitalAudioOpl(@Nullable Integer compressedDigitalAudioOpl) {
             this.compressedDigitalAudioOpl = Input.ofNullable(compressedDigitalAudioOpl);
             return this;
         }
 
-        public Builder setCompressedDigitalVideoOpl(@Nullable Input<Integer> compressedDigitalVideoOpl) {
+        public Builder compressedDigitalVideoOpl(@Nullable Input<Integer> compressedDigitalVideoOpl) {
             this.compressedDigitalVideoOpl = compressedDigitalVideoOpl;
             return this;
         }
 
-        public Builder setCompressedDigitalVideoOpl(@Nullable Integer compressedDigitalVideoOpl) {
+        public Builder compressedDigitalVideoOpl(@Nullable Integer compressedDigitalVideoOpl) {
             this.compressedDigitalVideoOpl = Input.ofNullable(compressedDigitalVideoOpl);
             return this;
         }
 
-        public Builder setDigitalVideoOnlyContentRestriction(Input<Boolean> digitalVideoOnlyContentRestriction) {
+        public Builder digitalVideoOnlyContentRestriction(Input<Boolean> digitalVideoOnlyContentRestriction) {
             this.digitalVideoOnlyContentRestriction = Objects.requireNonNull(digitalVideoOnlyContentRestriction);
             return this;
         }
 
-        public Builder setDigitalVideoOnlyContentRestriction(Boolean digitalVideoOnlyContentRestriction) {
+        public Builder digitalVideoOnlyContentRestriction(Boolean digitalVideoOnlyContentRestriction) {
             this.digitalVideoOnlyContentRestriction = Input.of(Objects.requireNonNull(digitalVideoOnlyContentRestriction));
             return this;
         }
 
-        public Builder setExplicitAnalogTelevisionOutputRestriction(@Nullable Input<ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs> explicitAnalogTelevisionOutputRestriction) {
+        public Builder explicitAnalogTelevisionOutputRestriction(@Nullable Input<ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs> explicitAnalogTelevisionOutputRestriction) {
             this.explicitAnalogTelevisionOutputRestriction = explicitAnalogTelevisionOutputRestriction;
             return this;
         }
 
-        public Builder setExplicitAnalogTelevisionOutputRestriction(@Nullable ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs explicitAnalogTelevisionOutputRestriction) {
+        public Builder explicitAnalogTelevisionOutputRestriction(@Nullable ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs explicitAnalogTelevisionOutputRestriction) {
             this.explicitAnalogTelevisionOutputRestriction = Input.ofNullable(explicitAnalogTelevisionOutputRestriction);
             return this;
         }
 
-        public Builder setFirstPlayExpiration(@Nullable Input<String> firstPlayExpiration) {
+        public Builder firstPlayExpiration(@Nullable Input<String> firstPlayExpiration) {
             this.firstPlayExpiration = firstPlayExpiration;
             return this;
         }
 
-        public Builder setFirstPlayExpiration(@Nullable String firstPlayExpiration) {
+        public Builder firstPlayExpiration(@Nullable String firstPlayExpiration) {
             this.firstPlayExpiration = Input.ofNullable(firstPlayExpiration);
             return this;
         }
 
-        public Builder setImageConstraintForAnalogComponentVideoRestriction(Input<Boolean> imageConstraintForAnalogComponentVideoRestriction) {
+        public Builder imageConstraintForAnalogComponentVideoRestriction(Input<Boolean> imageConstraintForAnalogComponentVideoRestriction) {
             this.imageConstraintForAnalogComponentVideoRestriction = Objects.requireNonNull(imageConstraintForAnalogComponentVideoRestriction);
             return this;
         }
 
-        public Builder setImageConstraintForAnalogComponentVideoRestriction(Boolean imageConstraintForAnalogComponentVideoRestriction) {
+        public Builder imageConstraintForAnalogComponentVideoRestriction(Boolean imageConstraintForAnalogComponentVideoRestriction) {
             this.imageConstraintForAnalogComponentVideoRestriction = Input.of(Objects.requireNonNull(imageConstraintForAnalogComponentVideoRestriction));
             return this;
         }
 
-        public Builder setImageConstraintForAnalogComputerMonitorRestriction(Input<Boolean> imageConstraintForAnalogComputerMonitorRestriction) {
+        public Builder imageConstraintForAnalogComputerMonitorRestriction(Input<Boolean> imageConstraintForAnalogComputerMonitorRestriction) {
             this.imageConstraintForAnalogComputerMonitorRestriction = Objects.requireNonNull(imageConstraintForAnalogComputerMonitorRestriction);
             return this;
         }
 
-        public Builder setImageConstraintForAnalogComputerMonitorRestriction(Boolean imageConstraintForAnalogComputerMonitorRestriction) {
+        public Builder imageConstraintForAnalogComputerMonitorRestriction(Boolean imageConstraintForAnalogComputerMonitorRestriction) {
             this.imageConstraintForAnalogComputerMonitorRestriction = Input.of(Objects.requireNonNull(imageConstraintForAnalogComputerMonitorRestriction));
             return this;
         }
 
-        public Builder setScmsRestriction(@Nullable Input<Integer> scmsRestriction) {
+        public Builder scmsRestriction(@Nullable Input<Integer> scmsRestriction) {
             this.scmsRestriction = scmsRestriction;
             return this;
         }
 
-        public Builder setScmsRestriction(@Nullable Integer scmsRestriction) {
+        public Builder scmsRestriction(@Nullable Integer scmsRestriction) {
             this.scmsRestriction = Input.ofNullable(scmsRestriction);
             return this;
         }
 
-        public Builder setUncompressedDigitalAudioOpl(@Nullable Input<Integer> uncompressedDigitalAudioOpl) {
+        public Builder uncompressedDigitalAudioOpl(@Nullable Input<Integer> uncompressedDigitalAudioOpl) {
             this.uncompressedDigitalAudioOpl = uncompressedDigitalAudioOpl;
             return this;
         }
 
-        public Builder setUncompressedDigitalAudioOpl(@Nullable Integer uncompressedDigitalAudioOpl) {
+        public Builder uncompressedDigitalAudioOpl(@Nullable Integer uncompressedDigitalAudioOpl) {
             this.uncompressedDigitalAudioOpl = Input.ofNullable(uncompressedDigitalAudioOpl);
             return this;
         }
 
-        public Builder setUncompressedDigitalVideoOpl(@Nullable Input<Integer> uncompressedDigitalVideoOpl) {
+        public Builder uncompressedDigitalVideoOpl(@Nullable Input<Integer> uncompressedDigitalVideoOpl) {
             this.uncompressedDigitalVideoOpl = uncompressedDigitalVideoOpl;
             return this;
         }
 
-        public Builder setUncompressedDigitalVideoOpl(@Nullable Integer uncompressedDigitalVideoOpl) {
+        public Builder uncompressedDigitalVideoOpl(@Nullable Integer uncompressedDigitalVideoOpl) {
             this.uncompressedDigitalVideoOpl = Input.ofNullable(uncompressedDigitalVideoOpl);
             return this;
         }

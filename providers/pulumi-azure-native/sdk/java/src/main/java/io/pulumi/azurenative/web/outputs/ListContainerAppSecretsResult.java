@@ -49,7 +49,7 @@ public final class ListContainerAppSecretsResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(List<ContainerAppSecretResponse> value) {
+        public Builder value(List<ContainerAppSecretResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

@@ -91,17 +91,17 @@ public final class HttpConfigResponse extends io.pulumi.resources.InvokeArgs {
     	      this.port = defaults.port;
         }
 
-        public Builder setHosts(List<HttpHostConfigResponse> hosts) {
+        public Builder hosts(List<HttpHostConfigResponse> hosts) {
             this.hosts = Objects.requireNonNull(hosts);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }

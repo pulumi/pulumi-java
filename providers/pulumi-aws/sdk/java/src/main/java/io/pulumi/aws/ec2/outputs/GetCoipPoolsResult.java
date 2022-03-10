@@ -85,22 +85,22 @@ public final class GetCoipPoolsResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setFilters(@Nullable List<GetCoipPoolsFilter> filters) {
+        public Builder filters(@Nullable List<GetCoipPoolsFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setPoolIds(List<String> poolIds) {
+        public Builder poolIds(List<String> poolIds) {
             this.poolIds = Objects.requireNonNull(poolIds);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

@@ -50,12 +50,12 @@ public final class CertificatePolicyQualifierInfo {
     	      this.qualifier = defaults.qualifier;
         }
 
-        public Builder setPolicyQualifierId(String policyQualifierId) {
+        public Builder policyQualifierId(String policyQualifierId) {
             this.policyQualifierId = Objects.requireNonNull(policyQualifierId);
             return this;
         }
 
-        public Builder setQualifier(CertificateQualifier qualifier) {
+        public Builder qualifier(CertificateQualifier qualifier) {
             this.qualifier = Objects.requireNonNull(qualifier);
             return this;
         }

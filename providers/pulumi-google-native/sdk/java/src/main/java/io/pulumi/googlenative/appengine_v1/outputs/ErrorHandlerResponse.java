@@ -81,17 +81,17 @@ public final class ErrorHandlerResponse {
     	      this.staticFile = defaults.staticFile;
         }
 
-        public Builder setErrorCode(String errorCode) {
+        public Builder errorCode(String errorCode) {
             this.errorCode = Objects.requireNonNull(errorCode);
             return this;
         }
 
-        public Builder setMimeType(String mimeType) {
+        public Builder mimeType(String mimeType) {
             this.mimeType = Objects.requireNonNull(mimeType);
             return this;
         }
 
-        public Builder setStaticFile(String staticFile) {
+        public Builder staticFile(String staticFile) {
             this.staticFile = Objects.requireNonNull(staticFile);
             return this;
         }

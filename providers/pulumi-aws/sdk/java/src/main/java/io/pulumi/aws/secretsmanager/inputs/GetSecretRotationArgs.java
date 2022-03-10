@@ -51,7 +51,7 @@ public final class GetSecretRotationArgs extends io.pulumi.resources.InvokeArgs 
     	      this.secretId = defaults.secretId;
         }
 
-        public Builder setSecretId(String secretId) {
+        public Builder secretId(String secretId) {
             this.secretId = Objects.requireNonNull(secretId);
             return this;
         }

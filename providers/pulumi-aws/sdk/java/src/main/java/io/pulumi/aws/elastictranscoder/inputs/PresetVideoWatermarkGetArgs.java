@@ -198,102 +198,102 @@ public final class PresetVideoWatermarkGetArgs extends io.pulumi.resources.Resou
     	      this.verticalOffset = defaults.verticalOffset;
         }
 
-        public Builder setHorizontalAlign(@Nullable Input<String> horizontalAlign) {
+        public Builder horizontalAlign(@Nullable Input<String> horizontalAlign) {
             this.horizontalAlign = horizontalAlign;
             return this;
         }
 
-        public Builder setHorizontalAlign(@Nullable String horizontalAlign) {
+        public Builder horizontalAlign(@Nullable String horizontalAlign) {
             this.horizontalAlign = Input.ofNullable(horizontalAlign);
             return this;
         }
 
-        public Builder setHorizontalOffset(@Nullable Input<String> horizontalOffset) {
+        public Builder horizontalOffset(@Nullable Input<String> horizontalOffset) {
             this.horizontalOffset = horizontalOffset;
             return this;
         }
 
-        public Builder setHorizontalOffset(@Nullable String horizontalOffset) {
+        public Builder horizontalOffset(@Nullable String horizontalOffset) {
             this.horizontalOffset = Input.ofNullable(horizontalOffset);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setMaxHeight(@Nullable Input<String> maxHeight) {
+        public Builder maxHeight(@Nullable Input<String> maxHeight) {
             this.maxHeight = maxHeight;
             return this;
         }
 
-        public Builder setMaxHeight(@Nullable String maxHeight) {
+        public Builder maxHeight(@Nullable String maxHeight) {
             this.maxHeight = Input.ofNullable(maxHeight);
             return this;
         }
 
-        public Builder setMaxWidth(@Nullable Input<String> maxWidth) {
+        public Builder maxWidth(@Nullable Input<String> maxWidth) {
             this.maxWidth = maxWidth;
             return this;
         }
 
-        public Builder setMaxWidth(@Nullable String maxWidth) {
+        public Builder maxWidth(@Nullable String maxWidth) {
             this.maxWidth = Input.ofNullable(maxWidth);
             return this;
         }
 
-        public Builder setOpacity(@Nullable Input<String> opacity) {
+        public Builder opacity(@Nullable Input<String> opacity) {
             this.opacity = opacity;
             return this;
         }
 
-        public Builder setOpacity(@Nullable String opacity) {
+        public Builder opacity(@Nullable String opacity) {
             this.opacity = Input.ofNullable(opacity);
             return this;
         }
 
-        public Builder setSizingPolicy(@Nullable Input<String> sizingPolicy) {
+        public Builder sizingPolicy(@Nullable Input<String> sizingPolicy) {
             this.sizingPolicy = sizingPolicy;
             return this;
         }
 
-        public Builder setSizingPolicy(@Nullable String sizingPolicy) {
+        public Builder sizingPolicy(@Nullable String sizingPolicy) {
             this.sizingPolicy = Input.ofNullable(sizingPolicy);
             return this;
         }
 
-        public Builder setTarget(@Nullable Input<String> target) {
+        public Builder target(@Nullable Input<String> target) {
             this.target = target;
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = Input.ofNullable(target);
             return this;
         }
 
-        public Builder setVerticalAlign(@Nullable Input<String> verticalAlign) {
+        public Builder verticalAlign(@Nullable Input<String> verticalAlign) {
             this.verticalAlign = verticalAlign;
             return this;
         }
 
-        public Builder setVerticalAlign(@Nullable String verticalAlign) {
+        public Builder verticalAlign(@Nullable String verticalAlign) {
             this.verticalAlign = Input.ofNullable(verticalAlign);
             return this;
         }
 
-        public Builder setVerticalOffset(@Nullable Input<String> verticalOffset) {
+        public Builder verticalOffset(@Nullable Input<String> verticalOffset) {
             this.verticalOffset = verticalOffset;
             return this;
         }
 
-        public Builder setVerticalOffset(@Nullable String verticalOffset) {
+        public Builder verticalOffset(@Nullable String verticalOffset) {
             this.verticalOffset = Input.ofNullable(verticalOffset);
             return this;
         }

@@ -77,32 +77,32 @@ public final class JobStatusGetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.state = defaults.state;
         }
 
-        public Builder setErrorResults(@Nullable Input<List<JobStatusErrorResultGetArgs>> errorResults) {
+        public Builder errorResults(@Nullable Input<List<JobStatusErrorResultGetArgs>> errorResults) {
             this.errorResults = errorResults;
             return this;
         }
 
-        public Builder setErrorResults(@Nullable List<JobStatusErrorResultGetArgs> errorResults) {
+        public Builder errorResults(@Nullable List<JobStatusErrorResultGetArgs> errorResults) {
             this.errorResults = Input.ofNullable(errorResults);
             return this;
         }
 
-        public Builder setErrors(@Nullable Input<List<JobStatusErrorGetArgs>> errors) {
+        public Builder errors(@Nullable Input<List<JobStatusErrorGetArgs>> errors) {
             this.errors = errors;
             return this;
         }
 
-        public Builder setErrors(@Nullable List<JobStatusErrorGetArgs> errors) {
+        public Builder errors(@Nullable List<JobStatusErrorGetArgs> errors) {
             this.errors = Input.ofNullable(errors);
             return this;
         }
 
-        public Builder setState(@Nullable Input<String> state) {
+        public Builder state(@Nullable Input<String> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = Input.ofNullable(state);
             return this;
         }

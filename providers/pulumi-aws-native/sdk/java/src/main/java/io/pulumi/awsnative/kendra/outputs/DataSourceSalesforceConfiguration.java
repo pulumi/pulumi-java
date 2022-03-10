@@ -113,47 +113,47 @@ public final class DataSourceSalesforceConfiguration {
     	      this.standardObjectConfigurations = defaults.standardObjectConfigurations;
         }
 
-        public Builder setChatterFeedConfiguration(@Nullable DataSourceSalesforceChatterFeedConfiguration chatterFeedConfiguration) {
+        public Builder chatterFeedConfiguration(@Nullable DataSourceSalesforceChatterFeedConfiguration chatterFeedConfiguration) {
             this.chatterFeedConfiguration = chatterFeedConfiguration;
             return this;
         }
 
-        public Builder setCrawlAttachments(@Nullable Boolean crawlAttachments) {
+        public Builder crawlAttachments(@Nullable Boolean crawlAttachments) {
             this.crawlAttachments = crawlAttachments;
             return this;
         }
 
-        public Builder setExcludeAttachmentFilePatterns(@Nullable List<String> excludeAttachmentFilePatterns) {
+        public Builder excludeAttachmentFilePatterns(@Nullable List<String> excludeAttachmentFilePatterns) {
             this.excludeAttachmentFilePatterns = excludeAttachmentFilePatterns;
             return this;
         }
 
-        public Builder setIncludeAttachmentFilePatterns(@Nullable List<String> includeAttachmentFilePatterns) {
+        public Builder includeAttachmentFilePatterns(@Nullable List<String> includeAttachmentFilePatterns) {
             this.includeAttachmentFilePatterns = includeAttachmentFilePatterns;
             return this;
         }
 
-        public Builder setKnowledgeArticleConfiguration(@Nullable DataSourceSalesforceKnowledgeArticleConfiguration knowledgeArticleConfiguration) {
+        public Builder knowledgeArticleConfiguration(@Nullable DataSourceSalesforceKnowledgeArticleConfiguration knowledgeArticleConfiguration) {
             this.knowledgeArticleConfiguration = knowledgeArticleConfiguration;
             return this;
         }
 
-        public Builder setSecretArn(String secretArn) {
+        public Builder secretArn(String secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }
 
-        public Builder setServerUrl(String serverUrl) {
+        public Builder serverUrl(String serverUrl) {
             this.serverUrl = Objects.requireNonNull(serverUrl);
             return this;
         }
 
-        public Builder setStandardObjectAttachmentConfiguration(@Nullable DataSourceSalesforceStandardObjectAttachmentConfiguration standardObjectAttachmentConfiguration) {
+        public Builder standardObjectAttachmentConfiguration(@Nullable DataSourceSalesforceStandardObjectAttachmentConfiguration standardObjectAttachmentConfiguration) {
             this.standardObjectAttachmentConfiguration = standardObjectAttachmentConfiguration;
             return this;
         }
 
-        public Builder setStandardObjectConfigurations(@Nullable List<DataSourceSalesforceStandardObjectConfiguration> standardObjectConfigurations) {
+        public Builder standardObjectConfigurations(@Nullable List<DataSourceSalesforceStandardObjectConfiguration> standardObjectConfigurations) {
             this.standardObjectConfigurations = standardObjectConfigurations;
             return this;
         }

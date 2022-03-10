@@ -48,7 +48,7 @@ public final class RuleGroupRuleGroupStatefulRuleOptions {
     	      this.ruleOrder = defaults.ruleOrder;
         }
 
-        public Builder setRuleOrder(String ruleOrder) {
+        public Builder ruleOrder(String ruleOrder) {
             this.ruleOrder = Objects.requireNonNull(ruleOrder);
             return this;
         }

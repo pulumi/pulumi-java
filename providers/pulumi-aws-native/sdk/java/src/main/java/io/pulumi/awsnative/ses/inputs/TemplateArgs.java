@@ -106,42 +106,42 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.textPart = defaults.textPart;
         }
 
-        public Builder setHtmlPart(@Nullable Input<String> htmlPart) {
+        public Builder htmlPart(@Nullable Input<String> htmlPart) {
             this.htmlPart = htmlPart;
             return this;
         }
 
-        public Builder setHtmlPart(@Nullable String htmlPart) {
+        public Builder htmlPart(@Nullable String htmlPart) {
             this.htmlPart = Input.ofNullable(htmlPart);
             return this;
         }
 
-        public Builder setSubjectPart(Input<String> subjectPart) {
+        public Builder subjectPart(Input<String> subjectPart) {
             this.subjectPart = Objects.requireNonNull(subjectPart);
             return this;
         }
 
-        public Builder setSubjectPart(String subjectPart) {
+        public Builder subjectPart(String subjectPart) {
             this.subjectPart = Input.of(Objects.requireNonNull(subjectPart));
             return this;
         }
 
-        public Builder setTemplateName(@Nullable Input<String> templateName) {
+        public Builder templateName(@Nullable Input<String> templateName) {
             this.templateName = templateName;
             return this;
         }
 
-        public Builder setTemplateName(@Nullable String templateName) {
+        public Builder templateName(@Nullable String templateName) {
             this.templateName = Input.ofNullable(templateName);
             return this;
         }
 
-        public Builder setTextPart(@Nullable Input<String> textPart) {
+        public Builder textPart(@Nullable Input<String> textPart) {
             this.textPart = textPart;
             return this;
         }
 
-        public Builder setTextPart(@Nullable String textPart) {
+        public Builder textPart(@Nullable String textPart) {
             this.textPart = Input.ofNullable(textPart);
             return this;
         }

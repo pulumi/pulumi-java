@@ -101,22 +101,22 @@ public final class GoogleCloudApigeeV1OperationConfigResponse {
     	      this.quota = defaults.quota;
         }
 
-        public Builder setApiSource(String apiSource) {
+        public Builder apiSource(String apiSource) {
             this.apiSource = Objects.requireNonNull(apiSource);
             return this;
         }
 
-        public Builder setAttributes(List<GoogleCloudApigeeV1AttributeResponse> attributes) {
+        public Builder attributes(List<GoogleCloudApigeeV1AttributeResponse> attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
 
-        public Builder setOperations(List<GoogleCloudApigeeV1OperationResponse> operations) {
+        public Builder operations(List<GoogleCloudApigeeV1OperationResponse> operations) {
             this.operations = Objects.requireNonNull(operations);
             return this;
         }
 
-        public Builder setQuota(GoogleCloudApigeeV1QuotaResponse quota) {
+        public Builder quota(GoogleCloudApigeeV1QuotaResponse quota) {
             this.quota = Objects.requireNonNull(quota);
             return this;
         }

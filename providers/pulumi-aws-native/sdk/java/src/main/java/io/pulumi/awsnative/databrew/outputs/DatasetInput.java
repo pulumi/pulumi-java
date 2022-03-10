@@ -70,22 +70,22 @@ public final class DatasetInput {
     	      this.s3InputDefinition = defaults.s3InputDefinition;
         }
 
-        public Builder setDataCatalogInputDefinition(@Nullable DatasetDataCatalogInputDefinition dataCatalogInputDefinition) {
+        public Builder dataCatalogInputDefinition(@Nullable DatasetDataCatalogInputDefinition dataCatalogInputDefinition) {
             this.dataCatalogInputDefinition = dataCatalogInputDefinition;
             return this;
         }
 
-        public Builder setDatabaseInputDefinition(@Nullable DatasetDatabaseInputDefinition databaseInputDefinition) {
+        public Builder databaseInputDefinition(@Nullable DatasetDatabaseInputDefinition databaseInputDefinition) {
             this.databaseInputDefinition = databaseInputDefinition;
             return this;
         }
 
-        public Builder setMetadata(@Nullable DatasetMetadata metadata) {
+        public Builder metadata(@Nullable DatasetMetadata metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setS3InputDefinition(@Nullable DatasetS3Location s3InputDefinition) {
+        public Builder s3InputDefinition(@Nullable DatasetS3Location s3InputDefinition) {
             this.s3InputDefinition = s3InputDefinition;
             return this;
         }

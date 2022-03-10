@@ -125,52 +125,52 @@ public final class IntegrationRuntimeSsisCatalogInfoArgs extends io.pulumi.resou
     	      this.dualStandbyPairName = defaults.dualStandbyPairName;
         }
 
-        public Builder setCatalogAdminPassword(@Nullable Input<SecureStringArgs> catalogAdminPassword) {
+        public Builder catalogAdminPassword(@Nullable Input<SecureStringArgs> catalogAdminPassword) {
             this.catalogAdminPassword = catalogAdminPassword;
             return this;
         }
 
-        public Builder setCatalogAdminPassword(@Nullable SecureStringArgs catalogAdminPassword) {
+        public Builder catalogAdminPassword(@Nullable SecureStringArgs catalogAdminPassword) {
             this.catalogAdminPassword = Input.ofNullable(catalogAdminPassword);
             return this;
         }
 
-        public Builder setCatalogAdminUserName(@Nullable Input<String> catalogAdminUserName) {
+        public Builder catalogAdminUserName(@Nullable Input<String> catalogAdminUserName) {
             this.catalogAdminUserName = catalogAdminUserName;
             return this;
         }
 
-        public Builder setCatalogAdminUserName(@Nullable String catalogAdminUserName) {
+        public Builder catalogAdminUserName(@Nullable String catalogAdminUserName) {
             this.catalogAdminUserName = Input.ofNullable(catalogAdminUserName);
             return this;
         }
 
-        public Builder setCatalogPricingTier(@Nullable Input<Either<String,IntegrationRuntimeSsisCatalogPricingTier>> catalogPricingTier) {
+        public Builder catalogPricingTier(@Nullable Input<Either<String,IntegrationRuntimeSsisCatalogPricingTier>> catalogPricingTier) {
             this.catalogPricingTier = catalogPricingTier;
             return this;
         }
 
-        public Builder setCatalogPricingTier(@Nullable Either<String,IntegrationRuntimeSsisCatalogPricingTier> catalogPricingTier) {
+        public Builder catalogPricingTier(@Nullable Either<String,IntegrationRuntimeSsisCatalogPricingTier> catalogPricingTier) {
             this.catalogPricingTier = Input.ofNullable(catalogPricingTier);
             return this;
         }
 
-        public Builder setCatalogServerEndpoint(@Nullable Input<String> catalogServerEndpoint) {
+        public Builder catalogServerEndpoint(@Nullable Input<String> catalogServerEndpoint) {
             this.catalogServerEndpoint = catalogServerEndpoint;
             return this;
         }
 
-        public Builder setCatalogServerEndpoint(@Nullable String catalogServerEndpoint) {
+        public Builder catalogServerEndpoint(@Nullable String catalogServerEndpoint) {
             this.catalogServerEndpoint = Input.ofNullable(catalogServerEndpoint);
             return this;
         }
 
-        public Builder setDualStandbyPairName(@Nullable Input<String> dualStandbyPairName) {
+        public Builder dualStandbyPairName(@Nullable Input<String> dualStandbyPairName) {
             this.dualStandbyPairName = dualStandbyPairName;
             return this;
         }
 
-        public Builder setDualStandbyPairName(@Nullable String dualStandbyPairName) {
+        public Builder dualStandbyPairName(@Nullable String dualStandbyPairName) {
             this.dualStandbyPairName = Input.ofNullable(dualStandbyPairName);
             return this;
         }

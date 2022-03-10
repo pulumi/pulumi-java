@@ -127,27 +127,27 @@ public final class AutoscaleProfileResponse extends io.pulumi.resources.InvokeAr
     	      this.rules = defaults.rules;
         }
 
-        public Builder setCapacity(ScaleCapacityResponse capacity) {
+        public Builder capacity(ScaleCapacityResponse capacity) {
             this.capacity = Objects.requireNonNull(capacity);
             return this;
         }
 
-        public Builder setFixedDate(@Nullable TimeWindowResponse fixedDate) {
+        public Builder fixedDate(@Nullable TimeWindowResponse fixedDate) {
             this.fixedDate = fixedDate;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRecurrence(@Nullable RecurrenceResponse recurrence) {
+        public Builder recurrence(@Nullable RecurrenceResponse recurrence) {
             this.recurrence = recurrence;
             return this;
         }
 
-        public Builder setRules(List<ScaleRuleResponse> rules) {
+        public Builder rules(List<ScaleRuleResponse> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }

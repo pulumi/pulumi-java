@@ -68,12 +68,12 @@ public final class FirewallPolicyLogAnalyticsWorkspaceResponse {
     	      this.workspaceId = defaults.workspaceId;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
 
-        public Builder setWorkspaceId(@Nullable SubResourceResponse workspaceId) {
+        public Builder workspaceId(@Nullable SubResourceResponse workspaceId) {
             this.workspaceId = workspaceId;
             return this;
         }

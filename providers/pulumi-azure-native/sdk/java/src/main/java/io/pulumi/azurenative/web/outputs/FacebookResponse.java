@@ -102,22 +102,22 @@ public final class FacebookResponse {
     	      this.registration = defaults.registration;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setGraphApiVersion(@Nullable String graphApiVersion) {
+        public Builder graphApiVersion(@Nullable String graphApiVersion) {
             this.graphApiVersion = graphApiVersion;
             return this;
         }
 
-        public Builder setLogin(@Nullable LoginScopesResponse login) {
+        public Builder login(@Nullable LoginScopesResponse login) {
             this.login = login;
             return this;
         }
 
-        public Builder setRegistration(@Nullable AppRegistrationResponse registration) {
+        public Builder registration(@Nullable AppRegistrationResponse registration) {
             this.registration = registration;
             return this;
         }

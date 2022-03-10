@@ -67,12 +67,12 @@ public final class ScalingPlanScalingInstructionPredefinedLoadMetricSpecificatio
     	      this.resourceLabel = defaults.resourceLabel;
         }
 
-        public Builder setPredefinedLoadMetricType(String predefinedLoadMetricType) {
+        public Builder predefinedLoadMetricType(String predefinedLoadMetricType) {
             this.predefinedLoadMetricType = Objects.requireNonNull(predefinedLoadMetricType);
             return this;
         }
 
-        public Builder setResourceLabel(@Nullable String resourceLabel) {
+        public Builder resourceLabel(@Nullable String resourceLabel) {
             this.resourceLabel = resourceLabel;
             return this;
         }

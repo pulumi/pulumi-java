@@ -141,82 +141,82 @@ public final class BudgetsActionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subscribers = defaults.subscribers;
         }
 
-        public Builder setActionThreshold(Input<BudgetsActionActionThresholdArgs> actionThreshold) {
+        public Builder actionThreshold(Input<BudgetsActionActionThresholdArgs> actionThreshold) {
             this.actionThreshold = Objects.requireNonNull(actionThreshold);
             return this;
         }
 
-        public Builder setActionThreshold(BudgetsActionActionThresholdArgs actionThreshold) {
+        public Builder actionThreshold(BudgetsActionActionThresholdArgs actionThreshold) {
             this.actionThreshold = Input.of(Objects.requireNonNull(actionThreshold));
             return this;
         }
 
-        public Builder setActionType(Input<BudgetsActionActionType> actionType) {
+        public Builder actionType(Input<BudgetsActionActionType> actionType) {
             this.actionType = Objects.requireNonNull(actionType);
             return this;
         }
 
-        public Builder setActionType(BudgetsActionActionType actionType) {
+        public Builder actionType(BudgetsActionActionType actionType) {
             this.actionType = Input.of(Objects.requireNonNull(actionType));
             return this;
         }
 
-        public Builder setApprovalModel(@Nullable Input<BudgetsActionApprovalModel> approvalModel) {
+        public Builder approvalModel(@Nullable Input<BudgetsActionApprovalModel> approvalModel) {
             this.approvalModel = approvalModel;
             return this;
         }
 
-        public Builder setApprovalModel(@Nullable BudgetsActionApprovalModel approvalModel) {
+        public Builder approvalModel(@Nullable BudgetsActionApprovalModel approvalModel) {
             this.approvalModel = Input.ofNullable(approvalModel);
             return this;
         }
 
-        public Builder setBudgetName(Input<String> budgetName) {
+        public Builder budgetName(Input<String> budgetName) {
             this.budgetName = Objects.requireNonNull(budgetName);
             return this;
         }
 
-        public Builder setBudgetName(String budgetName) {
+        public Builder budgetName(String budgetName) {
             this.budgetName = Input.of(Objects.requireNonNull(budgetName));
             return this;
         }
 
-        public Builder setDefinition(Input<BudgetsActionDefinitionArgs> definition) {
+        public Builder definition(Input<BudgetsActionDefinitionArgs> definition) {
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
 
-        public Builder setDefinition(BudgetsActionDefinitionArgs definition) {
+        public Builder definition(BudgetsActionDefinitionArgs definition) {
             this.definition = Input.of(Objects.requireNonNull(definition));
             return this;
         }
 
-        public Builder setExecutionRoleArn(Input<String> executionRoleArn) {
+        public Builder executionRoleArn(Input<String> executionRoleArn) {
             this.executionRoleArn = Objects.requireNonNull(executionRoleArn);
             return this;
         }
 
-        public Builder setExecutionRoleArn(String executionRoleArn) {
+        public Builder executionRoleArn(String executionRoleArn) {
             this.executionRoleArn = Input.of(Objects.requireNonNull(executionRoleArn));
             return this;
         }
 
-        public Builder setNotificationType(Input<BudgetsActionNotificationType> notificationType) {
+        public Builder notificationType(Input<BudgetsActionNotificationType> notificationType) {
             this.notificationType = Objects.requireNonNull(notificationType);
             return this;
         }
 
-        public Builder setNotificationType(BudgetsActionNotificationType notificationType) {
+        public Builder notificationType(BudgetsActionNotificationType notificationType) {
             this.notificationType = Input.of(Objects.requireNonNull(notificationType));
             return this;
         }
 
-        public Builder setSubscribers(Input<List<BudgetsActionSubscriberArgs>> subscribers) {
+        public Builder subscribers(Input<List<BudgetsActionSubscriberArgs>> subscribers) {
             this.subscribers = Objects.requireNonNull(subscribers);
             return this;
         }
 
-        public Builder setSubscribers(List<BudgetsActionSubscriberArgs> subscribers) {
+        public Builder subscribers(List<BudgetsActionSubscriberArgs> subscribers) {
             this.subscribers = Input.of(Objects.requireNonNull(subscribers));
             return this;
         }

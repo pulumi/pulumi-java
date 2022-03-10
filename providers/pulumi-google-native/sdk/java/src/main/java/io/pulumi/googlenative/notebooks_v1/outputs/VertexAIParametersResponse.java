@@ -66,12 +66,12 @@ public final class VertexAIParametersResponse {
     	      this.network = defaults.network;
         }
 
-        public Builder setEnv(Map<String,String> env) {
+        public Builder env(Map<String,String> env) {
             this.env = Objects.requireNonNull(env);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }

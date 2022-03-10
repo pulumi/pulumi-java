@@ -159,72 +159,72 @@ public final class ContentKeyPolicyFairPlayConfigurationArgs extends io.pulumi.r
     	      this.rentalDuration = defaults.rentalDuration;
         }
 
-        public Builder setAsk(Input<String> ask) {
+        public Builder ask(Input<String> ask) {
             this.ask = Objects.requireNonNull(ask);
             return this;
         }
 
-        public Builder setAsk(String ask) {
+        public Builder ask(String ask) {
             this.ask = Input.of(Objects.requireNonNull(ask));
             return this;
         }
 
-        public Builder setFairPlayPfx(Input<String> fairPlayPfx) {
+        public Builder fairPlayPfx(Input<String> fairPlayPfx) {
             this.fairPlayPfx = Objects.requireNonNull(fairPlayPfx);
             return this;
         }
 
-        public Builder setFairPlayPfx(String fairPlayPfx) {
+        public Builder fairPlayPfx(String fairPlayPfx) {
             this.fairPlayPfx = Input.of(Objects.requireNonNull(fairPlayPfx));
             return this;
         }
 
-        public Builder setFairPlayPfxPassword(Input<String> fairPlayPfxPassword) {
+        public Builder fairPlayPfxPassword(Input<String> fairPlayPfxPassword) {
             this.fairPlayPfxPassword = Objects.requireNonNull(fairPlayPfxPassword);
             return this;
         }
 
-        public Builder setFairPlayPfxPassword(String fairPlayPfxPassword) {
+        public Builder fairPlayPfxPassword(String fairPlayPfxPassword) {
             this.fairPlayPfxPassword = Input.of(Objects.requireNonNull(fairPlayPfxPassword));
             return this;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder setOfflineRentalConfiguration(@Nullable Input<ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs> offlineRentalConfiguration) {
+        public Builder offlineRentalConfiguration(@Nullable Input<ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs> offlineRentalConfiguration) {
             this.offlineRentalConfiguration = offlineRentalConfiguration;
             return this;
         }
 
-        public Builder setOfflineRentalConfiguration(@Nullable ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs offlineRentalConfiguration) {
+        public Builder offlineRentalConfiguration(@Nullable ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs offlineRentalConfiguration) {
             this.offlineRentalConfiguration = Input.ofNullable(offlineRentalConfiguration);
             return this;
         }
 
-        public Builder setRentalAndLeaseKeyType(Input<Either<String,ContentKeyPolicyFairPlayRentalAndLeaseKeyType>> rentalAndLeaseKeyType) {
+        public Builder rentalAndLeaseKeyType(Input<Either<String,ContentKeyPolicyFairPlayRentalAndLeaseKeyType>> rentalAndLeaseKeyType) {
             this.rentalAndLeaseKeyType = Objects.requireNonNull(rentalAndLeaseKeyType);
             return this;
         }
 
-        public Builder setRentalAndLeaseKeyType(Either<String,ContentKeyPolicyFairPlayRentalAndLeaseKeyType> rentalAndLeaseKeyType) {
+        public Builder rentalAndLeaseKeyType(Either<String,ContentKeyPolicyFairPlayRentalAndLeaseKeyType> rentalAndLeaseKeyType) {
             this.rentalAndLeaseKeyType = Input.of(Objects.requireNonNull(rentalAndLeaseKeyType));
             return this;
         }
 
-        public Builder setRentalDuration(Input<Double> rentalDuration) {
+        public Builder rentalDuration(Input<Double> rentalDuration) {
             this.rentalDuration = Objects.requireNonNull(rentalDuration);
             return this;
         }
 
-        public Builder setRentalDuration(Double rentalDuration) {
+        public Builder rentalDuration(Double rentalDuration) {
             this.rentalDuration = Input.of(Objects.requireNonNull(rentalDuration));
             return this;
         }

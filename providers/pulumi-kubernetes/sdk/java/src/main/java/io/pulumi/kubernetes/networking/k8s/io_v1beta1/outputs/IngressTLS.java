@@ -68,12 +68,12 @@ public final class IngressTLS {
     	      this.secretName = defaults.secretName;
         }
 
-        public Builder setHosts(@Nullable List<String> hosts) {
+        public Builder hosts(@Nullable List<String> hosts) {
             this.hosts = hosts;
             return this;
         }
 
-        public Builder setSecretName(@Nullable String secretName) {
+        public Builder secretName(@Nullable String secretName) {
             this.secretName = secretName;
             return this;
         }

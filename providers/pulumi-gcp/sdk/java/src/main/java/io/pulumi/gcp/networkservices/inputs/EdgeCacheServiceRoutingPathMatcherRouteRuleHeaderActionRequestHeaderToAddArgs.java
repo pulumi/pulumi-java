@@ -88,32 +88,32 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionReques
     	      this.replace = defaults.replace;
         }
 
-        public Builder setHeaderName(Input<String> headerName) {
+        public Builder headerName(Input<String> headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
-        public Builder setHeaderName(String headerName) {
+        public Builder headerName(String headerName) {
             this.headerName = Input.of(Objects.requireNonNull(headerName));
             return this;
         }
 
-        public Builder setHeaderValue(Input<String> headerValue) {
+        public Builder headerValue(Input<String> headerValue) {
             this.headerValue = Objects.requireNonNull(headerValue);
             return this;
         }
 
-        public Builder setHeaderValue(String headerValue) {
+        public Builder headerValue(String headerValue) {
             this.headerValue = Input.of(Objects.requireNonNull(headerValue));
             return this;
         }
 
-        public Builder setReplace(@Nullable Input<Boolean> replace) {
+        public Builder replace(@Nullable Input<Boolean> replace) {
             this.replace = replace;
             return this;
         }
 
-        public Builder setReplace(@Nullable Boolean replace) {
+        public Builder replace(@Nullable Boolean replace) {
             this.replace = Input.ofNullable(replace);
             return this;
         }

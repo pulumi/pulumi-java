@@ -107,22 +107,22 @@ public final class ReferenceVmResponse extends io.pulumi.resources.InvokeArgs {
     	      this.vmStateDetails = defaults.vmStateDetails;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
 
-        public Builder setVmResourceId(String vmResourceId) {
+        public Builder vmResourceId(String vmResourceId) {
             this.vmResourceId = Objects.requireNonNull(vmResourceId);
             return this;
         }
 
-        public Builder setVmStateDetails(VmStateDetailsResponse vmStateDetails) {
+        public Builder vmStateDetails(VmStateDetailsResponse vmStateDetails) {
             this.vmStateDetails = Objects.requireNonNull(vmStateDetails);
             return this;
         }

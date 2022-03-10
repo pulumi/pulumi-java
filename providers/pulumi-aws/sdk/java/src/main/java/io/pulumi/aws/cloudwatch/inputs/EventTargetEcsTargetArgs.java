@@ -220,112 +220,112 @@ public final class EventTargetEcsTargetArgs extends io.pulumi.resources.Resource
     	      this.taskDefinitionArn = defaults.taskDefinitionArn;
         }
 
-        public Builder setEnableEcsManagedTags(@Nullable Input<Boolean> enableEcsManagedTags) {
+        public Builder enableEcsManagedTags(@Nullable Input<Boolean> enableEcsManagedTags) {
             this.enableEcsManagedTags = enableEcsManagedTags;
             return this;
         }
 
-        public Builder setEnableEcsManagedTags(@Nullable Boolean enableEcsManagedTags) {
+        public Builder enableEcsManagedTags(@Nullable Boolean enableEcsManagedTags) {
             this.enableEcsManagedTags = Input.ofNullable(enableEcsManagedTags);
             return this;
         }
 
-        public Builder setEnableExecuteCommand(@Nullable Input<Boolean> enableExecuteCommand) {
+        public Builder enableExecuteCommand(@Nullable Input<Boolean> enableExecuteCommand) {
             this.enableExecuteCommand = enableExecuteCommand;
             return this;
         }
 
-        public Builder setEnableExecuteCommand(@Nullable Boolean enableExecuteCommand) {
+        public Builder enableExecuteCommand(@Nullable Boolean enableExecuteCommand) {
             this.enableExecuteCommand = Input.ofNullable(enableExecuteCommand);
             return this;
         }
 
-        public Builder setGroup(@Nullable Input<String> group) {
+        public Builder group(@Nullable Input<String> group) {
             this.group = group;
             return this;
         }
 
-        public Builder setGroup(@Nullable String group) {
+        public Builder group(@Nullable String group) {
             this.group = Input.ofNullable(group);
             return this;
         }
 
-        public Builder setLaunchType(@Nullable Input<String> launchType) {
+        public Builder launchType(@Nullable Input<String> launchType) {
             this.launchType = launchType;
             return this;
         }
 
-        public Builder setLaunchType(@Nullable String launchType) {
+        public Builder launchType(@Nullable String launchType) {
             this.launchType = Input.ofNullable(launchType);
             return this;
         }
 
-        public Builder setNetworkConfiguration(@Nullable Input<EventTargetEcsTargetNetworkConfigurationArgs> networkConfiguration) {
+        public Builder networkConfiguration(@Nullable Input<EventTargetEcsTargetNetworkConfigurationArgs> networkConfiguration) {
             this.networkConfiguration = networkConfiguration;
             return this;
         }
 
-        public Builder setNetworkConfiguration(@Nullable EventTargetEcsTargetNetworkConfigurationArgs networkConfiguration) {
+        public Builder networkConfiguration(@Nullable EventTargetEcsTargetNetworkConfigurationArgs networkConfiguration) {
             this.networkConfiguration = Input.ofNullable(networkConfiguration);
             return this;
         }
 
-        public Builder setPlacementConstraints(@Nullable Input<List<EventTargetEcsTargetPlacementConstraintArgs>> placementConstraints) {
+        public Builder placementConstraints(@Nullable Input<List<EventTargetEcsTargetPlacementConstraintArgs>> placementConstraints) {
             this.placementConstraints = placementConstraints;
             return this;
         }
 
-        public Builder setPlacementConstraints(@Nullable List<EventTargetEcsTargetPlacementConstraintArgs> placementConstraints) {
+        public Builder placementConstraints(@Nullable List<EventTargetEcsTargetPlacementConstraintArgs> placementConstraints) {
             this.placementConstraints = Input.ofNullable(placementConstraints);
             return this;
         }
 
-        public Builder setPlatformVersion(@Nullable Input<String> platformVersion) {
+        public Builder platformVersion(@Nullable Input<String> platformVersion) {
             this.platformVersion = platformVersion;
             return this;
         }
 
-        public Builder setPlatformVersion(@Nullable String platformVersion) {
+        public Builder platformVersion(@Nullable String platformVersion) {
             this.platformVersion = Input.ofNullable(platformVersion);
             return this;
         }
 
-        public Builder setPropagateTags(@Nullable Input<String> propagateTags) {
+        public Builder propagateTags(@Nullable Input<String> propagateTags) {
             this.propagateTags = propagateTags;
             return this;
         }
 
-        public Builder setPropagateTags(@Nullable String propagateTags) {
+        public Builder propagateTags(@Nullable String propagateTags) {
             this.propagateTags = Input.ofNullable(propagateTags);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTaskCount(@Nullable Input<Integer> taskCount) {
+        public Builder taskCount(@Nullable Input<Integer> taskCount) {
             this.taskCount = taskCount;
             return this;
         }
 
-        public Builder setTaskCount(@Nullable Integer taskCount) {
+        public Builder taskCount(@Nullable Integer taskCount) {
             this.taskCount = Input.ofNullable(taskCount);
             return this;
         }
 
-        public Builder setTaskDefinitionArn(Input<String> taskDefinitionArn) {
+        public Builder taskDefinitionArn(Input<String> taskDefinitionArn) {
             this.taskDefinitionArn = Objects.requireNonNull(taskDefinitionArn);
             return this;
         }
 
-        public Builder setTaskDefinitionArn(String taskDefinitionArn) {
+        public Builder taskDefinitionArn(String taskDefinitionArn) {
             this.taskDefinitionArn = Input.of(Objects.requireNonNull(taskDefinitionArn));
             return this;
         }

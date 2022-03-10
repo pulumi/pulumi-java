@@ -74,22 +74,22 @@ public final class SubnetworkSecondaryRangeArgs extends io.pulumi.resources.Reso
     	      this.rangeName = defaults.rangeName;
         }
 
-        public Builder setIpCidrRange(@Nullable Input<String> ipCidrRange) {
+        public Builder ipCidrRange(@Nullable Input<String> ipCidrRange) {
             this.ipCidrRange = ipCidrRange;
             return this;
         }
 
-        public Builder setIpCidrRange(@Nullable String ipCidrRange) {
+        public Builder ipCidrRange(@Nullable String ipCidrRange) {
             this.ipCidrRange = Input.ofNullable(ipCidrRange);
             return this;
         }
 
-        public Builder setRangeName(@Nullable Input<String> rangeName) {
+        public Builder rangeName(@Nullable Input<String> rangeName) {
             this.rangeName = rangeName;
             return this;
         }
 
-        public Builder setRangeName(@Nullable String rangeName) {
+        public Builder rangeName(@Nullable String rangeName) {
             this.rangeName = Input.ofNullable(rangeName);
             return this;
         }

@@ -76,22 +76,22 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesArgs e
     	      this.taskType = defaults.taskType;
         }
 
-        public Builder setInput(@Nullable Input<MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs> input) {
+        public Builder input(@Nullable Input<MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs> input) {
             this.input = input;
             return this;
         }
 
-        public Builder setInput(@Nullable MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs input) {
+        public Builder input(@Nullable MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs input) {
             this.input = Input.ofNullable(input);
             return this;
         }
 
-        public Builder setTaskType(Input<String> taskType) {
+        public Builder taskType(Input<String> taskType) {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
 
-        public Builder setTaskType(String taskType) {
+        public Builder taskType(String taskType) {
             this.taskType = Input.of(Objects.requireNonNull(taskType));
             return this;
         }

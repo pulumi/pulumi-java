@@ -50,7 +50,7 @@ public final class ListBitLockerKeyResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(@Nullable List<DriveBitLockerKeyResponse> value) {
+        public Builder value(@Nullable List<DriveBitLockerKeyResponse> value) {
             this.value = value;
             return this;
         }

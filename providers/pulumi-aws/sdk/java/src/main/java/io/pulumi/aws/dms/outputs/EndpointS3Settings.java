@@ -244,67 +244,67 @@ public final class EndpointS3Settings {
     	      this.serviceAccessRoleArn = defaults.serviceAccessRoleArn;
         }
 
-        public Builder setBucketFolder(@Nullable String bucketFolder) {
+        public Builder bucketFolder(@Nullable String bucketFolder) {
             this.bucketFolder = bucketFolder;
             return this;
         }
 
-        public Builder setBucketName(@Nullable String bucketName) {
+        public Builder bucketName(@Nullable String bucketName) {
             this.bucketName = bucketName;
             return this;
         }
 
-        public Builder setCompressionType(@Nullable String compressionType) {
+        public Builder compressionType(@Nullable String compressionType) {
             this.compressionType = compressionType;
             return this;
         }
 
-        public Builder setCsvDelimiter(@Nullable String csvDelimiter) {
+        public Builder csvDelimiter(@Nullable String csvDelimiter) {
             this.csvDelimiter = csvDelimiter;
             return this;
         }
 
-        public Builder setCsvRowDelimiter(@Nullable String csvRowDelimiter) {
+        public Builder csvRowDelimiter(@Nullable String csvRowDelimiter) {
             this.csvRowDelimiter = csvRowDelimiter;
             return this;
         }
 
-        public Builder setDataFormat(@Nullable String dataFormat) {
+        public Builder dataFormat(@Nullable String dataFormat) {
             this.dataFormat = dataFormat;
             return this;
         }
 
-        public Builder setDatePartitionEnabled(@Nullable Boolean datePartitionEnabled) {
+        public Builder datePartitionEnabled(@Nullable Boolean datePartitionEnabled) {
             this.datePartitionEnabled = datePartitionEnabled;
             return this;
         }
 
-        public Builder setEncryptionMode(@Nullable String encryptionMode) {
+        public Builder encryptionMode(@Nullable String encryptionMode) {
             this.encryptionMode = encryptionMode;
             return this;
         }
 
-        public Builder setExternalTableDefinition(@Nullable String externalTableDefinition) {
+        public Builder externalTableDefinition(@Nullable String externalTableDefinition) {
             this.externalTableDefinition = externalTableDefinition;
             return this;
         }
 
-        public Builder setParquetTimestampInMillisecond(@Nullable Boolean parquetTimestampInMillisecond) {
+        public Builder parquetTimestampInMillisecond(@Nullable Boolean parquetTimestampInMillisecond) {
             this.parquetTimestampInMillisecond = parquetTimestampInMillisecond;
             return this;
         }
 
-        public Builder setParquetVersion(@Nullable String parquetVersion) {
+        public Builder parquetVersion(@Nullable String parquetVersion) {
             this.parquetVersion = parquetVersion;
             return this;
         }
 
-        public Builder setServerSideEncryptionKmsKeyId(@Nullable String serverSideEncryptionKmsKeyId) {
+        public Builder serverSideEncryptionKmsKeyId(@Nullable String serverSideEncryptionKmsKeyId) {
             this.serverSideEncryptionKmsKeyId = serverSideEncryptionKmsKeyId;
             return this;
         }
 
-        public Builder setServiceAccessRoleArn(@Nullable String serviceAccessRoleArn) {
+        public Builder serviceAccessRoleArn(@Nullable String serviceAccessRoleArn) {
             this.serviceAccessRoleArn = serviceAccessRoleArn;
             return this;
         }

@@ -74,22 +74,22 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs e
     	      this.url = defaults.url;
         }
 
-        public Builder setRevisionId(Input<String> revisionId) {
+        public Builder revisionId(Input<String> revisionId) {
             this.revisionId = Objects.requireNonNull(revisionId);
             return this;
         }
 
-        public Builder setRevisionId(String revisionId) {
+        public Builder revisionId(String revisionId) {
             this.revisionId = Input.of(Objects.requireNonNull(revisionId));
             return this;
         }
 
-        public Builder setUrl(@Nullable Input<String> url) {
+        public Builder url(@Nullable Input<String> url) {
             this.url = url;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = Input.ofNullable(url);
             return this;
         }

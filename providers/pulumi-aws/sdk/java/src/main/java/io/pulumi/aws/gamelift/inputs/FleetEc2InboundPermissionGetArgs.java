@@ -102,42 +102,42 @@ public final class FleetEc2InboundPermissionGetArgs extends io.pulumi.resources.
     	      this.toPort = defaults.toPort;
         }
 
-        public Builder setFromPort(Input<Integer> fromPort) {
+        public Builder fromPort(Input<Integer> fromPort) {
             this.fromPort = Objects.requireNonNull(fromPort);
             return this;
         }
 
-        public Builder setFromPort(Integer fromPort) {
+        public Builder fromPort(Integer fromPort) {
             this.fromPort = Input.of(Objects.requireNonNull(fromPort));
             return this;
         }
 
-        public Builder setIpRange(Input<String> ipRange) {
+        public Builder ipRange(Input<String> ipRange) {
             this.ipRange = Objects.requireNonNull(ipRange);
             return this;
         }
 
-        public Builder setIpRange(String ipRange) {
+        public Builder ipRange(String ipRange) {
             this.ipRange = Input.of(Objects.requireNonNull(ipRange));
             return this;
         }
 
-        public Builder setProtocol(Input<String> protocol) {
+        public Builder protocol(Input<String> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Input.of(Objects.requireNonNull(protocol));
             return this;
         }
 
-        public Builder setToPort(Input<Integer> toPort) {
+        public Builder toPort(Input<Integer> toPort) {
             this.toPort = Objects.requireNonNull(toPort);
             return this;
         }
 
-        public Builder setToPort(Integer toPort) {
+        public Builder toPort(Integer toPort) {
             this.toPort = Input.of(Objects.requireNonNull(toPort));
             return this;
         }

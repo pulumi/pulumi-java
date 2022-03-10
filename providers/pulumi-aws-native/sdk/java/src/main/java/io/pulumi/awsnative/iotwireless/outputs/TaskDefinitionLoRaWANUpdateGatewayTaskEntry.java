@@ -51,12 +51,12 @@ public final class TaskDefinitionLoRaWANUpdateGatewayTaskEntry {
     	      this.updateVersion = defaults.updateVersion;
         }
 
-        public Builder setCurrentVersion(@Nullable TaskDefinitionLoRaWANGatewayVersion currentVersion) {
+        public Builder currentVersion(@Nullable TaskDefinitionLoRaWANGatewayVersion currentVersion) {
             this.currentVersion = currentVersion;
             return this;
         }
 
-        public Builder setUpdateVersion(@Nullable TaskDefinitionLoRaWANGatewayVersion updateVersion) {
+        public Builder updateVersion(@Nullable TaskDefinitionLoRaWANGatewayVersion updateVersion) {
             this.updateVersion = updateVersion;
             return this;
         }

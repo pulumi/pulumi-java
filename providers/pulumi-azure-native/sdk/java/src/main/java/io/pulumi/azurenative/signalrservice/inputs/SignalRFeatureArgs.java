@@ -95,32 +95,32 @@ public final class SignalRFeatureArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setFlag(Input<Either<String,FeatureFlags>> flag) {
+        public Builder flag(Input<Either<String,FeatureFlags>> flag) {
             this.flag = Objects.requireNonNull(flag);
             return this;
         }
 
-        public Builder setFlag(Either<String,FeatureFlags> flag) {
+        public Builder flag(Either<String,FeatureFlags> flag) {
             this.flag = Input.of(Objects.requireNonNull(flag));
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Input<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setValue(Input<String> value) {
+        public Builder value(Input<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }

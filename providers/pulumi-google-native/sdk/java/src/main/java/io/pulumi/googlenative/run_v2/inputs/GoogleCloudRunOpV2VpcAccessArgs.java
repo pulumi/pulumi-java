@@ -75,22 +75,22 @@ public final class GoogleCloudRunOpV2VpcAccessArgs extends io.pulumi.resources.R
     	      this.egress = defaults.egress;
         }
 
-        public Builder setConnector(@Nullable Input<String> connector) {
+        public Builder connector(@Nullable Input<String> connector) {
             this.connector = connector;
             return this;
         }
 
-        public Builder setConnector(@Nullable String connector) {
+        public Builder connector(@Nullable String connector) {
             this.connector = Input.ofNullable(connector);
             return this;
         }
 
-        public Builder setEgress(@Nullable Input<GoogleCloudRunOpV2VpcAccessEgress> egress) {
+        public Builder egress(@Nullable Input<GoogleCloudRunOpV2VpcAccessEgress> egress) {
             this.egress = egress;
             return this;
         }
 
-        public Builder setEgress(@Nullable GoogleCloudRunOpV2VpcAccessEgress egress) {
+        public Builder egress(@Nullable GoogleCloudRunOpV2VpcAccessEgress egress) {
             this.egress = Input.ofNullable(egress);
             return this;
         }

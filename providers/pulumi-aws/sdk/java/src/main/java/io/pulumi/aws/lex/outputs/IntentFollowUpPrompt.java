@@ -70,12 +70,12 @@ public final class IntentFollowUpPrompt {
     	      this.rejectionStatement = defaults.rejectionStatement;
         }
 
-        public Builder setPrompt(IntentFollowUpPromptPrompt prompt) {
+        public Builder prompt(IntentFollowUpPromptPrompt prompt) {
             this.prompt = Objects.requireNonNull(prompt);
             return this;
         }
 
-        public Builder setRejectionStatement(IntentFollowUpPromptRejectionStatement rejectionStatement) {
+        public Builder rejectionStatement(IntentFollowUpPromptRejectionStatement rejectionStatement) {
             this.rejectionStatement = Objects.requireNonNull(rejectionStatement);
             return this;
         }

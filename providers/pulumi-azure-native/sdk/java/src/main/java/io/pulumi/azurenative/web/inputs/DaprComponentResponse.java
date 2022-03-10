@@ -108,22 +108,22 @@ public final class DaprComponentResponse extends io.pulumi.resources.InvokeArgs 
     	      this.version = defaults.version;
         }
 
-        public Builder setMetadata(@Nullable List<DaprMetadataResponse> metadata) {
+        public Builder metadata(@Nullable List<DaprMetadataResponse> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

@@ -358,102 +358,102 @@ public final class GetRegionCommitmentResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAutoRenew(Boolean autoRenew) {
+        public Builder autoRenew(Boolean autoRenew) {
             this.autoRenew = Objects.requireNonNull(autoRenew);
             return this;
         }
 
-        public Builder setCategory(String category) {
+        public Builder category(String category) {
             this.category = Objects.requireNonNull(category);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEndTimestamp(String endTimestamp) {
+        public Builder endTimestamp(String endTimestamp) {
             this.endTimestamp = Objects.requireNonNull(endTimestamp);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLicenseResource(LicenseResourceCommitmentResponse licenseResource) {
+        public Builder licenseResource(LicenseResourceCommitmentResponse licenseResource) {
             this.licenseResource = Objects.requireNonNull(licenseResource);
             return this;
         }
 
-        public Builder setMergeSourceCommitments(List<String> mergeSourceCommitments) {
+        public Builder mergeSourceCommitments(List<String> mergeSourceCommitments) {
             this.mergeSourceCommitments = Objects.requireNonNull(mergeSourceCommitments);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPlan(String plan) {
+        public Builder plan(String plan) {
             this.plan = Objects.requireNonNull(plan);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setReservations(List<ReservationResponse> reservations) {
+        public Builder reservations(List<ReservationResponse> reservations) {
             this.reservations = Objects.requireNonNull(reservations);
             return this;
         }
 
-        public Builder setResources(List<ResourceCommitmentResponse> resources) {
+        public Builder resources(List<ResourceCommitmentResponse> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSelfLinkWithId(String selfLinkWithId) {
+        public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
 
-        public Builder setSplitSourceCommitment(String splitSourceCommitment) {
+        public Builder splitSourceCommitment(String splitSourceCommitment) {
             this.splitSourceCommitment = Objects.requireNonNull(splitSourceCommitment);
             return this;
         }
 
-        public Builder setStartTimestamp(String startTimestamp) {
+        public Builder startTimestamp(String startTimestamp) {
             this.startTimestamp = Objects.requireNonNull(startTimestamp);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatusMessage(String statusMessage) {
+        public Builder statusMessage(String statusMessage) {
             this.statusMessage = Objects.requireNonNull(statusMessage);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -151,72 +151,72 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
     	      this.testFrequencyInSec = defaults.testFrequencyInSec;
         }
 
-        public Builder setConnectionMonitorTestName(@Nullable Input<String> connectionMonitorTestName) {
+        public Builder connectionMonitorTestName(@Nullable Input<String> connectionMonitorTestName) {
             this.connectionMonitorTestName = connectionMonitorTestName;
             return this;
         }
 
-        public Builder setConnectionMonitorTestName(@Nullable String connectionMonitorTestName) {
+        public Builder connectionMonitorTestName(@Nullable String connectionMonitorTestName) {
             this.connectionMonitorTestName = Input.ofNullable(connectionMonitorTestName);
             return this;
         }
 
-        public Builder setDestination(@Nullable Input<String> destination) {
+        public Builder destination(@Nullable Input<String> destination) {
             this.destination = destination;
             return this;
         }
 
-        public Builder setDestination(@Nullable String destination) {
+        public Builder destination(@Nullable String destination) {
             this.destination = Input.ofNullable(destination);
             return this;
         }
 
-        public Builder setDestinationPort(@Nullable Input<Integer> destinationPort) {
+        public Builder destinationPort(@Nullable Input<Integer> destinationPort) {
             this.destinationPort = destinationPort;
             return this;
         }
 
-        public Builder setDestinationPort(@Nullable Integer destinationPort) {
+        public Builder destinationPort(@Nullable Integer destinationPort) {
             this.destinationPort = Input.ofNullable(destinationPort);
             return this;
         }
 
-        public Builder setPeeringServiceName(Input<String> peeringServiceName) {
+        public Builder peeringServiceName(Input<String> peeringServiceName) {
             this.peeringServiceName = Objects.requireNonNull(peeringServiceName);
             return this;
         }
 
-        public Builder setPeeringServiceName(String peeringServiceName) {
+        public Builder peeringServiceName(String peeringServiceName) {
             this.peeringServiceName = Input.of(Objects.requireNonNull(peeringServiceName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSourceAgent(@Nullable Input<String> sourceAgent) {
+        public Builder sourceAgent(@Nullable Input<String> sourceAgent) {
             this.sourceAgent = sourceAgent;
             return this;
         }
 
-        public Builder setSourceAgent(@Nullable String sourceAgent) {
+        public Builder sourceAgent(@Nullable String sourceAgent) {
             this.sourceAgent = Input.ofNullable(sourceAgent);
             return this;
         }
 
-        public Builder setTestFrequencyInSec(@Nullable Input<Integer> testFrequencyInSec) {
+        public Builder testFrequencyInSec(@Nullable Input<Integer> testFrequencyInSec) {
             this.testFrequencyInSec = testFrequencyInSec;
             return this;
         }
 
-        public Builder setTestFrequencyInSec(@Nullable Integer testFrequencyInSec) {
+        public Builder testFrequencyInSec(@Nullable Integer testFrequencyInSec) {
             this.testFrequencyInSec = Input.ofNullable(testFrequencyInSec);
             return this;
         }

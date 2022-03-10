@@ -99,42 +99,42 @@ public final class DatasetDatabaseInputDefinitionArgs extends io.pulumi.resource
     	      this.tempDirectory = defaults.tempDirectory;
         }
 
-        public Builder setDatabaseTableName(@Nullable Input<String> databaseTableName) {
+        public Builder databaseTableName(@Nullable Input<String> databaseTableName) {
             this.databaseTableName = databaseTableName;
             return this;
         }
 
-        public Builder setDatabaseTableName(@Nullable String databaseTableName) {
+        public Builder databaseTableName(@Nullable String databaseTableName) {
             this.databaseTableName = Input.ofNullable(databaseTableName);
             return this;
         }
 
-        public Builder setGlueConnectionName(Input<String> glueConnectionName) {
+        public Builder glueConnectionName(Input<String> glueConnectionName) {
             this.glueConnectionName = Objects.requireNonNull(glueConnectionName);
             return this;
         }
 
-        public Builder setGlueConnectionName(String glueConnectionName) {
+        public Builder glueConnectionName(String glueConnectionName) {
             this.glueConnectionName = Input.of(Objects.requireNonNull(glueConnectionName));
             return this;
         }
 
-        public Builder setQueryString(@Nullable Input<String> queryString) {
+        public Builder queryString(@Nullable Input<String> queryString) {
             this.queryString = queryString;
             return this;
         }
 
-        public Builder setQueryString(@Nullable String queryString) {
+        public Builder queryString(@Nullable String queryString) {
             this.queryString = Input.ofNullable(queryString);
             return this;
         }
 
-        public Builder setTempDirectory(@Nullable Input<DatasetS3LocationArgs> tempDirectory) {
+        public Builder tempDirectory(@Nullable Input<DatasetS3LocationArgs> tempDirectory) {
             this.tempDirectory = tempDirectory;
             return this;
         }
 
-        public Builder setTempDirectory(@Nullable DatasetS3LocationArgs tempDirectory) {
+        public Builder tempDirectory(@Nullable DatasetS3LocationArgs tempDirectory) {
             this.tempDirectory = Input.ofNullable(tempDirectory);
             return this;
         }

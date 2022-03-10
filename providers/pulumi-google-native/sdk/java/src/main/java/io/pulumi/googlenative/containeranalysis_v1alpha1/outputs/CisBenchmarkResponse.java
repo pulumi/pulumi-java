@@ -66,12 +66,12 @@ public final class CisBenchmarkResponse {
     	      this.severity = defaults.severity;
         }
 
-        public Builder setProfileLevel(Integer profileLevel) {
+        public Builder profileLevel(Integer profileLevel) {
             this.profileLevel = Objects.requireNonNull(profileLevel);
             return this;
         }
 
-        public Builder setSeverity(String severity) {
+        public Builder severity(String severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }

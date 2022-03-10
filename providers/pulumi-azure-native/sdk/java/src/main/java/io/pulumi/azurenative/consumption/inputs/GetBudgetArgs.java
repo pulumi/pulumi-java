@@ -68,12 +68,12 @@ public final class GetBudgetArgs extends io.pulumi.resources.InvokeArgs {
     	      this.scope = defaults.scope;
         }
 
-        public Builder setBudgetName(String budgetName) {
+        public Builder budgetName(String budgetName) {
             this.budgetName = Objects.requireNonNull(budgetName);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }

@@ -252,132 +252,132 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setApplicationDefinitionId(@Nullable Input<String> applicationDefinitionId) {
+        public Builder applicationDefinitionId(@Nullable Input<String> applicationDefinitionId) {
             this.applicationDefinitionId = applicationDefinitionId;
             return this;
         }
 
-        public Builder setApplicationDefinitionId(@Nullable String applicationDefinitionId) {
+        public Builder applicationDefinitionId(@Nullable String applicationDefinitionId) {
             this.applicationDefinitionId = Input.ofNullable(applicationDefinitionId);
             return this;
         }
 
-        public Builder setApplicationName(@Nullable Input<String> applicationName) {
+        public Builder applicationName(@Nullable Input<String> applicationName) {
             this.applicationName = applicationName;
             return this;
         }
 
-        public Builder setApplicationName(@Nullable String applicationName) {
+        public Builder applicationName(@Nullable String applicationName) {
             this.applicationName = Input.ofNullable(applicationName);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<IdentityArgs> identity) {
+        public Builder identity(@Nullable Input<IdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable IdentityArgs identity) {
+        public Builder identity(@Nullable IdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setJitAccessPolicy(@Nullable Input<ApplicationJitAccessPolicyArgs> jitAccessPolicy) {
+        public Builder jitAccessPolicy(@Nullable Input<ApplicationJitAccessPolicyArgs> jitAccessPolicy) {
             this.jitAccessPolicy = jitAccessPolicy;
             return this;
         }
 
-        public Builder setJitAccessPolicy(@Nullable ApplicationJitAccessPolicyArgs jitAccessPolicy) {
+        public Builder jitAccessPolicy(@Nullable ApplicationJitAccessPolicyArgs jitAccessPolicy) {
             this.jitAccessPolicy = Input.ofNullable(jitAccessPolicy);
             return this;
         }
 
-        public Builder setKind(Input<String> kind) {
+        public Builder kind(Input<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setManagedBy(@Nullable Input<String> managedBy) {
+        public Builder managedBy(@Nullable Input<String> managedBy) {
             this.managedBy = managedBy;
             return this;
         }
 
-        public Builder setManagedBy(@Nullable String managedBy) {
+        public Builder managedBy(@Nullable String managedBy) {
             this.managedBy = Input.ofNullable(managedBy);
             return this;
         }
 
-        public Builder setManagedResourceGroupId(@Nullable Input<String> managedResourceGroupId) {
+        public Builder managedResourceGroupId(@Nullable Input<String> managedResourceGroupId) {
             this.managedResourceGroupId = managedResourceGroupId;
             return this;
         }
 
-        public Builder setManagedResourceGroupId(@Nullable String managedResourceGroupId) {
+        public Builder managedResourceGroupId(@Nullable String managedResourceGroupId) {
             this.managedResourceGroupId = Input.ofNullable(managedResourceGroupId);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Object> parameters) {
+        public Builder parameters(@Nullable Input<Object> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Object parameters) {
+        public Builder parameters(@Nullable Object parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setPlan(@Nullable Input<PlanArgs> plan) {
+        public Builder plan(@Nullable Input<PlanArgs> plan) {
             this.plan = plan;
             return this;
         }
 
-        public Builder setPlan(@Nullable PlanArgs plan) {
+        public Builder plan(@Nullable PlanArgs plan) {
             this.plan = Input.ofNullable(plan);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Input<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuArgs sku) {
+        public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

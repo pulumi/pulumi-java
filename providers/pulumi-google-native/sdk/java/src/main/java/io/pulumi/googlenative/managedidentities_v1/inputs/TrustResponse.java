@@ -218,57 +218,57 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setLastTrustHeartbeatTime(String lastTrustHeartbeatTime) {
+        public Builder lastTrustHeartbeatTime(String lastTrustHeartbeatTime) {
             this.lastTrustHeartbeatTime = Objects.requireNonNull(lastTrustHeartbeatTime);
             return this;
         }
 
-        public Builder setSelectiveAuthentication(Boolean selectiveAuthentication) {
+        public Builder selectiveAuthentication(Boolean selectiveAuthentication) {
             this.selectiveAuthentication = Objects.requireNonNull(selectiveAuthentication);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStateDescription(String stateDescription) {
+        public Builder stateDescription(String stateDescription) {
             this.stateDescription = Objects.requireNonNull(stateDescription);
             return this;
         }
 
-        public Builder setTargetDnsIpAddresses(List<String> targetDnsIpAddresses) {
+        public Builder targetDnsIpAddresses(List<String> targetDnsIpAddresses) {
             this.targetDnsIpAddresses = Objects.requireNonNull(targetDnsIpAddresses);
             return this;
         }
 
-        public Builder setTargetDomainName(String targetDomainName) {
+        public Builder targetDomainName(String targetDomainName) {
             this.targetDomainName = Objects.requireNonNull(targetDomainName);
             return this;
         }
 
-        public Builder setTrustDirection(String trustDirection) {
+        public Builder trustDirection(String trustDirection) {
             this.trustDirection = Objects.requireNonNull(trustDirection);
             return this;
         }
 
-        public Builder setTrustHandshakeSecret(String trustHandshakeSecret) {
+        public Builder trustHandshakeSecret(String trustHandshakeSecret) {
             this.trustHandshakeSecret = Objects.requireNonNull(trustHandshakeSecret);
             return this;
         }
 
-        public Builder setTrustType(String trustType) {
+        public Builder trustType(String trustType) {
             this.trustType = Objects.requireNonNull(trustType);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

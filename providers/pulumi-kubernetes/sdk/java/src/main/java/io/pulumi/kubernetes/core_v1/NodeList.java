@@ -126,8 +126,8 @@ public class NodeList extends io.pulumi.resources.CustomResource {
     private static NodeListArgs makeArgs(NodeListArgs args) {
         var builder = args == null ? NodeListArgs.builder() : NodeListArgs.builder(args);
         return builder
-            .setApiVersion("v1")
-            .setKind("NodeList")
+            .apiVersion("v1")
+            .kind("NodeList")
             .build();
     }
 

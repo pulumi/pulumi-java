@@ -98,27 +98,27 @@ public final class GetCertificateAuthorityRevocationConfigurationCrlConfiguratio
     	      this.s3ObjectAcl = defaults.s3ObjectAcl;
         }
 
-        public Builder setCustomCname(String customCname) {
+        public Builder customCname(String customCname) {
             this.customCname = Objects.requireNonNull(customCname);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setExpirationInDays(Integer expirationInDays) {
+        public Builder expirationInDays(Integer expirationInDays) {
             this.expirationInDays = Objects.requireNonNull(expirationInDays);
             return this;
         }
 
-        public Builder setS3BucketName(String s3BucketName) {
+        public Builder s3BucketName(String s3BucketName) {
             this.s3BucketName = Objects.requireNonNull(s3BucketName);
             return this;
         }
 
-        public Builder setS3ObjectAcl(String s3ObjectAcl) {
+        public Builder s3ObjectAcl(String s3ObjectAcl) {
             this.s3ObjectAcl = Objects.requireNonNull(s3ObjectAcl);
             return this;
         }

@@ -50,7 +50,7 @@ public final class AdditionalFeaturesServerConfigurationsResponse {
     	      this.isRServicesEnabled = defaults.isRServicesEnabled;
         }
 
-        public Builder setIsRServicesEnabled(@Nullable Boolean isRServicesEnabled) {
+        public Builder isRServicesEnabled(@Nullable Boolean isRServicesEnabled) {
             this.isRServicesEnabled = isRServicesEnabled;
             return this;
         }

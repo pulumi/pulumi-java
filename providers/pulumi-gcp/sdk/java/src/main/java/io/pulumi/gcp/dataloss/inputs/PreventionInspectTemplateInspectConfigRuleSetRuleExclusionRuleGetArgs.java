@@ -109,42 +109,42 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
     	      this.regex = defaults.regex;
         }
 
-        public Builder setDictionary(@Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryGetArgs> dictionary) {
+        public Builder dictionary(@Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryGetArgs> dictionary) {
             this.dictionary = dictionary;
             return this;
         }
 
-        public Builder setDictionary(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryGetArgs dictionary) {
+        public Builder dictionary(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryGetArgs dictionary) {
             this.dictionary = Input.ofNullable(dictionary);
             return this;
         }
 
-        public Builder setExcludeInfoTypes(@Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesGetArgs> excludeInfoTypes) {
+        public Builder excludeInfoTypes(@Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesGetArgs> excludeInfoTypes) {
             this.excludeInfoTypes = excludeInfoTypes;
             return this;
         }
 
-        public Builder setExcludeInfoTypes(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesGetArgs excludeInfoTypes) {
+        public Builder excludeInfoTypes(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesGetArgs excludeInfoTypes) {
             this.excludeInfoTypes = Input.ofNullable(excludeInfoTypes);
             return this;
         }
 
-        public Builder setMatchingType(Input<String> matchingType) {
+        public Builder matchingType(Input<String> matchingType) {
             this.matchingType = Objects.requireNonNull(matchingType);
             return this;
         }
 
-        public Builder setMatchingType(String matchingType) {
+        public Builder matchingType(String matchingType) {
             this.matchingType = Input.of(Objects.requireNonNull(matchingType));
             return this;
         }
 
-        public Builder setRegex(@Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexGetArgs> regex) {
+        public Builder regex(@Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexGetArgs> regex) {
             this.regex = regex;
             return this;
         }
 
-        public Builder setRegex(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexGetArgs regex) {
+        public Builder regex(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexGetArgs regex) {
             this.regex = Input.ofNullable(regex);
             return this;
         }

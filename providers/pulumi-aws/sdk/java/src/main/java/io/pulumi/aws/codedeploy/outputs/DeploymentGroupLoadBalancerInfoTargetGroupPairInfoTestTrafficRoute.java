@@ -49,7 +49,7 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTraffic
     	      this.listenerArns = defaults.listenerArns;
         }
 
-        public Builder setListenerArns(List<String> listenerArns) {
+        public Builder listenerArns(List<String> listenerArns) {
             this.listenerArns = Objects.requireNonNull(listenerArns);
             return this;
         }

@@ -67,12 +67,12 @@ public final class BiEngineStatisticsResponse {
     	      this.biEngineReasons = defaults.biEngineReasons;
         }
 
-        public Builder setBiEngineMode(String biEngineMode) {
+        public Builder biEngineMode(String biEngineMode) {
             this.biEngineMode = Objects.requireNonNull(biEngineMode);
             return this;
         }
 
-        public Builder setBiEngineReasons(List<BiEngineReasonResponse> biEngineReasons) {
+        public Builder biEngineReasons(List<BiEngineReasonResponse> biEngineReasons) {
             this.biEngineReasons = Objects.requireNonNull(biEngineReasons);
             return this;
         }

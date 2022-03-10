@@ -108,42 +108,42 @@ public final class TargetIpFilterRuleArgs extends io.pulumi.resources.ResourceAr
     	      this.target = defaults.target;
         }
 
-        public Builder setAction(Input<IpFilterActionType> action) {
+        public Builder action(Input<IpFilterActionType> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setAction(IpFilterActionType action) {
+        public Builder action(IpFilterActionType action) {
             this.action = Input.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder setFilterName(Input<String> filterName) {
+        public Builder filterName(Input<String> filterName) {
             this.filterName = Objects.requireNonNull(filterName);
             return this;
         }
 
-        public Builder setFilterName(String filterName) {
+        public Builder filterName(String filterName) {
             this.filterName = Input.of(Objects.requireNonNull(filterName));
             return this;
         }
 
-        public Builder setIpMask(Input<String> ipMask) {
+        public Builder ipMask(Input<String> ipMask) {
             this.ipMask = Objects.requireNonNull(ipMask);
             return this;
         }
 
-        public Builder setIpMask(String ipMask) {
+        public Builder ipMask(String ipMask) {
             this.ipMask = Input.of(Objects.requireNonNull(ipMask));
             return this;
         }
 
-        public Builder setTarget(@Nullable Input<IpFilterTargetType> target) {
+        public Builder target(@Nullable Input<IpFilterTargetType> target) {
             this.target = target;
             return this;
         }
 
-        public Builder setTarget(@Nullable IpFilterTargetType target) {
+        public Builder target(@Nullable IpFilterTargetType target) {
             this.target = Input.ofNullable(target);
             return this;
         }

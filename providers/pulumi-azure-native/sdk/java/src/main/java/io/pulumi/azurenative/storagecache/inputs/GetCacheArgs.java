@@ -68,12 +68,12 @@ public final class GetCacheArgs extends io.pulumi.resources.InvokeArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setCacheName(String cacheName) {
+        public Builder cacheName(String cacheName) {
             this.cacheName = Objects.requireNonNull(cacheName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

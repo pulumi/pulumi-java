@@ -123,52 +123,52 @@ public final class SmsChannelPropertiesArgs extends io.pulumi.resources.Resource
     	      this.phone = defaults.phone;
         }
 
-        public Builder setAccountSID(Input<String> accountSID) {
+        public Builder accountSID(Input<String> accountSID) {
             this.accountSID = Objects.requireNonNull(accountSID);
             return this;
         }
 
-        public Builder setAccountSID(String accountSID) {
+        public Builder accountSID(String accountSID) {
             this.accountSID = Input.of(Objects.requireNonNull(accountSID));
             return this;
         }
 
-        public Builder setAuthToken(@Nullable Input<String> authToken) {
+        public Builder authToken(@Nullable Input<String> authToken) {
             this.authToken = authToken;
             return this;
         }
 
-        public Builder setAuthToken(@Nullable String authToken) {
+        public Builder authToken(@Nullable String authToken) {
             this.authToken = Input.ofNullable(authToken);
             return this;
         }
 
-        public Builder setIsEnabled(Input<Boolean> isEnabled) {
+        public Builder isEnabled(Input<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
-        public Builder setIsEnabled(Boolean isEnabled) {
+        public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Input.of(Objects.requireNonNull(isEnabled));
             return this;
         }
 
-        public Builder setIsValidated(@Nullable Input<Boolean> isValidated) {
+        public Builder isValidated(@Nullable Input<Boolean> isValidated) {
             this.isValidated = isValidated;
             return this;
         }
 
-        public Builder setIsValidated(@Nullable Boolean isValidated) {
+        public Builder isValidated(@Nullable Boolean isValidated) {
             this.isValidated = Input.ofNullable(isValidated);
             return this;
         }
 
-        public Builder setPhone(Input<String> phone) {
+        public Builder phone(Input<String> phone) {
             this.phone = Objects.requireNonNull(phone);
             return this;
         }
 
-        public Builder setPhone(String phone) {
+        public Builder phone(String phone) {
             this.phone = Input.of(Objects.requireNonNull(phone));
             return this;
         }

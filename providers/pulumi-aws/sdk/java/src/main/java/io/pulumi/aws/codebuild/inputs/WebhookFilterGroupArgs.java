@@ -54,12 +54,12 @@ public final class WebhookFilterGroupArgs extends io.pulumi.resources.ResourceAr
     	      this.filters = defaults.filters;
         }
 
-        public Builder setFilters(@Nullable Input<List<WebhookFilterGroupFilterArgs>> filters) {
+        public Builder filters(@Nullable Input<List<WebhookFilterGroupFilterArgs>> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setFilters(@Nullable List<WebhookFilterGroupFilterArgs> filters) {
+        public Builder filters(@Nullable List<WebhookFilterGroupFilterArgs> filters) {
             this.filters = Input.ofNullable(filters);
             return this;
         }

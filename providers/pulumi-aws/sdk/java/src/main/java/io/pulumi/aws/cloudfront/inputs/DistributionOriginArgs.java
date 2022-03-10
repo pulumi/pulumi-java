@@ -198,92 +198,92 @@ public final class DistributionOriginArgs extends io.pulumi.resources.ResourceAr
     	      this.s3OriginConfig = defaults.s3OriginConfig;
         }
 
-        public Builder setConnectionAttempts(@Nullable Input<Integer> connectionAttempts) {
+        public Builder connectionAttempts(@Nullable Input<Integer> connectionAttempts) {
             this.connectionAttempts = connectionAttempts;
             return this;
         }
 
-        public Builder setConnectionAttempts(@Nullable Integer connectionAttempts) {
+        public Builder connectionAttempts(@Nullable Integer connectionAttempts) {
             this.connectionAttempts = Input.ofNullable(connectionAttempts);
             return this;
         }
 
-        public Builder setConnectionTimeout(@Nullable Input<Integer> connectionTimeout) {
+        public Builder connectionTimeout(@Nullable Input<Integer> connectionTimeout) {
             this.connectionTimeout = connectionTimeout;
             return this;
         }
 
-        public Builder setConnectionTimeout(@Nullable Integer connectionTimeout) {
+        public Builder connectionTimeout(@Nullable Integer connectionTimeout) {
             this.connectionTimeout = Input.ofNullable(connectionTimeout);
             return this;
         }
 
-        public Builder setCustomHeaders(@Nullable Input<List<DistributionOriginCustomHeaderArgs>> customHeaders) {
+        public Builder customHeaders(@Nullable Input<List<DistributionOriginCustomHeaderArgs>> customHeaders) {
             this.customHeaders = customHeaders;
             return this;
         }
 
-        public Builder setCustomHeaders(@Nullable List<DistributionOriginCustomHeaderArgs> customHeaders) {
+        public Builder customHeaders(@Nullable List<DistributionOriginCustomHeaderArgs> customHeaders) {
             this.customHeaders = Input.ofNullable(customHeaders);
             return this;
         }
 
-        public Builder setCustomOriginConfig(@Nullable Input<DistributionOriginCustomOriginConfigArgs> customOriginConfig) {
+        public Builder customOriginConfig(@Nullable Input<DistributionOriginCustomOriginConfigArgs> customOriginConfig) {
             this.customOriginConfig = customOriginConfig;
             return this;
         }
 
-        public Builder setCustomOriginConfig(@Nullable DistributionOriginCustomOriginConfigArgs customOriginConfig) {
+        public Builder customOriginConfig(@Nullable DistributionOriginCustomOriginConfigArgs customOriginConfig) {
             this.customOriginConfig = Input.ofNullable(customOriginConfig);
             return this;
         }
 
-        public Builder setDomainName(Input<String> domainName) {
+        public Builder domainName(Input<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
-        public Builder setDomainName(String domainName) {
+        public Builder domainName(String domainName) {
             this.domainName = Input.of(Objects.requireNonNull(domainName));
             return this;
         }
 
-        public Builder setOriginId(Input<String> originId) {
+        public Builder originId(Input<String> originId) {
             this.originId = Objects.requireNonNull(originId);
             return this;
         }
 
-        public Builder setOriginId(String originId) {
+        public Builder originId(String originId) {
             this.originId = Input.of(Objects.requireNonNull(originId));
             return this;
         }
 
-        public Builder setOriginPath(@Nullable Input<String> originPath) {
+        public Builder originPath(@Nullable Input<String> originPath) {
             this.originPath = originPath;
             return this;
         }
 
-        public Builder setOriginPath(@Nullable String originPath) {
+        public Builder originPath(@Nullable String originPath) {
             this.originPath = Input.ofNullable(originPath);
             return this;
         }
 
-        public Builder setOriginShield(@Nullable Input<DistributionOriginOriginShieldArgs> originShield) {
+        public Builder originShield(@Nullable Input<DistributionOriginOriginShieldArgs> originShield) {
             this.originShield = originShield;
             return this;
         }
 
-        public Builder setOriginShield(@Nullable DistributionOriginOriginShieldArgs originShield) {
+        public Builder originShield(@Nullable DistributionOriginOriginShieldArgs originShield) {
             this.originShield = Input.ofNullable(originShield);
             return this;
         }
 
-        public Builder setS3OriginConfig(@Nullable Input<DistributionOriginS3OriginConfigArgs> s3OriginConfig) {
+        public Builder s3OriginConfig(@Nullable Input<DistributionOriginS3OriginConfigArgs> s3OriginConfig) {
             this.s3OriginConfig = s3OriginConfig;
             return this;
         }
 
-        public Builder setS3OriginConfig(@Nullable DistributionOriginS3OriginConfigArgs s3OriginConfig) {
+        public Builder s3OriginConfig(@Nullable DistributionOriginS3OriginConfigArgs s3OriginConfig) {
             this.s3OriginConfig = Input.ofNullable(s3OriginConfig);
             return this;
         }

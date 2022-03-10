@@ -104,42 +104,42 @@ public final class FleetSpotOptionsArgs extends io.pulumi.resources.ResourceArgs
     	      this.maintenanceStrategies = defaults.maintenanceStrategies;
         }
 
-        public Builder setAllocationStrategy(@Nullable Input<String> allocationStrategy) {
+        public Builder allocationStrategy(@Nullable Input<String> allocationStrategy) {
             this.allocationStrategy = allocationStrategy;
             return this;
         }
 
-        public Builder setAllocationStrategy(@Nullable String allocationStrategy) {
+        public Builder allocationStrategy(@Nullable String allocationStrategy) {
             this.allocationStrategy = Input.ofNullable(allocationStrategy);
             return this;
         }
 
-        public Builder setInstanceInterruptionBehavior(@Nullable Input<String> instanceInterruptionBehavior) {
+        public Builder instanceInterruptionBehavior(@Nullable Input<String> instanceInterruptionBehavior) {
             this.instanceInterruptionBehavior = instanceInterruptionBehavior;
             return this;
         }
 
-        public Builder setInstanceInterruptionBehavior(@Nullable String instanceInterruptionBehavior) {
+        public Builder instanceInterruptionBehavior(@Nullable String instanceInterruptionBehavior) {
             this.instanceInterruptionBehavior = Input.ofNullable(instanceInterruptionBehavior);
             return this;
         }
 
-        public Builder setInstancePoolsToUseCount(@Nullable Input<Integer> instancePoolsToUseCount) {
+        public Builder instancePoolsToUseCount(@Nullable Input<Integer> instancePoolsToUseCount) {
             this.instancePoolsToUseCount = instancePoolsToUseCount;
             return this;
         }
 
-        public Builder setInstancePoolsToUseCount(@Nullable Integer instancePoolsToUseCount) {
+        public Builder instancePoolsToUseCount(@Nullable Integer instancePoolsToUseCount) {
             this.instancePoolsToUseCount = Input.ofNullable(instancePoolsToUseCount);
             return this;
         }
 
-        public Builder setMaintenanceStrategies(@Nullable Input<FleetSpotOptionsMaintenanceStrategiesArgs> maintenanceStrategies) {
+        public Builder maintenanceStrategies(@Nullable Input<FleetSpotOptionsMaintenanceStrategiesArgs> maintenanceStrategies) {
             this.maintenanceStrategies = maintenanceStrategies;
             return this;
         }
 
-        public Builder setMaintenanceStrategies(@Nullable FleetSpotOptionsMaintenanceStrategiesArgs maintenanceStrategies) {
+        public Builder maintenanceStrategies(@Nullable FleetSpotOptionsMaintenanceStrategiesArgs maintenanceStrategies) {
             this.maintenanceStrategies = Input.ofNullable(maintenanceStrategies);
             return this;
         }

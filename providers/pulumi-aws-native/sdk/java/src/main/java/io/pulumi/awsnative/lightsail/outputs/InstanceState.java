@@ -68,12 +68,12 @@ public final class InstanceState {
     	      this.name = defaults.name;
         }
 
-        public Builder setCode(@Nullable Integer code) {
+        public Builder code(@Nullable Integer code) {
             this.code = code;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

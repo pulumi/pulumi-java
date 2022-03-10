@@ -50,7 +50,7 @@ public final class ApplicationHAClusterPrometheusExporter {
     	      this.prometheusPort = defaults.prometheusPort;
         }
 
-        public Builder setPrometheusPort(@Nullable String prometheusPort) {
+        public Builder prometheusPort(@Nullable String prometheusPort) {
             this.prometheusPort = prometheusPort;
             return this;
         }

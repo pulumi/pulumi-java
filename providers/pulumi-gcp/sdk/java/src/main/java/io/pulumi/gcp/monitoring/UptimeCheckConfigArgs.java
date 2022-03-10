@@ -210,102 +210,102 @@ public final class UptimeCheckConfigArgs extends io.pulumi.resources.ResourceArg
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setContentMatchers(@Nullable Input<List<UptimeCheckConfigContentMatcherArgs>> contentMatchers) {
+        public Builder contentMatchers(@Nullable Input<List<UptimeCheckConfigContentMatcherArgs>> contentMatchers) {
             this.contentMatchers = contentMatchers;
             return this;
         }
 
-        public Builder setContentMatchers(@Nullable List<UptimeCheckConfigContentMatcherArgs> contentMatchers) {
+        public Builder contentMatchers(@Nullable List<UptimeCheckConfigContentMatcherArgs> contentMatchers) {
             this.contentMatchers = Input.ofNullable(contentMatchers);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setHttpCheck(@Nullable Input<UptimeCheckConfigHttpCheckArgs> httpCheck) {
+        public Builder httpCheck(@Nullable Input<UptimeCheckConfigHttpCheckArgs> httpCheck) {
             this.httpCheck = httpCheck;
             return this;
         }
 
-        public Builder setHttpCheck(@Nullable UptimeCheckConfigHttpCheckArgs httpCheck) {
+        public Builder httpCheck(@Nullable UptimeCheckConfigHttpCheckArgs httpCheck) {
             this.httpCheck = Input.ofNullable(httpCheck);
             return this;
         }
 
-        public Builder setMonitoredResource(@Nullable Input<UptimeCheckConfigMonitoredResourceArgs> monitoredResource) {
+        public Builder monitoredResource(@Nullable Input<UptimeCheckConfigMonitoredResourceArgs> monitoredResource) {
             this.monitoredResource = monitoredResource;
             return this;
         }
 
-        public Builder setMonitoredResource(@Nullable UptimeCheckConfigMonitoredResourceArgs monitoredResource) {
+        public Builder monitoredResource(@Nullable UptimeCheckConfigMonitoredResourceArgs monitoredResource) {
             this.monitoredResource = Input.ofNullable(monitoredResource);
             return this;
         }
 
-        public Builder setPeriod(@Nullable Input<String> period) {
+        public Builder period(@Nullable Input<String> period) {
             this.period = period;
             return this;
         }
 
-        public Builder setPeriod(@Nullable String period) {
+        public Builder period(@Nullable String period) {
             this.period = Input.ofNullable(period);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setResourceGroup(@Nullable Input<UptimeCheckConfigResourceGroupArgs> resourceGroup) {
+        public Builder resourceGroup(@Nullable Input<UptimeCheckConfigResourceGroupArgs> resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
 
-        public Builder setResourceGroup(@Nullable UptimeCheckConfigResourceGroupArgs resourceGroup) {
+        public Builder resourceGroup(@Nullable UptimeCheckConfigResourceGroupArgs resourceGroup) {
             this.resourceGroup = Input.ofNullable(resourceGroup);
             return this;
         }
 
-        public Builder setSelectedRegions(@Nullable Input<List<String>> selectedRegions) {
+        public Builder selectedRegions(@Nullable Input<List<String>> selectedRegions) {
             this.selectedRegions = selectedRegions;
             return this;
         }
 
-        public Builder setSelectedRegions(@Nullable List<String> selectedRegions) {
+        public Builder selectedRegions(@Nullable List<String> selectedRegions) {
             this.selectedRegions = Input.ofNullable(selectedRegions);
             return this;
         }
 
-        public Builder setTcpCheck(@Nullable Input<UptimeCheckConfigTcpCheckArgs> tcpCheck) {
+        public Builder tcpCheck(@Nullable Input<UptimeCheckConfigTcpCheckArgs> tcpCheck) {
             this.tcpCheck = tcpCheck;
             return this;
         }
 
-        public Builder setTcpCheck(@Nullable UptimeCheckConfigTcpCheckArgs tcpCheck) {
+        public Builder tcpCheck(@Nullable UptimeCheckConfigTcpCheckArgs tcpCheck) {
             this.tcpCheck = Input.ofNullable(tcpCheck);
             return this;
         }
 
-        public Builder setTimeout(Input<String> timeout) {
+        public Builder timeout(Input<String> timeout) {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
 
-        public Builder setTimeout(String timeout) {
+        public Builder timeout(String timeout) {
             this.timeout = Input.of(Objects.requireNonNull(timeout));
             return this;
         }

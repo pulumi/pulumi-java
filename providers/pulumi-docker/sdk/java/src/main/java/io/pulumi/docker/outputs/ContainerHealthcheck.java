@@ -77,27 +77,27 @@ public final class ContainerHealthcheck {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setInterval(@Nullable String interval) {
+        public Builder interval(@Nullable String interval) {
             this.interval = interval;
             return this;
         }
 
-        public Builder setRetries(@Nullable Integer retries) {
+        public Builder retries(@Nullable Integer retries) {
             this.retries = retries;
             return this;
         }
 
-        public Builder setStartPeriod(@Nullable String startPeriod) {
+        public Builder startPeriod(@Nullable String startPeriod) {
             this.startPeriod = startPeriod;
             return this;
         }
 
-        public Builder setTests(List<String> tests) {
+        public Builder tests(List<String> tests) {
             this.tests = Objects.requireNonNull(tests);
             return this;
         }
 
-        public Builder setTimeout(@Nullable String timeout) {
+        public Builder timeout(@Nullable String timeout) {
             this.timeout = timeout;
             return this;
         }

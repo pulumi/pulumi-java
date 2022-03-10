@@ -57,12 +57,12 @@ public final class FunctionDeadLetterConfigArgs extends io.pulumi.resources.Reso
     	      this.targetArn = defaults.targetArn;
         }
 
-        public Builder setTargetArn(@Nullable Input<String> targetArn) {
+        public Builder targetArn(@Nullable Input<String> targetArn) {
             this.targetArn = targetArn;
             return this;
         }
 
-        public Builder setTargetArn(@Nullable String targetArn) {
+        public Builder targetArn(@Nullable String targetArn) {
             this.targetArn = Input.ofNullable(targetArn);
             return this;
         }

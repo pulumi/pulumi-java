@@ -132,22 +132,22 @@ public final class RouterBgp {
     	      this.asn = defaults.asn;
         }
 
-        public Builder setAdvertiseMode(@Nullable String advertiseMode) {
+        public Builder advertiseMode(@Nullable String advertiseMode) {
             this.advertiseMode = advertiseMode;
             return this;
         }
 
-        public Builder setAdvertisedGroups(@Nullable List<String> advertisedGroups) {
+        public Builder advertisedGroups(@Nullable List<String> advertisedGroups) {
             this.advertisedGroups = advertisedGroups;
             return this;
         }
 
-        public Builder setAdvertisedIpRanges(@Nullable List<RouterBgpAdvertisedIpRange> advertisedIpRanges) {
+        public Builder advertisedIpRanges(@Nullable List<RouterBgpAdvertisedIpRange> advertisedIpRanges) {
             this.advertisedIpRanges = advertisedIpRanges;
             return this;
         }
 
-        public Builder setAsn(Integer asn) {
+        public Builder asn(Integer asn) {
             this.asn = Objects.requireNonNull(asn);
             return this;
         }

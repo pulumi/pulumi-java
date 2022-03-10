@@ -50,12 +50,12 @@ public final class GraphArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setTags(@Nullable Input<List<GraphTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<GraphTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<GraphTagArgs> tags) {
+        public Builder tags(@Nullable List<GraphTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

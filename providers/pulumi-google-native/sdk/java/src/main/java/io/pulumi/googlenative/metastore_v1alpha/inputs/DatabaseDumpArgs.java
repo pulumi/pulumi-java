@@ -108,42 +108,42 @@ public final class DatabaseDumpArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setDatabaseType(@Nullable Input<DatabaseDumpDatabaseType> databaseType) {
+        public Builder databaseType(@Nullable Input<DatabaseDumpDatabaseType> databaseType) {
             this.databaseType = databaseType;
             return this;
         }
 
-        public Builder setDatabaseType(@Nullable DatabaseDumpDatabaseType databaseType) {
+        public Builder databaseType(@Nullable DatabaseDumpDatabaseType databaseType) {
             this.databaseType = Input.ofNullable(databaseType);
             return this;
         }
 
-        public Builder setGcsUri(@Nullable Input<String> gcsUri) {
+        public Builder gcsUri(@Nullable Input<String> gcsUri) {
             this.gcsUri = gcsUri;
             return this;
         }
 
-        public Builder setGcsUri(@Nullable String gcsUri) {
+        public Builder gcsUri(@Nullable String gcsUri) {
             this.gcsUri = Input.ofNullable(gcsUri);
             return this;
         }
 
-        public Builder setSourceDatabase(@Nullable Input<String> sourceDatabase) {
+        public Builder sourceDatabase(@Nullable Input<String> sourceDatabase) {
             this.sourceDatabase = sourceDatabase;
             return this;
         }
 
-        public Builder setSourceDatabase(@Nullable String sourceDatabase) {
+        public Builder sourceDatabase(@Nullable String sourceDatabase) {
             this.sourceDatabase = Input.ofNullable(sourceDatabase);
             return this;
         }
 
-        public Builder setType(@Nullable Input<DatabaseDumpType> type) {
+        public Builder type(@Nullable Input<DatabaseDumpType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable DatabaseDumpType type) {
+        public Builder type(@Nullable DatabaseDumpType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

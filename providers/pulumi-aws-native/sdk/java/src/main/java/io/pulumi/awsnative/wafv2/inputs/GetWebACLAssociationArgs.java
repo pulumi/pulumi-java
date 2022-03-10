@@ -60,12 +60,12 @@ public final class GetWebACLAssociationArgs extends io.pulumi.resources.InvokeAr
     	      this.webACLArn = defaults.webACLArn;
         }
 
-        public Builder setResourceArn(String resourceArn) {
+        public Builder resourceArn(String resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
 
-        public Builder setWebACLArn(String webACLArn) {
+        public Builder webACLArn(String webACLArn) {
             this.webACLArn = Objects.requireNonNull(webACLArn);
             return this;
         }

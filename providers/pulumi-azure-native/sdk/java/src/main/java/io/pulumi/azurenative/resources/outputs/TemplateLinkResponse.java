@@ -115,27 +115,27 @@ public final class TemplateLinkResponse {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setContentVersion(@Nullable String contentVersion) {
+        public Builder contentVersion(@Nullable String contentVersion) {
             this.contentVersion = contentVersion;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setQueryString(@Nullable String queryString) {
+        public Builder queryString(@Nullable String queryString) {
             this.queryString = queryString;
             return this;
         }
 
-        public Builder setRelativePath(@Nullable String relativePath) {
+        public Builder relativePath(@Nullable String relativePath) {
             this.relativePath = relativePath;
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
         }

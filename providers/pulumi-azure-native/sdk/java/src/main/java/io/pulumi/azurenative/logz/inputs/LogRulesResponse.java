@@ -108,22 +108,22 @@ public final class LogRulesResponse extends io.pulumi.resources.InvokeArgs {
     	      this.sendSubscriptionLogs = defaults.sendSubscriptionLogs;
         }
 
-        public Builder setFilteringTags(@Nullable List<FilteringTagResponse> filteringTags) {
+        public Builder filteringTags(@Nullable List<FilteringTagResponse> filteringTags) {
             this.filteringTags = filteringTags;
             return this;
         }
 
-        public Builder setSendAadLogs(@Nullable Boolean sendAadLogs) {
+        public Builder sendAadLogs(@Nullable Boolean sendAadLogs) {
             this.sendAadLogs = sendAadLogs;
             return this;
         }
 
-        public Builder setSendActivityLogs(@Nullable Boolean sendActivityLogs) {
+        public Builder sendActivityLogs(@Nullable Boolean sendActivityLogs) {
             this.sendActivityLogs = sendActivityLogs;
             return this;
         }
 
-        public Builder setSendSubscriptionLogs(@Nullable Boolean sendSubscriptionLogs) {
+        public Builder sendSubscriptionLogs(@Nullable Boolean sendSubscriptionLogs) {
             this.sendSubscriptionLogs = sendSubscriptionLogs;
             return this;
         }

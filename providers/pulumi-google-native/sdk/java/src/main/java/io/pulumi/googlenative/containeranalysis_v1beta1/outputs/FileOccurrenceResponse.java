@@ -147,37 +147,37 @@ public final class FileOccurrenceResponse {
     	      this.notice = defaults.notice;
         }
 
-        public Builder setAttributions(List<String> attributions) {
+        public Builder attributions(List<String> attributions) {
             this.attributions = Objects.requireNonNull(attributions);
             return this;
         }
 
-        public Builder setComment(String comment) {
+        public Builder comment(String comment) {
             this.comment = Objects.requireNonNull(comment);
             return this;
         }
 
-        public Builder setContributors(List<String> contributors) {
+        public Builder contributors(List<String> contributors) {
             this.contributors = Objects.requireNonNull(contributors);
             return this;
         }
 
-        public Builder setCopyright(String copyright) {
+        public Builder copyright(String copyright) {
             this.copyright = Objects.requireNonNull(copyright);
             return this;
         }
 
-        public Builder setFilesLicenseInfo(List<String> filesLicenseInfo) {
+        public Builder filesLicenseInfo(List<String> filesLicenseInfo) {
             this.filesLicenseInfo = Objects.requireNonNull(filesLicenseInfo);
             return this;
         }
 
-        public Builder setLicenseConcluded(LicenseResponse licenseConcluded) {
+        public Builder licenseConcluded(LicenseResponse licenseConcluded) {
             this.licenseConcluded = Objects.requireNonNull(licenseConcluded);
             return this;
         }
 
-        public Builder setNotice(String notice) {
+        public Builder notice(String notice) {
             this.notice = Objects.requireNonNull(notice);
             return this;
         }

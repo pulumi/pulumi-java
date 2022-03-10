@@ -50,7 +50,7 @@ public final class SpotFleetRequestSpotMaintenanceStrategies {
     	      this.capacityRebalance = defaults.capacityRebalance;
         }
 
-        public Builder setCapacityRebalance(@Nullable SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalance capacityRebalance) {
+        public Builder capacityRebalance(@Nullable SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalance capacityRebalance) {
             this.capacityRebalance = capacityRebalance;
             return this;
         }

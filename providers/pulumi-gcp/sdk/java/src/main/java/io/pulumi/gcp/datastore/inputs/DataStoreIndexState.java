@@ -124,52 +124,52 @@ public final class DataStoreIndexState extends io.pulumi.resources.ResourceArgs 
     	      this.properties = defaults.properties;
         }
 
-        public Builder setAncestor(@Nullable Input<String> ancestor) {
+        public Builder ancestor(@Nullable Input<String> ancestor) {
             this.ancestor = ancestor;
             return this;
         }
 
-        public Builder setAncestor(@Nullable String ancestor) {
+        public Builder ancestor(@Nullable String ancestor) {
             this.ancestor = Input.ofNullable(ancestor);
             return this;
         }
 
-        public Builder setIndexId(@Nullable Input<String> indexId) {
+        public Builder indexId(@Nullable Input<String> indexId) {
             this.indexId = indexId;
             return this;
         }
 
-        public Builder setIndexId(@Nullable String indexId) {
+        public Builder indexId(@Nullable String indexId) {
             this.indexId = Input.ofNullable(indexId);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<List<DataStoreIndexPropertyGetArgs>> properties) {
+        public Builder properties(@Nullable Input<List<DataStoreIndexPropertyGetArgs>> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable List<DataStoreIndexPropertyGetArgs> properties) {
+        public Builder properties(@Nullable List<DataStoreIndexPropertyGetArgs> properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }

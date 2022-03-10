@@ -71,22 +71,22 @@ public final class ManagedScalingPolicyArgs extends io.pulumi.resources.Resource
     	      this.computeLimits = defaults.computeLimits;
         }
 
-        public Builder setClusterId(Input<String> clusterId) {
+        public Builder clusterId(Input<String> clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
 
-        public Builder setClusterId(String clusterId) {
+        public Builder clusterId(String clusterId) {
             this.clusterId = Input.of(Objects.requireNonNull(clusterId));
             return this;
         }
 
-        public Builder setComputeLimits(Input<List<ManagedScalingPolicyComputeLimitArgs>> computeLimits) {
+        public Builder computeLimits(Input<List<ManagedScalingPolicyComputeLimitArgs>> computeLimits) {
             this.computeLimits = Objects.requireNonNull(computeLimits);
             return this;
         }
 
-        public Builder setComputeLimits(List<ManagedScalingPolicyComputeLimitArgs> computeLimits) {
+        public Builder computeLimits(List<ManagedScalingPolicyComputeLimitArgs> computeLimits) {
             this.computeLimits = Input.of(Objects.requireNonNull(computeLimits));
             return this;
         }

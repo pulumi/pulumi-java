@@ -103,37 +103,37 @@ public final class RequestValidatorState extends io.pulumi.resources.ResourceArg
     	      this.validateRequestParameters = defaults.validateRequestParameters;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRestApi(@Nullable Input<String> restApi) {
+        public Builder restApi(@Nullable Input<String> restApi) {
             this.restApi = restApi;
             return this;
         }
 
-        public Builder setValidateRequestBody(@Nullable Input<Boolean> validateRequestBody) {
+        public Builder validateRequestBody(@Nullable Input<Boolean> validateRequestBody) {
             this.validateRequestBody = validateRequestBody;
             return this;
         }
 
-        public Builder setValidateRequestBody(@Nullable Boolean validateRequestBody) {
+        public Builder validateRequestBody(@Nullable Boolean validateRequestBody) {
             this.validateRequestBody = Input.ofNullable(validateRequestBody);
             return this;
         }
 
-        public Builder setValidateRequestParameters(@Nullable Input<Boolean> validateRequestParameters) {
+        public Builder validateRequestParameters(@Nullable Input<Boolean> validateRequestParameters) {
             this.validateRequestParameters = validateRequestParameters;
             return this;
         }
 
-        public Builder setValidateRequestParameters(@Nullable Boolean validateRequestParameters) {
+        public Builder validateRequestParameters(@Nullable Boolean validateRequestParameters) {
             this.validateRequestParameters = Input.ofNullable(validateRequestParameters);
             return this;
         }

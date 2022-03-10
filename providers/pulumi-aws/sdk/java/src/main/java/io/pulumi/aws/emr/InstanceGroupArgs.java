@@ -186,92 +186,92 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setAutoscalingPolicy(@Nullable Input<String> autoscalingPolicy) {
+        public Builder autoscalingPolicy(@Nullable Input<String> autoscalingPolicy) {
             this.autoscalingPolicy = autoscalingPolicy;
             return this;
         }
 
-        public Builder setAutoscalingPolicy(@Nullable String autoscalingPolicy) {
+        public Builder autoscalingPolicy(@Nullable String autoscalingPolicy) {
             this.autoscalingPolicy = Input.ofNullable(autoscalingPolicy);
             return this;
         }
 
-        public Builder setBidPrice(@Nullable Input<String> bidPrice) {
+        public Builder bidPrice(@Nullable Input<String> bidPrice) {
             this.bidPrice = bidPrice;
             return this;
         }
 
-        public Builder setBidPrice(@Nullable String bidPrice) {
+        public Builder bidPrice(@Nullable String bidPrice) {
             this.bidPrice = Input.ofNullable(bidPrice);
             return this;
         }
 
-        public Builder setClusterId(Input<String> clusterId) {
+        public Builder clusterId(Input<String> clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
 
-        public Builder setClusterId(String clusterId) {
+        public Builder clusterId(String clusterId) {
             this.clusterId = Input.of(Objects.requireNonNull(clusterId));
             return this;
         }
 
-        public Builder setConfigurationsJson(@Nullable Input<String> configurationsJson) {
+        public Builder configurationsJson(@Nullable Input<String> configurationsJson) {
             this.configurationsJson = configurationsJson;
             return this;
         }
 
-        public Builder setConfigurationsJson(@Nullable String configurationsJson) {
+        public Builder configurationsJson(@Nullable String configurationsJson) {
             this.configurationsJson = Input.ofNullable(configurationsJson);
             return this;
         }
 
-        public Builder setEbsConfigs(@Nullable Input<List<InstanceGroupEbsConfigArgs>> ebsConfigs) {
+        public Builder ebsConfigs(@Nullable Input<List<InstanceGroupEbsConfigArgs>> ebsConfigs) {
             this.ebsConfigs = ebsConfigs;
             return this;
         }
 
-        public Builder setEbsConfigs(@Nullable List<InstanceGroupEbsConfigArgs> ebsConfigs) {
+        public Builder ebsConfigs(@Nullable List<InstanceGroupEbsConfigArgs> ebsConfigs) {
             this.ebsConfigs = Input.ofNullable(ebsConfigs);
             return this;
         }
 
-        public Builder setEbsOptimized(@Nullable Input<Boolean> ebsOptimized) {
+        public Builder ebsOptimized(@Nullable Input<Boolean> ebsOptimized) {
             this.ebsOptimized = ebsOptimized;
             return this;
         }
 
-        public Builder setEbsOptimized(@Nullable Boolean ebsOptimized) {
+        public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
             this.ebsOptimized = Input.ofNullable(ebsOptimized);
             return this;
         }
 
-        public Builder setInstanceCount(@Nullable Input<Integer> instanceCount) {
+        public Builder instanceCount(@Nullable Input<Integer> instanceCount) {
             this.instanceCount = instanceCount;
             return this;
         }
 
-        public Builder setInstanceCount(@Nullable Integer instanceCount) {
+        public Builder instanceCount(@Nullable Integer instanceCount) {
             this.instanceCount = Input.ofNullable(instanceCount);
             return this;
         }
 
-        public Builder setInstanceType(Input<String> instanceType) {
+        public Builder instanceType(Input<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Input.of(Objects.requireNonNull(instanceType));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

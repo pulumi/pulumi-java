@@ -68,12 +68,12 @@ public final class WebAnonymousAuthenticationResponse {
     	      this.url = defaults.url;
         }
 
-        public Builder setAuthenticationType(String authenticationType) {
+        public Builder authenticationType(String authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
 
-        public Builder setUrl(Object url) {
+        public Builder url(Object url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

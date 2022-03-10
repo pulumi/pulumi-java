@@ -75,17 +75,17 @@ public final class SkuCostResponse extends io.pulumi.resources.InvokeArgs {
     	      this.quantity = defaults.quantity;
         }
 
-        public Builder setExtendedUnit(@Nullable String extendedUnit) {
+        public Builder extendedUnit(@Nullable String extendedUnit) {
             this.extendedUnit = extendedUnit;
             return this;
         }
 
-        public Builder setMeterId(String meterId) {
+        public Builder meterId(String meterId) {
             this.meterId = Objects.requireNonNull(meterId);
             return this;
         }
 
-        public Builder setQuantity(@Nullable Integer quantity) {
+        public Builder quantity(@Nullable Integer quantity) {
             this.quantity = quantity;
             return this;
         }

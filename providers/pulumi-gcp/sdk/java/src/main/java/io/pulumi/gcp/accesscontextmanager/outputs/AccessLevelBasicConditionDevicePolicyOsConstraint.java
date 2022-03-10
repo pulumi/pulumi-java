@@ -90,17 +90,17 @@ public final class AccessLevelBasicConditionDevicePolicyOsConstraint {
     	      this.requireVerifiedChromeOs = defaults.requireVerifiedChromeOs;
         }
 
-        public Builder setMinimumVersion(@Nullable String minimumVersion) {
+        public Builder minimumVersion(@Nullable String minimumVersion) {
             this.minimumVersion = minimumVersion;
             return this;
         }
 
-        public Builder setOsType(String osType) {
+        public Builder osType(String osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
 
-        public Builder setRequireVerifiedChromeOs(@Nullable Boolean requireVerifiedChromeOs) {
+        public Builder requireVerifiedChromeOs(@Nullable Boolean requireVerifiedChromeOs) {
             this.requireVerifiedChromeOs = requireVerifiedChromeOs;
             return this;
         }

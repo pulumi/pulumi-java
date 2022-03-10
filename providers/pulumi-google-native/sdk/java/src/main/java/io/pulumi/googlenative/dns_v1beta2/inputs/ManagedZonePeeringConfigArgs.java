@@ -67,22 +67,22 @@ public final class ManagedZonePeeringConfigArgs extends io.pulumi.resources.Reso
     	      this.targetNetwork = defaults.targetNetwork;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setTargetNetwork(@Nullable Input<ManagedZonePeeringConfigTargetNetworkArgs> targetNetwork) {
+        public Builder targetNetwork(@Nullable Input<ManagedZonePeeringConfigTargetNetworkArgs> targetNetwork) {
             this.targetNetwork = targetNetwork;
             return this;
         }
 
-        public Builder setTargetNetwork(@Nullable ManagedZonePeeringConfigTargetNetworkArgs targetNetwork) {
+        public Builder targetNetwork(@Nullable ManagedZonePeeringConfigTargetNetworkArgs targetNetwork) {
             this.targetNetwork = Input.ofNullable(targetNetwork);
             return this;
         }

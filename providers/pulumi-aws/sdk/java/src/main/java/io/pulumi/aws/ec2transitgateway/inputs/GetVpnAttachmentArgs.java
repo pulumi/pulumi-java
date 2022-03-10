@@ -105,22 +105,22 @@ public final class GetVpnAttachmentArgs extends io.pulumi.resources.InvokeArgs {
     	      this.vpnConnectionId = defaults.vpnConnectionId;
         }
 
-        public Builder setFilters(@Nullable List<GetVpnAttachmentFilter> filters) {
+        public Builder filters(@Nullable List<GetVpnAttachmentFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTransitGatewayId(@Nullable String transitGatewayId) {
+        public Builder transitGatewayId(@Nullable String transitGatewayId) {
             this.transitGatewayId = transitGatewayId;
             return this;
         }
 
-        public Builder setVpnConnectionId(@Nullable String vpnConnectionId) {
+        public Builder vpnConnectionId(@Nullable String vpnConnectionId) {
             this.vpnConnectionId = vpnConnectionId;
             return this;
         }

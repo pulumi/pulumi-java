@@ -73,22 +73,22 @@ public final class CreateTrustedIdProviderWithAccountParametersArgs extends io.p
     	      this.name = defaults.name;
         }
 
-        public Builder setIdProvider(Input<String> idProvider) {
+        public Builder idProvider(Input<String> idProvider) {
             this.idProvider = Objects.requireNonNull(idProvider);
             return this;
         }
 
-        public Builder setIdProvider(String idProvider) {
+        public Builder idProvider(String idProvider) {
             this.idProvider = Input.of(Objects.requireNonNull(idProvider));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

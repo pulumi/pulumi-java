@@ -50,7 +50,7 @@ public final class OrganizationFeedFeedOutputConfig {
     	      this.pubsubDestination = defaults.pubsubDestination;
         }
 
-        public Builder setPubsubDestination(OrganizationFeedFeedOutputConfigPubsubDestination pubsubDestination) {
+        public Builder pubsubDestination(OrganizationFeedFeedOutputConfigPubsubDestination pubsubDestination) {
             this.pubsubDestination = Objects.requireNonNull(pubsubDestination);
             return this;
         }

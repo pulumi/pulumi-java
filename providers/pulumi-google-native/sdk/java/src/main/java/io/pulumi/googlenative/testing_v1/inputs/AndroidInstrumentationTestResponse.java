@@ -188,47 +188,47 @@ public final class AndroidInstrumentationTestResponse extends io.pulumi.resource
     	      this.testTargets = defaults.testTargets;
         }
 
-        public Builder setAppApk(FileReferenceResponse appApk) {
+        public Builder appApk(FileReferenceResponse appApk) {
             this.appApk = Objects.requireNonNull(appApk);
             return this;
         }
 
-        public Builder setAppBundle(AppBundleResponse appBundle) {
+        public Builder appBundle(AppBundleResponse appBundle) {
             this.appBundle = Objects.requireNonNull(appBundle);
             return this;
         }
 
-        public Builder setAppPackageId(String appPackageId) {
+        public Builder appPackageId(String appPackageId) {
             this.appPackageId = Objects.requireNonNull(appPackageId);
             return this;
         }
 
-        public Builder setOrchestratorOption(String orchestratorOption) {
+        public Builder orchestratorOption(String orchestratorOption) {
             this.orchestratorOption = Objects.requireNonNull(orchestratorOption);
             return this;
         }
 
-        public Builder setShardingOption(ShardingOptionResponse shardingOption) {
+        public Builder shardingOption(ShardingOptionResponse shardingOption) {
             this.shardingOption = Objects.requireNonNull(shardingOption);
             return this;
         }
 
-        public Builder setTestApk(FileReferenceResponse testApk) {
+        public Builder testApk(FileReferenceResponse testApk) {
             this.testApk = Objects.requireNonNull(testApk);
             return this;
         }
 
-        public Builder setTestPackageId(String testPackageId) {
+        public Builder testPackageId(String testPackageId) {
             this.testPackageId = Objects.requireNonNull(testPackageId);
             return this;
         }
 
-        public Builder setTestRunnerClass(String testRunnerClass) {
+        public Builder testRunnerClass(String testRunnerClass) {
             this.testRunnerClass = Objects.requireNonNull(testRunnerClass);
             return this;
         }
 
-        public Builder setTestTargets(List<String> testTargets) {
+        public Builder testTargets(List<String> testTargets) {
             this.testTargets = Objects.requireNonNull(testTargets);
             return this;
         }

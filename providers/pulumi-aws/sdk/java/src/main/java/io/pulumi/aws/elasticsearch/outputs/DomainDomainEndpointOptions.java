@@ -108,27 +108,27 @@ public final class DomainDomainEndpointOptions {
     	      this.tlsSecurityPolicy = defaults.tlsSecurityPolicy;
         }
 
-        public Builder setCustomEndpoint(@Nullable String customEndpoint) {
+        public Builder customEndpoint(@Nullable String customEndpoint) {
             this.customEndpoint = customEndpoint;
             return this;
         }
 
-        public Builder setCustomEndpointCertificateArn(@Nullable String customEndpointCertificateArn) {
+        public Builder customEndpointCertificateArn(@Nullable String customEndpointCertificateArn) {
             this.customEndpointCertificateArn = customEndpointCertificateArn;
             return this;
         }
 
-        public Builder setCustomEndpointEnabled(@Nullable Boolean customEndpointEnabled) {
+        public Builder customEndpointEnabled(@Nullable Boolean customEndpointEnabled) {
             this.customEndpointEnabled = customEndpointEnabled;
             return this;
         }
 
-        public Builder setEnforceHttps(@Nullable Boolean enforceHttps) {
+        public Builder enforceHttps(@Nullable Boolean enforceHttps) {
             this.enforceHttps = enforceHttps;
             return this;
         }
 
-        public Builder setTlsSecurityPolicy(@Nullable String tlsSecurityPolicy) {
+        public Builder tlsSecurityPolicy(@Nullable String tlsSecurityPolicy) {
             this.tlsSecurityPolicy = tlsSecurityPolicy;
             return this;
         }

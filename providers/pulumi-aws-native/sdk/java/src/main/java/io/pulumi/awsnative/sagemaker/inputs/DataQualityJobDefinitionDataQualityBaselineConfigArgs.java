@@ -80,32 +80,32 @@ public final class DataQualityJobDefinitionDataQualityBaselineConfigArgs extends
     	      this.statisticsResource = defaults.statisticsResource;
         }
 
-        public Builder setBaseliningJobName(@Nullable Input<String> baseliningJobName) {
+        public Builder baseliningJobName(@Nullable Input<String> baseliningJobName) {
             this.baseliningJobName = baseliningJobName;
             return this;
         }
 
-        public Builder setBaseliningJobName(@Nullable String baseliningJobName) {
+        public Builder baseliningJobName(@Nullable String baseliningJobName) {
             this.baseliningJobName = Input.ofNullable(baseliningJobName);
             return this;
         }
 
-        public Builder setConstraintsResource(@Nullable Input<DataQualityJobDefinitionConstraintsResourceArgs> constraintsResource) {
+        public Builder constraintsResource(@Nullable Input<DataQualityJobDefinitionConstraintsResourceArgs> constraintsResource) {
             this.constraintsResource = constraintsResource;
             return this;
         }
 
-        public Builder setConstraintsResource(@Nullable DataQualityJobDefinitionConstraintsResourceArgs constraintsResource) {
+        public Builder constraintsResource(@Nullable DataQualityJobDefinitionConstraintsResourceArgs constraintsResource) {
             this.constraintsResource = Input.ofNullable(constraintsResource);
             return this;
         }
 
-        public Builder setStatisticsResource(@Nullable Input<DataQualityJobDefinitionStatisticsResourceArgs> statisticsResource) {
+        public Builder statisticsResource(@Nullable Input<DataQualityJobDefinitionStatisticsResourceArgs> statisticsResource) {
             this.statisticsResource = statisticsResource;
             return this;
         }
 
-        public Builder setStatisticsResource(@Nullable DataQualityJobDefinitionStatisticsResourceArgs statisticsResource) {
+        public Builder statisticsResource(@Nullable DataQualityJobDefinitionStatisticsResourceArgs statisticsResource) {
             this.statisticsResource = Input.ofNullable(statisticsResource);
             return this;
         }

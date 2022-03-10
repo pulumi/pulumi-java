@@ -90,17 +90,17 @@ public final class LineRegistrationResponse extends io.pulumi.resources.InvokeAr
     	      this.generatedId = defaults.generatedId;
         }
 
-        public Builder setChannelAccessToken(@Nullable String channelAccessToken) {
+        public Builder channelAccessToken(@Nullable String channelAccessToken) {
             this.channelAccessToken = channelAccessToken;
             return this;
         }
 
-        public Builder setChannelSecret(@Nullable String channelSecret) {
+        public Builder channelSecret(@Nullable String channelSecret) {
             this.channelSecret = channelSecret;
             return this;
         }
 
-        public Builder setGeneratedId(String generatedId) {
+        public Builder generatedId(String generatedId) {
             this.generatedId = Objects.requireNonNull(generatedId);
             return this;
         }

@@ -47,7 +47,7 @@ public final class GetAccessPolicyIamPolicyArgs extends io.pulumi.resources.Invo
     	      this.accessPolicyId = defaults.accessPolicyId;
         }
 
-        public Builder setAccessPolicyId(String accessPolicyId) {
+        public Builder accessPolicyId(String accessPolicyId) {
             this.accessPolicyId = Objects.requireNonNull(accessPolicyId);
             return this;
         }

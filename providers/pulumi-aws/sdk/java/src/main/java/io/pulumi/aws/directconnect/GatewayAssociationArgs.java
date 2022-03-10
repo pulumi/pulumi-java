@@ -141,62 +141,62 @@ public final class GatewayAssociationArgs extends io.pulumi.resources.ResourceAr
     	      this.vpnGatewayId = defaults.vpnGatewayId;
         }
 
-        public Builder setAllowedPrefixes(@Nullable Input<List<String>> allowedPrefixes) {
+        public Builder allowedPrefixes(@Nullable Input<List<String>> allowedPrefixes) {
             this.allowedPrefixes = allowedPrefixes;
             return this;
         }
 
-        public Builder setAllowedPrefixes(@Nullable List<String> allowedPrefixes) {
+        public Builder allowedPrefixes(@Nullable List<String> allowedPrefixes) {
             this.allowedPrefixes = Input.ofNullable(allowedPrefixes);
             return this;
         }
 
-        public Builder setAssociatedGatewayId(@Nullable Input<String> associatedGatewayId) {
+        public Builder associatedGatewayId(@Nullable Input<String> associatedGatewayId) {
             this.associatedGatewayId = associatedGatewayId;
             return this;
         }
 
-        public Builder setAssociatedGatewayId(@Nullable String associatedGatewayId) {
+        public Builder associatedGatewayId(@Nullable String associatedGatewayId) {
             this.associatedGatewayId = Input.ofNullable(associatedGatewayId);
             return this;
         }
 
-        public Builder setAssociatedGatewayOwnerAccountId(@Nullable Input<String> associatedGatewayOwnerAccountId) {
+        public Builder associatedGatewayOwnerAccountId(@Nullable Input<String> associatedGatewayOwnerAccountId) {
             this.associatedGatewayOwnerAccountId = associatedGatewayOwnerAccountId;
             return this;
         }
 
-        public Builder setAssociatedGatewayOwnerAccountId(@Nullable String associatedGatewayOwnerAccountId) {
+        public Builder associatedGatewayOwnerAccountId(@Nullable String associatedGatewayOwnerAccountId) {
             this.associatedGatewayOwnerAccountId = Input.ofNullable(associatedGatewayOwnerAccountId);
             return this;
         }
 
-        public Builder setDxGatewayId(Input<String> dxGatewayId) {
+        public Builder dxGatewayId(Input<String> dxGatewayId) {
             this.dxGatewayId = Objects.requireNonNull(dxGatewayId);
             return this;
         }
 
-        public Builder setDxGatewayId(String dxGatewayId) {
+        public Builder dxGatewayId(String dxGatewayId) {
             this.dxGatewayId = Input.of(Objects.requireNonNull(dxGatewayId));
             return this;
         }
 
-        public Builder setProposalId(@Nullable Input<String> proposalId) {
+        public Builder proposalId(@Nullable Input<String> proposalId) {
             this.proposalId = proposalId;
             return this;
         }
 
-        public Builder setProposalId(@Nullable String proposalId) {
+        public Builder proposalId(@Nullable String proposalId) {
             this.proposalId = Input.ofNullable(proposalId);
             return this;
         }
 
-        public Builder setVpnGatewayId(@Nullable Input<String> vpnGatewayId) {
+        public Builder vpnGatewayId(@Nullable Input<String> vpnGatewayId) {
             this.vpnGatewayId = vpnGatewayId;
             return this;
         }
 
-        public Builder setVpnGatewayId(@Nullable String vpnGatewayId) {
+        public Builder vpnGatewayId(@Nullable String vpnGatewayId) {
             this.vpnGatewayId = Input.ofNullable(vpnGatewayId);
             return this;
         }

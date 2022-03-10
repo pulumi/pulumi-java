@@ -51,12 +51,12 @@ public final class TopicRuleIotSiteWiseAction {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setPutAssetPropertyValueEntries(List<TopicRulePutAssetPropertyValueEntry> putAssetPropertyValueEntries) {
+        public Builder putAssetPropertyValueEntries(List<TopicRulePutAssetPropertyValueEntry> putAssetPropertyValueEntries) {
             this.putAssetPropertyValueEntries = Objects.requireNonNull(putAssetPropertyValueEntries);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }

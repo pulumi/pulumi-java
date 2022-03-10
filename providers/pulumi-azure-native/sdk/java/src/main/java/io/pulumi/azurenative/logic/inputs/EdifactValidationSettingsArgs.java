@@ -205,102 +205,102 @@ public final class EdifactValidationSettingsArgs extends io.pulumi.resources.Res
     	      this.validateXSDTypes = defaults.validateXSDTypes;
         }
 
-        public Builder setAllowLeadingAndTrailingSpacesAndZeroes(Input<Boolean> allowLeadingAndTrailingSpacesAndZeroes) {
+        public Builder allowLeadingAndTrailingSpacesAndZeroes(Input<Boolean> allowLeadingAndTrailingSpacesAndZeroes) {
             this.allowLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull(allowLeadingAndTrailingSpacesAndZeroes);
             return this;
         }
 
-        public Builder setAllowLeadingAndTrailingSpacesAndZeroes(Boolean allowLeadingAndTrailingSpacesAndZeroes) {
+        public Builder allowLeadingAndTrailingSpacesAndZeroes(Boolean allowLeadingAndTrailingSpacesAndZeroes) {
             this.allowLeadingAndTrailingSpacesAndZeroes = Input.of(Objects.requireNonNull(allowLeadingAndTrailingSpacesAndZeroes));
             return this;
         }
 
-        public Builder setCheckDuplicateGroupControlNumber(Input<Boolean> checkDuplicateGroupControlNumber) {
+        public Builder checkDuplicateGroupControlNumber(Input<Boolean> checkDuplicateGroupControlNumber) {
             this.checkDuplicateGroupControlNumber = Objects.requireNonNull(checkDuplicateGroupControlNumber);
             return this;
         }
 
-        public Builder setCheckDuplicateGroupControlNumber(Boolean checkDuplicateGroupControlNumber) {
+        public Builder checkDuplicateGroupControlNumber(Boolean checkDuplicateGroupControlNumber) {
             this.checkDuplicateGroupControlNumber = Input.of(Objects.requireNonNull(checkDuplicateGroupControlNumber));
             return this;
         }
 
-        public Builder setCheckDuplicateInterchangeControlNumber(Input<Boolean> checkDuplicateInterchangeControlNumber) {
+        public Builder checkDuplicateInterchangeControlNumber(Input<Boolean> checkDuplicateInterchangeControlNumber) {
             this.checkDuplicateInterchangeControlNumber = Objects.requireNonNull(checkDuplicateInterchangeControlNumber);
             return this;
         }
 
-        public Builder setCheckDuplicateInterchangeControlNumber(Boolean checkDuplicateInterchangeControlNumber) {
+        public Builder checkDuplicateInterchangeControlNumber(Boolean checkDuplicateInterchangeControlNumber) {
             this.checkDuplicateInterchangeControlNumber = Input.of(Objects.requireNonNull(checkDuplicateInterchangeControlNumber));
             return this;
         }
 
-        public Builder setCheckDuplicateTransactionSetControlNumber(Input<Boolean> checkDuplicateTransactionSetControlNumber) {
+        public Builder checkDuplicateTransactionSetControlNumber(Input<Boolean> checkDuplicateTransactionSetControlNumber) {
             this.checkDuplicateTransactionSetControlNumber = Objects.requireNonNull(checkDuplicateTransactionSetControlNumber);
             return this;
         }
 
-        public Builder setCheckDuplicateTransactionSetControlNumber(Boolean checkDuplicateTransactionSetControlNumber) {
+        public Builder checkDuplicateTransactionSetControlNumber(Boolean checkDuplicateTransactionSetControlNumber) {
             this.checkDuplicateTransactionSetControlNumber = Input.of(Objects.requireNonNull(checkDuplicateTransactionSetControlNumber));
             return this;
         }
 
-        public Builder setInterchangeControlNumberValidityDays(Input<Integer> interchangeControlNumberValidityDays) {
+        public Builder interchangeControlNumberValidityDays(Input<Integer> interchangeControlNumberValidityDays) {
             this.interchangeControlNumberValidityDays = Objects.requireNonNull(interchangeControlNumberValidityDays);
             return this;
         }
 
-        public Builder setInterchangeControlNumberValidityDays(Integer interchangeControlNumberValidityDays) {
+        public Builder interchangeControlNumberValidityDays(Integer interchangeControlNumberValidityDays) {
             this.interchangeControlNumberValidityDays = Input.of(Objects.requireNonNull(interchangeControlNumberValidityDays));
             return this;
         }
 
-        public Builder setTrailingSeparatorPolicy(Input<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy) {
+        public Builder trailingSeparatorPolicy(Input<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy) {
             this.trailingSeparatorPolicy = Objects.requireNonNull(trailingSeparatorPolicy);
             return this;
         }
 
-        public Builder setTrailingSeparatorPolicy(Either<String,TrailingSeparatorPolicy> trailingSeparatorPolicy) {
+        public Builder trailingSeparatorPolicy(Either<String,TrailingSeparatorPolicy> trailingSeparatorPolicy) {
             this.trailingSeparatorPolicy = Input.of(Objects.requireNonNull(trailingSeparatorPolicy));
             return this;
         }
 
-        public Builder setTrimLeadingAndTrailingSpacesAndZeroes(Input<Boolean> trimLeadingAndTrailingSpacesAndZeroes) {
+        public Builder trimLeadingAndTrailingSpacesAndZeroes(Input<Boolean> trimLeadingAndTrailingSpacesAndZeroes) {
             this.trimLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull(trimLeadingAndTrailingSpacesAndZeroes);
             return this;
         }
 
-        public Builder setTrimLeadingAndTrailingSpacesAndZeroes(Boolean trimLeadingAndTrailingSpacesAndZeroes) {
+        public Builder trimLeadingAndTrailingSpacesAndZeroes(Boolean trimLeadingAndTrailingSpacesAndZeroes) {
             this.trimLeadingAndTrailingSpacesAndZeroes = Input.of(Objects.requireNonNull(trimLeadingAndTrailingSpacesAndZeroes));
             return this;
         }
 
-        public Builder setValidateCharacterSet(Input<Boolean> validateCharacterSet) {
+        public Builder validateCharacterSet(Input<Boolean> validateCharacterSet) {
             this.validateCharacterSet = Objects.requireNonNull(validateCharacterSet);
             return this;
         }
 
-        public Builder setValidateCharacterSet(Boolean validateCharacterSet) {
+        public Builder validateCharacterSet(Boolean validateCharacterSet) {
             this.validateCharacterSet = Input.of(Objects.requireNonNull(validateCharacterSet));
             return this;
         }
 
-        public Builder setValidateEDITypes(Input<Boolean> validateEDITypes) {
+        public Builder validateEDITypes(Input<Boolean> validateEDITypes) {
             this.validateEDITypes = Objects.requireNonNull(validateEDITypes);
             return this;
         }
 
-        public Builder setValidateEDITypes(Boolean validateEDITypes) {
+        public Builder validateEDITypes(Boolean validateEDITypes) {
             this.validateEDITypes = Input.of(Objects.requireNonNull(validateEDITypes));
             return this;
         }
 
-        public Builder setValidateXSDTypes(Input<Boolean> validateXSDTypes) {
+        public Builder validateXSDTypes(Input<Boolean> validateXSDTypes) {
             this.validateXSDTypes = Objects.requireNonNull(validateXSDTypes);
             return this;
         }
 
-        public Builder setValidateXSDTypes(Boolean validateXSDTypes) {
+        public Builder validateXSDTypes(Boolean validateXSDTypes) {
             this.validateXSDTypes = Input.of(Objects.requireNonNull(validateXSDTypes));
             return this;
         }

@@ -76,12 +76,12 @@ public final class DiagnosticsRefResponse extends io.pulumi.resources.InvokeArgs
     	      this.sinkRefs = defaults.sinkRefs;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setSinkRefs(@Nullable List<String> sinkRefs) {
+        public Builder sinkRefs(@Nullable List<String> sinkRefs) {
             this.sinkRefs = sinkRefs;
             return this;
         }

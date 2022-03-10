@@ -83,32 +83,32 @@ public final class AuthorizedCertificateArgs extends io.pulumi.resources.Resourc
     	      this.displayName = defaults.displayName;
         }
 
-        public Builder setAppId(Input<String> appId) {
+        public Builder appId(Input<String> appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
 
-        public Builder setAppId(String appId) {
+        public Builder appId(String appId) {
             this.appId = Input.of(Objects.requireNonNull(appId));
             return this;
         }
 
-        public Builder setCertificateRawData(@Nullable Input<CertificateRawDataArgs> certificateRawData) {
+        public Builder certificateRawData(@Nullable Input<CertificateRawDataArgs> certificateRawData) {
             this.certificateRawData = certificateRawData;
             return this;
         }
 
-        public Builder setCertificateRawData(@Nullable CertificateRawDataArgs certificateRawData) {
+        public Builder certificateRawData(@Nullable CertificateRawDataArgs certificateRawData) {
             this.certificateRawData = Input.ofNullable(certificateRawData);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }

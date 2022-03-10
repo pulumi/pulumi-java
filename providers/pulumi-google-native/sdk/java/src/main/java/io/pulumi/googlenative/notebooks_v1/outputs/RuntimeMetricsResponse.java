@@ -49,7 +49,7 @@ public final class RuntimeMetricsResponse {
     	      this.systemMetrics = defaults.systemMetrics;
         }
 
-        public Builder setSystemMetrics(Map<String,String> systemMetrics) {
+        public Builder systemMetrics(Map<String,String> systemMetrics) {
             this.systemMetrics = Objects.requireNonNull(systemMetrics);
             return this;
         }

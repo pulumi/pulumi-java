@@ -229,112 +229,112 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
     	      this.serverBinding = defaults.serverBinding;
         }
 
-        public Builder setCpuOvercommitType(@Nullable Input<String> cpuOvercommitType) {
+        public Builder cpuOvercommitType(@Nullable Input<String> cpuOvercommitType) {
             this.cpuOvercommitType = cpuOvercommitType;
             return this;
         }
 
-        public Builder setCpuOvercommitType(@Nullable String cpuOvercommitType) {
+        public Builder cpuOvercommitType(@Nullable String cpuOvercommitType) {
             this.cpuOvercommitType = Input.ofNullable(cpuOvercommitType);
             return this;
         }
 
-        public Builder setCreationTimestamp(@Nullable Input<String> creationTimestamp) {
+        public Builder creationTimestamp(@Nullable Input<String> creationTimestamp) {
             this.creationTimestamp = creationTimestamp;
             return this;
         }
 
-        public Builder setCreationTimestamp(@Nullable String creationTimestamp) {
+        public Builder creationTimestamp(@Nullable String creationTimestamp) {
             this.creationTimestamp = Input.ofNullable(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNodeAffinityLabels(@Nullable Input<Map<String,String>> nodeAffinityLabels) {
+        public Builder nodeAffinityLabels(@Nullable Input<Map<String,String>> nodeAffinityLabels) {
             this.nodeAffinityLabels = nodeAffinityLabels;
             return this;
         }
 
-        public Builder setNodeAffinityLabels(@Nullable Map<String,String> nodeAffinityLabels) {
+        public Builder nodeAffinityLabels(@Nullable Map<String,String> nodeAffinityLabels) {
             this.nodeAffinityLabels = Input.ofNullable(nodeAffinityLabels);
             return this;
         }
 
-        public Builder setNodeType(@Nullable Input<String> nodeType) {
+        public Builder nodeType(@Nullable Input<String> nodeType) {
             this.nodeType = nodeType;
             return this;
         }
 
-        public Builder setNodeType(@Nullable String nodeType) {
+        public Builder nodeType(@Nullable String nodeType) {
             this.nodeType = Input.ofNullable(nodeType);
             return this;
         }
 
-        public Builder setNodeTypeFlexibility(@Nullable Input<NodeTemplateNodeTypeFlexibilityGetArgs> nodeTypeFlexibility) {
+        public Builder nodeTypeFlexibility(@Nullable Input<NodeTemplateNodeTypeFlexibilityGetArgs> nodeTypeFlexibility) {
             this.nodeTypeFlexibility = nodeTypeFlexibility;
             return this;
         }
 
-        public Builder setNodeTypeFlexibility(@Nullable NodeTemplateNodeTypeFlexibilityGetArgs nodeTypeFlexibility) {
+        public Builder nodeTypeFlexibility(@Nullable NodeTemplateNodeTypeFlexibilityGetArgs nodeTypeFlexibility) {
             this.nodeTypeFlexibility = Input.ofNullable(nodeTypeFlexibility);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setSelfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Input<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
-        public Builder setSelfLink(@Nullable String selfLink) {
+        public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Input.ofNullable(selfLink);
             return this;
         }
 
-        public Builder setServerBinding(@Nullable Input<NodeTemplateServerBindingGetArgs> serverBinding) {
+        public Builder serverBinding(@Nullable Input<NodeTemplateServerBindingGetArgs> serverBinding) {
             this.serverBinding = serverBinding;
             return this;
         }
 
-        public Builder setServerBinding(@Nullable NodeTemplateServerBindingGetArgs serverBinding) {
+        public Builder serverBinding(@Nullable NodeTemplateServerBindingGetArgs serverBinding) {
             this.serverBinding = Input.ofNullable(serverBinding);
             return this;
         }

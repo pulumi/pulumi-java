@@ -92,32 +92,32 @@ public final class AzureDatabricksDeltaLakeExportCommandArgs extends io.pulumi.r
     	      this.type = defaults.type;
         }
 
-        public Builder setDateFormat(@Nullable Input<Object> dateFormat) {
+        public Builder dateFormat(@Nullable Input<Object> dateFormat) {
             this.dateFormat = dateFormat;
             return this;
         }
 
-        public Builder setDateFormat(@Nullable Object dateFormat) {
+        public Builder dateFormat(@Nullable Object dateFormat) {
             this.dateFormat = Input.ofNullable(dateFormat);
             return this;
         }
 
-        public Builder setTimestampFormat(@Nullable Input<Object> timestampFormat) {
+        public Builder timestampFormat(@Nullable Input<Object> timestampFormat) {
             this.timestampFormat = timestampFormat;
             return this;
         }
 
-        public Builder setTimestampFormat(@Nullable Object timestampFormat) {
+        public Builder timestampFormat(@Nullable Object timestampFormat) {
             this.timestampFormat = Input.ofNullable(timestampFormat);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

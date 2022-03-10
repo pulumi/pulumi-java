@@ -53,12 +53,12 @@ public final class VirtualNodeSpecLoggingAccessLogArgs extends io.pulumi.resourc
     	      this.file = defaults.file;
         }
 
-        public Builder setFile(@Nullable Input<VirtualNodeSpecLoggingAccessLogFileArgs> file) {
+        public Builder file(@Nullable Input<VirtualNodeSpecLoggingAccessLogFileArgs> file) {
             this.file = file;
             return this;
         }
 
-        public Builder setFile(@Nullable VirtualNodeSpecLoggingAccessLogFileArgs file) {
+        public Builder file(@Nullable VirtualNodeSpecLoggingAccessLogFileArgs file) {
             this.file = Input.ofNullable(file);
             return this;
         }

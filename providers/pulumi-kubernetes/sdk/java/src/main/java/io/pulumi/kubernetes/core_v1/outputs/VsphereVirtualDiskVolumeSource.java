@@ -99,22 +99,22 @@ public final class VsphereVirtualDiskVolumeSource {
     	      this.volumePath = defaults.volumePath;
         }
 
-        public Builder setFsType(@Nullable String fsType) {
+        public Builder fsType(@Nullable String fsType) {
             this.fsType = fsType;
             return this;
         }
 
-        public Builder setStoragePolicyID(@Nullable String storagePolicyID) {
+        public Builder storagePolicyID(@Nullable String storagePolicyID) {
             this.storagePolicyID = storagePolicyID;
             return this;
         }
 
-        public Builder setStoragePolicyName(@Nullable String storagePolicyName) {
+        public Builder storagePolicyName(@Nullable String storagePolicyName) {
             this.storagePolicyName = storagePolicyName;
             return this;
         }
 
-        public Builder setVolumePath(String volumePath) {
+        public Builder volumePath(String volumePath) {
             this.volumePath = Objects.requireNonNull(volumePath);
             return this;
         }

@@ -90,32 +90,32 @@ public final class ApplicationPolicyArgs extends io.pulumi.resources.ResourceArg
     	      this.policyDefinitionId = defaults.policyDefinitionId;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<String> parameters) {
+        public Builder parameters(@Nullable Input<String> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable String parameters) {
+        public Builder parameters(@Nullable String parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setPolicyDefinitionId(@Nullable Input<String> policyDefinitionId) {
+        public Builder policyDefinitionId(@Nullable Input<String> policyDefinitionId) {
             this.policyDefinitionId = policyDefinitionId;
             return this;
         }
 
-        public Builder setPolicyDefinitionId(@Nullable String policyDefinitionId) {
+        public Builder policyDefinitionId(@Nullable String policyDefinitionId) {
             this.policyDefinitionId = Input.ofNullable(policyDefinitionId);
             return this;
         }

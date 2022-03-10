@@ -199,102 +199,102 @@ public final class ADLSGen2FolderDataSetArgs extends io.pulumi.resources.Resourc
     	      this.subscriptionId = defaults.subscriptionId;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setDataSetName(@Nullable Input<String> dataSetName) {
+        public Builder dataSetName(@Nullable Input<String> dataSetName) {
             this.dataSetName = dataSetName;
             return this;
         }
 
-        public Builder setDataSetName(@Nullable String dataSetName) {
+        public Builder dataSetName(@Nullable String dataSetName) {
             this.dataSetName = Input.ofNullable(dataSetName);
             return this;
         }
 
-        public Builder setFileSystem(Input<String> fileSystem) {
+        public Builder fileSystem(Input<String> fileSystem) {
             this.fileSystem = Objects.requireNonNull(fileSystem);
             return this;
         }
 
-        public Builder setFileSystem(String fileSystem) {
+        public Builder fileSystem(String fileSystem) {
             this.fileSystem = Input.of(Objects.requireNonNull(fileSystem));
             return this;
         }
 
-        public Builder setFolderPath(Input<String> folderPath) {
+        public Builder folderPath(Input<String> folderPath) {
             this.folderPath = Objects.requireNonNull(folderPath);
             return this;
         }
 
-        public Builder setFolderPath(String folderPath) {
+        public Builder folderPath(String folderPath) {
             this.folderPath = Input.of(Objects.requireNonNull(folderPath));
             return this;
         }
 
-        public Builder setKind(Input<String> kind) {
+        public Builder kind(Input<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setResourceGroup(Input<String> resourceGroup) {
+        public Builder resourceGroup(Input<String> resourceGroup) {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
         }
 
-        public Builder setResourceGroup(String resourceGroup) {
+        public Builder resourceGroup(String resourceGroup) {
             this.resourceGroup = Input.of(Objects.requireNonNull(resourceGroup));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setShareName(Input<String> shareName) {
+        public Builder shareName(Input<String> shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
 
-        public Builder setShareName(String shareName) {
+        public Builder shareName(String shareName) {
             this.shareName = Input.of(Objects.requireNonNull(shareName));
             return this;
         }
 
-        public Builder setStorageAccountName(Input<String> storageAccountName) {
+        public Builder storageAccountName(Input<String> storageAccountName) {
             this.storageAccountName = Objects.requireNonNull(storageAccountName);
             return this;
         }
 
-        public Builder setStorageAccountName(String storageAccountName) {
+        public Builder storageAccountName(String storageAccountName) {
             this.storageAccountName = Input.of(Objects.requireNonNull(storageAccountName));
             return this;
         }
 
-        public Builder setSubscriptionId(Input<String> subscriptionId) {
+        public Builder subscriptionId(Input<String> subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
 
-        public Builder setSubscriptionId(String subscriptionId) {
+        public Builder subscriptionId(String subscriptionId) {
             this.subscriptionId = Input.of(Objects.requireNonNull(subscriptionId));
             return this;
         }

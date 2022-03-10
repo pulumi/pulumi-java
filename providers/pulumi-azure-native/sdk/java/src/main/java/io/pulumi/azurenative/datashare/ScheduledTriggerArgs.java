@@ -170,82 +170,82 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
     	      this.triggerName = defaults.triggerName;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setKind(Input<String> kind) {
+        public Builder kind(Input<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setRecurrenceInterval(Input<Either<String,RecurrenceInterval>> recurrenceInterval) {
+        public Builder recurrenceInterval(Input<Either<String,RecurrenceInterval>> recurrenceInterval) {
             this.recurrenceInterval = Objects.requireNonNull(recurrenceInterval);
             return this;
         }
 
-        public Builder setRecurrenceInterval(Either<String,RecurrenceInterval> recurrenceInterval) {
+        public Builder recurrenceInterval(Either<String,RecurrenceInterval> recurrenceInterval) {
             this.recurrenceInterval = Input.of(Objects.requireNonNull(recurrenceInterval));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setShareSubscriptionName(Input<String> shareSubscriptionName) {
+        public Builder shareSubscriptionName(Input<String> shareSubscriptionName) {
             this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName);
             return this;
         }
 
-        public Builder setShareSubscriptionName(String shareSubscriptionName) {
+        public Builder shareSubscriptionName(String shareSubscriptionName) {
             this.shareSubscriptionName = Input.of(Objects.requireNonNull(shareSubscriptionName));
             return this;
         }
 
-        public Builder setSynchronizationMode(@Nullable Input<Either<String,SynchronizationMode>> synchronizationMode) {
+        public Builder synchronizationMode(@Nullable Input<Either<String,SynchronizationMode>> synchronizationMode) {
             this.synchronizationMode = synchronizationMode;
             return this;
         }
 
-        public Builder setSynchronizationMode(@Nullable Either<String,SynchronizationMode> synchronizationMode) {
+        public Builder synchronizationMode(@Nullable Either<String,SynchronizationMode> synchronizationMode) {
             this.synchronizationMode = Input.ofNullable(synchronizationMode);
             return this;
         }
 
-        public Builder setSynchronizationTime(Input<String> synchronizationTime) {
+        public Builder synchronizationTime(Input<String> synchronizationTime) {
             this.synchronizationTime = Objects.requireNonNull(synchronizationTime);
             return this;
         }
 
-        public Builder setSynchronizationTime(String synchronizationTime) {
+        public Builder synchronizationTime(String synchronizationTime) {
             this.synchronizationTime = Input.of(Objects.requireNonNull(synchronizationTime));
             return this;
         }
 
-        public Builder setTriggerName(@Nullable Input<String> triggerName) {
+        public Builder triggerName(@Nullable Input<String> triggerName) {
             this.triggerName = triggerName;
             return this;
         }
 
-        public Builder setTriggerName(@Nullable String triggerName) {
+        public Builder triggerName(@Nullable String triggerName) {
             this.triggerName = Input.ofNullable(triggerName);
             return this;
         }

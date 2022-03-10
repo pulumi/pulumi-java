@@ -564,302 +564,302 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vsphereVolume = defaults.vsphereVolume;
         }
 
-        public Builder setAwsElasticBlockStore(@Nullable Input<AWSElasticBlockStoreVolumeSourceArgs> awsElasticBlockStore) {
+        public Builder awsElasticBlockStore(@Nullable Input<AWSElasticBlockStoreVolumeSourceArgs> awsElasticBlockStore) {
             this.awsElasticBlockStore = awsElasticBlockStore;
             return this;
         }
 
-        public Builder setAwsElasticBlockStore(@Nullable AWSElasticBlockStoreVolumeSourceArgs awsElasticBlockStore) {
+        public Builder awsElasticBlockStore(@Nullable AWSElasticBlockStoreVolumeSourceArgs awsElasticBlockStore) {
             this.awsElasticBlockStore = Input.ofNullable(awsElasticBlockStore);
             return this;
         }
 
-        public Builder setAzureDisk(@Nullable Input<AzureDiskVolumeSourceArgs> azureDisk) {
+        public Builder azureDisk(@Nullable Input<AzureDiskVolumeSourceArgs> azureDisk) {
             this.azureDisk = azureDisk;
             return this;
         }
 
-        public Builder setAzureDisk(@Nullable AzureDiskVolumeSourceArgs azureDisk) {
+        public Builder azureDisk(@Nullable AzureDiskVolumeSourceArgs azureDisk) {
             this.azureDisk = Input.ofNullable(azureDisk);
             return this;
         }
 
-        public Builder setAzureFile(@Nullable Input<AzureFileVolumeSourceArgs> azureFile) {
+        public Builder azureFile(@Nullable Input<AzureFileVolumeSourceArgs> azureFile) {
             this.azureFile = azureFile;
             return this;
         }
 
-        public Builder setAzureFile(@Nullable AzureFileVolumeSourceArgs azureFile) {
+        public Builder azureFile(@Nullable AzureFileVolumeSourceArgs azureFile) {
             this.azureFile = Input.ofNullable(azureFile);
             return this;
         }
 
-        public Builder setCephfs(@Nullable Input<CephFSVolumeSourceArgs> cephfs) {
+        public Builder cephfs(@Nullable Input<CephFSVolumeSourceArgs> cephfs) {
             this.cephfs = cephfs;
             return this;
         }
 
-        public Builder setCephfs(@Nullable CephFSVolumeSourceArgs cephfs) {
+        public Builder cephfs(@Nullable CephFSVolumeSourceArgs cephfs) {
             this.cephfs = Input.ofNullable(cephfs);
             return this;
         }
 
-        public Builder setCinder(@Nullable Input<CinderVolumeSourceArgs> cinder) {
+        public Builder cinder(@Nullable Input<CinderVolumeSourceArgs> cinder) {
             this.cinder = cinder;
             return this;
         }
 
-        public Builder setCinder(@Nullable CinderVolumeSourceArgs cinder) {
+        public Builder cinder(@Nullable CinderVolumeSourceArgs cinder) {
             this.cinder = Input.ofNullable(cinder);
             return this;
         }
 
-        public Builder setConfigMap(@Nullable Input<ConfigMapVolumeSourceArgs> configMap) {
+        public Builder configMap(@Nullable Input<ConfigMapVolumeSourceArgs> configMap) {
             this.configMap = configMap;
             return this;
         }
 
-        public Builder setConfigMap(@Nullable ConfigMapVolumeSourceArgs configMap) {
+        public Builder configMap(@Nullable ConfigMapVolumeSourceArgs configMap) {
             this.configMap = Input.ofNullable(configMap);
             return this;
         }
 
-        public Builder setCsi(@Nullable Input<CSIVolumeSourceArgs> csi) {
+        public Builder csi(@Nullable Input<CSIVolumeSourceArgs> csi) {
             this.csi = csi;
             return this;
         }
 
-        public Builder setCsi(@Nullable CSIVolumeSourceArgs csi) {
+        public Builder csi(@Nullable CSIVolumeSourceArgs csi) {
             this.csi = Input.ofNullable(csi);
             return this;
         }
 
-        public Builder setDownwardAPI(@Nullable Input<DownwardAPIVolumeSourceArgs> downwardAPI) {
+        public Builder downwardAPI(@Nullable Input<DownwardAPIVolumeSourceArgs> downwardAPI) {
             this.downwardAPI = downwardAPI;
             return this;
         }
 
-        public Builder setDownwardAPI(@Nullable DownwardAPIVolumeSourceArgs downwardAPI) {
+        public Builder downwardAPI(@Nullable DownwardAPIVolumeSourceArgs downwardAPI) {
             this.downwardAPI = Input.ofNullable(downwardAPI);
             return this;
         }
 
-        public Builder setEmptyDir(@Nullable Input<EmptyDirVolumeSourceArgs> emptyDir) {
+        public Builder emptyDir(@Nullable Input<EmptyDirVolumeSourceArgs> emptyDir) {
             this.emptyDir = emptyDir;
             return this;
         }
 
-        public Builder setEmptyDir(@Nullable EmptyDirVolumeSourceArgs emptyDir) {
+        public Builder emptyDir(@Nullable EmptyDirVolumeSourceArgs emptyDir) {
             this.emptyDir = Input.ofNullable(emptyDir);
             return this;
         }
 
-        public Builder setEphemeral(@Nullable Input<EphemeralVolumeSourceArgs> ephemeral) {
+        public Builder ephemeral(@Nullable Input<EphemeralVolumeSourceArgs> ephemeral) {
             this.ephemeral = ephemeral;
             return this;
         }
 
-        public Builder setEphemeral(@Nullable EphemeralVolumeSourceArgs ephemeral) {
+        public Builder ephemeral(@Nullable EphemeralVolumeSourceArgs ephemeral) {
             this.ephemeral = Input.ofNullable(ephemeral);
             return this;
         }
 
-        public Builder setFc(@Nullable Input<FCVolumeSourceArgs> fc) {
+        public Builder fc(@Nullable Input<FCVolumeSourceArgs> fc) {
             this.fc = fc;
             return this;
         }
 
-        public Builder setFc(@Nullable FCVolumeSourceArgs fc) {
+        public Builder fc(@Nullable FCVolumeSourceArgs fc) {
             this.fc = Input.ofNullable(fc);
             return this;
         }
 
-        public Builder setFlexVolume(@Nullable Input<FlexVolumeSourceArgs> flexVolume) {
+        public Builder flexVolume(@Nullable Input<FlexVolumeSourceArgs> flexVolume) {
             this.flexVolume = flexVolume;
             return this;
         }
 
-        public Builder setFlexVolume(@Nullable FlexVolumeSourceArgs flexVolume) {
+        public Builder flexVolume(@Nullable FlexVolumeSourceArgs flexVolume) {
             this.flexVolume = Input.ofNullable(flexVolume);
             return this;
         }
 
-        public Builder setFlocker(@Nullable Input<FlockerVolumeSourceArgs> flocker) {
+        public Builder flocker(@Nullable Input<FlockerVolumeSourceArgs> flocker) {
             this.flocker = flocker;
             return this;
         }
 
-        public Builder setFlocker(@Nullable FlockerVolumeSourceArgs flocker) {
+        public Builder flocker(@Nullable FlockerVolumeSourceArgs flocker) {
             this.flocker = Input.ofNullable(flocker);
             return this;
         }
 
-        public Builder setGcePersistentDisk(@Nullable Input<GCEPersistentDiskVolumeSourceArgs> gcePersistentDisk) {
+        public Builder gcePersistentDisk(@Nullable Input<GCEPersistentDiskVolumeSourceArgs> gcePersistentDisk) {
             this.gcePersistentDisk = gcePersistentDisk;
             return this;
         }
 
-        public Builder setGcePersistentDisk(@Nullable GCEPersistentDiskVolumeSourceArgs gcePersistentDisk) {
+        public Builder gcePersistentDisk(@Nullable GCEPersistentDiskVolumeSourceArgs gcePersistentDisk) {
             this.gcePersistentDisk = Input.ofNullable(gcePersistentDisk);
             return this;
         }
 
-        public Builder setGitRepo(@Nullable Input<GitRepoVolumeSourceArgs> gitRepo) {
+        public Builder gitRepo(@Nullable Input<GitRepoVolumeSourceArgs> gitRepo) {
             this.gitRepo = gitRepo;
             return this;
         }
 
-        public Builder setGitRepo(@Nullable GitRepoVolumeSourceArgs gitRepo) {
+        public Builder gitRepo(@Nullable GitRepoVolumeSourceArgs gitRepo) {
             this.gitRepo = Input.ofNullable(gitRepo);
             return this;
         }
 
-        public Builder setGlusterfs(@Nullable Input<GlusterfsVolumeSourceArgs> glusterfs) {
+        public Builder glusterfs(@Nullable Input<GlusterfsVolumeSourceArgs> glusterfs) {
             this.glusterfs = glusterfs;
             return this;
         }
 
-        public Builder setGlusterfs(@Nullable GlusterfsVolumeSourceArgs glusterfs) {
+        public Builder glusterfs(@Nullable GlusterfsVolumeSourceArgs glusterfs) {
             this.glusterfs = Input.ofNullable(glusterfs);
             return this;
         }
 
-        public Builder setHostPath(@Nullable Input<HostPathVolumeSourceArgs> hostPath) {
+        public Builder hostPath(@Nullable Input<HostPathVolumeSourceArgs> hostPath) {
             this.hostPath = hostPath;
             return this;
         }
 
-        public Builder setHostPath(@Nullable HostPathVolumeSourceArgs hostPath) {
+        public Builder hostPath(@Nullable HostPathVolumeSourceArgs hostPath) {
             this.hostPath = Input.ofNullable(hostPath);
             return this;
         }
 
-        public Builder setIscsi(@Nullable Input<ISCSIVolumeSourceArgs> iscsi) {
+        public Builder iscsi(@Nullable Input<ISCSIVolumeSourceArgs> iscsi) {
             this.iscsi = iscsi;
             return this;
         }
 
-        public Builder setIscsi(@Nullable ISCSIVolumeSourceArgs iscsi) {
+        public Builder iscsi(@Nullable ISCSIVolumeSourceArgs iscsi) {
             this.iscsi = Input.ofNullable(iscsi);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setNfs(@Nullable Input<NFSVolumeSourceArgs> nfs) {
+        public Builder nfs(@Nullable Input<NFSVolumeSourceArgs> nfs) {
             this.nfs = nfs;
             return this;
         }
 
-        public Builder setNfs(@Nullable NFSVolumeSourceArgs nfs) {
+        public Builder nfs(@Nullable NFSVolumeSourceArgs nfs) {
             this.nfs = Input.ofNullable(nfs);
             return this;
         }
 
-        public Builder setPersistentVolumeClaim(@Nullable Input<PersistentVolumeClaimVolumeSourceArgs> persistentVolumeClaim) {
+        public Builder persistentVolumeClaim(@Nullable Input<PersistentVolumeClaimVolumeSourceArgs> persistentVolumeClaim) {
             this.persistentVolumeClaim = persistentVolumeClaim;
             return this;
         }
 
-        public Builder setPersistentVolumeClaim(@Nullable PersistentVolumeClaimVolumeSourceArgs persistentVolumeClaim) {
+        public Builder persistentVolumeClaim(@Nullable PersistentVolumeClaimVolumeSourceArgs persistentVolumeClaim) {
             this.persistentVolumeClaim = Input.ofNullable(persistentVolumeClaim);
             return this;
         }
 
-        public Builder setPhotonPersistentDisk(@Nullable Input<PhotonPersistentDiskVolumeSourceArgs> photonPersistentDisk) {
+        public Builder photonPersistentDisk(@Nullable Input<PhotonPersistentDiskVolumeSourceArgs> photonPersistentDisk) {
             this.photonPersistentDisk = photonPersistentDisk;
             return this;
         }
 
-        public Builder setPhotonPersistentDisk(@Nullable PhotonPersistentDiskVolumeSourceArgs photonPersistentDisk) {
+        public Builder photonPersistentDisk(@Nullable PhotonPersistentDiskVolumeSourceArgs photonPersistentDisk) {
             this.photonPersistentDisk = Input.ofNullable(photonPersistentDisk);
             return this;
         }
 
-        public Builder setPortworxVolume(@Nullable Input<PortworxVolumeSourceArgs> portworxVolume) {
+        public Builder portworxVolume(@Nullable Input<PortworxVolumeSourceArgs> portworxVolume) {
             this.portworxVolume = portworxVolume;
             return this;
         }
 
-        public Builder setPortworxVolume(@Nullable PortworxVolumeSourceArgs portworxVolume) {
+        public Builder portworxVolume(@Nullable PortworxVolumeSourceArgs portworxVolume) {
             this.portworxVolume = Input.ofNullable(portworxVolume);
             return this;
         }
 
-        public Builder setProjected(@Nullable Input<ProjectedVolumeSourceArgs> projected) {
+        public Builder projected(@Nullable Input<ProjectedVolumeSourceArgs> projected) {
             this.projected = projected;
             return this;
         }
 
-        public Builder setProjected(@Nullable ProjectedVolumeSourceArgs projected) {
+        public Builder projected(@Nullable ProjectedVolumeSourceArgs projected) {
             this.projected = Input.ofNullable(projected);
             return this;
         }
 
-        public Builder setQuobyte(@Nullable Input<QuobyteVolumeSourceArgs> quobyte) {
+        public Builder quobyte(@Nullable Input<QuobyteVolumeSourceArgs> quobyte) {
             this.quobyte = quobyte;
             return this;
         }
 
-        public Builder setQuobyte(@Nullable QuobyteVolumeSourceArgs quobyte) {
+        public Builder quobyte(@Nullable QuobyteVolumeSourceArgs quobyte) {
             this.quobyte = Input.ofNullable(quobyte);
             return this;
         }
 
-        public Builder setRbd(@Nullable Input<RBDVolumeSourceArgs> rbd) {
+        public Builder rbd(@Nullable Input<RBDVolumeSourceArgs> rbd) {
             this.rbd = rbd;
             return this;
         }
 
-        public Builder setRbd(@Nullable RBDVolumeSourceArgs rbd) {
+        public Builder rbd(@Nullable RBDVolumeSourceArgs rbd) {
             this.rbd = Input.ofNullable(rbd);
             return this;
         }
 
-        public Builder setScaleIO(@Nullable Input<ScaleIOVolumeSourceArgs> scaleIO) {
+        public Builder scaleIO(@Nullable Input<ScaleIOVolumeSourceArgs> scaleIO) {
             this.scaleIO = scaleIO;
             return this;
         }
 
-        public Builder setScaleIO(@Nullable ScaleIOVolumeSourceArgs scaleIO) {
+        public Builder scaleIO(@Nullable ScaleIOVolumeSourceArgs scaleIO) {
             this.scaleIO = Input.ofNullable(scaleIO);
             return this;
         }
 
-        public Builder setSecret(@Nullable Input<SecretVolumeSourceArgs> secret) {
+        public Builder secret(@Nullable Input<SecretVolumeSourceArgs> secret) {
             this.secret = secret;
             return this;
         }
 
-        public Builder setSecret(@Nullable SecretVolumeSourceArgs secret) {
+        public Builder secret(@Nullable SecretVolumeSourceArgs secret) {
             this.secret = Input.ofNullable(secret);
             return this;
         }
 
-        public Builder setStorageos(@Nullable Input<StorageOSVolumeSourceArgs> storageos) {
+        public Builder storageos(@Nullable Input<StorageOSVolumeSourceArgs> storageos) {
             this.storageos = storageos;
             return this;
         }
 
-        public Builder setStorageos(@Nullable StorageOSVolumeSourceArgs storageos) {
+        public Builder storageos(@Nullable StorageOSVolumeSourceArgs storageos) {
             this.storageos = Input.ofNullable(storageos);
             return this;
         }
 
-        public Builder setVsphereVolume(@Nullable Input<VsphereVirtualDiskVolumeSourceArgs> vsphereVolume) {
+        public Builder vsphereVolume(@Nullable Input<VsphereVirtualDiskVolumeSourceArgs> vsphereVolume) {
             this.vsphereVolume = vsphereVolume;
             return this;
         }
 
-        public Builder setVsphereVolume(@Nullable VsphereVirtualDiskVolumeSourceArgs vsphereVolume) {
+        public Builder vsphereVolume(@Nullable VsphereVirtualDiskVolumeSourceArgs vsphereVolume) {
             this.vsphereVolume = Input.ofNullable(vsphereVolume);
             return this;
         }

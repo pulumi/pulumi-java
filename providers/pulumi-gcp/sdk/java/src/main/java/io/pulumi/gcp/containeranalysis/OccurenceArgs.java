@@ -132,52 +132,52 @@ public final class OccurenceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceUri = defaults.resourceUri;
         }
 
-        public Builder setAttestation(Input<OccurenceAttestationArgs> attestation) {
+        public Builder attestation(Input<OccurenceAttestationArgs> attestation) {
             this.attestation = Objects.requireNonNull(attestation);
             return this;
         }
 
-        public Builder setAttestation(OccurenceAttestationArgs attestation) {
+        public Builder attestation(OccurenceAttestationArgs attestation) {
             this.attestation = Input.of(Objects.requireNonNull(attestation));
             return this;
         }
 
-        public Builder setNoteName(Input<String> noteName) {
+        public Builder noteName(Input<String> noteName) {
             this.noteName = Objects.requireNonNull(noteName);
             return this;
         }
 
-        public Builder setNoteName(String noteName) {
+        public Builder noteName(String noteName) {
             this.noteName = Input.of(Objects.requireNonNull(noteName));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRemediation(@Nullable Input<String> remediation) {
+        public Builder remediation(@Nullable Input<String> remediation) {
             this.remediation = remediation;
             return this;
         }
 
-        public Builder setRemediation(@Nullable String remediation) {
+        public Builder remediation(@Nullable String remediation) {
             this.remediation = Input.ofNullable(remediation);
             return this;
         }
 
-        public Builder setResourceUri(Input<String> resourceUri) {
+        public Builder resourceUri(Input<String> resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
 
-        public Builder setResourceUri(String resourceUri) {
+        public Builder resourceUri(String resourceUri) {
             this.resourceUri = Input.of(Objects.requireNonNull(resourceUri));
             return this;
         }

@@ -49,7 +49,7 @@ public final class GoogleCloudApigeeV1CertificateResponse {
     	      this.certInfo = defaults.certInfo;
         }
 
-        public Builder setCertInfo(List<GoogleCloudApigeeV1CertInfoResponse> certInfo) {
+        public Builder certInfo(List<GoogleCloudApigeeV1CertInfoResponse> certInfo) {
             this.certInfo = Objects.requireNonNull(certInfo);
             return this;
         }

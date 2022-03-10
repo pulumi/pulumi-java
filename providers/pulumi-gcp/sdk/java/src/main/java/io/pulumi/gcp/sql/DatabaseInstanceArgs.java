@@ -265,122 +265,122 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
     	      this.settings = defaults.settings;
         }
 
-        public Builder setClone(@Nullable Input<DatabaseInstanceCloneArgs> clone) {
+        public Builder clone(@Nullable Input<DatabaseInstanceCloneArgs> clone) {
             this.clone = clone;
             return this;
         }
 
-        public Builder setClone(@Nullable DatabaseInstanceCloneArgs clone) {
+        public Builder clone(@Nullable DatabaseInstanceCloneArgs clone) {
             this.clone = Input.ofNullable(clone);
             return this;
         }
 
-        public Builder setDatabaseVersion(Input<String> databaseVersion) {
+        public Builder databaseVersion(Input<String> databaseVersion) {
             this.databaseVersion = Objects.requireNonNull(databaseVersion);
             return this;
         }
 
-        public Builder setDatabaseVersion(String databaseVersion) {
+        public Builder databaseVersion(String databaseVersion) {
             this.databaseVersion = Input.of(Objects.requireNonNull(databaseVersion));
             return this;
         }
 
-        public Builder setDeletionProtection(@Nullable Input<Boolean> deletionProtection) {
+        public Builder deletionProtection(@Nullable Input<Boolean> deletionProtection) {
             this.deletionProtection = deletionProtection;
             return this;
         }
 
-        public Builder setDeletionProtection(@Nullable Boolean deletionProtection) {
+        public Builder deletionProtection(@Nullable Boolean deletionProtection) {
             this.deletionProtection = Input.ofNullable(deletionProtection);
             return this;
         }
 
-        public Builder setEncryptionKeyName(@Nullable Input<String> encryptionKeyName) {
+        public Builder encryptionKeyName(@Nullable Input<String> encryptionKeyName) {
             this.encryptionKeyName = encryptionKeyName;
             return this;
         }
 
-        public Builder setEncryptionKeyName(@Nullable String encryptionKeyName) {
+        public Builder encryptionKeyName(@Nullable String encryptionKeyName) {
             this.encryptionKeyName = Input.ofNullable(encryptionKeyName);
             return this;
         }
 
-        public Builder setMasterInstanceName(@Nullable Input<String> masterInstanceName) {
+        public Builder masterInstanceName(@Nullable Input<String> masterInstanceName) {
             this.masterInstanceName = masterInstanceName;
             return this;
         }
 
-        public Builder setMasterInstanceName(@Nullable String masterInstanceName) {
+        public Builder masterInstanceName(@Nullable String masterInstanceName) {
             this.masterInstanceName = Input.ofNullable(masterInstanceName);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setReplicaConfiguration(@Nullable Input<DatabaseInstanceReplicaConfigurationArgs> replicaConfiguration) {
+        public Builder replicaConfiguration(@Nullable Input<DatabaseInstanceReplicaConfigurationArgs> replicaConfiguration) {
             this.replicaConfiguration = replicaConfiguration;
             return this;
         }
 
-        public Builder setReplicaConfiguration(@Nullable DatabaseInstanceReplicaConfigurationArgs replicaConfiguration) {
+        public Builder replicaConfiguration(@Nullable DatabaseInstanceReplicaConfigurationArgs replicaConfiguration) {
             this.replicaConfiguration = Input.ofNullable(replicaConfiguration);
             return this;
         }
 
-        public Builder setRestoreBackupContext(@Nullable Input<DatabaseInstanceRestoreBackupContextArgs> restoreBackupContext) {
+        public Builder restoreBackupContext(@Nullable Input<DatabaseInstanceRestoreBackupContextArgs> restoreBackupContext) {
             this.restoreBackupContext = restoreBackupContext;
             return this;
         }
 
-        public Builder setRestoreBackupContext(@Nullable DatabaseInstanceRestoreBackupContextArgs restoreBackupContext) {
+        public Builder restoreBackupContext(@Nullable DatabaseInstanceRestoreBackupContextArgs restoreBackupContext) {
             this.restoreBackupContext = Input.ofNullable(restoreBackupContext);
             return this;
         }
 
-        public Builder setRootPassword(@Nullable Input<String> rootPassword) {
+        public Builder rootPassword(@Nullable Input<String> rootPassword) {
             this.rootPassword = rootPassword;
             return this;
         }
 
-        public Builder setRootPassword(@Nullable String rootPassword) {
+        public Builder rootPassword(@Nullable String rootPassword) {
             this.rootPassword = Input.ofNullable(rootPassword);
             return this;
         }
 
-        public Builder setSettings(@Nullable Input<DatabaseInstanceSettingsArgs> settings) {
+        public Builder settings(@Nullable Input<DatabaseInstanceSettingsArgs> settings) {
             this.settings = settings;
             return this;
         }
 
-        public Builder setSettings(@Nullable DatabaseInstanceSettingsArgs settings) {
+        public Builder settings(@Nullable DatabaseInstanceSettingsArgs settings) {
             this.settings = Input.ofNullable(settings);
             return this;
         }

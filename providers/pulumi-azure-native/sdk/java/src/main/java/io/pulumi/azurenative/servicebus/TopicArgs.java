@@ -249,132 +249,132 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topicName = defaults.topicName;
         }
 
-        public Builder setAutoDeleteOnIdle(@Nullable Input<String> autoDeleteOnIdle) {
+        public Builder autoDeleteOnIdle(@Nullable Input<String> autoDeleteOnIdle) {
             this.autoDeleteOnIdle = autoDeleteOnIdle;
             return this;
         }
 
-        public Builder setAutoDeleteOnIdle(@Nullable String autoDeleteOnIdle) {
+        public Builder autoDeleteOnIdle(@Nullable String autoDeleteOnIdle) {
             this.autoDeleteOnIdle = Input.ofNullable(autoDeleteOnIdle);
             return this;
         }
 
-        public Builder setDefaultMessageTimeToLive(@Nullable Input<String> defaultMessageTimeToLive) {
+        public Builder defaultMessageTimeToLive(@Nullable Input<String> defaultMessageTimeToLive) {
             this.defaultMessageTimeToLive = defaultMessageTimeToLive;
             return this;
         }
 
-        public Builder setDefaultMessageTimeToLive(@Nullable String defaultMessageTimeToLive) {
+        public Builder defaultMessageTimeToLive(@Nullable String defaultMessageTimeToLive) {
             this.defaultMessageTimeToLive = Input.ofNullable(defaultMessageTimeToLive);
             return this;
         }
 
-        public Builder setDuplicateDetectionHistoryTimeWindow(@Nullable Input<String> duplicateDetectionHistoryTimeWindow) {
+        public Builder duplicateDetectionHistoryTimeWindow(@Nullable Input<String> duplicateDetectionHistoryTimeWindow) {
             this.duplicateDetectionHistoryTimeWindow = duplicateDetectionHistoryTimeWindow;
             return this;
         }
 
-        public Builder setDuplicateDetectionHistoryTimeWindow(@Nullable String duplicateDetectionHistoryTimeWindow) {
+        public Builder duplicateDetectionHistoryTimeWindow(@Nullable String duplicateDetectionHistoryTimeWindow) {
             this.duplicateDetectionHistoryTimeWindow = Input.ofNullable(duplicateDetectionHistoryTimeWindow);
             return this;
         }
 
-        public Builder setEnableBatchedOperations(@Nullable Input<Boolean> enableBatchedOperations) {
+        public Builder enableBatchedOperations(@Nullable Input<Boolean> enableBatchedOperations) {
             this.enableBatchedOperations = enableBatchedOperations;
             return this;
         }
 
-        public Builder setEnableBatchedOperations(@Nullable Boolean enableBatchedOperations) {
+        public Builder enableBatchedOperations(@Nullable Boolean enableBatchedOperations) {
             this.enableBatchedOperations = Input.ofNullable(enableBatchedOperations);
             return this;
         }
 
-        public Builder setEnableExpress(@Nullable Input<Boolean> enableExpress) {
+        public Builder enableExpress(@Nullable Input<Boolean> enableExpress) {
             this.enableExpress = enableExpress;
             return this;
         }
 
-        public Builder setEnableExpress(@Nullable Boolean enableExpress) {
+        public Builder enableExpress(@Nullable Boolean enableExpress) {
             this.enableExpress = Input.ofNullable(enableExpress);
             return this;
         }
 
-        public Builder setEnablePartitioning(@Nullable Input<Boolean> enablePartitioning) {
+        public Builder enablePartitioning(@Nullable Input<Boolean> enablePartitioning) {
             this.enablePartitioning = enablePartitioning;
             return this;
         }
 
-        public Builder setEnablePartitioning(@Nullable Boolean enablePartitioning) {
+        public Builder enablePartitioning(@Nullable Boolean enablePartitioning) {
             this.enablePartitioning = Input.ofNullable(enablePartitioning);
             return this;
         }
 
-        public Builder setMaxSizeInMegabytes(@Nullable Input<Integer> maxSizeInMegabytes) {
+        public Builder maxSizeInMegabytes(@Nullable Input<Integer> maxSizeInMegabytes) {
             this.maxSizeInMegabytes = maxSizeInMegabytes;
             return this;
         }
 
-        public Builder setMaxSizeInMegabytes(@Nullable Integer maxSizeInMegabytes) {
+        public Builder maxSizeInMegabytes(@Nullable Integer maxSizeInMegabytes) {
             this.maxSizeInMegabytes = Input.ofNullable(maxSizeInMegabytes);
             return this;
         }
 
-        public Builder setNamespaceName(Input<String> namespaceName) {
+        public Builder namespaceName(Input<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
 
-        public Builder setNamespaceName(String namespaceName) {
+        public Builder namespaceName(String namespaceName) {
             this.namespaceName = Input.of(Objects.requireNonNull(namespaceName));
             return this;
         }
 
-        public Builder setRequiresDuplicateDetection(@Nullable Input<Boolean> requiresDuplicateDetection) {
+        public Builder requiresDuplicateDetection(@Nullable Input<Boolean> requiresDuplicateDetection) {
             this.requiresDuplicateDetection = requiresDuplicateDetection;
             return this;
         }
 
-        public Builder setRequiresDuplicateDetection(@Nullable Boolean requiresDuplicateDetection) {
+        public Builder requiresDuplicateDetection(@Nullable Boolean requiresDuplicateDetection) {
             this.requiresDuplicateDetection = Input.ofNullable(requiresDuplicateDetection);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<EntityStatus> status) {
+        public Builder status(@Nullable Input<EntityStatus> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable EntityStatus status) {
+        public Builder status(@Nullable EntityStatus status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setSupportOrdering(@Nullable Input<Boolean> supportOrdering) {
+        public Builder supportOrdering(@Nullable Input<Boolean> supportOrdering) {
             this.supportOrdering = supportOrdering;
             return this;
         }
 
-        public Builder setSupportOrdering(@Nullable Boolean supportOrdering) {
+        public Builder supportOrdering(@Nullable Boolean supportOrdering) {
             this.supportOrdering = Input.ofNullable(supportOrdering);
             return this;
         }
 
-        public Builder setTopicName(@Nullable Input<String> topicName) {
+        public Builder topicName(@Nullable Input<String> topicName) {
             this.topicName = topicName;
             return this;
         }
 
-        public Builder setTopicName(@Nullable String topicName) {
+        public Builder topicName(@Nullable String topicName) {
             this.topicName = Input.ofNullable(topicName);
             return this;
         }

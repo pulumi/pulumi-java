@@ -127,52 +127,52 @@ public final class DefenderForContainersAwsOfferingArgs extends io.pulumi.resour
     	      this.offeringType = defaults.offeringType;
         }
 
-        public Builder setCloudWatchToKinesis(@Nullable Input<DefenderForContainersAwsOfferingCloudWatchToKinesisArgs> cloudWatchToKinesis) {
+        public Builder cloudWatchToKinesis(@Nullable Input<DefenderForContainersAwsOfferingCloudWatchToKinesisArgs> cloudWatchToKinesis) {
             this.cloudWatchToKinesis = cloudWatchToKinesis;
             return this;
         }
 
-        public Builder setCloudWatchToKinesis(@Nullable DefenderForContainersAwsOfferingCloudWatchToKinesisArgs cloudWatchToKinesis) {
+        public Builder cloudWatchToKinesis(@Nullable DefenderForContainersAwsOfferingCloudWatchToKinesisArgs cloudWatchToKinesis) {
             this.cloudWatchToKinesis = Input.ofNullable(cloudWatchToKinesis);
             return this;
         }
 
-        public Builder setKinesisToS3(@Nullable Input<DefenderForContainersAwsOfferingKinesisToS3Args> kinesisToS3) {
+        public Builder kinesisToS3(@Nullable Input<DefenderForContainersAwsOfferingKinesisToS3Args> kinesisToS3) {
             this.kinesisToS3 = kinesisToS3;
             return this;
         }
 
-        public Builder setKinesisToS3(@Nullable DefenderForContainersAwsOfferingKinesisToS3Args kinesisToS3) {
+        public Builder kinesisToS3(@Nullable DefenderForContainersAwsOfferingKinesisToS3Args kinesisToS3) {
             this.kinesisToS3 = Input.ofNullable(kinesisToS3);
             return this;
         }
 
-        public Builder setKubernetesScubaReader(@Nullable Input<DefenderForContainersAwsOfferingKubernetesScubaReaderArgs> kubernetesScubaReader) {
+        public Builder kubernetesScubaReader(@Nullable Input<DefenderForContainersAwsOfferingKubernetesScubaReaderArgs> kubernetesScubaReader) {
             this.kubernetesScubaReader = kubernetesScubaReader;
             return this;
         }
 
-        public Builder setKubernetesScubaReader(@Nullable DefenderForContainersAwsOfferingKubernetesScubaReaderArgs kubernetesScubaReader) {
+        public Builder kubernetesScubaReader(@Nullable DefenderForContainersAwsOfferingKubernetesScubaReaderArgs kubernetesScubaReader) {
             this.kubernetesScubaReader = Input.ofNullable(kubernetesScubaReader);
             return this;
         }
 
-        public Builder setKubernetesService(@Nullable Input<DefenderForContainersAwsOfferingKubernetesServiceArgs> kubernetesService) {
+        public Builder kubernetesService(@Nullable Input<DefenderForContainersAwsOfferingKubernetesServiceArgs> kubernetesService) {
             this.kubernetesService = kubernetesService;
             return this;
         }
 
-        public Builder setKubernetesService(@Nullable DefenderForContainersAwsOfferingKubernetesServiceArgs kubernetesService) {
+        public Builder kubernetesService(@Nullable DefenderForContainersAwsOfferingKubernetesServiceArgs kubernetesService) {
             this.kubernetesService = Input.ofNullable(kubernetesService);
             return this;
         }
 
-        public Builder setOfferingType(Input<String> offeringType) {
+        public Builder offeringType(Input<String> offeringType) {
             this.offeringType = Objects.requireNonNull(offeringType);
             return this;
         }
 
-        public Builder setOfferingType(String offeringType) {
+        public Builder offeringType(String offeringType) {
             this.offeringType = Input.of(Objects.requireNonNull(offeringType));
             return this;
         }

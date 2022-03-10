@@ -64,12 +64,12 @@ public final class GetAuthorizerArgs extends io.pulumi.resources.InvokeArgs {
     	      this.restApiId = defaults.restApiId;
         }
 
-        public Builder setAuthorizerId(String authorizerId) {
+        public Builder authorizerId(String authorizerId) {
             this.authorizerId = Objects.requireNonNull(authorizerId);
             return this;
         }
 
-        public Builder setRestApiId(String restApiId) {
+        public Builder restApiId(String restApiId) {
             this.restApiId = Objects.requireNonNull(restApiId);
             return this;
         }

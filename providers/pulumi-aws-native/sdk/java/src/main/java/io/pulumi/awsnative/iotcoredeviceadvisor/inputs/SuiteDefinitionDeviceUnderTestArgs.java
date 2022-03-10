@@ -62,22 +62,22 @@ public final class SuiteDefinitionDeviceUnderTestArgs extends io.pulumi.resource
     	      this.thingArn = defaults.thingArn;
         }
 
-        public Builder setCertificateArn(@Nullable Input<String> certificateArn) {
+        public Builder certificateArn(@Nullable Input<String> certificateArn) {
             this.certificateArn = certificateArn;
             return this;
         }
 
-        public Builder setCertificateArn(@Nullable String certificateArn) {
+        public Builder certificateArn(@Nullable String certificateArn) {
             this.certificateArn = Input.ofNullable(certificateArn);
             return this;
         }
 
-        public Builder setThingArn(@Nullable Input<String> thingArn) {
+        public Builder thingArn(@Nullable Input<String> thingArn) {
             this.thingArn = thingArn;
             return this;
         }
 
-        public Builder setThingArn(@Nullable String thingArn) {
+        public Builder thingArn(@Nullable String thingArn) {
             this.thingArn = Input.ofNullable(thingArn);
             return this;
         }

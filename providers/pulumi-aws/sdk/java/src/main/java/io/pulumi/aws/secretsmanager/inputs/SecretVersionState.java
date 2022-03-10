@@ -135,62 +135,62 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
     	      this.versionStages = defaults.versionStages;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setSecretBinary(@Nullable Input<String> secretBinary) {
+        public Builder secretBinary(@Nullable Input<String> secretBinary) {
             this.secretBinary = secretBinary;
             return this;
         }
 
-        public Builder setSecretBinary(@Nullable String secretBinary) {
+        public Builder secretBinary(@Nullable String secretBinary) {
             this.secretBinary = Input.ofNullable(secretBinary);
             return this;
         }
 
-        public Builder setSecretId(@Nullable Input<String> secretId) {
+        public Builder secretId(@Nullable Input<String> secretId) {
             this.secretId = secretId;
             return this;
         }
 
-        public Builder setSecretId(@Nullable String secretId) {
+        public Builder secretId(@Nullable String secretId) {
             this.secretId = Input.ofNullable(secretId);
             return this;
         }
 
-        public Builder setSecretString(@Nullable Input<String> secretString) {
+        public Builder secretString(@Nullable Input<String> secretString) {
             this.secretString = secretString;
             return this;
         }
 
-        public Builder setSecretString(@Nullable String secretString) {
+        public Builder secretString(@Nullable String secretString) {
             this.secretString = Input.ofNullable(secretString);
             return this;
         }
 
-        public Builder setVersionId(@Nullable Input<String> versionId) {
+        public Builder versionId(@Nullable Input<String> versionId) {
             this.versionId = versionId;
             return this;
         }
 
-        public Builder setVersionId(@Nullable String versionId) {
+        public Builder versionId(@Nullable String versionId) {
             this.versionId = Input.ofNullable(versionId);
             return this;
         }
 
-        public Builder setVersionStages(@Nullable Input<List<String>> versionStages) {
+        public Builder versionStages(@Nullable Input<List<String>> versionStages) {
             this.versionStages = versionStages;
             return this;
         }
 
-        public Builder setVersionStages(@Nullable List<String> versionStages) {
+        public Builder versionStages(@Nullable List<String> versionStages) {
             this.versionStages = Input.ofNullable(versionStages);
             return this;
         }

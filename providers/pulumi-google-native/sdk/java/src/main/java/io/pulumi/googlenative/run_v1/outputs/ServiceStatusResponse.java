@@ -150,37 +150,37 @@ public final class ServiceStatusResponse {
     	      this.url = defaults.url;
         }
 
-        public Builder setAddress(AddressableResponse address) {
+        public Builder address(AddressableResponse address) {
             this.address = Objects.requireNonNull(address);
             return this;
         }
 
-        public Builder setConditions(List<GoogleCloudRunV1ConditionResponse> conditions) {
+        public Builder conditions(List<GoogleCloudRunV1ConditionResponse> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
 
-        public Builder setLatestCreatedRevisionName(String latestCreatedRevisionName) {
+        public Builder latestCreatedRevisionName(String latestCreatedRevisionName) {
             this.latestCreatedRevisionName = Objects.requireNonNull(latestCreatedRevisionName);
             return this;
         }
 
-        public Builder setLatestReadyRevisionName(String latestReadyRevisionName) {
+        public Builder latestReadyRevisionName(String latestReadyRevisionName) {
             this.latestReadyRevisionName = Objects.requireNonNull(latestReadyRevisionName);
             return this;
         }
 
-        public Builder setObservedGeneration(Integer observedGeneration) {
+        public Builder observedGeneration(Integer observedGeneration) {
             this.observedGeneration = Objects.requireNonNull(observedGeneration);
             return this;
         }
 
-        public Builder setTraffic(List<TrafficTargetResponse> traffic) {
+        public Builder traffic(List<TrafficTargetResponse> traffic) {
             this.traffic = Objects.requireNonNull(traffic);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

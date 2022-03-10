@@ -67,12 +67,12 @@ public final class MigrationEligibilityInfoResponse {
     	      this.validationMessages = defaults.validationMessages;
         }
 
-        public Builder setIsEligibleForMigration(Boolean isEligibleForMigration) {
+        public Builder isEligibleForMigration(Boolean isEligibleForMigration) {
             this.isEligibleForMigration = Objects.requireNonNull(isEligibleForMigration);
             return this;
         }
 
-        public Builder setValidationMessages(List<String> validationMessages) {
+        public Builder validationMessages(List<String> validationMessages) {
             this.validationMessages = Objects.requireNonNull(validationMessages);
             return this;
         }

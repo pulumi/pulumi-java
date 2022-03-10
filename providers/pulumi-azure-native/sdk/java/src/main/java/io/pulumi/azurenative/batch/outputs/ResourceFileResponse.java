@@ -131,32 +131,32 @@ public final class ResourceFileResponse {
     	      this.storageContainerUrl = defaults.storageContainerUrl;
         }
 
-        public Builder setAutoStorageContainerName(@Nullable String autoStorageContainerName) {
+        public Builder autoStorageContainerName(@Nullable String autoStorageContainerName) {
             this.autoStorageContainerName = autoStorageContainerName;
             return this;
         }
 
-        public Builder setBlobPrefix(@Nullable String blobPrefix) {
+        public Builder blobPrefix(@Nullable String blobPrefix) {
             this.blobPrefix = blobPrefix;
             return this;
         }
 
-        public Builder setFileMode(@Nullable String fileMode) {
+        public Builder fileMode(@Nullable String fileMode) {
             this.fileMode = fileMode;
             return this;
         }
 
-        public Builder setFilePath(@Nullable String filePath) {
+        public Builder filePath(@Nullable String filePath) {
             this.filePath = filePath;
             return this;
         }
 
-        public Builder setHttpUrl(@Nullable String httpUrl) {
+        public Builder httpUrl(@Nullable String httpUrl) {
             this.httpUrl = httpUrl;
             return this;
         }
 
-        public Builder setStorageContainerUrl(@Nullable String storageContainerUrl) {
+        public Builder storageContainerUrl(@Nullable String storageContainerUrl) {
             this.storageContainerUrl = storageContainerUrl;
             return this;
         }

@@ -68,12 +68,12 @@ public final class GetResourcePoolArgs extends io.pulumi.resources.InvokeArgs {
     	      this.resourcePoolName = defaults.resourcePoolName;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourcePoolName(String resourcePoolName) {
+        public Builder resourcePoolName(String resourcePoolName) {
             this.resourcePoolName = Objects.requireNonNull(resourcePoolName);
             return this;
         }

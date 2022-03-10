@@ -74,12 +74,12 @@ public final class StreamingPolicyPlayReadyConfigurationResponse extends io.pulu
     	      this.playReadyCustomAttributes = defaults.playReadyCustomAttributes;
         }
 
-        public Builder setCustomLicenseAcquisitionUrlTemplate(@Nullable String customLicenseAcquisitionUrlTemplate) {
+        public Builder customLicenseAcquisitionUrlTemplate(@Nullable String customLicenseAcquisitionUrlTemplate) {
             this.customLicenseAcquisitionUrlTemplate = customLicenseAcquisitionUrlTemplate;
             return this;
         }
 
-        public Builder setPlayReadyCustomAttributes(@Nullable String playReadyCustomAttributes) {
+        public Builder playReadyCustomAttributes(@Nullable String playReadyCustomAttributes) {
             this.playReadyCustomAttributes = playReadyCustomAttributes;
             return this;
         }

@@ -51,7 +51,7 @@ public final class GetDiagnosticServiceTokenReadOnlyArgs extends io.pulumi.resou
     	      this.resourceUri = defaults.resourceUri;
         }
 
-        public Builder setResourceUri(String resourceUri) {
+        public Builder resourceUri(String resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }

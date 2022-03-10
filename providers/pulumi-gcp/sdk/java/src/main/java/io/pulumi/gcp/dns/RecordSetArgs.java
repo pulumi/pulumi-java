@@ -141,62 +141,62 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setManagedZone(Input<String> managedZone) {
+        public Builder managedZone(Input<String> managedZone) {
             this.managedZone = Objects.requireNonNull(managedZone);
             return this;
         }
 
-        public Builder setManagedZone(String managedZone) {
+        public Builder managedZone(String managedZone) {
             this.managedZone = Input.of(Objects.requireNonNull(managedZone));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRrdatas(Input<List<String>> rrdatas) {
+        public Builder rrdatas(Input<List<String>> rrdatas) {
             this.rrdatas = Objects.requireNonNull(rrdatas);
             return this;
         }
 
-        public Builder setRrdatas(List<String> rrdatas) {
+        public Builder rrdatas(List<String> rrdatas) {
             this.rrdatas = Input.of(Objects.requireNonNull(rrdatas));
             return this;
         }
 
-        public Builder setTtl(@Nullable Input<Integer> ttl) {
+        public Builder ttl(@Nullable Input<Integer> ttl) {
             this.ttl = ttl;
             return this;
         }
 
-        public Builder setTtl(@Nullable Integer ttl) {
+        public Builder ttl(@Nullable Integer ttl) {
             this.ttl = Input.ofNullable(ttl);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

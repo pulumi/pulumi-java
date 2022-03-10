@@ -75,22 +75,22 @@ public final class SelectVideoTrackByIdArgs extends io.pulumi.resources.Resource
     	      this.trackId = defaults.trackId;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder setTrackId(Input<Double> trackId) {
+        public Builder trackId(Input<Double> trackId) {
             this.trackId = Objects.requireNonNull(trackId);
             return this;
         }
 
-        public Builder setTrackId(Double trackId) {
+        public Builder trackId(Double trackId) {
             this.trackId = Input.of(Objects.requireNonNull(trackId));
             return this;
         }

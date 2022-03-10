@@ -55,7 +55,7 @@ public final class AnthosClusterResponse extends io.pulumi.resources.InvokeArgs 
     	      this.membership = defaults.membership;
         }
 
-        public Builder setMembership(String membership) {
+        public Builder membership(String membership) {
             this.membership = Objects.requireNonNull(membership);
             return this;
         }

@@ -68,12 +68,12 @@ public final class ReportGroupExportConfig {
     	      this.type = defaults.type;
         }
 
-        public Builder setS3Destination(@Nullable ReportGroupExportConfigS3Destination s3Destination) {
+        public Builder s3Destination(@Nullable ReportGroupExportConfigS3Destination s3Destination) {
             this.s3Destination = s3Destination;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

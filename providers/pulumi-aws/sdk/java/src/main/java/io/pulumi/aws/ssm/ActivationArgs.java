@@ -136,62 +136,62 @@ public final class ActivationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setExpirationDate(@Nullable Input<String> expirationDate) {
+        public Builder expirationDate(@Nullable Input<String> expirationDate) {
             this.expirationDate = expirationDate;
             return this;
         }
 
-        public Builder setExpirationDate(@Nullable String expirationDate) {
+        public Builder expirationDate(@Nullable String expirationDate) {
             this.expirationDate = Input.ofNullable(expirationDate);
             return this;
         }
 
-        public Builder setIamRole(Input<String> iamRole) {
+        public Builder iamRole(Input<String> iamRole) {
             this.iamRole = Objects.requireNonNull(iamRole);
             return this;
         }
 
-        public Builder setIamRole(String iamRole) {
+        public Builder iamRole(String iamRole) {
             this.iamRole = Input.of(Objects.requireNonNull(iamRole));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRegistrationLimit(@Nullable Input<Integer> registrationLimit) {
+        public Builder registrationLimit(@Nullable Input<Integer> registrationLimit) {
             this.registrationLimit = registrationLimit;
             return this;
         }
 
-        public Builder setRegistrationLimit(@Nullable Integer registrationLimit) {
+        public Builder registrationLimit(@Nullable Integer registrationLimit) {
             this.registrationLimit = Input.ofNullable(registrationLimit);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

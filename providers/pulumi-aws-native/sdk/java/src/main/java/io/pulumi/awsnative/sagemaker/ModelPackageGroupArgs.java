@@ -93,42 +93,42 @@ public final class ModelPackageGroupArgs extends io.pulumi.resources.ResourceArg
     	      this.tags = defaults.tags;
         }
 
-        public Builder setModelPackageGroupDescription(@Nullable Input<String> modelPackageGroupDescription) {
+        public Builder modelPackageGroupDescription(@Nullable Input<String> modelPackageGroupDescription) {
             this.modelPackageGroupDescription = modelPackageGroupDescription;
             return this;
         }
 
-        public Builder setModelPackageGroupDescription(@Nullable String modelPackageGroupDescription) {
+        public Builder modelPackageGroupDescription(@Nullable String modelPackageGroupDescription) {
             this.modelPackageGroupDescription = Input.ofNullable(modelPackageGroupDescription);
             return this;
         }
 
-        public Builder setModelPackageGroupName(@Nullable Input<String> modelPackageGroupName) {
+        public Builder modelPackageGroupName(@Nullable Input<String> modelPackageGroupName) {
             this.modelPackageGroupName = modelPackageGroupName;
             return this;
         }
 
-        public Builder setModelPackageGroupName(@Nullable String modelPackageGroupName) {
+        public Builder modelPackageGroupName(@Nullable String modelPackageGroupName) {
             this.modelPackageGroupName = Input.ofNullable(modelPackageGroupName);
             return this;
         }
 
-        public Builder setModelPackageGroupPolicy(@Nullable Input<Object> modelPackageGroupPolicy) {
+        public Builder modelPackageGroupPolicy(@Nullable Input<Object> modelPackageGroupPolicy) {
             this.modelPackageGroupPolicy = modelPackageGroupPolicy;
             return this;
         }
 
-        public Builder setModelPackageGroupPolicy(@Nullable Object modelPackageGroupPolicy) {
+        public Builder modelPackageGroupPolicy(@Nullable Object modelPackageGroupPolicy) {
             this.modelPackageGroupPolicy = Input.ofNullable(modelPackageGroupPolicy);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<ModelPackageGroupTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<ModelPackageGroupTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ModelPackageGroupTagArgs> tags) {
+        public Builder tags(@Nullable List<ModelPackageGroupTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

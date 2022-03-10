@@ -57,7 +57,7 @@ public final class ApiEntityReferenceResponse extends io.pulumi.resources.Invoke
     	      this.id = defaults.id;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }

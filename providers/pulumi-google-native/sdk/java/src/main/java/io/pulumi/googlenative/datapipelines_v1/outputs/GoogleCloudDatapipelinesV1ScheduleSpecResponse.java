@@ -81,17 +81,17 @@ public final class GoogleCloudDatapipelinesV1ScheduleSpecResponse {
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setNextJobTime(String nextJobTime) {
+        public Builder nextJobTime(String nextJobTime) {
             this.nextJobTime = Objects.requireNonNull(nextJobTime);
             return this;
         }
 
-        public Builder setSchedule(String schedule) {
+        public Builder schedule(String schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
 
-        public Builder setTimeZone(String timeZone) {
+        public Builder timeZone(String timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }

@@ -76,32 +76,32 @@ public final class ScheduledActionTypeArgs extends io.pulumi.resources.ResourceA
     	      this.resumeCluster = defaults.resumeCluster;
         }
 
-        public Builder setPauseCluster(@Nullable Input<ScheduledActionPauseClusterMessageArgs> pauseCluster) {
+        public Builder pauseCluster(@Nullable Input<ScheduledActionPauseClusterMessageArgs> pauseCluster) {
             this.pauseCluster = pauseCluster;
             return this;
         }
 
-        public Builder setPauseCluster(@Nullable ScheduledActionPauseClusterMessageArgs pauseCluster) {
+        public Builder pauseCluster(@Nullable ScheduledActionPauseClusterMessageArgs pauseCluster) {
             this.pauseCluster = Input.ofNullable(pauseCluster);
             return this;
         }
 
-        public Builder setResizeCluster(@Nullable Input<ScheduledActionResizeClusterMessageArgs> resizeCluster) {
+        public Builder resizeCluster(@Nullable Input<ScheduledActionResizeClusterMessageArgs> resizeCluster) {
             this.resizeCluster = resizeCluster;
             return this;
         }
 
-        public Builder setResizeCluster(@Nullable ScheduledActionResizeClusterMessageArgs resizeCluster) {
+        public Builder resizeCluster(@Nullable ScheduledActionResizeClusterMessageArgs resizeCluster) {
             this.resizeCluster = Input.ofNullable(resizeCluster);
             return this;
         }
 
-        public Builder setResumeCluster(@Nullable Input<ScheduledActionResumeClusterMessageArgs> resumeCluster) {
+        public Builder resumeCluster(@Nullable Input<ScheduledActionResumeClusterMessageArgs> resumeCluster) {
             this.resumeCluster = resumeCluster;
             return this;
         }
 
-        public Builder setResumeCluster(@Nullable ScheduledActionResumeClusterMessageArgs resumeCluster) {
+        public Builder resumeCluster(@Nullable ScheduledActionResumeClusterMessageArgs resumeCluster) {
             this.resumeCluster = Input.ofNullable(resumeCluster);
             return this;
         }

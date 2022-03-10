@@ -244,132 +244,132 @@ public final class GlobalNetworkEndpointGroupArgs extends io.pulumi.resources.Re
     	      this.subnetwork = defaults.subnetwork;
         }
 
-        public Builder setAnnotations(@Nullable Input<Map<String,String>> annotations) {
+        public Builder annotations(@Nullable Input<Map<String,String>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable Map<String,String> annotations) {
+        public Builder annotations(@Nullable Map<String,String> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setAppEngine(@Nullable Input<NetworkEndpointGroupAppEngineArgs> appEngine) {
+        public Builder appEngine(@Nullable Input<NetworkEndpointGroupAppEngineArgs> appEngine) {
             this.appEngine = appEngine;
             return this;
         }
 
-        public Builder setAppEngine(@Nullable NetworkEndpointGroupAppEngineArgs appEngine) {
+        public Builder appEngine(@Nullable NetworkEndpointGroupAppEngineArgs appEngine) {
             this.appEngine = Input.ofNullable(appEngine);
             return this;
         }
 
-        public Builder setCloudFunction(@Nullable Input<NetworkEndpointGroupCloudFunctionArgs> cloudFunction) {
+        public Builder cloudFunction(@Nullable Input<NetworkEndpointGroupCloudFunctionArgs> cloudFunction) {
             this.cloudFunction = cloudFunction;
             return this;
         }
 
-        public Builder setCloudFunction(@Nullable NetworkEndpointGroupCloudFunctionArgs cloudFunction) {
+        public Builder cloudFunction(@Nullable NetworkEndpointGroupCloudFunctionArgs cloudFunction) {
             this.cloudFunction = Input.ofNullable(cloudFunction);
             return this;
         }
 
-        public Builder setCloudRun(@Nullable Input<NetworkEndpointGroupCloudRunArgs> cloudRun) {
+        public Builder cloudRun(@Nullable Input<NetworkEndpointGroupCloudRunArgs> cloudRun) {
             this.cloudRun = cloudRun;
             return this;
         }
 
-        public Builder setCloudRun(@Nullable NetworkEndpointGroupCloudRunArgs cloudRun) {
+        public Builder cloudRun(@Nullable NetworkEndpointGroupCloudRunArgs cloudRun) {
             this.cloudRun = Input.ofNullable(cloudRun);
             return this;
         }
 
-        public Builder setDefaultPort(@Nullable Input<Integer> defaultPort) {
+        public Builder defaultPort(@Nullable Input<Integer> defaultPort) {
             this.defaultPort = defaultPort;
             return this;
         }
 
-        public Builder setDefaultPort(@Nullable Integer defaultPort) {
+        public Builder defaultPort(@Nullable Integer defaultPort) {
             this.defaultPort = Input.ofNullable(defaultPort);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetwork(@Nullable Input<String> network) {
+        public Builder network(@Nullable Input<String> network) {
             this.network = network;
             return this;
         }
 
-        public Builder setNetwork(@Nullable String network) {
+        public Builder network(@Nullable String network) {
             this.network = Input.ofNullable(network);
             return this;
         }
 
-        public Builder setNetworkEndpointType(@Nullable Input<GlobalNetworkEndpointGroupNetworkEndpointType> networkEndpointType) {
+        public Builder networkEndpointType(@Nullable Input<GlobalNetworkEndpointGroupNetworkEndpointType> networkEndpointType) {
             this.networkEndpointType = networkEndpointType;
             return this;
         }
 
-        public Builder setNetworkEndpointType(@Nullable GlobalNetworkEndpointGroupNetworkEndpointType networkEndpointType) {
+        public Builder networkEndpointType(@Nullable GlobalNetworkEndpointGroupNetworkEndpointType networkEndpointType) {
             this.networkEndpointType = Input.ofNullable(networkEndpointType);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setPscTargetService(@Nullable Input<String> pscTargetService) {
+        public Builder pscTargetService(@Nullable Input<String> pscTargetService) {
             this.pscTargetService = pscTargetService;
             return this;
         }
 
-        public Builder setPscTargetService(@Nullable String pscTargetService) {
+        public Builder pscTargetService(@Nullable String pscTargetService) {
             this.pscTargetService = Input.ofNullable(pscTargetService);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setSubnetwork(@Nullable Input<String> subnetwork) {
+        public Builder subnetwork(@Nullable Input<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
 
-        public Builder setSubnetwork(@Nullable String subnetwork) {
+        public Builder subnetwork(@Nullable String subnetwork) {
             this.subnetwork = Input.ofNullable(subnetwork);
             return this;
         }

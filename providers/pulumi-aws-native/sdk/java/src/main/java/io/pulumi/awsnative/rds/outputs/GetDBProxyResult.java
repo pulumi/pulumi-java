@@ -184,47 +184,47 @@ public final class GetDBProxyResult {
     	      this.vpcSecurityGroupIds = defaults.vpcSecurityGroupIds;
         }
 
-        public Builder setAuth(@Nullable List<DBProxyAuthFormat> auth) {
+        public Builder auth(@Nullable List<DBProxyAuthFormat> auth) {
             this.auth = auth;
             return this;
         }
 
-        public Builder setDBProxyArn(@Nullable String dBProxyArn) {
+        public Builder dBProxyArn(@Nullable String dBProxyArn) {
             this.dBProxyArn = dBProxyArn;
             return this;
         }
 
-        public Builder setDebugLogging(@Nullable Boolean debugLogging) {
+        public Builder debugLogging(@Nullable Boolean debugLogging) {
             this.debugLogging = debugLogging;
             return this;
         }
 
-        public Builder setEndpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setIdleClientTimeout(@Nullable Integer idleClientTimeout) {
+        public Builder idleClientTimeout(@Nullable Integer idleClientTimeout) {
             this.idleClientTimeout = idleClientTimeout;
             return this;
         }
 
-        public Builder setRequireTLS(@Nullable Boolean requireTLS) {
+        public Builder requireTLS(@Nullable Boolean requireTLS) {
             this.requireTLS = requireTLS;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DBProxyTagFormat> tags) {
+        public Builder tags(@Nullable List<DBProxyTagFormat> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setVpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
+        public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }

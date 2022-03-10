@@ -98,27 +98,27 @@ public final class GetGithubEnterpriseConfigArgs extends io.pulumi.resources.Inv
     	      this.projectId = defaults.projectId;
         }
 
-        public Builder setConfigId(@Nullable String configId) {
+        public Builder configId(@Nullable String configId) {
             this.configId = configId;
             return this;
         }
 
-        public Builder setGithubEnterpriseConfigId(String githubEnterpriseConfigId) {
+        public Builder githubEnterpriseConfigId(String githubEnterpriseConfigId) {
             this.githubEnterpriseConfigId = Objects.requireNonNull(githubEnterpriseConfigId);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProjectId(@Nullable String projectId) {
+        public Builder projectId(@Nullable String projectId) {
             this.projectId = projectId;
             return this;
         }

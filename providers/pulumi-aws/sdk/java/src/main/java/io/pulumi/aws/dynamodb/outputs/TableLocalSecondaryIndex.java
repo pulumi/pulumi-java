@@ -111,22 +111,22 @@ public final class TableLocalSecondaryIndex {
     	      this.rangeKey = defaults.rangeKey;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNonKeyAttributes(@Nullable List<String> nonKeyAttributes) {
+        public Builder nonKeyAttributes(@Nullable List<String> nonKeyAttributes) {
             this.nonKeyAttributes = nonKeyAttributes;
             return this;
         }
 
-        public Builder setProjectionType(String projectionType) {
+        public Builder projectionType(String projectionType) {
             this.projectionType = Objects.requireNonNull(projectionType);
             return this;
         }
 
-        public Builder setRangeKey(String rangeKey) {
+        public Builder rangeKey(String rangeKey) {
             this.rangeKey = Objects.requireNonNull(rangeKey);
             return this;
         }

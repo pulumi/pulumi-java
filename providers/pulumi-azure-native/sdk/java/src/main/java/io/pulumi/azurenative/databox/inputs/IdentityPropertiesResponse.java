@@ -75,12 +75,12 @@ public final class IdentityPropertiesResponse extends io.pulumi.resources.Invoke
     	      this.userAssigned = defaults.userAssigned;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setUserAssigned(@Nullable UserAssignedPropertiesResponse userAssigned) {
+        public Builder userAssigned(@Nullable UserAssignedPropertiesResponse userAssigned) {
             this.userAssigned = userAssigned;
             return this;
         }

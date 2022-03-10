@@ -69,22 +69,22 @@ public final class InsightFiltersFindingProviderFieldsTypeArgs extends io.pulumi
     	      this.value = defaults.value;
         }
 
-        public Builder setComparison(Input<String> comparison) {
+        public Builder comparison(Input<String> comparison) {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
 
-        public Builder setComparison(String comparison) {
+        public Builder comparison(String comparison) {
             this.comparison = Input.of(Objects.requireNonNull(comparison));
             return this;
         }
 
-        public Builder setValue(Input<String> value) {
+        public Builder value(Input<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }

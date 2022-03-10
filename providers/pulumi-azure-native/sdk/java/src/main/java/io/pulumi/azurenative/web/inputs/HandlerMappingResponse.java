@@ -91,17 +91,17 @@ public final class HandlerMappingResponse extends io.pulumi.resources.InvokeArgs
     	      this.scriptProcessor = defaults.scriptProcessor;
         }
 
-        public Builder setArguments(@Nullable String arguments) {
+        public Builder arguments(@Nullable String arguments) {
             this.arguments = arguments;
             return this;
         }
 
-        public Builder setExtension(@Nullable String extension) {
+        public Builder extension(@Nullable String extension) {
             this.extension = extension;
             return this;
         }
 
-        public Builder setScriptProcessor(@Nullable String scriptProcessor) {
+        public Builder scriptProcessor(@Nullable String scriptProcessor) {
             this.scriptProcessor = scriptProcessor;
             return this;
         }

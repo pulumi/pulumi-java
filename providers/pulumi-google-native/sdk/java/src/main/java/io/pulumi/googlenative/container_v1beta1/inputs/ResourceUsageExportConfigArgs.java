@@ -92,32 +92,32 @@ public final class ResourceUsageExportConfigArgs extends io.pulumi.resources.Res
     	      this.enableNetworkEgressMetering = defaults.enableNetworkEgressMetering;
         }
 
-        public Builder setBigqueryDestination(@Nullable Input<BigQueryDestinationArgs> bigqueryDestination) {
+        public Builder bigqueryDestination(@Nullable Input<BigQueryDestinationArgs> bigqueryDestination) {
             this.bigqueryDestination = bigqueryDestination;
             return this;
         }
 
-        public Builder setBigqueryDestination(@Nullable BigQueryDestinationArgs bigqueryDestination) {
+        public Builder bigqueryDestination(@Nullable BigQueryDestinationArgs bigqueryDestination) {
             this.bigqueryDestination = Input.ofNullable(bigqueryDestination);
             return this;
         }
 
-        public Builder setConsumptionMeteringConfig(@Nullable Input<ConsumptionMeteringConfigArgs> consumptionMeteringConfig) {
+        public Builder consumptionMeteringConfig(@Nullable Input<ConsumptionMeteringConfigArgs> consumptionMeteringConfig) {
             this.consumptionMeteringConfig = consumptionMeteringConfig;
             return this;
         }
 
-        public Builder setConsumptionMeteringConfig(@Nullable ConsumptionMeteringConfigArgs consumptionMeteringConfig) {
+        public Builder consumptionMeteringConfig(@Nullable ConsumptionMeteringConfigArgs consumptionMeteringConfig) {
             this.consumptionMeteringConfig = Input.ofNullable(consumptionMeteringConfig);
             return this;
         }
 
-        public Builder setEnableNetworkEgressMetering(@Nullable Input<Boolean> enableNetworkEgressMetering) {
+        public Builder enableNetworkEgressMetering(@Nullable Input<Boolean> enableNetworkEgressMetering) {
             this.enableNetworkEgressMetering = enableNetworkEgressMetering;
             return this;
         }
 
-        public Builder setEnableNetworkEgressMetering(@Nullable Boolean enableNetworkEgressMetering) {
+        public Builder enableNetworkEgressMetering(@Nullable Boolean enableNetworkEgressMetering) {
             this.enableNetworkEgressMetering = Input.ofNullable(enableNetworkEgressMetering);
             return this;
         }

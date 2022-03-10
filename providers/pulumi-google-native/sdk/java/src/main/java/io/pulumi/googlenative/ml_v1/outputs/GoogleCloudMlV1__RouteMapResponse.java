@@ -65,12 +65,12 @@ public final class GoogleCloudMlV1__RouteMapResponse {
     	      this.predict = defaults.predict;
         }
 
-        public Builder setHealth(String health) {
+        public Builder health(String health) {
             this.health = Objects.requireNonNull(health);
             return this;
         }
 
-        public Builder setPredict(String predict) {
+        public Builder predict(String predict) {
             this.predict = Objects.requireNonNull(predict);
             return this;
         }

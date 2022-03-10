@@ -76,22 +76,22 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionCon
     	      this.groupSuggestionResponses = defaults.groupSuggestionResponses;
         }
 
-        public Builder setFeatureConfigs(@Nullable Input<List<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigArgs>> featureConfigs) {
+        public Builder featureConfigs(@Nullable Input<List<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigArgs>> featureConfigs) {
             this.featureConfigs = featureConfigs;
             return this;
         }
 
-        public Builder setFeatureConfigs(@Nullable List<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigArgs> featureConfigs) {
+        public Builder featureConfigs(@Nullable List<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigArgs> featureConfigs) {
             this.featureConfigs = Input.ofNullable(featureConfigs);
             return this;
         }
 
-        public Builder setGroupSuggestionResponses(@Nullable Input<Boolean> groupSuggestionResponses) {
+        public Builder groupSuggestionResponses(@Nullable Input<Boolean> groupSuggestionResponses) {
             this.groupSuggestionResponses = groupSuggestionResponses;
             return this;
         }
 
-        public Builder setGroupSuggestionResponses(@Nullable Boolean groupSuggestionResponses) {
+        public Builder groupSuggestionResponses(@Nullable Boolean groupSuggestionResponses) {
             this.groupSuggestionResponses = Input.ofNullable(groupSuggestionResponses);
             return this;
         }

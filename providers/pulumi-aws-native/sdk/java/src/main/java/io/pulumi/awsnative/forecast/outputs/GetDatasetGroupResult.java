@@ -102,22 +102,22 @@ public final class GetDatasetGroupResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDatasetArns(@Nullable List<String> datasetArns) {
+        public Builder datasetArns(@Nullable List<String> datasetArns) {
             this.datasetArns = datasetArns;
             return this;
         }
 
-        public Builder setDatasetGroupArn(@Nullable String datasetGroupArn) {
+        public Builder datasetGroupArn(@Nullable String datasetGroupArn) {
             this.datasetGroupArn = datasetGroupArn;
             return this;
         }
 
-        public Builder setDomain(@Nullable DatasetGroupDomain domain) {
+        public Builder domain(@Nullable DatasetGroupDomain domain) {
             this.domain = domain;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DatasetGroupTag> tags) {
+        public Builder tags(@Nullable List<DatasetGroupTag> tags) {
             this.tags = tags;
             return this;
         }

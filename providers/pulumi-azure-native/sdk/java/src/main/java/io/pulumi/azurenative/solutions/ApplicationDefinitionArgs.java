@@ -371,202 +371,202 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
     	      this.tags = defaults.tags;
         }
 
-        public Builder setApplicationDefinitionName(@Nullable Input<String> applicationDefinitionName) {
+        public Builder applicationDefinitionName(@Nullable Input<String> applicationDefinitionName) {
             this.applicationDefinitionName = applicationDefinitionName;
             return this;
         }
 
-        public Builder setApplicationDefinitionName(@Nullable String applicationDefinitionName) {
+        public Builder applicationDefinitionName(@Nullable String applicationDefinitionName) {
             this.applicationDefinitionName = Input.ofNullable(applicationDefinitionName);
             return this;
         }
 
-        public Builder setArtifacts(@Nullable Input<List<ApplicationDefinitionArtifactArgs>> artifacts) {
+        public Builder artifacts(@Nullable Input<List<ApplicationDefinitionArtifactArgs>> artifacts) {
             this.artifacts = artifacts;
             return this;
         }
 
-        public Builder setArtifacts(@Nullable List<ApplicationDefinitionArtifactArgs> artifacts) {
+        public Builder artifacts(@Nullable List<ApplicationDefinitionArtifactArgs> artifacts) {
             this.artifacts = Input.ofNullable(artifacts);
             return this;
         }
 
-        public Builder setAuthorizations(@Nullable Input<List<ApplicationAuthorizationArgs>> authorizations) {
+        public Builder authorizations(@Nullable Input<List<ApplicationAuthorizationArgs>> authorizations) {
             this.authorizations = authorizations;
             return this;
         }
 
-        public Builder setAuthorizations(@Nullable List<ApplicationAuthorizationArgs> authorizations) {
+        public Builder authorizations(@Nullable List<ApplicationAuthorizationArgs> authorizations) {
             this.authorizations = Input.ofNullable(authorizations);
             return this;
         }
 
-        public Builder setCreateUiDefinition(@Nullable Input<Object> createUiDefinition) {
+        public Builder createUiDefinition(@Nullable Input<Object> createUiDefinition) {
             this.createUiDefinition = createUiDefinition;
             return this;
         }
 
-        public Builder setCreateUiDefinition(@Nullable Object createUiDefinition) {
+        public Builder createUiDefinition(@Nullable Object createUiDefinition) {
             this.createUiDefinition = Input.ofNullable(createUiDefinition);
             return this;
         }
 
-        public Builder setDeploymentPolicy(@Nullable Input<ApplicationDeploymentPolicyArgs> deploymentPolicy) {
+        public Builder deploymentPolicy(@Nullable Input<ApplicationDeploymentPolicyArgs> deploymentPolicy) {
             this.deploymentPolicy = deploymentPolicy;
             return this;
         }
 
-        public Builder setDeploymentPolicy(@Nullable ApplicationDeploymentPolicyArgs deploymentPolicy) {
+        public Builder deploymentPolicy(@Nullable ApplicationDeploymentPolicyArgs deploymentPolicy) {
             this.deploymentPolicy = Input.ofNullable(deploymentPolicy);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setIsEnabled(@Nullable Input<Boolean> isEnabled) {
+        public Builder isEnabled(@Nullable Input<Boolean> isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
 
-        public Builder setIsEnabled(@Nullable Boolean isEnabled) {
+        public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = Input.ofNullable(isEnabled);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setLockLevel(Input<ApplicationLockLevel> lockLevel) {
+        public Builder lockLevel(Input<ApplicationLockLevel> lockLevel) {
             this.lockLevel = Objects.requireNonNull(lockLevel);
             return this;
         }
 
-        public Builder setLockLevel(ApplicationLockLevel lockLevel) {
+        public Builder lockLevel(ApplicationLockLevel lockLevel) {
             this.lockLevel = Input.of(Objects.requireNonNull(lockLevel));
             return this;
         }
 
-        public Builder setLockingPolicy(@Nullable Input<ApplicationPackageLockingPolicyDefinitionArgs> lockingPolicy) {
+        public Builder lockingPolicy(@Nullable Input<ApplicationPackageLockingPolicyDefinitionArgs> lockingPolicy) {
             this.lockingPolicy = lockingPolicy;
             return this;
         }
 
-        public Builder setLockingPolicy(@Nullable ApplicationPackageLockingPolicyDefinitionArgs lockingPolicy) {
+        public Builder lockingPolicy(@Nullable ApplicationPackageLockingPolicyDefinitionArgs lockingPolicy) {
             this.lockingPolicy = Input.ofNullable(lockingPolicy);
             return this;
         }
 
-        public Builder setMainTemplate(@Nullable Input<Object> mainTemplate) {
+        public Builder mainTemplate(@Nullable Input<Object> mainTemplate) {
             this.mainTemplate = mainTemplate;
             return this;
         }
 
-        public Builder setMainTemplate(@Nullable Object mainTemplate) {
+        public Builder mainTemplate(@Nullable Object mainTemplate) {
             this.mainTemplate = Input.ofNullable(mainTemplate);
             return this;
         }
 
-        public Builder setManagedBy(@Nullable Input<String> managedBy) {
+        public Builder managedBy(@Nullable Input<String> managedBy) {
             this.managedBy = managedBy;
             return this;
         }
 
-        public Builder setManagedBy(@Nullable String managedBy) {
+        public Builder managedBy(@Nullable String managedBy) {
             this.managedBy = Input.ofNullable(managedBy);
             return this;
         }
 
-        public Builder setManagementPolicy(@Nullable Input<ApplicationManagementPolicyArgs> managementPolicy) {
+        public Builder managementPolicy(@Nullable Input<ApplicationManagementPolicyArgs> managementPolicy) {
             this.managementPolicy = managementPolicy;
             return this;
         }
 
-        public Builder setManagementPolicy(@Nullable ApplicationManagementPolicyArgs managementPolicy) {
+        public Builder managementPolicy(@Nullable ApplicationManagementPolicyArgs managementPolicy) {
             this.managementPolicy = Input.ofNullable(managementPolicy);
             return this;
         }
 
-        public Builder setNotificationPolicy(@Nullable Input<ApplicationNotificationPolicyArgs> notificationPolicy) {
+        public Builder notificationPolicy(@Nullable Input<ApplicationNotificationPolicyArgs> notificationPolicy) {
             this.notificationPolicy = notificationPolicy;
             return this;
         }
 
-        public Builder setNotificationPolicy(@Nullable ApplicationNotificationPolicyArgs notificationPolicy) {
+        public Builder notificationPolicy(@Nullable ApplicationNotificationPolicyArgs notificationPolicy) {
             this.notificationPolicy = Input.ofNullable(notificationPolicy);
             return this;
         }
 
-        public Builder setPackageFileUri(@Nullable Input<String> packageFileUri) {
+        public Builder packageFileUri(@Nullable Input<String> packageFileUri) {
             this.packageFileUri = packageFileUri;
             return this;
         }
 
-        public Builder setPackageFileUri(@Nullable String packageFileUri) {
+        public Builder packageFileUri(@Nullable String packageFileUri) {
             this.packageFileUri = Input.ofNullable(packageFileUri);
             return this;
         }
 
-        public Builder setPolicies(@Nullable Input<List<ApplicationPolicyArgs>> policies) {
+        public Builder policies(@Nullable Input<List<ApplicationPolicyArgs>> policies) {
             this.policies = policies;
             return this;
         }
 
-        public Builder setPolicies(@Nullable List<ApplicationPolicyArgs> policies) {
+        public Builder policies(@Nullable List<ApplicationPolicyArgs> policies) {
             this.policies = Input.ofNullable(policies);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Input<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuArgs sku) {
+        public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

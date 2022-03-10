@@ -40,7 +40,7 @@ public final class CertificateQualifier {
     	      this.cpsUri = defaults.cpsUri;
         }
 
-        public Builder setCpsUri(String cpsUri) {
+        public Builder cpsUri(String cpsUri) {
             this.cpsUri = Objects.requireNonNull(cpsUri);
             return this;
         }

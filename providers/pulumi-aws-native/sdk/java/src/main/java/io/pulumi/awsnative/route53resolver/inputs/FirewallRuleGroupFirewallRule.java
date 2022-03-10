@@ -158,37 +158,37 @@ public final class FirewallRuleGroupFirewallRule extends io.pulumi.resources.Inv
     	      this.priority = defaults.priority;
         }
 
-        public Builder setAction(FirewallRuleGroupFirewallRuleAction action) {
+        public Builder action(FirewallRuleGroupFirewallRuleAction action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setBlockOverrideDnsType(@Nullable FirewallRuleGroupFirewallRuleBlockOverrideDnsType blockOverrideDnsType) {
+        public Builder blockOverrideDnsType(@Nullable FirewallRuleGroupFirewallRuleBlockOverrideDnsType blockOverrideDnsType) {
             this.blockOverrideDnsType = blockOverrideDnsType;
             return this;
         }
 
-        public Builder setBlockOverrideDomain(@Nullable String blockOverrideDomain) {
+        public Builder blockOverrideDomain(@Nullable String blockOverrideDomain) {
             this.blockOverrideDomain = blockOverrideDomain;
             return this;
         }
 
-        public Builder setBlockOverrideTtl(@Nullable Integer blockOverrideTtl) {
+        public Builder blockOverrideTtl(@Nullable Integer blockOverrideTtl) {
             this.blockOverrideTtl = blockOverrideTtl;
             return this;
         }
 
-        public Builder setBlockResponse(@Nullable FirewallRuleGroupFirewallRuleBlockResponse blockResponse) {
+        public Builder blockResponse(@Nullable FirewallRuleGroupFirewallRuleBlockResponse blockResponse) {
             this.blockResponse = blockResponse;
             return this;
         }
 
-        public Builder setFirewallDomainListId(String firewallDomainListId) {
+        public Builder firewallDomainListId(String firewallDomainListId) {
             this.firewallDomainListId = Objects.requireNonNull(firewallDomainListId);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }

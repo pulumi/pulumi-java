@@ -246,132 +246,132 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
     	      this.title = defaults.title;
         }
 
-        public Builder setCommonName(@Nullable Input<String> commonName) {
+        public Builder commonName(@Nullable Input<String> commonName) {
             this.commonName = commonName;
             return this;
         }
 
-        public Builder setCommonName(@Nullable String commonName) {
+        public Builder commonName(@Nullable String commonName) {
             this.commonName = Input.ofNullable(commonName);
             return this;
         }
 
-        public Builder setCountry(@Nullable Input<String> country) {
+        public Builder country(@Nullable Input<String> country) {
             this.country = country;
             return this;
         }
 
-        public Builder setCountry(@Nullable String country) {
+        public Builder country(@Nullable String country) {
             this.country = Input.ofNullable(country);
             return this;
         }
 
-        public Builder setDistinguishedNameQualifier(@Nullable Input<String> distinguishedNameQualifier) {
+        public Builder distinguishedNameQualifier(@Nullable Input<String> distinguishedNameQualifier) {
             this.distinguishedNameQualifier = distinguishedNameQualifier;
             return this;
         }
 
-        public Builder setDistinguishedNameQualifier(@Nullable String distinguishedNameQualifier) {
+        public Builder distinguishedNameQualifier(@Nullable String distinguishedNameQualifier) {
             this.distinguishedNameQualifier = Input.ofNullable(distinguishedNameQualifier);
             return this;
         }
 
-        public Builder setGenerationQualifier(@Nullable Input<String> generationQualifier) {
+        public Builder generationQualifier(@Nullable Input<String> generationQualifier) {
             this.generationQualifier = generationQualifier;
             return this;
         }
 
-        public Builder setGenerationQualifier(@Nullable String generationQualifier) {
+        public Builder generationQualifier(@Nullable String generationQualifier) {
             this.generationQualifier = Input.ofNullable(generationQualifier);
             return this;
         }
 
-        public Builder setGivenName(@Nullable Input<String> givenName) {
+        public Builder givenName(@Nullable Input<String> givenName) {
             this.givenName = givenName;
             return this;
         }
 
-        public Builder setGivenName(@Nullable String givenName) {
+        public Builder givenName(@Nullable String givenName) {
             this.givenName = Input.ofNullable(givenName);
             return this;
         }
 
-        public Builder setInitials(@Nullable Input<String> initials) {
+        public Builder initials(@Nullable Input<String> initials) {
             this.initials = initials;
             return this;
         }
 
-        public Builder setInitials(@Nullable String initials) {
+        public Builder initials(@Nullable String initials) {
             this.initials = Input.ofNullable(initials);
             return this;
         }
 
-        public Builder setLocality(@Nullable Input<String> locality) {
+        public Builder locality(@Nullable Input<String> locality) {
             this.locality = locality;
             return this;
         }
 
-        public Builder setLocality(@Nullable String locality) {
+        public Builder locality(@Nullable String locality) {
             this.locality = Input.ofNullable(locality);
             return this;
         }
 
-        public Builder setOrganization(@Nullable Input<String> organization) {
+        public Builder organization(@Nullable Input<String> organization) {
             this.organization = organization;
             return this;
         }
 
-        public Builder setOrganization(@Nullable String organization) {
+        public Builder organization(@Nullable String organization) {
             this.organization = Input.ofNullable(organization);
             return this;
         }
 
-        public Builder setOrganizationalUnit(@Nullable Input<String> organizationalUnit) {
+        public Builder organizationalUnit(@Nullable Input<String> organizationalUnit) {
             this.organizationalUnit = organizationalUnit;
             return this;
         }
 
-        public Builder setOrganizationalUnit(@Nullable String organizationalUnit) {
+        public Builder organizationalUnit(@Nullable String organizationalUnit) {
             this.organizationalUnit = Input.ofNullable(organizationalUnit);
             return this;
         }
 
-        public Builder setPseudonym(@Nullable Input<String> pseudonym) {
+        public Builder pseudonym(@Nullable Input<String> pseudonym) {
             this.pseudonym = pseudonym;
             return this;
         }
 
-        public Builder setPseudonym(@Nullable String pseudonym) {
+        public Builder pseudonym(@Nullable String pseudonym) {
             this.pseudonym = Input.ofNullable(pseudonym);
             return this;
         }
 
-        public Builder setState(@Nullable Input<String> state) {
+        public Builder state(@Nullable Input<String> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setSurname(@Nullable Input<String> surname) {
+        public Builder surname(@Nullable Input<String> surname) {
             this.surname = surname;
             return this;
         }
 
-        public Builder setSurname(@Nullable String surname) {
+        public Builder surname(@Nullable String surname) {
             this.surname = Input.ofNullable(surname);
             return this;
         }
 
-        public Builder setTitle(@Nullable Input<String> title) {
+        public Builder title(@Nullable Input<String> title) {
             this.title = title;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = Input.ofNullable(title);
             return this;
         }

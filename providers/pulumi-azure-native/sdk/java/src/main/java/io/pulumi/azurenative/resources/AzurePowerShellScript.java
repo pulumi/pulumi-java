@@ -398,7 +398,7 @@ public class AzurePowerShellScript extends io.pulumi.resources.CustomResource {
     private static AzurePowerShellScriptArgs makeArgs(AzurePowerShellScriptArgs args) {
         var builder = args == null ? AzurePowerShellScriptArgs.builder() : AzurePowerShellScriptArgs.builder(args);
         return builder
-            .setKind("AzurePowerShell")
+            .kind("AzurePowerShell")
             .build();
     }
 

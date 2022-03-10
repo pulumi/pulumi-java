@@ -160,72 +160,72 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDatasetConfiguration(Input<LabelingDatasetConfigurationArgs> datasetConfiguration) {
+        public Builder datasetConfiguration(Input<LabelingDatasetConfigurationArgs> datasetConfiguration) {
             this.datasetConfiguration = Objects.requireNonNull(datasetConfiguration);
             return this;
         }
 
-        public Builder setDatasetConfiguration(LabelingDatasetConfigurationArgs datasetConfiguration) {
+        public Builder datasetConfiguration(LabelingDatasetConfigurationArgs datasetConfiguration) {
             this.datasetConfiguration = Input.of(Objects.requireNonNull(datasetConfiguration));
             return this;
         }
 
-        public Builder setJobInstructions(Input<LabelingJobInstructionsArgs> jobInstructions) {
+        public Builder jobInstructions(Input<LabelingJobInstructionsArgs> jobInstructions) {
             this.jobInstructions = Objects.requireNonNull(jobInstructions);
             return this;
         }
 
-        public Builder setJobInstructions(LabelingJobInstructionsArgs jobInstructions) {
+        public Builder jobInstructions(LabelingJobInstructionsArgs jobInstructions) {
             this.jobInstructions = Input.of(Objects.requireNonNull(jobInstructions));
             return this;
         }
 
-        public Builder setLabelCategories(Input<Map<String,LabelCategoryArgs>> labelCategories) {
+        public Builder labelCategories(Input<Map<String,LabelCategoryArgs>> labelCategories) {
             this.labelCategories = Objects.requireNonNull(labelCategories);
             return this;
         }
 
-        public Builder setLabelCategories(Map<String,LabelCategoryArgs> labelCategories) {
+        public Builder labelCategories(Map<String,LabelCategoryArgs> labelCategories) {
             this.labelCategories = Input.of(Objects.requireNonNull(labelCategories));
             return this;
         }
 
-        public Builder setLabelingJobMediaProperties(Input<LabelingJobImagePropertiesArgs> labelingJobMediaProperties) {
+        public Builder labelingJobMediaProperties(Input<LabelingJobImagePropertiesArgs> labelingJobMediaProperties) {
             this.labelingJobMediaProperties = Objects.requireNonNull(labelingJobMediaProperties);
             return this;
         }
 
-        public Builder setLabelingJobMediaProperties(LabelingJobImagePropertiesArgs labelingJobMediaProperties) {
+        public Builder labelingJobMediaProperties(LabelingJobImagePropertiesArgs labelingJobMediaProperties) {
             this.labelingJobMediaProperties = Input.of(Objects.requireNonNull(labelingJobMediaProperties));
             return this;
         }
 
-        public Builder setMlAssistConfiguration(@Nullable Input<MLAssistConfigurationArgs> mlAssistConfiguration) {
+        public Builder mlAssistConfiguration(@Nullable Input<MLAssistConfigurationArgs> mlAssistConfiguration) {
             this.mlAssistConfiguration = mlAssistConfiguration;
             return this;
         }
 
-        public Builder setMlAssistConfiguration(@Nullable MLAssistConfigurationArgs mlAssistConfiguration) {
+        public Builder mlAssistConfiguration(@Nullable MLAssistConfigurationArgs mlAssistConfiguration) {
             this.mlAssistConfiguration = Input.ofNullable(mlAssistConfiguration);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Input<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

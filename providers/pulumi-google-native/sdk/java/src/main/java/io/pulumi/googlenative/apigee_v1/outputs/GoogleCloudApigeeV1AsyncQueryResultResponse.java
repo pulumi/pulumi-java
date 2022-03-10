@@ -65,12 +65,12 @@ public final class GoogleCloudApigeeV1AsyncQueryResultResponse {
     	      this.self = defaults.self;
         }
 
-        public Builder setExpires(String expires) {
+        public Builder expires(String expires) {
             this.expires = Objects.requireNonNull(expires);
             return this;
         }
 
-        public Builder setSelf(String self) {
+        public Builder self(String self) {
             this.self = Objects.requireNonNull(self);
             return this;
         }

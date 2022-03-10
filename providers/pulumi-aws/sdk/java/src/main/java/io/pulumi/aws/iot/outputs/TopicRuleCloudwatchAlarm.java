@@ -97,22 +97,22 @@ public final class TopicRuleCloudwatchAlarm {
     	      this.stateValue = defaults.stateValue;
         }
 
-        public Builder setAlarmName(String alarmName) {
+        public Builder alarmName(String alarmName) {
             this.alarmName = Objects.requireNonNull(alarmName);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setStateReason(String stateReason) {
+        public Builder stateReason(String stateReason) {
             this.stateReason = Objects.requireNonNull(stateReason);
             return this;
         }
 
-        public Builder setStateValue(String stateValue) {
+        public Builder stateValue(String stateValue) {
             this.stateValue = Objects.requireNonNull(stateValue);
             return this;
         }

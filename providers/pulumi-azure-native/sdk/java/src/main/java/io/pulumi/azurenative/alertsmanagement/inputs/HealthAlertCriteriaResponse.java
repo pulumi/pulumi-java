@@ -58,7 +58,7 @@ public final class HealthAlertCriteriaResponse extends io.pulumi.resources.Invok
     	      this.allOf = defaults.allOf;
         }
 
-        public Builder setAllOf(@Nullable List<VmGuestHealthAlertCriterionResponse> allOf) {
+        public Builder allOf(@Nullable List<VmGuestHealthAlertCriterionResponse> allOf) {
             this.allOf = allOf;
             return this;
         }

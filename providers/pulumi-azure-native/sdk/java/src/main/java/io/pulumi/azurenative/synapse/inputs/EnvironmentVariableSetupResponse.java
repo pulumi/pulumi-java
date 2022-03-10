@@ -89,17 +89,17 @@ public final class EnvironmentVariableSetupResponse extends io.pulumi.resources.
     	      this.variableValue = defaults.variableValue;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVariableName(String variableName) {
+        public Builder variableName(String variableName) {
             this.variableName = Objects.requireNonNull(variableName);
             return this;
         }
 
-        public Builder setVariableValue(String variableValue) {
+        public Builder variableValue(String variableValue) {
             this.variableValue = Objects.requireNonNull(variableValue);
             return this;
         }

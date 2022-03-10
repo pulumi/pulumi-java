@@ -141,62 +141,62 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subnetworkName = defaults.subnetworkName;
         }
 
-        public Builder setForwardedPorts(@Nullable Input<List<String>> forwardedPorts) {
+        public Builder forwardedPorts(@Nullable Input<List<String>> forwardedPorts) {
             this.forwardedPorts = forwardedPorts;
             return this;
         }
 
-        public Builder setForwardedPorts(@Nullable List<String> forwardedPorts) {
+        public Builder forwardedPorts(@Nullable List<String> forwardedPorts) {
             this.forwardedPorts = Input.ofNullable(forwardedPorts);
             return this;
         }
 
-        public Builder setInstanceIpMode(@Nullable Input<NetworkInstanceIpMode> instanceIpMode) {
+        public Builder instanceIpMode(@Nullable Input<NetworkInstanceIpMode> instanceIpMode) {
             this.instanceIpMode = instanceIpMode;
             return this;
         }
 
-        public Builder setInstanceIpMode(@Nullable NetworkInstanceIpMode instanceIpMode) {
+        public Builder instanceIpMode(@Nullable NetworkInstanceIpMode instanceIpMode) {
             this.instanceIpMode = Input.ofNullable(instanceIpMode);
             return this;
         }
 
-        public Builder setInstanceTag(@Nullable Input<String> instanceTag) {
+        public Builder instanceTag(@Nullable Input<String> instanceTag) {
             this.instanceTag = instanceTag;
             return this;
         }
 
-        public Builder setInstanceTag(@Nullable String instanceTag) {
+        public Builder instanceTag(@Nullable String instanceTag) {
             this.instanceTag = Input.ofNullable(instanceTag);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSessionAffinity(@Nullable Input<Boolean> sessionAffinity) {
+        public Builder sessionAffinity(@Nullable Input<Boolean> sessionAffinity) {
             this.sessionAffinity = sessionAffinity;
             return this;
         }
 
-        public Builder setSessionAffinity(@Nullable Boolean sessionAffinity) {
+        public Builder sessionAffinity(@Nullable Boolean sessionAffinity) {
             this.sessionAffinity = Input.ofNullable(sessionAffinity);
             return this;
         }
 
-        public Builder setSubnetworkName(@Nullable Input<String> subnetworkName) {
+        public Builder subnetworkName(@Nullable Input<String> subnetworkName) {
             this.subnetworkName = subnetworkName;
             return this;
         }
 
-        public Builder setSubnetworkName(@Nullable String subnetworkName) {
+        public Builder subnetworkName(@Nullable String subnetworkName) {
             this.subnetworkName = Input.ofNullable(subnetworkName);
             return this;
         }

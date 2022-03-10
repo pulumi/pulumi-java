@@ -164,42 +164,42 @@ public final class GetMaintenanceConfigurationResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setExtensionProperties(@Nullable Map<String,String> extensionProperties) {
+        public Builder extensionProperties(@Nullable Map<String,String> extensionProperties) {
             this.extensionProperties = extensionProperties;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setMaintenanceScope(@Nullable String maintenanceScope) {
+        public Builder maintenanceScope(@Nullable String maintenanceScope) {
             this.maintenanceScope = maintenanceScope;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

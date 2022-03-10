@@ -248,132 +248,132 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAgentArns(Input<List<String>> agentArns) {
+        public Builder agentArns(Input<List<String>> agentArns) {
             this.agentArns = Objects.requireNonNull(agentArns);
             return this;
         }
 
-        public Builder setAgentArns(List<String> agentArns) {
+        public Builder agentArns(List<String> agentArns) {
             this.agentArns = Input.of(Objects.requireNonNull(agentArns));
             return this;
         }
 
-        public Builder setAuthenticationType(Input<LocationHDFSAuthenticationType> authenticationType) {
+        public Builder authenticationType(Input<LocationHDFSAuthenticationType> authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
 
-        public Builder setAuthenticationType(LocationHDFSAuthenticationType authenticationType) {
+        public Builder authenticationType(LocationHDFSAuthenticationType authenticationType) {
             this.authenticationType = Input.of(Objects.requireNonNull(authenticationType));
             return this;
         }
 
-        public Builder setBlockSize(@Nullable Input<Integer> blockSize) {
+        public Builder blockSize(@Nullable Input<Integer> blockSize) {
             this.blockSize = blockSize;
             return this;
         }
 
-        public Builder setBlockSize(@Nullable Integer blockSize) {
+        public Builder blockSize(@Nullable Integer blockSize) {
             this.blockSize = Input.ofNullable(blockSize);
             return this;
         }
 
-        public Builder setKerberosKeytab(@Nullable Input<String> kerberosKeytab) {
+        public Builder kerberosKeytab(@Nullable Input<String> kerberosKeytab) {
             this.kerberosKeytab = kerberosKeytab;
             return this;
         }
 
-        public Builder setKerberosKeytab(@Nullable String kerberosKeytab) {
+        public Builder kerberosKeytab(@Nullable String kerberosKeytab) {
             this.kerberosKeytab = Input.ofNullable(kerberosKeytab);
             return this;
         }
 
-        public Builder setKerberosKrb5Conf(@Nullable Input<String> kerberosKrb5Conf) {
+        public Builder kerberosKrb5Conf(@Nullable Input<String> kerberosKrb5Conf) {
             this.kerberosKrb5Conf = kerberosKrb5Conf;
             return this;
         }
 
-        public Builder setKerberosKrb5Conf(@Nullable String kerberosKrb5Conf) {
+        public Builder kerberosKrb5Conf(@Nullable String kerberosKrb5Conf) {
             this.kerberosKrb5Conf = Input.ofNullable(kerberosKrb5Conf);
             return this;
         }
 
-        public Builder setKerberosPrincipal(@Nullable Input<String> kerberosPrincipal) {
+        public Builder kerberosPrincipal(@Nullable Input<String> kerberosPrincipal) {
             this.kerberosPrincipal = kerberosPrincipal;
             return this;
         }
 
-        public Builder setKerberosPrincipal(@Nullable String kerberosPrincipal) {
+        public Builder kerberosPrincipal(@Nullable String kerberosPrincipal) {
             this.kerberosPrincipal = Input.ofNullable(kerberosPrincipal);
             return this;
         }
 
-        public Builder setKmsKeyProviderUri(@Nullable Input<String> kmsKeyProviderUri) {
+        public Builder kmsKeyProviderUri(@Nullable Input<String> kmsKeyProviderUri) {
             this.kmsKeyProviderUri = kmsKeyProviderUri;
             return this;
         }
 
-        public Builder setKmsKeyProviderUri(@Nullable String kmsKeyProviderUri) {
+        public Builder kmsKeyProviderUri(@Nullable String kmsKeyProviderUri) {
             this.kmsKeyProviderUri = Input.ofNullable(kmsKeyProviderUri);
             return this;
         }
 
-        public Builder setNameNodes(Input<List<LocationHDFSNameNodeArgs>> nameNodes) {
+        public Builder nameNodes(Input<List<LocationHDFSNameNodeArgs>> nameNodes) {
             this.nameNodes = Objects.requireNonNull(nameNodes);
             return this;
         }
 
-        public Builder setNameNodes(List<LocationHDFSNameNodeArgs> nameNodes) {
+        public Builder nameNodes(List<LocationHDFSNameNodeArgs> nameNodes) {
             this.nameNodes = Input.of(Objects.requireNonNull(nameNodes));
             return this;
         }
 
-        public Builder setQopConfiguration(@Nullable Input<LocationHDFSQopConfigurationArgs> qopConfiguration) {
+        public Builder qopConfiguration(@Nullable Input<LocationHDFSQopConfigurationArgs> qopConfiguration) {
             this.qopConfiguration = qopConfiguration;
             return this;
         }
 
-        public Builder setQopConfiguration(@Nullable LocationHDFSQopConfigurationArgs qopConfiguration) {
+        public Builder qopConfiguration(@Nullable LocationHDFSQopConfigurationArgs qopConfiguration) {
             this.qopConfiguration = Input.ofNullable(qopConfiguration);
             return this;
         }
 
-        public Builder setReplicationFactor(@Nullable Input<Integer> replicationFactor) {
+        public Builder replicationFactor(@Nullable Input<Integer> replicationFactor) {
             this.replicationFactor = replicationFactor;
             return this;
         }
 
-        public Builder setReplicationFactor(@Nullable Integer replicationFactor) {
+        public Builder replicationFactor(@Nullable Integer replicationFactor) {
             this.replicationFactor = Input.ofNullable(replicationFactor);
             return this;
         }
 
-        public Builder setSimpleUser(@Nullable Input<String> simpleUser) {
+        public Builder simpleUser(@Nullable Input<String> simpleUser) {
             this.simpleUser = simpleUser;
             return this;
         }
 
-        public Builder setSimpleUser(@Nullable String simpleUser) {
+        public Builder simpleUser(@Nullable String simpleUser) {
             this.simpleUser = Input.ofNullable(simpleUser);
             return this;
         }
 
-        public Builder setSubdirectory(@Nullable Input<String> subdirectory) {
+        public Builder subdirectory(@Nullable Input<String> subdirectory) {
             this.subdirectory = subdirectory;
             return this;
         }
 
-        public Builder setSubdirectory(@Nullable String subdirectory) {
+        public Builder subdirectory(@Nullable String subdirectory) {
             this.subdirectory = Input.ofNullable(subdirectory);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<LocationHDFSTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<LocationHDFSTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<LocationHDFSTagArgs> tags) {
+        public Builder tags(@Nullable List<LocationHDFSTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

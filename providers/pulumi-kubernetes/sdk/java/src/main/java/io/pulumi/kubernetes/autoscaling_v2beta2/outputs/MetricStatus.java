@@ -136,32 +136,32 @@ public final class MetricStatus {
     	      this.type = defaults.type;
         }
 
-        public Builder setContainerResource(@Nullable ContainerResourceMetricStatus containerResource) {
+        public Builder containerResource(@Nullable ContainerResourceMetricStatus containerResource) {
             this.containerResource = containerResource;
             return this;
         }
 
-        public Builder setExternal(@Nullable ExternalMetricStatus external) {
+        public Builder external(@Nullable ExternalMetricStatus external) {
             this.external = external;
             return this;
         }
 
-        public Builder setObject(@Nullable ObjectMetricStatus object) {
+        public Builder object(@Nullable ObjectMetricStatus object) {
             this.object = object;
             return this;
         }
 
-        public Builder setPods(@Nullable PodsMetricStatus pods) {
+        public Builder pods(@Nullable PodsMetricStatus pods) {
             this.pods = pods;
             return this;
         }
 
-        public Builder setResource(@Nullable ResourceMetricStatus resource) {
+        public Builder resource(@Nullable ResourceMetricStatus resource) {
             this.resource = resource;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

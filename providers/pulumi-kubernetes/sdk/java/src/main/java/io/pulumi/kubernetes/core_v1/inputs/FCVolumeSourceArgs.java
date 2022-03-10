@@ -125,52 +125,52 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.wwids = defaults.wwids;
         }
 
-        public Builder setFsType(@Nullable Input<String> fsType) {
+        public Builder fsType(@Nullable Input<String> fsType) {
             this.fsType = fsType;
             return this;
         }
 
-        public Builder setFsType(@Nullable String fsType) {
+        public Builder fsType(@Nullable String fsType) {
             this.fsType = Input.ofNullable(fsType);
             return this;
         }
 
-        public Builder setLun(@Nullable Input<Integer> lun) {
+        public Builder lun(@Nullable Input<Integer> lun) {
             this.lun = lun;
             return this;
         }
 
-        public Builder setLun(@Nullable Integer lun) {
+        public Builder lun(@Nullable Integer lun) {
             this.lun = Input.ofNullable(lun);
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Input.ofNullable(readOnly);
             return this;
         }
 
-        public Builder setTargetWWNs(@Nullable Input<List<String>> targetWWNs) {
+        public Builder targetWWNs(@Nullable Input<List<String>> targetWWNs) {
             this.targetWWNs = targetWWNs;
             return this;
         }
 
-        public Builder setTargetWWNs(@Nullable List<String> targetWWNs) {
+        public Builder targetWWNs(@Nullable List<String> targetWWNs) {
             this.targetWWNs = Input.ofNullable(targetWWNs);
             return this;
         }
 
-        public Builder setWwids(@Nullable Input<List<String>> wwids) {
+        public Builder wwids(@Nullable Input<List<String>> wwids) {
             this.wwids = wwids;
             return this;
         }
 
-        public Builder setWwids(@Nullable List<String> wwids) {
+        public Builder wwids(@Nullable List<String> wwids) {
             this.wwids = Input.ofNullable(wwids);
             return this;
         }

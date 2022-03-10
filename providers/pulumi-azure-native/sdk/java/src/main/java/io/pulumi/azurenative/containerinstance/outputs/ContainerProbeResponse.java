@@ -149,37 +149,37 @@ public final class ContainerProbeResponse {
     	      this.timeoutSeconds = defaults.timeoutSeconds;
         }
 
-        public Builder setExec(@Nullable ContainerExecResponse exec) {
+        public Builder exec(@Nullable ContainerExecResponse exec) {
             this.exec = exec;
             return this;
         }
 
-        public Builder setFailureThreshold(@Nullable Integer failureThreshold) {
+        public Builder failureThreshold(@Nullable Integer failureThreshold) {
             this.failureThreshold = failureThreshold;
             return this;
         }
 
-        public Builder setHttpGet(@Nullable ContainerHttpGetResponse httpGet) {
+        public Builder httpGet(@Nullable ContainerHttpGetResponse httpGet) {
             this.httpGet = httpGet;
             return this;
         }
 
-        public Builder setInitialDelaySeconds(@Nullable Integer initialDelaySeconds) {
+        public Builder initialDelaySeconds(@Nullable Integer initialDelaySeconds) {
             this.initialDelaySeconds = initialDelaySeconds;
             return this;
         }
 
-        public Builder setPeriodSeconds(@Nullable Integer periodSeconds) {
+        public Builder periodSeconds(@Nullable Integer periodSeconds) {
             this.periodSeconds = periodSeconds;
             return this;
         }
 
-        public Builder setSuccessThreshold(@Nullable Integer successThreshold) {
+        public Builder successThreshold(@Nullable Integer successThreshold) {
             this.successThreshold = successThreshold;
             return this;
         }
 
-        public Builder setTimeoutSeconds(@Nullable Integer timeoutSeconds) {
+        public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }

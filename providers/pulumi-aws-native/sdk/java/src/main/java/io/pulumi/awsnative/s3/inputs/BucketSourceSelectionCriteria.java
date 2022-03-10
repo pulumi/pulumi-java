@@ -75,12 +75,12 @@ public final class BucketSourceSelectionCriteria extends io.pulumi.resources.Inv
     	      this.sseKmsEncryptedObjects = defaults.sseKmsEncryptedObjects;
         }
 
-        public Builder setReplicaModifications(@Nullable BucketReplicaModifications replicaModifications) {
+        public Builder replicaModifications(@Nullable BucketReplicaModifications replicaModifications) {
             this.replicaModifications = replicaModifications;
             return this;
         }
 
-        public Builder setSseKmsEncryptedObjects(@Nullable BucketSseKmsEncryptedObjects sseKmsEncryptedObjects) {
+        public Builder sseKmsEncryptedObjects(@Nullable BucketSseKmsEncryptedObjects sseKmsEncryptedObjects) {
             this.sseKmsEncryptedObjects = sseKmsEncryptedObjects;
             return this;
         }

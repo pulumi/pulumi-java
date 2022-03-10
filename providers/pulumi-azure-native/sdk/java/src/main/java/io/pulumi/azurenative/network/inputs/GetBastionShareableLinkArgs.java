@@ -88,17 +88,17 @@ public final class GetBastionShareableLinkArgs extends io.pulumi.resources.Invok
     	      this.vms = defaults.vms;
         }
 
-        public Builder setBastionHostName(String bastionHostName) {
+        public Builder bastionHostName(String bastionHostName) {
             this.bastionHostName = Objects.requireNonNull(bastionHostName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setVms(@Nullable List<BastionShareableLink> vms) {
+        public Builder vms(@Nullable List<BastionShareableLink> vms) {
             this.vms = vms;
             return this;
         }

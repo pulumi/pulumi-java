@@ -69,12 +69,12 @@ public final class GetBotAssociationArgs extends io.pulumi.resources.InvokeArgs 
     	      this.lexBot = defaults.lexBot;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setLexBot(GetBotAssociationLexBot lexBot) {
+        public Builder lexBot(GetBotAssociationLexBot lexBot) {
             this.lexBot = Objects.requireNonNull(lexBot);
             return this;
         }

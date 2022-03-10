@@ -55,7 +55,7 @@ public final class ManualScalingResponse extends io.pulumi.resources.InvokeArgs 
     	      this.instances = defaults.instances;
         }
 
-        public Builder setInstances(Integer instances) {
+        public Builder instances(Integer instances) {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }

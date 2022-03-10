@@ -142,62 +142,62 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
     	      this.subnet = defaults.subnet;
         }
 
-        public Builder setDnsServers(@Nullable Input<List<String>> dnsServers) {
+        public Builder dnsServers(@Nullable Input<List<String>> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
 
-        public Builder setDnsServers(@Nullable List<String> dnsServers) {
+        public Builder dnsServers(@Nullable List<String> dnsServers) {
             this.dnsServers = Input.ofNullable(dnsServers);
             return this;
         }
 
-        public Builder setGateway(@Nullable Input<String> gateway) {
+        public Builder gateway(@Nullable Input<String> gateway) {
             this.gateway = gateway;
             return this;
         }
 
-        public Builder setGateway(@Nullable String gateway) {
+        public Builder gateway(@Nullable String gateway) {
             this.gateway = Input.ofNullable(gateway);
             return this;
         }
 
-        public Builder setIpAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Input<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Input.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder setIpAllocationMethod(@Nullable Input<Either<String,IPAllocationMethod>> ipAllocationMethod) {
+        public Builder ipAllocationMethod(@Nullable Input<Either<String,IPAllocationMethod>> ipAllocationMethod) {
             this.ipAllocationMethod = ipAllocationMethod;
             return this;
         }
 
-        public Builder setIpAllocationMethod(@Nullable Either<String,IPAllocationMethod> ipAllocationMethod) {
+        public Builder ipAllocationMethod(@Nullable Either<String,IPAllocationMethod> ipAllocationMethod) {
             this.ipAllocationMethod = Input.ofNullable(ipAllocationMethod);
             return this;
         }
 
-        public Builder setIpVersion(@Nullable Input<Either<String,IPVersion>> ipVersion) {
+        public Builder ipVersion(@Nullable Input<Either<String,IPVersion>> ipVersion) {
             this.ipVersion = ipVersion;
             return this;
         }
 
-        public Builder setIpVersion(@Nullable Either<String,IPVersion> ipVersion) {
+        public Builder ipVersion(@Nullable Either<String,IPVersion> ipVersion) {
             this.ipVersion = Input.ofNullable(ipVersion);
             return this;
         }
 
-        public Builder setSubnet(@Nullable Input<String> subnet) {
+        public Builder subnet(@Nullable Input<String> subnet) {
             this.subnet = subnet;
             return this;
         }
 
-        public Builder setSubnet(@Nullable String subnet) {
+        public Builder subnet(@Nullable String subnet) {
             this.subnet = Input.ofNullable(subnet);
             return this;
         }

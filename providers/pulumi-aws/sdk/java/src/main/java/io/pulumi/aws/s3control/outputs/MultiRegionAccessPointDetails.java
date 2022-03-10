@@ -86,17 +86,17 @@ public final class MultiRegionAccessPointDetails {
     	      this.regions = defaults.regions;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPublicAccessBlock(@Nullable MultiRegionAccessPointDetailsPublicAccessBlock publicAccessBlock) {
+        public Builder publicAccessBlock(@Nullable MultiRegionAccessPointDetailsPublicAccessBlock publicAccessBlock) {
             this.publicAccessBlock = publicAccessBlock;
             return this;
         }
 
-        public Builder setRegions(List<MultiRegionAccessPointDetailsRegion> regions) {
+        public Builder regions(List<MultiRegionAccessPointDetailsRegion> regions) {
             this.regions = Objects.requireNonNull(regions);
             return this;
         }

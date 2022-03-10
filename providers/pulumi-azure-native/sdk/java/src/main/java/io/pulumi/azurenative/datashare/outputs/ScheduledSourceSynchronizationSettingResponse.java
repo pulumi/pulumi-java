@@ -85,17 +85,17 @@ public final class ScheduledSourceSynchronizationSettingResponse {
     	      this.synchronizationTime = defaults.synchronizationTime;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setRecurrenceInterval(@Nullable String recurrenceInterval) {
+        public Builder recurrenceInterval(@Nullable String recurrenceInterval) {
             this.recurrenceInterval = recurrenceInterval;
             return this;
         }
 
-        public Builder setSynchronizationTime(@Nullable String synchronizationTime) {
+        public Builder synchronizationTime(@Nullable String synchronizationTime) {
             this.synchronizationTime = synchronizationTime;
             return this;
         }

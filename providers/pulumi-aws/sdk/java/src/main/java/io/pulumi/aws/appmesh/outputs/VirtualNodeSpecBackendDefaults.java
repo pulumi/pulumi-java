@@ -50,7 +50,7 @@ public final class VirtualNodeSpecBackendDefaults {
     	      this.clientPolicy = defaults.clientPolicy;
         }
 
-        public Builder setClientPolicy(@Nullable VirtualNodeSpecBackendDefaultsClientPolicy clientPolicy) {
+        public Builder clientPolicy(@Nullable VirtualNodeSpecBackendDefaultsClientPolicy clientPolicy) {
             this.clientPolicy = clientPolicy;
             return this;
         }

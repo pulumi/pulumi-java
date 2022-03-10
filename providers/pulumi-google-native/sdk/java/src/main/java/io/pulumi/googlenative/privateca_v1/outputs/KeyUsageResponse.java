@@ -84,17 +84,17 @@ public final class KeyUsageResponse {
     	      this.unknownExtendedKeyUsages = defaults.unknownExtendedKeyUsages;
         }
 
-        public Builder setBaseKeyUsage(KeyUsageOptionsResponse baseKeyUsage) {
+        public Builder baseKeyUsage(KeyUsageOptionsResponse baseKeyUsage) {
             this.baseKeyUsage = Objects.requireNonNull(baseKeyUsage);
             return this;
         }
 
-        public Builder setExtendedKeyUsage(ExtendedKeyUsageOptionsResponse extendedKeyUsage) {
+        public Builder extendedKeyUsage(ExtendedKeyUsageOptionsResponse extendedKeyUsage) {
             this.extendedKeyUsage = Objects.requireNonNull(extendedKeyUsage);
             return this;
         }
 
-        public Builder setUnknownExtendedKeyUsages(List<ObjectIdResponse> unknownExtendedKeyUsages) {
+        public Builder unknownExtendedKeyUsages(List<ObjectIdResponse> unknownExtendedKeyUsages) {
             this.unknownExtendedKeyUsages = Objects.requireNonNull(unknownExtendedKeyUsages);
             return this;
         }

@@ -69,22 +69,22 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAu
     	      this.domain = defaults.domain;
         }
 
-        public Builder setCredentialsParameter(Input<String> credentialsParameter) {
+        public Builder credentialsParameter(Input<String> credentialsParameter) {
             this.credentialsParameter = Objects.requireNonNull(credentialsParameter);
             return this;
         }
 
-        public Builder setCredentialsParameter(String credentialsParameter) {
+        public Builder credentialsParameter(String credentialsParameter) {
             this.credentialsParameter = Input.of(Objects.requireNonNull(credentialsParameter));
             return this;
         }
 
-        public Builder setDomain(Input<String> domain) {
+        public Builder domain(Input<String> domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
-        public Builder setDomain(String domain) {
+        public Builder domain(String domain) {
             this.domain = Input.of(Objects.requireNonNull(domain));
             return this;
         }

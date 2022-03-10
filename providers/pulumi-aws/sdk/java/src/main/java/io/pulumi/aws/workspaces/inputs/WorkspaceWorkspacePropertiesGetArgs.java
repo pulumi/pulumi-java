@@ -119,52 +119,52 @@ public final class WorkspaceWorkspacePropertiesGetArgs extends io.pulumi.resourc
     	      this.userVolumeSizeGib = defaults.userVolumeSizeGib;
         }
 
-        public Builder setComputeTypeName(@Nullable Input<String> computeTypeName) {
+        public Builder computeTypeName(@Nullable Input<String> computeTypeName) {
             this.computeTypeName = computeTypeName;
             return this;
         }
 
-        public Builder setComputeTypeName(@Nullable String computeTypeName) {
+        public Builder computeTypeName(@Nullable String computeTypeName) {
             this.computeTypeName = Input.ofNullable(computeTypeName);
             return this;
         }
 
-        public Builder setRootVolumeSizeGib(@Nullable Input<Integer> rootVolumeSizeGib) {
+        public Builder rootVolumeSizeGib(@Nullable Input<Integer> rootVolumeSizeGib) {
             this.rootVolumeSizeGib = rootVolumeSizeGib;
             return this;
         }
 
-        public Builder setRootVolumeSizeGib(@Nullable Integer rootVolumeSizeGib) {
+        public Builder rootVolumeSizeGib(@Nullable Integer rootVolumeSizeGib) {
             this.rootVolumeSizeGib = Input.ofNullable(rootVolumeSizeGib);
             return this;
         }
 
-        public Builder setRunningMode(@Nullable Input<String> runningMode) {
+        public Builder runningMode(@Nullable Input<String> runningMode) {
             this.runningMode = runningMode;
             return this;
         }
 
-        public Builder setRunningMode(@Nullable String runningMode) {
+        public Builder runningMode(@Nullable String runningMode) {
             this.runningMode = Input.ofNullable(runningMode);
             return this;
         }
 
-        public Builder setRunningModeAutoStopTimeoutInMinutes(@Nullable Input<Integer> runningModeAutoStopTimeoutInMinutes) {
+        public Builder runningModeAutoStopTimeoutInMinutes(@Nullable Input<Integer> runningModeAutoStopTimeoutInMinutes) {
             this.runningModeAutoStopTimeoutInMinutes = runningModeAutoStopTimeoutInMinutes;
             return this;
         }
 
-        public Builder setRunningModeAutoStopTimeoutInMinutes(@Nullable Integer runningModeAutoStopTimeoutInMinutes) {
+        public Builder runningModeAutoStopTimeoutInMinutes(@Nullable Integer runningModeAutoStopTimeoutInMinutes) {
             this.runningModeAutoStopTimeoutInMinutes = Input.ofNullable(runningModeAutoStopTimeoutInMinutes);
             return this;
         }
 
-        public Builder setUserVolumeSizeGib(@Nullable Input<Integer> userVolumeSizeGib) {
+        public Builder userVolumeSizeGib(@Nullable Input<Integer> userVolumeSizeGib) {
             this.userVolumeSizeGib = userVolumeSizeGib;
             return this;
         }
 
-        public Builder setUserVolumeSizeGib(@Nullable Integer userVolumeSizeGib) {
+        public Builder userVolumeSizeGib(@Nullable Integer userVolumeSizeGib) {
             this.userVolumeSizeGib = Input.ofNullable(userVolumeSizeGib);
             return this;
         }

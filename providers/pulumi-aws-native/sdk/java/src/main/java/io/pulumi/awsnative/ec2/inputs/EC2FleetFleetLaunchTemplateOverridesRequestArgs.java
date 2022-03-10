@@ -137,82 +137,82 @@ public final class EC2FleetFleetLaunchTemplateOverridesRequestArgs extends io.pu
     	      this.weightedCapacity = defaults.weightedCapacity;
         }
 
-        public Builder setAvailabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Input.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder setInstanceRequirements(@Nullable Input<EC2FleetInstanceRequirementsRequestArgs> instanceRequirements) {
+        public Builder instanceRequirements(@Nullable Input<EC2FleetInstanceRequirementsRequestArgs> instanceRequirements) {
             this.instanceRequirements = instanceRequirements;
             return this;
         }
 
-        public Builder setInstanceRequirements(@Nullable EC2FleetInstanceRequirementsRequestArgs instanceRequirements) {
+        public Builder instanceRequirements(@Nullable EC2FleetInstanceRequirementsRequestArgs instanceRequirements) {
             this.instanceRequirements = Input.ofNullable(instanceRequirements);
             return this;
         }
 
-        public Builder setInstanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Input<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Input.ofNullable(instanceType);
             return this;
         }
 
-        public Builder setMaxPrice(@Nullable Input<String> maxPrice) {
+        public Builder maxPrice(@Nullable Input<String> maxPrice) {
             this.maxPrice = maxPrice;
             return this;
         }
 
-        public Builder setMaxPrice(@Nullable String maxPrice) {
+        public Builder maxPrice(@Nullable String maxPrice) {
             this.maxPrice = Input.ofNullable(maxPrice);
             return this;
         }
 
-        public Builder setPlacement(@Nullable Input<EC2FleetPlacementArgs> placement) {
+        public Builder placement(@Nullable Input<EC2FleetPlacementArgs> placement) {
             this.placement = placement;
             return this;
         }
 
-        public Builder setPlacement(@Nullable EC2FleetPlacementArgs placement) {
+        public Builder placement(@Nullable EC2FleetPlacementArgs placement) {
             this.placement = Input.ofNullable(placement);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Double> priority) {
+        public Builder priority(@Nullable Input<Double> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Double priority) {
+        public Builder priority(@Nullable Double priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setSubnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Input<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Input.ofNullable(subnetId);
             return this;
         }
 
-        public Builder setWeightedCapacity(@Nullable Input<Double> weightedCapacity) {
+        public Builder weightedCapacity(@Nullable Input<Double> weightedCapacity) {
             this.weightedCapacity = weightedCapacity;
             return this;
         }
 
-        public Builder setWeightedCapacity(@Nullable Double weightedCapacity) {
+        public Builder weightedCapacity(@Nullable Double weightedCapacity) {
             this.weightedCapacity = Input.ofNullable(weightedCapacity);
             return this;
         }

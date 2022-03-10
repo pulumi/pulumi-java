@@ -140,42 +140,42 @@ public final class AlertPolicyConditionConditionAbsentArgs extends io.pulumi.res
     	      this.trigger = defaults.trigger;
         }
 
-        public Builder setAggregations(@Nullable Input<List<AlertPolicyConditionConditionAbsentAggregationArgs>> aggregations) {
+        public Builder aggregations(@Nullable Input<List<AlertPolicyConditionConditionAbsentAggregationArgs>> aggregations) {
             this.aggregations = aggregations;
             return this;
         }
 
-        public Builder setAggregations(@Nullable List<AlertPolicyConditionConditionAbsentAggregationArgs> aggregations) {
+        public Builder aggregations(@Nullable List<AlertPolicyConditionConditionAbsentAggregationArgs> aggregations) {
             this.aggregations = Input.ofNullable(aggregations);
             return this;
         }
 
-        public Builder setDuration(Input<String> duration) {
+        public Builder duration(Input<String> duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
-        public Builder setDuration(String duration) {
+        public Builder duration(String duration) {
             this.duration = Input.of(Objects.requireNonNull(duration));
             return this;
         }
 
-        public Builder setFilter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Input<String> filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFilter(@Nullable String filter) {
+        public Builder filter(@Nullable String filter) {
             this.filter = Input.ofNullable(filter);
             return this;
         }
 
-        public Builder setTrigger(@Nullable Input<AlertPolicyConditionConditionAbsentTriggerArgs> trigger) {
+        public Builder trigger(@Nullable Input<AlertPolicyConditionConditionAbsentTriggerArgs> trigger) {
             this.trigger = trigger;
             return this;
         }
 
-        public Builder setTrigger(@Nullable AlertPolicyConditionConditionAbsentTriggerArgs trigger) {
+        public Builder trigger(@Nullable AlertPolicyConditionConditionAbsentTriggerArgs trigger) {
             this.trigger = Input.ofNullable(trigger);
             return this;
         }

@@ -115,27 +115,27 @@ public final class ProjectFileSystemLocation {
     	      this.type = defaults.type;
         }
 
-        public Builder setIdentifier(@Nullable String identifier) {
+        public Builder identifier(@Nullable String identifier) {
             this.identifier = identifier;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setMountOptions(@Nullable String mountOptions) {
+        public Builder mountOptions(@Nullable String mountOptions) {
             this.mountOptions = mountOptions;
             return this;
         }
 
-        public Builder setMountPoint(@Nullable String mountPoint) {
+        public Builder mountPoint(@Nullable String mountPoint) {
             this.mountPoint = mountPoint;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

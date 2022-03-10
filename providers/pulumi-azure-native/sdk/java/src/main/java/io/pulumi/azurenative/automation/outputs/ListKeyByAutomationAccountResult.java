@@ -50,7 +50,7 @@ public final class ListKeyByAutomationAccountResult {
     	      this.keys = defaults.keys;
         }
 
-        public Builder setKeys(@Nullable List<KeyResponse> keys) {
+        public Builder keys(@Nullable List<KeyResponse> keys) {
             this.keys = keys;
             return this;
         }

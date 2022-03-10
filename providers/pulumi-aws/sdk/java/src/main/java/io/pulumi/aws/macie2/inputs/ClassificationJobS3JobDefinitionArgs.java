@@ -72,22 +72,22 @@ public final class ClassificationJobS3JobDefinitionArgs extends io.pulumi.resour
     	      this.scoping = defaults.scoping;
         }
 
-        public Builder setBucketDefinitions(@Nullable Input<List<ClassificationJobS3JobDefinitionBucketDefinitionArgs>> bucketDefinitions) {
+        public Builder bucketDefinitions(@Nullable Input<List<ClassificationJobS3JobDefinitionBucketDefinitionArgs>> bucketDefinitions) {
             this.bucketDefinitions = bucketDefinitions;
             return this;
         }
 
-        public Builder setBucketDefinitions(@Nullable List<ClassificationJobS3JobDefinitionBucketDefinitionArgs> bucketDefinitions) {
+        public Builder bucketDefinitions(@Nullable List<ClassificationJobS3JobDefinitionBucketDefinitionArgs> bucketDefinitions) {
             this.bucketDefinitions = Input.ofNullable(bucketDefinitions);
             return this;
         }
 
-        public Builder setScoping(@Nullable Input<ClassificationJobS3JobDefinitionScopingArgs> scoping) {
+        public Builder scoping(@Nullable Input<ClassificationJobS3JobDefinitionScopingArgs> scoping) {
             this.scoping = scoping;
             return this;
         }
 
-        public Builder setScoping(@Nullable ClassificationJobS3JobDefinitionScopingArgs scoping) {
+        public Builder scoping(@Nullable ClassificationJobS3JobDefinitionScopingArgs scoping) {
             this.scoping = Input.ofNullable(scoping);
             return this;
         }

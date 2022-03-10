@@ -86,32 +86,32 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setBody(@Nullable Input<String> body) {
+        public Builder body(@Nullable Input<String> body) {
             this.body = body;
             return this;
         }
 
-        public Builder setBody(@Nullable String body) {
+        public Builder body(@Nullable String body) {
             this.body = Input.ofNullable(body);
             return this;
         }
 
-        public Builder setServerId(@Nullable Input<String> serverId) {
+        public Builder serverId(@Nullable Input<String> serverId) {
             this.serverId = serverId;
             return this;
         }
 
-        public Builder setServerId(@Nullable String serverId) {
+        public Builder serverId(@Nullable String serverId) {
             this.serverId = Input.ofNullable(serverId);
             return this;
         }
 
-        public Builder setUserName(@Nullable Input<String> userName) {
+        public Builder userName(@Nullable Input<String> userName) {
             this.userName = userName;
             return this;
         }
 
-        public Builder setUserName(@Nullable String userName) {
+        public Builder userName(@Nullable String userName) {
             this.userName = Input.ofNullable(userName);
             return this;
         }

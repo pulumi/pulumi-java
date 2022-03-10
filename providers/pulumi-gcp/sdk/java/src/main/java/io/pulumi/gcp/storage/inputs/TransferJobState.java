@@ -185,92 +185,92 @@ public final class TransferJobState extends io.pulumi.resources.ResourceArgs {
     	      this.transferSpec = defaults.transferSpec;
         }
 
-        public Builder setCreationTime(@Nullable Input<String> creationTime) {
+        public Builder creationTime(@Nullable Input<String> creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
-        public Builder setCreationTime(@Nullable String creationTime) {
+        public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = Input.ofNullable(creationTime);
             return this;
         }
 
-        public Builder setDeletionTime(@Nullable Input<String> deletionTime) {
+        public Builder deletionTime(@Nullable Input<String> deletionTime) {
             this.deletionTime = deletionTime;
             return this;
         }
 
-        public Builder setDeletionTime(@Nullable String deletionTime) {
+        public Builder deletionTime(@Nullable String deletionTime) {
             this.deletionTime = Input.ofNullable(deletionTime);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setLastModificationTime(@Nullable Input<String> lastModificationTime) {
+        public Builder lastModificationTime(@Nullable Input<String> lastModificationTime) {
             this.lastModificationTime = lastModificationTime;
             return this;
         }
 
-        public Builder setLastModificationTime(@Nullable String lastModificationTime) {
+        public Builder lastModificationTime(@Nullable String lastModificationTime) {
             this.lastModificationTime = Input.ofNullable(lastModificationTime);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSchedule(@Nullable Input<TransferJobScheduleGetArgs> schedule) {
+        public Builder schedule(@Nullable Input<TransferJobScheduleGetArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setSchedule(@Nullable TransferJobScheduleGetArgs schedule) {
+        public Builder schedule(@Nullable TransferJobScheduleGetArgs schedule) {
             this.schedule = Input.ofNullable(schedule);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setTransferSpec(@Nullable Input<TransferJobTransferSpecGetArgs> transferSpec) {
+        public Builder transferSpec(@Nullable Input<TransferJobTransferSpecGetArgs> transferSpec) {
             this.transferSpec = transferSpec;
             return this;
         }
 
-        public Builder setTransferSpec(@Nullable TransferJobTransferSpecGetArgs transferSpec) {
+        public Builder transferSpec(@Nullable TransferJobTransferSpecGetArgs transferSpec) {
             this.transferSpec = Input.ofNullable(transferSpec);
             return this;
         }

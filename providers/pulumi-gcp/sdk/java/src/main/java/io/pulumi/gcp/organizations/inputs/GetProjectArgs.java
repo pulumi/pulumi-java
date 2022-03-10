@@ -53,7 +53,7 @@ public final class GetProjectArgs extends io.pulumi.resources.InvokeArgs {
     	      this.projectId = defaults.projectId;
         }
 
-        public Builder setProjectId(@Nullable String projectId) {
+        public Builder projectId(@Nullable String projectId) {
             this.projectId = projectId;
             return this;
         }

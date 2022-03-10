@@ -73,22 +73,22 @@ public final class DefaultObjectACLState extends io.pulumi.resources.ResourceArg
     	      this.roleEntities = defaults.roleEntities;
         }
 
-        public Builder setBucket(@Nullable Input<String> bucket) {
+        public Builder bucket(@Nullable Input<String> bucket) {
             this.bucket = bucket;
             return this;
         }
 
-        public Builder setBucket(@Nullable String bucket) {
+        public Builder bucket(@Nullable String bucket) {
             this.bucket = Input.ofNullable(bucket);
             return this;
         }
 
-        public Builder setRoleEntities(@Nullable Input<List<String>> roleEntities) {
+        public Builder roleEntities(@Nullable Input<List<String>> roleEntities) {
             this.roleEntities = roleEntities;
             return this;
         }
 
-        public Builder setRoleEntities(@Nullable List<String> roleEntities) {
+        public Builder roleEntities(@Nullable List<String> roleEntities) {
             this.roleEntities = Input.ofNullable(roleEntities);
             return this;
         }

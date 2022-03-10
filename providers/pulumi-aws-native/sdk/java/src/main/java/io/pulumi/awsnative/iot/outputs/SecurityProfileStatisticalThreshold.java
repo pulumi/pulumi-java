@@ -50,7 +50,7 @@ public final class SecurityProfileStatisticalThreshold {
     	      this.statistic = defaults.statistic;
         }
 
-        public Builder setStatistic(@Nullable SecurityProfileStatisticalThresholdStatistic statistic) {
+        public Builder statistic(@Nullable SecurityProfileStatisticalThresholdStatistic statistic) {
             this.statistic = statistic;
             return this;
         }

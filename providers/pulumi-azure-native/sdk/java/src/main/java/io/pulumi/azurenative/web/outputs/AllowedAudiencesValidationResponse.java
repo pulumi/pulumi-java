@@ -50,7 +50,7 @@ public final class AllowedAudiencesValidationResponse {
     	      this.allowedAudiences = defaults.allowedAudiences;
         }
 
-        public Builder setAllowedAudiences(@Nullable List<String> allowedAudiences) {
+        public Builder allowedAudiences(@Nullable List<String> allowedAudiences) {
             this.allowedAudiences = allowedAudiences;
             return this;
         }

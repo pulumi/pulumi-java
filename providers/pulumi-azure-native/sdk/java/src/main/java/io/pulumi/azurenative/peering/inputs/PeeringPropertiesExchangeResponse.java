@@ -76,12 +76,12 @@ public final class PeeringPropertiesExchangeResponse extends io.pulumi.resources
     	      this.peerAsn = defaults.peerAsn;
         }
 
-        public Builder setConnections(@Nullable List<ExchangeConnectionResponse> connections) {
+        public Builder connections(@Nullable List<ExchangeConnectionResponse> connections) {
             this.connections = connections;
             return this;
         }
 
-        public Builder setPeerAsn(@Nullable SubResourceResponse peerAsn) {
+        public Builder peerAsn(@Nullable SubResourceResponse peerAsn) {
             this.peerAsn = peerAsn;
             return this;
         }

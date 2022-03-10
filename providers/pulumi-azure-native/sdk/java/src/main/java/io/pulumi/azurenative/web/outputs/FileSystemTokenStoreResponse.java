@@ -50,7 +50,7 @@ public final class FileSystemTokenStoreResponse {
     	      this.directory = defaults.directory;
         }
 
-        public Builder setDirectory(@Nullable String directory) {
+        public Builder directory(@Nullable String directory) {
             this.directory = directory;
             return this;
         }

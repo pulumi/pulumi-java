@@ -84,17 +84,17 @@ public final class EnumValueResponse {
     	      this.options = defaults.options;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNumber(Integer number) {
+        public Builder number(Integer number) {
             this.number = Objects.requireNonNull(number);
             return this;
         }
 
-        public Builder setOptions(List<OptionResponse> options) {
+        public Builder options(List<OptionResponse> options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }

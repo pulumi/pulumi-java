@@ -275,132 +275,132 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setApiVersion(@Nullable Input<String> apiVersion) {
+        public Builder apiVersion(@Nullable Input<String> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Input.ofNullable(apiVersion);
             return this;
         }
 
-        public Builder setAvatarUri(@Nullable Input<String> avatarUri) {
+        public Builder avatarUri(@Nullable Input<String> avatarUri) {
             this.avatarUri = avatarUri;
             return this;
         }
 
-        public Builder setAvatarUri(@Nullable String avatarUri) {
+        public Builder avatarUri(@Nullable String avatarUri) {
             this.avatarUri = Input.ofNullable(avatarUri);
             return this;
         }
 
-        public Builder setAvatarUriBackend(@Nullable Input<String> avatarUriBackend) {
+        public Builder avatarUriBackend(@Nullable Input<String> avatarUriBackend) {
             this.avatarUriBackend = avatarUriBackend;
             return this;
         }
 
-        public Builder setAvatarUriBackend(@Nullable String avatarUriBackend) {
+        public Builder avatarUriBackend(@Nullable String avatarUriBackend) {
             this.avatarUriBackend = Input.ofNullable(avatarUriBackend);
             return this;
         }
 
-        public Builder setClassificationThreshold(@Nullable Input<Double> classificationThreshold) {
+        public Builder classificationThreshold(@Nullable Input<Double> classificationThreshold) {
             this.classificationThreshold = classificationThreshold;
             return this;
         }
 
-        public Builder setClassificationThreshold(@Nullable Double classificationThreshold) {
+        public Builder classificationThreshold(@Nullable Double classificationThreshold) {
             this.classificationThreshold = Input.ofNullable(classificationThreshold);
             return this;
         }
 
-        public Builder setDefaultLanguageCode(@Nullable Input<String> defaultLanguageCode) {
+        public Builder defaultLanguageCode(@Nullable Input<String> defaultLanguageCode) {
             this.defaultLanguageCode = defaultLanguageCode;
             return this;
         }
 
-        public Builder setDefaultLanguageCode(@Nullable String defaultLanguageCode) {
+        public Builder defaultLanguageCode(@Nullable String defaultLanguageCode) {
             this.defaultLanguageCode = Input.ofNullable(defaultLanguageCode);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setEnableLogging(@Nullable Input<Boolean> enableLogging) {
+        public Builder enableLogging(@Nullable Input<Boolean> enableLogging) {
             this.enableLogging = enableLogging;
             return this;
         }
 
-        public Builder setEnableLogging(@Nullable Boolean enableLogging) {
+        public Builder enableLogging(@Nullable Boolean enableLogging) {
             this.enableLogging = Input.ofNullable(enableLogging);
             return this;
         }
 
-        public Builder setMatchMode(@Nullable Input<String> matchMode) {
+        public Builder matchMode(@Nullable Input<String> matchMode) {
             this.matchMode = matchMode;
             return this;
         }
 
-        public Builder setMatchMode(@Nullable String matchMode) {
+        public Builder matchMode(@Nullable String matchMode) {
             this.matchMode = Input.ofNullable(matchMode);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSupportedLanguageCodes(@Nullable Input<List<String>> supportedLanguageCodes) {
+        public Builder supportedLanguageCodes(@Nullable Input<List<String>> supportedLanguageCodes) {
             this.supportedLanguageCodes = supportedLanguageCodes;
             return this;
         }
 
-        public Builder setSupportedLanguageCodes(@Nullable List<String> supportedLanguageCodes) {
+        public Builder supportedLanguageCodes(@Nullable List<String> supportedLanguageCodes) {
             this.supportedLanguageCodes = Input.ofNullable(supportedLanguageCodes);
             return this;
         }
 
-        public Builder setTier(@Nullable Input<String> tier) {
+        public Builder tier(@Nullable Input<String> tier) {
             this.tier = tier;
             return this;
         }
 
-        public Builder setTier(@Nullable String tier) {
+        public Builder tier(@Nullable String tier) {
             this.tier = Input.ofNullable(tier);
             return this;
         }
 
-        public Builder setTimeZone(@Nullable Input<String> timeZone) {
+        public Builder timeZone(@Nullable Input<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Input.ofNullable(timeZone);
             return this;
         }

@@ -75,32 +75,32 @@ public final class ServiceTaskSpecResourcesReservationArgs extends io.pulumi.res
     	      this.nanoCpus = defaults.nanoCpus;
         }
 
-        public Builder setGenericResources(@Nullable Input<ServiceTaskSpecResourcesReservationGenericResourcesArgs> genericResources) {
+        public Builder genericResources(@Nullable Input<ServiceTaskSpecResourcesReservationGenericResourcesArgs> genericResources) {
             this.genericResources = genericResources;
             return this;
         }
 
-        public Builder setGenericResources(@Nullable ServiceTaskSpecResourcesReservationGenericResourcesArgs genericResources) {
+        public Builder genericResources(@Nullable ServiceTaskSpecResourcesReservationGenericResourcesArgs genericResources) {
             this.genericResources = Input.ofNullable(genericResources);
             return this;
         }
 
-        public Builder setMemoryBytes(@Nullable Input<Integer> memoryBytes) {
+        public Builder memoryBytes(@Nullable Input<Integer> memoryBytes) {
             this.memoryBytes = memoryBytes;
             return this;
         }
 
-        public Builder setMemoryBytes(@Nullable Integer memoryBytes) {
+        public Builder memoryBytes(@Nullable Integer memoryBytes) {
             this.memoryBytes = Input.ofNullable(memoryBytes);
             return this;
         }
 
-        public Builder setNanoCpus(@Nullable Input<Integer> nanoCpus) {
+        public Builder nanoCpus(@Nullable Input<Integer> nanoCpus) {
             this.nanoCpus = nanoCpus;
             return this;
         }
 
-        public Builder setNanoCpus(@Nullable Integer nanoCpus) {
+        public Builder nanoCpus(@Nullable Integer nanoCpus) {
             this.nanoCpus = Input.ofNullable(nanoCpus);
             return this;
         }

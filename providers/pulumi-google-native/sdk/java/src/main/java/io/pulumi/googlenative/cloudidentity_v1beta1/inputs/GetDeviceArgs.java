@@ -47,7 +47,7 @@ public final class GetDeviceArgs extends io.pulumi.resources.InvokeArgs {
     	      this.deviceId = defaults.deviceId;
         }
 
-        public Builder setDeviceId(String deviceId) {
+        public Builder deviceId(String deviceId) {
             this.deviceId = Objects.requireNonNull(deviceId);
             return this;
         }

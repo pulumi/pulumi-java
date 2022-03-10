@@ -75,22 +75,22 @@ public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs
     	      this.trainingStep = defaults.trainingStep;
         }
 
-        public Builder setObjectiveValue(@Nullable Input<Double> objectiveValue) {
+        public Builder objectiveValue(@Nullable Input<Double> objectiveValue) {
             this.objectiveValue = objectiveValue;
             return this;
         }
 
-        public Builder setObjectiveValue(@Nullable Double objectiveValue) {
+        public Builder objectiveValue(@Nullable Double objectiveValue) {
             this.objectiveValue = Input.ofNullable(objectiveValue);
             return this;
         }
 
-        public Builder setTrainingStep(@Nullable Input<String> trainingStep) {
+        public Builder trainingStep(@Nullable Input<String> trainingStep) {
             this.trainingStep = trainingStep;
             return this;
         }
 
-        public Builder setTrainingStep(@Nullable String trainingStep) {
+        public Builder trainingStep(@Nullable String trainingStep) {
             this.trainingStep = Input.ofNullable(trainingStep);
             return this;
         }

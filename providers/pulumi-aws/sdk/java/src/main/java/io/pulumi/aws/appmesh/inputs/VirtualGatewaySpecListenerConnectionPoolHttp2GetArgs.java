@@ -52,12 +52,12 @@ public final class VirtualGatewaySpecListenerConnectionPoolHttp2GetArgs extends 
     	      this.maxRequests = defaults.maxRequests;
         }
 
-        public Builder setMaxRequests(Input<Integer> maxRequests) {
+        public Builder maxRequests(Input<Integer> maxRequests) {
             this.maxRequests = Objects.requireNonNull(maxRequests);
             return this;
         }
 
-        public Builder setMaxRequests(Integer maxRequests) {
+        public Builder maxRequests(Integer maxRequests) {
             this.maxRequests = Input.of(Objects.requireNonNull(maxRequests));
             return this;
         }

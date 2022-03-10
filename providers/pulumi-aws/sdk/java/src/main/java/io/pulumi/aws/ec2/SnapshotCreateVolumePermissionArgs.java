@@ -69,22 +69,22 @@ public final class SnapshotCreateVolumePermissionArgs extends io.pulumi.resource
     	      this.snapshotId = defaults.snapshotId;
         }
 
-        public Builder setAccountId(Input<String> accountId) {
+        public Builder accountId(Input<String> accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
 
-        public Builder setAccountId(String accountId) {
+        public Builder accountId(String accountId) {
             this.accountId = Input.of(Objects.requireNonNull(accountId));
             return this;
         }
 
-        public Builder setSnapshotId(Input<String> snapshotId) {
+        public Builder snapshotId(Input<String> snapshotId) {
             this.snapshotId = Objects.requireNonNull(snapshotId);
             return this;
         }
 
-        public Builder setSnapshotId(String snapshotId) {
+        public Builder snapshotId(String snapshotId) {
             this.snapshotId = Input.of(Objects.requireNonNull(snapshotId));
             return this;
         }

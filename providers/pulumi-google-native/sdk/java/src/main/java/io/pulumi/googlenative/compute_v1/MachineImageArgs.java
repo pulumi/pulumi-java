@@ -195,102 +195,102 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.storageLocations = defaults.storageLocations;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setGuestFlush(@Nullable Input<Boolean> guestFlush) {
+        public Builder guestFlush(@Nullable Input<Boolean> guestFlush) {
             this.guestFlush = guestFlush;
             return this;
         }
 
-        public Builder setGuestFlush(@Nullable Boolean guestFlush) {
+        public Builder guestFlush(@Nullable Boolean guestFlush) {
             this.guestFlush = Input.ofNullable(guestFlush);
             return this;
         }
 
-        public Builder setMachineImageEncryptionKey(@Nullable Input<CustomerEncryptionKeyArgs> machineImageEncryptionKey) {
+        public Builder machineImageEncryptionKey(@Nullable Input<CustomerEncryptionKeyArgs> machineImageEncryptionKey) {
             this.machineImageEncryptionKey = machineImageEncryptionKey;
             return this;
         }
 
-        public Builder setMachineImageEncryptionKey(@Nullable CustomerEncryptionKeyArgs machineImageEncryptionKey) {
+        public Builder machineImageEncryptionKey(@Nullable CustomerEncryptionKeyArgs machineImageEncryptionKey) {
             this.machineImageEncryptionKey = Input.ofNullable(machineImageEncryptionKey);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setSavedDisks(@Nullable Input<List<SavedDiskArgs>> savedDisks) {
+        public Builder savedDisks(@Nullable Input<List<SavedDiskArgs>> savedDisks) {
             this.savedDisks = savedDisks;
             return this;
         }
 
-        public Builder setSavedDisks(@Nullable List<SavedDiskArgs> savedDisks) {
+        public Builder savedDisks(@Nullable List<SavedDiskArgs> savedDisks) {
             this.savedDisks = Input.ofNullable(savedDisks);
             return this;
         }
 
-        public Builder setSourceDiskEncryptionKeys(@Nullable Input<List<SourceDiskEncryptionKeyArgs>> sourceDiskEncryptionKeys) {
+        public Builder sourceDiskEncryptionKeys(@Nullable Input<List<SourceDiskEncryptionKeyArgs>> sourceDiskEncryptionKeys) {
             this.sourceDiskEncryptionKeys = sourceDiskEncryptionKeys;
             return this;
         }
 
-        public Builder setSourceDiskEncryptionKeys(@Nullable List<SourceDiskEncryptionKeyArgs> sourceDiskEncryptionKeys) {
+        public Builder sourceDiskEncryptionKeys(@Nullable List<SourceDiskEncryptionKeyArgs> sourceDiskEncryptionKeys) {
             this.sourceDiskEncryptionKeys = Input.ofNullable(sourceDiskEncryptionKeys);
             return this;
         }
 
-        public Builder setSourceInstance(Input<String> sourceInstance) {
+        public Builder sourceInstance(Input<String> sourceInstance) {
             this.sourceInstance = Objects.requireNonNull(sourceInstance);
             return this;
         }
 
-        public Builder setSourceInstance(String sourceInstance) {
+        public Builder sourceInstance(String sourceInstance) {
             this.sourceInstance = Input.of(Objects.requireNonNull(sourceInstance));
             return this;
         }
 
-        public Builder setStorageLocations(@Nullable Input<List<String>> storageLocations) {
+        public Builder storageLocations(@Nullable Input<List<String>> storageLocations) {
             this.storageLocations = storageLocations;
             return this;
         }
 
-        public Builder setStorageLocations(@Nullable List<String> storageLocations) {
+        public Builder storageLocations(@Nullable List<String> storageLocations) {
             this.storageLocations = Input.ofNullable(storageLocations);
             return this;
         }

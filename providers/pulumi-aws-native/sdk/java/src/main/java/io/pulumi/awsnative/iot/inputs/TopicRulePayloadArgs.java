@@ -113,62 +113,62 @@ public final class TopicRulePayloadArgs extends io.pulumi.resources.ResourceArgs
     	      this.sql = defaults.sql;
         }
 
-        public Builder setActions(Input<List<TopicRuleActionArgs>> actions) {
+        public Builder actions(Input<List<TopicRuleActionArgs>> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
-        public Builder setActions(List<TopicRuleActionArgs> actions) {
+        public Builder actions(List<TopicRuleActionArgs> actions) {
             this.actions = Input.of(Objects.requireNonNull(actions));
             return this;
         }
 
-        public Builder setAwsIotSqlVersion(@Nullable Input<String> awsIotSqlVersion) {
+        public Builder awsIotSqlVersion(@Nullable Input<String> awsIotSqlVersion) {
             this.awsIotSqlVersion = awsIotSqlVersion;
             return this;
         }
 
-        public Builder setAwsIotSqlVersion(@Nullable String awsIotSqlVersion) {
+        public Builder awsIotSqlVersion(@Nullable String awsIotSqlVersion) {
             this.awsIotSqlVersion = Input.ofNullable(awsIotSqlVersion);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setErrorAction(@Nullable Input<TopicRuleActionArgs> errorAction) {
+        public Builder errorAction(@Nullable Input<TopicRuleActionArgs> errorAction) {
             this.errorAction = errorAction;
             return this;
         }
 
-        public Builder setErrorAction(@Nullable TopicRuleActionArgs errorAction) {
+        public Builder errorAction(@Nullable TopicRuleActionArgs errorAction) {
             this.errorAction = Input.ofNullable(errorAction);
             return this;
         }
 
-        public Builder setRuleDisabled(@Nullable Input<Boolean> ruleDisabled) {
+        public Builder ruleDisabled(@Nullable Input<Boolean> ruleDisabled) {
             this.ruleDisabled = ruleDisabled;
             return this;
         }
 
-        public Builder setRuleDisabled(@Nullable Boolean ruleDisabled) {
+        public Builder ruleDisabled(@Nullable Boolean ruleDisabled) {
             this.ruleDisabled = Input.ofNullable(ruleDisabled);
             return this;
         }
 
-        public Builder setSql(Input<String> sql) {
+        public Builder sql(Input<String> sql) {
             this.sql = Objects.requireNonNull(sql);
             return this;
         }
 
-        public Builder setSql(String sql) {
+        public Builder sql(String sql) {
             this.sql = Input.of(Objects.requireNonNull(sql));
             return this;
         }

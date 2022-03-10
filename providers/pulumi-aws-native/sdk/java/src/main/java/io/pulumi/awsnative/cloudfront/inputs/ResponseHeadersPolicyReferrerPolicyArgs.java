@@ -62,22 +62,22 @@ public final class ResponseHeadersPolicyReferrerPolicyArgs extends io.pulumi.res
     	      this.referrerPolicy = defaults.referrerPolicy;
         }
 
-        public Builder setOverride(Input<Boolean> override) {
+        public Builder override(Input<Boolean> override) {
             this.override = Objects.requireNonNull(override);
             return this;
         }
 
-        public Builder setOverride(Boolean override) {
+        public Builder override(Boolean override) {
             this.override = Input.of(Objects.requireNonNull(override));
             return this;
         }
 
-        public Builder setReferrerPolicy(Input<String> referrerPolicy) {
+        public Builder referrerPolicy(Input<String> referrerPolicy) {
             this.referrerPolicy = Objects.requireNonNull(referrerPolicy);
             return this;
         }
 
-        public Builder setReferrerPolicy(String referrerPolicy) {
+        public Builder referrerPolicy(String referrerPolicy) {
             this.referrerPolicy = Input.of(Objects.requireNonNull(referrerPolicy));
             return this;
         }

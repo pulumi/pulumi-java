@@ -75,12 +75,12 @@ public final class ComputeBindingResponse extends io.pulumi.resources.InvokeArgs
     	      this.nodeCount = defaults.nodeCount;
         }
 
-        public Builder setComputeId(@Nullable String computeId) {
+        public Builder computeId(@Nullable String computeId) {
             this.computeId = computeId;
             return this;
         }
 
-        public Builder setNodeCount(@Nullable Integer nodeCount) {
+        public Builder nodeCount(@Nullable Integer nodeCount) {
             this.nodeCount = nodeCount;
             return this;
         }

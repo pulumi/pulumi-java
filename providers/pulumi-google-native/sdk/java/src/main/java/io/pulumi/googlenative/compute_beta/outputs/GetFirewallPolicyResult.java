@@ -229,62 +229,62 @@ public final class GetFirewallPolicyResult {
     	      this.shortName = defaults.shortName;
         }
 
-        public Builder setAssociations(List<FirewallPolicyAssociationResponse> associations) {
+        public Builder associations(List<FirewallPolicyAssociationResponse> associations) {
             this.associations = Objects.requireNonNull(associations);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setFingerprint(String fingerprint) {
+        public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParent(String parent) {
+        public Builder parent(String parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
-        public Builder setRuleTupleCount(Integer ruleTupleCount) {
+        public Builder ruleTupleCount(Integer ruleTupleCount) {
             this.ruleTupleCount = Objects.requireNonNull(ruleTupleCount);
             return this;
         }
 
-        public Builder setRules(List<FirewallPolicyRuleResponse> rules) {
+        public Builder rules(List<FirewallPolicyRuleResponse> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSelfLinkWithId(String selfLinkWithId) {
+        public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
 
-        public Builder setShortName(String shortName) {
+        public Builder shortName(String shortName) {
             this.shortName = Objects.requireNonNull(shortName);
             return this;
         }

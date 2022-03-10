@@ -66,22 +66,22 @@ public final class ModelQualityJobDefinitionModelQualityJobInputArgs extends io.
     	      this.groundTruthS3Input = defaults.groundTruthS3Input;
         }
 
-        public Builder setEndpointInput(Input<ModelQualityJobDefinitionEndpointInputArgs> endpointInput) {
+        public Builder endpointInput(Input<ModelQualityJobDefinitionEndpointInputArgs> endpointInput) {
             this.endpointInput = Objects.requireNonNull(endpointInput);
             return this;
         }
 
-        public Builder setEndpointInput(ModelQualityJobDefinitionEndpointInputArgs endpointInput) {
+        public Builder endpointInput(ModelQualityJobDefinitionEndpointInputArgs endpointInput) {
             this.endpointInput = Input.of(Objects.requireNonNull(endpointInput));
             return this;
         }
 
-        public Builder setGroundTruthS3Input(Input<ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs> groundTruthS3Input) {
+        public Builder groundTruthS3Input(Input<ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs> groundTruthS3Input) {
             this.groundTruthS3Input = Objects.requireNonNull(groundTruthS3Input);
             return this;
         }
 
-        public Builder setGroundTruthS3Input(ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs groundTruthS3Input) {
+        public Builder groundTruthS3Input(ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs groundTruthS3Input) {
             this.groundTruthS3Input = Input.of(Objects.requireNonNull(groundTruthS3Input));
             return this;
         }

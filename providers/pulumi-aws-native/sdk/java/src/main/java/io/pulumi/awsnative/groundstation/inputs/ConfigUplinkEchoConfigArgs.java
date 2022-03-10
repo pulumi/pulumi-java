@@ -63,22 +63,22 @@ public final class ConfigUplinkEchoConfigArgs extends io.pulumi.resources.Resour
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setAntennaUplinkConfigArn(@Nullable Input<String> antennaUplinkConfigArn) {
+        public Builder antennaUplinkConfigArn(@Nullable Input<String> antennaUplinkConfigArn) {
             this.antennaUplinkConfigArn = antennaUplinkConfigArn;
             return this;
         }
 
-        public Builder setAntennaUplinkConfigArn(@Nullable String antennaUplinkConfigArn) {
+        public Builder antennaUplinkConfigArn(@Nullable String antennaUplinkConfigArn) {
             this.antennaUplinkConfigArn = Input.ofNullable(antennaUplinkConfigArn);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }

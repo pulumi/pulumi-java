@@ -75,32 +75,32 @@ public final class InAppTemplateHeaderConfigArgs extends io.pulumi.resources.Res
     	      this.textColor = defaults.textColor;
         }
 
-        public Builder setAlignment(@Nullable Input<InAppTemplateAlignment> alignment) {
+        public Builder alignment(@Nullable Input<InAppTemplateAlignment> alignment) {
             this.alignment = alignment;
             return this;
         }
 
-        public Builder setAlignment(@Nullable InAppTemplateAlignment alignment) {
+        public Builder alignment(@Nullable InAppTemplateAlignment alignment) {
             this.alignment = Input.ofNullable(alignment);
             return this;
         }
 
-        public Builder setHeader(@Nullable Input<String> header) {
+        public Builder header(@Nullable Input<String> header) {
             this.header = header;
             return this;
         }
 
-        public Builder setHeader(@Nullable String header) {
+        public Builder header(@Nullable String header) {
             this.header = Input.ofNullable(header);
             return this;
         }
 
-        public Builder setTextColor(@Nullable Input<String> textColor) {
+        public Builder textColor(@Nullable Input<String> textColor) {
             this.textColor = textColor;
             return this;
         }
 
-        public Builder setTextColor(@Nullable String textColor) {
+        public Builder textColor(@Nullable String textColor) {
             this.textColor = Input.ofNullable(textColor);
             return this;
         }

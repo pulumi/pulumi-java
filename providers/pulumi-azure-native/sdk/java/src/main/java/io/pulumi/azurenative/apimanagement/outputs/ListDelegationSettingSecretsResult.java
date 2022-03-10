@@ -50,7 +50,7 @@ public final class ListDelegationSettingSecretsResult {
     	      this.validationKey = defaults.validationKey;
         }
 
-        public Builder setValidationKey(@Nullable String validationKey) {
+        public Builder validationKey(@Nullable String validationKey) {
             this.validationKey = validationKey;
             return this;
         }

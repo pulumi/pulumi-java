@@ -177,37 +177,37 @@ public final class WebAclLoggingConfigurationRedactedField {
     	      this.uriPath = defaults.uriPath;
         }
 
-        public Builder setAllQueryArguments(@Nullable WebAclLoggingConfigurationRedactedFieldAllQueryArguments allQueryArguments) {
+        public Builder allQueryArguments(@Nullable WebAclLoggingConfigurationRedactedFieldAllQueryArguments allQueryArguments) {
             this.allQueryArguments = allQueryArguments;
             return this;
         }
 
-        public Builder setBody(@Nullable WebAclLoggingConfigurationRedactedFieldBody body) {
+        public Builder body(@Nullable WebAclLoggingConfigurationRedactedFieldBody body) {
             this.body = body;
             return this;
         }
 
-        public Builder setMethod(@Nullable WebAclLoggingConfigurationRedactedFieldMethod method) {
+        public Builder method(@Nullable WebAclLoggingConfigurationRedactedFieldMethod method) {
             this.method = method;
             return this;
         }
 
-        public Builder setQueryString(@Nullable WebAclLoggingConfigurationRedactedFieldQueryString queryString) {
+        public Builder queryString(@Nullable WebAclLoggingConfigurationRedactedFieldQueryString queryString) {
             this.queryString = queryString;
             return this;
         }
 
-        public Builder setSingleHeader(@Nullable WebAclLoggingConfigurationRedactedFieldSingleHeader singleHeader) {
+        public Builder singleHeader(@Nullable WebAclLoggingConfigurationRedactedFieldSingleHeader singleHeader) {
             this.singleHeader = singleHeader;
             return this;
         }
 
-        public Builder setSingleQueryArgument(@Nullable WebAclLoggingConfigurationRedactedFieldSingleQueryArgument singleQueryArgument) {
+        public Builder singleQueryArgument(@Nullable WebAclLoggingConfigurationRedactedFieldSingleQueryArgument singleQueryArgument) {
             this.singleQueryArgument = singleQueryArgument;
             return this;
         }
 
-        public Builder setUriPath(@Nullable WebAclLoggingConfigurationRedactedFieldUriPath uriPath) {
+        public Builder uriPath(@Nullable WebAclLoggingConfigurationRedactedFieldUriPath uriPath) {
             this.uriPath = uriPath;
             return this;
         }

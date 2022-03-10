@@ -76,12 +76,12 @@ public final class CriteriaResponse extends io.pulumi.resources.InvokeArgs {
     	      this.metricName = defaults.metricName;
         }
 
-        public Builder setDimensions(@Nullable List<DimensionResponse> dimensions) {
+        public Builder dimensions(@Nullable List<DimensionResponse> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }

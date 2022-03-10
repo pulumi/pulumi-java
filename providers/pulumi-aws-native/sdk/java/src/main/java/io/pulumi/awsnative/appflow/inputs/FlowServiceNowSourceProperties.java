@@ -47,7 +47,7 @@ public final class FlowServiceNowSourceProperties extends io.pulumi.resources.In
     	      this.object = defaults.object;
         }
 
-        public Builder setObject(String object) {
+        public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }

@@ -107,42 +107,42 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     	      this.postalAddress = defaults.postalAddress;
         }
 
-        public Builder setEmail(Input<String> email) {
+        public Builder email(Input<String> email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Input.of(Objects.requireNonNull(email));
             return this;
         }
 
-        public Builder setFaxNumber(@Nullable Input<String> faxNumber) {
+        public Builder faxNumber(@Nullable Input<String> faxNumber) {
             this.faxNumber = faxNumber;
             return this;
         }
 
-        public Builder setFaxNumber(@Nullable String faxNumber) {
+        public Builder faxNumber(@Nullable String faxNumber) {
             this.faxNumber = Input.ofNullable(faxNumber);
             return this;
         }
 
-        public Builder setPhoneNumber(Input<String> phoneNumber) {
+        public Builder phoneNumber(Input<String> phoneNumber) {
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
         }
 
-        public Builder setPhoneNumber(String phoneNumber) {
+        public Builder phoneNumber(String phoneNumber) {
             this.phoneNumber = Input.of(Objects.requireNonNull(phoneNumber));
             return this;
         }
 
-        public Builder setPostalAddress(Input<PostalAddressArgs> postalAddress) {
+        public Builder postalAddress(Input<PostalAddressArgs> postalAddress) {
             this.postalAddress = Objects.requireNonNull(postalAddress);
             return this;
         }
 
-        public Builder setPostalAddress(PostalAddressArgs postalAddress) {
+        public Builder postalAddress(PostalAddressArgs postalAddress) {
             this.postalAddress = Input.of(Objects.requireNonNull(postalAddress));
             return this;
         }

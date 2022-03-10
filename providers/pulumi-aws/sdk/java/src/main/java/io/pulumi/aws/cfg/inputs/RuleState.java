@@ -201,102 +201,102 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setInputParameters(@Nullable Input<String> inputParameters) {
+        public Builder inputParameters(@Nullable Input<String> inputParameters) {
             this.inputParameters = inputParameters;
             return this;
         }
 
-        public Builder setInputParameters(@Nullable String inputParameters) {
+        public Builder inputParameters(@Nullable String inputParameters) {
             this.inputParameters = Input.ofNullable(inputParameters);
             return this;
         }
 
-        public Builder setMaximumExecutionFrequency(@Nullable Input<String> maximumExecutionFrequency) {
+        public Builder maximumExecutionFrequency(@Nullable Input<String> maximumExecutionFrequency) {
             this.maximumExecutionFrequency = maximumExecutionFrequency;
             return this;
         }
 
-        public Builder setMaximumExecutionFrequency(@Nullable String maximumExecutionFrequency) {
+        public Builder maximumExecutionFrequency(@Nullable String maximumExecutionFrequency) {
             this.maximumExecutionFrequency = Input.ofNullable(maximumExecutionFrequency);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRuleId(@Nullable Input<String> ruleId) {
+        public Builder ruleId(@Nullable Input<String> ruleId) {
             this.ruleId = ruleId;
             return this;
         }
 
-        public Builder setRuleId(@Nullable String ruleId) {
+        public Builder ruleId(@Nullable String ruleId) {
             this.ruleId = Input.ofNullable(ruleId);
             return this;
         }
 
-        public Builder setScope(@Nullable Input<RuleScopeGetArgs> scope) {
+        public Builder scope(@Nullable Input<RuleScopeGetArgs> scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setScope(@Nullable RuleScopeGetArgs scope) {
+        public Builder scope(@Nullable RuleScopeGetArgs scope) {
             this.scope = Input.ofNullable(scope);
             return this;
         }
 
-        public Builder setSource(@Nullable Input<RuleSourceGetArgs> source) {
+        public Builder source(@Nullable Input<RuleSourceGetArgs> source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSource(@Nullable RuleSourceGetArgs source) {
+        public Builder source(@Nullable RuleSourceGetArgs source) {
             this.source = Input.ofNullable(source);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

@@ -91,32 +91,32 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityAppSpecifi
     	      this.imageUri = defaults.imageUri;
         }
 
-        public Builder setConfigUri(Input<String> configUri) {
+        public Builder configUri(Input<String> configUri) {
             this.configUri = Objects.requireNonNull(configUri);
             return this;
         }
 
-        public Builder setConfigUri(String configUri) {
+        public Builder configUri(String configUri) {
             this.configUri = Input.of(Objects.requireNonNull(configUri));
             return this;
         }
 
-        public Builder setEnvironment(@Nullable Input<Object> environment) {
+        public Builder environment(@Nullable Input<Object> environment) {
             this.environment = environment;
             return this;
         }
 
-        public Builder setEnvironment(@Nullable Object environment) {
+        public Builder environment(@Nullable Object environment) {
             this.environment = Input.ofNullable(environment);
             return this;
         }
 
-        public Builder setImageUri(Input<String> imageUri) {
+        public Builder imageUri(Input<String> imageUri) {
             this.imageUri = Objects.requireNonNull(imageUri);
             return this;
         }
 
-        public Builder setImageUri(String imageUri) {
+        public Builder imageUri(String imageUri) {
             this.imageUri = Input.of(Objects.requireNonNull(imageUri));
             return this;
         }

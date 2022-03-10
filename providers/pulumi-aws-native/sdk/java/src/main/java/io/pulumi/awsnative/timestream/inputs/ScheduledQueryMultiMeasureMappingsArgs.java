@@ -68,22 +68,22 @@ public final class ScheduledQueryMultiMeasureMappingsArgs extends io.pulumi.reso
     	      this.targetMultiMeasureName = defaults.targetMultiMeasureName;
         }
 
-        public Builder setMultiMeasureAttributeMappings(Input<List<ScheduledQueryMultiMeasureAttributeMappingArgs>> multiMeasureAttributeMappings) {
+        public Builder multiMeasureAttributeMappings(Input<List<ScheduledQueryMultiMeasureAttributeMappingArgs>> multiMeasureAttributeMappings) {
             this.multiMeasureAttributeMappings = Objects.requireNonNull(multiMeasureAttributeMappings);
             return this;
         }
 
-        public Builder setMultiMeasureAttributeMappings(List<ScheduledQueryMultiMeasureAttributeMappingArgs> multiMeasureAttributeMappings) {
+        public Builder multiMeasureAttributeMappings(List<ScheduledQueryMultiMeasureAttributeMappingArgs> multiMeasureAttributeMappings) {
             this.multiMeasureAttributeMappings = Input.of(Objects.requireNonNull(multiMeasureAttributeMappings));
             return this;
         }
 
-        public Builder setTargetMultiMeasureName(@Nullable Input<String> targetMultiMeasureName) {
+        public Builder targetMultiMeasureName(@Nullable Input<String> targetMultiMeasureName) {
             this.targetMultiMeasureName = targetMultiMeasureName;
             return this;
         }
 
-        public Builder setTargetMultiMeasureName(@Nullable String targetMultiMeasureName) {
+        public Builder targetMultiMeasureName(@Nullable String targetMultiMeasureName) {
             this.targetMultiMeasureName = Input.ofNullable(targetMultiMeasureName);
             return this;
         }

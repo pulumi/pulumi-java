@@ -90,17 +90,17 @@ public final class WorkloadsConfigResponse extends io.pulumi.resources.InvokeArg
     	      this.worker = defaults.worker;
         }
 
-        public Builder setScheduler(SchedulerResourceResponse scheduler) {
+        public Builder scheduler(SchedulerResourceResponse scheduler) {
             this.scheduler = Objects.requireNonNull(scheduler);
             return this;
         }
 
-        public Builder setWebServer(WebServerResourceResponse webServer) {
+        public Builder webServer(WebServerResourceResponse webServer) {
             this.webServer = Objects.requireNonNull(webServer);
             return this;
         }
 
-        public Builder setWorker(WorkerResourceResponse worker) {
+        public Builder worker(WorkerResourceResponse worker) {
             this.worker = Objects.requireNonNull(worker);
             return this;
         }

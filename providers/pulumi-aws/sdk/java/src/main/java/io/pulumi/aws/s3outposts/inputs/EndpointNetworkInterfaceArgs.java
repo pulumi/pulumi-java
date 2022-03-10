@@ -53,12 +53,12 @@ public final class EndpointNetworkInterfaceArgs extends io.pulumi.resources.Reso
     	      this.networkInterfaceId = defaults.networkInterfaceId;
         }
 
-        public Builder setNetworkInterfaceId(@Nullable Input<String> networkInterfaceId) {
+        public Builder networkInterfaceId(@Nullable Input<String> networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
-        public Builder setNetworkInterfaceId(@Nullable String networkInterfaceId) {
+        public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
             this.networkInterfaceId = Input.ofNullable(networkInterfaceId);
             return this;
         }

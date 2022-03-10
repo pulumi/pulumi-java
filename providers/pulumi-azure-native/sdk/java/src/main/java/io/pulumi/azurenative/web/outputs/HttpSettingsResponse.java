@@ -85,17 +85,17 @@ public final class HttpSettingsResponse {
     	      this.routes = defaults.routes;
         }
 
-        public Builder setForwardProxy(@Nullable ForwardProxyResponse forwardProxy) {
+        public Builder forwardProxy(@Nullable ForwardProxyResponse forwardProxy) {
             this.forwardProxy = forwardProxy;
             return this;
         }
 
-        public Builder setRequireHttps(@Nullable Boolean requireHttps) {
+        public Builder requireHttps(@Nullable Boolean requireHttps) {
             this.requireHttps = requireHttps;
             return this;
         }
 
-        public Builder setRoutes(@Nullable HttpSettingsRoutesResponse routes) {
+        public Builder routes(@Nullable HttpSettingsRoutesResponse routes) {
             this.routes = routes;
             return this;
         }

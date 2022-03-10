@@ -65,12 +65,12 @@ public final class VMInfoResponse {
     	      this.uuid = defaults.uuid;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setUuid(String uuid) {
+        public Builder uuid(String uuid) {
             this.uuid = Objects.requireNonNull(uuid);
             return this;
         }

@@ -82,32 +82,32 @@ public final class NFSMountConfigurationArgs extends io.pulumi.resources.Resourc
     	      this.source = defaults.source;
         }
 
-        public Builder setMountOptions(@Nullable Input<String> mountOptions) {
+        public Builder mountOptions(@Nullable Input<String> mountOptions) {
             this.mountOptions = mountOptions;
             return this;
         }
 
-        public Builder setMountOptions(@Nullable String mountOptions) {
+        public Builder mountOptions(@Nullable String mountOptions) {
             this.mountOptions = Input.ofNullable(mountOptions);
             return this;
         }
 
-        public Builder setRelativeMountPath(Input<String> relativeMountPath) {
+        public Builder relativeMountPath(Input<String> relativeMountPath) {
             this.relativeMountPath = Objects.requireNonNull(relativeMountPath);
             return this;
         }
 
-        public Builder setRelativeMountPath(String relativeMountPath) {
+        public Builder relativeMountPath(String relativeMountPath) {
             this.relativeMountPath = Input.of(Objects.requireNonNull(relativeMountPath));
             return this;
         }
 
-        public Builder setSource(Input<String> source) {
+        public Builder source(Input<String> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Input.of(Objects.requireNonNull(source));
             return this;
         }

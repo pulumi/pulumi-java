@@ -165,82 +165,82 @@ public final class RuleGroupFieldToMatchArgs extends io.pulumi.resources.Resourc
     	      this.uriPath = defaults.uriPath;
         }
 
-        public Builder setAllQueryArguments(@Nullable Input<Object> allQueryArguments) {
+        public Builder allQueryArguments(@Nullable Input<Object> allQueryArguments) {
             this.allQueryArguments = allQueryArguments;
             return this;
         }
 
-        public Builder setAllQueryArguments(@Nullable Object allQueryArguments) {
+        public Builder allQueryArguments(@Nullable Object allQueryArguments) {
             this.allQueryArguments = Input.ofNullable(allQueryArguments);
             return this;
         }
 
-        public Builder setBody(@Nullable Input<Object> body) {
+        public Builder body(@Nullable Input<Object> body) {
             this.body = body;
             return this;
         }
 
-        public Builder setBody(@Nullable Object body) {
+        public Builder body(@Nullable Object body) {
             this.body = Input.ofNullable(body);
             return this;
         }
 
-        public Builder setJsonBody(@Nullable Input<RuleGroupJsonBodyArgs> jsonBody) {
+        public Builder jsonBody(@Nullable Input<RuleGroupJsonBodyArgs> jsonBody) {
             this.jsonBody = jsonBody;
             return this;
         }
 
-        public Builder setJsonBody(@Nullable RuleGroupJsonBodyArgs jsonBody) {
+        public Builder jsonBody(@Nullable RuleGroupJsonBodyArgs jsonBody) {
             this.jsonBody = Input.ofNullable(jsonBody);
             return this;
         }
 
-        public Builder setMethod(@Nullable Input<Object> method) {
+        public Builder method(@Nullable Input<Object> method) {
             this.method = method;
             return this;
         }
 
-        public Builder setMethod(@Nullable Object method) {
+        public Builder method(@Nullable Object method) {
             this.method = Input.ofNullable(method);
             return this;
         }
 
-        public Builder setQueryString(@Nullable Input<Object> queryString) {
+        public Builder queryString(@Nullable Input<Object> queryString) {
             this.queryString = queryString;
             return this;
         }
 
-        public Builder setQueryString(@Nullable Object queryString) {
+        public Builder queryString(@Nullable Object queryString) {
             this.queryString = Input.ofNullable(queryString);
             return this;
         }
 
-        public Builder setSingleHeader(@Nullable Input<RuleGroupFieldToMatchSingleHeaderPropertiesArgs> singleHeader) {
+        public Builder singleHeader(@Nullable Input<RuleGroupFieldToMatchSingleHeaderPropertiesArgs> singleHeader) {
             this.singleHeader = singleHeader;
             return this;
         }
 
-        public Builder setSingleHeader(@Nullable RuleGroupFieldToMatchSingleHeaderPropertiesArgs singleHeader) {
+        public Builder singleHeader(@Nullable RuleGroupFieldToMatchSingleHeaderPropertiesArgs singleHeader) {
             this.singleHeader = Input.ofNullable(singleHeader);
             return this;
         }
 
-        public Builder setSingleQueryArgument(@Nullable Input<RuleGroupFieldToMatchSingleQueryArgumentPropertiesArgs> singleQueryArgument) {
+        public Builder singleQueryArgument(@Nullable Input<RuleGroupFieldToMatchSingleQueryArgumentPropertiesArgs> singleQueryArgument) {
             this.singleQueryArgument = singleQueryArgument;
             return this;
         }
 
-        public Builder setSingleQueryArgument(@Nullable RuleGroupFieldToMatchSingleQueryArgumentPropertiesArgs singleQueryArgument) {
+        public Builder singleQueryArgument(@Nullable RuleGroupFieldToMatchSingleQueryArgumentPropertiesArgs singleQueryArgument) {
             this.singleQueryArgument = Input.ofNullable(singleQueryArgument);
             return this;
         }
 
-        public Builder setUriPath(@Nullable Input<Object> uriPath) {
+        public Builder uriPath(@Nullable Input<Object> uriPath) {
             this.uriPath = uriPath;
             return this;
         }
 
-        public Builder setUriPath(@Nullable Object uriPath) {
+        public Builder uriPath(@Nullable Object uriPath) {
             this.uriPath = Input.ofNullable(uriPath);
             return this;
         }

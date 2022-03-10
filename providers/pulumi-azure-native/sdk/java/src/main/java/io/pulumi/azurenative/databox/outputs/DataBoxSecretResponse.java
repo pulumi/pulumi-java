@@ -116,27 +116,27 @@ public final class DataBoxSecretResponse {
     	      this.networkConfigurations = defaults.networkConfigurations;
         }
 
-        public Builder setAccountCredentialDetails(List<AccountCredentialDetailsResponse> accountCredentialDetails) {
+        public Builder accountCredentialDetails(List<AccountCredentialDetailsResponse> accountCredentialDetails) {
             this.accountCredentialDetails = Objects.requireNonNull(accountCredentialDetails);
             return this;
         }
 
-        public Builder setDevicePassword(String devicePassword) {
+        public Builder devicePassword(String devicePassword) {
             this.devicePassword = Objects.requireNonNull(devicePassword);
             return this;
         }
 
-        public Builder setDeviceSerialNumber(String deviceSerialNumber) {
+        public Builder deviceSerialNumber(String deviceSerialNumber) {
             this.deviceSerialNumber = Objects.requireNonNull(deviceSerialNumber);
             return this;
         }
 
-        public Builder setEncodedValidationCertPubKey(String encodedValidationCertPubKey) {
+        public Builder encodedValidationCertPubKey(String encodedValidationCertPubKey) {
             this.encodedValidationCertPubKey = Objects.requireNonNull(encodedValidationCertPubKey);
             return this;
         }
 
-        public Builder setNetworkConfigurations(List<ApplianceNetworkConfigurationResponse> networkConfigurations) {
+        public Builder networkConfigurations(List<ApplianceNetworkConfigurationResponse> networkConfigurations) {
             this.networkConfigurations = Objects.requireNonNull(networkConfigurations);
             return this;
         }

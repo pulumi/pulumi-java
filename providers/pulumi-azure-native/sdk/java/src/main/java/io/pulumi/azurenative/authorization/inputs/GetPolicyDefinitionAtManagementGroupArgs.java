@@ -68,12 +68,12 @@ public final class GetPolicyDefinitionAtManagementGroupArgs extends io.pulumi.re
     	      this.policyDefinitionName = defaults.policyDefinitionName;
         }
 
-        public Builder setManagementGroupId(String managementGroupId) {
+        public Builder managementGroupId(String managementGroupId) {
             this.managementGroupId = Objects.requireNonNull(managementGroupId);
             return this;
         }
 
-        public Builder setPolicyDefinitionName(String policyDefinitionName) {
+        public Builder policyDefinitionName(String policyDefinitionName) {
             this.policyDefinitionName = Objects.requireNonNull(policyDefinitionName);
             return this;
         }

@@ -312,87 +312,87 @@ public final class GetSourceControlConfigurationResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setComplianceStatus(ComplianceStatusResponse complianceStatus) {
+        public Builder complianceStatus(ComplianceStatusResponse complianceStatus) {
             this.complianceStatus = Objects.requireNonNull(complianceStatus);
             return this;
         }
 
-        public Builder setConfigurationProtectedSettings(@Nullable Map<String,String> configurationProtectedSettings) {
+        public Builder configurationProtectedSettings(@Nullable Map<String,String> configurationProtectedSettings) {
             this.configurationProtectedSettings = configurationProtectedSettings;
             return this;
         }
 
-        public Builder setEnableHelmOperator(@Nullable Boolean enableHelmOperator) {
+        public Builder enableHelmOperator(@Nullable Boolean enableHelmOperator) {
             this.enableHelmOperator = enableHelmOperator;
             return this;
         }
 
-        public Builder setHelmOperatorProperties(@Nullable HelmOperatorPropertiesResponse helmOperatorProperties) {
+        public Builder helmOperatorProperties(@Nullable HelmOperatorPropertiesResponse helmOperatorProperties) {
             this.helmOperatorProperties = helmOperatorProperties;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOperatorInstanceName(@Nullable String operatorInstanceName) {
+        public Builder operatorInstanceName(@Nullable String operatorInstanceName) {
             this.operatorInstanceName = operatorInstanceName;
             return this;
         }
 
-        public Builder setOperatorNamespace(@Nullable String operatorNamespace) {
+        public Builder operatorNamespace(@Nullable String operatorNamespace) {
             this.operatorNamespace = operatorNamespace;
             return this;
         }
 
-        public Builder setOperatorParams(@Nullable String operatorParams) {
+        public Builder operatorParams(@Nullable String operatorParams) {
             this.operatorParams = operatorParams;
             return this;
         }
 
-        public Builder setOperatorScope(@Nullable String operatorScope) {
+        public Builder operatorScope(@Nullable String operatorScope) {
             this.operatorScope = operatorScope;
             return this;
         }
 
-        public Builder setOperatorType(@Nullable String operatorType) {
+        public Builder operatorType(@Nullable String operatorType) {
             this.operatorType = operatorType;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRepositoryPublicKey(String repositoryPublicKey) {
+        public Builder repositoryPublicKey(String repositoryPublicKey) {
             this.repositoryPublicKey = Objects.requireNonNull(repositoryPublicKey);
             return this;
         }
 
-        public Builder setRepositoryUrl(@Nullable String repositoryUrl) {
+        public Builder repositoryUrl(@Nullable String repositoryUrl) {
             this.repositoryUrl = repositoryUrl;
             return this;
         }
 
-        public Builder setSshKnownHostsContents(@Nullable String sshKnownHostsContents) {
+        public Builder sshKnownHostsContents(@Nullable String sshKnownHostsContents) {
             this.sshKnownHostsContents = sshKnownHostsContents;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

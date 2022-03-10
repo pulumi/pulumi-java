@@ -139,62 +139,62 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
     	      this.timescale = defaults.timescale;
         }
 
-        public Builder setEndTimestamp(@Nullable Input<Double> endTimestamp) {
+        public Builder endTimestamp(@Nullable Input<Double> endTimestamp) {
             this.endTimestamp = endTimestamp;
             return this;
         }
 
-        public Builder setEndTimestamp(@Nullable Double endTimestamp) {
+        public Builder endTimestamp(@Nullable Double endTimestamp) {
             this.endTimestamp = Input.ofNullable(endTimestamp);
             return this;
         }
 
-        public Builder setForceEndTimestamp(@Nullable Input<Boolean> forceEndTimestamp) {
+        public Builder forceEndTimestamp(@Nullable Input<Boolean> forceEndTimestamp) {
             this.forceEndTimestamp = forceEndTimestamp;
             return this;
         }
 
-        public Builder setForceEndTimestamp(@Nullable Boolean forceEndTimestamp) {
+        public Builder forceEndTimestamp(@Nullable Boolean forceEndTimestamp) {
             this.forceEndTimestamp = Input.ofNullable(forceEndTimestamp);
             return this;
         }
 
-        public Builder setLiveBackoffDuration(@Nullable Input<Double> liveBackoffDuration) {
+        public Builder liveBackoffDuration(@Nullable Input<Double> liveBackoffDuration) {
             this.liveBackoffDuration = liveBackoffDuration;
             return this;
         }
 
-        public Builder setLiveBackoffDuration(@Nullable Double liveBackoffDuration) {
+        public Builder liveBackoffDuration(@Nullable Double liveBackoffDuration) {
             this.liveBackoffDuration = Input.ofNullable(liveBackoffDuration);
             return this;
         }
 
-        public Builder setPresentationWindowDuration(@Nullable Input<Double> presentationWindowDuration) {
+        public Builder presentationWindowDuration(@Nullable Input<Double> presentationWindowDuration) {
             this.presentationWindowDuration = presentationWindowDuration;
             return this;
         }
 
-        public Builder setPresentationWindowDuration(@Nullable Double presentationWindowDuration) {
+        public Builder presentationWindowDuration(@Nullable Double presentationWindowDuration) {
             this.presentationWindowDuration = Input.ofNullable(presentationWindowDuration);
             return this;
         }
 
-        public Builder setStartTimestamp(@Nullable Input<Double> startTimestamp) {
+        public Builder startTimestamp(@Nullable Input<Double> startTimestamp) {
             this.startTimestamp = startTimestamp;
             return this;
         }
 
-        public Builder setStartTimestamp(@Nullable Double startTimestamp) {
+        public Builder startTimestamp(@Nullable Double startTimestamp) {
             this.startTimestamp = Input.ofNullable(startTimestamp);
             return this;
         }
 
-        public Builder setTimescale(@Nullable Input<Double> timescale) {
+        public Builder timescale(@Nullable Input<Double> timescale) {
             this.timescale = timescale;
             return this;
         }
 
-        public Builder setTimescale(@Nullable Double timescale) {
+        public Builder timescale(@Nullable Double timescale) {
             this.timescale = Input.ofNullable(timescale);
             return this;
         }

@@ -152,37 +152,37 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
     	      this.username = defaults.username;
         }
 
-        public Builder setDnsIps(List<String> dnsIps) {
+        public Builder dnsIps(List<String> dnsIps) {
             this.dnsIps = Objects.requireNonNull(dnsIps);
             return this;
         }
 
-        public Builder setDomainName(String domainName) {
+        public Builder domainName(String domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
-        public Builder setFileSystemAdministratorsGroup(@Nullable String fileSystemAdministratorsGroup) {
+        public Builder fileSystemAdministratorsGroup(@Nullable String fileSystemAdministratorsGroup) {
             this.fileSystemAdministratorsGroup = fileSystemAdministratorsGroup;
             return this;
         }
 
-        public Builder setOrganizationalUnitDistinguidshedName(@Nullable String organizationalUnitDistinguidshedName) {
+        public Builder organizationalUnitDistinguidshedName(@Nullable String organizationalUnitDistinguidshedName) {
             this.organizationalUnitDistinguidshedName = organizationalUnitDistinguidshedName;
             return this;
         }
 
-        public Builder setOrganizationalUnitDistinguishedName(@Nullable String organizationalUnitDistinguishedName) {
+        public Builder organizationalUnitDistinguishedName(@Nullable String organizationalUnitDistinguishedName) {
             this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

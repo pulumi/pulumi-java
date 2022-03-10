@@ -105,42 +105,42 @@ public final class RepositoryIamPolicyArgs extends io.pulumi.resources.ResourceA
     	      this.repository = defaults.repository;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPolicyData(Input<String> policyData) {
+        public Builder policyData(Input<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
-        public Builder setPolicyData(String policyData) {
+        public Builder policyData(String policyData) {
             this.policyData = Input.of(Objects.requireNonNull(policyData));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRepository(Input<String> repository) {
+        public Builder repository(Input<String> repository) {
             this.repository = Objects.requireNonNull(repository);
             return this;
         }
 
-        public Builder setRepository(String repository) {
+        public Builder repository(String repository) {
             this.repository = Input.of(Objects.requireNonNull(repository));
             return this;
         }

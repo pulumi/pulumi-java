@@ -78,17 +78,17 @@ public final class GetReplicationSetResult {
     	      this.regions = defaults.regions;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDeletionProtected(@Nullable Boolean deletionProtected) {
+        public Builder deletionProtected(@Nullable Boolean deletionProtected) {
             this.deletionProtected = deletionProtected;
             return this;
         }
 
-        public Builder setRegions(@Nullable List<ReplicationSetReplicationRegion> regions) {
+        public Builder regions(@Nullable List<ReplicationSetReplicationRegion> regions) {
             this.regions = regions;
             return this;
         }

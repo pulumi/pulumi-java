@@ -51,7 +51,7 @@ public final class SecretReplicationUserManaged {
     	      this.replicas = defaults.replicas;
         }
 
-        public Builder setReplicas(List<SecretReplicationUserManagedReplica> replicas) {
+        public Builder replicas(List<SecretReplicationUserManagedReplica> replicas) {
             this.replicas = Objects.requireNonNull(replicas);
             return this;
         }

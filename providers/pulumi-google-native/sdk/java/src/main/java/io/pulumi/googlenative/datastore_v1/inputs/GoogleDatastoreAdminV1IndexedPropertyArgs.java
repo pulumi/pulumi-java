@@ -74,22 +74,22 @@ public final class GoogleDatastoreAdminV1IndexedPropertyArgs extends io.pulumi.r
     	      this.name = defaults.name;
         }
 
-        public Builder setDirection(Input<GoogleDatastoreAdminV1IndexedPropertyDirection> direction) {
+        public Builder direction(Input<GoogleDatastoreAdminV1IndexedPropertyDirection> direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
-        public Builder setDirection(GoogleDatastoreAdminV1IndexedPropertyDirection direction) {
+        public Builder direction(GoogleDatastoreAdminV1IndexedPropertyDirection direction) {
             this.direction = Input.of(Objects.requireNonNull(direction));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

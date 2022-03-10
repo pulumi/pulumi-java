@@ -92,32 +92,32 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sourceConnectionProfileName = defaults.sourceConnectionProfileName;
         }
 
-        public Builder setMysqlSourceConfig(@Nullable Input<MysqlSourceConfigArgs> mysqlSourceConfig) {
+        public Builder mysqlSourceConfig(@Nullable Input<MysqlSourceConfigArgs> mysqlSourceConfig) {
             this.mysqlSourceConfig = mysqlSourceConfig;
             return this;
         }
 
-        public Builder setMysqlSourceConfig(@Nullable MysqlSourceConfigArgs mysqlSourceConfig) {
+        public Builder mysqlSourceConfig(@Nullable MysqlSourceConfigArgs mysqlSourceConfig) {
             this.mysqlSourceConfig = Input.ofNullable(mysqlSourceConfig);
             return this;
         }
 
-        public Builder setOracleSourceConfig(@Nullable Input<OracleSourceConfigArgs> oracleSourceConfig) {
+        public Builder oracleSourceConfig(@Nullable Input<OracleSourceConfigArgs> oracleSourceConfig) {
             this.oracleSourceConfig = oracleSourceConfig;
             return this;
         }
 
-        public Builder setOracleSourceConfig(@Nullable OracleSourceConfigArgs oracleSourceConfig) {
+        public Builder oracleSourceConfig(@Nullable OracleSourceConfigArgs oracleSourceConfig) {
             this.oracleSourceConfig = Input.ofNullable(oracleSourceConfig);
             return this;
         }
 
-        public Builder setSourceConnectionProfileName(Input<String> sourceConnectionProfileName) {
+        public Builder sourceConnectionProfileName(Input<String> sourceConnectionProfileName) {
             this.sourceConnectionProfileName = Objects.requireNonNull(sourceConnectionProfileName);
             return this;
         }
 
-        public Builder setSourceConnectionProfileName(String sourceConnectionProfileName) {
+        public Builder sourceConnectionProfileName(String sourceConnectionProfileName) {
             this.sourceConnectionProfileName = Input.of(Objects.requireNonNull(sourceConnectionProfileName));
             return this;
         }

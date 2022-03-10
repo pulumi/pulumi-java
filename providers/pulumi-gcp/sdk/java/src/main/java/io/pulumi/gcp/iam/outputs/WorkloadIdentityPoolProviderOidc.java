@@ -79,12 +79,12 @@ public final class WorkloadIdentityPoolProviderOidc {
     	      this.issuerUri = defaults.issuerUri;
         }
 
-        public Builder setAllowedAudiences(@Nullable List<String> allowedAudiences) {
+        public Builder allowedAudiences(@Nullable List<String> allowedAudiences) {
             this.allowedAudiences = allowedAudiences;
             return this;
         }
 
-        public Builder setIssuerUri(String issuerUri) {
+        public Builder issuerUri(String issuerUri) {
             this.issuerUri = Objects.requireNonNull(issuerUri);
             return this;
         }

@@ -74,22 +74,22 @@ public final class PodsMetricSourceArgs extends io.pulumi.resources.ResourceArgs
     	      this.target = defaults.target;
         }
 
-        public Builder setMetric(Input<MetricIdentifierArgs> metric) {
+        public Builder metric(Input<MetricIdentifierArgs> metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
 
-        public Builder setMetric(MetricIdentifierArgs metric) {
+        public Builder metric(MetricIdentifierArgs metric) {
             this.metric = Input.of(Objects.requireNonNull(metric));
             return this;
         }
 
-        public Builder setTarget(Input<MetricTargetArgs> target) {
+        public Builder target(Input<MetricTargetArgs> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
 
-        public Builder setTarget(MetricTargetArgs target) {
+        public Builder target(MetricTargetArgs target) {
             this.target = Input.of(Objects.requireNonNull(target));
             return this;
         }

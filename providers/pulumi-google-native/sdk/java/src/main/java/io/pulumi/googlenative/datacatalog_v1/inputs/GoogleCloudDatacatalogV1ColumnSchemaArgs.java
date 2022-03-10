@@ -123,52 +123,52 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaArgs extends io.pulumi.re
     	      this.type = defaults.type;
         }
 
-        public Builder setColumn(Input<String> column) {
+        public Builder column(Input<String> column) {
             this.column = Objects.requireNonNull(column);
             return this;
         }
 
-        public Builder setColumn(String column) {
+        public Builder column(String column) {
             this.column = Input.of(Objects.requireNonNull(column));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setMode(@Nullable Input<String> mode) {
+        public Builder mode(@Nullable Input<String> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }
 
-        public Builder setSubcolumns(@Nullable Input<List<GoogleCloudDatacatalogV1ColumnSchemaArgs>> subcolumns) {
+        public Builder subcolumns(@Nullable Input<List<GoogleCloudDatacatalogV1ColumnSchemaArgs>> subcolumns) {
             this.subcolumns = subcolumns;
             return this;
         }
 
-        public Builder setSubcolumns(@Nullable List<GoogleCloudDatacatalogV1ColumnSchemaArgs> subcolumns) {
+        public Builder subcolumns(@Nullable List<GoogleCloudDatacatalogV1ColumnSchemaArgs> subcolumns) {
             this.subcolumns = Input.ofNullable(subcolumns);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

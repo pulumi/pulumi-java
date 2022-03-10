@@ -65,12 +65,12 @@ public final class GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse
     	      this.uri = defaults.uri;
         }
 
-        public Builder setDestinationName(String destinationName) {
+        public Builder destinationName(String destinationName) {
             this.destinationName = Objects.requireNonNull(destinationName);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

@@ -218,112 +218,112 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setAdvancedSchedule(@Nullable Input<AdvancedScheduleArgs> advancedSchedule) {
+        public Builder advancedSchedule(@Nullable Input<AdvancedScheduleArgs> advancedSchedule) {
             this.advancedSchedule = advancedSchedule;
             return this;
         }
 
-        public Builder setAdvancedSchedule(@Nullable AdvancedScheduleArgs advancedSchedule) {
+        public Builder advancedSchedule(@Nullable AdvancedScheduleArgs advancedSchedule) {
             this.advancedSchedule = Input.ofNullable(advancedSchedule);
             return this;
         }
 
-        public Builder setAutomationAccountName(Input<String> automationAccountName) {
+        public Builder automationAccountName(Input<String> automationAccountName) {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
 
-        public Builder setAutomationAccountName(String automationAccountName) {
+        public Builder automationAccountName(String automationAccountName) {
             this.automationAccountName = Input.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setExpiryTime(@Nullable Input<String> expiryTime) {
+        public Builder expiryTime(@Nullable Input<String> expiryTime) {
             this.expiryTime = expiryTime;
             return this;
         }
 
-        public Builder setExpiryTime(@Nullable String expiryTime) {
+        public Builder expiryTime(@Nullable String expiryTime) {
             this.expiryTime = Input.ofNullable(expiryTime);
             return this;
         }
 
-        public Builder setFrequency(Input<Either<String,ScheduleFrequency>> frequency) {
+        public Builder frequency(Input<Either<String,ScheduleFrequency>> frequency) {
             this.frequency = Objects.requireNonNull(frequency);
             return this;
         }
 
-        public Builder setFrequency(Either<String,ScheduleFrequency> frequency) {
+        public Builder frequency(Either<String,ScheduleFrequency> frequency) {
             this.frequency = Input.of(Objects.requireNonNull(frequency));
             return this;
         }
 
-        public Builder setInterval(@Nullable Input<Object> interval) {
+        public Builder interval(@Nullable Input<Object> interval) {
             this.interval = interval;
             return this;
         }
 
-        public Builder setInterval(@Nullable Object interval) {
+        public Builder interval(@Nullable Object interval) {
             this.interval = Input.ofNullable(interval);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setScheduleName(@Nullable Input<String> scheduleName) {
+        public Builder scheduleName(@Nullable Input<String> scheduleName) {
             this.scheduleName = scheduleName;
             return this;
         }
 
-        public Builder setScheduleName(@Nullable String scheduleName) {
+        public Builder scheduleName(@Nullable String scheduleName) {
             this.scheduleName = Input.ofNullable(scheduleName);
             return this;
         }
 
-        public Builder setStartTime(Input<String> startTime) {
+        public Builder startTime(Input<String> startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Input.of(Objects.requireNonNull(startTime));
             return this;
         }
 
-        public Builder setTimeZone(@Nullable Input<String> timeZone) {
+        public Builder timeZone(@Nullable Input<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Input.ofNullable(timeZone);
             return this;
         }

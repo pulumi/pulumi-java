@@ -139,62 +139,62 @@ public final class IoTHubStreamInputDataSourceArgs extends io.pulumi.resources.R
     	      this.type = defaults.type;
         }
 
-        public Builder setConsumerGroupName(@Nullable Input<String> consumerGroupName) {
+        public Builder consumerGroupName(@Nullable Input<String> consumerGroupName) {
             this.consumerGroupName = consumerGroupName;
             return this;
         }
 
-        public Builder setConsumerGroupName(@Nullable String consumerGroupName) {
+        public Builder consumerGroupName(@Nullable String consumerGroupName) {
             this.consumerGroupName = Input.ofNullable(consumerGroupName);
             return this;
         }
 
-        public Builder setEndpoint(@Nullable Input<String> endpoint) {
+        public Builder endpoint(@Nullable Input<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setEndpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = Input.ofNullable(endpoint);
             return this;
         }
 
-        public Builder setIotHubNamespace(@Nullable Input<String> iotHubNamespace) {
+        public Builder iotHubNamespace(@Nullable Input<String> iotHubNamespace) {
             this.iotHubNamespace = iotHubNamespace;
             return this;
         }
 
-        public Builder setIotHubNamespace(@Nullable String iotHubNamespace) {
+        public Builder iotHubNamespace(@Nullable String iotHubNamespace) {
             this.iotHubNamespace = Input.ofNullable(iotHubNamespace);
             return this;
         }
 
-        public Builder setSharedAccessPolicyKey(@Nullable Input<String> sharedAccessPolicyKey) {
+        public Builder sharedAccessPolicyKey(@Nullable Input<String> sharedAccessPolicyKey) {
             this.sharedAccessPolicyKey = sharedAccessPolicyKey;
             return this;
         }
 
-        public Builder setSharedAccessPolicyKey(@Nullable String sharedAccessPolicyKey) {
+        public Builder sharedAccessPolicyKey(@Nullable String sharedAccessPolicyKey) {
             this.sharedAccessPolicyKey = Input.ofNullable(sharedAccessPolicyKey);
             return this;
         }
 
-        public Builder setSharedAccessPolicyName(@Nullable Input<String> sharedAccessPolicyName) {
+        public Builder sharedAccessPolicyName(@Nullable Input<String> sharedAccessPolicyName) {
             this.sharedAccessPolicyName = sharedAccessPolicyName;
             return this;
         }
 
-        public Builder setSharedAccessPolicyName(@Nullable String sharedAccessPolicyName) {
+        public Builder sharedAccessPolicyName(@Nullable String sharedAccessPolicyName) {
             this.sharedAccessPolicyName = Input.ofNullable(sharedAccessPolicyName);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

@@ -89,17 +89,17 @@ public final class GetVpcDhcpOptionsArgs extends io.pulumi.resources.InvokeArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDhcpOptionsId(@Nullable String dhcpOptionsId) {
+        public Builder dhcpOptionsId(@Nullable String dhcpOptionsId) {
             this.dhcpOptionsId = dhcpOptionsId;
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetVpcDhcpOptionsFilter> filters) {
+        public Builder filters(@Nullable List<GetVpcDhcpOptionsFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }

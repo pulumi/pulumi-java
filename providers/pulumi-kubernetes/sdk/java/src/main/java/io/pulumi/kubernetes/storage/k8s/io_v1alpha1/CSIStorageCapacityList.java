@@ -126,8 +126,8 @@ public class CSIStorageCapacityList extends io.pulumi.resources.CustomResource {
     private static CSIStorageCapacityListArgs makeArgs(CSIStorageCapacityListArgs args) {
         var builder = args == null ? CSIStorageCapacityListArgs.builder() : CSIStorageCapacityListArgs.builder(args);
         return builder
-            .setApiVersion("storage.k8s.io/v1alpha1")
-            .setKind("CSIStorageCapacityList")
+            .apiVersion("storage.k8s.io/v1alpha1")
+            .kind("CSIStorageCapacityList")
             .build();
     }
 

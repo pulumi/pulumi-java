@@ -219,107 +219,107 @@ public final class GetDatabaseInstanceResult {
     	      this.settings = defaults.settings;
         }
 
-        public Builder setClones(List<GetDatabaseInstanceClone> clones) {
+        public Builder clones(List<GetDatabaseInstanceClone> clones) {
             this.clones = Objects.requireNonNull(clones);
             return this;
         }
 
-        public Builder setConnectionName(String connectionName) {
+        public Builder connectionName(String connectionName) {
             this.connectionName = Objects.requireNonNull(connectionName);
             return this;
         }
 
-        public Builder setDatabaseVersion(String databaseVersion) {
+        public Builder databaseVersion(String databaseVersion) {
             this.databaseVersion = Objects.requireNonNull(databaseVersion);
             return this;
         }
 
-        public Builder setDeletionProtection(Boolean deletionProtection) {
+        public Builder deletionProtection(Boolean deletionProtection) {
             this.deletionProtection = Objects.requireNonNull(deletionProtection);
             return this;
         }
 
-        public Builder setEncryptionKeyName(String encryptionKeyName) {
+        public Builder encryptionKeyName(String encryptionKeyName) {
             this.encryptionKeyName = Objects.requireNonNull(encryptionKeyName);
             return this;
         }
 
-        public Builder setFirstIpAddress(String firstIpAddress) {
+        public Builder firstIpAddress(String firstIpAddress) {
             this.firstIpAddress = Objects.requireNonNull(firstIpAddress);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIpAddresses(List<GetDatabaseInstanceIpAddress> ipAddresses) {
+        public Builder ipAddresses(List<GetDatabaseInstanceIpAddress> ipAddresses) {
             this.ipAddresses = Objects.requireNonNull(ipAddresses);
             return this;
         }
 
-        public Builder setMasterInstanceName(String masterInstanceName) {
+        public Builder masterInstanceName(String masterInstanceName) {
             this.masterInstanceName = Objects.requireNonNull(masterInstanceName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrivateIpAddress(String privateIpAddress) {
+        public Builder privateIpAddress(String privateIpAddress) {
             this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setPublicIpAddress(String publicIpAddress) {
+        public Builder publicIpAddress(String publicIpAddress) {
             this.publicIpAddress = Objects.requireNonNull(publicIpAddress);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setReplicaConfigurations(List<GetDatabaseInstanceReplicaConfiguration> replicaConfigurations) {
+        public Builder replicaConfigurations(List<GetDatabaseInstanceReplicaConfiguration> replicaConfigurations) {
             this.replicaConfigurations = Objects.requireNonNull(replicaConfigurations);
             return this;
         }
 
-        public Builder setRestoreBackupContexts(List<GetDatabaseInstanceRestoreBackupContext> restoreBackupContexts) {
+        public Builder restoreBackupContexts(List<GetDatabaseInstanceRestoreBackupContext> restoreBackupContexts) {
             this.restoreBackupContexts = Objects.requireNonNull(restoreBackupContexts);
             return this;
         }
 
-        public Builder setRootPassword(String rootPassword) {
+        public Builder rootPassword(String rootPassword) {
             this.rootPassword = Objects.requireNonNull(rootPassword);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setServerCaCerts(List<GetDatabaseInstanceServerCaCert> serverCaCerts) {
+        public Builder serverCaCerts(List<GetDatabaseInstanceServerCaCert> serverCaCerts) {
             this.serverCaCerts = Objects.requireNonNull(serverCaCerts);
             return this;
         }
 
-        public Builder setServiceAccountEmailAddress(String serviceAccountEmailAddress) {
+        public Builder serviceAccountEmailAddress(String serviceAccountEmailAddress) {
             this.serviceAccountEmailAddress = Objects.requireNonNull(serviceAccountEmailAddress);
             return this;
         }
 
-        public Builder setSettings(List<GetDatabaseInstanceSetting> settings) {
+        public Builder settings(List<GetDatabaseInstanceSetting> settings) {
             this.settings = Objects.requireNonNull(settings);
             return this;
         }

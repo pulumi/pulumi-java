@@ -116,27 +116,27 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
     	      this.minProbability = defaults.minProbability;
         }
 
-        public Builder setBucketSize(String bucketSize) {
+        public Builder bucketSize(String bucketSize) {
             this.bucketSize = Objects.requireNonNull(bucketSize);
             return this;
         }
 
-        public Builder setBucketValueCount(String bucketValueCount) {
+        public Builder bucketValueCount(String bucketValueCount) {
             this.bucketValueCount = Objects.requireNonNull(bucketValueCount);
             return this;
         }
 
-        public Builder setBucketValues(List<GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse> bucketValues) {
+        public Builder bucketValues(List<GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse> bucketValues) {
             this.bucketValues = Objects.requireNonNull(bucketValues);
             return this;
         }
 
-        public Builder setMaxProbability(Double maxProbability) {
+        public Builder maxProbability(Double maxProbability) {
             this.maxProbability = Objects.requireNonNull(maxProbability);
             return this;
         }
 
-        public Builder setMinProbability(Double minProbability) {
+        public Builder minProbability(Double minProbability) {
             this.minProbability = Objects.requireNonNull(minProbability);
             return this;
         }

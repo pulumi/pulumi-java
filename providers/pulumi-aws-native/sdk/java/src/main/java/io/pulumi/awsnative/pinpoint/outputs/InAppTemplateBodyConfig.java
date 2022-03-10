@@ -60,17 +60,17 @@ public final class InAppTemplateBodyConfig {
     	      this.textColor = defaults.textColor;
         }
 
-        public Builder setAlignment(@Nullable InAppTemplateAlignment alignment) {
+        public Builder alignment(@Nullable InAppTemplateAlignment alignment) {
             this.alignment = alignment;
             return this;
         }
 
-        public Builder setBody(@Nullable String body) {
+        public Builder body(@Nullable String body) {
             this.body = body;
             return this;
         }
 
-        public Builder setTextColor(@Nullable String textColor) {
+        public Builder textColor(@Nullable String textColor) {
             this.textColor = textColor;
             return this;
         }

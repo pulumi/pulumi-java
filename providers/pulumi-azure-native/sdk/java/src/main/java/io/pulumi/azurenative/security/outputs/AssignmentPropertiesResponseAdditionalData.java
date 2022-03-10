@@ -50,7 +50,7 @@ public final class AssignmentPropertiesResponseAdditionalData {
     	      this.exemptionCategory = defaults.exemptionCategory;
         }
 
-        public Builder setExemptionCategory(@Nullable String exemptionCategory) {
+        public Builder exemptionCategory(@Nullable String exemptionCategory) {
             this.exemptionCategory = exemptionCategory;
             return this;
         }

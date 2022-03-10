@@ -48,7 +48,7 @@ public final class ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecifi
     	      this.allocationStrategy = defaults.allocationStrategy;
         }
 
-        public Builder setAllocationStrategy(String allocationStrategy) {
+        public Builder allocationStrategy(String allocationStrategy) {
             this.allocationStrategy = Objects.requireNonNull(allocationStrategy);
             return this;
         }

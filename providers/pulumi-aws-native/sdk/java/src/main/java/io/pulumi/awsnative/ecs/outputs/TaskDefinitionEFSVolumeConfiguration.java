@@ -78,27 +78,27 @@ public final class TaskDefinitionEFSVolumeConfiguration {
     	      this.transitEncryptionPort = defaults.transitEncryptionPort;
         }
 
-        public Builder setAuthorizationConfig(@Nullable TaskDefinitionAuthorizationConfig authorizationConfig) {
+        public Builder authorizationConfig(@Nullable TaskDefinitionAuthorizationConfig authorizationConfig) {
             this.authorizationConfig = authorizationConfig;
             return this;
         }
 
-        public Builder setFilesystemId(String filesystemId) {
+        public Builder filesystemId(String filesystemId) {
             this.filesystemId = Objects.requireNonNull(filesystemId);
             return this;
         }
 
-        public Builder setRootDirectory(@Nullable String rootDirectory) {
+        public Builder rootDirectory(@Nullable String rootDirectory) {
             this.rootDirectory = rootDirectory;
             return this;
         }
 
-        public Builder setTransitEncryption(@Nullable TaskDefinitionEFSVolumeConfigurationTransitEncryption transitEncryption) {
+        public Builder transitEncryption(@Nullable TaskDefinitionEFSVolumeConfigurationTransitEncryption transitEncryption) {
             this.transitEncryption = transitEncryption;
             return this;
         }
 
-        public Builder setTransitEncryptionPort(@Nullable Integer transitEncryptionPort) {
+        public Builder transitEncryptionPort(@Nullable Integer transitEncryptionPort) {
             this.transitEncryptionPort = transitEncryptionPort;
             return this;
         }

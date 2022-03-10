@@ -109,42 +109,42 @@ public final class IosTestSetupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.pushFiles = defaults.pushFiles;
         }
 
-        public Builder setAdditionalIpas(@Nullable Input<List<FileReferenceArgs>> additionalIpas) {
+        public Builder additionalIpas(@Nullable Input<List<FileReferenceArgs>> additionalIpas) {
             this.additionalIpas = additionalIpas;
             return this;
         }
 
-        public Builder setAdditionalIpas(@Nullable List<FileReferenceArgs> additionalIpas) {
+        public Builder additionalIpas(@Nullable List<FileReferenceArgs> additionalIpas) {
             this.additionalIpas = Input.ofNullable(additionalIpas);
             return this;
         }
 
-        public Builder setNetworkProfile(@Nullable Input<String> networkProfile) {
+        public Builder networkProfile(@Nullable Input<String> networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
 
-        public Builder setNetworkProfile(@Nullable String networkProfile) {
+        public Builder networkProfile(@Nullable String networkProfile) {
             this.networkProfile = Input.ofNullable(networkProfile);
             return this;
         }
 
-        public Builder setPullDirectories(@Nullable Input<List<IosDeviceFileArgs>> pullDirectories) {
+        public Builder pullDirectories(@Nullable Input<List<IosDeviceFileArgs>> pullDirectories) {
             this.pullDirectories = pullDirectories;
             return this;
         }
 
-        public Builder setPullDirectories(@Nullable List<IosDeviceFileArgs> pullDirectories) {
+        public Builder pullDirectories(@Nullable List<IosDeviceFileArgs> pullDirectories) {
             this.pullDirectories = Input.ofNullable(pullDirectories);
             return this;
         }
 
-        public Builder setPushFiles(@Nullable Input<List<IosDeviceFileArgs>> pushFiles) {
+        public Builder pushFiles(@Nullable Input<List<IosDeviceFileArgs>> pushFiles) {
             this.pushFiles = pushFiles;
             return this;
         }
 
-        public Builder setPushFiles(@Nullable List<IosDeviceFileArgs> pushFiles) {
+        public Builder pushFiles(@Nullable List<IosDeviceFileArgs> pushFiles) {
             this.pushFiles = Input.ofNullable(pushFiles);
             return this;
         }

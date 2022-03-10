@@ -56,12 +56,12 @@ public final class AutoStorageBasePropertiesArgs extends io.pulumi.resources.Res
     	      this.storageAccountId = defaults.storageAccountId;
         }
 
-        public Builder setStorageAccountId(Input<String> storageAccountId) {
+        public Builder storageAccountId(Input<String> storageAccountId) {
             this.storageAccountId = Objects.requireNonNull(storageAccountId);
             return this;
         }
 
-        public Builder setStorageAccountId(String storageAccountId) {
+        public Builder storageAccountId(String storageAccountId) {
             this.storageAccountId = Input.of(Objects.requireNonNull(storageAccountId));
             return this;
         }

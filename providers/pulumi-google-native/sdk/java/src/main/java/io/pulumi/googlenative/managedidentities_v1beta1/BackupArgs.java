@@ -91,42 +91,42 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setBackupId(Input<String> backupId) {
+        public Builder backupId(Input<String> backupId) {
             this.backupId = Objects.requireNonNull(backupId);
             return this;
         }
 
-        public Builder setBackupId(String backupId) {
+        public Builder backupId(String backupId) {
             this.backupId = Input.of(Objects.requireNonNull(backupId));
             return this;
         }
 
-        public Builder setDomainId(Input<String> domainId) {
+        public Builder domainId(Input<String> domainId) {
             this.domainId = Objects.requireNonNull(domainId);
             return this;
         }
 
-        public Builder setDomainId(String domainId) {
+        public Builder domainId(String domainId) {
             this.domainId = Input.of(Objects.requireNonNull(domainId));
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

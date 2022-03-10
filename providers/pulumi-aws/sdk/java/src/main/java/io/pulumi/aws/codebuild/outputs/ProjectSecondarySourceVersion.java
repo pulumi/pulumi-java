@@ -65,12 +65,12 @@ public final class ProjectSecondarySourceVersion {
     	      this.sourceVersion = defaults.sourceVersion;
         }
 
-        public Builder setSourceIdentifier(String sourceIdentifier) {
+        public Builder sourceIdentifier(String sourceIdentifier) {
             this.sourceIdentifier = Objects.requireNonNull(sourceIdentifier);
             return this;
         }
 
-        public Builder setSourceVersion(String sourceVersion) {
+        public Builder sourceVersion(String sourceVersion) {
             this.sourceVersion = Objects.requireNonNull(sourceVersion);
             return this;
         }

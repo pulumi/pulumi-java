@@ -48,7 +48,7 @@ public final class ApplicationApplicationConfigurationApplicationSnapshotConfigu
     	      this.snapshotsEnabled = defaults.snapshotsEnabled;
         }
 
-        public Builder setSnapshotsEnabled(Boolean snapshotsEnabled) {
+        public Builder snapshotsEnabled(Boolean snapshotsEnabled) {
             this.snapshotsEnabled = Objects.requireNonNull(snapshotsEnabled);
             return this;
         }

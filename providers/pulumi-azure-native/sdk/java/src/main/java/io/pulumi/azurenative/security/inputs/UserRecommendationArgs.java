@@ -74,22 +74,22 @@ public final class UserRecommendationArgs extends io.pulumi.resources.ResourceAr
     	      this.username = defaults.username;
         }
 
-        public Builder setRecommendationAction(@Nullable Input<String> recommendationAction) {
+        public Builder recommendationAction(@Nullable Input<String> recommendationAction) {
             this.recommendationAction = recommendationAction;
             return this;
         }
 
-        public Builder setRecommendationAction(@Nullable String recommendationAction) {
+        public Builder recommendationAction(@Nullable String recommendationAction) {
             this.recommendationAction = Input.ofNullable(recommendationAction);
             return this;
         }
 
-        public Builder setUsername(@Nullable Input<String> username) {
+        public Builder username(@Nullable Input<String> username) {
             this.username = username;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = Input.ofNullable(username);
             return this;
         }

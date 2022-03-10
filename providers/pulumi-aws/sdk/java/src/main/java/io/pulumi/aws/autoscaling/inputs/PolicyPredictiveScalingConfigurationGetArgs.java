@@ -119,52 +119,52 @@ public final class PolicyPredictiveScalingConfigurationGetArgs extends io.pulumi
     	      this.schedulingBufferTime = defaults.schedulingBufferTime;
         }
 
-        public Builder setMaxCapacityBreachBehavior(@Nullable Input<String> maxCapacityBreachBehavior) {
+        public Builder maxCapacityBreachBehavior(@Nullable Input<String> maxCapacityBreachBehavior) {
             this.maxCapacityBreachBehavior = maxCapacityBreachBehavior;
             return this;
         }
 
-        public Builder setMaxCapacityBreachBehavior(@Nullable String maxCapacityBreachBehavior) {
+        public Builder maxCapacityBreachBehavior(@Nullable String maxCapacityBreachBehavior) {
             this.maxCapacityBreachBehavior = Input.ofNullable(maxCapacityBreachBehavior);
             return this;
         }
 
-        public Builder setMaxCapacityBuffer(@Nullable Input<String> maxCapacityBuffer) {
+        public Builder maxCapacityBuffer(@Nullable Input<String> maxCapacityBuffer) {
             this.maxCapacityBuffer = maxCapacityBuffer;
             return this;
         }
 
-        public Builder setMaxCapacityBuffer(@Nullable String maxCapacityBuffer) {
+        public Builder maxCapacityBuffer(@Nullable String maxCapacityBuffer) {
             this.maxCapacityBuffer = Input.ofNullable(maxCapacityBuffer);
             return this;
         }
 
-        public Builder setMetricSpecification(Input<PolicyPredictiveScalingConfigurationMetricSpecificationGetArgs> metricSpecification) {
+        public Builder metricSpecification(Input<PolicyPredictiveScalingConfigurationMetricSpecificationGetArgs> metricSpecification) {
             this.metricSpecification = Objects.requireNonNull(metricSpecification);
             return this;
         }
 
-        public Builder setMetricSpecification(PolicyPredictiveScalingConfigurationMetricSpecificationGetArgs metricSpecification) {
+        public Builder metricSpecification(PolicyPredictiveScalingConfigurationMetricSpecificationGetArgs metricSpecification) {
             this.metricSpecification = Input.of(Objects.requireNonNull(metricSpecification));
             return this;
         }
 
-        public Builder setMode(@Nullable Input<String> mode) {
+        public Builder mode(@Nullable Input<String> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }
 
-        public Builder setSchedulingBufferTime(@Nullable Input<String> schedulingBufferTime) {
+        public Builder schedulingBufferTime(@Nullable Input<String> schedulingBufferTime) {
             this.schedulingBufferTime = schedulingBufferTime;
             return this;
         }
 
-        public Builder setSchedulingBufferTime(@Nullable String schedulingBufferTime) {
+        public Builder schedulingBufferTime(@Nullable String schedulingBufferTime) {
             this.schedulingBufferTime = Input.ofNullable(schedulingBufferTime);
             return this;
         }

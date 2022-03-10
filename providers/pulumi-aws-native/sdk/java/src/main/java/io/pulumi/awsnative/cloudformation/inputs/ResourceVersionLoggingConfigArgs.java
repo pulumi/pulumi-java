@@ -70,22 +70,22 @@ public final class ResourceVersionLoggingConfigArgs extends io.pulumi.resources.
     	      this.logRoleArn = defaults.logRoleArn;
         }
 
-        public Builder setLogGroupName(@Nullable Input<String> logGroupName) {
+        public Builder logGroupName(@Nullable Input<String> logGroupName) {
             this.logGroupName = logGroupName;
             return this;
         }
 
-        public Builder setLogGroupName(@Nullable String logGroupName) {
+        public Builder logGroupName(@Nullable String logGroupName) {
             this.logGroupName = Input.ofNullable(logGroupName);
             return this;
         }
 
-        public Builder setLogRoleArn(@Nullable Input<String> logRoleArn) {
+        public Builder logRoleArn(@Nullable Input<String> logRoleArn) {
             this.logRoleArn = logRoleArn;
             return this;
         }
 
-        public Builder setLogRoleArn(@Nullable String logRoleArn) {
+        public Builder logRoleArn(@Nullable String logRoleArn) {
             this.logRoleArn = Input.ofNullable(logRoleArn);
             return this;
         }

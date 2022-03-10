@@ -47,7 +47,7 @@ public final class GetModelPackageGroupArgs extends io.pulumi.resources.InvokeAr
     	      this.modelPackageGroupArn = defaults.modelPackageGroupArn;
         }
 
-        public Builder setModelPackageGroupArn(String modelPackageGroupArn) {
+        public Builder modelPackageGroupArn(String modelPackageGroupArn) {
             this.modelPackageGroupArn = Objects.requireNonNull(modelPackageGroupArn);
             return this;
         }

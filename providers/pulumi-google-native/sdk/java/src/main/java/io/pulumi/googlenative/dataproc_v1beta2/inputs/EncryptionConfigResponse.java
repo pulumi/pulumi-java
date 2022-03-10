@@ -55,7 +55,7 @@ public final class EncryptionConfigResponse extends io.pulumi.resources.InvokeAr
     	      this.gcePdKmsKeyName = defaults.gcePdKmsKeyName;
         }
 
-        public Builder setGcePdKmsKeyName(String gcePdKmsKeyName) {
+        public Builder gcePdKmsKeyName(String gcePdKmsKeyName) {
             this.gcePdKmsKeyName = Objects.requireNonNull(gcePdKmsKeyName);
             return this;
         }

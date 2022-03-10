@@ -101,22 +101,22 @@ public final class SourceProvenanceResponse {
     	      this.resolvedStorageSourceManifest = defaults.resolvedStorageSourceManifest;
         }
 
-        public Builder setFileHashes(Map<String,String> fileHashes) {
+        public Builder fileHashes(Map<String,String> fileHashes) {
             this.fileHashes = Objects.requireNonNull(fileHashes);
             return this;
         }
 
-        public Builder setResolvedRepoSource(RepoSourceResponse resolvedRepoSource) {
+        public Builder resolvedRepoSource(RepoSourceResponse resolvedRepoSource) {
             this.resolvedRepoSource = Objects.requireNonNull(resolvedRepoSource);
             return this;
         }
 
-        public Builder setResolvedStorageSource(StorageSourceResponse resolvedStorageSource) {
+        public Builder resolvedStorageSource(StorageSourceResponse resolvedStorageSource) {
             this.resolvedStorageSource = Objects.requireNonNull(resolvedStorageSource);
             return this;
         }
 
-        public Builder setResolvedStorageSourceManifest(StorageSourceManifestResponse resolvedStorageSourceManifest) {
+        public Builder resolvedStorageSourceManifest(StorageSourceManifestResponse resolvedStorageSourceManifest) {
             this.resolvedStorageSourceManifest = Objects.requireNonNull(resolvedStorageSourceManifest);
             return this;
         }

@@ -58,7 +58,7 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
     	      this.ipRules = defaults.ipRules;
         }
 
-        public Builder setIpRules(@Nullable List<IpRuleResponse> ipRules) {
+        public Builder ipRules(@Nullable List<IpRuleResponse> ipRules) {
             this.ipRules = ipRules;
             return this;
         }

@@ -251,7 +251,7 @@ public class ArcAddon extends io.pulumi.resources.CustomResource {
     private static ArcAddonArgs makeArgs(ArcAddonArgs args) {
         var builder = args == null ? ArcAddonArgs.builder() : ArcAddonArgs.builder(args);
         return builder
-            .setKind("ArcForKubernetes")
+            .kind("ArcForKubernetes")
             .build();
     }
 

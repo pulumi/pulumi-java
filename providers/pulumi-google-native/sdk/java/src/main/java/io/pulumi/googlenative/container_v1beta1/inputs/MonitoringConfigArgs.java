@@ -75,22 +75,22 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
     	      this.managedPrometheusConfig = defaults.managedPrometheusConfig;
         }
 
-        public Builder setComponentConfig(@Nullable Input<MonitoringComponentConfigArgs> componentConfig) {
+        public Builder componentConfig(@Nullable Input<MonitoringComponentConfigArgs> componentConfig) {
             this.componentConfig = componentConfig;
             return this;
         }
 
-        public Builder setComponentConfig(@Nullable MonitoringComponentConfigArgs componentConfig) {
+        public Builder componentConfig(@Nullable MonitoringComponentConfigArgs componentConfig) {
             this.componentConfig = Input.ofNullable(componentConfig);
             return this;
         }
 
-        public Builder setManagedPrometheusConfig(@Nullable Input<ManagedPrometheusConfigArgs> managedPrometheusConfig) {
+        public Builder managedPrometheusConfig(@Nullable Input<ManagedPrometheusConfigArgs> managedPrometheusConfig) {
             this.managedPrometheusConfig = managedPrometheusConfig;
             return this;
         }
 
-        public Builder setManagedPrometheusConfig(@Nullable ManagedPrometheusConfigArgs managedPrometheusConfig) {
+        public Builder managedPrometheusConfig(@Nullable ManagedPrometheusConfigArgs managedPrometheusConfig) {
             this.managedPrometheusConfig = Input.ofNullable(managedPrometheusConfig);
             return this;
         }

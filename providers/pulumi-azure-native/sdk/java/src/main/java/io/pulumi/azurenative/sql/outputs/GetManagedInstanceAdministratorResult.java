@@ -147,37 +147,37 @@ public final class GetManagedInstanceAdministratorResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAdministratorType(String administratorType) {
+        public Builder administratorType(String administratorType) {
             this.administratorType = Objects.requireNonNull(administratorType);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLogin(String login) {
+        public Builder login(String login) {
             this.login = Objects.requireNonNull(login);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSid(String sid) {
+        public Builder sid(String sid) {
             this.sid = Objects.requireNonNull(sid);
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

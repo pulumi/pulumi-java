@@ -177,47 +177,47 @@ public final class GetApplicationPackageResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setFormat(String format) {
+        public Builder format(String format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastActivationTime(String lastActivationTime) {
+        public Builder lastActivationTime(String lastActivationTime) {
             this.lastActivationTime = Objects.requireNonNull(lastActivationTime);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStorageUrl(String storageUrl) {
+        public Builder storageUrl(String storageUrl) {
             this.storageUrl = Objects.requireNonNull(storageUrl);
             return this;
         }
 
-        public Builder setStorageUrlExpiry(String storageUrlExpiry) {
+        public Builder storageUrlExpiry(String storageUrlExpiry) {
             this.storageUrlExpiry = Objects.requireNonNull(storageUrlExpiry);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

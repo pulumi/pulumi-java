@@ -212,102 +212,102 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
     	      this.upstream = defaults.upstream;
         }
 
-        public Builder setCors(@Nullable Input<SignalRCorsSettingsArgs> cors) {
+        public Builder cors(@Nullable Input<SignalRCorsSettingsArgs> cors) {
             this.cors = cors;
             return this;
         }
 
-        public Builder setCors(@Nullable SignalRCorsSettingsArgs cors) {
+        public Builder cors(@Nullable SignalRCorsSettingsArgs cors) {
             this.cors = Input.ofNullable(cors);
             return this;
         }
 
-        public Builder setFeatures(@Nullable Input<List<SignalRFeatureArgs>> features) {
+        public Builder features(@Nullable Input<List<SignalRFeatureArgs>> features) {
             this.features = features;
             return this;
         }
 
-        public Builder setFeatures(@Nullable List<SignalRFeatureArgs> features) {
+        public Builder features(@Nullable List<SignalRFeatureArgs> features) {
             this.features = Input.ofNullable(features);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<Either<String,ServiceKind>> kind) {
+        public Builder kind(@Nullable Input<Either<String,ServiceKind>> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable Either<String,ServiceKind> kind) {
+        public Builder kind(@Nullable Either<String,ServiceKind> kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setNetworkACLs(@Nullable Input<SignalRNetworkACLsArgs> networkACLs) {
+        public Builder networkACLs(@Nullable Input<SignalRNetworkACLsArgs> networkACLs) {
             this.networkACLs = networkACLs;
             return this;
         }
 
-        public Builder setNetworkACLs(@Nullable SignalRNetworkACLsArgs networkACLs) {
+        public Builder networkACLs(@Nullable SignalRNetworkACLsArgs networkACLs) {
             this.networkACLs = Input.ofNullable(networkACLs);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Input<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
-        public Builder setResourceName(@Nullable String resourceName) {
+        public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Input.ofNullable(resourceName);
             return this;
         }
 
-        public Builder setSku(@Nullable Input<ResourceSkuArgs> sku) {
+        public Builder sku(@Nullable Input<ResourceSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable ResourceSkuArgs sku) {
+        public Builder sku(@Nullable ResourceSkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUpstream(@Nullable Input<ServerlessUpstreamSettingsArgs> upstream) {
+        public Builder upstream(@Nullable Input<ServerlessUpstreamSettingsArgs> upstream) {
             this.upstream = upstream;
             return this;
         }
 
-        public Builder setUpstream(@Nullable ServerlessUpstreamSettingsArgs upstream) {
+        public Builder upstream(@Nullable ServerlessUpstreamSettingsArgs upstream) {
             this.upstream = Input.ofNullable(upstream);
             return this;
         }

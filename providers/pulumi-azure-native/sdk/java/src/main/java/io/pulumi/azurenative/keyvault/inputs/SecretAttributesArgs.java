@@ -91,32 +91,32 @@ public final class SecretAttributesArgs extends io.pulumi.resources.ResourceArgs
     	      this.notBefore = defaults.notBefore;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setExpires(@Nullable Input<Integer> expires) {
+        public Builder expires(@Nullable Input<Integer> expires) {
             this.expires = expires;
             return this;
         }
 
-        public Builder setExpires(@Nullable Integer expires) {
+        public Builder expires(@Nullable Integer expires) {
             this.expires = Input.ofNullable(expires);
             return this;
         }
 
-        public Builder setNotBefore(@Nullable Input<Integer> notBefore) {
+        public Builder notBefore(@Nullable Input<Integer> notBefore) {
             this.notBefore = notBefore;
             return this;
         }
 
-        public Builder setNotBefore(@Nullable Integer notBefore) {
+        public Builder notBefore(@Nullable Integer notBefore) {
             this.notBefore = Input.ofNullable(notBefore);
             return this;
         }

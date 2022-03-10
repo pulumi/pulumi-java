@@ -132,32 +132,32 @@ public final class GetWebhookResult {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setDisabled(Boolean disabled) {
+        public Builder disabled(Boolean disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setGenericWebService(GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceResponse genericWebService) {
+        public Builder genericWebService(GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceResponse genericWebService) {
             this.genericWebService = Objects.requireNonNull(genericWebService);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setServiceDirectory(GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigResponse serviceDirectory) {
+        public Builder serviceDirectory(GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigResponse serviceDirectory) {
             this.serviceDirectory = Objects.requireNonNull(serviceDirectory);
             return this;
         }
 
-        public Builder setTimeout(String timeout) {
+        public Builder timeout(String timeout) {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }

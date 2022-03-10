@@ -79,17 +79,17 @@ public final class InstanceTemplateNetworkInterfaceAccessConfig {
     	      this.publicPtrDomainName = defaults.publicPtrDomainName;
         }
 
-        public Builder setNatIp(@Nullable String natIp) {
+        public Builder natIp(@Nullable String natIp) {
             this.natIp = natIp;
             return this;
         }
 
-        public Builder setNetworkTier(@Nullable String networkTier) {
+        public Builder networkTier(@Nullable String networkTier) {
             this.networkTier = networkTier;
             return this;
         }
 
-        public Builder setPublicPtrDomainName(@Nullable String publicPtrDomainName) {
+        public Builder publicPtrDomainName(@Nullable String publicPtrDomainName) {
             this.publicPtrDomainName = publicPtrDomainName;
             return this;
         }

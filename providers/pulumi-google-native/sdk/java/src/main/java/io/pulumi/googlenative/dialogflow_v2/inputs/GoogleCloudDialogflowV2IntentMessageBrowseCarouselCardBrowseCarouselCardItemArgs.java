@@ -124,52 +124,52 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
     	      this.title = defaults.title;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFooter(@Nullable Input<String> footer) {
+        public Builder footer(@Nullable Input<String> footer) {
             this.footer = footer;
             return this;
         }
 
-        public Builder setFooter(@Nullable String footer) {
+        public Builder footer(@Nullable String footer) {
             this.footer = Input.ofNullable(footer);
             return this;
         }
 
-        public Builder setImage(@Nullable Input<GoogleCloudDialogflowV2IntentMessageImageArgs> image) {
+        public Builder image(@Nullable Input<GoogleCloudDialogflowV2IntentMessageImageArgs> image) {
             this.image = image;
             return this;
         }
 
-        public Builder setImage(@Nullable GoogleCloudDialogflowV2IntentMessageImageArgs image) {
+        public Builder image(@Nullable GoogleCloudDialogflowV2IntentMessageImageArgs image) {
             this.image = Input.ofNullable(image);
             return this;
         }
 
-        public Builder setOpenUriAction(Input<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionArgs> openUriAction) {
+        public Builder openUriAction(Input<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionArgs> openUriAction) {
             this.openUriAction = Objects.requireNonNull(openUriAction);
             return this;
         }
 
-        public Builder setOpenUriAction(GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionArgs openUriAction) {
+        public Builder openUriAction(GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionArgs openUriAction) {
             this.openUriAction = Input.of(Objects.requireNonNull(openUriAction));
             return this;
         }
 
-        public Builder setTitle(Input<String> title) {
+        public Builder title(Input<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Input.of(Objects.requireNonNull(title));
             return this;
         }

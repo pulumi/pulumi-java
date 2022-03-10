@@ -154,72 +154,72 @@ public final class BucketReplicationConfigRuleDestinationArgs extends io.pulumi.
     	      this.storageClass = defaults.storageClass;
         }
 
-        public Builder setAccessControlTranslation(@Nullable Input<BucketReplicationConfigRuleDestinationAccessControlTranslationArgs> accessControlTranslation) {
+        public Builder accessControlTranslation(@Nullable Input<BucketReplicationConfigRuleDestinationAccessControlTranslationArgs> accessControlTranslation) {
             this.accessControlTranslation = accessControlTranslation;
             return this;
         }
 
-        public Builder setAccessControlTranslation(@Nullable BucketReplicationConfigRuleDestinationAccessControlTranslationArgs accessControlTranslation) {
+        public Builder accessControlTranslation(@Nullable BucketReplicationConfigRuleDestinationAccessControlTranslationArgs accessControlTranslation) {
             this.accessControlTranslation = Input.ofNullable(accessControlTranslation);
             return this;
         }
 
-        public Builder setAccount(@Nullable Input<String> account) {
+        public Builder account(@Nullable Input<String> account) {
             this.account = account;
             return this;
         }
 
-        public Builder setAccount(@Nullable String account) {
+        public Builder account(@Nullable String account) {
             this.account = Input.ofNullable(account);
             return this;
         }
 
-        public Builder setBucket(Input<String> bucket) {
+        public Builder bucket(Input<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Input.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder setEncryptionConfiguration(@Nullable Input<BucketReplicationConfigRuleDestinationEncryptionConfigurationArgs> encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable Input<BucketReplicationConfigRuleDestinationEncryptionConfigurationArgs> encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
 
-        public Builder setEncryptionConfiguration(@Nullable BucketReplicationConfigRuleDestinationEncryptionConfigurationArgs encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable BucketReplicationConfigRuleDestinationEncryptionConfigurationArgs encryptionConfiguration) {
             this.encryptionConfiguration = Input.ofNullable(encryptionConfiguration);
             return this;
         }
 
-        public Builder setMetrics(@Nullable Input<BucketReplicationConfigRuleDestinationMetricsArgs> metrics) {
+        public Builder metrics(@Nullable Input<BucketReplicationConfigRuleDestinationMetricsArgs> metrics) {
             this.metrics = metrics;
             return this;
         }
 
-        public Builder setMetrics(@Nullable BucketReplicationConfigRuleDestinationMetricsArgs metrics) {
+        public Builder metrics(@Nullable BucketReplicationConfigRuleDestinationMetricsArgs metrics) {
             this.metrics = Input.ofNullable(metrics);
             return this;
         }
 
-        public Builder setReplicationTime(@Nullable Input<BucketReplicationConfigRuleDestinationReplicationTimeArgs> replicationTime) {
+        public Builder replicationTime(@Nullable Input<BucketReplicationConfigRuleDestinationReplicationTimeArgs> replicationTime) {
             this.replicationTime = replicationTime;
             return this;
         }
 
-        public Builder setReplicationTime(@Nullable BucketReplicationConfigRuleDestinationReplicationTimeArgs replicationTime) {
+        public Builder replicationTime(@Nullable BucketReplicationConfigRuleDestinationReplicationTimeArgs replicationTime) {
             this.replicationTime = Input.ofNullable(replicationTime);
             return this;
         }
 
-        public Builder setStorageClass(@Nullable Input<String> storageClass) {
+        public Builder storageClass(@Nullable Input<String> storageClass) {
             this.storageClass = storageClass;
             return this;
         }
 
-        public Builder setStorageClass(@Nullable String storageClass) {
+        public Builder storageClass(@Nullable String storageClass) {
             this.storageClass = Input.ofNullable(storageClass);
             return this;
         }

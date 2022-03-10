@@ -104,37 +104,37 @@ public final class GetLaunchResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setGroups(@Nullable List<LaunchGroupObject> groups) {
+        public Builder groups(@Nullable List<LaunchGroupObject> groups) {
             this.groups = groups;
             return this;
         }
 
-        public Builder setMetricMonitors(@Nullable List<LaunchMetricDefinitionObject> metricMonitors) {
+        public Builder metricMonitors(@Nullable List<LaunchMetricDefinitionObject> metricMonitors) {
             this.metricMonitors = metricMonitors;
             return this;
         }
 
-        public Builder setRandomizationSalt(@Nullable String randomizationSalt) {
+        public Builder randomizationSalt(@Nullable String randomizationSalt) {
             this.randomizationSalt = randomizationSalt;
             return this;
         }
 
-        public Builder setScheduledSplitsConfig(@Nullable List<LaunchStepConfig> scheduledSplitsConfig) {
+        public Builder scheduledSplitsConfig(@Nullable List<LaunchStepConfig> scheduledSplitsConfig) {
             this.scheduledSplitsConfig = scheduledSplitsConfig;
             return this;
         }
 
-        public Builder setTags(@Nullable List<LaunchTag> tags) {
+        public Builder tags(@Nullable List<LaunchTag> tags) {
             this.tags = tags;
             return this;
         }

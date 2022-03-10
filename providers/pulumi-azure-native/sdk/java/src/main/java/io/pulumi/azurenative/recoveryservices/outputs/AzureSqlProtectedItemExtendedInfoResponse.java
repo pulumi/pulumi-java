@@ -84,17 +84,17 @@ public final class AzureSqlProtectedItemExtendedInfoResponse {
     	      this.recoveryPointCount = defaults.recoveryPointCount;
         }
 
-        public Builder setOldestRecoveryPoint(@Nullable String oldestRecoveryPoint) {
+        public Builder oldestRecoveryPoint(@Nullable String oldestRecoveryPoint) {
             this.oldestRecoveryPoint = oldestRecoveryPoint;
             return this;
         }
 
-        public Builder setPolicyState(@Nullable String policyState) {
+        public Builder policyState(@Nullable String policyState) {
             this.policyState = policyState;
             return this;
         }
 
-        public Builder setRecoveryPointCount(@Nullable Integer recoveryPointCount) {
+        public Builder recoveryPointCount(@Nullable Integer recoveryPointCount) {
             this.recoveryPointCount = recoveryPointCount;
             return this;
         }

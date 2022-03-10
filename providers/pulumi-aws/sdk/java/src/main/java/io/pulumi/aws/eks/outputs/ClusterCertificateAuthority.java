@@ -50,7 +50,7 @@ public final class ClusterCertificateAuthority {
     	      this.data = defaults.data;
         }
 
-        public Builder setData(@Nullable String data) {
+        public Builder data(@Nullable String data) {
             this.data = data;
             return this;
         }

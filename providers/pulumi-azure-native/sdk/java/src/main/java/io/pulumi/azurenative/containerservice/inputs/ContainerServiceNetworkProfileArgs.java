@@ -209,102 +209,102 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
     	      this.serviceCidr = defaults.serviceCidr;
         }
 
-        public Builder setDnsServiceIP(@Nullable Input<String> dnsServiceIP) {
+        public Builder dnsServiceIP(@Nullable Input<String> dnsServiceIP) {
             this.dnsServiceIP = dnsServiceIP;
             return this;
         }
 
-        public Builder setDnsServiceIP(@Nullable String dnsServiceIP) {
+        public Builder dnsServiceIP(@Nullable String dnsServiceIP) {
             this.dnsServiceIP = Input.ofNullable(dnsServiceIP);
             return this;
         }
 
-        public Builder setDockerBridgeCidr(@Nullable Input<String> dockerBridgeCidr) {
+        public Builder dockerBridgeCidr(@Nullable Input<String> dockerBridgeCidr) {
             this.dockerBridgeCidr = dockerBridgeCidr;
             return this;
         }
 
-        public Builder setDockerBridgeCidr(@Nullable String dockerBridgeCidr) {
+        public Builder dockerBridgeCidr(@Nullable String dockerBridgeCidr) {
             this.dockerBridgeCidr = Input.ofNullable(dockerBridgeCidr);
             return this;
         }
 
-        public Builder setLoadBalancerProfile(@Nullable Input<ManagedClusterLoadBalancerProfileArgs> loadBalancerProfile) {
+        public Builder loadBalancerProfile(@Nullable Input<ManagedClusterLoadBalancerProfileArgs> loadBalancerProfile) {
             this.loadBalancerProfile = loadBalancerProfile;
             return this;
         }
 
-        public Builder setLoadBalancerProfile(@Nullable ManagedClusterLoadBalancerProfileArgs loadBalancerProfile) {
+        public Builder loadBalancerProfile(@Nullable ManagedClusterLoadBalancerProfileArgs loadBalancerProfile) {
             this.loadBalancerProfile = Input.ofNullable(loadBalancerProfile);
             return this;
         }
 
-        public Builder setLoadBalancerSku(@Nullable Input<Either<String,LoadBalancerSku>> loadBalancerSku) {
+        public Builder loadBalancerSku(@Nullable Input<Either<String,LoadBalancerSku>> loadBalancerSku) {
             this.loadBalancerSku = loadBalancerSku;
             return this;
         }
 
-        public Builder setLoadBalancerSku(@Nullable Either<String,LoadBalancerSku> loadBalancerSku) {
+        public Builder loadBalancerSku(@Nullable Either<String,LoadBalancerSku> loadBalancerSku) {
             this.loadBalancerSku = Input.ofNullable(loadBalancerSku);
             return this;
         }
 
-        public Builder setNetworkMode(@Nullable Input<Either<String,NetworkMode>> networkMode) {
+        public Builder networkMode(@Nullable Input<Either<String,NetworkMode>> networkMode) {
             this.networkMode = networkMode;
             return this;
         }
 
-        public Builder setNetworkMode(@Nullable Either<String,NetworkMode> networkMode) {
+        public Builder networkMode(@Nullable Either<String,NetworkMode> networkMode) {
             this.networkMode = Input.ofNullable(networkMode);
             return this;
         }
 
-        public Builder setNetworkPlugin(@Nullable Input<Either<String,NetworkPlugin>> networkPlugin) {
+        public Builder networkPlugin(@Nullable Input<Either<String,NetworkPlugin>> networkPlugin) {
             this.networkPlugin = networkPlugin;
             return this;
         }
 
-        public Builder setNetworkPlugin(@Nullable Either<String,NetworkPlugin> networkPlugin) {
+        public Builder networkPlugin(@Nullable Either<String,NetworkPlugin> networkPlugin) {
             this.networkPlugin = Input.ofNullable(networkPlugin);
             return this;
         }
 
-        public Builder setNetworkPolicy(@Nullable Input<Either<String,NetworkPolicy>> networkPolicy) {
+        public Builder networkPolicy(@Nullable Input<Either<String,NetworkPolicy>> networkPolicy) {
             this.networkPolicy = networkPolicy;
             return this;
         }
 
-        public Builder setNetworkPolicy(@Nullable Either<String,NetworkPolicy> networkPolicy) {
+        public Builder networkPolicy(@Nullable Either<String,NetworkPolicy> networkPolicy) {
             this.networkPolicy = Input.ofNullable(networkPolicy);
             return this;
         }
 
-        public Builder setOutboundType(@Nullable Input<Either<String,OutboundType>> outboundType) {
+        public Builder outboundType(@Nullable Input<Either<String,OutboundType>> outboundType) {
             this.outboundType = outboundType;
             return this;
         }
 
-        public Builder setOutboundType(@Nullable Either<String,OutboundType> outboundType) {
+        public Builder outboundType(@Nullable Either<String,OutboundType> outboundType) {
             this.outboundType = Input.ofNullable(outboundType);
             return this;
         }
 
-        public Builder setPodCidr(@Nullable Input<String> podCidr) {
+        public Builder podCidr(@Nullable Input<String> podCidr) {
             this.podCidr = podCidr;
             return this;
         }
 
-        public Builder setPodCidr(@Nullable String podCidr) {
+        public Builder podCidr(@Nullable String podCidr) {
             this.podCidr = Input.ofNullable(podCidr);
             return this;
         }
 
-        public Builder setServiceCidr(@Nullable Input<String> serviceCidr) {
+        public Builder serviceCidr(@Nullable Input<String> serviceCidr) {
             this.serviceCidr = serviceCidr;
             return this;
         }
 
-        public Builder setServiceCidr(@Nullable String serviceCidr) {
+        public Builder serviceCidr(@Nullable String serviceCidr) {
             this.serviceCidr = Input.ofNullable(serviceCidr);
             return this;
         }

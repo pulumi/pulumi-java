@@ -87,32 +87,32 @@ public final class MetricBucketOptionsLinearBucketsGetArgs extends io.pulumi.res
     	      this.width = defaults.width;
         }
 
-        public Builder setNumFiniteBuckets(@Nullable Input<Integer> numFiniteBuckets) {
+        public Builder numFiniteBuckets(@Nullable Input<Integer> numFiniteBuckets) {
             this.numFiniteBuckets = numFiniteBuckets;
             return this;
         }
 
-        public Builder setNumFiniteBuckets(@Nullable Integer numFiniteBuckets) {
+        public Builder numFiniteBuckets(@Nullable Integer numFiniteBuckets) {
             this.numFiniteBuckets = Input.ofNullable(numFiniteBuckets);
             return this;
         }
 
-        public Builder setOffset(@Nullable Input<Double> offset) {
+        public Builder offset(@Nullable Input<Double> offset) {
             this.offset = offset;
             return this;
         }
 
-        public Builder setOffset(@Nullable Double offset) {
+        public Builder offset(@Nullable Double offset) {
             this.offset = Input.ofNullable(offset);
             return this;
         }
 
-        public Builder setWidth(@Nullable Input<Double> width) {
+        public Builder width(@Nullable Input<Double> width) {
             this.width = width;
             return this;
         }
 
-        public Builder setWidth(@Nullable Double width) {
+        public Builder width(@Nullable Double width) {
             this.width = Input.ofNullable(width);
             return this;
         }

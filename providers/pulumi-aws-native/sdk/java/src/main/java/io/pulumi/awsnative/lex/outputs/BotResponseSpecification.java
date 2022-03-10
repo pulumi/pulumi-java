@@ -61,12 +61,12 @@ public final class BotResponseSpecification {
     	      this.messageGroupsList = defaults.messageGroupsList;
         }
 
-        public Builder setAllowInterrupt(@Nullable Boolean allowInterrupt) {
+        public Builder allowInterrupt(@Nullable Boolean allowInterrupt) {
             this.allowInterrupt = allowInterrupt;
             return this;
         }
 
-        public Builder setMessageGroupsList(List<BotMessageGroup> messageGroupsList) {
+        public Builder messageGroupsList(List<BotMessageGroup> messageGroupsList) {
             this.messageGroupsList = Objects.requireNonNull(messageGroupsList);
             return this;
         }

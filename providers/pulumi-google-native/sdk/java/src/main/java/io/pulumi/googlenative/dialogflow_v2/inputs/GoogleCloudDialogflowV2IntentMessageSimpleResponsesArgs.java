@@ -57,12 +57,12 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs exten
     	      this.simpleResponses = defaults.simpleResponses;
         }
 
-        public Builder setSimpleResponses(Input<List<GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs>> simpleResponses) {
+        public Builder simpleResponses(Input<List<GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs>> simpleResponses) {
             this.simpleResponses = Objects.requireNonNull(simpleResponses);
             return this;
         }
 
-        public Builder setSimpleResponses(List<GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs> simpleResponses) {
+        public Builder simpleResponses(List<GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs> simpleResponses) {
             this.simpleResponses = Input.of(Objects.requireNonNull(simpleResponses));
             return this;
         }

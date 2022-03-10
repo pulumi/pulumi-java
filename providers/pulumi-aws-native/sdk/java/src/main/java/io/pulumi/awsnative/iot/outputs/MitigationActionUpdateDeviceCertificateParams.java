@@ -40,7 +40,7 @@ public final class MitigationActionUpdateDeviceCertificateParams {
     	      this.action = defaults.action;
         }
 
-        public Builder setAction(MitigationActionUpdateDeviceCertificateParamsAction action) {
+        public Builder action(MitigationActionUpdateDeviceCertificateParamsAction action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }

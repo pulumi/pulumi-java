@@ -48,7 +48,7 @@ public final class ConnectorProfileSingularConnectorProfileCredentials {
     	      this.apiKey = defaults.apiKey;
         }
 
-        public Builder setApiKey(String apiKey) {
+        public Builder apiKey(String apiKey) {
             this.apiKey = Objects.requireNonNull(apiKey);
             return this;
         }

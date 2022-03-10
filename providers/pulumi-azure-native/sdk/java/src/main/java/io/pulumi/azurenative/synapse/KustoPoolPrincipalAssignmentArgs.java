@@ -169,82 +169,82 @@ public final class KustoPoolPrincipalAssignmentArgs extends io.pulumi.resources.
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setKustoPoolName(Input<String> kustoPoolName) {
+        public Builder kustoPoolName(Input<String> kustoPoolName) {
             this.kustoPoolName = Objects.requireNonNull(kustoPoolName);
             return this;
         }
 
-        public Builder setKustoPoolName(String kustoPoolName) {
+        public Builder kustoPoolName(String kustoPoolName) {
             this.kustoPoolName = Input.of(Objects.requireNonNull(kustoPoolName));
             return this;
         }
 
-        public Builder setPrincipalAssignmentName(@Nullable Input<String> principalAssignmentName) {
+        public Builder principalAssignmentName(@Nullable Input<String> principalAssignmentName) {
             this.principalAssignmentName = principalAssignmentName;
             return this;
         }
 
-        public Builder setPrincipalAssignmentName(@Nullable String principalAssignmentName) {
+        public Builder principalAssignmentName(@Nullable String principalAssignmentName) {
             this.principalAssignmentName = Input.ofNullable(principalAssignmentName);
             return this;
         }
 
-        public Builder setPrincipalId(Input<String> principalId) {
+        public Builder principalId(Input<String> principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
 
-        public Builder setPrincipalId(String principalId) {
+        public Builder principalId(String principalId) {
             this.principalId = Input.of(Objects.requireNonNull(principalId));
             return this;
         }
 
-        public Builder setPrincipalType(Input<Either<String,PrincipalType>> principalType) {
+        public Builder principalType(Input<Either<String,PrincipalType>> principalType) {
             this.principalType = Objects.requireNonNull(principalType);
             return this;
         }
 
-        public Builder setPrincipalType(Either<String,PrincipalType> principalType) {
+        public Builder principalType(Either<String,PrincipalType> principalType) {
             this.principalType = Input.of(Objects.requireNonNull(principalType));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRole(Input<Either<String,ClusterPrincipalRole>> role) {
+        public Builder role(Input<Either<String,ClusterPrincipalRole>> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
-        public Builder setRole(Either<String,ClusterPrincipalRole> role) {
+        public Builder role(Either<String,ClusterPrincipalRole> role) {
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
 
-        public Builder setTenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Input<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Input.ofNullable(tenantId);
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

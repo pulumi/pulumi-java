@@ -121,27 +121,27 @@ public final class ResourcePolicyInstanceSchedulePolicyResponse extends io.pulum
     	      this.vmStopSchedule = defaults.vmStopSchedule;
         }
 
-        public Builder setExpirationTime(String expirationTime) {
+        public Builder expirationTime(String expirationTime) {
             this.expirationTime = Objects.requireNonNull(expirationTime);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setTimeZone(String timeZone) {
+        public Builder timeZone(String timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
 
-        public Builder setVmStartSchedule(ResourcePolicyInstanceSchedulePolicyScheduleResponse vmStartSchedule) {
+        public Builder vmStartSchedule(ResourcePolicyInstanceSchedulePolicyScheduleResponse vmStartSchedule) {
             this.vmStartSchedule = Objects.requireNonNull(vmStartSchedule);
             return this;
         }
 
-        public Builder setVmStopSchedule(ResourcePolicyInstanceSchedulePolicyScheduleResponse vmStopSchedule) {
+        public Builder vmStopSchedule(ResourcePolicyInstanceSchedulePolicyScheduleResponse vmStopSchedule) {
             this.vmStopSchedule = Objects.requireNonNull(vmStopSchedule);
             return this;
         }

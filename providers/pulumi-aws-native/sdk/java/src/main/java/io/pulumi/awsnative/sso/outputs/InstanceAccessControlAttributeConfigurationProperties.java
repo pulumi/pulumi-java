@@ -41,7 +41,7 @@ public final class InstanceAccessControlAttributeConfigurationProperties {
     	      this.accessControlAttributes = defaults.accessControlAttributes;
         }
 
-        public Builder setAccessControlAttributes(List<InstanceAccessControlAttributeConfigurationAccessControlAttribute> accessControlAttributes) {
+        public Builder accessControlAttributes(List<InstanceAccessControlAttributeConfigurationAccessControlAttribute> accessControlAttributes) {
             this.accessControlAttributes = Objects.requireNonNull(accessControlAttributes);
             return this;
         }

@@ -203,52 +203,52 @@ public final class JobConfigResponse {
     	      this.spriteSheets = defaults.spriteSheets;
         }
 
-        public Builder setAdBreaks(List<AdBreakResponse> adBreaks) {
+        public Builder adBreaks(List<AdBreakResponse> adBreaks) {
             this.adBreaks = Objects.requireNonNull(adBreaks);
             return this;
         }
 
-        public Builder setEditList(List<EditAtomResponse> editList) {
+        public Builder editList(List<EditAtomResponse> editList) {
             this.editList = Objects.requireNonNull(editList);
             return this;
         }
 
-        public Builder setElementaryStreams(List<ElementaryStreamResponse> elementaryStreams) {
+        public Builder elementaryStreams(List<ElementaryStreamResponse> elementaryStreams) {
             this.elementaryStreams = Objects.requireNonNull(elementaryStreams);
             return this;
         }
 
-        public Builder setInputs(List<InputResponse> inputs) {
+        public Builder inputs(List<InputResponse> inputs) {
             this.inputs = Objects.requireNonNull(inputs);
             return this;
         }
 
-        public Builder setManifests(List<ManifestResponse> manifests) {
+        public Builder manifests(List<ManifestResponse> manifests) {
             this.manifests = Objects.requireNonNull(manifests);
             return this;
         }
 
-        public Builder setMuxStreams(List<MuxStreamResponse> muxStreams) {
+        public Builder muxStreams(List<MuxStreamResponse> muxStreams) {
             this.muxStreams = Objects.requireNonNull(muxStreams);
             return this;
         }
 
-        public Builder setOutput(OutputResponse output) {
+        public Builder output(OutputResponse output) {
             this.output = Objects.requireNonNull(output);
             return this;
         }
 
-        public Builder setOverlays(List<OverlayResponse> overlays) {
+        public Builder overlays(List<OverlayResponse> overlays) {
             this.overlays = Objects.requireNonNull(overlays);
             return this;
         }
 
-        public Builder setPubsubDestination(PubsubDestinationResponse pubsubDestination) {
+        public Builder pubsubDestination(PubsubDestinationResponse pubsubDestination) {
             this.pubsubDestination = Objects.requireNonNull(pubsubDestination);
             return this;
         }
 
-        public Builder setSpriteSheets(List<SpriteSheetResponse> spriteSheets) {
+        public Builder spriteSheets(List<SpriteSheetResponse> spriteSheets) {
             this.spriteSheets = Objects.requireNonNull(spriteSheets);
             return this;
         }

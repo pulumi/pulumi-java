@@ -135,62 +135,62 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serverRole = defaults.serverRole;
         }
 
-        public Builder setLinkedRedisCacheId(Input<String> linkedRedisCacheId) {
+        public Builder linkedRedisCacheId(Input<String> linkedRedisCacheId) {
             this.linkedRedisCacheId = Objects.requireNonNull(linkedRedisCacheId);
             return this;
         }
 
-        public Builder setLinkedRedisCacheId(String linkedRedisCacheId) {
+        public Builder linkedRedisCacheId(String linkedRedisCacheId) {
             this.linkedRedisCacheId = Input.of(Objects.requireNonNull(linkedRedisCacheId));
             return this;
         }
 
-        public Builder setLinkedRedisCacheLocation(Input<String> linkedRedisCacheLocation) {
+        public Builder linkedRedisCacheLocation(Input<String> linkedRedisCacheLocation) {
             this.linkedRedisCacheLocation = Objects.requireNonNull(linkedRedisCacheLocation);
             return this;
         }
 
-        public Builder setLinkedRedisCacheLocation(String linkedRedisCacheLocation) {
+        public Builder linkedRedisCacheLocation(String linkedRedisCacheLocation) {
             this.linkedRedisCacheLocation = Input.of(Objects.requireNonNull(linkedRedisCacheLocation));
             return this;
         }
 
-        public Builder setLinkedServerName(@Nullable Input<String> linkedServerName) {
+        public Builder linkedServerName(@Nullable Input<String> linkedServerName) {
             this.linkedServerName = linkedServerName;
             return this;
         }
 
-        public Builder setLinkedServerName(@Nullable String linkedServerName) {
+        public Builder linkedServerName(@Nullable String linkedServerName) {
             this.linkedServerName = Input.ofNullable(linkedServerName);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServerRole(Input<ReplicationRole> serverRole) {
+        public Builder serverRole(Input<ReplicationRole> serverRole) {
             this.serverRole = Objects.requireNonNull(serverRole);
             return this;
         }
 
-        public Builder setServerRole(ReplicationRole serverRole) {
+        public Builder serverRole(ReplicationRole serverRole) {
             this.serverRole = Input.of(Objects.requireNonNull(serverRole));
             return this;
         }

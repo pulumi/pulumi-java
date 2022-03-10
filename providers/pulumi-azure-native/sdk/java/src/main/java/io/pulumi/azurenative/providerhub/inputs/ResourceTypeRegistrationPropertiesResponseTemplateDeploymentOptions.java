@@ -64,12 +64,12 @@ public final class ResourceTypeRegistrationPropertiesResponseTemplateDeploymentO
     	      this.preflightSupported = defaults.preflightSupported;
         }
 
-        public Builder setPreflightOptions(@Nullable List<String> preflightOptions) {
+        public Builder preflightOptions(@Nullable List<String> preflightOptions) {
             this.preflightOptions = preflightOptions;
             return this;
         }
 
-        public Builder setPreflightSupported(@Nullable Boolean preflightSupported) {
+        public Builder preflightSupported(@Nullable Boolean preflightSupported) {
             this.preflightSupported = preflightSupported;
             return this;
         }

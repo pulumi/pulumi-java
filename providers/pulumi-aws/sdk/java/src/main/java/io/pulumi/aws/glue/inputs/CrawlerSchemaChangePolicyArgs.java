@@ -70,22 +70,22 @@ public final class CrawlerSchemaChangePolicyArgs extends io.pulumi.resources.Res
     	      this.updateBehavior = defaults.updateBehavior;
         }
 
-        public Builder setDeleteBehavior(@Nullable Input<String> deleteBehavior) {
+        public Builder deleteBehavior(@Nullable Input<String> deleteBehavior) {
             this.deleteBehavior = deleteBehavior;
             return this;
         }
 
-        public Builder setDeleteBehavior(@Nullable String deleteBehavior) {
+        public Builder deleteBehavior(@Nullable String deleteBehavior) {
             this.deleteBehavior = Input.ofNullable(deleteBehavior);
             return this;
         }
 
-        public Builder setUpdateBehavior(@Nullable Input<String> updateBehavior) {
+        public Builder updateBehavior(@Nullable Input<String> updateBehavior) {
             this.updateBehavior = updateBehavior;
             return this;
         }
 
-        public Builder setUpdateBehavior(@Nullable String updateBehavior) {
+        public Builder updateBehavior(@Nullable String updateBehavior) {
             this.updateBehavior = Input.ofNullable(updateBehavior);
             return this;
         }

@@ -92,32 +92,32 @@ public final class VolumeBackupsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumeName = defaults.volumeName;
         }
 
-        public Builder setBackupsCount(@Nullable Input<Integer> backupsCount) {
+        public Builder backupsCount(@Nullable Input<Integer> backupsCount) {
             this.backupsCount = backupsCount;
             return this;
         }
 
-        public Builder setBackupsCount(@Nullable Integer backupsCount) {
+        public Builder backupsCount(@Nullable Integer backupsCount) {
             this.backupsCount = Input.ofNullable(backupsCount);
             return this;
         }
 
-        public Builder setPolicyEnabled(@Nullable Input<Boolean> policyEnabled) {
+        public Builder policyEnabled(@Nullable Input<Boolean> policyEnabled) {
             this.policyEnabled = policyEnabled;
             return this;
         }
 
-        public Builder setPolicyEnabled(@Nullable Boolean policyEnabled) {
+        public Builder policyEnabled(@Nullable Boolean policyEnabled) {
             this.policyEnabled = Input.ofNullable(policyEnabled);
             return this;
         }
 
-        public Builder setVolumeName(@Nullable Input<String> volumeName) {
+        public Builder volumeName(@Nullable Input<String> volumeName) {
             this.volumeName = volumeName;
             return this;
         }
 
-        public Builder setVolumeName(@Nullable String volumeName) {
+        public Builder volumeName(@Nullable String volumeName) {
             this.volumeName = Input.ofNullable(volumeName);
             return this;
         }

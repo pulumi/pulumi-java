@@ -156,72 +156,72 @@ public final class CacheKeyPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.queryStringWhitelist = defaults.queryStringWhitelist;
         }
 
-        public Builder setIncludeHost(@Nullable Input<Boolean> includeHost) {
+        public Builder includeHost(@Nullable Input<Boolean> includeHost) {
             this.includeHost = includeHost;
             return this;
         }
 
-        public Builder setIncludeHost(@Nullable Boolean includeHost) {
+        public Builder includeHost(@Nullable Boolean includeHost) {
             this.includeHost = Input.ofNullable(includeHost);
             return this;
         }
 
-        public Builder setIncludeHttpHeaders(@Nullable Input<List<String>> includeHttpHeaders) {
+        public Builder includeHttpHeaders(@Nullable Input<List<String>> includeHttpHeaders) {
             this.includeHttpHeaders = includeHttpHeaders;
             return this;
         }
 
-        public Builder setIncludeHttpHeaders(@Nullable List<String> includeHttpHeaders) {
+        public Builder includeHttpHeaders(@Nullable List<String> includeHttpHeaders) {
             this.includeHttpHeaders = Input.ofNullable(includeHttpHeaders);
             return this;
         }
 
-        public Builder setIncludeNamedCookies(@Nullable Input<List<String>> includeNamedCookies) {
+        public Builder includeNamedCookies(@Nullable Input<List<String>> includeNamedCookies) {
             this.includeNamedCookies = includeNamedCookies;
             return this;
         }
 
-        public Builder setIncludeNamedCookies(@Nullable List<String> includeNamedCookies) {
+        public Builder includeNamedCookies(@Nullable List<String> includeNamedCookies) {
             this.includeNamedCookies = Input.ofNullable(includeNamedCookies);
             return this;
         }
 
-        public Builder setIncludeProtocol(@Nullable Input<Boolean> includeProtocol) {
+        public Builder includeProtocol(@Nullable Input<Boolean> includeProtocol) {
             this.includeProtocol = includeProtocol;
             return this;
         }
 
-        public Builder setIncludeProtocol(@Nullable Boolean includeProtocol) {
+        public Builder includeProtocol(@Nullable Boolean includeProtocol) {
             this.includeProtocol = Input.ofNullable(includeProtocol);
             return this;
         }
 
-        public Builder setIncludeQueryString(@Nullable Input<Boolean> includeQueryString) {
+        public Builder includeQueryString(@Nullable Input<Boolean> includeQueryString) {
             this.includeQueryString = includeQueryString;
             return this;
         }
 
-        public Builder setIncludeQueryString(@Nullable Boolean includeQueryString) {
+        public Builder includeQueryString(@Nullable Boolean includeQueryString) {
             this.includeQueryString = Input.ofNullable(includeQueryString);
             return this;
         }
 
-        public Builder setQueryStringBlacklist(@Nullable Input<List<String>> queryStringBlacklist) {
+        public Builder queryStringBlacklist(@Nullable Input<List<String>> queryStringBlacklist) {
             this.queryStringBlacklist = queryStringBlacklist;
             return this;
         }
 
-        public Builder setQueryStringBlacklist(@Nullable List<String> queryStringBlacklist) {
+        public Builder queryStringBlacklist(@Nullable List<String> queryStringBlacklist) {
             this.queryStringBlacklist = Input.ofNullable(queryStringBlacklist);
             return this;
         }
 
-        public Builder setQueryStringWhitelist(@Nullable Input<List<String>> queryStringWhitelist) {
+        public Builder queryStringWhitelist(@Nullable Input<List<String>> queryStringWhitelist) {
             this.queryStringWhitelist = queryStringWhitelist;
             return this;
         }
 
-        public Builder setQueryStringWhitelist(@Nullable List<String> queryStringWhitelist) {
+        public Builder queryStringWhitelist(@Nullable List<String> queryStringWhitelist) {
             this.queryStringWhitelist = Input.ofNullable(queryStringWhitelist);
             return this;
         }

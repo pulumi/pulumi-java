@@ -48,7 +48,7 @@ public final class BucketReplicationConfigRuleDestinationEncryptionConfiguration
     	      this.replicaKmsKeyId = defaults.replicaKmsKeyId;
         }
 
-        public Builder setReplicaKmsKeyId(String replicaKmsKeyId) {
+        public Builder replicaKmsKeyId(String replicaKmsKeyId) {
             this.replicaKmsKeyId = Objects.requireNonNull(replicaKmsKeyId);
             return this;
         }

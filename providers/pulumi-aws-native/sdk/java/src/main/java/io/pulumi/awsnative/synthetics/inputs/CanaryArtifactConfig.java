@@ -53,7 +53,7 @@ public final class CanaryArtifactConfig extends io.pulumi.resources.InvokeArgs {
     	      this.s3Encryption = defaults.s3Encryption;
         }
 
-        public Builder setS3Encryption(@Nullable CanaryS3Encryption s3Encryption) {
+        public Builder s3Encryption(@Nullable CanaryS3Encryption s3Encryption) {
             this.s3Encryption = s3Encryption;
             return this;
         }

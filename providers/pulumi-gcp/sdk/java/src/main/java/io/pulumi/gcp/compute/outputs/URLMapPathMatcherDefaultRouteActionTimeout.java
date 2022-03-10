@@ -72,12 +72,12 @@ public final class URLMapPathMatcherDefaultRouteActionTimeout {
     	      this.seconds = defaults.seconds;
         }
 
-        public Builder setNanos(@Nullable Integer nanos) {
+        public Builder nanos(@Nullable Integer nanos) {
             this.nanos = nanos;
             return this;
         }
 
-        public Builder setSeconds(@Nullable String seconds) {
+        public Builder seconds(@Nullable String seconds) {
             this.seconds = seconds;
             return this;
         }

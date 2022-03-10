@@ -68,12 +68,12 @@ public final class MediaGraphPemCertificateListResponse {
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setCertificates(List<String> certificates) {
+        public Builder certificates(List<String> certificates) {
             this.certificates = Objects.requireNonNull(certificates);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }

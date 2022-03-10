@@ -108,42 +108,42 @@ public final class CloudSqlPropertiesArgs extends io.pulumi.resources.ResourceAr
     	      this.type = defaults.type;
         }
 
-        public Builder setCredential(@Nullable Input<CloudSqlCredentialArgs> credential) {
+        public Builder credential(@Nullable Input<CloudSqlCredentialArgs> credential) {
             this.credential = credential;
             return this;
         }
 
-        public Builder setCredential(@Nullable CloudSqlCredentialArgs credential) {
+        public Builder credential(@Nullable CloudSqlCredentialArgs credential) {
             this.credential = Input.ofNullable(credential);
             return this;
         }
 
-        public Builder setDatabase(@Nullable Input<String> database) {
+        public Builder database(@Nullable Input<String> database) {
             this.database = database;
             return this;
         }
 
-        public Builder setDatabase(@Nullable String database) {
+        public Builder database(@Nullable String database) {
             this.database = Input.ofNullable(database);
             return this;
         }
 
-        public Builder setInstanceId(@Nullable Input<String> instanceId) {
+        public Builder instanceId(@Nullable Input<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
 
-        public Builder setInstanceId(@Nullable String instanceId) {
+        public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = Input.ofNullable(instanceId);
             return this;
         }
 
-        public Builder setType(@Nullable Input<CloudSqlPropertiesType> type) {
+        public Builder type(@Nullable Input<CloudSqlPropertiesType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable CloudSqlPropertiesType type) {
+        public Builder type(@Nullable CloudSqlPropertiesType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

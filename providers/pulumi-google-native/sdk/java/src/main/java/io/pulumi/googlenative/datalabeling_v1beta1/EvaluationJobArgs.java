@@ -148,72 +148,72 @@ public final class EvaluationJobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.schedule = defaults.schedule;
         }
 
-        public Builder setAnnotationSpecSet(Input<String> annotationSpecSet) {
+        public Builder annotationSpecSet(Input<String> annotationSpecSet) {
             this.annotationSpecSet = Objects.requireNonNull(annotationSpecSet);
             return this;
         }
 
-        public Builder setAnnotationSpecSet(String annotationSpecSet) {
+        public Builder annotationSpecSet(String annotationSpecSet) {
             this.annotationSpecSet = Input.of(Objects.requireNonNull(annotationSpecSet));
             return this;
         }
 
-        public Builder setDescription(Input<String> description) {
+        public Builder description(Input<String> description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Input.of(Objects.requireNonNull(description));
             return this;
         }
 
-        public Builder setEvaluationJobConfig(Input<GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs> evaluationJobConfig) {
+        public Builder evaluationJobConfig(Input<GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs> evaluationJobConfig) {
             this.evaluationJobConfig = Objects.requireNonNull(evaluationJobConfig);
             return this;
         }
 
-        public Builder setEvaluationJobConfig(GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs evaluationJobConfig) {
+        public Builder evaluationJobConfig(GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs evaluationJobConfig) {
             this.evaluationJobConfig = Input.of(Objects.requireNonNull(evaluationJobConfig));
             return this;
         }
 
-        public Builder setLabelMissingGroundTruth(Input<Boolean> labelMissingGroundTruth) {
+        public Builder labelMissingGroundTruth(Input<Boolean> labelMissingGroundTruth) {
             this.labelMissingGroundTruth = Objects.requireNonNull(labelMissingGroundTruth);
             return this;
         }
 
-        public Builder setLabelMissingGroundTruth(Boolean labelMissingGroundTruth) {
+        public Builder labelMissingGroundTruth(Boolean labelMissingGroundTruth) {
             this.labelMissingGroundTruth = Input.of(Objects.requireNonNull(labelMissingGroundTruth));
             return this;
         }
 
-        public Builder setModelVersion(Input<String> modelVersion) {
+        public Builder modelVersion(Input<String> modelVersion) {
             this.modelVersion = Objects.requireNonNull(modelVersion);
             return this;
         }
 
-        public Builder setModelVersion(String modelVersion) {
+        public Builder modelVersion(String modelVersion) {
             this.modelVersion = Input.of(Objects.requireNonNull(modelVersion));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSchedule(Input<String> schedule) {
+        public Builder schedule(Input<String> schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
 
-        public Builder setSchedule(String schedule) {
+        public Builder schedule(String schedule) {
             this.schedule = Input.of(Objects.requireNonNull(schedule));
             return this;
         }

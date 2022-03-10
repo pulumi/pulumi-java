@@ -68,12 +68,12 @@ public final class DomainEndpointOptions {
     	      this.tlsSecurityPolicy = defaults.tlsSecurityPolicy;
         }
 
-        public Builder setEnforceHttps(@Nullable Boolean enforceHttps) {
+        public Builder enforceHttps(@Nullable Boolean enforceHttps) {
             this.enforceHttps = enforceHttps;
             return this;
         }
 
-        public Builder setTlsSecurityPolicy(@Nullable String tlsSecurityPolicy) {
+        public Builder tlsSecurityPolicy(@Nullable String tlsSecurityPolicy) {
             this.tlsSecurityPolicy = tlsSecurityPolicy;
             return this;
         }

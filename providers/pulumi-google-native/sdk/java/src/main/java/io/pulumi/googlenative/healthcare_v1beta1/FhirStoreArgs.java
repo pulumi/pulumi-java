@@ -254,142 +254,142 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setDatasetId(Input<String> datasetId) {
+        public Builder datasetId(Input<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
-        public Builder setDatasetId(String datasetId) {
+        public Builder datasetId(String datasetId) {
             this.datasetId = Input.of(Objects.requireNonNull(datasetId));
             return this;
         }
 
-        public Builder setDefaultSearchHandlingStrict(@Nullable Input<Boolean> defaultSearchHandlingStrict) {
+        public Builder defaultSearchHandlingStrict(@Nullable Input<Boolean> defaultSearchHandlingStrict) {
             this.defaultSearchHandlingStrict = defaultSearchHandlingStrict;
             return this;
         }
 
-        public Builder setDefaultSearchHandlingStrict(@Nullable Boolean defaultSearchHandlingStrict) {
+        public Builder defaultSearchHandlingStrict(@Nullable Boolean defaultSearchHandlingStrict) {
             this.defaultSearchHandlingStrict = Input.ofNullable(defaultSearchHandlingStrict);
             return this;
         }
 
-        public Builder setDisableReferentialIntegrity(@Nullable Input<Boolean> disableReferentialIntegrity) {
+        public Builder disableReferentialIntegrity(@Nullable Input<Boolean> disableReferentialIntegrity) {
             this.disableReferentialIntegrity = disableReferentialIntegrity;
             return this;
         }
 
-        public Builder setDisableReferentialIntegrity(@Nullable Boolean disableReferentialIntegrity) {
+        public Builder disableReferentialIntegrity(@Nullable Boolean disableReferentialIntegrity) {
             this.disableReferentialIntegrity = Input.ofNullable(disableReferentialIntegrity);
             return this;
         }
 
-        public Builder setDisableResourceVersioning(@Nullable Input<Boolean> disableResourceVersioning) {
+        public Builder disableResourceVersioning(@Nullable Input<Boolean> disableResourceVersioning) {
             this.disableResourceVersioning = disableResourceVersioning;
             return this;
         }
 
-        public Builder setDisableResourceVersioning(@Nullable Boolean disableResourceVersioning) {
+        public Builder disableResourceVersioning(@Nullable Boolean disableResourceVersioning) {
             this.disableResourceVersioning = Input.ofNullable(disableResourceVersioning);
             return this;
         }
 
-        public Builder setEnableUpdateCreate(@Nullable Input<Boolean> enableUpdateCreate) {
+        public Builder enableUpdateCreate(@Nullable Input<Boolean> enableUpdateCreate) {
             this.enableUpdateCreate = enableUpdateCreate;
             return this;
         }
 
-        public Builder setEnableUpdateCreate(@Nullable Boolean enableUpdateCreate) {
+        public Builder enableUpdateCreate(@Nullable Boolean enableUpdateCreate) {
             this.enableUpdateCreate = Input.ofNullable(enableUpdateCreate);
             return this;
         }
 
-        public Builder setFhirStoreId(@Nullable Input<String> fhirStoreId) {
+        public Builder fhirStoreId(@Nullable Input<String> fhirStoreId) {
             this.fhirStoreId = fhirStoreId;
             return this;
         }
 
-        public Builder setFhirStoreId(@Nullable String fhirStoreId) {
+        public Builder fhirStoreId(@Nullable String fhirStoreId) {
             this.fhirStoreId = Input.ofNullable(fhirStoreId);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setNotificationConfig(@Nullable Input<NotificationConfigArgs> notificationConfig) {
+        public Builder notificationConfig(@Nullable Input<NotificationConfigArgs> notificationConfig) {
             this.notificationConfig = notificationConfig;
             return this;
         }
 
-        public Builder setNotificationConfig(@Nullable NotificationConfigArgs notificationConfig) {
+        public Builder notificationConfig(@Nullable NotificationConfigArgs notificationConfig) {
             this.notificationConfig = Input.ofNullable(notificationConfig);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSearchConfig(@Nullable Input<SearchConfigArgs> searchConfig) {
+        public Builder searchConfig(@Nullable Input<SearchConfigArgs> searchConfig) {
             this.searchConfig = searchConfig;
             return this;
         }
 
-        public Builder setSearchConfig(@Nullable SearchConfigArgs searchConfig) {
+        public Builder searchConfig(@Nullable SearchConfigArgs searchConfig) {
             this.searchConfig = Input.ofNullable(searchConfig);
             return this;
         }
 
-        public Builder setStreamConfigs(@Nullable Input<List<StreamConfigArgs>> streamConfigs) {
+        public Builder streamConfigs(@Nullable Input<List<StreamConfigArgs>> streamConfigs) {
             this.streamConfigs = streamConfigs;
             return this;
         }
 
-        public Builder setStreamConfigs(@Nullable List<StreamConfigArgs> streamConfigs) {
+        public Builder streamConfigs(@Nullable List<StreamConfigArgs> streamConfigs) {
             this.streamConfigs = Input.ofNullable(streamConfigs);
             return this;
         }
 
-        public Builder setValidationConfig(@Nullable Input<ValidationConfigArgs> validationConfig) {
+        public Builder validationConfig(@Nullable Input<ValidationConfigArgs> validationConfig) {
             this.validationConfig = validationConfig;
             return this;
         }
 
-        public Builder setValidationConfig(@Nullable ValidationConfigArgs validationConfig) {
+        public Builder validationConfig(@Nullable ValidationConfigArgs validationConfig) {
             this.validationConfig = Input.ofNullable(validationConfig);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<FhirStoreVersion> version) {
+        public Builder version(@Nullable Input<FhirStoreVersion> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable FhirStoreVersion version) {
+        public Builder version(@Nullable FhirStoreVersion version) {
             this.version = Input.ofNullable(version);
             return this;
         }

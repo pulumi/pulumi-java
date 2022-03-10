@@ -57,7 +57,7 @@ public final class AppliancePropertiesResponseInfrastructureConfig extends io.pu
     	      this.provider = defaults.provider;
         }
 
-        public Builder setProvider(@Nullable String provider) {
+        public Builder provider(@Nullable String provider) {
             this.provider = provider;
             return this;
         }

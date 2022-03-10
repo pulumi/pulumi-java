@@ -101,22 +101,22 @@ public final class BlobInventoryPolicyFilterResponse {
     	      this.prefixMatch = defaults.prefixMatch;
         }
 
-        public Builder setBlobTypes(List<String> blobTypes) {
+        public Builder blobTypes(List<String> blobTypes) {
             this.blobTypes = Objects.requireNonNull(blobTypes);
             return this;
         }
 
-        public Builder setIncludeBlobVersions(@Nullable Boolean includeBlobVersions) {
+        public Builder includeBlobVersions(@Nullable Boolean includeBlobVersions) {
             this.includeBlobVersions = includeBlobVersions;
             return this;
         }
 
-        public Builder setIncludeSnapshots(@Nullable Boolean includeSnapshots) {
+        public Builder includeSnapshots(@Nullable Boolean includeSnapshots) {
             this.includeSnapshots = includeSnapshots;
             return this;
         }
 
-        public Builder setPrefixMatch(@Nullable List<String> prefixMatch) {
+        public Builder prefixMatch(@Nullable List<String> prefixMatch) {
             this.prefixMatch = prefixMatch;
             return this;
         }

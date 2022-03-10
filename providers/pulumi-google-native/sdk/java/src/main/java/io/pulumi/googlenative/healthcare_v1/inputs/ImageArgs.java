@@ -74,22 +74,22 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rawBytes = defaults.rawBytes;
         }
 
-        public Builder setGcsUri(@Nullable Input<String> gcsUri) {
+        public Builder gcsUri(@Nullable Input<String> gcsUri) {
             this.gcsUri = gcsUri;
             return this;
         }
 
-        public Builder setGcsUri(@Nullable String gcsUri) {
+        public Builder gcsUri(@Nullable String gcsUri) {
             this.gcsUri = Input.ofNullable(gcsUri);
             return this;
         }
 
-        public Builder setRawBytes(@Nullable Input<String> rawBytes) {
+        public Builder rawBytes(@Nullable Input<String> rawBytes) {
             this.rawBytes = rawBytes;
             return this;
         }
 
-        public Builder setRawBytes(@Nullable String rawBytes) {
+        public Builder rawBytes(@Nullable String rawBytes) {
             this.rawBytes = Input.ofNullable(rawBytes);
             return this;
         }

@@ -243,67 +243,67 @@ public final class GetWebAppHostNameBindingResult {
     	      this.virtualIP = defaults.virtualIP;
         }
 
-        public Builder setAzureResourceName(@Nullable String azureResourceName) {
+        public Builder azureResourceName(@Nullable String azureResourceName) {
             this.azureResourceName = azureResourceName;
             return this;
         }
 
-        public Builder setAzureResourceType(@Nullable String azureResourceType) {
+        public Builder azureResourceType(@Nullable String azureResourceType) {
             this.azureResourceType = azureResourceType;
             return this;
         }
 
-        public Builder setCustomHostNameDnsRecordType(@Nullable String customHostNameDnsRecordType) {
+        public Builder customHostNameDnsRecordType(@Nullable String customHostNameDnsRecordType) {
             this.customHostNameDnsRecordType = customHostNameDnsRecordType;
             return this;
         }
 
-        public Builder setDomainId(@Nullable String domainId) {
+        public Builder domainId(@Nullable String domainId) {
             this.domainId = domainId;
             return this;
         }
 
-        public Builder setHostNameType(@Nullable String hostNameType) {
+        public Builder hostNameType(@Nullable String hostNameType) {
             this.hostNameType = hostNameType;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSiteName(@Nullable String siteName) {
+        public Builder siteName(@Nullable String siteName) {
             this.siteName = siteName;
             return this;
         }
 
-        public Builder setSslState(@Nullable String sslState) {
+        public Builder sslState(@Nullable String sslState) {
             this.sslState = sslState;
             return this;
         }
 
-        public Builder setThumbprint(@Nullable String thumbprint) {
+        public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVirtualIP(String virtualIP) {
+        public Builder virtualIP(String virtualIP) {
             this.virtualIP = Objects.requireNonNull(virtualIP);
             return this;
         }

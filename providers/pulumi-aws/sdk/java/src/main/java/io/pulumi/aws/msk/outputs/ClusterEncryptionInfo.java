@@ -68,12 +68,12 @@ public final class ClusterEncryptionInfo {
     	      this.encryptionInTransit = defaults.encryptionInTransit;
         }
 
-        public Builder setEncryptionAtRestKmsKeyArn(@Nullable String encryptionAtRestKmsKeyArn) {
+        public Builder encryptionAtRestKmsKeyArn(@Nullable String encryptionAtRestKmsKeyArn) {
             this.encryptionAtRestKmsKeyArn = encryptionAtRestKmsKeyArn;
             return this;
         }
 
-        public Builder setEncryptionInTransit(@Nullable ClusterEncryptionInfoEncryptionInTransit encryptionInTransit) {
+        public Builder encryptionInTransit(@Nullable ClusterEncryptionInfoEncryptionInTransit encryptionInTransit) {
             this.encryptionInTransit = encryptionInTransit;
             return this;
         }

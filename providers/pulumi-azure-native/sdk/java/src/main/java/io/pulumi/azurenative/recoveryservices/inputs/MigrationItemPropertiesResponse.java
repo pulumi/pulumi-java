@@ -254,67 +254,67 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
     	      this.testMigrateStateDescription = defaults.testMigrateStateDescription;
         }
 
-        public Builder setAllowedOperations(List<String> allowedOperations) {
+        public Builder allowedOperations(List<String> allowedOperations) {
             this.allowedOperations = Objects.requireNonNull(allowedOperations);
             return this;
         }
 
-        public Builder setCurrentJob(CurrentJobDetailsResponse currentJob) {
+        public Builder currentJob(CurrentJobDetailsResponse currentJob) {
             this.currentJob = Objects.requireNonNull(currentJob);
             return this;
         }
 
-        public Builder setHealth(String health) {
+        public Builder health(String health) {
             this.health = Objects.requireNonNull(health);
             return this;
         }
 
-        public Builder setHealthErrors(List<HealthErrorResponse> healthErrors) {
+        public Builder healthErrors(List<HealthErrorResponse> healthErrors) {
             this.healthErrors = Objects.requireNonNull(healthErrors);
             return this;
         }
 
-        public Builder setMachineName(String machineName) {
+        public Builder machineName(String machineName) {
             this.machineName = Objects.requireNonNull(machineName);
             return this;
         }
 
-        public Builder setMigrationState(String migrationState) {
+        public Builder migrationState(String migrationState) {
             this.migrationState = Objects.requireNonNull(migrationState);
             return this;
         }
 
-        public Builder setMigrationStateDescription(String migrationStateDescription) {
+        public Builder migrationStateDescription(String migrationStateDescription) {
             this.migrationStateDescription = Objects.requireNonNull(migrationStateDescription);
             return this;
         }
 
-        public Builder setPolicyFriendlyName(String policyFriendlyName) {
+        public Builder policyFriendlyName(String policyFriendlyName) {
             this.policyFriendlyName = Objects.requireNonNull(policyFriendlyName);
             return this;
         }
 
-        public Builder setPolicyId(String policyId) {
+        public Builder policyId(String policyId) {
             this.policyId = Objects.requireNonNull(policyId);
             return this;
         }
 
-        public Builder setProviderSpecificDetails(@Nullable VMwareCbtMigrationDetailsResponse providerSpecificDetails) {
+        public Builder providerSpecificDetails(@Nullable VMwareCbtMigrationDetailsResponse providerSpecificDetails) {
             this.providerSpecificDetails = providerSpecificDetails;
             return this;
         }
 
-        public Builder setRecoveryServicesProviderId(String recoveryServicesProviderId) {
+        public Builder recoveryServicesProviderId(String recoveryServicesProviderId) {
             this.recoveryServicesProviderId = Objects.requireNonNull(recoveryServicesProviderId);
             return this;
         }
 
-        public Builder setTestMigrateState(String testMigrateState) {
+        public Builder testMigrateState(String testMigrateState) {
             this.testMigrateState = Objects.requireNonNull(testMigrateState);
             return this;
         }
 
-        public Builder setTestMigrateStateDescription(String testMigrateStateDescription) {
+        public Builder testMigrateStateDescription(String testMigrateStateDescription) {
             this.testMigrateStateDescription = Objects.requireNonNull(testMigrateStateDescription);
             return this;
         }

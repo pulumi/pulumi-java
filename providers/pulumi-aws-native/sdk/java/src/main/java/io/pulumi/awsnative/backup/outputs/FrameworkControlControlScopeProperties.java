@@ -84,17 +84,17 @@ public final class FrameworkControlControlScopeProperties {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setComplianceResourceIds(@Nullable List<String> complianceResourceIds) {
+        public Builder complianceResourceIds(@Nullable List<String> complianceResourceIds) {
             this.complianceResourceIds = complianceResourceIds;
             return this;
         }
 
-        public Builder setComplianceResourceTypes(@Nullable List<String> complianceResourceTypes) {
+        public Builder complianceResourceTypes(@Nullable List<String> complianceResourceTypes) {
             this.complianceResourceTypes = complianceResourceTypes;
             return this;
         }
 
-        public Builder setTags(@Nullable List<FrameworkTag> tags) {
+        public Builder tags(@Nullable List<FrameworkTag> tags) {
             this.tags = tags;
             return this;
         }

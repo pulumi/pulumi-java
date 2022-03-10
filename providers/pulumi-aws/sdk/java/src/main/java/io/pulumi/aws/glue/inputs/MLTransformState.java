@@ -301,162 +301,162 @@ public final class MLTransformState extends io.pulumi.resources.ResourceArgs {
     	      this.workerType = defaults.workerType;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setGlueVersion(@Nullable Input<String> glueVersion) {
+        public Builder glueVersion(@Nullable Input<String> glueVersion) {
             this.glueVersion = glueVersion;
             return this;
         }
 
-        public Builder setGlueVersion(@Nullable String glueVersion) {
+        public Builder glueVersion(@Nullable String glueVersion) {
             this.glueVersion = Input.ofNullable(glueVersion);
             return this;
         }
 
-        public Builder setInputRecordTables(@Nullable Input<List<MLTransformInputRecordTableGetArgs>> inputRecordTables) {
+        public Builder inputRecordTables(@Nullable Input<List<MLTransformInputRecordTableGetArgs>> inputRecordTables) {
             this.inputRecordTables = inputRecordTables;
             return this;
         }
 
-        public Builder setInputRecordTables(@Nullable List<MLTransformInputRecordTableGetArgs> inputRecordTables) {
+        public Builder inputRecordTables(@Nullable List<MLTransformInputRecordTableGetArgs> inputRecordTables) {
             this.inputRecordTables = Input.ofNullable(inputRecordTables);
             return this;
         }
 
-        public Builder setLabelCount(@Nullable Input<Integer> labelCount) {
+        public Builder labelCount(@Nullable Input<Integer> labelCount) {
             this.labelCount = labelCount;
             return this;
         }
 
-        public Builder setLabelCount(@Nullable Integer labelCount) {
+        public Builder labelCount(@Nullable Integer labelCount) {
             this.labelCount = Input.ofNullable(labelCount);
             return this;
         }
 
-        public Builder setMaxCapacity(@Nullable Input<Double> maxCapacity) {
+        public Builder maxCapacity(@Nullable Input<Double> maxCapacity) {
             this.maxCapacity = maxCapacity;
             return this;
         }
 
-        public Builder setMaxCapacity(@Nullable Double maxCapacity) {
+        public Builder maxCapacity(@Nullable Double maxCapacity) {
             this.maxCapacity = Input.ofNullable(maxCapacity);
             return this;
         }
 
-        public Builder setMaxRetries(@Nullable Input<Integer> maxRetries) {
+        public Builder maxRetries(@Nullable Input<Integer> maxRetries) {
             this.maxRetries = maxRetries;
             return this;
         }
 
-        public Builder setMaxRetries(@Nullable Integer maxRetries) {
+        public Builder maxRetries(@Nullable Integer maxRetries) {
             this.maxRetries = Input.ofNullable(maxRetries);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNumberOfWorkers(@Nullable Input<Integer> numberOfWorkers) {
+        public Builder numberOfWorkers(@Nullable Input<Integer> numberOfWorkers) {
             this.numberOfWorkers = numberOfWorkers;
             return this;
         }
 
-        public Builder setNumberOfWorkers(@Nullable Integer numberOfWorkers) {
+        public Builder numberOfWorkers(@Nullable Integer numberOfWorkers) {
             this.numberOfWorkers = Input.ofNullable(numberOfWorkers);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<MLTransformParametersGetArgs> parameters) {
+        public Builder parameters(@Nullable Input<MLTransformParametersGetArgs> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable MLTransformParametersGetArgs parameters) {
+        public Builder parameters(@Nullable MLTransformParametersGetArgs parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setRoleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Input<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Input.ofNullable(roleArn);
             return this;
         }
 
-        public Builder setSchemas(@Nullable Input<List<MLTransformSchemaGetArgs>> schemas) {
+        public Builder schemas(@Nullable Input<List<MLTransformSchemaGetArgs>> schemas) {
             this.schemas = schemas;
             return this;
         }
 
-        public Builder setSchemas(@Nullable List<MLTransformSchemaGetArgs> schemas) {
+        public Builder schemas(@Nullable List<MLTransformSchemaGetArgs> schemas) {
             this.schemas = Input.ofNullable(schemas);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<Integer> timeout) {
+        public Builder timeout(@Nullable Input<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable Integer timeout) {
+        public Builder timeout(@Nullable Integer timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }
 
-        public Builder setWorkerType(@Nullable Input<String> workerType) {
+        public Builder workerType(@Nullable Input<String> workerType) {
             this.workerType = workerType;
             return this;
         }
 
-        public Builder setWorkerType(@Nullable String workerType) {
+        public Builder workerType(@Nullable String workerType) {
             this.workerType = Input.ofNullable(workerType);
             return this;
         }

@@ -89,32 +89,32 @@ public final class ServiceNetworkSettingsState extends io.pulumi.resources.Resou
     	      this.service = defaults.service;
         }
 
-        public Builder setNetworkSettings(@Nullable Input<ServiceNetworkSettingsNetworkSettingsGetArgs> networkSettings) {
+        public Builder networkSettings(@Nullable Input<ServiceNetworkSettingsNetworkSettingsGetArgs> networkSettings) {
             this.networkSettings = networkSettings;
             return this;
         }
 
-        public Builder setNetworkSettings(@Nullable ServiceNetworkSettingsNetworkSettingsGetArgs networkSettings) {
+        public Builder networkSettings(@Nullable ServiceNetworkSettingsNetworkSettingsGetArgs networkSettings) {
             this.networkSettings = Input.ofNullable(networkSettings);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setService(@Nullable Input<String> service) {
+        public Builder service(@Nullable Input<String> service) {
             this.service = service;
             return this;
         }
 
-        public Builder setService(@Nullable String service) {
+        public Builder service(@Nullable String service) {
             this.service = Input.ofNullable(service);
             return this;
         }

@@ -71,22 +71,22 @@ public final class ClusterClientAuthenticationArgs extends io.pulumi.resources.R
     	      this.tls = defaults.tls;
         }
 
-        public Builder setSasl(@Nullable Input<ClusterClientAuthenticationSaslArgs> sasl) {
+        public Builder sasl(@Nullable Input<ClusterClientAuthenticationSaslArgs> sasl) {
             this.sasl = sasl;
             return this;
         }
 
-        public Builder setSasl(@Nullable ClusterClientAuthenticationSaslArgs sasl) {
+        public Builder sasl(@Nullable ClusterClientAuthenticationSaslArgs sasl) {
             this.sasl = Input.ofNullable(sasl);
             return this;
         }
 
-        public Builder setTls(@Nullable Input<ClusterClientAuthenticationTlsArgs> tls) {
+        public Builder tls(@Nullable Input<ClusterClientAuthenticationTlsArgs> tls) {
             this.tls = tls;
             return this;
         }
 
-        public Builder setTls(@Nullable ClusterClientAuthenticationTlsArgs tls) {
+        public Builder tls(@Nullable ClusterClientAuthenticationTlsArgs tls) {
             this.tls = Input.ofNullable(tls);
             return this;
         }

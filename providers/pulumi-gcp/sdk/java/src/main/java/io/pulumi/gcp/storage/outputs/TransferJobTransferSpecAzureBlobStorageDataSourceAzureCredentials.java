@@ -48,7 +48,7 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredent
     	      this.sasToken = defaults.sasToken;
         }
 
-        public Builder setSasToken(String sasToken) {
+        public Builder sasToken(String sasToken) {
             this.sasToken = Objects.requireNonNull(sasToken);
             return this;
         }

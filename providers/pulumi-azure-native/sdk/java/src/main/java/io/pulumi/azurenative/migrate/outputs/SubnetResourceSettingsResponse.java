@@ -84,17 +84,17 @@ public final class SubnetResourceSettingsResponse {
     	      this.networkSecurityGroup = defaults.networkSecurityGroup;
         }
 
-        public Builder setAddressPrefix(@Nullable String addressPrefix) {
+        public Builder addressPrefix(@Nullable String addressPrefix) {
             this.addressPrefix = addressPrefix;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNetworkSecurityGroup(@Nullable NsgReferenceResponse networkSecurityGroup) {
+        public Builder networkSecurityGroup(@Nullable NsgReferenceResponse networkSecurityGroup) {
             this.networkSecurityGroup = networkSecurityGroup;
             return this;
         }

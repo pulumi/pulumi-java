@@ -57,12 +57,12 @@ public final class SdsConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.grpcServiceConfig = defaults.grpcServiceConfig;
         }
 
-        public Builder setGrpcServiceConfig(@Nullable Input<GrpcServiceConfigArgs> grpcServiceConfig) {
+        public Builder grpcServiceConfig(@Nullable Input<GrpcServiceConfigArgs> grpcServiceConfig) {
             this.grpcServiceConfig = grpcServiceConfig;
             return this;
         }
 
-        public Builder setGrpcServiceConfig(@Nullable GrpcServiceConfigArgs grpcServiceConfig) {
+        public Builder grpcServiceConfig(@Nullable GrpcServiceConfigArgs grpcServiceConfig) {
             this.grpcServiceConfig = Input.ofNullable(grpcServiceConfig);
             return this;
         }

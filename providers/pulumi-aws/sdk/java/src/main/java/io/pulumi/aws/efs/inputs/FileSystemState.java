@@ -304,162 +304,162 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
     	      this.throughputMode = defaults.throughputMode;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAvailabilityZoneId(@Nullable Input<String> availabilityZoneId) {
+        public Builder availabilityZoneId(@Nullable Input<String> availabilityZoneId) {
             this.availabilityZoneId = availabilityZoneId;
             return this;
         }
 
-        public Builder setAvailabilityZoneId(@Nullable String availabilityZoneId) {
+        public Builder availabilityZoneId(@Nullable String availabilityZoneId) {
             this.availabilityZoneId = Input.ofNullable(availabilityZoneId);
             return this;
         }
 
-        public Builder setAvailabilityZoneName(@Nullable Input<String> availabilityZoneName) {
+        public Builder availabilityZoneName(@Nullable Input<String> availabilityZoneName) {
             this.availabilityZoneName = availabilityZoneName;
             return this;
         }
 
-        public Builder setAvailabilityZoneName(@Nullable String availabilityZoneName) {
+        public Builder availabilityZoneName(@Nullable String availabilityZoneName) {
             this.availabilityZoneName = Input.ofNullable(availabilityZoneName);
             return this;
         }
 
-        public Builder setCreationToken(@Nullable Input<String> creationToken) {
+        public Builder creationToken(@Nullable Input<String> creationToken) {
             this.creationToken = creationToken;
             return this;
         }
 
-        public Builder setCreationToken(@Nullable String creationToken) {
+        public Builder creationToken(@Nullable String creationToken) {
             this.creationToken = Input.ofNullable(creationToken);
             return this;
         }
 
-        public Builder setDnsName(@Nullable Input<String> dnsName) {
+        public Builder dnsName(@Nullable Input<String> dnsName) {
             this.dnsName = dnsName;
             return this;
         }
 
-        public Builder setDnsName(@Nullable String dnsName) {
+        public Builder dnsName(@Nullable String dnsName) {
             this.dnsName = Input.ofNullable(dnsName);
             return this;
         }
 
-        public Builder setEncrypted(@Nullable Input<Boolean> encrypted) {
+        public Builder encrypted(@Nullable Input<Boolean> encrypted) {
             this.encrypted = encrypted;
             return this;
         }
 
-        public Builder setEncrypted(@Nullable Boolean encrypted) {
+        public Builder encrypted(@Nullable Boolean encrypted) {
             this.encrypted = Input.ofNullable(encrypted);
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Input.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder setLifecyclePolicy(@Nullable Input<FileSystemLifecyclePolicyGetArgs> lifecyclePolicy) {
+        public Builder lifecyclePolicy(@Nullable Input<FileSystemLifecyclePolicyGetArgs> lifecyclePolicy) {
             this.lifecyclePolicy = lifecyclePolicy;
             return this;
         }
 
-        public Builder setLifecyclePolicy(@Nullable FileSystemLifecyclePolicyGetArgs lifecyclePolicy) {
+        public Builder lifecyclePolicy(@Nullable FileSystemLifecyclePolicyGetArgs lifecyclePolicy) {
             this.lifecyclePolicy = Input.ofNullable(lifecyclePolicy);
             return this;
         }
 
-        public Builder setNumberOfMountTargets(@Nullable Input<Integer> numberOfMountTargets) {
+        public Builder numberOfMountTargets(@Nullable Input<Integer> numberOfMountTargets) {
             this.numberOfMountTargets = numberOfMountTargets;
             return this;
         }
 
-        public Builder setNumberOfMountTargets(@Nullable Integer numberOfMountTargets) {
+        public Builder numberOfMountTargets(@Nullable Integer numberOfMountTargets) {
             this.numberOfMountTargets = Input.ofNullable(numberOfMountTargets);
             return this;
         }
 
-        public Builder setOwnerId(@Nullable Input<String> ownerId) {
+        public Builder ownerId(@Nullable Input<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
-        public Builder setOwnerId(@Nullable String ownerId) {
+        public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = Input.ofNullable(ownerId);
             return this;
         }
 
-        public Builder setPerformanceMode(@Nullable Input<String> performanceMode) {
+        public Builder performanceMode(@Nullable Input<String> performanceMode) {
             this.performanceMode = performanceMode;
             return this;
         }
 
-        public Builder setPerformanceMode(@Nullable String performanceMode) {
+        public Builder performanceMode(@Nullable String performanceMode) {
             this.performanceMode = Input.ofNullable(performanceMode);
             return this;
         }
 
-        public Builder setProvisionedThroughputInMibps(@Nullable Input<Double> provisionedThroughputInMibps) {
+        public Builder provisionedThroughputInMibps(@Nullable Input<Double> provisionedThroughputInMibps) {
             this.provisionedThroughputInMibps = provisionedThroughputInMibps;
             return this;
         }
 
-        public Builder setProvisionedThroughputInMibps(@Nullable Double provisionedThroughputInMibps) {
+        public Builder provisionedThroughputInMibps(@Nullable Double provisionedThroughputInMibps) {
             this.provisionedThroughputInMibps = Input.ofNullable(provisionedThroughputInMibps);
             return this;
         }
 
-        public Builder setSizeInBytes(@Nullable Input<List<FileSystemSizeInByteGetArgs>> sizeInBytes) {
+        public Builder sizeInBytes(@Nullable Input<List<FileSystemSizeInByteGetArgs>> sizeInBytes) {
             this.sizeInBytes = sizeInBytes;
             return this;
         }
 
-        public Builder setSizeInBytes(@Nullable List<FileSystemSizeInByteGetArgs> sizeInBytes) {
+        public Builder sizeInBytes(@Nullable List<FileSystemSizeInByteGetArgs> sizeInBytes) {
             this.sizeInBytes = Input.ofNullable(sizeInBytes);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setThroughputMode(@Nullable Input<String> throughputMode) {
+        public Builder throughputMode(@Nullable Input<String> throughputMode) {
             this.throughputMode = throughputMode;
             return this;
         }
 
-        public Builder setThroughputMode(@Nullable String throughputMode) {
+        public Builder throughputMode(@Nullable String throughputMode) {
             this.throughputMode = Input.ofNullable(throughputMode);
             return this;
         }

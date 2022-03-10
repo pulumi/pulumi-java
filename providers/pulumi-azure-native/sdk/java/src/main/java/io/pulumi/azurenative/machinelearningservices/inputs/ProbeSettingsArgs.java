@@ -123,52 +123,52 @@ public final class ProbeSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setFailureThreshold(@Nullable Input<Integer> failureThreshold) {
+        public Builder failureThreshold(@Nullable Input<Integer> failureThreshold) {
             this.failureThreshold = failureThreshold;
             return this;
         }
 
-        public Builder setFailureThreshold(@Nullable Integer failureThreshold) {
+        public Builder failureThreshold(@Nullable Integer failureThreshold) {
             this.failureThreshold = Input.ofNullable(failureThreshold);
             return this;
         }
 
-        public Builder setInitialDelay(@Nullable Input<String> initialDelay) {
+        public Builder initialDelay(@Nullable Input<String> initialDelay) {
             this.initialDelay = initialDelay;
             return this;
         }
 
-        public Builder setInitialDelay(@Nullable String initialDelay) {
+        public Builder initialDelay(@Nullable String initialDelay) {
             this.initialDelay = Input.ofNullable(initialDelay);
             return this;
         }
 
-        public Builder setPeriod(@Nullable Input<String> period) {
+        public Builder period(@Nullable Input<String> period) {
             this.period = period;
             return this;
         }
 
-        public Builder setPeriod(@Nullable String period) {
+        public Builder period(@Nullable String period) {
             this.period = Input.ofNullable(period);
             return this;
         }
 
-        public Builder setSuccessThreshold(@Nullable Input<Integer> successThreshold) {
+        public Builder successThreshold(@Nullable Input<Integer> successThreshold) {
             this.successThreshold = successThreshold;
             return this;
         }
 
-        public Builder setSuccessThreshold(@Nullable Integer successThreshold) {
+        public Builder successThreshold(@Nullable Integer successThreshold) {
             this.successThreshold = Input.ofNullable(successThreshold);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<String> timeout) {
+        public Builder timeout(@Nullable Input<String> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable String timeout) {
+        public Builder timeout(@Nullable String timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }

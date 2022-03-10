@@ -99,42 +99,42 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetType = defaults.targetType;
         }
 
-        public Builder setDatastoreConfig(@Nullable Input<GoogleCloudApigeeV1DatastoreConfigArgs> datastoreConfig) {
+        public Builder datastoreConfig(@Nullable Input<GoogleCloudApigeeV1DatastoreConfigArgs> datastoreConfig) {
             this.datastoreConfig = datastoreConfig;
             return this;
         }
 
-        public Builder setDatastoreConfig(@Nullable GoogleCloudApigeeV1DatastoreConfigArgs datastoreConfig) {
+        public Builder datastoreConfig(@Nullable GoogleCloudApigeeV1DatastoreConfigArgs datastoreConfig) {
             this.datastoreConfig = Input.ofNullable(datastoreConfig);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setOrganizationId(Input<String> organizationId) {
+        public Builder organizationId(Input<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Input.of(Objects.requireNonNull(organizationId));
             return this;
         }
 
-        public Builder setTargetType(@Nullable Input<String> targetType) {
+        public Builder targetType(@Nullable Input<String> targetType) {
             this.targetType = targetType;
             return this;
         }
 
-        public Builder setTargetType(@Nullable String targetType) {
+        public Builder targetType(@Nullable String targetType) {
             this.targetType = Input.ofNullable(targetType);
             return this;
         }

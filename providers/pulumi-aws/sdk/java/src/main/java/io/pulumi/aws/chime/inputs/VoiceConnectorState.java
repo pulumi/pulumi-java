@@ -103,42 +103,42 @@ public final class VoiceConnectorState extends io.pulumi.resources.ResourceArgs 
     	      this.requireEncryption = defaults.requireEncryption;
         }
 
-        public Builder setAwsRegion(@Nullable Input<String> awsRegion) {
+        public Builder awsRegion(@Nullable Input<String> awsRegion) {
             this.awsRegion = awsRegion;
             return this;
         }
 
-        public Builder setAwsRegion(@Nullable String awsRegion) {
+        public Builder awsRegion(@Nullable String awsRegion) {
             this.awsRegion = Input.ofNullable(awsRegion);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOutboundHostName(@Nullable Input<String> outboundHostName) {
+        public Builder outboundHostName(@Nullable Input<String> outboundHostName) {
             this.outboundHostName = outboundHostName;
             return this;
         }
 
-        public Builder setOutboundHostName(@Nullable String outboundHostName) {
+        public Builder outboundHostName(@Nullable String outboundHostName) {
             this.outboundHostName = Input.ofNullable(outboundHostName);
             return this;
         }
 
-        public Builder setRequireEncryption(@Nullable Input<Boolean> requireEncryption) {
+        public Builder requireEncryption(@Nullable Input<Boolean> requireEncryption) {
             this.requireEncryption = requireEncryption;
             return this;
         }
 
-        public Builder setRequireEncryption(@Nullable Boolean requireEncryption) {
+        public Builder requireEncryption(@Nullable Boolean requireEncryption) {
             this.requireEncryption = Input.ofNullable(requireEncryption);
             return this;
         }

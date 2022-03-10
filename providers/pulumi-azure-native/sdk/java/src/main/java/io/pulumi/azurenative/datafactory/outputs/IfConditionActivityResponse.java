@@ -207,42 +207,42 @@ public final class IfConditionActivityResponse {
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder setDependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
+        public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setExpression(ExpressionResponse expression) {
+        public Builder expression(ExpressionResponse expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
 
-        public Builder setIfFalseActivities(@Nullable List<Object> ifFalseActivities) {
+        public Builder ifFalseActivities(@Nullable List<Object> ifFalseActivities) {
             this.ifFalseActivities = ifFalseActivities;
             return this;
         }
 
-        public Builder setIfTrueActivities(@Nullable List<Object> ifTrueActivities) {
+        public Builder ifTrueActivities(@Nullable List<Object> ifTrueActivities) {
             this.ifTrueActivities = ifTrueActivities;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserProperties(@Nullable List<UserPropertyResponse> userProperties) {
+        public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }

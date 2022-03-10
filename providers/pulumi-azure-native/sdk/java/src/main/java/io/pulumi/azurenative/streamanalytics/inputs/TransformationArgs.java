@@ -91,32 +91,32 @@ public final class TransformationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.streamingUnits = defaults.streamingUnits;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setQuery(@Nullable Input<String> query) {
+        public Builder query(@Nullable Input<String> query) {
             this.query = query;
             return this;
         }
 
-        public Builder setQuery(@Nullable String query) {
+        public Builder query(@Nullable String query) {
             this.query = Input.ofNullable(query);
             return this;
         }
 
-        public Builder setStreamingUnits(@Nullable Input<Integer> streamingUnits) {
+        public Builder streamingUnits(@Nullable Input<Integer> streamingUnits) {
             this.streamingUnits = streamingUnits;
             return this;
         }
 
-        public Builder setStreamingUnits(@Nullable Integer streamingUnits) {
+        public Builder streamingUnits(@Nullable Integer streamingUnits) {
             this.streamingUnits = Input.ofNullable(streamingUnits);
             return this;
         }

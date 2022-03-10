@@ -102,42 +102,42 @@ public final class ScopeAssignmentArgs extends io.pulumi.resources.ResourceArgs 
     	      this.scopeAssignmentName = defaults.scopeAssignmentName;
         }
 
-        public Builder setAssignedManagedNetwork(@Nullable Input<String> assignedManagedNetwork) {
+        public Builder assignedManagedNetwork(@Nullable Input<String> assignedManagedNetwork) {
             this.assignedManagedNetwork = assignedManagedNetwork;
             return this;
         }
 
-        public Builder setAssignedManagedNetwork(@Nullable String assignedManagedNetwork) {
+        public Builder assignedManagedNetwork(@Nullable String assignedManagedNetwork) {
             this.assignedManagedNetwork = Input.ofNullable(assignedManagedNetwork);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setScope(Input<String> scope) {
+        public Builder scope(Input<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Input.of(Objects.requireNonNull(scope));
             return this;
         }
 
-        public Builder setScopeAssignmentName(@Nullable Input<String> scopeAssignmentName) {
+        public Builder scopeAssignmentName(@Nullable Input<String> scopeAssignmentName) {
             this.scopeAssignmentName = scopeAssignmentName;
             return this;
         }
 
-        public Builder setScopeAssignmentName(@Nullable String scopeAssignmentName) {
+        public Builder scopeAssignmentName(@Nullable String scopeAssignmentName) {
             this.scopeAssignmentName = Input.ofNullable(scopeAssignmentName);
             return this;
         }

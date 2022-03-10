@@ -152,72 +152,72 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAuthorizationKey(@Nullable Input<String> authorizationKey) {
+        public Builder authorizationKey(@Nullable Input<String> authorizationKey) {
             this.authorizationKey = authorizationKey;
             return this;
         }
 
-        public Builder setAuthorizationKey(@Nullable String authorizationKey) {
+        public Builder authorizationKey(@Nullable String authorizationKey) {
             this.authorizationKey = Input.ofNullable(authorizationKey);
             return this;
         }
 
-        public Builder setAuthorizationName(@Nullable Input<String> authorizationName) {
+        public Builder authorizationName(@Nullable Input<String> authorizationName) {
             this.authorizationName = authorizationName;
             return this;
         }
 
-        public Builder setAuthorizationName(@Nullable String authorizationName) {
+        public Builder authorizationName(@Nullable String authorizationName) {
             this.authorizationName = Input.ofNullable(authorizationName);
             return this;
         }
 
-        public Builder setAuthorizationUseStatus(@Nullable Input<Either<String,AuthorizationUseStatus>> authorizationUseStatus) {
+        public Builder authorizationUseStatus(@Nullable Input<Either<String,AuthorizationUseStatus>> authorizationUseStatus) {
             this.authorizationUseStatus = authorizationUseStatus;
             return this;
         }
 
-        public Builder setAuthorizationUseStatus(@Nullable Either<String,AuthorizationUseStatus> authorizationUseStatus) {
+        public Builder authorizationUseStatus(@Nullable Either<String,AuthorizationUseStatus> authorizationUseStatus) {
             this.authorizationUseStatus = Input.ofNullable(authorizationUseStatus);
             return this;
         }
 
-        public Builder setCircuitName(Input<String> circuitName) {
+        public Builder circuitName(Input<String> circuitName) {
             this.circuitName = Objects.requireNonNull(circuitName);
             return this;
         }
 
-        public Builder setCircuitName(String circuitName) {
+        public Builder circuitName(String circuitName) {
             this.circuitName = Input.of(Objects.requireNonNull(circuitName));
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

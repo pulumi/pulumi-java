@@ -58,12 +58,12 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.networkInterfaces = defaults.networkInterfaces;
         }
 
-        public Builder setNetworkInterfaces(@Nullable Input<List<IpAddressArgs>> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable Input<List<IpAddressArgs>> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
 
-        public Builder setNetworkInterfaces(@Nullable List<IpAddressArgs> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable List<IpAddressArgs> networkInterfaces) {
             this.networkInterfaces = Input.ofNullable(networkInterfaces);
             return this;
         }

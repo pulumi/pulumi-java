@@ -75,17 +75,17 @@ public final class PipelineAddAttributes extends io.pulumi.resources.InvokeArgs 
     	      this.next = defaults.next;
         }
 
-        public Builder setAttributes(Object attributes) {
+        public Builder attributes(Object attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNext(@Nullable String next) {
+        public Builder next(@Nullable String next) {
             this.next = next;
             return this;
         }

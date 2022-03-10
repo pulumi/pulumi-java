@@ -242,122 +242,122 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     	      this.userEmail = defaults.userEmail;
         }
 
-        public Builder setCopy(@Nullable Input<JobCopyGetArgs> copy) {
+        public Builder copy(@Nullable Input<JobCopyGetArgs> copy) {
             this.copy = copy;
             return this;
         }
 
-        public Builder setCopy(@Nullable JobCopyGetArgs copy) {
+        public Builder copy(@Nullable JobCopyGetArgs copy) {
             this.copy = Input.ofNullable(copy);
             return this;
         }
 
-        public Builder setExtract(@Nullable Input<JobExtractGetArgs> extract) {
+        public Builder extract(@Nullable Input<JobExtractGetArgs> extract) {
             this.extract = extract;
             return this;
         }
 
-        public Builder setExtract(@Nullable JobExtractGetArgs extract) {
+        public Builder extract(@Nullable JobExtractGetArgs extract) {
             this.extract = Input.ofNullable(extract);
             return this;
         }
 
-        public Builder setJobId(@Nullable Input<String> jobId) {
+        public Builder jobId(@Nullable Input<String> jobId) {
             this.jobId = jobId;
             return this;
         }
 
-        public Builder setJobId(@Nullable String jobId) {
+        public Builder jobId(@Nullable String jobId) {
             this.jobId = Input.ofNullable(jobId);
             return this;
         }
 
-        public Builder setJobTimeoutMs(@Nullable Input<String> jobTimeoutMs) {
+        public Builder jobTimeoutMs(@Nullable Input<String> jobTimeoutMs) {
             this.jobTimeoutMs = jobTimeoutMs;
             return this;
         }
 
-        public Builder setJobTimeoutMs(@Nullable String jobTimeoutMs) {
+        public Builder jobTimeoutMs(@Nullable String jobTimeoutMs) {
             this.jobTimeoutMs = Input.ofNullable(jobTimeoutMs);
             return this;
         }
 
-        public Builder setJobType(@Nullable Input<String> jobType) {
+        public Builder jobType(@Nullable Input<String> jobType) {
             this.jobType = jobType;
             return this;
         }
 
-        public Builder setJobType(@Nullable String jobType) {
+        public Builder jobType(@Nullable String jobType) {
             this.jobType = Input.ofNullable(jobType);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLoad(@Nullable Input<JobLoadGetArgs> load) {
+        public Builder load(@Nullable Input<JobLoadGetArgs> load) {
             this.load = load;
             return this;
         }
 
-        public Builder setLoad(@Nullable JobLoadGetArgs load) {
+        public Builder load(@Nullable JobLoadGetArgs load) {
             this.load = Input.ofNullable(load);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setQuery(@Nullable Input<JobQueryGetArgs> query) {
+        public Builder query(@Nullable Input<JobQueryGetArgs> query) {
             this.query = query;
             return this;
         }
 
-        public Builder setQuery(@Nullable JobQueryGetArgs query) {
+        public Builder query(@Nullable JobQueryGetArgs query) {
             this.query = Input.ofNullable(query);
             return this;
         }
 
-        public Builder setStatuses(@Nullable Input<List<JobStatusGetArgs>> statuses) {
+        public Builder statuses(@Nullable Input<List<JobStatusGetArgs>> statuses) {
             this.statuses = statuses;
             return this;
         }
 
-        public Builder setStatuses(@Nullable List<JobStatusGetArgs> statuses) {
+        public Builder statuses(@Nullable List<JobStatusGetArgs> statuses) {
             this.statuses = Input.ofNullable(statuses);
             return this;
         }
 
-        public Builder setUserEmail(@Nullable Input<String> userEmail) {
+        public Builder userEmail(@Nullable Input<String> userEmail) {
             this.userEmail = userEmail;
             return this;
         }
 
-        public Builder setUserEmail(@Nullable String userEmail) {
+        public Builder userEmail(@Nullable String userEmail) {
             this.userEmail = Input.ofNullable(userEmail);
             return this;
         }

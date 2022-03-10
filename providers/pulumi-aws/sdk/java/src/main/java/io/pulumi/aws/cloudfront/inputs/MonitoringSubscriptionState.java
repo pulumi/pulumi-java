@@ -71,22 +71,22 @@ public final class MonitoringSubscriptionState extends io.pulumi.resources.Resou
     	      this.monitoringSubscription = defaults.monitoringSubscription;
         }
 
-        public Builder setDistributionId(@Nullable Input<String> distributionId) {
+        public Builder distributionId(@Nullable Input<String> distributionId) {
             this.distributionId = distributionId;
             return this;
         }
 
-        public Builder setDistributionId(@Nullable String distributionId) {
+        public Builder distributionId(@Nullable String distributionId) {
             this.distributionId = Input.ofNullable(distributionId);
             return this;
         }
 
-        public Builder setMonitoringSubscription(@Nullable Input<MonitoringSubscriptionMonitoringSubscriptionGetArgs> monitoringSubscription) {
+        public Builder monitoringSubscription(@Nullable Input<MonitoringSubscriptionMonitoringSubscriptionGetArgs> monitoringSubscription) {
             this.monitoringSubscription = monitoringSubscription;
             return this;
         }
 
-        public Builder setMonitoringSubscription(@Nullable MonitoringSubscriptionMonitoringSubscriptionGetArgs monitoringSubscription) {
+        public Builder monitoringSubscription(@Nullable MonitoringSubscriptionMonitoringSubscriptionGetArgs monitoringSubscription) {
             this.monitoringSubscription = Input.ofNullable(monitoringSubscription);
             return this;
         }

@@ -60,12 +60,12 @@ public final class GetOrganizationMuteConfigArgs extends io.pulumi.resources.Inv
     	      this.organizationId = defaults.organizationId;
         }
 
-        public Builder setMuteConfigId(String muteConfigId) {
+        public Builder muteConfigId(String muteConfigId) {
             this.muteConfigId = Objects.requireNonNull(muteConfigId);
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }

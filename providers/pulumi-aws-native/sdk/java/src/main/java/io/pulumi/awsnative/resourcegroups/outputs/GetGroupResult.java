@@ -103,32 +103,32 @@ public final class GetGroupResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setConfiguration(@Nullable List<GroupConfigurationItem> configuration) {
+        public Builder configuration(@Nullable List<GroupConfigurationItem> configuration) {
             this.configuration = configuration;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setResourceQuery(@Nullable GroupResourceQuery resourceQuery) {
+        public Builder resourceQuery(@Nullable GroupResourceQuery resourceQuery) {
             this.resourceQuery = resourceQuery;
             return this;
         }
 
-        public Builder setResources(@Nullable List<String> resources) {
+        public Builder resources(@Nullable List<String> resources) {
             this.resources = resources;
             return this;
         }
 
-        public Builder setTags(@Nullable List<GroupTag> tags) {
+        public Builder tags(@Nullable List<GroupTag> tags) {
             this.tags = tags;
             return this;
         }

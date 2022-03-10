@@ -65,12 +65,12 @@ public final class InsightFiltersNoteText {
     	      this.value = defaults.value;
         }
 
-        public Builder setComparison(String comparison) {
+        public Builder comparison(String comparison) {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

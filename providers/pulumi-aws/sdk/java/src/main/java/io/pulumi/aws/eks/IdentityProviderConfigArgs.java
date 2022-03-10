@@ -88,32 +88,32 @@ public final class IdentityProviderConfigArgs extends io.pulumi.resources.Resour
     	      this.tags = defaults.tags;
         }
 
-        public Builder setClusterName(Input<String> clusterName) {
+        public Builder clusterName(Input<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Input.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder setOidc(Input<IdentityProviderConfigOidcArgs> oidc) {
+        public Builder oidc(Input<IdentityProviderConfigOidcArgs> oidc) {
             this.oidc = Objects.requireNonNull(oidc);
             return this;
         }
 
-        public Builder setOidc(IdentityProviderConfigOidcArgs oidc) {
+        public Builder oidc(IdentityProviderConfigOidcArgs oidc) {
             this.oidc = Input.of(Objects.requireNonNull(oidc));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

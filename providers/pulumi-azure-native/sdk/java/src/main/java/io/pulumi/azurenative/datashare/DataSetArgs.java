@@ -120,52 +120,52 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.shareName = defaults.shareName;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setDataSetName(@Nullable Input<String> dataSetName) {
+        public Builder dataSetName(@Nullable Input<String> dataSetName) {
             this.dataSetName = dataSetName;
             return this;
         }
 
-        public Builder setDataSetName(@Nullable String dataSetName) {
+        public Builder dataSetName(@Nullable String dataSetName) {
             this.dataSetName = Input.ofNullable(dataSetName);
             return this;
         }
 
-        public Builder setKind(Input<Either<String,DataSetKind>> kind) {
+        public Builder kind(Input<Either<String,DataSetKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(Either<String,DataSetKind> kind) {
+        public Builder kind(Either<String,DataSetKind> kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setShareName(Input<String> shareName) {
+        public Builder shareName(Input<String> shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
 
-        public Builder setShareName(String shareName) {
+        public Builder shareName(String shareName) {
             this.shareName = Input.of(Objects.requireNonNull(shareName));
             return this;
         }

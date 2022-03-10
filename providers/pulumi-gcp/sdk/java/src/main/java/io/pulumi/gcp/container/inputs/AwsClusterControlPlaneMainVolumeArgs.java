@@ -103,42 +103,42 @@ public final class AwsClusterControlPlaneMainVolumeArgs extends io.pulumi.resour
     	      this.volumeType = defaults.volumeType;
         }
 
-        public Builder setIops(@Nullable Input<Integer> iops) {
+        public Builder iops(@Nullable Input<Integer> iops) {
             this.iops = iops;
             return this;
         }
 
-        public Builder setIops(@Nullable Integer iops) {
+        public Builder iops(@Nullable Integer iops) {
             this.iops = Input.ofNullable(iops);
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable String kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
             return this;
         }
 
-        public Builder setSizeGib(@Nullable Input<Integer> sizeGib) {
+        public Builder sizeGib(@Nullable Input<Integer> sizeGib) {
             this.sizeGib = sizeGib;
             return this;
         }
 
-        public Builder setSizeGib(@Nullable Integer sizeGib) {
+        public Builder sizeGib(@Nullable Integer sizeGib) {
             this.sizeGib = Input.ofNullable(sizeGib);
             return this;
         }
 
-        public Builder setVolumeType(@Nullable Input<String> volumeType) {
+        public Builder volumeType(@Nullable Input<String> volumeType) {
             this.volumeType = volumeType;
             return this;
         }
 
-        public Builder setVolumeType(@Nullable String volumeType) {
+        public Builder volumeType(@Nullable String volumeType) {
             this.volumeType = Input.ofNullable(volumeType);
             return this;
         }

@@ -350,97 +350,97 @@ public final class GetAccountResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCloudConnectors(@Nullable CloudConnectorsResponse cloudConnectors) {
+        public Builder cloudConnectors(@Nullable CloudConnectorsResponse cloudConnectors) {
             this.cloudConnectors = cloudConnectors;
             return this;
         }
 
-        public Builder setCreatedAt(String createdAt) {
+        public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
 
-        public Builder setCreatedBy(String createdBy) {
+        public Builder createdBy(String createdBy) {
             this.createdBy = Objects.requireNonNull(createdBy);
             return this;
         }
 
-        public Builder setCreatedByObjectId(String createdByObjectId) {
+        public Builder createdByObjectId(String createdByObjectId) {
             this.createdByObjectId = Objects.requireNonNull(createdByObjectId);
             return this;
         }
 
-        public Builder setEndpoints(AccountPropertiesResponseEndpoints endpoints) {
+        public Builder endpoints(AccountPropertiesResponseEndpoints endpoints) {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
 
-        public Builder setFriendlyName(String friendlyName) {
+        public Builder friendlyName(String friendlyName) {
             this.friendlyName = Objects.requireNonNull(friendlyName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable IdentityResponse identity) {
+        public Builder identity(@Nullable IdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setManagedResourceGroupName(@Nullable String managedResourceGroupName) {
+        public Builder managedResourceGroupName(@Nullable String managedResourceGroupName) {
             this.managedResourceGroupName = managedResourceGroupName;
             return this;
         }
 
-        public Builder setManagedResources(AccountPropertiesResponseManagedResources managedResources) {
+        public Builder managedResources(AccountPropertiesResponseManagedResources managedResources) {
             this.managedResources = Objects.requireNonNull(managedResources);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
+        public Builder privateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable String publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setSku(AccountResponseSku sku) {
+        public Builder sku(AccountResponseSku sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setSystemData(AccountPropertiesResponseSystemData systemData) {
+        public Builder systemData(AccountPropertiesResponseSystemData systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

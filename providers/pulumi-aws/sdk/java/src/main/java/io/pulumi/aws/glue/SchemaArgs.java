@@ -151,72 +151,72 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCompatibility(Input<String> compatibility) {
+        public Builder compatibility(Input<String> compatibility) {
             this.compatibility = Objects.requireNonNull(compatibility);
             return this;
         }
 
-        public Builder setCompatibility(String compatibility) {
+        public Builder compatibility(String compatibility) {
             this.compatibility = Input.of(Objects.requireNonNull(compatibility));
             return this;
         }
 
-        public Builder setDataFormat(Input<String> dataFormat) {
+        public Builder dataFormat(Input<String> dataFormat) {
             this.dataFormat = Objects.requireNonNull(dataFormat);
             return this;
         }
 
-        public Builder setDataFormat(String dataFormat) {
+        public Builder dataFormat(String dataFormat) {
             this.dataFormat = Input.of(Objects.requireNonNull(dataFormat));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setRegistryArn(@Nullable Input<String> registryArn) {
+        public Builder registryArn(@Nullable Input<String> registryArn) {
             this.registryArn = registryArn;
             return this;
         }
 
-        public Builder setRegistryArn(@Nullable String registryArn) {
+        public Builder registryArn(@Nullable String registryArn) {
             this.registryArn = Input.ofNullable(registryArn);
             return this;
         }
 
-        public Builder setSchemaDefinition(Input<String> schemaDefinition) {
+        public Builder schemaDefinition(Input<String> schemaDefinition) {
             this.schemaDefinition = Objects.requireNonNull(schemaDefinition);
             return this;
         }
 
-        public Builder setSchemaDefinition(String schemaDefinition) {
+        public Builder schemaDefinition(String schemaDefinition) {
             this.schemaDefinition = Input.of(Objects.requireNonNull(schemaDefinition));
             return this;
         }
 
-        public Builder setSchemaName(Input<String> schemaName) {
+        public Builder schemaName(Input<String> schemaName) {
             this.schemaName = Objects.requireNonNull(schemaName);
             return this;
         }
 
-        public Builder setSchemaName(String schemaName) {
+        public Builder schemaName(String schemaName) {
             this.schemaName = Input.of(Objects.requireNonNull(schemaName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

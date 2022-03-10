@@ -102,42 +102,42 @@ public final class BackendEnvironmentArgs extends io.pulumi.resources.ResourceAr
     	      this.stackName = defaults.stackName;
         }
 
-        public Builder setAppId(Input<String> appId) {
+        public Builder appId(Input<String> appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
 
-        public Builder setAppId(String appId) {
+        public Builder appId(String appId) {
             this.appId = Input.of(Objects.requireNonNull(appId));
             return this;
         }
 
-        public Builder setDeploymentArtifacts(@Nullable Input<String> deploymentArtifacts) {
+        public Builder deploymentArtifacts(@Nullable Input<String> deploymentArtifacts) {
             this.deploymentArtifacts = deploymentArtifacts;
             return this;
         }
 
-        public Builder setDeploymentArtifacts(@Nullable String deploymentArtifacts) {
+        public Builder deploymentArtifacts(@Nullable String deploymentArtifacts) {
             this.deploymentArtifacts = Input.ofNullable(deploymentArtifacts);
             return this;
         }
 
-        public Builder setEnvironmentName(Input<String> environmentName) {
+        public Builder environmentName(Input<String> environmentName) {
             this.environmentName = Objects.requireNonNull(environmentName);
             return this;
         }
 
-        public Builder setEnvironmentName(String environmentName) {
+        public Builder environmentName(String environmentName) {
             this.environmentName = Input.of(Objects.requireNonNull(environmentName));
             return this;
         }
 
-        public Builder setStackName(@Nullable Input<String> stackName) {
+        public Builder stackName(@Nullable Input<String> stackName) {
             this.stackName = stackName;
             return this;
         }
 
-        public Builder setStackName(@Nullable String stackName) {
+        public Builder stackName(@Nullable String stackName) {
             this.stackName = Input.ofNullable(stackName);
             return this;
         }

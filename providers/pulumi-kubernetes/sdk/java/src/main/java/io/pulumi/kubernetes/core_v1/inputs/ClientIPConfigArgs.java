@@ -57,12 +57,12 @@ public final class ClientIPConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeoutSeconds = defaults.timeoutSeconds;
         }
 
-        public Builder setTimeoutSeconds(@Nullable Input<Integer> timeoutSeconds) {
+        public Builder timeoutSeconds(@Nullable Input<Integer> timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
 
-        public Builder setTimeoutSeconds(@Nullable Integer timeoutSeconds) {
+        public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
             this.timeoutSeconds = Input.ofNullable(timeoutSeconds);
             return this;
         }

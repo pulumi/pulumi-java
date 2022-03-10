@@ -227,122 +227,122 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.v2betumId = defaults.v2betumId;
         }
 
-        public Builder setClassification(@Nullable Input<CaseClassificationArgs> classification) {
+        public Builder classification(@Nullable Input<CaseClassificationArgs> classification) {
             this.classification = classification;
             return this;
         }
 
-        public Builder setClassification(@Nullable CaseClassificationArgs classification) {
+        public Builder classification(@Nullable CaseClassificationArgs classification) {
             this.classification = Input.ofNullable(classification);
             return this;
         }
 
-        public Builder setCreator(@Nullable Input<ActorArgs> creator) {
+        public Builder creator(@Nullable Input<ActorArgs> creator) {
             this.creator = creator;
             return this;
         }
 
-        public Builder setCreator(@Nullable ActorArgs creator) {
+        public Builder creator(@Nullable ActorArgs creator) {
             this.creator = Input.ofNullable(creator);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setEscalated(@Nullable Input<Boolean> escalated) {
+        public Builder escalated(@Nullable Input<Boolean> escalated) {
             this.escalated = escalated;
             return this;
         }
 
-        public Builder setEscalated(@Nullable Boolean escalated) {
+        public Builder escalated(@Nullable Boolean escalated) {
             this.escalated = Input.ofNullable(escalated);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<CasePriority> priority) {
+        public Builder priority(@Nullable Input<CasePriority> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable CasePriority priority) {
+        public Builder priority(@Nullable CasePriority priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setSubscriberEmailAddresses(@Nullable Input<List<String>> subscriberEmailAddresses) {
+        public Builder subscriberEmailAddresses(@Nullable Input<List<String>> subscriberEmailAddresses) {
             this.subscriberEmailAddresses = subscriberEmailAddresses;
             return this;
         }
 
-        public Builder setSubscriberEmailAddresses(@Nullable List<String> subscriberEmailAddresses) {
+        public Builder subscriberEmailAddresses(@Nullable List<String> subscriberEmailAddresses) {
             this.subscriberEmailAddresses = Input.ofNullable(subscriberEmailAddresses);
             return this;
         }
 
-        public Builder setTestCase(@Nullable Input<Boolean> testCase) {
+        public Builder testCase(@Nullable Input<Boolean> testCase) {
             this.testCase = testCase;
             return this;
         }
 
-        public Builder setTestCase(@Nullable Boolean testCase) {
+        public Builder testCase(@Nullable Boolean testCase) {
             this.testCase = Input.ofNullable(testCase);
             return this;
         }
 
-        public Builder setTimeZone(@Nullable Input<String> timeZone) {
+        public Builder timeZone(@Nullable Input<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Input.ofNullable(timeZone);
             return this;
         }
 
-        public Builder setV2betaId1(Input<String> v2betaId1) {
+        public Builder v2betaId1(Input<String> v2betaId1) {
             this.v2betaId1 = Objects.requireNonNull(v2betaId1);
             return this;
         }
 
-        public Builder setV2betaId1(String v2betaId1) {
+        public Builder v2betaId1(String v2betaId1) {
             this.v2betaId1 = Input.of(Objects.requireNonNull(v2betaId1));
             return this;
         }
 
-        public Builder setV2betumId(Input<String> v2betumId) {
+        public Builder v2betumId(Input<String> v2betumId) {
             this.v2betumId = Objects.requireNonNull(v2betumId);
             return this;
         }
 
-        public Builder setV2betumId(String v2betumId) {
+        public Builder v2betumId(String v2betumId) {
             this.v2betumId = Input.of(Objects.requireNonNull(v2betumId));
             return this;
         }

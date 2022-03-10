@@ -57,12 +57,12 @@ public final class InstanceTemplateSpecArgs extends io.pulumi.resources.Resource
     	      this.spec = defaults.spec;
         }
 
-        public Builder setSpec(@Nullable Input<InstanceSpecArgs> spec) {
+        public Builder spec(@Nullable Input<InstanceSpecArgs> spec) {
             this.spec = spec;
             return this;
         }
 
-        public Builder setSpec(@Nullable InstanceSpecArgs spec) {
+        public Builder spec(@Nullable InstanceSpecArgs spec) {
             this.spec = Input.ofNullable(spec);
             return this;
         }

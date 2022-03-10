@@ -159,37 +159,37 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
     	      this.triggeredIntent = defaults.triggeredIntent;
         }
 
-        public Builder setCurrentPage(GoogleCloudDialogflowCxV3beta1PageResponse currentPage) {
+        public Builder currentPage(GoogleCloudDialogflowCxV3beta1PageResponse currentPage) {
             this.currentPage = Objects.requireNonNull(currentPage);
             return this;
         }
 
-        public Builder setDiagnosticInfo(Map<String,String> diagnosticInfo) {
+        public Builder diagnosticInfo(Map<String,String> diagnosticInfo) {
             this.diagnosticInfo = Objects.requireNonNull(diagnosticInfo);
             return this;
         }
 
-        public Builder setDifferences(List<GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse> differences) {
+        public Builder differences(List<GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse> differences) {
             this.differences = Objects.requireNonNull(differences);
             return this;
         }
 
-        public Builder setSessionParameters(Map<String,String> sessionParameters) {
+        public Builder sessionParameters(Map<String,String> sessionParameters) {
             this.sessionParameters = Objects.requireNonNull(sessionParameters);
             return this;
         }
 
-        public Builder setStatus(GoogleRpcStatusResponse status) {
+        public Builder status(GoogleRpcStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTextResponses(List<GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse> textResponses) {
+        public Builder textResponses(List<GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse> textResponses) {
             this.textResponses = Objects.requireNonNull(textResponses);
             return this;
         }
 
-        public Builder setTriggeredIntent(GoogleCloudDialogflowCxV3beta1IntentResponse triggeredIntent) {
+        public Builder triggeredIntent(GoogleCloudDialogflowCxV3beta1IntentResponse triggeredIntent) {
             this.triggeredIntent = Objects.requireNonNull(triggeredIntent);
             return this;
         }

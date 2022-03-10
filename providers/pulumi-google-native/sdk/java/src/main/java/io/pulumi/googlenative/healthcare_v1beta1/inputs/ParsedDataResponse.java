@@ -52,7 +52,7 @@ public final class ParsedDataResponse extends io.pulumi.resources.InvokeArgs {
     	      this.segments = defaults.segments;
         }
 
-        public Builder setSegments(List<SegmentResponse> segments) {
+        public Builder segments(List<SegmentResponse> segments) {
             this.segments = Objects.requireNonNull(segments);
             return this;
         }

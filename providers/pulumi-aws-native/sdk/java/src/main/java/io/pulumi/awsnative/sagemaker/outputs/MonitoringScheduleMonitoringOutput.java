@@ -40,7 +40,7 @@ public final class MonitoringScheduleMonitoringOutput {
     	      this.s3Output = defaults.s3Output;
         }
 
-        public Builder setS3Output(MonitoringScheduleS3Output s3Output) {
+        public Builder s3Output(MonitoringScheduleS3Output s3Output) {
             this.s3Output = Objects.requireNonNull(s3Output);
             return this;
         }

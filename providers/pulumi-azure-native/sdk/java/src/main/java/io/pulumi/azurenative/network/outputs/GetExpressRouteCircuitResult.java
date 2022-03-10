@@ -381,107 +381,107 @@ public final class GetExpressRouteCircuitResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAllowClassicOperations(@Nullable Boolean allowClassicOperations) {
+        public Builder allowClassicOperations(@Nullable Boolean allowClassicOperations) {
             this.allowClassicOperations = allowClassicOperations;
             return this;
         }
 
-        public Builder setAuthorizations(@Nullable List<ExpressRouteCircuitAuthorizationResponse> authorizations) {
+        public Builder authorizations(@Nullable List<ExpressRouteCircuitAuthorizationResponse> authorizations) {
             this.authorizations = authorizations;
             return this;
         }
 
-        public Builder setBandwidthInGbps(@Nullable Double bandwidthInGbps) {
+        public Builder bandwidthInGbps(@Nullable Double bandwidthInGbps) {
             this.bandwidthInGbps = bandwidthInGbps;
             return this;
         }
 
-        public Builder setCircuitProvisioningState(@Nullable String circuitProvisioningState) {
+        public Builder circuitProvisioningState(@Nullable String circuitProvisioningState) {
             this.circuitProvisioningState = circuitProvisioningState;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setExpressRoutePort(@Nullable SubResourceResponse expressRoutePort) {
+        public Builder expressRoutePort(@Nullable SubResourceResponse expressRoutePort) {
             this.expressRoutePort = expressRoutePort;
             return this;
         }
 
-        public Builder setGatewayManagerEtag(@Nullable String gatewayManagerEtag) {
+        public Builder gatewayManagerEtag(@Nullable String gatewayManagerEtag) {
             this.gatewayManagerEtag = gatewayManagerEtag;
             return this;
         }
 
-        public Builder setGlobalReachEnabled(@Nullable Boolean globalReachEnabled) {
+        public Builder globalReachEnabled(@Nullable Boolean globalReachEnabled) {
             this.globalReachEnabled = globalReachEnabled;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPeerings(@Nullable List<ExpressRouteCircuitPeeringResponse> peerings) {
+        public Builder peerings(@Nullable List<ExpressRouteCircuitPeeringResponse> peerings) {
             this.peerings = peerings;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setServiceKey(@Nullable String serviceKey) {
+        public Builder serviceKey(@Nullable String serviceKey) {
             this.serviceKey = serviceKey;
             return this;
         }
 
-        public Builder setServiceProviderNotes(@Nullable String serviceProviderNotes) {
+        public Builder serviceProviderNotes(@Nullable String serviceProviderNotes) {
             this.serviceProviderNotes = serviceProviderNotes;
             return this;
         }
 
-        public Builder setServiceProviderProperties(@Nullable ExpressRouteCircuitServiceProviderPropertiesResponse serviceProviderProperties) {
+        public Builder serviceProviderProperties(@Nullable ExpressRouteCircuitServiceProviderPropertiesResponse serviceProviderProperties) {
             this.serviceProviderProperties = serviceProviderProperties;
             return this;
         }
 
-        public Builder setServiceProviderProvisioningState(@Nullable String serviceProviderProvisioningState) {
+        public Builder serviceProviderProvisioningState(@Nullable String serviceProviderProvisioningState) {
             this.serviceProviderProvisioningState = serviceProviderProvisioningState;
             return this;
         }
 
-        public Builder setSku(@Nullable ExpressRouteCircuitSkuResponse sku) {
+        public Builder sku(@Nullable ExpressRouteCircuitSkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setStag(Integer stag) {
+        public Builder stag(Integer stag) {
             this.stag = Objects.requireNonNull(stag);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

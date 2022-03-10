@@ -536,157 +536,157 @@ public final class GetAccessReviewScheduleDefinitionByIdResult {
     	      this.userPrincipalName = defaults.userPrincipalName;
         }
 
-        public Builder setAssignmentState(String assignmentState) {
+        public Builder assignmentState(String assignmentState) {
             this.assignmentState = Objects.requireNonNull(assignmentState);
             return this;
         }
 
-        public Builder setAutoApplyDecisionsEnabled(@Nullable Boolean autoApplyDecisionsEnabled) {
+        public Builder autoApplyDecisionsEnabled(@Nullable Boolean autoApplyDecisionsEnabled) {
             this.autoApplyDecisionsEnabled = autoApplyDecisionsEnabled;
             return this;
         }
 
-        public Builder setBackupReviewers(@Nullable List<AccessReviewReviewerResponse> backupReviewers) {
+        public Builder backupReviewers(@Nullable List<AccessReviewReviewerResponse> backupReviewers) {
             this.backupReviewers = backupReviewers;
             return this;
         }
 
-        public Builder setDefaultDecision(@Nullable String defaultDecision) {
+        public Builder defaultDecision(@Nullable String defaultDecision) {
             this.defaultDecision = defaultDecision;
             return this;
         }
 
-        public Builder setDefaultDecisionEnabled(@Nullable Boolean defaultDecisionEnabled) {
+        public Builder defaultDecisionEnabled(@Nullable Boolean defaultDecisionEnabled) {
             this.defaultDecisionEnabled = defaultDecisionEnabled;
             return this;
         }
 
-        public Builder setDescriptionForAdmins(@Nullable String descriptionForAdmins) {
+        public Builder descriptionForAdmins(@Nullable String descriptionForAdmins) {
             this.descriptionForAdmins = descriptionForAdmins;
             return this;
         }
 
-        public Builder setDescriptionForReviewers(@Nullable String descriptionForReviewers) {
+        public Builder descriptionForReviewers(@Nullable String descriptionForReviewers) {
             this.descriptionForReviewers = descriptionForReviewers;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setEndDate(@Nullable String endDate) {
+        public Builder endDate(@Nullable String endDate) {
             this.endDate = endDate;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInactiveDuration(@Nullable String inactiveDuration) {
+        public Builder inactiveDuration(@Nullable String inactiveDuration) {
             this.inactiveDuration = inactiveDuration;
             return this;
         }
 
-        public Builder setInstanceDurationInDays(@Nullable Integer instanceDurationInDays) {
+        public Builder instanceDurationInDays(@Nullable Integer instanceDurationInDays) {
             this.instanceDurationInDays = instanceDurationInDays;
             return this;
         }
 
-        public Builder setInstances(@Nullable List<AccessReviewInstanceResponse> instances) {
+        public Builder instances(@Nullable List<AccessReviewInstanceResponse> instances) {
             this.instances = instances;
             return this;
         }
 
-        public Builder setInterval(@Nullable Integer interval) {
+        public Builder interval(@Nullable Integer interval) {
             this.interval = interval;
             return this;
         }
 
-        public Builder setJustificationRequiredOnApproval(@Nullable Boolean justificationRequiredOnApproval) {
+        public Builder justificationRequiredOnApproval(@Nullable Boolean justificationRequiredOnApproval) {
             this.justificationRequiredOnApproval = justificationRequiredOnApproval;
             return this;
         }
 
-        public Builder setMailNotificationsEnabled(@Nullable Boolean mailNotificationsEnabled) {
+        public Builder mailNotificationsEnabled(@Nullable Boolean mailNotificationsEnabled) {
             this.mailNotificationsEnabled = mailNotificationsEnabled;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNumberOfOccurrences(@Nullable Integer numberOfOccurrences) {
+        public Builder numberOfOccurrences(@Nullable Integer numberOfOccurrences) {
             this.numberOfOccurrences = numberOfOccurrences;
             return this;
         }
 
-        public Builder setPrincipalId(String principalId) {
+        public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
 
-        public Builder setPrincipalName(String principalName) {
+        public Builder principalName(String principalName) {
             this.principalName = Objects.requireNonNull(principalName);
             return this;
         }
 
-        public Builder setPrincipalType(String principalType) {
+        public Builder principalType(String principalType) {
             this.principalType = Objects.requireNonNull(principalType);
             return this;
         }
 
-        public Builder setRecommendationsEnabled(@Nullable Boolean recommendationsEnabled) {
+        public Builder recommendationsEnabled(@Nullable Boolean recommendationsEnabled) {
             this.recommendationsEnabled = recommendationsEnabled;
             return this;
         }
 
-        public Builder setReminderNotificationsEnabled(@Nullable Boolean reminderNotificationsEnabled) {
+        public Builder reminderNotificationsEnabled(@Nullable Boolean reminderNotificationsEnabled) {
             this.reminderNotificationsEnabled = reminderNotificationsEnabled;
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
-        public Builder setReviewers(@Nullable List<AccessReviewReviewerResponse> reviewers) {
+        public Builder reviewers(@Nullable List<AccessReviewReviewerResponse> reviewers) {
             this.reviewers = reviewers;
             return this;
         }
 
-        public Builder setReviewersType(String reviewersType) {
+        public Builder reviewersType(String reviewersType) {
             this.reviewersType = Objects.requireNonNull(reviewersType);
             return this;
         }
 
-        public Builder setRoleDefinitionId(String roleDefinitionId) {
+        public Builder roleDefinitionId(String roleDefinitionId) {
             this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
             return this;
         }
 
-        public Builder setStartDate(@Nullable String startDate) {
+        public Builder startDate(@Nullable String startDate) {
             this.startDate = startDate;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserPrincipalName(String userPrincipalName) {
+        public Builder userPrincipalName(String userPrincipalName) {
             this.userPrincipalName = Objects.requireNonNull(userPrincipalName);
             return this;
         }

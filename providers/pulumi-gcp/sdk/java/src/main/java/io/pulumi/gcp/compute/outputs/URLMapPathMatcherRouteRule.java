@@ -189,32 +189,32 @@ public final class URLMapPathMatcherRouteRule {
     	      this.urlRedirect = defaults.urlRedirect;
         }
 
-        public Builder setHeaderAction(@Nullable URLMapPathMatcherRouteRuleHeaderAction headerAction) {
+        public Builder headerAction(@Nullable URLMapPathMatcherRouteRuleHeaderAction headerAction) {
             this.headerAction = headerAction;
             return this;
         }
 
-        public Builder setMatchRules(@Nullable List<URLMapPathMatcherRouteRuleMatchRule> matchRules) {
+        public Builder matchRules(@Nullable List<URLMapPathMatcherRouteRuleMatchRule> matchRules) {
             this.matchRules = matchRules;
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setRouteAction(@Nullable URLMapPathMatcherRouteRuleRouteAction routeAction) {
+        public Builder routeAction(@Nullable URLMapPathMatcherRouteRuleRouteAction routeAction) {
             this.routeAction = routeAction;
             return this;
         }
 
-        public Builder setService(@Nullable String service) {
+        public Builder service(@Nullable String service) {
             this.service = service;
             return this;
         }
 
-        public Builder setUrlRedirect(@Nullable URLMapPathMatcherRouteRuleUrlRedirect urlRedirect) {
+        public Builder urlRedirect(@Nullable URLMapPathMatcherRouteRuleUrlRedirect urlRedirect) {
             this.urlRedirect = urlRedirect;
             return this;
         }

@@ -122,52 +122,52 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setAppId(@Nullable Input<String> appId) {
+        public Builder appId(@Nullable Input<String> appId) {
             this.appId = appId;
             return this;
         }
 
-        public Builder setAppId(@Nullable String appId) {
+        public Builder appId(@Nullable String appId) {
             this.appId = Input.ofNullable(appId);
             return this;
         }
 
-        public Builder setObjectId(@Nullable Input<String> objectId) {
+        public Builder objectId(@Nullable Input<String> objectId) {
             this.objectId = objectId;
             return this;
         }
 
-        public Builder setObjectId(@Nullable String objectId) {
+        public Builder objectId(@Nullable String objectId) {
             this.objectId = Input.ofNullable(objectId);
             return this;
         }
 
-        public Builder setPrincipalId(@Nullable Input<String> principalId) {
+        public Builder principalId(@Nullable Input<String> principalId) {
             this.principalId = principalId;
             return this;
         }
 
-        public Builder setPrincipalId(@Nullable String principalId) {
+        public Builder principalId(@Nullable String principalId) {
             this.principalId = Input.ofNullable(principalId);
             return this;
         }
 
-        public Builder setPrincipalName(@Nullable Input<String> principalName) {
+        public Builder principalName(@Nullable Input<String> principalName) {
             this.principalName = principalName;
             return this;
         }
 
-        public Builder setPrincipalName(@Nullable String principalName) {
+        public Builder principalName(@Nullable String principalName) {
             this.principalName = Input.ofNullable(principalName);
             return this;
         }
 
-        public Builder setTenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Input<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Input.ofNullable(tenantId);
             return this;
         }

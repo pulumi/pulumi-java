@@ -136,62 +136,62 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setClusterName(Input<String> clusterName) {
+        public Builder clusterName(Input<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Input.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder setDatastoreName(@Nullable Input<String> datastoreName) {
+        public Builder datastoreName(@Nullable Input<String> datastoreName) {
             this.datastoreName = datastoreName;
             return this;
         }
 
-        public Builder setDatastoreName(@Nullable String datastoreName) {
+        public Builder datastoreName(@Nullable String datastoreName) {
             this.datastoreName = Input.ofNullable(datastoreName);
             return this;
         }
 
-        public Builder setDiskPoolVolume(@Nullable Input<DiskPoolVolumeArgs> diskPoolVolume) {
+        public Builder diskPoolVolume(@Nullable Input<DiskPoolVolumeArgs> diskPoolVolume) {
             this.diskPoolVolume = diskPoolVolume;
             return this;
         }
 
-        public Builder setDiskPoolVolume(@Nullable DiskPoolVolumeArgs diskPoolVolume) {
+        public Builder diskPoolVolume(@Nullable DiskPoolVolumeArgs diskPoolVolume) {
             this.diskPoolVolume = Input.ofNullable(diskPoolVolume);
             return this;
         }
 
-        public Builder setNetAppVolume(@Nullable Input<NetAppVolumeArgs> netAppVolume) {
+        public Builder netAppVolume(@Nullable Input<NetAppVolumeArgs> netAppVolume) {
             this.netAppVolume = netAppVolume;
             return this;
         }
 
-        public Builder setNetAppVolume(@Nullable NetAppVolumeArgs netAppVolume) {
+        public Builder netAppVolume(@Nullable NetAppVolumeArgs netAppVolume) {
             this.netAppVolume = Input.ofNullable(netAppVolume);
             return this;
         }
 
-        public Builder setPrivateCloudName(Input<String> privateCloudName) {
+        public Builder privateCloudName(Input<String> privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
 
-        public Builder setPrivateCloudName(String privateCloudName) {
+        public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Input.of(Objects.requireNonNull(privateCloudName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

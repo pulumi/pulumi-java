@@ -108,22 +108,22 @@ public final class ToolExecutionResponse extends io.pulumi.resources.InvokeArgs 
     	      this.toolOutputs = defaults.toolOutputs;
         }
 
-        public Builder setCommandLineArguments(List<String> commandLineArguments) {
+        public Builder commandLineArguments(List<String> commandLineArguments) {
             this.commandLineArguments = Objects.requireNonNull(commandLineArguments);
             return this;
         }
 
-        public Builder setExitCode(ToolExitCodeResponse exitCode) {
+        public Builder exitCode(ToolExitCodeResponse exitCode) {
             this.exitCode = Objects.requireNonNull(exitCode);
             return this;
         }
 
-        public Builder setToolLogs(List<FileReferenceResponse> toolLogs) {
+        public Builder toolLogs(List<FileReferenceResponse> toolLogs) {
             this.toolLogs = Objects.requireNonNull(toolLogs);
             return this;
         }
 
-        public Builder setToolOutputs(List<ToolOutputReferenceResponse> toolOutputs) {
+        public Builder toolOutputs(List<ToolOutputReferenceResponse> toolOutputs) {
             this.toolOutputs = Objects.requireNonNull(toolOutputs);
             return this;
         }

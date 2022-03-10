@@ -65,12 +65,12 @@ public final class AccessUrlsResponse {
     	      this.crlAccessUrl = defaults.crlAccessUrl;
         }
 
-        public Builder setCaCertificateAccessUrl(String caCertificateAccessUrl) {
+        public Builder caCertificateAccessUrl(String caCertificateAccessUrl) {
             this.caCertificateAccessUrl = Objects.requireNonNull(caCertificateAccessUrl);
             return this;
         }
 
-        public Builder setCrlAccessUrl(String crlAccessUrl) {
+        public Builder crlAccessUrl(String crlAccessUrl) {
             this.crlAccessUrl = Objects.requireNonNull(crlAccessUrl);
             return this;
         }

@@ -94,17 +94,17 @@ public final class ResourcePolicyGroupPlacementPolicy {
     	      this.vmCount = defaults.vmCount;
         }
 
-        public Builder setAvailabilityDomainCount(@Nullable Integer availabilityDomainCount) {
+        public Builder availabilityDomainCount(@Nullable Integer availabilityDomainCount) {
             this.availabilityDomainCount = availabilityDomainCount;
             return this;
         }
 
-        public Builder setCollocation(@Nullable String collocation) {
+        public Builder collocation(@Nullable String collocation) {
             this.collocation = collocation;
             return this;
         }
 
-        public Builder setVmCount(@Nullable Integer vmCount) {
+        public Builder vmCount(@Nullable Integer vmCount) {
             this.vmCount = vmCount;
             return this;
         }

@@ -58,12 +58,12 @@ public final class VirtualMachineScaleSetVMNetworkProfileConfigurationArgs exten
     	      this.networkInterfaceConfigurations = defaults.networkInterfaceConfigurations;
         }
 
-        public Builder setNetworkInterfaceConfigurations(@Nullable Input<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations) {
+        public Builder networkInterfaceConfigurations(@Nullable Input<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations) {
             this.networkInterfaceConfigurations = networkInterfaceConfigurations;
             return this;
         }
 
-        public Builder setNetworkInterfaceConfigurations(@Nullable List<VirtualMachineScaleSetNetworkConfigurationArgs> networkInterfaceConfigurations) {
+        public Builder networkInterfaceConfigurations(@Nullable List<VirtualMachineScaleSetNetworkConfigurationArgs> networkInterfaceConfigurations) {
             this.networkInterfaceConfigurations = Input.ofNullable(networkInterfaceConfigurations);
             return this;
         }

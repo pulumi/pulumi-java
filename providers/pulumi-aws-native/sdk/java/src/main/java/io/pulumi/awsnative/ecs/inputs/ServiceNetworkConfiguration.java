@@ -49,7 +49,7 @@ public final class ServiceNetworkConfiguration extends io.pulumi.resources.Invok
     	      this.awsvpcConfiguration = defaults.awsvpcConfiguration;
         }
 
-        public Builder setAwsvpcConfiguration(@Nullable ServiceAwsVpcConfiguration awsvpcConfiguration) {
+        public Builder awsvpcConfiguration(@Nullable ServiceAwsVpcConfiguration awsvpcConfiguration) {
             this.awsvpcConfiguration = awsvpcConfiguration;
             return this;
         }

@@ -234,62 +234,62 @@ public final class GetBudgetResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAmount(Double amount) {
+        public Builder amount(Double amount) {
             this.amount = Objects.requireNonNull(amount);
             return this;
         }
 
-        public Builder setCategory(String category) {
+        public Builder category(String category) {
             this.category = Objects.requireNonNull(category);
             return this;
         }
 
-        public Builder setCurrentSpend(CurrentSpendResponse currentSpend) {
+        public Builder currentSpend(CurrentSpendResponse currentSpend) {
             this.currentSpend = Objects.requireNonNull(currentSpend);
             return this;
         }
 
-        public Builder setETag(@Nullable String eTag) {
+        public Builder eTag(@Nullable String eTag) {
             this.eTag = eTag;
             return this;
         }
 
-        public Builder setFilter(@Nullable BudgetFilterResponse filter) {
+        public Builder filter(@Nullable BudgetFilterResponse filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setForecastSpend(ForecastSpendResponse forecastSpend) {
+        public Builder forecastSpend(ForecastSpendResponse forecastSpend) {
             this.forecastSpend = Objects.requireNonNull(forecastSpend);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNotifications(@Nullable Map<String,NotificationResponse> notifications) {
+        public Builder notifications(@Nullable Map<String,NotificationResponse> notifications) {
             this.notifications = notifications;
             return this;
         }
 
-        public Builder setTimeGrain(String timeGrain) {
+        public Builder timeGrain(String timeGrain) {
             this.timeGrain = Objects.requireNonNull(timeGrain);
             return this;
         }
 
-        public Builder setTimePeriod(BudgetTimePeriodResponse timePeriod) {
+        public Builder timePeriod(BudgetTimePeriodResponse timePeriod) {
             this.timePeriod = Objects.requireNonNull(timePeriod);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

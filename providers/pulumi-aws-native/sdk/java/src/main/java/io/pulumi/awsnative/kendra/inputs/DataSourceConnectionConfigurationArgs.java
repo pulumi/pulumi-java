@@ -98,52 +98,52 @@ public final class DataSourceConnectionConfigurationArgs extends io.pulumi.resou
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder setDatabaseHost(Input<String> databaseHost) {
+        public Builder databaseHost(Input<String> databaseHost) {
             this.databaseHost = Objects.requireNonNull(databaseHost);
             return this;
         }
 
-        public Builder setDatabaseHost(String databaseHost) {
+        public Builder databaseHost(String databaseHost) {
             this.databaseHost = Input.of(Objects.requireNonNull(databaseHost));
             return this;
         }
 
-        public Builder setDatabaseName(Input<String> databaseName) {
+        public Builder databaseName(Input<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Input.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder setDatabasePort(Input<Integer> databasePort) {
+        public Builder databasePort(Input<Integer> databasePort) {
             this.databasePort = Objects.requireNonNull(databasePort);
             return this;
         }
 
-        public Builder setDatabasePort(Integer databasePort) {
+        public Builder databasePort(Integer databasePort) {
             this.databasePort = Input.of(Objects.requireNonNull(databasePort));
             return this;
         }
 
-        public Builder setSecretArn(Input<String> secretArn) {
+        public Builder secretArn(Input<String> secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }
 
-        public Builder setSecretArn(String secretArn) {
+        public Builder secretArn(String secretArn) {
             this.secretArn = Input.of(Objects.requireNonNull(secretArn));
             return this;
         }
 
-        public Builder setTableName(Input<String> tableName) {
+        public Builder tableName(Input<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Input.of(Objects.requireNonNull(tableName));
             return this;
         }

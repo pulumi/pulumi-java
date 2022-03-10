@@ -187,92 +187,92 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAssumeRolePolicyDocument(Input<Object> assumeRolePolicyDocument) {
+        public Builder assumeRolePolicyDocument(Input<Object> assumeRolePolicyDocument) {
             this.assumeRolePolicyDocument = Objects.requireNonNull(assumeRolePolicyDocument);
             return this;
         }
 
-        public Builder setAssumeRolePolicyDocument(Object assumeRolePolicyDocument) {
+        public Builder assumeRolePolicyDocument(Object assumeRolePolicyDocument) {
             this.assumeRolePolicyDocument = Input.of(Objects.requireNonNull(assumeRolePolicyDocument));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setManagedPolicyArns(@Nullable Input<List<String>> managedPolicyArns) {
+        public Builder managedPolicyArns(@Nullable Input<List<String>> managedPolicyArns) {
             this.managedPolicyArns = managedPolicyArns;
             return this;
         }
 
-        public Builder setManagedPolicyArns(@Nullable List<String> managedPolicyArns) {
+        public Builder managedPolicyArns(@Nullable List<String> managedPolicyArns) {
             this.managedPolicyArns = Input.ofNullable(managedPolicyArns);
             return this;
         }
 
-        public Builder setMaxSessionDuration(@Nullable Input<Integer> maxSessionDuration) {
+        public Builder maxSessionDuration(@Nullable Input<Integer> maxSessionDuration) {
             this.maxSessionDuration = maxSessionDuration;
             return this;
         }
 
-        public Builder setMaxSessionDuration(@Nullable Integer maxSessionDuration) {
+        public Builder maxSessionDuration(@Nullable Integer maxSessionDuration) {
             this.maxSessionDuration = Input.ofNullable(maxSessionDuration);
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }
 
-        public Builder setPermissionsBoundary(@Nullable Input<String> permissionsBoundary) {
+        public Builder permissionsBoundary(@Nullable Input<String> permissionsBoundary) {
             this.permissionsBoundary = permissionsBoundary;
             return this;
         }
 
-        public Builder setPermissionsBoundary(@Nullable String permissionsBoundary) {
+        public Builder permissionsBoundary(@Nullable String permissionsBoundary) {
             this.permissionsBoundary = Input.ofNullable(permissionsBoundary);
             return this;
         }
 
-        public Builder setPolicies(@Nullable Input<List<RolePolicyArgs>> policies) {
+        public Builder policies(@Nullable Input<List<RolePolicyArgs>> policies) {
             this.policies = policies;
             return this;
         }
 
-        public Builder setPolicies(@Nullable List<RolePolicyArgs> policies) {
+        public Builder policies(@Nullable List<RolePolicyArgs> policies) {
             this.policies = Input.ofNullable(policies);
             return this;
         }
 
-        public Builder setRoleName(@Nullable Input<String> roleName) {
+        public Builder roleName(@Nullable Input<String> roleName) {
             this.roleName = roleName;
             return this;
         }
 
-        public Builder setRoleName(@Nullable String roleName) {
+        public Builder roleName(@Nullable String roleName) {
             this.roleName = Input.ofNullable(roleName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<RoleTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<RoleTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<RoleTagArgs> tags) {
+        public Builder tags(@Nullable List<RoleTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

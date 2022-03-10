@@ -96,22 +96,22 @@ public final class OrganizationPolicyListPolicy {
     	      this.suggestedValue = defaults.suggestedValue;
         }
 
-        public Builder setAllow(@Nullable OrganizationPolicyListPolicyAllow allow) {
+        public Builder allow(@Nullable OrganizationPolicyListPolicyAllow allow) {
             this.allow = allow;
             return this;
         }
 
-        public Builder setDeny(@Nullable OrganizationPolicyListPolicyDeny deny) {
+        public Builder deny(@Nullable OrganizationPolicyListPolicyDeny deny) {
             this.deny = deny;
             return this;
         }
 
-        public Builder setInheritFromParent(@Nullable Boolean inheritFromParent) {
+        public Builder inheritFromParent(@Nullable Boolean inheritFromParent) {
             this.inheritFromParent = inheritFromParent;
             return this;
         }
 
-        public Builder setSuggestedValue(@Nullable String suggestedValue) {
+        public Builder suggestedValue(@Nullable String suggestedValue) {
             this.suggestedValue = suggestedValue;
             return this;
         }

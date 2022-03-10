@@ -202,57 +202,57 @@ public final class GetDetectorResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setAssociatedModels(@Nullable List<DetectorModel> associatedModels) {
+        public Builder associatedModels(@Nullable List<DetectorModel> associatedModels) {
             this.associatedModels = associatedModels;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDetectorVersionId(@Nullable String detectorVersionId) {
+        public Builder detectorVersionId(@Nullable String detectorVersionId) {
             this.detectorVersionId = detectorVersionId;
             return this;
         }
 
-        public Builder setDetectorVersionStatus(@Nullable DetectorVersionStatus detectorVersionStatus) {
+        public Builder detectorVersionStatus(@Nullable DetectorVersionStatus detectorVersionStatus) {
             this.detectorVersionStatus = detectorVersionStatus;
             return this;
         }
 
-        public Builder setEventType(@Nullable DetectorEventType eventType) {
+        public Builder eventType(@Nullable DetectorEventType eventType) {
             this.eventType = eventType;
             return this;
         }
 
-        public Builder setLastUpdatedTime(@Nullable String lastUpdatedTime) {
+        public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
 
-        public Builder setRuleExecutionMode(@Nullable DetectorRuleExecutionMode ruleExecutionMode) {
+        public Builder ruleExecutionMode(@Nullable DetectorRuleExecutionMode ruleExecutionMode) {
             this.ruleExecutionMode = ruleExecutionMode;
             return this;
         }
 
-        public Builder setRules(@Nullable List<DetectorRule> rules) {
+        public Builder rules(@Nullable List<DetectorRule> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DetectorTag> tags) {
+        public Builder tags(@Nullable List<DetectorTag> tags) {
             this.tags = tags;
             return this;
         }

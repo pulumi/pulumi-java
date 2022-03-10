@@ -107,42 +107,42 @@ public final class ReverseSshConnectivityArgs extends io.pulumi.resources.Resour
     	      this.vpc = defaults.vpc;
         }
 
-        public Builder setVm(@Nullable Input<String> vm) {
+        public Builder vm(@Nullable Input<String> vm) {
             this.vm = vm;
             return this;
         }
 
-        public Builder setVm(@Nullable String vm) {
+        public Builder vm(@Nullable String vm) {
             this.vm = Input.ofNullable(vm);
             return this;
         }
 
-        public Builder setVmIp(Input<String> vmIp) {
+        public Builder vmIp(Input<String> vmIp) {
             this.vmIp = Objects.requireNonNull(vmIp);
             return this;
         }
 
-        public Builder setVmIp(String vmIp) {
+        public Builder vmIp(String vmIp) {
             this.vmIp = Input.of(Objects.requireNonNull(vmIp));
             return this;
         }
 
-        public Builder setVmPort(Input<Integer> vmPort) {
+        public Builder vmPort(Input<Integer> vmPort) {
             this.vmPort = Objects.requireNonNull(vmPort);
             return this;
         }
 
-        public Builder setVmPort(Integer vmPort) {
+        public Builder vmPort(Integer vmPort) {
             this.vmPort = Input.of(Objects.requireNonNull(vmPort));
             return this;
         }
 
-        public Builder setVpc(@Nullable Input<String> vpc) {
+        public Builder vpc(@Nullable Input<String> vpc) {
             this.vpc = vpc;
             return this;
         }
 
-        public Builder setVpc(@Nullable String vpc) {
+        public Builder vpc(@Nullable String vpc) {
             this.vpc = Input.ofNullable(vpc);
             return this;
         }

@@ -62,12 +62,12 @@ public final class GetGlobalNetworkEndpointGroupArgs extends io.pulumi.resources
     	      this.project = defaults.project;
         }
 
-        public Builder setNetworkEndpointGroup(String networkEndpointGroup) {
+        public Builder networkEndpointGroup(String networkEndpointGroup) {
             this.networkEndpointGroup = Objects.requireNonNull(networkEndpointGroup);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

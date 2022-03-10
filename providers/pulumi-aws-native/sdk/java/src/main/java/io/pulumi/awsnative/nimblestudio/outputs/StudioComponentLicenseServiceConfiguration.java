@@ -50,7 +50,7 @@ public final class StudioComponentLicenseServiceConfiguration {
     	      this.endpoint = defaults.endpoint;
         }
 
-        public Builder setEndpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = endpoint;
             return this;
         }

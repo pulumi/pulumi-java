@@ -84,17 +84,17 @@ public final class StateMachineLoggingConfiguration {
     	      this.logDestination = defaults.logDestination;
         }
 
-        public Builder setIncludeExecutionData(@Nullable Boolean includeExecutionData) {
+        public Builder includeExecutionData(@Nullable Boolean includeExecutionData) {
             this.includeExecutionData = includeExecutionData;
             return this;
         }
 
-        public Builder setLevel(@Nullable String level) {
+        public Builder level(@Nullable String level) {
             this.level = level;
             return this;
         }
 
-        public Builder setLogDestination(@Nullable String logDestination) {
+        public Builder logDestination(@Nullable String logDestination) {
             this.logDestination = logDestination;
             return this;
         }

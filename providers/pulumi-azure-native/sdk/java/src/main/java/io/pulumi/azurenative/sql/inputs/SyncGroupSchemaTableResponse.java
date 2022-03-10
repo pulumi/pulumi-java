@@ -76,12 +76,12 @@ public final class SyncGroupSchemaTableResponse extends io.pulumi.resources.Invo
     	      this.quotedName = defaults.quotedName;
         }
 
-        public Builder setColumns(@Nullable List<SyncGroupSchemaTableColumnResponse> columns) {
+        public Builder columns(@Nullable List<SyncGroupSchemaTableColumnResponse> columns) {
             this.columns = columns;
             return this;
         }
 
-        public Builder setQuotedName(@Nullable String quotedName) {
+        public Builder quotedName(@Nullable String quotedName) {
             this.quotedName = quotedName;
             return this;
         }

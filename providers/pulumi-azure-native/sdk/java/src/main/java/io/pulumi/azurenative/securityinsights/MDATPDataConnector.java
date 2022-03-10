@@ -167,7 +167,7 @@ public class MDATPDataConnector extends io.pulumi.resources.CustomResource {
     private static MDATPDataConnectorArgs makeArgs(MDATPDataConnectorArgs args) {
         var builder = args == null ? MDATPDataConnectorArgs.builder() : MDATPDataConnectorArgs.builder(args);
         return builder
-            .setKind("MicrosoftDefenderAdvancedThreatProtection")
+            .kind("MicrosoftDefenderAdvancedThreatProtection")
             .build();
     }
 

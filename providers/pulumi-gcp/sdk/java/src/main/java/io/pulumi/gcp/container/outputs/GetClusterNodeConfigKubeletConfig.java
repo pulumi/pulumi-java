@@ -58,17 +58,17 @@ public final class GetClusterNodeConfigKubeletConfig {
     	      this.cpuManagerPolicy = defaults.cpuManagerPolicy;
         }
 
-        public Builder setCpuCfsQuota(Boolean cpuCfsQuota) {
+        public Builder cpuCfsQuota(Boolean cpuCfsQuota) {
             this.cpuCfsQuota = Objects.requireNonNull(cpuCfsQuota);
             return this;
         }
 
-        public Builder setCpuCfsQuotaPeriod(String cpuCfsQuotaPeriod) {
+        public Builder cpuCfsQuotaPeriod(String cpuCfsQuotaPeriod) {
             this.cpuCfsQuotaPeriod = Objects.requireNonNull(cpuCfsQuotaPeriod);
             return this;
         }
 
-        public Builder setCpuManagerPolicy(String cpuManagerPolicy) {
+        public Builder cpuManagerPolicy(String cpuManagerPolicy) {
             this.cpuManagerPolicy = Objects.requireNonNull(cpuManagerPolicy);
             return this;
         }

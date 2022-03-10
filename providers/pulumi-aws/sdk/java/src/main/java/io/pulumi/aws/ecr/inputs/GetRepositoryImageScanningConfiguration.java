@@ -51,7 +51,7 @@ public final class GetRepositoryImageScanningConfiguration extends io.pulumi.res
     	      this.scanOnPush = defaults.scanOnPush;
         }
 
-        public Builder setScanOnPush(Boolean scanOnPush) {
+        public Builder scanOnPush(Boolean scanOnPush) {
             this.scanOnPush = Objects.requireNonNull(scanOnPush);
             return this;
         }

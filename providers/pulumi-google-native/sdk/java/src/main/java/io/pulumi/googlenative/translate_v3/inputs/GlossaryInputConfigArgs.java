@@ -56,12 +56,12 @@ public final class GlossaryInputConfigArgs extends io.pulumi.resources.ResourceA
     	      this.gcsSource = defaults.gcsSource;
         }
 
-        public Builder setGcsSource(Input<GcsSourceArgs> gcsSource) {
+        public Builder gcsSource(Input<GcsSourceArgs> gcsSource) {
             this.gcsSource = Objects.requireNonNull(gcsSource);
             return this;
         }
 
-        public Builder setGcsSource(GcsSourceArgs gcsSource) {
+        public Builder gcsSource(GcsSourceArgs gcsSource) {
             this.gcsSource = Input.of(Objects.requireNonNull(gcsSource));
             return this;
         }

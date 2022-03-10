@@ -70,22 +70,22 @@ public final class ResponseHeadersPolicySecurityHeadersConfigFrameOptionsArgs ex
     	      this.override = defaults.override;
         }
 
-        public Builder setFrameOption(Input<String> frameOption) {
+        public Builder frameOption(Input<String> frameOption) {
             this.frameOption = Objects.requireNonNull(frameOption);
             return this;
         }
 
-        public Builder setFrameOption(String frameOption) {
+        public Builder frameOption(String frameOption) {
             this.frameOption = Input.of(Objects.requireNonNull(frameOption));
             return this;
         }
 
-        public Builder setOverride(Input<Boolean> override) {
+        public Builder override(Input<Boolean> override) {
             this.override = Objects.requireNonNull(override);
             return this;
         }
 
-        public Builder setOverride(Boolean override) {
+        public Builder override(Boolean override) {
             this.override = Input.of(Objects.requireNonNull(override));
             return this;
         }

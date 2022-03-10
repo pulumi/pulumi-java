@@ -72,12 +72,12 @@ public final class OracleSourceConfigResponse extends io.pulumi.resources.Invoke
     	      this.rejectlist = defaults.rejectlist;
         }
 
-        public Builder setAllowlist(OracleRdbmsResponse allowlist) {
+        public Builder allowlist(OracleRdbmsResponse allowlist) {
             this.allowlist = Objects.requireNonNull(allowlist);
             return this;
         }
 
-        public Builder setRejectlist(OracleRdbmsResponse rejectlist) {
+        public Builder rejectlist(OracleRdbmsResponse rejectlist) {
             this.rejectlist = Objects.requireNonNull(rejectlist);
             return this;
         }

@@ -153,72 +153,72 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setExcludeFilters(@Nullable Input<List<MetricStreamFilterArgs>> excludeFilters) {
+        public Builder excludeFilters(@Nullable Input<List<MetricStreamFilterArgs>> excludeFilters) {
             this.excludeFilters = excludeFilters;
             return this;
         }
 
-        public Builder setExcludeFilters(@Nullable List<MetricStreamFilterArgs> excludeFilters) {
+        public Builder excludeFilters(@Nullable List<MetricStreamFilterArgs> excludeFilters) {
             this.excludeFilters = Input.ofNullable(excludeFilters);
             return this;
         }
 
-        public Builder setFirehoseArn(Input<String> firehoseArn) {
+        public Builder firehoseArn(Input<String> firehoseArn) {
             this.firehoseArn = Objects.requireNonNull(firehoseArn);
             return this;
         }
 
-        public Builder setFirehoseArn(String firehoseArn) {
+        public Builder firehoseArn(String firehoseArn) {
             this.firehoseArn = Input.of(Objects.requireNonNull(firehoseArn));
             return this;
         }
 
-        public Builder setIncludeFilters(@Nullable Input<List<MetricStreamFilterArgs>> includeFilters) {
+        public Builder includeFilters(@Nullable Input<List<MetricStreamFilterArgs>> includeFilters) {
             this.includeFilters = includeFilters;
             return this;
         }
 
-        public Builder setIncludeFilters(@Nullable List<MetricStreamFilterArgs> includeFilters) {
+        public Builder includeFilters(@Nullable List<MetricStreamFilterArgs> includeFilters) {
             this.includeFilters = Input.ofNullable(includeFilters);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOutputFormat(Input<String> outputFormat) {
+        public Builder outputFormat(Input<String> outputFormat) {
             this.outputFormat = Objects.requireNonNull(outputFormat);
             return this;
         }
 
-        public Builder setOutputFormat(String outputFormat) {
+        public Builder outputFormat(String outputFormat) {
             this.outputFormat = Input.of(Objects.requireNonNull(outputFormat));
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<MetricStreamTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<MetricStreamTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<MetricStreamTagArgs> tags) {
+        public Builder tags(@Nullable List<MetricStreamTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

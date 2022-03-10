@@ -133,62 +133,62 @@ public final class PartitionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder setCatalogId(@Nullable Input<String> catalogId) {
+        public Builder catalogId(@Nullable Input<String> catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
-        public Builder setCatalogId(@Nullable String catalogId) {
+        public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = Input.ofNullable(catalogId);
             return this;
         }
 
-        public Builder setDatabaseName(Input<String> databaseName) {
+        public Builder databaseName(Input<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Input.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,String>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,String> parameters) {
+        public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setPartitionValues(Input<List<String>> partitionValues) {
+        public Builder partitionValues(Input<List<String>> partitionValues) {
             this.partitionValues = Objects.requireNonNull(partitionValues);
             return this;
         }
 
-        public Builder setPartitionValues(List<String> partitionValues) {
+        public Builder partitionValues(List<String> partitionValues) {
             this.partitionValues = Input.of(Objects.requireNonNull(partitionValues));
             return this;
         }
 
-        public Builder setStorageDescriptor(@Nullable Input<PartitionStorageDescriptorArgs> storageDescriptor) {
+        public Builder storageDescriptor(@Nullable Input<PartitionStorageDescriptorArgs> storageDescriptor) {
             this.storageDescriptor = storageDescriptor;
             return this;
         }
 
-        public Builder setStorageDescriptor(@Nullable PartitionStorageDescriptorArgs storageDescriptor) {
+        public Builder storageDescriptor(@Nullable PartitionStorageDescriptorArgs storageDescriptor) {
             this.storageDescriptor = Input.ofNullable(storageDescriptor);
             return this;
         }
 
-        public Builder setTableName(Input<String> tableName) {
+        public Builder tableName(Input<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Input.of(Objects.requireNonNull(tableName));
             return this;
         }

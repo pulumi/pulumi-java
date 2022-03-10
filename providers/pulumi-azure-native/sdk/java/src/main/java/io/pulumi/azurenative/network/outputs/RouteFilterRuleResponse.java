@@ -164,42 +164,42 @@ public final class RouteFilterRuleResponse {
     	      this.routeFilterRuleType = defaults.routeFilterRuleType;
         }
 
-        public Builder setAccess(String access) {
+        public Builder access(String access) {
             this.access = Objects.requireNonNull(access);
             return this;
         }
 
-        public Builder setCommunities(List<String> communities) {
+        public Builder communities(List<String> communities) {
             this.communities = Objects.requireNonNull(communities);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRouteFilterRuleType(String routeFilterRuleType) {
+        public Builder routeFilterRuleType(String routeFilterRuleType) {
             this.routeFilterRuleType = Objects.requireNonNull(routeFilterRuleType);
             return this;
         }

@@ -151,37 +151,37 @@ public final class TestSetupResponse {
     	      this.networkProfile = defaults.networkProfile;
         }
 
-        public Builder setAccount(AccountResponse account) {
+        public Builder account(AccountResponse account) {
             this.account = Objects.requireNonNull(account);
             return this;
         }
 
-        public Builder setAdditionalApks(List<ApkResponse> additionalApks) {
+        public Builder additionalApks(List<ApkResponse> additionalApks) {
             this.additionalApks = Objects.requireNonNull(additionalApks);
             return this;
         }
 
-        public Builder setDirectoriesToPull(List<String> directoriesToPull) {
+        public Builder directoriesToPull(List<String> directoriesToPull) {
             this.directoriesToPull = Objects.requireNonNull(directoriesToPull);
             return this;
         }
 
-        public Builder setDontAutograntPermissions(Boolean dontAutograntPermissions) {
+        public Builder dontAutograntPermissions(Boolean dontAutograntPermissions) {
             this.dontAutograntPermissions = Objects.requireNonNull(dontAutograntPermissions);
             return this;
         }
 
-        public Builder setEnvironmentVariables(List<EnvironmentVariableResponse> environmentVariables) {
+        public Builder environmentVariables(List<EnvironmentVariableResponse> environmentVariables) {
             this.environmentVariables = Objects.requireNonNull(environmentVariables);
             return this;
         }
 
-        public Builder setFilesToPush(List<DeviceFileResponse> filesToPush) {
+        public Builder filesToPush(List<DeviceFileResponse> filesToPush) {
             this.filesToPush = Objects.requireNonNull(filesToPush);
             return this;
         }
 
-        public Builder setNetworkProfile(String networkProfile) {
+        public Builder networkProfile(String networkProfile) {
             this.networkProfile = Objects.requireNonNull(networkProfile);
             return this;
         }

@@ -68,12 +68,12 @@ public final class GetAssignmentArgs extends io.pulumi.resources.InvokeArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAssignmentId(String assignmentId) {
+        public Builder assignmentId(String assignmentId) {
             this.assignmentId = Objects.requireNonNull(assignmentId);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

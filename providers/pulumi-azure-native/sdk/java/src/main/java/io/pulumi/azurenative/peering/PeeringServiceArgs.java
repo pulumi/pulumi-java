@@ -184,92 +184,92 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPeeringServiceLocation(@Nullable Input<String> peeringServiceLocation) {
+        public Builder peeringServiceLocation(@Nullable Input<String> peeringServiceLocation) {
             this.peeringServiceLocation = peeringServiceLocation;
             return this;
         }
 
-        public Builder setPeeringServiceLocation(@Nullable String peeringServiceLocation) {
+        public Builder peeringServiceLocation(@Nullable String peeringServiceLocation) {
             this.peeringServiceLocation = Input.ofNullable(peeringServiceLocation);
             return this;
         }
 
-        public Builder setPeeringServiceName(@Nullable Input<String> peeringServiceName) {
+        public Builder peeringServiceName(@Nullable Input<String> peeringServiceName) {
             this.peeringServiceName = peeringServiceName;
             return this;
         }
 
-        public Builder setPeeringServiceName(@Nullable String peeringServiceName) {
+        public Builder peeringServiceName(@Nullable String peeringServiceName) {
             this.peeringServiceName = Input.ofNullable(peeringServiceName);
             return this;
         }
 
-        public Builder setPeeringServiceProvider(@Nullable Input<String> peeringServiceProvider) {
+        public Builder peeringServiceProvider(@Nullable Input<String> peeringServiceProvider) {
             this.peeringServiceProvider = peeringServiceProvider;
             return this;
         }
 
-        public Builder setPeeringServiceProvider(@Nullable String peeringServiceProvider) {
+        public Builder peeringServiceProvider(@Nullable String peeringServiceProvider) {
             this.peeringServiceProvider = Input.ofNullable(peeringServiceProvider);
             return this;
         }
 
-        public Builder setProviderBackupPeeringLocation(@Nullable Input<String> providerBackupPeeringLocation) {
+        public Builder providerBackupPeeringLocation(@Nullable Input<String> providerBackupPeeringLocation) {
             this.providerBackupPeeringLocation = providerBackupPeeringLocation;
             return this;
         }
 
-        public Builder setProviderBackupPeeringLocation(@Nullable String providerBackupPeeringLocation) {
+        public Builder providerBackupPeeringLocation(@Nullable String providerBackupPeeringLocation) {
             this.providerBackupPeeringLocation = Input.ofNullable(providerBackupPeeringLocation);
             return this;
         }
 
-        public Builder setProviderPrimaryPeeringLocation(@Nullable Input<String> providerPrimaryPeeringLocation) {
+        public Builder providerPrimaryPeeringLocation(@Nullable Input<String> providerPrimaryPeeringLocation) {
             this.providerPrimaryPeeringLocation = providerPrimaryPeeringLocation;
             return this;
         }
 
-        public Builder setProviderPrimaryPeeringLocation(@Nullable String providerPrimaryPeeringLocation) {
+        public Builder providerPrimaryPeeringLocation(@Nullable String providerPrimaryPeeringLocation) {
             this.providerPrimaryPeeringLocation = Input.ofNullable(providerPrimaryPeeringLocation);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(@Nullable Input<PeeringServiceSkuArgs> sku) {
+        public Builder sku(@Nullable Input<PeeringServiceSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable PeeringServiceSkuArgs sku) {
+        public Builder sku(@Nullable PeeringServiceSkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

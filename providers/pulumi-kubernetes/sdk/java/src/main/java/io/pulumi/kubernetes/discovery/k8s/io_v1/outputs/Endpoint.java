@@ -168,42 +168,42 @@ public final class Endpoint {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setAddresses(List<String> addresses) {
+        public Builder addresses(List<String> addresses) {
             this.addresses = Objects.requireNonNull(addresses);
             return this;
         }
 
-        public Builder setConditions(@Nullable EndpointConditions conditions) {
+        public Builder conditions(@Nullable EndpointConditions conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setDeprecatedTopology(@Nullable Map<String,String> deprecatedTopology) {
+        public Builder deprecatedTopology(@Nullable Map<String,String> deprecatedTopology) {
             this.deprecatedTopology = deprecatedTopology;
             return this;
         }
 
-        public Builder setHints(@Nullable EndpointHints hints) {
+        public Builder hints(@Nullable EndpointHints hints) {
             this.hints = hints;
             return this;
         }
 
-        public Builder setHostname(@Nullable String hostname) {
+        public Builder hostname(@Nullable String hostname) {
             this.hostname = hostname;
             return this;
         }
 
-        public Builder setNodeName(@Nullable String nodeName) {
+        public Builder nodeName(@Nullable String nodeName) {
             this.nodeName = nodeName;
             return this;
         }
 
-        public Builder setTargetRef(@Nullable ObjectReference targetRef) {
+        public Builder targetRef(@Nullable ObjectReference targetRef) {
             this.targetRef = targetRef;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = zone;
             return this;
         }

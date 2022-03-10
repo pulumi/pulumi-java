@@ -90,32 +90,32 @@ public final class MirrorConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.webhookId = defaults.webhookId;
         }
 
-        public Builder setDeployKeyId(@Nullable Input<String> deployKeyId) {
+        public Builder deployKeyId(@Nullable Input<String> deployKeyId) {
             this.deployKeyId = deployKeyId;
             return this;
         }
 
-        public Builder setDeployKeyId(@Nullable String deployKeyId) {
+        public Builder deployKeyId(@Nullable String deployKeyId) {
             this.deployKeyId = Input.ofNullable(deployKeyId);
             return this;
         }
 
-        public Builder setUrl(@Nullable Input<String> url) {
+        public Builder url(@Nullable Input<String> url) {
             this.url = url;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = Input.ofNullable(url);
             return this;
         }
 
-        public Builder setWebhookId(@Nullable Input<String> webhookId) {
+        public Builder webhookId(@Nullable Input<String> webhookId) {
             this.webhookId = webhookId;
             return this;
         }
 
-        public Builder setWebhookId(@Nullable String webhookId) {
+        public Builder webhookId(@Nullable String webhookId) {
             this.webhookId = Input.ofNullable(webhookId);
             return this;
         }

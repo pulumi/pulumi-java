@@ -119,27 +119,27 @@ public final class RouterBgpResponse extends io.pulumi.resources.InvokeArgs {
     	      this.keepaliveInterval = defaults.keepaliveInterval;
         }
 
-        public Builder setAdvertiseMode(String advertiseMode) {
+        public Builder advertiseMode(String advertiseMode) {
             this.advertiseMode = Objects.requireNonNull(advertiseMode);
             return this;
         }
 
-        public Builder setAdvertisedGroups(List<String> advertisedGroups) {
+        public Builder advertisedGroups(List<String> advertisedGroups) {
             this.advertisedGroups = Objects.requireNonNull(advertisedGroups);
             return this;
         }
 
-        public Builder setAdvertisedIpRanges(List<RouterAdvertisedIpRangeResponse> advertisedIpRanges) {
+        public Builder advertisedIpRanges(List<RouterAdvertisedIpRangeResponse> advertisedIpRanges) {
             this.advertisedIpRanges = Objects.requireNonNull(advertisedIpRanges);
             return this;
         }
 
-        public Builder setAsn(Integer asn) {
+        public Builder asn(Integer asn) {
             this.asn = Objects.requireNonNull(asn);
             return this;
         }
 
-        public Builder setKeepaliveInterval(Integer keepaliveInterval) {
+        public Builder keepaliveInterval(Integer keepaliveInterval) {
             this.keepaliveInterval = Objects.requireNonNull(keepaliveInterval);
             return this;
         }

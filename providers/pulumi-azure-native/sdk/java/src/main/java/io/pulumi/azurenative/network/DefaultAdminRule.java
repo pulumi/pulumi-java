@@ -323,7 +323,7 @@ public class DefaultAdminRule extends io.pulumi.resources.CustomResource {
     private static DefaultAdminRuleArgs makeArgs(DefaultAdminRuleArgs args) {
         var builder = args == null ? DefaultAdminRuleArgs.builder() : DefaultAdminRuleArgs.builder(args);
         return builder
-            .setKind("Default")
+            .kind("Default")
             .build();
     }
 

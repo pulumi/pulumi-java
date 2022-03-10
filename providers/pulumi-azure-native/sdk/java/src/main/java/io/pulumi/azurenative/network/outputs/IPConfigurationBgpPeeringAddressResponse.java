@@ -100,22 +100,22 @@ public final class IPConfigurationBgpPeeringAddressResponse {
     	      this.tunnelIpAddresses = defaults.tunnelIpAddresses;
         }
 
-        public Builder setCustomBgpIpAddresses(@Nullable List<String> customBgpIpAddresses) {
+        public Builder customBgpIpAddresses(@Nullable List<String> customBgpIpAddresses) {
             this.customBgpIpAddresses = customBgpIpAddresses;
             return this;
         }
 
-        public Builder setDefaultBgpIpAddresses(List<String> defaultBgpIpAddresses) {
+        public Builder defaultBgpIpAddresses(List<String> defaultBgpIpAddresses) {
             this.defaultBgpIpAddresses = Objects.requireNonNull(defaultBgpIpAddresses);
             return this;
         }
 
-        public Builder setIpconfigurationId(@Nullable String ipconfigurationId) {
+        public Builder ipconfigurationId(@Nullable String ipconfigurationId) {
             this.ipconfigurationId = ipconfigurationId;
             return this;
         }
 
-        public Builder setTunnelIpAddresses(List<String> tunnelIpAddresses) {
+        public Builder tunnelIpAddresses(List<String> tunnelIpAddresses) {
             this.tunnelIpAddresses = Objects.requireNonNull(tunnelIpAddresses);
             return this;
         }

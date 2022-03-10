@@ -91,22 +91,22 @@ public final class ContactListTopic {
     	      this.topicName = defaults.topicName;
         }
 
-        public Builder setDefaultSubscriptionStatus(String defaultSubscriptionStatus) {
+        public Builder defaultSubscriptionStatus(String defaultSubscriptionStatus) {
             this.defaultSubscriptionStatus = Objects.requireNonNull(defaultSubscriptionStatus);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setTopicName(String topicName) {
+        public Builder topicName(String topicName) {
             this.topicName = Objects.requireNonNull(topicName);
             return this;
         }

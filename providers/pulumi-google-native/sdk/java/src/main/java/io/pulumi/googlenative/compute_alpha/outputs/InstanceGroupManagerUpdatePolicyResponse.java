@@ -163,42 +163,42 @@ public final class InstanceGroupManagerUpdatePolicyResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setInstanceRedistributionType(String instanceRedistributionType) {
+        public Builder instanceRedistributionType(String instanceRedistributionType) {
             this.instanceRedistributionType = Objects.requireNonNull(instanceRedistributionType);
             return this;
         }
 
-        public Builder setMaxSurge(FixedOrPercentResponse maxSurge) {
+        public Builder maxSurge(FixedOrPercentResponse maxSurge) {
             this.maxSurge = Objects.requireNonNull(maxSurge);
             return this;
         }
 
-        public Builder setMaxUnavailable(FixedOrPercentResponse maxUnavailable) {
+        public Builder maxUnavailable(FixedOrPercentResponse maxUnavailable) {
             this.maxUnavailable = Objects.requireNonNull(maxUnavailable);
             return this;
         }
 
-        public Builder setMinReadySec(Integer minReadySec) {
+        public Builder minReadySec(Integer minReadySec) {
             this.minReadySec = Objects.requireNonNull(minReadySec);
             return this;
         }
 
-        public Builder setMinimalAction(String minimalAction) {
+        public Builder minimalAction(String minimalAction) {
             this.minimalAction = Objects.requireNonNull(minimalAction);
             return this;
         }
 
-        public Builder setMostDisruptiveAllowedAction(String mostDisruptiveAllowedAction) {
+        public Builder mostDisruptiveAllowedAction(String mostDisruptiveAllowedAction) {
             this.mostDisruptiveAllowedAction = Objects.requireNonNull(mostDisruptiveAllowedAction);
             return this;
         }
 
-        public Builder setReplacementMethod(String replacementMethod) {
+        public Builder replacementMethod(String replacementMethod) {
             this.replacementMethod = Objects.requireNonNull(replacementMethod);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

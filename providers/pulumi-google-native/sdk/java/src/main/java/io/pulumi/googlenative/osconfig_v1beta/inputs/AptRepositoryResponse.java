@@ -121,27 +121,27 @@ public final class AptRepositoryResponse extends io.pulumi.resources.InvokeArgs 
     	      this.uri = defaults.uri;
         }
 
-        public Builder setArchiveType(String archiveType) {
+        public Builder archiveType(String archiveType) {
             this.archiveType = Objects.requireNonNull(archiveType);
             return this;
         }
 
-        public Builder setComponents(List<String> components) {
+        public Builder components(List<String> components) {
             this.components = Objects.requireNonNull(components);
             return this;
         }
 
-        public Builder setDistribution(String distribution) {
+        public Builder distribution(String distribution) {
             this.distribution = Objects.requireNonNull(distribution);
             return this;
         }
 
-        public Builder setGpgKey(String gpgKey) {
+        public Builder gpgKey(String gpgKey) {
             this.gpgKey = Objects.requireNonNull(gpgKey);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

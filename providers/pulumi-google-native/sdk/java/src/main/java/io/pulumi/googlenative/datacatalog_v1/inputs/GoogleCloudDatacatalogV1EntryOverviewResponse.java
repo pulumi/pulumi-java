@@ -55,7 +55,7 @@ public final class GoogleCloudDatacatalogV1EntryOverviewResponse extends io.pulu
     	      this.overview = defaults.overview;
         }
 
-        public Builder setOverview(String overview) {
+        public Builder overview(String overview) {
             this.overview = Objects.requireNonNull(overview);
             return this;
         }

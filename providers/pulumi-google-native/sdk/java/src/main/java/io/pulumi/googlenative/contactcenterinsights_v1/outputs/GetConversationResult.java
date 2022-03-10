@@ -345,97 +345,97 @@ public final class GetConversationResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setAgentId(String agentId) {
+        public Builder agentId(String agentId) {
             this.agentId = Objects.requireNonNull(agentId);
             return this;
         }
 
-        public Builder setCallMetadata(GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse callMetadata) {
+        public Builder callMetadata(GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse callMetadata) {
             this.callMetadata = Objects.requireNonNull(callMetadata);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDataSource(GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse dataSource) {
+        public Builder dataSource(GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse dataSource) {
             this.dataSource = Objects.requireNonNull(dataSource);
             return this;
         }
 
-        public Builder setDialogflowIntents(Map<String,String> dialogflowIntents) {
+        public Builder dialogflowIntents(Map<String,String> dialogflowIntents) {
             this.dialogflowIntents = Objects.requireNonNull(dialogflowIntents);
             return this;
         }
 
-        public Builder setDuration(String duration) {
+        public Builder duration(String duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
-        public Builder setExpireTime(String expireTime) {
+        public Builder expireTime(String expireTime) {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLanguageCode(String languageCode) {
+        public Builder languageCode(String languageCode) {
             this.languageCode = Objects.requireNonNull(languageCode);
             return this;
         }
 
-        public Builder setLatestAnalysis(GoogleCloudContactcenterinsightsV1AnalysisResponse latestAnalysis) {
+        public Builder latestAnalysis(GoogleCloudContactcenterinsightsV1AnalysisResponse latestAnalysis) {
             this.latestAnalysis = Objects.requireNonNull(latestAnalysis);
             return this;
         }
 
-        public Builder setMedium(String medium) {
+        public Builder medium(String medium) {
             this.medium = Objects.requireNonNull(medium);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setObfuscatedUserId(String obfuscatedUserId) {
+        public Builder obfuscatedUserId(String obfuscatedUserId) {
             this.obfuscatedUserId = Objects.requireNonNull(obfuscatedUserId);
             return this;
         }
 
-        public Builder setRuntimeAnnotations(List<GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse> runtimeAnnotations) {
+        public Builder runtimeAnnotations(List<GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse> runtimeAnnotations) {
             this.runtimeAnnotations = Objects.requireNonNull(runtimeAnnotations);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setTranscript(GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse transcript) {
+        public Builder transcript(GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse transcript) {
             this.transcript = Objects.requireNonNull(transcript);
             return this;
         }
 
-        public Builder setTtl(String ttl) {
+        public Builder ttl(String ttl) {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }
 
-        public Builder setTurnCount(Integer turnCount) {
+        public Builder turnCount(Integer turnCount) {
             this.turnCount = Objects.requireNonNull(turnCount);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

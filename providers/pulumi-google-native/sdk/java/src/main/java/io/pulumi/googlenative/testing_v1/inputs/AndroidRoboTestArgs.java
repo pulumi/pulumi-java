@@ -176,82 +176,82 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
     	      this.startingIntents = defaults.startingIntents;
         }
 
-        public Builder setAppApk(@Nullable Input<FileReferenceArgs> appApk) {
+        public Builder appApk(@Nullable Input<FileReferenceArgs> appApk) {
             this.appApk = appApk;
             return this;
         }
 
-        public Builder setAppApk(@Nullable FileReferenceArgs appApk) {
+        public Builder appApk(@Nullable FileReferenceArgs appApk) {
             this.appApk = Input.ofNullable(appApk);
             return this;
         }
 
-        public Builder setAppBundle(@Nullable Input<AppBundleArgs> appBundle) {
+        public Builder appBundle(@Nullable Input<AppBundleArgs> appBundle) {
             this.appBundle = appBundle;
             return this;
         }
 
-        public Builder setAppBundle(@Nullable AppBundleArgs appBundle) {
+        public Builder appBundle(@Nullable AppBundleArgs appBundle) {
             this.appBundle = Input.ofNullable(appBundle);
             return this;
         }
 
-        public Builder setAppInitialActivity(@Nullable Input<String> appInitialActivity) {
+        public Builder appInitialActivity(@Nullable Input<String> appInitialActivity) {
             this.appInitialActivity = appInitialActivity;
             return this;
         }
 
-        public Builder setAppInitialActivity(@Nullable String appInitialActivity) {
+        public Builder appInitialActivity(@Nullable String appInitialActivity) {
             this.appInitialActivity = Input.ofNullable(appInitialActivity);
             return this;
         }
 
-        public Builder setAppPackageId(@Nullable Input<String> appPackageId) {
+        public Builder appPackageId(@Nullable Input<String> appPackageId) {
             this.appPackageId = appPackageId;
             return this;
         }
 
-        public Builder setAppPackageId(@Nullable String appPackageId) {
+        public Builder appPackageId(@Nullable String appPackageId) {
             this.appPackageId = Input.ofNullable(appPackageId);
             return this;
         }
 
-        public Builder setRoboDirectives(@Nullable Input<List<RoboDirectiveArgs>> roboDirectives) {
+        public Builder roboDirectives(@Nullable Input<List<RoboDirectiveArgs>> roboDirectives) {
             this.roboDirectives = roboDirectives;
             return this;
         }
 
-        public Builder setRoboDirectives(@Nullable List<RoboDirectiveArgs> roboDirectives) {
+        public Builder roboDirectives(@Nullable List<RoboDirectiveArgs> roboDirectives) {
             this.roboDirectives = Input.ofNullable(roboDirectives);
             return this;
         }
 
-        public Builder setRoboMode(@Nullable Input<AndroidRoboTestRoboMode> roboMode) {
+        public Builder roboMode(@Nullable Input<AndroidRoboTestRoboMode> roboMode) {
             this.roboMode = roboMode;
             return this;
         }
 
-        public Builder setRoboMode(@Nullable AndroidRoboTestRoboMode roboMode) {
+        public Builder roboMode(@Nullable AndroidRoboTestRoboMode roboMode) {
             this.roboMode = Input.ofNullable(roboMode);
             return this;
         }
 
-        public Builder setRoboScript(@Nullable Input<FileReferenceArgs> roboScript) {
+        public Builder roboScript(@Nullable Input<FileReferenceArgs> roboScript) {
             this.roboScript = roboScript;
             return this;
         }
 
-        public Builder setRoboScript(@Nullable FileReferenceArgs roboScript) {
+        public Builder roboScript(@Nullable FileReferenceArgs roboScript) {
             this.roboScript = Input.ofNullable(roboScript);
             return this;
         }
 
-        public Builder setStartingIntents(@Nullable Input<List<RoboStartingIntentArgs>> startingIntents) {
+        public Builder startingIntents(@Nullable Input<List<RoboStartingIntentArgs>> startingIntents) {
             this.startingIntents = startingIntents;
             return this;
         }
 
-        public Builder setStartingIntents(@Nullable List<RoboStartingIntentArgs> startingIntents) {
+        public Builder startingIntents(@Nullable List<RoboStartingIntentArgs> startingIntents) {
             this.startingIntents = Input.ofNullable(startingIntents);
             return this;
         }

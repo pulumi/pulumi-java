@@ -130,32 +130,32 @@ public final class GetIntegrationRuntimeConnectionInfoResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setHostServiceUri(String hostServiceUri) {
+        public Builder hostServiceUri(String hostServiceUri) {
             this.hostServiceUri = Objects.requireNonNull(hostServiceUri);
             return this;
         }
 
-        public Builder setIdentityCertThumbprint(String identityCertThumbprint) {
+        public Builder identityCertThumbprint(String identityCertThumbprint) {
             this.identityCertThumbprint = Objects.requireNonNull(identityCertThumbprint);
             return this;
         }
 
-        public Builder setIsIdentityCertExprired(Boolean isIdentityCertExprired) {
+        public Builder isIdentityCertExprired(Boolean isIdentityCertExprired) {
             this.isIdentityCertExprired = Objects.requireNonNull(isIdentityCertExprired);
             return this;
         }
 
-        public Builder setPublicKey(String publicKey) {
+        public Builder publicKey(String publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
 
-        public Builder setServiceToken(String serviceToken) {
+        public Builder serviceToken(String serviceToken) {
             this.serviceToken = Objects.requireNonNull(serviceToken);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

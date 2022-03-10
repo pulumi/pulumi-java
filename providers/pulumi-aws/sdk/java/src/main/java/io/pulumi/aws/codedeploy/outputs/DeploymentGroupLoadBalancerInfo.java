@@ -86,17 +86,17 @@ public final class DeploymentGroupLoadBalancerInfo {
     	      this.targetGroupPairInfo = defaults.targetGroupPairInfo;
         }
 
-        public Builder setElbInfos(@Nullable List<DeploymentGroupLoadBalancerInfoElbInfo> elbInfos) {
+        public Builder elbInfos(@Nullable List<DeploymentGroupLoadBalancerInfoElbInfo> elbInfos) {
             this.elbInfos = elbInfos;
             return this;
         }
 
-        public Builder setTargetGroupInfos(@Nullable List<DeploymentGroupLoadBalancerInfoTargetGroupInfo> targetGroupInfos) {
+        public Builder targetGroupInfos(@Nullable List<DeploymentGroupLoadBalancerInfoTargetGroupInfo> targetGroupInfos) {
             this.targetGroupInfos = targetGroupInfos;
             return this;
         }
 
-        public Builder setTargetGroupPairInfo(@Nullable DeploymentGroupLoadBalancerInfoTargetGroupPairInfo targetGroupPairInfo) {
+        public Builder targetGroupPairInfo(@Nullable DeploymentGroupLoadBalancerInfoTargetGroupPairInfo targetGroupPairInfo) {
             this.targetGroupPairInfo = targetGroupPairInfo;
             return this;
         }

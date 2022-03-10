@@ -123,52 +123,52 @@ public final class MonitoringScheduleMonitoringAppSpecificationArgs extends io.p
     	      this.recordPreprocessorSourceUri = defaults.recordPreprocessorSourceUri;
         }
 
-        public Builder setContainerArguments(@Nullable Input<List<String>> containerArguments) {
+        public Builder containerArguments(@Nullable Input<List<String>> containerArguments) {
             this.containerArguments = containerArguments;
             return this;
         }
 
-        public Builder setContainerArguments(@Nullable List<String> containerArguments) {
+        public Builder containerArguments(@Nullable List<String> containerArguments) {
             this.containerArguments = Input.ofNullable(containerArguments);
             return this;
         }
 
-        public Builder setContainerEntrypoint(@Nullable Input<List<String>> containerEntrypoint) {
+        public Builder containerEntrypoint(@Nullable Input<List<String>> containerEntrypoint) {
             this.containerEntrypoint = containerEntrypoint;
             return this;
         }
 
-        public Builder setContainerEntrypoint(@Nullable List<String> containerEntrypoint) {
+        public Builder containerEntrypoint(@Nullable List<String> containerEntrypoint) {
             this.containerEntrypoint = Input.ofNullable(containerEntrypoint);
             return this;
         }
 
-        public Builder setImageUri(Input<String> imageUri) {
+        public Builder imageUri(Input<String> imageUri) {
             this.imageUri = Objects.requireNonNull(imageUri);
             return this;
         }
 
-        public Builder setImageUri(String imageUri) {
+        public Builder imageUri(String imageUri) {
             this.imageUri = Input.of(Objects.requireNonNull(imageUri));
             return this;
         }
 
-        public Builder setPostAnalyticsProcessorSourceUri(@Nullable Input<String> postAnalyticsProcessorSourceUri) {
+        public Builder postAnalyticsProcessorSourceUri(@Nullable Input<String> postAnalyticsProcessorSourceUri) {
             this.postAnalyticsProcessorSourceUri = postAnalyticsProcessorSourceUri;
             return this;
         }
 
-        public Builder setPostAnalyticsProcessorSourceUri(@Nullable String postAnalyticsProcessorSourceUri) {
+        public Builder postAnalyticsProcessorSourceUri(@Nullable String postAnalyticsProcessorSourceUri) {
             this.postAnalyticsProcessorSourceUri = Input.ofNullable(postAnalyticsProcessorSourceUri);
             return this;
         }
 
-        public Builder setRecordPreprocessorSourceUri(@Nullable Input<String> recordPreprocessorSourceUri) {
+        public Builder recordPreprocessorSourceUri(@Nullable Input<String> recordPreprocessorSourceUri) {
             this.recordPreprocessorSourceUri = recordPreprocessorSourceUri;
             return this;
         }
 
-        public Builder setRecordPreprocessorSourceUri(@Nullable String recordPreprocessorSourceUri) {
+        public Builder recordPreprocessorSourceUri(@Nullable String recordPreprocessorSourceUri) {
             this.recordPreprocessorSourceUri = Input.ofNullable(recordPreprocessorSourceUri);
             return this;
         }

@@ -76,22 +76,22 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskPropertiesArgs ex
     	      this.taskType = defaults.taskType;
         }
 
-        public Builder setInput(@Nullable Input<ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs> input) {
+        public Builder input(@Nullable Input<ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs> input) {
             this.input = input;
             return this;
         }
 
-        public Builder setInput(@Nullable ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs input) {
+        public Builder input(@Nullable ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs input) {
             this.input = Input.ofNullable(input);
             return this;
         }
 
-        public Builder setTaskType(Input<String> taskType) {
+        public Builder taskType(Input<String> taskType) {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
 
-        public Builder setTaskType(String taskType) {
+        public Builder taskType(String taskType) {
             this.taskType = Input.of(Objects.requireNonNull(taskType));
             return this;
         }

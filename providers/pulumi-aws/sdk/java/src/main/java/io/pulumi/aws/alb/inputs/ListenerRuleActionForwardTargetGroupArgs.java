@@ -71,22 +71,22 @@ public final class ListenerRuleActionForwardTargetGroupArgs extends io.pulumi.re
     	      this.weight = defaults.weight;
         }
 
-        public Builder setArn(Input<String> arn) {
+        public Builder arn(Input<String> arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Input.of(Objects.requireNonNull(arn));
             return this;
         }
 
-        public Builder setWeight(@Nullable Input<Integer> weight) {
+        public Builder weight(@Nullable Input<Integer> weight) {
             this.weight = weight;
             return this;
         }
 
-        public Builder setWeight(@Nullable Integer weight) {
+        public Builder weight(@Nullable Integer weight) {
             this.weight = Input.ofNullable(weight);
             return this;
         }

@@ -57,7 +57,7 @@ public final class ExtendedPropertiesResponse extends io.pulumi.resources.Invoke
     	      this.diskExclusionProperties = defaults.diskExclusionProperties;
         }
 
-        public Builder setDiskExclusionProperties(@Nullable DiskExclusionPropertiesResponse diskExclusionProperties) {
+        public Builder diskExclusionProperties(@Nullable DiskExclusionPropertiesResponse diskExclusionProperties) {
             this.diskExclusionProperties = diskExclusionProperties;
             return this;
         }

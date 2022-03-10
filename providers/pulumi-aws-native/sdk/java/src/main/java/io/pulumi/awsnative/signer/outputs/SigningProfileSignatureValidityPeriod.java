@@ -52,12 +52,12 @@ public final class SigningProfileSignatureValidityPeriod {
     	      this.value = defaults.value;
         }
 
-        public Builder setType(@Nullable SigningProfileSignatureValidityPeriodType type) {
+        public Builder type(@Nullable SigningProfileSignatureValidityPeriodType type) {
             this.type = type;
             return this;
         }
 
-        public Builder setValue(@Nullable Integer value) {
+        public Builder value(@Nullable Integer value) {
             this.value = value;
             return this;
         }

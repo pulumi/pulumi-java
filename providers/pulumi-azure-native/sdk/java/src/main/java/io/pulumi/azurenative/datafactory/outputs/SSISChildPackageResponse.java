@@ -100,22 +100,22 @@ public final class SSISChildPackageResponse {
     	      this.packagePath = defaults.packagePath;
         }
 
-        public Builder setPackageContent(Object packageContent) {
+        public Builder packageContent(Object packageContent) {
             this.packageContent = Objects.requireNonNull(packageContent);
             return this;
         }
 
-        public Builder setPackageLastModifiedDate(@Nullable String packageLastModifiedDate) {
+        public Builder packageLastModifiedDate(@Nullable String packageLastModifiedDate) {
             this.packageLastModifiedDate = packageLastModifiedDate;
             return this;
         }
 
-        public Builder setPackageName(@Nullable String packageName) {
+        public Builder packageName(@Nullable String packageName) {
             this.packageName = packageName;
             return this;
         }
 
-        public Builder setPackagePath(Object packagePath) {
+        public Builder packagePath(Object packagePath) {
             this.packagePath = Objects.requireNonNull(packagePath);
             return this;
         }

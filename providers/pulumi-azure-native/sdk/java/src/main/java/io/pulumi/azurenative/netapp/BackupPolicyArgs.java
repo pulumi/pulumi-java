@@ -235,122 +235,122 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.yearlyBackupsToKeep = defaults.yearlyBackupsToKeep;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setBackupPolicyName(@Nullable Input<String> backupPolicyName) {
+        public Builder backupPolicyName(@Nullable Input<String> backupPolicyName) {
             this.backupPolicyName = backupPolicyName;
             return this;
         }
 
-        public Builder setBackupPolicyName(@Nullable String backupPolicyName) {
+        public Builder backupPolicyName(@Nullable String backupPolicyName) {
             this.backupPolicyName = Input.ofNullable(backupPolicyName);
             return this;
         }
 
-        public Builder setDailyBackupsToKeep(@Nullable Input<Integer> dailyBackupsToKeep) {
+        public Builder dailyBackupsToKeep(@Nullable Input<Integer> dailyBackupsToKeep) {
             this.dailyBackupsToKeep = dailyBackupsToKeep;
             return this;
         }
 
-        public Builder setDailyBackupsToKeep(@Nullable Integer dailyBackupsToKeep) {
+        public Builder dailyBackupsToKeep(@Nullable Integer dailyBackupsToKeep) {
             this.dailyBackupsToKeep = Input.ofNullable(dailyBackupsToKeep);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMonthlyBackupsToKeep(@Nullable Input<Integer> monthlyBackupsToKeep) {
+        public Builder monthlyBackupsToKeep(@Nullable Input<Integer> monthlyBackupsToKeep) {
             this.monthlyBackupsToKeep = monthlyBackupsToKeep;
             return this;
         }
 
-        public Builder setMonthlyBackupsToKeep(@Nullable Integer monthlyBackupsToKeep) {
+        public Builder monthlyBackupsToKeep(@Nullable Integer monthlyBackupsToKeep) {
             this.monthlyBackupsToKeep = Input.ofNullable(monthlyBackupsToKeep);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVolumeBackups(@Nullable Input<List<VolumeBackupsArgs>> volumeBackups) {
+        public Builder volumeBackups(@Nullable Input<List<VolumeBackupsArgs>> volumeBackups) {
             this.volumeBackups = volumeBackups;
             return this;
         }
 
-        public Builder setVolumeBackups(@Nullable List<VolumeBackupsArgs> volumeBackups) {
+        public Builder volumeBackups(@Nullable List<VolumeBackupsArgs> volumeBackups) {
             this.volumeBackups = Input.ofNullable(volumeBackups);
             return this;
         }
 
-        public Builder setVolumesAssigned(@Nullable Input<Integer> volumesAssigned) {
+        public Builder volumesAssigned(@Nullable Input<Integer> volumesAssigned) {
             this.volumesAssigned = volumesAssigned;
             return this;
         }
 
-        public Builder setVolumesAssigned(@Nullable Integer volumesAssigned) {
+        public Builder volumesAssigned(@Nullable Integer volumesAssigned) {
             this.volumesAssigned = Input.ofNullable(volumesAssigned);
             return this;
         }
 
-        public Builder setWeeklyBackupsToKeep(@Nullable Input<Integer> weeklyBackupsToKeep) {
+        public Builder weeklyBackupsToKeep(@Nullable Input<Integer> weeklyBackupsToKeep) {
             this.weeklyBackupsToKeep = weeklyBackupsToKeep;
             return this;
         }
 
-        public Builder setWeeklyBackupsToKeep(@Nullable Integer weeklyBackupsToKeep) {
+        public Builder weeklyBackupsToKeep(@Nullable Integer weeklyBackupsToKeep) {
             this.weeklyBackupsToKeep = Input.ofNullable(weeklyBackupsToKeep);
             return this;
         }
 
-        public Builder setYearlyBackupsToKeep(@Nullable Input<Integer> yearlyBackupsToKeep) {
+        public Builder yearlyBackupsToKeep(@Nullable Input<Integer> yearlyBackupsToKeep) {
             this.yearlyBackupsToKeep = yearlyBackupsToKeep;
             return this;
         }
 
-        public Builder setYearlyBackupsToKeep(@Nullable Integer yearlyBackupsToKeep) {
+        public Builder yearlyBackupsToKeep(@Nullable Integer yearlyBackupsToKeep) {
             this.yearlyBackupsToKeep = Input.ofNullable(yearlyBackupsToKeep);
             return this;
         }

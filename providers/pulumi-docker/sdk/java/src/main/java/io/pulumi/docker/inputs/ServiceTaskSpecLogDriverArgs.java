@@ -63,22 +63,22 @@ public final class ServiceTaskSpecLogDriverArgs extends io.pulumi.resources.Reso
     	      this.options = defaults.options;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setOptions(@Nullable Input<Map<String,String>> options) {
+        public Builder options(@Nullable Input<Map<String,String>> options) {
             this.options = options;
             return this;
         }
 
-        public Builder setOptions(@Nullable Map<String,String> options) {
+        public Builder options(@Nullable Map<String,String> options) {
             this.options = Input.ofNullable(options);
             return this;
         }

@@ -112,42 +112,42 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scale = defaults.scale;
         }
 
-        public Builder setContainers(@Nullable Input<List<ContainerArgs>> containers) {
+        public Builder containers(@Nullable Input<List<ContainerArgs>> containers) {
             this.containers = containers;
             return this;
         }
 
-        public Builder setContainers(@Nullable List<ContainerArgs> containers) {
+        public Builder containers(@Nullable List<ContainerArgs> containers) {
             this.containers = Input.ofNullable(containers);
             return this;
         }
 
-        public Builder setDapr(@Nullable Input<DaprArgs> dapr) {
+        public Builder dapr(@Nullable Input<DaprArgs> dapr) {
             this.dapr = dapr;
             return this;
         }
 
-        public Builder setDapr(@Nullable DaprArgs dapr) {
+        public Builder dapr(@Nullable DaprArgs dapr) {
             this.dapr = Input.ofNullable(dapr);
             return this;
         }
 
-        public Builder setRevisionSuffix(@Nullable Input<String> revisionSuffix) {
+        public Builder revisionSuffix(@Nullable Input<String> revisionSuffix) {
             this.revisionSuffix = revisionSuffix;
             return this;
         }
 
-        public Builder setRevisionSuffix(@Nullable String revisionSuffix) {
+        public Builder revisionSuffix(@Nullable String revisionSuffix) {
             this.revisionSuffix = Input.ofNullable(revisionSuffix);
             return this;
         }
 
-        public Builder setScale(@Nullable Input<ScaleArgs> scale) {
+        public Builder scale(@Nullable Input<ScaleArgs> scale) {
             this.scale = scale;
             return this;
         }
 
-        public Builder setScale(@Nullable ScaleArgs scale) {
+        public Builder scale(@Nullable ScaleArgs scale) {
             this.scale = Input.ofNullable(scale);
             return this;
         }

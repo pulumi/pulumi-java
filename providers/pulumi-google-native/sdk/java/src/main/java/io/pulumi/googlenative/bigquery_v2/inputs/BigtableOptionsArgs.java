@@ -88,32 +88,32 @@ public final class BigtableOptionsArgs extends io.pulumi.resources.ResourceArgs 
     	      this.readRowkeyAsString = defaults.readRowkeyAsString;
         }
 
-        public Builder setColumnFamilies(@Nullable Input<List<BigtableColumnFamilyArgs>> columnFamilies) {
+        public Builder columnFamilies(@Nullable Input<List<BigtableColumnFamilyArgs>> columnFamilies) {
             this.columnFamilies = columnFamilies;
             return this;
         }
 
-        public Builder setColumnFamilies(@Nullable List<BigtableColumnFamilyArgs> columnFamilies) {
+        public Builder columnFamilies(@Nullable List<BigtableColumnFamilyArgs> columnFamilies) {
             this.columnFamilies = Input.ofNullable(columnFamilies);
             return this;
         }
 
-        public Builder setIgnoreUnspecifiedColumnFamilies(@Nullable Input<Boolean> ignoreUnspecifiedColumnFamilies) {
+        public Builder ignoreUnspecifiedColumnFamilies(@Nullable Input<Boolean> ignoreUnspecifiedColumnFamilies) {
             this.ignoreUnspecifiedColumnFamilies = ignoreUnspecifiedColumnFamilies;
             return this;
         }
 
-        public Builder setIgnoreUnspecifiedColumnFamilies(@Nullable Boolean ignoreUnspecifiedColumnFamilies) {
+        public Builder ignoreUnspecifiedColumnFamilies(@Nullable Boolean ignoreUnspecifiedColumnFamilies) {
             this.ignoreUnspecifiedColumnFamilies = Input.ofNullable(ignoreUnspecifiedColumnFamilies);
             return this;
         }
 
-        public Builder setReadRowkeyAsString(@Nullable Input<Boolean> readRowkeyAsString) {
+        public Builder readRowkeyAsString(@Nullable Input<Boolean> readRowkeyAsString) {
             this.readRowkeyAsString = readRowkeyAsString;
             return this;
         }
 
-        public Builder setReadRowkeyAsString(@Nullable Boolean readRowkeyAsString) {
+        public Builder readRowkeyAsString(@Nullable Boolean readRowkeyAsString) {
             this.readRowkeyAsString = Input.ofNullable(readRowkeyAsString);
             return this;
         }

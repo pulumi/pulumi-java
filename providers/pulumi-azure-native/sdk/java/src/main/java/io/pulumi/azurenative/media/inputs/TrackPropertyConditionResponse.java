@@ -90,17 +90,17 @@ public final class TrackPropertyConditionResponse extends io.pulumi.resources.In
     	      this.value = defaults.value;
         }
 
-        public Builder setOperation(String operation) {
+        public Builder operation(String operation) {
             this.operation = Objects.requireNonNull(operation);
             return this;
         }
 
-        public Builder setProperty(String property) {
+        public Builder property(String property) {
             this.property = Objects.requireNonNull(property);
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

@@ -386,122 +386,122 @@ public final class GetFunctionResult {
     	      this.vpcConnectorEgressSettings = defaults.vpcConnectorEgressSettings;
         }
 
-        public Builder setAvailableMemoryMb(Integer availableMemoryMb) {
+        public Builder availableMemoryMb(Integer availableMemoryMb) {
             this.availableMemoryMb = Objects.requireNonNull(availableMemoryMb);
             return this;
         }
 
-        public Builder setBuildEnvironmentVariables(Map<String,Object> buildEnvironmentVariables) {
+        public Builder buildEnvironmentVariables(Map<String,Object> buildEnvironmentVariables) {
             this.buildEnvironmentVariables = Objects.requireNonNull(buildEnvironmentVariables);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEntryPoint(String entryPoint) {
+        public Builder entryPoint(String entryPoint) {
             this.entryPoint = Objects.requireNonNull(entryPoint);
             return this;
         }
 
-        public Builder setEnvironmentVariables(Map<String,Object> environmentVariables) {
+        public Builder environmentVariables(Map<String,Object> environmentVariables) {
             this.environmentVariables = Objects.requireNonNull(environmentVariables);
             return this;
         }
 
-        public Builder setEventTriggers(List<GetFunctionEventTrigger> eventTriggers) {
+        public Builder eventTriggers(List<GetFunctionEventTrigger> eventTriggers) {
             this.eventTriggers = Objects.requireNonNull(eventTriggers);
             return this;
         }
 
-        public Builder setHttpsTriggerUrl(String httpsTriggerUrl) {
+        public Builder httpsTriggerUrl(String httpsTriggerUrl) {
             this.httpsTriggerUrl = Objects.requireNonNull(httpsTriggerUrl);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIngressSettings(String ingressSettings) {
+        public Builder ingressSettings(String ingressSettings) {
             this.ingressSettings = Objects.requireNonNull(ingressSettings);
             return this;
         }
 
-        public Builder setLabels(Map<String,Object> labels) {
+        public Builder labels(Map<String,Object> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setMaxInstances(Integer maxInstances) {
+        public Builder maxInstances(Integer maxInstances) {
             this.maxInstances = Objects.requireNonNull(maxInstances);
             return this;
         }
 
-        public Builder setMinInstances(Integer minInstances) {
+        public Builder minInstances(Integer minInstances) {
             this.minInstances = Objects.requireNonNull(minInstances);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRuntime(String runtime) {
+        public Builder runtime(String runtime) {
             this.runtime = Objects.requireNonNull(runtime);
             return this;
         }
 
-        public Builder setServiceAccountEmail(String serviceAccountEmail) {
+        public Builder serviceAccountEmail(String serviceAccountEmail) {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
         }
 
-        public Builder setSourceArchiveBucket(String sourceArchiveBucket) {
+        public Builder sourceArchiveBucket(String sourceArchiveBucket) {
             this.sourceArchiveBucket = Objects.requireNonNull(sourceArchiveBucket);
             return this;
         }
 
-        public Builder setSourceArchiveObject(String sourceArchiveObject) {
+        public Builder sourceArchiveObject(String sourceArchiveObject) {
             this.sourceArchiveObject = Objects.requireNonNull(sourceArchiveObject);
             return this;
         }
 
-        public Builder setSourceRepositories(List<GetFunctionSourceRepository> sourceRepositories) {
+        public Builder sourceRepositories(List<GetFunctionSourceRepository> sourceRepositories) {
             this.sourceRepositories = Objects.requireNonNull(sourceRepositories);
             return this;
         }
 
-        public Builder setTimeout(Integer timeout) {
+        public Builder timeout(Integer timeout) {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
 
-        public Builder setTriggerHttp(Boolean triggerHttp) {
+        public Builder triggerHttp(Boolean triggerHttp) {
             this.triggerHttp = Objects.requireNonNull(triggerHttp);
             return this;
         }
 
-        public Builder setVpcConnector(String vpcConnector) {
+        public Builder vpcConnector(String vpcConnector) {
             this.vpcConnector = Objects.requireNonNull(vpcConnector);
             return this;
         }
 
-        public Builder setVpcConnectorEgressSettings(String vpcConnectorEgressSettings) {
+        public Builder vpcConnectorEgressSettings(String vpcConnectorEgressSettings) {
             this.vpcConnectorEgressSettings = Objects.requireNonNull(vpcConnectorEgressSettings);
             return this;
         }

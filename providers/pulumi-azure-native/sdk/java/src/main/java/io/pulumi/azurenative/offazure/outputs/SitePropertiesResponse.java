@@ -117,27 +117,27 @@ public final class SitePropertiesResponse {
     	      this.servicePrincipalIdentityDetails = defaults.servicePrincipalIdentityDetails;
         }
 
-        public Builder setAgentDetails(@Nullable SiteAgentPropertiesResponse agentDetails) {
+        public Builder agentDetails(@Nullable SiteAgentPropertiesResponse agentDetails) {
             this.agentDetails = agentDetails;
             return this;
         }
 
-        public Builder setApplianceName(@Nullable String applianceName) {
+        public Builder applianceName(@Nullable String applianceName) {
             this.applianceName = applianceName;
             return this;
         }
 
-        public Builder setDiscoverySolutionId(@Nullable String discoverySolutionId) {
+        public Builder discoverySolutionId(@Nullable String discoverySolutionId) {
             this.discoverySolutionId = discoverySolutionId;
             return this;
         }
 
-        public Builder setServiceEndpoint(String serviceEndpoint) {
+        public Builder serviceEndpoint(String serviceEndpoint) {
             this.serviceEndpoint = Objects.requireNonNull(serviceEndpoint);
             return this;
         }
 
-        public Builder setServicePrincipalIdentityDetails(@Nullable SiteSpnPropertiesResponse servicePrincipalIdentityDetails) {
+        public Builder servicePrincipalIdentityDetails(@Nullable SiteSpnPropertiesResponse servicePrincipalIdentityDetails) {
             this.servicePrincipalIdentityDetails = servicePrincipalIdentityDetails;
             return this;
         }

@@ -136,82 +136,82 @@ public final class InstanceFromTemplateBootDiskArgs extends io.pulumi.resources.
     	      this.source = defaults.source;
         }
 
-        public Builder setAutoDelete(@Nullable Input<Boolean> autoDelete) {
+        public Builder autoDelete(@Nullable Input<Boolean> autoDelete) {
             this.autoDelete = autoDelete;
             return this;
         }
 
-        public Builder setAutoDelete(@Nullable Boolean autoDelete) {
+        public Builder autoDelete(@Nullable Boolean autoDelete) {
             this.autoDelete = Input.ofNullable(autoDelete);
             return this;
         }
 
-        public Builder setDeviceName(@Nullable Input<String> deviceName) {
+        public Builder deviceName(@Nullable Input<String> deviceName) {
             this.deviceName = deviceName;
             return this;
         }
 
-        public Builder setDeviceName(@Nullable String deviceName) {
+        public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = Input.ofNullable(deviceName);
             return this;
         }
 
-        public Builder setDiskEncryptionKeyRaw(@Nullable Input<String> diskEncryptionKeyRaw) {
+        public Builder diskEncryptionKeyRaw(@Nullable Input<String> diskEncryptionKeyRaw) {
             this.diskEncryptionKeyRaw = diskEncryptionKeyRaw;
             return this;
         }
 
-        public Builder setDiskEncryptionKeyRaw(@Nullable String diskEncryptionKeyRaw) {
+        public Builder diskEncryptionKeyRaw(@Nullable String diskEncryptionKeyRaw) {
             this.diskEncryptionKeyRaw = Input.ofNullable(diskEncryptionKeyRaw);
             return this;
         }
 
-        public Builder setDiskEncryptionKeySha256(@Nullable Input<String> diskEncryptionKeySha256) {
+        public Builder diskEncryptionKeySha256(@Nullable Input<String> diskEncryptionKeySha256) {
             this.diskEncryptionKeySha256 = diskEncryptionKeySha256;
             return this;
         }
 
-        public Builder setDiskEncryptionKeySha256(@Nullable String diskEncryptionKeySha256) {
+        public Builder diskEncryptionKeySha256(@Nullable String diskEncryptionKeySha256) {
             this.diskEncryptionKeySha256 = Input.ofNullable(diskEncryptionKeySha256);
             return this;
         }
 
-        public Builder setInitializeParams(@Nullable Input<InstanceFromTemplateBootDiskInitializeParamsArgs> initializeParams) {
+        public Builder initializeParams(@Nullable Input<InstanceFromTemplateBootDiskInitializeParamsArgs> initializeParams) {
             this.initializeParams = initializeParams;
             return this;
         }
 
-        public Builder setInitializeParams(@Nullable InstanceFromTemplateBootDiskInitializeParamsArgs initializeParams) {
+        public Builder initializeParams(@Nullable InstanceFromTemplateBootDiskInitializeParamsArgs initializeParams) {
             this.initializeParams = Input.ofNullable(initializeParams);
             return this;
         }
 
-        public Builder setKmsKeySelfLink(@Nullable Input<String> kmsKeySelfLink) {
+        public Builder kmsKeySelfLink(@Nullable Input<String> kmsKeySelfLink) {
             this.kmsKeySelfLink = kmsKeySelfLink;
             return this;
         }
 
-        public Builder setKmsKeySelfLink(@Nullable String kmsKeySelfLink) {
+        public Builder kmsKeySelfLink(@Nullable String kmsKeySelfLink) {
             this.kmsKeySelfLink = Input.ofNullable(kmsKeySelfLink);
             return this;
         }
 
-        public Builder setMode(@Nullable Input<String> mode) {
+        public Builder mode(@Nullable Input<String> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }
 
-        public Builder setSource(@Nullable Input<String> source) {
+        public Builder source(@Nullable Input<String> source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSource(@Nullable String source) {
+        public Builder source(@Nullable String source) {
             this.source = Input.ofNullable(source);
             return this;
         }

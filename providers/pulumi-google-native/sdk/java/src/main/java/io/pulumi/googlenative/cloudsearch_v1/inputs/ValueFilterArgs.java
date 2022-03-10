@@ -71,22 +71,22 @@ public final class ValueFilterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setOperatorName(@Nullable Input<String> operatorName) {
+        public Builder operatorName(@Nullable Input<String> operatorName) {
             this.operatorName = operatorName;
             return this;
         }
 
-        public Builder setOperatorName(@Nullable String operatorName) {
+        public Builder operatorName(@Nullable String operatorName) {
             this.operatorName = Input.ofNullable(operatorName);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<ValueArgs> value) {
+        public Builder value(@Nullable Input<ValueArgs> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable ValueArgs value) {
+        public Builder value(@Nullable ValueArgs value) {
             this.value = Input.ofNullable(value);
             return this;
         }

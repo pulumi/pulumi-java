@@ -179,82 +179,82 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
     	      this.restrictionTokenType = defaults.restrictionTokenType;
         }
 
-        public Builder setAlternateVerificationKeys(@Nullable Input<List<Object>> alternateVerificationKeys) {
+        public Builder alternateVerificationKeys(@Nullable Input<List<Object>> alternateVerificationKeys) {
             this.alternateVerificationKeys = alternateVerificationKeys;
             return this;
         }
 
-        public Builder setAlternateVerificationKeys(@Nullable List<Object> alternateVerificationKeys) {
+        public Builder alternateVerificationKeys(@Nullable List<Object> alternateVerificationKeys) {
             this.alternateVerificationKeys = Input.ofNullable(alternateVerificationKeys);
             return this;
         }
 
-        public Builder setAudience(Input<String> audience) {
+        public Builder audience(Input<String> audience) {
             this.audience = Objects.requireNonNull(audience);
             return this;
         }
 
-        public Builder setAudience(String audience) {
+        public Builder audience(String audience) {
             this.audience = Input.of(Objects.requireNonNull(audience));
             return this;
         }
 
-        public Builder setIssuer(Input<String> issuer) {
+        public Builder issuer(Input<String> issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
 
-        public Builder setIssuer(String issuer) {
+        public Builder issuer(String issuer) {
             this.issuer = Input.of(Objects.requireNonNull(issuer));
             return this;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder setOpenIdConnectDiscoveryDocument(@Nullable Input<String> openIdConnectDiscoveryDocument) {
+        public Builder openIdConnectDiscoveryDocument(@Nullable Input<String> openIdConnectDiscoveryDocument) {
             this.openIdConnectDiscoveryDocument = openIdConnectDiscoveryDocument;
             return this;
         }
 
-        public Builder setOpenIdConnectDiscoveryDocument(@Nullable String openIdConnectDiscoveryDocument) {
+        public Builder openIdConnectDiscoveryDocument(@Nullable String openIdConnectDiscoveryDocument) {
             this.openIdConnectDiscoveryDocument = Input.ofNullable(openIdConnectDiscoveryDocument);
             return this;
         }
 
-        public Builder setPrimaryVerificationKey(Input<Object> primaryVerificationKey) {
+        public Builder primaryVerificationKey(Input<Object> primaryVerificationKey) {
             this.primaryVerificationKey = Objects.requireNonNull(primaryVerificationKey);
             return this;
         }
 
-        public Builder setPrimaryVerificationKey(Object primaryVerificationKey) {
+        public Builder primaryVerificationKey(Object primaryVerificationKey) {
             this.primaryVerificationKey = Input.of(Objects.requireNonNull(primaryVerificationKey));
             return this;
         }
 
-        public Builder setRequiredClaims(@Nullable Input<List<ContentKeyPolicyTokenClaimArgs>> requiredClaims) {
+        public Builder requiredClaims(@Nullable Input<List<ContentKeyPolicyTokenClaimArgs>> requiredClaims) {
             this.requiredClaims = requiredClaims;
             return this;
         }
 
-        public Builder setRequiredClaims(@Nullable List<ContentKeyPolicyTokenClaimArgs> requiredClaims) {
+        public Builder requiredClaims(@Nullable List<ContentKeyPolicyTokenClaimArgs> requiredClaims) {
             this.requiredClaims = Input.ofNullable(requiredClaims);
             return this;
         }
 
-        public Builder setRestrictionTokenType(Input<Either<String,ContentKeyPolicyRestrictionTokenType>> restrictionTokenType) {
+        public Builder restrictionTokenType(Input<Either<String,ContentKeyPolicyRestrictionTokenType>> restrictionTokenType) {
             this.restrictionTokenType = Objects.requireNonNull(restrictionTokenType);
             return this;
         }
 
-        public Builder setRestrictionTokenType(Either<String,ContentKeyPolicyRestrictionTokenType> restrictionTokenType) {
+        public Builder restrictionTokenType(Either<String,ContentKeyPolicyRestrictionTokenType> restrictionTokenType) {
             this.restrictionTokenType = Input.of(Objects.requireNonNull(restrictionTokenType));
             return this;
         }

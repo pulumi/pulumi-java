@@ -108,42 +108,42 @@ public final class AutoPatchingSettingsArgs extends io.pulumi.resources.Resource
     	      this.maintenanceWindowStartingHour = defaults.maintenanceWindowStartingHour;
         }
 
-        public Builder setDayOfWeek(@Nullable Input<DayOfWeek> dayOfWeek) {
+        public Builder dayOfWeek(@Nullable Input<DayOfWeek> dayOfWeek) {
             this.dayOfWeek = dayOfWeek;
             return this;
         }
 
-        public Builder setDayOfWeek(@Nullable DayOfWeek dayOfWeek) {
+        public Builder dayOfWeek(@Nullable DayOfWeek dayOfWeek) {
             this.dayOfWeek = Input.ofNullable(dayOfWeek);
             return this;
         }
 
-        public Builder setEnable(@Nullable Input<Boolean> enable) {
+        public Builder enable(@Nullable Input<Boolean> enable) {
             this.enable = enable;
             return this;
         }
 
-        public Builder setEnable(@Nullable Boolean enable) {
+        public Builder enable(@Nullable Boolean enable) {
             this.enable = Input.ofNullable(enable);
             return this;
         }
 
-        public Builder setMaintenanceWindowDuration(@Nullable Input<Integer> maintenanceWindowDuration) {
+        public Builder maintenanceWindowDuration(@Nullable Input<Integer> maintenanceWindowDuration) {
             this.maintenanceWindowDuration = maintenanceWindowDuration;
             return this;
         }
 
-        public Builder setMaintenanceWindowDuration(@Nullable Integer maintenanceWindowDuration) {
+        public Builder maintenanceWindowDuration(@Nullable Integer maintenanceWindowDuration) {
             this.maintenanceWindowDuration = Input.ofNullable(maintenanceWindowDuration);
             return this;
         }
 
-        public Builder setMaintenanceWindowStartingHour(@Nullable Input<Integer> maintenanceWindowStartingHour) {
+        public Builder maintenanceWindowStartingHour(@Nullable Input<Integer> maintenanceWindowStartingHour) {
             this.maintenanceWindowStartingHour = maintenanceWindowStartingHour;
             return this;
         }
 
-        public Builder setMaintenanceWindowStartingHour(@Nullable Integer maintenanceWindowStartingHour) {
+        public Builder maintenanceWindowStartingHour(@Nullable Integer maintenanceWindowStartingHour) {
             this.maintenanceWindowStartingHour = Input.ofNullable(maintenanceWindowStartingHour);
             return this;
         }

@@ -65,12 +65,12 @@ public final class AzureClusterControlPlaneReplicaPlacement {
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setAzureAvailabilityZone(String azureAvailabilityZone) {
+        public Builder azureAvailabilityZone(String azureAvailabilityZone) {
             this.azureAvailabilityZone = Objects.requireNonNull(azureAvailabilityZone);
             return this;
         }
 
-        public Builder setSubnetId(String subnetId) {
+        public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }

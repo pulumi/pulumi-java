@@ -245,122 +245,122 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends io.pulu
     	      this.timePartConfig = defaults.timePartConfig;
         }
 
-        public Builder setBucketingConfig(@Nullable Input<GooglePrivacyDlpV2BucketingConfigArgs> bucketingConfig) {
+        public Builder bucketingConfig(@Nullable Input<GooglePrivacyDlpV2BucketingConfigArgs> bucketingConfig) {
             this.bucketingConfig = bucketingConfig;
             return this;
         }
 
-        public Builder setBucketingConfig(@Nullable GooglePrivacyDlpV2BucketingConfigArgs bucketingConfig) {
+        public Builder bucketingConfig(@Nullable GooglePrivacyDlpV2BucketingConfigArgs bucketingConfig) {
             this.bucketingConfig = Input.ofNullable(bucketingConfig);
             return this;
         }
 
-        public Builder setCharacterMaskConfig(@Nullable Input<GooglePrivacyDlpV2CharacterMaskConfigArgs> characterMaskConfig) {
+        public Builder characterMaskConfig(@Nullable Input<GooglePrivacyDlpV2CharacterMaskConfigArgs> characterMaskConfig) {
             this.characterMaskConfig = characterMaskConfig;
             return this;
         }
 
-        public Builder setCharacterMaskConfig(@Nullable GooglePrivacyDlpV2CharacterMaskConfigArgs characterMaskConfig) {
+        public Builder characterMaskConfig(@Nullable GooglePrivacyDlpV2CharacterMaskConfigArgs characterMaskConfig) {
             this.characterMaskConfig = Input.ofNullable(characterMaskConfig);
             return this;
         }
 
-        public Builder setCryptoDeterministicConfig(@Nullable Input<GooglePrivacyDlpV2CryptoDeterministicConfigArgs> cryptoDeterministicConfig) {
+        public Builder cryptoDeterministicConfig(@Nullable Input<GooglePrivacyDlpV2CryptoDeterministicConfigArgs> cryptoDeterministicConfig) {
             this.cryptoDeterministicConfig = cryptoDeterministicConfig;
             return this;
         }
 
-        public Builder setCryptoDeterministicConfig(@Nullable GooglePrivacyDlpV2CryptoDeterministicConfigArgs cryptoDeterministicConfig) {
+        public Builder cryptoDeterministicConfig(@Nullable GooglePrivacyDlpV2CryptoDeterministicConfigArgs cryptoDeterministicConfig) {
             this.cryptoDeterministicConfig = Input.ofNullable(cryptoDeterministicConfig);
             return this;
         }
 
-        public Builder setCryptoHashConfig(@Nullable Input<GooglePrivacyDlpV2CryptoHashConfigArgs> cryptoHashConfig) {
+        public Builder cryptoHashConfig(@Nullable Input<GooglePrivacyDlpV2CryptoHashConfigArgs> cryptoHashConfig) {
             this.cryptoHashConfig = cryptoHashConfig;
             return this;
         }
 
-        public Builder setCryptoHashConfig(@Nullable GooglePrivacyDlpV2CryptoHashConfigArgs cryptoHashConfig) {
+        public Builder cryptoHashConfig(@Nullable GooglePrivacyDlpV2CryptoHashConfigArgs cryptoHashConfig) {
             this.cryptoHashConfig = Input.ofNullable(cryptoHashConfig);
             return this;
         }
 
-        public Builder setCryptoReplaceFfxFpeConfig(@Nullable Input<GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs> cryptoReplaceFfxFpeConfig) {
+        public Builder cryptoReplaceFfxFpeConfig(@Nullable Input<GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs> cryptoReplaceFfxFpeConfig) {
             this.cryptoReplaceFfxFpeConfig = cryptoReplaceFfxFpeConfig;
             return this;
         }
 
-        public Builder setCryptoReplaceFfxFpeConfig(@Nullable GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs cryptoReplaceFfxFpeConfig) {
+        public Builder cryptoReplaceFfxFpeConfig(@Nullable GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs cryptoReplaceFfxFpeConfig) {
             this.cryptoReplaceFfxFpeConfig = Input.ofNullable(cryptoReplaceFfxFpeConfig);
             return this;
         }
 
-        public Builder setDateShiftConfig(@Nullable Input<GooglePrivacyDlpV2DateShiftConfigArgs> dateShiftConfig) {
+        public Builder dateShiftConfig(@Nullable Input<GooglePrivacyDlpV2DateShiftConfigArgs> dateShiftConfig) {
             this.dateShiftConfig = dateShiftConfig;
             return this;
         }
 
-        public Builder setDateShiftConfig(@Nullable GooglePrivacyDlpV2DateShiftConfigArgs dateShiftConfig) {
+        public Builder dateShiftConfig(@Nullable GooglePrivacyDlpV2DateShiftConfigArgs dateShiftConfig) {
             this.dateShiftConfig = Input.ofNullable(dateShiftConfig);
             return this;
         }
 
-        public Builder setFixedSizeBucketingConfig(@Nullable Input<GooglePrivacyDlpV2FixedSizeBucketingConfigArgs> fixedSizeBucketingConfig) {
+        public Builder fixedSizeBucketingConfig(@Nullable Input<GooglePrivacyDlpV2FixedSizeBucketingConfigArgs> fixedSizeBucketingConfig) {
             this.fixedSizeBucketingConfig = fixedSizeBucketingConfig;
             return this;
         }
 
-        public Builder setFixedSizeBucketingConfig(@Nullable GooglePrivacyDlpV2FixedSizeBucketingConfigArgs fixedSizeBucketingConfig) {
+        public Builder fixedSizeBucketingConfig(@Nullable GooglePrivacyDlpV2FixedSizeBucketingConfigArgs fixedSizeBucketingConfig) {
             this.fixedSizeBucketingConfig = Input.ofNullable(fixedSizeBucketingConfig);
             return this;
         }
 
-        public Builder setRedactConfig(@Nullable Input<GooglePrivacyDlpV2RedactConfigArgs> redactConfig) {
+        public Builder redactConfig(@Nullable Input<GooglePrivacyDlpV2RedactConfigArgs> redactConfig) {
             this.redactConfig = redactConfig;
             return this;
         }
 
-        public Builder setRedactConfig(@Nullable GooglePrivacyDlpV2RedactConfigArgs redactConfig) {
+        public Builder redactConfig(@Nullable GooglePrivacyDlpV2RedactConfigArgs redactConfig) {
             this.redactConfig = Input.ofNullable(redactConfig);
             return this;
         }
 
-        public Builder setReplaceConfig(@Nullable Input<GooglePrivacyDlpV2ReplaceValueConfigArgs> replaceConfig) {
+        public Builder replaceConfig(@Nullable Input<GooglePrivacyDlpV2ReplaceValueConfigArgs> replaceConfig) {
             this.replaceConfig = replaceConfig;
             return this;
         }
 
-        public Builder setReplaceConfig(@Nullable GooglePrivacyDlpV2ReplaceValueConfigArgs replaceConfig) {
+        public Builder replaceConfig(@Nullable GooglePrivacyDlpV2ReplaceValueConfigArgs replaceConfig) {
             this.replaceConfig = Input.ofNullable(replaceConfig);
             return this;
         }
 
-        public Builder setReplaceDictionaryConfig(@Nullable Input<GooglePrivacyDlpV2ReplaceDictionaryConfigArgs> replaceDictionaryConfig) {
+        public Builder replaceDictionaryConfig(@Nullable Input<GooglePrivacyDlpV2ReplaceDictionaryConfigArgs> replaceDictionaryConfig) {
             this.replaceDictionaryConfig = replaceDictionaryConfig;
             return this;
         }
 
-        public Builder setReplaceDictionaryConfig(@Nullable GooglePrivacyDlpV2ReplaceDictionaryConfigArgs replaceDictionaryConfig) {
+        public Builder replaceDictionaryConfig(@Nullable GooglePrivacyDlpV2ReplaceDictionaryConfigArgs replaceDictionaryConfig) {
             this.replaceDictionaryConfig = Input.ofNullable(replaceDictionaryConfig);
             return this;
         }
 
-        public Builder setReplaceWithInfoTypeConfig(@Nullable Input<GooglePrivacyDlpV2ReplaceWithInfoTypeConfigArgs> replaceWithInfoTypeConfig) {
+        public Builder replaceWithInfoTypeConfig(@Nullable Input<GooglePrivacyDlpV2ReplaceWithInfoTypeConfigArgs> replaceWithInfoTypeConfig) {
             this.replaceWithInfoTypeConfig = replaceWithInfoTypeConfig;
             return this;
         }
 
-        public Builder setReplaceWithInfoTypeConfig(@Nullable GooglePrivacyDlpV2ReplaceWithInfoTypeConfigArgs replaceWithInfoTypeConfig) {
+        public Builder replaceWithInfoTypeConfig(@Nullable GooglePrivacyDlpV2ReplaceWithInfoTypeConfigArgs replaceWithInfoTypeConfig) {
             this.replaceWithInfoTypeConfig = Input.ofNullable(replaceWithInfoTypeConfig);
             return this;
         }
 
-        public Builder setTimePartConfig(@Nullable Input<GooglePrivacyDlpV2TimePartConfigArgs> timePartConfig) {
+        public Builder timePartConfig(@Nullable Input<GooglePrivacyDlpV2TimePartConfigArgs> timePartConfig) {
             this.timePartConfig = timePartConfig;
             return this;
         }
 
-        public Builder setTimePartConfig(@Nullable GooglePrivacyDlpV2TimePartConfigArgs timePartConfig) {
+        public Builder timePartConfig(@Nullable GooglePrivacyDlpV2TimePartConfigArgs timePartConfig) {
             this.timePartConfig = Input.ofNullable(timePartConfig);
             return this;
         }

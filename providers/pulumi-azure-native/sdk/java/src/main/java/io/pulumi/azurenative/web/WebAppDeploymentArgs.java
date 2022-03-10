@@ -248,132 +248,132 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
     	      this.status = defaults.status;
         }
 
-        public Builder setActive(@Nullable Input<Boolean> active) {
+        public Builder active(@Nullable Input<Boolean> active) {
             this.active = active;
             return this;
         }
 
-        public Builder setActive(@Nullable Boolean active) {
+        public Builder active(@Nullable Boolean active) {
             this.active = Input.ofNullable(active);
             return this;
         }
 
-        public Builder setAuthor(@Nullable Input<String> author) {
+        public Builder author(@Nullable Input<String> author) {
             this.author = author;
             return this;
         }
 
-        public Builder setAuthor(@Nullable String author) {
+        public Builder author(@Nullable String author) {
             this.author = Input.ofNullable(author);
             return this;
         }
 
-        public Builder setAuthorEmail(@Nullable Input<String> authorEmail) {
+        public Builder authorEmail(@Nullable Input<String> authorEmail) {
             this.authorEmail = authorEmail;
             return this;
         }
 
-        public Builder setAuthorEmail(@Nullable String authorEmail) {
+        public Builder authorEmail(@Nullable String authorEmail) {
             this.authorEmail = Input.ofNullable(authorEmail);
             return this;
         }
 
-        public Builder setDeployer(@Nullable Input<String> deployer) {
+        public Builder deployer(@Nullable Input<String> deployer) {
             this.deployer = deployer;
             return this;
         }
 
-        public Builder setDeployer(@Nullable String deployer) {
+        public Builder deployer(@Nullable String deployer) {
             this.deployer = Input.ofNullable(deployer);
             return this;
         }
 
-        public Builder setDetails(@Nullable Input<String> details) {
+        public Builder details(@Nullable Input<String> details) {
             this.details = details;
             return this;
         }
 
-        public Builder setDetails(@Nullable String details) {
+        public Builder details(@Nullable String details) {
             this.details = Input.ofNullable(details);
             return this;
         }
 
-        public Builder setEndTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Input<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = Input.ofNullable(endTime);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setMessage(@Nullable Input<String> message) {
+        public Builder message(@Nullable Input<String> message) {
             this.message = message;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = Input.ofNullable(message);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setStartTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Input<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<Integer> status) {
+        public Builder status(@Nullable Input<Integer> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable Integer status) {
+        public Builder status(@Nullable Integer status) {
             this.status = Input.ofNullable(status);
             return this;
         }

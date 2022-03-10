@@ -120,27 +120,27 @@ public final class CacheUpgradeStatusResponse extends io.pulumi.resources.Invoke
     	      this.pendingFirmwareVersion = defaults.pendingFirmwareVersion;
         }
 
-        public Builder setCurrentFirmwareVersion(String currentFirmwareVersion) {
+        public Builder currentFirmwareVersion(String currentFirmwareVersion) {
             this.currentFirmwareVersion = Objects.requireNonNull(currentFirmwareVersion);
             return this;
         }
 
-        public Builder setFirmwareUpdateDeadline(String firmwareUpdateDeadline) {
+        public Builder firmwareUpdateDeadline(String firmwareUpdateDeadline) {
             this.firmwareUpdateDeadline = Objects.requireNonNull(firmwareUpdateDeadline);
             return this;
         }
 
-        public Builder setFirmwareUpdateStatus(String firmwareUpdateStatus) {
+        public Builder firmwareUpdateStatus(String firmwareUpdateStatus) {
             this.firmwareUpdateStatus = Objects.requireNonNull(firmwareUpdateStatus);
             return this;
         }
 
-        public Builder setLastFirmwareUpdate(String lastFirmwareUpdate) {
+        public Builder lastFirmwareUpdate(String lastFirmwareUpdate) {
             this.lastFirmwareUpdate = Objects.requireNonNull(lastFirmwareUpdate);
             return this;
         }
 
-        public Builder setPendingFirmwareVersion(String pendingFirmwareVersion) {
+        public Builder pendingFirmwareVersion(String pendingFirmwareVersion) {
             this.pendingFirmwareVersion = Objects.requireNonNull(pendingFirmwareVersion);
             return this;
         }

@@ -50,7 +50,7 @@ public final class HttpSettingsRoutesResponse {
     	      this.apiPrefix = defaults.apiPrefix;
         }
 
-        public Builder setApiPrefix(@Nullable String apiPrefix) {
+        public Builder apiPrefix(@Nullable String apiPrefix) {
             this.apiPrefix = apiPrefix;
             return this;
         }

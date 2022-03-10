@@ -62,12 +62,12 @@ public final class PodReadinessGateArgs extends io.pulumi.resources.ResourceArgs
     	      this.conditionType = defaults.conditionType;
         }
 
-        public Builder setConditionType(Input<String> conditionType) {
+        public Builder conditionType(Input<String> conditionType) {
             this.conditionType = Objects.requireNonNull(conditionType);
             return this;
         }
 
-        public Builder setConditionType(String conditionType) {
+        public Builder conditionType(String conditionType) {
             this.conditionType = Input.of(Objects.requireNonNull(conditionType));
             return this;
         }

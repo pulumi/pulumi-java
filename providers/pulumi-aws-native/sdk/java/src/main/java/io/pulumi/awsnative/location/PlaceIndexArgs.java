@@ -100,52 +100,52 @@ public final class PlaceIndexArgs extends io.pulumi.resources.ResourceArgs {
     	      this.pricingPlan = defaults.pricingPlan;
         }
 
-        public Builder setDataSource(Input<String> dataSource) {
+        public Builder dataSource(Input<String> dataSource) {
             this.dataSource = Objects.requireNonNull(dataSource);
             return this;
         }
 
-        public Builder setDataSource(String dataSource) {
+        public Builder dataSource(String dataSource) {
             this.dataSource = Input.of(Objects.requireNonNull(dataSource));
             return this;
         }
 
-        public Builder setDataSourceConfiguration(@Nullable Input<PlaceIndexDataSourceConfigurationArgs> dataSourceConfiguration) {
+        public Builder dataSourceConfiguration(@Nullable Input<PlaceIndexDataSourceConfigurationArgs> dataSourceConfiguration) {
             this.dataSourceConfiguration = dataSourceConfiguration;
             return this;
         }
 
-        public Builder setDataSourceConfiguration(@Nullable PlaceIndexDataSourceConfigurationArgs dataSourceConfiguration) {
+        public Builder dataSourceConfiguration(@Nullable PlaceIndexDataSourceConfigurationArgs dataSourceConfiguration) {
             this.dataSourceConfiguration = Input.ofNullable(dataSourceConfiguration);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setIndexName(Input<String> indexName) {
+        public Builder indexName(Input<String> indexName) {
             this.indexName = Objects.requireNonNull(indexName);
             return this;
         }
 
-        public Builder setIndexName(String indexName) {
+        public Builder indexName(String indexName) {
             this.indexName = Input.of(Objects.requireNonNull(indexName));
             return this;
         }
 
-        public Builder setPricingPlan(@Nullable Input<PlaceIndexPricingPlan> pricingPlan) {
+        public Builder pricingPlan(@Nullable Input<PlaceIndexPricingPlan> pricingPlan) {
             this.pricingPlan = pricingPlan;
             return this;
         }
 
-        public Builder setPricingPlan(@Nullable PlaceIndexPricingPlan pricingPlan) {
+        public Builder pricingPlan(@Nullable PlaceIndexPricingPlan pricingPlan) {
             this.pricingPlan = Input.ofNullable(pricingPlan);
             return this;
         }

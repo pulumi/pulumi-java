@@ -126,52 +126,52 @@ public final class ApplicationHANAPrometheusExporterArgs extends io.pulumi.resou
     	      this.prometheusPort = defaults.prometheusPort;
         }
 
-        public Builder setAgreeToInstallHANADBClient(Input<Boolean> agreeToInstallHANADBClient) {
+        public Builder agreeToInstallHANADBClient(Input<Boolean> agreeToInstallHANADBClient) {
             this.agreeToInstallHANADBClient = Objects.requireNonNull(agreeToInstallHANADBClient);
             return this;
         }
 
-        public Builder setAgreeToInstallHANADBClient(Boolean agreeToInstallHANADBClient) {
+        public Builder agreeToInstallHANADBClient(Boolean agreeToInstallHANADBClient) {
             this.agreeToInstallHANADBClient = Input.of(Objects.requireNonNull(agreeToInstallHANADBClient));
             return this;
         }
 
-        public Builder setHANAPort(Input<String> hANAPort) {
+        public Builder hANAPort(Input<String> hANAPort) {
             this.hANAPort = Objects.requireNonNull(hANAPort);
             return this;
         }
 
-        public Builder setHANAPort(String hANAPort) {
+        public Builder hANAPort(String hANAPort) {
             this.hANAPort = Input.of(Objects.requireNonNull(hANAPort));
             return this;
         }
 
-        public Builder setHANASID(Input<String> hANASID) {
+        public Builder hANASID(Input<String> hANASID) {
             this.hANASID = Objects.requireNonNull(hANASID);
             return this;
         }
 
-        public Builder setHANASID(String hANASID) {
+        public Builder hANASID(String hANASID) {
             this.hANASID = Input.of(Objects.requireNonNull(hANASID));
             return this;
         }
 
-        public Builder setHANASecretName(Input<String> hANASecretName) {
+        public Builder hANASecretName(Input<String> hANASecretName) {
             this.hANASecretName = Objects.requireNonNull(hANASecretName);
             return this;
         }
 
-        public Builder setHANASecretName(String hANASecretName) {
+        public Builder hANASecretName(String hANASecretName) {
             this.hANASecretName = Input.of(Objects.requireNonNull(hANASecretName));
             return this;
         }
 
-        public Builder setPrometheusPort(@Nullable Input<String> prometheusPort) {
+        public Builder prometheusPort(@Nullable Input<String> prometheusPort) {
             this.prometheusPort = prometheusPort;
             return this;
         }
 
-        public Builder setPrometheusPort(@Nullable String prometheusPort) {
+        public Builder prometheusPort(@Nullable String prometheusPort) {
             this.prometheusPort = Input.ofNullable(prometheusPort);
             return this;
         }

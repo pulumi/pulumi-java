@@ -66,12 +66,12 @@ public final class UserPasswordResponse {
     	      this.username = defaults.username;
         }
 
-        public Builder setPassword(SecretResponse password) {
+        public Builder password(SecretResponse password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

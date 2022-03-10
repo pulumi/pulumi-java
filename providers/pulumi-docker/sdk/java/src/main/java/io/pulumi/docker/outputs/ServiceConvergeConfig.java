@@ -51,12 +51,12 @@ public final class ServiceConvergeConfig {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setDelay(@Nullable String delay) {
+        public Builder delay(@Nullable String delay) {
             this.delay = delay;
             return this;
         }
 
-        public Builder setTimeout(@Nullable String timeout) {
+        public Builder timeout(@Nullable String timeout) {
             this.timeout = timeout;
             return this;
         }

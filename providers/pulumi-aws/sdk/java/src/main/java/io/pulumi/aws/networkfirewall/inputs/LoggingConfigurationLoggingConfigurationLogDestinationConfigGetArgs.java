@@ -89,32 +89,32 @@ public final class LoggingConfigurationLoggingConfigurationLogDestinationConfigG
     	      this.logType = defaults.logType;
         }
 
-        public Builder setLogDestination(Input<Map<String,String>> logDestination) {
+        public Builder logDestination(Input<Map<String,String>> logDestination) {
             this.logDestination = Objects.requireNonNull(logDestination);
             return this;
         }
 
-        public Builder setLogDestination(Map<String,String> logDestination) {
+        public Builder logDestination(Map<String,String> logDestination) {
             this.logDestination = Input.of(Objects.requireNonNull(logDestination));
             return this;
         }
 
-        public Builder setLogDestinationType(Input<String> logDestinationType) {
+        public Builder logDestinationType(Input<String> logDestinationType) {
             this.logDestinationType = Objects.requireNonNull(logDestinationType);
             return this;
         }
 
-        public Builder setLogDestinationType(String logDestinationType) {
+        public Builder logDestinationType(String logDestinationType) {
             this.logDestinationType = Input.of(Objects.requireNonNull(logDestinationType));
             return this;
         }
 
-        public Builder setLogType(Input<String> logType) {
+        public Builder logType(Input<String> logType) {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }
 
-        public Builder setLogType(String logType) {
+        public Builder logType(String logType) {
             this.logType = Input.of(Objects.requireNonNull(logType));
             return this;
         }

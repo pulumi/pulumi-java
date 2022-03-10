@@ -42,7 +42,7 @@ public final class RuleGroupActionDefinition {
     	      this.publishMetricAction = defaults.publishMetricAction;
         }
 
-        public Builder setPublishMetricAction(@Nullable RuleGroupPublishMetricAction publishMetricAction) {
+        public Builder publishMetricAction(@Nullable RuleGroupPublishMetricAction publishMetricAction) {
             this.publishMetricAction = publishMetricAction;
             return this;
         }

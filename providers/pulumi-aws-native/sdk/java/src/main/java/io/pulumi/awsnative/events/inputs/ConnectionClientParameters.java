@@ -60,12 +60,12 @@ public final class ConnectionClientParameters extends io.pulumi.resources.Invoke
     	      this.clientSecret = defaults.clientSecret;
         }
 
-        public Builder setClientID(String clientID) {
+        public Builder clientID(String clientID) {
             this.clientID = Objects.requireNonNull(clientID);
             return this;
         }
 
-        public Builder setClientSecret(String clientSecret) {
+        public Builder clientSecret(String clientSecret) {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
         }

@@ -83,17 +83,17 @@ public final class ComputeInstanceLastOperationResponse {
     	      this.operationTime = defaults.operationTime;
         }
 
-        public Builder setOperationName(@Nullable String operationName) {
+        public Builder operationName(@Nullable String operationName) {
             this.operationName = operationName;
             return this;
         }
 
-        public Builder setOperationStatus(@Nullable String operationStatus) {
+        public Builder operationStatus(@Nullable String operationStatus) {
             this.operationStatus = operationStatus;
             return this;
         }
 
-        public Builder setOperationTime(@Nullable String operationTime) {
+        public Builder operationTime(@Nullable String operationTime) {
             this.operationTime = operationTime;
             return this;
         }

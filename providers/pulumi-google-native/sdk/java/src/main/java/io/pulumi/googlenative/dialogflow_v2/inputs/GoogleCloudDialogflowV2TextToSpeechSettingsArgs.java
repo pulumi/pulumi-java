@@ -110,42 +110,42 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettingsArgs extends io.pu
     	      this.synthesizeSpeechConfigs = defaults.synthesizeSpeechConfigs;
         }
 
-        public Builder setEnableTextToSpeech(@Nullable Input<Boolean> enableTextToSpeech) {
+        public Builder enableTextToSpeech(@Nullable Input<Boolean> enableTextToSpeech) {
             this.enableTextToSpeech = enableTextToSpeech;
             return this;
         }
 
-        public Builder setEnableTextToSpeech(@Nullable Boolean enableTextToSpeech) {
+        public Builder enableTextToSpeech(@Nullable Boolean enableTextToSpeech) {
             this.enableTextToSpeech = Input.ofNullable(enableTextToSpeech);
             return this;
         }
 
-        public Builder setOutputAudioEncoding(Input<GoogleCloudDialogflowV2TextToSpeechSettingsOutputAudioEncoding> outputAudioEncoding) {
+        public Builder outputAudioEncoding(Input<GoogleCloudDialogflowV2TextToSpeechSettingsOutputAudioEncoding> outputAudioEncoding) {
             this.outputAudioEncoding = Objects.requireNonNull(outputAudioEncoding);
             return this;
         }
 
-        public Builder setOutputAudioEncoding(GoogleCloudDialogflowV2TextToSpeechSettingsOutputAudioEncoding outputAudioEncoding) {
+        public Builder outputAudioEncoding(GoogleCloudDialogflowV2TextToSpeechSettingsOutputAudioEncoding outputAudioEncoding) {
             this.outputAudioEncoding = Input.of(Objects.requireNonNull(outputAudioEncoding));
             return this;
         }
 
-        public Builder setSampleRateHertz(@Nullable Input<Integer> sampleRateHertz) {
+        public Builder sampleRateHertz(@Nullable Input<Integer> sampleRateHertz) {
             this.sampleRateHertz = sampleRateHertz;
             return this;
         }
 
-        public Builder setSampleRateHertz(@Nullable Integer sampleRateHertz) {
+        public Builder sampleRateHertz(@Nullable Integer sampleRateHertz) {
             this.sampleRateHertz = Input.ofNullable(sampleRateHertz);
             return this;
         }
 
-        public Builder setSynthesizeSpeechConfigs(@Nullable Input<Map<String,String>> synthesizeSpeechConfigs) {
+        public Builder synthesizeSpeechConfigs(@Nullable Input<Map<String,String>> synthesizeSpeechConfigs) {
             this.synthesizeSpeechConfigs = synthesizeSpeechConfigs;
             return this;
         }
 
-        public Builder setSynthesizeSpeechConfigs(@Nullable Map<String,String> synthesizeSpeechConfigs) {
+        public Builder synthesizeSpeechConfigs(@Nullable Map<String,String> synthesizeSpeechConfigs) {
             this.synthesizeSpeechConfigs = Input.ofNullable(synthesizeSpeechConfigs);
             return this;
         }

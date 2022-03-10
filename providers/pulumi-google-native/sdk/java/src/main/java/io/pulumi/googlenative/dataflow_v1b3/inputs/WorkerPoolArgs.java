@@ -389,212 +389,212 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setAutoscalingSettings(@Nullable Input<AutoscalingSettingsArgs> autoscalingSettings) {
+        public Builder autoscalingSettings(@Nullable Input<AutoscalingSettingsArgs> autoscalingSettings) {
             this.autoscalingSettings = autoscalingSettings;
             return this;
         }
 
-        public Builder setAutoscalingSettings(@Nullable AutoscalingSettingsArgs autoscalingSettings) {
+        public Builder autoscalingSettings(@Nullable AutoscalingSettingsArgs autoscalingSettings) {
             this.autoscalingSettings = Input.ofNullable(autoscalingSettings);
             return this;
         }
 
-        public Builder setDataDisks(@Nullable Input<List<DiskArgs>> dataDisks) {
+        public Builder dataDisks(@Nullable Input<List<DiskArgs>> dataDisks) {
             this.dataDisks = dataDisks;
             return this;
         }
 
-        public Builder setDataDisks(@Nullable List<DiskArgs> dataDisks) {
+        public Builder dataDisks(@Nullable List<DiskArgs> dataDisks) {
             this.dataDisks = Input.ofNullable(dataDisks);
             return this;
         }
 
-        public Builder setDefaultPackageSet(@Nullable Input<WorkerPoolDefaultPackageSet> defaultPackageSet) {
+        public Builder defaultPackageSet(@Nullable Input<WorkerPoolDefaultPackageSet> defaultPackageSet) {
             this.defaultPackageSet = defaultPackageSet;
             return this;
         }
 
-        public Builder setDefaultPackageSet(@Nullable WorkerPoolDefaultPackageSet defaultPackageSet) {
+        public Builder defaultPackageSet(@Nullable WorkerPoolDefaultPackageSet defaultPackageSet) {
             this.defaultPackageSet = Input.ofNullable(defaultPackageSet);
             return this;
         }
 
-        public Builder setDiskSizeGb(@Nullable Input<Integer> diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Input<Integer> diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
 
-        public Builder setDiskSizeGb(@Nullable Integer diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
             this.diskSizeGb = Input.ofNullable(diskSizeGb);
             return this;
         }
 
-        public Builder setDiskSourceImage(@Nullable Input<String> diskSourceImage) {
+        public Builder diskSourceImage(@Nullable Input<String> diskSourceImage) {
             this.diskSourceImage = diskSourceImage;
             return this;
         }
 
-        public Builder setDiskSourceImage(@Nullable String diskSourceImage) {
+        public Builder diskSourceImage(@Nullable String diskSourceImage) {
             this.diskSourceImage = Input.ofNullable(diskSourceImage);
             return this;
         }
 
-        public Builder setDiskType(@Nullable Input<String> diskType) {
+        public Builder diskType(@Nullable Input<String> diskType) {
             this.diskType = diskType;
             return this;
         }
 
-        public Builder setDiskType(@Nullable String diskType) {
+        public Builder diskType(@Nullable String diskType) {
             this.diskType = Input.ofNullable(diskType);
             return this;
         }
 
-        public Builder setIpConfiguration(@Nullable Input<WorkerPoolIpConfiguration> ipConfiguration) {
+        public Builder ipConfiguration(@Nullable Input<WorkerPoolIpConfiguration> ipConfiguration) {
             this.ipConfiguration = ipConfiguration;
             return this;
         }
 
-        public Builder setIpConfiguration(@Nullable WorkerPoolIpConfiguration ipConfiguration) {
+        public Builder ipConfiguration(@Nullable WorkerPoolIpConfiguration ipConfiguration) {
             this.ipConfiguration = Input.ofNullable(ipConfiguration);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setMachineType(@Nullable Input<String> machineType) {
+        public Builder machineType(@Nullable Input<String> machineType) {
             this.machineType = machineType;
             return this;
         }
 
-        public Builder setMachineType(@Nullable String machineType) {
+        public Builder machineType(@Nullable String machineType) {
             this.machineType = Input.ofNullable(machineType);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setNetwork(@Nullable Input<String> network) {
+        public Builder network(@Nullable Input<String> network) {
             this.network = network;
             return this;
         }
 
-        public Builder setNetwork(@Nullable String network) {
+        public Builder network(@Nullable String network) {
             this.network = Input.ofNullable(network);
             return this;
         }
 
-        public Builder setNumThreadsPerWorker(@Nullable Input<Integer> numThreadsPerWorker) {
+        public Builder numThreadsPerWorker(@Nullable Input<Integer> numThreadsPerWorker) {
             this.numThreadsPerWorker = numThreadsPerWorker;
             return this;
         }
 
-        public Builder setNumThreadsPerWorker(@Nullable Integer numThreadsPerWorker) {
+        public Builder numThreadsPerWorker(@Nullable Integer numThreadsPerWorker) {
             this.numThreadsPerWorker = Input.ofNullable(numThreadsPerWorker);
             return this;
         }
 
-        public Builder setNumWorkers(@Nullable Input<Integer> numWorkers) {
+        public Builder numWorkers(@Nullable Input<Integer> numWorkers) {
             this.numWorkers = numWorkers;
             return this;
         }
 
-        public Builder setNumWorkers(@Nullable Integer numWorkers) {
+        public Builder numWorkers(@Nullable Integer numWorkers) {
             this.numWorkers = Input.ofNullable(numWorkers);
             return this;
         }
 
-        public Builder setOnHostMaintenance(@Nullable Input<String> onHostMaintenance) {
+        public Builder onHostMaintenance(@Nullable Input<String> onHostMaintenance) {
             this.onHostMaintenance = onHostMaintenance;
             return this;
         }
 
-        public Builder setOnHostMaintenance(@Nullable String onHostMaintenance) {
+        public Builder onHostMaintenance(@Nullable String onHostMaintenance) {
             this.onHostMaintenance = Input.ofNullable(onHostMaintenance);
             return this;
         }
 
-        public Builder setPackages(@Nullable Input<List<PackageArgs>> packages) {
+        public Builder packages(@Nullable Input<List<PackageArgs>> packages) {
             this.packages = packages;
             return this;
         }
 
-        public Builder setPackages(@Nullable List<PackageArgs> packages) {
+        public Builder packages(@Nullable List<PackageArgs> packages) {
             this.packages = Input.ofNullable(packages);
             return this;
         }
 
-        public Builder setPoolArgs(@Nullable Input<Map<String,String>> poolArgs) {
+        public Builder poolArgs(@Nullable Input<Map<String,String>> poolArgs) {
             this.poolArgs = poolArgs;
             return this;
         }
 
-        public Builder setPoolArgs(@Nullable Map<String,String> poolArgs) {
+        public Builder poolArgs(@Nullable Map<String,String> poolArgs) {
             this.poolArgs = Input.ofNullable(poolArgs);
             return this;
         }
 
-        public Builder setSdkHarnessContainerImages(@Nullable Input<List<SdkHarnessContainerImageArgs>> sdkHarnessContainerImages) {
+        public Builder sdkHarnessContainerImages(@Nullable Input<List<SdkHarnessContainerImageArgs>> sdkHarnessContainerImages) {
             this.sdkHarnessContainerImages = sdkHarnessContainerImages;
             return this;
         }
 
-        public Builder setSdkHarnessContainerImages(@Nullable List<SdkHarnessContainerImageArgs> sdkHarnessContainerImages) {
+        public Builder sdkHarnessContainerImages(@Nullable List<SdkHarnessContainerImageArgs> sdkHarnessContainerImages) {
             this.sdkHarnessContainerImages = Input.ofNullable(sdkHarnessContainerImages);
             return this;
         }
 
-        public Builder setSubnetwork(@Nullable Input<String> subnetwork) {
+        public Builder subnetwork(@Nullable Input<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
 
-        public Builder setSubnetwork(@Nullable String subnetwork) {
+        public Builder subnetwork(@Nullable String subnetwork) {
             this.subnetwork = Input.ofNullable(subnetwork);
             return this;
         }
 
-        public Builder setTaskrunnerSettings(@Nullable Input<TaskRunnerSettingsArgs> taskrunnerSettings) {
+        public Builder taskrunnerSettings(@Nullable Input<TaskRunnerSettingsArgs> taskrunnerSettings) {
             this.taskrunnerSettings = taskrunnerSettings;
             return this;
         }
 
-        public Builder setTaskrunnerSettings(@Nullable TaskRunnerSettingsArgs taskrunnerSettings) {
+        public Builder taskrunnerSettings(@Nullable TaskRunnerSettingsArgs taskrunnerSettings) {
             this.taskrunnerSettings = Input.ofNullable(taskrunnerSettings);
             return this;
         }
 
-        public Builder setTeardownPolicy(@Nullable Input<WorkerPoolTeardownPolicy> teardownPolicy) {
+        public Builder teardownPolicy(@Nullable Input<WorkerPoolTeardownPolicy> teardownPolicy) {
             this.teardownPolicy = teardownPolicy;
             return this;
         }
 
-        public Builder setTeardownPolicy(@Nullable WorkerPoolTeardownPolicy teardownPolicy) {
+        public Builder teardownPolicy(@Nullable WorkerPoolTeardownPolicy teardownPolicy) {
             this.teardownPolicy = Input.ofNullable(teardownPolicy);
             return this;
         }
 
-        public Builder setZone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Input<String> zone) {
             this.zone = zone;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = Input.ofNullable(zone);
             return this;
         }

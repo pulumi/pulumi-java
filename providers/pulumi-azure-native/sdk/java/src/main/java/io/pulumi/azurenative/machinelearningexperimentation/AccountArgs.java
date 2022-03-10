@@ -200,102 +200,102 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vsoAccountId = defaults.vsoAccountId;
         }
 
-        public Builder setAccountName(@Nullable Input<String> accountName) {
+        public Builder accountName(@Nullable Input<String> accountName) {
             this.accountName = accountName;
             return this;
         }
 
-        public Builder setAccountName(@Nullable String accountName) {
+        public Builder accountName(@Nullable String accountName) {
             this.accountName = Input.ofNullable(accountName);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Input<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Input.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder setKeyVaultId(Input<String> keyVaultId) {
+        public Builder keyVaultId(Input<String> keyVaultId) {
             this.keyVaultId = Objects.requireNonNull(keyVaultId);
             return this;
         }
 
-        public Builder setKeyVaultId(String keyVaultId) {
+        public Builder keyVaultId(String keyVaultId) {
             this.keyVaultId = Input.of(Objects.requireNonNull(keyVaultId));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSeats(@Nullable Input<String> seats) {
+        public Builder seats(@Nullable Input<String> seats) {
             this.seats = seats;
             return this;
         }
 
-        public Builder setSeats(@Nullable String seats) {
+        public Builder seats(@Nullable String seats) {
             this.seats = Input.ofNullable(seats);
             return this;
         }
 
-        public Builder setStorageAccount(Input<StorageAccountPropertiesArgs> storageAccount) {
+        public Builder storageAccount(Input<StorageAccountPropertiesArgs> storageAccount) {
             this.storageAccount = Objects.requireNonNull(storageAccount);
             return this;
         }
 
-        public Builder setStorageAccount(StorageAccountPropertiesArgs storageAccount) {
+        public Builder storageAccount(StorageAccountPropertiesArgs storageAccount) {
             this.storageAccount = Input.of(Objects.requireNonNull(storageAccount));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVsoAccountId(Input<String> vsoAccountId) {
+        public Builder vsoAccountId(Input<String> vsoAccountId) {
             this.vsoAccountId = Objects.requireNonNull(vsoAccountId);
             return this;
         }
 
-        public Builder setVsoAccountId(String vsoAccountId) {
+        public Builder vsoAccountId(String vsoAccountId) {
             this.vsoAccountId = Input.of(Objects.requireNonNull(vsoAccountId));
             return this;
         }

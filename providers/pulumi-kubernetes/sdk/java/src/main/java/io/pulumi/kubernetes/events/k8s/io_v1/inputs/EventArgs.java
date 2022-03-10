@@ -319,172 +319,172 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setAction(@Nullable Input<String> action) {
+        public Builder action(@Nullable Input<String> action) {
             this.action = action;
             return this;
         }
 
-        public Builder setAction(@Nullable String action) {
+        public Builder action(@Nullable String action) {
             this.action = Input.ofNullable(action);
             return this;
         }
 
-        public Builder setApiVersion(@Nullable Input<String> apiVersion) {
+        public Builder apiVersion(@Nullable Input<String> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Input.ofNullable(apiVersion);
             return this;
         }
 
-        public Builder setDeprecatedCount(@Nullable Input<Integer> deprecatedCount) {
+        public Builder deprecatedCount(@Nullable Input<Integer> deprecatedCount) {
             this.deprecatedCount = deprecatedCount;
             return this;
         }
 
-        public Builder setDeprecatedCount(@Nullable Integer deprecatedCount) {
+        public Builder deprecatedCount(@Nullable Integer deprecatedCount) {
             this.deprecatedCount = Input.ofNullable(deprecatedCount);
             return this;
         }
 
-        public Builder setDeprecatedFirstTimestamp(@Nullable Input<String> deprecatedFirstTimestamp) {
+        public Builder deprecatedFirstTimestamp(@Nullable Input<String> deprecatedFirstTimestamp) {
             this.deprecatedFirstTimestamp = deprecatedFirstTimestamp;
             return this;
         }
 
-        public Builder setDeprecatedFirstTimestamp(@Nullable String deprecatedFirstTimestamp) {
+        public Builder deprecatedFirstTimestamp(@Nullable String deprecatedFirstTimestamp) {
             this.deprecatedFirstTimestamp = Input.ofNullable(deprecatedFirstTimestamp);
             return this;
         }
 
-        public Builder setDeprecatedLastTimestamp(@Nullable Input<String> deprecatedLastTimestamp) {
+        public Builder deprecatedLastTimestamp(@Nullable Input<String> deprecatedLastTimestamp) {
             this.deprecatedLastTimestamp = deprecatedLastTimestamp;
             return this;
         }
 
-        public Builder setDeprecatedLastTimestamp(@Nullable String deprecatedLastTimestamp) {
+        public Builder deprecatedLastTimestamp(@Nullable String deprecatedLastTimestamp) {
             this.deprecatedLastTimestamp = Input.ofNullable(deprecatedLastTimestamp);
             return this;
         }
 
-        public Builder setDeprecatedSource(@Nullable Input<EventSourceArgs> deprecatedSource) {
+        public Builder deprecatedSource(@Nullable Input<EventSourceArgs> deprecatedSource) {
             this.deprecatedSource = deprecatedSource;
             return this;
         }
 
-        public Builder setDeprecatedSource(@Nullable EventSourceArgs deprecatedSource) {
+        public Builder deprecatedSource(@Nullable EventSourceArgs deprecatedSource) {
             this.deprecatedSource = Input.ofNullable(deprecatedSource);
             return this;
         }
 
-        public Builder setEventTime(Input<String> eventTime) {
+        public Builder eventTime(Input<String> eventTime) {
             this.eventTime = Objects.requireNonNull(eventTime);
             return this;
         }
 
-        public Builder setEventTime(String eventTime) {
+        public Builder eventTime(String eventTime) {
             this.eventTime = Input.of(Objects.requireNonNull(eventTime));
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<ObjectMetaArgs> metadata) {
+        public Builder metadata(@Nullable Input<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable ObjectMetaArgs metadata) {
+        public Builder metadata(@Nullable ObjectMetaArgs metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setNote(@Nullable Input<String> note) {
+        public Builder note(@Nullable Input<String> note) {
             this.note = note;
             return this;
         }
 
-        public Builder setNote(@Nullable String note) {
+        public Builder note(@Nullable String note) {
             this.note = Input.ofNullable(note);
             return this;
         }
 
-        public Builder setReason(@Nullable Input<String> reason) {
+        public Builder reason(@Nullable Input<String> reason) {
             this.reason = reason;
             return this;
         }
 
-        public Builder setReason(@Nullable String reason) {
+        public Builder reason(@Nullable String reason) {
             this.reason = Input.ofNullable(reason);
             return this;
         }
 
-        public Builder setRegarding(@Nullable Input<ObjectReferenceArgs> regarding) {
+        public Builder regarding(@Nullable Input<ObjectReferenceArgs> regarding) {
             this.regarding = regarding;
             return this;
         }
 
-        public Builder setRegarding(@Nullable ObjectReferenceArgs regarding) {
+        public Builder regarding(@Nullable ObjectReferenceArgs regarding) {
             this.regarding = Input.ofNullable(regarding);
             return this;
         }
 
-        public Builder setRelated(@Nullable Input<ObjectReferenceArgs> related) {
+        public Builder related(@Nullable Input<ObjectReferenceArgs> related) {
             this.related = related;
             return this;
         }
 
-        public Builder setRelated(@Nullable ObjectReferenceArgs related) {
+        public Builder related(@Nullable ObjectReferenceArgs related) {
             this.related = Input.ofNullable(related);
             return this;
         }
 
-        public Builder setReportingController(@Nullable Input<String> reportingController) {
+        public Builder reportingController(@Nullable Input<String> reportingController) {
             this.reportingController = reportingController;
             return this;
         }
 
-        public Builder setReportingController(@Nullable String reportingController) {
+        public Builder reportingController(@Nullable String reportingController) {
             this.reportingController = Input.ofNullable(reportingController);
             return this;
         }
 
-        public Builder setReportingInstance(@Nullable Input<String> reportingInstance) {
+        public Builder reportingInstance(@Nullable Input<String> reportingInstance) {
             this.reportingInstance = reportingInstance;
             return this;
         }
 
-        public Builder setReportingInstance(@Nullable String reportingInstance) {
+        public Builder reportingInstance(@Nullable String reportingInstance) {
             this.reportingInstance = Input.ofNullable(reportingInstance);
             return this;
         }
 
-        public Builder setSeries(@Nullable Input<EventSeriesArgs> series) {
+        public Builder series(@Nullable Input<EventSeriesArgs> series) {
             this.series = series;
             return this;
         }
 
-        public Builder setSeries(@Nullable EventSeriesArgs series) {
+        public Builder series(@Nullable EventSeriesArgs series) {
             this.series = Input.ofNullable(series);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

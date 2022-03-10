@@ -120,52 +120,52 @@ public final class ReportGroupExportConfigS3DestinationArgs extends io.pulumi.re
     	      this.path = defaults.path;
         }
 
-        public Builder setBucket(Input<String> bucket) {
+        public Builder bucket(Input<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Input.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder setEncryptionDisabled(@Nullable Input<Boolean> encryptionDisabled) {
+        public Builder encryptionDisabled(@Nullable Input<Boolean> encryptionDisabled) {
             this.encryptionDisabled = encryptionDisabled;
             return this;
         }
 
-        public Builder setEncryptionDisabled(@Nullable Boolean encryptionDisabled) {
+        public Builder encryptionDisabled(@Nullable Boolean encryptionDisabled) {
             this.encryptionDisabled = Input.ofNullable(encryptionDisabled);
             return this;
         }
 
-        public Builder setEncryptionKey(Input<String> encryptionKey) {
+        public Builder encryptionKey(Input<String> encryptionKey) {
             this.encryptionKey = Objects.requireNonNull(encryptionKey);
             return this;
         }
 
-        public Builder setEncryptionKey(String encryptionKey) {
+        public Builder encryptionKey(String encryptionKey) {
             this.encryptionKey = Input.of(Objects.requireNonNull(encryptionKey));
             return this;
         }
 
-        public Builder setPackaging(@Nullable Input<String> packaging) {
+        public Builder packaging(@Nullable Input<String> packaging) {
             this.packaging = packaging;
             return this;
         }
 
-        public Builder setPackaging(@Nullable String packaging) {
+        public Builder packaging(@Nullable String packaging) {
             this.packaging = Input.ofNullable(packaging);
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }

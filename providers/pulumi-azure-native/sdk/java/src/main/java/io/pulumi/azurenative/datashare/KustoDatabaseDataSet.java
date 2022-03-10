@@ -195,7 +195,7 @@ public class KustoDatabaseDataSet extends io.pulumi.resources.CustomResource {
     private static KustoDatabaseDataSetArgs makeArgs(KustoDatabaseDataSetArgs args) {
         var builder = args == null ? KustoDatabaseDataSetArgs.builder() : KustoDatabaseDataSetArgs.builder(args);
         return builder
-            .setKind("KustoDatabase")
+            .kind("KustoDatabase")
             .build();
     }
 

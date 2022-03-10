@@ -70,12 +70,12 @@ public final class JsonWriteSettingsResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setFilePattern(@Nullable Object filePattern) {
+        public Builder filePattern(@Nullable Object filePattern) {
             this.filePattern = filePattern;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

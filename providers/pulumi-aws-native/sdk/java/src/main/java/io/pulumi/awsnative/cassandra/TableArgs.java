@@ -198,102 +198,102 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setBillingMode(@Nullable Input<TableBillingModeArgs> billingMode) {
+        public Builder billingMode(@Nullable Input<TableBillingModeArgs> billingMode) {
             this.billingMode = billingMode;
             return this;
         }
 
-        public Builder setBillingMode(@Nullable TableBillingModeArgs billingMode) {
+        public Builder billingMode(@Nullable TableBillingModeArgs billingMode) {
             this.billingMode = Input.ofNullable(billingMode);
             return this;
         }
 
-        public Builder setClusteringKeyColumns(@Nullable Input<List<TableClusteringKeyColumnArgs>> clusteringKeyColumns) {
+        public Builder clusteringKeyColumns(@Nullable Input<List<TableClusteringKeyColumnArgs>> clusteringKeyColumns) {
             this.clusteringKeyColumns = clusteringKeyColumns;
             return this;
         }
 
-        public Builder setClusteringKeyColumns(@Nullable List<TableClusteringKeyColumnArgs> clusteringKeyColumns) {
+        public Builder clusteringKeyColumns(@Nullable List<TableClusteringKeyColumnArgs> clusteringKeyColumns) {
             this.clusteringKeyColumns = Input.ofNullable(clusteringKeyColumns);
             return this;
         }
 
-        public Builder setDefaultTimeToLive(@Nullable Input<Integer> defaultTimeToLive) {
+        public Builder defaultTimeToLive(@Nullable Input<Integer> defaultTimeToLive) {
             this.defaultTimeToLive = defaultTimeToLive;
             return this;
         }
 
-        public Builder setDefaultTimeToLive(@Nullable Integer defaultTimeToLive) {
+        public Builder defaultTimeToLive(@Nullable Integer defaultTimeToLive) {
             this.defaultTimeToLive = Input.ofNullable(defaultTimeToLive);
             return this;
         }
 
-        public Builder setEncryptionSpecification(@Nullable Input<TableEncryptionSpecificationArgs> encryptionSpecification) {
+        public Builder encryptionSpecification(@Nullable Input<TableEncryptionSpecificationArgs> encryptionSpecification) {
             this.encryptionSpecification = encryptionSpecification;
             return this;
         }
 
-        public Builder setEncryptionSpecification(@Nullable TableEncryptionSpecificationArgs encryptionSpecification) {
+        public Builder encryptionSpecification(@Nullable TableEncryptionSpecificationArgs encryptionSpecification) {
             this.encryptionSpecification = Input.ofNullable(encryptionSpecification);
             return this;
         }
 
-        public Builder setKeyspaceName(Input<String> keyspaceName) {
+        public Builder keyspaceName(Input<String> keyspaceName) {
             this.keyspaceName = Objects.requireNonNull(keyspaceName);
             return this;
         }
 
-        public Builder setKeyspaceName(String keyspaceName) {
+        public Builder keyspaceName(String keyspaceName) {
             this.keyspaceName = Input.of(Objects.requireNonNull(keyspaceName));
             return this;
         }
 
-        public Builder setPartitionKeyColumns(Input<List<TableColumnArgs>> partitionKeyColumns) {
+        public Builder partitionKeyColumns(Input<List<TableColumnArgs>> partitionKeyColumns) {
             this.partitionKeyColumns = Objects.requireNonNull(partitionKeyColumns);
             return this;
         }
 
-        public Builder setPartitionKeyColumns(List<TableColumnArgs> partitionKeyColumns) {
+        public Builder partitionKeyColumns(List<TableColumnArgs> partitionKeyColumns) {
             this.partitionKeyColumns = Input.of(Objects.requireNonNull(partitionKeyColumns));
             return this;
         }
 
-        public Builder setPointInTimeRecoveryEnabled(@Nullable Input<Boolean> pointInTimeRecoveryEnabled) {
+        public Builder pointInTimeRecoveryEnabled(@Nullable Input<Boolean> pointInTimeRecoveryEnabled) {
             this.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
             return this;
         }
 
-        public Builder setPointInTimeRecoveryEnabled(@Nullable Boolean pointInTimeRecoveryEnabled) {
+        public Builder pointInTimeRecoveryEnabled(@Nullable Boolean pointInTimeRecoveryEnabled) {
             this.pointInTimeRecoveryEnabled = Input.ofNullable(pointInTimeRecoveryEnabled);
             return this;
         }
 
-        public Builder setRegularColumns(@Nullable Input<List<TableColumnArgs>> regularColumns) {
+        public Builder regularColumns(@Nullable Input<List<TableColumnArgs>> regularColumns) {
             this.regularColumns = regularColumns;
             return this;
         }
 
-        public Builder setRegularColumns(@Nullable List<TableColumnArgs> regularColumns) {
+        public Builder regularColumns(@Nullable List<TableColumnArgs> regularColumns) {
             this.regularColumns = Input.ofNullable(regularColumns);
             return this;
         }
 
-        public Builder setTableName(@Nullable Input<String> tableName) {
+        public Builder tableName(@Nullable Input<String> tableName) {
             this.tableName = tableName;
             return this;
         }
 
-        public Builder setTableName(@Nullable String tableName) {
+        public Builder tableName(@Nullable String tableName) {
             this.tableName = Input.ofNullable(tableName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<TableTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<TableTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<TableTagArgs> tags) {
+        public Builder tags(@Nullable List<TableTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

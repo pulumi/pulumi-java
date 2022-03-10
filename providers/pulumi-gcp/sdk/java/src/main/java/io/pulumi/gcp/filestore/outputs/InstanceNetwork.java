@@ -134,27 +134,27 @@ public final class InstanceNetwork {
     	      this.reservedIpRange = defaults.reservedIpRange;
         }
 
-        public Builder setConnectMode(@Nullable String connectMode) {
+        public Builder connectMode(@Nullable String connectMode) {
             this.connectMode = connectMode;
             return this;
         }
 
-        public Builder setIpAddresses(@Nullable List<String> ipAddresses) {
+        public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
 
-        public Builder setModes(List<String> modes) {
+        public Builder modes(List<String> modes) {
             this.modes = Objects.requireNonNull(modes);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setReservedIpRange(@Nullable String reservedIpRange) {
+        public Builder reservedIpRange(@Nullable String reservedIpRange) {
             this.reservedIpRange = reservedIpRange;
             return this;
         }

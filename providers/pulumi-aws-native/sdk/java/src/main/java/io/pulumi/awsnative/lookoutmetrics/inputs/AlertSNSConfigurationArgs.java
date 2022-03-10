@@ -73,22 +73,22 @@ public final class AlertSNSConfigurationArgs extends io.pulumi.resources.Resourc
     	      this.snsTopicArn = defaults.snsTopicArn;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setSnsTopicArn(Input<String> snsTopicArn) {
+        public Builder snsTopicArn(Input<String> snsTopicArn) {
             this.snsTopicArn = Objects.requireNonNull(snsTopicArn);
             return this;
         }
 
-        public Builder setSnsTopicArn(String snsTopicArn) {
+        public Builder snsTopicArn(String snsTopicArn) {
             this.snsTopicArn = Input.of(Objects.requireNonNull(snsTopicArn));
             return this;
         }

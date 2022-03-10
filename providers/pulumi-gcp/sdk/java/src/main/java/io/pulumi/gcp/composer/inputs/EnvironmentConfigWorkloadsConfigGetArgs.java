@@ -76,32 +76,32 @@ public final class EnvironmentConfigWorkloadsConfigGetArgs extends io.pulumi.res
     	      this.worker = defaults.worker;
         }
 
-        public Builder setScheduler(@Nullable Input<EnvironmentConfigWorkloadsConfigSchedulerGetArgs> scheduler) {
+        public Builder scheduler(@Nullable Input<EnvironmentConfigWorkloadsConfigSchedulerGetArgs> scheduler) {
             this.scheduler = scheduler;
             return this;
         }
 
-        public Builder setScheduler(@Nullable EnvironmentConfigWorkloadsConfigSchedulerGetArgs scheduler) {
+        public Builder scheduler(@Nullable EnvironmentConfigWorkloadsConfigSchedulerGetArgs scheduler) {
             this.scheduler = Input.ofNullable(scheduler);
             return this;
         }
 
-        public Builder setWebServer(@Nullable Input<EnvironmentConfigWorkloadsConfigWebServerGetArgs> webServer) {
+        public Builder webServer(@Nullable Input<EnvironmentConfigWorkloadsConfigWebServerGetArgs> webServer) {
             this.webServer = webServer;
             return this;
         }
 
-        public Builder setWebServer(@Nullable EnvironmentConfigWorkloadsConfigWebServerGetArgs webServer) {
+        public Builder webServer(@Nullable EnvironmentConfigWorkloadsConfigWebServerGetArgs webServer) {
             this.webServer = Input.ofNullable(webServer);
             return this;
         }
 
-        public Builder setWorker(@Nullable Input<EnvironmentConfigWorkloadsConfigWorkerGetArgs> worker) {
+        public Builder worker(@Nullable Input<EnvironmentConfigWorkloadsConfigWorkerGetArgs> worker) {
             this.worker = worker;
             return this;
         }
 
-        public Builder setWorker(@Nullable EnvironmentConfigWorkloadsConfigWorkerGetArgs worker) {
+        public Builder worker(@Nullable EnvironmentConfigWorkloadsConfigWorkerGetArgs worker) {
             this.worker = Input.ofNullable(worker);
             return this;
         }

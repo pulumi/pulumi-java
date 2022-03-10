@@ -68,12 +68,12 @@ public final class LaunchTemplateCapacityReservationSpecification {
     	      this.capacityReservationTarget = defaults.capacityReservationTarget;
         }
 
-        public Builder setCapacityReservationPreference(@Nullable String capacityReservationPreference) {
+        public Builder capacityReservationPreference(@Nullable String capacityReservationPreference) {
             this.capacityReservationPreference = capacityReservationPreference;
             return this;
         }
 
-        public Builder setCapacityReservationTarget(@Nullable LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget capacityReservationTarget) {
+        public Builder capacityReservationTarget(@Nullable LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget capacityReservationTarget) {
             this.capacityReservationTarget = capacityReservationTarget;
             return this;
         }

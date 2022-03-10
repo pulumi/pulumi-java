@@ -123,52 +123,52 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.renewTime = defaults.renewTime;
         }
 
-        public Builder setAcquireTime(@Nullable Input<String> acquireTime) {
+        public Builder acquireTime(@Nullable Input<String> acquireTime) {
             this.acquireTime = acquireTime;
             return this;
         }
 
-        public Builder setAcquireTime(@Nullable String acquireTime) {
+        public Builder acquireTime(@Nullable String acquireTime) {
             this.acquireTime = Input.ofNullable(acquireTime);
             return this;
         }
 
-        public Builder setHolderIdentity(@Nullable Input<String> holderIdentity) {
+        public Builder holderIdentity(@Nullable Input<String> holderIdentity) {
             this.holderIdentity = holderIdentity;
             return this;
         }
 
-        public Builder setHolderIdentity(@Nullable String holderIdentity) {
+        public Builder holderIdentity(@Nullable String holderIdentity) {
             this.holderIdentity = Input.ofNullable(holderIdentity);
             return this;
         }
 
-        public Builder setLeaseDurationSeconds(@Nullable Input<Integer> leaseDurationSeconds) {
+        public Builder leaseDurationSeconds(@Nullable Input<Integer> leaseDurationSeconds) {
             this.leaseDurationSeconds = leaseDurationSeconds;
             return this;
         }
 
-        public Builder setLeaseDurationSeconds(@Nullable Integer leaseDurationSeconds) {
+        public Builder leaseDurationSeconds(@Nullable Integer leaseDurationSeconds) {
             this.leaseDurationSeconds = Input.ofNullable(leaseDurationSeconds);
             return this;
         }
 
-        public Builder setLeaseTransitions(@Nullable Input<Integer> leaseTransitions) {
+        public Builder leaseTransitions(@Nullable Input<Integer> leaseTransitions) {
             this.leaseTransitions = leaseTransitions;
             return this;
         }
 
-        public Builder setLeaseTransitions(@Nullable Integer leaseTransitions) {
+        public Builder leaseTransitions(@Nullable Integer leaseTransitions) {
             this.leaseTransitions = Input.ofNullable(leaseTransitions);
             return this;
         }
 
-        public Builder setRenewTime(@Nullable Input<String> renewTime) {
+        public Builder renewTime(@Nullable Input<String> renewTime) {
             this.renewTime = renewTime;
             return this;
         }
 
-        public Builder setRenewTime(@Nullable String renewTime) {
+        public Builder renewTime(@Nullable String renewTime) {
             this.renewTime = Input.ofNullable(renewTime);
             return this;
         }

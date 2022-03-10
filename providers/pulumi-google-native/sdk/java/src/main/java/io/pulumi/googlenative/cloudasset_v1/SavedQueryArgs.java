@@ -140,72 +140,72 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.v1Id1 = defaults.v1Id1;
         }
 
-        public Builder setContent(@Nullable Input<QueryContentArgs> content) {
+        public Builder content(@Nullable Input<QueryContentArgs> content) {
             this.content = content;
             return this;
         }
 
-        public Builder setContent(@Nullable QueryContentArgs content) {
+        public Builder content(@Nullable QueryContentArgs content) {
             this.content = Input.ofNullable(content);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSavedQueryId(Input<String> savedQueryId) {
+        public Builder savedQueryId(Input<String> savedQueryId) {
             this.savedQueryId = Objects.requireNonNull(savedQueryId);
             return this;
         }
 
-        public Builder setSavedQueryId(String savedQueryId) {
+        public Builder savedQueryId(String savedQueryId) {
             this.savedQueryId = Input.of(Objects.requireNonNull(savedQueryId));
             return this;
         }
 
-        public Builder setV1Id(Input<String> v1Id) {
+        public Builder v1Id(Input<String> v1Id) {
             this.v1Id = Objects.requireNonNull(v1Id);
             return this;
         }
 
-        public Builder setV1Id(String v1Id) {
+        public Builder v1Id(String v1Id) {
             this.v1Id = Input.of(Objects.requireNonNull(v1Id));
             return this;
         }
 
-        public Builder setV1Id1(Input<String> v1Id1) {
+        public Builder v1Id1(Input<String> v1Id1) {
             this.v1Id1 = Objects.requireNonNull(v1Id1);
             return this;
         }
 
-        public Builder setV1Id1(String v1Id1) {
+        public Builder v1Id1(String v1Id1) {
             this.v1Id1 = Input.of(Objects.requireNonNull(v1Id1));
             return this;
         }

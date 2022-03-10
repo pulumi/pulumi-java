@@ -115,27 +115,27 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultResponse {
     	      this.testTime = defaults.testTime;
         }
 
-        public Builder setConversationTurns(List<GoogleCloudDialogflowCxV3ConversationTurnResponse> conversationTurns) {
+        public Builder conversationTurns(List<GoogleCloudDialogflowCxV3ConversationTurnResponse> conversationTurns) {
             this.conversationTurns = Objects.requireNonNull(conversationTurns);
             return this;
         }
 
-        public Builder setEnvironment(String environment) {
+        public Builder environment(String environment) {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTestResult(String testResult) {
+        public Builder testResult(String testResult) {
             this.testResult = Objects.requireNonNull(testResult);
             return this;
         }
 
-        public Builder setTestTime(String testTime) {
+        public Builder testTime(String testTime) {
             this.testTime = Objects.requireNonNull(testTime);
             return this;
         }

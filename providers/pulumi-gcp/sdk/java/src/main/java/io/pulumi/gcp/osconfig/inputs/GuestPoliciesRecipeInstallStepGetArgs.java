@@ -163,72 +163,72 @@ public final class GuestPoliciesRecipeInstallStepGetArgs extends io.pulumi.resou
     	      this.scriptRun = defaults.scriptRun;
         }
 
-        public Builder setArchiveExtraction(@Nullable Input<GuestPoliciesRecipeInstallStepArchiveExtractionGetArgs> archiveExtraction) {
+        public Builder archiveExtraction(@Nullable Input<GuestPoliciesRecipeInstallStepArchiveExtractionGetArgs> archiveExtraction) {
             this.archiveExtraction = archiveExtraction;
             return this;
         }
 
-        public Builder setArchiveExtraction(@Nullable GuestPoliciesRecipeInstallStepArchiveExtractionGetArgs archiveExtraction) {
+        public Builder archiveExtraction(@Nullable GuestPoliciesRecipeInstallStepArchiveExtractionGetArgs archiveExtraction) {
             this.archiveExtraction = Input.ofNullable(archiveExtraction);
             return this;
         }
 
-        public Builder setDpkgInstallation(@Nullable Input<GuestPoliciesRecipeInstallStepDpkgInstallationGetArgs> dpkgInstallation) {
+        public Builder dpkgInstallation(@Nullable Input<GuestPoliciesRecipeInstallStepDpkgInstallationGetArgs> dpkgInstallation) {
             this.dpkgInstallation = dpkgInstallation;
             return this;
         }
 
-        public Builder setDpkgInstallation(@Nullable GuestPoliciesRecipeInstallStepDpkgInstallationGetArgs dpkgInstallation) {
+        public Builder dpkgInstallation(@Nullable GuestPoliciesRecipeInstallStepDpkgInstallationGetArgs dpkgInstallation) {
             this.dpkgInstallation = Input.ofNullable(dpkgInstallation);
             return this;
         }
 
-        public Builder setFileCopy(@Nullable Input<GuestPoliciesRecipeInstallStepFileCopyGetArgs> fileCopy) {
+        public Builder fileCopy(@Nullable Input<GuestPoliciesRecipeInstallStepFileCopyGetArgs> fileCopy) {
             this.fileCopy = fileCopy;
             return this;
         }
 
-        public Builder setFileCopy(@Nullable GuestPoliciesRecipeInstallStepFileCopyGetArgs fileCopy) {
+        public Builder fileCopy(@Nullable GuestPoliciesRecipeInstallStepFileCopyGetArgs fileCopy) {
             this.fileCopy = Input.ofNullable(fileCopy);
             return this;
         }
 
-        public Builder setFileExec(@Nullable Input<GuestPoliciesRecipeInstallStepFileExecGetArgs> fileExec) {
+        public Builder fileExec(@Nullable Input<GuestPoliciesRecipeInstallStepFileExecGetArgs> fileExec) {
             this.fileExec = fileExec;
             return this;
         }
 
-        public Builder setFileExec(@Nullable GuestPoliciesRecipeInstallStepFileExecGetArgs fileExec) {
+        public Builder fileExec(@Nullable GuestPoliciesRecipeInstallStepFileExecGetArgs fileExec) {
             this.fileExec = Input.ofNullable(fileExec);
             return this;
         }
 
-        public Builder setMsiInstallation(@Nullable Input<GuestPoliciesRecipeInstallStepMsiInstallationGetArgs> msiInstallation) {
+        public Builder msiInstallation(@Nullable Input<GuestPoliciesRecipeInstallStepMsiInstallationGetArgs> msiInstallation) {
             this.msiInstallation = msiInstallation;
             return this;
         }
 
-        public Builder setMsiInstallation(@Nullable GuestPoliciesRecipeInstallStepMsiInstallationGetArgs msiInstallation) {
+        public Builder msiInstallation(@Nullable GuestPoliciesRecipeInstallStepMsiInstallationGetArgs msiInstallation) {
             this.msiInstallation = Input.ofNullable(msiInstallation);
             return this;
         }
 
-        public Builder setRpmInstallation(@Nullable Input<GuestPoliciesRecipeInstallStepRpmInstallationGetArgs> rpmInstallation) {
+        public Builder rpmInstallation(@Nullable Input<GuestPoliciesRecipeInstallStepRpmInstallationGetArgs> rpmInstallation) {
             this.rpmInstallation = rpmInstallation;
             return this;
         }
 
-        public Builder setRpmInstallation(@Nullable GuestPoliciesRecipeInstallStepRpmInstallationGetArgs rpmInstallation) {
+        public Builder rpmInstallation(@Nullable GuestPoliciesRecipeInstallStepRpmInstallationGetArgs rpmInstallation) {
             this.rpmInstallation = Input.ofNullable(rpmInstallation);
             return this;
         }
 
-        public Builder setScriptRun(@Nullable Input<GuestPoliciesRecipeInstallStepScriptRunGetArgs> scriptRun) {
+        public Builder scriptRun(@Nullable Input<GuestPoliciesRecipeInstallStepScriptRunGetArgs> scriptRun) {
             this.scriptRun = scriptRun;
             return this;
         }
 
-        public Builder setScriptRun(@Nullable GuestPoliciesRecipeInstallStepScriptRunGetArgs scriptRun) {
+        public Builder scriptRun(@Nullable GuestPoliciesRecipeInstallStepScriptRunGetArgs scriptRun) {
             this.scriptRun = Input.ofNullable(scriptRun);
             return this;
         }

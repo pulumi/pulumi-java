@@ -74,12 +74,12 @@ public final class ACIServiceResponseResponseVnetConfiguration extends io.pulumi
     	      this.vnetName = defaults.vnetName;
         }
 
-        public Builder setSubnetName(@Nullable String subnetName) {
+        public Builder subnetName(@Nullable String subnetName) {
             this.subnetName = subnetName;
             return this;
         }
 
-        public Builder setVnetName(@Nullable String vnetName) {
+        public Builder vnetName(@Nullable String vnetName) {
             this.vnetName = vnetName;
             return this;
         }

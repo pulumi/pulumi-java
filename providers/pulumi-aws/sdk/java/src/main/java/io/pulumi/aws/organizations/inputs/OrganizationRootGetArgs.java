@@ -104,42 +104,42 @@ public final class OrganizationRootGetArgs extends io.pulumi.resources.ResourceA
     	      this.policyTypes = defaults.policyTypes;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPolicyTypes(@Nullable Input<List<OrganizationRootPolicyTypeGetArgs>> policyTypes) {
+        public Builder policyTypes(@Nullable Input<List<OrganizationRootPolicyTypeGetArgs>> policyTypes) {
             this.policyTypes = policyTypes;
             return this;
         }
 
-        public Builder setPolicyTypes(@Nullable List<OrganizationRootPolicyTypeGetArgs> policyTypes) {
+        public Builder policyTypes(@Nullable List<OrganizationRootPolicyTypeGetArgs> policyTypes) {
             this.policyTypes = Input.ofNullable(policyTypes);
             return this;
         }

@@ -87,32 +87,32 @@ public final class TopicRuleRepublishGetArgs extends io.pulumi.resources.Resourc
     	      this.topic = defaults.topic;
         }
 
-        public Builder setQos(@Nullable Input<Integer> qos) {
+        public Builder qos(@Nullable Input<Integer> qos) {
             this.qos = qos;
             return this;
         }
 
-        public Builder setQos(@Nullable Integer qos) {
+        public Builder qos(@Nullable Integer qos) {
             this.qos = Input.ofNullable(qos);
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setTopic(Input<String> topic) {
+        public Builder topic(Input<String> topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
 
-        public Builder setTopic(String topic) {
+        public Builder topic(String topic) {
             this.topic = Input.of(Objects.requireNonNull(topic));
             return this;
         }

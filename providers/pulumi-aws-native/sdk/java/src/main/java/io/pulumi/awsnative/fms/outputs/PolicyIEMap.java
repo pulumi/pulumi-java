@@ -51,12 +51,12 @@ public final class PolicyIEMap {
     	      this.oRGUNIT = defaults.oRGUNIT;
         }
 
-        public Builder setACCOUNT(@Nullable List<String> aCCOUNT) {
+        public Builder aCCOUNT(@Nullable List<String> aCCOUNT) {
             this.aCCOUNT = aCCOUNT;
             return this;
         }
 
-        public Builder setORGUNIT(@Nullable List<String> oRGUNIT) {
+        public Builder oRGUNIT(@Nullable List<String> oRGUNIT) {
             this.oRGUNIT = oRGUNIT;
             return this;
         }

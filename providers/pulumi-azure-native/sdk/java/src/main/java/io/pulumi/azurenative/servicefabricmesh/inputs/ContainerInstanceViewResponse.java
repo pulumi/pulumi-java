@@ -109,22 +109,22 @@ public final class ContainerInstanceViewResponse extends io.pulumi.resources.Inv
     	      this.restartCount = defaults.restartCount;
         }
 
-        public Builder setCurrentState(@Nullable ContainerStateResponse currentState) {
+        public Builder currentState(@Nullable ContainerStateResponse currentState) {
             this.currentState = currentState;
             return this;
         }
 
-        public Builder setEvents(@Nullable List<ContainerEventResponse> events) {
+        public Builder events(@Nullable List<ContainerEventResponse> events) {
             this.events = events;
             return this;
         }
 
-        public Builder setPreviousState(@Nullable ContainerStateResponse previousState) {
+        public Builder previousState(@Nullable ContainerStateResponse previousState) {
             this.previousState = previousState;
             return this;
         }
 
-        public Builder setRestartCount(@Nullable Integer restartCount) {
+        public Builder restartCount(@Nullable Integer restartCount) {
             this.restartCount = restartCount;
             return this;
         }

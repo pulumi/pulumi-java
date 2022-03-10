@@ -166,82 +166,82 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userRole = defaults.userRole;
         }
 
-        public Builder setAwsAccountId(@Nullable Input<String> awsAccountId) {
+        public Builder awsAccountId(@Nullable Input<String> awsAccountId) {
             this.awsAccountId = awsAccountId;
             return this;
         }
 
-        public Builder setAwsAccountId(@Nullable String awsAccountId) {
+        public Builder awsAccountId(@Nullable String awsAccountId) {
             this.awsAccountId = Input.ofNullable(awsAccountId);
             return this;
         }
 
-        public Builder setEmail(Input<String> email) {
+        public Builder email(Input<String> email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Input.of(Objects.requireNonNull(email));
             return this;
         }
 
-        public Builder setIamArn(@Nullable Input<String> iamArn) {
+        public Builder iamArn(@Nullable Input<String> iamArn) {
             this.iamArn = iamArn;
             return this;
         }
 
-        public Builder setIamArn(@Nullable String iamArn) {
+        public Builder iamArn(@Nullable String iamArn) {
             this.iamArn = Input.ofNullable(iamArn);
             return this;
         }
 
-        public Builder setIdentityType(Input<String> identityType) {
+        public Builder identityType(Input<String> identityType) {
             this.identityType = Objects.requireNonNull(identityType);
             return this;
         }
 
-        public Builder setIdentityType(String identityType) {
+        public Builder identityType(String identityType) {
             this.identityType = Input.of(Objects.requireNonNull(identityType));
             return this;
         }
 
-        public Builder setNamespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Input<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = Input.ofNullable(namespace);
             return this;
         }
 
-        public Builder setSessionName(@Nullable Input<String> sessionName) {
+        public Builder sessionName(@Nullable Input<String> sessionName) {
             this.sessionName = sessionName;
             return this;
         }
 
-        public Builder setSessionName(@Nullable String sessionName) {
+        public Builder sessionName(@Nullable String sessionName) {
             this.sessionName = Input.ofNullable(sessionName);
             return this;
         }
 
-        public Builder setUserName(@Nullable Input<String> userName) {
+        public Builder userName(@Nullable Input<String> userName) {
             this.userName = userName;
             return this;
         }
 
-        public Builder setUserName(@Nullable String userName) {
+        public Builder userName(@Nullable String userName) {
             this.userName = Input.ofNullable(userName);
             return this;
         }
 
-        public Builder setUserRole(Input<String> userRole) {
+        public Builder userRole(Input<String> userRole) {
             this.userRole = Objects.requireNonNull(userRole);
             return this;
         }
 
-        public Builder setUserRole(String userRole) {
+        public Builder userRole(String userRole) {
             this.userRole = Input.of(Objects.requireNonNull(userRole));
             return this;
         }

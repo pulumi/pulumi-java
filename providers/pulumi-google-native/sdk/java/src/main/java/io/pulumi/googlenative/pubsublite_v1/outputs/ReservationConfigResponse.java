@@ -48,7 +48,7 @@ public final class ReservationConfigResponse {
     	      this.throughputReservation = defaults.throughputReservation;
         }
 
-        public Builder setThroughputReservation(String throughputReservation) {
+        public Builder throughputReservation(String throughputReservation) {
             this.throughputReservation = Objects.requireNonNull(throughputReservation);
             return this;
         }

@@ -302,82 +302,82 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
     	      this.replicationProviders = defaults.replicationProviders;
         }
 
-        public Builder setAllowedOperations(@Nullable List<String> allowedOperations) {
+        public Builder allowedOperations(@Nullable List<String> allowedOperations) {
             this.allowedOperations = allowedOperations;
             return this;
         }
 
-        public Builder setCurrentScenario(@Nullable CurrentScenarioDetailsResponse currentScenario) {
+        public Builder currentScenario(@Nullable CurrentScenarioDetailsResponse currentScenario) {
             this.currentScenario = currentScenario;
             return this;
         }
 
-        public Builder setCurrentScenarioStatus(@Nullable String currentScenarioStatus) {
+        public Builder currentScenarioStatus(@Nullable String currentScenarioStatus) {
             this.currentScenarioStatus = currentScenarioStatus;
             return this;
         }
 
-        public Builder setCurrentScenarioStatusDescription(@Nullable String currentScenarioStatusDescription) {
+        public Builder currentScenarioStatusDescription(@Nullable String currentScenarioStatusDescription) {
             this.currentScenarioStatusDescription = currentScenarioStatusDescription;
             return this;
         }
 
-        public Builder setFailoverDeploymentModel(@Nullable String failoverDeploymentModel) {
+        public Builder failoverDeploymentModel(@Nullable String failoverDeploymentModel) {
             this.failoverDeploymentModel = failoverDeploymentModel;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setGroups(@Nullable List<RecoveryPlanGroupResponse> groups) {
+        public Builder groups(@Nullable List<RecoveryPlanGroupResponse> groups) {
             this.groups = groups;
             return this;
         }
 
-        public Builder setLastPlannedFailoverTime(@Nullable String lastPlannedFailoverTime) {
+        public Builder lastPlannedFailoverTime(@Nullable String lastPlannedFailoverTime) {
             this.lastPlannedFailoverTime = lastPlannedFailoverTime;
             return this;
         }
 
-        public Builder setLastTestFailoverTime(@Nullable String lastTestFailoverTime) {
+        public Builder lastTestFailoverTime(@Nullable String lastTestFailoverTime) {
             this.lastTestFailoverTime = lastTestFailoverTime;
             return this;
         }
 
-        public Builder setLastUnplannedFailoverTime(@Nullable String lastUnplannedFailoverTime) {
+        public Builder lastUnplannedFailoverTime(@Nullable String lastUnplannedFailoverTime) {
             this.lastUnplannedFailoverTime = lastUnplannedFailoverTime;
             return this;
         }
 
-        public Builder setPrimaryFabricFriendlyName(@Nullable String primaryFabricFriendlyName) {
+        public Builder primaryFabricFriendlyName(@Nullable String primaryFabricFriendlyName) {
             this.primaryFabricFriendlyName = primaryFabricFriendlyName;
             return this;
         }
 
-        public Builder setPrimaryFabricId(@Nullable String primaryFabricId) {
+        public Builder primaryFabricId(@Nullable String primaryFabricId) {
             this.primaryFabricId = primaryFabricId;
             return this;
         }
 
-        public Builder setProviderSpecificDetails(List<RecoveryPlanA2ADetailsResponse> providerSpecificDetails) {
+        public Builder providerSpecificDetails(List<RecoveryPlanA2ADetailsResponse> providerSpecificDetails) {
             this.providerSpecificDetails = Objects.requireNonNull(providerSpecificDetails);
             return this;
         }
 
-        public Builder setRecoveryFabricFriendlyName(@Nullable String recoveryFabricFriendlyName) {
+        public Builder recoveryFabricFriendlyName(@Nullable String recoveryFabricFriendlyName) {
             this.recoveryFabricFriendlyName = recoveryFabricFriendlyName;
             return this;
         }
 
-        public Builder setRecoveryFabricId(@Nullable String recoveryFabricId) {
+        public Builder recoveryFabricId(@Nullable String recoveryFabricId) {
             this.recoveryFabricId = recoveryFabricId;
             return this;
         }
 
-        public Builder setReplicationProviders(@Nullable List<String> replicationProviders) {
+        public Builder replicationProviders(@Nullable List<String> replicationProviders) {
             this.replicationProviders = replicationProviders;
             return this;
         }

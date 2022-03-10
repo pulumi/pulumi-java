@@ -102,42 +102,42 @@ public final class GetPackageVersionResult {
     	      this.updatedLatestPatchVersion = defaults.updatedLatestPatchVersion;
         }
 
-        public Builder setIsLatestPatch(@Nullable Boolean isLatestPatch) {
+        public Builder isLatestPatch(@Nullable Boolean isLatestPatch) {
             this.isLatestPatch = isLatestPatch;
             return this;
         }
 
-        public Builder setMarkLatest(@Nullable Boolean markLatest) {
+        public Builder markLatest(@Nullable Boolean markLatest) {
             this.markLatest = markLatest;
             return this;
         }
 
-        public Builder setPackageArn(@Nullable String packageArn) {
+        public Builder packageArn(@Nullable String packageArn) {
             this.packageArn = packageArn;
             return this;
         }
 
-        public Builder setPackageName(@Nullable String packageName) {
+        public Builder packageName(@Nullable String packageName) {
             this.packageName = packageName;
             return this;
         }
 
-        public Builder setRegisteredTime(@Nullable Integer registeredTime) {
+        public Builder registeredTime(@Nullable Integer registeredTime) {
             this.registeredTime = registeredTime;
             return this;
         }
 
-        public Builder setStatus(@Nullable PackageVersionStatus status) {
+        public Builder status(@Nullable PackageVersionStatus status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatusDescription(@Nullable String statusDescription) {
+        public Builder statusDescription(@Nullable String statusDescription) {
             this.statusDescription = statusDescription;
             return this;
         }
 
-        public Builder setUpdatedLatestPatchVersion(@Nullable String updatedLatestPatchVersion) {
+        public Builder updatedLatestPatchVersion(@Nullable String updatedLatestPatchVersion) {
             this.updatedLatestPatchVersion = updatedLatestPatchVersion;
             return this;
         }

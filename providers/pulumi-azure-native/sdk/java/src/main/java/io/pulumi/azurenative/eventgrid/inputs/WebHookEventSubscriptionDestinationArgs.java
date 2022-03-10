@@ -140,62 +140,62 @@ public final class WebHookEventSubscriptionDestinationArgs extends io.pulumi.res
     	      this.preferredBatchSizeInKilobytes = defaults.preferredBatchSizeInKilobytes;
         }
 
-        public Builder setAzureActiveDirectoryApplicationIdOrUri(@Nullable Input<String> azureActiveDirectoryApplicationIdOrUri) {
+        public Builder azureActiveDirectoryApplicationIdOrUri(@Nullable Input<String> azureActiveDirectoryApplicationIdOrUri) {
             this.azureActiveDirectoryApplicationIdOrUri = azureActiveDirectoryApplicationIdOrUri;
             return this;
         }
 
-        public Builder setAzureActiveDirectoryApplicationIdOrUri(@Nullable String azureActiveDirectoryApplicationIdOrUri) {
+        public Builder azureActiveDirectoryApplicationIdOrUri(@Nullable String azureActiveDirectoryApplicationIdOrUri) {
             this.azureActiveDirectoryApplicationIdOrUri = Input.ofNullable(azureActiveDirectoryApplicationIdOrUri);
             return this;
         }
 
-        public Builder setAzureActiveDirectoryTenantId(@Nullable Input<String> azureActiveDirectoryTenantId) {
+        public Builder azureActiveDirectoryTenantId(@Nullable Input<String> azureActiveDirectoryTenantId) {
             this.azureActiveDirectoryTenantId = azureActiveDirectoryTenantId;
             return this;
         }
 
-        public Builder setAzureActiveDirectoryTenantId(@Nullable String azureActiveDirectoryTenantId) {
+        public Builder azureActiveDirectoryTenantId(@Nullable String azureActiveDirectoryTenantId) {
             this.azureActiveDirectoryTenantId = Input.ofNullable(azureActiveDirectoryTenantId);
             return this;
         }
 
-        public Builder setEndpointType(Input<String> endpointType) {
+        public Builder endpointType(Input<String> endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
 
-        public Builder setEndpointType(String endpointType) {
+        public Builder endpointType(String endpointType) {
             this.endpointType = Input.of(Objects.requireNonNull(endpointType));
             return this;
         }
 
-        public Builder setEndpointUrl(@Nullable Input<String> endpointUrl) {
+        public Builder endpointUrl(@Nullable Input<String> endpointUrl) {
             this.endpointUrl = endpointUrl;
             return this;
         }
 
-        public Builder setEndpointUrl(@Nullable String endpointUrl) {
+        public Builder endpointUrl(@Nullable String endpointUrl) {
             this.endpointUrl = Input.ofNullable(endpointUrl);
             return this;
         }
 
-        public Builder setMaxEventsPerBatch(@Nullable Input<Integer> maxEventsPerBatch) {
+        public Builder maxEventsPerBatch(@Nullable Input<Integer> maxEventsPerBatch) {
             this.maxEventsPerBatch = maxEventsPerBatch;
             return this;
         }
 
-        public Builder setMaxEventsPerBatch(@Nullable Integer maxEventsPerBatch) {
+        public Builder maxEventsPerBatch(@Nullable Integer maxEventsPerBatch) {
             this.maxEventsPerBatch = Input.ofNullable(maxEventsPerBatch);
             return this;
         }
 
-        public Builder setPreferredBatchSizeInKilobytes(@Nullable Input<Integer> preferredBatchSizeInKilobytes) {
+        public Builder preferredBatchSizeInKilobytes(@Nullable Input<Integer> preferredBatchSizeInKilobytes) {
             this.preferredBatchSizeInKilobytes = preferredBatchSizeInKilobytes;
             return this;
         }
 
-        public Builder setPreferredBatchSizeInKilobytes(@Nullable Integer preferredBatchSizeInKilobytes) {
+        public Builder preferredBatchSizeInKilobytes(@Nullable Integer preferredBatchSizeInKilobytes) {
             this.preferredBatchSizeInKilobytes = Input.ofNullable(preferredBatchSizeInKilobytes);
             return this;
         }

@@ -76,22 +76,22 @@ public final class SQLStorageSettingsArgs extends io.pulumi.resources.ResourceAr
     	      this.luns = defaults.luns;
         }
 
-        public Builder setDefaultFilePath(@Nullable Input<String> defaultFilePath) {
+        public Builder defaultFilePath(@Nullable Input<String> defaultFilePath) {
             this.defaultFilePath = defaultFilePath;
             return this;
         }
 
-        public Builder setDefaultFilePath(@Nullable String defaultFilePath) {
+        public Builder defaultFilePath(@Nullable String defaultFilePath) {
             this.defaultFilePath = Input.ofNullable(defaultFilePath);
             return this;
         }
 
-        public Builder setLuns(@Nullable Input<List<Integer>> luns) {
+        public Builder luns(@Nullable Input<List<Integer>> luns) {
             this.luns = luns;
             return this;
         }
 
-        public Builder setLuns(@Nullable List<Integer> luns) {
+        public Builder luns(@Nullable List<Integer> luns) {
             this.luns = Input.ofNullable(luns);
             return this;
         }

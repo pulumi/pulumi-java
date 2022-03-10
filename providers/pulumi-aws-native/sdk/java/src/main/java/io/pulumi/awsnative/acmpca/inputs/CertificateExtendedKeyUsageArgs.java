@@ -66,22 +66,22 @@ public final class CertificateExtendedKeyUsageArgs extends io.pulumi.resources.R
     	      this.extendedKeyUsageType = defaults.extendedKeyUsageType;
         }
 
-        public Builder setExtendedKeyUsageObjectIdentifier(@Nullable Input<String> extendedKeyUsageObjectIdentifier) {
+        public Builder extendedKeyUsageObjectIdentifier(@Nullable Input<String> extendedKeyUsageObjectIdentifier) {
             this.extendedKeyUsageObjectIdentifier = extendedKeyUsageObjectIdentifier;
             return this;
         }
 
-        public Builder setExtendedKeyUsageObjectIdentifier(@Nullable String extendedKeyUsageObjectIdentifier) {
+        public Builder extendedKeyUsageObjectIdentifier(@Nullable String extendedKeyUsageObjectIdentifier) {
             this.extendedKeyUsageObjectIdentifier = Input.ofNullable(extendedKeyUsageObjectIdentifier);
             return this;
         }
 
-        public Builder setExtendedKeyUsageType(@Nullable Input<String> extendedKeyUsageType) {
+        public Builder extendedKeyUsageType(@Nullable Input<String> extendedKeyUsageType) {
             this.extendedKeyUsageType = extendedKeyUsageType;
             return this;
         }
 
-        public Builder setExtendedKeyUsageType(@Nullable String extendedKeyUsageType) {
+        public Builder extendedKeyUsageType(@Nullable String extendedKeyUsageType) {
             this.extendedKeyUsageType = Input.ofNullable(extendedKeyUsageType);
             return this;
         }

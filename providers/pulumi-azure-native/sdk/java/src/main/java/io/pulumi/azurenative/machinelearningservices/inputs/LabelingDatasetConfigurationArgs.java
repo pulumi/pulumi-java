@@ -91,32 +91,32 @@ public final class LabelingDatasetConfigurationArgs extends io.pulumi.resources.
     	      this.enableIncrementalDatasetRefresh = defaults.enableIncrementalDatasetRefresh;
         }
 
-        public Builder setAssetName(Input<String> assetName) {
+        public Builder assetName(Input<String> assetName) {
             this.assetName = Objects.requireNonNull(assetName);
             return this;
         }
 
-        public Builder setAssetName(String assetName) {
+        public Builder assetName(String assetName) {
             this.assetName = Input.of(Objects.requireNonNull(assetName));
             return this;
         }
 
-        public Builder setDatasetVersion(Input<String> datasetVersion) {
+        public Builder datasetVersion(Input<String> datasetVersion) {
             this.datasetVersion = Objects.requireNonNull(datasetVersion);
             return this;
         }
 
-        public Builder setDatasetVersion(String datasetVersion) {
+        public Builder datasetVersion(String datasetVersion) {
             this.datasetVersion = Input.of(Objects.requireNonNull(datasetVersion));
             return this;
         }
 
-        public Builder setEnableIncrementalDatasetRefresh(@Nullable Input<Boolean> enableIncrementalDatasetRefresh) {
+        public Builder enableIncrementalDatasetRefresh(@Nullable Input<Boolean> enableIncrementalDatasetRefresh) {
             this.enableIncrementalDatasetRefresh = enableIncrementalDatasetRefresh;
             return this;
         }
 
-        public Builder setEnableIncrementalDatasetRefresh(@Nullable Boolean enableIncrementalDatasetRefresh) {
+        public Builder enableIncrementalDatasetRefresh(@Nullable Boolean enableIncrementalDatasetRefresh) {
             this.enableIncrementalDatasetRefresh = Input.ofNullable(enableIncrementalDatasetRefresh);
             return this;
         }

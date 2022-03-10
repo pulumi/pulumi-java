@@ -91,32 +91,32 @@ public final class IPConfigurationProfileArgs extends io.pulumi.resources.Resour
     	      this.subnet = defaults.subnet;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSubnet(@Nullable Input<SubnetArgs> subnet) {
+        public Builder subnet(@Nullable Input<SubnetArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
 
-        public Builder setSubnet(@Nullable SubnetArgs subnet) {
+        public Builder subnet(@Nullable SubnetArgs subnet) {
             this.subnet = Input.ofNullable(subnet);
             return this;
         }

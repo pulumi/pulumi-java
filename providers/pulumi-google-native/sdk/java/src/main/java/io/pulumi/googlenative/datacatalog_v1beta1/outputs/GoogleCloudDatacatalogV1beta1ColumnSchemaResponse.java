@@ -114,27 +114,27 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setColumn(String column) {
+        public Builder column(String column) {
             this.column = Objects.requireNonNull(column);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setMode(String mode) {
+        public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
-        public Builder setSubcolumns(List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> subcolumns) {
+        public Builder subcolumns(List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> subcolumns) {
             this.subcolumns = Objects.requireNonNull(subcolumns);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

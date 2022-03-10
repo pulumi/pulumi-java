@@ -172,52 +172,52 @@ public final class GetFolderResult {
     	      this.parent = defaults.parent;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setFolder(String folder) {
+        public Builder folder(String folder) {
             this.folder = Objects.requireNonNull(folder);
             return this;
         }
 
-        public Builder setFolderId(String folderId) {
+        public Builder folderId(String folderId) {
             this.folderId = Objects.requireNonNull(folderId);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLifecycleState(String lifecycleState) {
+        public Builder lifecycleState(String lifecycleState) {
             this.lifecycleState = Objects.requireNonNull(lifecycleState);
             return this;
         }
 
-        public Builder setLookupOrganization(@Nullable Boolean lookupOrganization) {
+        public Builder lookupOrganization(@Nullable Boolean lookupOrganization) {
             this.lookupOrganization = lookupOrganization;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOrganization(String organization) {
+        public Builder organization(String organization) {
             this.organization = Objects.requireNonNull(organization);
             return this;
         }
 
-        public Builder setParent(String parent) {
+        public Builder parent(String parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }

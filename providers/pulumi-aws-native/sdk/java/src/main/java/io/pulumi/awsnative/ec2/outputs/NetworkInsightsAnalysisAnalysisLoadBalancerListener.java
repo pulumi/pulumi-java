@@ -51,12 +51,12 @@ public final class NetworkInsightsAnalysisAnalysisLoadBalancerListener {
     	      this.loadBalancerPort = defaults.loadBalancerPort;
         }
 
-        public Builder setInstancePort(@Nullable Integer instancePort) {
+        public Builder instancePort(@Nullable Integer instancePort) {
             this.instancePort = instancePort;
             return this;
         }
 
-        public Builder setLoadBalancerPort(@Nullable Integer loadBalancerPort) {
+        public Builder loadBalancerPort(@Nullable Integer loadBalancerPort) {
             this.loadBalancerPort = loadBalancerPort;
             return this;
         }

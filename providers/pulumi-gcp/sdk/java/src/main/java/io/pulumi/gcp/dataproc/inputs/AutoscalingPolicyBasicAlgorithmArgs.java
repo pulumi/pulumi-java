@@ -74,22 +74,22 @@ public final class AutoscalingPolicyBasicAlgorithmArgs extends io.pulumi.resourc
     	      this.yarnConfig = defaults.yarnConfig;
         }
 
-        public Builder setCooldownPeriod(@Nullable Input<String> cooldownPeriod) {
+        public Builder cooldownPeriod(@Nullable Input<String> cooldownPeriod) {
             this.cooldownPeriod = cooldownPeriod;
             return this;
         }
 
-        public Builder setCooldownPeriod(@Nullable String cooldownPeriod) {
+        public Builder cooldownPeriod(@Nullable String cooldownPeriod) {
             this.cooldownPeriod = Input.ofNullable(cooldownPeriod);
             return this;
         }
 
-        public Builder setYarnConfig(Input<AutoscalingPolicyBasicAlgorithmYarnConfigArgs> yarnConfig) {
+        public Builder yarnConfig(Input<AutoscalingPolicyBasicAlgorithmYarnConfigArgs> yarnConfig) {
             this.yarnConfig = Objects.requireNonNull(yarnConfig);
             return this;
         }
 
-        public Builder setYarnConfig(AutoscalingPolicyBasicAlgorithmYarnConfigArgs yarnConfig) {
+        public Builder yarnConfig(AutoscalingPolicyBasicAlgorithmYarnConfigArgs yarnConfig) {
             this.yarnConfig = Input.of(Objects.requireNonNull(yarnConfig));
             return this;
         }

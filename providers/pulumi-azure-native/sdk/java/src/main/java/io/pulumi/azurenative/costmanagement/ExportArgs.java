@@ -155,72 +155,72 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scope = defaults.scope;
         }
 
-        public Builder setDefinition(Input<ExportDefinitionArgs> definition) {
+        public Builder definition(Input<ExportDefinitionArgs> definition) {
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
 
-        public Builder setDefinition(ExportDefinitionArgs definition) {
+        public Builder definition(ExportDefinitionArgs definition) {
             this.definition = Input.of(Objects.requireNonNull(definition));
             return this;
         }
 
-        public Builder setDeliveryInfo(Input<ExportDeliveryInfoArgs> deliveryInfo) {
+        public Builder deliveryInfo(Input<ExportDeliveryInfoArgs> deliveryInfo) {
             this.deliveryInfo = Objects.requireNonNull(deliveryInfo);
             return this;
         }
 
-        public Builder setDeliveryInfo(ExportDeliveryInfoArgs deliveryInfo) {
+        public Builder deliveryInfo(ExportDeliveryInfoArgs deliveryInfo) {
             this.deliveryInfo = Input.of(Objects.requireNonNull(deliveryInfo));
             return this;
         }
 
-        public Builder setETag(@Nullable Input<String> eTag) {
+        public Builder eTag(@Nullable Input<String> eTag) {
             this.eTag = eTag;
             return this;
         }
 
-        public Builder setETag(@Nullable String eTag) {
+        public Builder eTag(@Nullable String eTag) {
             this.eTag = Input.ofNullable(eTag);
             return this;
         }
 
-        public Builder setExportName(@Nullable Input<String> exportName) {
+        public Builder exportName(@Nullable Input<String> exportName) {
             this.exportName = exportName;
             return this;
         }
 
-        public Builder setExportName(@Nullable String exportName) {
+        public Builder exportName(@Nullable String exportName) {
             this.exportName = Input.ofNullable(exportName);
             return this;
         }
 
-        public Builder setFormat(@Nullable Input<Either<String,FormatType>> format) {
+        public Builder format(@Nullable Input<Either<String,FormatType>> format) {
             this.format = format;
             return this;
         }
 
-        public Builder setFormat(@Nullable Either<String,FormatType> format) {
+        public Builder format(@Nullable Either<String,FormatType> format) {
             this.format = Input.ofNullable(format);
             return this;
         }
 
-        public Builder setSchedule(@Nullable Input<ExportScheduleArgs> schedule) {
+        public Builder schedule(@Nullable Input<ExportScheduleArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setSchedule(@Nullable ExportScheduleArgs schedule) {
+        public Builder schedule(@Nullable ExportScheduleArgs schedule) {
             this.schedule = Input.ofNullable(schedule);
             return this;
         }
 
-        public Builder setScope(Input<String> scope) {
+        public Builder scope(Input<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Input.of(Objects.requireNonNull(scope));
             return this;
         }

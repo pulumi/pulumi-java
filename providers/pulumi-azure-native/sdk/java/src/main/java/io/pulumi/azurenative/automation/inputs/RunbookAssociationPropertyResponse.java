@@ -57,7 +57,7 @@ public final class RunbookAssociationPropertyResponse extends io.pulumi.resource
     	      this.name = defaults.name;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

@@ -102,22 +102,22 @@ public final class ClusterRestoreToPointInTime {
     	      this.useLatestRestorableTime = defaults.useLatestRestorableTime;
         }
 
-        public Builder setRestoreToTime(@Nullable String restoreToTime) {
+        public Builder restoreToTime(@Nullable String restoreToTime) {
             this.restoreToTime = restoreToTime;
             return this;
         }
 
-        public Builder setRestoreType(@Nullable String restoreType) {
+        public Builder restoreType(@Nullable String restoreType) {
             this.restoreType = restoreType;
             return this;
         }
 
-        public Builder setSourceClusterIdentifier(String sourceClusterIdentifier) {
+        public Builder sourceClusterIdentifier(String sourceClusterIdentifier) {
             this.sourceClusterIdentifier = Objects.requireNonNull(sourceClusterIdentifier);
             return this;
         }
 
-        public Builder setUseLatestRestorableTime(@Nullable Boolean useLatestRestorableTime) {
+        public Builder useLatestRestorableTime(@Nullable Boolean useLatestRestorableTime) {
             this.useLatestRestorableTime = useLatestRestorableTime;
             return this;
         }

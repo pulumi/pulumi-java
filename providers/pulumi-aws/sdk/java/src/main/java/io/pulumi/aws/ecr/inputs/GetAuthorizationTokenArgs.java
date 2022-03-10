@@ -53,7 +53,7 @@ public final class GetAuthorizationTokenArgs extends io.pulumi.resources.InvokeA
     	      this.registryId = defaults.registryId;
         }
 
-        public Builder setRegistryId(@Nullable String registryId) {
+        public Builder registryId(@Nullable String registryId) {
             this.registryId = registryId;
             return this;
         }

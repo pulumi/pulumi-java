@@ -150,92 +150,92 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setDeleteProtection(@Nullable Input<Boolean> deleteProtection) {
+        public Builder deleteProtection(@Nullable Input<Boolean> deleteProtection) {
             this.deleteProtection = deleteProtection;
             return this;
         }
 
-        public Builder setDeleteProtection(@Nullable Boolean deleteProtection) {
+        public Builder deleteProtection(@Nullable Boolean deleteProtection) {
             this.deleteProtection = Input.ofNullable(deleteProtection);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFirewallName(@Nullable Input<String> firewallName) {
+        public Builder firewallName(@Nullable Input<String> firewallName) {
             this.firewallName = firewallName;
             return this;
         }
 
-        public Builder setFirewallName(@Nullable String firewallName) {
+        public Builder firewallName(@Nullable String firewallName) {
             this.firewallName = Input.ofNullable(firewallName);
             return this;
         }
 
-        public Builder setFirewallPolicyArn(Input<String> firewallPolicyArn) {
+        public Builder firewallPolicyArn(Input<String> firewallPolicyArn) {
             this.firewallPolicyArn = Objects.requireNonNull(firewallPolicyArn);
             return this;
         }
 
-        public Builder setFirewallPolicyArn(String firewallPolicyArn) {
+        public Builder firewallPolicyArn(String firewallPolicyArn) {
             this.firewallPolicyArn = Input.of(Objects.requireNonNull(firewallPolicyArn));
             return this;
         }
 
-        public Builder setFirewallPolicyChangeProtection(@Nullable Input<Boolean> firewallPolicyChangeProtection) {
+        public Builder firewallPolicyChangeProtection(@Nullable Input<Boolean> firewallPolicyChangeProtection) {
             this.firewallPolicyChangeProtection = firewallPolicyChangeProtection;
             return this;
         }
 
-        public Builder setFirewallPolicyChangeProtection(@Nullable Boolean firewallPolicyChangeProtection) {
+        public Builder firewallPolicyChangeProtection(@Nullable Boolean firewallPolicyChangeProtection) {
             this.firewallPolicyChangeProtection = Input.ofNullable(firewallPolicyChangeProtection);
             return this;
         }
 
-        public Builder setSubnetChangeProtection(@Nullable Input<Boolean> subnetChangeProtection) {
+        public Builder subnetChangeProtection(@Nullable Input<Boolean> subnetChangeProtection) {
             this.subnetChangeProtection = subnetChangeProtection;
             return this;
         }
 
-        public Builder setSubnetChangeProtection(@Nullable Boolean subnetChangeProtection) {
+        public Builder subnetChangeProtection(@Nullable Boolean subnetChangeProtection) {
             this.subnetChangeProtection = Input.ofNullable(subnetChangeProtection);
             return this;
         }
 
-        public Builder setSubnetMappings(Input<List<FirewallSubnetMappingArgs>> subnetMappings) {
+        public Builder subnetMappings(Input<List<FirewallSubnetMappingArgs>> subnetMappings) {
             this.subnetMappings = Objects.requireNonNull(subnetMappings);
             return this;
         }
 
-        public Builder setSubnetMappings(List<FirewallSubnetMappingArgs> subnetMappings) {
+        public Builder subnetMappings(List<FirewallSubnetMappingArgs> subnetMappings) {
             this.subnetMappings = Input.of(Objects.requireNonNull(subnetMappings));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<FirewallTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<FirewallTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<FirewallTagArgs> tags) {
+        public Builder tags(@Nullable List<FirewallTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVpcId(Input<String> vpcId) {
+        public Builder vpcId(Input<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Input.of(Objects.requireNonNull(vpcId));
             return this;
         }

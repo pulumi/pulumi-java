@@ -122,52 +122,52 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceRuntimeSubnetId = defaults.serviceRuntimeSubnetId;
         }
 
-        public Builder setAppNetworkResourceGroup(@Nullable Input<String> appNetworkResourceGroup) {
+        public Builder appNetworkResourceGroup(@Nullable Input<String> appNetworkResourceGroup) {
             this.appNetworkResourceGroup = appNetworkResourceGroup;
             return this;
         }
 
-        public Builder setAppNetworkResourceGroup(@Nullable String appNetworkResourceGroup) {
+        public Builder appNetworkResourceGroup(@Nullable String appNetworkResourceGroup) {
             this.appNetworkResourceGroup = Input.ofNullable(appNetworkResourceGroup);
             return this;
         }
 
-        public Builder setAppSubnetId(@Nullable Input<String> appSubnetId) {
+        public Builder appSubnetId(@Nullable Input<String> appSubnetId) {
             this.appSubnetId = appSubnetId;
             return this;
         }
 
-        public Builder setAppSubnetId(@Nullable String appSubnetId) {
+        public Builder appSubnetId(@Nullable String appSubnetId) {
             this.appSubnetId = Input.ofNullable(appSubnetId);
             return this;
         }
 
-        public Builder setServiceCidr(@Nullable Input<String> serviceCidr) {
+        public Builder serviceCidr(@Nullable Input<String> serviceCidr) {
             this.serviceCidr = serviceCidr;
             return this;
         }
 
-        public Builder setServiceCidr(@Nullable String serviceCidr) {
+        public Builder serviceCidr(@Nullable String serviceCidr) {
             this.serviceCidr = Input.ofNullable(serviceCidr);
             return this;
         }
 
-        public Builder setServiceRuntimeNetworkResourceGroup(@Nullable Input<String> serviceRuntimeNetworkResourceGroup) {
+        public Builder serviceRuntimeNetworkResourceGroup(@Nullable Input<String> serviceRuntimeNetworkResourceGroup) {
             this.serviceRuntimeNetworkResourceGroup = serviceRuntimeNetworkResourceGroup;
             return this;
         }
 
-        public Builder setServiceRuntimeNetworkResourceGroup(@Nullable String serviceRuntimeNetworkResourceGroup) {
+        public Builder serviceRuntimeNetworkResourceGroup(@Nullable String serviceRuntimeNetworkResourceGroup) {
             this.serviceRuntimeNetworkResourceGroup = Input.ofNullable(serviceRuntimeNetworkResourceGroup);
             return this;
         }
 
-        public Builder setServiceRuntimeSubnetId(@Nullable Input<String> serviceRuntimeSubnetId) {
+        public Builder serviceRuntimeSubnetId(@Nullable Input<String> serviceRuntimeSubnetId) {
             this.serviceRuntimeSubnetId = serviceRuntimeSubnetId;
             return this;
         }
 
-        public Builder setServiceRuntimeSubnetId(@Nullable String serviceRuntimeSubnetId) {
+        public Builder serviceRuntimeSubnetId(@Nullable String serviceRuntimeSubnetId) {
             this.serviceRuntimeSubnetId = Input.ofNullable(serviceRuntimeSubnetId);
             return this;
         }

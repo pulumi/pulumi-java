@@ -103,42 +103,42 @@ public final class EventConnectionArgs extends io.pulumi.resources.ResourceArgs 
     	      this.name = defaults.name;
         }
 
-        public Builder setAuthParameters(Input<EventConnectionAuthParametersArgs> authParameters) {
+        public Builder authParameters(Input<EventConnectionAuthParametersArgs> authParameters) {
             this.authParameters = Objects.requireNonNull(authParameters);
             return this;
         }
 
-        public Builder setAuthParameters(EventConnectionAuthParametersArgs authParameters) {
+        public Builder authParameters(EventConnectionAuthParametersArgs authParameters) {
             this.authParameters = Input.of(Objects.requireNonNull(authParameters));
             return this;
         }
 
-        public Builder setAuthorizationType(Input<String> authorizationType) {
+        public Builder authorizationType(Input<String> authorizationType) {
             this.authorizationType = Objects.requireNonNull(authorizationType);
             return this;
         }
 
-        public Builder setAuthorizationType(String authorizationType) {
+        public Builder authorizationType(String authorizationType) {
             this.authorizationType = Input.of(Objects.requireNonNull(authorizationType));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

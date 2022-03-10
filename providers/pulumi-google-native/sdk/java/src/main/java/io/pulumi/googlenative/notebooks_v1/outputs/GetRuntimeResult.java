@@ -181,47 +181,47 @@ public final class GetRuntimeResult {
     	      this.virtualMachine = defaults.virtualMachine;
         }
 
-        public Builder setAccessConfig(RuntimeAccessConfigResponse accessConfig) {
+        public Builder accessConfig(RuntimeAccessConfigResponse accessConfig) {
             this.accessConfig = Objects.requireNonNull(accessConfig);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setHealthState(String healthState) {
+        public Builder healthState(String healthState) {
             this.healthState = Objects.requireNonNull(healthState);
             return this;
         }
 
-        public Builder setMetrics(RuntimeMetricsResponse metrics) {
+        public Builder metrics(RuntimeMetricsResponse metrics) {
             this.metrics = Objects.requireNonNull(metrics);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSoftwareConfig(RuntimeSoftwareConfigResponse softwareConfig) {
+        public Builder softwareConfig(RuntimeSoftwareConfigResponse softwareConfig) {
             this.softwareConfig = Objects.requireNonNull(softwareConfig);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
 
-        public Builder setVirtualMachine(VirtualMachineResponse virtualMachine) {
+        public Builder virtualMachine(VirtualMachineResponse virtualMachine) {
             this.virtualMachine = Objects.requireNonNull(virtualMachine);
             return this;
         }

@@ -84,17 +84,17 @@ public final class GetIntegrationAccountAgreementArgs extends io.pulumi.resource
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAgreementName(String agreementName) {
+        public Builder agreementName(String agreementName) {
             this.agreementName = Objects.requireNonNull(agreementName);
             return this;
         }
 
-        public Builder setIntegrationAccountName(String integrationAccountName) {
+        public Builder integrationAccountName(String integrationAccountName) {
             this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

@@ -143,7 +143,8 @@ func (id Property) Getter() string {
 
 // The name of a setter for this property.
 func (id Property) Setter() string {
-	return id.safePrefix("set")
+	setter := id.safePrefix("")
+	return strings.ToLower(setter[0:1]) + setter[1:]
 }
 
 // Title converts the input string to a title cased string.

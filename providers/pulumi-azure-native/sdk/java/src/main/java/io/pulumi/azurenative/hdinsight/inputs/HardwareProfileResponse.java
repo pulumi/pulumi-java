@@ -57,7 +57,7 @@ public final class HardwareProfileResponse extends io.pulumi.resources.InvokeArg
     	      this.vmSize = defaults.vmSize;
         }
 
-        public Builder setVmSize(@Nullable String vmSize) {
+        public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = vmSize;
             return this;
         }

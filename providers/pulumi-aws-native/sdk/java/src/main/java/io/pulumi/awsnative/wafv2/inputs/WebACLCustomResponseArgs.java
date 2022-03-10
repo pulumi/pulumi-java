@@ -89,32 +89,32 @@ public final class WebACLCustomResponseArgs extends io.pulumi.resources.Resource
     	      this.responseHeaders = defaults.responseHeaders;
         }
 
-        public Builder setCustomResponseBodyKey(@Nullable Input<String> customResponseBodyKey) {
+        public Builder customResponseBodyKey(@Nullable Input<String> customResponseBodyKey) {
             this.customResponseBodyKey = customResponseBodyKey;
             return this;
         }
 
-        public Builder setCustomResponseBodyKey(@Nullable String customResponseBodyKey) {
+        public Builder customResponseBodyKey(@Nullable String customResponseBodyKey) {
             this.customResponseBodyKey = Input.ofNullable(customResponseBodyKey);
             return this;
         }
 
-        public Builder setResponseCode(Input<Integer> responseCode) {
+        public Builder responseCode(Input<Integer> responseCode) {
             this.responseCode = Objects.requireNonNull(responseCode);
             return this;
         }
 
-        public Builder setResponseCode(Integer responseCode) {
+        public Builder responseCode(Integer responseCode) {
             this.responseCode = Input.of(Objects.requireNonNull(responseCode));
             return this;
         }
 
-        public Builder setResponseHeaders(@Nullable Input<List<WebACLCustomHTTPHeaderArgs>> responseHeaders) {
+        public Builder responseHeaders(@Nullable Input<List<WebACLCustomHTTPHeaderArgs>> responseHeaders) {
             this.responseHeaders = responseHeaders;
             return this;
         }
 
-        public Builder setResponseHeaders(@Nullable List<WebACLCustomHTTPHeaderArgs> responseHeaders) {
+        public Builder responseHeaders(@Nullable List<WebACLCustomHTTPHeaderArgs> responseHeaders) {
             this.responseHeaders = Input.ofNullable(responseHeaders);
             return this;
         }

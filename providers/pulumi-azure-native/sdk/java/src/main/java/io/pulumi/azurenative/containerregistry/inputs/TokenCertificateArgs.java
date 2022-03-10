@@ -104,42 +104,42 @@ public final class TokenCertificateArgs extends io.pulumi.resources.ResourceArgs
     	      this.thumbprint = defaults.thumbprint;
         }
 
-        public Builder setEncodedPemCertificate(@Nullable Input<String> encodedPemCertificate) {
+        public Builder encodedPemCertificate(@Nullable Input<String> encodedPemCertificate) {
             this.encodedPemCertificate = encodedPemCertificate;
             return this;
         }
 
-        public Builder setEncodedPemCertificate(@Nullable String encodedPemCertificate) {
+        public Builder encodedPemCertificate(@Nullable String encodedPemCertificate) {
             this.encodedPemCertificate = Input.ofNullable(encodedPemCertificate);
             return this;
         }
 
-        public Builder setExpiry(@Nullable Input<String> expiry) {
+        public Builder expiry(@Nullable Input<String> expiry) {
             this.expiry = expiry;
             return this;
         }
 
-        public Builder setExpiry(@Nullable String expiry) {
+        public Builder expiry(@Nullable String expiry) {
             this.expiry = Input.ofNullable(expiry);
             return this;
         }
 
-        public Builder setName(@Nullable Input<Either<String,TokenCertificateName>> name) {
+        public Builder name(@Nullable Input<Either<String,TokenCertificateName>> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable Either<String,TokenCertificateName> name) {
+        public Builder name(@Nullable Either<String,TokenCertificateName> name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setThumbprint(@Nullable Input<String> thumbprint) {
+        public Builder thumbprint(@Nullable Input<String> thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }
 
-        public Builder setThumbprint(@Nullable String thumbprint) {
+        public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = Input.ofNullable(thumbprint);
             return this;
         }

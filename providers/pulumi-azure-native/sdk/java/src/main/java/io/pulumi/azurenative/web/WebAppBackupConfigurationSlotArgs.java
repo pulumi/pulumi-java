@@ -186,92 +186,92 @@ public final class WebAppBackupConfigurationSlotArgs extends io.pulumi.resources
     	      this.storageAccountUrl = defaults.storageAccountUrl;
         }
 
-        public Builder setBackupName(@Nullable Input<String> backupName) {
+        public Builder backupName(@Nullable Input<String> backupName) {
             this.backupName = backupName;
             return this;
         }
 
-        public Builder setBackupName(@Nullable String backupName) {
+        public Builder backupName(@Nullable String backupName) {
             this.backupName = Input.ofNullable(backupName);
             return this;
         }
 
-        public Builder setBackupSchedule(@Nullable Input<BackupScheduleArgs> backupSchedule) {
+        public Builder backupSchedule(@Nullable Input<BackupScheduleArgs> backupSchedule) {
             this.backupSchedule = backupSchedule;
             return this;
         }
 
-        public Builder setBackupSchedule(@Nullable BackupScheduleArgs backupSchedule) {
+        public Builder backupSchedule(@Nullable BackupScheduleArgs backupSchedule) {
             this.backupSchedule = Input.ofNullable(backupSchedule);
             return this;
         }
 
-        public Builder setDatabases(@Nullable Input<List<DatabaseBackupSettingArgs>> databases) {
+        public Builder databases(@Nullable Input<List<DatabaseBackupSettingArgs>> databases) {
             this.databases = databases;
             return this;
         }
 
-        public Builder setDatabases(@Nullable List<DatabaseBackupSettingArgs> databases) {
+        public Builder databases(@Nullable List<DatabaseBackupSettingArgs> databases) {
             this.databases = Input.ofNullable(databases);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSlot(Input<String> slot) {
+        public Builder slot(Input<String> slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
         }
 
-        public Builder setSlot(String slot) {
+        public Builder slot(String slot) {
             this.slot = Input.of(Objects.requireNonNull(slot));
             return this;
         }
 
-        public Builder setStorageAccountUrl(Input<String> storageAccountUrl) {
+        public Builder storageAccountUrl(Input<String> storageAccountUrl) {
             this.storageAccountUrl = Objects.requireNonNull(storageAccountUrl);
             return this;
         }
 
-        public Builder setStorageAccountUrl(String storageAccountUrl) {
+        public Builder storageAccountUrl(String storageAccountUrl) {
             this.storageAccountUrl = Input.of(Objects.requireNonNull(storageAccountUrl));
             return this;
         }

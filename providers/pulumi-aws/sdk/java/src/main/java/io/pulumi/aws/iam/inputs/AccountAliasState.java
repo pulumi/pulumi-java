@@ -53,12 +53,12 @@ public final class AccountAliasState extends io.pulumi.resources.ResourceArgs {
     	      this.accountAlias = defaults.accountAlias;
         }
 
-        public Builder setAccountAlias(@Nullable Input<String> accountAlias) {
+        public Builder accountAlias(@Nullable Input<String> accountAlias) {
             this.accountAlias = accountAlias;
             return this;
         }
 
-        public Builder setAccountAlias(@Nullable String accountAlias) {
+        public Builder accountAlias(@Nullable String accountAlias) {
             this.accountAlias = Input.ofNullable(accountAlias);
             return this;
         }

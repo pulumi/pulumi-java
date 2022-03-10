@@ -85,17 +85,17 @@ public final class FlowDestinationFlowConfig {
     	      this.destinationConnectorProperties = defaults.destinationConnectorProperties;
         }
 
-        public Builder setConnectorProfileName(@Nullable String connectorProfileName) {
+        public Builder connectorProfileName(@Nullable String connectorProfileName) {
             this.connectorProfileName = connectorProfileName;
             return this;
         }
 
-        public Builder setConnectorType(FlowConnectorType connectorType) {
+        public Builder connectorType(FlowConnectorType connectorType) {
             this.connectorType = Objects.requireNonNull(connectorType);
             return this;
         }
 
-        public Builder setDestinationConnectorProperties(FlowDestinationConnectorProperties destinationConnectorProperties) {
+        public Builder destinationConnectorProperties(FlowDestinationConnectorProperties destinationConnectorProperties) {
             this.destinationConnectorProperties = Objects.requireNonNull(destinationConnectorProperties);
             return this;
         }

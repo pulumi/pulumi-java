@@ -136,62 +136,62 @@ public final class EndpointConfigurationProductionVariantArgs extends io.pulumi.
     	      this.variantName = defaults.variantName;
         }
 
-        public Builder setAcceleratorType(@Nullable Input<String> acceleratorType) {
+        public Builder acceleratorType(@Nullable Input<String> acceleratorType) {
             this.acceleratorType = acceleratorType;
             return this;
         }
 
-        public Builder setAcceleratorType(@Nullable String acceleratorType) {
+        public Builder acceleratorType(@Nullable String acceleratorType) {
             this.acceleratorType = Input.ofNullable(acceleratorType);
             return this;
         }
 
-        public Builder setInitialInstanceCount(Input<Integer> initialInstanceCount) {
+        public Builder initialInstanceCount(Input<Integer> initialInstanceCount) {
             this.initialInstanceCount = Objects.requireNonNull(initialInstanceCount);
             return this;
         }
 
-        public Builder setInitialInstanceCount(Integer initialInstanceCount) {
+        public Builder initialInstanceCount(Integer initialInstanceCount) {
             this.initialInstanceCount = Input.of(Objects.requireNonNull(initialInstanceCount));
             return this;
         }
 
-        public Builder setInitialVariantWeight(@Nullable Input<Double> initialVariantWeight) {
+        public Builder initialVariantWeight(@Nullable Input<Double> initialVariantWeight) {
             this.initialVariantWeight = initialVariantWeight;
             return this;
         }
 
-        public Builder setInitialVariantWeight(@Nullable Double initialVariantWeight) {
+        public Builder initialVariantWeight(@Nullable Double initialVariantWeight) {
             this.initialVariantWeight = Input.ofNullable(initialVariantWeight);
             return this;
         }
 
-        public Builder setInstanceType(Input<String> instanceType) {
+        public Builder instanceType(Input<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Input.of(Objects.requireNonNull(instanceType));
             return this;
         }
 
-        public Builder setModelName(Input<String> modelName) {
+        public Builder modelName(Input<String> modelName) {
             this.modelName = Objects.requireNonNull(modelName);
             return this;
         }
 
-        public Builder setModelName(String modelName) {
+        public Builder modelName(String modelName) {
             this.modelName = Input.of(Objects.requireNonNull(modelName));
             return this;
         }
 
-        public Builder setVariantName(@Nullable Input<String> variantName) {
+        public Builder variantName(@Nullable Input<String> variantName) {
             this.variantName = variantName;
             return this;
         }
 
-        public Builder setVariantName(@Nullable String variantName) {
+        public Builder variantName(@Nullable String variantName) {
             this.variantName = Input.ofNullable(variantName);
             return this;
         }

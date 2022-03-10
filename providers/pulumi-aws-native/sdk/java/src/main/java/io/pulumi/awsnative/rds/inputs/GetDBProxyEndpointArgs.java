@@ -51,7 +51,7 @@ public final class GetDBProxyEndpointArgs extends io.pulumi.resources.InvokeArgs
     	      this.dBProxyEndpointName = defaults.dBProxyEndpointName;
         }
 
-        public Builder setDBProxyEndpointName(String dBProxyEndpointName) {
+        public Builder dBProxyEndpointName(String dBProxyEndpointName) {
             this.dBProxyEndpointName = Objects.requireNonNull(dBProxyEndpointName);
             return this;
         }

@@ -91,32 +91,32 @@ public final class ForwardProxyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.customProtoHeaderName = defaults.customProtoHeaderName;
         }
 
-        public Builder setConvention(@Nullable Input<ForwardProxyConvention> convention) {
+        public Builder convention(@Nullable Input<ForwardProxyConvention> convention) {
             this.convention = convention;
             return this;
         }
 
-        public Builder setConvention(@Nullable ForwardProxyConvention convention) {
+        public Builder convention(@Nullable ForwardProxyConvention convention) {
             this.convention = Input.ofNullable(convention);
             return this;
         }
 
-        public Builder setCustomHostHeaderName(@Nullable Input<String> customHostHeaderName) {
+        public Builder customHostHeaderName(@Nullable Input<String> customHostHeaderName) {
             this.customHostHeaderName = customHostHeaderName;
             return this;
         }
 
-        public Builder setCustomHostHeaderName(@Nullable String customHostHeaderName) {
+        public Builder customHostHeaderName(@Nullable String customHostHeaderName) {
             this.customHostHeaderName = Input.ofNullable(customHostHeaderName);
             return this;
         }
 
-        public Builder setCustomProtoHeaderName(@Nullable Input<String> customProtoHeaderName) {
+        public Builder customProtoHeaderName(@Nullable Input<String> customProtoHeaderName) {
             this.customProtoHeaderName = customProtoHeaderName;
             return this;
         }
 
-        public Builder setCustomProtoHeaderName(@Nullable String customProtoHeaderName) {
+        public Builder customProtoHeaderName(@Nullable String customProtoHeaderName) {
             this.customProtoHeaderName = Input.ofNullable(customProtoHeaderName);
             return this;
         }

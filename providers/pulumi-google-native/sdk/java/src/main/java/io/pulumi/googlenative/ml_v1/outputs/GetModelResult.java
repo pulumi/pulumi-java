@@ -165,42 +165,42 @@ public final class GetModelResult {
     	      this.regions = defaults.regions;
         }
 
-        public Builder setDefaultVersion(GoogleCloudMlV1__VersionResponse defaultVersion) {
+        public Builder defaultVersion(GoogleCloudMlV1__VersionResponse defaultVersion) {
             this.defaultVersion = Objects.requireNonNull(defaultVersion);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOnlinePredictionConsoleLogging(Boolean onlinePredictionConsoleLogging) {
+        public Builder onlinePredictionConsoleLogging(Boolean onlinePredictionConsoleLogging) {
             this.onlinePredictionConsoleLogging = Objects.requireNonNull(onlinePredictionConsoleLogging);
             return this;
         }
 
-        public Builder setOnlinePredictionLogging(Boolean onlinePredictionLogging) {
+        public Builder onlinePredictionLogging(Boolean onlinePredictionLogging) {
             this.onlinePredictionLogging = Objects.requireNonNull(onlinePredictionLogging);
             return this;
         }
 
-        public Builder setRegions(List<String> regions) {
+        public Builder regions(List<String> regions) {
             this.regions = Objects.requireNonNull(regions);
             return this;
         }

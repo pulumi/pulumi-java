@@ -109,42 +109,42 @@ public final class ProtocolCustomSettingsFormatArgs extends io.pulumi.resources.
     	      this.triggerSensitivityOverride = defaults.triggerSensitivityOverride;
         }
 
-        public Builder setProtocol(@Nullable Input<Either<String,DdosCustomPolicyProtocol>> protocol) {
+        public Builder protocol(@Nullable Input<Either<String,DdosCustomPolicyProtocol>> protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProtocol(@Nullable Either<String,DdosCustomPolicyProtocol> protocol) {
+        public Builder protocol(@Nullable Either<String,DdosCustomPolicyProtocol> protocol) {
             this.protocol = Input.ofNullable(protocol);
             return this;
         }
 
-        public Builder setSourceRateOverride(@Nullable Input<String> sourceRateOverride) {
+        public Builder sourceRateOverride(@Nullable Input<String> sourceRateOverride) {
             this.sourceRateOverride = sourceRateOverride;
             return this;
         }
 
-        public Builder setSourceRateOverride(@Nullable String sourceRateOverride) {
+        public Builder sourceRateOverride(@Nullable String sourceRateOverride) {
             this.sourceRateOverride = Input.ofNullable(sourceRateOverride);
             return this;
         }
 
-        public Builder setTriggerRateOverride(@Nullable Input<String> triggerRateOverride) {
+        public Builder triggerRateOverride(@Nullable Input<String> triggerRateOverride) {
             this.triggerRateOverride = triggerRateOverride;
             return this;
         }
 
-        public Builder setTriggerRateOverride(@Nullable String triggerRateOverride) {
+        public Builder triggerRateOverride(@Nullable String triggerRateOverride) {
             this.triggerRateOverride = Input.ofNullable(triggerRateOverride);
             return this;
         }
 
-        public Builder setTriggerSensitivityOverride(@Nullable Input<Either<String,DdosCustomPolicyTriggerSensitivityOverride>> triggerSensitivityOverride) {
+        public Builder triggerSensitivityOverride(@Nullable Input<Either<String,DdosCustomPolicyTriggerSensitivityOverride>> triggerSensitivityOverride) {
             this.triggerSensitivityOverride = triggerSensitivityOverride;
             return this;
         }
 
-        public Builder setTriggerSensitivityOverride(@Nullable Either<String,DdosCustomPolicyTriggerSensitivityOverride> triggerSensitivityOverride) {
+        public Builder triggerSensitivityOverride(@Nullable Either<String,DdosCustomPolicyTriggerSensitivityOverride> triggerSensitivityOverride) {
             this.triggerSensitivityOverride = Input.ofNullable(triggerSensitivityOverride);
             return this;
         }

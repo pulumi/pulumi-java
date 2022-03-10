@@ -66,12 +66,12 @@ public final class ConnectorVpc {
     	      this.subnets = defaults.subnets;
         }
 
-        public Builder setSecurityGroups(List<String> securityGroups) {
+        public Builder securityGroups(List<String> securityGroups) {
             this.securityGroups = Objects.requireNonNull(securityGroups);
             return this;
         }
 
-        public Builder setSubnets(List<String> subnets) {
+        public Builder subnets(List<String> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }

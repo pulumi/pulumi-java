@@ -70,22 +70,22 @@ public final class BucketLifecycleRuleGetArgs extends io.pulumi.resources.Resour
     	      this.condition = defaults.condition;
         }
 
-        public Builder setAction(Input<BucketLifecycleRuleActionGetArgs> action) {
+        public Builder action(Input<BucketLifecycleRuleActionGetArgs> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setAction(BucketLifecycleRuleActionGetArgs action) {
+        public Builder action(BucketLifecycleRuleActionGetArgs action) {
             this.action = Input.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder setCondition(Input<BucketLifecycleRuleConditionGetArgs> condition) {
+        public Builder condition(Input<BucketLifecycleRuleConditionGetArgs> condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
 
-        public Builder setCondition(BucketLifecycleRuleConditionGetArgs condition) {
+        public Builder condition(BucketLifecycleRuleConditionGetArgs condition) {
             this.condition = Input.of(Objects.requireNonNull(condition));
             return this;
         }

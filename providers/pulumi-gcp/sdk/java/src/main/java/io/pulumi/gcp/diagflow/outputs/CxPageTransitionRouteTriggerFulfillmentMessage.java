@@ -50,7 +50,7 @@ public final class CxPageTransitionRouteTriggerFulfillmentMessage {
     	      this.text = defaults.text;
         }
 
-        public Builder setText(@Nullable CxPageTransitionRouteTriggerFulfillmentMessageText text) {
+        public Builder text(@Nullable CxPageTransitionRouteTriggerFulfillmentMessageText text) {
             this.text = text;
             return this;
         }

@@ -196,92 +196,92 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.versionTemplate = defaults.versionTemplate;
         }
 
-        public Builder setDestroyScheduledDuration(@Nullable Input<String> destroyScheduledDuration) {
+        public Builder destroyScheduledDuration(@Nullable Input<String> destroyScheduledDuration) {
             this.destroyScheduledDuration = destroyScheduledDuration;
             return this;
         }
 
-        public Builder setDestroyScheduledDuration(@Nullable String destroyScheduledDuration) {
+        public Builder destroyScheduledDuration(@Nullable String destroyScheduledDuration) {
             this.destroyScheduledDuration = Input.ofNullable(destroyScheduledDuration);
             return this;
         }
 
-        public Builder setImportOnly(@Nullable Input<Boolean> importOnly) {
+        public Builder importOnly(@Nullable Input<Boolean> importOnly) {
             this.importOnly = importOnly;
             return this;
         }
 
-        public Builder setImportOnly(@Nullable Boolean importOnly) {
+        public Builder importOnly(@Nullable Boolean importOnly) {
             this.importOnly = Input.ofNullable(importOnly);
             return this;
         }
 
-        public Builder setKeyRing(Input<String> keyRing) {
+        public Builder keyRing(Input<String> keyRing) {
             this.keyRing = Objects.requireNonNull(keyRing);
             return this;
         }
 
-        public Builder setKeyRing(String keyRing) {
+        public Builder keyRing(String keyRing) {
             this.keyRing = Input.of(Objects.requireNonNull(keyRing));
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPurpose(@Nullable Input<String> purpose) {
+        public Builder purpose(@Nullable Input<String> purpose) {
             this.purpose = purpose;
             return this;
         }
 
-        public Builder setPurpose(@Nullable String purpose) {
+        public Builder purpose(@Nullable String purpose) {
             this.purpose = Input.ofNullable(purpose);
             return this;
         }
 
-        public Builder setRotationPeriod(@Nullable Input<String> rotationPeriod) {
+        public Builder rotationPeriod(@Nullable Input<String> rotationPeriod) {
             this.rotationPeriod = rotationPeriod;
             return this;
         }
 
-        public Builder setRotationPeriod(@Nullable String rotationPeriod) {
+        public Builder rotationPeriod(@Nullable String rotationPeriod) {
             this.rotationPeriod = Input.ofNullable(rotationPeriod);
             return this;
         }
 
-        public Builder setSkipInitialVersionCreation(@Nullable Input<Boolean> skipInitialVersionCreation) {
+        public Builder skipInitialVersionCreation(@Nullable Input<Boolean> skipInitialVersionCreation) {
             this.skipInitialVersionCreation = skipInitialVersionCreation;
             return this;
         }
 
-        public Builder setSkipInitialVersionCreation(@Nullable Boolean skipInitialVersionCreation) {
+        public Builder skipInitialVersionCreation(@Nullable Boolean skipInitialVersionCreation) {
             this.skipInitialVersionCreation = Input.ofNullable(skipInitialVersionCreation);
             return this;
         }
 
-        public Builder setVersionTemplate(@Nullable Input<CryptoKeyVersionTemplateArgs> versionTemplate) {
+        public Builder versionTemplate(@Nullable Input<CryptoKeyVersionTemplateArgs> versionTemplate) {
             this.versionTemplate = versionTemplate;
             return this;
         }
 
-        public Builder setVersionTemplate(@Nullable CryptoKeyVersionTemplateArgs versionTemplate) {
+        public Builder versionTemplate(@Nullable CryptoKeyVersionTemplateArgs versionTemplate) {
             this.versionTemplate = Input.ofNullable(versionTemplate);
             return this;
         }

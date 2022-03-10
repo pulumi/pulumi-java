@@ -155,72 +155,72 @@ public final class DocumentDbOutputDataSourceArgs extends io.pulumi.resources.Re
     	      this.type = defaults.type;
         }
 
-        public Builder setAccountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Input<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
-        public Builder setAccountId(@Nullable String accountId) {
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = Input.ofNullable(accountId);
             return this;
         }
 
-        public Builder setAccountKey(@Nullable Input<String> accountKey) {
+        public Builder accountKey(@Nullable Input<String> accountKey) {
             this.accountKey = accountKey;
             return this;
         }
 
-        public Builder setAccountKey(@Nullable String accountKey) {
+        public Builder accountKey(@Nullable String accountKey) {
             this.accountKey = Input.ofNullable(accountKey);
             return this;
         }
 
-        public Builder setCollectionNamePattern(@Nullable Input<String> collectionNamePattern) {
+        public Builder collectionNamePattern(@Nullable Input<String> collectionNamePattern) {
             this.collectionNamePattern = collectionNamePattern;
             return this;
         }
 
-        public Builder setCollectionNamePattern(@Nullable String collectionNamePattern) {
+        public Builder collectionNamePattern(@Nullable String collectionNamePattern) {
             this.collectionNamePattern = Input.ofNullable(collectionNamePattern);
             return this;
         }
 
-        public Builder setDatabase(@Nullable Input<String> database) {
+        public Builder database(@Nullable Input<String> database) {
             this.database = database;
             return this;
         }
 
-        public Builder setDatabase(@Nullable String database) {
+        public Builder database(@Nullable String database) {
             this.database = Input.ofNullable(database);
             return this;
         }
 
-        public Builder setDocumentId(@Nullable Input<String> documentId) {
+        public Builder documentId(@Nullable Input<String> documentId) {
             this.documentId = documentId;
             return this;
         }
 
-        public Builder setDocumentId(@Nullable String documentId) {
+        public Builder documentId(@Nullable String documentId) {
             this.documentId = Input.ofNullable(documentId);
             return this;
         }
 
-        public Builder setPartitionKey(@Nullable Input<String> partitionKey) {
+        public Builder partitionKey(@Nullable Input<String> partitionKey) {
             this.partitionKey = partitionKey;
             return this;
         }
 
-        public Builder setPartitionKey(@Nullable String partitionKey) {
+        public Builder partitionKey(@Nullable String partitionKey) {
             this.partitionKey = Input.ofNullable(partitionKey);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

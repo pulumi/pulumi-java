@@ -48,7 +48,7 @@ public final class SSISExecutionParameterResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(Object value) {
+        public Builder value(Object value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

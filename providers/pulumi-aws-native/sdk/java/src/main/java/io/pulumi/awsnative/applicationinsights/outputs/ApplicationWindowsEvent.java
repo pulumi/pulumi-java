@@ -101,22 +101,22 @@ public final class ApplicationWindowsEvent {
     	      this.patternSet = defaults.patternSet;
         }
 
-        public Builder setEventLevels(List<ApplicationEventLevel> eventLevels) {
+        public Builder eventLevels(List<ApplicationEventLevel> eventLevels) {
             this.eventLevels = Objects.requireNonNull(eventLevels);
             return this;
         }
 
-        public Builder setEventName(String eventName) {
+        public Builder eventName(String eventName) {
             this.eventName = Objects.requireNonNull(eventName);
             return this;
         }
 
-        public Builder setLogGroupName(String logGroupName) {
+        public Builder logGroupName(String logGroupName) {
             this.logGroupName = Objects.requireNonNull(logGroupName);
             return this;
         }
 
-        public Builder setPatternSet(@Nullable String patternSet) {
+        public Builder patternSet(@Nullable String patternSet) {
             this.patternSet = patternSet;
             return this;
         }

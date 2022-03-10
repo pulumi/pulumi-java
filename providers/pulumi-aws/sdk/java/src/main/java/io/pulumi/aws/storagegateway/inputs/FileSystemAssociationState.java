@@ -184,92 +184,92 @@ public final class FileSystemAssociationState extends io.pulumi.resources.Resour
     	      this.username = defaults.username;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAuditDestinationArn(@Nullable Input<String> auditDestinationArn) {
+        public Builder auditDestinationArn(@Nullable Input<String> auditDestinationArn) {
             this.auditDestinationArn = auditDestinationArn;
             return this;
         }
 
-        public Builder setAuditDestinationArn(@Nullable String auditDestinationArn) {
+        public Builder auditDestinationArn(@Nullable String auditDestinationArn) {
             this.auditDestinationArn = Input.ofNullable(auditDestinationArn);
             return this;
         }
 
-        public Builder setCacheAttributes(@Nullable Input<FileSystemAssociationCacheAttributesGetArgs> cacheAttributes) {
+        public Builder cacheAttributes(@Nullable Input<FileSystemAssociationCacheAttributesGetArgs> cacheAttributes) {
             this.cacheAttributes = cacheAttributes;
             return this;
         }
 
-        public Builder setCacheAttributes(@Nullable FileSystemAssociationCacheAttributesGetArgs cacheAttributes) {
+        public Builder cacheAttributes(@Nullable FileSystemAssociationCacheAttributesGetArgs cacheAttributes) {
             this.cacheAttributes = Input.ofNullable(cacheAttributes);
             return this;
         }
 
-        public Builder setGatewayArn(@Nullable Input<String> gatewayArn) {
+        public Builder gatewayArn(@Nullable Input<String> gatewayArn) {
             this.gatewayArn = gatewayArn;
             return this;
         }
 
-        public Builder setGatewayArn(@Nullable String gatewayArn) {
+        public Builder gatewayArn(@Nullable String gatewayArn) {
             this.gatewayArn = Input.ofNullable(gatewayArn);
             return this;
         }
 
-        public Builder setLocationArn(@Nullable Input<String> locationArn) {
+        public Builder locationArn(@Nullable Input<String> locationArn) {
             this.locationArn = locationArn;
             return this;
         }
 
-        public Builder setLocationArn(@Nullable String locationArn) {
+        public Builder locationArn(@Nullable String locationArn) {
             this.locationArn = Input.ofNullable(locationArn);
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<String> password) {
+        public Builder password(@Nullable Input<String> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setUsername(@Nullable Input<String> username) {
+        public Builder username(@Nullable Input<String> username) {
             this.username = username;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = Input.ofNullable(username);
             return this;
         }

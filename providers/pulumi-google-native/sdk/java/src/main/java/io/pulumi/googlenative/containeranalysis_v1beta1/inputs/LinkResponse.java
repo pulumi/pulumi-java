@@ -124,27 +124,27 @@ public final class LinkResponse extends io.pulumi.resources.InvokeArgs {
     	      this.products = defaults.products;
         }
 
-        public Builder setByproducts(ByProductsResponse byproducts) {
+        public Builder byproducts(ByProductsResponse byproducts) {
             this.byproducts = Objects.requireNonNull(byproducts);
             return this;
         }
 
-        public Builder setCommand(List<String> command) {
+        public Builder command(List<String> command) {
             this.command = Objects.requireNonNull(command);
             return this;
         }
 
-        public Builder setEnvironment(EnvironmentResponse environment) {
+        public Builder environment(EnvironmentResponse environment) {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
 
-        public Builder setMaterials(List<GrafeasV1beta1IntotoArtifactResponse> materials) {
+        public Builder materials(List<GrafeasV1beta1IntotoArtifactResponse> materials) {
             this.materials = Objects.requireNonNull(materials);
             return this;
         }
 
-        public Builder setProducts(List<GrafeasV1beta1IntotoArtifactResponse> products) {
+        public Builder products(List<GrafeasV1beta1IntotoArtifactResponse> products) {
             this.products = Objects.requireNonNull(products);
             return this;
         }

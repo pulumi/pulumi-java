@@ -256,142 +256,142 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
     	      this.updatedAt = defaults.updatedAt;
         }
 
-        public Builder setAccountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Input<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
-        public Builder setAccountId(@Nullable String accountId) {
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = Input.ofNullable(accountId);
             return this;
         }
 
-        public Builder setAdministratorAccountId(@Nullable Input<String> administratorAccountId) {
+        public Builder administratorAccountId(@Nullable Input<String> administratorAccountId) {
             this.administratorAccountId = administratorAccountId;
             return this;
         }
 
-        public Builder setAdministratorAccountId(@Nullable String administratorAccountId) {
+        public Builder administratorAccountId(@Nullable String administratorAccountId) {
             this.administratorAccountId = Input.ofNullable(administratorAccountId);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setEmail(@Nullable Input<String> email) {
+        public Builder email(@Nullable Input<String> email) {
             this.email = email;
             return this;
         }
 
-        public Builder setEmail(@Nullable String email) {
+        public Builder email(@Nullable String email) {
             this.email = Input.ofNullable(email);
             return this;
         }
 
-        public Builder setInvitationDisableEmailNotification(@Nullable Input<String> invitationDisableEmailNotification) {
+        public Builder invitationDisableEmailNotification(@Nullable Input<String> invitationDisableEmailNotification) {
             this.invitationDisableEmailNotification = invitationDisableEmailNotification;
             return this;
         }
 
-        public Builder setInvitationDisableEmailNotification(@Nullable String invitationDisableEmailNotification) {
+        public Builder invitationDisableEmailNotification(@Nullable String invitationDisableEmailNotification) {
             this.invitationDisableEmailNotification = Input.ofNullable(invitationDisableEmailNotification);
             return this;
         }
 
-        public Builder setInvitationMessage(@Nullable Input<String> invitationMessage) {
+        public Builder invitationMessage(@Nullable Input<String> invitationMessage) {
             this.invitationMessage = invitationMessage;
             return this;
         }
 
-        public Builder setInvitationMessage(@Nullable String invitationMessage) {
+        public Builder invitationMessage(@Nullable String invitationMessage) {
             this.invitationMessage = Input.ofNullable(invitationMessage);
             return this;
         }
 
-        public Builder setInvite(@Nullable Input<Boolean> invite) {
+        public Builder invite(@Nullable Input<Boolean> invite) {
             this.invite = invite;
             return this;
         }
 
-        public Builder setInvite(@Nullable Boolean invite) {
+        public Builder invite(@Nullable Boolean invite) {
             this.invite = Input.ofNullable(invite);
             return this;
         }
 
-        public Builder setInvitedAt(@Nullable Input<String> invitedAt) {
+        public Builder invitedAt(@Nullable Input<String> invitedAt) {
             this.invitedAt = invitedAt;
             return this;
         }
 
-        public Builder setInvitedAt(@Nullable String invitedAt) {
+        public Builder invitedAt(@Nullable String invitedAt) {
             this.invitedAt = Input.ofNullable(invitedAt);
             return this;
         }
 
-        public Builder setMasterAccountId(@Nullable Input<String> masterAccountId) {
+        public Builder masterAccountId(@Nullable Input<String> masterAccountId) {
             this.masterAccountId = masterAccountId;
             return this;
         }
 
-        public Builder setMasterAccountId(@Nullable String masterAccountId) {
+        public Builder masterAccountId(@Nullable String masterAccountId) {
             this.masterAccountId = Input.ofNullable(masterAccountId);
             return this;
         }
 
-        public Builder setRelationshipStatus(@Nullable Input<String> relationshipStatus) {
+        public Builder relationshipStatus(@Nullable Input<String> relationshipStatus) {
             this.relationshipStatus = relationshipStatus;
             return this;
         }
 
-        public Builder setRelationshipStatus(@Nullable String relationshipStatus) {
+        public Builder relationshipStatus(@Nullable String relationshipStatus) {
             this.relationshipStatus = Input.ofNullable(relationshipStatus);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setUpdatedAt(@Nullable Input<String> updatedAt) {
+        public Builder updatedAt(@Nullable Input<String> updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
-        public Builder setUpdatedAt(@Nullable String updatedAt) {
+        public Builder updatedAt(@Nullable String updatedAt) {
             this.updatedAt = Input.ofNullable(updatedAt);
             return this;
         }

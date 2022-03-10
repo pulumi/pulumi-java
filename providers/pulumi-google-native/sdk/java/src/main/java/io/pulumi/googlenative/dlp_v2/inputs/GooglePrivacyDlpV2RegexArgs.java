@@ -76,22 +76,22 @@ public final class GooglePrivacyDlpV2RegexArgs extends io.pulumi.resources.Resou
     	      this.pattern = defaults.pattern;
         }
 
-        public Builder setGroupIndexes(@Nullable Input<List<Integer>> groupIndexes) {
+        public Builder groupIndexes(@Nullable Input<List<Integer>> groupIndexes) {
             this.groupIndexes = groupIndexes;
             return this;
         }
 
-        public Builder setGroupIndexes(@Nullable List<Integer> groupIndexes) {
+        public Builder groupIndexes(@Nullable List<Integer> groupIndexes) {
             this.groupIndexes = Input.ofNullable(groupIndexes);
             return this;
         }
 
-        public Builder setPattern(@Nullable Input<String> pattern) {
+        public Builder pattern(@Nullable Input<String> pattern) {
             this.pattern = pattern;
             return this;
         }
 
-        public Builder setPattern(@Nullable String pattern) {
+        public Builder pattern(@Nullable String pattern) {
             this.pattern = Input.ofNullable(pattern);
             return this;
         }

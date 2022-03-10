@@ -53,12 +53,12 @@ public final class OriginAccessIdentityArgs extends io.pulumi.resources.Resource
     	      this.comment = defaults.comment;
         }
 
-        public Builder setComment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Input<String> comment) {
             this.comment = comment;
             return this;
         }
 
-        public Builder setComment(@Nullable String comment) {
+        public Builder comment(@Nullable String comment) {
             this.comment = Input.ofNullable(comment);
             return this;
         }

@@ -90,17 +90,17 @@ public final class SoftwareConfigResponse extends io.pulumi.resources.InvokeArgs
     	      this.properties = defaults.properties;
         }
 
-        public Builder setImageVersion(String imageVersion) {
+        public Builder imageVersion(String imageVersion) {
             this.imageVersion = Objects.requireNonNull(imageVersion);
             return this;
         }
 
-        public Builder setOptionalComponents(List<String> optionalComponents) {
+        public Builder optionalComponents(List<String> optionalComponents) {
             this.optionalComponents = Objects.requireNonNull(optionalComponents);
             return this;
         }
 
-        public Builder setProperties(Map<String,String> properties) {
+        public Builder properties(Map<String,String> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }

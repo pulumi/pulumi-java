@@ -189,92 +189,92 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
     	      this.typeHandlerVersion = defaults.typeHandlerVersion;
         }
 
-        public Builder setAutoUpgradeMinorVersion(@Nullable Input<Boolean> autoUpgradeMinorVersion) {
+        public Builder autoUpgradeMinorVersion(@Nullable Input<Boolean> autoUpgradeMinorVersion) {
             this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
             return this;
         }
 
-        public Builder setAutoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
+        public Builder autoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
             this.autoUpgradeMinorVersion = Input.ofNullable(autoUpgradeMinorVersion);
             return this;
         }
 
-        public Builder setForceUpdateTag(@Nullable Input<String> forceUpdateTag) {
+        public Builder forceUpdateTag(@Nullable Input<String> forceUpdateTag) {
             this.forceUpdateTag = forceUpdateTag;
             return this;
         }
 
-        public Builder setForceUpdateTag(@Nullable String forceUpdateTag) {
+        public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
             this.forceUpdateTag = Input.ofNullable(forceUpdateTag);
             return this;
         }
 
-        public Builder setProtectedSettings(@Nullable Input<String> protectedSettings) {
+        public Builder protectedSettings(@Nullable Input<String> protectedSettings) {
             this.protectedSettings = protectedSettings;
             return this;
         }
 
-        public Builder setProtectedSettings(@Nullable String protectedSettings) {
+        public Builder protectedSettings(@Nullable String protectedSettings) {
             this.protectedSettings = Input.ofNullable(protectedSettings);
             return this;
         }
 
-        public Builder setProtectedSettingsFromKeyVault(@Nullable Input<CloudServiceVaultAndSecretReferenceArgs> protectedSettingsFromKeyVault) {
+        public Builder protectedSettingsFromKeyVault(@Nullable Input<CloudServiceVaultAndSecretReferenceArgs> protectedSettingsFromKeyVault) {
             this.protectedSettingsFromKeyVault = protectedSettingsFromKeyVault;
             return this;
         }
 
-        public Builder setProtectedSettingsFromKeyVault(@Nullable CloudServiceVaultAndSecretReferenceArgs protectedSettingsFromKeyVault) {
+        public Builder protectedSettingsFromKeyVault(@Nullable CloudServiceVaultAndSecretReferenceArgs protectedSettingsFromKeyVault) {
             this.protectedSettingsFromKeyVault = Input.ofNullable(protectedSettingsFromKeyVault);
             return this;
         }
 
-        public Builder setPublisher(@Nullable Input<String> publisher) {
+        public Builder publisher(@Nullable Input<String> publisher) {
             this.publisher = publisher;
             return this;
         }
 
-        public Builder setPublisher(@Nullable String publisher) {
+        public Builder publisher(@Nullable String publisher) {
             this.publisher = Input.ofNullable(publisher);
             return this;
         }
 
-        public Builder setRolesAppliedTo(@Nullable Input<List<String>> rolesAppliedTo) {
+        public Builder rolesAppliedTo(@Nullable Input<List<String>> rolesAppliedTo) {
             this.rolesAppliedTo = rolesAppliedTo;
             return this;
         }
 
-        public Builder setRolesAppliedTo(@Nullable List<String> rolesAppliedTo) {
+        public Builder rolesAppliedTo(@Nullable List<String> rolesAppliedTo) {
             this.rolesAppliedTo = Input.ofNullable(rolesAppliedTo);
             return this;
         }
 
-        public Builder setSettings(@Nullable Input<String> settings) {
+        public Builder settings(@Nullable Input<String> settings) {
             this.settings = settings;
             return this;
         }
 
-        public Builder setSettings(@Nullable String settings) {
+        public Builder settings(@Nullable String settings) {
             this.settings = Input.ofNullable(settings);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setTypeHandlerVersion(@Nullable Input<String> typeHandlerVersion) {
+        public Builder typeHandlerVersion(@Nullable Input<String> typeHandlerVersion) {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
         }
 
-        public Builder setTypeHandlerVersion(@Nullable String typeHandlerVersion) {
+        public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
             this.typeHandlerVersion = Input.ofNullable(typeHandlerVersion);
             return this;
         }

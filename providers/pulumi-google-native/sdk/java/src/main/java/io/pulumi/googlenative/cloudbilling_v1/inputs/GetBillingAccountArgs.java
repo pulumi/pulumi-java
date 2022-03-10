@@ -47,7 +47,7 @@ public final class GetBillingAccountArgs extends io.pulumi.resources.InvokeArgs 
     	      this.billingAccountId = defaults.billingAccountId;
         }
 
-        public Builder setBillingAccountId(String billingAccountId) {
+        public Builder billingAccountId(String billingAccountId) {
             this.billingAccountId = Objects.requireNonNull(billingAccountId);
             return this;
         }

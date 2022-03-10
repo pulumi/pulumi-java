@@ -103,42 +103,42 @@ public final class KeySigningKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder setHostedZoneId(Input<String> hostedZoneId) {
+        public Builder hostedZoneId(Input<String> hostedZoneId) {
             this.hostedZoneId = Objects.requireNonNull(hostedZoneId);
             return this;
         }
 
-        public Builder setHostedZoneId(String hostedZoneId) {
+        public Builder hostedZoneId(String hostedZoneId) {
             this.hostedZoneId = Input.of(Objects.requireNonNull(hostedZoneId));
             return this;
         }
 
-        public Builder setKeyManagementServiceArn(Input<String> keyManagementServiceArn) {
+        public Builder keyManagementServiceArn(Input<String> keyManagementServiceArn) {
             this.keyManagementServiceArn = Objects.requireNonNull(keyManagementServiceArn);
             return this;
         }
 
-        public Builder setKeyManagementServiceArn(String keyManagementServiceArn) {
+        public Builder keyManagementServiceArn(String keyManagementServiceArn) {
             this.keyManagementServiceArn = Input.of(Objects.requireNonNull(keyManagementServiceArn));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setStatus(Input<KeySigningKeyStatus> status) {
+        public Builder status(Input<KeySigningKeyStatus> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatus(KeySigningKeyStatus status) {
+        public Builder status(KeySigningKeyStatus status) {
             this.status = Input.of(Objects.requireNonNull(status));
             return this;
         }

@@ -99,32 +99,32 @@ public final class ContentKeyPolicyOptionArgs extends io.pulumi.resources.Resour
     	      this.restriction = defaults.restriction;
         }
 
-        public Builder setConfiguration(Input<Object> configuration) {
+        public Builder configuration(Input<Object> configuration) {
             this.configuration = Objects.requireNonNull(configuration);
             return this;
         }
 
-        public Builder setConfiguration(Object configuration) {
+        public Builder configuration(Object configuration) {
             this.configuration = Input.of(Objects.requireNonNull(configuration));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRestriction(Input<Object> restriction) {
+        public Builder restriction(Input<Object> restriction) {
             this.restriction = Objects.requireNonNull(restriction);
             return this;
         }
 
-        public Builder setRestriction(Object restriction) {
+        public Builder restriction(Object restriction) {
             this.restriction = Input.of(Objects.requireNonNull(restriction));
             return this;
         }

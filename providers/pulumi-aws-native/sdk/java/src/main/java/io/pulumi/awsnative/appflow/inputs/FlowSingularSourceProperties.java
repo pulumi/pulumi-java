@@ -47,7 +47,7 @@ public final class FlowSingularSourceProperties extends io.pulumi.resources.Invo
     	      this.object = defaults.object;
         }
 
-        public Builder setObject(String object) {
+        public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }

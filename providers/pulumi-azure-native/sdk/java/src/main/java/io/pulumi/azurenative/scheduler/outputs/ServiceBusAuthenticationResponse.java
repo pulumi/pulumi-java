@@ -83,17 +83,17 @@ public final class ServiceBusAuthenticationResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setSasKey(@Nullable String sasKey) {
+        public Builder sasKey(@Nullable String sasKey) {
             this.sasKey = sasKey;
             return this;
         }
 
-        public Builder setSasKeyName(@Nullable String sasKeyName) {
+        public Builder sasKeyName(@Nullable String sasKeyName) {
             this.sasKeyName = sasKeyName;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

@@ -65,12 +65,12 @@ public final class DirectoryConfigServiceAccountCredentials {
     	      this.accountPassword = defaults.accountPassword;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountPassword(String accountPassword) {
+        public Builder accountPassword(String accountPassword) {
             this.accountPassword = Objects.requireNonNull(accountPassword);
             return this;
         }

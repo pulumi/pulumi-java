@@ -68,12 +68,12 @@ public final class GetRemediationAtResourceGroupArgs extends io.pulumi.resources
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setRemediationName(String remediationName) {
+        public Builder remediationName(String remediationName) {
             this.remediationName = Objects.requireNonNull(remediationName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

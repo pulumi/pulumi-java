@@ -89,22 +89,22 @@ public final class TopicRuleHttpAction extends io.pulumi.resources.InvokeArgs {
     	      this.url = defaults.url;
         }
 
-        public Builder setAuth(@Nullable TopicRuleHttpAuthorization auth) {
+        public Builder auth(@Nullable TopicRuleHttpAuthorization auth) {
             this.auth = auth;
             return this;
         }
 
-        public Builder setConfirmationUrl(@Nullable String confirmationUrl) {
+        public Builder confirmationUrl(@Nullable String confirmationUrl) {
             this.confirmationUrl = confirmationUrl;
             return this;
         }
 
-        public Builder setHeaders(@Nullable List<TopicRuleHttpActionHeader> headers) {
+        public Builder headers(@Nullable List<TopicRuleHttpActionHeader> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

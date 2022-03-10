@@ -128,52 +128,52 @@ public final class AutomationRuleTriggeringLogicArgs extends io.pulumi.resources
     	      this.triggersWhen = defaults.triggersWhen;
         }
 
-        public Builder setConditions(@Nullable Input<List<AutomationRulePropertyValuesConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Input<List<AutomationRulePropertyValuesConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<AutomationRulePropertyValuesConditionArgs> conditions) {
+        public Builder conditions(@Nullable List<AutomationRulePropertyValuesConditionArgs> conditions) {
             this.conditions = Input.ofNullable(conditions);
             return this;
         }
 
-        public Builder setExpirationTimeUtc(@Nullable Input<String> expirationTimeUtc) {
+        public Builder expirationTimeUtc(@Nullable Input<String> expirationTimeUtc) {
             this.expirationTimeUtc = expirationTimeUtc;
             return this;
         }
 
-        public Builder setExpirationTimeUtc(@Nullable String expirationTimeUtc) {
+        public Builder expirationTimeUtc(@Nullable String expirationTimeUtc) {
             this.expirationTimeUtc = Input.ofNullable(expirationTimeUtc);
             return this;
         }
 
-        public Builder setIsEnabled(Input<Boolean> isEnabled) {
+        public Builder isEnabled(Input<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
-        public Builder setIsEnabled(Boolean isEnabled) {
+        public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Input.of(Objects.requireNonNull(isEnabled));
             return this;
         }
 
-        public Builder setTriggersOn(Input<Either<String,TriggersOn>> triggersOn) {
+        public Builder triggersOn(Input<Either<String,TriggersOn>> triggersOn) {
             this.triggersOn = Objects.requireNonNull(triggersOn);
             return this;
         }
 
-        public Builder setTriggersOn(Either<String,TriggersOn> triggersOn) {
+        public Builder triggersOn(Either<String,TriggersOn> triggersOn) {
             this.triggersOn = Input.of(Objects.requireNonNull(triggersOn));
             return this;
         }
 
-        public Builder setTriggersWhen(Input<Either<String,TriggersWhen>> triggersWhen) {
+        public Builder triggersWhen(Input<Either<String,TriggersWhen>> triggersWhen) {
             this.triggersWhen = Objects.requireNonNull(triggersWhen);
             return this;
         }
 
-        public Builder setTriggersWhen(Either<String,TriggersWhen> triggersWhen) {
+        public Builder triggersWhen(Either<String,TriggersWhen> triggersWhen) {
             this.triggersWhen = Input.of(Objects.requireNonNull(triggersWhen));
             return this;
         }

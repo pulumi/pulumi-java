@@ -62,12 +62,12 @@ public final class GetBackendServiceArgs extends io.pulumi.resources.InvokeArgs 
     	      this.project = defaults.project;
         }
 
-        public Builder setBackendService(String backendService) {
+        public Builder backendService(String backendService) {
             this.backendService = Objects.requireNonNull(backendService);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

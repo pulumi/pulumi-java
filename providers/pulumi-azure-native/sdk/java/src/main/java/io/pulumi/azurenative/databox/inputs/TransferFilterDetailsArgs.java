@@ -112,42 +112,42 @@ public final class TransferFilterDetailsArgs extends io.pulumi.resources.Resourc
     	      this.filterFileDetails = defaults.filterFileDetails;
         }
 
-        public Builder setAzureFileFilterDetails(@Nullable Input<AzureFileFilterDetailsArgs> azureFileFilterDetails) {
+        public Builder azureFileFilterDetails(@Nullable Input<AzureFileFilterDetailsArgs> azureFileFilterDetails) {
             this.azureFileFilterDetails = azureFileFilterDetails;
             return this;
         }
 
-        public Builder setAzureFileFilterDetails(@Nullable AzureFileFilterDetailsArgs azureFileFilterDetails) {
+        public Builder azureFileFilterDetails(@Nullable AzureFileFilterDetailsArgs azureFileFilterDetails) {
             this.azureFileFilterDetails = Input.ofNullable(azureFileFilterDetails);
             return this;
         }
 
-        public Builder setBlobFilterDetails(@Nullable Input<BlobFilterDetailsArgs> blobFilterDetails) {
+        public Builder blobFilterDetails(@Nullable Input<BlobFilterDetailsArgs> blobFilterDetails) {
             this.blobFilterDetails = blobFilterDetails;
             return this;
         }
 
-        public Builder setBlobFilterDetails(@Nullable BlobFilterDetailsArgs blobFilterDetails) {
+        public Builder blobFilterDetails(@Nullable BlobFilterDetailsArgs blobFilterDetails) {
             this.blobFilterDetails = Input.ofNullable(blobFilterDetails);
             return this;
         }
 
-        public Builder setDataAccountType(Input<Either<String,DataAccountType>> dataAccountType) {
+        public Builder dataAccountType(Input<Either<String,DataAccountType>> dataAccountType) {
             this.dataAccountType = Objects.requireNonNull(dataAccountType);
             return this;
         }
 
-        public Builder setDataAccountType(Either<String,DataAccountType> dataAccountType) {
+        public Builder dataAccountType(Either<String,DataAccountType> dataAccountType) {
             this.dataAccountType = Input.of(Objects.requireNonNull(dataAccountType));
             return this;
         }
 
-        public Builder setFilterFileDetails(@Nullable Input<List<FilterFileDetailsArgs>> filterFileDetails) {
+        public Builder filterFileDetails(@Nullable Input<List<FilterFileDetailsArgs>> filterFileDetails) {
             this.filterFileDetails = filterFileDetails;
             return this;
         }
 
-        public Builder setFilterFileDetails(@Nullable List<FilterFileDetailsArgs> filterFileDetails) {
+        public Builder filterFileDetails(@Nullable List<FilterFileDetailsArgs> filterFileDetails) {
             this.filterFileDetails = Input.ofNullable(filterFileDetails);
             return this;
         }

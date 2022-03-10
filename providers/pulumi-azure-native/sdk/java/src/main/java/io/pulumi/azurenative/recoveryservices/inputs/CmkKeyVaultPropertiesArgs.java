@@ -57,12 +57,12 @@ public final class CmkKeyVaultPropertiesArgs extends io.pulumi.resources.Resourc
     	      this.keyUri = defaults.keyUri;
         }
 
-        public Builder setKeyUri(@Nullable Input<String> keyUri) {
+        public Builder keyUri(@Nullable Input<String> keyUri) {
             this.keyUri = keyUri;
             return this;
         }
 
-        public Builder setKeyUri(@Nullable String keyUri) {
+        public Builder keyUri(@Nullable String keyUri) {
             this.keyUri = Input.ofNullable(keyUri);
             return this;
         }

@@ -68,12 +68,12 @@ public final class FirewallPolicyIntrusionDetectionResponse {
     	      this.mode = defaults.mode;
         }
 
-        public Builder setConfiguration(@Nullable FirewallPolicyIntrusionDetectionConfigurationResponse configuration) {
+        public Builder configuration(@Nullable FirewallPolicyIntrusionDetectionConfigurationResponse configuration) {
             this.configuration = configuration;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }

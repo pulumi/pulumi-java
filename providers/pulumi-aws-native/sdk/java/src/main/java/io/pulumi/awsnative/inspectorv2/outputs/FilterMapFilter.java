@@ -60,17 +60,17 @@ public final class FilterMapFilter {
     	      this.value = defaults.value;
         }
 
-        public Builder setComparison(FilterMapComparison comparison) {
+        public Builder comparison(FilterMapComparison comparison) {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

@@ -109,42 +109,42 @@ public final class ContentSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setHash(@Nullable Input<ContentHashArgs> hash) {
+        public Builder hash(@Nullable Input<ContentHashArgs> hash) {
             this.hash = hash;
             return this;
         }
 
-        public Builder setHash(@Nullable ContentHashArgs hash) {
+        public Builder hash(@Nullable ContentHashArgs hash) {
             this.hash = Input.ofNullable(hash);
             return this;
         }
 
-        public Builder setType(@Nullable Input<Either<String,ContentSourceType>> type) {
+        public Builder type(@Nullable Input<Either<String,ContentSourceType>> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable Either<String,ContentSourceType> type) {
+        public Builder type(@Nullable Either<String,ContentSourceType> type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

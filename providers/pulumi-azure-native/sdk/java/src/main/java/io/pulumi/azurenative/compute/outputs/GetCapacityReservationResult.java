@@ -231,62 +231,62 @@ public final class GetCapacityReservationResult {
     	      this.zones = defaults.zones;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstanceView(CapacityReservationInstanceViewResponse instanceView) {
+        public Builder instanceView(CapacityReservationInstanceViewResponse instanceView) {
             this.instanceView = Objects.requireNonNull(instanceView);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setProvisioningTime(String provisioningTime) {
+        public Builder provisioningTime(String provisioningTime) {
             this.provisioningTime = Objects.requireNonNull(provisioningTime);
             return this;
         }
 
-        public Builder setReservationId(String reservationId) {
+        public Builder reservationId(String reservationId) {
             this.reservationId = Objects.requireNonNull(reservationId);
             return this;
         }
 
-        public Builder setSku(SkuResponse sku) {
+        public Builder sku(SkuResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVirtualMachinesAssociated(List<SubResourceReadOnlyResponse> virtualMachinesAssociated) {
+        public Builder virtualMachinesAssociated(List<SubResourceReadOnlyResponse> virtualMachinesAssociated) {
             this.virtualMachinesAssociated = Objects.requireNonNull(virtualMachinesAssociated);
             return this;
         }
 
-        public Builder setZones(@Nullable List<String> zones) {
+        public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }

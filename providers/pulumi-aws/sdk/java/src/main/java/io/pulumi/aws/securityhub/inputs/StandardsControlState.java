@@ -199,102 +199,102 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
     	      this.title = defaults.title;
         }
 
-        public Builder setControlId(@Nullable Input<String> controlId) {
+        public Builder controlId(@Nullable Input<String> controlId) {
             this.controlId = controlId;
             return this;
         }
 
-        public Builder setControlId(@Nullable String controlId) {
+        public Builder controlId(@Nullable String controlId) {
             this.controlId = Input.ofNullable(controlId);
             return this;
         }
 
-        public Builder setControlStatus(@Nullable Input<String> controlStatus) {
+        public Builder controlStatus(@Nullable Input<String> controlStatus) {
             this.controlStatus = controlStatus;
             return this;
         }
 
-        public Builder setControlStatus(@Nullable String controlStatus) {
+        public Builder controlStatus(@Nullable String controlStatus) {
             this.controlStatus = Input.ofNullable(controlStatus);
             return this;
         }
 
-        public Builder setControlStatusUpdatedAt(@Nullable Input<String> controlStatusUpdatedAt) {
+        public Builder controlStatusUpdatedAt(@Nullable Input<String> controlStatusUpdatedAt) {
             this.controlStatusUpdatedAt = controlStatusUpdatedAt;
             return this;
         }
 
-        public Builder setControlStatusUpdatedAt(@Nullable String controlStatusUpdatedAt) {
+        public Builder controlStatusUpdatedAt(@Nullable String controlStatusUpdatedAt) {
             this.controlStatusUpdatedAt = Input.ofNullable(controlStatusUpdatedAt);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisabledReason(@Nullable Input<String> disabledReason) {
+        public Builder disabledReason(@Nullable Input<String> disabledReason) {
             this.disabledReason = disabledReason;
             return this;
         }
 
-        public Builder setDisabledReason(@Nullable String disabledReason) {
+        public Builder disabledReason(@Nullable String disabledReason) {
             this.disabledReason = Input.ofNullable(disabledReason);
             return this;
         }
 
-        public Builder setRelatedRequirements(@Nullable Input<List<String>> relatedRequirements) {
+        public Builder relatedRequirements(@Nullable Input<List<String>> relatedRequirements) {
             this.relatedRequirements = relatedRequirements;
             return this;
         }
 
-        public Builder setRelatedRequirements(@Nullable List<String> relatedRequirements) {
+        public Builder relatedRequirements(@Nullable List<String> relatedRequirements) {
             this.relatedRequirements = Input.ofNullable(relatedRequirements);
             return this;
         }
 
-        public Builder setRemediationUrl(@Nullable Input<String> remediationUrl) {
+        public Builder remediationUrl(@Nullable Input<String> remediationUrl) {
             this.remediationUrl = remediationUrl;
             return this;
         }
 
-        public Builder setRemediationUrl(@Nullable String remediationUrl) {
+        public Builder remediationUrl(@Nullable String remediationUrl) {
             this.remediationUrl = Input.ofNullable(remediationUrl);
             return this;
         }
 
-        public Builder setSeverityRating(@Nullable Input<String> severityRating) {
+        public Builder severityRating(@Nullable Input<String> severityRating) {
             this.severityRating = severityRating;
             return this;
         }
 
-        public Builder setSeverityRating(@Nullable String severityRating) {
+        public Builder severityRating(@Nullable String severityRating) {
             this.severityRating = Input.ofNullable(severityRating);
             return this;
         }
 
-        public Builder setStandardsControlArn(@Nullable Input<String> standardsControlArn) {
+        public Builder standardsControlArn(@Nullable Input<String> standardsControlArn) {
             this.standardsControlArn = standardsControlArn;
             return this;
         }
 
-        public Builder setStandardsControlArn(@Nullable String standardsControlArn) {
+        public Builder standardsControlArn(@Nullable String standardsControlArn) {
             this.standardsControlArn = Input.ofNullable(standardsControlArn);
             return this;
         }
 
-        public Builder setTitle(@Nullable Input<String> title) {
+        public Builder title(@Nullable Input<String> title) {
             this.title = title;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = Input.ofNullable(title);
             return this;
         }

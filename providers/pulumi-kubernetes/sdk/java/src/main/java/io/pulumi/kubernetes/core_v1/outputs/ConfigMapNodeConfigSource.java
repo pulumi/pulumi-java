@@ -115,27 +115,27 @@ public final class ConfigMapNodeConfigSource {
     	      this.uid = defaults.uid;
         }
 
-        public Builder setKubeletConfigKey(String kubeletConfigKey) {
+        public Builder kubeletConfigKey(String kubeletConfigKey) {
             this.kubeletConfigKey = Objects.requireNonNull(kubeletConfigKey);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNamespace(String namespace) {
+        public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
 
-        public Builder setResourceVersion(@Nullable String resourceVersion) {
+        public Builder resourceVersion(@Nullable String resourceVersion) {
             this.resourceVersion = resourceVersion;
             return this;
         }
 
-        public Builder setUid(@Nullable String uid) {
+        public Builder uid(@Nullable String uid) {
             this.uid = uid;
             return this;
         }

@@ -58,7 +58,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigEncryptionConfig {
     	      this.kmsKey = defaults.kmsKey;
         }
 
-        public Builder setKmsKey(@Nullable String kmsKey) {
+        public Builder kmsKey(@Nullable String kmsKey) {
             this.kmsKey = kmsKey;
             return this;
         }

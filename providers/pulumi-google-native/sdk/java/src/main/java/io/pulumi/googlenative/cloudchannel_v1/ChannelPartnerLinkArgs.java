@@ -82,32 +82,32 @@ public final class ChannelPartnerLinkArgs extends io.pulumi.resources.ResourceAr
     	      this.resellerCloudIdentityId = defaults.resellerCloudIdentityId;
         }
 
-        public Builder setAccountId(Input<String> accountId) {
+        public Builder accountId(Input<String> accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
 
-        public Builder setAccountId(String accountId) {
+        public Builder accountId(String accountId) {
             this.accountId = Input.of(Objects.requireNonNull(accountId));
             return this;
         }
 
-        public Builder setLinkState(Input<ChannelPartnerLinkLinkState> linkState) {
+        public Builder linkState(Input<ChannelPartnerLinkLinkState> linkState) {
             this.linkState = Objects.requireNonNull(linkState);
             return this;
         }
 
-        public Builder setLinkState(ChannelPartnerLinkLinkState linkState) {
+        public Builder linkState(ChannelPartnerLinkLinkState linkState) {
             this.linkState = Input.of(Objects.requireNonNull(linkState));
             return this;
         }
 
-        public Builder setResellerCloudIdentityId(Input<String> resellerCloudIdentityId) {
+        public Builder resellerCloudIdentityId(Input<String> resellerCloudIdentityId) {
             this.resellerCloudIdentityId = Objects.requireNonNull(resellerCloudIdentityId);
             return this;
         }
 
-        public Builder setResellerCloudIdentityId(String resellerCloudIdentityId) {
+        public Builder resellerCloudIdentityId(String resellerCloudIdentityId) {
             this.resellerCloudIdentityId = Input.of(Objects.requireNonNull(resellerCloudIdentityId));
             return this;
         }

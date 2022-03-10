@@ -71,22 +71,22 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
     	      this.textContent = defaults.textContent;
         }
 
-        public Builder setS3ContentLocation(@Nullable Input<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs> s3ContentLocation) {
+        public Builder s3ContentLocation(@Nullable Input<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs> s3ContentLocation) {
             this.s3ContentLocation = s3ContentLocation;
             return this;
         }
 
-        public Builder setS3ContentLocation(@Nullable ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs s3ContentLocation) {
+        public Builder s3ContentLocation(@Nullable ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs s3ContentLocation) {
             this.s3ContentLocation = Input.ofNullable(s3ContentLocation);
             return this;
         }
 
-        public Builder setTextContent(@Nullable Input<String> textContent) {
+        public Builder textContent(@Nullable Input<String> textContent) {
             this.textContent = textContent;
             return this;
         }
 
-        public Builder setTextContent(@Nullable String textContent) {
+        public Builder textContent(@Nullable String textContent) {
             this.textContent = Input.ofNullable(textContent);
             return this;
         }

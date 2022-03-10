@@ -108,42 +108,42 @@ public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArg
     	      this.kind = defaults.kind;
         }
 
-        public Builder setBlueprint(@Nullable Input<String> blueprint) {
+        public Builder blueprint(@Nullable Input<String> blueprint) {
             this.blueprint = blueprint;
             return this;
         }
 
-        public Builder setBlueprint(@Nullable String blueprint) {
+        public Builder blueprint(@Nullable String blueprint) {
             this.blueprint = Input.ofNullable(blueprint);
             return this;
         }
 
-        public Builder setComponentVersion(@Nullable Input<Map<String,String>> componentVersion) {
+        public Builder componentVersion(@Nullable Input<Map<String,String>> componentVersion) {
             this.componentVersion = componentVersion;
             return this;
         }
 
-        public Builder setComponentVersion(@Nullable Map<String,String> componentVersion) {
+        public Builder componentVersion(@Nullable Map<String,String> componentVersion) {
             this.componentVersion = Input.ofNullable(componentVersion);
             return this;
         }
 
-        public Builder setConfigurations(@Nullable Input<Object> configurations) {
+        public Builder configurations(@Nullable Input<Object> configurations) {
             this.configurations = configurations;
             return this;
         }
 
-        public Builder setConfigurations(@Nullable Object configurations) {
+        public Builder configurations(@Nullable Object configurations) {
             this.configurations = Input.ofNullable(configurations);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }

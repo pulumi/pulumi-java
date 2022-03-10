@@ -233,62 +233,62 @@ public final class OSDiskResponse {
     	      this.writeAcceleratorEnabled = defaults.writeAcceleratorEnabled;
         }
 
-        public Builder setCaching(@Nullable String caching) {
+        public Builder caching(@Nullable String caching) {
             this.caching = caching;
             return this;
         }
 
-        public Builder setCreateOption(String createOption) {
+        public Builder createOption(String createOption) {
             this.createOption = Objects.requireNonNull(createOption);
             return this;
         }
 
-        public Builder setDeleteOption(@Nullable String deleteOption) {
+        public Builder deleteOption(@Nullable String deleteOption) {
             this.deleteOption = deleteOption;
             return this;
         }
 
-        public Builder setDiffDiskSettings(@Nullable DiffDiskSettingsResponse diffDiskSettings) {
+        public Builder diffDiskSettings(@Nullable DiffDiskSettingsResponse diffDiskSettings) {
             this.diffDiskSettings = diffDiskSettings;
             return this;
         }
 
-        public Builder setDiskSizeGB(@Nullable Integer diskSizeGB) {
+        public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
 
-        public Builder setEncryptionSettings(@Nullable DiskEncryptionSettingsResponse encryptionSettings) {
+        public Builder encryptionSettings(@Nullable DiskEncryptionSettingsResponse encryptionSettings) {
             this.encryptionSettings = encryptionSettings;
             return this;
         }
 
-        public Builder setImage(@Nullable VirtualHardDiskResponse image) {
+        public Builder image(@Nullable VirtualHardDiskResponse image) {
             this.image = image;
             return this;
         }
 
-        public Builder setManagedDisk(@Nullable ManagedDiskParametersResponse managedDisk) {
+        public Builder managedDisk(@Nullable ManagedDiskParametersResponse managedDisk) {
             this.managedDisk = managedDisk;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setOsType(@Nullable String osType) {
+        public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
 
-        public Builder setVhd(@Nullable VirtualHardDiskResponse vhd) {
+        public Builder vhd(@Nullable VirtualHardDiskResponse vhd) {
             this.vhd = vhd;
             return this;
         }
 
-        public Builder setWriteAcceleratorEnabled(@Nullable Boolean writeAcceleratorEnabled) {
+        public Builder writeAcceleratorEnabled(@Nullable Boolean writeAcceleratorEnabled) {
             this.writeAcceleratorEnabled = writeAcceleratorEnabled;
             return this;
         }

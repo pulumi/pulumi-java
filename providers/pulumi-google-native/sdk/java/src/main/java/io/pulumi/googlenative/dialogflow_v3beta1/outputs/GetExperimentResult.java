@@ -279,77 +279,77 @@ public final class GetExperimentResult {
     	      this.variantsHistory = defaults.variantsHistory;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDefinition(GoogleCloudDialogflowCxV3beta1ExperimentDefinitionResponse definition) {
+        public Builder definition(GoogleCloudDialogflowCxV3beta1ExperimentDefinitionResponse definition) {
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setExperimentLength(String experimentLength) {
+        public Builder experimentLength(String experimentLength) {
             this.experimentLength = Objects.requireNonNull(experimentLength);
             return this;
         }
 
-        public Builder setLastUpdateTime(String lastUpdateTime) {
+        public Builder lastUpdateTime(String lastUpdateTime) {
             this.lastUpdateTime = Objects.requireNonNull(lastUpdateTime);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResult(GoogleCloudDialogflowCxV3beta1ExperimentResultResponse result) {
+        public Builder result(GoogleCloudDialogflowCxV3beta1ExperimentResultResponse result) {
             this.result = Objects.requireNonNull(result);
             return this;
         }
 
-        public Builder setRolloutConfig(GoogleCloudDialogflowCxV3beta1RolloutConfigResponse rolloutConfig) {
+        public Builder rolloutConfig(GoogleCloudDialogflowCxV3beta1RolloutConfigResponse rolloutConfig) {
             this.rolloutConfig = Objects.requireNonNull(rolloutConfig);
             return this;
         }
 
-        public Builder setRolloutFailureReason(String rolloutFailureReason) {
+        public Builder rolloutFailureReason(String rolloutFailureReason) {
             this.rolloutFailureReason = Objects.requireNonNull(rolloutFailureReason);
             return this;
         }
 
-        public Builder setRolloutState(GoogleCloudDialogflowCxV3beta1RolloutStateResponse rolloutState) {
+        public Builder rolloutState(GoogleCloudDialogflowCxV3beta1RolloutStateResponse rolloutState) {
             this.rolloutState = Objects.requireNonNull(rolloutState);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setVariantsHistory(List<GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse> variantsHistory) {
+        public Builder variantsHistory(List<GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse> variantsHistory) {
             this.variantsHistory = Objects.requireNonNull(variantsHistory);
             return this;
         }

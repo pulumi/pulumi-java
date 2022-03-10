@@ -73,12 +73,12 @@ public final class PhraseResponse extends io.pulumi.resources.InvokeArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setBoost(Double boost) {
+        public Builder boost(Double boost) {
             this.boost = Objects.requireNonNull(boost);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

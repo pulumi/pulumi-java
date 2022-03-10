@@ -48,7 +48,7 @@ public final class BucketVersioningConfiguration {
     	      this.status = defaults.status;
         }
 
-        public Builder setStatus(BucketVersioningConfigurationStatus status) {
+        public Builder status(BucketVersioningConfigurationStatus status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

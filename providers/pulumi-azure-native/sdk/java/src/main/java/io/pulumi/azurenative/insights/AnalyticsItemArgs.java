@@ -203,102 +203,102 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setContent(@Nullable Input<String> content) {
+        public Builder content(@Nullable Input<String> content) {
             this.content = content;
             return this;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = Input.ofNullable(content);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOverrideItem(@Nullable Input<Boolean> overrideItem) {
+        public Builder overrideItem(@Nullable Input<Boolean> overrideItem) {
             this.overrideItem = overrideItem;
             return this;
         }
 
-        public Builder setOverrideItem(@Nullable Boolean overrideItem) {
+        public Builder overrideItem(@Nullable Boolean overrideItem) {
             this.overrideItem = Input.ofNullable(overrideItem);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<ApplicationInsightsComponentAnalyticsItemPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<ApplicationInsightsComponentAnalyticsItemPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable ApplicationInsightsComponentAnalyticsItemPropertiesArgs properties) {
+        public Builder properties(@Nullable ApplicationInsightsComponentAnalyticsItemPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceName(Input<String> resourceName) {
+        public Builder resourceName(Input<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
-        public Builder setResourceName(String resourceName) {
+        public Builder resourceName(String resourceName) {
             this.resourceName = Input.of(Objects.requireNonNull(resourceName));
             return this;
         }
 
-        public Builder setScope(@Nullable Input<Either<String,ItemScope>> scope) {
+        public Builder scope(@Nullable Input<Either<String,ItemScope>> scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setScope(@Nullable Either<String,ItemScope> scope) {
+        public Builder scope(@Nullable Either<String,ItemScope> scope) {
             this.scope = Input.ofNullable(scope);
             return this;
         }
 
-        public Builder setScopePath(Input<String> scopePath) {
+        public Builder scopePath(Input<String> scopePath) {
             this.scopePath = Objects.requireNonNull(scopePath);
             return this;
         }
 
-        public Builder setScopePath(String scopePath) {
+        public Builder scopePath(String scopePath) {
             this.scopePath = Input.of(Objects.requireNonNull(scopePath));
             return this;
         }
 
-        public Builder setType(@Nullable Input<Either<String,ItemType>> type) {
+        public Builder type(@Nullable Input<Either<String,ItemType>> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable Either<String,ItemType> type) {
+        public Builder type(@Nullable Either<String,ItemType> type) {
             this.type = Input.ofNullable(type);
             return this;
         }

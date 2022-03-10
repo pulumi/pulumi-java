@@ -113,42 +113,42 @@ public final class FiltersArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rotation = defaults.rotation;
         }
 
-        public Builder setCrop(@Nullable Input<RectangleArgs> crop) {
+        public Builder crop(@Nullable Input<RectangleArgs> crop) {
             this.crop = crop;
             return this;
         }
 
-        public Builder setCrop(@Nullable RectangleArgs crop) {
+        public Builder crop(@Nullable RectangleArgs crop) {
             this.crop = Input.ofNullable(crop);
             return this;
         }
 
-        public Builder setDeinterlace(@Nullable Input<DeinterlaceArgs> deinterlace) {
+        public Builder deinterlace(@Nullable Input<DeinterlaceArgs> deinterlace) {
             this.deinterlace = deinterlace;
             return this;
         }
 
-        public Builder setDeinterlace(@Nullable DeinterlaceArgs deinterlace) {
+        public Builder deinterlace(@Nullable DeinterlaceArgs deinterlace) {
             this.deinterlace = Input.ofNullable(deinterlace);
             return this;
         }
 
-        public Builder setOverlays(@Nullable Input<List<Either<AudioOverlayArgs,VideoOverlayArgs>>> overlays) {
+        public Builder overlays(@Nullable Input<List<Either<AudioOverlayArgs,VideoOverlayArgs>>> overlays) {
             this.overlays = overlays;
             return this;
         }
 
-        public Builder setOverlays(@Nullable List<Either<AudioOverlayArgs,VideoOverlayArgs>> overlays) {
+        public Builder overlays(@Nullable List<Either<AudioOverlayArgs,VideoOverlayArgs>> overlays) {
             this.overlays = Input.ofNullable(overlays);
             return this;
         }
 
-        public Builder setRotation(@Nullable Input<Either<String,Rotation>> rotation) {
+        public Builder rotation(@Nullable Input<Either<String,Rotation>> rotation) {
             this.rotation = rotation;
             return this;
         }
 
-        public Builder setRotation(@Nullable Either<String,Rotation> rotation) {
+        public Builder rotation(@Nullable Either<String,Rotation> rotation) {
             this.rotation = Input.ofNullable(rotation);
             return this;
         }

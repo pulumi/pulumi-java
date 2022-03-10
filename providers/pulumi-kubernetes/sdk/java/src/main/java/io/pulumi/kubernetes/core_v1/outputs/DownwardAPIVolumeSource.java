@@ -69,12 +69,12 @@ public final class DownwardAPIVolumeSource {
     	      this.items = defaults.items;
         }
 
-        public Builder setDefaultMode(@Nullable Integer defaultMode) {
+        public Builder defaultMode(@Nullable Integer defaultMode) {
             this.defaultMode = defaultMode;
             return this;
         }
 
-        public Builder setItems(@Nullable List<DownwardAPIVolumeFile> items) {
+        public Builder items(@Nullable List<DownwardAPIVolumeFile> items) {
             this.items = items;
             return this;
         }

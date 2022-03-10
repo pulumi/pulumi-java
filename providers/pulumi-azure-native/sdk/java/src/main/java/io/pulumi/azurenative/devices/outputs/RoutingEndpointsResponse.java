@@ -102,22 +102,22 @@ public final class RoutingEndpointsResponse {
     	      this.storageContainers = defaults.storageContainers;
         }
 
-        public Builder setEventHubs(@Nullable List<RoutingEventHubPropertiesResponse> eventHubs) {
+        public Builder eventHubs(@Nullable List<RoutingEventHubPropertiesResponse> eventHubs) {
             this.eventHubs = eventHubs;
             return this;
         }
 
-        public Builder setServiceBusQueues(@Nullable List<RoutingServiceBusQueueEndpointPropertiesResponse> serviceBusQueues) {
+        public Builder serviceBusQueues(@Nullable List<RoutingServiceBusQueueEndpointPropertiesResponse> serviceBusQueues) {
             this.serviceBusQueues = serviceBusQueues;
             return this;
         }
 
-        public Builder setServiceBusTopics(@Nullable List<RoutingServiceBusTopicEndpointPropertiesResponse> serviceBusTopics) {
+        public Builder serviceBusTopics(@Nullable List<RoutingServiceBusTopicEndpointPropertiesResponse> serviceBusTopics) {
             this.serviceBusTopics = serviceBusTopics;
             return this;
         }
 
-        public Builder setStorageContainers(@Nullable List<RoutingStorageContainerPropertiesResponse> storageContainers) {
+        public Builder storageContainers(@Nullable List<RoutingStorageContainerPropertiesResponse> storageContainers) {
             this.storageContainers = storageContainers;
             return this;
         }

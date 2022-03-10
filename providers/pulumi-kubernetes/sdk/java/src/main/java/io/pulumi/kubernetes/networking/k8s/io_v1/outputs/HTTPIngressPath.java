@@ -104,17 +104,17 @@ public final class HTTPIngressPath {
     	      this.pathType = defaults.pathType;
         }
 
-        public Builder setBackend(IngressBackend backend) {
+        public Builder backend(IngressBackend backend) {
             this.backend = Objects.requireNonNull(backend);
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPathType(String pathType) {
+        public Builder pathType(String pathType) {
             this.pathType = Objects.requireNonNull(pathType);
             return this;
         }

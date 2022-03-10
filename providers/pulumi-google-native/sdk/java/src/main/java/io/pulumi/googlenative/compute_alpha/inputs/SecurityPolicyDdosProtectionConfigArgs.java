@@ -49,12 +49,12 @@ public final class SecurityPolicyDdosProtectionConfigArgs extends io.pulumi.reso
     	      this.ddosProtection = defaults.ddosProtection;
         }
 
-        public Builder setDdosProtection(@Nullable Input<SecurityPolicyDdosProtectionConfigDdosProtection> ddosProtection) {
+        public Builder ddosProtection(@Nullable Input<SecurityPolicyDdosProtectionConfigDdosProtection> ddosProtection) {
             this.ddosProtection = ddosProtection;
             return this;
         }
 
-        public Builder setDdosProtection(@Nullable SecurityPolicyDdosProtectionConfigDdosProtection ddosProtection) {
+        public Builder ddosProtection(@Nullable SecurityPolicyDdosProtectionConfigDdosProtection ddosProtection) {
             this.ddosProtection = Input.ofNullable(ddosProtection);
             return this;
         }

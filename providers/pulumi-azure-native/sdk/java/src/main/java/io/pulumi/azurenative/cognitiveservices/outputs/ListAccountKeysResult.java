@@ -67,12 +67,12 @@ public final class ListAccountKeysResult {
     	      this.key2 = defaults.key2;
         }
 
-        public Builder setKey1(@Nullable String key1) {
+        public Builder key1(@Nullable String key1) {
             this.key1 = key1;
             return this;
         }
 
-        public Builder setKey2(@Nullable String key2) {
+        public Builder key2(@Nullable String key2) {
             this.key2 = key2;
             return this;
         }

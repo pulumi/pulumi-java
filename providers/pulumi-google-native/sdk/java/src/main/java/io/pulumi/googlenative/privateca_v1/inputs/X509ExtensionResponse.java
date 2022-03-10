@@ -90,17 +90,17 @@ public final class X509ExtensionResponse extends io.pulumi.resources.InvokeArgs 
     	      this.value = defaults.value;
         }
 
-        public Builder setCritical(Boolean critical) {
+        public Builder critical(Boolean critical) {
             this.critical = Objects.requireNonNull(critical);
             return this;
         }
 
-        public Builder setObjectId(ObjectIdResponse objectId) {
+        public Builder objectId(ObjectIdResponse objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

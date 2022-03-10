@@ -91,32 +91,32 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
     	      this.lufs = defaults.lufs;
         }
 
-        public Builder setHighBoost(@Nullable Input<Boolean> highBoost) {
+        public Builder highBoost(@Nullable Input<Boolean> highBoost) {
             this.highBoost = highBoost;
             return this;
         }
 
-        public Builder setHighBoost(@Nullable Boolean highBoost) {
+        public Builder highBoost(@Nullable Boolean highBoost) {
             this.highBoost = Input.ofNullable(highBoost);
             return this;
         }
 
-        public Builder setLowBoost(@Nullable Input<Boolean> lowBoost) {
+        public Builder lowBoost(@Nullable Input<Boolean> lowBoost) {
             this.lowBoost = lowBoost;
             return this;
         }
 
-        public Builder setLowBoost(@Nullable Boolean lowBoost) {
+        public Builder lowBoost(@Nullable Boolean lowBoost) {
             this.lowBoost = Input.ofNullable(lowBoost);
             return this;
         }
 
-        public Builder setLufs(@Nullable Input<Double> lufs) {
+        public Builder lufs(@Nullable Input<Double> lufs) {
             this.lufs = lufs;
             return this;
         }
 
-        public Builder setLufs(@Nullable Double lufs) {
+        public Builder lufs(@Nullable Double lufs) {
             this.lufs = Input.ofNullable(lufs);
             return this;
         }

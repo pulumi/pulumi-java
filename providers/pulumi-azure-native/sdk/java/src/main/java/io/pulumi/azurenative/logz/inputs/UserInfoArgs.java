@@ -102,42 +102,42 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.phoneNumber = defaults.phoneNumber;
         }
 
-        public Builder setEmailAddress(@Nullable Input<String> emailAddress) {
+        public Builder emailAddress(@Nullable Input<String> emailAddress) {
             this.emailAddress = emailAddress;
             return this;
         }
 
-        public Builder setEmailAddress(@Nullable String emailAddress) {
+        public Builder emailAddress(@Nullable String emailAddress) {
             this.emailAddress = Input.ofNullable(emailAddress);
             return this;
         }
 
-        public Builder setFirstName(@Nullable Input<String> firstName) {
+        public Builder firstName(@Nullable Input<String> firstName) {
             this.firstName = firstName;
             return this;
         }
 
-        public Builder setFirstName(@Nullable String firstName) {
+        public Builder firstName(@Nullable String firstName) {
             this.firstName = Input.ofNullable(firstName);
             return this;
         }
 
-        public Builder setLastName(@Nullable Input<String> lastName) {
+        public Builder lastName(@Nullable Input<String> lastName) {
             this.lastName = lastName;
             return this;
         }
 
-        public Builder setLastName(@Nullable String lastName) {
+        public Builder lastName(@Nullable String lastName) {
             this.lastName = Input.ofNullable(lastName);
             return this;
         }
 
-        public Builder setPhoneNumber(@Nullable Input<String> phoneNumber) {
+        public Builder phoneNumber(@Nullable Input<String> phoneNumber) {
             this.phoneNumber = phoneNumber;
             return this;
         }
 
-        public Builder setPhoneNumber(@Nullable String phoneNumber) {
+        public Builder phoneNumber(@Nullable String phoneNumber) {
             this.phoneNumber = Input.ofNullable(phoneNumber);
             return this;
         }

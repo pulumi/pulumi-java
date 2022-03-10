@@ -65,12 +65,12 @@ public final class ReplicationConfigurationReplicationConfigurationRuleDestinati
     	      this.registryId = defaults.registryId;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRegistryId(String registryId) {
+        public Builder registryId(String registryId) {
             this.registryId = Objects.requireNonNull(registryId);
             return this;
         }

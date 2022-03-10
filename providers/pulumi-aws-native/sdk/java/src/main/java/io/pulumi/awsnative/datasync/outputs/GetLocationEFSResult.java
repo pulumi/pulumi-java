@@ -85,17 +85,17 @@ public final class GetLocationEFSResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setLocationArn(@Nullable String locationArn) {
+        public Builder locationArn(@Nullable String locationArn) {
             this.locationArn = locationArn;
             return this;
         }
 
-        public Builder setLocationUri(@Nullable String locationUri) {
+        public Builder locationUri(@Nullable String locationUri) {
             this.locationUri = locationUri;
             return this;
         }
 
-        public Builder setTags(@Nullable List<LocationEFSTag> tags) {
+        public Builder tags(@Nullable List<LocationEFSTag> tags) {
             this.tags = tags;
             return this;
         }

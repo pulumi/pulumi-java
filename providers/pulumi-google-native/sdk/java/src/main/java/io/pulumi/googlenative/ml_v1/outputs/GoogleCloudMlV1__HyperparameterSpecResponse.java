@@ -181,47 +181,47 @@ public final class GoogleCloudMlV1__HyperparameterSpecResponse {
     	      this.resumePreviousJobId = defaults.resumePreviousJobId;
         }
 
-        public Builder setAlgorithm(String algorithm) {
+        public Builder algorithm(String algorithm) {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
 
-        public Builder setEnableTrialEarlyStopping(Boolean enableTrialEarlyStopping) {
+        public Builder enableTrialEarlyStopping(Boolean enableTrialEarlyStopping) {
             this.enableTrialEarlyStopping = Objects.requireNonNull(enableTrialEarlyStopping);
             return this;
         }
 
-        public Builder setGoal(String goal) {
+        public Builder goal(String goal) {
             this.goal = Objects.requireNonNull(goal);
             return this;
         }
 
-        public Builder setHyperparameterMetricTag(String hyperparameterMetricTag) {
+        public Builder hyperparameterMetricTag(String hyperparameterMetricTag) {
             this.hyperparameterMetricTag = Objects.requireNonNull(hyperparameterMetricTag);
             return this;
         }
 
-        public Builder setMaxFailedTrials(Integer maxFailedTrials) {
+        public Builder maxFailedTrials(Integer maxFailedTrials) {
             this.maxFailedTrials = Objects.requireNonNull(maxFailedTrials);
             return this;
         }
 
-        public Builder setMaxParallelTrials(Integer maxParallelTrials) {
+        public Builder maxParallelTrials(Integer maxParallelTrials) {
             this.maxParallelTrials = Objects.requireNonNull(maxParallelTrials);
             return this;
         }
 
-        public Builder setMaxTrials(Integer maxTrials) {
+        public Builder maxTrials(Integer maxTrials) {
             this.maxTrials = Objects.requireNonNull(maxTrials);
             return this;
         }
 
-        public Builder setParams(List<GoogleCloudMlV1__ParameterSpecResponse> params) {
+        public Builder params(List<GoogleCloudMlV1__ParameterSpecResponse> params) {
             this.params = Objects.requireNonNull(params);
             return this;
         }
 
-        public Builder setResumePreviousJobId(String resumePreviousJobId) {
+        public Builder resumePreviousJobId(String resumePreviousJobId) {
             this.resumePreviousJobId = Objects.requireNonNull(resumePreviousJobId);
             return this;
         }

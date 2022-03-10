@@ -143,62 +143,62 @@ public final class PolicyTagState extends io.pulumi.resources.ResourceArgs {
     	      this.taxonomy = defaults.taxonomy;
         }
 
-        public Builder setChildPolicyTags(@Nullable Input<List<String>> childPolicyTags) {
+        public Builder childPolicyTags(@Nullable Input<List<String>> childPolicyTags) {
             this.childPolicyTags = childPolicyTags;
             return this;
         }
 
-        public Builder setChildPolicyTags(@Nullable List<String> childPolicyTags) {
+        public Builder childPolicyTags(@Nullable List<String> childPolicyTags) {
             this.childPolicyTags = Input.ofNullable(childPolicyTags);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParentPolicyTag(@Nullable Input<String> parentPolicyTag) {
+        public Builder parentPolicyTag(@Nullable Input<String> parentPolicyTag) {
             this.parentPolicyTag = parentPolicyTag;
             return this;
         }
 
-        public Builder setParentPolicyTag(@Nullable String parentPolicyTag) {
+        public Builder parentPolicyTag(@Nullable String parentPolicyTag) {
             this.parentPolicyTag = Input.ofNullable(parentPolicyTag);
             return this;
         }
 
-        public Builder setTaxonomy(@Nullable Input<String> taxonomy) {
+        public Builder taxonomy(@Nullable Input<String> taxonomy) {
             this.taxonomy = taxonomy;
             return this;
         }
 
-        public Builder setTaxonomy(@Nullable String taxonomy) {
+        public Builder taxonomy(@Nullable String taxonomy) {
             this.taxonomy = Input.ofNullable(taxonomy);
             return this;
         }

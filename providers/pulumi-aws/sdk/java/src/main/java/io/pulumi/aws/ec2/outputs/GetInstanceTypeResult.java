@@ -807,237 +807,237 @@ public final class GetInstanceTypeResult {
     	      this.validThreadsPerCores = defaults.validThreadsPerCores;
         }
 
-        public Builder setAutoRecoverySupported(Boolean autoRecoverySupported) {
+        public Builder autoRecoverySupported(Boolean autoRecoverySupported) {
             this.autoRecoverySupported = Objects.requireNonNull(autoRecoverySupported);
             return this;
         }
 
-        public Builder setBareMetal(Boolean bareMetal) {
+        public Builder bareMetal(Boolean bareMetal) {
             this.bareMetal = Objects.requireNonNull(bareMetal);
             return this;
         }
 
-        public Builder setBurstablePerformanceSupported(Boolean burstablePerformanceSupported) {
+        public Builder burstablePerformanceSupported(Boolean burstablePerformanceSupported) {
             this.burstablePerformanceSupported = Objects.requireNonNull(burstablePerformanceSupported);
             return this;
         }
 
-        public Builder setCurrentGeneration(Boolean currentGeneration) {
+        public Builder currentGeneration(Boolean currentGeneration) {
             this.currentGeneration = Objects.requireNonNull(currentGeneration);
             return this;
         }
 
-        public Builder setDedicatedHostsSupported(Boolean dedicatedHostsSupported) {
+        public Builder dedicatedHostsSupported(Boolean dedicatedHostsSupported) {
             this.dedicatedHostsSupported = Objects.requireNonNull(dedicatedHostsSupported);
             return this;
         }
 
-        public Builder setDefaultCores(Integer defaultCores) {
+        public Builder defaultCores(Integer defaultCores) {
             this.defaultCores = Objects.requireNonNull(defaultCores);
             return this;
         }
 
-        public Builder setDefaultThreadsPerCore(Integer defaultThreadsPerCore) {
+        public Builder defaultThreadsPerCore(Integer defaultThreadsPerCore) {
             this.defaultThreadsPerCore = Objects.requireNonNull(defaultThreadsPerCore);
             return this;
         }
 
-        public Builder setDefaultVcpus(Integer defaultVcpus) {
+        public Builder defaultVcpus(Integer defaultVcpus) {
             this.defaultVcpus = Objects.requireNonNull(defaultVcpus);
             return this;
         }
 
-        public Builder setEbsEncryptionSupport(String ebsEncryptionSupport) {
+        public Builder ebsEncryptionSupport(String ebsEncryptionSupport) {
             this.ebsEncryptionSupport = Objects.requireNonNull(ebsEncryptionSupport);
             return this;
         }
 
-        public Builder setEbsNvmeSupport(String ebsNvmeSupport) {
+        public Builder ebsNvmeSupport(String ebsNvmeSupport) {
             this.ebsNvmeSupport = Objects.requireNonNull(ebsNvmeSupport);
             return this;
         }
 
-        public Builder setEbsOptimizedSupport(String ebsOptimizedSupport) {
+        public Builder ebsOptimizedSupport(String ebsOptimizedSupport) {
             this.ebsOptimizedSupport = Objects.requireNonNull(ebsOptimizedSupport);
             return this;
         }
 
-        public Builder setEbsPerformanceBaselineBandwidth(Integer ebsPerformanceBaselineBandwidth) {
+        public Builder ebsPerformanceBaselineBandwidth(Integer ebsPerformanceBaselineBandwidth) {
             this.ebsPerformanceBaselineBandwidth = Objects.requireNonNull(ebsPerformanceBaselineBandwidth);
             return this;
         }
 
-        public Builder setEbsPerformanceBaselineIops(Integer ebsPerformanceBaselineIops) {
+        public Builder ebsPerformanceBaselineIops(Integer ebsPerformanceBaselineIops) {
             this.ebsPerformanceBaselineIops = Objects.requireNonNull(ebsPerformanceBaselineIops);
             return this;
         }
 
-        public Builder setEbsPerformanceBaselineThroughput(Double ebsPerformanceBaselineThroughput) {
+        public Builder ebsPerformanceBaselineThroughput(Double ebsPerformanceBaselineThroughput) {
             this.ebsPerformanceBaselineThroughput = Objects.requireNonNull(ebsPerformanceBaselineThroughput);
             return this;
         }
 
-        public Builder setEbsPerformanceMaximumBandwidth(Integer ebsPerformanceMaximumBandwidth) {
+        public Builder ebsPerformanceMaximumBandwidth(Integer ebsPerformanceMaximumBandwidth) {
             this.ebsPerformanceMaximumBandwidth = Objects.requireNonNull(ebsPerformanceMaximumBandwidth);
             return this;
         }
 
-        public Builder setEbsPerformanceMaximumIops(Integer ebsPerformanceMaximumIops) {
+        public Builder ebsPerformanceMaximumIops(Integer ebsPerformanceMaximumIops) {
             this.ebsPerformanceMaximumIops = Objects.requireNonNull(ebsPerformanceMaximumIops);
             return this;
         }
 
-        public Builder setEbsPerformanceMaximumThroughput(Double ebsPerformanceMaximumThroughput) {
+        public Builder ebsPerformanceMaximumThroughput(Double ebsPerformanceMaximumThroughput) {
             this.ebsPerformanceMaximumThroughput = Objects.requireNonNull(ebsPerformanceMaximumThroughput);
             return this;
         }
 
-        public Builder setEfaSupported(Boolean efaSupported) {
+        public Builder efaSupported(Boolean efaSupported) {
             this.efaSupported = Objects.requireNonNull(efaSupported);
             return this;
         }
 
-        public Builder setEnaSupport(String enaSupport) {
+        public Builder enaSupport(String enaSupport) {
             this.enaSupport = Objects.requireNonNull(enaSupport);
             return this;
         }
 
-        public Builder setEncryptionInTransitSupported(Boolean encryptionInTransitSupported) {
+        public Builder encryptionInTransitSupported(Boolean encryptionInTransitSupported) {
             this.encryptionInTransitSupported = Objects.requireNonNull(encryptionInTransitSupported);
             return this;
         }
 
-        public Builder setFpgas(List<GetInstanceTypeFpga> fpgas) {
+        public Builder fpgas(List<GetInstanceTypeFpga> fpgas) {
             this.fpgas = Objects.requireNonNull(fpgas);
             return this;
         }
 
-        public Builder setFreeTierEligible(Boolean freeTierEligible) {
+        public Builder freeTierEligible(Boolean freeTierEligible) {
             this.freeTierEligible = Objects.requireNonNull(freeTierEligible);
             return this;
         }
 
-        public Builder setGpuses(List<GetInstanceTypeGpus> gpuses) {
+        public Builder gpuses(List<GetInstanceTypeGpus> gpuses) {
             this.gpuses = Objects.requireNonNull(gpuses);
             return this;
         }
 
-        public Builder setHibernationSupported(Boolean hibernationSupported) {
+        public Builder hibernationSupported(Boolean hibernationSupported) {
             this.hibernationSupported = Objects.requireNonNull(hibernationSupported);
             return this;
         }
 
-        public Builder setHypervisor(String hypervisor) {
+        public Builder hypervisor(String hypervisor) {
             this.hypervisor = Objects.requireNonNull(hypervisor);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInferenceAccelerators(List<GetInstanceTypeInferenceAccelerator> inferenceAccelerators) {
+        public Builder inferenceAccelerators(List<GetInstanceTypeInferenceAccelerator> inferenceAccelerators) {
             this.inferenceAccelerators = Objects.requireNonNull(inferenceAccelerators);
             return this;
         }
 
-        public Builder setInstanceDisks(List<GetInstanceTypeInstanceDisk> instanceDisks) {
+        public Builder instanceDisks(List<GetInstanceTypeInstanceDisk> instanceDisks) {
             this.instanceDisks = Objects.requireNonNull(instanceDisks);
             return this;
         }
 
-        public Builder setInstanceStorageSupported(Boolean instanceStorageSupported) {
+        public Builder instanceStorageSupported(Boolean instanceStorageSupported) {
             this.instanceStorageSupported = Objects.requireNonNull(instanceStorageSupported);
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setIpv6Supported(Boolean ipv6Supported) {
+        public Builder ipv6Supported(Boolean ipv6Supported) {
             this.ipv6Supported = Objects.requireNonNull(ipv6Supported);
             return this;
         }
 
-        public Builder setMaximumIpv4AddressesPerInterface(Integer maximumIpv4AddressesPerInterface) {
+        public Builder maximumIpv4AddressesPerInterface(Integer maximumIpv4AddressesPerInterface) {
             this.maximumIpv4AddressesPerInterface = Objects.requireNonNull(maximumIpv4AddressesPerInterface);
             return this;
         }
 
-        public Builder setMaximumIpv6AddressesPerInterface(Integer maximumIpv6AddressesPerInterface) {
+        public Builder maximumIpv6AddressesPerInterface(Integer maximumIpv6AddressesPerInterface) {
             this.maximumIpv6AddressesPerInterface = Objects.requireNonNull(maximumIpv6AddressesPerInterface);
             return this;
         }
 
-        public Builder setMaximumNetworkInterfaces(Integer maximumNetworkInterfaces) {
+        public Builder maximumNetworkInterfaces(Integer maximumNetworkInterfaces) {
             this.maximumNetworkInterfaces = Objects.requireNonNull(maximumNetworkInterfaces);
             return this;
         }
 
-        public Builder setMemorySize(Integer memorySize) {
+        public Builder memorySize(Integer memorySize) {
             this.memorySize = Objects.requireNonNull(memorySize);
             return this;
         }
 
-        public Builder setNetworkPerformance(String networkPerformance) {
+        public Builder networkPerformance(String networkPerformance) {
             this.networkPerformance = Objects.requireNonNull(networkPerformance);
             return this;
         }
 
-        public Builder setSupportedArchitectures(List<String> supportedArchitectures) {
+        public Builder supportedArchitectures(List<String> supportedArchitectures) {
             this.supportedArchitectures = Objects.requireNonNull(supportedArchitectures);
             return this;
         }
 
-        public Builder setSupportedPlacementStrategies(List<String> supportedPlacementStrategies) {
+        public Builder supportedPlacementStrategies(List<String> supportedPlacementStrategies) {
             this.supportedPlacementStrategies = Objects.requireNonNull(supportedPlacementStrategies);
             return this;
         }
 
-        public Builder setSupportedRootDeviceTypes(List<String> supportedRootDeviceTypes) {
+        public Builder supportedRootDeviceTypes(List<String> supportedRootDeviceTypes) {
             this.supportedRootDeviceTypes = Objects.requireNonNull(supportedRootDeviceTypes);
             return this;
         }
 
-        public Builder setSupportedUsagesClasses(List<String> supportedUsagesClasses) {
+        public Builder supportedUsagesClasses(List<String> supportedUsagesClasses) {
             this.supportedUsagesClasses = Objects.requireNonNull(supportedUsagesClasses);
             return this;
         }
 
-        public Builder setSupportedVirtualizationTypes(List<String> supportedVirtualizationTypes) {
+        public Builder supportedVirtualizationTypes(List<String> supportedVirtualizationTypes) {
             this.supportedVirtualizationTypes = Objects.requireNonNull(supportedVirtualizationTypes);
             return this;
         }
 
-        public Builder setSustainedClockSpeed(Double sustainedClockSpeed) {
+        public Builder sustainedClockSpeed(Double sustainedClockSpeed) {
             this.sustainedClockSpeed = Objects.requireNonNull(sustainedClockSpeed);
             return this;
         }
 
-        public Builder setTotalFpgaMemory(Integer totalFpgaMemory) {
+        public Builder totalFpgaMemory(Integer totalFpgaMemory) {
             this.totalFpgaMemory = Objects.requireNonNull(totalFpgaMemory);
             return this;
         }
 
-        public Builder setTotalGpuMemory(Integer totalGpuMemory) {
+        public Builder totalGpuMemory(Integer totalGpuMemory) {
             this.totalGpuMemory = Objects.requireNonNull(totalGpuMemory);
             return this;
         }
 
-        public Builder setTotalInstanceStorage(Integer totalInstanceStorage) {
+        public Builder totalInstanceStorage(Integer totalInstanceStorage) {
             this.totalInstanceStorage = Objects.requireNonNull(totalInstanceStorage);
             return this;
         }
 
-        public Builder setValidCores(List<Integer> validCores) {
+        public Builder validCores(List<Integer> validCores) {
             this.validCores = Objects.requireNonNull(validCores);
             return this;
         }
 
-        public Builder setValidThreadsPerCores(List<Integer> validThreadsPerCores) {
+        public Builder validThreadsPerCores(List<Integer> validThreadsPerCores) {
             this.validThreadsPerCores = Objects.requireNonNull(validThreadsPerCores);
             return this;
         }

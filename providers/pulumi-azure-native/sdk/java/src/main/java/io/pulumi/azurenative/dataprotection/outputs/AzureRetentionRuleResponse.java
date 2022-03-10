@@ -78,22 +78,22 @@ public final class AzureRetentionRuleResponse {
     	      this.objectType = defaults.objectType;
         }
 
-        public Builder setIsDefault(@Nullable Boolean isDefault) {
+        public Builder isDefault(@Nullable Boolean isDefault) {
             this.isDefault = isDefault;
             return this;
         }
 
-        public Builder setLifecycles(List<SourceLifeCycleResponse> lifecycles) {
+        public Builder lifecycles(List<SourceLifeCycleResponse> lifecycles) {
             this.lifecycles = Objects.requireNonNull(lifecycles);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setObjectType(String objectType) {
+        public Builder objectType(String objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }

@@ -95,37 +95,37 @@ public final class GetProvisioningTemplateResult {
     	      this.templateBody = defaults.templateBody;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setPreProvisioningHook(@Nullable ProvisioningTemplateProvisioningHook preProvisioningHook) {
+        public Builder preProvisioningHook(@Nullable ProvisioningTemplateProvisioningHook preProvisioningHook) {
             this.preProvisioningHook = preProvisioningHook;
             return this;
         }
 
-        public Builder setProvisioningRoleArn(@Nullable String provisioningRoleArn) {
+        public Builder provisioningRoleArn(@Nullable String provisioningRoleArn) {
             this.provisioningRoleArn = provisioningRoleArn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ProvisioningTemplateTag> tags) {
+        public Builder tags(@Nullable List<ProvisioningTemplateTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTemplateArn(@Nullable String templateArn) {
+        public Builder templateArn(@Nullable String templateArn) {
             this.templateArn = templateArn;
             return this;
         }
 
-        public Builder setTemplateBody(@Nullable String templateBody) {
+        public Builder templateBody(@Nullable String templateBody) {
             this.templateBody = templateBody;
             return this;
         }

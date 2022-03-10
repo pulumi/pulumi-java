@@ -74,12 +74,12 @@ public final class AttestationEvidenceResponse extends io.pulumi.resources.Invok
     	      this.sourceUri = defaults.sourceUri;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setSourceUri(@Nullable String sourceUri) {
+        public Builder sourceUri(@Nullable String sourceUri) {
             this.sourceUri = sourceUri;
             return this;
         }

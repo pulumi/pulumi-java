@@ -190,92 +190,92 @@ public final class AccessConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setExternalIpv6(@Nullable Input<String> externalIpv6) {
+        public Builder externalIpv6(@Nullable Input<String> externalIpv6) {
             this.externalIpv6 = externalIpv6;
             return this;
         }
 
-        public Builder setExternalIpv6(@Nullable String externalIpv6) {
+        public Builder externalIpv6(@Nullable String externalIpv6) {
             this.externalIpv6 = Input.ofNullable(externalIpv6);
             return this;
         }
 
-        public Builder setExternalIpv6PrefixLength(@Nullable Input<Integer> externalIpv6PrefixLength) {
+        public Builder externalIpv6PrefixLength(@Nullable Input<Integer> externalIpv6PrefixLength) {
             this.externalIpv6PrefixLength = externalIpv6PrefixLength;
             return this;
         }
 
-        public Builder setExternalIpv6PrefixLength(@Nullable Integer externalIpv6PrefixLength) {
+        public Builder externalIpv6PrefixLength(@Nullable Integer externalIpv6PrefixLength) {
             this.externalIpv6PrefixLength = Input.ofNullable(externalIpv6PrefixLength);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNatIP(@Nullable Input<String> natIP) {
+        public Builder natIP(@Nullable Input<String> natIP) {
             this.natIP = natIP;
             return this;
         }
 
-        public Builder setNatIP(@Nullable String natIP) {
+        public Builder natIP(@Nullable String natIP) {
             this.natIP = Input.ofNullable(natIP);
             return this;
         }
 
-        public Builder setNetworkTier(@Nullable Input<AccessConfigNetworkTier> networkTier) {
+        public Builder networkTier(@Nullable Input<AccessConfigNetworkTier> networkTier) {
             this.networkTier = networkTier;
             return this;
         }
 
-        public Builder setNetworkTier(@Nullable AccessConfigNetworkTier networkTier) {
+        public Builder networkTier(@Nullable AccessConfigNetworkTier networkTier) {
             this.networkTier = Input.ofNullable(networkTier);
             return this;
         }
 
-        public Builder setPublicPtrDomainName(@Nullable Input<String> publicPtrDomainName) {
+        public Builder publicPtrDomainName(@Nullable Input<String> publicPtrDomainName) {
             this.publicPtrDomainName = publicPtrDomainName;
             return this;
         }
 
-        public Builder setPublicPtrDomainName(@Nullable String publicPtrDomainName) {
+        public Builder publicPtrDomainName(@Nullable String publicPtrDomainName) {
             this.publicPtrDomainName = Input.ofNullable(publicPtrDomainName);
             return this;
         }
 
-        public Builder setSetPublicDns(@Nullable Input<Boolean> setPublicDns) {
+        public Builder setPublicDns(@Nullable Input<Boolean> setPublicDns) {
             this.setPublicDns = setPublicDns;
             return this;
         }
 
-        public Builder setSetPublicDns(@Nullable Boolean setPublicDns) {
+        public Builder setPublicDns(@Nullable Boolean setPublicDns) {
             this.setPublicDns = Input.ofNullable(setPublicDns);
             return this;
         }
 
-        public Builder setSetPublicPtr(@Nullable Input<Boolean> setPublicPtr) {
+        public Builder setPublicPtr(@Nullable Input<Boolean> setPublicPtr) {
             this.setPublicPtr = setPublicPtr;
             return this;
         }
 
-        public Builder setSetPublicPtr(@Nullable Boolean setPublicPtr) {
+        public Builder setPublicPtr(@Nullable Boolean setPublicPtr) {
             this.setPublicPtr = Input.ofNullable(setPublicPtr);
             return this;
         }
 
-        public Builder setType(@Nullable Input<AccessConfigType> type) {
+        public Builder type(@Nullable Input<AccessConfigType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable AccessConfigType type) {
+        public Builder type(@Nullable AccessConfigType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

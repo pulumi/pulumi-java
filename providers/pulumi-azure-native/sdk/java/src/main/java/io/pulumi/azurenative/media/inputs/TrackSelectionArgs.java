@@ -58,12 +58,12 @@ public final class TrackSelectionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.trackSelections = defaults.trackSelections;
         }
 
-        public Builder setTrackSelections(@Nullable Input<List<TrackPropertyConditionArgs>> trackSelections) {
+        public Builder trackSelections(@Nullable Input<List<TrackPropertyConditionArgs>> trackSelections) {
             this.trackSelections = trackSelections;
             return this;
         }
 
-        public Builder setTrackSelections(@Nullable List<TrackPropertyConditionArgs> trackSelections) {
+        public Builder trackSelections(@Nullable List<TrackPropertyConditionArgs> trackSelections) {
             this.trackSelections = Input.ofNullable(trackSelections);
             return this;
         }

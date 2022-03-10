@@ -53,12 +53,12 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsArgs extends 
     	      this.outputConfig = defaults.outputConfig;
         }
 
-        public Builder setOutputConfig(Input<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs> outputConfig) {
+        public Builder outputConfig(Input<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs> outputConfig) {
             this.outputConfig = Objects.requireNonNull(outputConfig);
             return this;
         }
 
-        public Builder setOutputConfig(PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs outputConfig) {
+        public Builder outputConfig(PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs outputConfig) {
             this.outputConfig = Input.of(Objects.requireNonNull(outputConfig));
             return this;
         }

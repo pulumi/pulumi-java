@@ -94,32 +94,32 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
     	      this.uefiSettings = defaults.uefiSettings;
         }
 
-        public Builder setEncryptionAtHost(@Nullable Input<Boolean> encryptionAtHost) {
+        public Builder encryptionAtHost(@Nullable Input<Boolean> encryptionAtHost) {
             this.encryptionAtHost = encryptionAtHost;
             return this;
         }
 
-        public Builder setEncryptionAtHost(@Nullable Boolean encryptionAtHost) {
+        public Builder encryptionAtHost(@Nullable Boolean encryptionAtHost) {
             this.encryptionAtHost = Input.ofNullable(encryptionAtHost);
             return this;
         }
 
-        public Builder setSecurityType(@Nullable Input<Either<String,SecurityTypes>> securityType) {
+        public Builder securityType(@Nullable Input<Either<String,SecurityTypes>> securityType) {
             this.securityType = securityType;
             return this;
         }
 
-        public Builder setSecurityType(@Nullable Either<String,SecurityTypes> securityType) {
+        public Builder securityType(@Nullable Either<String,SecurityTypes> securityType) {
             this.securityType = Input.ofNullable(securityType);
             return this;
         }
 
-        public Builder setUefiSettings(@Nullable Input<UefiSettingsArgs> uefiSettings) {
+        public Builder uefiSettings(@Nullable Input<UefiSettingsArgs> uefiSettings) {
             this.uefiSettings = uefiSettings;
             return this;
         }
 
-        public Builder setUefiSettings(@Nullable UefiSettingsArgs uefiSettings) {
+        public Builder uefiSettings(@Nullable UefiSettingsArgs uefiSettings) {
             this.uefiSettings = Input.ofNullable(uefiSettings);
             return this;
         }

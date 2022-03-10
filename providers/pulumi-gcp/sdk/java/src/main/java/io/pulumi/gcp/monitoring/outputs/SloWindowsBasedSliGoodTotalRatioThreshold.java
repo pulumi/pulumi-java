@@ -93,17 +93,17 @@ public final class SloWindowsBasedSliGoodTotalRatioThreshold {
     	      this.threshold = defaults.threshold;
         }
 
-        public Builder setBasicSliPerformance(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance basicSliPerformance) {
+        public Builder basicSliPerformance(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance basicSliPerformance) {
             this.basicSliPerformance = basicSliPerformance;
             return this;
         }
 
-        public Builder setPerformance(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdPerformance performance) {
+        public Builder performance(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdPerformance performance) {
             this.performance = performance;
             return this;
         }
 
-        public Builder setThreshold(@Nullable Double threshold) {
+        public Builder threshold(@Nullable Double threshold) {
             this.threshold = threshold;
             return this;
         }

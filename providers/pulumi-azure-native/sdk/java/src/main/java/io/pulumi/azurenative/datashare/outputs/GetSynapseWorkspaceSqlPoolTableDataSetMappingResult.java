@@ -180,47 +180,47 @@ public final class GetSynapseWorkspaceSqlPoolTableDataSetMappingResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDataSetId(String dataSetId) {
+        public Builder dataSetId(String dataSetId) {
             this.dataSetId = Objects.requireNonNull(dataSetId);
             return this;
         }
 
-        public Builder setDataSetMappingStatus(String dataSetMappingStatus) {
+        public Builder dataSetMappingStatus(String dataSetMappingStatus) {
             this.dataSetMappingStatus = Objects.requireNonNull(dataSetMappingStatus);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSynapseWorkspaceSqlPoolTableResourceId(String synapseWorkspaceSqlPoolTableResourceId) {
+        public Builder synapseWorkspaceSqlPoolTableResourceId(String synapseWorkspaceSqlPoolTableResourceId) {
             this.synapseWorkspaceSqlPoolTableResourceId = Objects.requireNonNull(synapseWorkspaceSqlPoolTableResourceId);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

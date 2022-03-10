@@ -88,32 +88,32 @@ public final class VpcIpamPreviewNextCidrArgs extends io.pulumi.resources.Resour
     	      this.netmaskLength = defaults.netmaskLength;
         }
 
-        public Builder setDisallowedCidrs(@Nullable Input<List<String>> disallowedCidrs) {
+        public Builder disallowedCidrs(@Nullable Input<List<String>> disallowedCidrs) {
             this.disallowedCidrs = disallowedCidrs;
             return this;
         }
 
-        public Builder setDisallowedCidrs(@Nullable List<String> disallowedCidrs) {
+        public Builder disallowedCidrs(@Nullable List<String> disallowedCidrs) {
             this.disallowedCidrs = Input.ofNullable(disallowedCidrs);
             return this;
         }
 
-        public Builder setIpamPoolId(Input<String> ipamPoolId) {
+        public Builder ipamPoolId(Input<String> ipamPoolId) {
             this.ipamPoolId = Objects.requireNonNull(ipamPoolId);
             return this;
         }
 
-        public Builder setIpamPoolId(String ipamPoolId) {
+        public Builder ipamPoolId(String ipamPoolId) {
             this.ipamPoolId = Input.of(Objects.requireNonNull(ipamPoolId));
             return this;
         }
 
-        public Builder setNetmaskLength(@Nullable Input<Integer> netmaskLength) {
+        public Builder netmaskLength(@Nullable Input<Integer> netmaskLength) {
             this.netmaskLength = netmaskLength;
             return this;
         }
 
-        public Builder setNetmaskLength(@Nullable Integer netmaskLength) {
+        public Builder netmaskLength(@Nullable Integer netmaskLength) {
             this.netmaskLength = Input.ofNullable(netmaskLength);
             return this;
         }

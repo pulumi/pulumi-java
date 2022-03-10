@@ -68,12 +68,12 @@ public final class ResolverRuleTargetIp {
     	      this.port = defaults.port;
         }
 
-        public Builder setIp(String ip) {
+        public Builder ip(String ip) {
             this.ip = Objects.requireNonNull(ip);
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }

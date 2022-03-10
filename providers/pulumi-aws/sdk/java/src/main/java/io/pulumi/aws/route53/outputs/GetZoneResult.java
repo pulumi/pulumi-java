@@ -207,67 +207,67 @@ public final class GetZoneResult {
     	      this.zoneId = defaults.zoneId;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setCallerReference(String callerReference) {
+        public Builder callerReference(String callerReference) {
             this.callerReference = Objects.requireNonNull(callerReference);
             return this;
         }
 
-        public Builder setComment(String comment) {
+        public Builder comment(String comment) {
             this.comment = Objects.requireNonNull(comment);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLinkedServiceDescription(String linkedServiceDescription) {
+        public Builder linkedServiceDescription(String linkedServiceDescription) {
             this.linkedServiceDescription = Objects.requireNonNull(linkedServiceDescription);
             return this;
         }
 
-        public Builder setLinkedServicePrincipal(String linkedServicePrincipal) {
+        public Builder linkedServicePrincipal(String linkedServicePrincipal) {
             this.linkedServicePrincipal = Objects.requireNonNull(linkedServicePrincipal);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNameServers(List<String> nameServers) {
+        public Builder nameServers(List<String> nameServers) {
             this.nameServers = Objects.requireNonNull(nameServers);
             return this;
         }
 
-        public Builder setPrivateZone(@Nullable Boolean privateZone) {
+        public Builder privateZone(@Nullable Boolean privateZone) {
             this.privateZone = privateZone;
             return this;
         }
 
-        public Builder setResourceRecordSetCount(Integer resourceRecordSetCount) {
+        public Builder resourceRecordSetCount(Integer resourceRecordSetCount) {
             this.resourceRecordSetCount = Objects.requireNonNull(resourceRecordSetCount);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
-        public Builder setZoneId(String zoneId) {
+        public Builder zoneId(String zoneId) {
             this.zoneId = Objects.requireNonNull(zoneId);
             return this;
         }

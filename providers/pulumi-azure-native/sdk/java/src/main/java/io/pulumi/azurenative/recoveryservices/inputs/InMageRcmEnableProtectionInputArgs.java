@@ -352,192 +352,192 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
     	      this.testSubnetName = defaults.testSubnetName;
         }
 
-        public Builder setDisksDefault(@Nullable Input<InMageRcmDisksDefaultInputArgs> disksDefault) {
+        public Builder disksDefault(@Nullable Input<InMageRcmDisksDefaultInputArgs> disksDefault) {
             this.disksDefault = disksDefault;
             return this;
         }
 
-        public Builder setDisksDefault(@Nullable InMageRcmDisksDefaultInputArgs disksDefault) {
+        public Builder disksDefault(@Nullable InMageRcmDisksDefaultInputArgs disksDefault) {
             this.disksDefault = Input.ofNullable(disksDefault);
             return this;
         }
 
-        public Builder setDisksToInclude(@Nullable Input<List<InMageRcmDiskInputArgs>> disksToInclude) {
+        public Builder disksToInclude(@Nullable Input<List<InMageRcmDiskInputArgs>> disksToInclude) {
             this.disksToInclude = disksToInclude;
             return this;
         }
 
-        public Builder setDisksToInclude(@Nullable List<InMageRcmDiskInputArgs> disksToInclude) {
+        public Builder disksToInclude(@Nullable List<InMageRcmDiskInputArgs> disksToInclude) {
             this.disksToInclude = Input.ofNullable(disksToInclude);
             return this;
         }
 
-        public Builder setFabricDiscoveryMachineId(@Nullable Input<String> fabricDiscoveryMachineId) {
+        public Builder fabricDiscoveryMachineId(@Nullable Input<String> fabricDiscoveryMachineId) {
             this.fabricDiscoveryMachineId = fabricDiscoveryMachineId;
             return this;
         }
 
-        public Builder setFabricDiscoveryMachineId(@Nullable String fabricDiscoveryMachineId) {
+        public Builder fabricDiscoveryMachineId(@Nullable String fabricDiscoveryMachineId) {
             this.fabricDiscoveryMachineId = Input.ofNullable(fabricDiscoveryMachineId);
             return this;
         }
 
-        public Builder setInstanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Input<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Input.ofNullable(instanceType);
             return this;
         }
 
-        public Builder setLicenseType(@Nullable Input<Either<String,LicenseType>> licenseType) {
+        public Builder licenseType(@Nullable Input<Either<String,LicenseType>> licenseType) {
             this.licenseType = licenseType;
             return this;
         }
 
-        public Builder setLicenseType(@Nullable Either<String,LicenseType> licenseType) {
+        public Builder licenseType(@Nullable Either<String,LicenseType> licenseType) {
             this.licenseType = Input.ofNullable(licenseType);
             return this;
         }
 
-        public Builder setMultiVmGroupName(@Nullable Input<String> multiVmGroupName) {
+        public Builder multiVmGroupName(@Nullable Input<String> multiVmGroupName) {
             this.multiVmGroupName = multiVmGroupName;
             return this;
         }
 
-        public Builder setMultiVmGroupName(@Nullable String multiVmGroupName) {
+        public Builder multiVmGroupName(@Nullable String multiVmGroupName) {
             this.multiVmGroupName = Input.ofNullable(multiVmGroupName);
             return this;
         }
 
-        public Builder setProcessServerId(@Nullable Input<String> processServerId) {
+        public Builder processServerId(@Nullable Input<String> processServerId) {
             this.processServerId = processServerId;
             return this;
         }
 
-        public Builder setProcessServerId(@Nullable String processServerId) {
+        public Builder processServerId(@Nullable String processServerId) {
             this.processServerId = Input.ofNullable(processServerId);
             return this;
         }
 
-        public Builder setRunAsAccountId(@Nullable Input<String> runAsAccountId) {
+        public Builder runAsAccountId(@Nullable Input<String> runAsAccountId) {
             this.runAsAccountId = runAsAccountId;
             return this;
         }
 
-        public Builder setRunAsAccountId(@Nullable String runAsAccountId) {
+        public Builder runAsAccountId(@Nullable String runAsAccountId) {
             this.runAsAccountId = Input.ofNullable(runAsAccountId);
             return this;
         }
 
-        public Builder setTargetAvailabilitySetId(@Nullable Input<String> targetAvailabilitySetId) {
+        public Builder targetAvailabilitySetId(@Nullable Input<String> targetAvailabilitySetId) {
             this.targetAvailabilitySetId = targetAvailabilitySetId;
             return this;
         }
 
-        public Builder setTargetAvailabilitySetId(@Nullable String targetAvailabilitySetId) {
+        public Builder targetAvailabilitySetId(@Nullable String targetAvailabilitySetId) {
             this.targetAvailabilitySetId = Input.ofNullable(targetAvailabilitySetId);
             return this;
         }
 
-        public Builder setTargetAvailabilityZone(@Nullable Input<String> targetAvailabilityZone) {
+        public Builder targetAvailabilityZone(@Nullable Input<String> targetAvailabilityZone) {
             this.targetAvailabilityZone = targetAvailabilityZone;
             return this;
         }
 
-        public Builder setTargetAvailabilityZone(@Nullable String targetAvailabilityZone) {
+        public Builder targetAvailabilityZone(@Nullable String targetAvailabilityZone) {
             this.targetAvailabilityZone = Input.ofNullable(targetAvailabilityZone);
             return this;
         }
 
-        public Builder setTargetBootDiagnosticsStorageAccountId(@Nullable Input<String> targetBootDiagnosticsStorageAccountId) {
+        public Builder targetBootDiagnosticsStorageAccountId(@Nullable Input<String> targetBootDiagnosticsStorageAccountId) {
             this.targetBootDiagnosticsStorageAccountId = targetBootDiagnosticsStorageAccountId;
             return this;
         }
 
-        public Builder setTargetBootDiagnosticsStorageAccountId(@Nullable String targetBootDiagnosticsStorageAccountId) {
+        public Builder targetBootDiagnosticsStorageAccountId(@Nullable String targetBootDiagnosticsStorageAccountId) {
             this.targetBootDiagnosticsStorageAccountId = Input.ofNullable(targetBootDiagnosticsStorageAccountId);
             return this;
         }
 
-        public Builder setTargetNetworkId(@Nullable Input<String> targetNetworkId) {
+        public Builder targetNetworkId(@Nullable Input<String> targetNetworkId) {
             this.targetNetworkId = targetNetworkId;
             return this;
         }
 
-        public Builder setTargetNetworkId(@Nullable String targetNetworkId) {
+        public Builder targetNetworkId(@Nullable String targetNetworkId) {
             this.targetNetworkId = Input.ofNullable(targetNetworkId);
             return this;
         }
 
-        public Builder setTargetProximityPlacementGroupId(@Nullable Input<String> targetProximityPlacementGroupId) {
+        public Builder targetProximityPlacementGroupId(@Nullable Input<String> targetProximityPlacementGroupId) {
             this.targetProximityPlacementGroupId = targetProximityPlacementGroupId;
             return this;
         }
 
-        public Builder setTargetProximityPlacementGroupId(@Nullable String targetProximityPlacementGroupId) {
+        public Builder targetProximityPlacementGroupId(@Nullable String targetProximityPlacementGroupId) {
             this.targetProximityPlacementGroupId = Input.ofNullable(targetProximityPlacementGroupId);
             return this;
         }
 
-        public Builder setTargetResourceGroupId(@Nullable Input<String> targetResourceGroupId) {
+        public Builder targetResourceGroupId(@Nullable Input<String> targetResourceGroupId) {
             this.targetResourceGroupId = targetResourceGroupId;
             return this;
         }
 
-        public Builder setTargetResourceGroupId(@Nullable String targetResourceGroupId) {
+        public Builder targetResourceGroupId(@Nullable String targetResourceGroupId) {
             this.targetResourceGroupId = Input.ofNullable(targetResourceGroupId);
             return this;
         }
 
-        public Builder setTargetSubnetName(@Nullable Input<String> targetSubnetName) {
+        public Builder targetSubnetName(@Nullable Input<String> targetSubnetName) {
             this.targetSubnetName = targetSubnetName;
             return this;
         }
 
-        public Builder setTargetSubnetName(@Nullable String targetSubnetName) {
+        public Builder targetSubnetName(@Nullable String targetSubnetName) {
             this.targetSubnetName = Input.ofNullable(targetSubnetName);
             return this;
         }
 
-        public Builder setTargetVmName(@Nullable Input<String> targetVmName) {
+        public Builder targetVmName(@Nullable Input<String> targetVmName) {
             this.targetVmName = targetVmName;
             return this;
         }
 
-        public Builder setTargetVmName(@Nullable String targetVmName) {
+        public Builder targetVmName(@Nullable String targetVmName) {
             this.targetVmName = Input.ofNullable(targetVmName);
             return this;
         }
 
-        public Builder setTargetVmSize(@Nullable Input<String> targetVmSize) {
+        public Builder targetVmSize(@Nullable Input<String> targetVmSize) {
             this.targetVmSize = targetVmSize;
             return this;
         }
 
-        public Builder setTargetVmSize(@Nullable String targetVmSize) {
+        public Builder targetVmSize(@Nullable String targetVmSize) {
             this.targetVmSize = Input.ofNullable(targetVmSize);
             return this;
         }
 
-        public Builder setTestNetworkId(@Nullable Input<String> testNetworkId) {
+        public Builder testNetworkId(@Nullable Input<String> testNetworkId) {
             this.testNetworkId = testNetworkId;
             return this;
         }
 
-        public Builder setTestNetworkId(@Nullable String testNetworkId) {
+        public Builder testNetworkId(@Nullable String testNetworkId) {
             this.testNetworkId = Input.ofNullable(testNetworkId);
             return this;
         }
 
-        public Builder setTestSubnetName(@Nullable Input<String> testSubnetName) {
+        public Builder testSubnetName(@Nullable Input<String> testSubnetName) {
             this.testSubnetName = testSubnetName;
             return this;
         }
 
-        public Builder setTestSubnetName(@Nullable String testSubnetName) {
+        public Builder testSubnetName(@Nullable String testSubnetName) {
             this.testSubnetName = Input.ofNullable(testSubnetName);
             return this;
         }

@@ -164,42 +164,42 @@ public final class GetObjectReplicationPolicyResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDestinationAccount(String destinationAccount) {
+        public Builder destinationAccount(String destinationAccount) {
             this.destinationAccount = Objects.requireNonNull(destinationAccount);
             return this;
         }
 
-        public Builder setEnabledTime(String enabledTime) {
+        public Builder enabledTime(String enabledTime) {
             this.enabledTime = Objects.requireNonNull(enabledTime);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPolicyId(String policyId) {
+        public Builder policyId(String policyId) {
             this.policyId = Objects.requireNonNull(policyId);
             return this;
         }
 
-        public Builder setRules(@Nullable List<ObjectReplicationPolicyRuleResponse> rules) {
+        public Builder rules(@Nullable List<ObjectReplicationPolicyRuleResponse> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setSourceAccount(String sourceAccount) {
+        public Builder sourceAccount(String sourceAccount) {
             this.sourceAccount = Objects.requireNonNull(sourceAccount);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

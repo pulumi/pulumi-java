@@ -74,22 +74,22 @@ public final class ReusableConfigWrapperArgs extends io.pulumi.resources.Resourc
     	      this.reusableConfigValues = defaults.reusableConfigValues;
         }
 
-        public Builder setReusableConfig(Input<String> reusableConfig) {
+        public Builder reusableConfig(Input<String> reusableConfig) {
             this.reusableConfig = Objects.requireNonNull(reusableConfig);
             return this;
         }
 
-        public Builder setReusableConfig(String reusableConfig) {
+        public Builder reusableConfig(String reusableConfig) {
             this.reusableConfig = Input.of(Objects.requireNonNull(reusableConfig));
             return this;
         }
 
-        public Builder setReusableConfigValues(Input<ReusableConfigValuesArgs> reusableConfigValues) {
+        public Builder reusableConfigValues(Input<ReusableConfigValuesArgs> reusableConfigValues) {
             this.reusableConfigValues = Objects.requireNonNull(reusableConfigValues);
             return this;
         }
 
-        public Builder setReusableConfigValues(ReusableConfigValuesArgs reusableConfigValues) {
+        public Builder reusableConfigValues(ReusableConfigValuesArgs reusableConfigValues) {
             this.reusableConfigValues = Input.of(Objects.requireNonNull(reusableConfigValues));
             return this;
         }

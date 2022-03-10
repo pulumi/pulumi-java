@@ -83,17 +83,17 @@ public final class ListAuthorizationServerSecretsResult {
     	      this.resourceOwnerUsername = defaults.resourceOwnerUsername;
         }
 
-        public Builder setClientSecret(@Nullable String clientSecret) {
+        public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
-        public Builder setResourceOwnerPassword(@Nullable String resourceOwnerPassword) {
+        public Builder resourceOwnerPassword(@Nullable String resourceOwnerPassword) {
             this.resourceOwnerPassword = resourceOwnerPassword;
             return this;
         }
 
-        public Builder setResourceOwnerUsername(@Nullable String resourceOwnerUsername) {
+        public Builder resourceOwnerUsername(@Nullable String resourceOwnerUsername) {
             this.resourceOwnerUsername = resourceOwnerUsername;
             return this;
         }

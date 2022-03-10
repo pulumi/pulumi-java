@@ -91,17 +91,17 @@ public final class GoogleRpcStatusResponse extends io.pulumi.resources.InvokeArg
     	      this.message = defaults.message;
         }
 
-        public Builder setCode(Integer code) {
+        public Builder code(Integer code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
 
-        public Builder setDetails(List<Map<String,String>> details) {
+        public Builder details(List<Map<String,String>> details) {
             this.details = Objects.requireNonNull(details);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }

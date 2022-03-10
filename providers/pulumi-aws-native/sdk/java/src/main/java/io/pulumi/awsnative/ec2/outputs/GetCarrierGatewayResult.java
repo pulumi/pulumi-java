@@ -101,22 +101,22 @@ public final class GetCarrierGatewayResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCarrierGatewayId(@Nullable String carrierGatewayId) {
+        public Builder carrierGatewayId(@Nullable String carrierGatewayId) {
             this.carrierGatewayId = carrierGatewayId;
             return this;
         }
 
-        public Builder setOwnerId(@Nullable String ownerId) {
+        public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
 
-        public Builder setTags(@Nullable List<CarrierGatewayTag> tags) {
+        public Builder tags(@Nullable List<CarrierGatewayTag> tags) {
             this.tags = tags;
             return this;
         }

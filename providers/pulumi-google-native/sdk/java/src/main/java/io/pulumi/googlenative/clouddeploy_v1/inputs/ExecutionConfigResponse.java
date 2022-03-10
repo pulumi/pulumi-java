@@ -139,32 +139,32 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
     	      this.workerPool = defaults.workerPool;
         }
 
-        public Builder setArtifactStorage(String artifactStorage) {
+        public Builder artifactStorage(String artifactStorage) {
             this.artifactStorage = Objects.requireNonNull(artifactStorage);
             return this;
         }
 
-        public Builder setDefaultPool(DefaultPoolResponse defaultPool) {
+        public Builder defaultPool(DefaultPoolResponse defaultPool) {
             this.defaultPool = Objects.requireNonNull(defaultPool);
             return this;
         }
 
-        public Builder setPrivatePool(PrivatePoolResponse privatePool) {
+        public Builder privatePool(PrivatePoolResponse privatePool) {
             this.privatePool = Objects.requireNonNull(privatePool);
             return this;
         }
 
-        public Builder setServiceAccount(String serviceAccount) {
+        public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
 
-        public Builder setUsages(List<String> usages) {
+        public Builder usages(List<String> usages) {
             this.usages = Objects.requireNonNull(usages);
             return this;
         }
 
-        public Builder setWorkerPool(String workerPool) {
+        public Builder workerPool(String workerPool) {
             this.workerPool = Objects.requireNonNull(workerPool);
             return this;
         }

@@ -98,22 +98,22 @@ public final class EndpointsApiServiceResponse {
     	      this.rolloutStrategy = defaults.rolloutStrategy;
         }
 
-        public Builder setConfigId(String configId) {
+        public Builder configId(String configId) {
             this.configId = Objects.requireNonNull(configId);
             return this;
         }
 
-        public Builder setDisableTraceSampling(Boolean disableTraceSampling) {
+        public Builder disableTraceSampling(Boolean disableTraceSampling) {
             this.disableTraceSampling = Objects.requireNonNull(disableTraceSampling);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRolloutStrategy(String rolloutStrategy) {
+        public Builder rolloutStrategy(String rolloutStrategy) {
             this.rolloutStrategy = Objects.requireNonNull(rolloutStrategy);
             return this;
         }

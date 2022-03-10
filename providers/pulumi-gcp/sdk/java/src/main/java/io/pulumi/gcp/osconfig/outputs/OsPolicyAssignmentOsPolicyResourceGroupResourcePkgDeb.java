@@ -68,12 +68,12 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDeb {
     	      this.source = defaults.source;
         }
 
-        public Builder setPullDeps(@Nullable Boolean pullDeps) {
+        public Builder pullDeps(@Nullable Boolean pullDeps) {
             this.pullDeps = pullDeps;
             return this;
         }
 
-        public Builder setSource(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSource source) {
+        public Builder source(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSource source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }

@@ -153,72 +153,72 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
     	      this.suppressionAlertsScope = defaults.suppressionAlertsScope;
         }
 
-        public Builder setAlertType(Input<String> alertType) {
+        public Builder alertType(Input<String> alertType) {
             this.alertType = Objects.requireNonNull(alertType);
             return this;
         }
 
-        public Builder setAlertType(String alertType) {
+        public Builder alertType(String alertType) {
             this.alertType = Input.of(Objects.requireNonNull(alertType));
             return this;
         }
 
-        public Builder setAlertsSuppressionRuleName(@Nullable Input<String> alertsSuppressionRuleName) {
+        public Builder alertsSuppressionRuleName(@Nullable Input<String> alertsSuppressionRuleName) {
             this.alertsSuppressionRuleName = alertsSuppressionRuleName;
             return this;
         }
 
-        public Builder setAlertsSuppressionRuleName(@Nullable String alertsSuppressionRuleName) {
+        public Builder alertsSuppressionRuleName(@Nullable String alertsSuppressionRuleName) {
             this.alertsSuppressionRuleName = Input.ofNullable(alertsSuppressionRuleName);
             return this;
         }
 
-        public Builder setComment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Input<String> comment) {
             this.comment = comment;
             return this;
         }
 
-        public Builder setComment(@Nullable String comment) {
+        public Builder comment(@Nullable String comment) {
             this.comment = Input.ofNullable(comment);
             return this;
         }
 
-        public Builder setExpirationDateUtc(@Nullable Input<String> expirationDateUtc) {
+        public Builder expirationDateUtc(@Nullable Input<String> expirationDateUtc) {
             this.expirationDateUtc = expirationDateUtc;
             return this;
         }
 
-        public Builder setExpirationDateUtc(@Nullable String expirationDateUtc) {
+        public Builder expirationDateUtc(@Nullable String expirationDateUtc) {
             this.expirationDateUtc = Input.ofNullable(expirationDateUtc);
             return this;
         }
 
-        public Builder setReason(Input<String> reason) {
+        public Builder reason(Input<String> reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
 
-        public Builder setReason(String reason) {
+        public Builder reason(String reason) {
             this.reason = Input.of(Objects.requireNonNull(reason));
             return this;
         }
 
-        public Builder setState(Input<Either<String,RuleState>> state) {
+        public Builder state(Input<Either<String,RuleState>> state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setState(Either<String,RuleState> state) {
+        public Builder state(Either<String,RuleState> state) {
             this.state = Input.of(Objects.requireNonNull(state));
             return this;
         }
 
-        public Builder setSuppressionAlertsScope(@Nullable Input<SuppressionAlertsScopeArgs> suppressionAlertsScope) {
+        public Builder suppressionAlertsScope(@Nullable Input<SuppressionAlertsScopeArgs> suppressionAlertsScope) {
             this.suppressionAlertsScope = suppressionAlertsScope;
             return this;
         }
 
-        public Builder setSuppressionAlertsScope(@Nullable SuppressionAlertsScopeArgs suppressionAlertsScope) {
+        public Builder suppressionAlertsScope(@Nullable SuppressionAlertsScopeArgs suppressionAlertsScope) {
             this.suppressionAlertsScope = Input.ofNullable(suppressionAlertsScope);
             return this;
         }

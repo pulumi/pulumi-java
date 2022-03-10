@@ -42,7 +42,7 @@ public final class FrontEndConfigurationResponse {
     	      this.kind = defaults.kind;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }

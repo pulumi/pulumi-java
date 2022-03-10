@@ -107,42 +107,42 @@ public final class AzureBlobStorageDataArgs extends io.pulumi.resources.Resource
     	      this.storageAccount = defaults.storageAccount;
         }
 
-        public Builder setAzureCredentials(Input<AzureCredentialsArgs> azureCredentials) {
+        public Builder azureCredentials(Input<AzureCredentialsArgs> azureCredentials) {
             this.azureCredentials = Objects.requireNonNull(azureCredentials);
             return this;
         }
 
-        public Builder setAzureCredentials(AzureCredentialsArgs azureCredentials) {
+        public Builder azureCredentials(AzureCredentialsArgs azureCredentials) {
             this.azureCredentials = Input.of(Objects.requireNonNull(azureCredentials));
             return this;
         }
 
-        public Builder setContainer(Input<String> container) {
+        public Builder container(Input<String> container) {
             this.container = Objects.requireNonNull(container);
             return this;
         }
 
-        public Builder setContainer(String container) {
+        public Builder container(String container) {
             this.container = Input.of(Objects.requireNonNull(container));
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }
 
-        public Builder setStorageAccount(Input<String> storageAccount) {
+        public Builder storageAccount(Input<String> storageAccount) {
             this.storageAccount = Objects.requireNonNull(storageAccount);
             return this;
         }
 
-        public Builder setStorageAccount(String storageAccount) {
+        public Builder storageAccount(String storageAccount) {
             this.storageAccount = Input.of(Objects.requireNonNull(storageAccount));
             return this;
         }

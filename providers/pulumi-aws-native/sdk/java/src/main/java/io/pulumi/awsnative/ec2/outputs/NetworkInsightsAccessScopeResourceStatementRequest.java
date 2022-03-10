@@ -51,12 +51,12 @@ public final class NetworkInsightsAccessScopeResourceStatementRequest {
     	      this.resources = defaults.resources;
         }
 
-        public Builder setResourceTypes(@Nullable List<String> resourceTypes) {
+        public Builder resourceTypes(@Nullable List<String> resourceTypes) {
             this.resourceTypes = resourceTypes;
             return this;
         }
 
-        public Builder setResources(@Nullable List<String> resources) {
+        public Builder resources(@Nullable List<String> resources) {
             this.resources = resources;
             return this;
         }

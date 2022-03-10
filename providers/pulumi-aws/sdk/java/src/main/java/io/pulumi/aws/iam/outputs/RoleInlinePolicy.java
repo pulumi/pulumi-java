@@ -67,12 +67,12 @@ public final class RoleInlinePolicy {
     	      this.policy = defaults.policy;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPolicy(@Nullable String policy) {
+        public Builder policy(@Nullable String policy) {
             this.policy = policy;
             return this;
         }

@@ -58,12 +58,12 @@ public final class ComputeProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.roles = defaults.roles;
         }
 
-        public Builder setRoles(@Nullable Input<List<RoleArgs>> roles) {
+        public Builder roles(@Nullable Input<List<RoleArgs>> roles) {
             this.roles = roles;
             return this;
         }
 
-        public Builder setRoles(@Nullable List<RoleArgs> roles) {
+        public Builder roles(@Nullable List<RoleArgs> roles) {
             this.roles = Input.ofNullable(roles);
             return this;
         }

@@ -74,17 +74,17 @@ public final class VirtualClusterContainerProvider {
     	      this.type = defaults.type;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInfo(VirtualClusterContainerInfo info) {
+        public Builder info(VirtualClusterContainerInfo info) {
             this.info = Objects.requireNonNull(info);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

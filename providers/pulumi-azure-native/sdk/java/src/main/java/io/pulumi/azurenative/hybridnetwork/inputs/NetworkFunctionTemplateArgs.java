@@ -58,12 +58,12 @@ public final class NetworkFunctionTemplateArgs extends io.pulumi.resources.Resou
     	      this.networkFunctionRoleConfigurations = defaults.networkFunctionRoleConfigurations;
         }
 
-        public Builder setNetworkFunctionRoleConfigurations(@Nullable Input<List<NetworkFunctionRoleConfigurationArgs>> networkFunctionRoleConfigurations) {
+        public Builder networkFunctionRoleConfigurations(@Nullable Input<List<NetworkFunctionRoleConfigurationArgs>> networkFunctionRoleConfigurations) {
             this.networkFunctionRoleConfigurations = networkFunctionRoleConfigurations;
             return this;
         }
 
-        public Builder setNetworkFunctionRoleConfigurations(@Nullable List<NetworkFunctionRoleConfigurationArgs> networkFunctionRoleConfigurations) {
+        public Builder networkFunctionRoleConfigurations(@Nullable List<NetworkFunctionRoleConfigurationArgs> networkFunctionRoleConfigurations) {
             this.networkFunctionRoleConfigurations = Input.ofNullable(networkFunctionRoleConfigurations);
             return this;
         }

@@ -120,52 +120,52 @@ public final class ScheduledActionTargetActionResizeClusterGetArgs extends io.pu
     	      this.numberOfNodes = defaults.numberOfNodes;
         }
 
-        public Builder setClassic(@Nullable Input<Boolean> classic) {
+        public Builder classic(@Nullable Input<Boolean> classic) {
             this.classic = classic;
             return this;
         }
 
-        public Builder setClassic(@Nullable Boolean classic) {
+        public Builder classic(@Nullable Boolean classic) {
             this.classic = Input.ofNullable(classic);
             return this;
         }
 
-        public Builder setClusterIdentifier(Input<String> clusterIdentifier) {
+        public Builder clusterIdentifier(Input<String> clusterIdentifier) {
             this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
             return this;
         }
 
-        public Builder setClusterIdentifier(String clusterIdentifier) {
+        public Builder clusterIdentifier(String clusterIdentifier) {
             this.clusterIdentifier = Input.of(Objects.requireNonNull(clusterIdentifier));
             return this;
         }
 
-        public Builder setClusterType(@Nullable Input<String> clusterType) {
+        public Builder clusterType(@Nullable Input<String> clusterType) {
             this.clusterType = clusterType;
             return this;
         }
 
-        public Builder setClusterType(@Nullable String clusterType) {
+        public Builder clusterType(@Nullable String clusterType) {
             this.clusterType = Input.ofNullable(clusterType);
             return this;
         }
 
-        public Builder setNodeType(@Nullable Input<String> nodeType) {
+        public Builder nodeType(@Nullable Input<String> nodeType) {
             this.nodeType = nodeType;
             return this;
         }
 
-        public Builder setNodeType(@Nullable String nodeType) {
+        public Builder nodeType(@Nullable String nodeType) {
             this.nodeType = Input.ofNullable(nodeType);
             return this;
         }
 
-        public Builder setNumberOfNodes(@Nullable Input<Integer> numberOfNodes) {
+        public Builder numberOfNodes(@Nullable Input<Integer> numberOfNodes) {
             this.numberOfNodes = numberOfNodes;
             return this;
         }
 
-        public Builder setNumberOfNodes(@Nullable Integer numberOfNodes) {
+        public Builder numberOfNodes(@Nullable Integer numberOfNodes) {
             this.numberOfNodes = Input.ofNullable(numberOfNodes);
             return this;
         }

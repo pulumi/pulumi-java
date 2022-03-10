@@ -250,132 +250,132 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
     	      this.timeUnit = defaults.timeUnit;
         }
 
-        public Builder setAccountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Input<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
-        public Builder setAccountId(@Nullable String accountId) {
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = Input.ofNullable(accountId);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setBudgetType(@Nullable Input<String> budgetType) {
+        public Builder budgetType(@Nullable Input<String> budgetType) {
             this.budgetType = budgetType;
             return this;
         }
 
-        public Builder setBudgetType(@Nullable String budgetType) {
+        public Builder budgetType(@Nullable String budgetType) {
             this.budgetType = Input.ofNullable(budgetType);
             return this;
         }
 
-        public Builder setCostFilters(@Nullable Input<Map<String,String>> costFilters) {
+        public Builder costFilters(@Nullable Input<Map<String,String>> costFilters) {
             this.costFilters = costFilters;
             return this;
         }
 
-        public Builder setCostFilters(@Nullable Map<String,String> costFilters) {
+        public Builder costFilters(@Nullable Map<String,String> costFilters) {
             this.costFilters = Input.ofNullable(costFilters);
             return this;
         }
 
-        public Builder setCostTypes(@Nullable Input<BudgetCostTypesGetArgs> costTypes) {
+        public Builder costTypes(@Nullable Input<BudgetCostTypesGetArgs> costTypes) {
             this.costTypes = costTypes;
             return this;
         }
 
-        public Builder setCostTypes(@Nullable BudgetCostTypesGetArgs costTypes) {
+        public Builder costTypes(@Nullable BudgetCostTypesGetArgs costTypes) {
             this.costTypes = Input.ofNullable(costTypes);
             return this;
         }
 
-        public Builder setLimitAmount(@Nullable Input<String> limitAmount) {
+        public Builder limitAmount(@Nullable Input<String> limitAmount) {
             this.limitAmount = limitAmount;
             return this;
         }
 
-        public Builder setLimitAmount(@Nullable String limitAmount) {
+        public Builder limitAmount(@Nullable String limitAmount) {
             this.limitAmount = Input.ofNullable(limitAmount);
             return this;
         }
 
-        public Builder setLimitUnit(@Nullable Input<String> limitUnit) {
+        public Builder limitUnit(@Nullable Input<String> limitUnit) {
             this.limitUnit = limitUnit;
             return this;
         }
 
-        public Builder setLimitUnit(@Nullable String limitUnit) {
+        public Builder limitUnit(@Nullable String limitUnit) {
             this.limitUnit = Input.ofNullable(limitUnit);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Input<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable String namePrefix) {
+        public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Input.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder setNotifications(@Nullable Input<List<BudgetNotificationGetArgs>> notifications) {
+        public Builder notifications(@Nullable Input<List<BudgetNotificationGetArgs>> notifications) {
             this.notifications = notifications;
             return this;
         }
 
-        public Builder setNotifications(@Nullable List<BudgetNotificationGetArgs> notifications) {
+        public Builder notifications(@Nullable List<BudgetNotificationGetArgs> notifications) {
             this.notifications = Input.ofNullable(notifications);
             return this;
         }
 
-        public Builder setTimePeriodEnd(@Nullable Input<String> timePeriodEnd) {
+        public Builder timePeriodEnd(@Nullable Input<String> timePeriodEnd) {
             this.timePeriodEnd = timePeriodEnd;
             return this;
         }
 
-        public Builder setTimePeriodEnd(@Nullable String timePeriodEnd) {
+        public Builder timePeriodEnd(@Nullable String timePeriodEnd) {
             this.timePeriodEnd = Input.ofNullable(timePeriodEnd);
             return this;
         }
 
-        public Builder setTimePeriodStart(@Nullable Input<String> timePeriodStart) {
+        public Builder timePeriodStart(@Nullable Input<String> timePeriodStart) {
             this.timePeriodStart = timePeriodStart;
             return this;
         }
 
-        public Builder setTimePeriodStart(@Nullable String timePeriodStart) {
+        public Builder timePeriodStart(@Nullable String timePeriodStart) {
             this.timePeriodStart = Input.ofNullable(timePeriodStart);
             return this;
         }
 
-        public Builder setTimeUnit(@Nullable Input<String> timeUnit) {
+        public Builder timeUnit(@Nullable Input<String> timeUnit) {
             this.timeUnit = timeUnit;
             return this;
         }
 
-        public Builder setTimeUnit(@Nullable String timeUnit) {
+        public Builder timeUnit(@Nullable String timeUnit) {
             this.timeUnit = Input.ofNullable(timeUnit);
             return this;
         }

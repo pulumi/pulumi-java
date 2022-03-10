@@ -76,22 +76,22 @@ public final class ClusterMasterAuth {
     	      this.clusterCaCertificate = defaults.clusterCaCertificate;
         }
 
-        public Builder setClientCertificate(@Nullable String clientCertificate) {
+        public Builder clientCertificate(@Nullable String clientCertificate) {
             this.clientCertificate = clientCertificate;
             return this;
         }
 
-        public Builder setClientCertificateConfig(ClusterMasterAuthClientCertificateConfig clientCertificateConfig) {
+        public Builder clientCertificateConfig(ClusterMasterAuthClientCertificateConfig clientCertificateConfig) {
             this.clientCertificateConfig = Objects.requireNonNull(clientCertificateConfig);
             return this;
         }
 
-        public Builder setClientKey(@Nullable String clientKey) {
+        public Builder clientKey(@Nullable String clientKey) {
             this.clientKey = clientKey;
             return this;
         }
 
-        public Builder setClusterCaCertificate(@Nullable String clusterCaCertificate) {
+        public Builder clusterCaCertificate(@Nullable String clusterCaCertificate) {
             this.clusterCaCertificate = clusterCaCertificate;
             return this;
         }

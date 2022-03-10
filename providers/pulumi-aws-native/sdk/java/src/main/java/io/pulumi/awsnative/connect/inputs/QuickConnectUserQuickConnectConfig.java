@@ -64,12 +64,12 @@ public final class QuickConnectUserQuickConnectConfig extends io.pulumi.resource
     	      this.userArn = defaults.userArn;
         }
 
-        public Builder setContactFlowArn(String contactFlowArn) {
+        public Builder contactFlowArn(String contactFlowArn) {
             this.contactFlowArn = Objects.requireNonNull(contactFlowArn);
             return this;
         }
 
-        public Builder setUserArn(String userArn) {
+        public Builder userArn(String userArn) {
             this.userArn = Objects.requireNonNull(userArn);
             return this;
         }

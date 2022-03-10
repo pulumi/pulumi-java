@@ -57,12 +57,12 @@ public final class EntrypointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.shell = defaults.shell;
         }
 
-        public Builder setShell(@Nullable Input<String> shell) {
+        public Builder shell(@Nullable Input<String> shell) {
             this.shell = shell;
             return this;
         }
 
-        public Builder setShell(@Nullable String shell) {
+        public Builder shell(@Nullable String shell) {
             this.shell = Input.ofNullable(shell);
             return this;
         }

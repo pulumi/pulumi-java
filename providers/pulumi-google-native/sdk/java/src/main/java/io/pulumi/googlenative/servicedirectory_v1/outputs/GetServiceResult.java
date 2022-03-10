@@ -84,17 +84,17 @@ public final class GetServiceResult {
     	      this.name = defaults.name;
         }
 
-        public Builder setAnnotations(Map<String,String> annotations) {
+        public Builder annotations(Map<String,String> annotations) {
             this.annotations = Objects.requireNonNull(annotations);
             return this;
         }
 
-        public Builder setEndpoints(List<EndpointResponse> endpoints) {
+        public Builder endpoints(List<EndpointResponse> endpoints) {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

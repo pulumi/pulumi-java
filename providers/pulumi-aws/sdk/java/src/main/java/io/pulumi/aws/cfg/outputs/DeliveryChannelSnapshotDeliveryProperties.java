@@ -50,7 +50,7 @@ public final class DeliveryChannelSnapshotDeliveryProperties {
     	      this.deliveryFrequency = defaults.deliveryFrequency;
         }
 
-        public Builder setDeliveryFrequency(@Nullable String deliveryFrequency) {
+        public Builder deliveryFrequency(@Nullable String deliveryFrequency) {
             this.deliveryFrequency = deliveryFrequency;
             return this;
         }

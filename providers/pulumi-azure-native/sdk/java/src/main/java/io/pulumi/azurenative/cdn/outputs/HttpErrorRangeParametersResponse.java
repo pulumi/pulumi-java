@@ -67,12 +67,12 @@ public final class HttpErrorRangeParametersResponse {
     	      this.end = defaults.end;
         }
 
-        public Builder setBegin(@Nullable Integer begin) {
+        public Builder begin(@Nullable Integer begin) {
             this.begin = begin;
             return this;
         }
 
-        public Builder setEnd(@Nullable Integer end) {
+        public Builder end(@Nullable Integer end) {
             this.end = end;
             return this;
         }

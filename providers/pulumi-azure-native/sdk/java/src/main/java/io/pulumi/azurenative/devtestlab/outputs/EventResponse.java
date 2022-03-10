@@ -50,7 +50,7 @@ public final class EventResponse {
     	      this.eventName = defaults.eventName;
         }
 
-        public Builder setEventName(@Nullable String eventName) {
+        public Builder eventName(@Nullable String eventName) {
             this.eventName = eventName;
             return this;
         }

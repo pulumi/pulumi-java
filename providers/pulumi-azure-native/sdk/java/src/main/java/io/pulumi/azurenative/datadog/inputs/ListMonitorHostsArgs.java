@@ -68,12 +68,12 @@ public final class ListMonitorHostsArgs extends io.pulumi.resources.InvokeArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setMonitorName(String monitorName) {
+        public Builder monitorName(String monitorName) {
             this.monitorName = Objects.requireNonNull(monitorName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

@@ -337,192 +337,192 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
     	      this.toolExecutionStep = defaults.toolExecutionStep;
         }
 
-        public Builder setCompletionTime(@Nullable Input<TimestampArgs> completionTime) {
+        public Builder completionTime(@Nullable Input<TimestampArgs> completionTime) {
             this.completionTime = completionTime;
             return this;
         }
 
-        public Builder setCompletionTime(@Nullable TimestampArgs completionTime) {
+        public Builder completionTime(@Nullable TimestampArgs completionTime) {
             this.completionTime = Input.ofNullable(completionTime);
             return this;
         }
 
-        public Builder setCreationTime(@Nullable Input<TimestampArgs> creationTime) {
+        public Builder creationTime(@Nullable Input<TimestampArgs> creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
-        public Builder setCreationTime(@Nullable TimestampArgs creationTime) {
+        public Builder creationTime(@Nullable TimestampArgs creationTime) {
             this.creationTime = Input.ofNullable(creationTime);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDeviceUsageDuration(@Nullable Input<DurationArgs> deviceUsageDuration) {
+        public Builder deviceUsageDuration(@Nullable Input<DurationArgs> deviceUsageDuration) {
             this.deviceUsageDuration = deviceUsageDuration;
             return this;
         }
 
-        public Builder setDeviceUsageDuration(@Nullable DurationArgs deviceUsageDuration) {
+        public Builder deviceUsageDuration(@Nullable DurationArgs deviceUsageDuration) {
             this.deviceUsageDuration = Input.ofNullable(deviceUsageDuration);
             return this;
         }
 
-        public Builder setDimensionValue(@Nullable Input<List<StepDimensionValueEntryArgs>> dimensionValue) {
+        public Builder dimensionValue(@Nullable Input<List<StepDimensionValueEntryArgs>> dimensionValue) {
             this.dimensionValue = dimensionValue;
             return this;
         }
 
-        public Builder setDimensionValue(@Nullable List<StepDimensionValueEntryArgs> dimensionValue) {
+        public Builder dimensionValue(@Nullable List<StepDimensionValueEntryArgs> dimensionValue) {
             this.dimensionValue = Input.ofNullable(dimensionValue);
             return this;
         }
 
-        public Builder setExecutionId(Input<String> executionId) {
+        public Builder executionId(Input<String> executionId) {
             this.executionId = Objects.requireNonNull(executionId);
             return this;
         }
 
-        public Builder setExecutionId(String executionId) {
+        public Builder executionId(String executionId) {
             this.executionId = Input.of(Objects.requireNonNull(executionId));
             return this;
         }
 
-        public Builder setHasImages(@Nullable Input<Boolean> hasImages) {
+        public Builder hasImages(@Nullable Input<Boolean> hasImages) {
             this.hasImages = hasImages;
             return this;
         }
 
-        public Builder setHasImages(@Nullable Boolean hasImages) {
+        public Builder hasImages(@Nullable Boolean hasImages) {
             this.hasImages = Input.ofNullable(hasImages);
             return this;
         }
 
-        public Builder setHistoryId(Input<String> historyId) {
+        public Builder historyId(Input<String> historyId) {
             this.historyId = Objects.requireNonNull(historyId);
             return this;
         }
 
-        public Builder setHistoryId(String historyId) {
+        public Builder historyId(String historyId) {
             this.historyId = Input.of(Objects.requireNonNull(historyId));
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<List<StepLabelsEntryArgs>> labels) {
+        public Builder labels(@Nullable Input<List<StepLabelsEntryArgs>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable List<StepLabelsEntryArgs> labels) {
+        public Builder labels(@Nullable List<StepLabelsEntryArgs> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setMultiStep(@Nullable Input<MultiStepArgs> multiStep) {
+        public Builder multiStep(@Nullable Input<MultiStepArgs> multiStep) {
             this.multiStep = multiStep;
             return this;
         }
 
-        public Builder setMultiStep(@Nullable MultiStepArgs multiStep) {
+        public Builder multiStep(@Nullable MultiStepArgs multiStep) {
             this.multiStep = Input.ofNullable(multiStep);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOutcome(@Nullable Input<OutcomeArgs> outcome) {
+        public Builder outcome(@Nullable Input<OutcomeArgs> outcome) {
             this.outcome = outcome;
             return this;
         }
 
-        public Builder setOutcome(@Nullable OutcomeArgs outcome) {
+        public Builder outcome(@Nullable OutcomeArgs outcome) {
             this.outcome = Input.ofNullable(outcome);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setRunDuration(@Nullable Input<DurationArgs> runDuration) {
+        public Builder runDuration(@Nullable Input<DurationArgs> runDuration) {
             this.runDuration = runDuration;
             return this;
         }
 
-        public Builder setRunDuration(@Nullable DurationArgs runDuration) {
+        public Builder runDuration(@Nullable DurationArgs runDuration) {
             this.runDuration = Input.ofNullable(runDuration);
             return this;
         }
 
-        public Builder setState(@Nullable Input<StepState> state) {
+        public Builder state(@Nullable Input<StepState> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable StepState state) {
+        public Builder state(@Nullable StepState state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setStepId(@Nullable Input<String> stepId) {
+        public Builder stepId(@Nullable Input<String> stepId) {
             this.stepId = stepId;
             return this;
         }
 
-        public Builder setStepId(@Nullable String stepId) {
+        public Builder stepId(@Nullable String stepId) {
             this.stepId = Input.ofNullable(stepId);
             return this;
         }
 
-        public Builder setTestExecutionStep(@Nullable Input<TestExecutionStepArgs> testExecutionStep) {
+        public Builder testExecutionStep(@Nullable Input<TestExecutionStepArgs> testExecutionStep) {
             this.testExecutionStep = testExecutionStep;
             return this;
         }
 
-        public Builder setTestExecutionStep(@Nullable TestExecutionStepArgs testExecutionStep) {
+        public Builder testExecutionStep(@Nullable TestExecutionStepArgs testExecutionStep) {
             this.testExecutionStep = Input.ofNullable(testExecutionStep);
             return this;
         }
 
-        public Builder setToolExecutionStep(@Nullable Input<ToolExecutionStepArgs> toolExecutionStep) {
+        public Builder toolExecutionStep(@Nullable Input<ToolExecutionStepArgs> toolExecutionStep) {
             this.toolExecutionStep = toolExecutionStep;
             return this;
         }
 
-        public Builder setToolExecutionStep(@Nullable ToolExecutionStepArgs toolExecutionStep) {
+        public Builder toolExecutionStep(@Nullable ToolExecutionStepArgs toolExecutionStep) {
             this.toolExecutionStep = Input.ofNullable(toolExecutionStep);
             return this;
         }

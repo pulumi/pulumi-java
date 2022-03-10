@@ -215,52 +215,52 @@ public final class JobSpec {
     	      this.ttlSecondsAfterFinished = defaults.ttlSecondsAfterFinished;
         }
 
-        public Builder setActiveDeadlineSeconds(@Nullable Integer activeDeadlineSeconds) {
+        public Builder activeDeadlineSeconds(@Nullable Integer activeDeadlineSeconds) {
             this.activeDeadlineSeconds = activeDeadlineSeconds;
             return this;
         }
 
-        public Builder setBackoffLimit(@Nullable Integer backoffLimit) {
+        public Builder backoffLimit(@Nullable Integer backoffLimit) {
             this.backoffLimit = backoffLimit;
             return this;
         }
 
-        public Builder setCompletionMode(@Nullable String completionMode) {
+        public Builder completionMode(@Nullable String completionMode) {
             this.completionMode = completionMode;
             return this;
         }
 
-        public Builder setCompletions(@Nullable Integer completions) {
+        public Builder completions(@Nullable Integer completions) {
             this.completions = completions;
             return this;
         }
 
-        public Builder setManualSelector(@Nullable Boolean manualSelector) {
+        public Builder manualSelector(@Nullable Boolean manualSelector) {
             this.manualSelector = manualSelector;
             return this;
         }
 
-        public Builder setParallelism(@Nullable Integer parallelism) {
+        public Builder parallelism(@Nullable Integer parallelism) {
             this.parallelism = parallelism;
             return this;
         }
 
-        public Builder setSelector(@Nullable LabelSelector selector) {
+        public Builder selector(@Nullable LabelSelector selector) {
             this.selector = selector;
             return this;
         }
 
-        public Builder setSuspend(@Nullable Boolean suspend) {
+        public Builder suspend(@Nullable Boolean suspend) {
             this.suspend = suspend;
             return this;
         }
 
-        public Builder setTemplate(PodTemplateSpec template) {
+        public Builder template(PodTemplateSpec template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }
 
-        public Builder setTtlSecondsAfterFinished(@Nullable Integer ttlSecondsAfterFinished) {
+        public Builder ttlSecondsAfterFinished(@Nullable Integer ttlSecondsAfterFinished) {
             this.ttlSecondsAfterFinished = ttlSecondsAfterFinished;
             return this;
         }

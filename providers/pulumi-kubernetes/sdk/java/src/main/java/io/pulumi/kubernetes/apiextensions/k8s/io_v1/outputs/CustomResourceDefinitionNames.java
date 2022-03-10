@@ -132,32 +132,32 @@ public final class CustomResourceDefinitionNames {
     	      this.singular = defaults.singular;
         }
 
-        public Builder setCategories(@Nullable List<String> categories) {
+        public Builder categories(@Nullable List<String> categories) {
             this.categories = categories;
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setListKind(@Nullable String listKind) {
+        public Builder listKind(@Nullable String listKind) {
             this.listKind = listKind;
             return this;
         }
 
-        public Builder setPlural(String plural) {
+        public Builder plural(String plural) {
             this.plural = Objects.requireNonNull(plural);
             return this;
         }
 
-        public Builder setShortNames(@Nullable List<String> shortNames) {
+        public Builder shortNames(@Nullable List<String> shortNames) {
             this.shortNames = shortNames;
             return this;
         }
 
-        public Builder setSingular(@Nullable String singular) {
+        public Builder singular(@Nullable String singular) {
             this.singular = singular;
             return this;
         }

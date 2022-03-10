@@ -57,7 +57,7 @@ public final class ApiPortalCustomDomainPropertiesResponse extends io.pulumi.res
     	      this.thumbprint = defaults.thumbprint;
         }
 
-        public Builder setThumbprint(@Nullable String thumbprint) {
+        public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }

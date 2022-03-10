@@ -57,12 +57,12 @@ public final class InstanceMonthlyTransferArgs extends io.pulumi.resources.Resou
     	      this.gbPerMonthAllocated = defaults.gbPerMonthAllocated;
         }
 
-        public Builder setGbPerMonthAllocated(@Nullable Input<String> gbPerMonthAllocated) {
+        public Builder gbPerMonthAllocated(@Nullable Input<String> gbPerMonthAllocated) {
             this.gbPerMonthAllocated = gbPerMonthAllocated;
             return this;
         }
 
-        public Builder setGbPerMonthAllocated(@Nullable String gbPerMonthAllocated) {
+        public Builder gbPerMonthAllocated(@Nullable String gbPerMonthAllocated) {
             this.gbPerMonthAllocated = Input.ofNullable(gbPerMonthAllocated);
             return this;
         }

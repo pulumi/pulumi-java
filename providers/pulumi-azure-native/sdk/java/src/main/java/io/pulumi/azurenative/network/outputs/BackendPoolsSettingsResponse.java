@@ -68,12 +68,12 @@ public final class BackendPoolsSettingsResponse {
     	      this.sendRecvTimeoutSeconds = defaults.sendRecvTimeoutSeconds;
         }
 
-        public Builder setEnforceCertificateNameCheck(@Nullable String enforceCertificateNameCheck) {
+        public Builder enforceCertificateNameCheck(@Nullable String enforceCertificateNameCheck) {
             this.enforceCertificateNameCheck = enforceCertificateNameCheck;
             return this;
         }
 
-        public Builder setSendRecvTimeoutSeconds(@Nullable Integer sendRecvTimeoutSeconds) {
+        public Builder sendRecvTimeoutSeconds(@Nullable Integer sendRecvTimeoutSeconds) {
             this.sendRecvTimeoutSeconds = sendRecvTimeoutSeconds;
             return this;
         }

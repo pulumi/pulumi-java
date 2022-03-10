@@ -178,82 +178,82 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setCodeId(@Nullable Input<String> codeId) {
+        public Builder codeId(@Nullable Input<String> codeId) {
             this.codeId = codeId;
             return this;
         }
 
-        public Builder setCodeId(@Nullable String codeId) {
+        public Builder codeId(@Nullable String codeId) {
             this.codeId = Input.ofNullable(codeId);
             return this;
         }
 
-        public Builder setCommand(Input<String> command) {
+        public Builder command(Input<String> command) {
             this.command = Objects.requireNonNull(command);
             return this;
         }
 
-        public Builder setCommand(String command) {
+        public Builder command(String command) {
             this.command = Input.of(Objects.requireNonNull(command));
             return this;
         }
 
-        public Builder setDistribution(@Nullable Input<Object> distribution) {
+        public Builder distribution(@Nullable Input<Object> distribution) {
             this.distribution = distribution;
             return this;
         }
 
-        public Builder setDistribution(@Nullable Object distribution) {
+        public Builder distribution(@Nullable Object distribution) {
             this.distribution = Input.ofNullable(distribution);
             return this;
         }
 
-        public Builder setEnvironmentId(@Nullable Input<String> environmentId) {
+        public Builder environmentId(@Nullable Input<String> environmentId) {
             this.environmentId = environmentId;
             return this;
         }
 
-        public Builder setEnvironmentId(@Nullable String environmentId) {
+        public Builder environmentId(@Nullable String environmentId) {
             this.environmentId = Input.ofNullable(environmentId);
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable Input<Map<String,String>> environmentVariables) {
+        public Builder environmentVariables(@Nullable Input<Map<String,String>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable Map<String,String> environmentVariables) {
+        public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
             this.environmentVariables = Input.ofNullable(environmentVariables);
             return this;
         }
 
-        public Builder setInputDataBindings(@Nullable Input<Map<String,InputDataBindingArgs>> inputDataBindings) {
+        public Builder inputDataBindings(@Nullable Input<Map<String,InputDataBindingArgs>> inputDataBindings) {
             this.inputDataBindings = inputDataBindings;
             return this;
         }
 
-        public Builder setInputDataBindings(@Nullable Map<String,InputDataBindingArgs> inputDataBindings) {
+        public Builder inputDataBindings(@Nullable Map<String,InputDataBindingArgs> inputDataBindings) {
             this.inputDataBindings = Input.ofNullable(inputDataBindings);
             return this;
         }
 
-        public Builder setOutputDataBindings(@Nullable Input<Map<String,OutputDataBindingArgs>> outputDataBindings) {
+        public Builder outputDataBindings(@Nullable Input<Map<String,OutputDataBindingArgs>> outputDataBindings) {
             this.outputDataBindings = outputDataBindings;
             return this;
         }
 
-        public Builder setOutputDataBindings(@Nullable Map<String,OutputDataBindingArgs> outputDataBindings) {
+        public Builder outputDataBindings(@Nullable Map<String,OutputDataBindingArgs> outputDataBindings) {
             this.outputDataBindings = Input.ofNullable(outputDataBindings);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<String> timeout) {
+        public Builder timeout(@Nullable Input<String> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable String timeout) {
+        public Builder timeout(@Nullable String timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }

@@ -137,62 +137,62 @@ public final class IotDpsResourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProperties(Input<IotDpsPropertiesDescriptionArgs> properties) {
+        public Builder properties(Input<IotDpsPropertiesDescriptionArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
-        public Builder setProperties(IotDpsPropertiesDescriptionArgs properties) {
+        public Builder properties(IotDpsPropertiesDescriptionArgs properties) {
             this.properties = Input.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder setProvisioningServiceName(@Nullable Input<String> provisioningServiceName) {
+        public Builder provisioningServiceName(@Nullable Input<String> provisioningServiceName) {
             this.provisioningServiceName = provisioningServiceName;
             return this;
         }
 
-        public Builder setProvisioningServiceName(@Nullable String provisioningServiceName) {
+        public Builder provisioningServiceName(@Nullable String provisioningServiceName) {
             this.provisioningServiceName = Input.ofNullable(provisioningServiceName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(Input<IotDpsSkuInfoArgs> sku) {
+        public Builder sku(Input<IotDpsSkuInfoArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setSku(IotDpsSkuInfoArgs sku) {
+        public Builder sku(IotDpsSkuInfoArgs sku) {
             this.sku = Input.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -47,7 +47,7 @@ public final class GetAccessPointArgs extends io.pulumi.resources.InvokeArgs {
     	      this.accessPointId = defaults.accessPointId;
         }
 
-        public Builder setAccessPointId(String accessPointId) {
+        public Builder accessPointId(String accessPointId) {
             this.accessPointId = Objects.requireNonNull(accessPointId);
             return this;
         }

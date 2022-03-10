@@ -99,22 +99,22 @@ public final class TableDataSetResponse {
     	      this.timeSeriesQuery = defaults.timeSeriesQuery;
         }
 
-        public Builder setMinAlignmentPeriod(String minAlignmentPeriod) {
+        public Builder minAlignmentPeriod(String minAlignmentPeriod) {
             this.minAlignmentPeriod = Objects.requireNonNull(minAlignmentPeriod);
             return this;
         }
 
-        public Builder setTableDisplayOptions(TableDisplayOptionsResponse tableDisplayOptions) {
+        public Builder tableDisplayOptions(TableDisplayOptionsResponse tableDisplayOptions) {
             this.tableDisplayOptions = Objects.requireNonNull(tableDisplayOptions);
             return this;
         }
 
-        public Builder setTableTemplate(String tableTemplate) {
+        public Builder tableTemplate(String tableTemplate) {
             this.tableTemplate = Objects.requireNonNull(tableTemplate);
             return this;
         }
 
-        public Builder setTimeSeriesQuery(TimeSeriesQueryResponse timeSeriesQuery) {
+        public Builder timeSeriesQuery(TimeSeriesQueryResponse timeSeriesQuery) {
             this.timeSeriesQuery = Objects.requireNonNull(timeSeriesQuery);
             return this;
         }

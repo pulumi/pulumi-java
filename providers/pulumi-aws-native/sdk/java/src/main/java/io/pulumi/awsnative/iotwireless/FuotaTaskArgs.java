@@ -201,102 +201,102 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAssociateMulticastGroup(@Nullable Input<String> associateMulticastGroup) {
+        public Builder associateMulticastGroup(@Nullable Input<String> associateMulticastGroup) {
             this.associateMulticastGroup = associateMulticastGroup;
             return this;
         }
 
-        public Builder setAssociateMulticastGroup(@Nullable String associateMulticastGroup) {
+        public Builder associateMulticastGroup(@Nullable String associateMulticastGroup) {
             this.associateMulticastGroup = Input.ofNullable(associateMulticastGroup);
             return this;
         }
 
-        public Builder setAssociateWirelessDevice(@Nullable Input<String> associateWirelessDevice) {
+        public Builder associateWirelessDevice(@Nullable Input<String> associateWirelessDevice) {
             this.associateWirelessDevice = associateWirelessDevice;
             return this;
         }
 
-        public Builder setAssociateWirelessDevice(@Nullable String associateWirelessDevice) {
+        public Builder associateWirelessDevice(@Nullable String associateWirelessDevice) {
             this.associateWirelessDevice = Input.ofNullable(associateWirelessDevice);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisassociateMulticastGroup(@Nullable Input<String> disassociateMulticastGroup) {
+        public Builder disassociateMulticastGroup(@Nullable Input<String> disassociateMulticastGroup) {
             this.disassociateMulticastGroup = disassociateMulticastGroup;
             return this;
         }
 
-        public Builder setDisassociateMulticastGroup(@Nullable String disassociateMulticastGroup) {
+        public Builder disassociateMulticastGroup(@Nullable String disassociateMulticastGroup) {
             this.disassociateMulticastGroup = Input.ofNullable(disassociateMulticastGroup);
             return this;
         }
 
-        public Builder setDisassociateWirelessDevice(@Nullable Input<String> disassociateWirelessDevice) {
+        public Builder disassociateWirelessDevice(@Nullable Input<String> disassociateWirelessDevice) {
             this.disassociateWirelessDevice = disassociateWirelessDevice;
             return this;
         }
 
-        public Builder setDisassociateWirelessDevice(@Nullable String disassociateWirelessDevice) {
+        public Builder disassociateWirelessDevice(@Nullable String disassociateWirelessDevice) {
             this.disassociateWirelessDevice = Input.ofNullable(disassociateWirelessDevice);
             return this;
         }
 
-        public Builder setFirmwareUpdateImage(Input<String> firmwareUpdateImage) {
+        public Builder firmwareUpdateImage(Input<String> firmwareUpdateImage) {
             this.firmwareUpdateImage = Objects.requireNonNull(firmwareUpdateImage);
             return this;
         }
 
-        public Builder setFirmwareUpdateImage(String firmwareUpdateImage) {
+        public Builder firmwareUpdateImage(String firmwareUpdateImage) {
             this.firmwareUpdateImage = Input.of(Objects.requireNonNull(firmwareUpdateImage));
             return this;
         }
 
-        public Builder setFirmwareUpdateRole(Input<String> firmwareUpdateRole) {
+        public Builder firmwareUpdateRole(Input<String> firmwareUpdateRole) {
             this.firmwareUpdateRole = Objects.requireNonNull(firmwareUpdateRole);
             return this;
         }
 
-        public Builder setFirmwareUpdateRole(String firmwareUpdateRole) {
+        public Builder firmwareUpdateRole(String firmwareUpdateRole) {
             this.firmwareUpdateRole = Input.of(Objects.requireNonNull(firmwareUpdateRole));
             return this;
         }
 
-        public Builder setLoRaWAN(Input<FuotaTaskLoRaWANArgs> loRaWAN) {
+        public Builder loRaWAN(Input<FuotaTaskLoRaWANArgs> loRaWAN) {
             this.loRaWAN = Objects.requireNonNull(loRaWAN);
             return this;
         }
 
-        public Builder setLoRaWAN(FuotaTaskLoRaWANArgs loRaWAN) {
+        public Builder loRaWAN(FuotaTaskLoRaWANArgs loRaWAN) {
             this.loRaWAN = Input.of(Objects.requireNonNull(loRaWAN));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<FuotaTaskTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<FuotaTaskTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<FuotaTaskTagArgs> tags) {
+        public Builder tags(@Nullable List<FuotaTaskTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

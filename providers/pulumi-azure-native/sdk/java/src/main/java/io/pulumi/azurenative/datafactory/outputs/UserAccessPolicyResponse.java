@@ -115,27 +115,27 @@ public final class UserAccessPolicyResponse {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setAccessResourcePath(@Nullable String accessResourcePath) {
+        public Builder accessResourcePath(@Nullable String accessResourcePath) {
             this.accessResourcePath = accessResourcePath;
             return this;
         }
 
-        public Builder setExpireTime(@Nullable String expireTime) {
+        public Builder expireTime(@Nullable String expireTime) {
             this.expireTime = expireTime;
             return this;
         }
 
-        public Builder setPermissions(@Nullable String permissions) {
+        public Builder permissions(@Nullable String permissions) {
             this.permissions = permissions;
             return this;
         }
 
-        public Builder setProfileName(@Nullable String profileName) {
+        public Builder profileName(@Nullable String profileName) {
             this.profileName = profileName;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }

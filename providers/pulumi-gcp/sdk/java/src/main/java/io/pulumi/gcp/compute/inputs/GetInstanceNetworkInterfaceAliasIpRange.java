@@ -70,12 +70,12 @@ public final class GetInstanceNetworkInterfaceAliasIpRange extends io.pulumi.res
     	      this.subnetworkRangeName = defaults.subnetworkRangeName;
         }
 
-        public Builder setIpCidrRange(String ipCidrRange) {
+        public Builder ipCidrRange(String ipCidrRange) {
             this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
             return this;
         }
 
-        public Builder setSubnetworkRangeName(String subnetworkRangeName) {
+        public Builder subnetworkRangeName(String subnetworkRangeName) {
             this.subnetworkRangeName = Objects.requireNonNull(subnetworkRangeName);
             return this;
         }

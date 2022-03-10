@@ -52,12 +52,12 @@ public final class MonitoringScheduleBaselineConfig {
     	      this.statisticsResource = defaults.statisticsResource;
         }
 
-        public Builder setConstraintsResource(@Nullable MonitoringScheduleConstraintsResource constraintsResource) {
+        public Builder constraintsResource(@Nullable MonitoringScheduleConstraintsResource constraintsResource) {
             this.constraintsResource = constraintsResource;
             return this;
         }
 
-        public Builder setStatisticsResource(@Nullable MonitoringScheduleStatisticsResource statisticsResource) {
+        public Builder statisticsResource(@Nullable MonitoringScheduleStatisticsResource statisticsResource) {
             this.statisticsResource = statisticsResource;
             return this;
         }

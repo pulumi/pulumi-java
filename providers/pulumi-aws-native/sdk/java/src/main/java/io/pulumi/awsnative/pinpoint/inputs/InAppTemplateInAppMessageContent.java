@@ -113,32 +113,32 @@ public final class InAppTemplateInAppMessageContent extends io.pulumi.resources.
     	      this.secondaryBtn = defaults.secondaryBtn;
         }
 
-        public Builder setBackgroundColor(@Nullable String backgroundColor) {
+        public Builder backgroundColor(@Nullable String backgroundColor) {
             this.backgroundColor = backgroundColor;
             return this;
         }
 
-        public Builder setBodyConfig(@Nullable InAppTemplateBodyConfig bodyConfig) {
+        public Builder bodyConfig(@Nullable InAppTemplateBodyConfig bodyConfig) {
             this.bodyConfig = bodyConfig;
             return this;
         }
 
-        public Builder setHeaderConfig(@Nullable InAppTemplateHeaderConfig headerConfig) {
+        public Builder headerConfig(@Nullable InAppTemplateHeaderConfig headerConfig) {
             this.headerConfig = headerConfig;
             return this;
         }
 
-        public Builder setImageUrl(@Nullable String imageUrl) {
+        public Builder imageUrl(@Nullable String imageUrl) {
             this.imageUrl = imageUrl;
             return this;
         }
 
-        public Builder setPrimaryBtn(@Nullable InAppTemplateButtonConfig primaryBtn) {
+        public Builder primaryBtn(@Nullable InAppTemplateButtonConfig primaryBtn) {
             this.primaryBtn = primaryBtn;
             return this;
         }
 
-        public Builder setSecondaryBtn(@Nullable InAppTemplateButtonConfig secondaryBtn) {
+        public Builder secondaryBtn(@Nullable InAppTemplateButtonConfig secondaryBtn) {
             this.secondaryBtn = secondaryBtn;
             return this;
         }

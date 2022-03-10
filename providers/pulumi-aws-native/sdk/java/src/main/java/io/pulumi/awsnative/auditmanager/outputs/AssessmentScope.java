@@ -68,12 +68,12 @@ public final class AssessmentScope {
     	      this.awsServices = defaults.awsServices;
         }
 
-        public Builder setAwsAccounts(@Nullable List<AssessmentAWSAccount> awsAccounts) {
+        public Builder awsAccounts(@Nullable List<AssessmentAWSAccount> awsAccounts) {
             this.awsAccounts = awsAccounts;
             return this;
         }
 
-        public Builder setAwsServices(@Nullable List<AssessmentAWSService> awsServices) {
+        public Builder awsServices(@Nullable List<AssessmentAWSService> awsServices) {
             this.awsServices = awsServices;
             return this;
         }

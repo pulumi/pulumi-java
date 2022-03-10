@@ -76,22 +76,22 @@ public final class CostAllocationRuleDetailsArgs extends io.pulumi.resources.Res
     	      this.targetResources = defaults.targetResources;
         }
 
-        public Builder setSourceResources(@Nullable Input<List<SourceCostAllocationResourceArgs>> sourceResources) {
+        public Builder sourceResources(@Nullable Input<List<SourceCostAllocationResourceArgs>> sourceResources) {
             this.sourceResources = sourceResources;
             return this;
         }
 
-        public Builder setSourceResources(@Nullable List<SourceCostAllocationResourceArgs> sourceResources) {
+        public Builder sourceResources(@Nullable List<SourceCostAllocationResourceArgs> sourceResources) {
             this.sourceResources = Input.ofNullable(sourceResources);
             return this;
         }
 
-        public Builder setTargetResources(@Nullable Input<List<TargetCostAllocationResourceArgs>> targetResources) {
+        public Builder targetResources(@Nullable Input<List<TargetCostAllocationResourceArgs>> targetResources) {
             this.targetResources = targetResources;
             return this;
         }
 
-        public Builder setTargetResources(@Nullable List<TargetCostAllocationResourceArgs> targetResources) {
+        public Builder targetResources(@Nullable List<TargetCostAllocationResourceArgs> targetResources) {
             this.targetResources = Input.ofNullable(targetResources);
             return this;
         }

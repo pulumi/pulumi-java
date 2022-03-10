@@ -103,42 +103,42 @@ public final class BaiduChannelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.secretKey = defaults.secretKey;
         }
 
-        public Builder setApiKey(Input<String> apiKey) {
+        public Builder apiKey(Input<String> apiKey) {
             this.apiKey = Objects.requireNonNull(apiKey);
             return this;
         }
 
-        public Builder setApiKey(String apiKey) {
+        public Builder apiKey(String apiKey) {
             this.apiKey = Input.of(Objects.requireNonNull(apiKey));
             return this;
         }
 
-        public Builder setApplicationId(Input<String> applicationId) {
+        public Builder applicationId(Input<String> applicationId) {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
 
-        public Builder setApplicationId(String applicationId) {
+        public Builder applicationId(String applicationId) {
             this.applicationId = Input.of(Objects.requireNonNull(applicationId));
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setSecretKey(Input<String> secretKey) {
+        public Builder secretKey(Input<String> secretKey) {
             this.secretKey = Objects.requireNonNull(secretKey);
             return this;
         }
 
-        public Builder setSecretKey(String secretKey) {
+        public Builder secretKey(String secretKey) {
             this.secretKey = Input.of(Objects.requireNonNull(secretKey));
             return this;
         }

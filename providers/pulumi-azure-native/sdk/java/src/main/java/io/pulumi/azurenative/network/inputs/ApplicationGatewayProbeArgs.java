@@ -239,122 +239,122 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
     	      this.unhealthyThreshold = defaults.unhealthyThreshold;
         }
 
-        public Builder setHost(@Nullable Input<String> host) {
+        public Builder host(@Nullable Input<String> host) {
             this.host = host;
             return this;
         }
 
-        public Builder setHost(@Nullable String host) {
+        public Builder host(@Nullable String host) {
             this.host = Input.ofNullable(host);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setInterval(@Nullable Input<Integer> interval) {
+        public Builder interval(@Nullable Input<Integer> interval) {
             this.interval = interval;
             return this;
         }
 
-        public Builder setInterval(@Nullable Integer interval) {
+        public Builder interval(@Nullable Integer interval) {
             this.interval = Input.ofNullable(interval);
             return this;
         }
 
-        public Builder setMatch(@Nullable Input<ApplicationGatewayProbeHealthResponseMatchArgs> match) {
+        public Builder match(@Nullable Input<ApplicationGatewayProbeHealthResponseMatchArgs> match) {
             this.match = match;
             return this;
         }
 
-        public Builder setMatch(@Nullable ApplicationGatewayProbeHealthResponseMatchArgs match) {
+        public Builder match(@Nullable ApplicationGatewayProbeHealthResponseMatchArgs match) {
             this.match = Input.ofNullable(match);
             return this;
         }
 
-        public Builder setMinServers(@Nullable Input<Integer> minServers) {
+        public Builder minServers(@Nullable Input<Integer> minServers) {
             this.minServers = minServers;
             return this;
         }
 
-        public Builder setMinServers(@Nullable Integer minServers) {
+        public Builder minServers(@Nullable Integer minServers) {
             this.minServers = Input.ofNullable(minServers);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }
 
-        public Builder setPickHostNameFromBackendHttpSettings(@Nullable Input<Boolean> pickHostNameFromBackendHttpSettings) {
+        public Builder pickHostNameFromBackendHttpSettings(@Nullable Input<Boolean> pickHostNameFromBackendHttpSettings) {
             this.pickHostNameFromBackendHttpSettings = pickHostNameFromBackendHttpSettings;
             return this;
         }
 
-        public Builder setPickHostNameFromBackendHttpSettings(@Nullable Boolean pickHostNameFromBackendHttpSettings) {
+        public Builder pickHostNameFromBackendHttpSettings(@Nullable Boolean pickHostNameFromBackendHttpSettings) {
             this.pickHostNameFromBackendHttpSettings = Input.ofNullable(pickHostNameFromBackendHttpSettings);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Input<Integer> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setProtocol(@Nullable Input<Either<String,ApplicationGatewayProtocol>> protocol) {
+        public Builder protocol(@Nullable Input<Either<String,ApplicationGatewayProtocol>> protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProtocol(@Nullable Either<String,ApplicationGatewayProtocol> protocol) {
+        public Builder protocol(@Nullable Either<String,ApplicationGatewayProtocol> protocol) {
             this.protocol = Input.ofNullable(protocol);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<Integer> timeout) {
+        public Builder timeout(@Nullable Input<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable Integer timeout) {
+        public Builder timeout(@Nullable Integer timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }
 
-        public Builder setUnhealthyThreshold(@Nullable Input<Integer> unhealthyThreshold) {
+        public Builder unhealthyThreshold(@Nullable Input<Integer> unhealthyThreshold) {
             this.unhealthyThreshold = unhealthyThreshold;
             return this;
         }
 
-        public Builder setUnhealthyThreshold(@Nullable Integer unhealthyThreshold) {
+        public Builder unhealthyThreshold(@Nullable Integer unhealthyThreshold) {
             this.unhealthyThreshold = Input.ofNullable(unhealthyThreshold);
             return this;
         }

@@ -58,12 +58,12 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.disks = defaults.disks;
         }
 
-        public Builder setDisks(@Nullable Input<List<VirtualDiskArgs>> disks) {
+        public Builder disks(@Nullable Input<List<VirtualDiskArgs>> disks) {
             this.disks = disks;
             return this;
         }
 
-        public Builder setDisks(@Nullable List<VirtualDiskArgs> disks) {
+        public Builder disks(@Nullable List<VirtualDiskArgs> disks) {
             this.disks = Input.ofNullable(disks);
             return this;
         }

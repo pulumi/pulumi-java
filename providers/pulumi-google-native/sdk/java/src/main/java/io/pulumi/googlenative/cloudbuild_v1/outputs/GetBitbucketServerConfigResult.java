@@ -196,52 +196,52 @@ public final class GetBitbucketServerConfigResult {
     	      this.webhookKey = defaults.webhookKey;
         }
 
-        public Builder setApiKey(String apiKey) {
+        public Builder apiKey(String apiKey) {
             this.apiKey = Objects.requireNonNull(apiKey);
             return this;
         }
 
-        public Builder setConnectedRepositories(List<BitbucketServerRepositoryIdResponse> connectedRepositories) {
+        public Builder connectedRepositories(List<BitbucketServerRepositoryIdResponse> connectedRepositories) {
             this.connectedRepositories = Objects.requireNonNull(connectedRepositories);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setHostUri(String hostUri) {
+        public Builder hostUri(String hostUri) {
             this.hostUri = Objects.requireNonNull(hostUri);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPeeredNetwork(String peeredNetwork) {
+        public Builder peeredNetwork(String peeredNetwork) {
             this.peeredNetwork = Objects.requireNonNull(peeredNetwork);
             return this;
         }
 
-        public Builder setSecrets(BitbucketServerSecretsResponse secrets) {
+        public Builder secrets(BitbucketServerSecretsResponse secrets) {
             this.secrets = Objects.requireNonNull(secrets);
             return this;
         }
 
-        public Builder setSslCa(String sslCa) {
+        public Builder sslCa(String sslCa) {
             this.sslCa = Objects.requireNonNull(sslCa);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
 
-        public Builder setWebhookKey(String webhookKey) {
+        public Builder webhookKey(String webhookKey) {
             this.webhookKey = Objects.requireNonNull(webhookKey);
             return this;
         }

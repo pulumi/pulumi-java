@@ -169,42 +169,42 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationResponse {
     	      this.sku = defaults.sku;
         }
 
-        public Builder setDeleteOption(@Nullable String deleteOption) {
+        public Builder deleteOption(@Nullable String deleteOption) {
             this.deleteOption = deleteOption;
             return this;
         }
 
-        public Builder setDnsSettings(@Nullable VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse dnsSettings) {
+        public Builder dnsSettings(@Nullable VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse dnsSettings) {
             this.dnsSettings = dnsSettings;
             return this;
         }
 
-        public Builder setIdleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
+        public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
 
-        public Builder setIpTags(@Nullable List<VirtualMachineScaleSetIpTagResponse> ipTags) {
+        public Builder ipTags(@Nullable List<VirtualMachineScaleSetIpTagResponse> ipTags) {
             this.ipTags = ipTags;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPublicIPAddressVersion(@Nullable String publicIPAddressVersion) {
+        public Builder publicIPAddressVersion(@Nullable String publicIPAddressVersion) {
             this.publicIPAddressVersion = publicIPAddressVersion;
             return this;
         }
 
-        public Builder setPublicIPPrefix(@Nullable SubResourceResponse publicIPPrefix) {
+        public Builder publicIPPrefix(@Nullable SubResourceResponse publicIPPrefix) {
             this.publicIPPrefix = publicIPPrefix;
             return this;
         }
 
-        public Builder setSku(@Nullable PublicIPAddressSkuResponse sku) {
+        public Builder sku(@Nullable PublicIPAddressSkuResponse sku) {
             this.sku = sku;
             return this;
         }

@@ -100,22 +100,22 @@ public final class WindowsSecurityContextOptions {
     	      this.runAsUserName = defaults.runAsUserName;
         }
 
-        public Builder setGmsaCredentialSpec(@Nullable String gmsaCredentialSpec) {
+        public Builder gmsaCredentialSpec(@Nullable String gmsaCredentialSpec) {
             this.gmsaCredentialSpec = gmsaCredentialSpec;
             return this;
         }
 
-        public Builder setGmsaCredentialSpecName(@Nullable String gmsaCredentialSpecName) {
+        public Builder gmsaCredentialSpecName(@Nullable String gmsaCredentialSpecName) {
             this.gmsaCredentialSpecName = gmsaCredentialSpecName;
             return this;
         }
 
-        public Builder setHostProcess(@Nullable Boolean hostProcess) {
+        public Builder hostProcess(@Nullable Boolean hostProcess) {
             this.hostProcess = hostProcess;
             return this;
         }
 
-        public Builder setRunAsUserName(@Nullable String runAsUserName) {
+        public Builder runAsUserName(@Nullable String runAsUserName) {
             this.runAsUserName = runAsUserName;
             return this;
         }

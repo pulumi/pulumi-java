@@ -52,12 +52,12 @@ public final class ChannelStorage {
     	      this.serviceManagedS3 = defaults.serviceManagedS3;
         }
 
-        public Builder setCustomerManagedS3(@Nullable ChannelCustomerManagedS3 customerManagedS3) {
+        public Builder customerManagedS3(@Nullable ChannelCustomerManagedS3 customerManagedS3) {
             this.customerManagedS3 = customerManagedS3;
             return this;
         }
 
-        public Builder setServiceManagedS3(@Nullable ChannelServiceManagedS3 serviceManagedS3) {
+        public Builder serviceManagedS3(@Nullable ChannelServiceManagedS3 serviceManagedS3) {
             this.serviceManagedS3 = serviceManagedS3;
             return this;
         }

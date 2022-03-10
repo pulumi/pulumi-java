@@ -150,72 +150,72 @@ public final class ApiTagDescriptionArgs extends io.pulumi.resources.ResourceArg
     	      this.tagDescriptionId = defaults.tagDescriptionId;
         }
 
-        public Builder setApiId(Input<String> apiId) {
+        public Builder apiId(Input<String> apiId) {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
 
-        public Builder setApiId(String apiId) {
+        public Builder apiId(String apiId) {
             this.apiId = Input.of(Objects.requireNonNull(apiId));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setExternalDocsDescription(@Nullable Input<String> externalDocsDescription) {
+        public Builder externalDocsDescription(@Nullable Input<String> externalDocsDescription) {
             this.externalDocsDescription = externalDocsDescription;
             return this;
         }
 
-        public Builder setExternalDocsDescription(@Nullable String externalDocsDescription) {
+        public Builder externalDocsDescription(@Nullable String externalDocsDescription) {
             this.externalDocsDescription = Input.ofNullable(externalDocsDescription);
             return this;
         }
 
-        public Builder setExternalDocsUrl(@Nullable Input<String> externalDocsUrl) {
+        public Builder externalDocsUrl(@Nullable Input<String> externalDocsUrl) {
             this.externalDocsUrl = externalDocsUrl;
             return this;
         }
 
-        public Builder setExternalDocsUrl(@Nullable String externalDocsUrl) {
+        public Builder externalDocsUrl(@Nullable String externalDocsUrl) {
             this.externalDocsUrl = Input.ofNullable(externalDocsUrl);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder setTagDescriptionId(@Nullable Input<String> tagDescriptionId) {
+        public Builder tagDescriptionId(@Nullable Input<String> tagDescriptionId) {
             this.tagDescriptionId = tagDescriptionId;
             return this;
         }
 
-        public Builder setTagDescriptionId(@Nullable String tagDescriptionId) {
+        public Builder tagDescriptionId(@Nullable String tagDescriptionId) {
             this.tagDescriptionId = Input.ofNullable(tagDescriptionId);
             return this;
         }

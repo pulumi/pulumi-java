@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePerson
     	      this.accountNumber = defaults.accountNumber;
         }
 
-        public Builder setAccountNumber(String accountNumber) {
+        public Builder accountNumber(String accountNumber) {
             this.accountNumber = Objects.requireNonNull(accountNumber);
             return this;
         }

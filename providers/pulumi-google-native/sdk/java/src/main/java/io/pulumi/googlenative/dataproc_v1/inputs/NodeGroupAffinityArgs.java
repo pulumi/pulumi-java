@@ -56,12 +56,12 @@ public final class NodeGroupAffinityArgs extends io.pulumi.resources.ResourceArg
     	      this.nodeGroupUri = defaults.nodeGroupUri;
         }
 
-        public Builder setNodeGroupUri(Input<String> nodeGroupUri) {
+        public Builder nodeGroupUri(Input<String> nodeGroupUri) {
             this.nodeGroupUri = Objects.requireNonNull(nodeGroupUri);
             return this;
         }
 
-        public Builder setNodeGroupUri(String nodeGroupUri) {
+        public Builder nodeGroupUri(String nodeGroupUri) {
             this.nodeGroupUri = Input.of(Objects.requireNonNull(nodeGroupUri));
             return this;
         }

@@ -128,27 +128,27 @@ public final class ReportDatasetResponse extends io.pulumi.resources.InvokeArgs 
     	      this.grouping = defaults.grouping;
         }
 
-        public Builder setAggregation(@Nullable Map<String,ReportAggregationResponse> aggregation) {
+        public Builder aggregation(@Nullable Map<String,ReportAggregationResponse> aggregation) {
             this.aggregation = aggregation;
             return this;
         }
 
-        public Builder setConfiguration(@Nullable ReportDatasetConfigurationResponse configuration) {
+        public Builder configuration(@Nullable ReportDatasetConfigurationResponse configuration) {
             this.configuration = configuration;
             return this;
         }
 
-        public Builder setFilter(@Nullable ReportFilterResponse filter) {
+        public Builder filter(@Nullable ReportFilterResponse filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setGranularity(@Nullable String granularity) {
+        public Builder granularity(@Nullable String granularity) {
             this.granularity = granularity;
             return this;
         }
 
-        public Builder setGrouping(@Nullable List<ReportGroupingResponse> grouping) {
+        public Builder grouping(@Nullable List<ReportGroupingResponse> grouping) {
             this.grouping = grouping;
             return this;
         }

@@ -105,42 +105,42 @@ public final class EnabledProtocolsArgs extends io.pulumi.resources.ResourceArgs
     	      this.smoothStreaming = defaults.smoothStreaming;
         }
 
-        public Builder setDash(Input<Boolean> dash) {
+        public Builder dash(Input<Boolean> dash) {
             this.dash = Objects.requireNonNull(dash);
             return this;
         }
 
-        public Builder setDash(Boolean dash) {
+        public Builder dash(Boolean dash) {
             this.dash = Input.of(Objects.requireNonNull(dash));
             return this;
         }
 
-        public Builder setDownload(Input<Boolean> download) {
+        public Builder download(Input<Boolean> download) {
             this.download = Objects.requireNonNull(download);
             return this;
         }
 
-        public Builder setDownload(Boolean download) {
+        public Builder download(Boolean download) {
             this.download = Input.of(Objects.requireNonNull(download));
             return this;
         }
 
-        public Builder setHls(Input<Boolean> hls) {
+        public Builder hls(Input<Boolean> hls) {
             this.hls = Objects.requireNonNull(hls);
             return this;
         }
 
-        public Builder setHls(Boolean hls) {
+        public Builder hls(Boolean hls) {
             this.hls = Input.of(Objects.requireNonNull(hls));
             return this;
         }
 
-        public Builder setSmoothStreaming(Input<Boolean> smoothStreaming) {
+        public Builder smoothStreaming(Input<Boolean> smoothStreaming) {
             this.smoothStreaming = Objects.requireNonNull(smoothStreaming);
             return this;
         }
 
-        public Builder setSmoothStreaming(Boolean smoothStreaming) {
+        public Builder smoothStreaming(Boolean smoothStreaming) {
             this.smoothStreaming = Input.of(Objects.requireNonNull(smoothStreaming));
             return this;
         }

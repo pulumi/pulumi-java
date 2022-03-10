@@ -69,17 +69,17 @@ public final class DatadogHostMetadataResponse {
     	      this.logsAgent = defaults.logsAgent;
         }
 
-        public Builder setAgentVersion(@Nullable String agentVersion) {
+        public Builder agentVersion(@Nullable String agentVersion) {
             this.agentVersion = agentVersion;
             return this;
         }
 
-        public Builder setInstallMethod(@Nullable DatadogInstallMethodResponse installMethod) {
+        public Builder installMethod(@Nullable DatadogInstallMethodResponse installMethod) {
             this.installMethod = installMethod;
             return this;
         }
 
-        public Builder setLogsAgent(@Nullable DatadogLogsAgentResponse logsAgent) {
+        public Builder logsAgent(@Nullable DatadogLogsAgentResponse logsAgent) {
             this.logsAgent = logsAgent;
             return this;
         }

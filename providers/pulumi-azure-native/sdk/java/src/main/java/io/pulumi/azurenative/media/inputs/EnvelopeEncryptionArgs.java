@@ -110,42 +110,42 @@ public final class EnvelopeEncryptionArgs extends io.pulumi.resources.ResourceAr
     	      this.enabledProtocols = defaults.enabledProtocols;
         }
 
-        public Builder setClearTracks(@Nullable Input<List<TrackSelectionArgs>> clearTracks) {
+        public Builder clearTracks(@Nullable Input<List<TrackSelectionArgs>> clearTracks) {
             this.clearTracks = clearTracks;
             return this;
         }
 
-        public Builder setClearTracks(@Nullable List<TrackSelectionArgs> clearTracks) {
+        public Builder clearTracks(@Nullable List<TrackSelectionArgs> clearTracks) {
             this.clearTracks = Input.ofNullable(clearTracks);
             return this;
         }
 
-        public Builder setContentKeys(@Nullable Input<StreamingPolicyContentKeysArgs> contentKeys) {
+        public Builder contentKeys(@Nullable Input<StreamingPolicyContentKeysArgs> contentKeys) {
             this.contentKeys = contentKeys;
             return this;
         }
 
-        public Builder setContentKeys(@Nullable StreamingPolicyContentKeysArgs contentKeys) {
+        public Builder contentKeys(@Nullable StreamingPolicyContentKeysArgs contentKeys) {
             this.contentKeys = Input.ofNullable(contentKeys);
             return this;
         }
 
-        public Builder setCustomKeyAcquisitionUrlTemplate(@Nullable Input<String> customKeyAcquisitionUrlTemplate) {
+        public Builder customKeyAcquisitionUrlTemplate(@Nullable Input<String> customKeyAcquisitionUrlTemplate) {
             this.customKeyAcquisitionUrlTemplate = customKeyAcquisitionUrlTemplate;
             return this;
         }
 
-        public Builder setCustomKeyAcquisitionUrlTemplate(@Nullable String customKeyAcquisitionUrlTemplate) {
+        public Builder customKeyAcquisitionUrlTemplate(@Nullable String customKeyAcquisitionUrlTemplate) {
             this.customKeyAcquisitionUrlTemplate = Input.ofNullable(customKeyAcquisitionUrlTemplate);
             return this;
         }
 
-        public Builder setEnabledProtocols(@Nullable Input<EnabledProtocolsArgs> enabledProtocols) {
+        public Builder enabledProtocols(@Nullable Input<EnabledProtocolsArgs> enabledProtocols) {
             this.enabledProtocols = enabledProtocols;
             return this;
         }
 
-        public Builder setEnabledProtocols(@Nullable EnabledProtocolsArgs enabledProtocols) {
+        public Builder enabledProtocols(@Nullable EnabledProtocolsArgs enabledProtocols) {
             this.enabledProtocols = Input.ofNullable(enabledProtocols);
             return this;
         }

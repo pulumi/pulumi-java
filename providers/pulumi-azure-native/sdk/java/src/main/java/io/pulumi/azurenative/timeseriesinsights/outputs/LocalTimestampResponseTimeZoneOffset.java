@@ -50,7 +50,7 @@ public final class LocalTimestampResponseTimeZoneOffset {
     	      this.propertyName = defaults.propertyName;
         }
 
-        public Builder setPropertyName(@Nullable String propertyName) {
+        public Builder propertyName(@Nullable String propertyName) {
             this.propertyName = propertyName;
             return this;
         }

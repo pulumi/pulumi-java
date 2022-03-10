@@ -50,7 +50,7 @@ public final class ListLocationConsortiumsResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(@Nullable List<ConsortiumResponse> value) {
+        public Builder value(@Nullable List<ConsortiumResponse> value) {
             this.value = value;
             return this;
         }

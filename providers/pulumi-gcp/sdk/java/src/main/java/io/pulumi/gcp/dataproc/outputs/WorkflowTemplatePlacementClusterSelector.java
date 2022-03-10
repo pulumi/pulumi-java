@@ -68,12 +68,12 @@ public final class WorkflowTemplatePlacementClusterSelector {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setClusterLabels(Map<String,String> clusterLabels) {
+        public Builder clusterLabels(Map<String,String> clusterLabels) {
             this.clusterLabels = Objects.requireNonNull(clusterLabels);
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = zone;
             return this;
         }

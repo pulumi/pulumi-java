@@ -102,22 +102,22 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepository {
     	      this.zypper = defaults.zypper;
         }
 
-        public Builder setApt(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryApt apt) {
+        public Builder apt(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryApt apt) {
             this.apt = apt;
             return this;
         }
 
-        public Builder setGoo(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGoo goo) {
+        public Builder goo(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGoo goo) {
             this.goo = goo;
             return this;
         }
 
-        public Builder setYum(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYum yum) {
+        public Builder yum(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYum yum) {
             this.yum = yum;
             return this;
         }
 
-        public Builder setZypper(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypper zypper) {
+        public Builder zypper(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypper zypper) {
             this.zypper = zypper;
             return this;
         }

@@ -47,7 +47,7 @@ public final class GetClusterMasterAuthClientCertificateConfig extends io.pulumi
     	      this.issueClientCertificate = defaults.issueClientCertificate;
         }
 
-        public Builder setIssueClientCertificate(Boolean issueClientCertificate) {
+        public Builder issueClientCertificate(Boolean issueClientCertificate) {
             this.issueClientCertificate = Objects.requireNonNull(issueClientCertificate);
             return this;
         }

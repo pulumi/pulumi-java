@@ -101,22 +101,22 @@ public final class NetworkInterfaceResponse {
     	      this.vmSwitchType = defaults.vmSwitchType;
         }
 
-        public Builder setIpConfigurations(@Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations) {
+        public Builder ipConfigurations(@Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations) {
             this.ipConfigurations = ipConfigurations;
             return this;
         }
 
-        public Builder setMacAddress(@Nullable String macAddress) {
+        public Builder macAddress(@Nullable String macAddress) {
             this.macAddress = macAddress;
             return this;
         }
 
-        public Builder setNetworkInterfaceName(@Nullable String networkInterfaceName) {
+        public Builder networkInterfaceName(@Nullable String networkInterfaceName) {
             this.networkInterfaceName = networkInterfaceName;
             return this;
         }
 
-        public Builder setVmSwitchType(@Nullable String vmSwitchType) {
+        public Builder vmSwitchType(@Nullable String vmSwitchType) {
             this.vmSwitchType = vmSwitchType;
             return this;
         }

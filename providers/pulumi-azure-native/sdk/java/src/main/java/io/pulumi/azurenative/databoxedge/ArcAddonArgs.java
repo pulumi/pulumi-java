@@ -167,82 +167,82 @@ public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subscriptionId = defaults.subscriptionId;
         }
 
-        public Builder setAddonName(@Nullable Input<String> addonName) {
+        public Builder addonName(@Nullable Input<String> addonName) {
             this.addonName = addonName;
             return this;
         }
 
-        public Builder setAddonName(@Nullable String addonName) {
+        public Builder addonName(@Nullable String addonName) {
             this.addonName = Input.ofNullable(addonName);
             return this;
         }
 
-        public Builder setDeviceName(Input<String> deviceName) {
+        public Builder deviceName(Input<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Input.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder setKind(Input<String> kind) {
+        public Builder kind(Input<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceLocation(Input<String> resourceLocation) {
+        public Builder resourceLocation(Input<String> resourceLocation) {
             this.resourceLocation = Objects.requireNonNull(resourceLocation);
             return this;
         }
 
-        public Builder setResourceLocation(String resourceLocation) {
+        public Builder resourceLocation(String resourceLocation) {
             this.resourceLocation = Input.of(Objects.requireNonNull(resourceLocation));
             return this;
         }
 
-        public Builder setResourceName(Input<String> resourceName) {
+        public Builder resourceName(Input<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
-        public Builder setResourceName(String resourceName) {
+        public Builder resourceName(String resourceName) {
             this.resourceName = Input.of(Objects.requireNonNull(resourceName));
             return this;
         }
 
-        public Builder setRoleName(Input<String> roleName) {
+        public Builder roleName(Input<String> roleName) {
             this.roleName = Objects.requireNonNull(roleName);
             return this;
         }
 
-        public Builder setRoleName(String roleName) {
+        public Builder roleName(String roleName) {
             this.roleName = Input.of(Objects.requireNonNull(roleName));
             return this;
         }
 
-        public Builder setSubscriptionId(Input<String> subscriptionId) {
+        public Builder subscriptionId(Input<String> subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
 
-        public Builder setSubscriptionId(String subscriptionId) {
+        public Builder subscriptionId(String subscriptionId) {
             this.subscriptionId = Input.of(Objects.requireNonNull(subscriptionId));
             return this;
         }

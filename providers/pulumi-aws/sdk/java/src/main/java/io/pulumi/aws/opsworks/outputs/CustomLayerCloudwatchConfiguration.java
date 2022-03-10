@@ -61,12 +61,12 @@ public final class CustomLayerCloudwatchConfiguration {
     	      this.logStreams = defaults.logStreams;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setLogStreams(@Nullable List<CustomLayerCloudwatchConfigurationLogStream> logStreams) {
+        public Builder logStreams(@Nullable List<CustomLayerCloudwatchConfigurationLogStream> logStreams) {
             this.logStreams = logStreams;
             return this;
         }

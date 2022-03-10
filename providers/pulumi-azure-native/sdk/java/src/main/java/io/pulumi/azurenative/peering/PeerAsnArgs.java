@@ -123,52 +123,52 @@ public final class PeerAsnArgs extends io.pulumi.resources.ResourceArgs {
     	      this.validationState = defaults.validationState;
         }
 
-        public Builder setPeerAsn(@Nullable Input<Integer> peerAsn) {
+        public Builder peerAsn(@Nullable Input<Integer> peerAsn) {
             this.peerAsn = peerAsn;
             return this;
         }
 
-        public Builder setPeerAsn(@Nullable Integer peerAsn) {
+        public Builder peerAsn(@Nullable Integer peerAsn) {
             this.peerAsn = Input.ofNullable(peerAsn);
             return this;
         }
 
-        public Builder setPeerAsnName(@Nullable Input<String> peerAsnName) {
+        public Builder peerAsnName(@Nullable Input<String> peerAsnName) {
             this.peerAsnName = peerAsnName;
             return this;
         }
 
-        public Builder setPeerAsnName(@Nullable String peerAsnName) {
+        public Builder peerAsnName(@Nullable String peerAsnName) {
             this.peerAsnName = Input.ofNullable(peerAsnName);
             return this;
         }
 
-        public Builder setPeerContactDetail(@Nullable Input<List<ContactDetailArgs>> peerContactDetail) {
+        public Builder peerContactDetail(@Nullable Input<List<ContactDetailArgs>> peerContactDetail) {
             this.peerContactDetail = peerContactDetail;
             return this;
         }
 
-        public Builder setPeerContactDetail(@Nullable List<ContactDetailArgs> peerContactDetail) {
+        public Builder peerContactDetail(@Nullable List<ContactDetailArgs> peerContactDetail) {
             this.peerContactDetail = Input.ofNullable(peerContactDetail);
             return this;
         }
 
-        public Builder setPeerName(@Nullable Input<String> peerName) {
+        public Builder peerName(@Nullable Input<String> peerName) {
             this.peerName = peerName;
             return this;
         }
 
-        public Builder setPeerName(@Nullable String peerName) {
+        public Builder peerName(@Nullable String peerName) {
             this.peerName = Input.ofNullable(peerName);
             return this;
         }
 
-        public Builder setValidationState(@Nullable Input<Either<String,ValidationState>> validationState) {
+        public Builder validationState(@Nullable Input<Either<String,ValidationState>> validationState) {
             this.validationState = validationState;
             return this;
         }
 
-        public Builder setValidationState(@Nullable Either<String,ValidationState> validationState) {
+        public Builder validationState(@Nullable Either<String,ValidationState> validationState) {
             this.validationState = Input.ofNullable(validationState);
             return this;
         }

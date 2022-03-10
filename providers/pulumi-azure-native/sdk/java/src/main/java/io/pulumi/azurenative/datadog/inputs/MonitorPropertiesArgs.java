@@ -94,32 +94,32 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
     	      this.userInfo = defaults.userInfo;
         }
 
-        public Builder setDatadogOrganizationProperties(@Nullable Input<DatadogOrganizationPropertiesArgs> datadogOrganizationProperties) {
+        public Builder datadogOrganizationProperties(@Nullable Input<DatadogOrganizationPropertiesArgs> datadogOrganizationProperties) {
             this.datadogOrganizationProperties = datadogOrganizationProperties;
             return this;
         }
 
-        public Builder setDatadogOrganizationProperties(@Nullable DatadogOrganizationPropertiesArgs datadogOrganizationProperties) {
+        public Builder datadogOrganizationProperties(@Nullable DatadogOrganizationPropertiesArgs datadogOrganizationProperties) {
             this.datadogOrganizationProperties = Input.ofNullable(datadogOrganizationProperties);
             return this;
         }
 
-        public Builder setMonitoringStatus(@Nullable Input<Either<String,MonitoringStatus>> monitoringStatus) {
+        public Builder monitoringStatus(@Nullable Input<Either<String,MonitoringStatus>> monitoringStatus) {
             this.monitoringStatus = monitoringStatus;
             return this;
         }
 
-        public Builder setMonitoringStatus(@Nullable Either<String,MonitoringStatus> monitoringStatus) {
+        public Builder monitoringStatus(@Nullable Either<String,MonitoringStatus> monitoringStatus) {
             this.monitoringStatus = Input.ofNullable(monitoringStatus);
             return this;
         }
 
-        public Builder setUserInfo(@Nullable Input<UserInfoArgs> userInfo) {
+        public Builder userInfo(@Nullable Input<UserInfoArgs> userInfo) {
             this.userInfo = userInfo;
             return this;
         }
 
-        public Builder setUserInfo(@Nullable UserInfoArgs userInfo) {
+        public Builder userInfo(@Nullable UserInfoArgs userInfo) {
             this.userInfo = Input.ofNullable(userInfo);
             return this;
         }

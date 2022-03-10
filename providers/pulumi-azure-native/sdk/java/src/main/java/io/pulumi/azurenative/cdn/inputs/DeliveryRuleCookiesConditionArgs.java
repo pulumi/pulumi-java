@@ -75,22 +75,22 @@ public final class DeliveryRuleCookiesConditionArgs extends io.pulumi.resources.
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setParameters(Input<CookiesMatchConditionParametersArgs> parameters) {
+        public Builder parameters(Input<CookiesMatchConditionParametersArgs> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setParameters(CookiesMatchConditionParametersArgs parameters) {
+        public Builder parameters(CookiesMatchConditionParametersArgs parameters) {
             this.parameters = Input.of(Objects.requireNonNull(parameters));
             return this;
         }

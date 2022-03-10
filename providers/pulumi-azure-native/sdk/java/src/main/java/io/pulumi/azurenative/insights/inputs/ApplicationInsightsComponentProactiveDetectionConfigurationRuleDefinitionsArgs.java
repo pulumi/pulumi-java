@@ -171,82 +171,82 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
     	      this.supportsEmailNotifications = defaults.supportsEmailNotifications;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setHelpUrl(@Nullable Input<String> helpUrl) {
+        public Builder helpUrl(@Nullable Input<String> helpUrl) {
             this.helpUrl = helpUrl;
             return this;
         }
 
-        public Builder setHelpUrl(@Nullable String helpUrl) {
+        public Builder helpUrl(@Nullable String helpUrl) {
             this.helpUrl = Input.ofNullable(helpUrl);
             return this;
         }
 
-        public Builder setIsEnabledByDefault(@Nullable Input<Boolean> isEnabledByDefault) {
+        public Builder isEnabledByDefault(@Nullable Input<Boolean> isEnabledByDefault) {
             this.isEnabledByDefault = isEnabledByDefault;
             return this;
         }
 
-        public Builder setIsEnabledByDefault(@Nullable Boolean isEnabledByDefault) {
+        public Builder isEnabledByDefault(@Nullable Boolean isEnabledByDefault) {
             this.isEnabledByDefault = Input.ofNullable(isEnabledByDefault);
             return this;
         }
 
-        public Builder setIsHidden(@Nullable Input<Boolean> isHidden) {
+        public Builder isHidden(@Nullable Input<Boolean> isHidden) {
             this.isHidden = isHidden;
             return this;
         }
 
-        public Builder setIsHidden(@Nullable Boolean isHidden) {
+        public Builder isHidden(@Nullable Boolean isHidden) {
             this.isHidden = Input.ofNullable(isHidden);
             return this;
         }
 
-        public Builder setIsInPreview(@Nullable Input<Boolean> isInPreview) {
+        public Builder isInPreview(@Nullable Input<Boolean> isInPreview) {
             this.isInPreview = isInPreview;
             return this;
         }
 
-        public Builder setIsInPreview(@Nullable Boolean isInPreview) {
+        public Builder isInPreview(@Nullable Boolean isInPreview) {
             this.isInPreview = Input.ofNullable(isInPreview);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSupportsEmailNotifications(@Nullable Input<Boolean> supportsEmailNotifications) {
+        public Builder supportsEmailNotifications(@Nullable Input<Boolean> supportsEmailNotifications) {
             this.supportsEmailNotifications = supportsEmailNotifications;
             return this;
         }
 
-        public Builder setSupportsEmailNotifications(@Nullable Boolean supportsEmailNotifications) {
+        public Builder supportsEmailNotifications(@Nullable Boolean supportsEmailNotifications) {
             this.supportsEmailNotifications = Input.ofNullable(supportsEmailNotifications);
             return this;
         }

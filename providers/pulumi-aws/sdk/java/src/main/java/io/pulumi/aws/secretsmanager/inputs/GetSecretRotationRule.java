@@ -47,7 +47,7 @@ public final class GetSecretRotationRule extends io.pulumi.resources.InvokeArgs 
     	      this.automaticallyAfterDays = defaults.automaticallyAfterDays;
         }
 
-        public Builder setAutomaticallyAfterDays(Integer automaticallyAfterDays) {
+        public Builder automaticallyAfterDays(Integer automaticallyAfterDays) {
             this.automaticallyAfterDays = Objects.requireNonNull(automaticallyAfterDays);
             return this;
         }

@@ -84,17 +84,17 @@ public final class ListIdentityProviderSecretsArgs extends io.pulumi.resources.I
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setIdentityProviderName(String identityProviderName) {
+        public Builder identityProviderName(String identityProviderName) {
             this.identityProviderName = Objects.requireNonNull(identityProviderName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }

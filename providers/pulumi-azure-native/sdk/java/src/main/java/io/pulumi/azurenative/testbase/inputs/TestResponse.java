@@ -109,22 +109,22 @@ public final class TestResponse extends io.pulumi.resources.InvokeArgs {
     	      this.validationRunStatus = defaults.validationRunStatus;
         }
 
-        public Builder setCommands(List<CommandResponse> commands) {
+        public Builder commands(List<CommandResponse> commands) {
             this.commands = Objects.requireNonNull(commands);
             return this;
         }
 
-        public Builder setIsActive(@Nullable Boolean isActive) {
+        public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
             return this;
         }
 
-        public Builder setTestType(String testType) {
+        public Builder testType(String testType) {
             this.testType = Objects.requireNonNull(testType);
             return this;
         }
 
-        public Builder setValidationRunStatus(String validationRunStatus) {
+        public Builder validationRunStatus(String validationRunStatus) {
             this.validationRunStatus = Objects.requireNonNull(validationRunStatus);
             return this;
         }

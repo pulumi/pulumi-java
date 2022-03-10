@@ -71,22 +71,22 @@ public final class RangePartitioningArgs extends io.pulumi.resources.ResourceArg
     	      this.range = defaults.range;
         }
 
-        public Builder setField(@Nullable Input<String> field) {
+        public Builder field(@Nullable Input<String> field) {
             this.field = field;
             return this;
         }
 
-        public Builder setField(@Nullable String field) {
+        public Builder field(@Nullable String field) {
             this.field = Input.ofNullable(field);
             return this;
         }
 
-        public Builder setRange(@Nullable Input<RangePartitioningRangeArgs> range) {
+        public Builder range(@Nullable Input<RangePartitioningRangeArgs> range) {
             this.range = range;
             return this;
         }
 
-        public Builder setRange(@Nullable RangePartitioningRangeArgs range) {
+        public Builder range(@Nullable RangePartitioningRangeArgs range) {
             this.range = Input.ofNullable(range);
             return this;
         }

@@ -343,97 +343,97 @@ public final class GetMigrationJobResult {
     	      this.vpcPeeringConnectivity = defaults.vpcPeeringConnectivity;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDestination(String destination) {
+        public Builder destination(String destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setDestinationDatabase(DatabaseTypeResponse destinationDatabase) {
+        public Builder destinationDatabase(DatabaseTypeResponse destinationDatabase) {
             this.destinationDatabase = Objects.requireNonNull(destinationDatabase);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDumpPath(String dumpPath) {
+        public Builder dumpPath(String dumpPath) {
             this.dumpPath = Objects.requireNonNull(dumpPath);
             return this;
         }
 
-        public Builder setDuration(String duration) {
+        public Builder duration(String duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setError(StatusResponse error) {
+        public Builder error(StatusResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPhase(String phase) {
+        public Builder phase(String phase) {
             this.phase = Objects.requireNonNull(phase);
             return this;
         }
 
-        public Builder setReverseSshConnectivity(ReverseSshConnectivityResponse reverseSshConnectivity) {
+        public Builder reverseSshConnectivity(ReverseSshConnectivityResponse reverseSshConnectivity) {
             this.reverseSshConnectivity = Objects.requireNonNull(reverseSshConnectivity);
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setSourceDatabase(DatabaseTypeResponse sourceDatabase) {
+        public Builder sourceDatabase(DatabaseTypeResponse sourceDatabase) {
             this.sourceDatabase = Objects.requireNonNull(sourceDatabase);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStaticIpConnectivity(StaticIpConnectivityResponse staticIpConnectivity) {
+        public Builder staticIpConnectivity(StaticIpConnectivityResponse staticIpConnectivity) {
             this.staticIpConnectivity = Objects.requireNonNull(staticIpConnectivity);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
 
-        public Builder setVpcPeeringConnectivity(VpcPeeringConnectivityResponse vpcPeeringConnectivity) {
+        public Builder vpcPeeringConnectivity(VpcPeeringConnectivityResponse vpcPeeringConnectivity) {
             this.vpcPeeringConnectivity = Objects.requireNonNull(vpcPeeringConnectivity);
             return this;
         }

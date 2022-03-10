@@ -196,52 +196,52 @@ public final class GetHybridRunbookWorkerResult {
     	      this.workerType = defaults.workerType;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIp(@Nullable String ip) {
+        public Builder ip(@Nullable String ip) {
             this.ip = ip;
             return this;
         }
 
-        public Builder setLastSeenDateTime(@Nullable String lastSeenDateTime) {
+        public Builder lastSeenDateTime(@Nullable String lastSeenDateTime) {
             this.lastSeenDateTime = lastSeenDateTime;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRegisteredDateTime(@Nullable String registeredDateTime) {
+        public Builder registeredDateTime(@Nullable String registeredDateTime) {
             this.registeredDateTime = registeredDateTime;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVmResourceId(@Nullable String vmResourceId) {
+        public Builder vmResourceId(@Nullable String vmResourceId) {
             this.vmResourceId = vmResourceId;
             return this;
         }
 
-        public Builder setWorkerName(@Nullable String workerName) {
+        public Builder workerName(@Nullable String workerName) {
             this.workerName = workerName;
             return this;
         }
 
-        public Builder setWorkerType(@Nullable String workerType) {
+        public Builder workerType(@Nullable String workerType) {
             this.workerType = workerType;
             return this;
         }

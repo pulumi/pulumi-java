@@ -157,32 +157,32 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoType {
     	      this.storedType = defaults.storedType;
         }
 
-        public Builder setDictionary(@Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeDictionary dictionary) {
+        public Builder dictionary(@Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeDictionary dictionary) {
             this.dictionary = dictionary;
             return this;
         }
 
-        public Builder setExclusionType(@Nullable String exclusionType) {
+        public Builder exclusionType(@Nullable String exclusionType) {
             this.exclusionType = exclusionType;
             return this;
         }
 
-        public Builder setInfoType(PreventionInspectTemplateInspectConfigCustomInfoTypeInfoType infoType) {
+        public Builder infoType(PreventionInspectTemplateInspectConfigCustomInfoTypeInfoType infoType) {
             this.infoType = Objects.requireNonNull(infoType);
             return this;
         }
 
-        public Builder setLikelihood(@Nullable String likelihood) {
+        public Builder likelihood(@Nullable String likelihood) {
             this.likelihood = likelihood;
             return this;
         }
 
-        public Builder setRegex(@Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeRegex regex) {
+        public Builder regex(@Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeRegex regex) {
             this.regex = regex;
             return this;
         }
 
-        public Builder setStoredType(@Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeStoredType storedType) {
+        public Builder storedType(@Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeStoredType storedType) {
             this.storedType = storedType;
             return this;
         }

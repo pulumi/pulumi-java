@@ -74,22 +74,22 @@ public final class LoadBalancerBackendAddressPoolReferenceArgs extends io.pulumi
     	      this.sourceArmResourceId = defaults.sourceArmResourceId;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSourceArmResourceId(Input<String> sourceArmResourceId) {
+        public Builder sourceArmResourceId(Input<String> sourceArmResourceId) {
             this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
             return this;
         }
 
-        public Builder setSourceArmResourceId(String sourceArmResourceId) {
+        public Builder sourceArmResourceId(String sourceArmResourceId) {
             this.sourceArmResourceId = Input.of(Objects.requireNonNull(sourceArmResourceId));
             return this;
         }

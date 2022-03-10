@@ -255,112 +255,112 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
     	      this.userLabels = defaults.userLabels;
         }
 
-        public Builder setAlertStrategy(@Nullable Input<AlertPolicyAlertStrategyGetArgs> alertStrategy) {
+        public Builder alertStrategy(@Nullable Input<AlertPolicyAlertStrategyGetArgs> alertStrategy) {
             this.alertStrategy = alertStrategy;
             return this;
         }
 
-        public Builder setAlertStrategy(@Nullable AlertPolicyAlertStrategyGetArgs alertStrategy) {
+        public Builder alertStrategy(@Nullable AlertPolicyAlertStrategyGetArgs alertStrategy) {
             this.alertStrategy = Input.ofNullable(alertStrategy);
             return this;
         }
 
-        public Builder setCombiner(@Nullable Input<String> combiner) {
+        public Builder combiner(@Nullable Input<String> combiner) {
             this.combiner = combiner;
             return this;
         }
 
-        public Builder setCombiner(@Nullable String combiner) {
+        public Builder combiner(@Nullable String combiner) {
             this.combiner = Input.ofNullable(combiner);
             return this;
         }
 
-        public Builder setConditions(@Nullable Input<List<AlertPolicyConditionGetArgs>> conditions) {
+        public Builder conditions(@Nullable Input<List<AlertPolicyConditionGetArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<AlertPolicyConditionGetArgs> conditions) {
+        public Builder conditions(@Nullable List<AlertPolicyConditionGetArgs> conditions) {
             this.conditions = Input.ofNullable(conditions);
             return this;
         }
 
-        public Builder setCreationRecords(@Nullable Input<List<AlertPolicyCreationRecordGetArgs>> creationRecords) {
+        public Builder creationRecords(@Nullable Input<List<AlertPolicyCreationRecordGetArgs>> creationRecords) {
             this.creationRecords = creationRecords;
             return this;
         }
 
-        public Builder setCreationRecords(@Nullable List<AlertPolicyCreationRecordGetArgs> creationRecords) {
+        public Builder creationRecords(@Nullable List<AlertPolicyCreationRecordGetArgs> creationRecords) {
             this.creationRecords = Input.ofNullable(creationRecords);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setDocumentation(@Nullable Input<AlertPolicyDocumentationGetArgs> documentation) {
+        public Builder documentation(@Nullable Input<AlertPolicyDocumentationGetArgs> documentation) {
             this.documentation = documentation;
             return this;
         }
 
-        public Builder setDocumentation(@Nullable AlertPolicyDocumentationGetArgs documentation) {
+        public Builder documentation(@Nullable AlertPolicyDocumentationGetArgs documentation) {
             this.documentation = Input.ofNullable(documentation);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNotificationChannels(@Nullable Input<List<String>> notificationChannels) {
+        public Builder notificationChannels(@Nullable Input<List<String>> notificationChannels) {
             this.notificationChannels = notificationChannels;
             return this;
         }
 
-        public Builder setNotificationChannels(@Nullable List<String> notificationChannels) {
+        public Builder notificationChannels(@Nullable List<String> notificationChannels) {
             this.notificationChannels = Input.ofNullable(notificationChannels);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setUserLabels(@Nullable Input<Map<String,String>> userLabels) {
+        public Builder userLabels(@Nullable Input<Map<String,String>> userLabels) {
             this.userLabels = userLabels;
             return this;
         }
 
-        public Builder setUserLabels(@Nullable Map<String,String> userLabels) {
+        public Builder userLabels(@Nullable Map<String,String> userLabels) {
             this.userLabels = Input.ofNullable(userLabels);
             return this;
         }

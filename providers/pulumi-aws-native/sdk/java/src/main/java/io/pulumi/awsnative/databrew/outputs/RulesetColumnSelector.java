@@ -67,12 +67,12 @@ public final class RulesetColumnSelector {
     	      this.regex = defaults.regex;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setRegex(@Nullable String regex) {
+        public Builder regex(@Nullable String regex) {
             this.regex = regex;
             return this;
         }

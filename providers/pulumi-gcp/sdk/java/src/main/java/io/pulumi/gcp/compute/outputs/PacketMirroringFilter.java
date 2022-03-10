@@ -92,17 +92,17 @@ public final class PacketMirroringFilter {
     	      this.ipProtocols = defaults.ipProtocols;
         }
 
-        public Builder setCidrRanges(@Nullable List<String> cidrRanges) {
+        public Builder cidrRanges(@Nullable List<String> cidrRanges) {
             this.cidrRanges = cidrRanges;
             return this;
         }
 
-        public Builder setDirection(@Nullable String direction) {
+        public Builder direction(@Nullable String direction) {
             this.direction = direction;
             return this;
         }
 
-        public Builder setIpProtocols(@Nullable List<String> ipProtocols) {
+        public Builder ipProtocols(@Nullable List<String> ipProtocols) {
             this.ipProtocols = ipProtocols;
             return this;
         }

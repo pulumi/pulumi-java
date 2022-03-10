@@ -77,12 +77,12 @@ public final class LiteTopicRetentionConfig {
     	      this.period = defaults.period;
         }
 
-        public Builder setPerPartitionBytes(String perPartitionBytes) {
+        public Builder perPartitionBytes(String perPartitionBytes) {
             this.perPartitionBytes = Objects.requireNonNull(perPartitionBytes);
             return this;
         }
 
-        public Builder setPeriod(@Nullable String period) {
+        public Builder period(@Nullable String period) {
             this.period = period;
             return this;
         }

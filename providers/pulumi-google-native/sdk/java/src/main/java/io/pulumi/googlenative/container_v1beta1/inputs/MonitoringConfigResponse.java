@@ -73,12 +73,12 @@ public final class MonitoringConfigResponse extends io.pulumi.resources.InvokeAr
     	      this.managedPrometheusConfig = defaults.managedPrometheusConfig;
         }
 
-        public Builder setComponentConfig(MonitoringComponentConfigResponse componentConfig) {
+        public Builder componentConfig(MonitoringComponentConfigResponse componentConfig) {
             this.componentConfig = Objects.requireNonNull(componentConfig);
             return this;
         }
 
-        public Builder setManagedPrometheusConfig(ManagedPrometheusConfigResponse managedPrometheusConfig) {
+        public Builder managedPrometheusConfig(ManagedPrometheusConfigResponse managedPrometheusConfig) {
             this.managedPrometheusConfig = Objects.requireNonNull(managedPrometheusConfig);
             return this;
         }

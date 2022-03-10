@@ -52,12 +52,12 @@ public final class EndpointConfigurationDataCaptureConfigCaptureOptionArgs exten
     	      this.captureMode = defaults.captureMode;
         }
 
-        public Builder setCaptureMode(Input<String> captureMode) {
+        public Builder captureMode(Input<String> captureMode) {
             this.captureMode = Objects.requireNonNull(captureMode);
             return this;
         }
 
-        public Builder setCaptureMode(String captureMode) {
+        public Builder captureMode(String captureMode) {
             this.captureMode = Input.of(Objects.requireNonNull(captureMode));
             return this;
         }

@@ -191,92 +191,92 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.updateConfig = defaults.updateConfig;
         }
 
-        public Builder setAuth(@Nullable Input<ServiceAuthArgs> auth) {
+        public Builder auth(@Nullable Input<ServiceAuthArgs> auth) {
             this.auth = auth;
             return this;
         }
 
-        public Builder setAuth(@Nullable ServiceAuthArgs auth) {
+        public Builder auth(@Nullable ServiceAuthArgs auth) {
             this.auth = Input.ofNullable(auth);
             return this;
         }
 
-        public Builder setConvergeConfig(@Nullable Input<ServiceConvergeConfigArgs> convergeConfig) {
+        public Builder convergeConfig(@Nullable Input<ServiceConvergeConfigArgs> convergeConfig) {
             this.convergeConfig = convergeConfig;
             return this;
         }
 
-        public Builder setConvergeConfig(@Nullable ServiceConvergeConfigArgs convergeConfig) {
+        public Builder convergeConfig(@Nullable ServiceConvergeConfigArgs convergeConfig) {
             this.convergeConfig = Input.ofNullable(convergeConfig);
             return this;
         }
 
-        public Builder setEndpointSpec(@Nullable Input<ServiceEndpointSpecArgs> endpointSpec) {
+        public Builder endpointSpec(@Nullable Input<ServiceEndpointSpecArgs> endpointSpec) {
             this.endpointSpec = endpointSpec;
             return this;
         }
 
-        public Builder setEndpointSpec(@Nullable ServiceEndpointSpecArgs endpointSpec) {
+        public Builder endpointSpec(@Nullable ServiceEndpointSpecArgs endpointSpec) {
             this.endpointSpec = Input.ofNullable(endpointSpec);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<List<ServiceLabelArgs>> labels) {
+        public Builder labels(@Nullable Input<List<ServiceLabelArgs>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable List<ServiceLabelArgs> labels) {
+        public Builder labels(@Nullable List<ServiceLabelArgs> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setMode(@Nullable Input<ServiceModeArgs> mode) {
+        public Builder mode(@Nullable Input<ServiceModeArgs> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable ServiceModeArgs mode) {
+        public Builder mode(@Nullable ServiceModeArgs mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRollbackConfig(@Nullable Input<ServiceRollbackConfigArgs> rollbackConfig) {
+        public Builder rollbackConfig(@Nullable Input<ServiceRollbackConfigArgs> rollbackConfig) {
             this.rollbackConfig = rollbackConfig;
             return this;
         }
 
-        public Builder setRollbackConfig(@Nullable ServiceRollbackConfigArgs rollbackConfig) {
+        public Builder rollbackConfig(@Nullable ServiceRollbackConfigArgs rollbackConfig) {
             this.rollbackConfig = Input.ofNullable(rollbackConfig);
             return this;
         }
 
-        public Builder setTaskSpec(Input<ServiceTaskSpecArgs> taskSpec) {
+        public Builder taskSpec(Input<ServiceTaskSpecArgs> taskSpec) {
             this.taskSpec = Objects.requireNonNull(taskSpec);
             return this;
         }
 
-        public Builder setTaskSpec(ServiceTaskSpecArgs taskSpec) {
+        public Builder taskSpec(ServiceTaskSpecArgs taskSpec) {
             this.taskSpec = Input.of(Objects.requireNonNull(taskSpec));
             return this;
         }
 
-        public Builder setUpdateConfig(@Nullable Input<ServiceUpdateConfigArgs> updateConfig) {
+        public Builder updateConfig(@Nullable Input<ServiceUpdateConfigArgs> updateConfig) {
             this.updateConfig = updateConfig;
             return this;
         }
 
-        public Builder setUpdateConfig(@Nullable ServiceUpdateConfigArgs updateConfig) {
+        public Builder updateConfig(@Nullable ServiceUpdateConfigArgs updateConfig) {
             this.updateConfig = Input.ofNullable(updateConfig);
             return this;
         }

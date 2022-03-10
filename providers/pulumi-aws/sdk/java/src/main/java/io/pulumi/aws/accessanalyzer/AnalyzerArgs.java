@@ -87,32 +87,32 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setAnalyzerName(Input<String> analyzerName) {
+        public Builder analyzerName(Input<String> analyzerName) {
             this.analyzerName = Objects.requireNonNull(analyzerName);
             return this;
         }
 
-        public Builder setAnalyzerName(String analyzerName) {
+        public Builder analyzerName(String analyzerName) {
             this.analyzerName = Input.of(Objects.requireNonNull(analyzerName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

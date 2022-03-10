@@ -88,32 +88,32 @@ public final class UsagePlanApiStageThrottleGetArgs extends io.pulumi.resources.
     	      this.rateLimit = defaults.rateLimit;
         }
 
-        public Builder setBurstLimit(@Nullable Input<Integer> burstLimit) {
+        public Builder burstLimit(@Nullable Input<Integer> burstLimit) {
             this.burstLimit = burstLimit;
             return this;
         }
 
-        public Builder setBurstLimit(@Nullable Integer burstLimit) {
+        public Builder burstLimit(@Nullable Integer burstLimit) {
             this.burstLimit = Input.ofNullable(burstLimit);
             return this;
         }
 
-        public Builder setPath(Input<String> path) {
+        public Builder path(Input<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Input.of(Objects.requireNonNull(path));
             return this;
         }
 
-        public Builder setRateLimit(@Nullable Input<Double> rateLimit) {
+        public Builder rateLimit(@Nullable Input<Double> rateLimit) {
             this.rateLimit = rateLimit;
             return this;
         }
 
-        public Builder setRateLimit(@Nullable Double rateLimit) {
+        public Builder rateLimit(@Nullable Double rateLimit) {
             this.rateLimit = Input.ofNullable(rateLimit);
             return this;
         }

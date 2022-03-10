@@ -98,52 +98,52 @@ public final class ClusterClusterCertificateGetArgs extends io.pulumi.resources.
     	      this.manufacturerHardwareCertificate = defaults.manufacturerHardwareCertificate;
         }
 
-        public Builder setAwsHardwareCertificate(@Nullable Input<String> awsHardwareCertificate) {
+        public Builder awsHardwareCertificate(@Nullable Input<String> awsHardwareCertificate) {
             this.awsHardwareCertificate = awsHardwareCertificate;
             return this;
         }
 
-        public Builder setAwsHardwareCertificate(@Nullable String awsHardwareCertificate) {
+        public Builder awsHardwareCertificate(@Nullable String awsHardwareCertificate) {
             this.awsHardwareCertificate = Input.ofNullable(awsHardwareCertificate);
             return this;
         }
 
-        public Builder setClusterCertificate(@Nullable Input<String> clusterCertificate) {
+        public Builder clusterCertificate(@Nullable Input<String> clusterCertificate) {
             this.clusterCertificate = clusterCertificate;
             return this;
         }
 
-        public Builder setClusterCertificate(@Nullable String clusterCertificate) {
+        public Builder clusterCertificate(@Nullable String clusterCertificate) {
             this.clusterCertificate = Input.ofNullable(clusterCertificate);
             return this;
         }
 
-        public Builder setClusterCsr(@Nullable Input<String> clusterCsr) {
+        public Builder clusterCsr(@Nullable Input<String> clusterCsr) {
             this.clusterCsr = clusterCsr;
             return this;
         }
 
-        public Builder setClusterCsr(@Nullable String clusterCsr) {
+        public Builder clusterCsr(@Nullable String clusterCsr) {
             this.clusterCsr = Input.ofNullable(clusterCsr);
             return this;
         }
 
-        public Builder setHsmCertificate(@Nullable Input<String> hsmCertificate) {
+        public Builder hsmCertificate(@Nullable Input<String> hsmCertificate) {
             this.hsmCertificate = hsmCertificate;
             return this;
         }
 
-        public Builder setHsmCertificate(@Nullable String hsmCertificate) {
+        public Builder hsmCertificate(@Nullable String hsmCertificate) {
             this.hsmCertificate = Input.ofNullable(hsmCertificate);
             return this;
         }
 
-        public Builder setManufacturerHardwareCertificate(@Nullable Input<String> manufacturerHardwareCertificate) {
+        public Builder manufacturerHardwareCertificate(@Nullable Input<String> manufacturerHardwareCertificate) {
             this.manufacturerHardwareCertificate = manufacturerHardwareCertificate;
             return this;
         }
 
-        public Builder setManufacturerHardwareCertificate(@Nullable String manufacturerHardwareCertificate) {
+        public Builder manufacturerHardwareCertificate(@Nullable String manufacturerHardwareCertificate) {
             this.manufacturerHardwareCertificate = Input.ofNullable(manufacturerHardwareCertificate);
             return this;
         }

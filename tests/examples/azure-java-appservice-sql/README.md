@@ -18,10 +18,11 @@ Provisions Azure SQL Database and Azure Application Insights to be used in combi
     $ az login
     ```
 
-1. Set the Azure region location to use:
+1. Set the Azure region location and sql password to use:
 
     ```
     $ pulumi config set azure-native:location westus
+    $ pulumi config set azure-java-appservice-sql:sqlPassword <value>
     ```
 
 1.  Run `pulumi up` to preview and deploy changes:

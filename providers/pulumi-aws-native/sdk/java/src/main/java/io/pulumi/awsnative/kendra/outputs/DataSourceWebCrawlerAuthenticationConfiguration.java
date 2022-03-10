@@ -42,7 +42,7 @@ public final class DataSourceWebCrawlerAuthenticationConfiguration {
     	      this.basicAuthentication = defaults.basicAuthentication;
         }
 
-        public Builder setBasicAuthentication(@Nullable List<DataSourceWebCrawlerBasicAuthentication> basicAuthentication) {
+        public Builder basicAuthentication(@Nullable List<DataSourceWebCrawlerBasicAuthentication> basicAuthentication) {
             this.basicAuthentication = basicAuthentication;
             return this;
         }

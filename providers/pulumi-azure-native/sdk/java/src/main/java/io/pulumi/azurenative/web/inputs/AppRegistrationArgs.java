@@ -74,22 +74,22 @@ public final class AppRegistrationArgs extends io.pulumi.resources.ResourceArgs 
     	      this.appSecretSettingName = defaults.appSecretSettingName;
         }
 
-        public Builder setAppId(@Nullable Input<String> appId) {
+        public Builder appId(@Nullable Input<String> appId) {
             this.appId = appId;
             return this;
         }
 
-        public Builder setAppId(@Nullable String appId) {
+        public Builder appId(@Nullable String appId) {
             this.appId = Input.ofNullable(appId);
             return this;
         }
 
-        public Builder setAppSecretSettingName(@Nullable Input<String> appSecretSettingName) {
+        public Builder appSecretSettingName(@Nullable Input<String> appSecretSettingName) {
             this.appSecretSettingName = appSecretSettingName;
             return this;
         }
 
-        public Builder setAppSecretSettingName(@Nullable String appSecretSettingName) {
+        public Builder appSecretSettingName(@Nullable String appSecretSettingName) {
             this.appSecretSettingName = Input.ofNullable(appSecretSettingName);
             return this;
         }

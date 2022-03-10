@@ -127,57 +127,57 @@ public final class GetDomainNameResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCertificateArn(@Nullable String certificateArn) {
+        public Builder certificateArn(@Nullable String certificateArn) {
             this.certificateArn = certificateArn;
             return this;
         }
 
-        public Builder setDistributionDomainName(@Nullable String distributionDomainName) {
+        public Builder distributionDomainName(@Nullable String distributionDomainName) {
             this.distributionDomainName = distributionDomainName;
             return this;
         }
 
-        public Builder setDistributionHostedZoneId(@Nullable String distributionHostedZoneId) {
+        public Builder distributionHostedZoneId(@Nullable String distributionHostedZoneId) {
             this.distributionHostedZoneId = distributionHostedZoneId;
             return this;
         }
 
-        public Builder setEndpointConfiguration(@Nullable DomainNameEndpointConfiguration endpointConfiguration) {
+        public Builder endpointConfiguration(@Nullable DomainNameEndpointConfiguration endpointConfiguration) {
             this.endpointConfiguration = endpointConfiguration;
             return this;
         }
 
-        public Builder setMutualTlsAuthentication(@Nullable DomainNameMutualTlsAuthentication mutualTlsAuthentication) {
+        public Builder mutualTlsAuthentication(@Nullable DomainNameMutualTlsAuthentication mutualTlsAuthentication) {
             this.mutualTlsAuthentication = mutualTlsAuthentication;
             return this;
         }
 
-        public Builder setOwnershipVerificationCertificateArn(@Nullable String ownershipVerificationCertificateArn) {
+        public Builder ownershipVerificationCertificateArn(@Nullable String ownershipVerificationCertificateArn) {
             this.ownershipVerificationCertificateArn = ownershipVerificationCertificateArn;
             return this;
         }
 
-        public Builder setRegionalCertificateArn(@Nullable String regionalCertificateArn) {
+        public Builder regionalCertificateArn(@Nullable String regionalCertificateArn) {
             this.regionalCertificateArn = regionalCertificateArn;
             return this;
         }
 
-        public Builder setRegionalDomainName(@Nullable String regionalDomainName) {
+        public Builder regionalDomainName(@Nullable String regionalDomainName) {
             this.regionalDomainName = regionalDomainName;
             return this;
         }
 
-        public Builder setRegionalHostedZoneId(@Nullable String regionalHostedZoneId) {
+        public Builder regionalHostedZoneId(@Nullable String regionalHostedZoneId) {
             this.regionalHostedZoneId = regionalHostedZoneId;
             return this;
         }
 
-        public Builder setSecurityPolicy(@Nullable String securityPolicy) {
+        public Builder securityPolicy(@Nullable String securityPolicy) {
             this.securityPolicy = securityPolicy;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DomainNameTag> tags) {
+        public Builder tags(@Nullable List<DomainNameTag> tags) {
             this.tags = tags;
             return this;
         }

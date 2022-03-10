@@ -84,17 +84,17 @@ public final class GetTimeSeriesDatabaseConnectionArgs extends io.pulumi.resourc
     	      this.timeSeriesDatabaseConnectionName = defaults.timeSeriesDatabaseConnectionName;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceName(String resourceName) {
+        public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
-        public Builder setTimeSeriesDatabaseConnectionName(String timeSeriesDatabaseConnectionName) {
+        public Builder timeSeriesDatabaseConnectionName(String timeSeriesDatabaseConnectionName) {
             this.timeSeriesDatabaseConnectionName = Objects.requireNonNull(timeSeriesDatabaseConnectionName);
             return this;
         }

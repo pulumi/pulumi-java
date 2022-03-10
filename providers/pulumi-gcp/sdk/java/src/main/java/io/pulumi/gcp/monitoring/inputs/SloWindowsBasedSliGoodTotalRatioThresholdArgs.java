@@ -92,32 +92,32 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdArgs extends io.pulu
     	      this.threshold = defaults.threshold;
         }
 
-        public Builder setBasicSliPerformance(@Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceArgs> basicSliPerformance) {
+        public Builder basicSliPerformance(@Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceArgs> basicSliPerformance) {
             this.basicSliPerformance = basicSliPerformance;
             return this;
         }
 
-        public Builder setBasicSliPerformance(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceArgs basicSliPerformance) {
+        public Builder basicSliPerformance(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceArgs basicSliPerformance) {
             this.basicSliPerformance = Input.ofNullable(basicSliPerformance);
             return this;
         }
 
-        public Builder setPerformance(@Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceArgs> performance) {
+        public Builder performance(@Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceArgs> performance) {
             this.performance = performance;
             return this;
         }
 
-        public Builder setPerformance(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdPerformanceArgs performance) {
+        public Builder performance(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdPerformanceArgs performance) {
             this.performance = Input.ofNullable(performance);
             return this;
         }
 
-        public Builder setThreshold(@Nullable Input<Double> threshold) {
+        public Builder threshold(@Nullable Input<Double> threshold) {
             this.threshold = threshold;
             return this;
         }
 
-        public Builder setThreshold(@Nullable Double threshold) {
+        public Builder threshold(@Nullable Double threshold) {
             this.threshold = Input.ofNullable(threshold);
             return this;
         }

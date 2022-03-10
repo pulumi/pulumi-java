@@ -74,12 +74,12 @@ public final class BackendServiceLogConfig {
     	      this.sampleRate = defaults.sampleRate;
         }
 
-        public Builder setEnable(@Nullable Boolean enable) {
+        public Builder enable(@Nullable Boolean enable) {
             this.enable = enable;
             return this;
         }
 
-        public Builder setSampleRate(@Nullable Double sampleRate) {
+        public Builder sampleRate(@Nullable Double sampleRate) {
             this.sampleRate = sampleRate;
             return this;
         }

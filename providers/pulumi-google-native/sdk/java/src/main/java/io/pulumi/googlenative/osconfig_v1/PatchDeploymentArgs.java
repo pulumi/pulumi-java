@@ -195,102 +195,102 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     	      this.rollout = defaults.rollout;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDuration(@Nullable Input<String> duration) {
+        public Builder duration(@Nullable Input<String> duration) {
             this.duration = duration;
             return this;
         }
 
-        public Builder setDuration(@Nullable String duration) {
+        public Builder duration(@Nullable String duration) {
             this.duration = Input.ofNullable(duration);
             return this;
         }
 
-        public Builder setInstanceFilter(Input<PatchInstanceFilterArgs> instanceFilter) {
+        public Builder instanceFilter(Input<PatchInstanceFilterArgs> instanceFilter) {
             this.instanceFilter = Objects.requireNonNull(instanceFilter);
             return this;
         }
 
-        public Builder setInstanceFilter(PatchInstanceFilterArgs instanceFilter) {
+        public Builder instanceFilter(PatchInstanceFilterArgs instanceFilter) {
             this.instanceFilter = Input.of(Objects.requireNonNull(instanceFilter));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOneTimeSchedule(Input<OneTimeScheduleArgs> oneTimeSchedule) {
+        public Builder oneTimeSchedule(Input<OneTimeScheduleArgs> oneTimeSchedule) {
             this.oneTimeSchedule = Objects.requireNonNull(oneTimeSchedule);
             return this;
         }
 
-        public Builder setOneTimeSchedule(OneTimeScheduleArgs oneTimeSchedule) {
+        public Builder oneTimeSchedule(OneTimeScheduleArgs oneTimeSchedule) {
             this.oneTimeSchedule = Input.of(Objects.requireNonNull(oneTimeSchedule));
             return this;
         }
 
-        public Builder setPatchConfig(@Nullable Input<PatchConfigArgs> patchConfig) {
+        public Builder patchConfig(@Nullable Input<PatchConfigArgs> patchConfig) {
             this.patchConfig = patchConfig;
             return this;
         }
 
-        public Builder setPatchConfig(@Nullable PatchConfigArgs patchConfig) {
+        public Builder patchConfig(@Nullable PatchConfigArgs patchConfig) {
             this.patchConfig = Input.ofNullable(patchConfig);
             return this;
         }
 
-        public Builder setPatchDeploymentId(Input<String> patchDeploymentId) {
+        public Builder patchDeploymentId(Input<String> patchDeploymentId) {
             this.patchDeploymentId = Objects.requireNonNull(patchDeploymentId);
             return this;
         }
 
-        public Builder setPatchDeploymentId(String patchDeploymentId) {
+        public Builder patchDeploymentId(String patchDeploymentId) {
             this.patchDeploymentId = Input.of(Objects.requireNonNull(patchDeploymentId));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRecurringSchedule(Input<RecurringScheduleArgs> recurringSchedule) {
+        public Builder recurringSchedule(Input<RecurringScheduleArgs> recurringSchedule) {
             this.recurringSchedule = Objects.requireNonNull(recurringSchedule);
             return this;
         }
 
-        public Builder setRecurringSchedule(RecurringScheduleArgs recurringSchedule) {
+        public Builder recurringSchedule(RecurringScheduleArgs recurringSchedule) {
             this.recurringSchedule = Input.of(Objects.requireNonNull(recurringSchedule));
             return this;
         }
 
-        public Builder setRollout(@Nullable Input<PatchRolloutArgs> rollout) {
+        public Builder rollout(@Nullable Input<PatchRolloutArgs> rollout) {
             this.rollout = rollout;
             return this;
         }
 
-        public Builder setRollout(@Nullable PatchRolloutArgs rollout) {
+        public Builder rollout(@Nullable PatchRolloutArgs rollout) {
             this.rollout = Input.ofNullable(rollout);
             return this;
         }

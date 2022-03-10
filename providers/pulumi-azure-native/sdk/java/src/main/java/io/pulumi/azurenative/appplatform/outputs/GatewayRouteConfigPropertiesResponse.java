@@ -85,17 +85,17 @@ public final class GatewayRouteConfigPropertiesResponse {
     	      this.routes = defaults.routes;
         }
 
-        public Builder setAppResourceId(@Nullable String appResourceId) {
+        public Builder appResourceId(@Nullable String appResourceId) {
             this.appResourceId = appResourceId;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRoutes(@Nullable List<GatewayApiRouteResponse> routes) {
+        public Builder routes(@Nullable List<GatewayApiRouteResponse> routes) {
             this.routes = routes;
             return this;
         }

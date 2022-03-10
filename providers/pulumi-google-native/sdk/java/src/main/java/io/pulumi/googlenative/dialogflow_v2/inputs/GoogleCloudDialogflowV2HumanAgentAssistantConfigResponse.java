@@ -106,22 +106,22 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigResponse exte
     	      this.notificationConfig = defaults.notificationConfig;
         }
 
-        public Builder setEndUserSuggestionConfig(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse endUserSuggestionConfig) {
+        public Builder endUserSuggestionConfig(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse endUserSuggestionConfig) {
             this.endUserSuggestionConfig = Objects.requireNonNull(endUserSuggestionConfig);
             return this;
         }
 
-        public Builder setHumanAgentSuggestionConfig(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse humanAgentSuggestionConfig) {
+        public Builder humanAgentSuggestionConfig(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse humanAgentSuggestionConfig) {
             this.humanAgentSuggestionConfig = Objects.requireNonNull(humanAgentSuggestionConfig);
             return this;
         }
 
-        public Builder setMessageAnalysisConfig(GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigResponse messageAnalysisConfig) {
+        public Builder messageAnalysisConfig(GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigResponse messageAnalysisConfig) {
             this.messageAnalysisConfig = Objects.requireNonNull(messageAnalysisConfig);
             return this;
         }
 
-        public Builder setNotificationConfig(GoogleCloudDialogflowV2NotificationConfigResponse notificationConfig) {
+        public Builder notificationConfig(GoogleCloudDialogflowV2NotificationConfigResponse notificationConfig) {
             this.notificationConfig = Objects.requireNonNull(notificationConfig);
             return this;
         }

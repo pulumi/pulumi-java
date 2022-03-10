@@ -67,12 +67,12 @@ public final class WsdlServiceResponse {
     	      this.qualifiedName = defaults.qualifiedName;
         }
 
-        public Builder setEndpointQualifiedNames(@Nullable List<String> endpointQualifiedNames) {
+        public Builder endpointQualifiedNames(@Nullable List<String> endpointQualifiedNames) {
             this.endpointQualifiedNames = endpointQualifiedNames;
             return this;
         }
 
-        public Builder setQualifiedName(String qualifiedName) {
+        public Builder qualifiedName(String qualifiedName) {
             this.qualifiedName = Objects.requireNonNull(qualifiedName);
             return this;
         }

@@ -66,12 +66,12 @@ public final class MonitoringResponse {
     	      this.producerDestinations = defaults.producerDestinations;
         }
 
-        public Builder setConsumerDestinations(List<MonitoringDestinationResponse> consumerDestinations) {
+        public Builder consumerDestinations(List<MonitoringDestinationResponse> consumerDestinations) {
             this.consumerDestinations = Objects.requireNonNull(consumerDestinations);
             return this;
         }
 
-        public Builder setProducerDestinations(List<MonitoringDestinationResponse> producerDestinations) {
+        public Builder producerDestinations(List<MonitoringDestinationResponse> producerDestinations) {
             this.producerDestinations = Objects.requireNonNull(producerDestinations);
             return this;
         }

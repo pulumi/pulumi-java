@@ -134,32 +134,32 @@ public final class GooglePrivacyDlpV2ActionResponse {
     	      this.saveFindings = defaults.saveFindings;
         }
 
-        public Builder setJobNotificationEmails(GooglePrivacyDlpV2JobNotificationEmailsResponse jobNotificationEmails) {
+        public Builder jobNotificationEmails(GooglePrivacyDlpV2JobNotificationEmailsResponse jobNotificationEmails) {
             this.jobNotificationEmails = Objects.requireNonNull(jobNotificationEmails);
             return this;
         }
 
-        public Builder setPubSub(GooglePrivacyDlpV2PublishToPubSubResponse pubSub) {
+        public Builder pubSub(GooglePrivacyDlpV2PublishToPubSubResponse pubSub) {
             this.pubSub = Objects.requireNonNull(pubSub);
             return this;
         }
 
-        public Builder setPublishFindingsToCloudDataCatalog(GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse publishFindingsToCloudDataCatalog) {
+        public Builder publishFindingsToCloudDataCatalog(GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse publishFindingsToCloudDataCatalog) {
             this.publishFindingsToCloudDataCatalog = Objects.requireNonNull(publishFindingsToCloudDataCatalog);
             return this;
         }
 
-        public Builder setPublishSummaryToCscc(GooglePrivacyDlpV2PublishSummaryToCsccResponse publishSummaryToCscc) {
+        public Builder publishSummaryToCscc(GooglePrivacyDlpV2PublishSummaryToCsccResponse publishSummaryToCscc) {
             this.publishSummaryToCscc = Objects.requireNonNull(publishSummaryToCscc);
             return this;
         }
 
-        public Builder setPublishToStackdriver(GooglePrivacyDlpV2PublishToStackdriverResponse publishToStackdriver) {
+        public Builder publishToStackdriver(GooglePrivacyDlpV2PublishToStackdriverResponse publishToStackdriver) {
             this.publishToStackdriver = Objects.requireNonNull(publishToStackdriver);
             return this;
         }
 
-        public Builder setSaveFindings(GooglePrivacyDlpV2SaveFindingsResponse saveFindings) {
+        public Builder saveFindings(GooglePrivacyDlpV2SaveFindingsResponse saveFindings) {
             this.saveFindings = Objects.requireNonNull(saveFindings);
             return this;
         }

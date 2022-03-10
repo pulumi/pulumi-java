@@ -193,47 +193,47 @@ public final class GetSlotTypeResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setChecksum(String checksum) {
+        public Builder checksum(String checksum) {
             this.checksum = Objects.requireNonNull(checksum);
             return this;
         }
 
-        public Builder setCreatedDate(String createdDate) {
+        public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEnumerationValues(List<GetSlotTypeEnumerationValue> enumerationValues) {
+        public Builder enumerationValues(List<GetSlotTypeEnumerationValue> enumerationValues) {
             this.enumerationValues = Objects.requireNonNull(enumerationValues);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastUpdatedDate(String lastUpdatedDate) {
+        public Builder lastUpdatedDate(String lastUpdatedDate) {
             this.lastUpdatedDate = Objects.requireNonNull(lastUpdatedDate);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setValueSelectionStrategy(String valueSelectionStrategy) {
+        public Builder valueSelectionStrategy(String valueSelectionStrategy) {
             this.valueSelectionStrategy = Objects.requireNonNull(valueSelectionStrategy);
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

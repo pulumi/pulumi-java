@@ -350,102 +350,102 @@ public final class GetImageResult {
     	      this.status = defaults.status;
         }
 
-        public Builder setArchiveSizeBytes(Integer archiveSizeBytes) {
+        public Builder archiveSizeBytes(Integer archiveSizeBytes) {
             this.archiveSizeBytes = Objects.requireNonNull(archiveSizeBytes);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDiskSizeGb(Integer diskSizeGb) {
+        public Builder diskSizeGb(Integer diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
 
-        public Builder setFamily(String family) {
+        public Builder family(String family) {
             this.family = Objects.requireNonNull(family);
             return this;
         }
 
-        public Builder setFilter(@Nullable String filter) {
+        public Builder filter(@Nullable String filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setImageEncryptionKeySha256(String imageEncryptionKeySha256) {
+        public Builder imageEncryptionKeySha256(String imageEncryptionKeySha256) {
             this.imageEncryptionKeySha256 = Objects.requireNonNull(imageEncryptionKeySha256);
             return this;
         }
 
-        public Builder setImageId(String imageId) {
+        public Builder imageId(String imageId) {
             this.imageId = Objects.requireNonNull(imageId);
             return this;
         }
 
-        public Builder setLabelFingerprint(String labelFingerprint) {
+        public Builder labelFingerprint(String labelFingerprint) {
             this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLicenses(List<String> licenses) {
+        public Builder licenses(List<String> licenses) {
             this.licenses = Objects.requireNonNull(licenses);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSourceDisk(String sourceDisk) {
+        public Builder sourceDisk(String sourceDisk) {
             this.sourceDisk = Objects.requireNonNull(sourceDisk);
             return this;
         }
 
-        public Builder setSourceDiskEncryptionKeySha256(String sourceDiskEncryptionKeySha256) {
+        public Builder sourceDiskEncryptionKeySha256(String sourceDiskEncryptionKeySha256) {
             this.sourceDiskEncryptionKeySha256 = Objects.requireNonNull(sourceDiskEncryptionKeySha256);
             return this;
         }
 
-        public Builder setSourceDiskId(String sourceDiskId) {
+        public Builder sourceDiskId(String sourceDiskId) {
             this.sourceDiskId = Objects.requireNonNull(sourceDiskId);
             return this;
         }
 
-        public Builder setSourceImageId(String sourceImageId) {
+        public Builder sourceImageId(String sourceImageId) {
             this.sourceImageId = Objects.requireNonNull(sourceImageId);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

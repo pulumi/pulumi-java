@@ -113,27 +113,27 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse {
     	      this.tablePrefix = defaults.tablePrefix;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setDatasetName(String datasetName) {
+        public Builder datasetName(String datasetName) {
             this.datasetName = Objects.requireNonNull(datasetName);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setTablePrefix(String tablePrefix) {
+        public Builder tablePrefix(String tablePrefix) {
             this.tablePrefix = Objects.requireNonNull(tablePrefix);
             return this;
         }

@@ -425,237 +425,237 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     	      this.websiteRedirect = defaults.websiteRedirect;
         }
 
-        public Builder setAcl(@Nullable Input<String> acl) {
+        public Builder acl(@Nullable Input<String> acl) {
             this.acl = acl;
             return this;
         }
 
-        public Builder setAcl(@Nullable String acl) {
+        public Builder acl(@Nullable String acl) {
             this.acl = Input.ofNullable(acl);
             return this;
         }
 
-        public Builder setBucket(Input<String> bucket) {
+        public Builder bucket(Input<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setBucketKeyEnabled(@Nullable Input<Boolean> bucketKeyEnabled) {
+        public Builder bucketKeyEnabled(@Nullable Input<Boolean> bucketKeyEnabled) {
             this.bucketKeyEnabled = bucketKeyEnabled;
             return this;
         }
 
-        public Builder setBucketKeyEnabled(@Nullable Boolean bucketKeyEnabled) {
+        public Builder bucketKeyEnabled(@Nullable Boolean bucketKeyEnabled) {
             this.bucketKeyEnabled = Input.ofNullable(bucketKeyEnabled);
             return this;
         }
 
-        public Builder setCacheControl(@Nullable Input<String> cacheControl) {
+        public Builder cacheControl(@Nullable Input<String> cacheControl) {
             this.cacheControl = cacheControl;
             return this;
         }
 
-        public Builder setCacheControl(@Nullable String cacheControl) {
+        public Builder cacheControl(@Nullable String cacheControl) {
             this.cacheControl = Input.ofNullable(cacheControl);
             return this;
         }
 
-        public Builder setContent(@Nullable Input<String> content) {
+        public Builder content(@Nullable Input<String> content) {
             this.content = content;
             return this;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = Input.ofNullable(content);
             return this;
         }
 
-        public Builder setContentBase64(@Nullable Input<String> contentBase64) {
+        public Builder contentBase64(@Nullable Input<String> contentBase64) {
             this.contentBase64 = contentBase64;
             return this;
         }
 
-        public Builder setContentBase64(@Nullable String contentBase64) {
+        public Builder contentBase64(@Nullable String contentBase64) {
             this.contentBase64 = Input.ofNullable(contentBase64);
             return this;
         }
 
-        public Builder setContentDisposition(@Nullable Input<String> contentDisposition) {
+        public Builder contentDisposition(@Nullable Input<String> contentDisposition) {
             this.contentDisposition = contentDisposition;
             return this;
         }
 
-        public Builder setContentDisposition(@Nullable String contentDisposition) {
+        public Builder contentDisposition(@Nullable String contentDisposition) {
             this.contentDisposition = Input.ofNullable(contentDisposition);
             return this;
         }
 
-        public Builder setContentEncoding(@Nullable Input<String> contentEncoding) {
+        public Builder contentEncoding(@Nullable Input<String> contentEncoding) {
             this.contentEncoding = contentEncoding;
             return this;
         }
 
-        public Builder setContentEncoding(@Nullable String contentEncoding) {
+        public Builder contentEncoding(@Nullable String contentEncoding) {
             this.contentEncoding = Input.ofNullable(contentEncoding);
             return this;
         }
 
-        public Builder setContentLanguage(@Nullable Input<String> contentLanguage) {
+        public Builder contentLanguage(@Nullable Input<String> contentLanguage) {
             this.contentLanguage = contentLanguage;
             return this;
         }
 
-        public Builder setContentLanguage(@Nullable String contentLanguage) {
+        public Builder contentLanguage(@Nullable String contentLanguage) {
             this.contentLanguage = Input.ofNullable(contentLanguage);
             return this;
         }
 
-        public Builder setContentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Input<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setContentType(@Nullable String contentType) {
+        public Builder contentType(@Nullable String contentType) {
             this.contentType = Input.ofNullable(contentType);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setForceDestroy(@Nullable Input<Boolean> forceDestroy) {
+        public Builder forceDestroy(@Nullable Input<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
 
-        public Builder setForceDestroy(@Nullable Boolean forceDestroy) {
+        public Builder forceDestroy(@Nullable Boolean forceDestroy) {
             this.forceDestroy = Input.ofNullable(forceDestroy);
             return this;
         }
 
-        public Builder setKey(@Nullable Input<String> key) {
+        public Builder key(@Nullable Input<String> key) {
             this.key = key;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = Input.ofNullable(key);
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Input.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setObjectLockLegalHoldStatus(@Nullable Input<String> objectLockLegalHoldStatus) {
+        public Builder objectLockLegalHoldStatus(@Nullable Input<String> objectLockLegalHoldStatus) {
             this.objectLockLegalHoldStatus = objectLockLegalHoldStatus;
             return this;
         }
 
-        public Builder setObjectLockLegalHoldStatus(@Nullable String objectLockLegalHoldStatus) {
+        public Builder objectLockLegalHoldStatus(@Nullable String objectLockLegalHoldStatus) {
             this.objectLockLegalHoldStatus = Input.ofNullable(objectLockLegalHoldStatus);
             return this;
         }
 
-        public Builder setObjectLockMode(@Nullable Input<String> objectLockMode) {
+        public Builder objectLockMode(@Nullable Input<String> objectLockMode) {
             this.objectLockMode = objectLockMode;
             return this;
         }
 
-        public Builder setObjectLockMode(@Nullable String objectLockMode) {
+        public Builder objectLockMode(@Nullable String objectLockMode) {
             this.objectLockMode = Input.ofNullable(objectLockMode);
             return this;
         }
 
-        public Builder setObjectLockRetainUntilDate(@Nullable Input<String> objectLockRetainUntilDate) {
+        public Builder objectLockRetainUntilDate(@Nullable Input<String> objectLockRetainUntilDate) {
             this.objectLockRetainUntilDate = objectLockRetainUntilDate;
             return this;
         }
 
-        public Builder setObjectLockRetainUntilDate(@Nullable String objectLockRetainUntilDate) {
+        public Builder objectLockRetainUntilDate(@Nullable String objectLockRetainUntilDate) {
             this.objectLockRetainUntilDate = Input.ofNullable(objectLockRetainUntilDate);
             return this;
         }
 
-        public Builder setServerSideEncryption(@Nullable Input<String> serverSideEncryption) {
+        public Builder serverSideEncryption(@Nullable Input<String> serverSideEncryption) {
             this.serverSideEncryption = serverSideEncryption;
             return this;
         }
 
-        public Builder setServerSideEncryption(@Nullable String serverSideEncryption) {
+        public Builder serverSideEncryption(@Nullable String serverSideEncryption) {
             this.serverSideEncryption = Input.ofNullable(serverSideEncryption);
             return this;
         }
 
-        public Builder setSource(@Nullable Input<AssetOrArchive> source) {
+        public Builder source(@Nullable Input<AssetOrArchive> source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSource(@Nullable AssetOrArchive source) {
+        public Builder source(@Nullable AssetOrArchive source) {
             this.source = Input.ofNullable(source);
             return this;
         }
 
-        public Builder setSourceHash(@Nullable Input<String> sourceHash) {
+        public Builder sourceHash(@Nullable Input<String> sourceHash) {
             this.sourceHash = sourceHash;
             return this;
         }
 
-        public Builder setSourceHash(@Nullable String sourceHash) {
+        public Builder sourceHash(@Nullable String sourceHash) {
             this.sourceHash = Input.ofNullable(sourceHash);
             return this;
         }
 
-        public Builder setStorageClass(@Nullable Input<String> storageClass) {
+        public Builder storageClass(@Nullable Input<String> storageClass) {
             this.storageClass = storageClass;
             return this;
         }
 
-        public Builder setStorageClass(@Nullable String storageClass) {
+        public Builder storageClass(@Nullable String storageClass) {
             this.storageClass = Input.ofNullable(storageClass);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setWebsiteRedirect(@Nullable Input<String> websiteRedirect) {
+        public Builder websiteRedirect(@Nullable Input<String> websiteRedirect) {
             this.websiteRedirect = websiteRedirect;
             return this;
         }
 
-        public Builder setWebsiteRedirect(@Nullable String websiteRedirect) {
+        public Builder websiteRedirect(@Nullable String websiteRedirect) {
             this.websiteRedirect = Input.ofNullable(websiteRedirect);
             return this;
         }

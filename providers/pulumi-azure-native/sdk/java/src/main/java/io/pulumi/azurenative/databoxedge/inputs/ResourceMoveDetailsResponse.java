@@ -74,12 +74,12 @@ public final class ResourceMoveDetailsResponse extends io.pulumi.resources.Invok
     	      this.operationInProgressLockTimeoutInUTC = defaults.operationInProgressLockTimeoutInUTC;
         }
 
-        public Builder setOperationInProgress(@Nullable String operationInProgress) {
+        public Builder operationInProgress(@Nullable String operationInProgress) {
             this.operationInProgress = operationInProgress;
             return this;
         }
 
-        public Builder setOperationInProgressLockTimeoutInUTC(@Nullable String operationInProgressLockTimeoutInUTC) {
+        public Builder operationInProgressLockTimeoutInUTC(@Nullable String operationInProgressLockTimeoutInUTC) {
             this.operationInProgressLockTimeoutInUTC = operationInProgressLockTimeoutInUTC;
             return this;
         }

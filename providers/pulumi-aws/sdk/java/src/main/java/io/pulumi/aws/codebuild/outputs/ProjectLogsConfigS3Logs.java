@@ -100,22 +100,22 @@ public final class ProjectLogsConfigS3Logs {
     	      this.status = defaults.status;
         }
 
-        public Builder setBucketOwnerAccess(@Nullable String bucketOwnerAccess) {
+        public Builder bucketOwnerAccess(@Nullable String bucketOwnerAccess) {
             this.bucketOwnerAccess = bucketOwnerAccess;
             return this;
         }
 
-        public Builder setEncryptionDisabled(@Nullable Boolean encryptionDisabled) {
+        public Builder encryptionDisabled(@Nullable Boolean encryptionDisabled) {
             this.encryptionDisabled = encryptionDisabled;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

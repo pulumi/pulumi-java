@@ -115,27 +115,27 @@ public final class AuthProviderResponse {
     	      this.jwtLocations = defaults.jwtLocations;
         }
 
-        public Builder setAudiences(String audiences) {
+        public Builder audiences(String audiences) {
             this.audiences = Objects.requireNonNull(audiences);
             return this;
         }
 
-        public Builder setAuthorizationUrl(String authorizationUrl) {
+        public Builder authorizationUrl(String authorizationUrl) {
             this.authorizationUrl = Objects.requireNonNull(authorizationUrl);
             return this;
         }
 
-        public Builder setIssuer(String issuer) {
+        public Builder issuer(String issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
 
-        public Builder setJwksUri(String jwksUri) {
+        public Builder jwksUri(String jwksUri) {
             this.jwksUri = Objects.requireNonNull(jwksUri);
             return this;
         }
 
-        public Builder setJwtLocations(List<JwtLocationResponse> jwtLocations) {
+        public Builder jwtLocations(List<JwtLocationResponse> jwtLocations) {
             this.jwtLocations = Objects.requireNonNull(jwtLocations);
             return this;
         }

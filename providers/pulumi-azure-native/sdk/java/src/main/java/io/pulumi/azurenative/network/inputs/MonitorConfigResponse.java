@@ -190,47 +190,47 @@ public final class MonitorConfigResponse extends io.pulumi.resources.InvokeArgs 
     	      this.toleratedNumberOfFailures = defaults.toleratedNumberOfFailures;
         }
 
-        public Builder setCustomHeaders(@Nullable List<MonitorConfigResponseCustomHeaders> customHeaders) {
+        public Builder customHeaders(@Nullable List<MonitorConfigResponseCustomHeaders> customHeaders) {
             this.customHeaders = customHeaders;
             return this;
         }
 
-        public Builder setExpectedStatusCodeRanges(@Nullable List<MonitorConfigResponseExpectedStatusCodeRanges> expectedStatusCodeRanges) {
+        public Builder expectedStatusCodeRanges(@Nullable List<MonitorConfigResponseExpectedStatusCodeRanges> expectedStatusCodeRanges) {
             this.expectedStatusCodeRanges = expectedStatusCodeRanges;
             return this;
         }
 
-        public Builder setIntervalInSeconds(@Nullable Double intervalInSeconds) {
+        public Builder intervalInSeconds(@Nullable Double intervalInSeconds) {
             this.intervalInSeconds = intervalInSeconds;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPort(@Nullable Double port) {
+        public Builder port(@Nullable Double port) {
             this.port = port;
             return this;
         }
 
-        public Builder setProfileMonitorStatus(@Nullable String profileMonitorStatus) {
+        public Builder profileMonitorStatus(@Nullable String profileMonitorStatus) {
             this.profileMonitorStatus = profileMonitorStatus;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setTimeoutInSeconds(@Nullable Double timeoutInSeconds) {
+        public Builder timeoutInSeconds(@Nullable Double timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
 
-        public Builder setToleratedNumberOfFailures(@Nullable Double toleratedNumberOfFailures) {
+        public Builder toleratedNumberOfFailures(@Nullable Double toleratedNumberOfFailures) {
             this.toleratedNumberOfFailures = toleratedNumberOfFailures;
             return this;
         }

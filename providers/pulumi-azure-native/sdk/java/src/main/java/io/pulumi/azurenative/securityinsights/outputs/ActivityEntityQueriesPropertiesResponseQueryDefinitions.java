@@ -50,7 +50,7 @@ public final class ActivityEntityQueriesPropertiesResponseQueryDefinitions {
     	      this.query = defaults.query;
         }
 
-        public Builder setQuery(@Nullable String query) {
+        public Builder query(@Nullable String query) {
             this.query = query;
             return this;
         }

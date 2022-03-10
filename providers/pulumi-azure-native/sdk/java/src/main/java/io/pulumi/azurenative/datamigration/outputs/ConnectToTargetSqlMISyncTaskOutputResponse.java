@@ -83,17 +83,17 @@ public final class ConnectToTargetSqlMISyncTaskOutputResponse {
     	      this.validationErrors = defaults.validationErrors;
         }
 
-        public Builder setTargetServerBrandVersion(String targetServerBrandVersion) {
+        public Builder targetServerBrandVersion(String targetServerBrandVersion) {
             this.targetServerBrandVersion = Objects.requireNonNull(targetServerBrandVersion);
             return this;
         }
 
-        public Builder setTargetServerVersion(String targetServerVersion) {
+        public Builder targetServerVersion(String targetServerVersion) {
             this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
             return this;
         }
 
-        public Builder setValidationErrors(List<ReportableExceptionResponse> validationErrors) {
+        public Builder validationErrors(List<ReportableExceptionResponse> validationErrors) {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }

@@ -42,7 +42,7 @@ public final class RuntimeMetric {
     	      this.systemMetrics = defaults.systemMetrics;
         }
 
-        public Builder setSystemMetrics(@Nullable Map<String,String> systemMetrics) {
+        public Builder systemMetrics(@Nullable Map<String,String> systemMetrics) {
             this.systemMetrics = systemMetrics;
             return this;
         }

@@ -88,32 +88,32 @@ public final class CatalogTableStorageDescriptorSkewedInfoGetArgs extends io.pul
     	      this.skewedColumnValues = defaults.skewedColumnValues;
         }
 
-        public Builder setSkewedColumnNames(@Nullable Input<List<String>> skewedColumnNames) {
+        public Builder skewedColumnNames(@Nullable Input<List<String>> skewedColumnNames) {
             this.skewedColumnNames = skewedColumnNames;
             return this;
         }
 
-        public Builder setSkewedColumnNames(@Nullable List<String> skewedColumnNames) {
+        public Builder skewedColumnNames(@Nullable List<String> skewedColumnNames) {
             this.skewedColumnNames = Input.ofNullable(skewedColumnNames);
             return this;
         }
 
-        public Builder setSkewedColumnValueLocationMaps(@Nullable Input<Map<String,String>> skewedColumnValueLocationMaps) {
+        public Builder skewedColumnValueLocationMaps(@Nullable Input<Map<String,String>> skewedColumnValueLocationMaps) {
             this.skewedColumnValueLocationMaps = skewedColumnValueLocationMaps;
             return this;
         }
 
-        public Builder setSkewedColumnValueLocationMaps(@Nullable Map<String,String> skewedColumnValueLocationMaps) {
+        public Builder skewedColumnValueLocationMaps(@Nullable Map<String,String> skewedColumnValueLocationMaps) {
             this.skewedColumnValueLocationMaps = Input.ofNullable(skewedColumnValueLocationMaps);
             return this;
         }
 
-        public Builder setSkewedColumnValues(@Nullable Input<List<String>> skewedColumnValues) {
+        public Builder skewedColumnValues(@Nullable Input<List<String>> skewedColumnValues) {
             this.skewedColumnValues = skewedColumnValues;
             return this;
         }
 
-        public Builder setSkewedColumnValues(@Nullable List<String> skewedColumnValues) {
+        public Builder skewedColumnValues(@Nullable List<String> skewedColumnValues) {
             this.skewedColumnValues = Input.ofNullable(skewedColumnValues);
             return this;
         }

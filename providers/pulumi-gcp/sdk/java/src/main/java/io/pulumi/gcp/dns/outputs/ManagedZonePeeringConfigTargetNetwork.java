@@ -52,7 +52,7 @@ public final class ManagedZonePeeringConfigTargetNetwork {
     	      this.networkUrl = defaults.networkUrl;
         }
 
-        public Builder setNetworkUrl(String networkUrl) {
+        public Builder networkUrl(String networkUrl) {
             this.networkUrl = Objects.requireNonNull(networkUrl);
             return this;
         }

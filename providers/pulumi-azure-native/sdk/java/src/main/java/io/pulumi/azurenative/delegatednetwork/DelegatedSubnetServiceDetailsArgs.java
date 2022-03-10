@@ -137,62 +137,62 @@ public final class DelegatedSubnetServiceDetailsArgs extends io.pulumi.resources
     	      this.tags = defaults.tags;
         }
 
-        public Builder setControllerDetails(@Nullable Input<ControllerDetailsArgs> controllerDetails) {
+        public Builder controllerDetails(@Nullable Input<ControllerDetailsArgs> controllerDetails) {
             this.controllerDetails = controllerDetails;
             return this;
         }
 
-        public Builder setControllerDetails(@Nullable ControllerDetailsArgs controllerDetails) {
+        public Builder controllerDetails(@Nullable ControllerDetailsArgs controllerDetails) {
             this.controllerDetails = Input.ofNullable(controllerDetails);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Input<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
-        public Builder setResourceName(@Nullable String resourceName) {
+        public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Input.ofNullable(resourceName);
             return this;
         }
 
-        public Builder setSubnetDetails(@Nullable Input<SubnetDetailsArgs> subnetDetails) {
+        public Builder subnetDetails(@Nullable Input<SubnetDetailsArgs> subnetDetails) {
             this.subnetDetails = subnetDetails;
             return this;
         }
 
-        public Builder setSubnetDetails(@Nullable SubnetDetailsArgs subnetDetails) {
+        public Builder subnetDetails(@Nullable SubnetDetailsArgs subnetDetails) {
             this.subnetDetails = Input.ofNullable(subnetDetails);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

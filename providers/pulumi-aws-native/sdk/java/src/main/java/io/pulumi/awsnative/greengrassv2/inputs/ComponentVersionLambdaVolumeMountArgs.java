@@ -88,42 +88,42 @@ public final class ComponentVersionLambdaVolumeMountArgs extends io.pulumi.resou
     	      this.sourcePath = defaults.sourcePath;
         }
 
-        public Builder setAddGroupOwner(@Nullable Input<Boolean> addGroupOwner) {
+        public Builder addGroupOwner(@Nullable Input<Boolean> addGroupOwner) {
             this.addGroupOwner = addGroupOwner;
             return this;
         }
 
-        public Builder setAddGroupOwner(@Nullable Boolean addGroupOwner) {
+        public Builder addGroupOwner(@Nullable Boolean addGroupOwner) {
             this.addGroupOwner = Input.ofNullable(addGroupOwner);
             return this;
         }
 
-        public Builder setDestinationPath(@Nullable Input<String> destinationPath) {
+        public Builder destinationPath(@Nullable Input<String> destinationPath) {
             this.destinationPath = destinationPath;
             return this;
         }
 
-        public Builder setDestinationPath(@Nullable String destinationPath) {
+        public Builder destinationPath(@Nullable String destinationPath) {
             this.destinationPath = Input.ofNullable(destinationPath);
             return this;
         }
 
-        public Builder setPermission(@Nullable Input<ComponentVersionLambdaFilesystemPermission> permission) {
+        public Builder permission(@Nullable Input<ComponentVersionLambdaFilesystemPermission> permission) {
             this.permission = permission;
             return this;
         }
 
-        public Builder setPermission(@Nullable ComponentVersionLambdaFilesystemPermission permission) {
+        public Builder permission(@Nullable ComponentVersionLambdaFilesystemPermission permission) {
             this.permission = Input.ofNullable(permission);
             return this;
         }
 
-        public Builder setSourcePath(@Nullable Input<String> sourcePath) {
+        public Builder sourcePath(@Nullable Input<String> sourcePath) {
             this.sourcePath = sourcePath;
             return this;
         }
 
-        public Builder setSourcePath(@Nullable String sourcePath) {
+        public Builder sourcePath(@Nullable String sourcePath) {
             this.sourcePath = Input.ofNullable(sourcePath);
             return this;
         }

@@ -67,22 +67,22 @@ public final class DatasetCsvOptionsArgs extends io.pulumi.resources.ResourceArg
     	      this.headerRow = defaults.headerRow;
         }
 
-        public Builder setDelimiter(@Nullable Input<String> delimiter) {
+        public Builder delimiter(@Nullable Input<String> delimiter) {
             this.delimiter = delimiter;
             return this;
         }
 
-        public Builder setDelimiter(@Nullable String delimiter) {
+        public Builder delimiter(@Nullable String delimiter) {
             this.delimiter = Input.ofNullable(delimiter);
             return this;
         }
 
-        public Builder setHeaderRow(@Nullable Input<Boolean> headerRow) {
+        public Builder headerRow(@Nullable Input<Boolean> headerRow) {
             this.headerRow = headerRow;
             return this;
         }
 
-        public Builder setHeaderRow(@Nullable Boolean headerRow) {
+        public Builder headerRow(@Nullable Boolean headerRow) {
             this.headerRow = Input.ofNullable(headerRow);
             return this;
         }

@@ -49,7 +49,7 @@ public final class GooglePrivacyDlpV2BucketingConfigResponse {
     	      this.buckets = defaults.buckets;
         }
 
-        public Builder setBuckets(List<GooglePrivacyDlpV2BucketResponse> buckets) {
+        public Builder buckets(List<GooglePrivacyDlpV2BucketResponse> buckets) {
             this.buckets = Objects.requireNonNull(buckets);
             return this;
         }

@@ -101,22 +101,22 @@ public final class UserInfo {
     	      this.username = defaults.username;
         }
 
-        public Builder setExtra(@Nullable Map<String,List<String>> extra) {
+        public Builder extra(@Nullable Map<String,List<String>> extra) {
             this.extra = extra;
             return this;
         }
 
-        public Builder setGroups(@Nullable List<String> groups) {
+        public Builder groups(@Nullable List<String> groups) {
             this.groups = groups;
             return this;
         }
 
-        public Builder setUid(@Nullable String uid) {
+        public Builder uid(@Nullable String uid) {
             this.uid = uid;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = username;
             return this;
         }

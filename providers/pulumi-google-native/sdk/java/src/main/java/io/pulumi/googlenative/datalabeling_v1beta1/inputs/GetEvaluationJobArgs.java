@@ -62,12 +62,12 @@ public final class GetEvaluationJobArgs extends io.pulumi.resources.InvokeArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setEvaluationJobId(String evaluationJobId) {
+        public Builder evaluationJobId(String evaluationJobId) {
             this.evaluationJobId = Objects.requireNonNull(evaluationJobId);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

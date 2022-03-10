@@ -137,62 +137,62 @@ public final class LiteSubscriptionArgs extends io.pulumi.resources.ResourceArgs
     	      this.zone = defaults.zone;
         }
 
-        public Builder setDeliveryConfig(@Nullable Input<LiteSubscriptionDeliveryConfigArgs> deliveryConfig) {
+        public Builder deliveryConfig(@Nullable Input<LiteSubscriptionDeliveryConfigArgs> deliveryConfig) {
             this.deliveryConfig = deliveryConfig;
             return this;
         }
 
-        public Builder setDeliveryConfig(@Nullable LiteSubscriptionDeliveryConfigArgs deliveryConfig) {
+        public Builder deliveryConfig(@Nullable LiteSubscriptionDeliveryConfigArgs deliveryConfig) {
             this.deliveryConfig = Input.ofNullable(deliveryConfig);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setTopic(Input<String> topic) {
+        public Builder topic(Input<String> topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
 
-        public Builder setTopic(String topic) {
+        public Builder topic(String topic) {
             this.topic = Input.of(Objects.requireNonNull(topic));
             return this;
         }
 
-        public Builder setZone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Input<String> zone) {
             this.zone = zone;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = Input.ofNullable(zone);
             return this;
         }

@@ -193,92 +193,92 @@ public final class SlotTypeState extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setChecksum(@Nullable Input<String> checksum) {
+        public Builder checksum(@Nullable Input<String> checksum) {
             this.checksum = checksum;
             return this;
         }
 
-        public Builder setChecksum(@Nullable String checksum) {
+        public Builder checksum(@Nullable String checksum) {
             this.checksum = Input.ofNullable(checksum);
             return this;
         }
 
-        public Builder setCreateVersion(@Nullable Input<Boolean> createVersion) {
+        public Builder createVersion(@Nullable Input<Boolean> createVersion) {
             this.createVersion = createVersion;
             return this;
         }
 
-        public Builder setCreateVersion(@Nullable Boolean createVersion) {
+        public Builder createVersion(@Nullable Boolean createVersion) {
             this.createVersion = Input.ofNullable(createVersion);
             return this;
         }
 
-        public Builder setCreatedDate(@Nullable Input<String> createdDate) {
+        public Builder createdDate(@Nullable Input<String> createdDate) {
             this.createdDate = createdDate;
             return this;
         }
 
-        public Builder setCreatedDate(@Nullable String createdDate) {
+        public Builder createdDate(@Nullable String createdDate) {
             this.createdDate = Input.ofNullable(createdDate);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEnumerationValues(@Nullable Input<List<SlotTypeEnumerationValueGetArgs>> enumerationValues) {
+        public Builder enumerationValues(@Nullable Input<List<SlotTypeEnumerationValueGetArgs>> enumerationValues) {
             this.enumerationValues = enumerationValues;
             return this;
         }
 
-        public Builder setEnumerationValues(@Nullable List<SlotTypeEnumerationValueGetArgs> enumerationValues) {
+        public Builder enumerationValues(@Nullable List<SlotTypeEnumerationValueGetArgs> enumerationValues) {
             this.enumerationValues = Input.ofNullable(enumerationValues);
             return this;
         }
 
-        public Builder setLastUpdatedDate(@Nullable Input<String> lastUpdatedDate) {
+        public Builder lastUpdatedDate(@Nullable Input<String> lastUpdatedDate) {
             this.lastUpdatedDate = lastUpdatedDate;
             return this;
         }
 
-        public Builder setLastUpdatedDate(@Nullable String lastUpdatedDate) {
+        public Builder lastUpdatedDate(@Nullable String lastUpdatedDate) {
             this.lastUpdatedDate = Input.ofNullable(lastUpdatedDate);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setValueSelectionStrategy(@Nullable Input<String> valueSelectionStrategy) {
+        public Builder valueSelectionStrategy(@Nullable Input<String> valueSelectionStrategy) {
             this.valueSelectionStrategy = valueSelectionStrategy;
             return this;
         }
 
-        public Builder setValueSelectionStrategy(@Nullable String valueSelectionStrategy) {
+        public Builder valueSelectionStrategy(@Nullable String valueSelectionStrategy) {
             this.valueSelectionStrategy = Input.ofNullable(valueSelectionStrategy);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

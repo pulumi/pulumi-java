@@ -102,42 +102,42 @@ public final class CustomerEncryptionKeyArgs extends io.pulumi.resources.Resourc
     	      this.rsaEncryptedKey = defaults.rsaEncryptedKey;
         }
 
-        public Builder setKmsKeyName(@Nullable Input<String> kmsKeyName) {
+        public Builder kmsKeyName(@Nullable Input<String> kmsKeyName) {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
 
-        public Builder setKmsKeyName(@Nullable String kmsKeyName) {
+        public Builder kmsKeyName(@Nullable String kmsKeyName) {
             this.kmsKeyName = Input.ofNullable(kmsKeyName);
             return this;
         }
 
-        public Builder setKmsKeyServiceAccount(@Nullable Input<String> kmsKeyServiceAccount) {
+        public Builder kmsKeyServiceAccount(@Nullable Input<String> kmsKeyServiceAccount) {
             this.kmsKeyServiceAccount = kmsKeyServiceAccount;
             return this;
         }
 
-        public Builder setKmsKeyServiceAccount(@Nullable String kmsKeyServiceAccount) {
+        public Builder kmsKeyServiceAccount(@Nullable String kmsKeyServiceAccount) {
             this.kmsKeyServiceAccount = Input.ofNullable(kmsKeyServiceAccount);
             return this;
         }
 
-        public Builder setRawKey(@Nullable Input<String> rawKey) {
+        public Builder rawKey(@Nullable Input<String> rawKey) {
             this.rawKey = rawKey;
             return this;
         }
 
-        public Builder setRawKey(@Nullable String rawKey) {
+        public Builder rawKey(@Nullable String rawKey) {
             this.rawKey = Input.ofNullable(rawKey);
             return this;
         }
 
-        public Builder setRsaEncryptedKey(@Nullable Input<String> rsaEncryptedKey) {
+        public Builder rsaEncryptedKey(@Nullable Input<String> rsaEncryptedKey) {
             this.rsaEncryptedKey = rsaEncryptedKey;
             return this;
         }
 
-        public Builder setRsaEncryptedKey(@Nullable String rsaEncryptedKey) {
+        public Builder rsaEncryptedKey(@Nullable String rsaEncryptedKey) {
             this.rsaEncryptedKey = Input.ofNullable(rsaEncryptedKey);
             return this;
         }

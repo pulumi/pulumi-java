@@ -67,12 +67,12 @@ public final class CompositeFilterResponse {
     	      this.subFilters = defaults.subFilters;
         }
 
-        public Builder setLogicOperator(String logicOperator) {
+        public Builder logicOperator(String logicOperator) {
             this.logicOperator = Objects.requireNonNull(logicOperator);
             return this;
         }
 
-        public Builder setSubFilters(List<FilterResponse> subFilters) {
+        public Builder subFilters(List<FilterResponse> subFilters) {
             this.subFilters = Objects.requireNonNull(subFilters);
             return this;
         }

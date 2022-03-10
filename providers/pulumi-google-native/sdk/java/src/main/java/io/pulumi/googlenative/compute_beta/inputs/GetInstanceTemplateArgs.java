@@ -62,12 +62,12 @@ public final class GetInstanceTemplateArgs extends io.pulumi.resources.InvokeArg
     	      this.project = defaults.project;
         }
 
-        public Builder setInstanceTemplate(String instanceTemplate) {
+        public Builder instanceTemplate(String instanceTemplate) {
             this.instanceTemplate = Objects.requireNonNull(instanceTemplate);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

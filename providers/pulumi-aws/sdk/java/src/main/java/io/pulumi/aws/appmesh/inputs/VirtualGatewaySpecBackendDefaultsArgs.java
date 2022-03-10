@@ -53,12 +53,12 @@ public final class VirtualGatewaySpecBackendDefaultsArgs extends io.pulumi.resou
     	      this.clientPolicy = defaults.clientPolicy;
         }
 
-        public Builder setClientPolicy(@Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyArgs> clientPolicy) {
+        public Builder clientPolicy(@Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyArgs> clientPolicy) {
             this.clientPolicy = clientPolicy;
             return this;
         }
 
-        public Builder setClientPolicy(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyArgs clientPolicy) {
+        public Builder clientPolicy(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyArgs clientPolicy) {
             this.clientPolicy = Input.ofNullable(clientPolicy);
             return this;
         }

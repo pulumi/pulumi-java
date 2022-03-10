@@ -67,22 +67,22 @@ public final class ExperimentTreatmentObject {
     	      this.variation = defaults.variation;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setFeature(String feature) {
+        public Builder feature(String feature) {
             this.feature = Objects.requireNonNull(feature);
             return this;
         }
 
-        public Builder setTreatmentName(String treatmentName) {
+        public Builder treatmentName(String treatmentName) {
             this.treatmentName = Objects.requireNonNull(treatmentName);
             return this;
         }
 
-        public Builder setVariation(String variation) {
+        public Builder variation(String variation) {
             this.variation = Objects.requireNonNull(variation);
             return this;
         }

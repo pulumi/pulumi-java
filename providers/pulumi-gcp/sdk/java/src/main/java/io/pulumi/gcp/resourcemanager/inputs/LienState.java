@@ -145,62 +145,62 @@ public final class LienState extends io.pulumi.resources.ResourceArgs {
     	      this.restrictions = defaults.restrictions;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOrigin(@Nullable Input<String> origin) {
+        public Builder origin(@Nullable Input<String> origin) {
             this.origin = origin;
             return this;
         }
 
-        public Builder setOrigin(@Nullable String origin) {
+        public Builder origin(@Nullable String origin) {
             this.origin = Input.ofNullable(origin);
             return this;
         }
 
-        public Builder setParent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Input<String> parent) {
             this.parent = parent;
             return this;
         }
 
-        public Builder setParent(@Nullable String parent) {
+        public Builder parent(@Nullable String parent) {
             this.parent = Input.ofNullable(parent);
             return this;
         }
 
-        public Builder setReason(@Nullable Input<String> reason) {
+        public Builder reason(@Nullable Input<String> reason) {
             this.reason = reason;
             return this;
         }
 
-        public Builder setReason(@Nullable String reason) {
+        public Builder reason(@Nullable String reason) {
             this.reason = Input.ofNullable(reason);
             return this;
         }
 
-        public Builder setRestrictions(@Nullable Input<List<String>> restrictions) {
+        public Builder restrictions(@Nullable Input<List<String>> restrictions) {
             this.restrictions = restrictions;
             return this;
         }
 
-        public Builder setRestrictions(@Nullable List<String> restrictions) {
+        public Builder restrictions(@Nullable List<String> restrictions) {
             this.restrictions = Input.ofNullable(restrictions);
             return this;
         }

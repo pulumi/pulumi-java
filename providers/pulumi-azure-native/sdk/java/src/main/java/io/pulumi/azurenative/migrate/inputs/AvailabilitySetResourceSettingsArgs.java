@@ -108,42 +108,42 @@ public final class AvailabilitySetResourceSettingsArgs extends io.pulumi.resourc
     	      this.updateDomain = defaults.updateDomain;
         }
 
-        public Builder setFaultDomain(@Nullable Input<Integer> faultDomain) {
+        public Builder faultDomain(@Nullable Input<Integer> faultDomain) {
             this.faultDomain = faultDomain;
             return this;
         }
 
-        public Builder setFaultDomain(@Nullable Integer faultDomain) {
+        public Builder faultDomain(@Nullable Integer faultDomain) {
             this.faultDomain = Input.ofNullable(faultDomain);
             return this;
         }
 
-        public Builder setResourceType(Input<String> resourceType) {
+        public Builder resourceType(Input<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Input.of(Objects.requireNonNull(resourceType));
             return this;
         }
 
-        public Builder setTargetResourceName(Input<String> targetResourceName) {
+        public Builder targetResourceName(Input<String> targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
 
-        public Builder setTargetResourceName(String targetResourceName) {
+        public Builder targetResourceName(String targetResourceName) {
             this.targetResourceName = Input.of(Objects.requireNonNull(targetResourceName));
             return this;
         }
 
-        public Builder setUpdateDomain(@Nullable Input<Integer> updateDomain) {
+        public Builder updateDomain(@Nullable Input<Integer> updateDomain) {
             this.updateDomain = updateDomain;
             return this;
         }
 
-        public Builder setUpdateDomain(@Nullable Integer updateDomain) {
+        public Builder updateDomain(@Nullable Integer updateDomain) {
             this.updateDomain = Input.ofNullable(updateDomain);
             return this;
         }

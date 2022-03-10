@@ -69,22 +69,22 @@ public final class QuickConnectQuickConnectConfigQueueConfigGetArgs extends io.p
     	      this.queueId = defaults.queueId;
         }
 
-        public Builder setContactFlowId(Input<String> contactFlowId) {
+        public Builder contactFlowId(Input<String> contactFlowId) {
             this.contactFlowId = Objects.requireNonNull(contactFlowId);
             return this;
         }
 
-        public Builder setContactFlowId(String contactFlowId) {
+        public Builder contactFlowId(String contactFlowId) {
             this.contactFlowId = Input.of(Objects.requireNonNull(contactFlowId));
             return this;
         }
 
-        public Builder setQueueId(Input<String> queueId) {
+        public Builder queueId(Input<String> queueId) {
             this.queueId = Objects.requireNonNull(queueId);
             return this;
         }
 
-        public Builder setQueueId(String queueId) {
+        public Builder queueId(String queueId) {
             this.queueId = Input.of(Objects.requireNonNull(queueId));
             return this;
         }

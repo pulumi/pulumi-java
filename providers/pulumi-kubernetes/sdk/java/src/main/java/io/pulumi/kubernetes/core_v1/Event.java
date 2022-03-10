@@ -312,8 +312,8 @@ public class Event extends io.pulumi.resources.CustomResource {
     private static EventArgs makeArgs(EventArgs args) {
         var builder = args == null ? EventArgs.builder() : EventArgs.builder(args);
         return builder
-            .setApiVersion("v1")
-            .setKind("Event")
+            .apiVersion("v1")
+            .kind("Event")
             .build();
     }
 

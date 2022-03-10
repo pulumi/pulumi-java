@@ -51,7 +51,7 @@ public final class GetGameServerDeploymentRolloutArgs extends io.pulumi.resource
     	      this.deploymentId = defaults.deploymentId;
         }
 
-        public Builder setDeploymentId(String deploymentId) {
+        public Builder deploymentId(String deploymentId) {
             this.deploymentId = Objects.requireNonNull(deploymentId);
             return this;
         }

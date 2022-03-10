@@ -72,22 +72,22 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArg
     	      this.table = defaults.table;
         }
 
-        public Builder setField(Input<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldArgs> field) {
+        public Builder field(Input<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldArgs> field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
 
-        public Builder setField(PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldArgs field) {
+        public Builder field(PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldArgs field) {
             this.field = Input.of(Objects.requireNonNull(field));
             return this;
         }
 
-        public Builder setTable(Input<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableArgs> table) {
+        public Builder table(Input<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableArgs> table) {
             this.table = Objects.requireNonNull(table);
             return this;
         }
 
-        public Builder setTable(PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableArgs table) {
+        public Builder table(PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableArgs table) {
             this.table = Input.of(Objects.requireNonNull(table));
             return this;
         }

@@ -63,22 +63,22 @@ public final class StackApplicationSettingsArgs extends io.pulumi.resources.Reso
     	      this.settingsGroup = defaults.settingsGroup;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setSettingsGroup(@Nullable Input<String> settingsGroup) {
+        public Builder settingsGroup(@Nullable Input<String> settingsGroup) {
             this.settingsGroup = settingsGroup;
             return this;
         }
 
-        public Builder setSettingsGroup(@Nullable String settingsGroup) {
+        public Builder settingsGroup(@Nullable String settingsGroup) {
             this.settingsGroup = Input.ofNullable(settingsGroup);
             return this;
         }

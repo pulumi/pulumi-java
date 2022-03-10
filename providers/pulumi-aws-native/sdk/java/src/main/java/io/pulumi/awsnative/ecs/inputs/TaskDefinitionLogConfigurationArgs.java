@@ -77,32 +77,32 @@ public final class TaskDefinitionLogConfigurationArgs extends io.pulumi.resource
     	      this.secretOptions = defaults.secretOptions;
         }
 
-        public Builder setLogDriver(Input<String> logDriver) {
+        public Builder logDriver(Input<String> logDriver) {
             this.logDriver = Objects.requireNonNull(logDriver);
             return this;
         }
 
-        public Builder setLogDriver(String logDriver) {
+        public Builder logDriver(String logDriver) {
             this.logDriver = Input.of(Objects.requireNonNull(logDriver));
             return this;
         }
 
-        public Builder setOptions(@Nullable Input<Object> options) {
+        public Builder options(@Nullable Input<Object> options) {
             this.options = options;
             return this;
         }
 
-        public Builder setOptions(@Nullable Object options) {
+        public Builder options(@Nullable Object options) {
             this.options = Input.ofNullable(options);
             return this;
         }
 
-        public Builder setSecretOptions(@Nullable Input<List<TaskDefinitionSecretArgs>> secretOptions) {
+        public Builder secretOptions(@Nullable Input<List<TaskDefinitionSecretArgs>> secretOptions) {
             this.secretOptions = secretOptions;
             return this;
         }
 
-        public Builder setSecretOptions(@Nullable List<TaskDefinitionSecretArgs> secretOptions) {
+        public Builder secretOptions(@Nullable List<TaskDefinitionSecretArgs> secretOptions) {
             this.secretOptions = Input.ofNullable(secretOptions);
             return this;
         }

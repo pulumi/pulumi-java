@@ -69,12 +69,12 @@ public final class DeploymentGroupAutoRollbackConfiguration {
     	      this.events = defaults.events;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEvents(@Nullable List<String> events) {
+        public Builder events(@Nullable List<String> events) {
             this.events = events;
             return this;
         }

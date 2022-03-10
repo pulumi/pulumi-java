@@ -77,22 +77,22 @@ public final class JobInputSequenceArgs extends io.pulumi.resources.ResourceArgs
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setInputs(@Nullable Input<List<JobInputClipArgs>> inputs) {
+        public Builder inputs(@Nullable Input<List<JobInputClipArgs>> inputs) {
             this.inputs = inputs;
             return this;
         }
 
-        public Builder setInputs(@Nullable List<JobInputClipArgs> inputs) {
+        public Builder inputs(@Nullable List<JobInputClipArgs> inputs) {
             this.inputs = Input.ofNullable(inputs);
             return this;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }

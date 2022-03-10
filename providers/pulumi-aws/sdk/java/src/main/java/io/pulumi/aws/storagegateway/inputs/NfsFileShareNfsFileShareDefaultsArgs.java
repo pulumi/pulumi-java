@@ -102,42 +102,42 @@ public final class NfsFileShareNfsFileShareDefaultsArgs extends io.pulumi.resour
     	      this.ownerId = defaults.ownerId;
         }
 
-        public Builder setDirectoryMode(@Nullable Input<String> directoryMode) {
+        public Builder directoryMode(@Nullable Input<String> directoryMode) {
             this.directoryMode = directoryMode;
             return this;
         }
 
-        public Builder setDirectoryMode(@Nullable String directoryMode) {
+        public Builder directoryMode(@Nullable String directoryMode) {
             this.directoryMode = Input.ofNullable(directoryMode);
             return this;
         }
 
-        public Builder setFileMode(@Nullable Input<String> fileMode) {
+        public Builder fileMode(@Nullable Input<String> fileMode) {
             this.fileMode = fileMode;
             return this;
         }
 
-        public Builder setFileMode(@Nullable String fileMode) {
+        public Builder fileMode(@Nullable String fileMode) {
             this.fileMode = Input.ofNullable(fileMode);
             return this;
         }
 
-        public Builder setGroupId(@Nullable Input<String> groupId) {
+        public Builder groupId(@Nullable Input<String> groupId) {
             this.groupId = groupId;
             return this;
         }
 
-        public Builder setGroupId(@Nullable String groupId) {
+        public Builder groupId(@Nullable String groupId) {
             this.groupId = Input.ofNullable(groupId);
             return this;
         }
 
-        public Builder setOwnerId(@Nullable Input<String> ownerId) {
+        public Builder ownerId(@Nullable Input<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
-        public Builder setOwnerId(@Nullable String ownerId) {
+        public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = Input.ofNullable(ownerId);
             return this;
         }

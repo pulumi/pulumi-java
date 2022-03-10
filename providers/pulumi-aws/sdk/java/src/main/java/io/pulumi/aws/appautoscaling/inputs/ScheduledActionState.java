@@ -199,102 +199,102 @@ public final class ScheduledActionState extends io.pulumi.resources.ResourceArgs
     	      this.timezone = defaults.timezone;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setEndTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Input<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = Input.ofNullable(endTime);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Input<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Input.ofNullable(resourceId);
             return this;
         }
 
-        public Builder setScalableDimension(@Nullable Input<String> scalableDimension) {
+        public Builder scalableDimension(@Nullable Input<String> scalableDimension) {
             this.scalableDimension = scalableDimension;
             return this;
         }
 
-        public Builder setScalableDimension(@Nullable String scalableDimension) {
+        public Builder scalableDimension(@Nullable String scalableDimension) {
             this.scalableDimension = Input.ofNullable(scalableDimension);
             return this;
         }
 
-        public Builder setScalableTargetAction(@Nullable Input<ScheduledActionScalableTargetActionGetArgs> scalableTargetAction) {
+        public Builder scalableTargetAction(@Nullable Input<ScheduledActionScalableTargetActionGetArgs> scalableTargetAction) {
             this.scalableTargetAction = scalableTargetAction;
             return this;
         }
 
-        public Builder setScalableTargetAction(@Nullable ScheduledActionScalableTargetActionGetArgs scalableTargetAction) {
+        public Builder scalableTargetAction(@Nullable ScheduledActionScalableTargetActionGetArgs scalableTargetAction) {
             this.scalableTargetAction = Input.ofNullable(scalableTargetAction);
             return this;
         }
 
-        public Builder setSchedule(@Nullable Input<String> schedule) {
+        public Builder schedule(@Nullable Input<String> schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setSchedule(@Nullable String schedule) {
+        public Builder schedule(@Nullable String schedule) {
             this.schedule = Input.ofNullable(schedule);
             return this;
         }
 
-        public Builder setServiceNamespace(@Nullable Input<String> serviceNamespace) {
+        public Builder serviceNamespace(@Nullable Input<String> serviceNamespace) {
             this.serviceNamespace = serviceNamespace;
             return this;
         }
 
-        public Builder setServiceNamespace(@Nullable String serviceNamespace) {
+        public Builder serviceNamespace(@Nullable String serviceNamespace) {
             this.serviceNamespace = Input.ofNullable(serviceNamespace);
             return this;
         }
 
-        public Builder setStartTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Input<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
 
-        public Builder setTimezone(@Nullable Input<String> timezone) {
+        public Builder timezone(@Nullable Input<String> timezone) {
             this.timezone = timezone;
             return this;
         }
 
-        public Builder setTimezone(@Nullable String timezone) {
+        public Builder timezone(@Nullable String timezone) {
             this.timezone = Input.ofNullable(timezone);
             return this;
         }

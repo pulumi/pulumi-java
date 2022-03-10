@@ -71,22 +71,22 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs
     	      this.labelNameCondition = defaults.labelNameCondition;
         }
 
-        public Builder setActionCondition(@Nullable Input<WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionGetArgs> actionCondition) {
+        public Builder actionCondition(@Nullable Input<WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionGetArgs> actionCondition) {
             this.actionCondition = actionCondition;
             return this;
         }
 
-        public Builder setActionCondition(@Nullable WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionGetArgs actionCondition) {
+        public Builder actionCondition(@Nullable WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionGetArgs actionCondition) {
             this.actionCondition = Input.ofNullable(actionCondition);
             return this;
         }
 
-        public Builder setLabelNameCondition(@Nullable Input<WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionGetArgs> labelNameCondition) {
+        public Builder labelNameCondition(@Nullable Input<WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionGetArgs> labelNameCondition) {
             this.labelNameCondition = labelNameCondition;
             return this;
         }
 
-        public Builder setLabelNameCondition(@Nullable WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionGetArgs labelNameCondition) {
+        public Builder labelNameCondition(@Nullable WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionGetArgs labelNameCondition) {
             this.labelNameCondition = Input.ofNullable(labelNameCondition);
             return this;
         }

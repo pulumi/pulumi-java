@@ -107,22 +107,22 @@ public final class ScalingConfigResponse extends io.pulumi.resources.InvokeArgs 
     	      this.selectors = defaults.selectors;
         }
 
-        public Builder setFleetAutoscalerSpec(String fleetAutoscalerSpec) {
+        public Builder fleetAutoscalerSpec(String fleetAutoscalerSpec) {
             this.fleetAutoscalerSpec = Objects.requireNonNull(fleetAutoscalerSpec);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSchedules(List<ScheduleResponse> schedules) {
+        public Builder schedules(List<ScheduleResponse> schedules) {
             this.schedules = Objects.requireNonNull(schedules);
             return this;
         }
 
-        public Builder setSelectors(List<LabelSelectorResponse> selectors) {
+        public Builder selectors(List<LabelSelectorResponse> selectors) {
             this.selectors = Objects.requireNonNull(selectors);
             return this;
         }

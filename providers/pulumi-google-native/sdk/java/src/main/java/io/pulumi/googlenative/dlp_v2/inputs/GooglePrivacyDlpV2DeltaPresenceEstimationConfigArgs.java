@@ -93,32 +93,32 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfigArgs extends i
     	      this.regionCode = defaults.regionCode;
         }
 
-        public Builder setAuxiliaryTables(@Nullable Input<List<GooglePrivacyDlpV2StatisticalTableArgs>> auxiliaryTables) {
+        public Builder auxiliaryTables(@Nullable Input<List<GooglePrivacyDlpV2StatisticalTableArgs>> auxiliaryTables) {
             this.auxiliaryTables = auxiliaryTables;
             return this;
         }
 
-        public Builder setAuxiliaryTables(@Nullable List<GooglePrivacyDlpV2StatisticalTableArgs> auxiliaryTables) {
+        public Builder auxiliaryTables(@Nullable List<GooglePrivacyDlpV2StatisticalTableArgs> auxiliaryTables) {
             this.auxiliaryTables = Input.ofNullable(auxiliaryTables);
             return this;
         }
 
-        public Builder setQuasiIds(Input<List<GooglePrivacyDlpV2QuasiIdArgs>> quasiIds) {
+        public Builder quasiIds(Input<List<GooglePrivacyDlpV2QuasiIdArgs>> quasiIds) {
             this.quasiIds = Objects.requireNonNull(quasiIds);
             return this;
         }
 
-        public Builder setQuasiIds(List<GooglePrivacyDlpV2QuasiIdArgs> quasiIds) {
+        public Builder quasiIds(List<GooglePrivacyDlpV2QuasiIdArgs> quasiIds) {
             this.quasiIds = Input.of(Objects.requireNonNull(quasiIds));
             return this;
         }
 
-        public Builder setRegionCode(@Nullable Input<String> regionCode) {
+        public Builder regionCode(@Nullable Input<String> regionCode) {
             this.regionCode = regionCode;
             return this;
         }
 
-        public Builder setRegionCode(@Nullable String regionCode) {
+        public Builder regionCode(@Nullable String regionCode) {
             this.regionCode = Input.ofNullable(regionCode);
             return this;
         }

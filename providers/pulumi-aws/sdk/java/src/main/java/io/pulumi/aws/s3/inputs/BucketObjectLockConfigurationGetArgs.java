@@ -71,22 +71,22 @@ public final class BucketObjectLockConfigurationGetArgs extends io.pulumi.resour
     	      this.rule = defaults.rule;
         }
 
-        public Builder setObjectLockEnabled(Input<String> objectLockEnabled) {
+        public Builder objectLockEnabled(Input<String> objectLockEnabled) {
             this.objectLockEnabled = Objects.requireNonNull(objectLockEnabled);
             return this;
         }
 
-        public Builder setObjectLockEnabled(String objectLockEnabled) {
+        public Builder objectLockEnabled(String objectLockEnabled) {
             this.objectLockEnabled = Input.of(Objects.requireNonNull(objectLockEnabled));
             return this;
         }
 
-        public Builder setRule(@Nullable Input<BucketObjectLockConfigurationRuleGetArgs> rule) {
+        public Builder rule(@Nullable Input<BucketObjectLockConfigurationRuleGetArgs> rule) {
             this.rule = rule;
             return this;
         }
 
-        public Builder setRule(@Nullable BucketObjectLockConfigurationRuleGetArgs rule) {
+        public Builder rule(@Nullable BucketObjectLockConfigurationRuleGetArgs rule) {
             this.rule = Input.ofNullable(rule);
             return this;
         }

@@ -72,12 +72,12 @@ public final class AlertPolicyAlertStrategy {
     	      this.notificationRateLimit = defaults.notificationRateLimit;
         }
 
-        public Builder setAutoClose(@Nullable String autoClose) {
+        public Builder autoClose(@Nullable String autoClose) {
             this.autoClose = autoClose;
             return this;
         }
 
-        public Builder setNotificationRateLimit(@Nullable AlertPolicyAlertStrategyNotificationRateLimit notificationRateLimit) {
+        public Builder notificationRateLimit(@Nullable AlertPolicyAlertStrategyNotificationRateLimit notificationRateLimit) {
             this.notificationRateLimit = notificationRateLimit;
             return this;
         }

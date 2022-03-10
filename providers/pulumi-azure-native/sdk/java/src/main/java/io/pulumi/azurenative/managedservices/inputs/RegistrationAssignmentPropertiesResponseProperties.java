@@ -172,42 +172,42 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends io
     	      this.registrationDefinitionName = defaults.registrationDefinitionName;
         }
 
-        public Builder setAuthorizations(@Nullable List<AuthorizationResponse> authorizations) {
+        public Builder authorizations(@Nullable List<AuthorizationResponse> authorizations) {
             this.authorizations = authorizations;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setManagedByTenantId(@Nullable String managedByTenantId) {
+        public Builder managedByTenantId(@Nullable String managedByTenantId) {
             this.managedByTenantId = managedByTenantId;
             return this;
         }
 
-        public Builder setManagedByTenantName(@Nullable String managedByTenantName) {
+        public Builder managedByTenantName(@Nullable String managedByTenantName) {
             this.managedByTenantName = managedByTenantName;
             return this;
         }
 
-        public Builder setManageeTenantId(@Nullable String manageeTenantId) {
+        public Builder manageeTenantId(@Nullable String manageeTenantId) {
             this.manageeTenantId = manageeTenantId;
             return this;
         }
 
-        public Builder setManageeTenantName(@Nullable String manageeTenantName) {
+        public Builder manageeTenantName(@Nullable String manageeTenantName) {
             this.manageeTenantName = manageeTenantName;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setRegistrationDefinitionName(@Nullable String registrationDefinitionName) {
+        public Builder registrationDefinitionName(@Nullable String registrationDefinitionName) {
             this.registrationDefinitionName = registrationDefinitionName;
             return this;
         }

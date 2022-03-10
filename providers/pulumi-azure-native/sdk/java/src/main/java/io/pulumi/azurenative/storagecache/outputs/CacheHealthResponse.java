@@ -85,17 +85,17 @@ public final class CacheHealthResponse {
     	      this.statusDescription = defaults.statusDescription;
         }
 
-        public Builder setConditions(List<ConditionResponse> conditions) {
+        public Builder conditions(List<ConditionResponse> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
 
-        public Builder setStatusDescription(@Nullable String statusDescription) {
+        public Builder statusDescription(@Nullable String statusDescription) {
             this.statusDescription = statusDescription;
             return this;
         }

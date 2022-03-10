@@ -48,7 +48,7 @@ public final class SecretResponse {
     	      this.secretVersion = defaults.secretVersion;
         }
 
-        public Builder setSecretVersion(String secretVersion) {
+        public Builder secretVersion(String secretVersion) {
             this.secretVersion = Objects.requireNonNull(secretVersion);
             return this;
         }

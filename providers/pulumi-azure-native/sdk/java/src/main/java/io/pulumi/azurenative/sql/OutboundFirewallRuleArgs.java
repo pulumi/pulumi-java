@@ -82,32 +82,32 @@ public final class OutboundFirewallRuleArgs extends io.pulumi.resources.Resource
     	      this.serverName = defaults.serverName;
         }
 
-        public Builder setOutboundRuleFqdn(@Nullable Input<String> outboundRuleFqdn) {
+        public Builder outboundRuleFqdn(@Nullable Input<String> outboundRuleFqdn) {
             this.outboundRuleFqdn = outboundRuleFqdn;
             return this;
         }
 
-        public Builder setOutboundRuleFqdn(@Nullable String outboundRuleFqdn) {
+        public Builder outboundRuleFqdn(@Nullable String outboundRuleFqdn) {
             this.outboundRuleFqdn = Input.ofNullable(outboundRuleFqdn);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServerName(Input<String> serverName) {
+        public Builder serverName(Input<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
-        public Builder setServerName(String serverName) {
+        public Builder serverName(String serverName) {
             this.serverName = Input.of(Objects.requireNonNull(serverName));
             return this;
         }

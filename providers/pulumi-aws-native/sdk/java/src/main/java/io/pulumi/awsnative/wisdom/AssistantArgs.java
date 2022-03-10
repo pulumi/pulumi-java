@@ -102,52 +102,52 @@ public final class AssistantArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setServerSideEncryptionConfiguration(@Nullable Input<AssistantServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration) {
+        public Builder serverSideEncryptionConfiguration(@Nullable Input<AssistantServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration) {
             this.serverSideEncryptionConfiguration = serverSideEncryptionConfiguration;
             return this;
         }
 
-        public Builder setServerSideEncryptionConfiguration(@Nullable AssistantServerSideEncryptionConfigurationArgs serverSideEncryptionConfiguration) {
+        public Builder serverSideEncryptionConfiguration(@Nullable AssistantServerSideEncryptionConfigurationArgs serverSideEncryptionConfiguration) {
             this.serverSideEncryptionConfiguration = Input.ofNullable(serverSideEncryptionConfiguration);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<AssistantTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<AssistantTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<AssistantTagArgs> tags) {
+        public Builder tags(@Nullable List<AssistantTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setType(Input<AssistantType> type) {
+        public Builder type(Input<AssistantType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(AssistantType type) {
+        public Builder type(AssistantType type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

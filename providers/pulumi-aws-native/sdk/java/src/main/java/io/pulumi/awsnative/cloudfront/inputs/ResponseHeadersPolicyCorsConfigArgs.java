@@ -127,72 +127,72 @@ public final class ResponseHeadersPolicyCorsConfigArgs extends io.pulumi.resourc
     	      this.originOverride = defaults.originOverride;
         }
 
-        public Builder setAccessControlAllowCredentials(Input<Boolean> accessControlAllowCredentials) {
+        public Builder accessControlAllowCredentials(Input<Boolean> accessControlAllowCredentials) {
             this.accessControlAllowCredentials = Objects.requireNonNull(accessControlAllowCredentials);
             return this;
         }
 
-        public Builder setAccessControlAllowCredentials(Boolean accessControlAllowCredentials) {
+        public Builder accessControlAllowCredentials(Boolean accessControlAllowCredentials) {
             this.accessControlAllowCredentials = Input.of(Objects.requireNonNull(accessControlAllowCredentials));
             return this;
         }
 
-        public Builder setAccessControlAllowHeaders(Input<ResponseHeadersPolicyAccessControlAllowHeadersArgs> accessControlAllowHeaders) {
+        public Builder accessControlAllowHeaders(Input<ResponseHeadersPolicyAccessControlAllowHeadersArgs> accessControlAllowHeaders) {
             this.accessControlAllowHeaders = Objects.requireNonNull(accessControlAllowHeaders);
             return this;
         }
 
-        public Builder setAccessControlAllowHeaders(ResponseHeadersPolicyAccessControlAllowHeadersArgs accessControlAllowHeaders) {
+        public Builder accessControlAllowHeaders(ResponseHeadersPolicyAccessControlAllowHeadersArgs accessControlAllowHeaders) {
             this.accessControlAllowHeaders = Input.of(Objects.requireNonNull(accessControlAllowHeaders));
             return this;
         }
 
-        public Builder setAccessControlAllowMethods(Input<ResponseHeadersPolicyAccessControlAllowMethodsArgs> accessControlAllowMethods) {
+        public Builder accessControlAllowMethods(Input<ResponseHeadersPolicyAccessControlAllowMethodsArgs> accessControlAllowMethods) {
             this.accessControlAllowMethods = Objects.requireNonNull(accessControlAllowMethods);
             return this;
         }
 
-        public Builder setAccessControlAllowMethods(ResponseHeadersPolicyAccessControlAllowMethodsArgs accessControlAllowMethods) {
+        public Builder accessControlAllowMethods(ResponseHeadersPolicyAccessControlAllowMethodsArgs accessControlAllowMethods) {
             this.accessControlAllowMethods = Input.of(Objects.requireNonNull(accessControlAllowMethods));
             return this;
         }
 
-        public Builder setAccessControlAllowOrigins(Input<ResponseHeadersPolicyAccessControlAllowOriginsArgs> accessControlAllowOrigins) {
+        public Builder accessControlAllowOrigins(Input<ResponseHeadersPolicyAccessControlAllowOriginsArgs> accessControlAllowOrigins) {
             this.accessControlAllowOrigins = Objects.requireNonNull(accessControlAllowOrigins);
             return this;
         }
 
-        public Builder setAccessControlAllowOrigins(ResponseHeadersPolicyAccessControlAllowOriginsArgs accessControlAllowOrigins) {
+        public Builder accessControlAllowOrigins(ResponseHeadersPolicyAccessControlAllowOriginsArgs accessControlAllowOrigins) {
             this.accessControlAllowOrigins = Input.of(Objects.requireNonNull(accessControlAllowOrigins));
             return this;
         }
 
-        public Builder setAccessControlExposeHeaders(@Nullable Input<ResponseHeadersPolicyAccessControlExposeHeadersArgs> accessControlExposeHeaders) {
+        public Builder accessControlExposeHeaders(@Nullable Input<ResponseHeadersPolicyAccessControlExposeHeadersArgs> accessControlExposeHeaders) {
             this.accessControlExposeHeaders = accessControlExposeHeaders;
             return this;
         }
 
-        public Builder setAccessControlExposeHeaders(@Nullable ResponseHeadersPolicyAccessControlExposeHeadersArgs accessControlExposeHeaders) {
+        public Builder accessControlExposeHeaders(@Nullable ResponseHeadersPolicyAccessControlExposeHeadersArgs accessControlExposeHeaders) {
             this.accessControlExposeHeaders = Input.ofNullable(accessControlExposeHeaders);
             return this;
         }
 
-        public Builder setAccessControlMaxAgeSec(@Nullable Input<Integer> accessControlMaxAgeSec) {
+        public Builder accessControlMaxAgeSec(@Nullable Input<Integer> accessControlMaxAgeSec) {
             this.accessControlMaxAgeSec = accessControlMaxAgeSec;
             return this;
         }
 
-        public Builder setAccessControlMaxAgeSec(@Nullable Integer accessControlMaxAgeSec) {
+        public Builder accessControlMaxAgeSec(@Nullable Integer accessControlMaxAgeSec) {
             this.accessControlMaxAgeSec = Input.ofNullable(accessControlMaxAgeSec);
             return this;
         }
 
-        public Builder setOriginOverride(Input<Boolean> originOverride) {
+        public Builder originOverride(Input<Boolean> originOverride) {
             this.originOverride = Objects.requireNonNull(originOverride);
             return this;
         }
 
-        public Builder setOriginOverride(Boolean originOverride) {
+        public Builder originOverride(Boolean originOverride) {
             this.originOverride = Input.of(Objects.requireNonNull(originOverride));
             return this;
         }

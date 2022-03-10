@@ -88,32 +88,32 @@ public final class ServiceDnsConfigGetArgs extends io.pulumi.resources.ResourceA
     	      this.routingPolicy = defaults.routingPolicy;
         }
 
-        public Builder setDnsRecords(Input<List<ServiceDnsConfigDnsRecordGetArgs>> dnsRecords) {
+        public Builder dnsRecords(Input<List<ServiceDnsConfigDnsRecordGetArgs>> dnsRecords) {
             this.dnsRecords = Objects.requireNonNull(dnsRecords);
             return this;
         }
 
-        public Builder setDnsRecords(List<ServiceDnsConfigDnsRecordGetArgs> dnsRecords) {
+        public Builder dnsRecords(List<ServiceDnsConfigDnsRecordGetArgs> dnsRecords) {
             this.dnsRecords = Input.of(Objects.requireNonNull(dnsRecords));
             return this;
         }
 
-        public Builder setNamespaceId(Input<String> namespaceId) {
+        public Builder namespaceId(Input<String> namespaceId) {
             this.namespaceId = Objects.requireNonNull(namespaceId);
             return this;
         }
 
-        public Builder setNamespaceId(String namespaceId) {
+        public Builder namespaceId(String namespaceId) {
             this.namespaceId = Input.of(Objects.requireNonNull(namespaceId));
             return this;
         }
 
-        public Builder setRoutingPolicy(@Nullable Input<String> routingPolicy) {
+        public Builder routingPolicy(@Nullable Input<String> routingPolicy) {
             this.routingPolicy = routingPolicy;
             return this;
         }
 
-        public Builder setRoutingPolicy(@Nullable String routingPolicy) {
+        public Builder routingPolicy(@Nullable String routingPolicy) {
             this.routingPolicy = Input.ofNullable(routingPolicy);
             return this;
         }

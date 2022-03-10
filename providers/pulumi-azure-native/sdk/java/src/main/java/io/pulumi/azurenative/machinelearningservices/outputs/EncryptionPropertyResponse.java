@@ -85,17 +85,17 @@ public final class EncryptionPropertyResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setIdentity(@Nullable IdentityForCmkResponse identity) {
+        public Builder identity(@Nullable IdentityForCmkResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setKeyVaultProperties(KeyVaultPropertiesResponse keyVaultProperties) {
+        public Builder keyVaultProperties(KeyVaultPropertiesResponse keyVaultProperties) {
             this.keyVaultProperties = Objects.requireNonNull(keyVaultProperties);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

@@ -86,17 +86,17 @@ public final class GetRestorePointCollectionArgs extends io.pulumi.resources.Inv
     	      this.restorePointCollectionName = defaults.restorePointCollectionName;
         }
 
-        public Builder setExpand(@Nullable String expand) {
+        public Builder expand(@Nullable String expand) {
             this.expand = expand;
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setRestorePointCollectionName(String restorePointCollectionName) {
+        public Builder restorePointCollectionName(String restorePointCollectionName) {
             this.restorePointCollectionName = Objects.requireNonNull(restorePointCollectionName);
             return this;
         }

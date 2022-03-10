@@ -217,112 +217,112 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
     	      this.trafficType = defaults.trafficType;
         }
 
-        public Builder setDeliverLogsPermissionArn(@Nullable Input<String> deliverLogsPermissionArn) {
+        public Builder deliverLogsPermissionArn(@Nullable Input<String> deliverLogsPermissionArn) {
             this.deliverLogsPermissionArn = deliverLogsPermissionArn;
             return this;
         }
 
-        public Builder setDeliverLogsPermissionArn(@Nullable String deliverLogsPermissionArn) {
+        public Builder deliverLogsPermissionArn(@Nullable String deliverLogsPermissionArn) {
             this.deliverLogsPermissionArn = Input.ofNullable(deliverLogsPermissionArn);
             return this;
         }
 
-        public Builder setDestinationOptions(@Nullable Input<DestinationOptionsPropertiesArgs> destinationOptions) {
+        public Builder destinationOptions(@Nullable Input<DestinationOptionsPropertiesArgs> destinationOptions) {
             this.destinationOptions = destinationOptions;
             return this;
         }
 
-        public Builder setDestinationOptions(@Nullable DestinationOptionsPropertiesArgs destinationOptions) {
+        public Builder destinationOptions(@Nullable DestinationOptionsPropertiesArgs destinationOptions) {
             this.destinationOptions = Input.ofNullable(destinationOptions);
             return this;
         }
 
-        public Builder setLogDestination(@Nullable Input<String> logDestination) {
+        public Builder logDestination(@Nullable Input<String> logDestination) {
             this.logDestination = logDestination;
             return this;
         }
 
-        public Builder setLogDestination(@Nullable String logDestination) {
+        public Builder logDestination(@Nullable String logDestination) {
             this.logDestination = Input.ofNullable(logDestination);
             return this;
         }
 
-        public Builder setLogDestinationType(@Nullable Input<FlowLogLogDestinationType> logDestinationType) {
+        public Builder logDestinationType(@Nullable Input<FlowLogLogDestinationType> logDestinationType) {
             this.logDestinationType = logDestinationType;
             return this;
         }
 
-        public Builder setLogDestinationType(@Nullable FlowLogLogDestinationType logDestinationType) {
+        public Builder logDestinationType(@Nullable FlowLogLogDestinationType logDestinationType) {
             this.logDestinationType = Input.ofNullable(logDestinationType);
             return this;
         }
 
-        public Builder setLogFormat(@Nullable Input<String> logFormat) {
+        public Builder logFormat(@Nullable Input<String> logFormat) {
             this.logFormat = logFormat;
             return this;
         }
 
-        public Builder setLogFormat(@Nullable String logFormat) {
+        public Builder logFormat(@Nullable String logFormat) {
             this.logFormat = Input.ofNullable(logFormat);
             return this;
         }
 
-        public Builder setLogGroupName(@Nullable Input<String> logGroupName) {
+        public Builder logGroupName(@Nullable Input<String> logGroupName) {
             this.logGroupName = logGroupName;
             return this;
         }
 
-        public Builder setLogGroupName(@Nullable String logGroupName) {
+        public Builder logGroupName(@Nullable String logGroupName) {
             this.logGroupName = Input.ofNullable(logGroupName);
             return this;
         }
 
-        public Builder setMaxAggregationInterval(@Nullable Input<Integer> maxAggregationInterval) {
+        public Builder maxAggregationInterval(@Nullable Input<Integer> maxAggregationInterval) {
             this.maxAggregationInterval = maxAggregationInterval;
             return this;
         }
 
-        public Builder setMaxAggregationInterval(@Nullable Integer maxAggregationInterval) {
+        public Builder maxAggregationInterval(@Nullable Integer maxAggregationInterval) {
             this.maxAggregationInterval = Input.ofNullable(maxAggregationInterval);
             return this;
         }
 
-        public Builder setResourceId(Input<String> resourceId) {
+        public Builder resourceId(Input<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Input.of(Objects.requireNonNull(resourceId));
             return this;
         }
 
-        public Builder setResourceType(Input<FlowLogResourceType> resourceType) {
+        public Builder resourceType(Input<FlowLogResourceType> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
-        public Builder setResourceType(FlowLogResourceType resourceType) {
+        public Builder resourceType(FlowLogResourceType resourceType) {
             this.resourceType = Input.of(Objects.requireNonNull(resourceType));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<FlowLogTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<FlowLogTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<FlowLogTagArgs> tags) {
+        public Builder tags(@Nullable List<FlowLogTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTrafficType(Input<FlowLogTrafficType> trafficType) {
+        public Builder trafficType(Input<FlowLogTrafficType> trafficType) {
             this.trafficType = Objects.requireNonNull(trafficType);
             return this;
         }
 
-        public Builder setTrafficType(FlowLogTrafficType trafficType) {
+        public Builder trafficType(FlowLogTrafficType trafficType) {
             this.trafficType = Input.of(Objects.requireNonNull(trafficType));
             return this;
         }

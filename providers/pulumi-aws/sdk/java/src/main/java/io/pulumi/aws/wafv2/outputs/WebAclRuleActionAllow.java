@@ -50,7 +50,7 @@ public final class WebAclRuleActionAllow {
     	      this.customRequestHandling = defaults.customRequestHandling;
         }
 
-        public Builder setCustomRequestHandling(@Nullable WebAclRuleActionAllowCustomRequestHandling customRequestHandling) {
+        public Builder customRequestHandling(@Nullable WebAclRuleActionAllowCustomRequestHandling customRequestHandling) {
             this.customRequestHandling = customRequestHandling;
             return this;
         }

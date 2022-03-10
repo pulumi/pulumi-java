@@ -74,12 +74,12 @@ public final class InitialReplicationDetailsResponse extends io.pulumi.resources
     	      this.initialReplicationType = defaults.initialReplicationType;
         }
 
-        public Builder setInitialReplicationProgressPercentage(@Nullable String initialReplicationProgressPercentage) {
+        public Builder initialReplicationProgressPercentage(@Nullable String initialReplicationProgressPercentage) {
             this.initialReplicationProgressPercentage = initialReplicationProgressPercentage;
             return this;
         }
 
-        public Builder setInitialReplicationType(@Nullable String initialReplicationType) {
+        public Builder initialReplicationType(@Nullable String initialReplicationType) {
             this.initialReplicationType = initialReplicationType;
             return this;
         }

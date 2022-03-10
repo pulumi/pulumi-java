@@ -75,22 +75,22 @@ public final class GoogleCloudRetailV2alphaRuleBoostActionArgs extends io.pulumi
     	      this.productsFilter = defaults.productsFilter;
         }
 
-        public Builder setBoost(@Nullable Input<Double> boost) {
+        public Builder boost(@Nullable Input<Double> boost) {
             this.boost = boost;
             return this;
         }
 
-        public Builder setBoost(@Nullable Double boost) {
+        public Builder boost(@Nullable Double boost) {
             this.boost = Input.ofNullable(boost);
             return this;
         }
 
-        public Builder setProductsFilter(@Nullable Input<String> productsFilter) {
+        public Builder productsFilter(@Nullable Input<String> productsFilter) {
             this.productsFilter = productsFilter;
             return this;
         }
 
-        public Builder setProductsFilter(@Nullable String productsFilter) {
+        public Builder productsFilter(@Nullable String productsFilter) {
             this.productsFilter = Input.ofNullable(productsFilter);
             return this;
         }

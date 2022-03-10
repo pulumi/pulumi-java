@@ -58,12 +58,12 @@ public final class ManagedClusterLoadBalancerProfileOutboundIPPrefixesArgs exten
     	      this.publicIPPrefixes = defaults.publicIPPrefixes;
         }
 
-        public Builder setPublicIPPrefixes(@Nullable Input<List<ResourceReferenceArgs>> publicIPPrefixes) {
+        public Builder publicIPPrefixes(@Nullable Input<List<ResourceReferenceArgs>> publicIPPrefixes) {
             this.publicIPPrefixes = publicIPPrefixes;
             return this;
         }
 
-        public Builder setPublicIPPrefixes(@Nullable List<ResourceReferenceArgs> publicIPPrefixes) {
+        public Builder publicIPPrefixes(@Nullable List<ResourceReferenceArgs> publicIPPrefixes) {
             this.publicIPPrefixes = Input.ofNullable(publicIPPrefixes);
             return this;
         }

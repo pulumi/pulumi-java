@@ -118,52 +118,52 @@ public final class SecretReplicaGetArgs extends io.pulumi.resources.ResourceArgs
     	      this.statusMessage = defaults.statusMessage;
         }
 
-        public Builder setKmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Input.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder setLastAccessedDate(@Nullable Input<String> lastAccessedDate) {
+        public Builder lastAccessedDate(@Nullable Input<String> lastAccessedDate) {
             this.lastAccessedDate = lastAccessedDate;
             return this;
         }
 
-        public Builder setLastAccessedDate(@Nullable String lastAccessedDate) {
+        public Builder lastAccessedDate(@Nullable String lastAccessedDate) {
             this.lastAccessedDate = Input.ofNullable(lastAccessedDate);
             return this;
         }
 
-        public Builder setRegion(Input<String> region) {
+        public Builder region(Input<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Input.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setStatusMessage(@Nullable Input<String> statusMessage) {
+        public Builder statusMessage(@Nullable Input<String> statusMessage) {
             this.statusMessage = statusMessage;
             return this;
         }
 
-        public Builder setStatusMessage(@Nullable String statusMessage) {
+        public Builder statusMessage(@Nullable String statusMessage) {
             this.statusMessage = Input.ofNullable(statusMessage);
             return this;
         }

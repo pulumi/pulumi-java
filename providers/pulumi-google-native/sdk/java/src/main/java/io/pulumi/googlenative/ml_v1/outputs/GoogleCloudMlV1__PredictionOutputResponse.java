@@ -98,22 +98,22 @@ public final class GoogleCloudMlV1__PredictionOutputResponse {
     	      this.predictionCount = defaults.predictionCount;
         }
 
-        public Builder setErrorCount(String errorCount) {
+        public Builder errorCount(String errorCount) {
             this.errorCount = Objects.requireNonNull(errorCount);
             return this;
         }
 
-        public Builder setNodeHours(Double nodeHours) {
+        public Builder nodeHours(Double nodeHours) {
             this.nodeHours = Objects.requireNonNull(nodeHours);
             return this;
         }
 
-        public Builder setOutputPath(String outputPath) {
+        public Builder outputPath(String outputPath) {
             this.outputPath = Objects.requireNonNull(outputPath);
             return this;
         }
 
-        public Builder setPredictionCount(String predictionCount) {
+        public Builder predictionCount(String predictionCount) {
             this.predictionCount = Objects.requireNonNull(predictionCount);
             return this;
         }

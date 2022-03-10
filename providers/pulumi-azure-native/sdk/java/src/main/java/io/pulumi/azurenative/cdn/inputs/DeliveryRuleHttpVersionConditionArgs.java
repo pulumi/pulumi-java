@@ -75,22 +75,22 @@ public final class DeliveryRuleHttpVersionConditionArgs extends io.pulumi.resour
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setParameters(Input<HttpVersionMatchConditionParametersArgs> parameters) {
+        public Builder parameters(Input<HttpVersionMatchConditionParametersArgs> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setParameters(HttpVersionMatchConditionParametersArgs parameters) {
+        public Builder parameters(HttpVersionMatchConditionParametersArgs parameters) {
             this.parameters = Input.of(Objects.requireNonNull(parameters));
             return this;
         }

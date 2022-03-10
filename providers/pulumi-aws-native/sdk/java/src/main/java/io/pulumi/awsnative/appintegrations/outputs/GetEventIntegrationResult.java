@@ -102,22 +102,22 @@ public final class GetEventIntegrationResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAssociations(@Nullable List<EventIntegrationAssociation> associations) {
+        public Builder associations(@Nullable List<EventIntegrationAssociation> associations) {
             this.associations = associations;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEventIntegrationArn(@Nullable String eventIntegrationArn) {
+        public Builder eventIntegrationArn(@Nullable String eventIntegrationArn) {
             this.eventIntegrationArn = eventIntegrationArn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<EventIntegrationTag> tags) {
+        public Builder tags(@Nullable List<EventIntegrationTag> tags) {
             this.tags = tags;
             return this;
         }

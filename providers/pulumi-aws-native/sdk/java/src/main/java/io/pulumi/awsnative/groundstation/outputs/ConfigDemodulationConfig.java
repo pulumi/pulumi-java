@@ -42,7 +42,7 @@ public final class ConfigDemodulationConfig {
     	      this.unvalidatedJSON = defaults.unvalidatedJSON;
         }
 
-        public Builder setUnvalidatedJSON(@Nullable String unvalidatedJSON) {
+        public Builder unvalidatedJSON(@Nullable String unvalidatedJSON) {
             this.unvalidatedJSON = unvalidatedJSON;
             return this;
         }

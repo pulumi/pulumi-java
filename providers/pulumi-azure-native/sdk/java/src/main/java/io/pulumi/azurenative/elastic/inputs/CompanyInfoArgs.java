@@ -122,52 +122,52 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.state = defaults.state;
         }
 
-        public Builder setBusiness(@Nullable Input<String> business) {
+        public Builder business(@Nullable Input<String> business) {
             this.business = business;
             return this;
         }
 
-        public Builder setBusiness(@Nullable String business) {
+        public Builder business(@Nullable String business) {
             this.business = Input.ofNullable(business);
             return this;
         }
 
-        public Builder setCountry(@Nullable Input<String> country) {
+        public Builder country(@Nullable Input<String> country) {
             this.country = country;
             return this;
         }
 
-        public Builder setCountry(@Nullable String country) {
+        public Builder country(@Nullable String country) {
             this.country = Input.ofNullable(country);
             return this;
         }
 
-        public Builder setDomain(@Nullable Input<String> domain) {
+        public Builder domain(@Nullable Input<String> domain) {
             this.domain = domain;
             return this;
         }
 
-        public Builder setDomain(@Nullable String domain) {
+        public Builder domain(@Nullable String domain) {
             this.domain = Input.ofNullable(domain);
             return this;
         }
 
-        public Builder setEmployeesNumber(@Nullable Input<String> employeesNumber) {
+        public Builder employeesNumber(@Nullable Input<String> employeesNumber) {
             this.employeesNumber = employeesNumber;
             return this;
         }
 
-        public Builder setEmployeesNumber(@Nullable String employeesNumber) {
+        public Builder employeesNumber(@Nullable String employeesNumber) {
             this.employeesNumber = Input.ofNullable(employeesNumber);
             return this;
         }
 
-        public Builder setState(@Nullable Input<String> state) {
+        public Builder state(@Nullable Input<String> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = Input.ofNullable(state);
             return this;
         }

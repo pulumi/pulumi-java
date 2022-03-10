@@ -70,22 +70,22 @@ public final class ConnectorApacheKafkaClusterArgs extends io.pulumi.resources.R
     	      this.vpc = defaults.vpc;
         }
 
-        public Builder setBootstrapServers(Input<String> bootstrapServers) {
+        public Builder bootstrapServers(Input<String> bootstrapServers) {
             this.bootstrapServers = Objects.requireNonNull(bootstrapServers);
             return this;
         }
 
-        public Builder setBootstrapServers(String bootstrapServers) {
+        public Builder bootstrapServers(String bootstrapServers) {
             this.bootstrapServers = Input.of(Objects.requireNonNull(bootstrapServers));
             return this;
         }
 
-        public Builder setVpc(Input<ConnectorVpcArgs> vpc) {
+        public Builder vpc(Input<ConnectorVpcArgs> vpc) {
             this.vpc = Objects.requireNonNull(vpc);
             return this;
         }
 
-        public Builder setVpc(ConnectorVpcArgs vpc) {
+        public Builder vpc(ConnectorVpcArgs vpc) {
             this.vpc = Input.of(Objects.requireNonNull(vpc));
             return this;
         }

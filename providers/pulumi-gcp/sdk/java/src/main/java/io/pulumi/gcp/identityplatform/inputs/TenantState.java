@@ -138,62 +138,62 @@ public final class TenantState extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setAllowPasswordSignup(@Nullable Input<Boolean> allowPasswordSignup) {
+        public Builder allowPasswordSignup(@Nullable Input<Boolean> allowPasswordSignup) {
             this.allowPasswordSignup = allowPasswordSignup;
             return this;
         }
 
-        public Builder setAllowPasswordSignup(@Nullable Boolean allowPasswordSignup) {
+        public Builder allowPasswordSignup(@Nullable Boolean allowPasswordSignup) {
             this.allowPasswordSignup = Input.ofNullable(allowPasswordSignup);
             return this;
         }
 
-        public Builder setDisableAuth(@Nullable Input<Boolean> disableAuth) {
+        public Builder disableAuth(@Nullable Input<Boolean> disableAuth) {
             this.disableAuth = disableAuth;
             return this;
         }
 
-        public Builder setDisableAuth(@Nullable Boolean disableAuth) {
+        public Builder disableAuth(@Nullable Boolean disableAuth) {
             this.disableAuth = Input.ofNullable(disableAuth);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setEnableEmailLinkSignin(@Nullable Input<Boolean> enableEmailLinkSignin) {
+        public Builder enableEmailLinkSignin(@Nullable Input<Boolean> enableEmailLinkSignin) {
             this.enableEmailLinkSignin = enableEmailLinkSignin;
             return this;
         }
 
-        public Builder setEnableEmailLinkSignin(@Nullable Boolean enableEmailLinkSignin) {
+        public Builder enableEmailLinkSignin(@Nullable Boolean enableEmailLinkSignin) {
             this.enableEmailLinkSignin = Input.ofNullable(enableEmailLinkSignin);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

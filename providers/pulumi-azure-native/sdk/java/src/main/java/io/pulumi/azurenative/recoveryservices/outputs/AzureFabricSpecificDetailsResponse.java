@@ -86,17 +86,17 @@ public final class AzureFabricSpecificDetailsResponse {
     	      this.location = defaults.location;
         }
 
-        public Builder setContainerIds(@Nullable List<String> containerIds) {
+        public Builder containerIds(@Nullable List<String> containerIds) {
             this.containerIds = containerIds;
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }

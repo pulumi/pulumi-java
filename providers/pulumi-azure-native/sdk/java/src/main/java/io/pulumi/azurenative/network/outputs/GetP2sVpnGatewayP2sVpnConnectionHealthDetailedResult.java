@@ -50,7 +50,7 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedResult {
     	      this.sasUrl = defaults.sasUrl;
         }
 
-        public Builder setSasUrl(@Nullable String sasUrl) {
+        public Builder sasUrl(@Nullable String sasUrl) {
             this.sasUrl = sasUrl;
             return this;
         }

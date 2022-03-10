@@ -111,62 +111,62 @@ public final class RuleGroupHeaderArgs extends io.pulumi.resources.ResourceArgs 
     	      this.sourcePort = defaults.sourcePort;
         }
 
-        public Builder setDestination(Input<String> destination) {
+        public Builder destination(Input<String> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setDestination(String destination) {
+        public Builder destination(String destination) {
             this.destination = Input.of(Objects.requireNonNull(destination));
             return this;
         }
 
-        public Builder setDestinationPort(Input<String> destinationPort) {
+        public Builder destinationPort(Input<String> destinationPort) {
             this.destinationPort = Objects.requireNonNull(destinationPort);
             return this;
         }
 
-        public Builder setDestinationPort(String destinationPort) {
+        public Builder destinationPort(String destinationPort) {
             this.destinationPort = Input.of(Objects.requireNonNull(destinationPort));
             return this;
         }
 
-        public Builder setDirection(Input<RuleGroupHeaderDirection> direction) {
+        public Builder direction(Input<RuleGroupHeaderDirection> direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
-        public Builder setDirection(RuleGroupHeaderDirection direction) {
+        public Builder direction(RuleGroupHeaderDirection direction) {
             this.direction = Input.of(Objects.requireNonNull(direction));
             return this;
         }
 
-        public Builder setProtocol(Input<RuleGroupHeaderProtocol> protocol) {
+        public Builder protocol(Input<RuleGroupHeaderProtocol> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setProtocol(RuleGroupHeaderProtocol protocol) {
+        public Builder protocol(RuleGroupHeaderProtocol protocol) {
             this.protocol = Input.of(Objects.requireNonNull(protocol));
             return this;
         }
 
-        public Builder setSource(Input<String> source) {
+        public Builder source(Input<String> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Input.of(Objects.requireNonNull(source));
             return this;
         }
 
-        public Builder setSourcePort(Input<String> sourcePort) {
+        public Builder sourcePort(Input<String> sourcePort) {
             this.sourcePort = Objects.requireNonNull(sourcePort);
             return this;
         }
 
-        public Builder setSourcePort(String sourcePort) {
+        public Builder sourcePort(String sourcePort) {
             this.sourcePort = Input.of(Objects.requireNonNull(sourcePort));
             return this;
         }

@@ -40,7 +40,7 @@ public final class SubsettingResponse {
     	      this.policy = defaults.policy;
         }
 
-        public Builder setPolicy(String policy) {
+        public Builder policy(String policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }

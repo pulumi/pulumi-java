@@ -237,122 +237,122 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setAutoscalingPolicy(@Nullable Input<NodeGroupAutoscalingPolicyGetArgs> autoscalingPolicy) {
+        public Builder autoscalingPolicy(@Nullable Input<NodeGroupAutoscalingPolicyGetArgs> autoscalingPolicy) {
             this.autoscalingPolicy = autoscalingPolicy;
             return this;
         }
 
-        public Builder setAutoscalingPolicy(@Nullable NodeGroupAutoscalingPolicyGetArgs autoscalingPolicy) {
+        public Builder autoscalingPolicy(@Nullable NodeGroupAutoscalingPolicyGetArgs autoscalingPolicy) {
             this.autoscalingPolicy = Input.ofNullable(autoscalingPolicy);
             return this;
         }
 
-        public Builder setCreationTimestamp(@Nullable Input<String> creationTimestamp) {
+        public Builder creationTimestamp(@Nullable Input<String> creationTimestamp) {
             this.creationTimestamp = creationTimestamp;
             return this;
         }
 
-        public Builder setCreationTimestamp(@Nullable String creationTimestamp) {
+        public Builder creationTimestamp(@Nullable String creationTimestamp) {
             this.creationTimestamp = Input.ofNullable(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setInitialSize(@Nullable Input<Integer> initialSize) {
+        public Builder initialSize(@Nullable Input<Integer> initialSize) {
             this.initialSize = initialSize;
             return this;
         }
 
-        public Builder setInitialSize(@Nullable Integer initialSize) {
+        public Builder initialSize(@Nullable Integer initialSize) {
             this.initialSize = Input.ofNullable(initialSize);
             return this;
         }
 
-        public Builder setMaintenancePolicy(@Nullable Input<String> maintenancePolicy) {
+        public Builder maintenancePolicy(@Nullable Input<String> maintenancePolicy) {
             this.maintenancePolicy = maintenancePolicy;
             return this;
         }
 
-        public Builder setMaintenancePolicy(@Nullable String maintenancePolicy) {
+        public Builder maintenancePolicy(@Nullable String maintenancePolicy) {
             this.maintenancePolicy = Input.ofNullable(maintenancePolicy);
             return this;
         }
 
-        public Builder setMaintenanceWindow(@Nullable Input<NodeGroupMaintenanceWindowGetArgs> maintenanceWindow) {
+        public Builder maintenanceWindow(@Nullable Input<NodeGroupMaintenanceWindowGetArgs> maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
 
-        public Builder setMaintenanceWindow(@Nullable NodeGroupMaintenanceWindowGetArgs maintenanceWindow) {
+        public Builder maintenanceWindow(@Nullable NodeGroupMaintenanceWindowGetArgs maintenanceWindow) {
             this.maintenanceWindow = Input.ofNullable(maintenanceWindow);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNodeTemplate(@Nullable Input<String> nodeTemplate) {
+        public Builder nodeTemplate(@Nullable Input<String> nodeTemplate) {
             this.nodeTemplate = nodeTemplate;
             return this;
         }
 
-        public Builder setNodeTemplate(@Nullable String nodeTemplate) {
+        public Builder nodeTemplate(@Nullable String nodeTemplate) {
             this.nodeTemplate = Input.ofNullable(nodeTemplate);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSelfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Input<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
-        public Builder setSelfLink(@Nullable String selfLink) {
+        public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Input.ofNullable(selfLink);
             return this;
         }
 
-        public Builder setSize(@Nullable Input<Integer> size) {
+        public Builder size(@Nullable Input<Integer> size) {
             this.size = size;
             return this;
         }
 
-        public Builder setSize(@Nullable Integer size) {
+        public Builder size(@Nullable Integer size) {
             this.size = Input.ofNullable(size);
             return this;
         }
 
-        public Builder setZone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Input<String> zone) {
             this.zone = zone;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = Input.ofNullable(zone);
             return this;
         }

@@ -251,7 +251,7 @@ public class BlobFolderDataSetMapping extends io.pulumi.resources.CustomResource
     private static BlobFolderDataSetMappingArgs makeArgs(BlobFolderDataSetMappingArgs args) {
         var builder = args == null ? BlobFolderDataSetMappingArgs.builder() : BlobFolderDataSetMappingArgs.builder(args);
         return builder
-            .setKind("BlobFolder")
+            .kind("BlobFolder")
             .build();
     }
 

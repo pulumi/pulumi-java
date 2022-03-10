@@ -50,7 +50,7 @@ public final class ScaleInPolicyResponse {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setRules(@Nullable List<String> rules) {
+        public Builder rules(@Nullable List<String> rules) {
             this.rules = rules;
             return this;
         }

@@ -85,17 +85,17 @@ public final class GetDomainLogPublishingOption extends io.pulumi.resources.Invo
     	      this.logType = defaults.logType;
         }
 
-        public Builder setCloudwatchLogGroupArn(String cloudwatchLogGroupArn) {
+        public Builder cloudwatchLogGroupArn(String cloudwatchLogGroupArn) {
             this.cloudwatchLogGroupArn = Objects.requireNonNull(cloudwatchLogGroupArn);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setLogType(String logType) {
+        public Builder logType(String logType) {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }

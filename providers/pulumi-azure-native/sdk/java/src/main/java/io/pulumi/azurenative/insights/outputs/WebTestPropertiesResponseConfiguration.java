@@ -50,7 +50,7 @@ public final class WebTestPropertiesResponseConfiguration {
     	      this.webTest = defaults.webTest;
         }
 
-        public Builder setWebTest(@Nullable String webTest) {
+        public Builder webTest(@Nullable String webTest) {
             this.webTest = webTest;
             return this;
         }

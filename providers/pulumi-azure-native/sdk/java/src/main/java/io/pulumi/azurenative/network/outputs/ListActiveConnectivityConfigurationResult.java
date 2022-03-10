@@ -69,12 +69,12 @@ public final class ListActiveConnectivityConfigurationResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setSkipToken(@Nullable String skipToken) {
+        public Builder skipToken(@Nullable String skipToken) {
             this.skipToken = skipToken;
             return this;
         }
 
-        public Builder setValue(@Nullable List<ActiveConnectivityConfigurationResponse> value) {
+        public Builder value(@Nullable List<ActiveConnectivityConfigurationResponse> value) {
             this.value = value;
             return this;
         }

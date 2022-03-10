@@ -188,92 +188,92 @@ public final class FlowSourceEncryptionArgs extends io.pulumi.resources.Resource
     	      this.url = defaults.url;
         }
 
-        public Builder setAlgorithm(Input<FlowSourceEncryptionAlgorithm> algorithm) {
+        public Builder algorithm(Input<FlowSourceEncryptionAlgorithm> algorithm) {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
 
-        public Builder setAlgorithm(FlowSourceEncryptionAlgorithm algorithm) {
+        public Builder algorithm(FlowSourceEncryptionAlgorithm algorithm) {
             this.algorithm = Input.of(Objects.requireNonNull(algorithm));
             return this;
         }
 
-        public Builder setConstantInitializationVector(@Nullable Input<String> constantInitializationVector) {
+        public Builder constantInitializationVector(@Nullable Input<String> constantInitializationVector) {
             this.constantInitializationVector = constantInitializationVector;
             return this;
         }
 
-        public Builder setConstantInitializationVector(@Nullable String constantInitializationVector) {
+        public Builder constantInitializationVector(@Nullable String constantInitializationVector) {
             this.constantInitializationVector = Input.ofNullable(constantInitializationVector);
             return this;
         }
 
-        public Builder setDeviceId(@Nullable Input<String> deviceId) {
+        public Builder deviceId(@Nullable Input<String> deviceId) {
             this.deviceId = deviceId;
             return this;
         }
 
-        public Builder setDeviceId(@Nullable String deviceId) {
+        public Builder deviceId(@Nullable String deviceId) {
             this.deviceId = Input.ofNullable(deviceId);
             return this;
         }
 
-        public Builder setKeyType(@Nullable Input<FlowSourceEncryptionKeyType> keyType) {
+        public Builder keyType(@Nullable Input<FlowSourceEncryptionKeyType> keyType) {
             this.keyType = keyType;
             return this;
         }
 
-        public Builder setKeyType(@Nullable FlowSourceEncryptionKeyType keyType) {
+        public Builder keyType(@Nullable FlowSourceEncryptionKeyType keyType) {
             this.keyType = Input.ofNullable(keyType);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setResourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Input<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Input.ofNullable(resourceId);
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setSecretArn(@Nullable Input<String> secretArn) {
+        public Builder secretArn(@Nullable Input<String> secretArn) {
             this.secretArn = secretArn;
             return this;
         }
 
-        public Builder setSecretArn(@Nullable String secretArn) {
+        public Builder secretArn(@Nullable String secretArn) {
             this.secretArn = Input.ofNullable(secretArn);
             return this;
         }
 
-        public Builder setUrl(@Nullable Input<String> url) {
+        public Builder url(@Nullable Input<String> url) {
             this.url = url;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = Input.ofNullable(url);
             return this;
         }

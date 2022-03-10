@@ -104,42 +104,42 @@ public final class DataQualityJobDefinitionEndpointInputArgs extends io.pulumi.r
     	      this.s3InputMode = defaults.s3InputMode;
         }
 
-        public Builder setEndpointName(Input<String> endpointName) {
+        public Builder endpointName(Input<String> endpointName) {
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
 
-        public Builder setEndpointName(String endpointName) {
+        public Builder endpointName(String endpointName) {
             this.endpointName = Input.of(Objects.requireNonNull(endpointName));
             return this;
         }
 
-        public Builder setLocalPath(Input<String> localPath) {
+        public Builder localPath(Input<String> localPath) {
             this.localPath = Objects.requireNonNull(localPath);
             return this;
         }
 
-        public Builder setLocalPath(String localPath) {
+        public Builder localPath(String localPath) {
             this.localPath = Input.of(Objects.requireNonNull(localPath));
             return this;
         }
 
-        public Builder setS3DataDistributionType(@Nullable Input<DataQualityJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType) {
+        public Builder s3DataDistributionType(@Nullable Input<DataQualityJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType) {
             this.s3DataDistributionType = s3DataDistributionType;
             return this;
         }
 
-        public Builder setS3DataDistributionType(@Nullable DataQualityJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType) {
+        public Builder s3DataDistributionType(@Nullable DataQualityJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType) {
             this.s3DataDistributionType = Input.ofNullable(s3DataDistributionType);
             return this;
         }
 
-        public Builder setS3InputMode(@Nullable Input<DataQualityJobDefinitionEndpointInputS3InputMode> s3InputMode) {
+        public Builder s3InputMode(@Nullable Input<DataQualityJobDefinitionEndpointInputS3InputMode> s3InputMode) {
             this.s3InputMode = s3InputMode;
             return this;
         }
 
-        public Builder setS3InputMode(@Nullable DataQualityJobDefinitionEndpointInputS3InputMode s3InputMode) {
+        public Builder s3InputMode(@Nullable DataQualityJobDefinitionEndpointInputS3InputMode s3InputMode) {
             this.s3InputMode = Input.ofNullable(s3InputMode);
             return this;
         }

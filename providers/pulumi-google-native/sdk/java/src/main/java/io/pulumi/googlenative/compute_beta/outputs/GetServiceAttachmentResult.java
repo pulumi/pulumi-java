@@ -310,87 +310,87 @@ public final class GetServiceAttachmentResult {
     	      this.targetService = defaults.targetService;
         }
 
-        public Builder setConnectedEndpoints(List<ServiceAttachmentConnectedEndpointResponse> connectedEndpoints) {
+        public Builder connectedEndpoints(List<ServiceAttachmentConnectedEndpointResponse> connectedEndpoints) {
             this.connectedEndpoints = Objects.requireNonNull(connectedEndpoints);
             return this;
         }
 
-        public Builder setConnectionPreference(String connectionPreference) {
+        public Builder connectionPreference(String connectionPreference) {
             this.connectionPreference = Objects.requireNonNull(connectionPreference);
             return this;
         }
 
-        public Builder setConsumerAcceptLists(List<ServiceAttachmentConsumerProjectLimitResponse> consumerAcceptLists) {
+        public Builder consumerAcceptLists(List<ServiceAttachmentConsumerProjectLimitResponse> consumerAcceptLists) {
             this.consumerAcceptLists = Objects.requireNonNull(consumerAcceptLists);
             return this;
         }
 
-        public Builder setConsumerRejectLists(List<String> consumerRejectLists) {
+        public Builder consumerRejectLists(List<String> consumerRejectLists) {
             this.consumerRejectLists = Objects.requireNonNull(consumerRejectLists);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDomainNames(List<String> domainNames) {
+        public Builder domainNames(List<String> domainNames) {
             this.domainNames = Objects.requireNonNull(domainNames);
             return this;
         }
 
-        public Builder setEnableProxyProtocol(Boolean enableProxyProtocol) {
+        public Builder enableProxyProtocol(Boolean enableProxyProtocol) {
             this.enableProxyProtocol = Objects.requireNonNull(enableProxyProtocol);
             return this;
         }
 
-        public Builder setFingerprint(String fingerprint) {
+        public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNatSubnets(List<String> natSubnets) {
+        public Builder natSubnets(List<String> natSubnets) {
             this.natSubnets = Objects.requireNonNull(natSubnets);
             return this;
         }
 
-        public Builder setProducerForwardingRule(String producerForwardingRule) {
+        public Builder producerForwardingRule(String producerForwardingRule) {
             this.producerForwardingRule = Objects.requireNonNull(producerForwardingRule);
             return this;
         }
 
-        public Builder setPscServiceAttachmentId(Uint128Response pscServiceAttachmentId) {
+        public Builder pscServiceAttachmentId(Uint128Response pscServiceAttachmentId) {
             this.pscServiceAttachmentId = Objects.requireNonNull(pscServiceAttachmentId);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setTargetService(String targetService) {
+        public Builder targetService(String targetService) {
             this.targetService = Objects.requireNonNull(targetService);
             return this;
         }

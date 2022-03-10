@@ -75,32 +75,32 @@ public final class NodePoolNodeConfigGuestAcceleratorGetArgs extends io.pulumi.r
     	      this.type = defaults.type;
         }
 
-        public Builder setCount(Input<Integer> count) {
+        public Builder count(Input<Integer> count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setCount(Integer count) {
+        public Builder count(Integer count) {
             this.count = Input.of(Objects.requireNonNull(count));
             return this;
         }
 
-        public Builder setGpuPartitionSize(@Nullable Input<String> gpuPartitionSize) {
+        public Builder gpuPartitionSize(@Nullable Input<String> gpuPartitionSize) {
             this.gpuPartitionSize = gpuPartitionSize;
             return this;
         }
 
-        public Builder setGpuPartitionSize(@Nullable String gpuPartitionSize) {
+        public Builder gpuPartitionSize(@Nullable String gpuPartitionSize) {
             this.gpuPartitionSize = Input.ofNullable(gpuPartitionSize);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

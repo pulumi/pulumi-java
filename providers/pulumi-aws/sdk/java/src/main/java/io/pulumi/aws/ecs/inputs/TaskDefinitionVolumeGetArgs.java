@@ -122,52 +122,52 @@ public final class TaskDefinitionVolumeGetArgs extends io.pulumi.resources.Resou
     	      this.name = defaults.name;
         }
 
-        public Builder setDockerVolumeConfiguration(@Nullable Input<TaskDefinitionVolumeDockerVolumeConfigurationGetArgs> dockerVolumeConfiguration) {
+        public Builder dockerVolumeConfiguration(@Nullable Input<TaskDefinitionVolumeDockerVolumeConfigurationGetArgs> dockerVolumeConfiguration) {
             this.dockerVolumeConfiguration = dockerVolumeConfiguration;
             return this;
         }
 
-        public Builder setDockerVolumeConfiguration(@Nullable TaskDefinitionVolumeDockerVolumeConfigurationGetArgs dockerVolumeConfiguration) {
+        public Builder dockerVolumeConfiguration(@Nullable TaskDefinitionVolumeDockerVolumeConfigurationGetArgs dockerVolumeConfiguration) {
             this.dockerVolumeConfiguration = Input.ofNullable(dockerVolumeConfiguration);
             return this;
         }
 
-        public Builder setEfsVolumeConfiguration(@Nullable Input<TaskDefinitionVolumeEfsVolumeConfigurationGetArgs> efsVolumeConfiguration) {
+        public Builder efsVolumeConfiguration(@Nullable Input<TaskDefinitionVolumeEfsVolumeConfigurationGetArgs> efsVolumeConfiguration) {
             this.efsVolumeConfiguration = efsVolumeConfiguration;
             return this;
         }
 
-        public Builder setEfsVolumeConfiguration(@Nullable TaskDefinitionVolumeEfsVolumeConfigurationGetArgs efsVolumeConfiguration) {
+        public Builder efsVolumeConfiguration(@Nullable TaskDefinitionVolumeEfsVolumeConfigurationGetArgs efsVolumeConfiguration) {
             this.efsVolumeConfiguration = Input.ofNullable(efsVolumeConfiguration);
             return this;
         }
 
-        public Builder setFsxWindowsFileServerVolumeConfiguration(@Nullable Input<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationGetArgs> fsxWindowsFileServerVolumeConfiguration) {
+        public Builder fsxWindowsFileServerVolumeConfiguration(@Nullable Input<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationGetArgs> fsxWindowsFileServerVolumeConfiguration) {
             this.fsxWindowsFileServerVolumeConfiguration = fsxWindowsFileServerVolumeConfiguration;
             return this;
         }
 
-        public Builder setFsxWindowsFileServerVolumeConfiguration(@Nullable TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationGetArgs fsxWindowsFileServerVolumeConfiguration) {
+        public Builder fsxWindowsFileServerVolumeConfiguration(@Nullable TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationGetArgs fsxWindowsFileServerVolumeConfiguration) {
             this.fsxWindowsFileServerVolumeConfiguration = Input.ofNullable(fsxWindowsFileServerVolumeConfiguration);
             return this;
         }
 
-        public Builder setHostPath(@Nullable Input<String> hostPath) {
+        public Builder hostPath(@Nullable Input<String> hostPath) {
             this.hostPath = hostPath;
             return this;
         }
 
-        public Builder setHostPath(@Nullable String hostPath) {
+        public Builder hostPath(@Nullable String hostPath) {
             this.hostPath = Input.ofNullable(hostPath);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

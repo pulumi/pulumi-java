@@ -77,22 +77,22 @@ public final class BatchAccountIdentityArgs extends io.pulumi.resources.Resource
     	      this.userAssignedIdentities = defaults.userAssignedIdentities;
         }
 
-        public Builder setType(Input<ResourceIdentityType> type) {
+        public Builder type(Input<ResourceIdentityType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(ResourceIdentityType type) {
+        public Builder type(ResourceIdentityType type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setUserAssignedIdentities(@Nullable Input<Map<String,Object>> userAssignedIdentities) {
+        public Builder userAssignedIdentities(@Nullable Input<Map<String,Object>> userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
 
-        public Builder setUserAssignedIdentities(@Nullable Map<String,Object> userAssignedIdentities) {
+        public Builder userAssignedIdentities(@Nullable Map<String,Object> userAssignedIdentities) {
             this.userAssignedIdentities = Input.ofNullable(userAssignedIdentities);
             return this;
         }

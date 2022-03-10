@@ -176,82 +176,82 @@ public final class NicIpConfigurationResourceSettingsArgs extends io.pulumi.reso
     	      this.subnet = defaults.subnet;
         }
 
-        public Builder setLoadBalancerBackendAddressPools(@Nullable Input<List<LoadBalancerBackendAddressPoolReferenceArgs>> loadBalancerBackendAddressPools) {
+        public Builder loadBalancerBackendAddressPools(@Nullable Input<List<LoadBalancerBackendAddressPoolReferenceArgs>> loadBalancerBackendAddressPools) {
             this.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;
             return this;
         }
 
-        public Builder setLoadBalancerBackendAddressPools(@Nullable List<LoadBalancerBackendAddressPoolReferenceArgs> loadBalancerBackendAddressPools) {
+        public Builder loadBalancerBackendAddressPools(@Nullable List<LoadBalancerBackendAddressPoolReferenceArgs> loadBalancerBackendAddressPools) {
             this.loadBalancerBackendAddressPools = Input.ofNullable(loadBalancerBackendAddressPools);
             return this;
         }
 
-        public Builder setLoadBalancerNatRules(@Nullable Input<List<LoadBalancerNatRuleReferenceArgs>> loadBalancerNatRules) {
+        public Builder loadBalancerNatRules(@Nullable Input<List<LoadBalancerNatRuleReferenceArgs>> loadBalancerNatRules) {
             this.loadBalancerNatRules = loadBalancerNatRules;
             return this;
         }
 
-        public Builder setLoadBalancerNatRules(@Nullable List<LoadBalancerNatRuleReferenceArgs> loadBalancerNatRules) {
+        public Builder loadBalancerNatRules(@Nullable List<LoadBalancerNatRuleReferenceArgs> loadBalancerNatRules) {
             this.loadBalancerNatRules = Input.ofNullable(loadBalancerNatRules);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPrimary(@Nullable Input<Boolean> primary) {
+        public Builder primary(@Nullable Input<Boolean> primary) {
             this.primary = primary;
             return this;
         }
 
-        public Builder setPrimary(@Nullable Boolean primary) {
+        public Builder primary(@Nullable Boolean primary) {
             this.primary = Input.ofNullable(primary);
             return this;
         }
 
-        public Builder setPrivateIpAddress(@Nullable Input<String> privateIpAddress) {
+        public Builder privateIpAddress(@Nullable Input<String> privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
 
-        public Builder setPrivateIpAddress(@Nullable String privateIpAddress) {
+        public Builder privateIpAddress(@Nullable String privateIpAddress) {
             this.privateIpAddress = Input.ofNullable(privateIpAddress);
             return this;
         }
 
-        public Builder setPrivateIpAllocationMethod(@Nullable Input<String> privateIpAllocationMethod) {
+        public Builder privateIpAllocationMethod(@Nullable Input<String> privateIpAllocationMethod) {
             this.privateIpAllocationMethod = privateIpAllocationMethod;
             return this;
         }
 
-        public Builder setPrivateIpAllocationMethod(@Nullable String privateIpAllocationMethod) {
+        public Builder privateIpAllocationMethod(@Nullable String privateIpAllocationMethod) {
             this.privateIpAllocationMethod = Input.ofNullable(privateIpAllocationMethod);
             return this;
         }
 
-        public Builder setPublicIp(@Nullable Input<PublicIpReferenceArgs> publicIp) {
+        public Builder publicIp(@Nullable Input<PublicIpReferenceArgs> publicIp) {
             this.publicIp = publicIp;
             return this;
         }
 
-        public Builder setPublicIp(@Nullable PublicIpReferenceArgs publicIp) {
+        public Builder publicIp(@Nullable PublicIpReferenceArgs publicIp) {
             this.publicIp = Input.ofNullable(publicIp);
             return this;
         }
 
-        public Builder setSubnet(@Nullable Input<SubnetReferenceArgs> subnet) {
+        public Builder subnet(@Nullable Input<SubnetReferenceArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
 
-        public Builder setSubnet(@Nullable SubnetReferenceArgs subnet) {
+        public Builder subnet(@Nullable SubnetReferenceArgs subnet) {
             this.subnet = Input.ofNullable(subnet);
             return this;
         }

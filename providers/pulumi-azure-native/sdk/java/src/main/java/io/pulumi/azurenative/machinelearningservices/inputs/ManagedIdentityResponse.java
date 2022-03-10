@@ -107,22 +107,22 @@ public final class ManagedIdentityResponse extends io.pulumi.resources.InvokeArg
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setIdentityType(String identityType) {
+        public Builder identityType(String identityType) {
             this.identityType = Objects.requireNonNull(identityType);
             return this;
         }
 
-        public Builder setObjectId(@Nullable String objectId) {
+        public Builder objectId(@Nullable String objectId) {
             this.objectId = objectId;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }

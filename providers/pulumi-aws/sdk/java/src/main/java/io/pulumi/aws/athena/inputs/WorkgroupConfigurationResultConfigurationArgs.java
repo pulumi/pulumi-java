@@ -71,22 +71,22 @@ public final class WorkgroupConfigurationResultConfigurationArgs extends io.pulu
     	      this.outputLocation = defaults.outputLocation;
         }
 
-        public Builder setEncryptionConfiguration(@Nullable Input<WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs> encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable Input<WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs> encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
 
-        public Builder setEncryptionConfiguration(@Nullable WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs encryptionConfiguration) {
             this.encryptionConfiguration = Input.ofNullable(encryptionConfiguration);
             return this;
         }
 
-        public Builder setOutputLocation(@Nullable Input<String> outputLocation) {
+        public Builder outputLocation(@Nullable Input<String> outputLocation) {
             this.outputLocation = outputLocation;
             return this;
         }
 
-        public Builder setOutputLocation(@Nullable String outputLocation) {
+        public Builder outputLocation(@Nullable String outputLocation) {
             this.outputLocation = Input.ofNullable(outputLocation);
             return this;
         }

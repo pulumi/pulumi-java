@@ -95,32 +95,32 @@ public final class NetworkPolicyPeerArgs extends io.pulumi.resources.ResourceArg
     	      this.podSelector = defaults.podSelector;
         }
 
-        public Builder setIpBlock(@Nullable Input<IPBlockArgs> ipBlock) {
+        public Builder ipBlock(@Nullable Input<IPBlockArgs> ipBlock) {
             this.ipBlock = ipBlock;
             return this;
         }
 
-        public Builder setIpBlock(@Nullable IPBlockArgs ipBlock) {
+        public Builder ipBlock(@Nullable IPBlockArgs ipBlock) {
             this.ipBlock = Input.ofNullable(ipBlock);
             return this;
         }
 
-        public Builder setNamespaceSelector(@Nullable Input<LabelSelectorArgs> namespaceSelector) {
+        public Builder namespaceSelector(@Nullable Input<LabelSelectorArgs> namespaceSelector) {
             this.namespaceSelector = namespaceSelector;
             return this;
         }
 
-        public Builder setNamespaceSelector(@Nullable LabelSelectorArgs namespaceSelector) {
+        public Builder namespaceSelector(@Nullable LabelSelectorArgs namespaceSelector) {
             this.namespaceSelector = Input.ofNullable(namespaceSelector);
             return this;
         }
 
-        public Builder setPodSelector(@Nullable Input<LabelSelectorArgs> podSelector) {
+        public Builder podSelector(@Nullable Input<LabelSelectorArgs> podSelector) {
             this.podSelector = podSelector;
             return this;
         }
 
-        public Builder setPodSelector(@Nullable LabelSelectorArgs podSelector) {
+        public Builder podSelector(@Nullable LabelSelectorArgs podSelector) {
             this.podSelector = Input.ofNullable(podSelector);
             return this;
         }

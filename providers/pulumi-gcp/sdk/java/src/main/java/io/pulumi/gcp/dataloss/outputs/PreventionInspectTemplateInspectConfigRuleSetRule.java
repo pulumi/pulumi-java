@@ -72,12 +72,12 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRule {
     	      this.hotwordRule = defaults.hotwordRule;
         }
 
-        public Builder setExclusionRule(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRule exclusionRule) {
+        public Builder exclusionRule(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRule exclusionRule) {
             this.exclusionRule = exclusionRule;
             return this;
         }
 
-        public Builder setHotwordRule(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule hotwordRule) {
+        public Builder hotwordRule(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule hotwordRule) {
             this.hotwordRule = hotwordRule;
             return this;
         }

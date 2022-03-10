@@ -76,12 +76,12 @@ public final class EndpointPropertiesUpdateParametersResponseDeliveryPolicy exte
     	      this.rules = defaults.rules;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setRules(List<DeliveryRuleResponse> rules) {
+        public Builder rules(List<DeliveryRuleResponse> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }

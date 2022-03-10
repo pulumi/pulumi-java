@@ -269,142 +269,142 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setContent(@Nullable Input<String> content) {
+        public Builder content(@Nullable Input<String> content) {
             this.content = content;
             return this;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = Input.ofNullable(content);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setEntitiesFilter(@Nullable Input<Map<String,List<String>>> entitiesFilter) {
+        public Builder entitiesFilter(@Nullable Input<Map<String,List<String>>> entitiesFilter) {
             this.entitiesFilter = entitiesFilter;
             return this;
         }
 
-        public Builder setEntitiesFilter(@Nullable Map<String,List<String>> entitiesFilter) {
+        public Builder entitiesFilter(@Nullable Map<String,List<String>> entitiesFilter) {
             this.entitiesFilter = Input.ofNullable(entitiesFilter);
             return this;
         }
 
-        public Builder setEntityQueryId(@Nullable Input<String> entityQueryId) {
+        public Builder entityQueryId(@Nullable Input<String> entityQueryId) {
             this.entityQueryId = entityQueryId;
             return this;
         }
 
-        public Builder setEntityQueryId(@Nullable String entityQueryId) {
+        public Builder entityQueryId(@Nullable String entityQueryId) {
             this.entityQueryId = Input.ofNullable(entityQueryId);
             return this;
         }
 
-        public Builder setInputEntityType(@Nullable Input<Either<String,EntityType>> inputEntityType) {
+        public Builder inputEntityType(@Nullable Input<Either<String,EntityType>> inputEntityType) {
             this.inputEntityType = inputEntityType;
             return this;
         }
 
-        public Builder setInputEntityType(@Nullable Either<String,EntityType> inputEntityType) {
+        public Builder inputEntityType(@Nullable Either<String,EntityType> inputEntityType) {
             this.inputEntityType = Input.ofNullable(inputEntityType);
             return this;
         }
 
-        public Builder setKind(Input<String> kind) {
+        public Builder kind(Input<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setOperationalInsightsResourceProvider(Input<String> operationalInsightsResourceProvider) {
+        public Builder operationalInsightsResourceProvider(Input<String> operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
 
-        public Builder setOperationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
+        public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Input.of(Objects.requireNonNull(operationalInsightsResourceProvider));
             return this;
         }
 
-        public Builder setQueryDefinitions(@Nullable Input<ActivityEntityQueriesPropertiesQueryDefinitionsArgs> queryDefinitions) {
+        public Builder queryDefinitions(@Nullable Input<ActivityEntityQueriesPropertiesQueryDefinitionsArgs> queryDefinitions) {
             this.queryDefinitions = queryDefinitions;
             return this;
         }
 
-        public Builder setQueryDefinitions(@Nullable ActivityEntityQueriesPropertiesQueryDefinitionsArgs queryDefinitions) {
+        public Builder queryDefinitions(@Nullable ActivityEntityQueriesPropertiesQueryDefinitionsArgs queryDefinitions) {
             this.queryDefinitions = Input.ofNullable(queryDefinitions);
             return this;
         }
 
-        public Builder setRequiredInputFieldsSets(@Nullable Input<List<List<String>>> requiredInputFieldsSets) {
+        public Builder requiredInputFieldsSets(@Nullable Input<List<List<String>>> requiredInputFieldsSets) {
             this.requiredInputFieldsSets = requiredInputFieldsSets;
             return this;
         }
 
-        public Builder setRequiredInputFieldsSets(@Nullable List<List<String>> requiredInputFieldsSets) {
+        public Builder requiredInputFieldsSets(@Nullable List<List<String>> requiredInputFieldsSets) {
             this.requiredInputFieldsSets = Input.ofNullable(requiredInputFieldsSets);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTemplateName(@Nullable Input<String> templateName) {
+        public Builder templateName(@Nullable Input<String> templateName) {
             this.templateName = templateName;
             return this;
         }
 
-        public Builder setTemplateName(@Nullable String templateName) {
+        public Builder templateName(@Nullable String templateName) {
             this.templateName = Input.ofNullable(templateName);
             return this;
         }
 
-        public Builder setTitle(@Nullable Input<String> title) {
+        public Builder title(@Nullable Input<String> title) {
             this.title = title;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = Input.ofNullable(title);
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

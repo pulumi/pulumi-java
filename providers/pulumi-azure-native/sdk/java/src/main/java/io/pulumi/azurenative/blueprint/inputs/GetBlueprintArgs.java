@@ -68,12 +68,12 @@ public final class GetBlueprintArgs extends io.pulumi.resources.InvokeArgs {
     	      this.resourceScope = defaults.resourceScope;
         }
 
-        public Builder setBlueprintName(String blueprintName) {
+        public Builder blueprintName(String blueprintName) {
             this.blueprintName = Objects.requireNonNull(blueprintName);
             return this;
         }
 
-        public Builder setResourceScope(String resourceScope) {
+        public Builder resourceScope(String resourceScope) {
             this.resourceScope = Objects.requireNonNull(resourceScope);
             return this;
         }

@@ -169,82 +169,82 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
     	      this.template = defaults.template;
         }
 
-        public Builder setConfiguration(@Nullable Input<ConfigurationArgs> configuration) {
+        public Builder configuration(@Nullable Input<ConfigurationArgs> configuration) {
             this.configuration = configuration;
             return this;
         }
 
-        public Builder setConfiguration(@Nullable ConfigurationArgs configuration) {
+        public Builder configuration(@Nullable ConfigurationArgs configuration) {
             this.configuration = Input.ofNullable(configuration);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setKubeEnvironmentId(@Nullable Input<String> kubeEnvironmentId) {
+        public Builder kubeEnvironmentId(@Nullable Input<String> kubeEnvironmentId) {
             this.kubeEnvironmentId = kubeEnvironmentId;
             return this;
         }
 
-        public Builder setKubeEnvironmentId(@Nullable String kubeEnvironmentId) {
+        public Builder kubeEnvironmentId(@Nullable String kubeEnvironmentId) {
             this.kubeEnvironmentId = Input.ofNullable(kubeEnvironmentId);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTemplate(@Nullable Input<TemplateArgs> template) {
+        public Builder template(@Nullable Input<TemplateArgs> template) {
             this.template = template;
             return this;
         }
 
-        public Builder setTemplate(@Nullable TemplateArgs template) {
+        public Builder template(@Nullable TemplateArgs template) {
             this.template = Input.ofNullable(template);
             return this;
         }

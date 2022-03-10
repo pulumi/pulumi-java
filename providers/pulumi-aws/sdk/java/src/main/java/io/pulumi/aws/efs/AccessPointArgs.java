@@ -105,42 +105,42 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setFileSystemId(Input<String> fileSystemId) {
+        public Builder fileSystemId(Input<String> fileSystemId) {
             this.fileSystemId = Objects.requireNonNull(fileSystemId);
             return this;
         }
 
-        public Builder setFileSystemId(String fileSystemId) {
+        public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = Input.of(Objects.requireNonNull(fileSystemId));
             return this;
         }
 
-        public Builder setPosixUser(@Nullable Input<AccessPointPosixUserArgs> posixUser) {
+        public Builder posixUser(@Nullable Input<AccessPointPosixUserArgs> posixUser) {
             this.posixUser = posixUser;
             return this;
         }
 
-        public Builder setPosixUser(@Nullable AccessPointPosixUserArgs posixUser) {
+        public Builder posixUser(@Nullable AccessPointPosixUserArgs posixUser) {
             this.posixUser = Input.ofNullable(posixUser);
             return this;
         }
 
-        public Builder setRootDirectory(@Nullable Input<AccessPointRootDirectoryArgs> rootDirectory) {
+        public Builder rootDirectory(@Nullable Input<AccessPointRootDirectoryArgs> rootDirectory) {
             this.rootDirectory = rootDirectory;
             return this;
         }
 
-        public Builder setRootDirectory(@Nullable AccessPointRootDirectoryArgs rootDirectory) {
+        public Builder rootDirectory(@Nullable AccessPointRootDirectoryArgs rootDirectory) {
             this.rootDirectory = Input.ofNullable(rootDirectory);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -55,7 +55,7 @@ public final class GoogleCloudMlV1__ContainerPortResponse extends io.pulumi.reso
     	      this.containerPort = defaults.containerPort;
         }
 
-        public Builder setContainerPort(Integer containerPort) {
+        public Builder containerPort(Integer containerPort) {
             this.containerPort = Objects.requireNonNull(containerPort);
             return this;
         }

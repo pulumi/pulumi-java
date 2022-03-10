@@ -67,12 +67,12 @@ public final class DistributionOrderedCacheBehaviorFunctionAssociation {
     	      this.functionArn = defaults.functionArn;
         }
 
-        public Builder setEventType(String eventType) {
+        public Builder eventType(String eventType) {
             this.eventType = Objects.requireNonNull(eventType);
             return this;
         }
 
-        public Builder setFunctionArn(String functionArn) {
+        public Builder functionArn(String functionArn) {
             this.functionArn = Objects.requireNonNull(functionArn);
             return this;
         }

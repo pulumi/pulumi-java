@@ -57,7 +57,7 @@ public final class VMResourcesResponse extends io.pulumi.resources.InvokeArgs {
     	      this.vmResourceId = defaults.vmResourceId;
         }
 
-        public Builder setVmResourceId(@Nullable String vmResourceId) {
+        public Builder vmResourceId(@Nullable String vmResourceId) {
             this.vmResourceId = vmResourceId;
             return this;
         }

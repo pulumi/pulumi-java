@@ -81,17 +81,17 @@ public final class PosixGroupResponse {
     	      this.systemId = defaults.systemId;
         }
 
-        public Builder setGid(String gid) {
+        public Builder gid(String gid) {
             this.gid = Objects.requireNonNull(gid);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSystemId(String systemId) {
+        public Builder systemId(String systemId) {
             this.systemId = Objects.requireNonNull(systemId);
             return this;
         }

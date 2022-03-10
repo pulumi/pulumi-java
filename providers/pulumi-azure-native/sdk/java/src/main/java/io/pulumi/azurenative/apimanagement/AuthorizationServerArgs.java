@@ -350,192 +350,192 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
     	      this.tokenEndpoint = defaults.tokenEndpoint;
         }
 
-        public Builder setAuthorizationEndpoint(Input<String> authorizationEndpoint) {
+        public Builder authorizationEndpoint(Input<String> authorizationEndpoint) {
             this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint);
             return this;
         }
 
-        public Builder setAuthorizationEndpoint(String authorizationEndpoint) {
+        public Builder authorizationEndpoint(String authorizationEndpoint) {
             this.authorizationEndpoint = Input.of(Objects.requireNonNull(authorizationEndpoint));
             return this;
         }
 
-        public Builder setAuthorizationMethods(@Nullable Input<List<AuthorizationMethod>> authorizationMethods) {
+        public Builder authorizationMethods(@Nullable Input<List<AuthorizationMethod>> authorizationMethods) {
             this.authorizationMethods = authorizationMethods;
             return this;
         }
 
-        public Builder setAuthorizationMethods(@Nullable List<AuthorizationMethod> authorizationMethods) {
+        public Builder authorizationMethods(@Nullable List<AuthorizationMethod> authorizationMethods) {
             this.authorizationMethods = Input.ofNullable(authorizationMethods);
             return this;
         }
 
-        public Builder setAuthsid(@Nullable Input<String> authsid) {
+        public Builder authsid(@Nullable Input<String> authsid) {
             this.authsid = authsid;
             return this;
         }
 
-        public Builder setAuthsid(@Nullable String authsid) {
+        public Builder authsid(@Nullable String authsid) {
             this.authsid = Input.ofNullable(authsid);
             return this;
         }
 
-        public Builder setBearerTokenSendingMethods(@Nullable Input<List<Either<String,BearerTokenSendingMethod>>> bearerTokenSendingMethods) {
+        public Builder bearerTokenSendingMethods(@Nullable Input<List<Either<String,BearerTokenSendingMethod>>> bearerTokenSendingMethods) {
             this.bearerTokenSendingMethods = bearerTokenSendingMethods;
             return this;
         }
 
-        public Builder setBearerTokenSendingMethods(@Nullable List<Either<String,BearerTokenSendingMethod>> bearerTokenSendingMethods) {
+        public Builder bearerTokenSendingMethods(@Nullable List<Either<String,BearerTokenSendingMethod>> bearerTokenSendingMethods) {
             this.bearerTokenSendingMethods = Input.ofNullable(bearerTokenSendingMethods);
             return this;
         }
 
-        public Builder setClientAuthenticationMethod(@Nullable Input<List<Either<String,ClientAuthenticationMethod>>> clientAuthenticationMethod) {
+        public Builder clientAuthenticationMethod(@Nullable Input<List<Either<String,ClientAuthenticationMethod>>> clientAuthenticationMethod) {
             this.clientAuthenticationMethod = clientAuthenticationMethod;
             return this;
         }
 
-        public Builder setClientAuthenticationMethod(@Nullable List<Either<String,ClientAuthenticationMethod>> clientAuthenticationMethod) {
+        public Builder clientAuthenticationMethod(@Nullable List<Either<String,ClientAuthenticationMethod>> clientAuthenticationMethod) {
             this.clientAuthenticationMethod = Input.ofNullable(clientAuthenticationMethod);
             return this;
         }
 
-        public Builder setClientId(Input<String> clientId) {
+        public Builder clientId(Input<String> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
-        public Builder setClientId(String clientId) {
+        public Builder clientId(String clientId) {
             this.clientId = Input.of(Objects.requireNonNull(clientId));
             return this;
         }
 
-        public Builder setClientRegistrationEndpoint(Input<String> clientRegistrationEndpoint) {
+        public Builder clientRegistrationEndpoint(Input<String> clientRegistrationEndpoint) {
             this.clientRegistrationEndpoint = Objects.requireNonNull(clientRegistrationEndpoint);
             return this;
         }
 
-        public Builder setClientRegistrationEndpoint(String clientRegistrationEndpoint) {
+        public Builder clientRegistrationEndpoint(String clientRegistrationEndpoint) {
             this.clientRegistrationEndpoint = Input.of(Objects.requireNonNull(clientRegistrationEndpoint));
             return this;
         }
 
-        public Builder setClientSecret(@Nullable Input<String> clientSecret) {
+        public Builder clientSecret(@Nullable Input<String> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
-        public Builder setClientSecret(@Nullable String clientSecret) {
+        public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = Input.ofNullable(clientSecret);
             return this;
         }
 
-        public Builder setDefaultScope(@Nullable Input<String> defaultScope) {
+        public Builder defaultScope(@Nullable Input<String> defaultScope) {
             this.defaultScope = defaultScope;
             return this;
         }
 
-        public Builder setDefaultScope(@Nullable String defaultScope) {
+        public Builder defaultScope(@Nullable String defaultScope) {
             this.defaultScope = Input.ofNullable(defaultScope);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setGrantTypes(Input<List<Either<String,GrantType>>> grantTypes) {
+        public Builder grantTypes(Input<List<Either<String,GrantType>>> grantTypes) {
             this.grantTypes = Objects.requireNonNull(grantTypes);
             return this;
         }
 
-        public Builder setGrantTypes(List<Either<String,GrantType>> grantTypes) {
+        public Builder grantTypes(List<Either<String,GrantType>> grantTypes) {
             this.grantTypes = Input.of(Objects.requireNonNull(grantTypes));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceOwnerPassword(@Nullable Input<String> resourceOwnerPassword) {
+        public Builder resourceOwnerPassword(@Nullable Input<String> resourceOwnerPassword) {
             this.resourceOwnerPassword = resourceOwnerPassword;
             return this;
         }
 
-        public Builder setResourceOwnerPassword(@Nullable String resourceOwnerPassword) {
+        public Builder resourceOwnerPassword(@Nullable String resourceOwnerPassword) {
             this.resourceOwnerPassword = Input.ofNullable(resourceOwnerPassword);
             return this;
         }
 
-        public Builder setResourceOwnerUsername(@Nullable Input<String> resourceOwnerUsername) {
+        public Builder resourceOwnerUsername(@Nullable Input<String> resourceOwnerUsername) {
             this.resourceOwnerUsername = resourceOwnerUsername;
             return this;
         }
 
-        public Builder setResourceOwnerUsername(@Nullable String resourceOwnerUsername) {
+        public Builder resourceOwnerUsername(@Nullable String resourceOwnerUsername) {
             this.resourceOwnerUsername = Input.ofNullable(resourceOwnerUsername);
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder setSupportState(@Nullable Input<Boolean> supportState) {
+        public Builder supportState(@Nullable Input<Boolean> supportState) {
             this.supportState = supportState;
             return this;
         }
 
-        public Builder setSupportState(@Nullable Boolean supportState) {
+        public Builder supportState(@Nullable Boolean supportState) {
             this.supportState = Input.ofNullable(supportState);
             return this;
         }
 
-        public Builder setTokenBodyParameters(@Nullable Input<List<TokenBodyParameterContractArgs>> tokenBodyParameters) {
+        public Builder tokenBodyParameters(@Nullable Input<List<TokenBodyParameterContractArgs>> tokenBodyParameters) {
             this.tokenBodyParameters = tokenBodyParameters;
             return this;
         }
 
-        public Builder setTokenBodyParameters(@Nullable List<TokenBodyParameterContractArgs> tokenBodyParameters) {
+        public Builder tokenBodyParameters(@Nullable List<TokenBodyParameterContractArgs> tokenBodyParameters) {
             this.tokenBodyParameters = Input.ofNullable(tokenBodyParameters);
             return this;
         }
 
-        public Builder setTokenEndpoint(@Nullable Input<String> tokenEndpoint) {
+        public Builder tokenEndpoint(@Nullable Input<String> tokenEndpoint) {
             this.tokenEndpoint = tokenEndpoint;
             return this;
         }
 
-        public Builder setTokenEndpoint(@Nullable String tokenEndpoint) {
+        public Builder tokenEndpoint(@Nullable String tokenEndpoint) {
             this.tokenEndpoint = Input.ofNullable(tokenEndpoint);
             return this;
         }

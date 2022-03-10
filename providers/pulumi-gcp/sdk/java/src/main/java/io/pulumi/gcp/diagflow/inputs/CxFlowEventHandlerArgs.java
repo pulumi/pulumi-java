@@ -123,52 +123,52 @@ public final class CxFlowEventHandlerArgs extends io.pulumi.resources.ResourceAr
     	      this.triggerFulfillment = defaults.triggerFulfillment;
         }
 
-        public Builder setEvent(@Nullable Input<String> event) {
+        public Builder event(@Nullable Input<String> event) {
             this.event = event;
             return this;
         }
 
-        public Builder setEvent(@Nullable String event) {
+        public Builder event(@Nullable String event) {
             this.event = Input.ofNullable(event);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTargetFlow(@Nullable Input<String> targetFlow) {
+        public Builder targetFlow(@Nullable Input<String> targetFlow) {
             this.targetFlow = targetFlow;
             return this;
         }
 
-        public Builder setTargetFlow(@Nullable String targetFlow) {
+        public Builder targetFlow(@Nullable String targetFlow) {
             this.targetFlow = Input.ofNullable(targetFlow);
             return this;
         }
 
-        public Builder setTargetPage(@Nullable Input<String> targetPage) {
+        public Builder targetPage(@Nullable Input<String> targetPage) {
             this.targetPage = targetPage;
             return this;
         }
 
-        public Builder setTargetPage(@Nullable String targetPage) {
+        public Builder targetPage(@Nullable String targetPage) {
             this.targetPage = Input.ofNullable(targetPage);
             return this;
         }
 
-        public Builder setTriggerFulfillment(@Nullable Input<CxFlowEventHandlerTriggerFulfillmentArgs> triggerFulfillment) {
+        public Builder triggerFulfillment(@Nullable Input<CxFlowEventHandlerTriggerFulfillmentArgs> triggerFulfillment) {
             this.triggerFulfillment = triggerFulfillment;
             return this;
         }
 
-        public Builder setTriggerFulfillment(@Nullable CxFlowEventHandlerTriggerFulfillmentArgs triggerFulfillment) {
+        public Builder triggerFulfillment(@Nullable CxFlowEventHandlerTriggerFulfillmentArgs triggerFulfillment) {
             this.triggerFulfillment = Input.ofNullable(triggerFulfillment);
             return this;
         }

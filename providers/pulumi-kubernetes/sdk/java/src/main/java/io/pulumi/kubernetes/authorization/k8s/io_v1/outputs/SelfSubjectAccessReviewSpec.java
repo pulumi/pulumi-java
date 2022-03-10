@@ -68,12 +68,12 @@ public final class SelfSubjectAccessReviewSpec {
     	      this.resourceAttributes = defaults.resourceAttributes;
         }
 
-        public Builder setNonResourceAttributes(@Nullable NonResourceAttributes nonResourceAttributes) {
+        public Builder nonResourceAttributes(@Nullable NonResourceAttributes nonResourceAttributes) {
             this.nonResourceAttributes = nonResourceAttributes;
             return this;
         }
 
-        public Builder setResourceAttributes(@Nullable ResourceAttributes resourceAttributes) {
+        public Builder resourceAttributes(@Nullable ResourceAttributes resourceAttributes) {
             this.resourceAttributes = resourceAttributes;
             return this;
         }

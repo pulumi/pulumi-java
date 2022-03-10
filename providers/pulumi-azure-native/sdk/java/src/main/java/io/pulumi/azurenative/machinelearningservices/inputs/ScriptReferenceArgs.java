@@ -106,42 +106,42 @@ public final class ScriptReferenceArgs extends io.pulumi.resources.ResourceArgs 
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setScriptArguments(@Nullable Input<String> scriptArguments) {
+        public Builder scriptArguments(@Nullable Input<String> scriptArguments) {
             this.scriptArguments = scriptArguments;
             return this;
         }
 
-        public Builder setScriptArguments(@Nullable String scriptArguments) {
+        public Builder scriptArguments(@Nullable String scriptArguments) {
             this.scriptArguments = Input.ofNullable(scriptArguments);
             return this;
         }
 
-        public Builder setScriptData(@Nullable Input<String> scriptData) {
+        public Builder scriptData(@Nullable Input<String> scriptData) {
             this.scriptData = scriptData;
             return this;
         }
 
-        public Builder setScriptData(@Nullable String scriptData) {
+        public Builder scriptData(@Nullable String scriptData) {
             this.scriptData = Input.ofNullable(scriptData);
             return this;
         }
 
-        public Builder setScriptSource(@Nullable Input<String> scriptSource) {
+        public Builder scriptSource(@Nullable Input<String> scriptSource) {
             this.scriptSource = scriptSource;
             return this;
         }
 
-        public Builder setScriptSource(@Nullable String scriptSource) {
+        public Builder scriptSource(@Nullable String scriptSource) {
             this.scriptSource = Input.ofNullable(scriptSource);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<String> timeout) {
+        public Builder timeout(@Nullable Input<String> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable String timeout) {
+        public Builder timeout(@Nullable String timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }

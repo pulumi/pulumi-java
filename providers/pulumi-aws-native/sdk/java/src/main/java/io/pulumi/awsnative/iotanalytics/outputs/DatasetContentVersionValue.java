@@ -40,7 +40,7 @@ public final class DatasetContentVersionValue {
     	      this.datasetName = defaults.datasetName;
         }
 
-        public Builder setDatasetName(String datasetName) {
+        public Builder datasetName(String datasetName) {
             this.datasetName = Objects.requireNonNull(datasetName);
             return this;
         }

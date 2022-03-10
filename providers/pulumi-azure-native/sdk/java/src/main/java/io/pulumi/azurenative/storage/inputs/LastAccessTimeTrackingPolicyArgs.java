@@ -111,42 +111,42 @@ public final class LastAccessTimeTrackingPolicyArgs extends io.pulumi.resources.
     	      this.trackingGranularityInDays = defaults.trackingGranularityInDays;
         }
 
-        public Builder setBlobType(@Nullable Input<List<String>> blobType) {
+        public Builder blobType(@Nullable Input<List<String>> blobType) {
             this.blobType = blobType;
             return this;
         }
 
-        public Builder setBlobType(@Nullable List<String> blobType) {
+        public Builder blobType(@Nullable List<String> blobType) {
             this.blobType = Input.ofNullable(blobType);
             return this;
         }
 
-        public Builder setEnable(Input<Boolean> enable) {
+        public Builder enable(Input<Boolean> enable) {
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
 
-        public Builder setEnable(Boolean enable) {
+        public Builder enable(Boolean enable) {
             this.enable = Input.of(Objects.requireNonNull(enable));
             return this;
         }
 
-        public Builder setName(@Nullable Input<Either<String,Name>> name) {
+        public Builder name(@Nullable Input<Either<String,Name>> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable Either<String,Name> name) {
+        public Builder name(@Nullable Either<String,Name> name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTrackingGranularityInDays(@Nullable Input<Integer> trackingGranularityInDays) {
+        public Builder trackingGranularityInDays(@Nullable Input<Integer> trackingGranularityInDays) {
             this.trackingGranularityInDays = trackingGranularityInDays;
             return this;
         }
 
-        public Builder setTrackingGranularityInDays(@Nullable Integer trackingGranularityInDays) {
+        public Builder trackingGranularityInDays(@Nullable Integer trackingGranularityInDays) {
             this.trackingGranularityInDays = Input.ofNullable(trackingGranularityInDays);
             return this;
         }

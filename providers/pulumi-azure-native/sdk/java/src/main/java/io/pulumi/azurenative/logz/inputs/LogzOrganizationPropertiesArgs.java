@@ -86,32 +86,32 @@ public final class LogzOrganizationPropertiesArgs extends io.pulumi.resources.Re
     	      this.singleSignOnUrl = defaults.singleSignOnUrl;
         }
 
-        public Builder setCompanyName(@Nullable Input<String> companyName) {
+        public Builder companyName(@Nullable Input<String> companyName) {
             this.companyName = companyName;
             return this;
         }
 
-        public Builder setCompanyName(@Nullable String companyName) {
+        public Builder companyName(@Nullable String companyName) {
             this.companyName = Input.ofNullable(companyName);
             return this;
         }
 
-        public Builder setEnterpriseAppId(@Nullable Input<String> enterpriseAppId) {
+        public Builder enterpriseAppId(@Nullable Input<String> enterpriseAppId) {
             this.enterpriseAppId = enterpriseAppId;
             return this;
         }
 
-        public Builder setEnterpriseAppId(@Nullable String enterpriseAppId) {
+        public Builder enterpriseAppId(@Nullable String enterpriseAppId) {
             this.enterpriseAppId = Input.ofNullable(enterpriseAppId);
             return this;
         }
 
-        public Builder setSingleSignOnUrl(@Nullable Input<String> singleSignOnUrl) {
+        public Builder singleSignOnUrl(@Nullable Input<String> singleSignOnUrl) {
             this.singleSignOnUrl = singleSignOnUrl;
             return this;
         }
 
-        public Builder setSingleSignOnUrl(@Nullable String singleSignOnUrl) {
+        public Builder singleSignOnUrl(@Nullable String singleSignOnUrl) {
             this.singleSignOnUrl = Input.ofNullable(singleSignOnUrl);
             return this;
         }

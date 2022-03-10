@@ -325,182 +325,182 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topk = defaults.topk;
         }
 
-        public Builder setChartType(@Nullable Input<String> chartType) {
+        public Builder chartType(@Nullable Input<String> chartType) {
             this.chartType = chartType;
             return this;
         }
 
-        public Builder setChartType(@Nullable String chartType) {
+        public Builder chartType(@Nullable String chartType) {
             this.chartType = Input.ofNullable(chartType);
             return this;
         }
 
-        public Builder setComments(@Nullable Input<List<String>> comments) {
+        public Builder comments(@Nullable Input<List<String>> comments) {
             this.comments = comments;
             return this;
         }
 
-        public Builder setComments(@Nullable List<String> comments) {
+        public Builder comments(@Nullable List<String> comments) {
             this.comments = Input.ofNullable(comments);
             return this;
         }
 
-        public Builder setDimensions(@Nullable Input<List<String>> dimensions) {
+        public Builder dimensions(@Nullable Input<List<String>> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
 
-        public Builder setDimensions(@Nullable List<String> dimensions) {
+        public Builder dimensions(@Nullable List<String> dimensions) {
             this.dimensions = Input.ofNullable(dimensions);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setFilter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Input<String> filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFilter(@Nullable String filter) {
+        public Builder filter(@Nullable String filter) {
             this.filter = Input.ofNullable(filter);
             return this;
         }
 
-        public Builder setFromTime(@Nullable Input<String> fromTime) {
+        public Builder fromTime(@Nullable Input<String> fromTime) {
             this.fromTime = fromTime;
             return this;
         }
 
-        public Builder setFromTime(@Nullable String fromTime) {
+        public Builder fromTime(@Nullable String fromTime) {
             this.fromTime = Input.ofNullable(fromTime);
             return this;
         }
 
-        public Builder setLimit(@Nullable Input<String> limit) {
+        public Builder limit(@Nullable Input<String> limit) {
             this.limit = limit;
             return this;
         }
 
-        public Builder setLimit(@Nullable String limit) {
+        public Builder limit(@Nullable String limit) {
             this.limit = Input.ofNullable(limit);
             return this;
         }
 
-        public Builder setMetrics(Input<List<GoogleCloudApigeeV1CustomReportMetricArgs>> metrics) {
+        public Builder metrics(Input<List<GoogleCloudApigeeV1CustomReportMetricArgs>> metrics) {
             this.metrics = Objects.requireNonNull(metrics);
             return this;
         }
 
-        public Builder setMetrics(List<GoogleCloudApigeeV1CustomReportMetricArgs> metrics) {
+        public Builder metrics(List<GoogleCloudApigeeV1CustomReportMetricArgs> metrics) {
             this.metrics = Input.of(Objects.requireNonNull(metrics));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOffset(@Nullable Input<String> offset) {
+        public Builder offset(@Nullable Input<String> offset) {
             this.offset = offset;
             return this;
         }
 
-        public Builder setOffset(@Nullable String offset) {
+        public Builder offset(@Nullable String offset) {
             this.offset = Input.ofNullable(offset);
             return this;
         }
 
-        public Builder setOrganizationId(Input<String> organizationId) {
+        public Builder organizationId(Input<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Input.of(Objects.requireNonNull(organizationId));
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<List<GoogleCloudApigeeV1ReportPropertyArgs>> properties) {
+        public Builder properties(@Nullable Input<List<GoogleCloudApigeeV1ReportPropertyArgs>> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable List<GoogleCloudApigeeV1ReportPropertyArgs> properties) {
+        public Builder properties(@Nullable List<GoogleCloudApigeeV1ReportPropertyArgs> properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setSortByCols(@Nullable Input<List<String>> sortByCols) {
+        public Builder sortByCols(@Nullable Input<List<String>> sortByCols) {
             this.sortByCols = sortByCols;
             return this;
         }
 
-        public Builder setSortByCols(@Nullable List<String> sortByCols) {
+        public Builder sortByCols(@Nullable List<String> sortByCols) {
             this.sortByCols = Input.ofNullable(sortByCols);
             return this;
         }
 
-        public Builder setSortOrder(@Nullable Input<String> sortOrder) {
+        public Builder sortOrder(@Nullable Input<String> sortOrder) {
             this.sortOrder = sortOrder;
             return this;
         }
 
-        public Builder setSortOrder(@Nullable String sortOrder) {
+        public Builder sortOrder(@Nullable String sortOrder) {
             this.sortOrder = Input.ofNullable(sortOrder);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Input<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<String> tags) {
+        public Builder tags(@Nullable List<String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTimeUnit(@Nullable Input<String> timeUnit) {
+        public Builder timeUnit(@Nullable Input<String> timeUnit) {
             this.timeUnit = timeUnit;
             return this;
         }
 
-        public Builder setTimeUnit(@Nullable String timeUnit) {
+        public Builder timeUnit(@Nullable String timeUnit) {
             this.timeUnit = Input.ofNullable(timeUnit);
             return this;
         }
 
-        public Builder setToTime(@Nullable Input<String> toTime) {
+        public Builder toTime(@Nullable Input<String> toTime) {
             this.toTime = toTime;
             return this;
         }
 
-        public Builder setToTime(@Nullable String toTime) {
+        public Builder toTime(@Nullable String toTime) {
             this.toTime = Input.ofNullable(toTime);
             return this;
         }
 
-        public Builder setTopk(@Nullable Input<String> topk) {
+        public Builder topk(@Nullable Input<String> topk) {
             this.topk = topk;
             return this;
         }
 
-        public Builder setTopk(@Nullable String topk) {
+        public Builder topk(@Nullable String topk) {
             this.topk = Input.ofNullable(topk);
             return this;
         }

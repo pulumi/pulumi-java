@@ -140,62 +140,62 @@ public final class RuleGroupRuleGetArgs extends io.pulumi.resources.ResourceArgs
     	      this.visibilityConfig = defaults.visibilityConfig;
         }
 
-        public Builder setAction(Input<RuleGroupRuleActionGetArgs> action) {
+        public Builder action(Input<RuleGroupRuleActionGetArgs> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setAction(RuleGroupRuleActionGetArgs action) {
+        public Builder action(RuleGroupRuleActionGetArgs action) {
             this.action = Input.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setPriority(Input<Integer> priority) {
+        public Builder priority(Input<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Input.of(Objects.requireNonNull(priority));
             return this;
         }
 
-        public Builder setRuleLabels(@Nullable Input<List<RuleGroupRuleRuleLabelGetArgs>> ruleLabels) {
+        public Builder ruleLabels(@Nullable Input<List<RuleGroupRuleRuleLabelGetArgs>> ruleLabels) {
             this.ruleLabels = ruleLabels;
             return this;
         }
 
-        public Builder setRuleLabels(@Nullable List<RuleGroupRuleRuleLabelGetArgs> ruleLabels) {
+        public Builder ruleLabels(@Nullable List<RuleGroupRuleRuleLabelGetArgs> ruleLabels) {
             this.ruleLabels = Input.ofNullable(ruleLabels);
             return this;
         }
 
-        public Builder setStatement(Input<RuleGroupRuleStatementGetArgs> statement) {
+        public Builder statement(Input<RuleGroupRuleStatementGetArgs> statement) {
             this.statement = Objects.requireNonNull(statement);
             return this;
         }
 
-        public Builder setStatement(RuleGroupRuleStatementGetArgs statement) {
+        public Builder statement(RuleGroupRuleStatementGetArgs statement) {
             this.statement = Input.of(Objects.requireNonNull(statement));
             return this;
         }
 
-        public Builder setVisibilityConfig(Input<RuleGroupRuleVisibilityConfigGetArgs> visibilityConfig) {
+        public Builder visibilityConfig(Input<RuleGroupRuleVisibilityConfigGetArgs> visibilityConfig) {
             this.visibilityConfig = Objects.requireNonNull(visibilityConfig);
             return this;
         }
 
-        public Builder setVisibilityConfig(RuleGroupRuleVisibilityConfigGetArgs visibilityConfig) {
+        public Builder visibilityConfig(RuleGroupRuleVisibilityConfigGetArgs visibilityConfig) {
             this.visibilityConfig = Input.of(Objects.requireNonNull(visibilityConfig));
             return this;
         }

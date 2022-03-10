@@ -68,12 +68,12 @@ public final class FailoverSetEligibilityResultResponse {
     	      this.isEligibleForFailover = defaults.isEligibleForFailover;
         }
 
-        public Builder setErrorMessage(@Nullable String errorMessage) {
+        public Builder errorMessage(@Nullable String errorMessage) {
             this.errorMessage = errorMessage;
             return this;
         }
 
-        public Builder setIsEligibleForFailover(@Nullable Boolean isEligibleForFailover) {
+        public Builder isEligibleForFailover(@Nullable Boolean isEligibleForFailover) {
             this.isEligibleForFailover = isEligibleForFailover;
             return this;
         }

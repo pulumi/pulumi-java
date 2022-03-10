@@ -82,17 +82,17 @@ public final class PickTimeSeriesFilterResponse {
     	      this.rankingMethod = defaults.rankingMethod;
         }
 
-        public Builder setDirection(String direction) {
+        public Builder direction(String direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
-        public Builder setNumTimeSeries(Integer numTimeSeries) {
+        public Builder numTimeSeries(Integer numTimeSeries) {
             this.numTimeSeries = Objects.requireNonNull(numTimeSeries);
             return this;
         }
 
-        public Builder setRankingMethod(String rankingMethod) {
+        public Builder rankingMethod(String rankingMethod) {
             this.rankingMethod = Objects.requireNonNull(rankingMethod);
             return this;
         }

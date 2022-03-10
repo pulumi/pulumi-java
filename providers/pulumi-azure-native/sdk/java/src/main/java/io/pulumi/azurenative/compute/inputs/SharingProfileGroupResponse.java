@@ -75,12 +75,12 @@ public final class SharingProfileGroupResponse extends io.pulumi.resources.Invok
     	      this.type = defaults.type;
         }
 
-        public Builder setIds(@Nullable List<String> ids) {
+        public Builder ids(@Nullable List<String> ids) {
             this.ids = ids;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

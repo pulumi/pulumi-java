@@ -152,72 +152,72 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setDataConnectionName(@Nullable Input<String> dataConnectionName) {
+        public Builder dataConnectionName(@Nullable Input<String> dataConnectionName) {
             this.dataConnectionName = dataConnectionName;
             return this;
         }
 
-        public Builder setDataConnectionName(@Nullable String dataConnectionName) {
+        public Builder dataConnectionName(@Nullable String dataConnectionName) {
             this.dataConnectionName = Input.ofNullable(dataConnectionName);
             return this;
         }
 
-        public Builder setDatabaseName(Input<String> databaseName) {
+        public Builder databaseName(Input<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Input.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder setKind(Input<Either<String,DataConnectionKind>> kind) {
+        public Builder kind(Input<Either<String,DataConnectionKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(Either<String,DataConnectionKind> kind) {
+        public Builder kind(Either<String,DataConnectionKind> kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setKustoPoolName(Input<String> kustoPoolName) {
+        public Builder kustoPoolName(Input<String> kustoPoolName) {
             this.kustoPoolName = Objects.requireNonNull(kustoPoolName);
             return this;
         }
 
-        public Builder setKustoPoolName(String kustoPoolName) {
+        public Builder kustoPoolName(String kustoPoolName) {
             this.kustoPoolName = Input.of(Objects.requireNonNull(kustoPoolName));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

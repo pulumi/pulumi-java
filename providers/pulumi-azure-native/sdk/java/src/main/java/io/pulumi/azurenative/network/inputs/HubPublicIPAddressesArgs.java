@@ -76,22 +76,22 @@ public final class HubPublicIPAddressesArgs extends io.pulumi.resources.Resource
     	      this.count = defaults.count;
         }
 
-        public Builder setAddresses(@Nullable Input<List<AzureFirewallPublicIPAddressArgs>> addresses) {
+        public Builder addresses(@Nullable Input<List<AzureFirewallPublicIPAddressArgs>> addresses) {
             this.addresses = addresses;
             return this;
         }
 
-        public Builder setAddresses(@Nullable List<AzureFirewallPublicIPAddressArgs> addresses) {
+        public Builder addresses(@Nullable List<AzureFirewallPublicIPAddressArgs> addresses) {
             this.addresses = Input.ofNullable(addresses);
             return this;
         }
 
-        public Builder setCount(@Nullable Input<Integer> count) {
+        public Builder count(@Nullable Input<Integer> count) {
             this.count = count;
             return this;
         }
 
-        public Builder setCount(@Nullable Integer count) {
+        public Builder count(@Nullable Integer count) {
             this.count = Input.ofNullable(count);
             return this;
         }

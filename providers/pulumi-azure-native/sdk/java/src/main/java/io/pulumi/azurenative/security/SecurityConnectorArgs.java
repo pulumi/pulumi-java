@@ -191,92 +191,92 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCloudName(@Nullable Input<Either<String,CloudName>> cloudName) {
+        public Builder cloudName(@Nullable Input<Either<String,CloudName>> cloudName) {
             this.cloudName = cloudName;
             return this;
         }
 
-        public Builder setCloudName(@Nullable Either<String,CloudName> cloudName) {
+        public Builder cloudName(@Nullable Either<String,CloudName> cloudName) {
             this.cloudName = Input.ofNullable(cloudName);
             return this;
         }
 
-        public Builder setHierarchyIdentifier(@Nullable Input<String> hierarchyIdentifier) {
+        public Builder hierarchyIdentifier(@Nullable Input<String> hierarchyIdentifier) {
             this.hierarchyIdentifier = hierarchyIdentifier;
             return this;
         }
 
-        public Builder setHierarchyIdentifier(@Nullable String hierarchyIdentifier) {
+        public Builder hierarchyIdentifier(@Nullable String hierarchyIdentifier) {
             this.hierarchyIdentifier = Input.ofNullable(hierarchyIdentifier);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setOfferings(@Nullable Input<List<Object>> offerings) {
+        public Builder offerings(@Nullable Input<List<Object>> offerings) {
             this.offerings = offerings;
             return this;
         }
 
-        public Builder setOfferings(@Nullable List<Object> offerings) {
+        public Builder offerings(@Nullable List<Object> offerings) {
             this.offerings = Input.ofNullable(offerings);
             return this;
         }
 
-        public Builder setOrganizationalData(@Nullable Input<SecurityConnectorPropertiesOrganizationalDataArgs> organizationalData) {
+        public Builder organizationalData(@Nullable Input<SecurityConnectorPropertiesOrganizationalDataArgs> organizationalData) {
             this.organizationalData = organizationalData;
             return this;
         }
 
-        public Builder setOrganizationalData(@Nullable SecurityConnectorPropertiesOrganizationalDataArgs organizationalData) {
+        public Builder organizationalData(@Nullable SecurityConnectorPropertiesOrganizationalDataArgs organizationalData) {
             this.organizationalData = Input.ofNullable(organizationalData);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSecurityConnectorName(@Nullable Input<String> securityConnectorName) {
+        public Builder securityConnectorName(@Nullable Input<String> securityConnectorName) {
             this.securityConnectorName = securityConnectorName;
             return this;
         }
 
-        public Builder setSecurityConnectorName(@Nullable String securityConnectorName) {
+        public Builder securityConnectorName(@Nullable String securityConnectorName) {
             this.securityConnectorName = Input.ofNullable(securityConnectorName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

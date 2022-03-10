@@ -109,42 +109,42 @@ public final class SpacecraftLinkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.polarization = defaults.polarization;
         }
 
-        public Builder setBandwidthMHz(Input<Double> bandwidthMHz) {
+        public Builder bandwidthMHz(Input<Double> bandwidthMHz) {
             this.bandwidthMHz = Objects.requireNonNull(bandwidthMHz);
             return this;
         }
 
-        public Builder setBandwidthMHz(Double bandwidthMHz) {
+        public Builder bandwidthMHz(Double bandwidthMHz) {
             this.bandwidthMHz = Input.of(Objects.requireNonNull(bandwidthMHz));
             return this;
         }
 
-        public Builder setCenterFrequencyMHz(Input<Double> centerFrequencyMHz) {
+        public Builder centerFrequencyMHz(Input<Double> centerFrequencyMHz) {
             this.centerFrequencyMHz = Objects.requireNonNull(centerFrequencyMHz);
             return this;
         }
 
-        public Builder setCenterFrequencyMHz(Double centerFrequencyMHz) {
+        public Builder centerFrequencyMHz(Double centerFrequencyMHz) {
             this.centerFrequencyMHz = Input.of(Objects.requireNonNull(centerFrequencyMHz));
             return this;
         }
 
-        public Builder setDirection(Input<Either<String,Direction>> direction) {
+        public Builder direction(Input<Either<String,Direction>> direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
-        public Builder setDirection(Either<String,Direction> direction) {
+        public Builder direction(Either<String,Direction> direction) {
             this.direction = Input.of(Objects.requireNonNull(direction));
             return this;
         }
 
-        public Builder setPolarization(Input<Either<String,Polarization>> polarization) {
+        public Builder polarization(Input<Either<String,Polarization>> polarization) {
             this.polarization = Objects.requireNonNull(polarization);
             return this;
         }
 
-        public Builder setPolarization(Either<String,Polarization> polarization) {
+        public Builder polarization(Either<String,Polarization> polarization) {
             this.polarization = Input.of(Objects.requireNonNull(polarization));
             return this;
         }

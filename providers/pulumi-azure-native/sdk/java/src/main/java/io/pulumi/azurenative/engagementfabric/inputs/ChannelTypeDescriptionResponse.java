@@ -91,17 +91,17 @@ public final class ChannelTypeDescriptionResponse extends io.pulumi.resources.In
     	      this.channelType = defaults.channelType;
         }
 
-        public Builder setChannelDescription(@Nullable String channelDescription) {
+        public Builder channelDescription(@Nullable String channelDescription) {
             this.channelDescription = channelDescription;
             return this;
         }
 
-        public Builder setChannelFunctions(@Nullable List<String> channelFunctions) {
+        public Builder channelFunctions(@Nullable List<String> channelFunctions) {
             this.channelFunctions = channelFunctions;
             return this;
         }
 
-        public Builder setChannelType(@Nullable String channelType) {
+        public Builder channelType(@Nullable String channelType) {
             this.channelType = channelType;
             return this;
         }

@@ -74,22 +74,22 @@ public final class StatefulSetPersistentVolumeClaimRetentionPolicyArgs extends i
     	      this.whenScaled = defaults.whenScaled;
         }
 
-        public Builder setWhenDeleted(@Nullable Input<String> whenDeleted) {
+        public Builder whenDeleted(@Nullable Input<String> whenDeleted) {
             this.whenDeleted = whenDeleted;
             return this;
         }
 
-        public Builder setWhenDeleted(@Nullable String whenDeleted) {
+        public Builder whenDeleted(@Nullable String whenDeleted) {
             this.whenDeleted = Input.ofNullable(whenDeleted);
             return this;
         }
 
-        public Builder setWhenScaled(@Nullable Input<String> whenScaled) {
+        public Builder whenScaled(@Nullable Input<String> whenScaled) {
             this.whenScaled = whenScaled;
             return this;
         }
 
-        public Builder setWhenScaled(@Nullable String whenScaled) {
+        public Builder whenScaled(@Nullable String whenScaled) {
             this.whenScaled = Input.ofNullable(whenScaled);
             return this;
         }

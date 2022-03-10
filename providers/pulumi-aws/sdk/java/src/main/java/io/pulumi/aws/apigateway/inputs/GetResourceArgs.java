@@ -68,12 +68,12 @@ public final class GetResourceArgs extends io.pulumi.resources.InvokeArgs {
     	      this.restApiId = defaults.restApiId;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setRestApiId(String restApiId) {
+        public Builder restApiId(String restApiId) {
             this.restApiId = Objects.requireNonNull(restApiId);
             return this;
         }

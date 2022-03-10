@@ -136,72 +136,72 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
     	      this.spec = defaults.spec;
         }
 
-        public Builder setFeatureId(@Nullable Input<String> featureId) {
+        public Builder featureId(@Nullable Input<String> featureId) {
             this.featureId = featureId;
             return this;
         }
 
-        public Builder setFeatureId(@Nullable String featureId) {
+        public Builder featureId(@Nullable String featureId) {
             this.featureId = Input.ofNullable(featureId);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMembershipSpecs(@Nullable Input<Map<String,String>> membershipSpecs) {
+        public Builder membershipSpecs(@Nullable Input<Map<String,String>> membershipSpecs) {
             this.membershipSpecs = membershipSpecs;
             return this;
         }
 
-        public Builder setMembershipSpecs(@Nullable Map<String,String> membershipSpecs) {
+        public Builder membershipSpecs(@Nullable Map<String,String> membershipSpecs) {
             this.membershipSpecs = Input.ofNullable(membershipSpecs);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setSpec(@Nullable Input<CommonFeatureSpecArgs> spec) {
+        public Builder spec(@Nullable Input<CommonFeatureSpecArgs> spec) {
             this.spec = spec;
             return this;
         }
 
-        public Builder setSpec(@Nullable CommonFeatureSpecArgs spec) {
+        public Builder spec(@Nullable CommonFeatureSpecArgs spec) {
             this.spec = Input.ofNullable(spec);
             return this;
         }

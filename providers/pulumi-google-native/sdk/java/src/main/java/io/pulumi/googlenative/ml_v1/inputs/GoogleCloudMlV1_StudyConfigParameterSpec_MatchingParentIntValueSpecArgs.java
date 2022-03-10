@@ -58,12 +58,12 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntVal
     	      this.values = defaults.values;
         }
 
-        public Builder setValues(@Nullable Input<List<String>> values) {
+        public Builder values(@Nullable Input<List<String>> values) {
             this.values = values;
             return this;
         }
 
-        public Builder setValues(@Nullable List<String> values) {
+        public Builder values(@Nullable List<String> values) {
             this.values = Input.ofNullable(values);
             return this;
         }

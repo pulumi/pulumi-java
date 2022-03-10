@@ -72,12 +72,12 @@ public final class DynamicGroupQueryResponse extends io.pulumi.resources.InvokeA
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder setQuery(String query) {
+        public Builder query(String query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }

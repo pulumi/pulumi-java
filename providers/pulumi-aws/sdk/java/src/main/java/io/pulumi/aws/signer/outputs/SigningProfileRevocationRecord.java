@@ -59,17 +59,17 @@ public final class SigningProfileRevocationRecord {
     	      this.revokedBy = defaults.revokedBy;
         }
 
-        public Builder setRevocationEffectiveFrom(@Nullable String revocationEffectiveFrom) {
+        public Builder revocationEffectiveFrom(@Nullable String revocationEffectiveFrom) {
             this.revocationEffectiveFrom = revocationEffectiveFrom;
             return this;
         }
 
-        public Builder setRevokedAt(@Nullable String revokedAt) {
+        public Builder revokedAt(@Nullable String revokedAt) {
             this.revokedAt = revokedAt;
             return this;
         }
 
-        public Builder setRevokedBy(@Nullable String revokedBy) {
+        public Builder revokedBy(@Nullable String revokedBy) {
             this.revokedBy = revokedBy;
             return this;
         }

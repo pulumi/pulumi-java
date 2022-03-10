@@ -105,42 +105,42 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDomainName(Input<String> domainName) {
+        public Builder domainName(Input<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
-        public Builder setDomainName(String domainName) {
+        public Builder domainName(String domainName) {
             this.domainName = Input.of(Objects.requireNonNull(domainName));
             return this;
         }
 
-        public Builder setDomainNameConfiguration(Input<DomainNameDomainNameConfigurationArgs> domainNameConfiguration) {
+        public Builder domainNameConfiguration(Input<DomainNameDomainNameConfigurationArgs> domainNameConfiguration) {
             this.domainNameConfiguration = Objects.requireNonNull(domainNameConfiguration);
             return this;
         }
 
-        public Builder setDomainNameConfiguration(DomainNameDomainNameConfigurationArgs domainNameConfiguration) {
+        public Builder domainNameConfiguration(DomainNameDomainNameConfigurationArgs domainNameConfiguration) {
             this.domainNameConfiguration = Input.of(Objects.requireNonNull(domainNameConfiguration));
             return this;
         }
 
-        public Builder setMutualTlsAuthentication(@Nullable Input<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication) {
+        public Builder mutualTlsAuthentication(@Nullable Input<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication) {
             this.mutualTlsAuthentication = mutualTlsAuthentication;
             return this;
         }
 
-        public Builder setMutualTlsAuthentication(@Nullable DomainNameMutualTlsAuthenticationArgs mutualTlsAuthentication) {
+        public Builder mutualTlsAuthentication(@Nullable DomainNameMutualTlsAuthenticationArgs mutualTlsAuthentication) {
             this.mutualTlsAuthentication = Input.ofNullable(mutualTlsAuthentication);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

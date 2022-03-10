@@ -150,72 +150,72 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
     	      this.subnetwork = defaults.subnetwork;
         }
 
-        public Builder setIpRange(@Nullable Input<String> ipRange) {
+        public Builder ipRange(@Nullable Input<String> ipRange) {
             this.ipRange = ipRange;
             return this;
         }
 
-        public Builder setIpRange(@Nullable String ipRange) {
+        public Builder ipRange(@Nullable String ipRange) {
             this.ipRange = Input.ofNullable(ipRange);
             return this;
         }
 
-        public Builder setLinkedInterconnectAttachment(@Nullable Input<String> linkedInterconnectAttachment) {
+        public Builder linkedInterconnectAttachment(@Nullable Input<String> linkedInterconnectAttachment) {
             this.linkedInterconnectAttachment = linkedInterconnectAttachment;
             return this;
         }
 
-        public Builder setLinkedInterconnectAttachment(@Nullable String linkedInterconnectAttachment) {
+        public Builder linkedInterconnectAttachment(@Nullable String linkedInterconnectAttachment) {
             this.linkedInterconnectAttachment = Input.ofNullable(linkedInterconnectAttachment);
             return this;
         }
 
-        public Builder setLinkedVpnTunnel(@Nullable Input<String> linkedVpnTunnel) {
+        public Builder linkedVpnTunnel(@Nullable Input<String> linkedVpnTunnel) {
             this.linkedVpnTunnel = linkedVpnTunnel;
             return this;
         }
 
-        public Builder setLinkedVpnTunnel(@Nullable String linkedVpnTunnel) {
+        public Builder linkedVpnTunnel(@Nullable String linkedVpnTunnel) {
             this.linkedVpnTunnel = Input.ofNullable(linkedVpnTunnel);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPrivateIpAddress(@Nullable Input<String> privateIpAddress) {
+        public Builder privateIpAddress(@Nullable Input<String> privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
 
-        public Builder setPrivateIpAddress(@Nullable String privateIpAddress) {
+        public Builder privateIpAddress(@Nullable String privateIpAddress) {
             this.privateIpAddress = Input.ofNullable(privateIpAddress);
             return this;
         }
 
-        public Builder setRedundantInterface(@Nullable Input<String> redundantInterface) {
+        public Builder redundantInterface(@Nullable Input<String> redundantInterface) {
             this.redundantInterface = redundantInterface;
             return this;
         }
 
-        public Builder setRedundantInterface(@Nullable String redundantInterface) {
+        public Builder redundantInterface(@Nullable String redundantInterface) {
             this.redundantInterface = Input.ofNullable(redundantInterface);
             return this;
         }
 
-        public Builder setSubnetwork(@Nullable Input<String> subnetwork) {
+        public Builder subnetwork(@Nullable Input<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
 
-        public Builder setSubnetwork(@Nullable String subnetwork) {
+        public Builder subnetwork(@Nullable String subnetwork) {
             this.subnetwork = Input.ofNullable(subnetwork);
             return this;
         }

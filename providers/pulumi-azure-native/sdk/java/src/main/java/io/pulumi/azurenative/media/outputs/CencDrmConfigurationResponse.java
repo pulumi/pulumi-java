@@ -68,12 +68,12 @@ public final class CencDrmConfigurationResponse {
     	      this.widevine = defaults.widevine;
         }
 
-        public Builder setPlayReady(@Nullable StreamingPolicyPlayReadyConfigurationResponse playReady) {
+        public Builder playReady(@Nullable StreamingPolicyPlayReadyConfigurationResponse playReady) {
             this.playReady = playReady;
             return this;
         }
 
-        public Builder setWidevine(@Nullable StreamingPolicyWidevineConfigurationResponse widevine) {
+        public Builder widevine(@Nullable StreamingPolicyWidevineConfigurationResponse widevine) {
             this.widevine = widevine;
             return this;
         }

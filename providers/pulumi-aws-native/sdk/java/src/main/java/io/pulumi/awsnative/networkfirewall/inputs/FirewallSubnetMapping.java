@@ -51,7 +51,7 @@ public final class FirewallSubnetMapping extends io.pulumi.resources.InvokeArgs 
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setSubnetId(String subnetId) {
+        public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }

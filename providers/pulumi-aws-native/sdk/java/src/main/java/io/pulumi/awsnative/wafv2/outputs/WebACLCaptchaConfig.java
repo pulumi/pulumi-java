@@ -42,7 +42,7 @@ public final class WebACLCaptchaConfig {
     	      this.immunityTimeProperty = defaults.immunityTimeProperty;
         }
 
-        public Builder setImmunityTimeProperty(@Nullable WebACLImmunityTimeProperty immunityTimeProperty) {
+        public Builder immunityTimeProperty(@Nullable WebACLImmunityTimeProperty immunityTimeProperty) {
             this.immunityTimeProperty = immunityTimeProperty;
             return this;
         }

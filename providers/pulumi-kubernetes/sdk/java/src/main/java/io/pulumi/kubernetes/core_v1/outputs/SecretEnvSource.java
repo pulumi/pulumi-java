@@ -68,12 +68,12 @@ public final class SecretEnvSource {
     	      this.optional = defaults.optional;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setOptional(@Nullable Boolean optional) {
+        public Builder optional(@Nullable Boolean optional) {
             this.optional = optional;
             return this;
         }

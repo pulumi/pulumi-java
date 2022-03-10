@@ -68,12 +68,12 @@ public final class PriorityLevelConfigurationSpec {
     	      this.type = defaults.type;
         }
 
-        public Builder setLimited(@Nullable LimitedPriorityLevelConfiguration limited) {
+        public Builder limited(@Nullable LimitedPriorityLevelConfiguration limited) {
             this.limited = limited;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

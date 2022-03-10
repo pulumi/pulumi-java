@@ -51,7 +51,7 @@ public final class GetSubscriptionNetworkManagerConnectionArgs extends io.pulumi
     	      this.networkManagerConnectionName = defaults.networkManagerConnectionName;
         }
 
-        public Builder setNetworkManagerConnectionName(String networkManagerConnectionName) {
+        public Builder networkManagerConnectionName(String networkManagerConnectionName) {
             this.networkManagerConnectionName = Objects.requireNonNull(networkManagerConnectionName);
             return this;
         }

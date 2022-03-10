@@ -50,7 +50,7 @@ public final class TrailInsightSelector {
     	      this.insightType = defaults.insightType;
         }
 
-        public Builder setInsightType(@Nullable String insightType) {
+        public Builder insightType(@Nullable String insightType) {
             this.insightType = insightType;
             return this;
         }

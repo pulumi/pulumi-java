@@ -70,22 +70,22 @@ public final class GoogleSheetsOptionsArgs extends io.pulumi.resources.ResourceA
     	      this.skipLeadingRows = defaults.skipLeadingRows;
         }
 
-        public Builder setRange(@Nullable Input<String> range) {
+        public Builder range(@Nullable Input<String> range) {
             this.range = range;
             return this;
         }
 
-        public Builder setRange(@Nullable String range) {
+        public Builder range(@Nullable String range) {
             this.range = Input.ofNullable(range);
             return this;
         }
 
-        public Builder setSkipLeadingRows(@Nullable Input<String> skipLeadingRows) {
+        public Builder skipLeadingRows(@Nullable Input<String> skipLeadingRows) {
             this.skipLeadingRows = skipLeadingRows;
             return this;
         }
 
-        public Builder setSkipLeadingRows(@Nullable String skipLeadingRows) {
+        public Builder skipLeadingRows(@Nullable String skipLeadingRows) {
             this.skipLeadingRows = Input.ofNullable(skipLeadingRows);
             return this;
         }

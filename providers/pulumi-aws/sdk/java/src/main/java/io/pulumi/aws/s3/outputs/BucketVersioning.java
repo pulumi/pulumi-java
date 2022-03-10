@@ -67,12 +67,12 @@ public final class BucketVersioning {
     	      this.mfaDelete = defaults.mfaDelete;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setMfaDelete(@Nullable Boolean mfaDelete) {
+        public Builder mfaDelete(@Nullable Boolean mfaDelete) {
             this.mfaDelete = mfaDelete;
             return this;
         }

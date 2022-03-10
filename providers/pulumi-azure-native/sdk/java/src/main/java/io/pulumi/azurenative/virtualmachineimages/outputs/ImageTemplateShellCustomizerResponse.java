@@ -118,27 +118,27 @@ public final class ImageTemplateShellCustomizerResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setInline(@Nullable List<String> inline) {
+        public Builder inline(@Nullable List<String> inline) {
             this.inline = inline;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setScriptUri(@Nullable String scriptUri) {
+        public Builder scriptUri(@Nullable String scriptUri) {
             this.scriptUri = scriptUri;
             return this;
         }
 
-        public Builder setSha256Checksum(@Nullable String sha256Checksum) {
+        public Builder sha256Checksum(@Nullable String sha256Checksum) {
             this.sha256Checksum = sha256Checksum;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

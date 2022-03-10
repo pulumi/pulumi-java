@@ -67,12 +67,12 @@ public final class OracleTableResponse {
     	      this.table = defaults.table;
         }
 
-        public Builder setOracleColumns(List<OracleColumnResponse> oracleColumns) {
+        public Builder oracleColumns(List<OracleColumnResponse> oracleColumns) {
             this.oracleColumns = Objects.requireNonNull(oracleColumns);
             return this;
         }
 
-        public Builder setTable(String table) {
+        public Builder table(String table) {
             this.table = Objects.requireNonNull(table);
             return this;
         }

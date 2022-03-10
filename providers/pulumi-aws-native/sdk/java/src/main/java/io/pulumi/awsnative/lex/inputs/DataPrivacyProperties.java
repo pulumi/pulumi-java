@@ -51,7 +51,7 @@ public final class DataPrivacyProperties extends io.pulumi.resources.InvokeArgs 
     	      this.childDirected = defaults.childDirected;
         }
 
-        public Builder setChildDirected(Boolean childDirected) {
+        public Builder childDirected(Boolean childDirected) {
             this.childDirected = Objects.requireNonNull(childDirected);
             return this;
         }

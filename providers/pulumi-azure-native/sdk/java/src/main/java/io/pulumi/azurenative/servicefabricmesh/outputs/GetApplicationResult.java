@@ -279,77 +279,77 @@ public final class GetApplicationResult {
     	      this.unhealthyEvaluation = defaults.unhealthyEvaluation;
         }
 
-        public Builder setDebugParams(@Nullable String debugParams) {
+        public Builder debugParams(@Nullable String debugParams) {
             this.debugParams = debugParams;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDiagnostics(@Nullable DiagnosticsDescriptionResponse diagnostics) {
+        public Builder diagnostics(@Nullable DiagnosticsDescriptionResponse diagnostics) {
             this.diagnostics = diagnostics;
             return this;
         }
 
-        public Builder setHealthState(String healthState) {
+        public Builder healthState(String healthState) {
             this.healthState = Objects.requireNonNull(healthState);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setServiceNames(List<String> serviceNames) {
+        public Builder serviceNames(List<String> serviceNames) {
             this.serviceNames = Objects.requireNonNull(serviceNames);
             return this;
         }
 
-        public Builder setServices(@Nullable List<ServiceResourceDescriptionResponse> services) {
+        public Builder services(@Nullable List<ServiceResourceDescriptionResponse> services) {
             this.services = services;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatusDetails(String statusDetails) {
+        public Builder statusDetails(String statusDetails) {
             this.statusDetails = Objects.requireNonNull(statusDetails);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUnhealthyEvaluation(String unhealthyEvaluation) {
+        public Builder unhealthyEvaluation(String unhealthyEvaluation) {
             this.unhealthyEvaluation = Objects.requireNonNull(unhealthyEvaluation);
             return this;
         }

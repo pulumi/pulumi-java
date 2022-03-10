@@ -188,47 +188,47 @@ public final class X12DelimiterOverridesResponse extends io.pulumi.resources.Inv
     	      this.targetNamespace = defaults.targetNamespace;
         }
 
-        public Builder setComponentSeparator(Integer componentSeparator) {
+        public Builder componentSeparator(Integer componentSeparator) {
             this.componentSeparator = Objects.requireNonNull(componentSeparator);
             return this;
         }
 
-        public Builder setDataElementSeparator(Integer dataElementSeparator) {
+        public Builder dataElementSeparator(Integer dataElementSeparator) {
             this.dataElementSeparator = Objects.requireNonNull(dataElementSeparator);
             return this;
         }
 
-        public Builder setMessageId(@Nullable String messageId) {
+        public Builder messageId(@Nullable String messageId) {
             this.messageId = messageId;
             return this;
         }
 
-        public Builder setProtocolVersion(@Nullable String protocolVersion) {
+        public Builder protocolVersion(@Nullable String protocolVersion) {
             this.protocolVersion = protocolVersion;
             return this;
         }
 
-        public Builder setReplaceCharacter(Integer replaceCharacter) {
+        public Builder replaceCharacter(Integer replaceCharacter) {
             this.replaceCharacter = Objects.requireNonNull(replaceCharacter);
             return this;
         }
 
-        public Builder setReplaceSeparatorsInPayload(Boolean replaceSeparatorsInPayload) {
+        public Builder replaceSeparatorsInPayload(Boolean replaceSeparatorsInPayload) {
             this.replaceSeparatorsInPayload = Objects.requireNonNull(replaceSeparatorsInPayload);
             return this;
         }
 
-        public Builder setSegmentTerminator(Integer segmentTerminator) {
+        public Builder segmentTerminator(Integer segmentTerminator) {
             this.segmentTerminator = Objects.requireNonNull(segmentTerminator);
             return this;
         }
 
-        public Builder setSegmentTerminatorSuffix(String segmentTerminatorSuffix) {
+        public Builder segmentTerminatorSuffix(String segmentTerminatorSuffix) {
             this.segmentTerminatorSuffix = Objects.requireNonNull(segmentTerminatorSuffix);
             return this;
         }
 
-        public Builder setTargetNamespace(@Nullable String targetNamespace) {
+        public Builder targetNamespace(@Nullable String targetNamespace) {
             this.targetNamespace = targetNamespace;
             return this;
         }

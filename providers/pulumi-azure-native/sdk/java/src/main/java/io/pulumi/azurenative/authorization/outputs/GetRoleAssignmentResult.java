@@ -275,77 +275,77 @@ public final class GetRoleAssignmentResult {
     	      this.updatedOn = defaults.updatedOn;
         }
 
-        public Builder setCondition(@Nullable String condition) {
+        public Builder condition(@Nullable String condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setConditionVersion(@Nullable String conditionVersion) {
+        public Builder conditionVersion(@Nullable String conditionVersion) {
             this.conditionVersion = conditionVersion;
             return this;
         }
 
-        public Builder setCreatedBy(String createdBy) {
+        public Builder createdBy(String createdBy) {
             this.createdBy = Objects.requireNonNull(createdBy);
             return this;
         }
 
-        public Builder setCreatedOn(String createdOn) {
+        public Builder createdOn(String createdOn) {
             this.createdOn = Objects.requireNonNull(createdOn);
             return this;
         }
 
-        public Builder setDelegatedManagedIdentityResourceId(@Nullable String delegatedManagedIdentityResourceId) {
+        public Builder delegatedManagedIdentityResourceId(@Nullable String delegatedManagedIdentityResourceId) {
             this.delegatedManagedIdentityResourceId = delegatedManagedIdentityResourceId;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrincipalId(String principalId) {
+        public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
 
-        public Builder setPrincipalType(@Nullable String principalType) {
+        public Builder principalType(@Nullable String principalType) {
             this.principalType = principalType;
             return this;
         }
 
-        public Builder setRoleDefinitionId(String roleDefinitionId) {
+        public Builder roleDefinitionId(String roleDefinitionId) {
             this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUpdatedBy(String updatedBy) {
+        public Builder updatedBy(String updatedBy) {
             this.updatedBy = Objects.requireNonNull(updatedBy);
             return this;
         }
 
-        public Builder setUpdatedOn(String updatedOn) {
+        public Builder updatedOn(String updatedOn) {
             this.updatedOn = Objects.requireNonNull(updatedOn);
             return this;
         }

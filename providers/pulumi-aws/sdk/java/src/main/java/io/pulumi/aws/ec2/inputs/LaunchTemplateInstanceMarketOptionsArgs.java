@@ -71,22 +71,22 @@ public final class LaunchTemplateInstanceMarketOptionsArgs extends io.pulumi.res
     	      this.spotOptions = defaults.spotOptions;
         }
 
-        public Builder setMarketType(@Nullable Input<String> marketType) {
+        public Builder marketType(@Nullable Input<String> marketType) {
             this.marketType = marketType;
             return this;
         }
 
-        public Builder setMarketType(@Nullable String marketType) {
+        public Builder marketType(@Nullable String marketType) {
             this.marketType = Input.ofNullable(marketType);
             return this;
         }
 
-        public Builder setSpotOptions(@Nullable Input<LaunchTemplateInstanceMarketOptionsSpotOptionsArgs> spotOptions) {
+        public Builder spotOptions(@Nullable Input<LaunchTemplateInstanceMarketOptionsSpotOptionsArgs> spotOptions) {
             this.spotOptions = spotOptions;
             return this;
         }
 
-        public Builder setSpotOptions(@Nullable LaunchTemplateInstanceMarketOptionsSpotOptionsArgs spotOptions) {
+        public Builder spotOptions(@Nullable LaunchTemplateInstanceMarketOptionsSpotOptionsArgs spotOptions) {
             this.spotOptions = Input.ofNullable(spotOptions);
             return this;
         }

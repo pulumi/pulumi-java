@@ -54,12 +54,12 @@ public final class ManagedSslCertificateManagedArgs extends io.pulumi.resources.
     	      this.domains = defaults.domains;
         }
 
-        public Builder setDomains(Input<List<String>> domains) {
+        public Builder domains(Input<List<String>> domains) {
             this.domains = Objects.requireNonNull(domains);
             return this;
         }
 
-        public Builder setDomains(List<String> domains) {
+        public Builder domains(List<String> domains) {
             this.domains = Input.of(Objects.requireNonNull(domains));
             return this;
         }

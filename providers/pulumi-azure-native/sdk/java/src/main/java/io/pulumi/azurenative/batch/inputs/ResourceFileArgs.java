@@ -134,62 +134,62 @@ public final class ResourceFileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.storageContainerUrl = defaults.storageContainerUrl;
         }
 
-        public Builder setAutoStorageContainerName(@Nullable Input<String> autoStorageContainerName) {
+        public Builder autoStorageContainerName(@Nullable Input<String> autoStorageContainerName) {
             this.autoStorageContainerName = autoStorageContainerName;
             return this;
         }
 
-        public Builder setAutoStorageContainerName(@Nullable String autoStorageContainerName) {
+        public Builder autoStorageContainerName(@Nullable String autoStorageContainerName) {
             this.autoStorageContainerName = Input.ofNullable(autoStorageContainerName);
             return this;
         }
 
-        public Builder setBlobPrefix(@Nullable Input<String> blobPrefix) {
+        public Builder blobPrefix(@Nullable Input<String> blobPrefix) {
             this.blobPrefix = blobPrefix;
             return this;
         }
 
-        public Builder setBlobPrefix(@Nullable String blobPrefix) {
+        public Builder blobPrefix(@Nullable String blobPrefix) {
             this.blobPrefix = Input.ofNullable(blobPrefix);
             return this;
         }
 
-        public Builder setFileMode(@Nullable Input<String> fileMode) {
+        public Builder fileMode(@Nullable Input<String> fileMode) {
             this.fileMode = fileMode;
             return this;
         }
 
-        public Builder setFileMode(@Nullable String fileMode) {
+        public Builder fileMode(@Nullable String fileMode) {
             this.fileMode = Input.ofNullable(fileMode);
             return this;
         }
 
-        public Builder setFilePath(@Nullable Input<String> filePath) {
+        public Builder filePath(@Nullable Input<String> filePath) {
             this.filePath = filePath;
             return this;
         }
 
-        public Builder setFilePath(@Nullable String filePath) {
+        public Builder filePath(@Nullable String filePath) {
             this.filePath = Input.ofNullable(filePath);
             return this;
         }
 
-        public Builder setHttpUrl(@Nullable Input<String> httpUrl) {
+        public Builder httpUrl(@Nullable Input<String> httpUrl) {
             this.httpUrl = httpUrl;
             return this;
         }
 
-        public Builder setHttpUrl(@Nullable String httpUrl) {
+        public Builder httpUrl(@Nullable String httpUrl) {
             this.httpUrl = Input.ofNullable(httpUrl);
             return this;
         }
 
-        public Builder setStorageContainerUrl(@Nullable Input<String> storageContainerUrl) {
+        public Builder storageContainerUrl(@Nullable Input<String> storageContainerUrl) {
             this.storageContainerUrl = storageContainerUrl;
             return this;
         }
 
-        public Builder setStorageContainerUrl(@Nullable String storageContainerUrl) {
+        public Builder storageContainerUrl(@Nullable String storageContainerUrl) {
             this.storageContainerUrl = Input.ofNullable(storageContainerUrl);
             return this;
         }

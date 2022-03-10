@@ -136,72 +136,72 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAutoScalingConfigurationArn(@Nullable Input<String> autoScalingConfigurationArn) {
+        public Builder autoScalingConfigurationArn(@Nullable Input<String> autoScalingConfigurationArn) {
             this.autoScalingConfigurationArn = autoScalingConfigurationArn;
             return this;
         }
 
-        public Builder setAutoScalingConfigurationArn(@Nullable String autoScalingConfigurationArn) {
+        public Builder autoScalingConfigurationArn(@Nullable String autoScalingConfigurationArn) {
             this.autoScalingConfigurationArn = Input.ofNullable(autoScalingConfigurationArn);
             return this;
         }
 
-        public Builder setEncryptionConfiguration(@Nullable Input<ServiceEncryptionConfigurationArgs> encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable Input<ServiceEncryptionConfigurationArgs> encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
 
-        public Builder setEncryptionConfiguration(@Nullable ServiceEncryptionConfigurationArgs encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable ServiceEncryptionConfigurationArgs encryptionConfiguration) {
             this.encryptionConfiguration = Input.ofNullable(encryptionConfiguration);
             return this;
         }
 
-        public Builder setHealthCheckConfiguration(@Nullable Input<ServiceHealthCheckConfigurationArgs> healthCheckConfiguration) {
+        public Builder healthCheckConfiguration(@Nullable Input<ServiceHealthCheckConfigurationArgs> healthCheckConfiguration) {
             this.healthCheckConfiguration = healthCheckConfiguration;
             return this;
         }
 
-        public Builder setHealthCheckConfiguration(@Nullable ServiceHealthCheckConfigurationArgs healthCheckConfiguration) {
+        public Builder healthCheckConfiguration(@Nullable ServiceHealthCheckConfigurationArgs healthCheckConfiguration) {
             this.healthCheckConfiguration = Input.ofNullable(healthCheckConfiguration);
             return this;
         }
 
-        public Builder setInstanceConfiguration(@Nullable Input<ServiceInstanceConfigurationArgs> instanceConfiguration) {
+        public Builder instanceConfiguration(@Nullable Input<ServiceInstanceConfigurationArgs> instanceConfiguration) {
             this.instanceConfiguration = instanceConfiguration;
             return this;
         }
 
-        public Builder setInstanceConfiguration(@Nullable ServiceInstanceConfigurationArgs instanceConfiguration) {
+        public Builder instanceConfiguration(@Nullable ServiceInstanceConfigurationArgs instanceConfiguration) {
             this.instanceConfiguration = Input.ofNullable(instanceConfiguration);
             return this;
         }
 
-        public Builder setServiceName(@Nullable Input<String> serviceName) {
+        public Builder serviceName(@Nullable Input<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
 
-        public Builder setServiceName(@Nullable String serviceName) {
+        public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = Input.ofNullable(serviceName);
             return this;
         }
 
-        public Builder setSourceConfiguration(Input<ServiceSourceConfigurationArgs> sourceConfiguration) {
+        public Builder sourceConfiguration(Input<ServiceSourceConfigurationArgs> sourceConfiguration) {
             this.sourceConfiguration = Objects.requireNonNull(sourceConfiguration);
             return this;
         }
 
-        public Builder setSourceConfiguration(ServiceSourceConfigurationArgs sourceConfiguration) {
+        public Builder sourceConfiguration(ServiceSourceConfigurationArgs sourceConfiguration) {
             this.sourceConfiguration = Input.of(Objects.requireNonNull(sourceConfiguration));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<ServiceTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<ServiceTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ServiceTagArgs> tags) {
+        public Builder tags(@Nullable List<ServiceTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -167,42 +167,42 @@ public final class BucketReplicationConfigurationRule {
     	      this.status = defaults.status;
         }
 
-        public Builder setDeleteMarkerReplicationStatus(@Nullable String deleteMarkerReplicationStatus) {
+        public Builder deleteMarkerReplicationStatus(@Nullable String deleteMarkerReplicationStatus) {
             this.deleteMarkerReplicationStatus = deleteMarkerReplicationStatus;
             return this;
         }
 
-        public Builder setDestination(BucketReplicationConfigurationRuleDestination destination) {
+        public Builder destination(BucketReplicationConfigurationRuleDestination destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setFilter(@Nullable BucketReplicationConfigurationRuleFilter filter) {
+        public Builder filter(@Nullable BucketReplicationConfigurationRuleFilter filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setSourceSelectionCriteria(@Nullable BucketReplicationConfigurationRuleSourceSelectionCriteria sourceSelectionCriteria) {
+        public Builder sourceSelectionCriteria(@Nullable BucketReplicationConfigurationRuleSourceSelectionCriteria sourceSelectionCriteria) {
             this.sourceSelectionCriteria = sourceSelectionCriteria;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

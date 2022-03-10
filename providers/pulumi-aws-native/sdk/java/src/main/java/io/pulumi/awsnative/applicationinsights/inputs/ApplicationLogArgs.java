@@ -123,52 +123,52 @@ public final class ApplicationLogArgs extends io.pulumi.resources.ResourceArgs {
     	      this.patternSet = defaults.patternSet;
         }
 
-        public Builder setEncoding(@Nullable Input<ApplicationLogEncoding> encoding) {
+        public Builder encoding(@Nullable Input<ApplicationLogEncoding> encoding) {
             this.encoding = encoding;
             return this;
         }
 
-        public Builder setEncoding(@Nullable ApplicationLogEncoding encoding) {
+        public Builder encoding(@Nullable ApplicationLogEncoding encoding) {
             this.encoding = Input.ofNullable(encoding);
             return this;
         }
 
-        public Builder setLogGroupName(@Nullable Input<String> logGroupName) {
+        public Builder logGroupName(@Nullable Input<String> logGroupName) {
             this.logGroupName = logGroupName;
             return this;
         }
 
-        public Builder setLogGroupName(@Nullable String logGroupName) {
+        public Builder logGroupName(@Nullable String logGroupName) {
             this.logGroupName = Input.ofNullable(logGroupName);
             return this;
         }
 
-        public Builder setLogPath(@Nullable Input<String> logPath) {
+        public Builder logPath(@Nullable Input<String> logPath) {
             this.logPath = logPath;
             return this;
         }
 
-        public Builder setLogPath(@Nullable String logPath) {
+        public Builder logPath(@Nullable String logPath) {
             this.logPath = Input.ofNullable(logPath);
             return this;
         }
 
-        public Builder setLogType(Input<String> logType) {
+        public Builder logType(Input<String> logType) {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }
 
-        public Builder setLogType(String logType) {
+        public Builder logType(String logType) {
             this.logType = Input.of(Objects.requireNonNull(logType));
             return this;
         }
 
-        public Builder setPatternSet(@Nullable Input<String> patternSet) {
+        public Builder patternSet(@Nullable Input<String> patternSet) {
             this.patternSet = patternSet;
             return this;
         }
 
-        public Builder setPatternSet(@Nullable String patternSet) {
+        public Builder patternSet(@Nullable String patternSet) {
             this.patternSet = Input.ofNullable(patternSet);
             return this;
         }

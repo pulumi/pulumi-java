@@ -91,32 +91,32 @@ public final class IoTEdgeAgentInfoArgs extends io.pulumi.resources.ResourceArgs
     	      this.tag = defaults.tag;
         }
 
-        public Builder setImageName(Input<String> imageName) {
+        public Builder imageName(Input<String> imageName) {
             this.imageName = Objects.requireNonNull(imageName);
             return this;
         }
 
-        public Builder setImageName(String imageName) {
+        public Builder imageName(String imageName) {
             this.imageName = Input.of(Objects.requireNonNull(imageName));
             return this;
         }
 
-        public Builder setImageRepository(@Nullable Input<ImageRepositoryCredentialArgs> imageRepository) {
+        public Builder imageRepository(@Nullable Input<ImageRepositoryCredentialArgs> imageRepository) {
             this.imageRepository = imageRepository;
             return this;
         }
 
-        public Builder setImageRepository(@Nullable ImageRepositoryCredentialArgs imageRepository) {
+        public Builder imageRepository(@Nullable ImageRepositoryCredentialArgs imageRepository) {
             this.imageRepository = Input.ofNullable(imageRepository);
             return this;
         }
 
-        public Builder setTag(Input<String> tag) {
+        public Builder tag(Input<String> tag) {
             this.tag = Objects.requireNonNull(tag);
             return this;
         }
 
-        public Builder setTag(String tag) {
+        public Builder tag(String tag) {
             this.tag = Input.of(Objects.requireNonNull(tag));
             return this;
         }

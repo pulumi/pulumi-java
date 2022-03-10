@@ -88,17 +88,17 @@ public final class ExecutionStageStateResponse extends io.pulumi.resources.Invok
     	      this.executionStageState = defaults.executionStageState;
         }
 
-        public Builder setCurrentStateTime(String currentStateTime) {
+        public Builder currentStateTime(String currentStateTime) {
             this.currentStateTime = Objects.requireNonNull(currentStateTime);
             return this;
         }
 
-        public Builder setExecutionStageName(String executionStageName) {
+        public Builder executionStageName(String executionStageName) {
             this.executionStageName = Objects.requireNonNull(executionStageName);
             return this;
         }
 
-        public Builder setExecutionStageState(String executionStageState) {
+        public Builder executionStageState(String executionStageState) {
             this.executionStageState = Objects.requireNonNull(executionStageState);
             return this;
         }

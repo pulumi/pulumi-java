@@ -62,22 +62,22 @@ public final class RuleGroupStatelessRuleArgs extends io.pulumi.resources.Resour
     	      this.ruleDefinition = defaults.ruleDefinition;
         }
 
-        public Builder setPriority(Input<Integer> priority) {
+        public Builder priority(Input<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Input.of(Objects.requireNonNull(priority));
             return this;
         }
 
-        public Builder setRuleDefinition(Input<RuleGroupRuleDefinitionArgs> ruleDefinition) {
+        public Builder ruleDefinition(Input<RuleGroupRuleDefinitionArgs> ruleDefinition) {
             this.ruleDefinition = Objects.requireNonNull(ruleDefinition);
             return this;
         }
 
-        public Builder setRuleDefinition(RuleGroupRuleDefinitionArgs ruleDefinition) {
+        public Builder ruleDefinition(RuleGroupRuleDefinitionArgs ruleDefinition) {
             this.ruleDefinition = Input.of(Objects.requireNonNull(ruleDefinition));
             return this;
         }

@@ -51,7 +51,7 @@ public final class GetOrganizationalUnitsArgs extends io.pulumi.resources.Invoke
     	      this.parentId = defaults.parentId;
         }
 
-        public Builder setParentId(String parentId) {
+        public Builder parentId(String parentId) {
             this.parentId = Objects.requireNonNull(parentId);
             return this;
         }

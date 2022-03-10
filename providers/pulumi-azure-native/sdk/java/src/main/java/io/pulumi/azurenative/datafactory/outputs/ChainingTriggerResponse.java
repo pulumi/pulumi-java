@@ -153,37 +153,37 @@ public final class ChainingTriggerResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setDependsOn(List<PipelineReferenceResponse> dependsOn) {
+        public Builder dependsOn(List<PipelineReferenceResponse> dependsOn) {
             this.dependsOn = Objects.requireNonNull(dependsOn);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setPipeline(TriggerPipelineReferenceResponse pipeline) {
+        public Builder pipeline(TriggerPipelineReferenceResponse pipeline) {
             this.pipeline = Objects.requireNonNull(pipeline);
             return this;
         }
 
-        public Builder setRunDimension(String runDimension) {
+        public Builder runDimension(String runDimension) {
             this.runDimension = Objects.requireNonNull(runDimension);
             return this;
         }
 
-        public Builder setRuntimeState(String runtimeState) {
+        public Builder runtimeState(String runtimeState) {
             this.runtimeState = Objects.requireNonNull(runtimeState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

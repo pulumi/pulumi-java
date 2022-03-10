@@ -71,22 +71,22 @@ public final class BucketReplicationConfigurationRuleDestinationMetricsGetArgs e
     	      this.status = defaults.status;
         }
 
-        public Builder setMinutes(@Nullable Input<Integer> minutes) {
+        public Builder minutes(@Nullable Input<Integer> minutes) {
             this.minutes = minutes;
             return this;
         }
 
-        public Builder setMinutes(@Nullable Integer minutes) {
+        public Builder minutes(@Nullable Integer minutes) {
             this.minutes = Input.ofNullable(minutes);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }

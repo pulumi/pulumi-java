@@ -173,42 +173,42 @@ public final class AzureTableOutputDataSourceResponse extends io.pulumi.resource
     	      this.type = defaults.type;
         }
 
-        public Builder setAccountKey(@Nullable String accountKey) {
+        public Builder accountKey(@Nullable String accountKey) {
             this.accountKey = accountKey;
             return this;
         }
 
-        public Builder setAccountName(@Nullable String accountName) {
+        public Builder accountName(@Nullable String accountName) {
             this.accountName = accountName;
             return this;
         }
 
-        public Builder setBatchSize(@Nullable Integer batchSize) {
+        public Builder batchSize(@Nullable Integer batchSize) {
             this.batchSize = batchSize;
             return this;
         }
 
-        public Builder setColumnsToRemove(@Nullable List<String> columnsToRemove) {
+        public Builder columnsToRemove(@Nullable List<String> columnsToRemove) {
             this.columnsToRemove = columnsToRemove;
             return this;
         }
 
-        public Builder setPartitionKey(@Nullable String partitionKey) {
+        public Builder partitionKey(@Nullable String partitionKey) {
             this.partitionKey = partitionKey;
             return this;
         }
 
-        public Builder setRowKey(@Nullable String rowKey) {
+        public Builder rowKey(@Nullable String rowKey) {
             this.rowKey = rowKey;
             return this;
         }
 
-        public Builder setTable(@Nullable String table) {
+        public Builder table(@Nullable String table) {
             this.table = table;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -256,67 +256,67 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
     	      this.transferOptions = defaults.transferOptions;
         }
 
-        public Builder setAwsS3DataSource(AwsS3DataResponse awsS3DataSource) {
+        public Builder awsS3DataSource(AwsS3DataResponse awsS3DataSource) {
             this.awsS3DataSource = Objects.requireNonNull(awsS3DataSource);
             return this;
         }
 
-        public Builder setAzureBlobStorageDataSource(AzureBlobStorageDataResponse azureBlobStorageDataSource) {
+        public Builder azureBlobStorageDataSource(AzureBlobStorageDataResponse azureBlobStorageDataSource) {
             this.azureBlobStorageDataSource = Objects.requireNonNull(azureBlobStorageDataSource);
             return this;
         }
 
-        public Builder setGcsDataSink(GcsDataResponse gcsDataSink) {
+        public Builder gcsDataSink(GcsDataResponse gcsDataSink) {
             this.gcsDataSink = Objects.requireNonNull(gcsDataSink);
             return this;
         }
 
-        public Builder setGcsDataSource(GcsDataResponse gcsDataSource) {
+        public Builder gcsDataSource(GcsDataResponse gcsDataSource) {
             this.gcsDataSource = Objects.requireNonNull(gcsDataSource);
             return this;
         }
 
-        public Builder setGcsIntermediateDataLocation(GcsDataResponse gcsIntermediateDataLocation) {
+        public Builder gcsIntermediateDataLocation(GcsDataResponse gcsIntermediateDataLocation) {
             this.gcsIntermediateDataLocation = Objects.requireNonNull(gcsIntermediateDataLocation);
             return this;
         }
 
-        public Builder setHttpDataSource(HttpDataResponse httpDataSource) {
+        public Builder httpDataSource(HttpDataResponse httpDataSource) {
             this.httpDataSource = Objects.requireNonNull(httpDataSource);
             return this;
         }
 
-        public Builder setObjectConditions(ObjectConditionsResponse objectConditions) {
+        public Builder objectConditions(ObjectConditionsResponse objectConditions) {
             this.objectConditions = Objects.requireNonNull(objectConditions);
             return this;
         }
 
-        public Builder setPosixDataSink(PosixFilesystemResponse posixDataSink) {
+        public Builder posixDataSink(PosixFilesystemResponse posixDataSink) {
             this.posixDataSink = Objects.requireNonNull(posixDataSink);
             return this;
         }
 
-        public Builder setPosixDataSource(PosixFilesystemResponse posixDataSource) {
+        public Builder posixDataSource(PosixFilesystemResponse posixDataSource) {
             this.posixDataSource = Objects.requireNonNull(posixDataSource);
             return this;
         }
 
-        public Builder setSinkAgentPoolName(String sinkAgentPoolName) {
+        public Builder sinkAgentPoolName(String sinkAgentPoolName) {
             this.sinkAgentPoolName = Objects.requireNonNull(sinkAgentPoolName);
             return this;
         }
 
-        public Builder setSourceAgentPoolName(String sourceAgentPoolName) {
+        public Builder sourceAgentPoolName(String sourceAgentPoolName) {
             this.sourceAgentPoolName = Objects.requireNonNull(sourceAgentPoolName);
             return this;
         }
 
-        public Builder setTransferManifest(TransferManifestResponse transferManifest) {
+        public Builder transferManifest(TransferManifestResponse transferManifest) {
             this.transferManifest = Objects.requireNonNull(transferManifest);
             return this;
         }
 
-        public Builder setTransferOptions(TransferOptionsResponse transferOptions) {
+        public Builder transferOptions(TransferOptionsResponse transferOptions) {
             this.transferOptions = Objects.requireNonNull(transferOptions);
             return this;
         }

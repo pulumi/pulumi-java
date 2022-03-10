@@ -65,17 +65,17 @@ public final class OtherResourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.foo = defaults.foo;
         }
 
-        public Builder setBar(@Nullable List<String> bar) {
+        public Builder bar(@Nullable List<String> bar) {
             this.bar = bar;
             return this;
         }
 
-        public Builder setFoo(@Nullable Input<Resource> foo) {
+        public Builder foo(@Nullable Input<Resource> foo) {
             this.foo = foo;
             return this;
         }
 
-        public Builder setFoo(@Nullable Resource foo) {
+        public Builder foo(@Nullable Resource foo) {
             this.foo = Input.ofNullable(foo);
             return this;
         }

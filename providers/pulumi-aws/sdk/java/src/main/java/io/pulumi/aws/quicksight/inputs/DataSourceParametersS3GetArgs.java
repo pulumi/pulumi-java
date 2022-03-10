@@ -52,12 +52,12 @@ public final class DataSourceParametersS3GetArgs extends io.pulumi.resources.Res
     	      this.manifestFileLocation = defaults.manifestFileLocation;
         }
 
-        public Builder setManifestFileLocation(Input<DataSourceParametersS3ManifestFileLocationGetArgs> manifestFileLocation) {
+        public Builder manifestFileLocation(Input<DataSourceParametersS3ManifestFileLocationGetArgs> manifestFileLocation) {
             this.manifestFileLocation = Objects.requireNonNull(manifestFileLocation);
             return this;
         }
 
-        public Builder setManifestFileLocation(DataSourceParametersS3ManifestFileLocationGetArgs manifestFileLocation) {
+        public Builder manifestFileLocation(DataSourceParametersS3ManifestFileLocationGetArgs manifestFileLocation) {
             this.manifestFileLocation = Input.of(Objects.requireNonNull(manifestFileLocation));
             return this;
         }

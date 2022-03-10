@@ -82,32 +82,32 @@ public final class ResourceGuardProxyArgs extends io.pulumi.resources.ResourceAr
     	      this.vaultName = defaults.vaultName;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceGuardProxyName(@Nullable Input<String> resourceGuardProxyName) {
+        public Builder resourceGuardProxyName(@Nullable Input<String> resourceGuardProxyName) {
             this.resourceGuardProxyName = resourceGuardProxyName;
             return this;
         }
 
-        public Builder setResourceGuardProxyName(@Nullable String resourceGuardProxyName) {
+        public Builder resourceGuardProxyName(@Nullable String resourceGuardProxyName) {
             this.resourceGuardProxyName = Input.ofNullable(resourceGuardProxyName);
             return this;
         }
 
-        public Builder setVaultName(Input<String> vaultName) {
+        public Builder vaultName(Input<String> vaultName) {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
         }
 
-        public Builder setVaultName(String vaultName) {
+        public Builder vaultName(String vaultName) {
             this.vaultName = Input.of(Objects.requireNonNull(vaultName));
             return this;
         }

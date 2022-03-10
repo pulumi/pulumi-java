@@ -50,7 +50,7 @@ public final class DebugSettingResponse {
     	      this.detailLevel = defaults.detailLevel;
         }
 
-        public Builder setDetailLevel(@Nullable String detailLevel) {
+        public Builder detailLevel(@Nullable String detailLevel) {
             this.detailLevel = detailLevel;
             return this;
         }

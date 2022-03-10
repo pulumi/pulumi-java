@@ -186,92 +186,92 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceSettings = defaults.resourceSettings;
         }
 
-        public Builder setBillingAccount(Input<String> billingAccount) {
+        public Builder billingAccount(Input<String> billingAccount) {
             this.billingAccount = Objects.requireNonNull(billingAccount);
             return this;
         }
 
-        public Builder setBillingAccount(String billingAccount) {
+        public Builder billingAccount(String billingAccount) {
             this.billingAccount = Input.of(Objects.requireNonNull(billingAccount));
             return this;
         }
 
-        public Builder setComplianceRegime(Input<String> complianceRegime) {
+        public Builder complianceRegime(Input<String> complianceRegime) {
             this.complianceRegime = Objects.requireNonNull(complianceRegime);
             return this;
         }
 
-        public Builder setComplianceRegime(String complianceRegime) {
+        public Builder complianceRegime(String complianceRegime) {
             this.complianceRegime = Input.of(Objects.requireNonNull(complianceRegime));
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setKmsSettings(@Nullable Input<WorkloadKmsSettingsArgs> kmsSettings) {
+        public Builder kmsSettings(@Nullable Input<WorkloadKmsSettingsArgs> kmsSettings) {
             this.kmsSettings = kmsSettings;
             return this;
         }
 
-        public Builder setKmsSettings(@Nullable WorkloadKmsSettingsArgs kmsSettings) {
+        public Builder kmsSettings(@Nullable WorkloadKmsSettingsArgs kmsSettings) {
             this.kmsSettings = Input.ofNullable(kmsSettings);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(Input<String> location) {
+        public Builder location(Input<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Input.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder setOrganization(Input<String> organization) {
+        public Builder organization(Input<String> organization) {
             this.organization = Objects.requireNonNull(organization);
             return this;
         }
 
-        public Builder setOrganization(String organization) {
+        public Builder organization(String organization) {
             this.organization = Input.of(Objects.requireNonNull(organization));
             return this;
         }
 
-        public Builder setProvisionedResourcesParent(@Nullable Input<String> provisionedResourcesParent) {
+        public Builder provisionedResourcesParent(@Nullable Input<String> provisionedResourcesParent) {
             this.provisionedResourcesParent = provisionedResourcesParent;
             return this;
         }
 
-        public Builder setProvisionedResourcesParent(@Nullable String provisionedResourcesParent) {
+        public Builder provisionedResourcesParent(@Nullable String provisionedResourcesParent) {
             this.provisionedResourcesParent = Input.ofNullable(provisionedResourcesParent);
             return this;
         }
 
-        public Builder setResourceSettings(@Nullable Input<List<WorkloadResourceSettingArgs>> resourceSettings) {
+        public Builder resourceSettings(@Nullable Input<List<WorkloadResourceSettingArgs>> resourceSettings) {
             this.resourceSettings = resourceSettings;
             return this;
         }
 
-        public Builder setResourceSettings(@Nullable List<WorkloadResourceSettingArgs> resourceSettings) {
+        public Builder resourceSettings(@Nullable List<WorkloadResourceSettingArgs> resourceSettings) {
             this.resourceSettings = Input.ofNullable(resourceSettings);
             return this;
         }

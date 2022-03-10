@@ -99,42 +99,42 @@ public final class InvocationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.triggers = defaults.triggers;
         }
 
-        public Builder setFunctionName(Input<String> functionName) {
+        public Builder functionName(Input<String> functionName) {
             this.functionName = Objects.requireNonNull(functionName);
             return this;
         }
 
-        public Builder setFunctionName(String functionName) {
+        public Builder functionName(String functionName) {
             this.functionName = Input.of(Objects.requireNonNull(functionName));
             return this;
         }
 
-        public Builder setInput(Input<String> input) {
+        public Builder input(Input<String> input) {
             this.input = Objects.requireNonNull(input);
             return this;
         }
 
-        public Builder setInput(String input) {
+        public Builder input(String input) {
             this.input = Input.of(Objects.requireNonNull(input));
             return this;
         }
 
-        public Builder setQualifier(@Nullable Input<String> qualifier) {
+        public Builder qualifier(@Nullable Input<String> qualifier) {
             this.qualifier = qualifier;
             return this;
         }
 
-        public Builder setQualifier(@Nullable String qualifier) {
+        public Builder qualifier(@Nullable String qualifier) {
             this.qualifier = Input.ofNullable(qualifier);
             return this;
         }
 
-        public Builder setTriggers(@Nullable Input<Map<String,String>> triggers) {
+        public Builder triggers(@Nullable Input<Map<String,String>> triggers) {
             this.triggers = triggers;
             return this;
         }
 
-        public Builder setTriggers(@Nullable Map<String,String> triggers) {
+        public Builder triggers(@Nullable Map<String,String> triggers) {
             this.triggers = Input.ofNullable(triggers);
             return this;
         }

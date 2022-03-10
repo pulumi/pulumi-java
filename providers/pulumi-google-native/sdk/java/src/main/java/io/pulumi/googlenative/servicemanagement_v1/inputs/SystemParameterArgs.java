@@ -90,32 +90,32 @@ public final class SystemParameterArgs extends io.pulumi.resources.ResourceArgs 
     	      this.urlQueryParameter = defaults.urlQueryParameter;
         }
 
-        public Builder setHttpHeader(@Nullable Input<String> httpHeader) {
+        public Builder httpHeader(@Nullable Input<String> httpHeader) {
             this.httpHeader = httpHeader;
             return this;
         }
 
-        public Builder setHttpHeader(@Nullable String httpHeader) {
+        public Builder httpHeader(@Nullable String httpHeader) {
             this.httpHeader = Input.ofNullable(httpHeader);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setUrlQueryParameter(@Nullable Input<String> urlQueryParameter) {
+        public Builder urlQueryParameter(@Nullable Input<String> urlQueryParameter) {
             this.urlQueryParameter = urlQueryParameter;
             return this;
         }
 
-        public Builder setUrlQueryParameter(@Nullable String urlQueryParameter) {
+        public Builder urlQueryParameter(@Nullable String urlQueryParameter) {
             this.urlQueryParameter = Input.ofNullable(urlQueryParameter);
             return this;
         }

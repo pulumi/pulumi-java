@@ -235,122 +235,122 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
     	      this.validityInYears = defaults.validityInYears;
         }
 
-        public Builder setAutoRenew(@Nullable Input<Boolean> autoRenew) {
+        public Builder autoRenew(@Nullable Input<Boolean> autoRenew) {
             this.autoRenew = autoRenew;
             return this;
         }
 
-        public Builder setAutoRenew(@Nullable Boolean autoRenew) {
+        public Builder autoRenew(@Nullable Boolean autoRenew) {
             this.autoRenew = Input.ofNullable(autoRenew);
             return this;
         }
 
-        public Builder setCertificateOrderName(@Nullable Input<String> certificateOrderName) {
+        public Builder certificateOrderName(@Nullable Input<String> certificateOrderName) {
             this.certificateOrderName = certificateOrderName;
             return this;
         }
 
-        public Builder setCertificateOrderName(@Nullable String certificateOrderName) {
+        public Builder certificateOrderName(@Nullable String certificateOrderName) {
             this.certificateOrderName = Input.ofNullable(certificateOrderName);
             return this;
         }
 
-        public Builder setCertificates(@Nullable Input<Map<String,AppServiceCertificateArgs>> certificates) {
+        public Builder certificates(@Nullable Input<Map<String,AppServiceCertificateArgs>> certificates) {
             this.certificates = certificates;
             return this;
         }
 
-        public Builder setCertificates(@Nullable Map<String,AppServiceCertificateArgs> certificates) {
+        public Builder certificates(@Nullable Map<String,AppServiceCertificateArgs> certificates) {
             this.certificates = Input.ofNullable(certificates);
             return this;
         }
 
-        public Builder setCsr(@Nullable Input<String> csr) {
+        public Builder csr(@Nullable Input<String> csr) {
             this.csr = csr;
             return this;
         }
 
-        public Builder setCsr(@Nullable String csr) {
+        public Builder csr(@Nullable String csr) {
             this.csr = Input.ofNullable(csr);
             return this;
         }
 
-        public Builder setDistinguishedName(@Nullable Input<String> distinguishedName) {
+        public Builder distinguishedName(@Nullable Input<String> distinguishedName) {
             this.distinguishedName = distinguishedName;
             return this;
         }
 
-        public Builder setDistinguishedName(@Nullable String distinguishedName) {
+        public Builder distinguishedName(@Nullable String distinguishedName) {
             this.distinguishedName = Input.ofNullable(distinguishedName);
             return this;
         }
 
-        public Builder setKeySize(@Nullable Input<Integer> keySize) {
+        public Builder keySize(@Nullable Input<Integer> keySize) {
             this.keySize = keySize;
             return this;
         }
 
-        public Builder setKeySize(@Nullable Integer keySize) {
+        public Builder keySize(@Nullable Integer keySize) {
             this.keySize = Input.ofNullable(keySize);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProductType(Input<CertificateProductType> productType) {
+        public Builder productType(Input<CertificateProductType> productType) {
             this.productType = Objects.requireNonNull(productType);
             return this;
         }
 
-        public Builder setProductType(CertificateProductType productType) {
+        public Builder productType(CertificateProductType productType) {
             this.productType = Input.of(Objects.requireNonNull(productType));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setValidityInYears(@Nullable Input<Integer> validityInYears) {
+        public Builder validityInYears(@Nullable Input<Integer> validityInYears) {
             this.validityInYears = validityInYears;
             return this;
         }
 
-        public Builder setValidityInYears(@Nullable Integer validityInYears) {
+        public Builder validityInYears(@Nullable Integer validityInYears) {
             this.validityInYears = Input.ofNullable(validityInYears);
             return this;
         }

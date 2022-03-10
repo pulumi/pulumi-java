@@ -101,22 +101,22 @@ public final class GetOrganizationConformancePackResult {
     	      this.excludedAccounts = defaults.excludedAccounts;
         }
 
-        public Builder setConformancePackInputParameters(@Nullable List<OrganizationConformancePackConformancePackInputParameter> conformancePackInputParameters) {
+        public Builder conformancePackInputParameters(@Nullable List<OrganizationConformancePackConformancePackInputParameter> conformancePackInputParameters) {
             this.conformancePackInputParameters = conformancePackInputParameters;
             return this;
         }
 
-        public Builder setDeliveryS3Bucket(@Nullable String deliveryS3Bucket) {
+        public Builder deliveryS3Bucket(@Nullable String deliveryS3Bucket) {
             this.deliveryS3Bucket = deliveryS3Bucket;
             return this;
         }
 
-        public Builder setDeliveryS3KeyPrefix(@Nullable String deliveryS3KeyPrefix) {
+        public Builder deliveryS3KeyPrefix(@Nullable String deliveryS3KeyPrefix) {
             this.deliveryS3KeyPrefix = deliveryS3KeyPrefix;
             return this;
         }
 
-        public Builder setExcludedAccounts(@Nullable List<String> excludedAccounts) {
+        public Builder excludedAccounts(@Nullable List<String> excludedAccounts) {
             this.excludedAccounts = excludedAccounts;
             return this;
         }

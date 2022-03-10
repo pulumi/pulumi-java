@@ -151,72 +151,72 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
     	      this.relationshipStatus = defaults.relationshipStatus;
         }
 
-        public Builder setAccountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Input<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
-        public Builder setAccountId(@Nullable String accountId) {
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = Input.ofNullable(accountId);
             return this;
         }
 
-        public Builder setDetectorId(@Nullable Input<String> detectorId) {
+        public Builder detectorId(@Nullable Input<String> detectorId) {
             this.detectorId = detectorId;
             return this;
         }
 
-        public Builder setDetectorId(@Nullable String detectorId) {
+        public Builder detectorId(@Nullable String detectorId) {
             this.detectorId = Input.ofNullable(detectorId);
             return this;
         }
 
-        public Builder setDisableEmailNotification(@Nullable Input<Boolean> disableEmailNotification) {
+        public Builder disableEmailNotification(@Nullable Input<Boolean> disableEmailNotification) {
             this.disableEmailNotification = disableEmailNotification;
             return this;
         }
 
-        public Builder setDisableEmailNotification(@Nullable Boolean disableEmailNotification) {
+        public Builder disableEmailNotification(@Nullable Boolean disableEmailNotification) {
             this.disableEmailNotification = Input.ofNullable(disableEmailNotification);
             return this;
         }
 
-        public Builder setEmail(@Nullable Input<String> email) {
+        public Builder email(@Nullable Input<String> email) {
             this.email = email;
             return this;
         }
 
-        public Builder setEmail(@Nullable String email) {
+        public Builder email(@Nullable String email) {
             this.email = Input.ofNullable(email);
             return this;
         }
 
-        public Builder setInvitationMessage(@Nullable Input<String> invitationMessage) {
+        public Builder invitationMessage(@Nullable Input<String> invitationMessage) {
             this.invitationMessage = invitationMessage;
             return this;
         }
 
-        public Builder setInvitationMessage(@Nullable String invitationMessage) {
+        public Builder invitationMessage(@Nullable String invitationMessage) {
             this.invitationMessage = Input.ofNullable(invitationMessage);
             return this;
         }
 
-        public Builder setInvite(@Nullable Input<Boolean> invite) {
+        public Builder invite(@Nullable Input<Boolean> invite) {
             this.invite = invite;
             return this;
         }
 
-        public Builder setInvite(@Nullable Boolean invite) {
+        public Builder invite(@Nullable Boolean invite) {
             this.invite = Input.ofNullable(invite);
             return this;
         }
 
-        public Builder setRelationshipStatus(@Nullable Input<String> relationshipStatus) {
+        public Builder relationshipStatus(@Nullable Input<String> relationshipStatus) {
             this.relationshipStatus = relationshipStatus;
             return this;
         }
 
-        public Builder setRelationshipStatus(@Nullable String relationshipStatus) {
+        public Builder relationshipStatus(@Nullable String relationshipStatus) {
             this.relationshipStatus = Input.ofNullable(relationshipStatus);
             return this;
         }

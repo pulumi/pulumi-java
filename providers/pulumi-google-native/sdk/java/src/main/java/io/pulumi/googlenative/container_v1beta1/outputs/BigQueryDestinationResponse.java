@@ -48,7 +48,7 @@ public final class BigQueryDestinationResponse {
     	      this.datasetId = defaults.datasetId;
         }
 
-        public Builder setDatasetId(String datasetId) {
+        public Builder datasetId(String datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }

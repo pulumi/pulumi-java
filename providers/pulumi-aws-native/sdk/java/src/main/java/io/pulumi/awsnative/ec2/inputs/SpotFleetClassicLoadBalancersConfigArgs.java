@@ -49,12 +49,12 @@ public final class SpotFleetClassicLoadBalancersConfigArgs extends io.pulumi.res
     	      this.classicLoadBalancers = defaults.classicLoadBalancers;
         }
 
-        public Builder setClassicLoadBalancers(Input<List<SpotFleetClassicLoadBalancerArgs>> classicLoadBalancers) {
+        public Builder classicLoadBalancers(Input<List<SpotFleetClassicLoadBalancerArgs>> classicLoadBalancers) {
             this.classicLoadBalancers = Objects.requireNonNull(classicLoadBalancers);
             return this;
         }
 
-        public Builder setClassicLoadBalancers(List<SpotFleetClassicLoadBalancerArgs> classicLoadBalancers) {
+        public Builder classicLoadBalancers(List<SpotFleetClassicLoadBalancerArgs> classicLoadBalancers) {
             this.classicLoadBalancers = Input.of(Objects.requireNonNull(classicLoadBalancers));
             return this;
         }

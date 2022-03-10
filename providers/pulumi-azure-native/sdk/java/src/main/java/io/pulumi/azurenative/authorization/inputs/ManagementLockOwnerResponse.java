@@ -57,7 +57,7 @@ public final class ManagementLockOwnerResponse extends io.pulumi.resources.Invok
     	      this.applicationId = defaults.applicationId;
         }
 
-        public Builder setApplicationId(@Nullable String applicationId) {
+        public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = applicationId;
             return this;
         }

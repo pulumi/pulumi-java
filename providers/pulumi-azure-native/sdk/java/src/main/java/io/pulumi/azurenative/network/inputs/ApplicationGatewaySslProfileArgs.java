@@ -126,52 +126,52 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
     	      this.trustedClientCertificates = defaults.trustedClientCertificates;
         }
 
-        public Builder setClientAuthConfiguration(@Nullable Input<ApplicationGatewayClientAuthConfigurationArgs> clientAuthConfiguration) {
+        public Builder clientAuthConfiguration(@Nullable Input<ApplicationGatewayClientAuthConfigurationArgs> clientAuthConfiguration) {
             this.clientAuthConfiguration = clientAuthConfiguration;
             return this;
         }
 
-        public Builder setClientAuthConfiguration(@Nullable ApplicationGatewayClientAuthConfigurationArgs clientAuthConfiguration) {
+        public Builder clientAuthConfiguration(@Nullable ApplicationGatewayClientAuthConfigurationArgs clientAuthConfiguration) {
             this.clientAuthConfiguration = Input.ofNullable(clientAuthConfiguration);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSslPolicy(@Nullable Input<ApplicationGatewaySslPolicyArgs> sslPolicy) {
+        public Builder sslPolicy(@Nullable Input<ApplicationGatewaySslPolicyArgs> sslPolicy) {
             this.sslPolicy = sslPolicy;
             return this;
         }
 
-        public Builder setSslPolicy(@Nullable ApplicationGatewaySslPolicyArgs sslPolicy) {
+        public Builder sslPolicy(@Nullable ApplicationGatewaySslPolicyArgs sslPolicy) {
             this.sslPolicy = Input.ofNullable(sslPolicy);
             return this;
         }
 
-        public Builder setTrustedClientCertificates(@Nullable Input<List<SubResourceArgs>> trustedClientCertificates) {
+        public Builder trustedClientCertificates(@Nullable Input<List<SubResourceArgs>> trustedClientCertificates) {
             this.trustedClientCertificates = trustedClientCertificates;
             return this;
         }
 
-        public Builder setTrustedClientCertificates(@Nullable List<SubResourceArgs> trustedClientCertificates) {
+        public Builder trustedClientCertificates(@Nullable List<SubResourceArgs> trustedClientCertificates) {
             this.trustedClientCertificates = Input.ofNullable(trustedClientCertificates);
             return this;
         }

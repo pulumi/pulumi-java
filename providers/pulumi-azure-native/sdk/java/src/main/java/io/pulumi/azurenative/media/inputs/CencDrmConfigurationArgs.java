@@ -75,22 +75,22 @@ public final class CencDrmConfigurationArgs extends io.pulumi.resources.Resource
     	      this.widevine = defaults.widevine;
         }
 
-        public Builder setPlayReady(@Nullable Input<StreamingPolicyPlayReadyConfigurationArgs> playReady) {
+        public Builder playReady(@Nullable Input<StreamingPolicyPlayReadyConfigurationArgs> playReady) {
             this.playReady = playReady;
             return this;
         }
 
-        public Builder setPlayReady(@Nullable StreamingPolicyPlayReadyConfigurationArgs playReady) {
+        public Builder playReady(@Nullable StreamingPolicyPlayReadyConfigurationArgs playReady) {
             this.playReady = Input.ofNullable(playReady);
             return this;
         }
 
-        public Builder setWidevine(@Nullable Input<StreamingPolicyWidevineConfigurationArgs> widevine) {
+        public Builder widevine(@Nullable Input<StreamingPolicyWidevineConfigurationArgs> widevine) {
             this.widevine = widevine;
             return this;
         }
 
-        public Builder setWidevine(@Nullable StreamingPolicyWidevineConfigurationArgs widevine) {
+        public Builder widevine(@Nullable StreamingPolicyWidevineConfigurationArgs widevine) {
             this.widevine = Input.ofNullable(widevine);
             return this;
         }

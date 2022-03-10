@@ -298,162 +298,162 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tapeDriveType = defaults.tapeDriveType;
         }
 
-        public Builder setActivationKey(@Nullable Input<String> activationKey) {
+        public Builder activationKey(@Nullable Input<String> activationKey) {
             this.activationKey = activationKey;
             return this;
         }
 
-        public Builder setActivationKey(@Nullable String activationKey) {
+        public Builder activationKey(@Nullable String activationKey) {
             this.activationKey = Input.ofNullable(activationKey);
             return this;
         }
 
-        public Builder setAverageDownloadRateLimitInBitsPerSec(@Nullable Input<Integer> averageDownloadRateLimitInBitsPerSec) {
+        public Builder averageDownloadRateLimitInBitsPerSec(@Nullable Input<Integer> averageDownloadRateLimitInBitsPerSec) {
             this.averageDownloadRateLimitInBitsPerSec = averageDownloadRateLimitInBitsPerSec;
             return this;
         }
 
-        public Builder setAverageDownloadRateLimitInBitsPerSec(@Nullable Integer averageDownloadRateLimitInBitsPerSec) {
+        public Builder averageDownloadRateLimitInBitsPerSec(@Nullable Integer averageDownloadRateLimitInBitsPerSec) {
             this.averageDownloadRateLimitInBitsPerSec = Input.ofNullable(averageDownloadRateLimitInBitsPerSec);
             return this;
         }
 
-        public Builder setAverageUploadRateLimitInBitsPerSec(@Nullable Input<Integer> averageUploadRateLimitInBitsPerSec) {
+        public Builder averageUploadRateLimitInBitsPerSec(@Nullable Input<Integer> averageUploadRateLimitInBitsPerSec) {
             this.averageUploadRateLimitInBitsPerSec = averageUploadRateLimitInBitsPerSec;
             return this;
         }
 
-        public Builder setAverageUploadRateLimitInBitsPerSec(@Nullable Integer averageUploadRateLimitInBitsPerSec) {
+        public Builder averageUploadRateLimitInBitsPerSec(@Nullable Integer averageUploadRateLimitInBitsPerSec) {
             this.averageUploadRateLimitInBitsPerSec = Input.ofNullable(averageUploadRateLimitInBitsPerSec);
             return this;
         }
 
-        public Builder setCloudwatchLogGroupArn(@Nullable Input<String> cloudwatchLogGroupArn) {
+        public Builder cloudwatchLogGroupArn(@Nullable Input<String> cloudwatchLogGroupArn) {
             this.cloudwatchLogGroupArn = cloudwatchLogGroupArn;
             return this;
         }
 
-        public Builder setCloudwatchLogGroupArn(@Nullable String cloudwatchLogGroupArn) {
+        public Builder cloudwatchLogGroupArn(@Nullable String cloudwatchLogGroupArn) {
             this.cloudwatchLogGroupArn = Input.ofNullable(cloudwatchLogGroupArn);
             return this;
         }
 
-        public Builder setGatewayIpAddress(@Nullable Input<String> gatewayIpAddress) {
+        public Builder gatewayIpAddress(@Nullable Input<String> gatewayIpAddress) {
             this.gatewayIpAddress = gatewayIpAddress;
             return this;
         }
 
-        public Builder setGatewayIpAddress(@Nullable String gatewayIpAddress) {
+        public Builder gatewayIpAddress(@Nullable String gatewayIpAddress) {
             this.gatewayIpAddress = Input.ofNullable(gatewayIpAddress);
             return this;
         }
 
-        public Builder setGatewayName(Input<String> gatewayName) {
+        public Builder gatewayName(Input<String> gatewayName) {
             this.gatewayName = Objects.requireNonNull(gatewayName);
             return this;
         }
 
-        public Builder setGatewayName(String gatewayName) {
+        public Builder gatewayName(String gatewayName) {
             this.gatewayName = Input.of(Objects.requireNonNull(gatewayName));
             return this;
         }
 
-        public Builder setGatewayTimezone(Input<String> gatewayTimezone) {
+        public Builder gatewayTimezone(Input<String> gatewayTimezone) {
             this.gatewayTimezone = Objects.requireNonNull(gatewayTimezone);
             return this;
         }
 
-        public Builder setGatewayTimezone(String gatewayTimezone) {
+        public Builder gatewayTimezone(String gatewayTimezone) {
             this.gatewayTimezone = Input.of(Objects.requireNonNull(gatewayTimezone));
             return this;
         }
 
-        public Builder setGatewayType(@Nullable Input<String> gatewayType) {
+        public Builder gatewayType(@Nullable Input<String> gatewayType) {
             this.gatewayType = gatewayType;
             return this;
         }
 
-        public Builder setGatewayType(@Nullable String gatewayType) {
+        public Builder gatewayType(@Nullable String gatewayType) {
             this.gatewayType = Input.ofNullable(gatewayType);
             return this;
         }
 
-        public Builder setGatewayVpcEndpoint(@Nullable Input<String> gatewayVpcEndpoint) {
+        public Builder gatewayVpcEndpoint(@Nullable Input<String> gatewayVpcEndpoint) {
             this.gatewayVpcEndpoint = gatewayVpcEndpoint;
             return this;
         }
 
-        public Builder setGatewayVpcEndpoint(@Nullable String gatewayVpcEndpoint) {
+        public Builder gatewayVpcEndpoint(@Nullable String gatewayVpcEndpoint) {
             this.gatewayVpcEndpoint = Input.ofNullable(gatewayVpcEndpoint);
             return this;
         }
 
-        public Builder setMediumChangerType(@Nullable Input<String> mediumChangerType) {
+        public Builder mediumChangerType(@Nullable Input<String> mediumChangerType) {
             this.mediumChangerType = mediumChangerType;
             return this;
         }
 
-        public Builder setMediumChangerType(@Nullable String mediumChangerType) {
+        public Builder mediumChangerType(@Nullable String mediumChangerType) {
             this.mediumChangerType = Input.ofNullable(mediumChangerType);
             return this;
         }
 
-        public Builder setSmbActiveDirectorySettings(@Nullable Input<GatewaySmbActiveDirectorySettingsArgs> smbActiveDirectorySettings) {
+        public Builder smbActiveDirectorySettings(@Nullable Input<GatewaySmbActiveDirectorySettingsArgs> smbActiveDirectorySettings) {
             this.smbActiveDirectorySettings = smbActiveDirectorySettings;
             return this;
         }
 
-        public Builder setSmbActiveDirectorySettings(@Nullable GatewaySmbActiveDirectorySettingsArgs smbActiveDirectorySettings) {
+        public Builder smbActiveDirectorySettings(@Nullable GatewaySmbActiveDirectorySettingsArgs smbActiveDirectorySettings) {
             this.smbActiveDirectorySettings = Input.ofNullable(smbActiveDirectorySettings);
             return this;
         }
 
-        public Builder setSmbFileShareVisibility(@Nullable Input<Boolean> smbFileShareVisibility) {
+        public Builder smbFileShareVisibility(@Nullable Input<Boolean> smbFileShareVisibility) {
             this.smbFileShareVisibility = smbFileShareVisibility;
             return this;
         }
 
-        public Builder setSmbFileShareVisibility(@Nullable Boolean smbFileShareVisibility) {
+        public Builder smbFileShareVisibility(@Nullable Boolean smbFileShareVisibility) {
             this.smbFileShareVisibility = Input.ofNullable(smbFileShareVisibility);
             return this;
         }
 
-        public Builder setSmbGuestPassword(@Nullable Input<String> smbGuestPassword) {
+        public Builder smbGuestPassword(@Nullable Input<String> smbGuestPassword) {
             this.smbGuestPassword = smbGuestPassword;
             return this;
         }
 
-        public Builder setSmbGuestPassword(@Nullable String smbGuestPassword) {
+        public Builder smbGuestPassword(@Nullable String smbGuestPassword) {
             this.smbGuestPassword = Input.ofNullable(smbGuestPassword);
             return this;
         }
 
-        public Builder setSmbSecurityStrategy(@Nullable Input<String> smbSecurityStrategy) {
+        public Builder smbSecurityStrategy(@Nullable Input<String> smbSecurityStrategy) {
             this.smbSecurityStrategy = smbSecurityStrategy;
             return this;
         }
 
-        public Builder setSmbSecurityStrategy(@Nullable String smbSecurityStrategy) {
+        public Builder smbSecurityStrategy(@Nullable String smbSecurityStrategy) {
             this.smbSecurityStrategy = Input.ofNullable(smbSecurityStrategy);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTapeDriveType(@Nullable Input<String> tapeDriveType) {
+        public Builder tapeDriveType(@Nullable Input<String> tapeDriveType) {
             this.tapeDriveType = tapeDriveType;
             return this;
         }
 
-        public Builder setTapeDriveType(@Nullable String tapeDriveType) {
+        public Builder tapeDriveType(@Nullable String tapeDriveType) {
             this.tapeDriveType = Input.ofNullable(tapeDriveType);
             return this;
         }

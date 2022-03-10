@@ -461,262 +461,262 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.title = defaults.title;
         }
 
-        public Builder setAddresses(@Nullable Input<List<String>> addresses) {
+        public Builder addresses(@Nullable Input<List<String>> addresses) {
             this.addresses = addresses;
             return this;
         }
 
-        public Builder setAddresses(@Nullable List<String> addresses) {
+        public Builder addresses(@Nullable List<String> addresses) {
             this.addresses = Input.ofNullable(addresses);
             return this;
         }
 
-        public Builder setApplicationInfo(Input<ApplicationInfoArgs> applicationInfo) {
+        public Builder applicationInfo(Input<ApplicationInfoArgs> applicationInfo) {
             this.applicationInfo = Objects.requireNonNull(applicationInfo);
             return this;
         }
 
-        public Builder setApplicationInfo(ApplicationInfoArgs applicationInfo) {
+        public Builder applicationInfo(ApplicationInfoArgs applicationInfo) {
             this.applicationInfo = Input.of(Objects.requireNonNull(applicationInfo));
             return this;
         }
 
-        public Builder setCompanyName(Input<String> companyName) {
+        public Builder companyName(Input<String> companyName) {
             this.companyName = Objects.requireNonNull(companyName);
             return this;
         }
 
-        public Builder setCompanyName(String companyName) {
+        public Builder companyName(String companyName) {
             this.companyName = Input.of(Objects.requireNonNull(companyName));
             return this;
         }
 
-        public Builder setCompensationInfo(@Nullable Input<CompensationInfoArgs> compensationInfo) {
+        public Builder compensationInfo(@Nullable Input<CompensationInfoArgs> compensationInfo) {
             this.compensationInfo = compensationInfo;
             return this;
         }
 
-        public Builder setCompensationInfo(@Nullable CompensationInfoArgs compensationInfo) {
+        public Builder compensationInfo(@Nullable CompensationInfoArgs compensationInfo) {
             this.compensationInfo = Input.ofNullable(compensationInfo);
             return this;
         }
 
-        public Builder setCustomAttributes(@Nullable Input<Map<String,String>> customAttributes) {
+        public Builder customAttributes(@Nullable Input<Map<String,String>> customAttributes) {
             this.customAttributes = customAttributes;
             return this;
         }
 
-        public Builder setCustomAttributes(@Nullable Map<String,String> customAttributes) {
+        public Builder customAttributes(@Nullable Map<String,String> customAttributes) {
             this.customAttributes = Input.ofNullable(customAttributes);
             return this;
         }
 
-        public Builder setDegreeTypes(@Nullable Input<List<JobDegreeTypesItem>> degreeTypes) {
+        public Builder degreeTypes(@Nullable Input<List<JobDegreeTypesItem>> degreeTypes) {
             this.degreeTypes = degreeTypes;
             return this;
         }
 
-        public Builder setDegreeTypes(@Nullable List<JobDegreeTypesItem> degreeTypes) {
+        public Builder degreeTypes(@Nullable List<JobDegreeTypesItem> degreeTypes) {
             this.degreeTypes = Input.ofNullable(degreeTypes);
             return this;
         }
 
-        public Builder setDepartment(@Nullable Input<String> department) {
+        public Builder department(@Nullable Input<String> department) {
             this.department = department;
             return this;
         }
 
-        public Builder setDepartment(@Nullable String department) {
+        public Builder department(@Nullable String department) {
             this.department = Input.ofNullable(department);
             return this;
         }
 
-        public Builder setDescription(Input<String> description) {
+        public Builder description(Input<String> description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Input.of(Objects.requireNonNull(description));
             return this;
         }
 
-        public Builder setEmploymentTypes(@Nullable Input<List<JobEmploymentTypesItem>> employmentTypes) {
+        public Builder employmentTypes(@Nullable Input<List<JobEmploymentTypesItem>> employmentTypes) {
             this.employmentTypes = employmentTypes;
             return this;
         }
 
-        public Builder setEmploymentTypes(@Nullable List<JobEmploymentTypesItem> employmentTypes) {
+        public Builder employmentTypes(@Nullable List<JobEmploymentTypesItem> employmentTypes) {
             this.employmentTypes = Input.ofNullable(employmentTypes);
             return this;
         }
 
-        public Builder setIncentives(@Nullable Input<String> incentives) {
+        public Builder incentives(@Nullable Input<String> incentives) {
             this.incentives = incentives;
             return this;
         }
 
-        public Builder setIncentives(@Nullable String incentives) {
+        public Builder incentives(@Nullable String incentives) {
             this.incentives = Input.ofNullable(incentives);
             return this;
         }
 
-        public Builder setJobBenefits(@Nullable Input<List<JobJobBenefitsItem>> jobBenefits) {
+        public Builder jobBenefits(@Nullable Input<List<JobJobBenefitsItem>> jobBenefits) {
             this.jobBenefits = jobBenefits;
             return this;
         }
 
-        public Builder setJobBenefits(@Nullable List<JobJobBenefitsItem> jobBenefits) {
+        public Builder jobBenefits(@Nullable List<JobJobBenefitsItem> jobBenefits) {
             this.jobBenefits = Input.ofNullable(jobBenefits);
             return this;
         }
 
-        public Builder setJobEndTime(@Nullable Input<String> jobEndTime) {
+        public Builder jobEndTime(@Nullable Input<String> jobEndTime) {
             this.jobEndTime = jobEndTime;
             return this;
         }
 
-        public Builder setJobEndTime(@Nullable String jobEndTime) {
+        public Builder jobEndTime(@Nullable String jobEndTime) {
             this.jobEndTime = Input.ofNullable(jobEndTime);
             return this;
         }
 
-        public Builder setJobLevel(@Nullable Input<JobJobLevel> jobLevel) {
+        public Builder jobLevel(@Nullable Input<JobJobLevel> jobLevel) {
             this.jobLevel = jobLevel;
             return this;
         }
 
-        public Builder setJobLevel(@Nullable JobJobLevel jobLevel) {
+        public Builder jobLevel(@Nullable JobJobLevel jobLevel) {
             this.jobLevel = Input.ofNullable(jobLevel);
             return this;
         }
 
-        public Builder setJobStartTime(@Nullable Input<String> jobStartTime) {
+        public Builder jobStartTime(@Nullable Input<String> jobStartTime) {
             this.jobStartTime = jobStartTime;
             return this;
         }
 
-        public Builder setJobStartTime(@Nullable String jobStartTime) {
+        public Builder jobStartTime(@Nullable String jobStartTime) {
             this.jobStartTime = Input.ofNullable(jobStartTime);
             return this;
         }
 
-        public Builder setLanguageCode(@Nullable Input<String> languageCode) {
+        public Builder languageCode(@Nullable Input<String> languageCode) {
             this.languageCode = languageCode;
             return this;
         }
 
-        public Builder setLanguageCode(@Nullable String languageCode) {
+        public Builder languageCode(@Nullable String languageCode) {
             this.languageCode = Input.ofNullable(languageCode);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPostingExpireTime(@Nullable Input<String> postingExpireTime) {
+        public Builder postingExpireTime(@Nullable Input<String> postingExpireTime) {
             this.postingExpireTime = postingExpireTime;
             return this;
         }
 
-        public Builder setPostingExpireTime(@Nullable String postingExpireTime) {
+        public Builder postingExpireTime(@Nullable String postingExpireTime) {
             this.postingExpireTime = Input.ofNullable(postingExpireTime);
             return this;
         }
 
-        public Builder setPostingPublishTime(@Nullable Input<String> postingPublishTime) {
+        public Builder postingPublishTime(@Nullable Input<String> postingPublishTime) {
             this.postingPublishTime = postingPublishTime;
             return this;
         }
 
-        public Builder setPostingPublishTime(@Nullable String postingPublishTime) {
+        public Builder postingPublishTime(@Nullable String postingPublishTime) {
             this.postingPublishTime = Input.ofNullable(postingPublishTime);
             return this;
         }
 
-        public Builder setPostingRegion(@Nullable Input<JobPostingRegion> postingRegion) {
+        public Builder postingRegion(@Nullable Input<JobPostingRegion> postingRegion) {
             this.postingRegion = postingRegion;
             return this;
         }
 
-        public Builder setPostingRegion(@Nullable JobPostingRegion postingRegion) {
+        public Builder postingRegion(@Nullable JobPostingRegion postingRegion) {
             this.postingRegion = Input.ofNullable(postingRegion);
             return this;
         }
 
-        public Builder setProcessingOptions(@Nullable Input<ProcessingOptionsArgs> processingOptions) {
+        public Builder processingOptions(@Nullable Input<ProcessingOptionsArgs> processingOptions) {
             this.processingOptions = processingOptions;
             return this;
         }
 
-        public Builder setProcessingOptions(@Nullable ProcessingOptionsArgs processingOptions) {
+        public Builder processingOptions(@Nullable ProcessingOptionsArgs processingOptions) {
             this.processingOptions = Input.ofNullable(processingOptions);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setPromotionValue(@Nullable Input<Integer> promotionValue) {
+        public Builder promotionValue(@Nullable Input<Integer> promotionValue) {
             this.promotionValue = promotionValue;
             return this;
         }
 
-        public Builder setPromotionValue(@Nullable Integer promotionValue) {
+        public Builder promotionValue(@Nullable Integer promotionValue) {
             this.promotionValue = Input.ofNullable(promotionValue);
             return this;
         }
 
-        public Builder setQualifications(@Nullable Input<String> qualifications) {
+        public Builder qualifications(@Nullable Input<String> qualifications) {
             this.qualifications = qualifications;
             return this;
         }
 
-        public Builder setQualifications(@Nullable String qualifications) {
+        public Builder qualifications(@Nullable String qualifications) {
             this.qualifications = Input.ofNullable(qualifications);
             return this;
         }
 
-        public Builder setRequisitionId(Input<String> requisitionId) {
+        public Builder requisitionId(Input<String> requisitionId) {
             this.requisitionId = Objects.requireNonNull(requisitionId);
             return this;
         }
 
-        public Builder setRequisitionId(String requisitionId) {
+        public Builder requisitionId(String requisitionId) {
             this.requisitionId = Input.of(Objects.requireNonNull(requisitionId));
             return this;
         }
 
-        public Builder setResponsibilities(@Nullable Input<String> responsibilities) {
+        public Builder responsibilities(@Nullable Input<String> responsibilities) {
             this.responsibilities = responsibilities;
             return this;
         }
 
-        public Builder setResponsibilities(@Nullable String responsibilities) {
+        public Builder responsibilities(@Nullable String responsibilities) {
             this.responsibilities = Input.ofNullable(responsibilities);
             return this;
         }
 
-        public Builder setTitle(Input<String> title) {
+        public Builder title(Input<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Input.of(Objects.requireNonNull(title));
             return this;
         }

@@ -59,12 +59,12 @@ public final class AppliancePropertiesInfrastructureConfigArgs extends io.pulumi
     	      this.provider = defaults.provider;
         }
 
-        public Builder setProvider(@Nullable Input<Either<String,Provider>> provider) {
+        public Builder provider(@Nullable Input<Either<String,Provider>> provider) {
             this.provider = provider;
             return this;
         }
 
-        public Builder setProvider(@Nullable Either<String,Provider> provider) {
+        public Builder provider(@Nullable Either<String,Provider> provider) {
             this.provider = Input.ofNullable(provider);
             return this;
         }

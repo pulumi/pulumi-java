@@ -245,122 +245,122 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
     	      this.type = defaults.type;
         }
 
-        public Builder setAnnotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Input<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setDelay(@Nullable Input<Object> delay) {
+        public Builder delay(@Nullable Input<Object> delay) {
             this.delay = delay;
             return this;
         }
 
-        public Builder setDelay(@Nullable Object delay) {
+        public Builder delay(@Nullable Object delay) {
             this.delay = Input.ofNullable(delay);
             return this;
         }
 
-        public Builder setDependsOn(@Nullable Input<List<Object>> dependsOn) {
+        public Builder dependsOn(@Nullable Input<List<Object>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDependsOn(@Nullable List<Object> dependsOn) {
+        public Builder dependsOn(@Nullable List<Object> dependsOn) {
             this.dependsOn = Input.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEndTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Input<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = Input.ofNullable(endTime);
             return this;
         }
 
-        public Builder setFrequency(Input<Either<String,TumblingWindowFrequency>> frequency) {
+        public Builder frequency(Input<Either<String,TumblingWindowFrequency>> frequency) {
             this.frequency = Objects.requireNonNull(frequency);
             return this;
         }
 
-        public Builder setFrequency(Either<String,TumblingWindowFrequency> frequency) {
+        public Builder frequency(Either<String,TumblingWindowFrequency> frequency) {
             this.frequency = Input.of(Objects.requireNonNull(frequency));
             return this;
         }
 
-        public Builder setInterval(Input<Integer> interval) {
+        public Builder interval(Input<Integer> interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
 
-        public Builder setInterval(Integer interval) {
+        public Builder interval(Integer interval) {
             this.interval = Input.of(Objects.requireNonNull(interval));
             return this;
         }
 
-        public Builder setMaxConcurrency(Input<Integer> maxConcurrency) {
+        public Builder maxConcurrency(Input<Integer> maxConcurrency) {
             this.maxConcurrency = Objects.requireNonNull(maxConcurrency);
             return this;
         }
 
-        public Builder setMaxConcurrency(Integer maxConcurrency) {
+        public Builder maxConcurrency(Integer maxConcurrency) {
             this.maxConcurrency = Input.of(Objects.requireNonNull(maxConcurrency));
             return this;
         }
 
-        public Builder setPipeline(Input<TriggerPipelineReferenceArgs> pipeline) {
+        public Builder pipeline(Input<TriggerPipelineReferenceArgs> pipeline) {
             this.pipeline = Objects.requireNonNull(pipeline);
             return this;
         }
 
-        public Builder setPipeline(TriggerPipelineReferenceArgs pipeline) {
+        public Builder pipeline(TriggerPipelineReferenceArgs pipeline) {
             this.pipeline = Input.of(Objects.requireNonNull(pipeline));
             return this;
         }
 
-        public Builder setRetryPolicy(@Nullable Input<RetryPolicyArgs> retryPolicy) {
+        public Builder retryPolicy(@Nullable Input<RetryPolicyArgs> retryPolicy) {
             this.retryPolicy = retryPolicy;
             return this;
         }
 
-        public Builder setRetryPolicy(@Nullable RetryPolicyArgs retryPolicy) {
+        public Builder retryPolicy(@Nullable RetryPolicyArgs retryPolicy) {
             this.retryPolicy = Input.ofNullable(retryPolicy);
             return this;
         }
 
-        public Builder setStartTime(Input<String> startTime) {
+        public Builder startTime(Input<String> startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Input.of(Objects.requireNonNull(startTime));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

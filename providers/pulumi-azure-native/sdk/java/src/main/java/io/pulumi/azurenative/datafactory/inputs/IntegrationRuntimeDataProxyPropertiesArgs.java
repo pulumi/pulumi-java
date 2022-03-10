@@ -91,32 +91,32 @@ public final class IntegrationRuntimeDataProxyPropertiesArgs extends io.pulumi.r
     	      this.stagingLinkedService = defaults.stagingLinkedService;
         }
 
-        public Builder setConnectVia(@Nullable Input<EntityReferenceArgs> connectVia) {
+        public Builder connectVia(@Nullable Input<EntityReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setConnectVia(@Nullable EntityReferenceArgs connectVia) {
+        public Builder connectVia(@Nullable EntityReferenceArgs connectVia) {
             this.connectVia = Input.ofNullable(connectVia);
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }
 
-        public Builder setStagingLinkedService(@Nullable Input<EntityReferenceArgs> stagingLinkedService) {
+        public Builder stagingLinkedService(@Nullable Input<EntityReferenceArgs> stagingLinkedService) {
             this.stagingLinkedService = stagingLinkedService;
             return this;
         }
 
-        public Builder setStagingLinkedService(@Nullable EntityReferenceArgs stagingLinkedService) {
+        public Builder stagingLinkedService(@Nullable EntityReferenceArgs stagingLinkedService) {
             this.stagingLinkedService = Input.ofNullable(stagingLinkedService);
             return this;
         }

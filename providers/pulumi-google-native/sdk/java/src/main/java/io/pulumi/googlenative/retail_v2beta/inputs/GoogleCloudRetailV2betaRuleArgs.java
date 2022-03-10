@@ -194,92 +194,92 @@ public final class GoogleCloudRetailV2betaRuleArgs extends io.pulumi.resources.R
     	      this.twowaySynonymsAction = defaults.twowaySynonymsAction;
         }
 
-        public Builder setBoostAction(@Nullable Input<GoogleCloudRetailV2betaRuleBoostActionArgs> boostAction) {
+        public Builder boostAction(@Nullable Input<GoogleCloudRetailV2betaRuleBoostActionArgs> boostAction) {
             this.boostAction = boostAction;
             return this;
         }
 
-        public Builder setBoostAction(@Nullable GoogleCloudRetailV2betaRuleBoostActionArgs boostAction) {
+        public Builder boostAction(@Nullable GoogleCloudRetailV2betaRuleBoostActionArgs boostAction) {
             this.boostAction = Input.ofNullable(boostAction);
             return this;
         }
 
-        public Builder setCondition(Input<GoogleCloudRetailV2betaConditionArgs> condition) {
+        public Builder condition(Input<GoogleCloudRetailV2betaConditionArgs> condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
 
-        public Builder setCondition(GoogleCloudRetailV2betaConditionArgs condition) {
+        public Builder condition(GoogleCloudRetailV2betaConditionArgs condition) {
             this.condition = Input.of(Objects.requireNonNull(condition));
             return this;
         }
 
-        public Builder setDoNotAssociateAction(@Nullable Input<GoogleCloudRetailV2betaRuleDoNotAssociateActionArgs> doNotAssociateAction) {
+        public Builder doNotAssociateAction(@Nullable Input<GoogleCloudRetailV2betaRuleDoNotAssociateActionArgs> doNotAssociateAction) {
             this.doNotAssociateAction = doNotAssociateAction;
             return this;
         }
 
-        public Builder setDoNotAssociateAction(@Nullable GoogleCloudRetailV2betaRuleDoNotAssociateActionArgs doNotAssociateAction) {
+        public Builder doNotAssociateAction(@Nullable GoogleCloudRetailV2betaRuleDoNotAssociateActionArgs doNotAssociateAction) {
             this.doNotAssociateAction = Input.ofNullable(doNotAssociateAction);
             return this;
         }
 
-        public Builder setFilterAction(@Nullable Input<GoogleCloudRetailV2betaRuleFilterActionArgs> filterAction) {
+        public Builder filterAction(@Nullable Input<GoogleCloudRetailV2betaRuleFilterActionArgs> filterAction) {
             this.filterAction = filterAction;
             return this;
         }
 
-        public Builder setFilterAction(@Nullable GoogleCloudRetailV2betaRuleFilterActionArgs filterAction) {
+        public Builder filterAction(@Nullable GoogleCloudRetailV2betaRuleFilterActionArgs filterAction) {
             this.filterAction = Input.ofNullable(filterAction);
             return this;
         }
 
-        public Builder setIgnoreAction(@Nullable Input<GoogleCloudRetailV2betaRuleIgnoreActionArgs> ignoreAction) {
+        public Builder ignoreAction(@Nullable Input<GoogleCloudRetailV2betaRuleIgnoreActionArgs> ignoreAction) {
             this.ignoreAction = ignoreAction;
             return this;
         }
 
-        public Builder setIgnoreAction(@Nullable GoogleCloudRetailV2betaRuleIgnoreActionArgs ignoreAction) {
+        public Builder ignoreAction(@Nullable GoogleCloudRetailV2betaRuleIgnoreActionArgs ignoreAction) {
             this.ignoreAction = Input.ofNullable(ignoreAction);
             return this;
         }
 
-        public Builder setOnewaySynonymsAction(@Nullable Input<GoogleCloudRetailV2betaRuleOnewaySynonymsActionArgs> onewaySynonymsAction) {
+        public Builder onewaySynonymsAction(@Nullable Input<GoogleCloudRetailV2betaRuleOnewaySynonymsActionArgs> onewaySynonymsAction) {
             this.onewaySynonymsAction = onewaySynonymsAction;
             return this;
         }
 
-        public Builder setOnewaySynonymsAction(@Nullable GoogleCloudRetailV2betaRuleOnewaySynonymsActionArgs onewaySynonymsAction) {
+        public Builder onewaySynonymsAction(@Nullable GoogleCloudRetailV2betaRuleOnewaySynonymsActionArgs onewaySynonymsAction) {
             this.onewaySynonymsAction = Input.ofNullable(onewaySynonymsAction);
             return this;
         }
 
-        public Builder setRedirectAction(@Nullable Input<GoogleCloudRetailV2betaRuleRedirectActionArgs> redirectAction) {
+        public Builder redirectAction(@Nullable Input<GoogleCloudRetailV2betaRuleRedirectActionArgs> redirectAction) {
             this.redirectAction = redirectAction;
             return this;
         }
 
-        public Builder setRedirectAction(@Nullable GoogleCloudRetailV2betaRuleRedirectActionArgs redirectAction) {
+        public Builder redirectAction(@Nullable GoogleCloudRetailV2betaRuleRedirectActionArgs redirectAction) {
             this.redirectAction = Input.ofNullable(redirectAction);
             return this;
         }
 
-        public Builder setReplacementAction(@Nullable Input<GoogleCloudRetailV2betaRuleReplacementActionArgs> replacementAction) {
+        public Builder replacementAction(@Nullable Input<GoogleCloudRetailV2betaRuleReplacementActionArgs> replacementAction) {
             this.replacementAction = replacementAction;
             return this;
         }
 
-        public Builder setReplacementAction(@Nullable GoogleCloudRetailV2betaRuleReplacementActionArgs replacementAction) {
+        public Builder replacementAction(@Nullable GoogleCloudRetailV2betaRuleReplacementActionArgs replacementAction) {
             this.replacementAction = Input.ofNullable(replacementAction);
             return this;
         }
 
-        public Builder setTwowaySynonymsAction(@Nullable Input<GoogleCloudRetailV2betaRuleTwowaySynonymsActionArgs> twowaySynonymsAction) {
+        public Builder twowaySynonymsAction(@Nullable Input<GoogleCloudRetailV2betaRuleTwowaySynonymsActionArgs> twowaySynonymsAction) {
             this.twowaySynonymsAction = twowaySynonymsAction;
             return this;
         }
 
-        public Builder setTwowaySynonymsAction(@Nullable GoogleCloudRetailV2betaRuleTwowaySynonymsActionArgs twowaySynonymsAction) {
+        public Builder twowaySynonymsAction(@Nullable GoogleCloudRetailV2betaRuleTwowaySynonymsActionArgs twowaySynonymsAction) {
             this.twowaySynonymsAction = Input.ofNullable(twowaySynonymsAction);
             return this;
         }

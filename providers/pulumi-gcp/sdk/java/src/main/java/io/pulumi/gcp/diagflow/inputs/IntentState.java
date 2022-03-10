@@ -301,152 +301,152 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
     	      this.webhookState = defaults.webhookState;
         }
 
-        public Builder setAction(@Nullable Input<String> action) {
+        public Builder action(@Nullable Input<String> action) {
             this.action = action;
             return this;
         }
 
-        public Builder setAction(@Nullable String action) {
+        public Builder action(@Nullable String action) {
             this.action = Input.ofNullable(action);
             return this;
         }
 
-        public Builder setDefaultResponsePlatforms(@Nullable Input<List<String>> defaultResponsePlatforms) {
+        public Builder defaultResponsePlatforms(@Nullable Input<List<String>> defaultResponsePlatforms) {
             this.defaultResponsePlatforms = defaultResponsePlatforms;
             return this;
         }
 
-        public Builder setDefaultResponsePlatforms(@Nullable List<String> defaultResponsePlatforms) {
+        public Builder defaultResponsePlatforms(@Nullable List<String> defaultResponsePlatforms) {
             this.defaultResponsePlatforms = Input.ofNullable(defaultResponsePlatforms);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setEvents(@Nullable Input<List<String>> events) {
+        public Builder events(@Nullable Input<List<String>> events) {
             this.events = events;
             return this;
         }
 
-        public Builder setEvents(@Nullable List<String> events) {
+        public Builder events(@Nullable List<String> events) {
             this.events = Input.ofNullable(events);
             return this;
         }
 
-        public Builder setFollowupIntentInfos(@Nullable Input<List<IntentFollowupIntentInfoGetArgs>> followupIntentInfos) {
+        public Builder followupIntentInfos(@Nullable Input<List<IntentFollowupIntentInfoGetArgs>> followupIntentInfos) {
             this.followupIntentInfos = followupIntentInfos;
             return this;
         }
 
-        public Builder setFollowupIntentInfos(@Nullable List<IntentFollowupIntentInfoGetArgs> followupIntentInfos) {
+        public Builder followupIntentInfos(@Nullable List<IntentFollowupIntentInfoGetArgs> followupIntentInfos) {
             this.followupIntentInfos = Input.ofNullable(followupIntentInfos);
             return this;
         }
 
-        public Builder setInputContextNames(@Nullable Input<List<String>> inputContextNames) {
+        public Builder inputContextNames(@Nullable Input<List<String>> inputContextNames) {
             this.inputContextNames = inputContextNames;
             return this;
         }
 
-        public Builder setInputContextNames(@Nullable List<String> inputContextNames) {
+        public Builder inputContextNames(@Nullable List<String> inputContextNames) {
             this.inputContextNames = Input.ofNullable(inputContextNames);
             return this;
         }
 
-        public Builder setIsFallback(@Nullable Input<Boolean> isFallback) {
+        public Builder isFallback(@Nullable Input<Boolean> isFallback) {
             this.isFallback = isFallback;
             return this;
         }
 
-        public Builder setIsFallback(@Nullable Boolean isFallback) {
+        public Builder isFallback(@Nullable Boolean isFallback) {
             this.isFallback = Input.ofNullable(isFallback);
             return this;
         }
 
-        public Builder setMlDisabled(@Nullable Input<Boolean> mlDisabled) {
+        public Builder mlDisabled(@Nullable Input<Boolean> mlDisabled) {
             this.mlDisabled = mlDisabled;
             return this;
         }
 
-        public Builder setMlDisabled(@Nullable Boolean mlDisabled) {
+        public Builder mlDisabled(@Nullable Boolean mlDisabled) {
             this.mlDisabled = Input.ofNullable(mlDisabled);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParentFollowupIntentName(@Nullable Input<String> parentFollowupIntentName) {
+        public Builder parentFollowupIntentName(@Nullable Input<String> parentFollowupIntentName) {
             this.parentFollowupIntentName = parentFollowupIntentName;
             return this;
         }
 
-        public Builder setParentFollowupIntentName(@Nullable String parentFollowupIntentName) {
+        public Builder parentFollowupIntentName(@Nullable String parentFollowupIntentName) {
             this.parentFollowupIntentName = Input.ofNullable(parentFollowupIntentName);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Input<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setResetContexts(@Nullable Input<Boolean> resetContexts) {
+        public Builder resetContexts(@Nullable Input<Boolean> resetContexts) {
             this.resetContexts = resetContexts;
             return this;
         }
 
-        public Builder setResetContexts(@Nullable Boolean resetContexts) {
+        public Builder resetContexts(@Nullable Boolean resetContexts) {
             this.resetContexts = Input.ofNullable(resetContexts);
             return this;
         }
 
-        public Builder setRootFollowupIntentName(@Nullable Input<String> rootFollowupIntentName) {
+        public Builder rootFollowupIntentName(@Nullable Input<String> rootFollowupIntentName) {
             this.rootFollowupIntentName = rootFollowupIntentName;
             return this;
         }
 
-        public Builder setRootFollowupIntentName(@Nullable String rootFollowupIntentName) {
+        public Builder rootFollowupIntentName(@Nullable String rootFollowupIntentName) {
             this.rootFollowupIntentName = Input.ofNullable(rootFollowupIntentName);
             return this;
         }
 
-        public Builder setWebhookState(@Nullable Input<String> webhookState) {
+        public Builder webhookState(@Nullable Input<String> webhookState) {
             this.webhookState = webhookState;
             return this;
         }
 
-        public Builder setWebhookState(@Nullable String webhookState) {
+        public Builder webhookState(@Nullable String webhookState) {
             this.webhookState = Input.ofNullable(webhookState);
             return this;
         }

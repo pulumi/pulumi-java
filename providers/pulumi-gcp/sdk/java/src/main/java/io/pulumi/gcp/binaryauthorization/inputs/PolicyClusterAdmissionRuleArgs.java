@@ -112,42 +112,42 @@ public final class PolicyClusterAdmissionRuleArgs extends io.pulumi.resources.Re
     	      this.requireAttestationsBies = defaults.requireAttestationsBies;
         }
 
-        public Builder setCluster(Input<String> cluster) {
+        public Builder cluster(Input<String> cluster) {
             this.cluster = Objects.requireNonNull(cluster);
             return this;
         }
 
-        public Builder setCluster(String cluster) {
+        public Builder cluster(String cluster) {
             this.cluster = Input.of(Objects.requireNonNull(cluster));
             return this;
         }
 
-        public Builder setEnforcementMode(Input<String> enforcementMode) {
+        public Builder enforcementMode(Input<String> enforcementMode) {
             this.enforcementMode = Objects.requireNonNull(enforcementMode);
             return this;
         }
 
-        public Builder setEnforcementMode(String enforcementMode) {
+        public Builder enforcementMode(String enforcementMode) {
             this.enforcementMode = Input.of(Objects.requireNonNull(enforcementMode));
             return this;
         }
 
-        public Builder setEvaluationMode(Input<String> evaluationMode) {
+        public Builder evaluationMode(Input<String> evaluationMode) {
             this.evaluationMode = Objects.requireNonNull(evaluationMode);
             return this;
         }
 
-        public Builder setEvaluationMode(String evaluationMode) {
+        public Builder evaluationMode(String evaluationMode) {
             this.evaluationMode = Input.of(Objects.requireNonNull(evaluationMode));
             return this;
         }
 
-        public Builder setRequireAttestationsBies(@Nullable Input<List<String>> requireAttestationsBies) {
+        public Builder requireAttestationsBies(@Nullable Input<List<String>> requireAttestationsBies) {
             this.requireAttestationsBies = requireAttestationsBies;
             return this;
         }
 
-        public Builder setRequireAttestationsBies(@Nullable List<String> requireAttestationsBies) {
+        public Builder requireAttestationsBies(@Nullable List<String> requireAttestationsBies) {
             this.requireAttestationsBies = Input.ofNullable(requireAttestationsBies);
             return this;
         }

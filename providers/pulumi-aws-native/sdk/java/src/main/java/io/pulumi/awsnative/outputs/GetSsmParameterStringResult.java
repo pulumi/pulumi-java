@@ -40,7 +40,7 @@ public final class GetSsmParameterStringResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

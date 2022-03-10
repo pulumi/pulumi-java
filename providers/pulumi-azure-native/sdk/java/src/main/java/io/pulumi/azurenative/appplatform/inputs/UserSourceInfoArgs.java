@@ -109,42 +109,42 @@ public final class UserSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setArtifactSelector(@Nullable Input<String> artifactSelector) {
+        public Builder artifactSelector(@Nullable Input<String> artifactSelector) {
             this.artifactSelector = artifactSelector;
             return this;
         }
 
-        public Builder setArtifactSelector(@Nullable String artifactSelector) {
+        public Builder artifactSelector(@Nullable String artifactSelector) {
             this.artifactSelector = Input.ofNullable(artifactSelector);
             return this;
         }
 
-        public Builder setRelativePath(@Nullable Input<String> relativePath) {
+        public Builder relativePath(@Nullable Input<String> relativePath) {
             this.relativePath = relativePath;
             return this;
         }
 
-        public Builder setRelativePath(@Nullable String relativePath) {
+        public Builder relativePath(@Nullable String relativePath) {
             this.relativePath = Input.ofNullable(relativePath);
             return this;
         }
 
-        public Builder setType(@Nullable Input<Either<String,UserSourceType>> type) {
+        public Builder type(@Nullable Input<Either<String,UserSourceType>> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable Either<String,UserSourceType> type) {
+        public Builder type(@Nullable Either<String,UserSourceType> type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

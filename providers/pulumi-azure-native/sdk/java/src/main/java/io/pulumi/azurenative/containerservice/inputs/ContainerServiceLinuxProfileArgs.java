@@ -74,22 +74,22 @@ public final class ContainerServiceLinuxProfileArgs extends io.pulumi.resources.
     	      this.ssh = defaults.ssh;
         }
 
-        public Builder setAdminUsername(Input<String> adminUsername) {
+        public Builder adminUsername(Input<String> adminUsername) {
             this.adminUsername = Objects.requireNonNull(adminUsername);
             return this;
         }
 
-        public Builder setAdminUsername(String adminUsername) {
+        public Builder adminUsername(String adminUsername) {
             this.adminUsername = Input.of(Objects.requireNonNull(adminUsername));
             return this;
         }
 
-        public Builder setSsh(Input<ContainerServiceSshConfigurationArgs> ssh) {
+        public Builder ssh(Input<ContainerServiceSshConfigurationArgs> ssh) {
             this.ssh = Objects.requireNonNull(ssh);
             return this;
         }
 
-        public Builder setSsh(ContainerServiceSshConfigurationArgs ssh) {
+        public Builder ssh(ContainerServiceSshConfigurationArgs ssh) {
             this.ssh = Input.of(Objects.requireNonNull(ssh));
             return this;
         }

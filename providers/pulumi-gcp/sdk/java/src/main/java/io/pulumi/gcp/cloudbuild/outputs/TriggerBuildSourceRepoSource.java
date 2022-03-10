@@ -191,42 +191,42 @@ public final class TriggerBuildSourceRepoSource {
     	      this.tagName = defaults.tagName;
         }
 
-        public Builder setBranchName(@Nullable String branchName) {
+        public Builder branchName(@Nullable String branchName) {
             this.branchName = branchName;
             return this;
         }
 
-        public Builder setCommitSha(@Nullable String commitSha) {
+        public Builder commitSha(@Nullable String commitSha) {
             this.commitSha = commitSha;
             return this;
         }
 
-        public Builder setDir(@Nullable String dir) {
+        public Builder dir(@Nullable String dir) {
             this.dir = dir;
             return this;
         }
 
-        public Builder setInvertRegex(@Nullable Boolean invertRegex) {
+        public Builder invertRegex(@Nullable Boolean invertRegex) {
             this.invertRegex = invertRegex;
             return this;
         }
 
-        public Builder setProjectId(@Nullable String projectId) {
+        public Builder projectId(@Nullable String projectId) {
             this.projectId = projectId;
             return this;
         }
 
-        public Builder setRepoName(String repoName) {
+        public Builder repoName(String repoName) {
             this.repoName = Objects.requireNonNull(repoName);
             return this;
         }
 
-        public Builder setSubstitutions(@Nullable Map<String,String> substitutions) {
+        public Builder substitutions(@Nullable Map<String,String> substitutions) {
             this.substitutions = substitutions;
             return this;
         }
 
-        public Builder setTagName(@Nullable String tagName) {
+        public Builder tagName(@Nullable String tagName) {
             this.tagName = tagName;
             return this;
         }

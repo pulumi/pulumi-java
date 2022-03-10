@@ -42,7 +42,7 @@ public final class NetworkInsightsAccessScopeThroughResourcesStatementRequest {
     	      this.resourceStatement = defaults.resourceStatement;
         }
 
-        public Builder setResourceStatement(@Nullable NetworkInsightsAccessScopeResourceStatementRequest resourceStatement) {
+        public Builder resourceStatement(@Nullable NetworkInsightsAccessScopeResourceStatementRequest resourceStatement) {
             this.resourceStatement = resourceStatement;
             return this;
         }

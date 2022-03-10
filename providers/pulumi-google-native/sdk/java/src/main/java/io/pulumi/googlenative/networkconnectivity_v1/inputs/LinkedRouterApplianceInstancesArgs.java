@@ -76,22 +76,22 @@ public final class LinkedRouterApplianceInstancesArgs extends io.pulumi.resource
     	      this.siteToSiteDataTransfer = defaults.siteToSiteDataTransfer;
         }
 
-        public Builder setInstances(@Nullable Input<List<RouterApplianceInstanceArgs>> instances) {
+        public Builder instances(@Nullable Input<List<RouterApplianceInstanceArgs>> instances) {
             this.instances = instances;
             return this;
         }
 
-        public Builder setInstances(@Nullable List<RouterApplianceInstanceArgs> instances) {
+        public Builder instances(@Nullable List<RouterApplianceInstanceArgs> instances) {
             this.instances = Input.ofNullable(instances);
             return this;
         }
 
-        public Builder setSiteToSiteDataTransfer(@Nullable Input<Boolean> siteToSiteDataTransfer) {
+        public Builder siteToSiteDataTransfer(@Nullable Input<Boolean> siteToSiteDataTransfer) {
             this.siteToSiteDataTransfer = siteToSiteDataTransfer;
             return this;
         }
 
-        public Builder setSiteToSiteDataTransfer(@Nullable Boolean siteToSiteDataTransfer) {
+        public Builder siteToSiteDataTransfer(@Nullable Boolean siteToSiteDataTransfer) {
             this.siteToSiteDataTransfer = Input.ofNullable(siteToSiteDataTransfer);
             return this;
         }

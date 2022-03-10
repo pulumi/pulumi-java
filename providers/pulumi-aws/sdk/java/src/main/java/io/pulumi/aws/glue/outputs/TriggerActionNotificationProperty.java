@@ -50,7 +50,7 @@ public final class TriggerActionNotificationProperty {
     	      this.notifyDelayAfter = defaults.notifyDelayAfter;
         }
 
-        public Builder setNotifyDelayAfter(@Nullable Integer notifyDelayAfter) {
+        public Builder notifyDelayAfter(@Nullable Integer notifyDelayAfter) {
             this.notifyDelayAfter = notifyDelayAfter;
             return this;
         }

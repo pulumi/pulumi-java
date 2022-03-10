@@ -74,12 +74,12 @@ public final class VirtualDirectoryResponse extends io.pulumi.resources.InvokeAr
     	      this.virtualPath = defaults.virtualPath;
         }
 
-        public Builder setPhysicalPath(@Nullable String physicalPath) {
+        public Builder physicalPath(@Nullable String physicalPath) {
             this.physicalPath = physicalPath;
             return this;
         }
 
-        public Builder setVirtualPath(@Nullable String virtualPath) {
+        public Builder virtualPath(@Nullable String virtualPath) {
             this.virtualPath = virtualPath;
             return this;
         }

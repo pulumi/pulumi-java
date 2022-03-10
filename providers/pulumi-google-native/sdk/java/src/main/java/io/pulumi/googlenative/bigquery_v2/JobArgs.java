@@ -97,42 +97,42 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.source = defaults.source;
         }
 
-        public Builder setConfiguration(@Nullable Input<JobConfigurationArgs> configuration) {
+        public Builder configuration(@Nullable Input<JobConfigurationArgs> configuration) {
             this.configuration = configuration;
             return this;
         }
 
-        public Builder setConfiguration(@Nullable JobConfigurationArgs configuration) {
+        public Builder configuration(@Nullable JobConfigurationArgs configuration) {
             this.configuration = Input.ofNullable(configuration);
             return this;
         }
 
-        public Builder setJobReference(@Nullable Input<JobReferenceArgs> jobReference) {
+        public Builder jobReference(@Nullable Input<JobReferenceArgs> jobReference) {
             this.jobReference = jobReference;
             return this;
         }
 
-        public Builder setJobReference(@Nullable JobReferenceArgs jobReference) {
+        public Builder jobReference(@Nullable JobReferenceArgs jobReference) {
             this.jobReference = Input.ofNullable(jobReference);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSource(@Nullable Input<AssetOrArchive> source) {
+        public Builder source(@Nullable Input<AssetOrArchive> source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSource(@Nullable AssetOrArchive source) {
+        public Builder source(@Nullable AssetOrArchive source) {
             this.source = Input.ofNullable(source);
             return this;
         }

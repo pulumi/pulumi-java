@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
     	      this.agent = defaults.agent;
         }
 
-        public Builder setAgent(String agent) {
+        public Builder agent(String agent) {
             this.agent = Objects.requireNonNull(agent);
             return this;
         }

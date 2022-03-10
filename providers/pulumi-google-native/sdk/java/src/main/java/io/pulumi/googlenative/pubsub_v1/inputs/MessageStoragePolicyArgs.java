@@ -58,12 +58,12 @@ public final class MessageStoragePolicyArgs extends io.pulumi.resources.Resource
     	      this.allowedPersistenceRegions = defaults.allowedPersistenceRegions;
         }
 
-        public Builder setAllowedPersistenceRegions(@Nullable Input<List<String>> allowedPersistenceRegions) {
+        public Builder allowedPersistenceRegions(@Nullable Input<List<String>> allowedPersistenceRegions) {
             this.allowedPersistenceRegions = allowedPersistenceRegions;
             return this;
         }
 
-        public Builder setAllowedPersistenceRegions(@Nullable List<String> allowedPersistenceRegions) {
+        public Builder allowedPersistenceRegions(@Nullable List<String> allowedPersistenceRegions) {
             this.allowedPersistenceRegions = Input.ofNullable(allowedPersistenceRegions);
             return this;
         }

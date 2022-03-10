@@ -144,32 +144,32 @@ public final class PersistentVolumeClaimStatus {
     	      this.resizeStatus = defaults.resizeStatus;
         }
 
-        public Builder setAccessModes(@Nullable List<String> accessModes) {
+        public Builder accessModes(@Nullable List<String> accessModes) {
             this.accessModes = accessModes;
             return this;
         }
 
-        public Builder setAllocatedResources(@Nullable Map<String,String> allocatedResources) {
+        public Builder allocatedResources(@Nullable Map<String,String> allocatedResources) {
             this.allocatedResources = allocatedResources;
             return this;
         }
 
-        public Builder setCapacity(@Nullable Map<String,String> capacity) {
+        public Builder capacity(@Nullable Map<String,String> capacity) {
             this.capacity = capacity;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<PersistentVolumeClaimCondition> conditions) {
+        public Builder conditions(@Nullable List<PersistentVolumeClaimCondition> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setPhase(@Nullable String phase) {
+        public Builder phase(@Nullable String phase) {
             this.phase = phase;
             return this;
         }
 
-        public Builder setResizeStatus(@Nullable String resizeStatus) {
+        public Builder resizeStatus(@Nullable String resizeStatus) {
             this.resizeStatus = resizeStatus;
             return this;
         }

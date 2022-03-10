@@ -191,47 +191,47 @@ public final class HttpRouteRuleResponse extends io.pulumi.resources.InvokeArgs 
     	      this.urlRedirect = defaults.urlRedirect;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setHeaderAction(HttpHeaderActionResponse headerAction) {
+        public Builder headerAction(HttpHeaderActionResponse headerAction) {
             this.headerAction = Objects.requireNonNull(headerAction);
             return this;
         }
 
-        public Builder setHttpFilterConfigs(List<HttpFilterConfigResponse> httpFilterConfigs) {
+        public Builder httpFilterConfigs(List<HttpFilterConfigResponse> httpFilterConfigs) {
             this.httpFilterConfigs = Objects.requireNonNull(httpFilterConfigs);
             return this;
         }
 
-        public Builder setHttpFilterMetadata(List<HttpFilterConfigResponse> httpFilterMetadata) {
+        public Builder httpFilterMetadata(List<HttpFilterConfigResponse> httpFilterMetadata) {
             this.httpFilterMetadata = Objects.requireNonNull(httpFilterMetadata);
             return this;
         }
 
-        public Builder setMatchRules(List<HttpRouteRuleMatchResponse> matchRules) {
+        public Builder matchRules(List<HttpRouteRuleMatchResponse> matchRules) {
             this.matchRules = Objects.requireNonNull(matchRules);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setRouteAction(HttpRouteActionResponse routeAction) {
+        public Builder routeAction(HttpRouteActionResponse routeAction) {
             this.routeAction = Objects.requireNonNull(routeAction);
             return this;
         }
 
-        public Builder setService(String service) {
+        public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
 
-        public Builder setUrlRedirect(HttpRedirectActionResponse urlRedirect) {
+        public Builder urlRedirect(HttpRedirectActionResponse urlRedirect) {
             this.urlRedirect = Objects.requireNonNull(urlRedirect);
             return this;
         }

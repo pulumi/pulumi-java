@@ -99,22 +99,22 @@ public final class X12SchemaReferenceResponse {
     	      this.senderApplicationId = defaults.senderApplicationId;
         }
 
-        public Builder setMessageId(String messageId) {
+        public Builder messageId(String messageId) {
             this.messageId = Objects.requireNonNull(messageId);
             return this;
         }
 
-        public Builder setSchemaName(String schemaName) {
+        public Builder schemaName(String schemaName) {
             this.schemaName = Objects.requireNonNull(schemaName);
             return this;
         }
 
-        public Builder setSchemaVersion(String schemaVersion) {
+        public Builder schemaVersion(String schemaVersion) {
             this.schemaVersion = Objects.requireNonNull(schemaVersion);
             return this;
         }
 
-        public Builder setSenderApplicationId(@Nullable String senderApplicationId) {
+        public Builder senderApplicationId(@Nullable String senderApplicationId) {
             this.senderApplicationId = senderApplicationId;
             return this;
         }

@@ -49,7 +49,7 @@ public final class DatasetLateDataRuleConfiguration extends io.pulumi.resources.
     	      this.deltaTimeSessionWindowConfiguration = defaults.deltaTimeSessionWindowConfiguration;
         }
 
-        public Builder setDeltaTimeSessionWindowConfiguration(@Nullable DatasetDeltaTimeSessionWindowConfiguration deltaTimeSessionWindowConfiguration) {
+        public Builder deltaTimeSessionWindowConfiguration(@Nullable DatasetDeltaTimeSessionWindowConfiguration deltaTimeSessionWindowConfiguration) {
             this.deltaTimeSessionWindowConfiguration = deltaTimeSessionWindowConfiguration;
             return this;
         }

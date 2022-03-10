@@ -60,12 +60,12 @@ public final class StreamingImageEncryptionConfiguration {
     	      this.keyType = defaults.keyType;
         }
 
-        public Builder setKeyArn(@Nullable String keyArn) {
+        public Builder keyArn(@Nullable String keyArn) {
             this.keyArn = keyArn;
             return this;
         }
 
-        public Builder setKeyType(StreamingImageEncryptionConfigurationKeyType keyType) {
+        public Builder keyType(StreamingImageEncryptionConfigurationKeyType keyType) {
             this.keyType = Objects.requireNonNull(keyType);
             return this;
         }

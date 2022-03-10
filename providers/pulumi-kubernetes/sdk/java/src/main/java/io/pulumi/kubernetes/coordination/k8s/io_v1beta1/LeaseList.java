@@ -126,8 +126,8 @@ public class LeaseList extends io.pulumi.resources.CustomResource {
     private static LeaseListArgs makeArgs(LeaseListArgs args) {
         var builder = args == null ? LeaseListArgs.builder() : LeaseListArgs.builder(args);
         return builder
-            .setApiVersion("coordination.k8s.io/v1beta1")
-            .setKind("LeaseList")
+            .apiVersion("coordination.k8s.io/v1beta1")
+            .kind("LeaseList")
             .build();
     }
 

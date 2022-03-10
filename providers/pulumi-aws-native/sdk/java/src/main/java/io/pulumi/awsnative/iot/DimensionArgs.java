@@ -105,42 +105,42 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setStringValues(Input<List<String>> stringValues) {
+        public Builder stringValues(Input<List<String>> stringValues) {
             this.stringValues = Objects.requireNonNull(stringValues);
             return this;
         }
 
-        public Builder setStringValues(List<String> stringValues) {
+        public Builder stringValues(List<String> stringValues) {
             this.stringValues = Input.of(Objects.requireNonNull(stringValues));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<DimensionTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<DimensionTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DimensionTagArgs> tags) {
+        public Builder tags(@Nullable List<DimensionTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setType(Input<DimensionType> type) {
+        public Builder type(Input<DimensionType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(DimensionType type) {
+        public Builder type(DimensionType type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

@@ -92,32 +92,32 @@ public final class CloudToDevicePropertiesArgs extends io.pulumi.resources.Resou
     	      this.maxDeliveryCount = defaults.maxDeliveryCount;
         }
 
-        public Builder setDefaultTtlAsIso8601(@Nullable Input<String> defaultTtlAsIso8601) {
+        public Builder defaultTtlAsIso8601(@Nullable Input<String> defaultTtlAsIso8601) {
             this.defaultTtlAsIso8601 = defaultTtlAsIso8601;
             return this;
         }
 
-        public Builder setDefaultTtlAsIso8601(@Nullable String defaultTtlAsIso8601) {
+        public Builder defaultTtlAsIso8601(@Nullable String defaultTtlAsIso8601) {
             this.defaultTtlAsIso8601 = Input.ofNullable(defaultTtlAsIso8601);
             return this;
         }
 
-        public Builder setFeedback(@Nullable Input<FeedbackPropertiesArgs> feedback) {
+        public Builder feedback(@Nullable Input<FeedbackPropertiesArgs> feedback) {
             this.feedback = feedback;
             return this;
         }
 
-        public Builder setFeedback(@Nullable FeedbackPropertiesArgs feedback) {
+        public Builder feedback(@Nullable FeedbackPropertiesArgs feedback) {
             this.feedback = Input.ofNullable(feedback);
             return this;
         }
 
-        public Builder setMaxDeliveryCount(@Nullable Input<Integer> maxDeliveryCount) {
+        public Builder maxDeliveryCount(@Nullable Input<Integer> maxDeliveryCount) {
             this.maxDeliveryCount = maxDeliveryCount;
             return this;
         }
 
-        public Builder setMaxDeliveryCount(@Nullable Integer maxDeliveryCount) {
+        public Builder maxDeliveryCount(@Nullable Integer maxDeliveryCount) {
             this.maxDeliveryCount = Input.ofNullable(maxDeliveryCount);
             return this;
         }

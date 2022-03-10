@@ -106,42 +106,42 @@ public final class CxEnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.versionConfigs = defaults.versionConfigs;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setParent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Input<String> parent) {
             this.parent = parent;
             return this;
         }
 
-        public Builder setParent(@Nullable String parent) {
+        public Builder parent(@Nullable String parent) {
             this.parent = Input.ofNullable(parent);
             return this;
         }
 
-        public Builder setVersionConfigs(Input<List<CxEnvironmentVersionConfigArgs>> versionConfigs) {
+        public Builder versionConfigs(Input<List<CxEnvironmentVersionConfigArgs>> versionConfigs) {
             this.versionConfigs = Objects.requireNonNull(versionConfigs);
             return this;
         }
 
-        public Builder setVersionConfigs(List<CxEnvironmentVersionConfigArgs> versionConfigs) {
+        public Builder versionConfigs(List<CxEnvironmentVersionConfigArgs> versionConfigs) {
             this.versionConfigs = Input.of(Objects.requireNonNull(versionConfigs));
             return this;
         }

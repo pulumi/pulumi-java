@@ -74,22 +74,22 @@ public final class RetentionPolicyArgs extends io.pulumi.resources.ResourceArgs 
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setDays(Input<Integer> days) {
+        public Builder days(Input<Integer> days) {
             this.days = Objects.requireNonNull(days);
             return this;
         }
 
-        public Builder setDays(Integer days) {
+        public Builder days(Integer days) {
             this.days = Input.of(Objects.requireNonNull(days));
             return this;
         }
 
-        public Builder setEnabled(Input<Boolean> enabled) {
+        public Builder enabled(Input<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Input.of(Objects.requireNonNull(enabled));
             return this;
         }

@@ -75,22 +75,22 @@ public final class SpecificationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.iosTest = defaults.iosTest;
         }
 
-        public Builder setAndroidTest(@Nullable Input<AndroidTestArgs> androidTest) {
+        public Builder androidTest(@Nullable Input<AndroidTestArgs> androidTest) {
             this.androidTest = androidTest;
             return this;
         }
 
-        public Builder setAndroidTest(@Nullable AndroidTestArgs androidTest) {
+        public Builder androidTest(@Nullable AndroidTestArgs androidTest) {
             this.androidTest = Input.ofNullable(androidTest);
             return this;
         }
 
-        public Builder setIosTest(@Nullable Input<IosTestArgs> iosTest) {
+        public Builder iosTest(@Nullable Input<IosTestArgs> iosTest) {
             this.iosTest = iosTest;
             return this;
         }
 
-        public Builder setIosTest(@Nullable IosTestArgs iosTest) {
+        public Builder iosTest(@Nullable IosTestArgs iosTest) {
             this.iosTest = Input.ofNullable(iosTest);
             return this;
         }

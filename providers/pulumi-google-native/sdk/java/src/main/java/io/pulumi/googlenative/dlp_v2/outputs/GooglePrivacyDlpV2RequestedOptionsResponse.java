@@ -66,12 +66,12 @@ public final class GooglePrivacyDlpV2RequestedOptionsResponse {
     	      this.snapshotInspectTemplate = defaults.snapshotInspectTemplate;
         }
 
-        public Builder setJobConfig(GooglePrivacyDlpV2InspectJobConfigResponse jobConfig) {
+        public Builder jobConfig(GooglePrivacyDlpV2InspectJobConfigResponse jobConfig) {
             this.jobConfig = Objects.requireNonNull(jobConfig);
             return this;
         }
 
-        public Builder setSnapshotInspectTemplate(GooglePrivacyDlpV2InspectTemplateResponse snapshotInspectTemplate) {
+        public Builder snapshotInspectTemplate(GooglePrivacyDlpV2InspectTemplateResponse snapshotInspectTemplate) {
             this.snapshotInspectTemplate = Objects.requireNonNull(snapshotInspectTemplate);
             return this;
         }

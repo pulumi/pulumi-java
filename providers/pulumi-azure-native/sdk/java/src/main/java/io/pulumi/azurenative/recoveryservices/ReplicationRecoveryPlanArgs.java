@@ -103,42 +103,42 @@ public final class ReplicationRecoveryPlanArgs extends io.pulumi.resources.Resou
     	      this.resourceName = defaults.resourceName;
         }
 
-        public Builder setProperties(Input<CreateRecoveryPlanInputPropertiesArgs> properties) {
+        public Builder properties(Input<CreateRecoveryPlanInputPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
-        public Builder setProperties(CreateRecoveryPlanInputPropertiesArgs properties) {
+        public Builder properties(CreateRecoveryPlanInputPropertiesArgs properties) {
             this.properties = Input.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder setRecoveryPlanName(@Nullable Input<String> recoveryPlanName) {
+        public Builder recoveryPlanName(@Nullable Input<String> recoveryPlanName) {
             this.recoveryPlanName = recoveryPlanName;
             return this;
         }
 
-        public Builder setRecoveryPlanName(@Nullable String recoveryPlanName) {
+        public Builder recoveryPlanName(@Nullable String recoveryPlanName) {
             this.recoveryPlanName = Input.ofNullable(recoveryPlanName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceName(Input<String> resourceName) {
+        public Builder resourceName(Input<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
-        public Builder setResourceName(String resourceName) {
+        public Builder resourceName(String resourceName) {
             this.resourceName = Input.of(Objects.requireNonNull(resourceName));
             return this;
         }

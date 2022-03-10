@@ -118,52 +118,52 @@ public final class DisasterRecoveryConfigArgs extends io.pulumi.resources.Resour
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAlias(@Nullable Input<String> alias) {
+        public Builder alias(@Nullable Input<String> alias) {
             this.alias = alias;
             return this;
         }
 
-        public Builder setAlias(@Nullable String alias) {
+        public Builder alias(@Nullable String alias) {
             this.alias = Input.ofNullable(alias);
             return this;
         }
 
-        public Builder setAlternateName(@Nullable Input<String> alternateName) {
+        public Builder alternateName(@Nullable Input<String> alternateName) {
             this.alternateName = alternateName;
             return this;
         }
 
-        public Builder setAlternateName(@Nullable String alternateName) {
+        public Builder alternateName(@Nullable String alternateName) {
             this.alternateName = Input.ofNullable(alternateName);
             return this;
         }
 
-        public Builder setNamespaceName(Input<String> namespaceName) {
+        public Builder namespaceName(Input<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
 
-        public Builder setNamespaceName(String namespaceName) {
+        public Builder namespaceName(String namespaceName) {
             this.namespaceName = Input.of(Objects.requireNonNull(namespaceName));
             return this;
         }
 
-        public Builder setPartnerNamespace(@Nullable Input<String> partnerNamespace) {
+        public Builder partnerNamespace(@Nullable Input<String> partnerNamespace) {
             this.partnerNamespace = partnerNamespace;
             return this;
         }
 
-        public Builder setPartnerNamespace(@Nullable String partnerNamespace) {
+        public Builder partnerNamespace(@Nullable String partnerNamespace) {
             this.partnerNamespace = Input.ofNullable(partnerNamespace);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

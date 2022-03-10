@@ -62,22 +62,22 @@ public final class ExperimentTreatmentToWeightArgs extends io.pulumi.resources.R
     	      this.treatment = defaults.treatment;
         }
 
-        public Builder setSplitWeight(Input<Integer> splitWeight) {
+        public Builder splitWeight(Input<Integer> splitWeight) {
             this.splitWeight = Objects.requireNonNull(splitWeight);
             return this;
         }
 
-        public Builder setSplitWeight(Integer splitWeight) {
+        public Builder splitWeight(Integer splitWeight) {
             this.splitWeight = Input.of(Objects.requireNonNull(splitWeight));
             return this;
         }
 
-        public Builder setTreatment(Input<String> treatment) {
+        public Builder treatment(Input<String> treatment) {
             this.treatment = Objects.requireNonNull(treatment);
             return this;
         }
 
-        public Builder setTreatment(String treatment) {
+        public Builder treatment(String treatment) {
             this.treatment = Input.of(Objects.requireNonNull(treatment));
             return this;
         }

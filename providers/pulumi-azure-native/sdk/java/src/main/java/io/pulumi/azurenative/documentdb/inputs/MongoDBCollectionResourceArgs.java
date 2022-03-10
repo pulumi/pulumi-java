@@ -110,42 +110,42 @@ public final class MongoDBCollectionResourceArgs extends io.pulumi.resources.Res
     	      this.shardKey = defaults.shardKey;
         }
 
-        public Builder setAnalyticalStorageTtl(@Nullable Input<Integer> analyticalStorageTtl) {
+        public Builder analyticalStorageTtl(@Nullable Input<Integer> analyticalStorageTtl) {
             this.analyticalStorageTtl = analyticalStorageTtl;
             return this;
         }
 
-        public Builder setAnalyticalStorageTtl(@Nullable Integer analyticalStorageTtl) {
+        public Builder analyticalStorageTtl(@Nullable Integer analyticalStorageTtl) {
             this.analyticalStorageTtl = Input.ofNullable(analyticalStorageTtl);
             return this;
         }
 
-        public Builder setId(Input<String> id) {
+        public Builder id(Input<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder setIndexes(@Nullable Input<List<MongoIndexArgs>> indexes) {
+        public Builder indexes(@Nullable Input<List<MongoIndexArgs>> indexes) {
             this.indexes = indexes;
             return this;
         }
 
-        public Builder setIndexes(@Nullable List<MongoIndexArgs> indexes) {
+        public Builder indexes(@Nullable List<MongoIndexArgs> indexes) {
             this.indexes = Input.ofNullable(indexes);
             return this;
         }
 
-        public Builder setShardKey(@Nullable Input<Map<String,String>> shardKey) {
+        public Builder shardKey(@Nullable Input<Map<String,String>> shardKey) {
             this.shardKey = shardKey;
             return this;
         }
 
-        public Builder setShardKey(@Nullable Map<String,String> shardKey) {
+        public Builder shardKey(@Nullable Map<String,String> shardKey) {
             this.shardKey = Input.ofNullable(shardKey);
             return this;
         }

@@ -49,7 +49,7 @@ public final class ClusterLogging {
     	      this.clusterLogging = defaults.clusterLogging;
         }
 
-        public Builder setClusterLogging(@Nullable ClusterLogging clusterLogging) {
+        public Builder clusterLogging(@Nullable ClusterLogging clusterLogging) {
             this.clusterLogging = clusterLogging;
             return this;
         }

@@ -48,7 +48,7 @@ public final class VirtualGatewaySpecListenerTlsValidationSubjectAlternativeName
     	      this.match = defaults.match;
         }
 
-        public Builder setMatch(VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatch match) {
+        public Builder match(VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatch match) {
             this.match = Objects.requireNonNull(match);
             return this;
         }

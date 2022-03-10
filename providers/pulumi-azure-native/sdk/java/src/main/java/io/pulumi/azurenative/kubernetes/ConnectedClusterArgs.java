@@ -186,92 +186,92 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAgentPublicKeyCertificate(Input<String> agentPublicKeyCertificate) {
+        public Builder agentPublicKeyCertificate(Input<String> agentPublicKeyCertificate) {
             this.agentPublicKeyCertificate = Objects.requireNonNull(agentPublicKeyCertificate);
             return this;
         }
 
-        public Builder setAgentPublicKeyCertificate(String agentPublicKeyCertificate) {
+        public Builder agentPublicKeyCertificate(String agentPublicKeyCertificate) {
             this.agentPublicKeyCertificate = Input.of(Objects.requireNonNull(agentPublicKeyCertificate));
             return this;
         }
 
-        public Builder setClusterName(@Nullable Input<String> clusterName) {
+        public Builder clusterName(@Nullable Input<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
 
-        public Builder setClusterName(@Nullable String clusterName) {
+        public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = Input.ofNullable(clusterName);
             return this;
         }
 
-        public Builder setDistribution(@Nullable Input<String> distribution) {
+        public Builder distribution(@Nullable Input<String> distribution) {
             this.distribution = distribution;
             return this;
         }
 
-        public Builder setDistribution(@Nullable String distribution) {
+        public Builder distribution(@Nullable String distribution) {
             this.distribution = Input.ofNullable(distribution);
             return this;
         }
 
-        public Builder setIdentity(Input<ConnectedClusterIdentityArgs> identity) {
+        public Builder identity(Input<ConnectedClusterIdentityArgs> identity) {
             this.identity = Objects.requireNonNull(identity);
             return this;
         }
 
-        public Builder setIdentity(ConnectedClusterIdentityArgs identity) {
+        public Builder identity(ConnectedClusterIdentityArgs identity) {
             this.identity = Input.of(Objects.requireNonNull(identity));
             return this;
         }
 
-        public Builder setInfrastructure(@Nullable Input<String> infrastructure) {
+        public Builder infrastructure(@Nullable Input<String> infrastructure) {
             this.infrastructure = infrastructure;
             return this;
         }
 
-        public Builder setInfrastructure(@Nullable String infrastructure) {
+        public Builder infrastructure(@Nullable String infrastructure) {
             this.infrastructure = Input.ofNullable(infrastructure);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Input<Either<String,ProvisioningState>> provisioningState) {
+        public Builder provisioningState(@Nullable Input<Either<String,ProvisioningState>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
+        public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
             this.provisioningState = Input.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
