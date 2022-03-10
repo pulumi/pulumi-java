@@ -21,10 +21,10 @@ public final class GetSitesResult {
      */
     private final List<String> ids;
 
-    @OutputCustomType.Constructor({"id","ids"})
+    @OutputCustomType.Constructor
     private GetSitesResult(
-        String id,
-        List<String> ids) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ids") List<String> ids) {
         this.id = id;
         this.ids = ids;
     }

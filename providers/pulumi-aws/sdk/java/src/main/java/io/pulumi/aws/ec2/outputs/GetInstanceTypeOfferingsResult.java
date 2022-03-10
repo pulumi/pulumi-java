@@ -36,14 +36,14 @@ public final class GetInstanceTypeOfferingsResult {
      */
     private final List<String> locations;
 
-    @OutputCustomType.Constructor({"filters","id","instanceTypes","locationType","locationTypes","locations"})
+    @OutputCustomType.Constructor
     private GetInstanceTypeOfferingsResult(
-        @Nullable List<GetInstanceTypeOfferingsFilter> filters,
-        String id,
-        List<String> instanceTypes,
-        @Nullable String locationType,
-        List<String> locationTypes,
-        List<String> locations) {
+        @OutputCustomType.Parameter("filters") @Nullable List<GetInstanceTypeOfferingsFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceTypes") List<String> instanceTypes,
+        @OutputCustomType.Parameter("locationType") @Nullable String locationType,
+        @OutputCustomType.Parameter("locationTypes") List<String> locationTypes,
+        @OutputCustomType.Parameter("locations") List<String> locations) {
         this.filters = filters;
         this.id = id;
         this.instanceTypes = instanceTypes;

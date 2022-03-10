@@ -30,11 +30,11 @@ public final class RuleGroupRuleActionBlockCustomResponse {
      */
     private final @Nullable List<RuleGroupRuleActionBlockCustomResponseResponseHeader> responseHeaders;
 
-    @OutputCustomType.Constructor({"customResponseBodyKey","responseCode","responseHeaders"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleActionBlockCustomResponse(
-        @Nullable String customResponseBodyKey,
-        Integer responseCode,
-        @Nullable List<RuleGroupRuleActionBlockCustomResponseResponseHeader> responseHeaders) {
+        @OutputCustomType.Parameter("customResponseBodyKey") @Nullable String customResponseBodyKey,
+        @OutputCustomType.Parameter("responseCode") Integer responseCode,
+        @OutputCustomType.Parameter("responseHeaders") @Nullable List<RuleGroupRuleActionBlockCustomResponseResponseHeader> responseHeaders) {
         this.customResponseBodyKey = customResponseBodyKey;
         this.responseCode = responseCode;
         this.responseHeaders = responseHeaders;

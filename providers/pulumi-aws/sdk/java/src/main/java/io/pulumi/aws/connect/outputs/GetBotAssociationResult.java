@@ -18,11 +18,11 @@ public final class GetBotAssociationResult {
     private final String instanceId;
     private final GetBotAssociationLexBot lexBot;
 
-    @OutputCustomType.Constructor({"id","instanceId","lexBot"})
+    @OutputCustomType.Constructor
     private GetBotAssociationResult(
-        String id,
-        String instanceId,
-        GetBotAssociationLexBot lexBot) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceId") String instanceId,
+        @OutputCustomType.Parameter("lexBot") GetBotAssociationLexBot lexBot) {
         this.id = id;
         this.instanceId = instanceId;
         this.lexBot = lexBot;

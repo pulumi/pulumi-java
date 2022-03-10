@@ -43,16 +43,16 @@ public final class GetServiceResult {
      */
     private final String taskDefinition;
 
-    @OutputCustomType.Constructor({"arn","clusterArn","desiredCount","id","launchType","schedulingStrategy","serviceName","taskDefinition"})
+    @OutputCustomType.Constructor
     private GetServiceResult(
-        String arn,
-        String clusterArn,
-        Integer desiredCount,
-        String id,
-        String launchType,
-        String schedulingStrategy,
-        String serviceName,
-        String taskDefinition) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("clusterArn") String clusterArn,
+        @OutputCustomType.Parameter("desiredCount") Integer desiredCount,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("launchType") String launchType,
+        @OutputCustomType.Parameter("schedulingStrategy") String schedulingStrategy,
+        @OutputCustomType.Parameter("serviceName") String serviceName,
+        @OutputCustomType.Parameter("taskDefinition") String taskDefinition) {
         this.arn = arn;
         this.clusterArn = clusterArn;
         this.desiredCount = desiredCount;

@@ -15,8 +15,8 @@ public final class FlowDefinitionHumanLoopActivationConfigHumanLoopActivationCon
      */
     private final String humanLoopActivationConditions;
 
-    @OutputCustomType.Constructor({"humanLoopActivationConditions"})
-    private FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfig(String humanLoopActivationConditions) {
+    @OutputCustomType.Constructor
+    private FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfig(@OutputCustomType.Parameter("humanLoopActivationConditions") String humanLoopActivationConditions) {
         this.humanLoopActivationConditions = humanLoopActivationConditions;
     }
 

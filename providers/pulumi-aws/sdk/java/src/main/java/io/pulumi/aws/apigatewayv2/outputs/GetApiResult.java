@@ -84,22 +84,22 @@ public final class GetApiResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"apiEndpoint","apiId","apiKeySelectionExpression","arn","corsConfigurations","description","disableExecuteApiEndpoint","executionArn","id","name","protocolType","routeSelectionExpression","tags","version"})
+    @OutputCustomType.Constructor
     private GetApiResult(
-        String apiEndpoint,
-        String apiId,
-        String apiKeySelectionExpression,
-        String arn,
-        List<GetApiCorsConfiguration> corsConfigurations,
-        String description,
-        Boolean disableExecuteApiEndpoint,
-        String executionArn,
-        String id,
-        String name,
-        String protocolType,
-        String routeSelectionExpression,
-        Map<String,String> tags,
-        String version) {
+        @OutputCustomType.Parameter("apiEndpoint") String apiEndpoint,
+        @OutputCustomType.Parameter("apiId") String apiId,
+        @OutputCustomType.Parameter("apiKeySelectionExpression") String apiKeySelectionExpression,
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("corsConfigurations") List<GetApiCorsConfiguration> corsConfigurations,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("disableExecuteApiEndpoint") Boolean disableExecuteApiEndpoint,
+        @OutputCustomType.Parameter("executionArn") String executionArn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("protocolType") String protocolType,
+        @OutputCustomType.Parameter("routeSelectionExpression") String routeSelectionExpression,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("version") String version) {
         this.apiEndpoint = apiEndpoint;
         this.apiId = apiId;
         this.apiKeySelectionExpression = apiKeySelectionExpression;

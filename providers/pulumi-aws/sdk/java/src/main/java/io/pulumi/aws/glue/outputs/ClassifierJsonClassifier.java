@@ -15,8 +15,8 @@ public final class ClassifierJsonClassifier {
      */
     private final String jsonPath;
 
-    @OutputCustomType.Constructor({"jsonPath"})
-    private ClassifierJsonClassifier(String jsonPath) {
+    @OutputCustomType.Constructor
+    private ClassifierJsonClassifier(@OutputCustomType.Parameter("jsonPath") String jsonPath) {
         this.jsonPath = jsonPath;
     }
 

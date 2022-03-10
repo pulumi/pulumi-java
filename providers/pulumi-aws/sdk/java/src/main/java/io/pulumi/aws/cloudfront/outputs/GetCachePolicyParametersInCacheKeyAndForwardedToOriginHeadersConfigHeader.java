@@ -16,8 +16,8 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeaders
      */
     private final List<String> items;
 
-    @OutputCustomType.Constructor({"items"})
-    private GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader(List<String> items) {
+    @OutputCustomType.Constructor
+    private GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader(@OutputCustomType.Parameter("items") List<String> items) {
         this.items = items;
     }
 

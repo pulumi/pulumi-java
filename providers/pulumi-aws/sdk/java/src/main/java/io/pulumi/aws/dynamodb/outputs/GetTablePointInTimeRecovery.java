@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetTablePointInTimeRecovery {
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private GetTablePointInTimeRecovery(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private GetTablePointInTimeRecovery(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

@@ -14,8 +14,8 @@ import javax.annotation.Nullable;
 public final class ProviderDefaultTagsArgs {
     private final @Nullable Input<Map<String,String>> tags;
 
-    @OutputCustomType.Constructor({"tags"})
-    private ProviderDefaultTagsArgs(@Nullable Input<Map<String,String>> tags) {
+    @OutputCustomType.Constructor
+    private ProviderDefaultTagsArgs(@OutputCustomType.Parameter("tags") @Nullable Input<Map<String,String>> tags) {
         this.tags = tags;
     }
 

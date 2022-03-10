@@ -29,12 +29,12 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationVpcConfig {
     private final List<String> subnetIds;
     private final @Nullable String vpcId;
 
-    @OutputCustomType.Constructor({"roleArn","securityGroupIds","subnetIds","vpcId"})
+    @OutputCustomType.Constructor
     private FirehoseDeliveryStreamElasticsearchConfigurationVpcConfig(
-        String roleArn,
-        List<String> securityGroupIds,
-        List<String> subnetIds,
-        @Nullable String vpcId) {
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
+        @OutputCustomType.Parameter("vpcId") @Nullable String vpcId) {
         this.roleArn = roleArn;
         this.securityGroupIds = securityGroupIds;
         this.subnetIds = subnetIds;

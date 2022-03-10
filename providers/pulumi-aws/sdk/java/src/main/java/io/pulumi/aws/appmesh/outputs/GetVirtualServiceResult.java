@@ -52,18 +52,18 @@ public final class GetVirtualServiceResult {
      */
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","createdDate","id","lastUpdatedDate","meshName","meshOwner","name","resourceOwner","specs","tags"})
+    @OutputCustomType.Constructor
     private GetVirtualServiceResult(
-        String arn,
-        String createdDate,
-        String id,
-        String lastUpdatedDate,
-        String meshName,
-        String meshOwner,
-        String name,
-        String resourceOwner,
-        List<GetVirtualServiceSpec> specs,
-        @Nullable Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastUpdatedDate") String lastUpdatedDate,
+        @OutputCustomType.Parameter("meshName") String meshName,
+        @OutputCustomType.Parameter("meshOwner") String meshOwner,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceOwner") String resourceOwner,
+        @OutputCustomType.Parameter("specs") List<GetVirtualServiceSpec> specs,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.arn = arn;
         this.createdDate = createdDate;
         this.id = id;

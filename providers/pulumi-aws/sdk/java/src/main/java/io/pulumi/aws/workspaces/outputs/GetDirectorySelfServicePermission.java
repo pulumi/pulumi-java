@@ -35,13 +35,13 @@ public final class GetDirectorySelfServicePermission {
      */
     private final Boolean switchRunningMode;
 
-    @OutputCustomType.Constructor({"changeComputeType","increaseVolumeSize","rebuildWorkspace","restartWorkspace","switchRunningMode"})
+    @OutputCustomType.Constructor
     private GetDirectorySelfServicePermission(
-        Boolean changeComputeType,
-        Boolean increaseVolumeSize,
-        Boolean rebuildWorkspace,
-        Boolean restartWorkspace,
-        Boolean switchRunningMode) {
+        @OutputCustomType.Parameter("changeComputeType") Boolean changeComputeType,
+        @OutputCustomType.Parameter("increaseVolumeSize") Boolean increaseVolumeSize,
+        @OutputCustomType.Parameter("rebuildWorkspace") Boolean rebuildWorkspace,
+        @OutputCustomType.Parameter("restartWorkspace") Boolean restartWorkspace,
+        @OutputCustomType.Parameter("switchRunningMode") Boolean switchRunningMode) {
         this.changeComputeType = changeComputeType;
         this.increaseVolumeSize = increaseVolumeSize;
         this.rebuildWorkspace = rebuildWorkspace;

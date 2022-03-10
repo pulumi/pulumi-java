@@ -20,10 +20,10 @@ public final class GetLaunchTemplateIamInstanceProfile {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"arn","name"})
+    @OutputCustomType.Constructor
     private GetLaunchTemplateIamInstanceProfile(
-        String arn,
-        String name) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("name") String name) {
         this.arn = arn;
         this.name = name;
     }

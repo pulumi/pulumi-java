@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatterns {
     private final @Nullable List<String> items;
 
-    @OutputCustomType.Constructor({"items"})
-    private FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatterns(@Nullable List<String> items) {
+    @OutputCustomType.Constructor
+    private FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatterns(@OutputCustomType.Parameter("items") @Nullable List<String> items) {
         this.items = items;
     }
 

@@ -29,11 +29,11 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      */
     private final @Nullable ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfiguration parallelismConfiguration;
 
-    @OutputCustomType.Constructor({"checkpointConfiguration","monitoringConfiguration","parallelismConfiguration"})
+    @OutputCustomType.Constructor
     private ApplicationApplicationConfigurationFlinkApplicationConfiguration(
-        @Nullable ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfiguration checkpointConfiguration,
-        @Nullable ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfiguration monitoringConfiguration,
-        @Nullable ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfiguration parallelismConfiguration) {
+        @OutputCustomType.Parameter("checkpointConfiguration") @Nullable ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfiguration checkpointConfiguration,
+        @OutputCustomType.Parameter("monitoringConfiguration") @Nullable ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfiguration monitoringConfiguration,
+        @OutputCustomType.Parameter("parallelismConfiguration") @Nullable ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfiguration parallelismConfiguration) {
         this.checkpointConfiguration = checkpointConfiguration;
         this.monitoringConfiguration = monitoringConfiguration;
         this.parallelismConfiguration = parallelismConfiguration;

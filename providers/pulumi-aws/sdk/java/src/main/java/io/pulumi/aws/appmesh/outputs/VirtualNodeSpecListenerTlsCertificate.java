@@ -29,11 +29,11 @@ public final class VirtualNodeSpecListenerTlsCertificate {
      */
     private final @Nullable VirtualNodeSpecListenerTlsCertificateSds sds;
 
-    @OutputCustomType.Constructor({"acm","file","sds"})
+    @OutputCustomType.Constructor
     private VirtualNodeSpecListenerTlsCertificate(
-        @Nullable VirtualNodeSpecListenerTlsCertificateAcm acm,
-        @Nullable VirtualNodeSpecListenerTlsCertificateFile file,
-        @Nullable VirtualNodeSpecListenerTlsCertificateSds sds) {
+        @OutputCustomType.Parameter("acm") @Nullable VirtualNodeSpecListenerTlsCertificateAcm acm,
+        @OutputCustomType.Parameter("file") @Nullable VirtualNodeSpecListenerTlsCertificateFile file,
+        @OutputCustomType.Parameter("sds") @Nullable VirtualNodeSpecListenerTlsCertificateSds sds) {
         this.acm = acm;
         this.file = file;
         this.sds = sds;

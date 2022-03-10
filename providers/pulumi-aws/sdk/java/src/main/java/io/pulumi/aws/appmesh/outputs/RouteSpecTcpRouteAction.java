@@ -17,8 +17,8 @@ public final class RouteSpecTcpRouteAction {
      */
     private final List<RouteSpecTcpRouteActionWeightedTarget> weightedTargets;
 
-    @OutputCustomType.Constructor({"weightedTargets"})
-    private RouteSpecTcpRouteAction(List<RouteSpecTcpRouteActionWeightedTarget> weightedTargets) {
+    @OutputCustomType.Constructor
+    private RouteSpecTcpRouteAction(@OutputCustomType.Parameter("weightedTargets") List<RouteSpecTcpRouteActionWeightedTarget> weightedTargets) {
         this.weightedTargets = weightedTargets;
     }
 

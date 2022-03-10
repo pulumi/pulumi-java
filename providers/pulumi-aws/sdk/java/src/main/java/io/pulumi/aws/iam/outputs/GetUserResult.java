@@ -46,15 +46,15 @@ public final class GetUserResult {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor({"arn","id","path","permissionsBoundary","tags","userId","userName"})
+    @OutputCustomType.Constructor
     private GetUserResult(
-        String arn,
-        String id,
-        String path,
-        String permissionsBoundary,
-        Map<String,String> tags,
-        String userId,
-        String userName) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("permissionsBoundary") String permissionsBoundary,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("userId") String userId,
+        @OutputCustomType.Parameter("userName") String userName) {
         this.arn = arn;
         this.id = id;
         this.path = path;

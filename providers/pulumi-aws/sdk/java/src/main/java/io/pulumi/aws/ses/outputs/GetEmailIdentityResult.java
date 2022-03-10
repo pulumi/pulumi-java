@@ -25,11 +25,11 @@ public final class GetEmailIdentityResult {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"arn","email","id"})
+    @OutputCustomType.Constructor
     private GetEmailIdentityResult(
-        String arn,
-        String email,
-        String id) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("id") String id) {
         this.arn = arn;
         this.email = email;
         this.id = id;

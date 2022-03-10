@@ -26,10 +26,10 @@ public final class SizeConstraintSetSizeConstraintFieldToMatch {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"data","type"})
+    @OutputCustomType.Constructor
     private SizeConstraintSetSizeConstraintFieldToMatch(
-        @Nullable String data,
-        String type) {
+        @OutputCustomType.Parameter("data") @Nullable String data,
+        @OutputCustomType.Parameter("type") String type) {
         this.data = data;
         this.type = type;
     }

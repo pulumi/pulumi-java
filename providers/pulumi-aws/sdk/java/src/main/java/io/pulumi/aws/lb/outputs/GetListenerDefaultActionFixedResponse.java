@@ -13,11 +13,11 @@ public final class GetListenerDefaultActionFixedResponse {
     private final String messageBody;
     private final String statusCode;
 
-    @OutputCustomType.Constructor({"contentType","messageBody","statusCode"})
+    @OutputCustomType.Constructor
     private GetListenerDefaultActionFixedResponse(
-        String contentType,
-        String messageBody,
-        String statusCode) {
+        @OutputCustomType.Parameter("contentType") String contentType,
+        @OutputCustomType.Parameter("messageBody") String messageBody,
+        @OutputCustomType.Parameter("statusCode") String statusCode) {
         this.contentType = contentType;
         this.messageBody = messageBody;
         this.statusCode = statusCode;

@@ -24,10 +24,10 @@ public final class DeploymentGroupAutoRollbackConfiguration {
      */
     private final @Nullable List<String> events;
 
-    @OutputCustomType.Constructor({"enabled","events"})
+    @OutputCustomType.Constructor
     private DeploymentGroupAutoRollbackConfiguration(
-        @Nullable Boolean enabled,
-        @Nullable List<String> events) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("events") @Nullable List<String> events) {
         this.enabled = enabled;
         this.events = events;
     }

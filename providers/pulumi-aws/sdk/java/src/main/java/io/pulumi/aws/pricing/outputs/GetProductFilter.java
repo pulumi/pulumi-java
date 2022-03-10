@@ -20,10 +20,10 @@ public final class GetProductFilter {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"field","value"})
+    @OutputCustomType.Constructor
     private GetProductFilter(
-        String field,
-        String value) {
+        @OutputCustomType.Parameter("field") String field,
+        @OutputCustomType.Parameter("value") String value) {
         this.field = field;
         this.value = value;
     }

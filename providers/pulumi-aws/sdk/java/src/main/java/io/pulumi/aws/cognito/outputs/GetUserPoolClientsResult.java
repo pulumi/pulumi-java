@@ -27,12 +27,12 @@ public final class GetUserPoolClientsResult {
     private final String id;
     private final String userPoolId;
 
-    @OutputCustomType.Constructor({"clientIds","clientNames","id","userPoolId"})
+    @OutputCustomType.Constructor
     private GetUserPoolClientsResult(
-        List<String> clientIds,
-        List<String> clientNames,
-        String id,
-        String userPoolId) {
+        @OutputCustomType.Parameter("clientIds") List<String> clientIds,
+        @OutputCustomType.Parameter("clientNames") List<String> clientNames,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("userPoolId") String userPoolId) {
         this.clientIds = clientIds;
         this.clientNames = clientNames;
         this.id = id;

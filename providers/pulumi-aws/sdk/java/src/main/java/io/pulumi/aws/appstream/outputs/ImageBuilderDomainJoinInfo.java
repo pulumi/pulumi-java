@@ -22,10 +22,10 @@ public final class ImageBuilderDomainJoinInfo {
      */
     private final @Nullable String organizationalUnitDistinguishedName;
 
-    @OutputCustomType.Constructor({"directoryName","organizationalUnitDistinguishedName"})
+    @OutputCustomType.Constructor
     private ImageBuilderDomainJoinInfo(
-        @Nullable String directoryName,
-        @Nullable String organizationalUnitDistinguishedName) {
+        @OutputCustomType.Parameter("directoryName") @Nullable String directoryName,
+        @OutputCustomType.Parameter("organizationalUnitDistinguishedName") @Nullable String organizationalUnitDistinguishedName) {
         this.directoryName = directoryName;
         this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
     }

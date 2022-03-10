@@ -25,10 +25,10 @@ public final class ServiceOrderedPlacementStrategy {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"field","type"})
+    @OutputCustomType.Constructor
     private ServiceOrderedPlacementStrategy(
-        @Nullable String field,
-        String type) {
+        @OutputCustomType.Parameter("field") @Nullable String field,
+        @OutputCustomType.Parameter("type") String type) {
         this.field = field;
         this.type = type;
     }

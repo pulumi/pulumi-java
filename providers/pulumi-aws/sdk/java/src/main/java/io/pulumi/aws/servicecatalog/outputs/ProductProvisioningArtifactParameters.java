@@ -43,14 +43,14 @@ public final class ProductProvisioningArtifactParameters {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"description","disableTemplateValidation","name","templatePhysicalId","templateUrl","type"})
+    @OutputCustomType.Constructor
     private ProductProvisioningArtifactParameters(
-        @Nullable String description,
-        @Nullable Boolean disableTemplateValidation,
-        @Nullable String name,
-        @Nullable String templatePhysicalId,
-        @Nullable String templateUrl,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("disableTemplateValidation") @Nullable Boolean disableTemplateValidation,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("templatePhysicalId") @Nullable String templatePhysicalId,
+        @OutputCustomType.Parameter("templateUrl") @Nullable String templateUrl,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.description = description;
         this.disableTemplateValidation = disableTemplateValidation;
         this.name = name;

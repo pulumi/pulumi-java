@@ -25,11 +25,11 @@ public final class GetNodeGroupScalingConfig {
      */
     private final Integer minSize;
 
-    @OutputCustomType.Constructor({"desiredSize","maxSize","minSize"})
+    @OutputCustomType.Constructor
     private GetNodeGroupScalingConfig(
-        Integer desiredSize,
-        Integer maxSize,
-        Integer minSize) {
+        @OutputCustomType.Parameter("desiredSize") Integer desiredSize,
+        @OutputCustomType.Parameter("maxSize") Integer maxSize,
+        @OutputCustomType.Parameter("minSize") Integer minSize) {
         this.desiredSize = desiredSize;
         this.maxSize = maxSize;
         this.minSize = minSize;

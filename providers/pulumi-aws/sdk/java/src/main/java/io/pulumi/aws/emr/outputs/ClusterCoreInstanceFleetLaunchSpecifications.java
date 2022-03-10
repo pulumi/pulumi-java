@@ -23,10 +23,10 @@ public final class ClusterCoreInstanceFleetLaunchSpecifications {
      */
     private final @Nullable List<ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecification> spotSpecifications;
 
-    @OutputCustomType.Constructor({"onDemandSpecifications","spotSpecifications"})
+    @OutputCustomType.Constructor
     private ClusterCoreInstanceFleetLaunchSpecifications(
-        @Nullable List<ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecification> onDemandSpecifications,
-        @Nullable List<ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecification> spotSpecifications) {
+        @OutputCustomType.Parameter("onDemandSpecifications") @Nullable List<ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecification> onDemandSpecifications,
+        @OutputCustomType.Parameter("spotSpecifications") @Nullable List<ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecification> spotSpecifications) {
         this.onDemandSpecifications = onDemandSpecifications;
         this.spotSpecifications = spotSpecifications;
     }

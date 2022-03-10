@@ -44,14 +44,14 @@ public final class GetPermissionsTableWithColumns {
      */
     private final @Nullable Boolean wildcard;
 
-    @OutputCustomType.Constructor({"catalogId","columnNames","databaseName","excludedColumnNames","name","wildcard"})
+    @OutputCustomType.Constructor
     private GetPermissionsTableWithColumns(
-        String catalogId,
-        @Nullable List<String> columnNames,
-        String databaseName,
-        @Nullable List<String> excludedColumnNames,
-        String name,
-        @Nullable Boolean wildcard) {
+        @OutputCustomType.Parameter("catalogId") String catalogId,
+        @OutputCustomType.Parameter("columnNames") @Nullable List<String> columnNames,
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("excludedColumnNames") @Nullable List<String> excludedColumnNames,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("wildcard") @Nullable Boolean wildcard) {
         this.catalogId = catalogId;
         this.columnNames = columnNames;
         this.databaseName = databaseName;

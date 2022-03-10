@@ -17,8 +17,8 @@ public final class ClusterServerSideEncryption {
      */
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private ClusterServerSideEncryption(@Nullable Boolean enabled) {
+    @OutputCustomType.Constructor
+    private ClusterServerSideEncryption(@OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.enabled = enabled;
     }
 

@@ -45,14 +45,14 @@ public final class OptionGroupOption {
      */
     private final @Nullable List<String> vpcSecurityGroupMemberships;
 
-    @OutputCustomType.Constructor({"dbSecurityGroupMemberships","optionName","optionSettings","port","version","vpcSecurityGroupMemberships"})
+    @OutputCustomType.Constructor
     private OptionGroupOption(
-        @Nullable List<String> dbSecurityGroupMemberships,
-        String optionName,
-        @Nullable List<OptionGroupOptionOptionSetting> optionSettings,
-        @Nullable Integer port,
-        @Nullable String version,
-        @Nullable List<String> vpcSecurityGroupMemberships) {
+        @OutputCustomType.Parameter("dbSecurityGroupMemberships") @Nullable List<String> dbSecurityGroupMemberships,
+        @OutputCustomType.Parameter("optionName") String optionName,
+        @OutputCustomType.Parameter("optionSettings") @Nullable List<OptionGroupOptionOptionSetting> optionSettings,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("version") @Nullable String version,
+        @OutputCustomType.Parameter("vpcSecurityGroupMemberships") @Nullable List<String> vpcSecurityGroupMemberships) {
         this.dbSecurityGroupMemberships = dbSecurityGroupMemberships;
         this.optionName = optionName;
         this.optionSettings = optionSettings;

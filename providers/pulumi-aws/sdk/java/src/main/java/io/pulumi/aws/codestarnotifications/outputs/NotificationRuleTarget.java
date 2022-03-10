@@ -27,11 +27,11 @@ public final class NotificationRuleTarget {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"address","status","type"})
+    @OutputCustomType.Constructor
     private NotificationRuleTarget(
-        String address,
-        @Nullable String status,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("address") String address,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.address = address;
         this.status = status;
         this.type = type;

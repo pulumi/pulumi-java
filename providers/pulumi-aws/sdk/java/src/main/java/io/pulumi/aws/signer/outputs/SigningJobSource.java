@@ -15,8 +15,8 @@ public final class SigningJobSource {
      */
     private final SigningJobSourceS3 s3;
 
-    @OutputCustomType.Constructor({"s3"})
-    private SigningJobSource(SigningJobSourceS3 s3) {
+    @OutputCustomType.Constructor
+    private SigningJobSource(@OutputCustomType.Parameter("s3") SigningJobSourceS3 s3) {
         this.s3 = s3;
     }
 

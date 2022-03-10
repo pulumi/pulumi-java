@@ -63,19 +63,19 @@ public final class GetClusterResult {
      */
     private final String zookeeperConnectString;
 
-    @OutputCustomType.Constructor({"arn","bootstrapBrokers","bootstrapBrokersSaslIam","bootstrapBrokersSaslScram","bootstrapBrokersTls","clusterName","id","kafkaVersion","numberOfBrokerNodes","tags","zookeeperConnectString"})
+    @OutputCustomType.Constructor
     private GetClusterResult(
-        String arn,
-        String bootstrapBrokers,
-        String bootstrapBrokersSaslIam,
-        String bootstrapBrokersSaslScram,
-        String bootstrapBrokersTls,
-        String clusterName,
-        String id,
-        String kafkaVersion,
-        Integer numberOfBrokerNodes,
-        Map<String,String> tags,
-        String zookeeperConnectString) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("bootstrapBrokers") String bootstrapBrokers,
+        @OutputCustomType.Parameter("bootstrapBrokersSaslIam") String bootstrapBrokersSaslIam,
+        @OutputCustomType.Parameter("bootstrapBrokersSaslScram") String bootstrapBrokersSaslScram,
+        @OutputCustomType.Parameter("bootstrapBrokersTls") String bootstrapBrokersTls,
+        @OutputCustomType.Parameter("clusterName") String clusterName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kafkaVersion") String kafkaVersion,
+        @OutputCustomType.Parameter("numberOfBrokerNodes") Integer numberOfBrokerNodes,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("zookeeperConnectString") String zookeeperConnectString) {
         this.arn = arn;
         this.bootstrapBrokers = bootstrapBrokers;
         this.bootstrapBrokersSaslIam = bootstrapBrokersSaslIam;

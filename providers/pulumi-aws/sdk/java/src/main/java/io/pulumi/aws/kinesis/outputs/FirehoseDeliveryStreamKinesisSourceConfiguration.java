@@ -20,10 +20,10 @@ public final class FirehoseDeliveryStreamKinesisSourceConfiguration {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"kinesisStreamArn","roleArn"})
+    @OutputCustomType.Constructor
     private FirehoseDeliveryStreamKinesisSourceConfiguration(
-        String kinesisStreamArn,
-        String roleArn) {
+        @OutputCustomType.Parameter("kinesisStreamArn") String kinesisStreamArn,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.kinesisStreamArn = kinesisStreamArn;
         this.roleArn = roleArn;
     }

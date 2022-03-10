@@ -35,12 +35,12 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      */
     private final FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfiguration schemaConfiguration;
 
-    @OutputCustomType.Constructor({"enabled","inputFormatConfiguration","outputFormatConfiguration","schemaConfiguration"})
+    @OutputCustomType.Constructor
     private FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfiguration(
-        @Nullable Boolean enabled,
-        FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfiguration inputFormatConfiguration,
-        FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfiguration outputFormatConfiguration,
-        FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfiguration schemaConfiguration) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("inputFormatConfiguration") FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfiguration inputFormatConfiguration,
+        @OutputCustomType.Parameter("outputFormatConfiguration") FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfiguration outputFormatConfiguration,
+        @OutputCustomType.Parameter("schemaConfiguration") FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfiguration schemaConfiguration) {
         this.enabled = enabled;
         this.inputFormatConfiguration = inputFormatConfiguration;
         this.outputFormatConfiguration = outputFormatConfiguration;

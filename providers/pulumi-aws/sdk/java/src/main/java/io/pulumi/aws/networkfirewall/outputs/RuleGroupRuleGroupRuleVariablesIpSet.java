@@ -21,10 +21,10 @@ public final class RuleGroupRuleGroupRuleVariablesIpSet {
      */
     private final String key;
 
-    @OutputCustomType.Constructor({"ipSet","key"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleGroupRuleVariablesIpSet(
-        RuleGroupRuleGroupRuleVariablesIpSetIpSet ipSet,
-        String key) {
+        @OutputCustomType.Parameter("ipSet") RuleGroupRuleGroupRuleVariablesIpSetIpSet ipSet,
+        @OutputCustomType.Parameter("key") String key) {
         this.ipSet = ipSet;
         this.key = key;
     }

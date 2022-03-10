@@ -21,10 +21,10 @@ public final class RouteRequestParameter {
      */
     private final Boolean required;
 
-    @OutputCustomType.Constructor({"requestParameterKey","required"})
+    @OutputCustomType.Constructor
     private RouteRequestParameter(
-        String requestParameterKey,
-        Boolean required) {
+        @OutputCustomType.Parameter("requestParameterKey") String requestParameterKey,
+        @OutputCustomType.Parameter("required") Boolean required) {
         this.requestParameterKey = requestParameterKey;
         this.required = required;
     }

@@ -17,8 +17,8 @@ public final class ClusterIdentity {
      */
     private final @Nullable List<ClusterIdentityOidc> oidcs;
 
-    @OutputCustomType.Constructor({"oidcs"})
-    private ClusterIdentity(@Nullable List<ClusterIdentityOidc> oidcs) {
+    @OutputCustomType.Constructor
+    private ClusterIdentity(@OutputCustomType.Parameter("oidcs") @Nullable List<ClusterIdentityOidc> oidcs) {
         this.oidcs = oidcs;
     }
 

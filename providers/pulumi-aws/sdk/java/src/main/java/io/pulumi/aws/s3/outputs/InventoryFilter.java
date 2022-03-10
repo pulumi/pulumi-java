@@ -17,8 +17,8 @@ public final class InventoryFilter {
      */
     private final @Nullable String prefix;
 
-    @OutputCustomType.Constructor({"prefix"})
-    private InventoryFilter(@Nullable String prefix) {
+    @OutputCustomType.Constructor
+    private InventoryFilter(@OutputCustomType.Parameter("prefix") @Nullable String prefix) {
         this.prefix = prefix;
     }
 

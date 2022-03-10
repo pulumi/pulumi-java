@@ -26,11 +26,11 @@ public final class FleetNetwork {
      */
     private final String vpcId;
 
-    @OutputCustomType.Constructor({"securityGroupIds","subnetIds","vpcId"})
+    @OutputCustomType.Constructor
     private FleetNetwork(
-        List<String> securityGroupIds,
-        List<String> subnetIds,
-        String vpcId) {
+        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
+        @OutputCustomType.Parameter("vpcId") String vpcId) {
         this.securityGroupIds = securityGroupIds;
         this.subnetIds = subnetIds;
         this.vpcId = vpcId;

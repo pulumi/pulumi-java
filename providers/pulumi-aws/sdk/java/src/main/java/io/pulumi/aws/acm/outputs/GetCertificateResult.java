@@ -40,17 +40,17 @@ public final class GetCertificateResult {
     private final Map<String,String> tags;
     private final @Nullable List<String> types;
 
-    @OutputCustomType.Constructor({"arn","domain","id","keyTypes","mostRecent","status","statuses","tags","types"})
+    @OutputCustomType.Constructor
     private GetCertificateResult(
-        String arn,
-        String domain,
-        String id,
-        @Nullable List<String> keyTypes,
-        @Nullable Boolean mostRecent,
-        String status,
-        @Nullable List<String> statuses,
-        Map<String,String> tags,
-        @Nullable List<String> types) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("domain") String domain,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("keyTypes") @Nullable List<String> keyTypes,
+        @OutputCustomType.Parameter("mostRecent") @Nullable Boolean mostRecent,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("statuses") @Nullable List<String> statuses,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("types") @Nullable List<String> types) {
         this.arn = arn;
         this.domain = domain;
         this.id = id;

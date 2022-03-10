@@ -29,11 +29,11 @@ public final class EventConnectionAuthParametersOauthOauthHttpParameters {
      */
     private final @Nullable List<EventConnectionAuthParametersOauthOauthHttpParametersQueryString> queryStrings;
 
-    @OutputCustomType.Constructor({"bodies","headers","queryStrings"})
+    @OutputCustomType.Constructor
     private EventConnectionAuthParametersOauthOauthHttpParameters(
-        @Nullable List<EventConnectionAuthParametersOauthOauthHttpParametersBody> bodies,
-        @Nullable List<EventConnectionAuthParametersOauthOauthHttpParametersHeader> headers,
-        @Nullable List<EventConnectionAuthParametersOauthOauthHttpParametersQueryString> queryStrings) {
+        @OutputCustomType.Parameter("bodies") @Nullable List<EventConnectionAuthParametersOauthOauthHttpParametersBody> bodies,
+        @OutputCustomType.Parameter("headers") @Nullable List<EventConnectionAuthParametersOauthOauthHttpParametersHeader> headers,
+        @OutputCustomType.Parameter("queryStrings") @Nullable List<EventConnectionAuthParametersOauthOauthHttpParametersQueryString> queryStrings) {
         this.bodies = bodies;
         this.headers = headers;
         this.queryStrings = queryStrings;

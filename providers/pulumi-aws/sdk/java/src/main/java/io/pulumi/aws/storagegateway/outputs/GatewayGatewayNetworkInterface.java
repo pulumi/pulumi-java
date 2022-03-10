@@ -17,8 +17,8 @@ public final class GatewayGatewayNetworkInterface {
      */
     private final @Nullable String ipv4Address;
 
-    @OutputCustomType.Constructor({"ipv4Address"})
-    private GatewayGatewayNetworkInterface(@Nullable String ipv4Address) {
+    @OutputCustomType.Constructor
+    private GatewayGatewayNetworkInterface(@OutputCustomType.Parameter("ipv4Address") @Nullable String ipv4Address) {
         this.ipv4Address = ipv4Address;
     }
 

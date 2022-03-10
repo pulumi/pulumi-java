@@ -29,11 +29,11 @@ public final class RouteSpecGrpcRouteMatchMetadata {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"invert","match","name"})
+    @OutputCustomType.Constructor
     private RouteSpecGrpcRouteMatchMetadata(
-        @Nullable Boolean invert,
-        @Nullable RouteSpecGrpcRouteMatchMetadataMatch match,
-        String name) {
+        @OutputCustomType.Parameter("invert") @Nullable Boolean invert,
+        @OutputCustomType.Parameter("match") @Nullable RouteSpecGrpcRouteMatchMetadataMatch match,
+        @OutputCustomType.Parameter("name") String name) {
         this.invert = invert;
         this.match = match;
         this.name = name;

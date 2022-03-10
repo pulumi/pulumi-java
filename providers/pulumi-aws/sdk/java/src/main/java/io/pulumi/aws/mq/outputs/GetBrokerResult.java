@@ -46,30 +46,30 @@ public final class GetBrokerResult {
     private final Map<String,String> tags;
     private final List<GetBrokerUser> users;
 
-    @OutputCustomType.Constructor({"arn","authenticationStrategy","autoMinorVersionUpgrade","brokerId","brokerName","configuration","deploymentMode","encryptionOptions","engineType","engineVersion","hostInstanceType","id","instances","ldapServerMetadatas","logs","maintenanceWindowStartTime","publiclyAccessible","securityGroups","storageType","subnetIds","tags","users"})
+    @OutputCustomType.Constructor
     private GetBrokerResult(
-        String arn,
-        String authenticationStrategy,
-        Boolean autoMinorVersionUpgrade,
-        String brokerId,
-        String brokerName,
-        GetBrokerConfiguration configuration,
-        String deploymentMode,
-        List<GetBrokerEncryptionOption> encryptionOptions,
-        String engineType,
-        String engineVersion,
-        String hostInstanceType,
-        String id,
-        List<GetBrokerInstance> instances,
-        List<GetBrokerLdapServerMetadata> ldapServerMetadatas,
-        GetBrokerLogs logs,
-        GetBrokerMaintenanceWindowStartTime maintenanceWindowStartTime,
-        Boolean publiclyAccessible,
-        List<String> securityGroups,
-        String storageType,
-        List<String> subnetIds,
-        Map<String,String> tags,
-        List<GetBrokerUser> users) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("authenticationStrategy") String authenticationStrategy,
+        @OutputCustomType.Parameter("autoMinorVersionUpgrade") Boolean autoMinorVersionUpgrade,
+        @OutputCustomType.Parameter("brokerId") String brokerId,
+        @OutputCustomType.Parameter("brokerName") String brokerName,
+        @OutputCustomType.Parameter("configuration") GetBrokerConfiguration configuration,
+        @OutputCustomType.Parameter("deploymentMode") String deploymentMode,
+        @OutputCustomType.Parameter("encryptionOptions") List<GetBrokerEncryptionOption> encryptionOptions,
+        @OutputCustomType.Parameter("engineType") String engineType,
+        @OutputCustomType.Parameter("engineVersion") String engineVersion,
+        @OutputCustomType.Parameter("hostInstanceType") String hostInstanceType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instances") List<GetBrokerInstance> instances,
+        @OutputCustomType.Parameter("ldapServerMetadatas") List<GetBrokerLdapServerMetadata> ldapServerMetadatas,
+        @OutputCustomType.Parameter("logs") GetBrokerLogs logs,
+        @OutputCustomType.Parameter("maintenanceWindowStartTime") GetBrokerMaintenanceWindowStartTime maintenanceWindowStartTime,
+        @OutputCustomType.Parameter("publiclyAccessible") Boolean publiclyAccessible,
+        @OutputCustomType.Parameter("securityGroups") List<String> securityGroups,
+        @OutputCustomType.Parameter("storageType") String storageType,
+        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("users") List<GetBrokerUser> users) {
         this.arn = arn;
         this.authenticationStrategy = authenticationStrategy;
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;

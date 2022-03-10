@@ -65,17 +65,17 @@ public final class GetSlotTypeResult {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"checksum","createdDate","description","enumerationValues","id","lastUpdatedDate","name","valueSelectionStrategy","version"})
+    @OutputCustomType.Constructor
     private GetSlotTypeResult(
-        String checksum,
-        String createdDate,
-        String description,
-        List<GetSlotTypeEnumerationValue> enumerationValues,
-        String id,
-        String lastUpdatedDate,
-        String name,
-        String valueSelectionStrategy,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("checksum") String checksum,
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("enumerationValues") List<GetSlotTypeEnumerationValue> enumerationValues,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastUpdatedDate") String lastUpdatedDate,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("valueSelectionStrategy") String valueSelectionStrategy,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.checksum = checksum;
         this.createdDate = createdDate;
         this.description = description;

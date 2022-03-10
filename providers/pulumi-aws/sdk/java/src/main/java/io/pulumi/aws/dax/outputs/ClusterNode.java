@@ -21,12 +21,12 @@ public final class ClusterNode {
      */
     private final @Nullable Integer port;
 
-    @OutputCustomType.Constructor({"address","availabilityZone","id","port"})
+    @OutputCustomType.Constructor
     private ClusterNode(
-        @Nullable String address,
-        @Nullable String availabilityZone,
-        @Nullable String id,
-        @Nullable Integer port) {
+        @OutputCustomType.Parameter("address") @Nullable String address,
+        @OutputCustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("port") @Nullable Integer port) {
         this.address = address;
         this.availabilityZone = availabilityZone;
         this.id = id;

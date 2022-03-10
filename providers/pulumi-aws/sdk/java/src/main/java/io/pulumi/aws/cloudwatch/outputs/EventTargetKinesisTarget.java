@@ -17,8 +17,8 @@ public final class EventTargetKinesisTarget {
      */
     private final @Nullable String partitionKeyPath;
 
-    @OutputCustomType.Constructor({"partitionKeyPath"})
-    private EventTargetKinesisTarget(@Nullable String partitionKeyPath) {
+    @OutputCustomType.Constructor
+    private EventTargetKinesisTarget(@OutputCustomType.Parameter("partitionKeyPath") @Nullable String partitionKeyPath) {
         this.partitionKeyPath = partitionKeyPath;
     }
 

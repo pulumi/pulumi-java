@@ -37,13 +37,13 @@ public final class SecretReplica {
      */
     private final @Nullable String statusMessage;
 
-    @OutputCustomType.Constructor({"kmsKeyId","lastAccessedDate","region","status","statusMessage"})
+    @OutputCustomType.Constructor
     private SecretReplica(
-        @Nullable String kmsKeyId,
-        @Nullable String lastAccessedDate,
-        String region,
-        @Nullable String status,
-        @Nullable String statusMessage) {
+        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @OutputCustomType.Parameter("lastAccessedDate") @Nullable String lastAccessedDate,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("statusMessage") @Nullable String statusMessage) {
         this.kmsKeyId = kmsKeyId;
         this.lastAccessedDate = lastAccessedDate;
         this.region = region;

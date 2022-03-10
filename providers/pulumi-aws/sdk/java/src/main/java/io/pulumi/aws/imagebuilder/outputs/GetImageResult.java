@@ -86,23 +86,23 @@ public final class GetImageResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"arn","buildVersionArn","dateCreated","distributionConfigurationArn","enhancedImageMetadataEnabled","id","imageRecipeArn","imageTestsConfigurations","infrastructureConfigurationArn","name","osVersion","outputResources","platform","tags","version"})
+    @OutputCustomType.Constructor
     private GetImageResult(
-        String arn,
-        String buildVersionArn,
-        String dateCreated,
-        String distributionConfigurationArn,
-        Boolean enhancedImageMetadataEnabled,
-        String id,
-        String imageRecipeArn,
-        List<GetImageImageTestsConfiguration> imageTestsConfigurations,
-        String infrastructureConfigurationArn,
-        String name,
-        String osVersion,
-        List<GetImageOutputResource> outputResources,
-        String platform,
-        Map<String,String> tags,
-        String version) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("buildVersionArn") String buildVersionArn,
+        @OutputCustomType.Parameter("dateCreated") String dateCreated,
+        @OutputCustomType.Parameter("distributionConfigurationArn") String distributionConfigurationArn,
+        @OutputCustomType.Parameter("enhancedImageMetadataEnabled") Boolean enhancedImageMetadataEnabled,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("imageRecipeArn") String imageRecipeArn,
+        @OutputCustomType.Parameter("imageTestsConfigurations") List<GetImageImageTestsConfiguration> imageTestsConfigurations,
+        @OutputCustomType.Parameter("infrastructureConfigurationArn") String infrastructureConfigurationArn,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("osVersion") String osVersion,
+        @OutputCustomType.Parameter("outputResources") List<GetImageOutputResource> outputResources,
+        @OutputCustomType.Parameter("platform") String platform,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("version") String version) {
         this.arn = arn;
         this.buildVersionArn = buildVersionArn;
         this.dateCreated = dateCreated;

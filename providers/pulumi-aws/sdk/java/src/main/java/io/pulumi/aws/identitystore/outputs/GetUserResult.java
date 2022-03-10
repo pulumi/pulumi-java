@@ -25,13 +25,13 @@ public final class GetUserResult {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor({"filters","id","identityStoreId","userId","userName"})
+    @OutputCustomType.Constructor
     private GetUserResult(
-        List<GetUserFilter> filters,
-        String id,
-        String identityStoreId,
-        String userId,
-        String userName) {
+        @OutputCustomType.Parameter("filters") List<GetUserFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identityStoreId") String identityStoreId,
+        @OutputCustomType.Parameter("userId") String userId,
+        @OutputCustomType.Parameter("userName") String userName) {
         this.filters = filters;
         this.id = id;
         this.identityStoreId = identityStoreId;

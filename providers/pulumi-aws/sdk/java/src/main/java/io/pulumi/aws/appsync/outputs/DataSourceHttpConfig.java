@@ -23,10 +23,10 @@ public final class DataSourceHttpConfig {
      */
     private final String endpoint;
 
-    @OutputCustomType.Constructor({"authorizationConfig","endpoint"})
+    @OutputCustomType.Constructor
     private DataSourceHttpConfig(
-        @Nullable DataSourceHttpConfigAuthorizationConfig authorizationConfig,
-        String endpoint) {
+        @OutputCustomType.Parameter("authorizationConfig") @Nullable DataSourceHttpConfigAuthorizationConfig authorizationConfig,
+        @OutputCustomType.Parameter("endpoint") String endpoint) {
         this.authorizationConfig = authorizationConfig;
         this.endpoint = endpoint;
     }

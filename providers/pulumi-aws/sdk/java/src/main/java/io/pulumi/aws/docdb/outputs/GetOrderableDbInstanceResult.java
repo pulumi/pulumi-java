@@ -30,16 +30,16 @@ public final class GetOrderableDbInstanceResult {
     private final @Nullable List<String> preferredInstanceClasses;
     private final Boolean vpc;
 
-    @OutputCustomType.Constructor({"availabilityZones","engine","engineVersion","id","instanceClass","licenseModel","preferredInstanceClasses","vpc"})
+    @OutputCustomType.Constructor
     private GetOrderableDbInstanceResult(
-        List<String> availabilityZones,
-        @Nullable String engine,
-        String engineVersion,
-        String id,
-        String instanceClass,
-        @Nullable String licenseModel,
-        @Nullable List<String> preferredInstanceClasses,
-        Boolean vpc) {
+        @OutputCustomType.Parameter("availabilityZones") List<String> availabilityZones,
+        @OutputCustomType.Parameter("engine") @Nullable String engine,
+        @OutputCustomType.Parameter("engineVersion") String engineVersion,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceClass") String instanceClass,
+        @OutputCustomType.Parameter("licenseModel") @Nullable String licenseModel,
+        @OutputCustomType.Parameter("preferredInstanceClasses") @Nullable List<String> preferredInstanceClasses,
+        @OutputCustomType.Parameter("vpc") Boolean vpc) {
         this.availabilityZones = availabilityZones;
         this.engine = engine;
         this.engineVersion = engineVersion;

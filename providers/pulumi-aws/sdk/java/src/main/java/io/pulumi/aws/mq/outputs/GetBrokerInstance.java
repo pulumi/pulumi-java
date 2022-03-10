@@ -14,11 +14,11 @@ public final class GetBrokerInstance {
     private final List<String> endpoints;
     private final String ipAddress;
 
-    @OutputCustomType.Constructor({"consoleUrl","endpoints","ipAddress"})
+    @OutputCustomType.Constructor
     private GetBrokerInstance(
-        String consoleUrl,
-        List<String> endpoints,
-        String ipAddress) {
+        @OutputCustomType.Parameter("consoleUrl") String consoleUrl,
+        @OutputCustomType.Parameter("endpoints") List<String> endpoints,
+        @OutputCustomType.Parameter("ipAddress") String ipAddress) {
         this.consoleUrl = consoleUrl;
         this.endpoints = endpoints;
         this.ipAddress = ipAddress;

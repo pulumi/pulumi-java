@@ -27,11 +27,11 @@ public final class JobCommand {
      */
     private final String scriptLocation;
 
-    @OutputCustomType.Constructor({"name","pythonVersion","scriptLocation"})
+    @OutputCustomType.Constructor
     private JobCommand(
-        @Nullable String name,
-        @Nullable String pythonVersion,
-        String scriptLocation) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("pythonVersion") @Nullable String pythonVersion,
+        @OutputCustomType.Parameter("scriptLocation") String scriptLocation) {
         this.name = name;
         this.pythonVersion = pythonVersion;
         this.scriptLocation = scriptLocation;

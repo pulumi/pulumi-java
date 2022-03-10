@@ -29,11 +29,11 @@ public final class UserAuthenticationMode {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"passwordCount","passwords","type"})
+    @OutputCustomType.Constructor
     private UserAuthenticationMode(
-        @Nullable Integer passwordCount,
-        List<String> passwords,
-        String type) {
+        @OutputCustomType.Parameter("passwordCount") @Nullable Integer passwordCount,
+        @OutputCustomType.Parameter("passwords") List<String> passwords,
+        @OutputCustomType.Parameter("type") String type) {
         this.passwordCount = passwordCount;
         this.passwords = passwords;
         this.type = type;

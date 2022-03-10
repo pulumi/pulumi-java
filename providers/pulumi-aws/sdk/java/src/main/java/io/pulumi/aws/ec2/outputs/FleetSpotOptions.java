@@ -34,12 +34,12 @@ public final class FleetSpotOptions {
      */
     private final @Nullable FleetSpotOptionsMaintenanceStrategies maintenanceStrategies;
 
-    @OutputCustomType.Constructor({"allocationStrategy","instanceInterruptionBehavior","instancePoolsToUseCount","maintenanceStrategies"})
+    @OutputCustomType.Constructor
     private FleetSpotOptions(
-        @Nullable String allocationStrategy,
-        @Nullable String instanceInterruptionBehavior,
-        @Nullable Integer instancePoolsToUseCount,
-        @Nullable FleetSpotOptionsMaintenanceStrategies maintenanceStrategies) {
+        @OutputCustomType.Parameter("allocationStrategy") @Nullable String allocationStrategy,
+        @OutputCustomType.Parameter("instanceInterruptionBehavior") @Nullable String instanceInterruptionBehavior,
+        @OutputCustomType.Parameter("instancePoolsToUseCount") @Nullable Integer instancePoolsToUseCount,
+        @OutputCustomType.Parameter("maintenanceStrategies") @Nullable FleetSpotOptionsMaintenanceStrategies maintenanceStrategies) {
         this.allocationStrategy = allocationStrategy;
         this.instanceInterruptionBehavior = instanceInterruptionBehavior;
         this.instancePoolsToUseCount = instancePoolsToUseCount;

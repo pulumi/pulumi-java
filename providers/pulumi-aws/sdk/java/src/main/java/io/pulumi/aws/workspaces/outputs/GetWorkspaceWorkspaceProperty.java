@@ -36,13 +36,13 @@ public final class GetWorkspaceWorkspaceProperty {
      */
     private final Integer userVolumeSizeGib;
 
-    @OutputCustomType.Constructor({"computeTypeName","rootVolumeSizeGib","runningMode","runningModeAutoStopTimeoutInMinutes","userVolumeSizeGib"})
+    @OutputCustomType.Constructor
     private GetWorkspaceWorkspaceProperty(
-        String computeTypeName,
-        Integer rootVolumeSizeGib,
-        String runningMode,
-        Integer runningModeAutoStopTimeoutInMinutes,
-        Integer userVolumeSizeGib) {
+        @OutputCustomType.Parameter("computeTypeName") String computeTypeName,
+        @OutputCustomType.Parameter("rootVolumeSizeGib") Integer rootVolumeSizeGib,
+        @OutputCustomType.Parameter("runningMode") String runningMode,
+        @OutputCustomType.Parameter("runningModeAutoStopTimeoutInMinutes") Integer runningModeAutoStopTimeoutInMinutes,
+        @OutputCustomType.Parameter("userVolumeSizeGib") Integer userVolumeSizeGib) {
         this.computeTypeName = computeTypeName;
         this.rootVolumeSizeGib = rootVolumeSizeGib;
         this.runningMode = runningMode;

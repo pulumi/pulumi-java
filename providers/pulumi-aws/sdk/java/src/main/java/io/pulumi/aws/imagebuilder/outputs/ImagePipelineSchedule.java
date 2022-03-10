@@ -22,10 +22,10 @@ public final class ImagePipelineSchedule {
      */
     private final String scheduleExpression;
 
-    @OutputCustomType.Constructor({"pipelineExecutionStartCondition","scheduleExpression"})
+    @OutputCustomType.Constructor
     private ImagePipelineSchedule(
-        @Nullable String pipelineExecutionStartCondition,
-        String scheduleExpression) {
+        @OutputCustomType.Parameter("pipelineExecutionStartCondition") @Nullable String pipelineExecutionStartCondition,
+        @OutputCustomType.Parameter("scheduleExpression") String scheduleExpression) {
         this.pipelineExecutionStartCondition = pipelineExecutionStartCondition;
         this.scheduleExpression = scheduleExpression;
     }

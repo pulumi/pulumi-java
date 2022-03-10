@@ -20,10 +20,10 @@ public final class BudgetActionSubscriber {
      */
     private final String subscriptionType;
 
-    @OutputCustomType.Constructor({"address","subscriptionType"})
+    @OutputCustomType.Constructor
     private BudgetActionSubscriber(
-        String address,
-        String subscriptionType) {
+        @OutputCustomType.Parameter("address") String address,
+        @OutputCustomType.Parameter("subscriptionType") String subscriptionType) {
         this.address = address;
         this.subscriptionType = subscriptionType;
     }

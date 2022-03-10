@@ -33,12 +33,12 @@ public final class ServiceServiceRegistries {
      */
     private final String registryArn;
 
-    @OutputCustomType.Constructor({"containerName","containerPort","port","registryArn"})
+    @OutputCustomType.Constructor
     private ServiceServiceRegistries(
-        @Nullable String containerName,
-        @Nullable Integer containerPort,
-        @Nullable Integer port,
-        String registryArn) {
+        @OutputCustomType.Parameter("containerName") @Nullable String containerName,
+        @OutputCustomType.Parameter("containerPort") @Nullable Integer containerPort,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("registryArn") String registryArn) {
         this.containerName = containerName;
         this.containerPort = containerPort;
         this.port = port;

@@ -34,12 +34,12 @@ public final class GroupInstanceRefreshPreferences {
      */
     private final @Nullable Integer minHealthyPercentage;
 
-    @OutputCustomType.Constructor({"checkpointDelay","checkpointPercentages","instanceWarmup","minHealthyPercentage"})
+    @OutputCustomType.Constructor
     private GroupInstanceRefreshPreferences(
-        @Nullable String checkpointDelay,
-        @Nullable List<Integer> checkpointPercentages,
-        @Nullable String instanceWarmup,
-        @Nullable Integer minHealthyPercentage) {
+        @OutputCustomType.Parameter("checkpointDelay") @Nullable String checkpointDelay,
+        @OutputCustomType.Parameter("checkpointPercentages") @Nullable List<Integer> checkpointPercentages,
+        @OutputCustomType.Parameter("instanceWarmup") @Nullable String instanceWarmup,
+        @OutputCustomType.Parameter("minHealthyPercentage") @Nullable Integer minHealthyPercentage) {
         this.checkpointDelay = checkpointDelay;
         this.checkpointPercentages = checkpointPercentages;
         this.instanceWarmup = instanceWarmup;

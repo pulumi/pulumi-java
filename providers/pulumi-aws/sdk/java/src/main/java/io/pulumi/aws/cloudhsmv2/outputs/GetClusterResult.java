@@ -45,15 +45,15 @@ public final class GetClusterResult {
      */
     private final String vpcId;
 
-    @OutputCustomType.Constructor({"clusterCertificates","clusterId","clusterState","id","securityGroupId","subnetIds","vpcId"})
+    @OutputCustomType.Constructor
     private GetClusterResult(
-        GetClusterClusterCertificates clusterCertificates,
-        String clusterId,
-        String clusterState,
-        String id,
-        String securityGroupId,
-        List<String> subnetIds,
-        String vpcId) {
+        @OutputCustomType.Parameter("clusterCertificates") GetClusterClusterCertificates clusterCertificates,
+        @OutputCustomType.Parameter("clusterId") String clusterId,
+        @OutputCustomType.Parameter("clusterState") String clusterState,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("securityGroupId") String securityGroupId,
+        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
+        @OutputCustomType.Parameter("vpcId") String vpcId) {
         this.clusterCertificates = clusterCertificates;
         this.clusterId = clusterId;
         this.clusterState = clusterState;

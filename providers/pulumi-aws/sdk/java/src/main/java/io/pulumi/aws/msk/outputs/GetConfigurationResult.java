@@ -43,15 +43,15 @@ public final class GetConfigurationResult {
      */
     private final String serverProperties;
 
-    @OutputCustomType.Constructor({"arn","description","id","kafkaVersions","latestRevision","name","serverProperties"})
+    @OutputCustomType.Constructor
     private GetConfigurationResult(
-        String arn,
-        String description,
-        String id,
-        List<String> kafkaVersions,
-        Integer latestRevision,
-        String name,
-        String serverProperties) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kafkaVersions") List<String> kafkaVersions,
+        @OutputCustomType.Parameter("latestRevision") Integer latestRevision,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("serverProperties") String serverProperties) {
         this.arn = arn;
         this.description = description;
         this.id = id;

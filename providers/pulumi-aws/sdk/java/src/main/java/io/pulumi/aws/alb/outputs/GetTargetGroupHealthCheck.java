@@ -21,17 +21,17 @@ public final class GetTargetGroupHealthCheck {
     private final Integer timeout;
     private final Integer unhealthyThreshold;
 
-    @OutputCustomType.Constructor({"enabled","healthyThreshold","interval","matcher","path","port","protocol","timeout","unhealthyThreshold"})
+    @OutputCustomType.Constructor
     private GetTargetGroupHealthCheck(
-        Boolean enabled,
-        Integer healthyThreshold,
-        Integer interval,
-        String matcher,
-        String path,
-        String port,
-        String protocol,
-        Integer timeout,
-        Integer unhealthyThreshold) {
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("healthyThreshold") Integer healthyThreshold,
+        @OutputCustomType.Parameter("interval") Integer interval,
+        @OutputCustomType.Parameter("matcher") String matcher,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("port") String port,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("timeout") Integer timeout,
+        @OutputCustomType.Parameter("unhealthyThreshold") Integer unhealthyThreshold) {
         this.enabled = enabled;
         this.healthyThreshold = healthyThreshold;
         this.interval = interval;

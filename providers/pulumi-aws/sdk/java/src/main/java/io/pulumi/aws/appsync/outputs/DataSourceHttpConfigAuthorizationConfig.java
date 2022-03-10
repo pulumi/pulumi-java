@@ -23,10 +23,10 @@ public final class DataSourceHttpConfigAuthorizationConfig {
      */
     private final @Nullable DataSourceHttpConfigAuthorizationConfigAwsIamConfig awsIamConfig;
 
-    @OutputCustomType.Constructor({"authorizationType","awsIamConfig"})
+    @OutputCustomType.Constructor
     private DataSourceHttpConfigAuthorizationConfig(
-        @Nullable String authorizationType,
-        @Nullable DataSourceHttpConfigAuthorizationConfigAwsIamConfig awsIamConfig) {
+        @OutputCustomType.Parameter("authorizationType") @Nullable String authorizationType,
+        @OutputCustomType.Parameter("awsIamConfig") @Nullable DataSourceHttpConfigAuthorizationConfigAwsIamConfig awsIamConfig) {
         this.authorizationType = authorizationType;
         this.awsIamConfig = awsIamConfig;
     }

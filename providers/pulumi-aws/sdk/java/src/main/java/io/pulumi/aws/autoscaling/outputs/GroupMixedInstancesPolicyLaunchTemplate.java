@@ -23,10 +23,10 @@ public final class GroupMixedInstancesPolicyLaunchTemplate {
      */
     private final @Nullable List<GroupMixedInstancesPolicyLaunchTemplateOverride> overrides;
 
-    @OutputCustomType.Constructor({"launchTemplateSpecification","overrides"})
+    @OutputCustomType.Constructor
     private GroupMixedInstancesPolicyLaunchTemplate(
-        GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification launchTemplateSpecification,
-        @Nullable List<GroupMixedInstancesPolicyLaunchTemplateOverride> overrides) {
+        @OutputCustomType.Parameter("launchTemplateSpecification") GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification launchTemplateSpecification,
+        @OutputCustomType.Parameter("overrides") @Nullable List<GroupMixedInstancesPolicyLaunchTemplateOverride> overrides) {
         this.launchTemplateSpecification = launchTemplateSpecification;
         this.overrides = overrides;
     }

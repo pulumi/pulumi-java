@@ -27,11 +27,11 @@ public final class RuleSourceSourceDetail {
      */
     private final @Nullable String messageType;
 
-    @OutputCustomType.Constructor({"eventSource","maximumExecutionFrequency","messageType"})
+    @OutputCustomType.Constructor
     private RuleSourceSourceDetail(
-        @Nullable String eventSource,
-        @Nullable String maximumExecutionFrequency,
-        @Nullable String messageType) {
+        @OutputCustomType.Parameter("eventSource") @Nullable String eventSource,
+        @OutputCustomType.Parameter("maximumExecutionFrequency") @Nullable String maximumExecutionFrequency,
+        @OutputCustomType.Parameter("messageType") @Nullable String messageType) {
         this.eventSource = eventSource;
         this.maximumExecutionFrequency = maximumExecutionFrequency;
         this.messageType = messageType;

@@ -27,11 +27,11 @@ public final class TopicRuleErrorActionKinesis {
      */
     private final String streamName;
 
-    @OutputCustomType.Constructor({"partitionKey","roleArn","streamName"})
+    @OutputCustomType.Constructor
     private TopicRuleErrorActionKinesis(
-        @Nullable String partitionKey,
-        String roleArn,
-        String streamName) {
+        @OutputCustomType.Parameter("partitionKey") @Nullable String partitionKey,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("streamName") String streamName) {
         this.partitionKey = partitionKey;
         this.roleArn = roleArn;
         this.streamName = streamName;

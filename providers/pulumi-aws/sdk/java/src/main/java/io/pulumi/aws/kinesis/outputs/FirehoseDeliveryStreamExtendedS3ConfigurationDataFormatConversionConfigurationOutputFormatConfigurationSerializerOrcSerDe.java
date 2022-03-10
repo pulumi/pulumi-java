@@ -66,18 +66,18 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      */
     private final @Nullable Integer stripeSizeBytes;
 
-    @OutputCustomType.Constructor({"blockSizeBytes","bloomFilterColumns","bloomFilterFalsePositiveProbability","compression","dictionaryKeyThreshold","enablePadding","formatVersion","paddingTolerance","rowIndexStride","stripeSizeBytes"})
+    @OutputCustomType.Constructor
     private FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDe(
-        @Nullable Integer blockSizeBytes,
-        @Nullable List<String> bloomFilterColumns,
-        @Nullable Double bloomFilterFalsePositiveProbability,
-        @Nullable String compression,
-        @Nullable Double dictionaryKeyThreshold,
-        @Nullable Boolean enablePadding,
-        @Nullable String formatVersion,
-        @Nullable Double paddingTolerance,
-        @Nullable Integer rowIndexStride,
-        @Nullable Integer stripeSizeBytes) {
+        @OutputCustomType.Parameter("blockSizeBytes") @Nullable Integer blockSizeBytes,
+        @OutputCustomType.Parameter("bloomFilterColumns") @Nullable List<String> bloomFilterColumns,
+        @OutputCustomType.Parameter("bloomFilterFalsePositiveProbability") @Nullable Double bloomFilterFalsePositiveProbability,
+        @OutputCustomType.Parameter("compression") @Nullable String compression,
+        @OutputCustomType.Parameter("dictionaryKeyThreshold") @Nullable Double dictionaryKeyThreshold,
+        @OutputCustomType.Parameter("enablePadding") @Nullable Boolean enablePadding,
+        @OutputCustomType.Parameter("formatVersion") @Nullable String formatVersion,
+        @OutputCustomType.Parameter("paddingTolerance") @Nullable Double paddingTolerance,
+        @OutputCustomType.Parameter("rowIndexStride") @Nullable Integer rowIndexStride,
+        @OutputCustomType.Parameter("stripeSizeBytes") @Nullable Integer stripeSizeBytes) {
         this.blockSizeBytes = blockSizeBytes;
         this.bloomFilterColumns = bloomFilterColumns;
         this.bloomFilterFalsePositiveProbability = bloomFilterFalsePositiveProbability;

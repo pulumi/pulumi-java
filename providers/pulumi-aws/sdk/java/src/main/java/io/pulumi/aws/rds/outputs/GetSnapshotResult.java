@@ -106,32 +106,32 @@ public final class GetSnapshotResult {
      */
     private final String vpcId;
 
-    @OutputCustomType.Constructor({"allocatedStorage","availabilityZone","dbInstanceIdentifier","dbSnapshotArn","dbSnapshotIdentifier","encrypted","engine","engineVersion","id","includePublic","includeShared","iops","kmsKeyId","licenseModel","mostRecent","optionGroupName","port","snapshotCreateTime","snapshotType","sourceDbSnapshotIdentifier","sourceRegion","status","storageType","vpcId"})
+    @OutputCustomType.Constructor
     private GetSnapshotResult(
-        Integer allocatedStorage,
-        String availabilityZone,
-        @Nullable String dbInstanceIdentifier,
-        String dbSnapshotArn,
-        @Nullable String dbSnapshotIdentifier,
-        Boolean encrypted,
-        String engine,
-        String engineVersion,
-        String id,
-        @Nullable Boolean includePublic,
-        @Nullable Boolean includeShared,
-        Integer iops,
-        String kmsKeyId,
-        String licenseModel,
-        @Nullable Boolean mostRecent,
-        String optionGroupName,
-        Integer port,
-        String snapshotCreateTime,
-        @Nullable String snapshotType,
-        String sourceDbSnapshotIdentifier,
-        String sourceRegion,
-        String status,
-        String storageType,
-        String vpcId) {
+        @OutputCustomType.Parameter("allocatedStorage") Integer allocatedStorage,
+        @OutputCustomType.Parameter("availabilityZone") String availabilityZone,
+        @OutputCustomType.Parameter("dbInstanceIdentifier") @Nullable String dbInstanceIdentifier,
+        @OutputCustomType.Parameter("dbSnapshotArn") String dbSnapshotArn,
+        @OutputCustomType.Parameter("dbSnapshotIdentifier") @Nullable String dbSnapshotIdentifier,
+        @OutputCustomType.Parameter("encrypted") Boolean encrypted,
+        @OutputCustomType.Parameter("engine") String engine,
+        @OutputCustomType.Parameter("engineVersion") String engineVersion,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("includePublic") @Nullable Boolean includePublic,
+        @OutputCustomType.Parameter("includeShared") @Nullable Boolean includeShared,
+        @OutputCustomType.Parameter("iops") Integer iops,
+        @OutputCustomType.Parameter("kmsKeyId") String kmsKeyId,
+        @OutputCustomType.Parameter("licenseModel") String licenseModel,
+        @OutputCustomType.Parameter("mostRecent") @Nullable Boolean mostRecent,
+        @OutputCustomType.Parameter("optionGroupName") String optionGroupName,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("snapshotCreateTime") String snapshotCreateTime,
+        @OutputCustomType.Parameter("snapshotType") @Nullable String snapshotType,
+        @OutputCustomType.Parameter("sourceDbSnapshotIdentifier") String sourceDbSnapshotIdentifier,
+        @OutputCustomType.Parameter("sourceRegion") String sourceRegion,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("storageType") String storageType,
+        @OutputCustomType.Parameter("vpcId") String vpcId) {
         this.allocatedStorage = allocatedStorage;
         this.availabilityZone = availabilityZone;
         this.dbInstanceIdentifier = dbInstanceIdentifier;

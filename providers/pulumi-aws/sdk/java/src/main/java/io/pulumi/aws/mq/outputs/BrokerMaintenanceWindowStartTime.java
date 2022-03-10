@@ -25,11 +25,11 @@ public final class BrokerMaintenanceWindowStartTime {
      */
     private final String timeZone;
 
-    @OutputCustomType.Constructor({"dayOfWeek","timeOfDay","timeZone"})
+    @OutputCustomType.Constructor
     private BrokerMaintenanceWindowStartTime(
-        String dayOfWeek,
-        String timeOfDay,
-        String timeZone) {
+        @OutputCustomType.Parameter("dayOfWeek") String dayOfWeek,
+        @OutputCustomType.Parameter("timeOfDay") String timeOfDay,
+        @OutputCustomType.Parameter("timeZone") String timeZone) {
         this.dayOfWeek = dayOfWeek;
         this.timeOfDay = timeOfDay;
         this.timeZone = timeZone;

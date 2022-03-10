@@ -15,8 +15,8 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefini
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"value"})
-    private FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimension(String value) {
+    @OutputCustomType.Constructor
+    private FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimension(@OutputCustomType.Parameter("value") String value) {
         this.value = value;
     }
 

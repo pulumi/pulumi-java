@@ -12,10 +12,10 @@ public final class OpenZfsVolumeOriginSnapshot {
     private final String copyStrategy;
     private final String snapshotArn;
 
-    @OutputCustomType.Constructor({"copyStrategy","snapshotArn"})
+    @OutputCustomType.Constructor
     private OpenZfsVolumeOriginSnapshot(
-        String copyStrategy,
-        String snapshotArn) {
+        @OutputCustomType.Parameter("copyStrategy") String copyStrategy,
+        @OutputCustomType.Parameter("snapshotArn") String snapshotArn) {
         this.copyStrategy = copyStrategy;
         this.snapshotArn = snapshotArn;
     }

@@ -20,10 +20,10 @@ public final class CustomLayerCloudwatchConfiguration {
      */
     private final @Nullable List<CustomLayerCloudwatchConfigurationLogStream> logStreams;
 
-    @OutputCustomType.Constructor({"enabled","logStreams"})
+    @OutputCustomType.Constructor
     private CustomLayerCloudwatchConfiguration(
-        @Nullable Boolean enabled,
-        @Nullable List<CustomLayerCloudwatchConfigurationLogStream> logStreams) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("logStreams") @Nullable List<CustomLayerCloudwatchConfigurationLogStream> logStreams) {
         this.enabled = enabled;
         this.logStreams = logStreams;
     }

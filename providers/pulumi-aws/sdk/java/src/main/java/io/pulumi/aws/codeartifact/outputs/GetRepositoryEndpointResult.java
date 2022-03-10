@@ -24,14 +24,14 @@ public final class GetRepositoryEndpointResult {
      */
     private final String repositoryEndpoint;
 
-    @OutputCustomType.Constructor({"domain","domainOwner","format","id","repository","repositoryEndpoint"})
+    @OutputCustomType.Constructor
     private GetRepositoryEndpointResult(
-        String domain,
-        String domainOwner,
-        String format,
-        String id,
-        String repository,
-        String repositoryEndpoint) {
+        @OutputCustomType.Parameter("domain") String domain,
+        @OutputCustomType.Parameter("domainOwner") String domainOwner,
+        @OutputCustomType.Parameter("format") String format,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("repository") String repository,
+        @OutputCustomType.Parameter("repositoryEndpoint") String repositoryEndpoint) {
         this.domain = domain;
         this.domainOwner = domainOwner;
         this.format = format;

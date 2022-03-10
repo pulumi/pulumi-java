@@ -28,11 +28,11 @@ public final class InsightFiltersResourceAwsEc2InstanceLaunchedAt {
      */
     private final @Nullable String start;
 
-    @OutputCustomType.Constructor({"dateRange","end","start"})
+    @OutputCustomType.Constructor
     private InsightFiltersResourceAwsEc2InstanceLaunchedAt(
-        @Nullable InsightFiltersResourceAwsEc2InstanceLaunchedAtDateRange dateRange,
-        @Nullable String end,
-        @Nullable String start) {
+        @OutputCustomType.Parameter("dateRange") @Nullable InsightFiltersResourceAwsEc2InstanceLaunchedAtDateRange dateRange,
+        @OutputCustomType.Parameter("end") @Nullable String end,
+        @OutputCustomType.Parameter("start") @Nullable String start) {
         this.dateRange = dateRange;
         this.end = end;
         this.start = start;

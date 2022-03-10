@@ -20,10 +20,10 @@ public final class GetAccountAliasResult {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"accountAlias","id"})
+    @OutputCustomType.Constructor
     private GetAccountAliasResult(
-        String accountAlias,
-        String id) {
+        @OutputCustomType.Parameter("accountAlias") String accountAlias,
+        @OutputCustomType.Parameter("id") String id) {
         this.accountAlias = accountAlias;
         this.id = id;
     }

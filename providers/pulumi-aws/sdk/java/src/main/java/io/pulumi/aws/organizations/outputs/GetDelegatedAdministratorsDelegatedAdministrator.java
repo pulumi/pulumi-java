@@ -50,16 +50,16 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"arn","delegationEnabledDate","email","id","joinedMethod","joinedTimestamp","name","status"})
+    @OutputCustomType.Constructor
     private GetDelegatedAdministratorsDelegatedAdministrator(
-        String arn,
-        String delegationEnabledDate,
-        String email,
-        String id,
-        String joinedMethod,
-        String joinedTimestamp,
-        String name,
-        String status) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("delegationEnabledDate") String delegationEnabledDate,
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("joinedMethod") String joinedMethod,
+        @OutputCustomType.Parameter("joinedTimestamp") String joinedTimestamp,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("status") String status) {
         this.arn = arn;
         this.delegationEnabledDate = delegationEnabledDate;
         this.email = email;

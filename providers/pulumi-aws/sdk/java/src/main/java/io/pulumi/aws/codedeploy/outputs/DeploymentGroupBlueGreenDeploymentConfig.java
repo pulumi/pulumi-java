@@ -29,11 +29,11 @@ public final class DeploymentGroupBlueGreenDeploymentConfig {
      */
     private final @Nullable DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccess terminateBlueInstancesOnDeploymentSuccess;
 
-    @OutputCustomType.Constructor({"deploymentReadyOption","greenFleetProvisioningOption","terminateBlueInstancesOnDeploymentSuccess"})
+    @OutputCustomType.Constructor
     private DeploymentGroupBlueGreenDeploymentConfig(
-        @Nullable DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption deploymentReadyOption,
-        @Nullable DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOption greenFleetProvisioningOption,
-        @Nullable DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccess terminateBlueInstancesOnDeploymentSuccess) {
+        @OutputCustomType.Parameter("deploymentReadyOption") @Nullable DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption deploymentReadyOption,
+        @OutputCustomType.Parameter("greenFleetProvisioningOption") @Nullable DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOption greenFleetProvisioningOption,
+        @OutputCustomType.Parameter("terminateBlueInstancesOnDeploymentSuccess") @Nullable DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccess terminateBlueInstancesOnDeploymentSuccess) {
         this.deploymentReadyOption = deploymentReadyOption;
         this.greenFleetProvisioningOption = greenFleetProvisioningOption;
         this.terminateBlueInstancesOnDeploymentSuccess = terminateBlueInstancesOnDeploymentSuccess;

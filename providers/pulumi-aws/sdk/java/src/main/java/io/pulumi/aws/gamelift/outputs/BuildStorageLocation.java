@@ -25,11 +25,11 @@ public final class BuildStorageLocation {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"bucket","key","roleArn"})
+    @OutputCustomType.Constructor
     private BuildStorageLocation(
-        String bucket,
-        String key,
-        String roleArn) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.bucket = bucket;
         this.key = key;
         this.roleArn = roleArn;

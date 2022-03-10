@@ -33,14 +33,14 @@ public final class GetScriptResult {
      */
     private final String scalaCode;
 
-    @OutputCustomType.Constructor({"dagEdges","dagNodes","id","language","pythonScript","scalaCode"})
+    @OutputCustomType.Constructor
     private GetScriptResult(
-        List<GetScriptDagEdge> dagEdges,
-        List<GetScriptDagNode> dagNodes,
-        String id,
-        @Nullable String language,
-        String pythonScript,
-        String scalaCode) {
+        @OutputCustomType.Parameter("dagEdges") List<GetScriptDagEdge> dagEdges,
+        @OutputCustomType.Parameter("dagNodes") List<GetScriptDagNode> dagNodes,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("language") @Nullable String language,
+        @OutputCustomType.Parameter("pythonScript") String pythonScript,
+        @OutputCustomType.Parameter("scalaCode") String scalaCode) {
         this.dagEdges = dagEdges;
         this.dagNodes = dagNodes;
         this.id = id;

@@ -25,11 +25,11 @@ public final class GetPipelineDefinitionPipelineObjectField {
      */
     private final String stringValue;
 
-    @OutputCustomType.Constructor({"key","refValue","stringValue"})
+    @OutputCustomType.Constructor
     private GetPipelineDefinitionPipelineObjectField(
-        String key,
-        String refValue,
-        String stringValue) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("refValue") String refValue,
+        @OutputCustomType.Parameter("stringValue") String stringValue) {
         this.key = key;
         this.refValue = refValue;
         this.stringValue = stringValue;

@@ -23,10 +23,10 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfiguration {
      */
     private final String configurationSource;
 
-    @OutputCustomType.Constructor({"codeConfigurationValues","configurationSource"})
+    @OutputCustomType.Constructor
     private ServiceSourceConfigurationCodeRepositoryCodeConfiguration(
-        @Nullable ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValues codeConfigurationValues,
-        String configurationSource) {
+        @OutputCustomType.Parameter("codeConfigurationValues") @Nullable ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValues codeConfigurationValues,
+        @OutputCustomType.Parameter("configurationSource") String configurationSource) {
         this.codeConfigurationValues = codeConfigurationValues;
         this.configurationSource = configurationSource;
     }

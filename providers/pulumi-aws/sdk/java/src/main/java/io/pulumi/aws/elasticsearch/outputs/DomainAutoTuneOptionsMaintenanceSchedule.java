@@ -26,11 +26,11 @@ public final class DomainAutoTuneOptionsMaintenanceSchedule {
      */
     private final String startAt;
 
-    @OutputCustomType.Constructor({"cronExpressionForRecurrence","duration","startAt"})
+    @OutputCustomType.Constructor
     private DomainAutoTuneOptionsMaintenanceSchedule(
-        String cronExpressionForRecurrence,
-        DomainAutoTuneOptionsMaintenanceScheduleDuration duration,
-        String startAt) {
+        @OutputCustomType.Parameter("cronExpressionForRecurrence") String cronExpressionForRecurrence,
+        @OutputCustomType.Parameter("duration") DomainAutoTuneOptionsMaintenanceScheduleDuration duration,
+        @OutputCustomType.Parameter("startAt") String startAt) {
         this.cronExpressionForRecurrence = cronExpressionForRecurrence;
         this.duration = duration;
         this.startAt = startAt;

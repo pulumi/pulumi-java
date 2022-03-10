@@ -49,18 +49,18 @@ public final class GetLocalGatewayVirtualInterfaceResult {
      */
     private final Integer vlan;
 
-    @OutputCustomType.Constructor({"filters","id","localAddress","localBgpAsn","localGatewayId","localGatewayVirtualInterfaceIds","peerAddress","peerBgpAsn","tags","vlan"})
+    @OutputCustomType.Constructor
     private GetLocalGatewayVirtualInterfaceResult(
-        @Nullable List<GetLocalGatewayVirtualInterfaceFilter> filters,
-        String id,
-        String localAddress,
-        Integer localBgpAsn,
-        String localGatewayId,
-        List<String> localGatewayVirtualInterfaceIds,
-        String peerAddress,
-        Integer peerBgpAsn,
-        Map<String,String> tags,
-        Integer vlan) {
+        @OutputCustomType.Parameter("filters") @Nullable List<GetLocalGatewayVirtualInterfaceFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("localAddress") String localAddress,
+        @OutputCustomType.Parameter("localBgpAsn") Integer localBgpAsn,
+        @OutputCustomType.Parameter("localGatewayId") String localGatewayId,
+        @OutputCustomType.Parameter("localGatewayVirtualInterfaceIds") List<String> localGatewayVirtualInterfaceIds,
+        @OutputCustomType.Parameter("peerAddress") String peerAddress,
+        @OutputCustomType.Parameter("peerBgpAsn") Integer peerBgpAsn,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("vlan") Integer vlan) {
         this.filters = filters;
         this.id = id;
         this.localAddress = localAddress;

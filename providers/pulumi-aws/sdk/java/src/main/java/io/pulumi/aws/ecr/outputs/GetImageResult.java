@@ -38,16 +38,16 @@ public final class GetImageResult {
     private final String registryId;
     private final String repositoryName;
 
-    @OutputCustomType.Constructor({"id","imageDigest","imagePushedAt","imageSizeInBytes","imageTag","imageTags","registryId","repositoryName"})
+    @OutputCustomType.Constructor
     private GetImageResult(
-        String id,
-        String imageDigest,
-        Integer imagePushedAt,
-        Integer imageSizeInBytes,
-        @Nullable String imageTag,
-        List<String> imageTags,
-        String registryId,
-        String repositoryName) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("imageDigest") String imageDigest,
+        @OutputCustomType.Parameter("imagePushedAt") Integer imagePushedAt,
+        @OutputCustomType.Parameter("imageSizeInBytes") Integer imageSizeInBytes,
+        @OutputCustomType.Parameter("imageTag") @Nullable String imageTag,
+        @OutputCustomType.Parameter("imageTags") List<String> imageTags,
+        @OutputCustomType.Parameter("registryId") String registryId,
+        @OutputCustomType.Parameter("repositoryName") String repositoryName) {
         this.id = id;
         this.imageDigest = imageDigest;
         this.imagePushedAt = imagePushedAt;

@@ -51,17 +51,17 @@ public final class GetBucketResult {
      */
     private final String websiteEndpoint;
 
-    @OutputCustomType.Constructor({"arn","bucket","bucketDomainName","bucketRegionalDomainName","hostedZoneId","id","region","websiteDomain","websiteEndpoint"})
+    @OutputCustomType.Constructor
     private GetBucketResult(
-        String arn,
-        String bucket,
-        String bucketDomainName,
-        String bucketRegionalDomainName,
-        String hostedZoneId,
-        String id,
-        String region,
-        String websiteDomain,
-        String websiteEndpoint) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("bucketDomainName") String bucketDomainName,
+        @OutputCustomType.Parameter("bucketRegionalDomainName") String bucketRegionalDomainName,
+        @OutputCustomType.Parameter("hostedZoneId") String hostedZoneId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("websiteDomain") String websiteDomain,
+        @OutputCustomType.Parameter("websiteEndpoint") String websiteEndpoint) {
         this.arn = arn;
         this.bucket = bucket;
         this.bucketDomainName = bucketDomainName;

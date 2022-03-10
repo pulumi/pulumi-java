@@ -43,16 +43,16 @@ public final class GetIpRangesResult {
     private final Integer syncToken;
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor({"cidrBlocks","createDate","id","ipv6CidrBlocks","regions","services","syncToken","url"})
+    @OutputCustomType.Constructor
     private GetIpRangesResult(
-        List<String> cidrBlocks,
-        String createDate,
-        String id,
-        List<String> ipv6CidrBlocks,
-        @Nullable List<String> regions,
-        List<String> services,
-        Integer syncToken,
-        @Nullable String url) {
+        @OutputCustomType.Parameter("cidrBlocks") List<String> cidrBlocks,
+        @OutputCustomType.Parameter("createDate") String createDate,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ipv6CidrBlocks") List<String> ipv6CidrBlocks,
+        @OutputCustomType.Parameter("regions") @Nullable List<String> regions,
+        @OutputCustomType.Parameter("services") List<String> services,
+        @OutputCustomType.Parameter("syncToken") Integer syncToken,
+        @OutputCustomType.Parameter("url") @Nullable String url) {
         this.cidrBlocks = cidrBlocks;
         this.createDate = createDate;
         this.id = id;

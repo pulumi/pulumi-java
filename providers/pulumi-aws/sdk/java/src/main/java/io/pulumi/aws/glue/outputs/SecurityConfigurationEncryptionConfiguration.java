@@ -19,11 +19,11 @@ public final class SecurityConfigurationEncryptionConfiguration {
      */
     private final SecurityConfigurationEncryptionConfigurationS3Encryption s3Encryption;
 
-    @OutputCustomType.Constructor({"cloudwatchEncryption","jobBookmarksEncryption","s3Encryption"})
+    @OutputCustomType.Constructor
     private SecurityConfigurationEncryptionConfiguration(
-        SecurityConfigurationEncryptionConfigurationCloudwatchEncryption cloudwatchEncryption,
-        SecurityConfigurationEncryptionConfigurationJobBookmarksEncryption jobBookmarksEncryption,
-        SecurityConfigurationEncryptionConfigurationS3Encryption s3Encryption) {
+        @OutputCustomType.Parameter("cloudwatchEncryption") SecurityConfigurationEncryptionConfigurationCloudwatchEncryption cloudwatchEncryption,
+        @OutputCustomType.Parameter("jobBookmarksEncryption") SecurityConfigurationEncryptionConfigurationJobBookmarksEncryption jobBookmarksEncryption,
+        @OutputCustomType.Parameter("s3Encryption") SecurityConfigurationEncryptionConfigurationS3Encryption s3Encryption) {
         this.cloudwatchEncryption = cloudwatchEncryption;
         this.jobBookmarksEncryption = jobBookmarksEncryption;
         this.s3Encryption = s3Encryption;

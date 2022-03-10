@@ -28,11 +28,11 @@ public final class DistributionOriginGroup {
      */
     private final String originId;
 
-    @OutputCustomType.Constructor({"failoverCriteria","members","originId"})
+    @OutputCustomType.Constructor
     private DistributionOriginGroup(
-        DistributionOriginGroupFailoverCriteria failoverCriteria,
-        List<DistributionOriginGroupMember> members,
-        String originId) {
+        @OutputCustomType.Parameter("failoverCriteria") DistributionOriginGroupFailoverCriteria failoverCriteria,
+        @OutputCustomType.Parameter("members") List<DistributionOriginGroupMember> members,
+        @OutputCustomType.Parameter("originId") String originId) {
         this.failoverCriteria = failoverCriteria;
         this.members = members;
         this.originId = originId;

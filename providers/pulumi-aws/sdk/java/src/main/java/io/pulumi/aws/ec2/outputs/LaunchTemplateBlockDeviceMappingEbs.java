@@ -57,16 +57,16 @@ public final class LaunchTemplateBlockDeviceMappingEbs {
      */
     private final @Nullable String volumeType;
 
-    @OutputCustomType.Constructor({"deleteOnTermination","encrypted","iops","kmsKeyId","snapshotId","throughput","volumeSize","volumeType"})
+    @OutputCustomType.Constructor
     private LaunchTemplateBlockDeviceMappingEbs(
-        @Nullable String deleteOnTermination,
-        @Nullable String encrypted,
-        @Nullable Integer iops,
-        @Nullable String kmsKeyId,
-        @Nullable String snapshotId,
-        @Nullable Integer throughput,
-        @Nullable Integer volumeSize,
-        @Nullable String volumeType) {
+        @OutputCustomType.Parameter("deleteOnTermination") @Nullable String deleteOnTermination,
+        @OutputCustomType.Parameter("encrypted") @Nullable String encrypted,
+        @OutputCustomType.Parameter("iops") @Nullable Integer iops,
+        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @OutputCustomType.Parameter("snapshotId") @Nullable String snapshotId,
+        @OutputCustomType.Parameter("throughput") @Nullable Integer throughput,
+        @OutputCustomType.Parameter("volumeSize") @Nullable Integer volumeSize,
+        @OutputCustomType.Parameter("volumeType") @Nullable String volumeType) {
         this.deleteOnTermination = deleteOnTermination;
         this.encrypted = encrypted;
         this.iops = iops;

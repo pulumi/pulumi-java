@@ -39,13 +39,13 @@ public final class TaskDefinitionVolumeDockerVolumeConfiguration {
      */
     private final @Nullable String scope;
 
-    @OutputCustomType.Constructor({"autoprovision","driver","driverOpts","labels","scope"})
+    @OutputCustomType.Constructor
     private TaskDefinitionVolumeDockerVolumeConfiguration(
-        @Nullable Boolean autoprovision,
-        @Nullable String driver,
-        @Nullable Map<String,String> driverOpts,
-        @Nullable Map<String,String> labels,
-        @Nullable String scope) {
+        @OutputCustomType.Parameter("autoprovision") @Nullable Boolean autoprovision,
+        @OutputCustomType.Parameter("driver") @Nullable String driver,
+        @OutputCustomType.Parameter("driverOpts") @Nullable Map<String,String> driverOpts,
+        @OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels,
+        @OutputCustomType.Parameter("scope") @Nullable String scope) {
         this.autoprovision = autoprovision;
         this.driver = driver;
         this.driverOpts = driverOpts;

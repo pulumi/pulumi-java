@@ -71,18 +71,18 @@ public final class ProjectSecondarySource {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"auth","buildStatusConfig","buildspec","gitCloneDepth","gitSubmodulesConfig","insecureSsl","location","reportBuildStatus","sourceIdentifier","type"})
+    @OutputCustomType.Constructor
     private ProjectSecondarySource(
-        @Nullable ProjectSecondarySourceAuth auth,
-        @Nullable ProjectSecondarySourceBuildStatusConfig buildStatusConfig,
-        @Nullable String buildspec,
-        @Nullable Integer gitCloneDepth,
-        @Nullable ProjectSecondarySourceGitSubmodulesConfig gitSubmodulesConfig,
-        @Nullable Boolean insecureSsl,
-        @Nullable String location,
-        @Nullable Boolean reportBuildStatus,
-        String sourceIdentifier,
-        String type) {
+        @OutputCustomType.Parameter("auth") @Nullable ProjectSecondarySourceAuth auth,
+        @OutputCustomType.Parameter("buildStatusConfig") @Nullable ProjectSecondarySourceBuildStatusConfig buildStatusConfig,
+        @OutputCustomType.Parameter("buildspec") @Nullable String buildspec,
+        @OutputCustomType.Parameter("gitCloneDepth") @Nullable Integer gitCloneDepth,
+        @OutputCustomType.Parameter("gitSubmodulesConfig") @Nullable ProjectSecondarySourceGitSubmodulesConfig gitSubmodulesConfig,
+        @OutputCustomType.Parameter("insecureSsl") @Nullable Boolean insecureSsl,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("reportBuildStatus") @Nullable Boolean reportBuildStatus,
+        @OutputCustomType.Parameter("sourceIdentifier") String sourceIdentifier,
+        @OutputCustomType.Parameter("type") String type) {
         this.auth = auth;
         this.buildStatusConfig = buildStatusConfig;
         this.buildspec = buildspec;

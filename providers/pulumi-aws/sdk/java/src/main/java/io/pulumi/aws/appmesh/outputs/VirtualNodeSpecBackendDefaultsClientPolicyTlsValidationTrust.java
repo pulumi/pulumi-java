@@ -29,11 +29,11 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrust 
      */
     private final @Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSds sds;
 
-    @OutputCustomType.Constructor({"acm","file","sds"})
+    @OutputCustomType.Constructor
     private VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrust(
-        @Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcm acm,
-        @Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFile file,
-        @Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSds sds) {
+        @OutputCustomType.Parameter("acm") @Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcm acm,
+        @OutputCustomType.Parameter("file") @Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFile file,
+        @OutputCustomType.Parameter("sds") @Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSds sds) {
         this.acm = acm;
         this.file = file;
         this.sds = sds;

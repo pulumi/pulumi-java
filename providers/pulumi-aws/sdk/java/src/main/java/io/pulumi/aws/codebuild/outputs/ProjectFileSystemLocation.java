@@ -37,13 +37,13 @@ public final class ProjectFileSystemLocation {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"identifier","location","mountOptions","mountPoint","type"})
+    @OutputCustomType.Constructor
     private ProjectFileSystemLocation(
-        @Nullable String identifier,
-        @Nullable String location,
-        @Nullable String mountOptions,
-        @Nullable String mountPoint,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("identifier") @Nullable String identifier,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("mountOptions") @Nullable String mountOptions,
+        @OutputCustomType.Parameter("mountPoint") @Nullable String mountPoint,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.identifier = identifier;
         this.location = location;
         this.mountOptions = mountOptions;

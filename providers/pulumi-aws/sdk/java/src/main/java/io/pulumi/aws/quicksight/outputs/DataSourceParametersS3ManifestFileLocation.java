@@ -20,10 +20,10 @@ public final class DataSourceParametersS3ManifestFileLocation {
      */
     private final String key;
 
-    @OutputCustomType.Constructor({"bucket","key"})
+    @OutputCustomType.Constructor
     private DataSourceParametersS3ManifestFileLocation(
-        String bucket,
-        String key) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("key") String key) {
         this.bucket = bucket;
         this.key = key;
     }

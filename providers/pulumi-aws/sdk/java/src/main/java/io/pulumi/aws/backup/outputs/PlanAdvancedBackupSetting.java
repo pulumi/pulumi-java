@@ -21,10 +21,10 @@ public final class PlanAdvancedBackupSetting {
      */
     private final String resourceType;
 
-    @OutputCustomType.Constructor({"backupOptions","resourceType"})
+    @OutputCustomType.Constructor
     private PlanAdvancedBackupSetting(
-        Map<String,String> backupOptions,
-        String resourceType) {
+        @OutputCustomType.Parameter("backupOptions") Map<String,String> backupOptions,
+        @OutputCustomType.Parameter("resourceType") String resourceType) {
         this.backupOptions = backupOptions;
         this.resourceType = resourceType;
     }

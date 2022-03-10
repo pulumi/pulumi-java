@@ -48,14 +48,14 @@ public final class LifecyclePolicyPolicyDetailsSchedule {
      */
     private final @Nullable Map<String,String> tagsToAdd;
 
-    @OutputCustomType.Constructor({"copyTags","createRule","crossRegionCopyRules","name","retainRule","tagsToAdd"})
+    @OutputCustomType.Constructor
     private LifecyclePolicyPolicyDetailsSchedule(
-        @Nullable Boolean copyTags,
-        LifecyclePolicyPolicyDetailsScheduleCreateRule createRule,
-        @Nullable List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRule> crossRegionCopyRules,
-        String name,
-        LifecyclePolicyPolicyDetailsScheduleRetainRule retainRule,
-        @Nullable Map<String,String> tagsToAdd) {
+        @OutputCustomType.Parameter("copyTags") @Nullable Boolean copyTags,
+        @OutputCustomType.Parameter("createRule") LifecyclePolicyPolicyDetailsScheduleCreateRule createRule,
+        @OutputCustomType.Parameter("crossRegionCopyRules") @Nullable List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRule> crossRegionCopyRules,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("retainRule") LifecyclePolicyPolicyDetailsScheduleRetainRule retainRule,
+        @OutputCustomType.Parameter("tagsToAdd") @Nullable Map<String,String> tagsToAdd) {
         this.copyTags = copyTags;
         this.createRule = createRule;
         this.crossRegionCopyRules = crossRegionCopyRules;

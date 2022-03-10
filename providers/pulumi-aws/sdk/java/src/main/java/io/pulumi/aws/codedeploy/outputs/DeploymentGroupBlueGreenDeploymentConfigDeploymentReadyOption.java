@@ -25,10 +25,10 @@ public final class DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption
      */
     private final @Nullable Integer waitTimeInMinutes;
 
-    @OutputCustomType.Constructor({"actionOnTimeout","waitTimeInMinutes"})
+    @OutputCustomType.Constructor
     private DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption(
-        @Nullable String actionOnTimeout,
-        @Nullable Integer waitTimeInMinutes) {
+        @OutputCustomType.Parameter("actionOnTimeout") @Nullable String actionOnTimeout,
+        @OutputCustomType.Parameter("waitTimeInMinutes") @Nullable Integer waitTimeInMinutes) {
         this.actionOnTimeout = actionOnTimeout;
         this.waitTimeInMinutes = waitTimeInMinutes;
     }

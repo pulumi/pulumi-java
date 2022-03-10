@@ -34,23 +34,23 @@ public final class GetLaunchTemplateNetworkInterface {
     private final List<String> securityGroups;
     private final String subnetId;
 
-    @OutputCustomType.Constructor({"associateCarrierIpAddress","associatePublicIpAddress","deleteOnTermination","description","deviceIndex","interfaceType","ipv4AddressCount","ipv4Addresses","ipv6AddressCount","ipv6Addresses","networkCardIndex","networkInterfaceId","privateIpAddress","securityGroups","subnetId"})
+    @OutputCustomType.Constructor
     private GetLaunchTemplateNetworkInterface(
-        String associateCarrierIpAddress,
-        @Nullable Boolean associatePublicIpAddress,
-        @Nullable Boolean deleteOnTermination,
-        String description,
-        Integer deviceIndex,
-        String interfaceType,
-        Integer ipv4AddressCount,
-        List<String> ipv4Addresses,
-        Integer ipv6AddressCount,
-        List<String> ipv6Addresses,
-        @Nullable Integer networkCardIndex,
-        String networkInterfaceId,
-        String privateIpAddress,
-        List<String> securityGroups,
-        String subnetId) {
+        @OutputCustomType.Parameter("associateCarrierIpAddress") String associateCarrierIpAddress,
+        @OutputCustomType.Parameter("associatePublicIpAddress") @Nullable Boolean associatePublicIpAddress,
+        @OutputCustomType.Parameter("deleteOnTermination") @Nullable Boolean deleteOnTermination,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("deviceIndex") Integer deviceIndex,
+        @OutputCustomType.Parameter("interfaceType") String interfaceType,
+        @OutputCustomType.Parameter("ipv4AddressCount") Integer ipv4AddressCount,
+        @OutputCustomType.Parameter("ipv4Addresses") List<String> ipv4Addresses,
+        @OutputCustomType.Parameter("ipv6AddressCount") Integer ipv6AddressCount,
+        @OutputCustomType.Parameter("ipv6Addresses") List<String> ipv6Addresses,
+        @OutputCustomType.Parameter("networkCardIndex") @Nullable Integer networkCardIndex,
+        @OutputCustomType.Parameter("networkInterfaceId") String networkInterfaceId,
+        @OutputCustomType.Parameter("privateIpAddress") String privateIpAddress,
+        @OutputCustomType.Parameter("securityGroups") List<String> securityGroups,
+        @OutputCustomType.Parameter("subnetId") String subnetId) {
         this.associateCarrierIpAddress = associateCarrierIpAddress;
         this.associatePublicIpAddress = associatePublicIpAddress;
         this.deleteOnTermination = deleteOnTermination;

@@ -20,10 +20,10 @@ public final class ClassifierXmlClassifier {
      */
     private final String rowTag;
 
-    @OutputCustomType.Constructor({"classification","rowTag"})
+    @OutputCustomType.Constructor
     private ClassifierXmlClassifier(
-        String classification,
-        String rowTag) {
+        @OutputCustomType.Parameter("classification") String classification,
+        @OutputCustomType.Parameter("rowTag") String rowTag) {
         this.classification = classification;
         this.rowTag = rowTag;
     }

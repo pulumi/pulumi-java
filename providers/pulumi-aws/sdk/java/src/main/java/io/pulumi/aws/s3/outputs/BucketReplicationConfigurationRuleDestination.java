@@ -51,15 +51,15 @@ public final class BucketReplicationConfigurationRuleDestination {
      */
     private final @Nullable String storageClass;
 
-    @OutputCustomType.Constructor({"accessControlTranslation","accountId","bucket","metrics","replicaKmsKeyId","replicationTime","storageClass"})
+    @OutputCustomType.Constructor
     private BucketReplicationConfigurationRuleDestination(
-        @Nullable BucketReplicationConfigurationRuleDestinationAccessControlTranslation accessControlTranslation,
-        @Nullable String accountId,
-        String bucket,
-        @Nullable BucketReplicationConfigurationRuleDestinationMetrics metrics,
-        @Nullable String replicaKmsKeyId,
-        @Nullable BucketReplicationConfigurationRuleDestinationReplicationTime replicationTime,
-        @Nullable String storageClass) {
+        @OutputCustomType.Parameter("accessControlTranslation") @Nullable BucketReplicationConfigurationRuleDestinationAccessControlTranslation accessControlTranslation,
+        @OutputCustomType.Parameter("accountId") @Nullable String accountId,
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("metrics") @Nullable BucketReplicationConfigurationRuleDestinationMetrics metrics,
+        @OutputCustomType.Parameter("replicaKmsKeyId") @Nullable String replicaKmsKeyId,
+        @OutputCustomType.Parameter("replicationTime") @Nullable BucketReplicationConfigurationRuleDestinationReplicationTime replicationTime,
+        @OutputCustomType.Parameter("storageClass") @Nullable String storageClass) {
         this.accessControlTranslation = accessControlTranslation;
         this.accountId = accountId;
         this.bucket = bucket;

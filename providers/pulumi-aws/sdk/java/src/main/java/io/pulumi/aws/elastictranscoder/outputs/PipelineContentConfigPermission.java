@@ -28,11 +28,11 @@ public final class PipelineContentConfigPermission {
      */
     private final @Nullable String granteeType;
 
-    @OutputCustomType.Constructor({"accesses","grantee","granteeType"})
+    @OutputCustomType.Constructor
     private PipelineContentConfigPermission(
-        @Nullable List<String> accesses,
-        @Nullable String grantee,
-        @Nullable String granteeType) {
+        @OutputCustomType.Parameter("accesses") @Nullable List<String> accesses,
+        @OutputCustomType.Parameter("grantee") @Nullable String grantee,
+        @OutputCustomType.Parameter("granteeType") @Nullable String granteeType) {
         this.accesses = accesses;
         this.grantee = grantee;
         this.granteeType = granteeType;

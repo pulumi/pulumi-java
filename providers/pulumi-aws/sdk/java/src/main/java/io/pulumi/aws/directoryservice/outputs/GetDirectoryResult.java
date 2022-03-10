@@ -84,24 +84,24 @@ public final class GetDirectoryResult {
     private final String type;
     private final List<GetDirectoryVpcSetting> vpcSettings;
 
-    @OutputCustomType.Constructor({"accessUrl","alias","connectSettings","description","directoryId","dnsIpAddresses","edition","enableSso","id","name","securityGroupId","shortName","size","tags","type","vpcSettings"})
+    @OutputCustomType.Constructor
     private GetDirectoryResult(
-        String accessUrl,
-        String alias,
-        List<GetDirectoryConnectSetting> connectSettings,
-        String description,
-        String directoryId,
-        List<String> dnsIpAddresses,
-        String edition,
-        Boolean enableSso,
-        String id,
-        String name,
-        String securityGroupId,
-        String shortName,
-        String size,
-        @Nullable Map<String,String> tags,
-        String type,
-        List<GetDirectoryVpcSetting> vpcSettings) {
+        @OutputCustomType.Parameter("accessUrl") String accessUrl,
+        @OutputCustomType.Parameter("alias") String alias,
+        @OutputCustomType.Parameter("connectSettings") List<GetDirectoryConnectSetting> connectSettings,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("directoryId") String directoryId,
+        @OutputCustomType.Parameter("dnsIpAddresses") List<String> dnsIpAddresses,
+        @OutputCustomType.Parameter("edition") String edition,
+        @OutputCustomType.Parameter("enableSso") Boolean enableSso,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("securityGroupId") String securityGroupId,
+        @OutputCustomType.Parameter("shortName") String shortName,
+        @OutputCustomType.Parameter("size") String size,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("vpcSettings") List<GetDirectoryVpcSetting> vpcSettings) {
         this.accessUrl = accessUrl;
         this.alias = alias;
         this.connectSettings = connectSettings;

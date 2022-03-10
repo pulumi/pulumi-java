@@ -28,11 +28,11 @@ public final class ReceiptRuleSnsAction {
      */
     private final String topicArn;
 
-    @OutputCustomType.Constructor({"encoding","position","topicArn"})
+    @OutputCustomType.Constructor
     private ReceiptRuleSnsAction(
-        @Nullable String encoding,
-        Integer position,
-        String topicArn) {
+        @OutputCustomType.Parameter("encoding") @Nullable String encoding,
+        @OutputCustomType.Parameter("position") Integer position,
+        @OutputCustomType.Parameter("topicArn") String topicArn) {
         this.encoding = encoding;
         this.position = position;
         this.topicArn = topicArn;

@@ -30,10 +30,10 @@ public final class ProjectSourceAuth {
         @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     private final String type;
 
-    @OutputCustomType.Constructor({"resource","type"})
+    @OutputCustomType.Constructor
     private ProjectSourceAuth(
-        @Nullable String resource,
-        String type) {
+        @OutputCustomType.Parameter("resource") @Nullable String resource,
+        @OutputCustomType.Parameter("type") String type) {
         this.resource = resource;
         this.type = type;
     }

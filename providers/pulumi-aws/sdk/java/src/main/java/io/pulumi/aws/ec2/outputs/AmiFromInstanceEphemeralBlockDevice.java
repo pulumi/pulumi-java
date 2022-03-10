@@ -23,10 +23,10 @@ public final class AmiFromInstanceEphemeralBlockDevice {
      */
     private final @Nullable String virtualName;
 
-    @OutputCustomType.Constructor({"deviceName","virtualName"})
+    @OutputCustomType.Constructor
     private AmiFromInstanceEphemeralBlockDevice(
-        @Nullable String deviceName,
-        @Nullable String virtualName) {
+        @OutputCustomType.Parameter("deviceName") @Nullable String deviceName,
+        @OutputCustomType.Parameter("virtualName") @Nullable String virtualName) {
         this.deviceName = deviceName;
         this.virtualName = virtualName;
     }

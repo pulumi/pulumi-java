@@ -31,15 +31,15 @@ public final class GetResourcesResult {
     private final @Nullable List<String> resourceTypeFilters;
     private final @Nullable List<GetResourcesTagFilter> tagFilters;
 
-    @OutputCustomType.Constructor({"excludeCompliantResources","id","includeComplianceDetails","resourceArnLists","resourceTagMappingLists","resourceTypeFilters","tagFilters"})
+    @OutputCustomType.Constructor
     private GetResourcesResult(
-        @Nullable Boolean excludeCompliantResources,
-        String id,
-        @Nullable Boolean includeComplianceDetails,
-        @Nullable List<String> resourceArnLists,
-        List<GetResourcesResourceTagMappingList> resourceTagMappingLists,
-        @Nullable List<String> resourceTypeFilters,
-        @Nullable List<GetResourcesTagFilter> tagFilters) {
+        @OutputCustomType.Parameter("excludeCompliantResources") @Nullable Boolean excludeCompliantResources,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("includeComplianceDetails") @Nullable Boolean includeComplianceDetails,
+        @OutputCustomType.Parameter("resourceArnLists") @Nullable List<String> resourceArnLists,
+        @OutputCustomType.Parameter("resourceTagMappingLists") List<GetResourcesResourceTagMappingList> resourceTagMappingLists,
+        @OutputCustomType.Parameter("resourceTypeFilters") @Nullable List<String> resourceTypeFilters,
+        @OutputCustomType.Parameter("tagFilters") @Nullable List<GetResourcesTagFilter> tagFilters) {
         this.excludeCompliantResources = excludeCompliantResources;
         this.id = id;
         this.includeComplianceDetails = includeComplianceDetails;

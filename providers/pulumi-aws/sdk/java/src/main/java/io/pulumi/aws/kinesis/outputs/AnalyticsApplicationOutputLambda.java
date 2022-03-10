@@ -20,10 +20,10 @@ public final class AnalyticsApplicationOutputLambda {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"resourceArn","roleArn"})
+    @OutputCustomType.Constructor
     private AnalyticsApplicationOutputLambda(
-        String resourceArn,
-        String roleArn) {
+        @OutputCustomType.Parameter("resourceArn") String resourceArn,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.resourceArn = resourceArn;
         this.roleArn = roleArn;
     }

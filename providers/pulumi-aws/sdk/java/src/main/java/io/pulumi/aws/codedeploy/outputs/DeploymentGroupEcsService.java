@@ -20,10 +20,10 @@ public final class DeploymentGroupEcsService {
      */
     private final String serviceName;
 
-    @OutputCustomType.Constructor({"clusterName","serviceName"})
+    @OutputCustomType.Constructor
     private DeploymentGroupEcsService(
-        String clusterName,
-        String serviceName) {
+        @OutputCustomType.Parameter("clusterName") String clusterName,
+        @OutputCustomType.Parameter("serviceName") String serviceName) {
         this.clusterName = clusterName;
         this.serviceName = serviceName;
     }

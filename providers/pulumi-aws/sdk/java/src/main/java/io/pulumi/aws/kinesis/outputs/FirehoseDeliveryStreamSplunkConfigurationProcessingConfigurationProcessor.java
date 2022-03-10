@@ -23,10 +23,10 @@ public final class FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurat
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"parameters","type"})
+    @OutputCustomType.Constructor
     private FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessor(
-        @Nullable List<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameter> parameters,
-        String type) {
+        @OutputCustomType.Parameter("parameters") @Nullable List<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameter> parameters,
+        @OutputCustomType.Parameter("type") String type) {
         this.parameters = parameters;
         this.type = type;
     }

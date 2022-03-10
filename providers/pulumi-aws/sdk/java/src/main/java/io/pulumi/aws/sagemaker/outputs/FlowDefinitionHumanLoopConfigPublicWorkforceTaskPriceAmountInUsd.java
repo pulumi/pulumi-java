@@ -27,11 +27,11 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountIn
      */
     private final @Nullable Integer tenthFractionsOfACent;
 
-    @OutputCustomType.Constructor({"cents","dollars","tenthFractionsOfACent"})
+    @OutputCustomType.Constructor
     private FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsd(
-        @Nullable Integer cents,
-        @Nullable Integer dollars,
-        @Nullable Integer tenthFractionsOfACent) {
+        @OutputCustomType.Parameter("cents") @Nullable Integer cents,
+        @OutputCustomType.Parameter("dollars") @Nullable Integer dollars,
+        @OutputCustomType.Parameter("tenthFractionsOfACent") @Nullable Integer tenthFractionsOfACent) {
         this.cents = cents;
         this.dollars = dollars;
         this.tenthFractionsOfACent = tenthFractionsOfACent;

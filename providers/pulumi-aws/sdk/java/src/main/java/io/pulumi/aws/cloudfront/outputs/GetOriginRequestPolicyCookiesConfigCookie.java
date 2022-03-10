@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class GetOriginRequestPolicyCookiesConfigCookie {
     private final List<String> items;
 
-    @OutputCustomType.Constructor({"items"})
-    private GetOriginRequestPolicyCookiesConfigCookie(List<String> items) {
+    @OutputCustomType.Constructor
+    private GetOriginRequestPolicyCookiesConfigCookie(@OutputCustomType.Parameter("items") List<String> items) {
         this.items = items;
     }
 

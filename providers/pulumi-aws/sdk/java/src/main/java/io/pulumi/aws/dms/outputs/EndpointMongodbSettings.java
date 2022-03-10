@@ -42,14 +42,14 @@ public final class EndpointMongodbSettings {
      */
     private final @Nullable String nestingLevel;
 
-    @OutputCustomType.Constructor({"authMechanism","authSource","authType","docsToInvestigate","extractDocId","nestingLevel"})
+    @OutputCustomType.Constructor
     private EndpointMongodbSettings(
-        @Nullable String authMechanism,
-        @Nullable String authSource,
-        @Nullable String authType,
-        @Nullable String docsToInvestigate,
-        @Nullable String extractDocId,
-        @Nullable String nestingLevel) {
+        @OutputCustomType.Parameter("authMechanism") @Nullable String authMechanism,
+        @OutputCustomType.Parameter("authSource") @Nullable String authSource,
+        @OutputCustomType.Parameter("authType") @Nullable String authType,
+        @OutputCustomType.Parameter("docsToInvestigate") @Nullable String docsToInvestigate,
+        @OutputCustomType.Parameter("extractDocId") @Nullable String extractDocId,
+        @OutputCustomType.Parameter("nestingLevel") @Nullable String nestingLevel) {
         this.authMechanism = authMechanism;
         this.authSource = authSource;
         this.authType = authType;

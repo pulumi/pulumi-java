@@ -34,14 +34,14 @@ public final class GetRegexPatternSetResult {
     private final List<GetRegexPatternSetRegularExpression> regularExpressions;
     private final String scope;
 
-    @OutputCustomType.Constructor({"arn","description","id","name","regularExpressions","scope"})
+    @OutputCustomType.Constructor
     private GetRegexPatternSetResult(
-        String arn,
-        String description,
-        String id,
-        String name,
-        List<GetRegexPatternSetRegularExpression> regularExpressions,
-        String scope) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("regularExpressions") List<GetRegexPatternSetRegularExpression> regularExpressions,
+        @OutputCustomType.Parameter("scope") String scope) {
         this.arn = arn;
         this.description = description;
         this.id = id;

@@ -22,10 +22,10 @@ public final class GrantConstraint {
      */
     private final @Nullable Map<String,String> encryptionContextSubset;
 
-    @OutputCustomType.Constructor({"encryptionContextEquals","encryptionContextSubset"})
+    @OutputCustomType.Constructor
     private GrantConstraint(
-        @Nullable Map<String,String> encryptionContextEquals,
-        @Nullable Map<String,String> encryptionContextSubset) {
+        @OutputCustomType.Parameter("encryptionContextEquals") @Nullable Map<String,String> encryptionContextEquals,
+        @OutputCustomType.Parameter("encryptionContextSubset") @Nullable Map<String,String> encryptionContextSubset) {
         this.encryptionContextEquals = encryptionContextEquals;
         this.encryptionContextSubset = encryptionContextSubset;
     }

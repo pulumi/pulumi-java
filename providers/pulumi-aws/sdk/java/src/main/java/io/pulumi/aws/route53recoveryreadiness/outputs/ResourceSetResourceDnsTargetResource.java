@@ -38,13 +38,13 @@ public final class ResourceSetResourceDnsTargetResource {
      */
     private final @Nullable ResourceSetResourceDnsTargetResourceTargetResource targetResource;
 
-    @OutputCustomType.Constructor({"domainName","hostedZoneArn","recordSetId","recordType","targetResource"})
+    @OutputCustomType.Constructor
     private ResourceSetResourceDnsTargetResource(
-        String domainName,
-        @Nullable String hostedZoneArn,
-        @Nullable String recordSetId,
-        @Nullable String recordType,
-        @Nullable ResourceSetResourceDnsTargetResourceTargetResource targetResource) {
+        @OutputCustomType.Parameter("domainName") String domainName,
+        @OutputCustomType.Parameter("hostedZoneArn") @Nullable String hostedZoneArn,
+        @OutputCustomType.Parameter("recordSetId") @Nullable String recordSetId,
+        @OutputCustomType.Parameter("recordType") @Nullable String recordType,
+        @OutputCustomType.Parameter("targetResource") @Nullable ResourceSetResourceDnsTargetResourceTargetResource targetResource) {
         this.domainName = domainName;
         this.hostedZoneArn = hostedZoneArn;
         this.recordSetId = recordSetId;

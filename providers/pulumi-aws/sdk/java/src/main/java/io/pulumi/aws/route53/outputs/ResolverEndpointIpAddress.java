@@ -23,11 +23,11 @@ public final class ResolverEndpointIpAddress {
      */
     private final String subnetId;
 
-    @OutputCustomType.Constructor({"ip","ipId","subnetId"})
+    @OutputCustomType.Constructor
     private ResolverEndpointIpAddress(
-        @Nullable String ip,
-        @Nullable String ipId,
-        String subnetId) {
+        @OutputCustomType.Parameter("ip") @Nullable String ip,
+        @OutputCustomType.Parameter("ipId") @Nullable String ipId,
+        @OutputCustomType.Parameter("subnetId") String subnetId) {
         this.ip = ip;
         this.ipId = ipId;
         this.subnetId = subnetId;

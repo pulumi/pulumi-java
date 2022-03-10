@@ -22,10 +22,10 @@ public final class GroupResourceQuery {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"query","type"})
+    @OutputCustomType.Constructor
     private GroupResourceQuery(
-        String query,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("query") String query,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.query = query;
         this.type = type;
     }

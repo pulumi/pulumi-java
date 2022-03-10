@@ -17,8 +17,8 @@ public final class FeatureGroupOnlineStoreConfigSecurityConfig {
      */
     private final @Nullable String kmsKeyId;
 
-    @OutputCustomType.Constructor({"kmsKeyId"})
-    private FeatureGroupOnlineStoreConfigSecurityConfig(@Nullable String kmsKeyId) {
+    @OutputCustomType.Constructor
+    private FeatureGroupOnlineStoreConfigSecurityConfig(@OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
     }
 

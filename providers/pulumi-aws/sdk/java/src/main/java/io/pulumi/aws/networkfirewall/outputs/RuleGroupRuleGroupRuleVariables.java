@@ -23,10 +23,10 @@ public final class RuleGroupRuleGroupRuleVariables {
      */
     private final @Nullable List<RuleGroupRuleGroupRuleVariablesPortSet> portSets;
 
-    @OutputCustomType.Constructor({"ipSets","portSets"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleGroupRuleVariables(
-        @Nullable List<RuleGroupRuleGroupRuleVariablesIpSet> ipSets,
-        @Nullable List<RuleGroupRuleGroupRuleVariablesPortSet> portSets) {
+        @OutputCustomType.Parameter("ipSets") @Nullable List<RuleGroupRuleGroupRuleVariablesIpSet> ipSets,
+        @OutputCustomType.Parameter("portSets") @Nullable List<RuleGroupRuleGroupRuleVariablesPortSet> portSets) {
         this.ipSets = ipSets;
         this.portSets = portSets;
     }

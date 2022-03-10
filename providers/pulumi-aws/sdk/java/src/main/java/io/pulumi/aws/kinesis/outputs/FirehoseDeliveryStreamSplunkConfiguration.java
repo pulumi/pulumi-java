@@ -55,16 +55,16 @@ public final class FirehoseDeliveryStreamSplunkConfiguration {
      */
     private final @Nullable String s3BackupMode;
 
-    @OutputCustomType.Constructor({"cloudwatchLoggingOptions","hecAcknowledgmentTimeout","hecEndpoint","hecEndpointType","hecToken","processingConfiguration","retryDuration","s3BackupMode"})
+    @OutputCustomType.Constructor
     private FirehoseDeliveryStreamSplunkConfiguration(
-        @Nullable FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions,
-        @Nullable Integer hecAcknowledgmentTimeout,
-        String hecEndpoint,
-        @Nullable String hecEndpointType,
-        String hecToken,
-        @Nullable FirehoseDeliveryStreamSplunkConfigurationProcessingConfiguration processingConfiguration,
-        @Nullable Integer retryDuration,
-        @Nullable String s3BackupMode) {
+        @OutputCustomType.Parameter("cloudwatchLoggingOptions") @Nullable FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions,
+        @OutputCustomType.Parameter("hecAcknowledgmentTimeout") @Nullable Integer hecAcknowledgmentTimeout,
+        @OutputCustomType.Parameter("hecEndpoint") String hecEndpoint,
+        @OutputCustomType.Parameter("hecEndpointType") @Nullable String hecEndpointType,
+        @OutputCustomType.Parameter("hecToken") String hecToken,
+        @OutputCustomType.Parameter("processingConfiguration") @Nullable FirehoseDeliveryStreamSplunkConfigurationProcessingConfiguration processingConfiguration,
+        @OutputCustomType.Parameter("retryDuration") @Nullable Integer retryDuration,
+        @OutputCustomType.Parameter("s3BackupMode") @Nullable String s3BackupMode) {
         this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
         this.hecAcknowledgmentTimeout = hecAcknowledgmentTimeout;
         this.hecEndpoint = hecEndpoint;

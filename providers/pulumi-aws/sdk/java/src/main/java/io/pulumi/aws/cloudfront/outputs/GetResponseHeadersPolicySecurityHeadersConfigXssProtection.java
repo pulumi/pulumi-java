@@ -31,12 +31,12 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigXssProtection {
      */
     private final String reportUri;
 
-    @OutputCustomType.Constructor({"modeBlock","override","protection","reportUri"})
+    @OutputCustomType.Constructor
     private GetResponseHeadersPolicySecurityHeadersConfigXssProtection(
-        Boolean modeBlock,
-        Boolean override,
-        Boolean protection,
-        String reportUri) {
+        @OutputCustomType.Parameter("modeBlock") Boolean modeBlock,
+        @OutputCustomType.Parameter("override") Boolean override,
+        @OutputCustomType.Parameter("protection") Boolean protection,
+        @OutputCustomType.Parameter("reportUri") String reportUri) {
         this.modeBlock = modeBlock;
         this.override = override;
         this.protection = protection;

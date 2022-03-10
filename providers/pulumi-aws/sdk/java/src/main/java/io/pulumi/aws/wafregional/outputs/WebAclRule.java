@@ -41,13 +41,13 @@ public final class WebAclRule {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"action","overrideAction","priority","ruleId","type"})
+    @OutputCustomType.Constructor
     private WebAclRule(
-        @Nullable WebAclRuleAction action,
-        @Nullable WebAclRuleOverrideAction overrideAction,
-        Integer priority,
-        String ruleId,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("action") @Nullable WebAclRuleAction action,
+        @OutputCustomType.Parameter("overrideAction") @Nullable WebAclRuleOverrideAction overrideAction,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("ruleId") String ruleId,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.action = action;
         this.overrideAction = overrideAction;
         this.priority = priority;

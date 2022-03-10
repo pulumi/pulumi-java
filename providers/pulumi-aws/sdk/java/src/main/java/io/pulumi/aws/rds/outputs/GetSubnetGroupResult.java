@@ -42,15 +42,15 @@ public final class GetSubnetGroupResult {
      */
     private final String vpcId;
 
-    @OutputCustomType.Constructor({"arn","description","id","name","status","subnetIds","vpcId"})
+    @OutputCustomType.Constructor
     private GetSubnetGroupResult(
-        String arn,
-        String description,
-        String id,
-        String name,
-        String status,
-        List<String> subnetIds,
-        String vpcId) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
+        @OutputCustomType.Parameter("vpcId") String vpcId) {
         this.arn = arn;
         this.description = description;
         this.id = id;

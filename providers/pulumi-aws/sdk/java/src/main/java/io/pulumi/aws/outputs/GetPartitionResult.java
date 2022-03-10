@@ -30,12 +30,12 @@ public final class GetPartitionResult {
      */
     private final String reverseDnsPrefix;
 
-    @OutputCustomType.Constructor({"dnsSuffix","id","partition","reverseDnsPrefix"})
+    @OutputCustomType.Constructor
     private GetPartitionResult(
-        String dnsSuffix,
-        String id,
-        String partition,
-        String reverseDnsPrefix) {
+        @OutputCustomType.Parameter("dnsSuffix") String dnsSuffix,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("partition") String partition,
+        @OutputCustomType.Parameter("reverseDnsPrefix") String reverseDnsPrefix) {
         this.dnsSuffix = dnsSuffix;
         this.id = id;
         this.partition = partition;

@@ -33,12 +33,12 @@ public final class GetSecretsSecret {
      */
     private final String payload;
 
-    @OutputCustomType.Constructor({"context","grantTokens","name","payload"})
+    @OutputCustomType.Constructor
     private GetSecretsSecret(
-        @Nullable Map<String,String> context,
-        @Nullable List<String> grantTokens,
-        String name,
-        String payload) {
+        @OutputCustomType.Parameter("context") @Nullable Map<String,String> context,
+        @OutputCustomType.Parameter("grantTokens") @Nullable List<String> grantTokens,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("payload") String payload) {
         this.context = context;
         this.grantTokens = grantTokens;
         this.name = name;

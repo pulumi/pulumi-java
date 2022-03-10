@@ -15,8 +15,8 @@ public final class GetInstanceEnclaveOption {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private GetInstanceEnclaveOption(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private GetInstanceEnclaveOption(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

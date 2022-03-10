@@ -15,8 +15,8 @@ public final class BucketReplicationConfigRuleExistingObjectReplication {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"status"})
-    private BucketReplicationConfigRuleExistingObjectReplication(String status) {
+    @OutputCustomType.Constructor
+    private BucketReplicationConfigRuleExistingObjectReplication(@OutputCustomType.Parameter("status") String status) {
         this.status = status;
     }
 

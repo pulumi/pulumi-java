@@ -52,16 +52,16 @@ public final class PresetThumbnails {
      */
     private final @Nullable String sizingPolicy;
 
-    @OutputCustomType.Constructor({"aspectRatio","format","interval","maxHeight","maxWidth","paddingPolicy","resolution","sizingPolicy"})
+    @OutputCustomType.Constructor
     private PresetThumbnails(
-        @Nullable String aspectRatio,
-        @Nullable String format,
-        @Nullable String interval,
-        @Nullable String maxHeight,
-        @Nullable String maxWidth,
-        @Nullable String paddingPolicy,
-        @Nullable String resolution,
-        @Nullable String sizingPolicy) {
+        @OutputCustomType.Parameter("aspectRatio") @Nullable String aspectRatio,
+        @OutputCustomType.Parameter("format") @Nullable String format,
+        @OutputCustomType.Parameter("interval") @Nullable String interval,
+        @OutputCustomType.Parameter("maxHeight") @Nullable String maxHeight,
+        @OutputCustomType.Parameter("maxWidth") @Nullable String maxWidth,
+        @OutputCustomType.Parameter("paddingPolicy") @Nullable String paddingPolicy,
+        @OutputCustomType.Parameter("resolution") @Nullable String resolution,
+        @OutputCustomType.Parameter("sizingPolicy") @Nullable String sizingPolicy) {
         this.aspectRatio = aspectRatio;
         this.format = format;
         this.interval = interval;

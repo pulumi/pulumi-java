@@ -29,11 +29,11 @@ public final class RateBasedRulePredicate {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dataId","negated","type"})
+    @OutputCustomType.Constructor
     private RateBasedRulePredicate(
-        String dataId,
-        Boolean negated,
-        String type) {
+        @OutputCustomType.Parameter("dataId") String dataId,
+        @OutputCustomType.Parameter("negated") Boolean negated,
+        @OutputCustomType.Parameter("type") String type) {
         this.dataId = dataId;
         this.negated = negated;
         this.type = type;

@@ -19,8 +19,8 @@ public final class FileSystemAssociationCacheAttributes {
      */
     private final @Nullable Integer cacheStaleTimeoutInSeconds;
 
-    @OutputCustomType.Constructor({"cacheStaleTimeoutInSeconds"})
-    private FileSystemAssociationCacheAttributes(@Nullable Integer cacheStaleTimeoutInSeconds) {
+    @OutputCustomType.Constructor
+    private FileSystemAssociationCacheAttributes(@OutputCustomType.Parameter("cacheStaleTimeoutInSeconds") @Nullable Integer cacheStaleTimeoutInSeconds) {
         this.cacheStaleTimeoutInSeconds = cacheStaleTimeoutInSeconds;
     }
 

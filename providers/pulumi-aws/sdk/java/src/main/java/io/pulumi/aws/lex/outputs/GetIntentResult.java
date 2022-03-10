@@ -61,17 +61,17 @@ public final class GetIntentResult {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"arn","checksum","createdDate","description","id","lastUpdatedDate","name","parentIntentSignature","version"})
+    @OutputCustomType.Constructor
     private GetIntentResult(
-        String arn,
-        String checksum,
-        String createdDate,
-        String description,
-        String id,
-        String lastUpdatedDate,
-        String name,
-        String parentIntentSignature,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("checksum") String checksum,
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastUpdatedDate") String lastUpdatedDate,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parentIntentSignature") String parentIntentSignature,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.arn = arn;
         this.checksum = checksum;
         this.createdDate = createdDate;

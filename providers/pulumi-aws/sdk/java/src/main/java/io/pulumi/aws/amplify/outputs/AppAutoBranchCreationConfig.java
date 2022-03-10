@@ -64,18 +64,18 @@ public final class AppAutoBranchCreationConfig {
      */
     private final @Nullable String stage;
 
-    @OutputCustomType.Constructor({"basicAuthCredentials","buildSpec","enableAutoBuild","enableBasicAuth","enablePerformanceMode","enablePullRequestPreview","environmentVariables","framework","pullRequestEnvironmentName","stage"})
+    @OutputCustomType.Constructor
     private AppAutoBranchCreationConfig(
-        @Nullable String basicAuthCredentials,
-        @Nullable String buildSpec,
-        @Nullable Boolean enableAutoBuild,
-        @Nullable Boolean enableBasicAuth,
-        @Nullable Boolean enablePerformanceMode,
-        @Nullable Boolean enablePullRequestPreview,
-        @Nullable Map<String,String> environmentVariables,
-        @Nullable String framework,
-        @Nullable String pullRequestEnvironmentName,
-        @Nullable String stage) {
+        @OutputCustomType.Parameter("basicAuthCredentials") @Nullable String basicAuthCredentials,
+        @OutputCustomType.Parameter("buildSpec") @Nullable String buildSpec,
+        @OutputCustomType.Parameter("enableAutoBuild") @Nullable Boolean enableAutoBuild,
+        @OutputCustomType.Parameter("enableBasicAuth") @Nullable Boolean enableBasicAuth,
+        @OutputCustomType.Parameter("enablePerformanceMode") @Nullable Boolean enablePerformanceMode,
+        @OutputCustomType.Parameter("enablePullRequestPreview") @Nullable Boolean enablePullRequestPreview,
+        @OutputCustomType.Parameter("environmentVariables") @Nullable Map<String,String> environmentVariables,
+        @OutputCustomType.Parameter("framework") @Nullable String framework,
+        @OutputCustomType.Parameter("pullRequestEnvironmentName") @Nullable String pullRequestEnvironmentName,
+        @OutputCustomType.Parameter("stage") @Nullable String stage) {
         this.basicAuthCredentials = basicAuthCredentials;
         this.buildSpec = buildSpec;
         this.enableAutoBuild = enableAutoBuild;

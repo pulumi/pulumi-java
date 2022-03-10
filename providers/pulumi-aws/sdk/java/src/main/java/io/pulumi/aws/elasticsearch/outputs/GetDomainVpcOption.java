@@ -31,12 +31,12 @@ public final class GetDomainVpcOption {
      */
     private final String vpcId;
 
-    @OutputCustomType.Constructor({"availabilityZones","securityGroupIds","subnetIds","vpcId"})
+    @OutputCustomType.Constructor
     private GetDomainVpcOption(
-        List<String> availabilityZones,
-        List<String> securityGroupIds,
-        List<String> subnetIds,
-        String vpcId) {
+        @OutputCustomType.Parameter("availabilityZones") List<String> availabilityZones,
+        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
+        @OutputCustomType.Parameter("vpcId") String vpcId) {
         this.availabilityZones = availabilityZones;
         this.securityGroupIds = securityGroupIds;
         this.subnetIds = subnetIds;

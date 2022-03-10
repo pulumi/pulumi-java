@@ -16,8 +16,8 @@ public final class UserPoolAccountRecoverySetting {
      */
     private final List<UserPoolAccountRecoverySettingRecoveryMechanism> recoveryMechanisms;
 
-    @OutputCustomType.Constructor({"recoveryMechanisms"})
-    private UserPoolAccountRecoverySetting(List<UserPoolAccountRecoverySettingRecoveryMechanism> recoveryMechanisms) {
+    @OutputCustomType.Constructor
+    private UserPoolAccountRecoverySetting(@OutputCustomType.Parameter("recoveryMechanisms") List<UserPoolAccountRecoverySettingRecoveryMechanism> recoveryMechanisms) {
         this.recoveryMechanisms = recoveryMechanisms;
     }
 

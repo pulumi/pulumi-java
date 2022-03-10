@@ -40,13 +40,13 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOrigin {
      */
     private final CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig queryStringsConfig;
 
-    @OutputCustomType.Constructor({"cookiesConfig","enableAcceptEncodingBrotli","enableAcceptEncodingGzip","headersConfig","queryStringsConfig"})
+    @OutputCustomType.Constructor
     private CachePolicyParametersInCacheKeyAndForwardedToOrigin(
-        CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfig cookiesConfig,
-        @Nullable Boolean enableAcceptEncodingBrotli,
-        @Nullable Boolean enableAcceptEncodingGzip,
-        CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig headersConfig,
-        CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig queryStringsConfig) {
+        @OutputCustomType.Parameter("cookiesConfig") CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfig cookiesConfig,
+        @OutputCustomType.Parameter("enableAcceptEncodingBrotli") @Nullable Boolean enableAcceptEncodingBrotli,
+        @OutputCustomType.Parameter("enableAcceptEncodingGzip") @Nullable Boolean enableAcceptEncodingGzip,
+        @OutputCustomType.Parameter("headersConfig") CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig headersConfig,
+        @OutputCustomType.Parameter("queryStringsConfig") CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig queryStringsConfig) {
         this.cookiesConfig = cookiesConfig;
         this.enableAcceptEncodingBrotli = enableAcceptEncodingBrotli;
         this.enableAcceptEncodingGzip = enableAcceptEncodingGzip;

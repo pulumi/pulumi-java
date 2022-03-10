@@ -28,10 +28,10 @@ public final class IntentRejectionStatement {
      */
     private final @Nullable String responseCard;
 
-    @OutputCustomType.Constructor({"messages","responseCard"})
+    @OutputCustomType.Constructor
     private IntentRejectionStatement(
-        List<IntentRejectionStatementMessage> messages,
-        @Nullable String responseCard) {
+        @OutputCustomType.Parameter("messages") List<IntentRejectionStatementMessage> messages,
+        @OutputCustomType.Parameter("responseCard") @Nullable String responseCard) {
         this.messages = messages;
         this.responseCard = responseCard;
     }

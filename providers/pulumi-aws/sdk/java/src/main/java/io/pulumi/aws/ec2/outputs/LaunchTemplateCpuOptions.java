@@ -23,10 +23,10 @@ public final class LaunchTemplateCpuOptions {
      */
     private final @Nullable Integer threadsPerCore;
 
-    @OutputCustomType.Constructor({"coreCount","threadsPerCore"})
+    @OutputCustomType.Constructor
     private LaunchTemplateCpuOptions(
-        @Nullable Integer coreCount,
-        @Nullable Integer threadsPerCore) {
+        @OutputCustomType.Parameter("coreCount") @Nullable Integer coreCount,
+        @OutputCustomType.Parameter("threadsPerCore") @Nullable Integer threadsPerCore) {
         this.coreCount = coreCount;
         this.threadsPerCore = threadsPerCore;
     }

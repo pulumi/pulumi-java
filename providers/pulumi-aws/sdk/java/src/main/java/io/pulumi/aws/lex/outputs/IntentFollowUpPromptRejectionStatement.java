@@ -28,10 +28,10 @@ public final class IntentFollowUpPromptRejectionStatement {
      */
     private final @Nullable String responseCard;
 
-    @OutputCustomType.Constructor({"messages","responseCard"})
+    @OutputCustomType.Constructor
     private IntentFollowUpPromptRejectionStatement(
-        List<IntentFollowUpPromptRejectionStatementMessage> messages,
-        @Nullable String responseCard) {
+        @OutputCustomType.Parameter("messages") List<IntentFollowUpPromptRejectionStatementMessage> messages,
+        @OutputCustomType.Parameter("responseCard") @Nullable String responseCard) {
         this.messages = messages;
         this.responseCard = responseCard;
     }

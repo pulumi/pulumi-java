@@ -23,10 +23,10 @@ public final class ProjectLogsConfig {
      */
     private final @Nullable ProjectLogsConfigS3Logs s3Logs;
 
-    @OutputCustomType.Constructor({"cloudwatchLogs","s3Logs"})
+    @OutputCustomType.Constructor
     private ProjectLogsConfig(
-        @Nullable ProjectLogsConfigCloudwatchLogs cloudwatchLogs,
-        @Nullable ProjectLogsConfigS3Logs s3Logs) {
+        @OutputCustomType.Parameter("cloudwatchLogs") @Nullable ProjectLogsConfigCloudwatchLogs cloudwatchLogs,
+        @OutputCustomType.Parameter("s3Logs") @Nullable ProjectLogsConfigS3Logs s3Logs) {
         this.cloudwatchLogs = cloudwatchLogs;
         this.s3Logs = s3Logs;
     }

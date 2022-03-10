@@ -15,8 +15,8 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup(String name) {
+    @OutputCustomType.Constructor
+    private DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

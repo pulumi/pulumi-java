@@ -85,23 +85,23 @@ public final class GetDomainNameResult {
      */
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","certificateArn","certificateName","certificateUploadDate","cloudfrontDomainName","cloudfrontZoneId","domainName","endpointConfigurations","id","regionalCertificateArn","regionalCertificateName","regionalDomainName","regionalZoneId","securityPolicy","tags"})
+    @OutputCustomType.Constructor
     private GetDomainNameResult(
-        String arn,
-        String certificateArn,
-        String certificateName,
-        String certificateUploadDate,
-        String cloudfrontDomainName,
-        String cloudfrontZoneId,
-        String domainName,
-        List<GetDomainNameEndpointConfiguration> endpointConfigurations,
-        String id,
-        String regionalCertificateArn,
-        String regionalCertificateName,
-        String regionalDomainName,
-        String regionalZoneId,
-        String securityPolicy,
-        @Nullable Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("certificateArn") String certificateArn,
+        @OutputCustomType.Parameter("certificateName") String certificateName,
+        @OutputCustomType.Parameter("certificateUploadDate") String certificateUploadDate,
+        @OutputCustomType.Parameter("cloudfrontDomainName") String cloudfrontDomainName,
+        @OutputCustomType.Parameter("cloudfrontZoneId") String cloudfrontZoneId,
+        @OutputCustomType.Parameter("domainName") String domainName,
+        @OutputCustomType.Parameter("endpointConfigurations") List<GetDomainNameEndpointConfiguration> endpointConfigurations,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("regionalCertificateArn") String regionalCertificateArn,
+        @OutputCustomType.Parameter("regionalCertificateName") String regionalCertificateName,
+        @OutputCustomType.Parameter("regionalDomainName") String regionalDomainName,
+        @OutputCustomType.Parameter("regionalZoneId") String regionalZoneId,
+        @OutputCustomType.Parameter("securityPolicy") String securityPolicy,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.arn = arn;
         this.certificateArn = certificateArn;
         this.certificateName = certificateName;

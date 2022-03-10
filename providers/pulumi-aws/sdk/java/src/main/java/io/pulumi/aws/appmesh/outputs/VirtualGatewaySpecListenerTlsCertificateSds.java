@@ -15,8 +15,8 @@ public final class VirtualGatewaySpecListenerTlsCertificateSds {
      */
     private final String secretName;
 
-    @OutputCustomType.Constructor({"secretName"})
-    private VirtualGatewaySpecListenerTlsCertificateSds(String secretName) {
+    @OutputCustomType.Constructor
+    private VirtualGatewaySpecListenerTlsCertificateSds(@OutputCustomType.Parameter("secretName") String secretName) {
         this.secretName = secretName;
     }
 

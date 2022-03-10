@@ -47,14 +47,14 @@ public final class RuleGroupRule {
      */
     private final RuleGroupRuleVisibilityConfig visibilityConfig;
 
-    @OutputCustomType.Constructor({"action","name","priority","ruleLabels","statement","visibilityConfig"})
+    @OutputCustomType.Constructor
     private RuleGroupRule(
-        RuleGroupRuleAction action,
-        String name,
-        Integer priority,
-        @Nullable List<RuleGroupRuleRuleLabel> ruleLabels,
-        RuleGroupRuleStatement statement,
-        RuleGroupRuleVisibilityConfig visibilityConfig) {
+        @OutputCustomType.Parameter("action") RuleGroupRuleAction action,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("ruleLabels") @Nullable List<RuleGroupRuleRuleLabel> ruleLabels,
+        @OutputCustomType.Parameter("statement") RuleGroupRuleStatement statement,
+        @OutputCustomType.Parameter("visibilityConfig") RuleGroupRuleVisibilityConfig visibilityConfig) {
         this.action = action;
         this.name = name;
         this.priority = priority;

@@ -36,12 +36,12 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTls {
      */
     private final VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation validation;
 
-    @OutputCustomType.Constructor({"certificate","enforce","ports","validation"})
+    @OutputCustomType.Constructor
     private VirtualNodeSpecBackendVirtualServiceClientPolicyTls(
-        @Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificate certificate,
-        @Nullable Boolean enforce,
-        @Nullable List<Integer> ports,
-        VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation validation) {
+        @OutputCustomType.Parameter("certificate") @Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificate certificate,
+        @OutputCustomType.Parameter("enforce") @Nullable Boolean enforce,
+        @OutputCustomType.Parameter("ports") @Nullable List<Integer> ports,
+        @OutputCustomType.Parameter("validation") VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation validation) {
         this.certificate = certificate;
         this.enforce = enforce;
         this.ports = ports;

@@ -38,14 +38,14 @@ public final class GetEventSourceResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"arn","createdBy","id","name","namePrefix","state"})
+    @OutputCustomType.Constructor
     private GetEventSourceResult(
-        String arn,
-        String createdBy,
-        String id,
-        String name,
-        @Nullable String namePrefix,
-        String state) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("createdBy") String createdBy,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("namePrefix") @Nullable String namePrefix,
+        @OutputCustomType.Parameter("state") String state) {
         this.arn = arn;
         this.createdBy = createdBy;
         this.id = id;

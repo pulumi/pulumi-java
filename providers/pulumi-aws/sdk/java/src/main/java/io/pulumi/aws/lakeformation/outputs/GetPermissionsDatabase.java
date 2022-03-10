@@ -20,10 +20,10 @@ public final class GetPermissionsDatabase {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"catalogId","name"})
+    @OutputCustomType.Constructor
     private GetPermissionsDatabase(
-        String catalogId,
-        String name) {
+        @OutputCustomType.Parameter("catalogId") String catalogId,
+        @OutputCustomType.Parameter("name") String name) {
         this.catalogId = catalogId;
         this.name = name;
     }

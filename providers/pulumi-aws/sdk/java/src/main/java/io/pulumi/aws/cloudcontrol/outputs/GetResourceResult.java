@@ -26,14 +26,14 @@ public final class GetResourceResult {
     private final String typeName;
     private final @Nullable String typeVersionId;
 
-    @OutputCustomType.Constructor({"id","identifier","properties","roleArn","typeName","typeVersionId"})
+    @OutputCustomType.Constructor
     private GetResourceResult(
-        String id,
-        String identifier,
-        String properties,
-        @Nullable String roleArn,
-        String typeName,
-        @Nullable String typeVersionId) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identifier") String identifier,
+        @OutputCustomType.Parameter("properties") String properties,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("typeName") String typeName,
+        @OutputCustomType.Parameter("typeVersionId") @Nullable String typeVersionId) {
         this.id = id;
         this.identifier = identifier;
         this.properties = properties;

@@ -23,10 +23,10 @@ public final class SpotFleetRequestLaunchTemplateConfig {
      */
     private final @Nullable List<SpotFleetRequestLaunchTemplateConfigOverride> overrides;
 
-    @OutputCustomType.Constructor({"launchTemplateSpecification","overrides"})
+    @OutputCustomType.Constructor
     private SpotFleetRequestLaunchTemplateConfig(
-        SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecification launchTemplateSpecification,
-        @Nullable List<SpotFleetRequestLaunchTemplateConfigOverride> overrides) {
+        @OutputCustomType.Parameter("launchTemplateSpecification") SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecification launchTemplateSpecification,
+        @OutputCustomType.Parameter("overrides") @Nullable List<SpotFleetRequestLaunchTemplateConfigOverride> overrides) {
         this.launchTemplateSpecification = launchTemplateSpecification;
         this.overrides = overrides;
     }

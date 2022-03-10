@@ -46,14 +46,14 @@ public final class PolicyTargetTrackingScalingPolicyConfiguration {
      */
     private final Double targetValue;
 
-    @OutputCustomType.Constructor({"customizedMetricSpecification","disableScaleIn","predefinedMetricSpecification","scaleInCooldown","scaleOutCooldown","targetValue"})
+    @OutputCustomType.Constructor
     private PolicyTargetTrackingScalingPolicyConfiguration(
-        @Nullable PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecification customizedMetricSpecification,
-        @Nullable Boolean disableScaleIn,
-        @Nullable PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification predefinedMetricSpecification,
-        @Nullable Integer scaleInCooldown,
-        @Nullable Integer scaleOutCooldown,
-        Double targetValue) {
+        @OutputCustomType.Parameter("customizedMetricSpecification") @Nullable PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecification customizedMetricSpecification,
+        @OutputCustomType.Parameter("disableScaleIn") @Nullable Boolean disableScaleIn,
+        @OutputCustomType.Parameter("predefinedMetricSpecification") @Nullable PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification predefinedMetricSpecification,
+        @OutputCustomType.Parameter("scaleInCooldown") @Nullable Integer scaleInCooldown,
+        @OutputCustomType.Parameter("scaleOutCooldown") @Nullable Integer scaleOutCooldown,
+        @OutputCustomType.Parameter("targetValue") Double targetValue) {
         this.customizedMetricSpecification = customizedMetricSpecification;
         this.disableScaleIn = disableScaleIn;
         this.predefinedMetricSpecification = predefinedMetricSpecification;

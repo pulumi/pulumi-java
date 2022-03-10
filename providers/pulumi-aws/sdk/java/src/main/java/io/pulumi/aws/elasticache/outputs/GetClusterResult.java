@@ -122,30 +122,30 @@ public final class GetClusterResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","availabilityZone","cacheNodes","clusterAddress","clusterId","configurationEndpoint","engine","engineVersion","id","maintenanceWindow","nodeType","notificationTopicArn","numCacheNodes","parameterGroupName","port","replicationGroupId","securityGroupIds","securityGroupNames","snapshotRetentionLimit","snapshotWindow","subnetGroupName","tags"})
+    @OutputCustomType.Constructor
     private GetClusterResult(
-        String arn,
-        String availabilityZone,
-        List<GetClusterCacheNode> cacheNodes,
-        String clusterAddress,
-        String clusterId,
-        String configurationEndpoint,
-        String engine,
-        String engineVersion,
-        String id,
-        String maintenanceWindow,
-        String nodeType,
-        String notificationTopicArn,
-        Integer numCacheNodes,
-        String parameterGroupName,
-        Integer port,
-        String replicationGroupId,
-        List<String> securityGroupIds,
-        List<String> securityGroupNames,
-        Integer snapshotRetentionLimit,
-        String snapshotWindow,
-        String subnetGroupName,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("availabilityZone") String availabilityZone,
+        @OutputCustomType.Parameter("cacheNodes") List<GetClusterCacheNode> cacheNodes,
+        @OutputCustomType.Parameter("clusterAddress") String clusterAddress,
+        @OutputCustomType.Parameter("clusterId") String clusterId,
+        @OutputCustomType.Parameter("configurationEndpoint") String configurationEndpoint,
+        @OutputCustomType.Parameter("engine") String engine,
+        @OutputCustomType.Parameter("engineVersion") String engineVersion,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("maintenanceWindow") String maintenanceWindow,
+        @OutputCustomType.Parameter("nodeType") String nodeType,
+        @OutputCustomType.Parameter("notificationTopicArn") String notificationTopicArn,
+        @OutputCustomType.Parameter("numCacheNodes") Integer numCacheNodes,
+        @OutputCustomType.Parameter("parameterGroupName") String parameterGroupName,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("replicationGroupId") String replicationGroupId,
+        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @OutputCustomType.Parameter("securityGroupNames") List<String> securityGroupNames,
+        @OutputCustomType.Parameter("snapshotRetentionLimit") Integer snapshotRetentionLimit,
+        @OutputCustomType.Parameter("snapshotWindow") String snapshotWindow,
+        @OutputCustomType.Parameter("subnetGroupName") String subnetGroupName,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.availabilityZone = availabilityZone;
         this.cacheNodes = cacheNodes;

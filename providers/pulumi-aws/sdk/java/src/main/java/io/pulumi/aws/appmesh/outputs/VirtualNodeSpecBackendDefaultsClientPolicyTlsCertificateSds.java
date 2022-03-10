@@ -15,8 +15,8 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificateSds {
      */
     private final String secretName;
 
-    @OutputCustomType.Constructor({"secretName"})
-    private VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificateSds(String secretName) {
+    @OutputCustomType.Constructor
+    private VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificateSds(@OutputCustomType.Parameter("secretName") String secretName) {
         this.secretName = secretName;
     }
 

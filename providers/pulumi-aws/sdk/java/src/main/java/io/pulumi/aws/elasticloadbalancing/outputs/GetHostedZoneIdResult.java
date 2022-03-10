@@ -18,10 +18,10 @@ public final class GetHostedZoneIdResult {
     private final String id;
     private final @Nullable String region;
 
-    @OutputCustomType.Constructor({"id","region"})
+    @OutputCustomType.Constructor
     private GetHostedZoneIdResult(
-        String id,
-        @Nullable String region) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("region") @Nullable String region) {
         this.id = id;
         this.region = region;
     }

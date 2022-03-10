@@ -21,10 +21,10 @@ public final class BucketReplicationConfigRuleDestinationReplicationTime {
      */
     private final BucketReplicationConfigRuleDestinationReplicationTimeTime time;
 
-    @OutputCustomType.Constructor({"status","time"})
+    @OutputCustomType.Constructor
     private BucketReplicationConfigRuleDestinationReplicationTime(
-        String status,
-        BucketReplicationConfigRuleDestinationReplicationTimeTime time) {
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("time") BucketReplicationConfigRuleDestinationReplicationTimeTime time) {
         this.status = status;
         this.time = time;
     }

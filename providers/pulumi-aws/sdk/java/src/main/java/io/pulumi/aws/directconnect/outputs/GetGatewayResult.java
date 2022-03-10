@@ -26,12 +26,12 @@ public final class GetGatewayResult {
      */
     private final String ownerAccountId;
 
-    @OutputCustomType.Constructor({"amazonSideAsn","id","name","ownerAccountId"})
+    @OutputCustomType.Constructor
     private GetGatewayResult(
-        String amazonSideAsn,
-        String id,
-        String name,
-        String ownerAccountId) {
+        @OutputCustomType.Parameter("amazonSideAsn") String amazonSideAsn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("ownerAccountId") String ownerAccountId) {
         this.amazonSideAsn = amazonSideAsn;
         this.id = id;
         this.name = name;

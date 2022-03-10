@@ -81,22 +81,22 @@ public final class GetTransitGatewayResult {
      */
     private final String vpnEcmpSupport;
 
-    @OutputCustomType.Constructor({"amazonSideAsn","arn","associationDefaultRouteTableId","autoAcceptSharedAttachments","defaultRouteTableAssociation","defaultRouteTablePropagation","description","dnsSupport","filters","id","ownerId","propagationDefaultRouteTableId","tags","vpnEcmpSupport"})
+    @OutputCustomType.Constructor
     private GetTransitGatewayResult(
-        Integer amazonSideAsn,
-        String arn,
-        String associationDefaultRouteTableId,
-        String autoAcceptSharedAttachments,
-        String defaultRouteTableAssociation,
-        String defaultRouteTablePropagation,
-        String description,
-        String dnsSupport,
-        @Nullable List<GetTransitGatewayFilter> filters,
-        String id,
-        String ownerId,
-        String propagationDefaultRouteTableId,
-        Map<String,String> tags,
-        String vpnEcmpSupport) {
+        @OutputCustomType.Parameter("amazonSideAsn") Integer amazonSideAsn,
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("associationDefaultRouteTableId") String associationDefaultRouteTableId,
+        @OutputCustomType.Parameter("autoAcceptSharedAttachments") String autoAcceptSharedAttachments,
+        @OutputCustomType.Parameter("defaultRouteTableAssociation") String defaultRouteTableAssociation,
+        @OutputCustomType.Parameter("defaultRouteTablePropagation") String defaultRouteTablePropagation,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("dnsSupport") String dnsSupport,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetTransitGatewayFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ownerId") String ownerId,
+        @OutputCustomType.Parameter("propagationDefaultRouteTableId") String propagationDefaultRouteTableId,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("vpnEcmpSupport") String vpnEcmpSupport) {
         this.amazonSideAsn = amazonSideAsn;
         this.arn = arn;
         this.associationDefaultRouteTableId = associationDefaultRouteTableId;

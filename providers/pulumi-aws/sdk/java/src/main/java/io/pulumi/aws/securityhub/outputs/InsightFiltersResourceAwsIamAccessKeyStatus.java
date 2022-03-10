@@ -20,10 +20,10 @@ public final class InsightFiltersResourceAwsIamAccessKeyStatus {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"comparison","value"})
+    @OutputCustomType.Constructor
     private InsightFiltersResourceAwsIamAccessKeyStatus(
-        String comparison,
-        String value) {
+        @OutputCustomType.Parameter("comparison") String comparison,
+        @OutputCustomType.Parameter("value") String value) {
         this.comparison = comparison;
         this.value = value;
     }

@@ -27,11 +27,11 @@ public final class QueueOutboundCallerConfig {
      */
     private final @Nullable String outboundFlowId;
 
-    @OutputCustomType.Constructor({"outboundCallerIdName","outboundCallerIdNumberId","outboundFlowId"})
+    @OutputCustomType.Constructor
     private QueueOutboundCallerConfig(
-        @Nullable String outboundCallerIdName,
-        @Nullable String outboundCallerIdNumberId,
-        @Nullable String outboundFlowId) {
+        @OutputCustomType.Parameter("outboundCallerIdName") @Nullable String outboundCallerIdName,
+        @OutputCustomType.Parameter("outboundCallerIdNumberId") @Nullable String outboundCallerIdNumberId,
+        @OutputCustomType.Parameter("outboundFlowId") @Nullable String outboundFlowId) {
         this.outboundCallerIdName = outboundCallerIdName;
         this.outboundCallerIdNumberId = outboundCallerIdNumberId;
         this.outboundFlowId = outboundFlowId;

@@ -23,10 +23,10 @@ public final class GroupMixedInstancesPolicy {
      */
     private final GroupMixedInstancesPolicyLaunchTemplate launchTemplate;
 
-    @OutputCustomType.Constructor({"instancesDistribution","launchTemplate"})
+    @OutputCustomType.Constructor
     private GroupMixedInstancesPolicy(
-        @Nullable GroupMixedInstancesPolicyInstancesDistribution instancesDistribution,
-        GroupMixedInstancesPolicyLaunchTemplate launchTemplate) {
+        @OutputCustomType.Parameter("instancesDistribution") @Nullable GroupMixedInstancesPolicyInstancesDistribution instancesDistribution,
+        @OutputCustomType.Parameter("launchTemplate") GroupMixedInstancesPolicyLaunchTemplate launchTemplate) {
         this.instancesDistribution = instancesDistribution;
         this.launchTemplate = launchTemplate;
     }

@@ -33,12 +33,12 @@ public final class InstancePublicPortsPortInfo {
      */
     private final Integer toPort;
 
-    @OutputCustomType.Constructor({"cidrs","fromPort","protocol","toPort"})
+    @OutputCustomType.Constructor
     private InstancePublicPortsPortInfo(
-        @Nullable List<String> cidrs,
-        Integer fromPort,
-        String protocol,
-        Integer toPort) {
+        @OutputCustomType.Parameter("cidrs") @Nullable List<String> cidrs,
+        @OutputCustomType.Parameter("fromPort") Integer fromPort,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("toPort") Integer toPort) {
         this.cidrs = cidrs;
         this.fromPort = fromPort;
         this.protocol = protocol;

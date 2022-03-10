@@ -38,13 +38,13 @@ public final class DirectoryWorkspaceCreationProperties {
      */
     private final @Nullable Boolean userEnabledAsLocalAdministrator;
 
-    @OutputCustomType.Constructor({"customSecurityGroupId","defaultOu","enableInternetAccess","enableMaintenanceMode","userEnabledAsLocalAdministrator"})
+    @OutputCustomType.Constructor
     private DirectoryWorkspaceCreationProperties(
-        @Nullable String customSecurityGroupId,
-        @Nullable String defaultOu,
-        @Nullable Boolean enableInternetAccess,
-        @Nullable Boolean enableMaintenanceMode,
-        @Nullable Boolean userEnabledAsLocalAdministrator) {
+        @OutputCustomType.Parameter("customSecurityGroupId") @Nullable String customSecurityGroupId,
+        @OutputCustomType.Parameter("defaultOu") @Nullable String defaultOu,
+        @OutputCustomType.Parameter("enableInternetAccess") @Nullable Boolean enableInternetAccess,
+        @OutputCustomType.Parameter("enableMaintenanceMode") @Nullable Boolean enableMaintenanceMode,
+        @OutputCustomType.Parameter("userEnabledAsLocalAdministrator") @Nullable Boolean userEnabledAsLocalAdministrator) {
         this.customSecurityGroupId = customSecurityGroupId;
         this.defaultOu = defaultOu;
         this.enableInternetAccess = enableInternetAccess;

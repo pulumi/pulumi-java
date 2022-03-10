@@ -22,10 +22,10 @@ public final class ClusterKubernetesNetworkConfig {
      */
     private final @Nullable String serviceIpv4Cidr;
 
-    @OutputCustomType.Constructor({"ipFamily","serviceIpv4Cidr"})
+    @OutputCustomType.Constructor
     private ClusterKubernetesNetworkConfig(
-        @Nullable String ipFamily,
-        @Nullable String serviceIpv4Cidr) {
+        @OutputCustomType.Parameter("ipFamily") @Nullable String ipFamily,
+        @OutputCustomType.Parameter("serviceIpv4Cidr") @Nullable String serviceIpv4Cidr) {
         this.ipFamily = ipFamily;
         this.serviceIpv4Cidr = serviceIpv4Cidr;
     }

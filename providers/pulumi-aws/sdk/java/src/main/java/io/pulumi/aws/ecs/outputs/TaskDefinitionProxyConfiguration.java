@@ -28,11 +28,11 @@ public final class TaskDefinitionProxyConfiguration {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"containerName","properties","type"})
+    @OutputCustomType.Constructor
     private TaskDefinitionProxyConfiguration(
-        String containerName,
-        @Nullable Map<String,String> properties,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("containerName") String containerName,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.containerName = containerName;
         this.properties = properties;
         this.type = type;

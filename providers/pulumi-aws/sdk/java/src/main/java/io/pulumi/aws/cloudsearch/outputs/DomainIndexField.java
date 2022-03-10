@@ -58,17 +58,17 @@ public final class DomainIndexField {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"analysisScheme","defaultValue","facet","highlight","name","$return","search","sort","type"})
+    @OutputCustomType.Constructor
     private DomainIndexField(
-        @Nullable String analysisScheme,
-        @Nullable String defaultValue,
-        @Nullable Boolean facet,
-        @Nullable Boolean highlight,
-        String name,
-        @Nullable Boolean $return,
-        @Nullable Boolean search,
-        @Nullable Boolean sort,
-        String type) {
+        @OutputCustomType.Parameter("analysisScheme") @Nullable String analysisScheme,
+        @OutputCustomType.Parameter("defaultValue") @Nullable String defaultValue,
+        @OutputCustomType.Parameter("facet") @Nullable Boolean facet,
+        @OutputCustomType.Parameter("highlight") @Nullable Boolean highlight,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("return") @Nullable Boolean $return,
+        @OutputCustomType.Parameter("search") @Nullable Boolean search,
+        @OutputCustomType.Parameter("sort") @Nullable Boolean sort,
+        @OutputCustomType.Parameter("type") String type) {
         this.analysisScheme = analysisScheme;
         this.defaultValue = defaultValue;
         this.facet = facet;

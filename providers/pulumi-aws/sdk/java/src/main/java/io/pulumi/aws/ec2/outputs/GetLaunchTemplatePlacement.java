@@ -19,16 +19,16 @@ public final class GetLaunchTemplatePlacement {
     private final String spreadDomain;
     private final String tenancy;
 
-    @OutputCustomType.Constructor({"affinity","availabilityZone","groupName","hostId","hostResourceGroupArn","partitionNumber","spreadDomain","tenancy"})
+    @OutputCustomType.Constructor
     private GetLaunchTemplatePlacement(
-        String affinity,
-        String availabilityZone,
-        String groupName,
-        String hostId,
-        String hostResourceGroupArn,
-        Integer partitionNumber,
-        String spreadDomain,
-        String tenancy) {
+        @OutputCustomType.Parameter("affinity") String affinity,
+        @OutputCustomType.Parameter("availabilityZone") String availabilityZone,
+        @OutputCustomType.Parameter("groupName") String groupName,
+        @OutputCustomType.Parameter("hostId") String hostId,
+        @OutputCustomType.Parameter("hostResourceGroupArn") String hostResourceGroupArn,
+        @OutputCustomType.Parameter("partitionNumber") Integer partitionNumber,
+        @OutputCustomType.Parameter("spreadDomain") String spreadDomain,
+        @OutputCustomType.Parameter("tenancy") String tenancy) {
         this.affinity = affinity;
         this.availabilityZone = availabilityZone;
         this.groupName = groupName;

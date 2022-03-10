@@ -37,13 +37,13 @@ public final class PresetAudio {
      */
     private final @Nullable String sampleRate;
 
-    @OutputCustomType.Constructor({"audioPackingMode","bitRate","channels","codec","sampleRate"})
+    @OutputCustomType.Constructor
     private PresetAudio(
-        @Nullable String audioPackingMode,
-        @Nullable String bitRate,
-        @Nullable String channels,
-        @Nullable String codec,
-        @Nullable String sampleRate) {
+        @OutputCustomType.Parameter("audioPackingMode") @Nullable String audioPackingMode,
+        @OutputCustomType.Parameter("bitRate") @Nullable String bitRate,
+        @OutputCustomType.Parameter("channels") @Nullable String channels,
+        @OutputCustomType.Parameter("codec") @Nullable String codec,
+        @OutputCustomType.Parameter("sampleRate") @Nullable String sampleRate) {
         this.audioPackingMode = audioPackingMode;
         this.bitRate = bitRate;
         this.channels = channels;

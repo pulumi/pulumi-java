@@ -63,17 +63,17 @@ public final class BucketReplicationConfigRule {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"deleteMarkerReplication","destination","existingObjectReplication","filter","id","prefix","priority","sourceSelectionCriteria","status"})
+    @OutputCustomType.Constructor
     private BucketReplicationConfigRule(
-        @Nullable BucketReplicationConfigRuleDeleteMarkerReplication deleteMarkerReplication,
-        BucketReplicationConfigRuleDestination destination,
-        @Nullable BucketReplicationConfigRuleExistingObjectReplication existingObjectReplication,
-        @Nullable BucketReplicationConfigRuleFilter filter,
-        @Nullable String id,
-        @Nullable String prefix,
-        @Nullable Integer priority,
-        @Nullable BucketReplicationConfigRuleSourceSelectionCriteria sourceSelectionCriteria,
-        String status) {
+        @OutputCustomType.Parameter("deleteMarkerReplication") @Nullable BucketReplicationConfigRuleDeleteMarkerReplication deleteMarkerReplication,
+        @OutputCustomType.Parameter("destination") BucketReplicationConfigRuleDestination destination,
+        @OutputCustomType.Parameter("existingObjectReplication") @Nullable BucketReplicationConfigRuleExistingObjectReplication existingObjectReplication,
+        @OutputCustomType.Parameter("filter") @Nullable BucketReplicationConfigRuleFilter filter,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("sourceSelectionCriteria") @Nullable BucketReplicationConfigRuleSourceSelectionCriteria sourceSelectionCriteria,
+        @OutputCustomType.Parameter("status") String status) {
         this.deleteMarkerReplication = deleteMarkerReplication;
         this.destination = destination;
         this.existingObjectReplication = existingObjectReplication;

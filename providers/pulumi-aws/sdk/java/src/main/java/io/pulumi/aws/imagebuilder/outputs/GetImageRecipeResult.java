@@ -81,22 +81,22 @@ public final class GetImageRecipeResult {
      */
     private final String workingDirectory;
 
-    @OutputCustomType.Constructor({"arn","blockDeviceMappings","components","dateCreated","description","id","name","owner","parentImage","platform","tags","userDataBase64","version","workingDirectory"})
+    @OutputCustomType.Constructor
     private GetImageRecipeResult(
-        String arn,
-        List<GetImageRecipeBlockDeviceMapping> blockDeviceMappings,
-        List<GetImageRecipeComponent> components,
-        String dateCreated,
-        String description,
-        String id,
-        String name,
-        String owner,
-        String parentImage,
-        String platform,
-        @Nullable Map<String,String> tags,
-        String userDataBase64,
-        String version,
-        String workingDirectory) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("blockDeviceMappings") List<GetImageRecipeBlockDeviceMapping> blockDeviceMappings,
+        @OutputCustomType.Parameter("components") List<GetImageRecipeComponent> components,
+        @OutputCustomType.Parameter("dateCreated") String dateCreated,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("owner") String owner,
+        @OutputCustomType.Parameter("parentImage") String parentImage,
+        @OutputCustomType.Parameter("platform") String platform,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("userDataBase64") String userDataBase64,
+        @OutputCustomType.Parameter("version") String version,
+        @OutputCustomType.Parameter("workingDirectory") String workingDirectory) {
         this.arn = arn;
         this.blockDeviceMappings = blockDeviceMappings;
         this.components = components;

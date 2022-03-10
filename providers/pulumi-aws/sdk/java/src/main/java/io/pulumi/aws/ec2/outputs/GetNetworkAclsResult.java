@@ -28,13 +28,13 @@ public final class GetNetworkAclsResult {
     private final Map<String,String> tags;
     private final @Nullable String vpcId;
 
-    @OutputCustomType.Constructor({"filters","id","ids","tags","vpcId"})
+    @OutputCustomType.Constructor
     private GetNetworkAclsResult(
-        @Nullable List<GetNetworkAclsFilter> filters,
-        String id,
-        List<String> ids,
-        Map<String,String> tags,
-        @Nullable String vpcId) {
+        @OutputCustomType.Parameter("filters") @Nullable List<GetNetworkAclsFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ids") List<String> ids,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("vpcId") @Nullable String vpcId) {
         this.filters = filters;
         this.id = id;
         this.ids = ids;

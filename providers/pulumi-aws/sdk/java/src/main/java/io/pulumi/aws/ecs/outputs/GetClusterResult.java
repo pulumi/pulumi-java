@@ -49,16 +49,16 @@ public final class GetClusterResult {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"arn","clusterName","id","pendingTasksCount","registeredContainerInstancesCount","runningTasksCount","settings","status"})
+    @OutputCustomType.Constructor
     private GetClusterResult(
-        String arn,
-        String clusterName,
-        String id,
-        Integer pendingTasksCount,
-        Integer registeredContainerInstancesCount,
-        Integer runningTasksCount,
-        List<GetClusterSetting> settings,
-        String status) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("clusterName") String clusterName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("pendingTasksCount") Integer pendingTasksCount,
+        @OutputCustomType.Parameter("registeredContainerInstancesCount") Integer registeredContainerInstancesCount,
+        @OutputCustomType.Parameter("runningTasksCount") Integer runningTasksCount,
+        @OutputCustomType.Parameter("settings") List<GetClusterSetting> settings,
+        @OutputCustomType.Parameter("status") String status) {
         this.arn = arn;
         this.clusterName = clusterName;
         this.id = id;

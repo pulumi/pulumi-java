@@ -21,10 +21,10 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomAction {
      */
     private final String actionName;
 
-    @OutputCustomType.Constructor({"actionDefinition","actionName"})
+    @OutputCustomType.Constructor
     private FirewallPolicyFirewallPolicyStatelessCustomAction(
-        FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinition actionDefinition,
-        String actionName) {
+        @OutputCustomType.Parameter("actionDefinition") FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinition actionDefinition,
+        @OutputCustomType.Parameter("actionName") String actionName) {
         this.actionDefinition = actionDefinition;
         this.actionName = actionName;
     }

@@ -23,10 +23,10 @@ public final class BucketReplicationConfigRuleDestinationMetrics {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"eventThreshold","status"})
+    @OutputCustomType.Constructor
     private BucketReplicationConfigRuleDestinationMetrics(
-        @Nullable BucketReplicationConfigRuleDestinationMetricsEventThreshold eventThreshold,
-        String status) {
+        @OutputCustomType.Parameter("eventThreshold") @Nullable BucketReplicationConfigRuleDestinationMetricsEventThreshold eventThreshold,
+        @OutputCustomType.Parameter("status") String status) {
         this.eventThreshold = eventThreshold;
         this.status = status;
     }

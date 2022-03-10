@@ -67,22 +67,22 @@ public final class GetAvailabilityZoneResult {
      */
     private final String zoneType;
 
-    @OutputCustomType.Constructor({"allAvailabilityZones","filters","groupName","id","name","nameSuffix","networkBorderGroup","optInStatus","parentZoneId","parentZoneName","region","state","zoneId","zoneType"})
+    @OutputCustomType.Constructor
     private GetAvailabilityZoneResult(
-        @Nullable Boolean allAvailabilityZones,
-        @Nullable List<GetAvailabilityZoneFilter> filters,
-        String groupName,
-        String id,
-        String name,
-        String nameSuffix,
-        String networkBorderGroup,
-        String optInStatus,
-        String parentZoneId,
-        String parentZoneName,
-        String region,
-        String state,
-        String zoneId,
-        String zoneType) {
+        @OutputCustomType.Parameter("allAvailabilityZones") @Nullable Boolean allAvailabilityZones,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetAvailabilityZoneFilter> filters,
+        @OutputCustomType.Parameter("groupName") String groupName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nameSuffix") String nameSuffix,
+        @OutputCustomType.Parameter("networkBorderGroup") String networkBorderGroup,
+        @OutputCustomType.Parameter("optInStatus") String optInStatus,
+        @OutputCustomType.Parameter("parentZoneId") String parentZoneId,
+        @OutputCustomType.Parameter("parentZoneName") String parentZoneName,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("zoneId") String zoneId,
+        @OutputCustomType.Parameter("zoneType") String zoneType) {
         this.allAvailabilityZones = allAvailabilityZones;
         this.filters = filters;
         this.groupName = groupName;

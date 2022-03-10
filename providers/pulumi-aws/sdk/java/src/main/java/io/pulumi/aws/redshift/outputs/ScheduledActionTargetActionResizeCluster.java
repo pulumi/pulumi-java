@@ -39,13 +39,13 @@ public final class ScheduledActionTargetActionResizeCluster {
      */
     private final @Nullable Integer numberOfNodes;
 
-    @OutputCustomType.Constructor({"classic","clusterIdentifier","clusterType","nodeType","numberOfNodes"})
+    @OutputCustomType.Constructor
     private ScheduledActionTargetActionResizeCluster(
-        @Nullable Boolean classic,
-        String clusterIdentifier,
-        @Nullable String clusterType,
-        @Nullable String nodeType,
-        @Nullable Integer numberOfNodes) {
+        @OutputCustomType.Parameter("classic") @Nullable Boolean classic,
+        @OutputCustomType.Parameter("clusterIdentifier") String clusterIdentifier,
+        @OutputCustomType.Parameter("clusterType") @Nullable String clusterType,
+        @OutputCustomType.Parameter("nodeType") @Nullable String nodeType,
+        @OutputCustomType.Parameter("numberOfNodes") @Nullable Integer numberOfNodes) {
         this.classic = classic;
         this.clusterIdentifier = clusterIdentifier;
         this.clusterType = clusterType;

@@ -21,10 +21,10 @@ public final class GetRulesPackagesResult {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"arns","id"})
+    @OutputCustomType.Constructor
     private GetRulesPackagesResult(
-        List<String> arns,
-        String id) {
+        @OutputCustomType.Parameter("arns") List<String> arns,
+        @OutputCustomType.Parameter("id") String id) {
         this.arns = arns;
         this.id = id;
     }

@@ -20,10 +20,10 @@ public final class GetHoursOfOperationConfigEndTime {
      */
     private final Integer minutes;
 
-    @OutputCustomType.Constructor({"hours","minutes"})
+    @OutputCustomType.Constructor
     private GetHoursOfOperationConfigEndTime(
-        Integer hours,
-        Integer minutes) {
+        @OutputCustomType.Parameter("hours") Integer hours,
+        @OutputCustomType.Parameter("minutes") Integer minutes) {
         this.hours = hours;
         this.minutes = minutes;
     }

@@ -27,11 +27,11 @@ public final class AccessPointPosixUser {
      */
     private final Integer uid;
 
-    @OutputCustomType.Constructor({"gid","secondaryGids","uid"})
+    @OutputCustomType.Constructor
     private AccessPointPosixUser(
-        Integer gid,
-        @Nullable List<Integer> secondaryGids,
-        Integer uid) {
+        @OutputCustomType.Parameter("gid") Integer gid,
+        @OutputCustomType.Parameter("secondaryGids") @Nullable List<Integer> secondaryGids,
+        @OutputCustomType.Parameter("uid") Integer uid) {
         this.gid = gid;
         this.secondaryGids = secondaryGids;
         this.uid = uid;

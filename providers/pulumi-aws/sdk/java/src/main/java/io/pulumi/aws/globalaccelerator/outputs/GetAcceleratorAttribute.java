@@ -14,11 +14,11 @@ public final class GetAcceleratorAttribute {
     private final String flowLogsS3Bucket;
     private final String flowLogsS3Prefix;
 
-    @OutputCustomType.Constructor({"flowLogsEnabled","flowLogsS3Bucket","flowLogsS3Prefix"})
+    @OutputCustomType.Constructor
     private GetAcceleratorAttribute(
-        Boolean flowLogsEnabled,
-        String flowLogsS3Bucket,
-        String flowLogsS3Prefix) {
+        @OutputCustomType.Parameter("flowLogsEnabled") Boolean flowLogsEnabled,
+        @OutputCustomType.Parameter("flowLogsS3Bucket") String flowLogsS3Bucket,
+        @OutputCustomType.Parameter("flowLogsS3Prefix") String flowLogsS3Prefix) {
         this.flowLogsEnabled = flowLogsEnabled;
         this.flowLogsS3Bucket = flowLogsS3Bucket;
         this.flowLogsS3Prefix = flowLogsS3Prefix;

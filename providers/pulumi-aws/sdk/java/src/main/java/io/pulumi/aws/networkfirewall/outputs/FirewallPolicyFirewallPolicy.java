@@ -54,15 +54,15 @@ public final class FirewallPolicyFirewallPolicy {
      */
     private final @Nullable List<FirewallPolicyFirewallPolicyStatelessRuleGroupReference> statelessRuleGroupReferences;
 
-    @OutputCustomType.Constructor({"statefulDefaultActions","statefulEngineOptions","statefulRuleGroupReferences","statelessCustomActions","statelessDefaultActions","statelessFragmentDefaultActions","statelessRuleGroupReferences"})
+    @OutputCustomType.Constructor
     private FirewallPolicyFirewallPolicy(
-        @Nullable List<String> statefulDefaultActions,
-        @Nullable FirewallPolicyFirewallPolicyStatefulEngineOptions statefulEngineOptions,
-        @Nullable List<FirewallPolicyFirewallPolicyStatefulRuleGroupReference> statefulRuleGroupReferences,
-        @Nullable List<FirewallPolicyFirewallPolicyStatelessCustomAction> statelessCustomActions,
-        List<String> statelessDefaultActions,
-        List<String> statelessFragmentDefaultActions,
-        @Nullable List<FirewallPolicyFirewallPolicyStatelessRuleGroupReference> statelessRuleGroupReferences) {
+        @OutputCustomType.Parameter("statefulDefaultActions") @Nullable List<String> statefulDefaultActions,
+        @OutputCustomType.Parameter("statefulEngineOptions") @Nullable FirewallPolicyFirewallPolicyStatefulEngineOptions statefulEngineOptions,
+        @OutputCustomType.Parameter("statefulRuleGroupReferences") @Nullable List<FirewallPolicyFirewallPolicyStatefulRuleGroupReference> statefulRuleGroupReferences,
+        @OutputCustomType.Parameter("statelessCustomActions") @Nullable List<FirewallPolicyFirewallPolicyStatelessCustomAction> statelessCustomActions,
+        @OutputCustomType.Parameter("statelessDefaultActions") List<String> statelessDefaultActions,
+        @OutputCustomType.Parameter("statelessFragmentDefaultActions") List<String> statelessFragmentDefaultActions,
+        @OutputCustomType.Parameter("statelessRuleGroupReferences") @Nullable List<FirewallPolicyFirewallPolicyStatelessRuleGroupReference> statelessRuleGroupReferences) {
         this.statefulDefaultActions = statefulDefaultActions;
         this.statefulEngineOptions = statefulEngineOptions;
         this.statefulRuleGroupReferences = statefulRuleGroupReferences;

@@ -26,11 +26,11 @@ public final class GetDomainLogPublishingOption {
      */
     private final String logType;
 
-    @OutputCustomType.Constructor({"cloudwatchLogGroupArn","enabled","logType"})
+    @OutputCustomType.Constructor
     private GetDomainLogPublishingOption(
-        String cloudwatchLogGroupArn,
-        Boolean enabled,
-        String logType) {
+        @OutputCustomType.Parameter("cloudwatchLogGroupArn") String cloudwatchLogGroupArn,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("logType") String logType) {
         this.cloudwatchLogGroupArn = cloudwatchLogGroupArn;
         this.enabled = enabled;
         this.logType = logType;

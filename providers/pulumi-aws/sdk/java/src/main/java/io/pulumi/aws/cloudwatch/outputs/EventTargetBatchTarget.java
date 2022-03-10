@@ -33,12 +33,12 @@ public final class EventTargetBatchTarget {
      */
     private final String jobName;
 
-    @OutputCustomType.Constructor({"arraySize","jobAttempts","jobDefinition","jobName"})
+    @OutputCustomType.Constructor
     private EventTargetBatchTarget(
-        @Nullable Integer arraySize,
-        @Nullable Integer jobAttempts,
-        String jobDefinition,
-        String jobName) {
+        @OutputCustomType.Parameter("arraySize") @Nullable Integer arraySize,
+        @OutputCustomType.Parameter("jobAttempts") @Nullable Integer jobAttempts,
+        @OutputCustomType.Parameter("jobDefinition") String jobDefinition,
+        @OutputCustomType.Parameter("jobName") String jobName) {
         this.arraySize = arraySize;
         this.jobAttempts = jobAttempts;
         this.jobDefinition = jobDefinition;

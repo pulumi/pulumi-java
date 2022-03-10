@@ -17,8 +17,8 @@ public final class ClusterConfiguration {
      */
     private final @Nullable ClusterConfigurationExecuteCommandConfiguration executeCommandConfiguration;
 
-    @OutputCustomType.Constructor({"executeCommandConfiguration"})
-    private ClusterConfiguration(@Nullable ClusterConfigurationExecuteCommandConfiguration executeCommandConfiguration) {
+    @OutputCustomType.Constructor
+    private ClusterConfiguration(@OutputCustomType.Parameter("executeCommandConfiguration") @Nullable ClusterConfigurationExecuteCommandConfiguration executeCommandConfiguration) {
         this.executeCommandConfiguration = executeCommandConfiguration;
     }
 

@@ -23,10 +23,10 @@ public final class DomainEncryptAtRest {
      */
     private final @Nullable String kmsKeyId;
 
-    @OutputCustomType.Constructor({"enabled","kmsKeyId"})
+    @OutputCustomType.Constructor
     private DomainEncryptAtRest(
-        Boolean enabled,
-        @Nullable String kmsKeyId) {
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId) {
         this.enabled = enabled;
         this.kmsKeyId = kmsKeyId;
     }

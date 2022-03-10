@@ -73,19 +73,19 @@ public final class EventTargetEcsTarget {
      */
     private final String taskDefinitionArn;
 
-    @OutputCustomType.Constructor({"enableEcsManagedTags","enableExecuteCommand","group","launchType","networkConfiguration","placementConstraints","platformVersion","propagateTags","tags","taskCount","taskDefinitionArn"})
+    @OutputCustomType.Constructor
     private EventTargetEcsTarget(
-        @Nullable Boolean enableEcsManagedTags,
-        @Nullable Boolean enableExecuteCommand,
-        @Nullable String group,
-        @Nullable String launchType,
-        @Nullable EventTargetEcsTargetNetworkConfiguration networkConfiguration,
-        @Nullable List<EventTargetEcsTargetPlacementConstraint> placementConstraints,
-        @Nullable String platformVersion,
-        @Nullable String propagateTags,
-        @Nullable Map<String,String> tags,
-        @Nullable Integer taskCount,
-        String taskDefinitionArn) {
+        @OutputCustomType.Parameter("enableEcsManagedTags") @Nullable Boolean enableEcsManagedTags,
+        @OutputCustomType.Parameter("enableExecuteCommand") @Nullable Boolean enableExecuteCommand,
+        @OutputCustomType.Parameter("group") @Nullable String group,
+        @OutputCustomType.Parameter("launchType") @Nullable String launchType,
+        @OutputCustomType.Parameter("networkConfiguration") @Nullable EventTargetEcsTargetNetworkConfiguration networkConfiguration,
+        @OutputCustomType.Parameter("placementConstraints") @Nullable List<EventTargetEcsTargetPlacementConstraint> placementConstraints,
+        @OutputCustomType.Parameter("platformVersion") @Nullable String platformVersion,
+        @OutputCustomType.Parameter("propagateTags") @Nullable String propagateTags,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("taskCount") @Nullable Integer taskCount,
+        @OutputCustomType.Parameter("taskDefinitionArn") String taskDefinitionArn) {
         this.enableEcsManagedTags = enableEcsManagedTags;
         this.enableExecuteCommand = enableExecuteCommand;
         this.group = group;

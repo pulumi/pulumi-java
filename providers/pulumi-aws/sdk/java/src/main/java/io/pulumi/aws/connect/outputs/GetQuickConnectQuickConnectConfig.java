@@ -34,12 +34,12 @@ public final class GetQuickConnectQuickConnectConfig {
      */
     private final List<GetQuickConnectQuickConnectConfigUserConfig> userConfigs;
 
-    @OutputCustomType.Constructor({"phoneConfigs","queueConfigs","quickConnectType","userConfigs"})
+    @OutputCustomType.Constructor
     private GetQuickConnectQuickConnectConfig(
-        List<GetQuickConnectQuickConnectConfigPhoneConfig> phoneConfigs,
-        List<GetQuickConnectQuickConnectConfigQueueConfig> queueConfigs,
-        String quickConnectType,
-        List<GetQuickConnectQuickConnectConfigUserConfig> userConfigs) {
+        @OutputCustomType.Parameter("phoneConfigs") List<GetQuickConnectQuickConnectConfigPhoneConfig> phoneConfigs,
+        @OutputCustomType.Parameter("queueConfigs") List<GetQuickConnectQuickConnectConfigQueueConfig> queueConfigs,
+        @OutputCustomType.Parameter("quickConnectType") String quickConnectType,
+        @OutputCustomType.Parameter("userConfigs") List<GetQuickConnectQuickConnectConfigUserConfig> userConfigs) {
         this.phoneConfigs = phoneConfigs;
         this.queueConfigs = queueConfigs;
         this.quickConnectType = quickConnectType;

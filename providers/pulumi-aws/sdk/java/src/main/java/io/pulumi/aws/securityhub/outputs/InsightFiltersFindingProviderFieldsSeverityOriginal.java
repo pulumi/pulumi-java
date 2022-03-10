@@ -20,10 +20,10 @@ public final class InsightFiltersFindingProviderFieldsSeverityOriginal {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"comparison","value"})
+    @OutputCustomType.Constructor
     private InsightFiltersFindingProviderFieldsSeverityOriginal(
-        String comparison,
-        String value) {
+        @OutputCustomType.Parameter("comparison") String comparison,
+        @OutputCustomType.Parameter("value") String value) {
         this.comparison = comparison;
         this.value = value;
     }

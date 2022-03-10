@@ -23,10 +23,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      */
     private final @Nullable Boolean cloudwatchOutputEnabled;
 
-    @OutputCustomType.Constructor({"cloudwatchLogGroupName","cloudwatchOutputEnabled"})
+    @OutputCustomType.Constructor
     private MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfig(
-        @Nullable String cloudwatchLogGroupName,
-        @Nullable Boolean cloudwatchOutputEnabled) {
+        @OutputCustomType.Parameter("cloudwatchLogGroupName") @Nullable String cloudwatchLogGroupName,
+        @OutputCustomType.Parameter("cloudwatchOutputEnabled") @Nullable Boolean cloudwatchOutputEnabled) {
         this.cloudwatchLogGroupName = cloudwatchLogGroupName;
         this.cloudwatchOutputEnabled = cloudwatchOutputEnabled;
     }

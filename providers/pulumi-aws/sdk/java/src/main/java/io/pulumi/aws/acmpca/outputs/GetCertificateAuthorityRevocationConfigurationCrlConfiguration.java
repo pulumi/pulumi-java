@@ -17,13 +17,13 @@ public final class GetCertificateAuthorityRevocationConfigurationCrlConfiguratio
     private final String s3BucketName;
     private final String s3ObjectAcl;
 
-    @OutputCustomType.Constructor({"customCname","enabled","expirationInDays","s3BucketName","s3ObjectAcl"})
+    @OutputCustomType.Constructor
     private GetCertificateAuthorityRevocationConfigurationCrlConfiguration(
-        String customCname,
-        Boolean enabled,
-        Integer expirationInDays,
-        String s3BucketName,
-        String s3ObjectAcl) {
+        @OutputCustomType.Parameter("customCname") String customCname,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("expirationInDays") Integer expirationInDays,
+        @OutputCustomType.Parameter("s3BucketName") String s3BucketName,
+        @OutputCustomType.Parameter("s3ObjectAcl") String s3ObjectAcl) {
         this.customCname = customCname;
         this.enabled = enabled;
         this.expirationInDays = expirationInDays;

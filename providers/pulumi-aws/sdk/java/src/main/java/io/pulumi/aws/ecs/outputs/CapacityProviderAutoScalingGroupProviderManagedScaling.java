@@ -38,13 +38,13 @@ public final class CapacityProviderAutoScalingGroupProviderManagedScaling {
      */
     private final @Nullable Integer targetCapacity;
 
-    @OutputCustomType.Constructor({"instanceWarmupPeriod","maximumScalingStepSize","minimumScalingStepSize","status","targetCapacity"})
+    @OutputCustomType.Constructor
     private CapacityProviderAutoScalingGroupProviderManagedScaling(
-        @Nullable Integer instanceWarmupPeriod,
-        @Nullable Integer maximumScalingStepSize,
-        @Nullable Integer minimumScalingStepSize,
-        @Nullable String status,
-        @Nullable Integer targetCapacity) {
+        @OutputCustomType.Parameter("instanceWarmupPeriod") @Nullable Integer instanceWarmupPeriod,
+        @OutputCustomType.Parameter("maximumScalingStepSize") @Nullable Integer maximumScalingStepSize,
+        @OutputCustomType.Parameter("minimumScalingStepSize") @Nullable Integer minimumScalingStepSize,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("targetCapacity") @Nullable Integer targetCapacity) {
         this.instanceWarmupPeriod = instanceWarmupPeriod;
         this.maximumScalingStepSize = maximumScalingStepSize;
         this.minimumScalingStepSize = minimumScalingStepSize;

@@ -22,10 +22,10 @@ public final class ClusterClusterEndpoint {
      */
     private final @Nullable String region;
 
-    @OutputCustomType.Constructor({"endpoint","region"})
+    @OutputCustomType.Constructor
     private ClusterClusterEndpoint(
-        @Nullable String endpoint,
-        @Nullable String region) {
+        @OutputCustomType.Parameter("endpoint") @Nullable String endpoint,
+        @OutputCustomType.Parameter("region") @Nullable String region) {
         this.endpoint = endpoint;
         this.region = region;
     }

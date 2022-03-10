@@ -39,13 +39,13 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetri
      */
     private final @Nullable String unit;
 
-    @OutputCustomType.Constructor({"dimensions","metricName","namespace","statistic","unit"})
+    @OutputCustomType.Constructor
     private PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecification(
-        @Nullable List<PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimension> dimensions,
-        String metricName,
-        String namespace,
-        String statistic,
-        @Nullable String unit) {
+        @OutputCustomType.Parameter("dimensions") @Nullable List<PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimension> dimensions,
+        @OutputCustomType.Parameter("metricName") String metricName,
+        @OutputCustomType.Parameter("namespace") String namespace,
+        @OutputCustomType.Parameter("statistic") String statistic,
+        @OutputCustomType.Parameter("unit") @Nullable String unit) {
         this.dimensions = dimensions;
         this.metricName = metricName;
         this.namespace = namespace;

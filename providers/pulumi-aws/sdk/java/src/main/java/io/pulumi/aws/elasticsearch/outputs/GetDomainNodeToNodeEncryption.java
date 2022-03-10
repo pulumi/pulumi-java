@@ -15,8 +15,8 @@ public final class GetDomainNodeToNodeEncryption {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private GetDomainNodeToNodeEncryption(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private GetDomainNodeToNodeEncryption(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

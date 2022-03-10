@@ -17,8 +17,8 @@ public final class RouteSpecTcpRouteTimeout {
      */
     private final @Nullable RouteSpecTcpRouteTimeoutIdle idle;
 
-    @OutputCustomType.Constructor({"idle"})
-    private RouteSpecTcpRouteTimeout(@Nullable RouteSpecTcpRouteTimeoutIdle idle) {
+    @OutputCustomType.Constructor
+    private RouteSpecTcpRouteTimeout(@OutputCustomType.Parameter("idle") @Nullable RouteSpecTcpRouteTimeoutIdle idle) {
         this.idle = idle;
     }
 

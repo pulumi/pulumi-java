@@ -29,11 +29,11 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      */
     private final @Nullable Boolean convertDotsInJsonKeysToUnderscores;
 
-    @OutputCustomType.Constructor({"caseInsensitive","columnToJsonKeyMappings","convertDotsInJsonKeysToUnderscores"})
+    @OutputCustomType.Constructor
     private FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDe(
-        @Nullable Boolean caseInsensitive,
-        @Nullable Map<String,String> columnToJsonKeyMappings,
-        @Nullable Boolean convertDotsInJsonKeysToUnderscores) {
+        @OutputCustomType.Parameter("caseInsensitive") @Nullable Boolean caseInsensitive,
+        @OutputCustomType.Parameter("columnToJsonKeyMappings") @Nullable Map<String,String> columnToJsonKeyMappings,
+        @OutputCustomType.Parameter("convertDotsInJsonKeysToUnderscores") @Nullable Boolean convertDotsInJsonKeysToUnderscores) {
         this.caseInsensitive = caseInsensitive;
         this.columnToJsonKeyMappings = columnToJsonKeyMappings;
         this.convertDotsInJsonKeysToUnderscores = convertDotsInJsonKeysToUnderscores;

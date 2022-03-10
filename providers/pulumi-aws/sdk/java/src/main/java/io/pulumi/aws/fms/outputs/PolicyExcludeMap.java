@@ -22,10 +22,10 @@ public final class PolicyExcludeMap {
      */
     private final @Nullable List<String> orgunits;
 
-    @OutputCustomType.Constructor({"accounts","orgunits"})
+    @OutputCustomType.Constructor
     private PolicyExcludeMap(
-        @Nullable List<String> accounts,
-        @Nullable List<String> orgunits) {
+        @OutputCustomType.Parameter("accounts") @Nullable List<String> accounts,
+        @OutputCustomType.Parameter("orgunits") @Nullable List<String> orgunits) {
         this.accounts = accounts;
         this.orgunits = orgunits;
     }

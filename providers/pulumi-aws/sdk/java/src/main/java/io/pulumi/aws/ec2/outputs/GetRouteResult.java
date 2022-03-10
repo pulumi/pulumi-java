@@ -28,22 +28,22 @@ public final class GetRouteResult {
     private final String transitGatewayId;
     private final String vpcPeeringConnectionId;
 
-    @OutputCustomType.Constructor({"carrierGatewayId","destinationCidrBlock","destinationIpv6CidrBlock","destinationPrefixListId","egressOnlyGatewayId","gatewayId","id","instanceId","localGatewayId","natGatewayId","networkInterfaceId","routeTableId","transitGatewayId","vpcPeeringConnectionId"})
+    @OutputCustomType.Constructor
     private GetRouteResult(
-        String carrierGatewayId,
-        String destinationCidrBlock,
-        String destinationIpv6CidrBlock,
-        String destinationPrefixListId,
-        String egressOnlyGatewayId,
-        String gatewayId,
-        String id,
-        String instanceId,
-        String localGatewayId,
-        String natGatewayId,
-        String networkInterfaceId,
-        String routeTableId,
-        String transitGatewayId,
-        String vpcPeeringConnectionId) {
+        @OutputCustomType.Parameter("carrierGatewayId") String carrierGatewayId,
+        @OutputCustomType.Parameter("destinationCidrBlock") String destinationCidrBlock,
+        @OutputCustomType.Parameter("destinationIpv6CidrBlock") String destinationIpv6CidrBlock,
+        @OutputCustomType.Parameter("destinationPrefixListId") String destinationPrefixListId,
+        @OutputCustomType.Parameter("egressOnlyGatewayId") String egressOnlyGatewayId,
+        @OutputCustomType.Parameter("gatewayId") String gatewayId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceId") String instanceId,
+        @OutputCustomType.Parameter("localGatewayId") String localGatewayId,
+        @OutputCustomType.Parameter("natGatewayId") String natGatewayId,
+        @OutputCustomType.Parameter("networkInterfaceId") String networkInterfaceId,
+        @OutputCustomType.Parameter("routeTableId") String routeTableId,
+        @OutputCustomType.Parameter("transitGatewayId") String transitGatewayId,
+        @OutputCustomType.Parameter("vpcPeeringConnectionId") String vpcPeeringConnectionId) {
         this.carrierGatewayId = carrierGatewayId;
         this.destinationCidrBlock = destinationCidrBlock;
         this.destinationIpv6CidrBlock = destinationIpv6CidrBlock;

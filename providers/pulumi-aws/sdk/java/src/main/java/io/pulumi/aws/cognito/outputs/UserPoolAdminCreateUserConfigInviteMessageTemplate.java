@@ -27,11 +27,11 @@ public final class UserPoolAdminCreateUserConfigInviteMessageTemplate {
      */
     private final @Nullable String smsMessage;
 
-    @OutputCustomType.Constructor({"emailMessage","emailSubject","smsMessage"})
+    @OutputCustomType.Constructor
     private UserPoolAdminCreateUserConfigInviteMessageTemplate(
-        @Nullable String emailMessage,
-        @Nullable String emailSubject,
-        @Nullable String smsMessage) {
+        @OutputCustomType.Parameter("emailMessage") @Nullable String emailMessage,
+        @OutputCustomType.Parameter("emailSubject") @Nullable String emailSubject,
+        @OutputCustomType.Parameter("smsMessage") @Nullable String smsMessage) {
         this.emailMessage = emailMessage;
         this.emailSubject = emailSubject;
         this.smsMessage = smsMessage;

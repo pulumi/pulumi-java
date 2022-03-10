@@ -36,14 +36,14 @@ public final class GetSessionContextResult {
      */
     private final String sessionName;
 
-    @OutputCustomType.Constructor({"arn","id","issuerArn","issuerId","issuerName","sessionName"})
+    @OutputCustomType.Constructor
     private GetSessionContextResult(
-        String arn,
-        String id,
-        String issuerArn,
-        String issuerId,
-        String issuerName,
-        String sessionName) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("issuerArn") String issuerArn,
+        @OutputCustomType.Parameter("issuerId") String issuerId,
+        @OutputCustomType.Parameter("issuerName") String issuerName,
+        @OutputCustomType.Parameter("sessionName") String sessionName) {
         this.arn = arn;
         this.id = id;
         this.issuerArn = issuerArn;

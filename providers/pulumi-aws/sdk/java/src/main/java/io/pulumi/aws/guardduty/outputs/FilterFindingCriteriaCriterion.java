@@ -48,15 +48,15 @@ public final class FilterFindingCriteriaCriterion {
      */
     private final @Nullable List<String> notEquals;
 
-    @OutputCustomType.Constructor({"equals","field","greaterThan","greaterThanOrEqual","lessThan","lessThanOrEqual","notEquals"})
+    @OutputCustomType.Constructor
     private FilterFindingCriteriaCriterion(
-        @Nullable List<String> equals,
-        String field,
-        @Nullable String greaterThan,
-        @Nullable String greaterThanOrEqual,
-        @Nullable String lessThan,
-        @Nullable String lessThanOrEqual,
-        @Nullable List<String> notEquals) {
+        @OutputCustomType.Parameter("equals") @Nullable List<String> equals,
+        @OutputCustomType.Parameter("field") String field,
+        @OutputCustomType.Parameter("greaterThan") @Nullable String greaterThan,
+        @OutputCustomType.Parameter("greaterThanOrEqual") @Nullable String greaterThanOrEqual,
+        @OutputCustomType.Parameter("lessThan") @Nullable String lessThan,
+        @OutputCustomType.Parameter("lessThanOrEqual") @Nullable String lessThanOrEqual,
+        @OutputCustomType.Parameter("notEquals") @Nullable List<String> notEquals) {
         this.equals = equals;
         this.field = field;
         this.greaterThan = greaterThan;

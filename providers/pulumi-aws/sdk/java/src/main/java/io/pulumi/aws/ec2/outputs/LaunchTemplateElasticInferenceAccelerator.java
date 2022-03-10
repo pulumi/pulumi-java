@@ -15,8 +15,8 @@ public final class LaunchTemplateElasticInferenceAccelerator {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"type"})
-    private LaunchTemplateElasticInferenceAccelerator(String type) {
+    @OutputCustomType.Constructor
+    private LaunchTemplateElasticInferenceAccelerator(@OutputCustomType.Parameter("type") String type) {
         this.type = type;
     }
 

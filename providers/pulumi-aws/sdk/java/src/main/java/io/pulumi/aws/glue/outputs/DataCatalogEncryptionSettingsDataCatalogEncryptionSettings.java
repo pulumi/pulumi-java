@@ -21,10 +21,10 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettings {
      */
     private final DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRest encryptionAtRest;
 
-    @OutputCustomType.Constructor({"connectionPasswordEncryption","encryptionAtRest"})
+    @OutputCustomType.Constructor
     private DataCatalogEncryptionSettingsDataCatalogEncryptionSettings(
-        DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryption connectionPasswordEncryption,
-        DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRest encryptionAtRest) {
+        @OutputCustomType.Parameter("connectionPasswordEncryption") DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryption connectionPasswordEncryption,
+        @OutputCustomType.Parameter("encryptionAtRest") DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRest encryptionAtRest) {
         this.connectionPasswordEncryption = connectionPasswordEncryption;
         this.encryptionAtRest = encryptionAtRest;
     }

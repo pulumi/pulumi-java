@@ -24,12 +24,12 @@ public final class DocumentParameter {
     private final @Nullable String name;
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"defaultValue","description","name","type"})
+    @OutputCustomType.Constructor
     private DocumentParameter(
-        @Nullable String defaultValue,
-        @Nullable String description,
-        @Nullable String name,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("defaultValue") @Nullable String defaultValue,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.defaultValue = defaultValue;
         this.description = description;
         this.name = name;

@@ -22,10 +22,10 @@ public final class ConfigurationProfileValidator {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"content","type"})
+    @OutputCustomType.Constructor
     private ConfigurationProfileValidator(
-        @Nullable String content,
-        String type) {
+        @OutputCustomType.Parameter("content") @Nullable String content,
+        @OutputCustomType.Parameter("type") String type) {
         this.content = content;
         this.type = type;
     }

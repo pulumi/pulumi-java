@@ -44,14 +44,14 @@ public final class ProvisionedProductStackSetProvisioningPreferences {
      */
     private final @Nullable List<String> regions;
 
-    @OutputCustomType.Constructor({"accounts","failureToleranceCount","failureTolerancePercentage","maxConcurrencyCount","maxConcurrencyPercentage","regions"})
+    @OutputCustomType.Constructor
     private ProvisionedProductStackSetProvisioningPreferences(
-        @Nullable List<String> accounts,
-        @Nullable Integer failureToleranceCount,
-        @Nullable Integer failureTolerancePercentage,
-        @Nullable Integer maxConcurrencyCount,
-        @Nullable Integer maxConcurrencyPercentage,
-        @Nullable List<String> regions) {
+        @OutputCustomType.Parameter("accounts") @Nullable List<String> accounts,
+        @OutputCustomType.Parameter("failureToleranceCount") @Nullable Integer failureToleranceCount,
+        @OutputCustomType.Parameter("failureTolerancePercentage") @Nullable Integer failureTolerancePercentage,
+        @OutputCustomType.Parameter("maxConcurrencyCount") @Nullable Integer maxConcurrencyCount,
+        @OutputCustomType.Parameter("maxConcurrencyPercentage") @Nullable Integer maxConcurrencyPercentage,
+        @OutputCustomType.Parameter("regions") @Nullable List<String> regions) {
         this.accounts = accounts;
         this.failureToleranceCount = failureToleranceCount;
         this.failureTolerancePercentage = failureTolerancePercentage;

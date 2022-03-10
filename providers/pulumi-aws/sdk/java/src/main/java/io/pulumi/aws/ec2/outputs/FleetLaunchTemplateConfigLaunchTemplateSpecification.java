@@ -27,11 +27,11 @@ public final class FleetLaunchTemplateConfigLaunchTemplateSpecification {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"launchTemplateId","launchTemplateName","version"})
+    @OutputCustomType.Constructor
     private FleetLaunchTemplateConfigLaunchTemplateSpecification(
-        @Nullable String launchTemplateId,
-        @Nullable String launchTemplateName,
-        String version) {
+        @OutputCustomType.Parameter("launchTemplateId") @Nullable String launchTemplateId,
+        @OutputCustomType.Parameter("launchTemplateName") @Nullable String launchTemplateName,
+        @OutputCustomType.Parameter("version") String version) {
         this.launchTemplateId = launchTemplateId;
         this.launchTemplateName = launchTemplateName;
         this.version = version;

@@ -21,10 +21,10 @@ public final class GetDefaultTagsResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"id","tags"})
+    @OutputCustomType.Constructor
     private GetDefaultTagsResult(
-        String id,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.id = id;
         this.tags = tags;
     }

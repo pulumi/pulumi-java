@@ -28,11 +28,11 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurat
      */
     private final @Nullable String logStreamName;
 
-    @OutputCustomType.Constructor({"enabled","logGroupName","logStreamName"})
+    @OutputCustomType.Constructor
     private FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptions(
-        @Nullable Boolean enabled,
-        @Nullable String logGroupName,
-        @Nullable String logStreamName) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("logGroupName") @Nullable String logGroupName,
+        @OutputCustomType.Parameter("logStreamName") @Nullable String logStreamName) {
         this.enabled = enabled;
         this.logGroupName = logGroupName;
         this.logStreamName = logStreamName;

@@ -28,11 +28,11 @@ public final class EndpointConnectionLogOptions {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"cloudwatchLogGroup","cloudwatchLogStream","enabled"})
+    @OutputCustomType.Constructor
     private EndpointConnectionLogOptions(
-        @Nullable String cloudwatchLogGroup,
-        @Nullable String cloudwatchLogStream,
-        Boolean enabled) {
+        @OutputCustomType.Parameter("cloudwatchLogGroup") @Nullable String cloudwatchLogGroup,
+        @OutputCustomType.Parameter("cloudwatchLogStream") @Nullable String cloudwatchLogStream,
+        @OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.cloudwatchLogGroup = cloudwatchLogGroup;
         this.cloudwatchLogStream = cloudwatchLogStream;
         this.enabled = enabled;

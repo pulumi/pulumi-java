@@ -29,11 +29,11 @@ public final class WebAclRuleAction {
      */
     private final @Nullable WebAclRuleActionCount count;
 
-    @OutputCustomType.Constructor({"allow","block","count"})
+    @OutputCustomType.Constructor
     private WebAclRuleAction(
-        @Nullable WebAclRuleActionAllow allow,
-        @Nullable WebAclRuleActionBlock block,
-        @Nullable WebAclRuleActionCount count) {
+        @OutputCustomType.Parameter("allow") @Nullable WebAclRuleActionAllow allow,
+        @OutputCustomType.Parameter("block") @Nullable WebAclRuleActionBlock block,
+        @OutputCustomType.Parameter("count") @Nullable WebAclRuleActionCount count) {
         this.allow = allow;
         this.block = block;
         this.count = count;

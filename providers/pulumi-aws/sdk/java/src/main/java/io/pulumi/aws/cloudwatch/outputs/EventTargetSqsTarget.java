@@ -17,8 +17,8 @@ public final class EventTargetSqsTarget {
      */
     private final @Nullable String messageGroupId;
 
-    @OutputCustomType.Constructor({"messageGroupId"})
-    private EventTargetSqsTarget(@Nullable String messageGroupId) {
+    @OutputCustomType.Constructor
+    private EventTargetSqsTarget(@OutputCustomType.Parameter("messageGroupId") @Nullable String messageGroupId) {
         this.messageGroupId = messageGroupId;
     }
 

@@ -15,8 +15,8 @@ public final class LaunchTemplateHibernationOptions {
      */
     private final Boolean configured;
 
-    @OutputCustomType.Constructor({"configured"})
-    private LaunchTemplateHibernationOptions(Boolean configured) {
+    @OutputCustomType.Constructor
+    private LaunchTemplateHibernationOptions(@OutputCustomType.Parameter("configured") Boolean configured) {
         this.configured = configured;
     }
 

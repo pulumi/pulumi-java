@@ -28,11 +28,11 @@ public final class CrawlerMongodbTarget {
      */
     private final @Nullable Boolean scanAll;
 
-    @OutputCustomType.Constructor({"connectionName","path","scanAll"})
+    @OutputCustomType.Constructor
     private CrawlerMongodbTarget(
-        String connectionName,
-        String path,
-        @Nullable Boolean scanAll) {
+        @OutputCustomType.Parameter("connectionName") String connectionName,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("scanAll") @Nullable Boolean scanAll) {
         this.connectionName = connectionName;
         this.path = path;
         this.scanAll = scanAll;

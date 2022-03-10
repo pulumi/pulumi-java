@@ -31,12 +31,12 @@ public final class GetInstanceMetadataOption {
      */
     private final String instanceMetadataTags;
 
-    @OutputCustomType.Constructor({"httpEndpoint","httpPutResponseHopLimit","httpTokens","instanceMetadataTags"})
+    @OutputCustomType.Constructor
     private GetInstanceMetadataOption(
-        String httpEndpoint,
-        Integer httpPutResponseHopLimit,
-        String httpTokens,
-        String instanceMetadataTags) {
+        @OutputCustomType.Parameter("httpEndpoint") String httpEndpoint,
+        @OutputCustomType.Parameter("httpPutResponseHopLimit") Integer httpPutResponseHopLimit,
+        @OutputCustomType.Parameter("httpTokens") String httpTokens,
+        @OutputCustomType.Parameter("instanceMetadataTags") String instanceMetadataTags) {
         this.httpEndpoint = httpEndpoint;
         this.httpPutResponseHopLimit = httpPutResponseHopLimit;
         this.httpTokens = httpTokens;

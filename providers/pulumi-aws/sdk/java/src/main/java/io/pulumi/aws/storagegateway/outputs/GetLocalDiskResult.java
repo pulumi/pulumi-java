@@ -23,13 +23,13 @@ public final class GetLocalDiskResult {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"diskId","diskNode","diskPath","gatewayArn","id"})
+    @OutputCustomType.Constructor
     private GetLocalDiskResult(
-        String diskId,
-        String diskNode,
-        String diskPath,
-        String gatewayArn,
-        String id) {
+        @OutputCustomType.Parameter("diskId") String diskId,
+        @OutputCustomType.Parameter("diskNode") String diskNode,
+        @OutputCustomType.Parameter("diskPath") String diskPath,
+        @OutputCustomType.Parameter("gatewayArn") String gatewayArn,
+        @OutputCustomType.Parameter("id") String id) {
         this.diskId = diskId;
         this.diskNode = diskNode;
         this.diskPath = diskPath;

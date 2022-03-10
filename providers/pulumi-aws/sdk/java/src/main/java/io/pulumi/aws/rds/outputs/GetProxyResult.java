@@ -75,21 +75,21 @@ public final class GetProxyResult {
      */
     private final List<String> vpcSubnetIds;
 
-    @OutputCustomType.Constructor({"arn","auths","debugLogging","endpoint","engineFamily","id","idleClientTimeout","name","requireTls","roleArn","vpcId","vpcSecurityGroupIds","vpcSubnetIds"})
+    @OutputCustomType.Constructor
     private GetProxyResult(
-        String arn,
-        List<GetProxyAuth> auths,
-        Boolean debugLogging,
-        String endpoint,
-        String engineFamily,
-        String id,
-        Integer idleClientTimeout,
-        String name,
-        Boolean requireTls,
-        String roleArn,
-        String vpcId,
-        List<String> vpcSecurityGroupIds,
-        List<String> vpcSubnetIds) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("auths") List<GetProxyAuth> auths,
+        @OutputCustomType.Parameter("debugLogging") Boolean debugLogging,
+        @OutputCustomType.Parameter("endpoint") String endpoint,
+        @OutputCustomType.Parameter("engineFamily") String engineFamily,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("idleClientTimeout") Integer idleClientTimeout,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("requireTls") Boolean requireTls,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("vpcId") String vpcId,
+        @OutputCustomType.Parameter("vpcSecurityGroupIds") List<String> vpcSecurityGroupIds,
+        @OutputCustomType.Parameter("vpcSubnetIds") List<String> vpcSubnetIds) {
         this.arn = arn;
         this.auths = auths;
         this.debugLogging = debugLogging;

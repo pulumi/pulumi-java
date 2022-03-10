@@ -72,21 +72,21 @@ public final class GetServerResult {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"arn","certificate","domain","endpoint","endpointType","id","identityProviderType","invocationRole","loggingRole","protocols","securityPolicyName","serverId","url"})
+    @OutputCustomType.Constructor
     private GetServerResult(
-        String arn,
-        String certificate,
-        String domain,
-        String endpoint,
-        String endpointType,
-        String id,
-        String identityProviderType,
-        String invocationRole,
-        String loggingRole,
-        List<String> protocols,
-        String securityPolicyName,
-        String serverId,
-        String url) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("certificate") String certificate,
+        @OutputCustomType.Parameter("domain") String domain,
+        @OutputCustomType.Parameter("endpoint") String endpoint,
+        @OutputCustomType.Parameter("endpointType") String endpointType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identityProviderType") String identityProviderType,
+        @OutputCustomType.Parameter("invocationRole") String invocationRole,
+        @OutputCustomType.Parameter("loggingRole") String loggingRole,
+        @OutputCustomType.Parameter("protocols") List<String> protocols,
+        @OutputCustomType.Parameter("securityPolicyName") String securityPolicyName,
+        @OutputCustomType.Parameter("serverId") String serverId,
+        @OutputCustomType.Parameter("url") String url) {
         this.arn = arn;
         this.certificate = certificate;
         this.domain = domain;

@@ -17,8 +17,8 @@ public final class DomainDefaultUserSettingsTensorBoardAppSettings {
      */
     private final @Nullable DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpec defaultResourceSpec;
 
-    @OutputCustomType.Constructor({"defaultResourceSpec"})
-    private DomainDefaultUserSettingsTensorBoardAppSettings(@Nullable DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpec defaultResourceSpec) {
+    @OutputCustomType.Constructor
+    private DomainDefaultUserSettingsTensorBoardAppSettings(@OutputCustomType.Parameter("defaultResourceSpec") @Nullable DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpec defaultResourceSpec) {
         this.defaultResourceSpec = defaultResourceSpec;
     }
 

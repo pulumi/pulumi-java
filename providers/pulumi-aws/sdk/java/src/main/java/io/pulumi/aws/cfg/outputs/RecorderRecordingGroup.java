@@ -29,11 +29,11 @@ public final class RecorderRecordingGroup {
      */
     private final @Nullable List<String> resourceTypes;
 
-    @OutputCustomType.Constructor({"allSupported","includeGlobalResourceTypes","resourceTypes"})
+    @OutputCustomType.Constructor
     private RecorderRecordingGroup(
-        @Nullable Boolean allSupported,
-        @Nullable Boolean includeGlobalResourceTypes,
-        @Nullable List<String> resourceTypes) {
+        @OutputCustomType.Parameter("allSupported") @Nullable Boolean allSupported,
+        @OutputCustomType.Parameter("includeGlobalResourceTypes") @Nullable Boolean includeGlobalResourceTypes,
+        @OutputCustomType.Parameter("resourceTypes") @Nullable List<String> resourceTypes) {
         this.allSupported = allSupported;
         this.includeGlobalResourceTypes = includeGlobalResourceTypes;
         this.resourceTypes = resourceTypes;

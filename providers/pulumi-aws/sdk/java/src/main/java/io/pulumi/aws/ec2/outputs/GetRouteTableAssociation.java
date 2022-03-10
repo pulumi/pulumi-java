@@ -36,13 +36,13 @@ public final class GetRouteTableAssociation {
      */
     private final String subnetId;
 
-    @OutputCustomType.Constructor({"gatewayId","main","routeTableAssociationId","routeTableId","subnetId"})
+    @OutputCustomType.Constructor
     private GetRouteTableAssociation(
-        String gatewayId,
-        Boolean main,
-        String routeTableAssociationId,
-        String routeTableId,
-        String subnetId) {
+        @OutputCustomType.Parameter("gatewayId") String gatewayId,
+        @OutputCustomType.Parameter("main") Boolean main,
+        @OutputCustomType.Parameter("routeTableAssociationId") String routeTableAssociationId,
+        @OutputCustomType.Parameter("routeTableId") String routeTableId,
+        @OutputCustomType.Parameter("subnetId") String subnetId) {
         this.gatewayId = gatewayId;
         this.main = main;
         this.routeTableAssociationId = routeTableAssociationId;

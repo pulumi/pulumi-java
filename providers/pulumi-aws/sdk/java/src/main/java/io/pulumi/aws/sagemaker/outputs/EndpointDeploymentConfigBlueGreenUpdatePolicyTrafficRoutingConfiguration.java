@@ -35,12 +35,12 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
      */
     private final Integer waitIntervalInSeconds;
 
-    @OutputCustomType.Constructor({"canarySize","linearStepSize","type","waitIntervalInSeconds"})
+    @OutputCustomType.Constructor
     private EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfiguration(
-        @Nullable EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySize canarySize,
-        @Nullable EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSize linearStepSize,
-        String type,
-        Integer waitIntervalInSeconds) {
+        @OutputCustomType.Parameter("canarySize") @Nullable EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySize canarySize,
+        @OutputCustomType.Parameter("linearStepSize") @Nullable EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSize linearStepSize,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("waitIntervalInSeconds") Integer waitIntervalInSeconds) {
         this.canarySize = canarySize;
         this.linearStepSize = linearStepSize;
         this.type = type;

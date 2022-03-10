@@ -27,11 +27,11 @@ public final class DomainAdvancedSecurityOptionsMasterUserOptions {
      */
     private final @Nullable String masterUserPassword;
 
-    @OutputCustomType.Constructor({"masterUserArn","masterUserName","masterUserPassword"})
+    @OutputCustomType.Constructor
     private DomainAdvancedSecurityOptionsMasterUserOptions(
-        @Nullable String masterUserArn,
-        @Nullable String masterUserName,
-        @Nullable String masterUserPassword) {
+        @OutputCustomType.Parameter("masterUserArn") @Nullable String masterUserArn,
+        @OutputCustomType.Parameter("masterUserName") @Nullable String masterUserName,
+        @OutputCustomType.Parameter("masterUserPassword") @Nullable String masterUserPassword) {
         this.masterUserArn = masterUserArn;
         this.masterUserName = masterUserName;
         this.masterUserPassword = masterUserPassword;

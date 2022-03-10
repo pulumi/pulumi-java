@@ -28,11 +28,11 @@ public final class FleetRuntimeConfigurationServerProcess {
      */
     private final @Nullable String parameters;
 
-    @OutputCustomType.Constructor({"concurrentExecutions","launchPath","parameters"})
+    @OutputCustomType.Constructor
     private FleetRuntimeConfigurationServerProcess(
-        Integer concurrentExecutions,
-        String launchPath,
-        @Nullable String parameters) {
+        @OutputCustomType.Parameter("concurrentExecutions") Integer concurrentExecutions,
+        @OutputCustomType.Parameter("launchPath") String launchPath,
+        @OutputCustomType.Parameter("parameters") @Nullable String parameters) {
         this.concurrentExecutions = concurrentExecutions;
         this.launchPath = launchPath;
         this.parameters = parameters;

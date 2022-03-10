@@ -53,15 +53,15 @@ public final class ApplicationApplicationConfiguration {
      */
     private final @Nullable ApplicationApplicationConfigurationVpcConfiguration vpcConfiguration;
 
-    @OutputCustomType.Constructor({"applicationCodeConfiguration","applicationSnapshotConfiguration","environmentProperties","flinkApplicationConfiguration","runConfiguration","sqlApplicationConfiguration","vpcConfiguration"})
+    @OutputCustomType.Constructor
     private ApplicationApplicationConfiguration(
-        ApplicationApplicationConfigurationApplicationCodeConfiguration applicationCodeConfiguration,
-        @Nullable ApplicationApplicationConfigurationApplicationSnapshotConfiguration applicationSnapshotConfiguration,
-        @Nullable ApplicationApplicationConfigurationEnvironmentProperties environmentProperties,
-        @Nullable ApplicationApplicationConfigurationFlinkApplicationConfiguration flinkApplicationConfiguration,
-        @Nullable ApplicationApplicationConfigurationRunConfiguration runConfiguration,
-        @Nullable ApplicationApplicationConfigurationSqlApplicationConfiguration sqlApplicationConfiguration,
-        @Nullable ApplicationApplicationConfigurationVpcConfiguration vpcConfiguration) {
+        @OutputCustomType.Parameter("applicationCodeConfiguration") ApplicationApplicationConfigurationApplicationCodeConfiguration applicationCodeConfiguration,
+        @OutputCustomType.Parameter("applicationSnapshotConfiguration") @Nullable ApplicationApplicationConfigurationApplicationSnapshotConfiguration applicationSnapshotConfiguration,
+        @OutputCustomType.Parameter("environmentProperties") @Nullable ApplicationApplicationConfigurationEnvironmentProperties environmentProperties,
+        @OutputCustomType.Parameter("flinkApplicationConfiguration") @Nullable ApplicationApplicationConfigurationFlinkApplicationConfiguration flinkApplicationConfiguration,
+        @OutputCustomType.Parameter("runConfiguration") @Nullable ApplicationApplicationConfigurationRunConfiguration runConfiguration,
+        @OutputCustomType.Parameter("sqlApplicationConfiguration") @Nullable ApplicationApplicationConfigurationSqlApplicationConfiguration sqlApplicationConfiguration,
+        @OutputCustomType.Parameter("vpcConfiguration") @Nullable ApplicationApplicationConfigurationVpcConfiguration vpcConfiguration) {
         this.applicationCodeConfiguration = applicationCodeConfiguration;
         this.applicationSnapshotConfiguration = applicationSnapshotConfiguration;
         this.environmentProperties = environmentProperties;

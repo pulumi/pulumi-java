@@ -78,21 +78,21 @@ public final class EndpointS3Settings {
      */
     private final @Nullable String serviceAccessRoleArn;
 
-    @OutputCustomType.Constructor({"bucketFolder","bucketName","compressionType","csvDelimiter","csvRowDelimiter","dataFormat","datePartitionEnabled","encryptionMode","externalTableDefinition","parquetTimestampInMillisecond","parquetVersion","serverSideEncryptionKmsKeyId","serviceAccessRoleArn"})
+    @OutputCustomType.Constructor
     private EndpointS3Settings(
-        @Nullable String bucketFolder,
-        @Nullable String bucketName,
-        @Nullable String compressionType,
-        @Nullable String csvDelimiter,
-        @Nullable String csvRowDelimiter,
-        @Nullable String dataFormat,
-        @Nullable Boolean datePartitionEnabled,
-        @Nullable String encryptionMode,
-        @Nullable String externalTableDefinition,
-        @Nullable Boolean parquetTimestampInMillisecond,
-        @Nullable String parquetVersion,
-        @Nullable String serverSideEncryptionKmsKeyId,
-        @Nullable String serviceAccessRoleArn) {
+        @OutputCustomType.Parameter("bucketFolder") @Nullable String bucketFolder,
+        @OutputCustomType.Parameter("bucketName") @Nullable String bucketName,
+        @OutputCustomType.Parameter("compressionType") @Nullable String compressionType,
+        @OutputCustomType.Parameter("csvDelimiter") @Nullable String csvDelimiter,
+        @OutputCustomType.Parameter("csvRowDelimiter") @Nullable String csvRowDelimiter,
+        @OutputCustomType.Parameter("dataFormat") @Nullable String dataFormat,
+        @OutputCustomType.Parameter("datePartitionEnabled") @Nullable Boolean datePartitionEnabled,
+        @OutputCustomType.Parameter("encryptionMode") @Nullable String encryptionMode,
+        @OutputCustomType.Parameter("externalTableDefinition") @Nullable String externalTableDefinition,
+        @OutputCustomType.Parameter("parquetTimestampInMillisecond") @Nullable Boolean parquetTimestampInMillisecond,
+        @OutputCustomType.Parameter("parquetVersion") @Nullable String parquetVersion,
+        @OutputCustomType.Parameter("serverSideEncryptionKmsKeyId") @Nullable String serverSideEncryptionKmsKeyId,
+        @OutputCustomType.Parameter("serviceAccessRoleArn") @Nullable String serviceAccessRoleArn) {
         this.bucketFolder = bucketFolder;
         this.bucketName = bucketName;
         this.compressionType = compressionType;

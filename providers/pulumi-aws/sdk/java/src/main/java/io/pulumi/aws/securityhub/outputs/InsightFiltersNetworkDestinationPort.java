@@ -27,11 +27,11 @@ public final class InsightFiltersNetworkDestinationPort {
      */
     private final @Nullable String lte;
 
-    @OutputCustomType.Constructor({"eq","gte","lte"})
+    @OutputCustomType.Constructor
     private InsightFiltersNetworkDestinationPort(
-        @Nullable String eq,
-        @Nullable String gte,
-        @Nullable String lte) {
+        @OutputCustomType.Parameter("eq") @Nullable String eq,
+        @OutputCustomType.Parameter("gte") @Nullable String gte,
+        @OutputCustomType.Parameter("lte") @Nullable String lte) {
         this.eq = eq;
         this.gte = gte;
         this.lte = lte;

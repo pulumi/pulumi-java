@@ -17,8 +17,8 @@ public final class ApplicationApplicationConfigurationRunConfigurationFlinkRunCo
      */
     private final @Nullable Boolean allowNonRestoredState;
 
-    @OutputCustomType.Constructor({"allowNonRestoredState"})
-    private ApplicationApplicationConfigurationRunConfigurationFlinkRunConfiguration(@Nullable Boolean allowNonRestoredState) {
+    @OutputCustomType.Constructor
+    private ApplicationApplicationConfigurationRunConfigurationFlinkRunConfiguration(@OutputCustomType.Parameter("allowNonRestoredState") @Nullable Boolean allowNonRestoredState) {
         this.allowNonRestoredState = allowNonRestoredState;
     }
 

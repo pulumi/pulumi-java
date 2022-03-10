@@ -21,10 +21,10 @@ public final class GetClustersResult {
      */
     private final List<String> names;
 
-    @OutputCustomType.Constructor({"id","names"})
+    @OutputCustomType.Constructor
     private GetClustersResult(
-        String id,
-        List<String> names) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("names") List<String> names) {
         this.id = id;
         this.names = names;
     }

@@ -22,10 +22,10 @@ public final class IpGroupRule {
      */
     private final String source;
 
-    @OutputCustomType.Constructor({"description","source"})
+    @OutputCustomType.Constructor
     private IpGroupRule(
-        @Nullable String description,
-        String source) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("source") String source) {
         this.description = description;
         this.source = source;
     }

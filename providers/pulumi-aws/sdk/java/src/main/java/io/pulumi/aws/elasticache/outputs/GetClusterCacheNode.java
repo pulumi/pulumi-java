@@ -24,12 +24,12 @@ public final class GetClusterCacheNode {
      */
     private final Integer port;
 
-    @OutputCustomType.Constructor({"address","availabilityZone","id","port"})
+    @OutputCustomType.Constructor
     private GetClusterCacheNode(
-        String address,
-        String availabilityZone,
-        String id,
-        Integer port) {
+        @OutputCustomType.Parameter("address") String address,
+        @OutputCustomType.Parameter("availabilityZone") String availabilityZone,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("port") Integer port) {
         this.address = address;
         this.availabilityZone = availabilityZone;
         this.id = id;

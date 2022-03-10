@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class GetOriginRequestPolicyHeadersConfigHeader {
     private final List<String> items;
 
-    @OutputCustomType.Constructor({"items"})
-    private GetOriginRequestPolicyHeadersConfigHeader(List<String> items) {
+    @OutputCustomType.Constructor
+    private GetOriginRequestPolicyHeadersConfigHeader(@OutputCustomType.Parameter("items") List<String> items) {
         this.items = items;
     }
 

@@ -15,8 +15,8 @@ public final class FunctionEventInvokeConfigDestinationConfigOnSuccess {
      */
     private final String destination;
 
-    @OutputCustomType.Constructor({"destination"})
-    private FunctionEventInvokeConfigDestinationConfigOnSuccess(String destination) {
+    @OutputCustomType.Constructor
+    private FunctionEventInvokeConfigDestinationConfigOnSuccess(@OutputCustomType.Parameter("destination") String destination) {
         this.destination = destination;
     }
 

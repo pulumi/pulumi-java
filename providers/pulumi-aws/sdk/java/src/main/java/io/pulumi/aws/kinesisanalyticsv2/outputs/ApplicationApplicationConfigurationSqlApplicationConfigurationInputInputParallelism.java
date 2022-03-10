@@ -17,8 +17,8 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      */
     private final @Nullable Integer count;
 
-    @OutputCustomType.Constructor({"count"})
-    private ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelism(@Nullable Integer count) {
+    @OutputCustomType.Constructor
+    private ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelism(@OutputCustomType.Parameter("count") @Nullable Integer count) {
         this.count = count;
     }
 

@@ -21,10 +21,10 @@ public final class VoiceConnectorGroupConnector {
      */
     private final String voiceConnectorId;
 
-    @OutputCustomType.Constructor({"priority","voiceConnectorId"})
+    @OutputCustomType.Constructor
     private VoiceConnectorGroupConnector(
-        Integer priority,
-        String voiceConnectorId) {
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("voiceConnectorId") String voiceConnectorId) {
         this.priority = priority;
         this.voiceConnectorId = voiceConnectorId;
     }

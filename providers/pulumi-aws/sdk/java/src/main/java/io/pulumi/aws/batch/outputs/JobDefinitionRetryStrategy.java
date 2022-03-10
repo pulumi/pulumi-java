@@ -24,10 +24,10 @@ public final class JobDefinitionRetryStrategy {
      */
     private final @Nullable List<JobDefinitionRetryStrategyEvaluateOnExit> evaluateOnExits;
 
-    @OutputCustomType.Constructor({"attempts","evaluateOnExits"})
+    @OutputCustomType.Constructor
     private JobDefinitionRetryStrategy(
-        @Nullable Integer attempts,
-        @Nullable List<JobDefinitionRetryStrategyEvaluateOnExit> evaluateOnExits) {
+        @OutputCustomType.Parameter("attempts") @Nullable Integer attempts,
+        @OutputCustomType.Parameter("evaluateOnExits") @Nullable List<JobDefinitionRetryStrategyEvaluateOnExit> evaluateOnExits) {
         this.attempts = attempts;
         this.evaluateOnExits = evaluateOnExits;
     }

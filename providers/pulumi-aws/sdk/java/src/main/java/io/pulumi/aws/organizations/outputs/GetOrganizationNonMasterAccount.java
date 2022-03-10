@@ -35,13 +35,13 @@ public final class GetOrganizationNonMasterAccount {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"arn","email","id","name","status"})
+    @OutputCustomType.Constructor
     private GetOrganizationNonMasterAccount(
-        String arn,
-        String email,
-        String id,
-        String name,
-        String status) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("status") String status) {
         this.arn = arn;
         this.email = email;
         this.id = id;

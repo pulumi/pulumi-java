@@ -31,13 +31,13 @@ public final class GetImageRecipesResult {
     private final List<String> names;
     private final @Nullable String owner;
 
-    @OutputCustomType.Constructor({"arns","filters","id","names","owner"})
+    @OutputCustomType.Constructor
     private GetImageRecipesResult(
-        List<String> arns,
-        @Nullable List<GetImageRecipesFilter> filters,
-        String id,
-        List<String> names,
-        @Nullable String owner) {
+        @OutputCustomType.Parameter("arns") List<String> arns,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetImageRecipesFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("names") List<String> names,
+        @OutputCustomType.Parameter("owner") @Nullable String owner) {
         this.arns = arns;
         this.filters = filters;
         this.id = id;

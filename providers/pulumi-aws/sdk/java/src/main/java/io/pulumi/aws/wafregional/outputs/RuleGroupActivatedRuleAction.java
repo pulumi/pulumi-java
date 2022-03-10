@@ -15,8 +15,8 @@ public final class RuleGroupActivatedRuleAction {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"type"})
-    private RuleGroupActivatedRuleAction(String type) {
+    @OutputCustomType.Constructor
+    private RuleGroupActivatedRuleAction(@OutputCustomType.Parameter("type") String type) {
         this.type = type;
     }
 

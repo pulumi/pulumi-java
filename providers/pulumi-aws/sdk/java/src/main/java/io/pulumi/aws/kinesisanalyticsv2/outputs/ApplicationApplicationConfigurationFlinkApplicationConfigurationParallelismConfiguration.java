@@ -34,12 +34,12 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      */
     private final @Nullable Integer parallelismPerKpu;
 
-    @OutputCustomType.Constructor({"autoScalingEnabled","configurationType","parallelism","parallelismPerKpu"})
+    @OutputCustomType.Constructor
     private ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfiguration(
-        @Nullable Boolean autoScalingEnabled,
-        String configurationType,
-        @Nullable Integer parallelism,
-        @Nullable Integer parallelismPerKpu) {
+        @OutputCustomType.Parameter("autoScalingEnabled") @Nullable Boolean autoScalingEnabled,
+        @OutputCustomType.Parameter("configurationType") String configurationType,
+        @OutputCustomType.Parameter("parallelism") @Nullable Integer parallelism,
+        @OutputCustomType.Parameter("parallelismPerKpu") @Nullable Integer parallelismPerKpu) {
         this.autoScalingEnabled = autoScalingEnabled;
         this.configurationType = configurationType;
         this.parallelism = parallelism;

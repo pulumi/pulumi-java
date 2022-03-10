@@ -25,12 +25,12 @@ public final class GetSolutionStackResult {
     private final String name;
     private final String nameRegex;
 
-    @OutputCustomType.Constructor({"id","mostRecent","name","nameRegex"})
+    @OutputCustomType.Constructor
     private GetSolutionStackResult(
-        String id,
-        @Nullable Boolean mostRecent,
-        String name,
-        String nameRegex) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("mostRecent") @Nullable Boolean mostRecent,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nameRegex") String nameRegex) {
         this.id = id;
         this.mostRecent = mostRecent;
         this.name = name;

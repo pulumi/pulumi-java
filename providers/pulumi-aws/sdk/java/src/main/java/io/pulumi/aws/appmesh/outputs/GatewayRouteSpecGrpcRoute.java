@@ -21,10 +21,10 @@ public final class GatewayRouteSpecGrpcRoute {
      */
     private final GatewayRouteSpecGrpcRouteMatch match;
 
-    @OutputCustomType.Constructor({"action","match"})
+    @OutputCustomType.Constructor
     private GatewayRouteSpecGrpcRoute(
-        GatewayRouteSpecGrpcRouteAction action,
-        GatewayRouteSpecGrpcRouteMatch match) {
+        @OutputCustomType.Parameter("action") GatewayRouteSpecGrpcRouteAction action,
+        @OutputCustomType.Parameter("match") GatewayRouteSpecGrpcRouteMatch match) {
         this.action = action;
         this.match = match;
     }

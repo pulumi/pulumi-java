@@ -28,11 +28,11 @@ public final class LaunchConfigurationMetadataOptions {
      */
     private final @Nullable String httpTokens;
 
-    @OutputCustomType.Constructor({"httpEndpoint","httpPutResponseHopLimit","httpTokens"})
+    @OutputCustomType.Constructor
     private LaunchConfigurationMetadataOptions(
-        @Nullable String httpEndpoint,
-        @Nullable Integer httpPutResponseHopLimit,
-        @Nullable String httpTokens) {
+        @OutputCustomType.Parameter("httpEndpoint") @Nullable String httpEndpoint,
+        @OutputCustomType.Parameter("httpPutResponseHopLimit") @Nullable Integer httpPutResponseHopLimit,
+        @OutputCustomType.Parameter("httpTokens") @Nullable String httpTokens) {
         this.httpEndpoint = httpEndpoint;
         this.httpPutResponseHopLimit = httpPutResponseHopLimit;
         this.httpTokens = httpTokens;

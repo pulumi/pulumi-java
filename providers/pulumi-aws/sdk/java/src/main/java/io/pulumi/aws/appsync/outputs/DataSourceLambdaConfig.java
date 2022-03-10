@@ -15,8 +15,8 @@ public final class DataSourceLambdaConfig {
      */
     private final String functionArn;
 
-    @OutputCustomType.Constructor({"functionArn"})
-    private DataSourceLambdaConfig(String functionArn) {
+    @OutputCustomType.Constructor
+    private DataSourceLambdaConfig(@OutputCustomType.Parameter("functionArn") String functionArn) {
         this.functionArn = functionArn;
     }
 

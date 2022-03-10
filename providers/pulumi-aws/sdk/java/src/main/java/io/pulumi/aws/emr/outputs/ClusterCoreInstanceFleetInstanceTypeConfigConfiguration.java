@@ -24,10 +24,10 @@ public final class ClusterCoreInstanceFleetInstanceTypeConfigConfiguration {
      */
     private final @Nullable Map<String,Object> properties;
 
-    @OutputCustomType.Constructor({"classification","properties"})
+    @OutputCustomType.Constructor
     private ClusterCoreInstanceFleetInstanceTypeConfigConfiguration(
-        @Nullable String classification,
-        @Nullable Map<String,Object> properties) {
+        @OutputCustomType.Parameter("classification") @Nullable String classification,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,Object> properties) {
         this.classification = classification;
         this.properties = properties;
     }

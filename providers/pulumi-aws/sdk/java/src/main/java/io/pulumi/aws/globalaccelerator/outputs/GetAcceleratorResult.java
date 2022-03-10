@@ -29,18 +29,18 @@ public final class GetAcceleratorResult {
     private final String name;
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","attributes","dnsName","enabled","hostedZoneId","id","ipAddressType","ipSets","name","tags"})
+    @OutputCustomType.Constructor
     private GetAcceleratorResult(
-        String arn,
-        List<GetAcceleratorAttribute> attributes,
-        String dnsName,
-        Boolean enabled,
-        String hostedZoneId,
-        String id,
-        String ipAddressType,
-        List<GetAcceleratorIpSet> ipSets,
-        String name,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("attributes") List<GetAcceleratorAttribute> attributes,
+        @OutputCustomType.Parameter("dnsName") String dnsName,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("hostedZoneId") String hostedZoneId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ipAddressType") String ipAddressType,
+        @OutputCustomType.Parameter("ipSets") List<GetAcceleratorIpSet> ipSets,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.attributes = attributes;
         this.dnsName = dnsName;

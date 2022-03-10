@@ -15,8 +15,8 @@ public final class ProjectSourceGitSubmodulesConfig {
      */
     private final Boolean fetchSubmodules;
 
-    @OutputCustomType.Constructor({"fetchSubmodules"})
-    private ProjectSourceGitSubmodulesConfig(Boolean fetchSubmodules) {
+    @OutputCustomType.Constructor
+    private ProjectSourceGitSubmodulesConfig(@OutputCustomType.Parameter("fetchSubmodules") Boolean fetchSubmodules) {
         this.fetchSubmodules = fetchSubmodules;
     }
 

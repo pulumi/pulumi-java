@@ -16,8 +16,8 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCu
      */
     private final List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimension> dimensions;
 
-    @OutputCustomType.Constructor({"dimensions"})
-    private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricAction(List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimension> dimensions) {
+    @OutputCustomType.Constructor
+    private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricAction(@OutputCustomType.Parameter("dimensions") List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimension> dimensions) {
         this.dimensions = dimensions;
     }
 

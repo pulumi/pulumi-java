@@ -17,8 +17,8 @@ public final class ConfigurationSetDeliveryOptions {
      */
     private final @Nullable String tlsPolicy;
 
-    @OutputCustomType.Constructor({"tlsPolicy"})
-    private ConfigurationSetDeliveryOptions(@Nullable String tlsPolicy) {
+    @OutputCustomType.Constructor
+    private ConfigurationSetDeliveryOptions(@OutputCustomType.Parameter("tlsPolicy") @Nullable String tlsPolicy) {
         this.tlsPolicy = tlsPolicy;
     }
 

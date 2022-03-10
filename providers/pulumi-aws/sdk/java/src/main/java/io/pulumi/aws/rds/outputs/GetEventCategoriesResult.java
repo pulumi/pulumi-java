@@ -24,11 +24,11 @@ public final class GetEventCategoriesResult {
     private final String id;
     private final @Nullable String sourceType;
 
-    @OutputCustomType.Constructor({"eventCategories","id","sourceType"})
+    @OutputCustomType.Constructor
     private GetEventCategoriesResult(
-        List<String> eventCategories,
-        String id,
-        @Nullable String sourceType) {
+        @OutputCustomType.Parameter("eventCategories") List<String> eventCategories,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("sourceType") @Nullable String sourceType) {
         this.eventCategories = eventCategories;
         this.id = id;
         this.sourceType = sourceType;

@@ -14,10 +14,10 @@ public final class GetLaunchTemplateInstanceMarketOption {
     private final String marketType;
     private final List<GetLaunchTemplateInstanceMarketOptionSpotOption> spotOptions;
 
-    @OutputCustomType.Constructor({"marketType","spotOptions"})
+    @OutputCustomType.Constructor
     private GetLaunchTemplateInstanceMarketOption(
-        String marketType,
-        List<GetLaunchTemplateInstanceMarketOptionSpotOption> spotOptions) {
+        @OutputCustomType.Parameter("marketType") String marketType,
+        @OutputCustomType.Parameter("spotOptions") List<GetLaunchTemplateInstanceMarketOptionSpotOption> spotOptions) {
         this.marketType = marketType;
         this.spotOptions = spotOptions;
     }

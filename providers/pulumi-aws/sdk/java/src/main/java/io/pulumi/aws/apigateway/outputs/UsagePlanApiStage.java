@@ -28,11 +28,11 @@ public final class UsagePlanApiStage {
      */
     private final @Nullable List<UsagePlanApiStageThrottle> throttles;
 
-    @OutputCustomType.Constructor({"apiId","stage","throttles"})
+    @OutputCustomType.Constructor
     private UsagePlanApiStage(
-        String apiId,
-        String stage,
-        @Nullable List<UsagePlanApiStageThrottle> throttles) {
+        @OutputCustomType.Parameter("apiId") String apiId,
+        @OutputCustomType.Parameter("stage") String stage,
+        @OutputCustomType.Parameter("throttles") @Nullable List<UsagePlanApiStageThrottle> throttles) {
         this.apiId = apiId;
         this.stage = stage;
         this.throttles = throttles;

@@ -19,10 +19,10 @@ public final class PipelineDefinitionParameterObject {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"attributes","id"})
+    @OutputCustomType.Constructor
     private PipelineDefinitionParameterObject(
-        @Nullable List<PipelineDefinitionParameterObjectAttribute> attributes,
-        String id) {
+        @OutputCustomType.Parameter("attributes") @Nullable List<PipelineDefinitionParameterObjectAttribute> attributes,
+        @OutputCustomType.Parameter("id") String id) {
         this.attributes = attributes;
         this.id = id;
     }

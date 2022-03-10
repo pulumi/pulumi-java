@@ -34,12 +34,12 @@ public final class TargetGroupStickiness {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"cookieDuration","cookieName","enabled","type"})
+    @OutputCustomType.Constructor
     private TargetGroupStickiness(
-        @Nullable Integer cookieDuration,
-        @Nullable String cookieName,
-        @Nullable Boolean enabled,
-        String type) {
+        @OutputCustomType.Parameter("cookieDuration") @Nullable Integer cookieDuration,
+        @OutputCustomType.Parameter("cookieName") @Nullable String cookieName,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("type") String type) {
         this.cookieDuration = cookieDuration;
         this.cookieName = cookieName;
         this.enabled = enabled;

@@ -16,10 +16,10 @@ public final class PhpAppLayerCloudwatchConfiguration {
     private final @Nullable Boolean enabled;
     private final @Nullable List<PhpAppLayerCloudwatchConfigurationLogStream> logStreams;
 
-    @OutputCustomType.Constructor({"enabled","logStreams"})
+    @OutputCustomType.Constructor
     private PhpAppLayerCloudwatchConfiguration(
-        @Nullable Boolean enabled,
-        @Nullable List<PhpAppLayerCloudwatchConfigurationLogStream> logStreams) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("logStreams") @Nullable List<PhpAppLayerCloudwatchConfigurationLogStream> logStreams) {
         this.enabled = enabled;
         this.logStreams = logStreams;
     }

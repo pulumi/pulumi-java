@@ -34,11 +34,11 @@ public final class IntentFollowUpPromptPrompt {
      */
     private final @Nullable String responseCard;
 
-    @OutputCustomType.Constructor({"maxAttempts","messages","responseCard"})
+    @OutputCustomType.Constructor
     private IntentFollowUpPromptPrompt(
-        Integer maxAttempts,
-        List<IntentFollowUpPromptPromptMessage> messages,
-        @Nullable String responseCard) {
+        @OutputCustomType.Parameter("maxAttempts") Integer maxAttempts,
+        @OutputCustomType.Parameter("messages") List<IntentFollowUpPromptPromptMessage> messages,
+        @OutputCustomType.Parameter("responseCard") @Nullable String responseCard) {
         this.maxAttempts = maxAttempts;
         this.messages = messages;
         this.responseCard = responseCard;

@@ -35,12 +35,12 @@ public final class TrailEventSelector {
      */
     private final @Nullable String readWriteType;
 
-    @OutputCustomType.Constructor({"dataResources","excludeManagementEventSources","includeManagementEvents","readWriteType"})
+    @OutputCustomType.Constructor
     private TrailEventSelector(
-        @Nullable List<TrailEventSelectorDataResource> dataResources,
-        @Nullable List<String> excludeManagementEventSources,
-        @Nullable Boolean includeManagementEvents,
-        @Nullable String readWriteType) {
+        @OutputCustomType.Parameter("dataResources") @Nullable List<TrailEventSelectorDataResource> dataResources,
+        @OutputCustomType.Parameter("excludeManagementEventSources") @Nullable List<String> excludeManagementEventSources,
+        @OutputCustomType.Parameter("includeManagementEvents") @Nullable Boolean includeManagementEvents,
+        @OutputCustomType.Parameter("readWriteType") @Nullable String readWriteType) {
         this.dataResources = dataResources;
         this.excludeManagementEventSources = excludeManagementEventSources;
         this.includeManagementEvents = includeManagementEvents;

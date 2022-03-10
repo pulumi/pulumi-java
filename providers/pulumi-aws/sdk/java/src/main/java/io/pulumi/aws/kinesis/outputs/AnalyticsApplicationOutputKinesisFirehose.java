@@ -20,10 +20,10 @@ public final class AnalyticsApplicationOutputKinesisFirehose {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"resourceArn","roleArn"})
+    @OutputCustomType.Constructor
     private AnalyticsApplicationOutputKinesisFirehose(
-        String resourceArn,
-        String roleArn) {
+        @OutputCustomType.Parameter("resourceArn") String resourceArn,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.resourceArn = resourceArn;
         this.roleArn = roleArn;
     }

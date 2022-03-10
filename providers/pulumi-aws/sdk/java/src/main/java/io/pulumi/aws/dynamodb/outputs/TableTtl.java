@@ -23,10 +23,10 @@ public final class TableTtl {
      */
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor({"attributeName","enabled"})
+    @OutputCustomType.Constructor
     private TableTtl(
-        String attributeName,
-        @Nullable Boolean enabled) {
+        @OutputCustomType.Parameter("attributeName") String attributeName,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.attributeName = attributeName;
         this.enabled = enabled;
     }

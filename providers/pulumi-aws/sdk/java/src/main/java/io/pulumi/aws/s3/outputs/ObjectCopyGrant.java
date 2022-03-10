@@ -38,13 +38,13 @@ public final class ObjectCopyGrant {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor({"email","id","permissions","type","uri"})
+    @OutputCustomType.Constructor
     private ObjectCopyGrant(
-        @Nullable String email,
-        @Nullable String id,
-        List<String> permissions,
-        String type,
-        @Nullable String uri) {
+        @OutputCustomType.Parameter("email") @Nullable String email,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("permissions") List<String> permissions,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uri") @Nullable String uri) {
         this.email = email;
         this.id = id;
         this.permissions = permissions;

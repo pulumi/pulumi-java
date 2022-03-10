@@ -23,19 +23,19 @@ public final class GetBrokerLdapServerMetadata {
     private final String userSearchMatching;
     private final Boolean userSearchSubtree;
 
-    @OutputCustomType.Constructor({"hosts","roleBase","roleName","roleSearchMatching","roleSearchSubtree","serviceAccountPassword","serviceAccountUsername","userBase","userRoleName","userSearchMatching","userSearchSubtree"})
+    @OutputCustomType.Constructor
     private GetBrokerLdapServerMetadata(
-        List<String> hosts,
-        String roleBase,
-        String roleName,
-        String roleSearchMatching,
-        Boolean roleSearchSubtree,
-        String serviceAccountPassword,
-        String serviceAccountUsername,
-        String userBase,
-        String userRoleName,
-        String userSearchMatching,
-        Boolean userSearchSubtree) {
+        @OutputCustomType.Parameter("hosts") List<String> hosts,
+        @OutputCustomType.Parameter("roleBase") String roleBase,
+        @OutputCustomType.Parameter("roleName") String roleName,
+        @OutputCustomType.Parameter("roleSearchMatching") String roleSearchMatching,
+        @OutputCustomType.Parameter("roleSearchSubtree") Boolean roleSearchSubtree,
+        @OutputCustomType.Parameter("serviceAccountPassword") String serviceAccountPassword,
+        @OutputCustomType.Parameter("serviceAccountUsername") String serviceAccountUsername,
+        @OutputCustomType.Parameter("userBase") String userBase,
+        @OutputCustomType.Parameter("userRoleName") String userRoleName,
+        @OutputCustomType.Parameter("userSearchMatching") String userSearchMatching,
+        @OutputCustomType.Parameter("userSearchSubtree") Boolean userSearchSubtree) {
         this.hosts = hosts;
         this.roleBase = roleBase;
         this.roleName = roleName;

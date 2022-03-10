@@ -23,10 +23,10 @@ public final class ListenerRuleActionForwardStickiness {
      */
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor({"duration","enabled"})
+    @OutputCustomType.Constructor
     private ListenerRuleActionForwardStickiness(
-        Integer duration,
-        @Nullable Boolean enabled) {
+        @OutputCustomType.Parameter("duration") Integer duration,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.duration = duration;
         this.enabled = enabled;
     }

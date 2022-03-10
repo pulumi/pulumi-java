@@ -26,11 +26,11 @@ public final class FieldLevelEncryptionProfileEncryptionEntitiesItem {
      */
     private final String publicKeyId;
 
-    @OutputCustomType.Constructor({"fieldPatterns","providerId","publicKeyId"})
+    @OutputCustomType.Constructor
     private FieldLevelEncryptionProfileEncryptionEntitiesItem(
-        FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatterns fieldPatterns,
-        String providerId,
-        String publicKeyId) {
+        @OutputCustomType.Parameter("fieldPatterns") FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatterns fieldPatterns,
+        @OutputCustomType.Parameter("providerId") String providerId,
+        @OutputCustomType.Parameter("publicKeyId") String publicKeyId) {
         this.fieldPatterns = fieldPatterns;
         this.providerId = providerId;
         this.publicKeyId = publicKeyId;

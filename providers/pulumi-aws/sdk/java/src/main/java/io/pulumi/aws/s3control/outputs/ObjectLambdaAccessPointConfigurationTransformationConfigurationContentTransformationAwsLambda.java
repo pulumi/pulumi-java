@@ -22,10 +22,10 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
      */
     private final @Nullable String functionPayload;
 
-    @OutputCustomType.Constructor({"functionArn","functionPayload"})
+    @OutputCustomType.Constructor
     private ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambda(
-        String functionArn,
-        @Nullable String functionPayload) {
+        @OutputCustomType.Parameter("functionArn") String functionArn,
+        @OutputCustomType.Parameter("functionPayload") @Nullable String functionPayload) {
         this.functionArn = functionArn;
         this.functionPayload = functionPayload;
     }

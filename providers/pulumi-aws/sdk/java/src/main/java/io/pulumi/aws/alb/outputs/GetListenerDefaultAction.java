@@ -25,16 +25,16 @@ public final class GetListenerDefaultAction {
     private final String targetGroupArn;
     private final String type;
 
-    @OutputCustomType.Constructor({"authenticateCognitos","authenticateOidcs","fixedResponses","forwards","order","redirects","targetGroupArn","type"})
+    @OutputCustomType.Constructor
     private GetListenerDefaultAction(
-        List<GetListenerDefaultActionAuthenticateCognito> authenticateCognitos,
-        List<GetListenerDefaultActionAuthenticateOidc> authenticateOidcs,
-        List<GetListenerDefaultActionFixedResponse> fixedResponses,
-        List<GetListenerDefaultActionForward> forwards,
-        Integer order,
-        List<GetListenerDefaultActionRedirect> redirects,
-        String targetGroupArn,
-        String type) {
+        @OutputCustomType.Parameter("authenticateCognitos") List<GetListenerDefaultActionAuthenticateCognito> authenticateCognitos,
+        @OutputCustomType.Parameter("authenticateOidcs") List<GetListenerDefaultActionAuthenticateOidc> authenticateOidcs,
+        @OutputCustomType.Parameter("fixedResponses") List<GetListenerDefaultActionFixedResponse> fixedResponses,
+        @OutputCustomType.Parameter("forwards") List<GetListenerDefaultActionForward> forwards,
+        @OutputCustomType.Parameter("order") Integer order,
+        @OutputCustomType.Parameter("redirects") List<GetListenerDefaultActionRedirect> redirects,
+        @OutputCustomType.Parameter("targetGroupArn") String targetGroupArn,
+        @OutputCustomType.Parameter("type") String type) {
         this.authenticateCognitos = authenticateCognitos;
         this.authenticateOidcs = authenticateOidcs;
         this.fixedResponses = fixedResponses;

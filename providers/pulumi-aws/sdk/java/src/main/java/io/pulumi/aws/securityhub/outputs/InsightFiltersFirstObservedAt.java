@@ -28,11 +28,11 @@ public final class InsightFiltersFirstObservedAt {
      */
     private final @Nullable String start;
 
-    @OutputCustomType.Constructor({"dateRange","end","start"})
+    @OutputCustomType.Constructor
     private InsightFiltersFirstObservedAt(
-        @Nullable InsightFiltersFirstObservedAtDateRange dateRange,
-        @Nullable String end,
-        @Nullable String start) {
+        @OutputCustomType.Parameter("dateRange") @Nullable InsightFiltersFirstObservedAtDateRange dateRange,
+        @OutputCustomType.Parameter("end") @Nullable String end,
+        @OutputCustomType.Parameter("start") @Nullable String start) {
         this.dateRange = dateRange;
         this.end = end;
         this.start = start;

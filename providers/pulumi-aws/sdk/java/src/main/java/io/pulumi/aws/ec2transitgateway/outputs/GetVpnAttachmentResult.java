@@ -28,13 +28,13 @@ public final class GetVpnAttachmentResult {
     private final @Nullable String transitGatewayId;
     private final @Nullable String vpnConnectionId;
 
-    @OutputCustomType.Constructor({"filters","id","tags","transitGatewayId","vpnConnectionId"})
+    @OutputCustomType.Constructor
     private GetVpnAttachmentResult(
-        @Nullable List<GetVpnAttachmentFilter> filters,
-        String id,
-        Map<String,String> tags,
-        @Nullable String transitGatewayId,
-        @Nullable String vpnConnectionId) {
+        @OutputCustomType.Parameter("filters") @Nullable List<GetVpnAttachmentFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("transitGatewayId") @Nullable String transitGatewayId,
+        @OutputCustomType.Parameter("vpnConnectionId") @Nullable String vpnConnectionId) {
         this.filters = filters;
         this.id = id;
         this.tags = tags;

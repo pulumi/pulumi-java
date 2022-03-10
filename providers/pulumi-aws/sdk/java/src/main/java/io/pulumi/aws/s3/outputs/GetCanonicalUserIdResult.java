@@ -20,10 +20,10 @@ public final class GetCanonicalUserIdResult {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"displayName","id"})
+    @OutputCustomType.Constructor
     private GetCanonicalUserIdResult(
-        String displayName,
-        String id) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("id") String id) {
         this.displayName = displayName;
         this.id = id;
     }

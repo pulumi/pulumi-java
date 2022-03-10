@@ -22,10 +22,10 @@ public final class GetNodeGroupResource {
      */
     private final String remoteAccessSecurityGroupId;
 
-    @OutputCustomType.Constructor({"autoscalingGroups","remoteAccessSecurityGroupId"})
+    @OutputCustomType.Constructor
     private GetNodeGroupResource(
-        List<GetNodeGroupResourceAutoscalingGroup> autoscalingGroups,
-        String remoteAccessSecurityGroupId) {
+        @OutputCustomType.Parameter("autoscalingGroups") List<GetNodeGroupResourceAutoscalingGroup> autoscalingGroups,
+        @OutputCustomType.Parameter("remoteAccessSecurityGroupId") String remoteAccessSecurityGroupId) {
         this.autoscalingGroups = autoscalingGroups;
         this.remoteAccessSecurityGroupId = remoteAccessSecurityGroupId;
     }

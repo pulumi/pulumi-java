@@ -21,10 +21,10 @@ public final class FirewallPolicyFirewallPolicyStatelessRuleGroupReference {
      */
     private final String resourceArn;
 
-    @OutputCustomType.Constructor({"priority","resourceArn"})
+    @OutputCustomType.Constructor
     private FirewallPolicyFirewallPolicyStatelessRuleGroupReference(
-        Integer priority,
-        String resourceArn) {
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("resourceArn") String resourceArn) {
         this.priority = priority;
         this.resourceArn = resourceArn;
     }

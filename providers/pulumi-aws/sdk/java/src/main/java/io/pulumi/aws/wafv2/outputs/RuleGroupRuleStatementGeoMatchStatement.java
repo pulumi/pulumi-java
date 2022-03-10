@@ -24,10 +24,10 @@ public final class RuleGroupRuleStatementGeoMatchStatement {
      */
     private final @Nullable RuleGroupRuleStatementGeoMatchStatementForwardedIpConfig forwardedIpConfig;
 
-    @OutputCustomType.Constructor({"countryCodes","forwardedIpConfig"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleStatementGeoMatchStatement(
-        List<String> countryCodes,
-        @Nullable RuleGroupRuleStatementGeoMatchStatementForwardedIpConfig forwardedIpConfig) {
+        @OutputCustomType.Parameter("countryCodes") List<String> countryCodes,
+        @OutputCustomType.Parameter("forwardedIpConfig") @Nullable RuleGroupRuleStatementGeoMatchStatementForwardedIpConfig forwardedIpConfig) {
         this.countryCodes = countryCodes;
         this.forwardedIpConfig = forwardedIpConfig;
     }

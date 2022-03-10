@@ -26,11 +26,11 @@ public final class GetVpcCidrBlockAssociation {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"associationId","cidrBlock","state"})
+    @OutputCustomType.Constructor
     private GetVpcCidrBlockAssociation(
-        String associationId,
-        String cidrBlock,
-        String state) {
+        @OutputCustomType.Parameter("associationId") String associationId,
+        @OutputCustomType.Parameter("cidrBlock") String cidrBlock,
+        @OutputCustomType.Parameter("state") String state) {
         this.associationId = associationId;
         this.cidrBlock = cidrBlock;
         this.state = state;

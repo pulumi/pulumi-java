@@ -31,13 +31,13 @@ public final class GetComponentsResult {
     private final List<String> names;
     private final @Nullable String owner;
 
-    @OutputCustomType.Constructor({"arns","filters","id","names","owner"})
+    @OutputCustomType.Constructor
     private GetComponentsResult(
-        List<String> arns,
-        @Nullable List<GetComponentsFilter> filters,
-        String id,
-        List<String> names,
-        @Nullable String owner) {
+        @OutputCustomType.Parameter("arns") List<String> arns,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetComponentsFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("names") List<String> names,
+        @OutputCustomType.Parameter("owner") @Nullable String owner) {
         this.arns = arns;
         this.filters = filters;
         this.id = id;

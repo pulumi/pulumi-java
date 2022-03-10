@@ -15,8 +15,8 @@ public final class VirtualNodeSpecBackend {
      */
     private final VirtualNodeSpecBackendVirtualService virtualService;
 
-    @OutputCustomType.Constructor({"virtualService"})
-    private VirtualNodeSpecBackend(VirtualNodeSpecBackendVirtualService virtualService) {
+    @OutputCustomType.Constructor
+    private VirtualNodeSpecBackend(@OutputCustomType.Parameter("virtualService") VirtualNodeSpecBackendVirtualService virtualService) {
         this.virtualService = virtualService;
     }
 

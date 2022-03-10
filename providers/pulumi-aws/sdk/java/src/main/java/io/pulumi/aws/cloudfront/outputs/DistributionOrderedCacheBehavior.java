@@ -146,28 +146,28 @@ public final class DistributionOrderedCacheBehavior {
      */
     private final String viewerProtocolPolicy;
 
-    @OutputCustomType.Constructor({"allowedMethods","cachePolicyId","cachedMethods","compress","defaultTtl","fieldLevelEncryptionId","forwardedValues","functionAssociations","lambdaFunctionAssociations","maxTtl","minTtl","originRequestPolicyId","pathPattern","realtimeLogConfigArn","responseHeadersPolicyId","smoothStreaming","targetOriginId","trustedKeyGroups","trustedSigners","viewerProtocolPolicy"})
+    @OutputCustomType.Constructor
     private DistributionOrderedCacheBehavior(
-        List<String> allowedMethods,
-        @Nullable String cachePolicyId,
-        List<String> cachedMethods,
-        @Nullable Boolean compress,
-        @Nullable Integer defaultTtl,
-        @Nullable String fieldLevelEncryptionId,
-        @Nullable DistributionOrderedCacheBehaviorForwardedValues forwardedValues,
-        @Nullable List<DistributionOrderedCacheBehaviorFunctionAssociation> functionAssociations,
-        @Nullable List<DistributionOrderedCacheBehaviorLambdaFunctionAssociation> lambdaFunctionAssociations,
-        @Nullable Integer maxTtl,
-        @Nullable Integer minTtl,
-        @Nullable String originRequestPolicyId,
-        String pathPattern,
-        @Nullable String realtimeLogConfigArn,
-        @Nullable String responseHeadersPolicyId,
-        @Nullable Boolean smoothStreaming,
-        String targetOriginId,
-        @Nullable List<String> trustedKeyGroups,
-        @Nullable List<String> trustedSigners,
-        String viewerProtocolPolicy) {
+        @OutputCustomType.Parameter("allowedMethods") List<String> allowedMethods,
+        @OutputCustomType.Parameter("cachePolicyId") @Nullable String cachePolicyId,
+        @OutputCustomType.Parameter("cachedMethods") List<String> cachedMethods,
+        @OutputCustomType.Parameter("compress") @Nullable Boolean compress,
+        @OutputCustomType.Parameter("defaultTtl") @Nullable Integer defaultTtl,
+        @OutputCustomType.Parameter("fieldLevelEncryptionId") @Nullable String fieldLevelEncryptionId,
+        @OutputCustomType.Parameter("forwardedValues") @Nullable DistributionOrderedCacheBehaviorForwardedValues forwardedValues,
+        @OutputCustomType.Parameter("functionAssociations") @Nullable List<DistributionOrderedCacheBehaviorFunctionAssociation> functionAssociations,
+        @OutputCustomType.Parameter("lambdaFunctionAssociations") @Nullable List<DistributionOrderedCacheBehaviorLambdaFunctionAssociation> lambdaFunctionAssociations,
+        @OutputCustomType.Parameter("maxTtl") @Nullable Integer maxTtl,
+        @OutputCustomType.Parameter("minTtl") @Nullable Integer minTtl,
+        @OutputCustomType.Parameter("originRequestPolicyId") @Nullable String originRequestPolicyId,
+        @OutputCustomType.Parameter("pathPattern") String pathPattern,
+        @OutputCustomType.Parameter("realtimeLogConfigArn") @Nullable String realtimeLogConfigArn,
+        @OutputCustomType.Parameter("responseHeadersPolicyId") @Nullable String responseHeadersPolicyId,
+        @OutputCustomType.Parameter("smoothStreaming") @Nullable Boolean smoothStreaming,
+        @OutputCustomType.Parameter("targetOriginId") String targetOriginId,
+        @OutputCustomType.Parameter("trustedKeyGroups") @Nullable List<String> trustedKeyGroups,
+        @OutputCustomType.Parameter("trustedSigners") @Nullable List<String> trustedSigners,
+        @OutputCustomType.Parameter("viewerProtocolPolicy") String viewerProtocolPolicy) {
         this.allowedMethods = allowedMethods;
         this.cachePolicyId = cachePolicyId;
         this.cachedMethods = cachedMethods;

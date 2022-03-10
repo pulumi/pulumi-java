@@ -27,11 +27,11 @@ public final class GetDistributionConfigurationDistribution {
      */
     private final String region;
 
-    @OutputCustomType.Constructor({"amiDistributionConfigurations","licenseConfigurationArns","region"})
+    @OutputCustomType.Constructor
     private GetDistributionConfigurationDistribution(
-        List<GetDistributionConfigurationDistributionAmiDistributionConfiguration> amiDistributionConfigurations,
-        List<String> licenseConfigurationArns,
-        String region) {
+        @OutputCustomType.Parameter("amiDistributionConfigurations") List<GetDistributionConfigurationDistributionAmiDistributionConfiguration> amiDistributionConfigurations,
+        @OutputCustomType.Parameter("licenseConfigurationArns") List<String> licenseConfigurationArns,
+        @OutputCustomType.Parameter("region") String region) {
         this.amiDistributionConfigurations = amiDistributionConfigurations;
         this.licenseConfigurationArns = licenseConfigurationArns;
         this.region = region;

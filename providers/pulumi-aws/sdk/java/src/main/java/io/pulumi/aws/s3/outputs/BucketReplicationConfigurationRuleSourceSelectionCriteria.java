@@ -18,8 +18,8 @@ public final class BucketReplicationConfigurationRuleSourceSelectionCriteria {
      */
     private final @Nullable BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjects sseKmsEncryptedObjects;
 
-    @OutputCustomType.Constructor({"sseKmsEncryptedObjects"})
-    private BucketReplicationConfigurationRuleSourceSelectionCriteria(@Nullable BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjects sseKmsEncryptedObjects) {
+    @OutputCustomType.Constructor
+    private BucketReplicationConfigurationRuleSourceSelectionCriteria(@OutputCustomType.Parameter("sseKmsEncryptedObjects") @Nullable BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjects sseKmsEncryptedObjects) {
         this.sseKmsEncryptedObjects = sseKmsEncryptedObjects;
     }
 

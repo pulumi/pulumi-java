@@ -35,12 +35,12 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecification {
      */
     private final Integer targetValue;
 
-    @OutputCustomType.Constructor({"predefinedLoadMetricSpecification","predefinedMetricPairSpecification","predefinedScalingMetricSpecification","targetValue"})
+    @OutputCustomType.Constructor
     private PolicyPredictiveScalingConfigurationMetricSpecification(
-        @Nullable PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecification predefinedLoadMetricSpecification,
-        @Nullable PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecification predefinedMetricPairSpecification,
-        @Nullable PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecification predefinedScalingMetricSpecification,
-        Integer targetValue) {
+        @OutputCustomType.Parameter("predefinedLoadMetricSpecification") @Nullable PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecification predefinedLoadMetricSpecification,
+        @OutputCustomType.Parameter("predefinedMetricPairSpecification") @Nullable PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecification predefinedMetricPairSpecification,
+        @OutputCustomType.Parameter("predefinedScalingMetricSpecification") @Nullable PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecification predefinedScalingMetricSpecification,
+        @OutputCustomType.Parameter("targetValue") Integer targetValue) {
         this.predefinedLoadMetricSpecification = predefinedLoadMetricSpecification;
         this.predefinedMetricPairSpecification = predefinedMetricPairSpecification;
         this.predefinedScalingMetricSpecification = predefinedScalingMetricSpecification;

@@ -28,11 +28,11 @@ public final class ClusterSnapshotCopy {
      */
     private final @Nullable Integer retentionPeriod;
 
-    @OutputCustomType.Constructor({"destinationRegion","grantName","retentionPeriod"})
+    @OutputCustomType.Constructor
     private ClusterSnapshotCopy(
-        String destinationRegion,
-        @Nullable String grantName,
-        @Nullable Integer retentionPeriod) {
+        @OutputCustomType.Parameter("destinationRegion") String destinationRegion,
+        @OutputCustomType.Parameter("grantName") @Nullable String grantName,
+        @OutputCustomType.Parameter("retentionPeriod") @Nullable Integer retentionPeriod) {
         this.destinationRegion = destinationRegion;
         this.grantName = grantName;
         this.retentionPeriod = retentionPeriod;

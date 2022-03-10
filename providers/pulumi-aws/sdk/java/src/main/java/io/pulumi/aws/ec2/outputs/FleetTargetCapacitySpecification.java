@@ -33,12 +33,12 @@ public final class FleetTargetCapacitySpecification {
      */
     private final Integer totalTargetCapacity;
 
-    @OutputCustomType.Constructor({"defaultTargetCapacityType","onDemandTargetCapacity","spotTargetCapacity","totalTargetCapacity"})
+    @OutputCustomType.Constructor
     private FleetTargetCapacitySpecification(
-        String defaultTargetCapacityType,
-        @Nullable Integer onDemandTargetCapacity,
-        @Nullable Integer spotTargetCapacity,
-        Integer totalTargetCapacity) {
+        @OutputCustomType.Parameter("defaultTargetCapacityType") String defaultTargetCapacityType,
+        @OutputCustomType.Parameter("onDemandTargetCapacity") @Nullable Integer onDemandTargetCapacity,
+        @OutputCustomType.Parameter("spotTargetCapacity") @Nullable Integer spotTargetCapacity,
+        @OutputCustomType.Parameter("totalTargetCapacity") Integer totalTargetCapacity) {
         this.defaultTargetCapacityType = defaultTargetCapacityType;
         this.onDemandTargetCapacity = onDemandTargetCapacity;
         this.spotTargetCapacity = spotTargetCapacity;

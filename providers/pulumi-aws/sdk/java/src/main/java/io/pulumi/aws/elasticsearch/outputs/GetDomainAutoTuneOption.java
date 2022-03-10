@@ -27,11 +27,11 @@ public final class GetDomainAutoTuneOption {
      */
     private final String rollbackOnDisable;
 
-    @OutputCustomType.Constructor({"desiredState","maintenanceSchedules","rollbackOnDisable"})
+    @OutputCustomType.Constructor
     private GetDomainAutoTuneOption(
-        String desiredState,
-        List<GetDomainAutoTuneOptionMaintenanceSchedule> maintenanceSchedules,
-        String rollbackOnDisable) {
+        @OutputCustomType.Parameter("desiredState") String desiredState,
+        @OutputCustomType.Parameter("maintenanceSchedules") List<GetDomainAutoTuneOptionMaintenanceSchedule> maintenanceSchedules,
+        @OutputCustomType.Parameter("rollbackOnDisable") String rollbackOnDisable) {
         this.desiredState = desiredState;
         this.maintenanceSchedules = maintenanceSchedules;
         this.rollbackOnDisable = rollbackOnDisable;

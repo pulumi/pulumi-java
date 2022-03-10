@@ -23,10 +23,10 @@ public final class ImagePipelineImageTestsConfiguration {
      */
     private final @Nullable Integer timeoutMinutes;
 
-    @OutputCustomType.Constructor({"imageTestsEnabled","timeoutMinutes"})
+    @OutputCustomType.Constructor
     private ImagePipelineImageTestsConfiguration(
-        @Nullable Boolean imageTestsEnabled,
-        @Nullable Integer timeoutMinutes) {
+        @OutputCustomType.Parameter("imageTestsEnabled") @Nullable Boolean imageTestsEnabled,
+        @OutputCustomType.Parameter("timeoutMinutes") @Nullable Integer timeoutMinutes) {
         this.imageTestsEnabled = imageTestsEnabled;
         this.timeoutMinutes = timeoutMinutes;
     }

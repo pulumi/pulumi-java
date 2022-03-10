@@ -82,24 +82,24 @@ public final class GetLayerVersionResult {
      */
     private final Integer version;
 
-    @OutputCustomType.Constructor({"arn","compatibleArchitecture","compatibleArchitectures","compatibleRuntime","compatibleRuntimes","createdDate","description","id","layerArn","layerName","licenseInfo","signingJobArn","signingProfileVersionArn","sourceCodeHash","sourceCodeSize","version"})
+    @OutputCustomType.Constructor
     private GetLayerVersionResult(
-        String arn,
-        @Nullable String compatibleArchitecture,
-        List<String> compatibleArchitectures,
-        @Nullable String compatibleRuntime,
-        List<String> compatibleRuntimes,
-        String createdDate,
-        String description,
-        String id,
-        String layerArn,
-        String layerName,
-        String licenseInfo,
-        String signingJobArn,
-        String signingProfileVersionArn,
-        String sourceCodeHash,
-        Integer sourceCodeSize,
-        Integer version) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("compatibleArchitecture") @Nullable String compatibleArchitecture,
+        @OutputCustomType.Parameter("compatibleArchitectures") List<String> compatibleArchitectures,
+        @OutputCustomType.Parameter("compatibleRuntime") @Nullable String compatibleRuntime,
+        @OutputCustomType.Parameter("compatibleRuntimes") List<String> compatibleRuntimes,
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("layerArn") String layerArn,
+        @OutputCustomType.Parameter("layerName") String layerName,
+        @OutputCustomType.Parameter("licenseInfo") String licenseInfo,
+        @OutputCustomType.Parameter("signingJobArn") String signingJobArn,
+        @OutputCustomType.Parameter("signingProfileVersionArn") String signingProfileVersionArn,
+        @OutputCustomType.Parameter("sourceCodeHash") String sourceCodeHash,
+        @OutputCustomType.Parameter("sourceCodeSize") Integer sourceCodeSize,
+        @OutputCustomType.Parameter("version") Integer version) {
         this.arn = arn;
         this.compatibleArchitecture = compatibleArchitecture;
         this.compatibleArchitectures = compatibleArchitectures;

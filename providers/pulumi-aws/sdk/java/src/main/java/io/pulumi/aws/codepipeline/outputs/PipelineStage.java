@@ -22,10 +22,10 @@ public final class PipelineStage {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"actions","name"})
+    @OutputCustomType.Constructor
     private PipelineStage(
-        List<PipelineStageAction> actions,
-        String name) {
+        @OutputCustomType.Parameter("actions") List<PipelineStageAction> actions,
+        @OutputCustomType.Parameter("name") String name) {
         this.actions = actions;
         this.name = name;
     }

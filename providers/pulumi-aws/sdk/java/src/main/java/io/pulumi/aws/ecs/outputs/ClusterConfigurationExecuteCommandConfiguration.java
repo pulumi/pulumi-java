@@ -28,11 +28,11 @@ public final class ClusterConfigurationExecuteCommandConfiguration {
      */
     private final @Nullable String logging;
 
-    @OutputCustomType.Constructor({"kmsKeyId","logConfiguration","logging"})
+    @OutputCustomType.Constructor
     private ClusterConfigurationExecuteCommandConfiguration(
-        @Nullable String kmsKeyId,
-        @Nullable ClusterConfigurationExecuteCommandConfigurationLogConfiguration logConfiguration,
-        @Nullable String logging) {
+        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @OutputCustomType.Parameter("logConfiguration") @Nullable ClusterConfigurationExecuteCommandConfigurationLogConfiguration logConfiguration,
+        @OutputCustomType.Parameter("logging") @Nullable String logging) {
         this.kmsKeyId = kmsKeyId;
         this.logConfiguration = logConfiguration;
         this.logging = logging;

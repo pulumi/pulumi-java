@@ -15,8 +15,8 @@ public final class GetCodeSigningConfigPolicy {
      */
     private final String untrustedArtifactOnDeployment;
 
-    @OutputCustomType.Constructor({"untrustedArtifactOnDeployment"})
-    private GetCodeSigningConfigPolicy(String untrustedArtifactOnDeployment) {
+    @OutputCustomType.Constructor
+    private GetCodeSigningConfigPolicy(@OutputCustomType.Parameter("untrustedArtifactOnDeployment") String untrustedArtifactOnDeployment) {
         this.untrustedArtifactOnDeployment = untrustedArtifactOnDeployment;
     }
 

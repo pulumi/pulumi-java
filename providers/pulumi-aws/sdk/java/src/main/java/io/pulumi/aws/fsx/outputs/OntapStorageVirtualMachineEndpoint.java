@@ -35,12 +35,12 @@ public final class OntapStorageVirtualMachineEndpoint {
      */
     private final @Nullable List<OntapStorageVirtualMachineEndpointSmb> smbs;
 
-    @OutputCustomType.Constructor({"iscses","managements","nfs","smbs"})
+    @OutputCustomType.Constructor
     private OntapStorageVirtualMachineEndpoint(
-        @Nullable List<OntapStorageVirtualMachineEndpointIscse> iscses,
-        @Nullable List<OntapStorageVirtualMachineEndpointManagement> managements,
-        @Nullable List<OntapStorageVirtualMachineEndpointNf> nfs,
-        @Nullable List<OntapStorageVirtualMachineEndpointSmb> smbs) {
+        @OutputCustomType.Parameter("iscses") @Nullable List<OntapStorageVirtualMachineEndpointIscse> iscses,
+        @OutputCustomType.Parameter("managements") @Nullable List<OntapStorageVirtualMachineEndpointManagement> managements,
+        @OutputCustomType.Parameter("nfs") @Nullable List<OntapStorageVirtualMachineEndpointNf> nfs,
+        @OutputCustomType.Parameter("smbs") @Nullable List<OntapStorageVirtualMachineEndpointSmb> smbs) {
         this.iscses = iscses;
         this.managements = managements;
         this.nfs = nfs;

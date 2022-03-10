@@ -27,11 +27,11 @@ public final class WebAclLoggingConfigurationLoggingFilterFilter {
      */
     private final String requirement;
 
-    @OutputCustomType.Constructor({"behavior","conditions","requirement"})
+    @OutputCustomType.Constructor
     private WebAclLoggingConfigurationLoggingFilterFilter(
-        String behavior,
-        List<WebAclLoggingConfigurationLoggingFilterFilterCondition> conditions,
-        String requirement) {
+        @OutputCustomType.Parameter("behavior") String behavior,
+        @OutputCustomType.Parameter("conditions") List<WebAclLoggingConfigurationLoggingFilterFilterCondition> conditions,
+        @OutputCustomType.Parameter("requirement") String requirement) {
         this.behavior = behavior;
         this.conditions = conditions;
         this.requirement = requirement;

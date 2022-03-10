@@ -32,12 +32,12 @@ public final class DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResou
      */
     private final @Nullable String sagemakerImageVersionArn;
 
-    @OutputCustomType.Constructor({"instanceType","lifecycleConfigArn","sagemakerImageArn","sagemakerImageVersionArn"})
+    @OutputCustomType.Constructor
     private DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpec(
-        @Nullable String instanceType,
-        @Nullable String lifecycleConfigArn,
-        @Nullable String sagemakerImageArn,
-        @Nullable String sagemakerImageVersionArn) {
+        @OutputCustomType.Parameter("instanceType") @Nullable String instanceType,
+        @OutputCustomType.Parameter("lifecycleConfigArn") @Nullable String lifecycleConfigArn,
+        @OutputCustomType.Parameter("sagemakerImageArn") @Nullable String sagemakerImageArn,
+        @OutputCustomType.Parameter("sagemakerImageVersionArn") @Nullable String sagemakerImageVersionArn) {
         this.instanceType = instanceType;
         this.lifecycleConfigArn = lifecycleConfigArn;
         this.sagemakerImageArn = sagemakerImageArn;

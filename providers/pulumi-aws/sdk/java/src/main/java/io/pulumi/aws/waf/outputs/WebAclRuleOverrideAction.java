@@ -15,8 +15,8 @@ public final class WebAclRuleOverrideAction {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"type"})
-    private WebAclRuleOverrideAction(String type) {
+    @OutputCustomType.Constructor
+    private WebAclRuleOverrideAction(@OutputCustomType.Parameter("type") String type) {
         this.type = type;
     }
 

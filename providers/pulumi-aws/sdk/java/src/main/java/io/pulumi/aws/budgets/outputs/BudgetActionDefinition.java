@@ -29,11 +29,11 @@ public final class BudgetActionDefinition {
      */
     private final @Nullable BudgetActionDefinitionSsmActionDefinition ssmActionDefinition;
 
-    @OutputCustomType.Constructor({"iamActionDefinition","scpActionDefinition","ssmActionDefinition"})
+    @OutputCustomType.Constructor
     private BudgetActionDefinition(
-        @Nullable BudgetActionDefinitionIamActionDefinition iamActionDefinition,
-        @Nullable BudgetActionDefinitionScpActionDefinition scpActionDefinition,
-        @Nullable BudgetActionDefinitionSsmActionDefinition ssmActionDefinition) {
+        @OutputCustomType.Parameter("iamActionDefinition") @Nullable BudgetActionDefinitionIamActionDefinition iamActionDefinition,
+        @OutputCustomType.Parameter("scpActionDefinition") @Nullable BudgetActionDefinitionScpActionDefinition scpActionDefinition,
+        @OutputCustomType.Parameter("ssmActionDefinition") @Nullable BudgetActionDefinitionSsmActionDefinition ssmActionDefinition) {
         this.iamActionDefinition = iamActionDefinition;
         this.scpActionDefinition = scpActionDefinition;
         this.ssmActionDefinition = ssmActionDefinition;

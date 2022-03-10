@@ -131,31 +131,31 @@ public final class GetDomainResult {
      */
     private final List<GetDomainVpcOption> vpcOptions;
 
-    @OutputCustomType.Constructor({"accessPolicies","advancedOptions","advancedSecurityOptions","arn","autoTuneOptions","clusterConfigs","cognitoOptions","created","deleted","domainId","domainName","ebsOptions","elasticsearchVersion","encryptionAtRests","endpoint","id","kibanaEndpoint","logPublishingOptions","nodeToNodeEncryptions","processing","snapshotOptions","tags","vpcOptions"})
+    @OutputCustomType.Constructor
     private GetDomainResult(
-        String accessPolicies,
-        Map<String,String> advancedOptions,
-        List<GetDomainAdvancedSecurityOption> advancedSecurityOptions,
-        String arn,
-        List<GetDomainAutoTuneOption> autoTuneOptions,
-        List<GetDomainClusterConfig> clusterConfigs,
-        List<GetDomainCognitoOption> cognitoOptions,
-        Boolean created,
-        Boolean deleted,
-        String domainId,
-        String domainName,
-        List<GetDomainEbsOption> ebsOptions,
-        String elasticsearchVersion,
-        List<GetDomainEncryptionAtRest> encryptionAtRests,
-        String endpoint,
-        String id,
-        String kibanaEndpoint,
-        List<GetDomainLogPublishingOption> logPublishingOptions,
-        List<GetDomainNodeToNodeEncryption> nodeToNodeEncryptions,
-        Boolean processing,
-        List<GetDomainSnapshotOption> snapshotOptions,
-        Map<String,String> tags,
-        List<GetDomainVpcOption> vpcOptions) {
+        @OutputCustomType.Parameter("accessPolicies") String accessPolicies,
+        @OutputCustomType.Parameter("advancedOptions") Map<String,String> advancedOptions,
+        @OutputCustomType.Parameter("advancedSecurityOptions") List<GetDomainAdvancedSecurityOption> advancedSecurityOptions,
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("autoTuneOptions") List<GetDomainAutoTuneOption> autoTuneOptions,
+        @OutputCustomType.Parameter("clusterConfigs") List<GetDomainClusterConfig> clusterConfigs,
+        @OutputCustomType.Parameter("cognitoOptions") List<GetDomainCognitoOption> cognitoOptions,
+        @OutputCustomType.Parameter("created") Boolean created,
+        @OutputCustomType.Parameter("deleted") Boolean deleted,
+        @OutputCustomType.Parameter("domainId") String domainId,
+        @OutputCustomType.Parameter("domainName") String domainName,
+        @OutputCustomType.Parameter("ebsOptions") List<GetDomainEbsOption> ebsOptions,
+        @OutputCustomType.Parameter("elasticsearchVersion") String elasticsearchVersion,
+        @OutputCustomType.Parameter("encryptionAtRests") List<GetDomainEncryptionAtRest> encryptionAtRests,
+        @OutputCustomType.Parameter("endpoint") String endpoint,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kibanaEndpoint") String kibanaEndpoint,
+        @OutputCustomType.Parameter("logPublishingOptions") List<GetDomainLogPublishingOption> logPublishingOptions,
+        @OutputCustomType.Parameter("nodeToNodeEncryptions") List<GetDomainNodeToNodeEncryption> nodeToNodeEncryptions,
+        @OutputCustomType.Parameter("processing") Boolean processing,
+        @OutputCustomType.Parameter("snapshotOptions") List<GetDomainSnapshotOption> snapshotOptions,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("vpcOptions") List<GetDomainVpcOption> vpcOptions) {
         this.accessPolicies = accessPolicies;
         this.advancedOptions = advancedOptions;
         this.advancedSecurityOptions = advancedSecurityOptions;

@@ -50,16 +50,16 @@ public final class WorkforceOidcConfig {
      */
     private final String userInfoEndpoint;
 
-    @OutputCustomType.Constructor({"authorizationEndpoint","clientId","clientSecret","issuer","jwksUri","logoutEndpoint","tokenEndpoint","userInfoEndpoint"})
+    @OutputCustomType.Constructor
     private WorkforceOidcConfig(
-        String authorizationEndpoint,
-        String clientId,
-        String clientSecret,
-        String issuer,
-        String jwksUri,
-        String logoutEndpoint,
-        String tokenEndpoint,
-        String userInfoEndpoint) {
+        @OutputCustomType.Parameter("authorizationEndpoint") String authorizationEndpoint,
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("clientSecret") String clientSecret,
+        @OutputCustomType.Parameter("issuer") String issuer,
+        @OutputCustomType.Parameter("jwksUri") String jwksUri,
+        @OutputCustomType.Parameter("logoutEndpoint") String logoutEndpoint,
+        @OutputCustomType.Parameter("tokenEndpoint") String tokenEndpoint,
+        @OutputCustomType.Parameter("userInfoEndpoint") String userInfoEndpoint) {
         this.authorizationEndpoint = authorizationEndpoint;
         this.clientId = clientId;
         this.clientSecret = clientSecret;

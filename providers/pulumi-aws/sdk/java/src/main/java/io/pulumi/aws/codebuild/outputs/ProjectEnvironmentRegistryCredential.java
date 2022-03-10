@@ -20,10 +20,10 @@ public final class ProjectEnvironmentRegistryCredential {
      */
     private final String credentialProvider;
 
-    @OutputCustomType.Constructor({"credential","credentialProvider"})
+    @OutputCustomType.Constructor
     private ProjectEnvironmentRegistryCredential(
-        String credential,
-        String credentialProvider) {
+        @OutputCustomType.Parameter("credential") String credential,
+        @OutputCustomType.Parameter("credentialProvider") String credentialProvider) {
         this.credential = credential;
         this.credentialProvider = credentialProvider;
     }

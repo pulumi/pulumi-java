@@ -34,12 +34,12 @@ public final class MLTransformParametersFindMatchesParameters {
      */
     private final @Nullable String primaryKeyColumnName;
 
-    @OutputCustomType.Constructor({"accuracyCostTradeOff","enforceProvidedLabels","precisionRecallTradeOff","primaryKeyColumnName"})
+    @OutputCustomType.Constructor
     private MLTransformParametersFindMatchesParameters(
-        @Nullable Double accuracyCostTradeOff,
-        @Nullable Boolean enforceProvidedLabels,
-        @Nullable Double precisionRecallTradeOff,
-        @Nullable String primaryKeyColumnName) {
+        @OutputCustomType.Parameter("accuracyCostTradeOff") @Nullable Double accuracyCostTradeOff,
+        @OutputCustomType.Parameter("enforceProvidedLabels") @Nullable Boolean enforceProvidedLabels,
+        @OutputCustomType.Parameter("precisionRecallTradeOff") @Nullable Double precisionRecallTradeOff,
+        @OutputCustomType.Parameter("primaryKeyColumnName") @Nullable String primaryKeyColumnName) {
         this.accuracyCostTradeOff = accuracyCostTradeOff;
         this.enforceProvidedLabels = enforceProvidedLabels;
         this.precisionRecallTradeOff = precisionRecallTradeOff;

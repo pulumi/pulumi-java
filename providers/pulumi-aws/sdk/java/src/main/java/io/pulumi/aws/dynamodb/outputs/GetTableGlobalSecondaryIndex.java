@@ -23,15 +23,15 @@ public final class GetTableGlobalSecondaryIndex {
     private final Integer readCapacity;
     private final Integer writeCapacity;
 
-    @OutputCustomType.Constructor({"hashKey","name","nonKeyAttributes","projectionType","rangeKey","readCapacity","writeCapacity"})
+    @OutputCustomType.Constructor
     private GetTableGlobalSecondaryIndex(
-        String hashKey,
-        String name,
-        List<String> nonKeyAttributes,
-        String projectionType,
-        String rangeKey,
-        Integer readCapacity,
-        Integer writeCapacity) {
+        @OutputCustomType.Parameter("hashKey") String hashKey,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nonKeyAttributes") List<String> nonKeyAttributes,
+        @OutputCustomType.Parameter("projectionType") String projectionType,
+        @OutputCustomType.Parameter("rangeKey") String rangeKey,
+        @OutputCustomType.Parameter("readCapacity") Integer readCapacity,
+        @OutputCustomType.Parameter("writeCapacity") Integer writeCapacity) {
         this.hashKey = hashKey;
         this.name = name;
         this.nonKeyAttributes = nonKeyAttributes;

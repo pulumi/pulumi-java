@@ -37,13 +37,13 @@ public final class BotAliasConversationLogsLogSetting {
      */
     private final @Nullable String resourcePrefix;
 
-    @OutputCustomType.Constructor({"destination","kmsKeyArn","logType","resourceArn","resourcePrefix"})
+    @OutputCustomType.Constructor
     private BotAliasConversationLogsLogSetting(
-        String destination,
-        @Nullable String kmsKeyArn,
-        String logType,
-        String resourceArn,
-        @Nullable String resourcePrefix) {
+        @OutputCustomType.Parameter("destination") String destination,
+        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
+        @OutputCustomType.Parameter("logType") String logType,
+        @OutputCustomType.Parameter("resourceArn") String resourceArn,
+        @OutputCustomType.Parameter("resourcePrefix") @Nullable String resourcePrefix) {
         this.destination = destination;
         this.kmsKeyArn = kmsKeyArn;
         this.logType = logType;

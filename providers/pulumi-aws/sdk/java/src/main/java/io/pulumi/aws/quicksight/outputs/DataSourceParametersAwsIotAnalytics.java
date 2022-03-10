@@ -15,8 +15,8 @@ public final class DataSourceParametersAwsIotAnalytics {
      */
     private final String dataSetName;
 
-    @OutputCustomType.Constructor({"dataSetName"})
-    private DataSourceParametersAwsIotAnalytics(String dataSetName) {
+    @OutputCustomType.Constructor
+    private DataSourceParametersAwsIotAnalytics(@OutputCustomType.Parameter("dataSetName") String dataSetName) {
         this.dataSetName = dataSetName;
     }
 

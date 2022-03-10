@@ -48,15 +48,15 @@ public final class GetOriginAccessIdentityResult {
      */
     private final String s3CanonicalUserId;
 
-    @OutputCustomType.Constructor({"callerReference","cloudfrontAccessIdentityPath","comment","etag","iamArn","id","s3CanonicalUserId"})
+    @OutputCustomType.Constructor
     private GetOriginAccessIdentityResult(
-        String callerReference,
-        String cloudfrontAccessIdentityPath,
-        String comment,
-        String etag,
-        String iamArn,
-        String id,
-        String s3CanonicalUserId) {
+        @OutputCustomType.Parameter("callerReference") String callerReference,
+        @OutputCustomType.Parameter("cloudfrontAccessIdentityPath") String cloudfrontAccessIdentityPath,
+        @OutputCustomType.Parameter("comment") String comment,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("iamArn") String iamArn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("s3CanonicalUserId") String s3CanonicalUserId) {
         this.callerReference = callerReference;
         this.cloudfrontAccessIdentityPath = cloudfrontAccessIdentityPath;
         this.comment = comment;

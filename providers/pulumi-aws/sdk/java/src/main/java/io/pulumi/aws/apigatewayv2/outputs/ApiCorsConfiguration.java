@@ -45,14 +45,14 @@ public final class ApiCorsConfiguration {
      */
     private final @Nullable Integer maxAge;
 
-    @OutputCustomType.Constructor({"allowCredentials","allowHeaders","allowMethods","allowOrigins","exposeHeaders","maxAge"})
+    @OutputCustomType.Constructor
     private ApiCorsConfiguration(
-        @Nullable Boolean allowCredentials,
-        @Nullable List<String> allowHeaders,
-        @Nullable List<String> allowMethods,
-        @Nullable List<String> allowOrigins,
-        @Nullable List<String> exposeHeaders,
-        @Nullable Integer maxAge) {
+        @OutputCustomType.Parameter("allowCredentials") @Nullable Boolean allowCredentials,
+        @OutputCustomType.Parameter("allowHeaders") @Nullable List<String> allowHeaders,
+        @OutputCustomType.Parameter("allowMethods") @Nullable List<String> allowMethods,
+        @OutputCustomType.Parameter("allowOrigins") @Nullable List<String> allowOrigins,
+        @OutputCustomType.Parameter("exposeHeaders") @Nullable List<String> exposeHeaders,
+        @OutputCustomType.Parameter("maxAge") @Nullable Integer maxAge) {
         this.allowCredentials = allowCredentials;
         this.allowHeaders = allowHeaders;
         this.allowMethods = allowMethods;

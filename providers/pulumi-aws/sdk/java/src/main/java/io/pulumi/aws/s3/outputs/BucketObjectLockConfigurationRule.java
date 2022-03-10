@@ -15,8 +15,8 @@ public final class BucketObjectLockConfigurationRule {
      */
     private final BucketObjectLockConfigurationRuleDefaultRetention defaultRetention;
 
-    @OutputCustomType.Constructor({"defaultRetention"})
-    private BucketObjectLockConfigurationRule(BucketObjectLockConfigurationRuleDefaultRetention defaultRetention) {
+    @OutputCustomType.Constructor
+    private BucketObjectLockConfigurationRule(@OutputCustomType.Parameter("defaultRetention") BucketObjectLockConfigurationRuleDefaultRetention defaultRetention) {
         this.defaultRetention = defaultRetention;
     }
 

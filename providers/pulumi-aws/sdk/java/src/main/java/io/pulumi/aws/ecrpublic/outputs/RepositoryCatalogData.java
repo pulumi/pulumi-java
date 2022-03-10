@@ -43,14 +43,14 @@ public final class RepositoryCatalogData {
      */
     private final @Nullable String usageText;
 
-    @OutputCustomType.Constructor({"aboutText","architectures","description","logoImageBlob","operatingSystems","usageText"})
+    @OutputCustomType.Constructor
     private RepositoryCatalogData(
-        @Nullable String aboutText,
-        @Nullable List<String> architectures,
-        @Nullable String description,
-        @Nullable String logoImageBlob,
-        @Nullable List<String> operatingSystems,
-        @Nullable String usageText) {
+        @OutputCustomType.Parameter("aboutText") @Nullable String aboutText,
+        @OutputCustomType.Parameter("architectures") @Nullable List<String> architectures,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("logoImageBlob") @Nullable String logoImageBlob,
+        @OutputCustomType.Parameter("operatingSystems") @Nullable List<String> operatingSystems,
+        @OutputCustomType.Parameter("usageText") @Nullable String usageText) {
         this.aboutText = aboutText;
         this.architectures = architectures;
         this.description = description;

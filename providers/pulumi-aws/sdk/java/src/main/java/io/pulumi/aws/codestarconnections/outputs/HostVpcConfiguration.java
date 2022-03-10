@@ -33,12 +33,12 @@ public final class HostVpcConfiguration {
      */
     private final String vpcId;
 
-    @OutputCustomType.Constructor({"securityGroupIds","subnetIds","tlsCertificate","vpcId"})
+    @OutputCustomType.Constructor
     private HostVpcConfiguration(
-        List<String> securityGroupIds,
-        List<String> subnetIds,
-        @Nullable String tlsCertificate,
-        String vpcId) {
+        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
+        @OutputCustomType.Parameter("tlsCertificate") @Nullable String tlsCertificate,
+        @OutputCustomType.Parameter("vpcId") String vpcId) {
         this.securityGroupIds = securityGroupIds;
         this.subnetIds = subnetIds;
         this.tlsCertificate = tlsCertificate;

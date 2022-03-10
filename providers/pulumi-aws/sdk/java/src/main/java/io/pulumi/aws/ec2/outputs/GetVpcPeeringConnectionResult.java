@@ -55,24 +55,24 @@ public final class GetVpcPeeringConnectionResult {
     private final Map<String,String> tags;
     private final String vpcId;
 
-    @OutputCustomType.Constructor({"accepter","cidrBlock","cidrBlockSets","filters","id","ownerId","peerCidrBlock","peerCidrBlockSets","peerOwnerId","peerRegion","peerVpcId","region","requester","status","tags","vpcId"})
+    @OutputCustomType.Constructor
     private GetVpcPeeringConnectionResult(
-        Map<String,Boolean> accepter,
-        String cidrBlock,
-        List<GetVpcPeeringConnectionCidrBlockSet> cidrBlockSets,
-        @Nullable List<GetVpcPeeringConnectionFilter> filters,
-        String id,
-        String ownerId,
-        String peerCidrBlock,
-        List<GetVpcPeeringConnectionPeerCidrBlockSet> peerCidrBlockSets,
-        String peerOwnerId,
-        String peerRegion,
-        String peerVpcId,
-        String region,
-        Map<String,Boolean> requester,
-        String status,
-        Map<String,String> tags,
-        String vpcId) {
+        @OutputCustomType.Parameter("accepter") Map<String,Boolean> accepter,
+        @OutputCustomType.Parameter("cidrBlock") String cidrBlock,
+        @OutputCustomType.Parameter("cidrBlockSets") List<GetVpcPeeringConnectionCidrBlockSet> cidrBlockSets,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetVpcPeeringConnectionFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ownerId") String ownerId,
+        @OutputCustomType.Parameter("peerCidrBlock") String peerCidrBlock,
+        @OutputCustomType.Parameter("peerCidrBlockSets") List<GetVpcPeeringConnectionPeerCidrBlockSet> peerCidrBlockSets,
+        @OutputCustomType.Parameter("peerOwnerId") String peerOwnerId,
+        @OutputCustomType.Parameter("peerRegion") String peerRegion,
+        @OutputCustomType.Parameter("peerVpcId") String peerVpcId,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("requester") Map<String,Boolean> requester,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("vpcId") String vpcId) {
         this.accepter = accepter;
         this.cidrBlock = cidrBlock;
         this.cidrBlockSets = cidrBlockSets;

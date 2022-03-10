@@ -20,10 +20,10 @@ public final class BotIntent {
      */
     private final String intentVersion;
 
-    @OutputCustomType.Constructor({"intentName","intentVersion"})
+    @OutputCustomType.Constructor
     private BotIntent(
-        String intentName,
-        String intentVersion) {
+        @OutputCustomType.Parameter("intentName") String intentName,
+        @OutputCustomType.Parameter("intentVersion") String intentVersion) {
         this.intentName = intentName;
         this.intentVersion = intentVersion;
     }

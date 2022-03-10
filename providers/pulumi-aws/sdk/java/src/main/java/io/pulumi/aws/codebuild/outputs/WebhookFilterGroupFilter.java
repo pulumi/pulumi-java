@@ -28,11 +28,11 @@ public final class WebhookFilterGroupFilter {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"excludeMatchedPattern","pattern","type"})
+    @OutputCustomType.Constructor
     private WebhookFilterGroupFilter(
-        @Nullable Boolean excludeMatchedPattern,
-        String pattern,
-        String type) {
+        @OutputCustomType.Parameter("excludeMatchedPattern") @Nullable Boolean excludeMatchedPattern,
+        @OutputCustomType.Parameter("pattern") String pattern,
+        @OutputCustomType.Parameter("type") String type) {
         this.excludeMatchedPattern = excludeMatchedPattern;
         this.pattern = pattern;
         this.type = type;

@@ -37,13 +37,13 @@ public final class EndpointAuthenticationOption {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"activeDirectoryId","rootCertificateChainArn","samlProviderArn","selfServiceSamlProviderArn","type"})
+    @OutputCustomType.Constructor
     private EndpointAuthenticationOption(
-        @Nullable String activeDirectoryId,
-        @Nullable String rootCertificateChainArn,
-        @Nullable String samlProviderArn,
-        @Nullable String selfServiceSamlProviderArn,
-        String type) {
+        @OutputCustomType.Parameter("activeDirectoryId") @Nullable String activeDirectoryId,
+        @OutputCustomType.Parameter("rootCertificateChainArn") @Nullable String rootCertificateChainArn,
+        @OutputCustomType.Parameter("samlProviderArn") @Nullable String samlProviderArn,
+        @OutputCustomType.Parameter("selfServiceSamlProviderArn") @Nullable String selfServiceSamlProviderArn,
+        @OutputCustomType.Parameter("type") String type) {
         this.activeDirectoryId = activeDirectoryId;
         this.rootCertificateChainArn = rootCertificateChainArn;
         this.samlProviderArn = samlProviderArn;

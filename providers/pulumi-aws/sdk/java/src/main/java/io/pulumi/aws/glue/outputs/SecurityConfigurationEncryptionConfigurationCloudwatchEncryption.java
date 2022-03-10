@@ -22,10 +22,10 @@ public final class SecurityConfigurationEncryptionConfigurationCloudwatchEncrypt
      */
     private final @Nullable String kmsKeyArn;
 
-    @OutputCustomType.Constructor({"cloudwatchEncryptionMode","kmsKeyArn"})
+    @OutputCustomType.Constructor
     private SecurityConfigurationEncryptionConfigurationCloudwatchEncryption(
-        @Nullable String cloudwatchEncryptionMode,
-        @Nullable String kmsKeyArn) {
+        @OutputCustomType.Parameter("cloudwatchEncryptionMode") @Nullable String cloudwatchEncryptionMode,
+        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn) {
         this.cloudwatchEncryptionMode = cloudwatchEncryptionMode;
         this.kmsKeyArn = kmsKeyArn;
     }

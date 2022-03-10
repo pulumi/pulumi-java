@@ -27,11 +27,11 @@ public final class SpotInstanceRequestLaunchTemplate {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"id","name","version"})
+    @OutputCustomType.Constructor
     private SpotInstanceRequestLaunchTemplate(
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.id = id;
         this.name = name;
         this.version = version;

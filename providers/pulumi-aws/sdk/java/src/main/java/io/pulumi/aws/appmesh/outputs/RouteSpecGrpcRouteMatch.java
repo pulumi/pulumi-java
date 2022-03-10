@@ -35,12 +35,12 @@ public final class RouteSpecGrpcRouteMatch {
      */
     private final @Nullable String serviceName;
 
-    @OutputCustomType.Constructor({"metadatas","methodName","prefix","serviceName"})
+    @OutputCustomType.Constructor
     private RouteSpecGrpcRouteMatch(
-        @Nullable List<RouteSpecGrpcRouteMatchMetadata> metadatas,
-        @Nullable String methodName,
-        @Nullable String prefix,
-        @Nullable String serviceName) {
+        @OutputCustomType.Parameter("metadatas") @Nullable List<RouteSpecGrpcRouteMatchMetadata> metadatas,
+        @OutputCustomType.Parameter("methodName") @Nullable String methodName,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("serviceName") @Nullable String serviceName) {
         this.metadatas = metadatas;
         this.methodName = methodName;
         this.prefix = prefix;

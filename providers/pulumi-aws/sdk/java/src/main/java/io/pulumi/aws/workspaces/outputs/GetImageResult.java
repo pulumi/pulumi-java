@@ -37,15 +37,15 @@ public final class GetImageResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"description","id","imageId","name","operatingSystemType","requiredTenancy","state"})
+    @OutputCustomType.Constructor
     private GetImageResult(
-        String description,
-        String id,
-        String imageId,
-        String name,
-        String operatingSystemType,
-        String requiredTenancy,
-        String state) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("imageId") String imageId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("operatingSystemType") String operatingSystemType,
+        @OutputCustomType.Parameter("requiredTenancy") String requiredTenancy,
+        @OutputCustomType.Parameter("state") String state) {
         this.description = description;
         this.id = id;
         this.imageId = imageId;

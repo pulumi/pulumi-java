@@ -17,8 +17,8 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersCon
      */
     private final @Nullable List<String> items;
 
-    @OutputCustomType.Constructor({"items"})
-    private CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeaders(@Nullable List<String> items) {
+    @OutputCustomType.Constructor
+    private CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeaders(@OutputCustomType.Parameter("items") @Nullable List<String> items) {
         this.items = items;
     }
 

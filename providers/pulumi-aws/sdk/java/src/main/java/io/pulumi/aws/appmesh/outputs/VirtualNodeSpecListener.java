@@ -47,14 +47,14 @@ public final class VirtualNodeSpecListener {
      */
     private final @Nullable VirtualNodeSpecListenerTls tls;
 
-    @OutputCustomType.Constructor({"connectionPool","healthCheck","outlierDetection","portMapping","timeout","tls"})
+    @OutputCustomType.Constructor
     private VirtualNodeSpecListener(
-        @Nullable VirtualNodeSpecListenerConnectionPool connectionPool,
-        @Nullable VirtualNodeSpecListenerHealthCheck healthCheck,
-        @Nullable VirtualNodeSpecListenerOutlierDetection outlierDetection,
-        VirtualNodeSpecListenerPortMapping portMapping,
-        @Nullable VirtualNodeSpecListenerTimeout timeout,
-        @Nullable VirtualNodeSpecListenerTls tls) {
+        @OutputCustomType.Parameter("connectionPool") @Nullable VirtualNodeSpecListenerConnectionPool connectionPool,
+        @OutputCustomType.Parameter("healthCheck") @Nullable VirtualNodeSpecListenerHealthCheck healthCheck,
+        @OutputCustomType.Parameter("outlierDetection") @Nullable VirtualNodeSpecListenerOutlierDetection outlierDetection,
+        @OutputCustomType.Parameter("portMapping") VirtualNodeSpecListenerPortMapping portMapping,
+        @OutputCustomType.Parameter("timeout") @Nullable VirtualNodeSpecListenerTimeout timeout,
+        @OutputCustomType.Parameter("tls") @Nullable VirtualNodeSpecListenerTls tls) {
         this.connectionPool = connectionPool;
         this.healthCheck = healthCheck;
         this.outlierDetection = outlierDetection;

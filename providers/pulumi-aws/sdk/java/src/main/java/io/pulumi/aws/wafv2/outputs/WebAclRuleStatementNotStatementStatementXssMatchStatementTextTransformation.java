@@ -21,10 +21,10 @@ public final class WebAclRuleStatementNotStatementStatementXssMatchStatementText
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"priority","type"})
+    @OutputCustomType.Constructor
     private WebAclRuleStatementNotStatementStatementXssMatchStatementTextTransformation(
-        Integer priority,
-        String type) {
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("type") String type) {
         this.priority = priority;
         this.type = type;
     }

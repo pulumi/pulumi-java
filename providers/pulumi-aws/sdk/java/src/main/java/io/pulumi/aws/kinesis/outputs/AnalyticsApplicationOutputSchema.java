@@ -15,8 +15,8 @@ public final class AnalyticsApplicationOutputSchema {
      */
     private final String recordFormatType;
 
-    @OutputCustomType.Constructor({"recordFormatType"})
-    private AnalyticsApplicationOutputSchema(String recordFormatType) {
+    @OutputCustomType.Constructor
+    private AnalyticsApplicationOutputSchema(@OutputCustomType.Parameter("recordFormatType") String recordFormatType) {
         this.recordFormatType = recordFormatType;
     }
 

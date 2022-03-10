@@ -21,10 +21,10 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
      */
     private final List<String> userIds;
 
-    @OutputCustomType.Constructor({"userGroups","userIds"})
+    @OutputCustomType.Constructor
     private GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission(
-        List<String> userGroups,
-        List<String> userIds) {
+        @OutputCustomType.Parameter("userGroups") List<String> userGroups,
+        @OutputCustomType.Parameter("userIds") List<String> userIds) {
         this.userGroups = userGroups;
         this.userIds = userIds;
     }

@@ -15,8 +15,8 @@ public final class GatewayRouteSpecHttpRouteMatch {
      */
     private final String prefix;
 
-    @OutputCustomType.Constructor({"prefix"})
-    private GatewayRouteSpecHttpRouteMatch(String prefix) {
+    @OutputCustomType.Constructor
+    private GatewayRouteSpecHttpRouteMatch(@OutputCustomType.Parameter("prefix") String prefix) {
         this.prefix = prefix;
     }
 

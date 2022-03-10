@@ -15,8 +15,8 @@ public final class GetDomainClusterConfigZoneAwarenessConfig {
      */
     private final Integer availabilityZoneCount;
 
-    @OutputCustomType.Constructor({"availabilityZoneCount"})
-    private GetDomainClusterConfigZoneAwarenessConfig(Integer availabilityZoneCount) {
+    @OutputCustomType.Constructor
+    private GetDomainClusterConfigZoneAwarenessConfig(@OutputCustomType.Parameter("availabilityZoneCount") Integer availabilityZoneCount) {
         this.availabilityZoneCount = availabilityZoneCount;
     }
 

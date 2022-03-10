@@ -46,17 +46,17 @@ public final class GetContactFlowResult {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"arn","contactFlowId","content","description","id","instanceId","name","tags","type"})
+    @OutputCustomType.Constructor
     private GetContactFlowResult(
-        String arn,
-        String contactFlowId,
-        String content,
-        String description,
-        String id,
-        String instanceId,
-        String name,
-        Map<String,String> tags,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("contactFlowId") String contactFlowId,
+        @OutputCustomType.Parameter("content") String content,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceId") String instanceId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.arn = arn;
         this.contactFlowId = contactFlowId;
         this.content = content;

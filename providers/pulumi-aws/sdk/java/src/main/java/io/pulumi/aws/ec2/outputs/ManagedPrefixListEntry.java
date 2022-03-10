@@ -22,10 +22,10 @@ public final class ManagedPrefixListEntry {
      */
     private final @Nullable String description;
 
-    @OutputCustomType.Constructor({"cidr","description"})
+    @OutputCustomType.Constructor
     private ManagedPrefixListEntry(
-        String cidr,
-        @Nullable String description) {
+        @OutputCustomType.Parameter("cidr") String cidr,
+        @OutputCustomType.Parameter("description") @Nullable String description) {
         this.cidr = cidr;
         this.description = description;
     }

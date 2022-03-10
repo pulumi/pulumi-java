@@ -45,14 +45,14 @@ public final class ModelPrimaryContainer {
      */
     private final @Nullable String modelDataUrl;
 
-    @OutputCustomType.Constructor({"containerHostname","environment","image","imageConfig","mode","modelDataUrl"})
+    @OutputCustomType.Constructor
     private ModelPrimaryContainer(
-        @Nullable String containerHostname,
-        @Nullable Map<String,String> environment,
-        String image,
-        @Nullable ModelPrimaryContainerImageConfig imageConfig,
-        @Nullable String mode,
-        @Nullable String modelDataUrl) {
+        @OutputCustomType.Parameter("containerHostname") @Nullable String containerHostname,
+        @OutputCustomType.Parameter("environment") @Nullable Map<String,String> environment,
+        @OutputCustomType.Parameter("image") String image,
+        @OutputCustomType.Parameter("imageConfig") @Nullable ModelPrimaryContainerImageConfig imageConfig,
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("modelDataUrl") @Nullable String modelDataUrl) {
         this.containerHostname = containerHostname;
         this.environment = environment;
         this.image = image;

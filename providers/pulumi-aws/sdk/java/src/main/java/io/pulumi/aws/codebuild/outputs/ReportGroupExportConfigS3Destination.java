@@ -39,13 +39,13 @@ public final class ReportGroupExportConfigS3Destination {
      */
     private final @Nullable String path;
 
-    @OutputCustomType.Constructor({"bucket","encryptionDisabled","encryptionKey","packaging","path"})
+    @OutputCustomType.Constructor
     private ReportGroupExportConfigS3Destination(
-        String bucket,
-        @Nullable Boolean encryptionDisabled,
-        String encryptionKey,
-        @Nullable String packaging,
-        @Nullable String path) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("encryptionDisabled") @Nullable Boolean encryptionDisabled,
+        @OutputCustomType.Parameter("encryptionKey") String encryptionKey,
+        @OutputCustomType.Parameter("packaging") @Nullable String packaging,
+        @OutputCustomType.Parameter("path") @Nullable String path) {
         this.bucket = bucket;
         this.encryptionDisabled = encryptionDisabled;
         this.encryptionKey = encryptionKey;

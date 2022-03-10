@@ -27,12 +27,12 @@ public final class GetAccessPointsResult {
      */
     private final List<String> ids;
 
-    @OutputCustomType.Constructor({"arns","fileSystemId","id","ids"})
+    @OutputCustomType.Constructor
     private GetAccessPointsResult(
-        List<String> arns,
-        String fileSystemId,
-        String id,
-        List<String> ids) {
+        @OutputCustomType.Parameter("arns") List<String> arns,
+        @OutputCustomType.Parameter("fileSystemId") String fileSystemId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ids") List<String> ids) {
         this.arns = arns;
         this.fileSystemId = fileSystemId;
         this.id = id;

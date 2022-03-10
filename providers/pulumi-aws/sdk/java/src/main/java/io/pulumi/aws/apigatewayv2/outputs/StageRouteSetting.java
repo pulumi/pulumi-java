@@ -47,14 +47,14 @@ public final class StageRouteSetting {
      */
     private final @Nullable Double throttlingRateLimit;
 
-    @OutputCustomType.Constructor({"dataTraceEnabled","detailedMetricsEnabled","loggingLevel","routeKey","throttlingBurstLimit","throttlingRateLimit"})
+    @OutputCustomType.Constructor
     private StageRouteSetting(
-        @Nullable Boolean dataTraceEnabled,
-        @Nullable Boolean detailedMetricsEnabled,
-        @Nullable String loggingLevel,
-        String routeKey,
-        @Nullable Integer throttlingBurstLimit,
-        @Nullable Double throttlingRateLimit) {
+        @OutputCustomType.Parameter("dataTraceEnabled") @Nullable Boolean dataTraceEnabled,
+        @OutputCustomType.Parameter("detailedMetricsEnabled") @Nullable Boolean detailedMetricsEnabled,
+        @OutputCustomType.Parameter("loggingLevel") @Nullable String loggingLevel,
+        @OutputCustomType.Parameter("routeKey") String routeKey,
+        @OutputCustomType.Parameter("throttlingBurstLimit") @Nullable Integer throttlingBurstLimit,
+        @OutputCustomType.Parameter("throttlingRateLimit") @Nullable Double throttlingRateLimit) {
         this.dataTraceEnabled = dataTraceEnabled;
         this.detailedMetricsEnabled = detailedMetricsEnabled;
         this.loggingLevel = loggingLevel;

@@ -20,10 +20,10 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfil
      */
     private final String queryArg;
 
-    @OutputCustomType.Constructor({"profileId","queryArg"})
+    @OutputCustomType.Constructor
     private FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItem(
-        String profileId,
-        String queryArg) {
+        @OutputCustomType.Parameter("profileId") String profileId,
+        @OutputCustomType.Parameter("queryArg") String queryArg) {
         this.profileId = profileId;
         this.queryArg = queryArg;
     }

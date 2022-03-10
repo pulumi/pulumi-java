@@ -86,21 +86,21 @@ public final class CatalogTableStorageDescriptor {
      */
     private final @Nullable Boolean storedAsSubDirectories;
 
-    @OutputCustomType.Constructor({"bucketColumns","columns","compressed","inputFormat","location","numberOfBuckets","outputFormat","parameters","schemaReference","serDeInfo","skewedInfo","sortColumns","storedAsSubDirectories"})
+    @OutputCustomType.Constructor
     private CatalogTableStorageDescriptor(
-        @Nullable List<String> bucketColumns,
-        @Nullable List<CatalogTableStorageDescriptorColumn> columns,
-        @Nullable Boolean compressed,
-        @Nullable String inputFormat,
-        @Nullable String location,
-        @Nullable Integer numberOfBuckets,
-        @Nullable String outputFormat,
-        @Nullable Map<String,String> parameters,
-        @Nullable CatalogTableStorageDescriptorSchemaReference schemaReference,
-        @Nullable CatalogTableStorageDescriptorSerDeInfo serDeInfo,
-        @Nullable CatalogTableStorageDescriptorSkewedInfo skewedInfo,
-        @Nullable List<CatalogTableStorageDescriptorSortColumn> sortColumns,
-        @Nullable Boolean storedAsSubDirectories) {
+        @OutputCustomType.Parameter("bucketColumns") @Nullable List<String> bucketColumns,
+        @OutputCustomType.Parameter("columns") @Nullable List<CatalogTableStorageDescriptorColumn> columns,
+        @OutputCustomType.Parameter("compressed") @Nullable Boolean compressed,
+        @OutputCustomType.Parameter("inputFormat") @Nullable String inputFormat,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("numberOfBuckets") @Nullable Integer numberOfBuckets,
+        @OutputCustomType.Parameter("outputFormat") @Nullable String outputFormat,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,String> parameters,
+        @OutputCustomType.Parameter("schemaReference") @Nullable CatalogTableStorageDescriptorSchemaReference schemaReference,
+        @OutputCustomType.Parameter("serDeInfo") @Nullable CatalogTableStorageDescriptorSerDeInfo serDeInfo,
+        @OutputCustomType.Parameter("skewedInfo") @Nullable CatalogTableStorageDescriptorSkewedInfo skewedInfo,
+        @OutputCustomType.Parameter("sortColumns") @Nullable List<CatalogTableStorageDescriptorSortColumn> sortColumns,
+        @OutputCustomType.Parameter("storedAsSubDirectories") @Nullable Boolean storedAsSubDirectories) {
         this.bucketColumns = bucketColumns;
         this.columns = columns;
         this.compressed = compressed;

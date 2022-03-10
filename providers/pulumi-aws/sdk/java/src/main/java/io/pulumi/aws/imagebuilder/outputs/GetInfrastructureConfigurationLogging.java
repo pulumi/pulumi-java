@@ -16,8 +16,8 @@ public final class GetInfrastructureConfigurationLogging {
      */
     private final List<GetInfrastructureConfigurationLoggingS3Log> s3Logs;
 
-    @OutputCustomType.Constructor({"s3Logs"})
-    private GetInfrastructureConfigurationLogging(List<GetInfrastructureConfigurationLoggingS3Log> s3Logs) {
+    @OutputCustomType.Constructor
+    private GetInfrastructureConfigurationLogging(@OutputCustomType.Parameter("s3Logs") List<GetInfrastructureConfigurationLoggingS3Log> s3Logs) {
         this.s3Logs = s3Logs;
     }
 

@@ -80,20 +80,20 @@ public final class PartitionStorageDescriptor {
      */
     private final @Nullable Boolean storedAsSubDirectories;
 
-    @OutputCustomType.Constructor({"bucketColumns","columns","compressed","inputFormat","location","numberOfBuckets","outputFormat","parameters","serDeInfo","skewedInfo","sortColumns","storedAsSubDirectories"})
+    @OutputCustomType.Constructor
     private PartitionStorageDescriptor(
-        @Nullable List<String> bucketColumns,
-        @Nullable List<PartitionStorageDescriptorColumn> columns,
-        @Nullable Boolean compressed,
-        @Nullable String inputFormat,
-        @Nullable String location,
-        @Nullable Integer numberOfBuckets,
-        @Nullable String outputFormat,
-        @Nullable Map<String,String> parameters,
-        @Nullable PartitionStorageDescriptorSerDeInfo serDeInfo,
-        @Nullable PartitionStorageDescriptorSkewedInfo skewedInfo,
-        @Nullable List<PartitionStorageDescriptorSortColumn> sortColumns,
-        @Nullable Boolean storedAsSubDirectories) {
+        @OutputCustomType.Parameter("bucketColumns") @Nullable List<String> bucketColumns,
+        @OutputCustomType.Parameter("columns") @Nullable List<PartitionStorageDescriptorColumn> columns,
+        @OutputCustomType.Parameter("compressed") @Nullable Boolean compressed,
+        @OutputCustomType.Parameter("inputFormat") @Nullable String inputFormat,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("numberOfBuckets") @Nullable Integer numberOfBuckets,
+        @OutputCustomType.Parameter("outputFormat") @Nullable String outputFormat,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,String> parameters,
+        @OutputCustomType.Parameter("serDeInfo") @Nullable PartitionStorageDescriptorSerDeInfo serDeInfo,
+        @OutputCustomType.Parameter("skewedInfo") @Nullable PartitionStorageDescriptorSkewedInfo skewedInfo,
+        @OutputCustomType.Parameter("sortColumns") @Nullable List<PartitionStorageDescriptorSortColumn> sortColumns,
+        @OutputCustomType.Parameter("storedAsSubDirectories") @Nullable Boolean storedAsSubDirectories) {
         this.bucketColumns = bucketColumns;
         this.columns = columns;
         this.compressed = compressed;

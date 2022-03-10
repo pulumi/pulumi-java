@@ -22,10 +22,10 @@ public final class EventTargetRetryPolicy {
      */
     private final @Nullable Integer maximumRetryAttempts;
 
-    @OutputCustomType.Constructor({"maximumEventAgeInSeconds","maximumRetryAttempts"})
+    @OutputCustomType.Constructor
     private EventTargetRetryPolicy(
-        @Nullable Integer maximumEventAgeInSeconds,
-        @Nullable Integer maximumRetryAttempts) {
+        @OutputCustomType.Parameter("maximumEventAgeInSeconds") @Nullable Integer maximumEventAgeInSeconds,
+        @OutputCustomType.Parameter("maximumRetryAttempts") @Nullable Integer maximumRetryAttempts) {
         this.maximumEventAgeInSeconds = maximumEventAgeInSeconds;
         this.maximumRetryAttempts = maximumRetryAttempts;
     }

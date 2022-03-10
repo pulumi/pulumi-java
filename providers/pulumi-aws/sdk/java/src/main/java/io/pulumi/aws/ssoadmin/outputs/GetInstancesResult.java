@@ -26,11 +26,11 @@ public final class GetInstancesResult {
      */
     private final List<String> identityStoreIds;
 
-    @OutputCustomType.Constructor({"arns","id","identityStoreIds"})
+    @OutputCustomType.Constructor
     private GetInstancesResult(
-        List<String> arns,
-        String id,
-        List<String> identityStoreIds) {
+        @OutputCustomType.Parameter("arns") List<String> arns,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identityStoreIds") List<String> identityStoreIds) {
         this.arns = arns;
         this.id = id;
         this.identityStoreIds = identityStoreIds;

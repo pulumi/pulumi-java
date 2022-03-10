@@ -77,21 +77,21 @@ public final class PresetVideo {
      */
     private final @Nullable String sizingPolicy;
 
-    @OutputCustomType.Constructor({"aspectRatio","bitRate","codec","displayAspectRatio","fixedGop","frameRate","keyframesMaxDist","maxFrameRate","maxHeight","maxWidth","paddingPolicy","resolution","sizingPolicy"})
+    @OutputCustomType.Constructor
     private PresetVideo(
-        @Nullable String aspectRatio,
-        @Nullable String bitRate,
-        @Nullable String codec,
-        @Nullable String displayAspectRatio,
-        @Nullable String fixedGop,
-        @Nullable String frameRate,
-        @Nullable String keyframesMaxDist,
-        @Nullable String maxFrameRate,
-        @Nullable String maxHeight,
-        @Nullable String maxWidth,
-        @Nullable String paddingPolicy,
-        @Nullable String resolution,
-        @Nullable String sizingPolicy) {
+        @OutputCustomType.Parameter("aspectRatio") @Nullable String aspectRatio,
+        @OutputCustomType.Parameter("bitRate") @Nullable String bitRate,
+        @OutputCustomType.Parameter("codec") @Nullable String codec,
+        @OutputCustomType.Parameter("displayAspectRatio") @Nullable String displayAspectRatio,
+        @OutputCustomType.Parameter("fixedGop") @Nullable String fixedGop,
+        @OutputCustomType.Parameter("frameRate") @Nullable String frameRate,
+        @OutputCustomType.Parameter("keyframesMaxDist") @Nullable String keyframesMaxDist,
+        @OutputCustomType.Parameter("maxFrameRate") @Nullable String maxFrameRate,
+        @OutputCustomType.Parameter("maxHeight") @Nullable String maxHeight,
+        @OutputCustomType.Parameter("maxWidth") @Nullable String maxWidth,
+        @OutputCustomType.Parameter("paddingPolicy") @Nullable String paddingPolicy,
+        @OutputCustomType.Parameter("resolution") @Nullable String resolution,
+        @OutputCustomType.Parameter("sizingPolicy") @Nullable String sizingPolicy) {
         this.aspectRatio = aspectRatio;
         this.bitRate = bitRate;
         this.codec = codec;

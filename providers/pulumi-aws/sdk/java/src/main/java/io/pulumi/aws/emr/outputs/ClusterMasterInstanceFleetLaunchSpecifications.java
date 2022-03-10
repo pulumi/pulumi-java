@@ -23,10 +23,10 @@ public final class ClusterMasterInstanceFleetLaunchSpecifications {
      */
     private final @Nullable List<ClusterMasterInstanceFleetLaunchSpecificationsSpotSpecification> spotSpecifications;
 
-    @OutputCustomType.Constructor({"onDemandSpecifications","spotSpecifications"})
+    @OutputCustomType.Constructor
     private ClusterMasterInstanceFleetLaunchSpecifications(
-        @Nullable List<ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecification> onDemandSpecifications,
-        @Nullable List<ClusterMasterInstanceFleetLaunchSpecificationsSpotSpecification> spotSpecifications) {
+        @OutputCustomType.Parameter("onDemandSpecifications") @Nullable List<ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecification> onDemandSpecifications,
+        @OutputCustomType.Parameter("spotSpecifications") @Nullable List<ClusterMasterInstanceFleetLaunchSpecificationsSpotSpecification> spotSpecifications) {
         this.onDemandSpecifications = onDemandSpecifications;
         this.spotSpecifications = spotSpecifications;
     }

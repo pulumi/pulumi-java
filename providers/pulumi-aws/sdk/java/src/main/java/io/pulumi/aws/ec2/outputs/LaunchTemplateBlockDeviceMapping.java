@@ -35,12 +35,12 @@ public final class LaunchTemplateBlockDeviceMapping {
      */
     private final @Nullable String virtualName;
 
-    @OutputCustomType.Constructor({"deviceName","ebs","noDevice","virtualName"})
+    @OutputCustomType.Constructor
     private LaunchTemplateBlockDeviceMapping(
-        @Nullable String deviceName,
-        @Nullable LaunchTemplateBlockDeviceMappingEbs ebs,
-        @Nullable String noDevice,
-        @Nullable String virtualName) {
+        @OutputCustomType.Parameter("deviceName") @Nullable String deviceName,
+        @OutputCustomType.Parameter("ebs") @Nullable LaunchTemplateBlockDeviceMappingEbs ebs,
+        @OutputCustomType.Parameter("noDevice") @Nullable String noDevice,
+        @OutputCustomType.Parameter("virtualName") @Nullable String virtualName) {
         this.deviceName = deviceName;
         this.ebs = ebs;
         this.noDevice = noDevice;

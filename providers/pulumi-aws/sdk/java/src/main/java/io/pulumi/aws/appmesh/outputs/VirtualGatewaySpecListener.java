@@ -35,12 +35,12 @@ public final class VirtualGatewaySpecListener {
      */
     private final @Nullable VirtualGatewaySpecListenerTls tls;
 
-    @OutputCustomType.Constructor({"connectionPool","healthCheck","portMapping","tls"})
+    @OutputCustomType.Constructor
     private VirtualGatewaySpecListener(
-        @Nullable VirtualGatewaySpecListenerConnectionPool connectionPool,
-        @Nullable VirtualGatewaySpecListenerHealthCheck healthCheck,
-        VirtualGatewaySpecListenerPortMapping portMapping,
-        @Nullable VirtualGatewaySpecListenerTls tls) {
+        @OutputCustomType.Parameter("connectionPool") @Nullable VirtualGatewaySpecListenerConnectionPool connectionPool,
+        @OutputCustomType.Parameter("healthCheck") @Nullable VirtualGatewaySpecListenerHealthCheck healthCheck,
+        @OutputCustomType.Parameter("portMapping") VirtualGatewaySpecListenerPortMapping portMapping,
+        @OutputCustomType.Parameter("tls") @Nullable VirtualGatewaySpecListenerTls tls) {
         this.connectionPool = connectionPool;
         this.healthCheck = healthCheck;
         this.portMapping = portMapping;

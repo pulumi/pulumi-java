@@ -38,13 +38,13 @@ public final class TriggerTrigger {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"branches","customData","destinationArn","events","name"})
+    @OutputCustomType.Constructor
     private TriggerTrigger(
-        @Nullable List<String> branches,
-        @Nullable String customData,
-        String destinationArn,
-        List<String> events,
-        String name) {
+        @OutputCustomType.Parameter("branches") @Nullable List<String> branches,
+        @OutputCustomType.Parameter("customData") @Nullable String customData,
+        @OutputCustomType.Parameter("destinationArn") String destinationArn,
+        @OutputCustomType.Parameter("events") List<String> events,
+        @OutputCustomType.Parameter("name") String name) {
         this.branches = branches;
         this.customData = customData;
         this.destinationArn = destinationArn;

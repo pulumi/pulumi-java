@@ -33,12 +33,12 @@ public final class VirtualNodeSpecListenerOutlierDetection {
      */
     private final Integer maxServerErrors;
 
-    @OutputCustomType.Constructor({"baseEjectionDuration","interval","maxEjectionPercent","maxServerErrors"})
+    @OutputCustomType.Constructor
     private VirtualNodeSpecListenerOutlierDetection(
-        VirtualNodeSpecListenerOutlierDetectionBaseEjectionDuration baseEjectionDuration,
-        VirtualNodeSpecListenerOutlierDetectionInterval interval,
-        Integer maxEjectionPercent,
-        Integer maxServerErrors) {
+        @OutputCustomType.Parameter("baseEjectionDuration") VirtualNodeSpecListenerOutlierDetectionBaseEjectionDuration baseEjectionDuration,
+        @OutputCustomType.Parameter("interval") VirtualNodeSpecListenerOutlierDetectionInterval interval,
+        @OutputCustomType.Parameter("maxEjectionPercent") Integer maxEjectionPercent,
+        @OutputCustomType.Parameter("maxServerErrors") Integer maxServerErrors) {
         this.baseEjectionDuration = baseEjectionDuration;
         this.interval = interval;
         this.maxEjectionPercent = maxEjectionPercent;

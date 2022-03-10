@@ -24,11 +24,11 @@ public final class GetInstanceTypesResult {
      */
     private final List<String> instanceTypes;
 
-    @OutputCustomType.Constructor({"filters","id","instanceTypes"})
+    @OutputCustomType.Constructor
     private GetInstanceTypesResult(
-        @Nullable List<GetInstanceTypesFilter> filters,
-        String id,
-        List<String> instanceTypes) {
+        @OutputCustomType.Parameter("filters") @Nullable List<GetInstanceTypesFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceTypes") List<String> instanceTypes) {
         this.filters = filters;
         this.id = id;
         this.instanceTypes = instanceTypes;

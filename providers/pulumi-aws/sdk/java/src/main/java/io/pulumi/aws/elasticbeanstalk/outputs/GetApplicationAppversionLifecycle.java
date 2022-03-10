@@ -32,12 +32,12 @@ public final class GetApplicationAppversionLifecycle {
      */
     private final String serviceRole;
 
-    @OutputCustomType.Constructor({"deleteSourceFromS3","maxAgeInDays","maxCount","serviceRole"})
+    @OutputCustomType.Constructor
     private GetApplicationAppversionLifecycle(
-        Boolean deleteSourceFromS3,
-        Integer maxAgeInDays,
-        Integer maxCount,
-        String serviceRole) {
+        @OutputCustomType.Parameter("deleteSourceFromS3") Boolean deleteSourceFromS3,
+        @OutputCustomType.Parameter("maxAgeInDays") Integer maxAgeInDays,
+        @OutputCustomType.Parameter("maxCount") Integer maxCount,
+        @OutputCustomType.Parameter("serviceRole") String serviceRole) {
         this.deleteSourceFromS3 = deleteSourceFromS3;
         this.maxAgeInDays = maxAgeInDays;
         this.maxCount = maxCount;

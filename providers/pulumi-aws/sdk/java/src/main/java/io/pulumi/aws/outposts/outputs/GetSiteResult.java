@@ -22,12 +22,12 @@ public final class GetSiteResult {
     private final String id;
     private final String name;
 
-    @OutputCustomType.Constructor({"accountId","description","id","name"})
+    @OutputCustomType.Constructor
     private GetSiteResult(
-        String accountId,
-        String description,
-        String id,
-        String name) {
+        @OutputCustomType.Parameter("accountId") String accountId,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name) {
         this.accountId = accountId;
         this.description = description;
         this.id = id;

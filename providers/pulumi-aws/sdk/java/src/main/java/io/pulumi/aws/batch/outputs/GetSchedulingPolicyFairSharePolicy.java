@@ -23,11 +23,11 @@ public final class GetSchedulingPolicyFairSharePolicy {
      */
     private final List<GetSchedulingPolicyFairSharePolicyShareDistribution> shareDistributions;
 
-    @OutputCustomType.Constructor({"computeReservation","shareDecaySeconds","shareDistributions"})
+    @OutputCustomType.Constructor
     private GetSchedulingPolicyFairSharePolicy(
-        Integer computeReservation,
-        Integer shareDecaySeconds,
-        List<GetSchedulingPolicyFairSharePolicyShareDistribution> shareDistributions) {
+        @OutputCustomType.Parameter("computeReservation") Integer computeReservation,
+        @OutputCustomType.Parameter("shareDecaySeconds") Integer shareDecaySeconds,
+        @OutputCustomType.Parameter("shareDistributions") List<GetSchedulingPolicyFairSharePolicyShareDistribution> shareDistributions) {
         this.computeReservation = computeReservation;
         this.shareDecaySeconds = shareDecaySeconds;
         this.shareDistributions = shareDistributions;

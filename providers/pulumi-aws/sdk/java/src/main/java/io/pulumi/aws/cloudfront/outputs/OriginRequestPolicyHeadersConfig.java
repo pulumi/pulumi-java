@@ -15,10 +15,10 @@ public final class OriginRequestPolicyHeadersConfig {
     private final @Nullable String headerBehavior;
     private final @Nullable OriginRequestPolicyHeadersConfigHeaders headers;
 
-    @OutputCustomType.Constructor({"headerBehavior","headers"})
+    @OutputCustomType.Constructor
     private OriginRequestPolicyHeadersConfig(
-        @Nullable String headerBehavior,
-        @Nullable OriginRequestPolicyHeadersConfigHeaders headers) {
+        @OutputCustomType.Parameter("headerBehavior") @Nullable String headerBehavior,
+        @OutputCustomType.Parameter("headers") @Nullable OriginRequestPolicyHeadersConfigHeaders headers) {
         this.headerBehavior = headerBehavior;
         this.headers = headers;
     }

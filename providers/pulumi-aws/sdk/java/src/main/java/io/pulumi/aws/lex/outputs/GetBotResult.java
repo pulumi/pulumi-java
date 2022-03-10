@@ -100,25 +100,25 @@ public final class GetBotResult {
      */
     private final String voiceId;
 
-    @OutputCustomType.Constructor({"arn","checksum","childDirected","createdDate","description","detectSentiment","enableModelImprovements","failureReason","id","idleSessionTtlInSeconds","lastUpdatedDate","locale","name","nluIntentConfidenceThreshold","status","version","voiceId"})
+    @OutputCustomType.Constructor
     private GetBotResult(
-        String arn,
-        String checksum,
-        Boolean childDirected,
-        String createdDate,
-        String description,
-        Boolean detectSentiment,
-        Boolean enableModelImprovements,
-        String failureReason,
-        String id,
-        Integer idleSessionTtlInSeconds,
-        String lastUpdatedDate,
-        String locale,
-        String name,
-        Double nluIntentConfidenceThreshold,
-        String status,
-        @Nullable String version,
-        String voiceId) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("checksum") String checksum,
+        @OutputCustomType.Parameter("childDirected") Boolean childDirected,
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("detectSentiment") Boolean detectSentiment,
+        @OutputCustomType.Parameter("enableModelImprovements") Boolean enableModelImprovements,
+        @OutputCustomType.Parameter("failureReason") String failureReason,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("idleSessionTtlInSeconds") Integer idleSessionTtlInSeconds,
+        @OutputCustomType.Parameter("lastUpdatedDate") String lastUpdatedDate,
+        @OutputCustomType.Parameter("locale") String locale,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nluIntentConfidenceThreshold") Double nluIntentConfidenceThreshold,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("version") @Nullable String version,
+        @OutputCustomType.Parameter("voiceId") String voiceId) {
         this.arn = arn;
         this.checksum = checksum;
         this.childDirected = childDirected;

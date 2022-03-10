@@ -24,10 +24,10 @@ public final class DistributionTrustedKeyGroup {
      */
     private final @Nullable List<DistributionTrustedKeyGroupItem> items;
 
-    @OutputCustomType.Constructor({"enabled","items"})
+    @OutputCustomType.Constructor
     private DistributionTrustedKeyGroup(
-        @Nullable Boolean enabled,
-        @Nullable List<DistributionTrustedKeyGroupItem> items) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("items") @Nullable List<DistributionTrustedKeyGroupItem> items) {
         this.enabled = enabled;
         this.items = items;
     }

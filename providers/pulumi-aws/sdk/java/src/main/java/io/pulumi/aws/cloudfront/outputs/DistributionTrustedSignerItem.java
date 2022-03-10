@@ -23,10 +23,10 @@ public final class DistributionTrustedSignerItem {
      */
     private final @Nullable List<String> keyPairIds;
 
-    @OutputCustomType.Constructor({"awsAccountNumber","keyPairIds"})
+    @OutputCustomType.Constructor
     private DistributionTrustedSignerItem(
-        @Nullable String awsAccountNumber,
-        @Nullable List<String> keyPairIds) {
+        @OutputCustomType.Parameter("awsAccountNumber") @Nullable String awsAccountNumber,
+        @OutputCustomType.Parameter("keyPairIds") @Nullable List<String> keyPairIds) {
         this.awsAccountNumber = awsAccountNumber;
         this.keyPairIds = keyPairIds;
     }

@@ -23,11 +23,11 @@ public final class GetOrganizationalUnitsResult {
     private final String id;
     private final String parentId;
 
-    @OutputCustomType.Constructor({"childrens","id","parentId"})
+    @OutputCustomType.Constructor
     private GetOrganizationalUnitsResult(
-        List<GetOrganizationalUnitsChildren> childrens,
-        String id,
-        String parentId) {
+        @OutputCustomType.Parameter("childrens") List<GetOrganizationalUnitsChildren> childrens,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("parentId") String parentId) {
         this.childrens = childrens;
         this.id = id;
         this.parentId = parentId;

@@ -29,12 +29,12 @@ public final class GetDistributionConfigurationsResult {
      */
     private final List<String> names;
 
-    @OutputCustomType.Constructor({"arns","filters","id","names"})
+    @OutputCustomType.Constructor
     private GetDistributionConfigurationsResult(
-        List<String> arns,
-        @Nullable List<GetDistributionConfigurationsFilter> filters,
-        String id,
-        List<String> names) {
+        @OutputCustomType.Parameter("arns") List<String> arns,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetDistributionConfigurationsFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("names") List<String> names) {
         this.arns = arns;
         this.filters = filters;
         this.id = id;

@@ -28,11 +28,11 @@ public final class CatalogTableStorageDescriptorSkewedInfo {
      */
     private final @Nullable List<String> skewedColumnValues;
 
-    @OutputCustomType.Constructor({"skewedColumnNames","skewedColumnValueLocationMaps","skewedColumnValues"})
+    @OutputCustomType.Constructor
     private CatalogTableStorageDescriptorSkewedInfo(
-        @Nullable List<String> skewedColumnNames,
-        @Nullable Map<String,String> skewedColumnValueLocationMaps,
-        @Nullable List<String> skewedColumnValues) {
+        @OutputCustomType.Parameter("skewedColumnNames") @Nullable List<String> skewedColumnNames,
+        @OutputCustomType.Parameter("skewedColumnValueLocationMaps") @Nullable Map<String,String> skewedColumnValueLocationMaps,
+        @OutputCustomType.Parameter("skewedColumnValues") @Nullable List<String> skewedColumnValues) {
         this.skewedColumnNames = skewedColumnNames;
         this.skewedColumnValueLocationMaps = skewedColumnValueLocationMaps;
         this.skewedColumnValues = skewedColumnValues;

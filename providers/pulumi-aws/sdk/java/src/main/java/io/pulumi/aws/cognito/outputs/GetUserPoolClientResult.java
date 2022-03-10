@@ -114,31 +114,31 @@ public final class GetUserPoolClientResult {
      */
     private final List<String> writeAttributes;
 
-    @OutputCustomType.Constructor({"accessTokenValidity","allowedOauthFlows","allowedOauthFlowsUserPoolClient","allowedOauthScopes","analyticsConfigurations","callbackUrls","clientId","clientSecret","defaultRedirectUri","enableTokenRevocation","explicitAuthFlows","generateSecret","id","idTokenValidity","logoutUrls","name","preventUserExistenceErrors","readAttributes","refreshTokenValidity","supportedIdentityProviders","tokenValidityUnits","userPoolId","writeAttributes"})
+    @OutputCustomType.Constructor
     private GetUserPoolClientResult(
-        Integer accessTokenValidity,
-        List<String> allowedOauthFlows,
-        Boolean allowedOauthFlowsUserPoolClient,
-        List<String> allowedOauthScopes,
-        List<GetUserPoolClientAnalyticsConfiguration> analyticsConfigurations,
-        List<String> callbackUrls,
-        String clientId,
-        String clientSecret,
-        String defaultRedirectUri,
-        Boolean enableTokenRevocation,
-        List<String> explicitAuthFlows,
-        Boolean generateSecret,
-        String id,
-        Integer idTokenValidity,
-        List<String> logoutUrls,
-        String name,
-        String preventUserExistenceErrors,
-        List<String> readAttributes,
-        Integer refreshTokenValidity,
-        List<String> supportedIdentityProviders,
-        List<GetUserPoolClientTokenValidityUnit> tokenValidityUnits,
-        String userPoolId,
-        List<String> writeAttributes) {
+        @OutputCustomType.Parameter("accessTokenValidity") Integer accessTokenValidity,
+        @OutputCustomType.Parameter("allowedOauthFlows") List<String> allowedOauthFlows,
+        @OutputCustomType.Parameter("allowedOauthFlowsUserPoolClient") Boolean allowedOauthFlowsUserPoolClient,
+        @OutputCustomType.Parameter("allowedOauthScopes") List<String> allowedOauthScopes,
+        @OutputCustomType.Parameter("analyticsConfigurations") List<GetUserPoolClientAnalyticsConfiguration> analyticsConfigurations,
+        @OutputCustomType.Parameter("callbackUrls") List<String> callbackUrls,
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("clientSecret") String clientSecret,
+        @OutputCustomType.Parameter("defaultRedirectUri") String defaultRedirectUri,
+        @OutputCustomType.Parameter("enableTokenRevocation") Boolean enableTokenRevocation,
+        @OutputCustomType.Parameter("explicitAuthFlows") List<String> explicitAuthFlows,
+        @OutputCustomType.Parameter("generateSecret") Boolean generateSecret,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("idTokenValidity") Integer idTokenValidity,
+        @OutputCustomType.Parameter("logoutUrls") List<String> logoutUrls,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("preventUserExistenceErrors") String preventUserExistenceErrors,
+        @OutputCustomType.Parameter("readAttributes") List<String> readAttributes,
+        @OutputCustomType.Parameter("refreshTokenValidity") Integer refreshTokenValidity,
+        @OutputCustomType.Parameter("supportedIdentityProviders") List<String> supportedIdentityProviders,
+        @OutputCustomType.Parameter("tokenValidityUnits") List<GetUserPoolClientTokenValidityUnit> tokenValidityUnits,
+        @OutputCustomType.Parameter("userPoolId") String userPoolId,
+        @OutputCustomType.Parameter("writeAttributes") List<String> writeAttributes) {
         this.accessTokenValidity = accessTokenValidity;
         this.allowedOauthFlows = allowedOauthFlows;
         this.allowedOauthFlowsUserPoolClient = allowedOauthFlowsUserPoolClient;

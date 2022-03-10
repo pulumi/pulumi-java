@@ -97,24 +97,24 @@ public final class ComputeEnvironmentComputeResources {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"allocationStrategy","bidPercentage","desiredVcpus","ec2Configuration","ec2KeyPair","imageId","instanceRole","instanceTypes","launchTemplate","maxVcpus","minVcpus","securityGroupIds","spotIamFleetRole","subnets","tags","type"})
+    @OutputCustomType.Constructor
     private ComputeEnvironmentComputeResources(
-        @Nullable String allocationStrategy,
-        @Nullable Integer bidPercentage,
-        @Nullable Integer desiredVcpus,
-        @Nullable ComputeEnvironmentComputeResourcesEc2Configuration ec2Configuration,
-        @Nullable String ec2KeyPair,
-        @Nullable String imageId,
-        @Nullable String instanceRole,
-        @Nullable List<String> instanceTypes,
-        @Nullable ComputeEnvironmentComputeResourcesLaunchTemplate launchTemplate,
-        Integer maxVcpus,
-        @Nullable Integer minVcpus,
-        List<String> securityGroupIds,
-        @Nullable String spotIamFleetRole,
-        List<String> subnets,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("allocationStrategy") @Nullable String allocationStrategy,
+        @OutputCustomType.Parameter("bidPercentage") @Nullable Integer bidPercentage,
+        @OutputCustomType.Parameter("desiredVcpus") @Nullable Integer desiredVcpus,
+        @OutputCustomType.Parameter("ec2Configuration") @Nullable ComputeEnvironmentComputeResourcesEc2Configuration ec2Configuration,
+        @OutputCustomType.Parameter("ec2KeyPair") @Nullable String ec2KeyPair,
+        @OutputCustomType.Parameter("imageId") @Nullable String imageId,
+        @OutputCustomType.Parameter("instanceRole") @Nullable String instanceRole,
+        @OutputCustomType.Parameter("instanceTypes") @Nullable List<String> instanceTypes,
+        @OutputCustomType.Parameter("launchTemplate") @Nullable ComputeEnvironmentComputeResourcesLaunchTemplate launchTemplate,
+        @OutputCustomType.Parameter("maxVcpus") Integer maxVcpus,
+        @OutputCustomType.Parameter("minVcpus") @Nullable Integer minVcpus,
+        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @OutputCustomType.Parameter("spotIamFleetRole") @Nullable String spotIamFleetRole,
+        @OutputCustomType.Parameter("subnets") List<String> subnets,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.allocationStrategy = allocationStrategy;
         this.bidPercentage = bidPercentage;
         this.desiredVcpus = desiredVcpus;

@@ -15,8 +15,8 @@ public final class TrailInsightSelector {
      */
     private final String insightType;
 
-    @OutputCustomType.Constructor({"insightType"})
-    private TrailInsightSelector(String insightType) {
+    @OutputCustomType.Constructor
+    private TrailInsightSelector(@OutputCustomType.Parameter("insightType") String insightType) {
         this.insightType = insightType;
     }
 

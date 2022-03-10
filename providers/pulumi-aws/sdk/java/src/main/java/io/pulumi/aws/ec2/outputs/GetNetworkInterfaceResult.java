@@ -104,28 +104,28 @@ public final class GetNetworkInterfaceResult {
      */
     private final String vpcId;
 
-    @OutputCustomType.Constructor({"arn","associations","attachments","availabilityZone","description","filters","id","interfaceType","ipv6Addresses","macAddress","outpostArn","ownerId","privateDnsName","privateIp","privateIps","requesterId","securityGroups","subnetId","tags","vpcId"})
+    @OutputCustomType.Constructor
     private GetNetworkInterfaceResult(
-        String arn,
-        List<GetNetworkInterfaceAssociation> associations,
-        List<GetNetworkInterfaceAttachment> attachments,
-        String availabilityZone,
-        String description,
-        @Nullable List<GetNetworkInterfaceFilter> filters,
-        String id,
-        String interfaceType,
-        List<String> ipv6Addresses,
-        String macAddress,
-        String outpostArn,
-        String ownerId,
-        String privateDnsName,
-        String privateIp,
-        List<String> privateIps,
-        String requesterId,
-        List<String> securityGroups,
-        String subnetId,
-        Map<String,String> tags,
-        String vpcId) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("associations") List<GetNetworkInterfaceAssociation> associations,
+        @OutputCustomType.Parameter("attachments") List<GetNetworkInterfaceAttachment> attachments,
+        @OutputCustomType.Parameter("availabilityZone") String availabilityZone,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetNetworkInterfaceFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("interfaceType") String interfaceType,
+        @OutputCustomType.Parameter("ipv6Addresses") List<String> ipv6Addresses,
+        @OutputCustomType.Parameter("macAddress") String macAddress,
+        @OutputCustomType.Parameter("outpostArn") String outpostArn,
+        @OutputCustomType.Parameter("ownerId") String ownerId,
+        @OutputCustomType.Parameter("privateDnsName") String privateDnsName,
+        @OutputCustomType.Parameter("privateIp") String privateIp,
+        @OutputCustomType.Parameter("privateIps") List<String> privateIps,
+        @OutputCustomType.Parameter("requesterId") String requesterId,
+        @OutputCustomType.Parameter("securityGroups") List<String> securityGroups,
+        @OutputCustomType.Parameter("subnetId") String subnetId,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("vpcId") String vpcId) {
         this.arn = arn;
         this.associations = associations;
         this.attachments = attachments;

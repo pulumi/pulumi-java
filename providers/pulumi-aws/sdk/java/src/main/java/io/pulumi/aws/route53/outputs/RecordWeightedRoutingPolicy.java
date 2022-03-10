@@ -15,8 +15,8 @@ public final class RecordWeightedRoutingPolicy {
      */
     private final Integer weight;
 
-    @OutputCustomType.Constructor({"weight"})
-    private RecordWeightedRoutingPolicy(Integer weight) {
+    @OutputCustomType.Constructor
+    private RecordWeightedRoutingPolicy(@OutputCustomType.Parameter("weight") Integer weight) {
         this.weight = weight;
     }
 

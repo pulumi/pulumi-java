@@ -47,16 +47,16 @@ public final class GetCachePolicyResult {
      */
     private final List<GetCachePolicyParametersInCacheKeyAndForwardedToOrigin> parametersInCacheKeyAndForwardedToOrigins;
 
-    @OutputCustomType.Constructor({"comment","defaultTtl","etag","id","maxTtl","minTtl","name","parametersInCacheKeyAndForwardedToOrigins"})
+    @OutputCustomType.Constructor
     private GetCachePolicyResult(
-        String comment,
-        Integer defaultTtl,
-        String etag,
-        @Nullable String id,
-        Integer maxTtl,
-        Integer minTtl,
-        @Nullable String name,
-        List<GetCachePolicyParametersInCacheKeyAndForwardedToOrigin> parametersInCacheKeyAndForwardedToOrigins) {
+        @OutputCustomType.Parameter("comment") String comment,
+        @OutputCustomType.Parameter("defaultTtl") Integer defaultTtl,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("maxTtl") Integer maxTtl,
+        @OutputCustomType.Parameter("minTtl") Integer minTtl,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("parametersInCacheKeyAndForwardedToOrigins") List<GetCachePolicyParametersInCacheKeyAndForwardedToOrigin> parametersInCacheKeyAndForwardedToOrigins) {
         this.comment = comment;
         this.defaultTtl = defaultTtl;
         this.etag = etag;

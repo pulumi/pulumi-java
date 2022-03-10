@@ -26,11 +26,11 @@ public final class ClusterStep {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"actionOnFailure","hadoopJarStep","name"})
+    @OutputCustomType.Constructor
     private ClusterStep(
-        String actionOnFailure,
-        ClusterStepHadoopJarStep hadoopJarStep,
-        String name) {
+        @OutputCustomType.Parameter("actionOnFailure") String actionOnFailure,
+        @OutputCustomType.Parameter("hadoopJarStep") ClusterStepHadoopJarStep hadoopJarStep,
+        @OutputCustomType.Parameter("name") String name) {
         this.actionOnFailure = actionOnFailure;
         this.hadoopJarStep = hadoopJarStep;
         this.name = name;

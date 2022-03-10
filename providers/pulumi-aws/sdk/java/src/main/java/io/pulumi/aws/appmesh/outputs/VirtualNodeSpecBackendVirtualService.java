@@ -23,10 +23,10 @@ public final class VirtualNodeSpecBackendVirtualService {
      */
     private final String virtualServiceName;
 
-    @OutputCustomType.Constructor({"clientPolicy","virtualServiceName"})
+    @OutputCustomType.Constructor
     private VirtualNodeSpecBackendVirtualService(
-        @Nullable VirtualNodeSpecBackendVirtualServiceClientPolicy clientPolicy,
-        String virtualServiceName) {
+        @OutputCustomType.Parameter("clientPolicy") @Nullable VirtualNodeSpecBackendVirtualServiceClientPolicy clientPolicy,
+        @OutputCustomType.Parameter("virtualServiceName") String virtualServiceName) {
         this.clientPolicy = clientPolicy;
         this.virtualServiceName = virtualServiceName;
     }

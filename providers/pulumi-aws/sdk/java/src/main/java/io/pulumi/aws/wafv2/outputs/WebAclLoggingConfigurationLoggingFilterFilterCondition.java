@@ -23,10 +23,10 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterCondition {
      */
     private final @Nullable WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameCondition labelNameCondition;
 
-    @OutputCustomType.Constructor({"actionCondition","labelNameCondition"})
+    @OutputCustomType.Constructor
     private WebAclLoggingConfigurationLoggingFilterFilterCondition(
-        @Nullable WebAclLoggingConfigurationLoggingFilterFilterConditionActionCondition actionCondition,
-        @Nullable WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameCondition labelNameCondition) {
+        @OutputCustomType.Parameter("actionCondition") @Nullable WebAclLoggingConfigurationLoggingFilterFilterConditionActionCondition actionCondition,
+        @OutputCustomType.Parameter("labelNameCondition") @Nullable WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameCondition labelNameCondition) {
         this.actionCondition = actionCondition;
         this.labelNameCondition = labelNameCondition;
     }

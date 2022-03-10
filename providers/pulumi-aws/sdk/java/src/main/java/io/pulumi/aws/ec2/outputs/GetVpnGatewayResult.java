@@ -22,16 +22,16 @@ public final class GetVpnGatewayResult {
     private final String state;
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"amazonSideAsn","arn","attachedVpcId","availabilityZone","filters","id","state","tags"})
+    @OutputCustomType.Constructor
     private GetVpnGatewayResult(
-        String amazonSideAsn,
-        String arn,
-        String attachedVpcId,
-        String availabilityZone,
-        @Nullable List<GetVpnGatewayFilter> filters,
-        String id,
-        String state,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("amazonSideAsn") String amazonSideAsn,
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("attachedVpcId") String attachedVpcId,
+        @OutputCustomType.Parameter("availabilityZone") String availabilityZone,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetVpnGatewayFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.amazonSideAsn = amazonSideAsn;
         this.arn = arn;
         this.attachedVpcId = attachedVpcId;

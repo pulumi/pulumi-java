@@ -32,12 +32,12 @@ public final class GetImageRecipeBlockDeviceMapping {
      */
     private final String virtualName;
 
-    @OutputCustomType.Constructor({"deviceName","ebs","noDevice","virtualName"})
+    @OutputCustomType.Constructor
     private GetImageRecipeBlockDeviceMapping(
-        String deviceName,
-        List<GetImageRecipeBlockDeviceMappingEb> ebs,
-        String noDevice,
-        String virtualName) {
+        @OutputCustomType.Parameter("deviceName") String deviceName,
+        @OutputCustomType.Parameter("ebs") List<GetImageRecipeBlockDeviceMappingEb> ebs,
+        @OutputCustomType.Parameter("noDevice") String noDevice,
+        @OutputCustomType.Parameter("virtualName") String virtualName) {
         this.deviceName = deviceName;
         this.ebs = ebs;
         this.noDevice = noDevice;

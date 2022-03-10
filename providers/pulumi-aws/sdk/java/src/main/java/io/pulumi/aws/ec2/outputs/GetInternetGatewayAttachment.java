@@ -20,10 +20,10 @@ public final class GetInternetGatewayAttachment {
      */
     private final String vpcId;
 
-    @OutputCustomType.Constructor({"state","vpcId"})
+    @OutputCustomType.Constructor
     private GetInternetGatewayAttachment(
-        String state,
-        String vpcId) {
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("vpcId") String vpcId) {
         this.state = state;
         this.vpcId = vpcId;
     }

@@ -32,12 +32,12 @@ public final class CanaryTimeline {
      */
     private final @Nullable String lastStopped;
 
-    @OutputCustomType.Constructor({"created","lastModified","lastStarted","lastStopped"})
+    @OutputCustomType.Constructor
     private CanaryTimeline(
-        @Nullable String created,
-        @Nullable String lastModified,
-        @Nullable String lastStarted,
-        @Nullable String lastStopped) {
+        @OutputCustomType.Parameter("created") @Nullable String created,
+        @OutputCustomType.Parameter("lastModified") @Nullable String lastModified,
+        @OutputCustomType.Parameter("lastStarted") @Nullable String lastStarted,
+        @OutputCustomType.Parameter("lastStopped") @Nullable String lastStopped) {
         this.created = created;
         this.lastModified = lastModified;
         this.lastStarted = lastStarted;

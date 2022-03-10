@@ -20,10 +20,10 @@ public final class GetPermissionsDataLocation {
      */
     private final String catalogId;
 
-    @OutputCustomType.Constructor({"arn","catalogId"})
+    @OutputCustomType.Constructor
     private GetPermissionsDataLocation(
-        String arn,
-        String catalogId) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("catalogId") String catalogId) {
         this.arn = arn;
         this.catalogId = catalogId;
     }

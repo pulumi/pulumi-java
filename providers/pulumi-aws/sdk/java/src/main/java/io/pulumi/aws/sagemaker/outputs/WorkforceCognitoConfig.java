@@ -20,10 +20,10 @@ public final class WorkforceCognitoConfig {
      */
     private final String userPool;
 
-    @OutputCustomType.Constructor({"clientId","userPool"})
+    @OutputCustomType.Constructor
     private WorkforceCognitoConfig(
-        String clientId,
-        String userPool) {
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("userPool") String userPool) {
         this.clientId = clientId;
         this.userPool = userPool;
     }

@@ -65,17 +65,17 @@ public final class BucketLifecycleRule {
      */
     private final @Nullable List<BucketLifecycleRuleTransition> transitions;
 
-    @OutputCustomType.Constructor({"abortIncompleteMultipartUploadDays","enabled","expiration","id","noncurrentVersionExpiration","noncurrentVersionTransitions","prefix","tags","transitions"})
+    @OutputCustomType.Constructor
     private BucketLifecycleRule(
-        @Nullable Integer abortIncompleteMultipartUploadDays,
-        Boolean enabled,
-        @Nullable BucketLifecycleRuleExpiration expiration,
-        @Nullable String id,
-        @Nullable BucketLifecycleRuleNoncurrentVersionExpiration noncurrentVersionExpiration,
-        @Nullable List<BucketLifecycleRuleNoncurrentVersionTransition> noncurrentVersionTransitions,
-        @Nullable String prefix,
-        @Nullable Map<String,String> tags,
-        @Nullable List<BucketLifecycleRuleTransition> transitions) {
+        @OutputCustomType.Parameter("abortIncompleteMultipartUploadDays") @Nullable Integer abortIncompleteMultipartUploadDays,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("expiration") @Nullable BucketLifecycleRuleExpiration expiration,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("noncurrentVersionExpiration") @Nullable BucketLifecycleRuleNoncurrentVersionExpiration noncurrentVersionExpiration,
+        @OutputCustomType.Parameter("noncurrentVersionTransitions") @Nullable List<BucketLifecycleRuleNoncurrentVersionTransition> noncurrentVersionTransitions,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("transitions") @Nullable List<BucketLifecycleRuleTransition> transitions) {
         this.abortIncompleteMultipartUploadDays = abortIncompleteMultipartUploadDays;
         this.enabled = enabled;
         this.expiration = expiration;

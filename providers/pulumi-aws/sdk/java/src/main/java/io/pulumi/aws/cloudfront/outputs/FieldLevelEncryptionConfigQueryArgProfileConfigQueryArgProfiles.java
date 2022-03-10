@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfiles {
     private final @Nullable List<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItem> items;
 
-    @OutputCustomType.Constructor({"items"})
-    private FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfiles(@Nullable List<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItem> items) {
+    @OutputCustomType.Constructor
+    private FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfiles(@OutputCustomType.Parameter("items") @Nullable List<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItem> items) {
         this.items = items;
     }
 

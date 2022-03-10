@@ -33,12 +33,12 @@ public final class DomainAssociationSubDomain {
      */
     private final @Nullable Boolean verified;
 
-    @OutputCustomType.Constructor({"branchName","dnsRecord","prefix","verified"})
+    @OutputCustomType.Constructor
     private DomainAssociationSubDomain(
-        String branchName,
-        @Nullable String dnsRecord,
-        String prefix,
-        @Nullable Boolean verified) {
+        @OutputCustomType.Parameter("branchName") String branchName,
+        @OutputCustomType.Parameter("dnsRecord") @Nullable String dnsRecord,
+        @OutputCustomType.Parameter("prefix") String prefix,
+        @OutputCustomType.Parameter("verified") @Nullable Boolean verified) {
         this.branchName = branchName;
         this.dnsRecord = dnsRecord;
         this.prefix = prefix;

@@ -22,10 +22,10 @@ public final class DataSourceElasticsearchConfig {
      */
     private final @Nullable String region;
 
-    @OutputCustomType.Constructor({"endpoint","region"})
+    @OutputCustomType.Constructor
     private DataSourceElasticsearchConfig(
-        String endpoint,
-        @Nullable String region) {
+        @OutputCustomType.Parameter("endpoint") String endpoint,
+        @OutputCustomType.Parameter("region") @Nullable String region) {
         this.endpoint = endpoint;
         this.region = region;
     }

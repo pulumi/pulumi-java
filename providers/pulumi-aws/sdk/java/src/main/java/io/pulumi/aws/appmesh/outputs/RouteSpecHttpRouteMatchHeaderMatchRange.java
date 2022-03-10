@@ -20,10 +20,10 @@ public final class RouteSpecHttpRouteMatchHeaderMatchRange {
      */
     private final Integer start;
 
-    @OutputCustomType.Constructor({"end","start"})
+    @OutputCustomType.Constructor
     private RouteSpecHttpRouteMatchHeaderMatchRange(
-        Integer end,
-        Integer start) {
+        @OutputCustomType.Parameter("end") Integer end,
+        @OutputCustomType.Parameter("start") Integer start) {
         this.end = end;
         this.start = start;
     }

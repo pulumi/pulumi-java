@@ -17,8 +17,8 @@ public final class DomainRetentionPolicy {
      */
     private final @Nullable String homeEfsFileSystem;
 
-    @OutputCustomType.Constructor({"homeEfsFileSystem"})
-    private DomainRetentionPolicy(@Nullable String homeEfsFileSystem) {
+    @OutputCustomType.Constructor
+    private DomainRetentionPolicy(@OutputCustomType.Parameter("homeEfsFileSystem") @Nullable String homeEfsFileSystem) {
         this.homeEfsFileSystem = homeEfsFileSystem;
     }
 

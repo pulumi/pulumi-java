@@ -16,8 +16,8 @@ public final class NfsLocationOnPremConfig {
      */
     private final List<String> agentArns;
 
-    @OutputCustomType.Constructor({"agentArns"})
-    private NfsLocationOnPremConfig(List<String> agentArns) {
+    @OutputCustomType.Constructor
+    private NfsLocationOnPremConfig(@OutputCustomType.Parameter("agentArns") List<String> agentArns) {
         this.agentArns = agentArns;
     }
 

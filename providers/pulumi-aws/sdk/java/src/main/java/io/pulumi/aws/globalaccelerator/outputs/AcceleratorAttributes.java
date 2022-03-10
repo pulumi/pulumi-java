@@ -28,11 +28,11 @@ public final class AcceleratorAttributes {
      */
     private final @Nullable String flowLogsS3Prefix;
 
-    @OutputCustomType.Constructor({"flowLogsEnabled","flowLogsS3Bucket","flowLogsS3Prefix"})
+    @OutputCustomType.Constructor
     private AcceleratorAttributes(
-        @Nullable Boolean flowLogsEnabled,
-        @Nullable String flowLogsS3Bucket,
-        @Nullable String flowLogsS3Prefix) {
+        @OutputCustomType.Parameter("flowLogsEnabled") @Nullable Boolean flowLogsEnabled,
+        @OutputCustomType.Parameter("flowLogsS3Bucket") @Nullable String flowLogsS3Bucket,
+        @OutputCustomType.Parameter("flowLogsS3Prefix") @Nullable String flowLogsS3Prefix) {
         this.flowLogsEnabled = flowLogsEnabled;
         this.flowLogsS3Bucket = flowLogsS3Bucket;
         this.flowLogsS3Prefix = flowLogsS3Prefix;

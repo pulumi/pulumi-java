@@ -37,14 +37,14 @@ public final class GetDirectoryConnectSetting {
      */
     private final String vpcId;
 
-    @OutputCustomType.Constructor({"availabilityZones","connectIps","customerDnsIps","customerUsername","subnetIds","vpcId"})
+    @OutputCustomType.Constructor
     private GetDirectoryConnectSetting(
-        List<String> availabilityZones,
-        List<String> connectIps,
-        List<String> customerDnsIps,
-        String customerUsername,
-        List<String> subnetIds,
-        String vpcId) {
+        @OutputCustomType.Parameter("availabilityZones") List<String> availabilityZones,
+        @OutputCustomType.Parameter("connectIps") List<String> connectIps,
+        @OutputCustomType.Parameter("customerDnsIps") List<String> customerDnsIps,
+        @OutputCustomType.Parameter("customerUsername") String customerUsername,
+        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
+        @OutputCustomType.Parameter("vpcId") String vpcId) {
         this.availabilityZones = availabilityZones;
         this.connectIps = connectIps;
         this.customerDnsIps = customerDnsIps;

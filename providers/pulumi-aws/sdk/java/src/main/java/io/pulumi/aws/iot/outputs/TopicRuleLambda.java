@@ -15,8 +15,8 @@ public final class TopicRuleLambda {
      */
     private final String functionArn;
 
-    @OutputCustomType.Constructor({"functionArn"})
-    private TopicRuleLambda(String functionArn) {
+    @OutputCustomType.Constructor
+    private TopicRuleLambda(@OutputCustomType.Parameter("functionArn") String functionArn) {
         this.functionArn = functionArn;
     }
 

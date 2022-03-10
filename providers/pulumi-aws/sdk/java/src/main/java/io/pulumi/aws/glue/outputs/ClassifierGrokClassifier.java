@@ -27,11 +27,11 @@ public final class ClassifierGrokClassifier {
      */
     private final String grokPattern;
 
-    @OutputCustomType.Constructor({"classification","customPatterns","grokPattern"})
+    @OutputCustomType.Constructor
     private ClassifierGrokClassifier(
-        String classification,
-        @Nullable String customPatterns,
-        String grokPattern) {
+        @OutputCustomType.Parameter("classification") String classification,
+        @OutputCustomType.Parameter("customPatterns") @Nullable String customPatterns,
+        @OutputCustomType.Parameter("grokPattern") String grokPattern) {
         this.classification = classification;
         this.customPatterns = customPatterns;
         this.grokPattern = grokPattern;

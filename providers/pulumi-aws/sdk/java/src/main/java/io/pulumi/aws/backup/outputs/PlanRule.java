@@ -63,17 +63,17 @@ public final class PlanRule {
      */
     private final String targetVaultName;
 
-    @OutputCustomType.Constructor({"completionWindow","copyActions","enableContinuousBackup","lifecycle","recoveryPointTags","ruleName","schedule","startWindow","targetVaultName"})
+    @OutputCustomType.Constructor
     private PlanRule(
-        @Nullable Integer completionWindow,
-        @Nullable List<PlanRuleCopyAction> copyActions,
-        @Nullable Boolean enableContinuousBackup,
-        @Nullable PlanRuleLifecycle lifecycle,
-        @Nullable Map<String,String> recoveryPointTags,
-        String ruleName,
-        @Nullable String schedule,
-        @Nullable Integer startWindow,
-        String targetVaultName) {
+        @OutputCustomType.Parameter("completionWindow") @Nullable Integer completionWindow,
+        @OutputCustomType.Parameter("copyActions") @Nullable List<PlanRuleCopyAction> copyActions,
+        @OutputCustomType.Parameter("enableContinuousBackup") @Nullable Boolean enableContinuousBackup,
+        @OutputCustomType.Parameter("lifecycle") @Nullable PlanRuleLifecycle lifecycle,
+        @OutputCustomType.Parameter("recoveryPointTags") @Nullable Map<String,String> recoveryPointTags,
+        @OutputCustomType.Parameter("ruleName") String ruleName,
+        @OutputCustomType.Parameter("schedule") @Nullable String schedule,
+        @OutputCustomType.Parameter("startWindow") @Nullable Integer startWindow,
+        @OutputCustomType.Parameter("targetVaultName") String targetVaultName) {
         this.completionWindow = completionWindow;
         this.copyActions = copyActions;
         this.enableContinuousBackup = enableContinuousBackup;

@@ -15,8 +15,8 @@ public final class BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploa
      */
     private final Integer daysAfterInitiation;
 
-    @OutputCustomType.Constructor({"daysAfterInitiation"})
-    private BucketLifecycleConfigurationRuleAbortIncompleteMultipartUpload(Integer daysAfterInitiation) {
+    @OutputCustomType.Constructor
+    private BucketLifecycleConfigurationRuleAbortIncompleteMultipartUpload(@OutputCustomType.Parameter("daysAfterInitiation") Integer daysAfterInitiation) {
         this.daysAfterInitiation = daysAfterInitiation;
     }
 

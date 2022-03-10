@@ -18,10 +18,10 @@ public final class ApplicationCloudwatchLoggingOptions {
      */
     private final String logStreamArn;
 
-    @OutputCustomType.Constructor({"cloudwatchLoggingOptionId","logStreamArn"})
+    @OutputCustomType.Constructor
     private ApplicationCloudwatchLoggingOptions(
-        @Nullable String cloudwatchLoggingOptionId,
-        String logStreamArn) {
+        @OutputCustomType.Parameter("cloudwatchLoggingOptionId") @Nullable String cloudwatchLoggingOptionId,
+        @OutputCustomType.Parameter("logStreamArn") String logStreamArn) {
         this.cloudwatchLoggingOptionId = cloudwatchLoggingOptionId;
         this.logStreamArn = logStreamArn;
     }

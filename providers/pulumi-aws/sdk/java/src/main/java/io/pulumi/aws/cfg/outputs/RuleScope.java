@@ -33,12 +33,12 @@ public final class RuleScope {
      */
     private final @Nullable String tagValue;
 
-    @OutputCustomType.Constructor({"complianceResourceId","complianceResourceTypes","tagKey","tagValue"})
+    @OutputCustomType.Constructor
     private RuleScope(
-        @Nullable String complianceResourceId,
-        @Nullable List<String> complianceResourceTypes,
-        @Nullable String tagKey,
-        @Nullable String tagValue) {
+        @OutputCustomType.Parameter("complianceResourceId") @Nullable String complianceResourceId,
+        @OutputCustomType.Parameter("complianceResourceTypes") @Nullable List<String> complianceResourceTypes,
+        @OutputCustomType.Parameter("tagKey") @Nullable String tagKey,
+        @OutputCustomType.Parameter("tagValue") @Nullable String tagValue) {
         this.complianceResourceId = complianceResourceId;
         this.complianceResourceTypes = complianceResourceTypes;
         this.tagKey = tagKey;

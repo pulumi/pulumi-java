@@ -26,16 +26,16 @@ public final class GetParametersByPathResult {
     private final List<String> values;
     private final @Nullable Boolean withDecryption;
 
-    @OutputCustomType.Constructor({"arns","id","names","path","recursive","types","values","withDecryption"})
+    @OutputCustomType.Constructor
     private GetParametersByPathResult(
-        List<String> arns,
-        String id,
-        List<String> names,
-        String path,
-        @Nullable Boolean recursive,
-        List<String> types,
-        List<String> values,
-        @Nullable Boolean withDecryption) {
+        @OutputCustomType.Parameter("arns") List<String> arns,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("names") List<String> names,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("recursive") @Nullable Boolean recursive,
+        @OutputCustomType.Parameter("types") List<String> types,
+        @OutputCustomType.Parameter("values") List<String> values,
+        @OutputCustomType.Parameter("withDecryption") @Nullable Boolean withDecryption) {
         this.arns = arns;
         this.id = id;
         this.names = names;

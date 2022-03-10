@@ -35,15 +35,15 @@ public final class GetDocumentResult {
     private final String id;
     private final String name;
 
-    @OutputCustomType.Constructor({"arn","content","documentFormat","documentType","documentVersion","id","name"})
+    @OutputCustomType.Constructor
     private GetDocumentResult(
-        String arn,
-        String content,
-        @Nullable String documentFormat,
-        String documentType,
-        @Nullable String documentVersion,
-        String id,
-        String name) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("content") String content,
+        @OutputCustomType.Parameter("documentFormat") @Nullable String documentFormat,
+        @OutputCustomType.Parameter("documentType") String documentType,
+        @OutputCustomType.Parameter("documentVersion") @Nullable String documentVersion,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name) {
         this.arn = arn;
         this.content = content;
         this.documentFormat = documentFormat;

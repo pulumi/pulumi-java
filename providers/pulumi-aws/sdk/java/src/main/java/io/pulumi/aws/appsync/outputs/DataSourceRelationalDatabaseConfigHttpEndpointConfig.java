@@ -37,13 +37,13 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfig {
      */
     private final @Nullable String schema;
 
-    @OutputCustomType.Constructor({"awsSecretStoreArn","databaseName","dbClusterIdentifier","region","schema"})
+    @OutputCustomType.Constructor
     private DataSourceRelationalDatabaseConfigHttpEndpointConfig(
-        String awsSecretStoreArn,
-        @Nullable String databaseName,
-        String dbClusterIdentifier,
-        @Nullable String region,
-        @Nullable String schema) {
+        @OutputCustomType.Parameter("awsSecretStoreArn") String awsSecretStoreArn,
+        @OutputCustomType.Parameter("databaseName") @Nullable String databaseName,
+        @OutputCustomType.Parameter("dbClusterIdentifier") String dbClusterIdentifier,
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("schema") @Nullable String schema) {
         this.awsSecretStoreArn = awsSecretStoreArn;
         this.databaseName = databaseName;
         this.dbClusterIdentifier = dbClusterIdentifier;

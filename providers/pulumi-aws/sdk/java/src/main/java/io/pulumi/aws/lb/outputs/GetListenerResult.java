@@ -28,18 +28,18 @@ public final class GetListenerResult {
     private final String sslPolicy;
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"alpnPolicy","arn","certificateArn","defaultActions","id","loadBalancerArn","port","protocol","sslPolicy","tags"})
+    @OutputCustomType.Constructor
     private GetListenerResult(
-        String alpnPolicy,
-        String arn,
-        String certificateArn,
-        List<GetListenerDefaultAction> defaultActions,
-        String id,
-        String loadBalancerArn,
-        Integer port,
-        String protocol,
-        String sslPolicy,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("alpnPolicy") String alpnPolicy,
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("certificateArn") String certificateArn,
+        @OutputCustomType.Parameter("defaultActions") List<GetListenerDefaultAction> defaultActions,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("loadBalancerArn") String loadBalancerArn,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("sslPolicy") String sslPolicy,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.alpnPolicy = alpnPolicy;
         this.arn = arn;
         this.certificateArn = certificateArn;

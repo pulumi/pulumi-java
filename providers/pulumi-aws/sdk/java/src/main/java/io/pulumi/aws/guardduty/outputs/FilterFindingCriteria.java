@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class FilterFindingCriteria {
     private final List<FilterFindingCriteriaCriterion> criterions;
 
-    @OutputCustomType.Constructor({"criterions"})
-    private FilterFindingCriteria(List<FilterFindingCriteriaCriterion> criterions) {
+    @OutputCustomType.Constructor
+    private FilterFindingCriteria(@OutputCustomType.Parameter("criterions") List<FilterFindingCriteriaCriterion> criterions) {
         this.criterions = criterions;
     }
 

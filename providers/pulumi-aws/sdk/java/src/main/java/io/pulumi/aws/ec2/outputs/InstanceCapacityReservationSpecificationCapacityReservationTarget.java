@@ -17,8 +17,8 @@ public final class InstanceCapacityReservationSpecificationCapacityReservationTa
      */
     private final @Nullable String capacityReservationId;
 
-    @OutputCustomType.Constructor({"capacityReservationId"})
-    private InstanceCapacityReservationSpecificationCapacityReservationTarget(@Nullable String capacityReservationId) {
+    @OutputCustomType.Constructor
+    private InstanceCapacityReservationSpecificationCapacityReservationTarget(@OutputCustomType.Parameter("capacityReservationId") @Nullable String capacityReservationId) {
         this.capacityReservationId = capacityReservationId;
     }
 

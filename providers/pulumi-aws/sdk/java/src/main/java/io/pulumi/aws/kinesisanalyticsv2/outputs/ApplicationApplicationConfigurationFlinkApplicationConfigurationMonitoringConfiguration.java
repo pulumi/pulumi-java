@@ -27,11 +27,11 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      */
     private final @Nullable String metricsLevel;
 
-    @OutputCustomType.Constructor({"configurationType","logLevel","metricsLevel"})
+    @OutputCustomType.Constructor
     private ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfiguration(
-        String configurationType,
-        @Nullable String logLevel,
-        @Nullable String metricsLevel) {
+        @OutputCustomType.Parameter("configurationType") String configurationType,
+        @OutputCustomType.Parameter("logLevel") @Nullable String logLevel,
+        @OutputCustomType.Parameter("metricsLevel") @Nullable String metricsLevel) {
         this.configurationType = configurationType;
         this.logLevel = logLevel;
         this.metricsLevel = metricsLevel;

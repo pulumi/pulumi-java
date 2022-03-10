@@ -29,11 +29,11 @@ public final class VirtualNodeSpecListenerTls {
      */
     private final @Nullable VirtualNodeSpecListenerTlsValidation validation;
 
-    @OutputCustomType.Constructor({"certificate","mode","validation"})
+    @OutputCustomType.Constructor
     private VirtualNodeSpecListenerTls(
-        VirtualNodeSpecListenerTlsCertificate certificate,
-        String mode,
-        @Nullable VirtualNodeSpecListenerTlsValidation validation) {
+        @OutputCustomType.Parameter("certificate") VirtualNodeSpecListenerTlsCertificate certificate,
+        @OutputCustomType.Parameter("mode") String mode,
+        @OutputCustomType.Parameter("validation") @Nullable VirtualNodeSpecListenerTlsValidation validation) {
         this.certificate = certificate;
         this.mode = mode;
         this.validation = validation;

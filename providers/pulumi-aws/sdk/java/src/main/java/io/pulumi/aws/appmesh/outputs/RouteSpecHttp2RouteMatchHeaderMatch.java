@@ -39,13 +39,13 @@ public final class RouteSpecHttp2RouteMatchHeaderMatch {
      */
     private final @Nullable String suffix;
 
-    @OutputCustomType.Constructor({"exact","prefix","range","regex","suffix"})
+    @OutputCustomType.Constructor
     private RouteSpecHttp2RouteMatchHeaderMatch(
-        @Nullable String exact,
-        @Nullable String prefix,
-        @Nullable RouteSpecHttp2RouteMatchHeaderMatchRange range,
-        @Nullable String regex,
-        @Nullable String suffix) {
+        @OutputCustomType.Parameter("exact") @Nullable String exact,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("range") @Nullable RouteSpecHttp2RouteMatchHeaderMatchRange range,
+        @OutputCustomType.Parameter("regex") @Nullable String regex,
+        @OutputCustomType.Parameter("suffix") @Nullable String suffix) {
         this.exact = exact;
         this.prefix = prefix;
         this.range = range;

@@ -23,10 +23,10 @@ public final class InventoryDestinationBucketEncryption {
      */
     private final @Nullable InventoryDestinationBucketEncryptionSseS3 sseS3;
 
-    @OutputCustomType.Constructor({"sseKms","sseS3"})
+    @OutputCustomType.Constructor
     private InventoryDestinationBucketEncryption(
-        @Nullable InventoryDestinationBucketEncryptionSseKms sseKms,
-        @Nullable InventoryDestinationBucketEncryptionSseS3 sseS3) {
+        @OutputCustomType.Parameter("sseKms") @Nullable InventoryDestinationBucketEncryptionSseKms sseKms,
+        @OutputCustomType.Parameter("sseS3") @Nullable InventoryDestinationBucketEncryptionSseS3 sseS3) {
         this.sseKms = sseKms;
         this.sseS3 = sseS3;
     }

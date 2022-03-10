@@ -21,11 +21,11 @@ public final class GetUserPoolSigningCertificateResult {
     private final String id;
     private final String userPoolId;
 
-    @OutputCustomType.Constructor({"certificate","id","userPoolId"})
+    @OutputCustomType.Constructor
     private GetUserPoolSigningCertificateResult(
-        String certificate,
-        String id,
-        String userPoolId) {
+        @OutputCustomType.Parameter("certificate") String certificate,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("userPoolId") String userPoolId) {
         this.certificate = certificate;
         this.id = id;
         this.userPoolId = userPoolId;

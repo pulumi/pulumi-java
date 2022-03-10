@@ -38,13 +38,13 @@ public final class BucketNotificationQueue {
      */
     private final String queueArn;
 
-    @OutputCustomType.Constructor({"events","filterPrefix","filterSuffix","id","queueArn"})
+    @OutputCustomType.Constructor
     private BucketNotificationQueue(
-        List<String> events,
-        @Nullable String filterPrefix,
-        @Nullable String filterSuffix,
-        @Nullable String id,
-        String queueArn) {
+        @OutputCustomType.Parameter("events") List<String> events,
+        @OutputCustomType.Parameter("filterPrefix") @Nullable String filterPrefix,
+        @OutputCustomType.Parameter("filterSuffix") @Nullable String filterSuffix,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("queueArn") String queueArn) {
         this.events = events;
         this.filterPrefix = filterPrefix;
         this.filterSuffix = filterSuffix;

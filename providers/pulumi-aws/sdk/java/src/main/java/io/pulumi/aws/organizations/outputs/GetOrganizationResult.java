@@ -69,19 +69,19 @@ public final class GetOrganizationResult {
      */
     private final List<GetOrganizationRoot> roots;
 
-    @OutputCustomType.Constructor({"accounts","arn","awsServiceAccessPrincipals","enabledPolicyTypes","featureSet","id","masterAccountArn","masterAccountEmail","masterAccountId","nonMasterAccounts","roots"})
+    @OutputCustomType.Constructor
     private GetOrganizationResult(
-        List<GetOrganizationAccount> accounts,
-        String arn,
-        List<String> awsServiceAccessPrincipals,
-        List<String> enabledPolicyTypes,
-        String featureSet,
-        String id,
-        String masterAccountArn,
-        String masterAccountEmail,
-        String masterAccountId,
-        List<GetOrganizationNonMasterAccount> nonMasterAccounts,
-        List<GetOrganizationRoot> roots) {
+        @OutputCustomType.Parameter("accounts") List<GetOrganizationAccount> accounts,
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("awsServiceAccessPrincipals") List<String> awsServiceAccessPrincipals,
+        @OutputCustomType.Parameter("enabledPolicyTypes") List<String> enabledPolicyTypes,
+        @OutputCustomType.Parameter("featureSet") String featureSet,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("masterAccountArn") String masterAccountArn,
+        @OutputCustomType.Parameter("masterAccountEmail") String masterAccountEmail,
+        @OutputCustomType.Parameter("masterAccountId") String masterAccountId,
+        @OutputCustomType.Parameter("nonMasterAccounts") List<GetOrganizationNonMasterAccount> nonMasterAccounts,
+        @OutputCustomType.Parameter("roots") List<GetOrganizationRoot> roots) {
         this.accounts = accounts;
         this.arn = arn;
         this.awsServiceAccessPrincipals = awsServiceAccessPrincipals;

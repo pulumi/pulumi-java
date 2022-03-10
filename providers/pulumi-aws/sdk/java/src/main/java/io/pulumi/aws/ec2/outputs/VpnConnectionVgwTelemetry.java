@@ -43,14 +43,14 @@ public final class VpnConnectionVgwTelemetry {
      */
     private final @Nullable String statusMessage;
 
-    @OutputCustomType.Constructor({"acceptedRouteCount","certificateArn","lastStatusChange","outsideIpAddress","status","statusMessage"})
+    @OutputCustomType.Constructor
     private VpnConnectionVgwTelemetry(
-        @Nullable Integer acceptedRouteCount,
-        @Nullable String certificateArn,
-        @Nullable String lastStatusChange,
-        @Nullable String outsideIpAddress,
-        @Nullable String status,
-        @Nullable String statusMessage) {
+        @OutputCustomType.Parameter("acceptedRouteCount") @Nullable Integer acceptedRouteCount,
+        @OutputCustomType.Parameter("certificateArn") @Nullable String certificateArn,
+        @OutputCustomType.Parameter("lastStatusChange") @Nullable String lastStatusChange,
+        @OutputCustomType.Parameter("outsideIpAddress") @Nullable String outsideIpAddress,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("statusMessage") @Nullable String statusMessage) {
         this.acceptedRouteCount = acceptedRouteCount;
         this.certificateArn = certificateArn;
         this.lastStatusChange = lastStatusChange;

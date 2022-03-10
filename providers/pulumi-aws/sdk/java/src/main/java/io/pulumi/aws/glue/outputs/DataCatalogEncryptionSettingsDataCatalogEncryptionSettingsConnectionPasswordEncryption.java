@@ -23,10 +23,10 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsCon
      */
     private final Boolean returnConnectionPasswordEncrypted;
 
-    @OutputCustomType.Constructor({"awsKmsKeyId","returnConnectionPasswordEncrypted"})
+    @OutputCustomType.Constructor
     private DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryption(
-        @Nullable String awsKmsKeyId,
-        Boolean returnConnectionPasswordEncrypted) {
+        @OutputCustomType.Parameter("awsKmsKeyId") @Nullable String awsKmsKeyId,
+        @OutputCustomType.Parameter("returnConnectionPasswordEncrypted") Boolean returnConnectionPasswordEncrypted) {
         this.awsKmsKeyId = awsKmsKeyId;
         this.returnConnectionPasswordEncrypted = returnConnectionPasswordEncrypted;
     }

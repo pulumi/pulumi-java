@@ -35,12 +35,12 @@ public final class EventConnectionAuthParameters {
      */
     private final @Nullable EventConnectionAuthParametersOauth oauth;
 
-    @OutputCustomType.Constructor({"apiKey","basic","invocationHttpParameters","oauth"})
+    @OutputCustomType.Constructor
     private EventConnectionAuthParameters(
-        @Nullable EventConnectionAuthParametersApiKey apiKey,
-        @Nullable EventConnectionAuthParametersBasic basic,
-        @Nullable EventConnectionAuthParametersInvocationHttpParameters invocationHttpParameters,
-        @Nullable EventConnectionAuthParametersOauth oauth) {
+        @OutputCustomType.Parameter("apiKey") @Nullable EventConnectionAuthParametersApiKey apiKey,
+        @OutputCustomType.Parameter("basic") @Nullable EventConnectionAuthParametersBasic basic,
+        @OutputCustomType.Parameter("invocationHttpParameters") @Nullable EventConnectionAuthParametersInvocationHttpParameters invocationHttpParameters,
+        @OutputCustomType.Parameter("oauth") @Nullable EventConnectionAuthParametersOauth oauth) {
         this.apiKey = apiKey;
         this.basic = basic;
         this.invocationHttpParameters = invocationHttpParameters;

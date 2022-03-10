@@ -37,15 +37,15 @@ public final class GetUserResult {
      */
     private final @Nullable String userName;
 
-    @OutputCustomType.Constructor({"accessString","engine","id","noPasswordRequired","passwords","userId","userName"})
+    @OutputCustomType.Constructor
     private GetUserResult(
-        @Nullable String accessString,
-        @Nullable String engine,
-        String id,
-        @Nullable Boolean noPasswordRequired,
-        @Nullable List<String> passwords,
-        String userId,
-        @Nullable String userName) {
+        @OutputCustomType.Parameter("accessString") @Nullable String accessString,
+        @OutputCustomType.Parameter("engine") @Nullable String engine,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("noPasswordRequired") @Nullable Boolean noPasswordRequired,
+        @OutputCustomType.Parameter("passwords") @Nullable List<String> passwords,
+        @OutputCustomType.Parameter("userId") String userId,
+        @OutputCustomType.Parameter("userName") @Nullable String userName) {
         this.accessString = accessString;
         this.engine = engine;
         this.id = id;

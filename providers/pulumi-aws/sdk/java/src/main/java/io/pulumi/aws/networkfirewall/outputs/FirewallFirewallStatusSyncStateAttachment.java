@@ -22,10 +22,10 @@ public final class FirewallFirewallStatusSyncStateAttachment {
      */
     private final @Nullable String subnetId;
 
-    @OutputCustomType.Constructor({"endpointId","subnetId"})
+    @OutputCustomType.Constructor
     private FirewallFirewallStatusSyncStateAttachment(
-        @Nullable String endpointId,
-        @Nullable String subnetId) {
+        @OutputCustomType.Parameter("endpointId") @Nullable String endpointId,
+        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId) {
         this.endpointId = endpointId;
         this.subnetId = subnetId;
     }

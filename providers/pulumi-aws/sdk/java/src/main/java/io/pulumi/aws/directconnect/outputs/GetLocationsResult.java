@@ -21,10 +21,10 @@ public final class GetLocationsResult {
      */
     private final List<String> locationCodes;
 
-    @OutputCustomType.Constructor({"id","locationCodes"})
+    @OutputCustomType.Constructor
     private GetLocationsResult(
-        String id,
-        List<String> locationCodes) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("locationCodes") List<String> locationCodes) {
         this.id = id;
         this.locationCodes = locationCodes;
     }

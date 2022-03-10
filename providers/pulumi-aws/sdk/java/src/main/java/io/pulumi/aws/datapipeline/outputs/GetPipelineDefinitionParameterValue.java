@@ -20,10 +20,10 @@ public final class GetPipelineDefinitionParameterValue {
      */
     private final String stringValue;
 
-    @OutputCustomType.Constructor({"id","stringValue"})
+    @OutputCustomType.Constructor
     private GetPipelineDefinitionParameterValue(
-        String id,
-        String stringValue) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("stringValue") String stringValue) {
         this.id = id;
         this.stringValue = stringValue;
     }

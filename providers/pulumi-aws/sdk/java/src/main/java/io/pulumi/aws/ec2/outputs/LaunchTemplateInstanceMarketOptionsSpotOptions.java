@@ -39,13 +39,13 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptions {
      */
     private final @Nullable String validUntil;
 
-    @OutputCustomType.Constructor({"blockDurationMinutes","instanceInterruptionBehavior","maxPrice","spotInstanceType","validUntil"})
+    @OutputCustomType.Constructor
     private LaunchTemplateInstanceMarketOptionsSpotOptions(
-        @Nullable Integer blockDurationMinutes,
-        @Nullable String instanceInterruptionBehavior,
-        @Nullable String maxPrice,
-        @Nullable String spotInstanceType,
-        @Nullable String validUntil) {
+        @OutputCustomType.Parameter("blockDurationMinutes") @Nullable Integer blockDurationMinutes,
+        @OutputCustomType.Parameter("instanceInterruptionBehavior") @Nullable String instanceInterruptionBehavior,
+        @OutputCustomType.Parameter("maxPrice") @Nullable String maxPrice,
+        @OutputCustomType.Parameter("spotInstanceType") @Nullable String spotInstanceType,
+        @OutputCustomType.Parameter("validUntil") @Nullable String validUntil) {
         this.blockDurationMinutes = blockDurationMinutes;
         this.instanceInterruptionBehavior = instanceInterruptionBehavior;
         this.maxPrice = maxPrice;

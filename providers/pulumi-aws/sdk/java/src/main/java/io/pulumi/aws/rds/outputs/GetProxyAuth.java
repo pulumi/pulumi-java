@@ -14,12 +14,12 @@ public final class GetProxyAuth {
     private final String iamAuth;
     private final String secretArn;
 
-    @OutputCustomType.Constructor({"authScheme","description","iamAuth","secretArn"})
+    @OutputCustomType.Constructor
     private GetProxyAuth(
-        String authScheme,
-        String description,
-        String iamAuth,
-        String secretArn) {
+        @OutputCustomType.Parameter("authScheme") String authScheme,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("iamAuth") String iamAuth,
+        @OutputCustomType.Parameter("secretArn") String secretArn) {
         this.authScheme = authScheme;
         this.description = description;
         this.iamAuth = iamAuth;

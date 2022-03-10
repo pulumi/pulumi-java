@@ -30,12 +30,12 @@ public final class GetRegionResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"description","endpoint","id","name"})
+    @OutputCustomType.Constructor
     private GetRegionResult(
-        String description,
-        String endpoint,
-        String id,
-        String name) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("endpoint") String endpoint,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name) {
         this.description = description;
         this.endpoint = endpoint;
         this.id = id;

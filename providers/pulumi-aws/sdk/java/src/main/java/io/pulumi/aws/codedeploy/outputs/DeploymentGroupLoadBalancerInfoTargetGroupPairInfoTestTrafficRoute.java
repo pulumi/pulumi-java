@@ -16,8 +16,8 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTraffic
      */
     private final List<String> listenerArns;
 
-    @OutputCustomType.Constructor({"listenerArns"})
-    private DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRoute(List<String> listenerArns) {
+    @OutputCustomType.Constructor
+    private DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRoute(@OutputCustomType.Parameter("listenerArns") List<String> listenerArns) {
         this.listenerArns = listenerArns;
     }
 

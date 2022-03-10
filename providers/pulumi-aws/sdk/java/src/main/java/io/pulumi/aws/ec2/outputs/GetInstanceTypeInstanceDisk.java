@@ -14,11 +14,11 @@ public final class GetInstanceTypeInstanceDisk {
     private final Integer size;
     private final String type;
 
-    @OutputCustomType.Constructor({"count","size","type"})
+    @OutputCustomType.Constructor
     private GetInstanceTypeInstanceDisk(
-        Integer count,
-        Integer size,
-        String type) {
+        @OutputCustomType.Parameter("count") Integer count,
+        @OutputCustomType.Parameter("size") Integer size,
+        @OutputCustomType.Parameter("type") String type) {
         this.count = count;
         this.size = size;
         this.type = type;

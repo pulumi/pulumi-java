@@ -15,8 +15,8 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSd
      */
     private final String secretName;
 
-    @OutputCustomType.Constructor({"secretName"})
-    private VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSds(String secretName) {
+    @OutputCustomType.Constructor
+    private VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSds(@OutputCustomType.Parameter("secretName") String secretName) {
         this.secretName = secretName;
     }
 

@@ -42,15 +42,15 @@ public final class GetConnectionResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","connectionStatus","hostArn","id","name","providerType","tags"})
+    @OutputCustomType.Constructor
     private GetConnectionResult(
-        String arn,
-        String connectionStatus,
-        String hostArn,
-        String id,
-        String name,
-        String providerType,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("connectionStatus") String connectionStatus,
+        @OutputCustomType.Parameter("hostArn") String hostArn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("providerType") String providerType,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.connectionStatus = connectionStatus;
         this.hostArn = hostArn;

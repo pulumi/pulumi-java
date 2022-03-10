@@ -69,19 +69,19 @@ public final class GetStreamResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","closedShards","creationTimestamp","id","name","openShards","retentionPeriod","shardLevelMetrics","status","streamModeDetails","tags"})
+    @OutputCustomType.Constructor
     private GetStreamResult(
-        String arn,
-        List<String> closedShards,
-        Integer creationTimestamp,
-        String id,
-        String name,
-        List<String> openShards,
-        Integer retentionPeriod,
-        List<String> shardLevelMetrics,
-        String status,
-        List<GetStreamStreamModeDetail> streamModeDetails,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("closedShards") List<String> closedShards,
+        @OutputCustomType.Parameter("creationTimestamp") Integer creationTimestamp,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("openShards") List<String> openShards,
+        @OutputCustomType.Parameter("retentionPeriod") Integer retentionPeriod,
+        @OutputCustomType.Parameter("shardLevelMetrics") List<String> shardLevelMetrics,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("streamModeDetails") List<GetStreamStreamModeDetail> streamModeDetails,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.closedShards = closedShards;
         this.creationTimestamp = creationTimestamp;

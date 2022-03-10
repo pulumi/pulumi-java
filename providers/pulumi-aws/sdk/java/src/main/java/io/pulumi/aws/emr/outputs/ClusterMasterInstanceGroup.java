@@ -45,14 +45,14 @@ public final class ClusterMasterInstanceGroup {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"bidPrice","ebsConfigs","id","instanceCount","instanceType","name"})
+    @OutputCustomType.Constructor
     private ClusterMasterInstanceGroup(
-        @Nullable String bidPrice,
-        @Nullable List<ClusterMasterInstanceGroupEbsConfig> ebsConfigs,
-        @Nullable String id,
-        @Nullable Integer instanceCount,
-        String instanceType,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("bidPrice") @Nullable String bidPrice,
+        @OutputCustomType.Parameter("ebsConfigs") @Nullable List<ClusterMasterInstanceGroupEbsConfig> ebsConfigs,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("instanceCount") @Nullable Integer instanceCount,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.bidPrice = bidPrice;
         this.ebsConfigs = ebsConfigs;
         this.id = id;

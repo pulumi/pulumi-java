@@ -28,11 +28,11 @@ public final class ApplicationEnvironment {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"key","secure","value"})
+    @OutputCustomType.Constructor
     private ApplicationEnvironment(
-        String key,
-        @Nullable Boolean secure,
-        String value) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("secure") @Nullable Boolean secure,
+        @OutputCustomType.Parameter("value") String value) {
         this.key = key;
         this.secure = secure;
         this.value = value;

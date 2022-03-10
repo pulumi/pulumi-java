@@ -40,14 +40,14 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeader {
      */
     private final String sourcePort;
 
-    @OutputCustomType.Constructor({"destination","destinationPort","direction","protocol","source","sourcePort"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleGroupRulesSourceStatefulRuleHeader(
-        String destination,
-        String destinationPort,
-        String direction,
-        String protocol,
-        String source,
-        String sourcePort) {
+        @OutputCustomType.Parameter("destination") String destination,
+        @OutputCustomType.Parameter("destinationPort") String destinationPort,
+        @OutputCustomType.Parameter("direction") String direction,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("source") String source,
+        @OutputCustomType.Parameter("sourcePort") String sourcePort) {
         this.destination = destination;
         this.destinationPort = destinationPort;
         this.direction = direction;

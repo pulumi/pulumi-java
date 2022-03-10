@@ -33,12 +33,12 @@ public final class ByteMatchSetByteMatchTuple {
      */
     private final String textTransformation;
 
-    @OutputCustomType.Constructor({"fieldToMatch","positionalConstraint","targetString","textTransformation"})
+    @OutputCustomType.Constructor
     private ByteMatchSetByteMatchTuple(
-        ByteMatchSetByteMatchTupleFieldToMatch fieldToMatch,
-        String positionalConstraint,
-        @Nullable String targetString,
-        String textTransformation) {
+        @OutputCustomType.Parameter("fieldToMatch") ByteMatchSetByteMatchTupleFieldToMatch fieldToMatch,
+        @OutputCustomType.Parameter("positionalConstraint") String positionalConstraint,
+        @OutputCustomType.Parameter("targetString") @Nullable String targetString,
+        @OutputCustomType.Parameter("textTransformation") String textTransformation) {
         this.fieldToMatch = fieldToMatch;
         this.positionalConstraint = positionalConstraint;
         this.targetString = targetString;

@@ -22,10 +22,10 @@ public final class DataSourceHttpConfigAuthorizationConfigAwsIamConfig {
      */
     private final @Nullable String signingServiceName;
 
-    @OutputCustomType.Constructor({"signingRegion","signingServiceName"})
+    @OutputCustomType.Constructor
     private DataSourceHttpConfigAuthorizationConfigAwsIamConfig(
-        @Nullable String signingRegion,
-        @Nullable String signingServiceName) {
+        @OutputCustomType.Parameter("signingRegion") @Nullable String signingRegion,
+        @OutputCustomType.Parameter("signingServiceName") @Nullable String signingServiceName) {
         this.signingRegion = signingRegion;
         this.signingServiceName = signingServiceName;
     }

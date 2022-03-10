@@ -41,13 +41,13 @@ public final class TaskDefinitionVolume {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"dockerVolumeConfiguration","efsVolumeConfiguration","fsxWindowsFileServerVolumeConfiguration","hostPath","name"})
+    @OutputCustomType.Constructor
     private TaskDefinitionVolume(
-        @Nullable TaskDefinitionVolumeDockerVolumeConfiguration dockerVolumeConfiguration,
-        @Nullable TaskDefinitionVolumeEfsVolumeConfiguration efsVolumeConfiguration,
-        @Nullable TaskDefinitionVolumeFsxWindowsFileServerVolumeConfiguration fsxWindowsFileServerVolumeConfiguration,
-        @Nullable String hostPath,
-        String name) {
+        @OutputCustomType.Parameter("dockerVolumeConfiguration") @Nullable TaskDefinitionVolumeDockerVolumeConfiguration dockerVolumeConfiguration,
+        @OutputCustomType.Parameter("efsVolumeConfiguration") @Nullable TaskDefinitionVolumeEfsVolumeConfiguration efsVolumeConfiguration,
+        @OutputCustomType.Parameter("fsxWindowsFileServerVolumeConfiguration") @Nullable TaskDefinitionVolumeFsxWindowsFileServerVolumeConfiguration fsxWindowsFileServerVolumeConfiguration,
+        @OutputCustomType.Parameter("hostPath") @Nullable String hostPath,
+        @OutputCustomType.Parameter("name") String name) {
         this.dockerVolumeConfiguration = dockerVolumeConfiguration;
         this.efsVolumeConfiguration = efsVolumeConfiguration;
         this.fsxWindowsFileServerVolumeConfiguration = fsxWindowsFileServerVolumeConfiguration;

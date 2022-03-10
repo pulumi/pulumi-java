@@ -90,24 +90,24 @@ public final class GetElasticIpResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"associationId","carrierIp","customerOwnedIp","customerOwnedIpv4Pool","domain","filters","id","instanceId","networkInterfaceId","networkInterfaceOwnerId","privateDns","privateIp","publicDns","publicIp","publicIpv4Pool","tags"})
+    @OutputCustomType.Constructor
     private GetElasticIpResult(
-        String associationId,
-        String carrierIp,
-        String customerOwnedIp,
-        String customerOwnedIpv4Pool,
-        String domain,
-        @Nullable List<GetElasticIpFilter> filters,
-        String id,
-        String instanceId,
-        String networkInterfaceId,
-        String networkInterfaceOwnerId,
-        String privateDns,
-        String privateIp,
-        String publicDns,
-        String publicIp,
-        String publicIpv4Pool,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("associationId") String associationId,
+        @OutputCustomType.Parameter("carrierIp") String carrierIp,
+        @OutputCustomType.Parameter("customerOwnedIp") String customerOwnedIp,
+        @OutputCustomType.Parameter("customerOwnedIpv4Pool") String customerOwnedIpv4Pool,
+        @OutputCustomType.Parameter("domain") String domain,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetElasticIpFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceId") String instanceId,
+        @OutputCustomType.Parameter("networkInterfaceId") String networkInterfaceId,
+        @OutputCustomType.Parameter("networkInterfaceOwnerId") String networkInterfaceOwnerId,
+        @OutputCustomType.Parameter("privateDns") String privateDns,
+        @OutputCustomType.Parameter("privateIp") String privateIp,
+        @OutputCustomType.Parameter("publicDns") String publicDns,
+        @OutputCustomType.Parameter("publicIp") String publicIp,
+        @OutputCustomType.Parameter("publicIpv4Pool") String publicIpv4Pool,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.associationId = associationId;
         this.carrierIp = carrierIp;
         this.customerOwnedIp = customerOwnedIp;

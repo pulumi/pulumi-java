@@ -30,11 +30,11 @@ public final class WebAclDefaultActionBlockCustomResponse {
      */
     private final @Nullable List<WebAclDefaultActionBlockCustomResponseResponseHeader> responseHeaders;
 
-    @OutputCustomType.Constructor({"customResponseBodyKey","responseCode","responseHeaders"})
+    @OutputCustomType.Constructor
     private WebAclDefaultActionBlockCustomResponse(
-        @Nullable String customResponseBodyKey,
-        Integer responseCode,
-        @Nullable List<WebAclDefaultActionBlockCustomResponseResponseHeader> responseHeaders) {
+        @OutputCustomType.Parameter("customResponseBodyKey") @Nullable String customResponseBodyKey,
+        @OutputCustomType.Parameter("responseCode") Integer responseCode,
+        @OutputCustomType.Parameter("responseHeaders") @Nullable List<WebAclDefaultActionBlockCustomResponseResponseHeader> responseHeaders) {
         this.customResponseBodyKey = customResponseBodyKey;
         this.responseCode = responseCode;
         this.responseHeaders = responseHeaders;

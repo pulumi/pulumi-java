@@ -35,12 +35,12 @@ public final class GetScriptDagNode {
      */
     private final String nodeType;
 
-    @OutputCustomType.Constructor({"args","id","lineNumber","nodeType"})
+    @OutputCustomType.Constructor
     private GetScriptDagNode(
-        List<GetScriptDagNodeArg> args,
-        String id,
-        @Nullable Integer lineNumber,
-        String nodeType) {
+        @OutputCustomType.Parameter("args") List<GetScriptDagNodeArg> args,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lineNumber") @Nullable Integer lineNumber,
+        @OutputCustomType.Parameter("nodeType") String nodeType) {
         this.args = args;
         this.id = id;
         this.lineNumber = lineNumber;

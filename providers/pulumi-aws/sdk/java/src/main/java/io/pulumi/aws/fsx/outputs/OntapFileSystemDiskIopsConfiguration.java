@@ -23,10 +23,10 @@ public final class OntapFileSystemDiskIopsConfiguration {
      */
     private final @Nullable String mode;
 
-    @OutputCustomType.Constructor({"iops","mode"})
+    @OutputCustomType.Constructor
     private OntapFileSystemDiskIopsConfiguration(
-        @Nullable Integer iops,
-        @Nullable String mode) {
+        @OutputCustomType.Parameter("iops") @Nullable Integer iops,
+        @OutputCustomType.Parameter("mode") @Nullable String mode) {
         this.iops = iops;
         this.mode = mode;
     }

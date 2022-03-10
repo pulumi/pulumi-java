@@ -26,11 +26,11 @@ public final class DataSourceParametersMysql {
      */
     private final Integer port;
 
-    @OutputCustomType.Constructor({"database","host","port"})
+    @OutputCustomType.Constructor
     private DataSourceParametersMysql(
-        String database,
-        String host,
-        Integer port) {
+        @OutputCustomType.Parameter("database") String database,
+        @OutputCustomType.Parameter("host") String host,
+        @OutputCustomType.Parameter("port") Integer port) {
         this.database = database;
         this.host = host;
         this.port = port;

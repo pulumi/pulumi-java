@@ -21,10 +21,10 @@ public final class OpenZfsVolumeNfsExportsClientConfiguration {
      */
     private final List<String> options;
 
-    @OutputCustomType.Constructor({"clients","options"})
+    @OutputCustomType.Constructor
     private OpenZfsVolumeNfsExportsClientConfiguration(
-        String clients,
-        List<String> options) {
+        @OutputCustomType.Parameter("clients") String clients,
+        @OutputCustomType.Parameter("options") List<String> options) {
         this.clients = clients;
         this.options = options;
     }

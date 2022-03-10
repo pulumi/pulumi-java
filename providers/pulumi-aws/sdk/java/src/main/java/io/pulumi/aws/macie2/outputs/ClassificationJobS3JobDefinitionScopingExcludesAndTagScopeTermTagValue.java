@@ -18,10 +18,10 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTer
     private final @Nullable String key;
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"key","value"})
+    @OutputCustomType.Constructor
     private ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValue(
-        @Nullable String key,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("key") @Nullable String key,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.key = key;
         this.value = value;
     }

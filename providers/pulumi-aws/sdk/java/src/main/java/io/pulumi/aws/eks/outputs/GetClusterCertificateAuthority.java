@@ -15,8 +15,8 @@ public final class GetClusterCertificateAuthority {
      */
     private final String data;
 
-    @OutputCustomType.Constructor({"data"})
-    private GetClusterCertificateAuthority(String data) {
+    @OutputCustomType.Constructor
+    private GetClusterCertificateAuthority(@OutputCustomType.Parameter("data") String data) {
         this.data = data;
     }
 

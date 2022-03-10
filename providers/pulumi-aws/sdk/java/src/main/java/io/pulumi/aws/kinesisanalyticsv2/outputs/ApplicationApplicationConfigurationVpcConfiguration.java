@@ -25,12 +25,12 @@ public final class ApplicationApplicationConfigurationVpcConfiguration {
     private final @Nullable String vpcConfigurationId;
     private final @Nullable String vpcId;
 
-    @OutputCustomType.Constructor({"securityGroupIds","subnetIds","vpcConfigurationId","vpcId"})
+    @OutputCustomType.Constructor
     private ApplicationApplicationConfigurationVpcConfiguration(
-        List<String> securityGroupIds,
-        List<String> subnetIds,
-        @Nullable String vpcConfigurationId,
-        @Nullable String vpcId) {
+        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
+        @OutputCustomType.Parameter("vpcConfigurationId") @Nullable String vpcConfigurationId,
+        @OutputCustomType.Parameter("vpcId") @Nullable String vpcId) {
         this.securityGroupIds = securityGroupIds;
         this.subnetIds = subnetIds;
         this.vpcConfigurationId = vpcConfigurationId;

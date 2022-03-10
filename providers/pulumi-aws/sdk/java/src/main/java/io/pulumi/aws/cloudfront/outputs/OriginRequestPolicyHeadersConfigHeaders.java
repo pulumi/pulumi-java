@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class OriginRequestPolicyHeadersConfigHeaders {
     private final @Nullable List<String> items;
 
-    @OutputCustomType.Constructor({"items"})
-    private OriginRequestPolicyHeadersConfigHeaders(@Nullable List<String> items) {
+    @OutputCustomType.Constructor
+    private OriginRequestPolicyHeadersConfigHeaders(@OutputCustomType.Parameter("items") @Nullable List<String> items) {
         this.items = items;
     }
 

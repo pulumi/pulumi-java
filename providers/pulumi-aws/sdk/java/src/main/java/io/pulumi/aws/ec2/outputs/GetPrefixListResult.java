@@ -31,13 +31,13 @@ public final class GetPrefixListResult {
     private final String name;
     private final @Nullable String prefixListId;
 
-    @OutputCustomType.Constructor({"cidrBlocks","filters","id","name","prefixListId"})
+    @OutputCustomType.Constructor
     private GetPrefixListResult(
-        List<String> cidrBlocks,
-        @Nullable List<GetPrefixListFilter> filters,
-        String id,
-        String name,
-        @Nullable String prefixListId) {
+        @OutputCustomType.Parameter("cidrBlocks") List<String> cidrBlocks,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetPrefixListFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("prefixListId") @Nullable String prefixListId) {
         this.cidrBlocks = cidrBlocks;
         this.filters = filters;
         this.id = id;

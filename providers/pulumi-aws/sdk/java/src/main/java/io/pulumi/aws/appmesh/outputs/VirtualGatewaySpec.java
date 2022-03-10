@@ -29,11 +29,11 @@ public final class VirtualGatewaySpec {
      */
     private final @Nullable VirtualGatewaySpecLogging logging;
 
-    @OutputCustomType.Constructor({"backendDefaults","listener","logging"})
+    @OutputCustomType.Constructor
     private VirtualGatewaySpec(
-        @Nullable VirtualGatewaySpecBackendDefaults backendDefaults,
-        VirtualGatewaySpecListener listener,
-        @Nullable VirtualGatewaySpecLogging logging) {
+        @OutputCustomType.Parameter("backendDefaults") @Nullable VirtualGatewaySpecBackendDefaults backendDefaults,
+        @OutputCustomType.Parameter("listener") VirtualGatewaySpecListener listener,
+        @OutputCustomType.Parameter("logging") @Nullable VirtualGatewaySpecLogging logging) {
         this.backendDefaults = backendDefaults;
         this.listener = listener;
         this.logging = logging;

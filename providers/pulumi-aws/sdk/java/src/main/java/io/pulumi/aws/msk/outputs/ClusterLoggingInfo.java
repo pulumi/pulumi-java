@@ -15,8 +15,8 @@ public final class ClusterLoggingInfo {
      */
     private final ClusterLoggingInfoBrokerLogs brokerLogs;
 
-    @OutputCustomType.Constructor({"brokerLogs"})
-    private ClusterLoggingInfo(ClusterLoggingInfoBrokerLogs brokerLogs) {
+    @OutputCustomType.Constructor
+    private ClusterLoggingInfo(@OutputCustomType.Parameter("brokerLogs") ClusterLoggingInfoBrokerLogs brokerLogs) {
         this.brokerLogs = brokerLogs;
     }
 

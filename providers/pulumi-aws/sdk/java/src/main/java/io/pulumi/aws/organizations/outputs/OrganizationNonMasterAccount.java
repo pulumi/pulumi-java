@@ -37,13 +37,13 @@ public final class OrganizationNonMasterAccount {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"arn","email","id","name","status"})
+    @OutputCustomType.Constructor
     private OrganizationNonMasterAccount(
-        @Nullable String arn,
-        @Nullable String email,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("email") @Nullable String email,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.arn = arn;
         this.email = email;
         this.id = id;

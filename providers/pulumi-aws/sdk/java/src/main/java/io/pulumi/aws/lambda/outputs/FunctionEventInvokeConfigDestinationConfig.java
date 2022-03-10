@@ -23,10 +23,10 @@ public final class FunctionEventInvokeConfigDestinationConfig {
      */
     private final @Nullable FunctionEventInvokeConfigDestinationConfigOnSuccess onSuccess;
 
-    @OutputCustomType.Constructor({"onFailure","onSuccess"})
+    @OutputCustomType.Constructor
     private FunctionEventInvokeConfigDestinationConfig(
-        @Nullable FunctionEventInvokeConfigDestinationConfigOnFailure onFailure,
-        @Nullable FunctionEventInvokeConfigDestinationConfigOnSuccess onSuccess) {
+        @OutputCustomType.Parameter("onFailure") @Nullable FunctionEventInvokeConfigDestinationConfigOnFailure onFailure,
+        @OutputCustomType.Parameter("onSuccess") @Nullable FunctionEventInvokeConfigDestinationConfigOnSuccess onSuccess) {
         this.onFailure = onFailure;
         this.onSuccess = onSuccess;
     }

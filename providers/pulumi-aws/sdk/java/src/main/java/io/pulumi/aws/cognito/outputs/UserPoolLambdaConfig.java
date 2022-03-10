@@ -79,21 +79,21 @@ public final class UserPoolLambdaConfig {
      */
     private final @Nullable String verifyAuthChallengeResponse;
 
-    @OutputCustomType.Constructor({"createAuthChallenge","customEmailSender","customMessage","customSmsSender","defineAuthChallenge","kmsKeyId","postAuthentication","postConfirmation","preAuthentication","preSignUp","preTokenGeneration","userMigration","verifyAuthChallengeResponse"})
+    @OutputCustomType.Constructor
     private UserPoolLambdaConfig(
-        @Nullable String createAuthChallenge,
-        @Nullable UserPoolLambdaConfigCustomEmailSender customEmailSender,
-        @Nullable String customMessage,
-        @Nullable UserPoolLambdaConfigCustomSmsSender customSmsSender,
-        @Nullable String defineAuthChallenge,
-        @Nullable String kmsKeyId,
-        @Nullable String postAuthentication,
-        @Nullable String postConfirmation,
-        @Nullable String preAuthentication,
-        @Nullable String preSignUp,
-        @Nullable String preTokenGeneration,
-        @Nullable String userMigration,
-        @Nullable String verifyAuthChallengeResponse) {
+        @OutputCustomType.Parameter("createAuthChallenge") @Nullable String createAuthChallenge,
+        @OutputCustomType.Parameter("customEmailSender") @Nullable UserPoolLambdaConfigCustomEmailSender customEmailSender,
+        @OutputCustomType.Parameter("customMessage") @Nullable String customMessage,
+        @OutputCustomType.Parameter("customSmsSender") @Nullable UserPoolLambdaConfigCustomSmsSender customSmsSender,
+        @OutputCustomType.Parameter("defineAuthChallenge") @Nullable String defineAuthChallenge,
+        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @OutputCustomType.Parameter("postAuthentication") @Nullable String postAuthentication,
+        @OutputCustomType.Parameter("postConfirmation") @Nullable String postConfirmation,
+        @OutputCustomType.Parameter("preAuthentication") @Nullable String preAuthentication,
+        @OutputCustomType.Parameter("preSignUp") @Nullable String preSignUp,
+        @OutputCustomType.Parameter("preTokenGeneration") @Nullable String preTokenGeneration,
+        @OutputCustomType.Parameter("userMigration") @Nullable String userMigration,
+        @OutputCustomType.Parameter("verifyAuthChallengeResponse") @Nullable String verifyAuthChallengeResponse) {
         this.createAuthChallenge = createAuthChallenge;
         this.customEmailSender = customEmailSender;
         this.customMessage = customMessage;

@@ -28,11 +28,11 @@ public final class TaskSetCapacityProviderStrategy {
      */
     private final Integer weight;
 
-    @OutputCustomType.Constructor({"base","capacityProvider","weight"})
+    @OutputCustomType.Constructor
     private TaskSetCapacityProviderStrategy(
-        @Nullable Integer base,
-        String capacityProvider,
-        Integer weight) {
+        @OutputCustomType.Parameter("base") @Nullable Integer base,
+        @OutputCustomType.Parameter("capacityProvider") String capacityProvider,
+        @OutputCustomType.Parameter("weight") Integer weight) {
         this.base = base;
         this.capacityProvider = capacityProvider;
         this.weight = weight;

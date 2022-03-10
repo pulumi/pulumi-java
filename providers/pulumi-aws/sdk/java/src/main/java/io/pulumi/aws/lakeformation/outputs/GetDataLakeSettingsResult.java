@@ -41,14 +41,14 @@ public final class GetDataLakeSettingsResult {
      */
     private final List<String> trustedResourceOwners;
 
-    @OutputCustomType.Constructor({"admins","catalogId","createDatabaseDefaultPermissions","createTableDefaultPermissions","id","trustedResourceOwners"})
+    @OutputCustomType.Constructor
     private GetDataLakeSettingsResult(
-        List<String> admins,
-        @Nullable String catalogId,
-        List<GetDataLakeSettingsCreateDatabaseDefaultPermission> createDatabaseDefaultPermissions,
-        List<GetDataLakeSettingsCreateTableDefaultPermission> createTableDefaultPermissions,
-        String id,
-        List<String> trustedResourceOwners) {
+        @OutputCustomType.Parameter("admins") List<String> admins,
+        @OutputCustomType.Parameter("catalogId") @Nullable String catalogId,
+        @OutputCustomType.Parameter("createDatabaseDefaultPermissions") List<GetDataLakeSettingsCreateDatabaseDefaultPermission> createDatabaseDefaultPermissions,
+        @OutputCustomType.Parameter("createTableDefaultPermissions") List<GetDataLakeSettingsCreateTableDefaultPermission> createTableDefaultPermissions,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("trustedResourceOwners") List<String> trustedResourceOwners) {
         this.admins = admins;
         this.catalogId = catalogId;
         this.createDatabaseDefaultPermissions = createDatabaseDefaultPermissions;

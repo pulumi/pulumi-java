@@ -20,10 +20,10 @@ public final class DataSourceParametersRds {
      */
     private final String instanceId;
 
-    @OutputCustomType.Constructor({"database","instanceId"})
+    @OutputCustomType.Constructor
     private DataSourceParametersRds(
-        String database,
-        String instanceId) {
+        @OutputCustomType.Parameter("database") String database,
+        @OutputCustomType.Parameter("instanceId") String instanceId) {
         this.database = database;
         this.instanceId = instanceId;
     }

@@ -22,10 +22,10 @@ public final class PipelineThumbnailConfig {
      */
     private final @Nullable String storageClass;
 
-    @OutputCustomType.Constructor({"bucket","storageClass"})
+    @OutputCustomType.Constructor
     private PipelineThumbnailConfig(
-        @Nullable String bucket,
-        @Nullable String storageClass) {
+        @OutputCustomType.Parameter("bucket") @Nullable String bucket,
+        @OutputCustomType.Parameter("storageClass") @Nullable String storageClass) {
         this.bucket = bucket;
         this.storageClass = storageClass;
     }

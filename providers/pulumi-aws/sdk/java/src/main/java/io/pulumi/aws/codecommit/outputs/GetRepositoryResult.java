@@ -36,14 +36,14 @@ public final class GetRepositoryResult {
     private final String repositoryId;
     private final String repositoryName;
 
-    @OutputCustomType.Constructor({"arn","cloneUrlHttp","cloneUrlSsh","id","repositoryId","repositoryName"})
+    @OutputCustomType.Constructor
     private GetRepositoryResult(
-        String arn,
-        String cloneUrlHttp,
-        String cloneUrlSsh,
-        String id,
-        String repositoryId,
-        String repositoryName) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("cloneUrlHttp") String cloneUrlHttp,
+        @OutputCustomType.Parameter("cloneUrlSsh") String cloneUrlSsh,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("repositoryId") String repositoryId,
+        @OutputCustomType.Parameter("repositoryName") String repositoryName) {
         this.arn = arn;
         this.cloneUrlHttp = cloneUrlHttp;
         this.cloneUrlSsh = cloneUrlSsh;

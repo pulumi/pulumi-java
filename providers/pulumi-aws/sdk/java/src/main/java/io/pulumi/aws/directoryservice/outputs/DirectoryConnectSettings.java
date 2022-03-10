@@ -38,14 +38,14 @@ public final class DirectoryConnectSettings {
      */
     private final String vpcId;
 
-    @OutputCustomType.Constructor({"availabilityZones","connectIps","customerDnsIps","customerUsername","subnetIds","vpcId"})
+    @OutputCustomType.Constructor
     private DirectoryConnectSettings(
-        @Nullable List<String> availabilityZones,
-        @Nullable List<String> connectIps,
-        List<String> customerDnsIps,
-        String customerUsername,
-        List<String> subnetIds,
-        String vpcId) {
+        @OutputCustomType.Parameter("availabilityZones") @Nullable List<String> availabilityZones,
+        @OutputCustomType.Parameter("connectIps") @Nullable List<String> connectIps,
+        @OutputCustomType.Parameter("customerDnsIps") List<String> customerDnsIps,
+        @OutputCustomType.Parameter("customerUsername") String customerUsername,
+        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
+        @OutputCustomType.Parameter("vpcId") String vpcId) {
         this.availabilityZones = availabilityZones;
         this.connectIps = connectIps;
         this.customerDnsIps = customerDnsIps;

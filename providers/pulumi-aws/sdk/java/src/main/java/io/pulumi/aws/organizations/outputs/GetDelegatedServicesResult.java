@@ -23,11 +23,11 @@ public final class GetDelegatedServicesResult {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"accountId","delegatedServices","id"})
+    @OutputCustomType.Constructor
     private GetDelegatedServicesResult(
-        String accountId,
-        List<GetDelegatedServicesDelegatedService> delegatedServices,
-        String id) {
+        @OutputCustomType.Parameter("accountId") String accountId,
+        @OutputCustomType.Parameter("delegatedServices") List<GetDelegatedServicesDelegatedService> delegatedServices,
+        @OutputCustomType.Parameter("id") String id) {
         this.accountId = accountId;
         this.delegatedServices = delegatedServices;
         this.id = id;

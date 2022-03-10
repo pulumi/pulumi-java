@@ -43,14 +43,14 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
      */
     private final List<String> targetAccountIds;
 
-    @OutputCustomType.Constructor({"amiTags","description","kmsKeyId","launchPermissions","name","targetAccountIds"})
+    @OutputCustomType.Constructor
     private GetDistributionConfigurationDistributionAmiDistributionConfiguration(
-        Map<String,String> amiTags,
-        String description,
-        String kmsKeyId,
-        List<GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission> launchPermissions,
-        String name,
-        List<String> targetAccountIds) {
+        @OutputCustomType.Parameter("amiTags") Map<String,String> amiTags,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("kmsKeyId") String kmsKeyId,
+        @OutputCustomType.Parameter("launchPermissions") List<GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission> launchPermissions,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("targetAccountIds") List<String> targetAccountIds) {
         this.amiTags = amiTags;
         this.description = description;
         this.kmsKeyId = kmsKeyId;

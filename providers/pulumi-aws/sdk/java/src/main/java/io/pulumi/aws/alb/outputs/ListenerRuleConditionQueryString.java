@@ -22,10 +22,10 @@ public final class ListenerRuleConditionQueryString {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"key","value"})
+    @OutputCustomType.Constructor
     private ListenerRuleConditionQueryString(
-        @Nullable String key,
-        String value) {
+        @OutputCustomType.Parameter("key") @Nullable String key,
+        @OutputCustomType.Parameter("value") String value) {
         this.key = key;
         this.value = value;
     }

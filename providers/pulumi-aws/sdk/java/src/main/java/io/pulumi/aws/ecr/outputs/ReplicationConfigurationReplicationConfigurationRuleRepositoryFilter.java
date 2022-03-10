@@ -20,10 +20,10 @@ public final class ReplicationConfigurationReplicationConfigurationRuleRepositor
      */
     private final String filterType;
 
-    @OutputCustomType.Constructor({"filter","filterType"})
+    @OutputCustomType.Constructor
     private ReplicationConfigurationReplicationConfigurationRuleRepositoryFilter(
-        String filter,
-        String filterType) {
+        @OutputCustomType.Parameter("filter") String filter,
+        @OutputCustomType.Parameter("filterType") String filterType) {
         this.filter = filter;
         this.filterType = filterType;
     }

@@ -27,11 +27,11 @@ public final class TopicRuleIotEvent {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"inputName","messageId","roleArn"})
+    @OutputCustomType.Constructor
     private TopicRuleIotEvent(
-        String inputName,
-        @Nullable String messageId,
-        String roleArn) {
+        @OutputCustomType.Parameter("inputName") String inputName,
+        @OutputCustomType.Parameter("messageId") @Nullable String messageId,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.inputName = inputName;
         this.messageId = messageId;
         this.roleArn = roleArn;

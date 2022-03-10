@@ -23,13 +23,13 @@ public final class GetLocalGatewayVirtualInterfaceGroupResult {
     private final List<String> localGatewayVirtualInterfaceIds;
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"filters","id","localGatewayId","localGatewayVirtualInterfaceIds","tags"})
+    @OutputCustomType.Constructor
     private GetLocalGatewayVirtualInterfaceGroupResult(
-        @Nullable List<GetLocalGatewayVirtualInterfaceGroupFilter> filters,
-        String id,
-        String localGatewayId,
-        List<String> localGatewayVirtualInterfaceIds,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("filters") @Nullable List<GetLocalGatewayVirtualInterfaceGroupFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("localGatewayId") String localGatewayId,
+        @OutputCustomType.Parameter("localGatewayVirtualInterfaceIds") List<String> localGatewayVirtualInterfaceIds,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.filters = filters;
         this.id = id;
         this.localGatewayId = localGatewayId;

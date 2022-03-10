@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfiles {
     private final List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItem> items;
 
-    @OutputCustomType.Constructor({"items"})
-    private FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfiles(List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItem> items) {
+    @OutputCustomType.Constructor
+    private FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfiles(@OutputCustomType.Parameter("items") List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItem> items) {
         this.items = items;
     }
 

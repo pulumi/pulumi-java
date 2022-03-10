@@ -26,12 +26,12 @@ public final class GetExportResult {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"exportingStackId","id","name","value"})
+    @OutputCustomType.Constructor
     private GetExportResult(
-        String exportingStackId,
-        String id,
-        String name,
-        String value) {
+        @OutputCustomType.Parameter("exportingStackId") String exportingStackId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("value") String value) {
         this.exportingStackId = exportingStackId;
         this.id = id;
         this.name = name;

@@ -45,15 +45,15 @@ public final class MemcachedLayerEbsVolume {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"encrypted","iops","mountPoint","numberOfDisks","raidLevel","size","type"})
+    @OutputCustomType.Constructor
     private MemcachedLayerEbsVolume(
-        @Nullable Boolean encrypted,
-        @Nullable Integer iops,
-        String mountPoint,
-        Integer numberOfDisks,
-        @Nullable String raidLevel,
-        Integer size,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("encrypted") @Nullable Boolean encrypted,
+        @OutputCustomType.Parameter("iops") @Nullable Integer iops,
+        @OutputCustomType.Parameter("mountPoint") String mountPoint,
+        @OutputCustomType.Parameter("numberOfDisks") Integer numberOfDisks,
+        @OutputCustomType.Parameter("raidLevel") @Nullable String raidLevel,
+        @OutputCustomType.Parameter("size") Integer size,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.encrypted = encrypted;
         this.iops = iops;
         this.mountPoint = mountPoint;

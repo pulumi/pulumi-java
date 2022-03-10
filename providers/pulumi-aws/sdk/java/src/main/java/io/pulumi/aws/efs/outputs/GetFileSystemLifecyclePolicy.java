@@ -12,10 +12,10 @@ public final class GetFileSystemLifecyclePolicy {
     private final String transitionToIa;
     private final String transitionToPrimaryStorageClass;
 
-    @OutputCustomType.Constructor({"transitionToIa","transitionToPrimaryStorageClass"})
+    @OutputCustomType.Constructor
     private GetFileSystemLifecyclePolicy(
-        String transitionToIa,
-        String transitionToPrimaryStorageClass) {
+        @OutputCustomType.Parameter("transitionToIa") String transitionToIa,
+        @OutputCustomType.Parameter("transitionToPrimaryStorageClass") String transitionToPrimaryStorageClass) {
         this.transitionToIa = transitionToIa;
         this.transitionToPrimaryStorageClass = transitionToPrimaryStorageClass;
     }

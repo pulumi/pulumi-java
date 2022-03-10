@@ -23,16 +23,16 @@ public final class ProviderAssumeRoleArgs {
     private final @Nullable Input<Map<String,String>> tags;
     private final @Nullable Input<List<String>> transitiveTagKeys;
 
-    @OutputCustomType.Constructor({"durationSeconds","externalId","policy","policyArns","roleArn","sessionName","tags","transitiveTagKeys"})
+    @OutputCustomType.Constructor
     private ProviderAssumeRoleArgs(
-        @Nullable Input<Integer> durationSeconds,
-        @Nullable Input<String> externalId,
-        @Nullable Input<String> policy,
-        @Nullable Input<List<String>> policyArns,
-        @Nullable Input<String> roleArn,
-        @Nullable Input<String> sessionName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<List<String>> transitiveTagKeys) {
+        @OutputCustomType.Parameter("durationSeconds") @Nullable Input<Integer> durationSeconds,
+        @OutputCustomType.Parameter("externalId") @Nullable Input<String> externalId,
+        @OutputCustomType.Parameter("policy") @Nullable Input<String> policy,
+        @OutputCustomType.Parameter("policyArns") @Nullable Input<List<String>> policyArns,
+        @OutputCustomType.Parameter("roleArn") @Nullable Input<String> roleArn,
+        @OutputCustomType.Parameter("sessionName") @Nullable Input<String> sessionName,
+        @OutputCustomType.Parameter("tags") @Nullable Input<Map<String,String>> tags,
+        @OutputCustomType.Parameter("transitiveTagKeys") @Nullable Input<List<String>> transitiveTagKeys) {
         this.durationSeconds = durationSeconds;
         this.externalId = externalId;
         this.policy = policy;

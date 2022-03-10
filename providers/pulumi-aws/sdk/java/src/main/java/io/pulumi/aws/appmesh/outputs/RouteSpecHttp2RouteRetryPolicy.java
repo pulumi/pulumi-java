@@ -36,12 +36,12 @@ public final class RouteSpecHttp2RouteRetryPolicy {
      */
     private final @Nullable List<String> tcpRetryEvents;
 
-    @OutputCustomType.Constructor({"httpRetryEvents","maxRetries","perRetryTimeout","tcpRetryEvents"})
+    @OutputCustomType.Constructor
     private RouteSpecHttp2RouteRetryPolicy(
-        @Nullable List<String> httpRetryEvents,
-        Integer maxRetries,
-        RouteSpecHttp2RouteRetryPolicyPerRetryTimeout perRetryTimeout,
-        @Nullable List<String> tcpRetryEvents) {
+        @OutputCustomType.Parameter("httpRetryEvents") @Nullable List<String> httpRetryEvents,
+        @OutputCustomType.Parameter("maxRetries") Integer maxRetries,
+        @OutputCustomType.Parameter("perRetryTimeout") RouteSpecHttp2RouteRetryPolicyPerRetryTimeout perRetryTimeout,
+        @OutputCustomType.Parameter("tcpRetryEvents") @Nullable List<String> tcpRetryEvents) {
         this.httpRetryEvents = httpRetryEvents;
         this.maxRetries = maxRetries;
         this.perRetryTimeout = perRetryTimeout;

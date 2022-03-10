@@ -21,10 +21,10 @@ public final class RouteSpecHttp2RouteTimeoutIdle {
      */
     private final Integer value;
 
-    @OutputCustomType.Constructor({"unit","value"})
+    @OutputCustomType.Constructor
     private RouteSpecHttp2RouteTimeoutIdle(
-        String unit,
-        Integer value) {
+        @OutputCustomType.Parameter("unit") String unit,
+        @OutputCustomType.Parameter("value") Integer value) {
         this.unit = unit;
         this.value = value;
     }

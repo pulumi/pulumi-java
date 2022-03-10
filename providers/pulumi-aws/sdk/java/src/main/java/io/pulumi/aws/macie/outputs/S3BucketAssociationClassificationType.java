@@ -24,10 +24,10 @@ public final class S3BucketAssociationClassificationType {
      */
     private final @Nullable String oneTime;
 
-    @OutputCustomType.Constructor({"continuous","oneTime"})
+    @OutputCustomType.Constructor
     private S3BucketAssociationClassificationType(
-        @Nullable String continuous,
-        @Nullable String oneTime) {
+        @OutputCustomType.Parameter("continuous") @Nullable String continuous,
+        @OutputCustomType.Parameter("oneTime") @Nullable String oneTime) {
         this.continuous = continuous;
         this.oneTime = oneTime;
     }

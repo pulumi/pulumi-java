@@ -38,14 +38,14 @@ public final class GetGroupResult {
      */
     private final List<GetGroupUser> users;
 
-    @OutputCustomType.Constructor({"arn","groupId","groupName","id","path","users"})
+    @OutputCustomType.Constructor
     private GetGroupResult(
-        String arn,
-        String groupId,
-        String groupName,
-        String id,
-        String path,
-        List<GetGroupUser> users) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("groupId") String groupId,
+        @OutputCustomType.Parameter("groupName") String groupName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("users") List<GetGroupUser> users) {
         this.arn = arn;
         this.groupId = groupId;
         this.groupName = groupName;

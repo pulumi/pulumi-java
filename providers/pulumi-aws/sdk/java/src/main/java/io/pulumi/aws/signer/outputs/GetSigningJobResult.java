@@ -95,25 +95,25 @@ public final class GetSigningJobResult {
      */
     private final String statusReason;
 
-    @OutputCustomType.Constructor({"completedAt","createdAt","id","jobId","jobInvoker","jobOwner","platformDisplayName","platformId","profileName","profileVersion","requestedBy","revocationRecords","signatureExpiresAt","signedObjects","sources","status","statusReason"})
+    @OutputCustomType.Constructor
     private GetSigningJobResult(
-        String completedAt,
-        String createdAt,
-        String id,
-        String jobId,
-        String jobInvoker,
-        String jobOwner,
-        String platformDisplayName,
-        String platformId,
-        String profileName,
-        String profileVersion,
-        String requestedBy,
-        List<GetSigningJobRevocationRecord> revocationRecords,
-        String signatureExpiresAt,
-        List<GetSigningJobSignedObject> signedObjects,
-        List<GetSigningJobSource> sources,
-        String status,
-        String statusReason) {
+        @OutputCustomType.Parameter("completedAt") String completedAt,
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("jobId") String jobId,
+        @OutputCustomType.Parameter("jobInvoker") String jobInvoker,
+        @OutputCustomType.Parameter("jobOwner") String jobOwner,
+        @OutputCustomType.Parameter("platformDisplayName") String platformDisplayName,
+        @OutputCustomType.Parameter("platformId") String platformId,
+        @OutputCustomType.Parameter("profileName") String profileName,
+        @OutputCustomType.Parameter("profileVersion") String profileVersion,
+        @OutputCustomType.Parameter("requestedBy") String requestedBy,
+        @OutputCustomType.Parameter("revocationRecords") List<GetSigningJobRevocationRecord> revocationRecords,
+        @OutputCustomType.Parameter("signatureExpiresAt") String signatureExpiresAt,
+        @OutputCustomType.Parameter("signedObjects") List<GetSigningJobSignedObject> signedObjects,
+        @OutputCustomType.Parameter("sources") List<GetSigningJobSource> sources,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("statusReason") String statusReason) {
         this.completedAt = completedAt;
         this.createdAt = createdAt;
         this.id = id;

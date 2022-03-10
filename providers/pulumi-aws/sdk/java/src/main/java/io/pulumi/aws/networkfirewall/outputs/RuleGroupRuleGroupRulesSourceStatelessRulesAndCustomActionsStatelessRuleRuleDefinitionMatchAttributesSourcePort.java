@@ -22,10 +22,10 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
      */
     private final @Nullable Integer toPort;
 
-    @OutputCustomType.Constructor({"fromPort","toPort"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePort(
-        Integer fromPort,
-        @Nullable Integer toPort) {
+        @OutputCustomType.Parameter("fromPort") Integer fromPort,
+        @OutputCustomType.Parameter("toPort") @Nullable Integer toPort) {
         this.fromPort = fromPort;
         this.toPort = toPort;
     }

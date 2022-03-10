@@ -58,17 +58,17 @@ public final class GetHoursOfOperationResult {
      */
     private final String timeZone;
 
-    @OutputCustomType.Constructor({"configs","description","hoursOfOperationArn","hoursOfOperationId","id","instanceId","name","tags","timeZone"})
+    @OutputCustomType.Constructor
     private GetHoursOfOperationResult(
-        List<GetHoursOfOperationConfig> configs,
-        String description,
-        String hoursOfOperationArn,
-        String hoursOfOperationId,
-        String id,
-        String instanceId,
-        String name,
-        Map<String,String> tags,
-        String timeZone) {
+        @OutputCustomType.Parameter("configs") List<GetHoursOfOperationConfig> configs,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("hoursOfOperationArn") String hoursOfOperationArn,
+        @OutputCustomType.Parameter("hoursOfOperationId") String hoursOfOperationId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceId") String instanceId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("timeZone") String timeZone) {
         this.configs = configs;
         this.description = description;
         this.hoursOfOperationArn = hoursOfOperationArn;

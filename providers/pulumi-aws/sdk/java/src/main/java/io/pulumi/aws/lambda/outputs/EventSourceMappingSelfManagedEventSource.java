@@ -16,8 +16,8 @@ public final class EventSourceMappingSelfManagedEventSource {
      */
     private final Map<String,String> endpoints;
 
-    @OutputCustomType.Constructor({"endpoints"})
-    private EventSourceMappingSelfManagedEventSource(Map<String,String> endpoints) {
+    @OutputCustomType.Constructor
+    private EventSourceMappingSelfManagedEventSource(@OutputCustomType.Parameter("endpoints") Map<String,String> endpoints) {
         this.endpoints = endpoints;
     }
 

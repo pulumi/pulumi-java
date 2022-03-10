@@ -43,14 +43,14 @@ public final class LogMetricFilterMetricTransformation {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"defaultValue","dimensions","name","namespace","unit","value"})
+    @OutputCustomType.Constructor
     private LogMetricFilterMetricTransformation(
-        @Nullable String defaultValue,
-        @Nullable Map<String,String> dimensions,
-        String name,
-        String namespace,
-        @Nullable String unit,
-        String value) {
+        @OutputCustomType.Parameter("defaultValue") @Nullable String defaultValue,
+        @OutputCustomType.Parameter("dimensions") @Nullable Map<String,String> dimensions,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("namespace") String namespace,
+        @OutputCustomType.Parameter("unit") @Nullable String unit,
+        @OutputCustomType.Parameter("value") String value) {
         this.defaultValue = defaultValue;
         this.dimensions = dimensions;
         this.name = name;

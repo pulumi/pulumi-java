@@ -28,11 +28,11 @@ public final class DomainScalingParameters {
      */
     private final @Nullable Integer desiredReplicationCount;
 
-    @OutputCustomType.Constructor({"desiredInstanceType","desiredPartitionCount","desiredReplicationCount"})
+    @OutputCustomType.Constructor
     private DomainScalingParameters(
-        @Nullable String desiredInstanceType,
-        @Nullable Integer desiredPartitionCount,
-        @Nullable Integer desiredReplicationCount) {
+        @OutputCustomType.Parameter("desiredInstanceType") @Nullable String desiredInstanceType,
+        @OutputCustomType.Parameter("desiredPartitionCount") @Nullable Integer desiredPartitionCount,
+        @OutputCustomType.Parameter("desiredReplicationCount") @Nullable Integer desiredReplicationCount) {
         this.desiredInstanceType = desiredInstanceType;
         this.desiredPartitionCount = desiredPartitionCount;
         this.desiredReplicationCount = desiredReplicationCount;
